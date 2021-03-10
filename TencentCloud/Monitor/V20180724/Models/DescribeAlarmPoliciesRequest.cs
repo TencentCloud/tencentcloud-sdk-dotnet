@@ -55,25 +55,36 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] MonitorTypes{ get; set; }
 
         /// <summary>
-        /// 根据命名空间过滤
+        /// 根据命名空间过滤，不同策略类型的值详见
+        /// [策略类型列表](https://cloud.tencent.com/document/product/248/50397)
         /// </summary>
         [JsonProperty("Namespaces")]
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// 告警对象列表
+        /// 告警对象列表，外层数组，对应多个实例
+        /// 内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
+        /// [
+        /// 	[{"name":"unInstanceId","value":"ins-qr888845g"}],
+        /// 	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
+        /// 	...
+        /// ]
+        /// 不同云产品参数示例详见
+        /// [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 根据接收人搜索
+        /// 根据接收人的uid搜索，需要调用访问管理的api查询。详见
+        /// [拉取子用户](https://cloud.tencent.com/document/product/598/34587)
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// 根据接收组搜索
+        /// 根据接收组的uid搜索，需要调用访问管理的api查询，详见
+        /// [查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }
@@ -85,7 +96,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] PolicyType{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// 排序字段，例如按照最后修改时间排序，Field: "UpdateTime"
         /// </summary>
         [JsonProperty("Field")]
         public string Field{ get; set; }
@@ -97,13 +108,15 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 项目id数组
+        /// 策略所属项目的id数组，可在此页面查看
+        /// [项目管理](https://console.cloud.tencent.com/project)
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 告警通知id列表
+        /// 通知模版的id列表，可查询通知模版列表获取。
+        /// [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
@@ -115,7 +128,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] RuleTypes{ get; set; }
 
         /// <summary>
-        /// 启停，1：启用   0：停止
+        /// 告警启停筛选，[1]：启用   [0]：停止，全部[0, 1]
         /// </summary>
         [JsonProperty("Enable")]
         public long?[] Enable{ get; set; }

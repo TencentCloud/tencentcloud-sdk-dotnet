@@ -70,6 +70,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <summary>
         /// EIP类型。默认值：EIP。
         /// <ul style="margin:0"><li>已开通Anycast公网加速白名单的用户，可选值：<ul><li>AnycastEIP：加速IP，可参见 [Anycast 公网加速](https://cloud.tencent.com/document/product/644)</li></ul>注意：仅部分地域支持加速IP。</li></ul>
+        /// <ul style="margin:0"><li>已开通精品IP白名单的用户，可选值：<ul><li>HighQualityEIP：精品IP</li></ul>注意：仅部分地域支持精品IP。</li></ul>
         /// </summary>
         [JsonProperty("AddressType")]
         public string AddressType{ get; set; }
@@ -102,6 +103,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
+        /// <summary>
+        /// EIP名称，用于申请EIP时用户自定义该EIP的个性化名称，默认值：未命名
+        /// </summary>
+        [JsonProperty("AddressName")]
+        public string AddressName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ApplicableForCLB", this.ApplicableForCLB);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
+            this.SetParamSimple(map, prefix + "AddressName", this.AddressName);
         }
     }
 }

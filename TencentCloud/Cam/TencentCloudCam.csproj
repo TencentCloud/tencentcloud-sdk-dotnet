@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.235</VersionPrefix>
+    <VersionPrefix>3.0.236</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeSubAccountsRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeSubAccountsResponse.cs" />
     <Compile Include="V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="V20190116\Models\SetMfaFlagResponse.cs" />
     <Compile Include="V20190116\Models\StrategyInfo.cs" />
     <Compile Include="V20190116\Models\SubAccountInfo.cs" />
+    <Compile Include="V20190116\Models\SubAccountUser.cs" />
     <Compile Include="V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="V20190116\Models\UpdateGroupRequest.cs" />

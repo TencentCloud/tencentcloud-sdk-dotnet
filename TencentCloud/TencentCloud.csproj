@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.235</VersionPrefix>
+    <VersionPrefix>3.0.236</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1404,6 +1404,8 @@
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSubAccountsRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSubAccountsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -1476,6 +1478,7 @@
     <Compile Include="Cam\V20190116\Models\SetMfaFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\SubAccountUser.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
@@ -2065,6 +2068,8 @@
     <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordRequest.cs" />
@@ -2283,6 +2288,7 @@
     <Compile Include="Cdn\V20180606\Models\VerifyDomainRecordResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\VideoSeek.cs" />
     <Compile Include="Cdn\V20180606\Models\ViolationUrl.cs" />
+    <Compile Include="Cdn\V20180606\Models\WafSubRuleStatus.cs" />
     <Compile Include="Cdn\V20180606\Models\WebpAdapter.cs" />
     <Compile Include="Cds\V20180420\CdsClient.cs" />
     <Compile Include="Cds\V20180420\Models\CdsAuditInstance.cs" />

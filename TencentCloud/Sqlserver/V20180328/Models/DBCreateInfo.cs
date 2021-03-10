@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string DBName{ get; set; }
 
         /// <summary>
-        /// 字符集。可选值包括：Chinese_PRC_CI_AS, Chinese_PRC_CS_AS, Chinese_PRC_BIN, Chinese_Taiwan_Stroke_CI_AS, SQL_Latin1_General_CP1_CI_AS, SQL_Latin1_General_CP1_CS_AS。不填默认为Chinese_PRC_CI_AS
+        /// 字符集。可通过接口DescribeDBCharsets查到支持的字符集，不填默认为Chinese_PRC_CI_AS。
         /// </summary>
         [JsonProperty("Charset")]
         public string Charset{ get; set; }

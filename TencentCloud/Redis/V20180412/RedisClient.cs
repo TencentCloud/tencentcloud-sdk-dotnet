@@ -373,7 +373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表信息
+        /// 查询Redis实例列表信息。该接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis实例列表信息
+        /// 查询Redis实例列表信息。该接口已废弃。
         /// </summary>
         /// <param name="req"><see cref="DescribeCommonDBInstancesRequest"/></param>
         /// <returns><see cref="DescribeCommonDBInstancesResponse"/></returns>

@@ -111,6 +111,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Conditions")]
         public ScdnEventLogConditions[] Conditions{ get; set; }
 
+        /// <summary>
+        /// 来源产品 cdn ecdn
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 地域：mainland 或 overseas
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +139,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArraySimple(map, prefix + "AttackTypes.", this.AttackTypes);
             this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

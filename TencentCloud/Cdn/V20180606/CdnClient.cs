@@ -213,6 +213,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
+        public async Task<CreateScdnFailedLogTaskResponse> CreateScdnFailedLogTask(CreateScdnFailedLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScdnFailedLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnFailedLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>
+        /// <returns><see cref="CreateScdnFailedLogTaskResponse"/></returns>
+        public CreateScdnFailedLogTaskResponse CreateScdnFailedLogTaskSync(CreateScdnFailedLogTaskRequest req)
+        {
+             JsonResponseModel<CreateScdnFailedLogTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScdnFailedLogTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnFailedLogTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// CreateScdnLogTask 用于创建事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnLogTaskRequest"/></param>

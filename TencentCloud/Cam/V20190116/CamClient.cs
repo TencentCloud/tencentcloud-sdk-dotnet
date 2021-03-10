@@ -1013,6 +1013,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 通过子用户UIN列表查询子用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountsRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountsResponse"/></returns>
+        public async Task<DescribeSubAccountsResponse> DescribeSubAccounts(DescribeSubAccountsRequest req)
+        {
+             JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过子用户UIN列表查询子用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubAccountsRequest"/></param>
+        /// <returns><see cref="DescribeSubAccountsResponse"/></returns>
+        public DescribeSubAccountsResponse DescribeSubAccountsSync(DescribeSubAccountsRequest req)
+        {
+             JsonResponseModel<DescribeSubAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DetachGroupPolicy）可用于解除绑定到用户组的策略。
         /// </summary>
         /// <param name="req"><see cref="DetachGroupPolicyRequest"/></param>

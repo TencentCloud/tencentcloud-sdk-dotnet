@@ -74,7 +74,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string[] BackupFiles{ get; set; }
 
         /// <summary>
-        /// 迁移任务状态，
+        /// 迁移任务状态，2-创建完成，7-全量导入中，8-等待增量，9-导入成功，10-导入失败，12-增量导入中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

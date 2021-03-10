@@ -24,12 +24,26 @@ namespace TencentCloud.Cdn.V20180606.Models
     public class ListScdnLogTasksRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 产品来源 cdn/ecdn
+        /// </summary>
+        [JsonProperty("Source")]
+        public string Source{ get; set; }
+
+        /// <summary>
+        /// 地域：mainland 或 overseas 为空表示查询所有地域
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }
