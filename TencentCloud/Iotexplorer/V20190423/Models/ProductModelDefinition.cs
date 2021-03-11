@@ -55,6 +55,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("CategoryModel")]
         public string CategoryModel{ get; set; }
 
+        /// <summary>
+        /// 产品的连接类型的模型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetTypeModel")]
+        public string NetTypeModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "CategoryModel", this.CategoryModel);
+            this.SetParamSimple(map, prefix + "NetTypeModel", this.NetTypeModel);
         }
     }
 }
