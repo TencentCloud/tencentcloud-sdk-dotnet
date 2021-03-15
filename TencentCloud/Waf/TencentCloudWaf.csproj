@@ -1,0 +1,69 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.239</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Waf</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20180125\WafClient.cs" />
+    <Compile Include="V20180125\Models\AddCustomRuleRequest.cs" />
+    <Compile Include="V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\CreateAttackDownloadTaskRequest.cs" />
+    <Compile Include="V20180125\Models\CreateAttackDownloadTaskResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteDownloadRecordRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\Strategy.cs" />
+  </ItemGroup>
+</Project>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.238</VersionPrefix>
+    <VersionPrefix>3.0.239</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4456,6 +4456,8 @@
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\KillSessionRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\KillSessionResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
@@ -7263,6 +7265,8 @@
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\InstanceSpec.cs" />
+    <Compile Include="Mariadb\V20170312\Models\KillSessionRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\KillSessionResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\LogFileInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionResponse.cs" />
@@ -7431,6 +7435,7 @@
     <Compile Include="Monitor\V20180724\MonitorClient.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmEvent.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmHistory.cs" />
+    <Compile Include="Monitor\V20180724\Models\AlarmHistoryMetric.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmPolicy.cs" />
     <Compile Include="Monitor\V20180724\Models\AlarmPolicyCondition.cs" />
@@ -10131,6 +10136,8 @@
     <Compile Include="Tcr\V20190924\Models\Filter.cs" />
     <Compile Include="Tcr\V20190924\Models\Header.cs" />
     <Compile Include="Tcr\V20190924\Models\Limit.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageExternalEndpointRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageExternalEndpointResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageImageLifecycleGlobalPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageImageLifecycleGlobalPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageInternalEndpointRequest.cs" />
@@ -12484,6 +12491,27 @@
     <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />
+    <Compile Include="Waf\V20180125\WafClient.cs" />
+    <Compile Include="Waf\V20180125\Models\AddCustomRuleRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteSessionRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteSessionResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeCustomRulesResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />
+    <Compile Include="Waf\V20180125\Models\Strategy.cs" />
     <Compile Include="Wss\V20180426\WssClient.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertRequest.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertResponse.cs" />

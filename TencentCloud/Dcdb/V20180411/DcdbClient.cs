@@ -1341,6 +1341,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（KillSession）用于杀死指定会话。
+        /// </summary>
+        /// <param name="req"><see cref="KillSessionRequest"/></param>
+        /// <returns><see cref="KillSessionResponse"/></returns>
+        public async Task<KillSessionResponse> KillSession(KillSessionRequest req)
+        {
+             JsonResponseModel<KillSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（KillSession）用于杀死指定会话。
+        /// </summary>
+        /// <param name="req"><see cref="KillSessionRequest"/></param>
+        /// <returns><see cref="KillSessionResponse"/></returns>
+        public KillSessionResponse KillSessionSync(KillSessionRequest req)
+        {
+             JsonResponseModel<KillSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyAccountDescription）用于修改云数据库账号备注。
         /// 注意：相同用户名，不同Host是不同的账号。
         /// </summary>

@@ -2173,6 +2173,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 管理实例公网访问
+        /// </summary>
+        /// <param name="req"><see cref="ManageExternalEndpointRequest"/></param>
+        /// <returns><see cref="ManageExternalEndpointResponse"/></returns>
+        public async Task<ManageExternalEndpointResponse> ManageExternalEndpoint(ManageExternalEndpointRequest req)
+        {
+             JsonResponseModel<ManageExternalEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageExternalEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageExternalEndpointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 管理实例公网访问
+        /// </summary>
+        /// <param name="req"><see cref="ManageExternalEndpointRequest"/></param>
+        /// <returns><see cref="ManageExternalEndpointResponse"/></returns>
+        public ManageExternalEndpointResponse ManageExternalEndpointSync(ManageExternalEndpointRequest req)
+        {
+             JsonResponseModel<ManageExternalEndpointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageExternalEndpoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageExternalEndpointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于设置个人版全局镜像版本自动清理策略
         /// </summary>
         /// <param name="req"><see cref="ManageImageLifecycleGlobalPersonalRequest"/></param>
