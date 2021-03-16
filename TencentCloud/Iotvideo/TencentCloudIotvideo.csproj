@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.239</VersionPrefix>
+    <VersionPrefix>3.0.240</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -201,8 +201,13 @@
     <Compile Include="V20201215\Models\ActionHistory.cs" />
     <Compile Include="V20201215\Models\CheckForwardAuthRequest.cs" />
     <Compile Include="V20201215\Models\CheckForwardAuthResponse.cs" />
+    <Compile Include="V20201215\Models\CloudStorageEvent.cs" />
+    <Compile Include="V20201215\Models\CloudStorageTimeData.cs" />
+    <Compile Include="V20201215\Models\CloudStorageTimeInfo.cs" />
     <Compile Include="V20201215\Models\CreateBatchRequest.cs" />
     <Compile Include="V20201215\Models\CreateBatchResponse.cs" />
+    <Compile Include="V20201215\Models\CreateCloudStorageRequest.cs" />
+    <Compile Include="V20201215\Models\CreateCloudStorageResponse.cs" />
     <Compile Include="V20201215\Models\CreateForwardRuleRequest.cs" />
     <Compile Include="V20201215\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\CreateProductRequest.cs" />
@@ -219,6 +224,16 @@
     <Compile Include="V20201215\Models\DescribeBatchsResponse.cs" />
     <Compile Include="V20201215\Models\DescribeCategoryRequest.cs" />
     <Compile Include="V20201215\Models\DescribeCategoryResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageDateRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageDateResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageEventsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageEventsResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageThumbnailRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageThumbnailResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageTimeRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeCloudStorageTimeResponse.cs" />
     <Compile Include="V20201215\Models\DescribeDeviceActionHistoryRequest.cs" />
     <Compile Include="V20201215\Models\DescribeDeviceActionHistoryResponse.cs" />
     <Compile Include="V20201215\Models\DescribeDeviceCommLogRequest.cs" />

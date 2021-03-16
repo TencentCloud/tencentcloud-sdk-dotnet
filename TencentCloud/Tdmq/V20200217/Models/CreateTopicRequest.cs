@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过32个字符。
+        /// 主题名，不支持中字以及除了短线和下划线外的特殊字符且不超过64个字符。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

@@ -53,6 +53,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建权限组。
         /// </summary>
         /// <param name="req"><see cref="CreateAccessGroupRequest"/></param>
@@ -73,6 +75,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建权限组。
         /// </summary>
         /// <param name="req"><see cref="CreateAccessGroupRequest"/></param>
@@ -93,6 +97,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建权限规则，权限规则ID和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateAccessRulesRequest"/></param>
@@ -113,6 +119,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建权限规则，权限规则ID和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateAccessRulesRequest"/></param>
@@ -133,6 +141,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建文件系统（异步）。
         /// </summary>
         /// <param name="req"><see cref="CreateFileSystemRequest"/></param>
@@ -153,6 +163,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建文件系统（异步）。
         /// </summary>
         /// <param name="req"><see cref="CreateFileSystemRequest"/></param>
@@ -173,6 +185,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateLifeCycleRulesRequest"/></param>
@@ -193,6 +207,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建生命周期规则，生命周期规则ID和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateLifeCycleRulesRequest"/></param>
@@ -213,6 +229,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建文件系统挂载点，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req"><see cref="CreateMountPointRequest"/></param>
@@ -233,6 +251,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 创建文件系统挂载点，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req"><see cref="CreateMountPointRequest"/></param>
@@ -253,6 +273,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
@@ -273,6 +295,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量创建回热任务，回热任务ID、状态和创建时间无需填写。
         /// </summary>
         /// <param name="req"><see cref="CreateRestoreTasksRequest"/></param>
@@ -293,6 +317,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除权限组。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessGroupRequest"/></param>
@@ -313,6 +339,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除权限组。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessGroupRequest"/></param>
@@ -333,6 +361,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量删除权限规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessRulesRequest"/></param>
@@ -353,6 +383,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量删除权限规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessRulesRequest"/></param>
@@ -373,6 +405,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除文件系统，不允许删除非空文件系统。
         /// </summary>
         /// <param name="req"><see cref="DeleteFileSystemRequest"/></param>
@@ -393,6 +427,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除文件系统，不允许删除非空文件系统。
         /// </summary>
         /// <param name="req"><see cref="DeleteFileSystemRequest"/></param>
@@ -413,6 +449,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量删除生命周期规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLifeCycleRulesRequest"/></param>
@@ -433,6 +471,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量删除生命周期规则。
         /// </summary>
         /// <param name="req"><see cref="DeleteLifeCycleRulesRequest"/></param>
@@ -453,6 +493,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除挂载点。
         /// </summary>
         /// <param name="req"><see cref="DeleteMountPointRequest"/></param>
@@ -473,6 +515,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 删除挂载点。
         /// </summary>
         /// <param name="req"><see cref="DeleteMountPointRequest"/></param>
@@ -493,6 +537,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看权限组列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessGroupsRequest"/></param>
@@ -513,6 +559,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看权限组列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessGroupsRequest"/></param>
@@ -533,6 +581,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过权限组ID查看权限规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRulesRequest"/></param>
@@ -553,6 +603,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过权限组ID查看权限规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRulesRequest"/></param>
@@ -573,6 +625,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看文件系统详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemRequest"/></param>
@@ -593,6 +647,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看文件系统详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemRequest"/></param>
@@ -613,6 +669,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看文件系统列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemsRequest"/></param>
@@ -633,6 +691,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看文件系统列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFileSystemsRequest"/></param>
@@ -653,6 +713,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看生命周期规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLifeCycleRulesRequest"/></param>
@@ -673,6 +735,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看生命周期规则列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLifeCycleRulesRequest"/></param>
@@ -693,6 +757,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看挂载点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointRequest"/></param>
@@ -713,6 +779,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 查看挂载点详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointRequest"/></param>
@@ -733,6 +801,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID或者权限组ID查看挂载点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointsRequest"/></param>
@@ -753,6 +823,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID或者权限组ID查看挂载点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMountPointsRequest"/></param>
@@ -773,6 +845,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看资源标签列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
@@ -793,6 +867,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看资源标签列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>
@@ -813,6 +889,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看回热任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRestoreTasksRequest"/></param>
@@ -833,6 +911,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 通过文件系统ID查看回热任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeRestoreTasksRequest"/></param>
@@ -853,6 +933,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改权限组属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessGroupRequest"/></param>
@@ -873,6 +955,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改权限组属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessGroupRequest"/></param>
@@ -893,6 +977,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
@@ -913,6 +999,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量修改权限规则属性，需要指定权限规则ID，支持修改权限规则地址、访问模式和优先级。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessRulesRequest"/></param>
@@ -933,6 +1021,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改文件系统属性，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemRequest"/></param>
@@ -953,6 +1043,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改文件系统属性，仅限于创建成功的文件系统。
         /// </summary>
         /// <param name="req"><see cref="ModifyFileSystemRequest"/></param>
@@ -973,6 +1065,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyLifeCycleRulesRequest"/></param>
@@ -993,6 +1087,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 批量修改生命周期规则属性，需要指定生命周期规则ID，支持修改生命周期规则名称、路径、转换列表和状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyLifeCycleRulesRequest"/></param>
@@ -1013,6 +1109,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改挂载点属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyMountPointRequest"/></param>
@@ -1033,6 +1131,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改挂载点属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyMountPointRequest"/></param>
@@ -1053,6 +1153,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改资源标签列表，全量覆盖。
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>
@@ -1073,6 +1175,8 @@ namespace TencentCloud.Chdfs.V20190718
         }
 
         /// <summary>
+        /// 云API旧版本2019-07-18预下线，所有功能由新版本2020-11-12替代，目前云API主要用作控制台使用。
+        /// 
         /// 修改资源标签列表，全量覆盖。
         /// </summary>
         /// <param name="req"><see cref="ModifyResourceTagsRequest"/></param>

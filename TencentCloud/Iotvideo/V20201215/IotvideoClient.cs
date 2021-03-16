@@ -133,6 +133,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 开通云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageResponse"/></returns>
+        public async Task<CreateCloudStorageResponse> CreateCloudStorage(CreateCloudStorageRequest req)
+        {
+             JsonResponseModel<CreateCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通云存服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudStorageRequest"/></param>
+        /// <returns><see cref="CreateCloudStorageResponse"/></returns>
+        public CreateCloudStorageResponse CreateCloudStorageSync(CreateCloudStorageRequest req)
+        {
+             JsonResponseModel<CreateCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建转发规则
         /// </summary>
         /// <param name="req"><see cref="CreateForwardRuleRequest"/></param>
@@ -444,6 +484,206 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCategory");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageResponse"/></returns>
+        public async Task<DescribeCloudStorageResponse> DescribeCloudStorage(DescribeCloudStorageRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备云存服务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageResponse"/></returns>
+        public DescribeCloudStorageResponse DescribeCloudStorageSync(DescribeCloudStorageRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取具有云存的日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageDateResponse"/></returns>
+        public async Task<DescribeCloudStorageDateResponse> DescribeCloudStorageDate(DescribeCloudStorageDateRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取具有云存的日期
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageDateRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageDateResponse"/></returns>
+        public DescribeCloudStorageDateResponse DescribeCloudStorageDateSync(DescribeCloudStorageDateRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageDateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsResponse"/></returns>
+        public async Task<DescribeCloudStorageEventsResponse> DescribeCloudStorageEvents(DescribeCloudStorageEventsRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取云存事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageEventsRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageEventsResponse"/></returns>
+        public DescribeCloudStorageEventsResponse DescribeCloudStorageEventsSync(DescribeCloudStorageEventsRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailResponse"/></returns>
+        public async Task<DescribeCloudStorageThumbnailResponse> DescribeCloudStorageThumbnail(DescribeCloudStorageThumbnailRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageThumbnailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageThumbnail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageThumbnailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取云存事件缩略图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageThumbnailRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageThumbnailResponse"/></returns>
+        public DescribeCloudStorageThumbnailResponse DescribeCloudStorageThumbnailSync(DescribeCloudStorageThumbnailRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageThumbnailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageThumbnail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageThumbnailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取某一天云存时间轴
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageTimeRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageTimeResponse"/></returns>
+        public async Task<DescribeCloudStorageTimeResponse> DescribeCloudStorageTime(DescribeCloudStorageTimeRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取某一天云存时间轴
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageTimeRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageTimeResponse"/></returns>
+        public DescribeCloudStorageTimeResponse DescribeCloudStorageTimeSync(DescribeCloudStorageTimeRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageTimeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

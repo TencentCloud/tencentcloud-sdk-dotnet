@@ -49,13 +49,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 客户端ID(IsGlobal为1时，Uuid或Hostip必填一个)
+        /// 客户端ID(IsGlobal为0时，Uuid或Hostip必填一个)
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 主机IP(IsGlobal为1时，Uuid或Hostip必填一个)
+        /// 主机IP(IsGlobal为0时，Uuid或Hostip必填一个)
         /// </summary>
         [JsonProperty("Hostip")]
         public string Hostip{ get; set; }

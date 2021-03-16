@@ -1213,6 +1213,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询实例公网访问入口状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalEndpointStatusRequest"/></param>
+        /// <returns><see cref="DescribeExternalEndpointStatusResponse"/></returns>
+        public async Task<DescribeExternalEndpointStatusResponse> DescribeExternalEndpointStatus(DescribeExternalEndpointStatusRequest req)
+        {
+             JsonResponseModel<DescribeExternalEndpointStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExternalEndpointStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalEndpointStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例公网访问入口状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalEndpointStatusRequest"/></param>
+        /// <returns><see cref="DescribeExternalEndpointStatusResponse"/></returns>
+        public DescribeExternalEndpointStatusResponse DescribeExternalEndpointStatusSync(DescribeExternalEndpointStatusRequest req)
+        {
+             JsonResponseModel<DescribeExternalEndpointStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExternalEndpointStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalEndpointStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询个人收藏仓库
         /// </summary>
         /// <param name="req"><see cref="DescribeFavorRepositoryPersonalRequest"/></param>

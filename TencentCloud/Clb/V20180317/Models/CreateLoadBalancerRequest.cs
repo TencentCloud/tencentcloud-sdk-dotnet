@@ -32,7 +32,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerType{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1
+        /// 负载均衡实例的类型。1：通用的负载均衡实例，目前只支持传入1。
         /// </summary>
         [JsonProperty("Forward")]
         public long? Forward{ get; set; }
@@ -82,7 +82,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string MasterZoneId{ get; set; }
 
         /// <summary>
-        /// 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1
+        /// 仅适用于公网负载均衡。可用区ID，指定可用区以创建负载均衡实例。如：ap-guangzhou-1。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
@@ -100,25 +100,25 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VipIsp{ get; set; }
 
         /// <summary>
-        /// 购买负载均衡同时，给负载均衡打上标签
+        /// 购买负载均衡同时，给负载均衡打上标签。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 指定Vip申请负载均衡
+        /// 指定Vip申请负载均衡。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）
+        /// 带宽包ID，指定此参数时，网络计费方式（InternetAccessible.InternetChargeType）只支持按带宽包计费（BANDWIDTH_PACKAGE）。
         /// </summary>
         [JsonProperty("BandwidthPackageId")]
         public string BandwidthPackageId{ get; set; }
 
         /// <summary>
-        /// 独占集群信息
+        /// 独占集群信息。
         /// </summary>
         [JsonProperty("ExclusiveCluster")]
         public ExclusiveCluster ExclusiveCluster{ get; set; }
@@ -148,7 +148,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterTag{ get; set; }
 
         /// <summary>
-        /// EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP
+        /// EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
         /// </summary>
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }

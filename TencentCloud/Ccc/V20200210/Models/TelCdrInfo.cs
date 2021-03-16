@@ -218,6 +218,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("QueuedSkillGroupId")]
         public long? QueuedSkillGroupId{ get; set; }
 
+        /// <summary>
+        /// 会话 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +254,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "QueuedTimestamp", this.QueuedTimestamp);
             this.SetParamArrayObj(map, prefix + "PostIVRKeyPressed.", this.PostIVRKeyPressed);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupId", this.QueuedSkillGroupId);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

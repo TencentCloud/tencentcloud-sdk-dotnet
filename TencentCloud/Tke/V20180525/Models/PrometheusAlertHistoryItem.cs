@@ -42,6 +42,34 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 告警状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// 触发的规则名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleItem")]
+        public string RuleItem{ get; set; }
+
+        /// <summary>
+        /// 告警渠道的id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// 告警渠道的名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +79,10 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "RuleItem", this.RuleItem);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

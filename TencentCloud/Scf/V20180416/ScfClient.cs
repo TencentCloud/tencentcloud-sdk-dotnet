@@ -707,6 +707,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 获取函数异步重试配置，包括重试次数和消息保留时间
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="GetFunctionEventInvokeConfigResponse"/></returns>
+        public async Task<GetFunctionEventInvokeConfigResponse> GetFunctionEventInvokeConfig(GetFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数异步重试配置，包括重试次数和消息保留时间
+        /// </summary>
+        /// <param name="req"><see cref="GetFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="GetFunctionEventInvokeConfigResponse"/></returns>
+        public GetFunctionEventInvokeConfigResponse GetFunctionEventInvokeConfigSync(GetFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<GetFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口根据指定的日志查询条件返回函数运行日志。
         /// </summary>
         /// <param name="req"><see cref="GetFunctionLogsRequest"/></param>
@@ -1578,6 +1618,46 @@ namespace TencentCloud.Scf.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateFunctionConfiguration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionConfigurationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新函数的异步重试配置，包括重试次数和消息保留时间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="UpdateFunctionEventInvokeConfigResponse"/></returns>
+        public async Task<UpdateFunctionEventInvokeConfigResponse> UpdateFunctionEventInvokeConfig(UpdateFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新函数的异步重试配置，包括重试次数和消息保留时间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFunctionEventInvokeConfigRequest"/></param>
+        /// <returns><see cref="UpdateFunctionEventInvokeConfigResponse"/></returns>
+        public UpdateFunctionEventInvokeConfigResponse UpdateFunctionEventInvokeConfigSync(UpdateFunctionEventInvokeConfigRequest req)
+        {
+             JsonResponseModel<UpdateFunctionEventInvokeConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateFunctionEventInvokeConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFunctionEventInvokeConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

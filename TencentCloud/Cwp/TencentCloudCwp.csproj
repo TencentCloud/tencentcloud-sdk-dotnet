@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.239</VersionPrefix>
+    <VersionPrefix>3.0.240</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,6 +176,8 @@
     <Compile Include="V20180228\Models\DescribeReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeReverseShellRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeRiskDnsListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeRiskDnsListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
@@ -302,6 +304,8 @@
     <Compile Include="V20180228\Models\UntrustMaliciousRequestResponse.cs" />
     <Compile Include="V20180228\Models\UntrustMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\UntrustMalwaresResponse.cs" />
+    <Compile Include="V20180228\Models\UpdateBaselineStrategyRequest.cs" />
+    <Compile Include="V20180228\Models\UpdateBaselineStrategyResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
     <Compile Include="V20180228\Models\Vul.cs" />
     <Compile Include="V20180228\Models\WeeklyReport.cs" />

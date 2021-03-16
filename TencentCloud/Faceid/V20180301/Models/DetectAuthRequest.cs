@@ -68,6 +68,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }

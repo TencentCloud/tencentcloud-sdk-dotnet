@@ -49,6 +49,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("CertType")]
         public long? CertType{ get; set; }
 
+        /// <summary>
+        /// 敏感数据加密信息。对传入信息（姓名、身份证号、银行卡号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "BankCard", this.BankCard);
             this.SetParamSimple(map, prefix + "CertType", this.CertType);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }
