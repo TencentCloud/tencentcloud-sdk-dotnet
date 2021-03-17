@@ -36,6 +36,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
 
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验对项目删除操作权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -199,6 +199,10 @@
     <Compile Include="V20191126\Models\VersionData.cs" />
     <Compile Include="V20201215\IotvideoClient.cs" />
     <Compile Include="V20201215\Models\ActionHistory.cs" />
+    <Compile Include="V20201215\Models\BatchUpdateFirmwareRequest.cs" />
+    <Compile Include="V20201215\Models\BatchUpdateFirmwareResponse.cs" />
+    <Compile Include="V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
+    <Compile Include="V20201215\Models\CancelDeviceFirmwareTaskResponse.cs" />
     <Compile Include="V20201215\Models\CheckForwardAuthRequest.cs" />
     <Compile Include="V20201215\Models\CheckForwardAuthResponse.cs" />
     <Compile Include="V20201215\Models\CloudStorageEvent.cs" />
@@ -212,8 +216,12 @@
     <Compile Include="V20201215\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\CreateProductRequest.cs" />
     <Compile Include="V20201215\Models\CreateProductResponse.cs" />
+    <Compile Include="V20201215\Models\CreateTaskFileUrlRequest.cs" />
+    <Compile Include="V20201215\Models\CreateTaskFileUrlResponse.cs" />
     <Compile Include="V20201215\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20201215\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20201215\Models\DeleteFirmwareRequest.cs" />
+    <Compile Include="V20201215\Models\DeleteFirmwareResponse.cs" />
     <Compile Include="V20201215\Models\DeleteForwardRuleRequest.cs" />
     <Compile Include="V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\DeleteProductRequest.cs" />
@@ -248,6 +256,18 @@
     <Compile Include="V20201215\Models\DescribeDeviceResponse.cs" />
     <Compile Include="V20201215\Models\DescribeDevicesRequest.cs" />
     <Compile Include="V20201215\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskDevicesRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskDevicesResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskDistributionRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskDistributionResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskStatisticsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTaskStatisticsResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTasksRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeFirmwareTasksResponse.cs" />
     <Compile Include="V20201215\Models\DescribeForwardRuleRequest.cs" />
     <Compile Include="V20201215\Models\DescribeForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\DescribeModelDefinitionRequest.cs" />
@@ -259,9 +279,20 @@
     <Compile Include="V20201215\Models\DeviceCommLogItem.cs" />
     <Compile Include="V20201215\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="V20201215\Models\DeviceInfo.cs" />
+    <Compile Include="V20201215\Models\DeviceUpdateStatus.cs" />
+    <Compile Include="V20201215\Models\EditFirmwareRequest.cs" />
+    <Compile Include="V20201215\Models\EditFirmwareResponse.cs" />
     <Compile Include="V20201215\Models\EventHistoryItem.cs" />
+    <Compile Include="V20201215\Models\FirmwareInfo.cs" />
+    <Compile Include="V20201215\Models\FirmwareTaskInfo.cs" />
+    <Compile Include="V20201215\Models\GetAllFirmwareVersionRequest.cs" />
+    <Compile Include="V20201215\Models\GetAllFirmwareVersionResponse.cs" />
+    <Compile Include="V20201215\Models\GetFirmwareURLRequest.cs" />
+    <Compile Include="V20201215\Models\GetFirmwareURLResponse.cs" />
     <Compile Include="V20201215\Models\ImportModelDefinitionRequest.cs" />
     <Compile Include="V20201215\Models\ImportModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\ListFirmwaresRequest.cs" />
+    <Compile Include="V20201215\Models\ListFirmwaresResponse.cs" />
     <Compile Include="V20201215\Models\ModifyDeviceRequest.cs" />
     <Compile Include="V20201215\Models\ModifyDeviceResponse.cs" />
     <Compile Include="V20201215\Models\ModifyForwardRuleRequest.cs" />
@@ -272,8 +303,14 @@
     <Compile Include="V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="V20201215\Models\ProductModelDefinition.cs" />
     <Compile Include="V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
+    <Compile Include="V20201215\Models\RetryDeviceFirmwareTaskResponse.cs" />
+    <Compile Include="V20201215\Models\SearchKeyword.cs" />
     <Compile Include="V20201215\Models\SetForwardAuthRequest.cs" />
     <Compile Include="V20201215\Models\SetForwardAuthResponse.cs" />
+    <Compile Include="V20201215\Models\StatusStatistic.cs" />
+    <Compile Include="V20201215\Models\UploadFirmwareRequest.cs" />
+    <Compile Include="V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="V20201215\Models\VideoBatch.cs" />
     <Compile Include="V20201215\Models\VideoProduct.cs" />
   </ItemGroup>

@@ -51,7 +51,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 归属者。
+        /// 项目归属者。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }

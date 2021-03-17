@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TeamId{ get; set; }
 
         /// <summary>
-        /// 成员 ID 列表，限指定30个指定成员。
+        /// 成员 ID 列表，限指定30个指定成员。如不填，则返回指定团队下的所有成员。
         /// </summary>
         [JsonProperty("MemberIds")]
         public string[] MemberIds{ get; set; }

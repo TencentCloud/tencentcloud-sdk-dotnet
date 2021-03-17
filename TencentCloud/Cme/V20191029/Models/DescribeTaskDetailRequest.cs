@@ -36,6 +36,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

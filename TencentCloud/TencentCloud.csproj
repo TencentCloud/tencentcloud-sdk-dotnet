@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3022,10 +3022,15 @@
     <Compile Include="Cme\V20191029\Models\ModifyTeamResponse.cs" />
     <Compile Include="Cme\V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\MoveClassResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\MoveResourceRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\MoveResourceResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\OtherMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\PlatformInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ProjectInfo.cs" />
     <Compile Include="Cme\V20191029\Models\Resource.cs" />
+    <Compile Include="Cme\V20191029\Models\ResourceInfo.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationResponse.cs" />
     <Compile Include="Cme\V20191029\Models\SearchMaterialRequest.cs" />
@@ -5099,6 +5104,8 @@
     <Compile Include="Emr\V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowRequest.cs" />
@@ -5108,6 +5115,8 @@
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="Emr\V20190103\Models\Execution.cs" />
     <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
+    <Compile Include="Emr\V20190103\Models\InquirePriceRenewEmrRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\InquirePriceRenewEmrResponse.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
@@ -5133,6 +5142,7 @@
     <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
+    <Compile Include="Emr\V20190103\Models\RenewInstancesInfo.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />
     <Compile Include="Emr\V20190103\Models\RunJobFlowRequest.cs" />
     <Compile Include="Emr\V20190103\Models\RunJobFlowResponse.cs" />
@@ -6711,6 +6721,10 @@
     <Compile Include="Iotvideo\V20191126\Models\VersionData.cs" />
     <Compile Include="Iotvideo\V20201215\IotvideoClient.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ActionHistory.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CheckForwardAuthRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CheckForwardAuthResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageEvent.cs" />
@@ -6724,8 +6738,12 @@
     <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateTaskFileUrlRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateTaskFileUrlResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteFirmwareRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeleteFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteProductRequest.cs" />
@@ -6760,6 +6778,18 @@
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskDevicesRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskDevicesResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskDistributionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskDistributionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskStatisticsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTaskStatisticsResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTasksRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareTasksResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeForwardRuleRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeModelDefinitionRequest.cs" />
@@ -6771,9 +6801,20 @@
     <Compile Include="Iotvideo\V20201215\Models\DeviceCommLogItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeviceUpdateStatus.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\EditFirmwareRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\EditFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\EventHistoryItem.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\FirmwareInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\FirmwareTaskInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\GetAllFirmwareVersionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\GetAllFirmwareVersionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\GetFirmwareURLRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\GetFirmwareURLResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ListFirmwaresRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ListFirmwaresResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyForwardRuleRequest.cs" />
@@ -6784,8 +6825,14 @@
     <Compile Include="Iotvideo\V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductModelDefinition.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\SearchKeyword.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\StatusStatistic.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoBatch.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoProduct.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
@@ -9577,11 +9624,21 @@
     <Compile Include="Tbaas\V20180416\Models\ClusterDetailForUser.cs" />
     <Compile Include="Tbaas\V20180416\Models\CreateChaincodeAndInstallForUserRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\CreateChaincodeAndInstallForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\DeployDynamicBcosContractRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\DeployDynamicBcosContractResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\DeployDynamicContractHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\DeployDynamicContractHandlerResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\DownloadUserCertRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\DownloadUserCertResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\EndorserGroup.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosBlockByNumberRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosBlockByNumberResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosBlockListRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosBlockListResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosTransByHashRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosTransByHashResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosTransListRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\GetBcosTransListResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetBlockListHandlerRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetBlockListHandlerResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\GetBlockListRequest.cs" />
@@ -9615,6 +9672,8 @@
     <Compile Include="Tbaas\V20180416\Models\GroupDetailForUser.cs" />
     <Compile Include="Tbaas\V20180416\Models\InitializeChaincodeForUserRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\InitializeChaincodeForUserResponse.cs" />
+    <Compile Include="Tbaas\V20180416\Models\InvokeBcosTransRequest.cs" />
+    <Compile Include="Tbaas\V20180416\Models\InvokeBcosTransResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\InvokeRequest.cs" />
     <Compile Include="Tbaas\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Tbaas\V20180416\Models\LogDetailForUser.cs" />
@@ -9858,6 +9917,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeExtensionUploadInfoRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeExtensionUploadInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayFreeQuotasRequest.cs" />
@@ -9877,6 +9938,8 @@
     <Compile Include="Tcb\V20180608\Models\EnvInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\ExtensionFile.cs" />
+    <Compile Include="Tcb\V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FreequotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
@@ -10802,6 +10865,8 @@
     <Compile Include="Tke\V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\SyncPrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\SyncPrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
@@ -11182,6 +11247,7 @@
     <Compile Include="Tsf\V20180326\Models\GroupPod.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPodResult.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupUseStatisticsEntity.cs" />
+    <Compile Include="Tsf\V20180326\Models\HealthCheckConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckSettings.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageRepository.cs" />
@@ -11226,6 +11292,7 @@
     <Compile Include="Tsf\V20180326\Models\PkgBind.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgList.cs" />
+    <Compile Include="Tsf\V20180326\Models\Ports.cs" />
     <Compile Include="Tsf\V20180326\Models\PropertyField.cs" />
     <Compile Include="Tsf\V20180326\Models\ProtocolPort.cs" />
     <Compile Include="Tsf\V20180326\Models\QuantileEntity.cs" />
@@ -11256,6 +11323,7 @@
     <Compile Include="Tsf\V20180326\Models\SchedulingStrategy.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
+    <Compile Include="Tsf\V20180326\Models\ServiceConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />
     <Compile Include="Tsf\V20180326\Models\ShardArgument.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupRequest.cs" />

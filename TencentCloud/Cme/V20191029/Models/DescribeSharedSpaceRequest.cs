@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 被授权目标实体。
+        /// 被授权目标,，个人或团队。
         /// </summary>
         [JsonProperty("Authorizee")]
         public Entity Authorizee{ get; set; }

@@ -1133,6 +1133,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 描述扩展上传文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionUploadInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtensionUploadInfoResponse"/></returns>
+        public async Task<DescribeExtensionUploadInfoResponse> DescribeExtensionUploadInfo(DescribeExtensionUploadInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtensionUploadInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExtensionUploadInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述扩展上传文件信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExtensionUploadInfoRequest"/></param>
+        /// <returns><see cref="DescribeExtensionUploadInfoResponse"/></returns>
+        public DescribeExtensionUploadInfoResponse DescribeExtensionUploadInfoSync(DescribeExtensionUploadInfoRequest req)
+        {
+             JsonResponseModel<DescribeExtensionUploadInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExtensionUploadInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExtensionUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取增值包计费相关信息
         /// </summary>
         /// <param name="req"><see cref="DescribeExtraPkgBillingInfoRequest"/></param>

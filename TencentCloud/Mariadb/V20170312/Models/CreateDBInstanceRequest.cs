@@ -94,7 +94,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 数据库引擎版本，当前可选：10.0.10，10.1.9，5.7.17。如果不传的话，默认为 Mariadb 10.1.9。
+        /// 数据库引擎版本，当前可选：8.0.18，10.1.9，5.7.17。如果不传的话，默认为 Percona 5.7.17。
         /// </summary>
         [JsonProperty("DbVersionId")]
         public string DbVersionId{ get; set; }

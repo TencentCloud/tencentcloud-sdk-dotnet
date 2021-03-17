@@ -43,7 +43,10 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] AspectRatioSet{ get; set; }
 
         /// <summary>
-        /// 项目类别集合。
+        /// 项目类别，取值有：
+        /// <li>VIDEO_EDIT：视频编辑。</li>
+        /// <li>SWITCHER：导播台。</li>
+        /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }
@@ -74,6 +77,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +97,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

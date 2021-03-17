@@ -31,7 +31,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 服务端口
+        /// 环境变量值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

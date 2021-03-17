@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -295,6 +295,7 @@
     <Compile Include="V20180326\Models\GroupPod.cs" />
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
     <Compile Include="V20180326\Models\GroupUseStatisticsEntity.cs" />
+    <Compile Include="V20180326\Models\HealthCheckConfig.cs" />
     <Compile Include="V20180326\Models\HealthCheckSetting.cs" />
     <Compile Include="V20180326\Models\HealthCheckSettings.cs" />
     <Compile Include="V20180326\Models\ImageRepository.cs" />
@@ -339,6 +340,7 @@
     <Compile Include="V20180326\Models\PkgBind.cs" />
     <Compile Include="V20180326\Models\PkgInfo.cs" />
     <Compile Include="V20180326\Models\PkgList.cs" />
+    <Compile Include="V20180326\Models\Ports.cs" />
     <Compile Include="V20180326\Models\PropertyField.cs" />
     <Compile Include="V20180326\Models\ProtocolPort.cs" />
     <Compile Include="V20180326\Models\QuantileEntity.cs" />
@@ -369,6 +371,7 @@
     <Compile Include="V20180326\Models\SchedulingStrategy.cs" />
     <Compile Include="V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="V20180326\Models\ServerlessGroupPage.cs" />
+    <Compile Include="V20180326\Models\ServiceConfig.cs" />
     <Compile Include="V20180326\Models\ServiceSetting.cs" />
     <Compile Include="V20180326\Models\ShardArgument.cs" />
     <Compile Include="V20180326\Models\ShrinkGroupRequest.cs" />

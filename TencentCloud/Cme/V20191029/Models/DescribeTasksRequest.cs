@@ -64,6 +64,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

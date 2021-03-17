@@ -31,13 +31,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 素材分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的素材信息。
+        /// 媒体分类路径，例如填写"/a/b"，则代表平铺该分类路径下及其子分类路径下的媒体信息。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材路径的归属者。
+        /// 媒体分类的归属者。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

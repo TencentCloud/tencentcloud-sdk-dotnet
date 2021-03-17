@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public SearchScope[] SearchScopes{ get; set; }
 
         /// <summary>
-        /// 素材类型，取值：
+        /// 媒体类型，取值：
         /// <li>AUDIO：音频；</li>
         /// <li>VIDEO：视频 ；</li>
         /// <li>IMAGE：图片。</li>
@@ -46,7 +46,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] MaterialTypes{ get; set; }
 
         /// <summary>
-        /// 搜索文本，模糊匹配素材名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
+        /// 搜索文本，模糊匹配媒体名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：15个字符。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
@@ -58,13 +58,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Resolution{ get; set; }
 
         /// <summary>
-        /// 按素材时长检索，单位s。
+        /// 按媒体时长检索，单位s。
         /// </summary>
         [JsonProperty("DurationRange")]
         public IntegerRange DurationRange{ get; set; }
 
         /// <summary>
-        /// 按照素材创建时间检索。
+        /// 按照媒体创建时间检索。
         /// </summary>
         [JsonProperty("CreateTimeRange")]
         public TimeRange CreateTimeRange{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验媒体访问权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

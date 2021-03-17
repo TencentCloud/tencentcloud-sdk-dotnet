@@ -2573,6 +2573,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 仅能设置节点池中处于伸缩组的节点
+        /// </summary>
+        /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
+        /// <returns><see cref="SetNodePoolNodeProtectionResponse"/></returns>
+        public async Task<SetNodePoolNodeProtectionResponse> SetNodePoolNodeProtection(SetNodePoolNodeProtectionRequest req)
+        {
+             JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetNodePoolNodeProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNodePoolNodeProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 仅能设置节点池中处于伸缩组的节点
+        /// </summary>
+        /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
+        /// <returns><see cref="SetNodePoolNodeProtectionResponse"/></returns>
+        public SetNodePoolNodeProtectionResponse SetNodePoolNodeProtectionSync(SetNodePoolNodeProtectionRequest req)
+        {
+             JsonResponseModel<SetNodePoolNodeProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetNodePoolNodeProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNodePoolNodeProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 同步模板到实例或者集群
         /// </summary>
         /// <param name="req"><see cref="SyncPrometheusTemplateRequest"/></param>

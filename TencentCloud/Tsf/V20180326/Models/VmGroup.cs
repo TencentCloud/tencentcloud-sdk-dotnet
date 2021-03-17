@@ -241,6 +241,27 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("HealthCheckSettings")]
         public HealthCheckSettings HealthCheckSettings{ get; set; }
 
+        /// <summary>
+        /// 程序包类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
+        /// <summary>
+        /// 启动脚本 base64编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartScript")]
+        public string StartScript{ get; set; }
+
+        /// <summary>
+        /// 停止脚本 base64编码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StopScript")]
+        public string StopScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +299,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamObj(map, prefix + "HealthCheckSettings.", this.HealthCheckSettings);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
+            this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
         }
     }
 }

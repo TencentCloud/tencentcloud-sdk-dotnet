@@ -61,6 +61,19 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
 
+        /// <summary>
+        /// 最近登录IP
+        /// </summary>
+        [JsonProperty("LastLoginIp")]
+        public string LastLoginIp{ get; set; }
+
+        /// <summary>
+        /// 最近登录时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastLoginTime")]
+        public string LastLoginTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +86,8 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "LastLoginIp", this.LastLoginIp);
+            this.SetParamSimple(map, prefix + "LastLoginTime", this.LastLoginTime);
         }
     }
 }

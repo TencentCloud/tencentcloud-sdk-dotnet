@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeClusterNodesResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeJobFlowRequest.cs" />
@@ -65,6 +67,8 @@
     <Compile Include="V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="V20190103\Models\Execution.cs" />
     <Compile Include="V20190103\Models\HostVolumeContext.cs" />
+    <Compile Include="V20190103\Models\InquirePriceRenewEmrRequest.cs" />
+    <Compile Include="V20190103\Models\InquirePriceRenewEmrResponse.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceRequest.cs" />
     <Compile Include="V20190103\Models\InquiryPriceCreateInstanceResponse.cs" />
     <Compile Include="V20190103\Models\InquiryPriceRenewInstanceRequest.cs" />
@@ -90,6 +94,7 @@
     <Compile Include="V20190103\Models\PodVolume.cs" />
     <Compile Include="V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="V20190103\Models\PriceResource.cs" />
+    <Compile Include="V20190103\Models\RenewInstancesInfo.cs" />
     <Compile Include="V20190103\Models\Resource.cs" />
     <Compile Include="V20190103\Models\RunJobFlowRequest.cs" />
     <Compile Include="V20190103\Models\RunJobFlowResponse.cs" />

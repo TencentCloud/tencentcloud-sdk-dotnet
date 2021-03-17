@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 资源所属实体。
+        /// 资源归属者，个人或者团队。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -43,14 +43,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public Resource[] Resources{ get; set; }
 
         /// <summary>
-        /// 被授权目标实体。
+        /// 被授权目标，个人或者团队。
         /// </summary>
         [JsonProperty("Authorizees")]
         public Entity[] Authorizees{ get; set; }
 
         /// <summary>
         /// 详细授权值。 取值有：
-        /// <li>R：可读，可以浏览素材，但不能使用该素材（将其添加到 Project），或复制到自己的媒资库中</li>
+        /// <li>R：可读，可以浏览媒体，但不能使用该媒体文件（将其添加到 Project），或复制到自己的媒资库中</li>
         /// <li>X：可用，可以使用该素材（将其添加到 Project），但不能将其复制到自己的媒资库中，意味着被授权者无法将该资源进一步扩散给其他个人或团队。</li>
         /// <li>C：可复制，既可以使用该素材（将其添加到 Project），也可以将其复制到自己的媒资库中。</li>
         /// <li>W：可修改、删除媒资。</li>

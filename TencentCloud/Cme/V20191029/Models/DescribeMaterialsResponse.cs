@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 素材列表信息。
+        /// 媒体列表信息。
         /// </summary>
         [JsonProperty("MaterialInfoSet")]
         public MaterialInfo[] MaterialInfoSet{ get; set; }

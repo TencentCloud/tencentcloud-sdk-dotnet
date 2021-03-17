@@ -49,6 +49,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>militant：武装分子。</li>
         /// <li>explosion：爆炸火灾。</li>
         /// <li>terrorists：暴恐人物。</li>
+        /// <li>scenario：暴恐画面。</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

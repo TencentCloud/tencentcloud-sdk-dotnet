@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 符合条件的素材记录总数。
+        /// 符合条件的媒体记录总数。
         /// </summary>
         [JsonProperty("MaterialTotalCount")]
         public long? MaterialTotalCount{ get; set; }
 
         /// <summary>
-        /// 浏览分类路径下的素材列表信息。
+        /// 浏览分类路径下的媒体列表信息。
         /// </summary>
         [JsonProperty("MaterialInfoSet")]
         public MaterialInfo[] MaterialInfoSet{ get; set; }

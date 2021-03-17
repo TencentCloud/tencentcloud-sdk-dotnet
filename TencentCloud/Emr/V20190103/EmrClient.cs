@@ -133,6 +133,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 预付费集群隔离后续费资源查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceRenewNodesResponse"/></returns>
+        public async Task<DescribeInstanceRenewNodesResponse> DescribeInstanceRenewNodes(DescribeInstanceRenewNodesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceRenewNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceRenewNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceRenewNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预付费集群隔离后续费资源查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceRenewNodesResponse"/></returns>
+        public DescribeInstanceRenewNodesResponse DescribeInstanceRenewNodesSync(DescribeInstanceRenewNodesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceRenewNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceRenewNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceRenewNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询EMR实例
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "DescribeJobFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集群续费询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewEmrRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewEmrResponse"/></returns>
+        public async Task<InquirePriceRenewEmrResponse> InquirePriceRenewEmr(InquirePriceRenewEmrRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewEmrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewEmr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewEmrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 集群续费询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewEmrRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewEmrResponse"/></returns>
+        public InquirePriceRenewEmrResponse InquirePriceRenewEmrSync(InquirePriceRenewEmrRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewEmrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewEmr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewEmrResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

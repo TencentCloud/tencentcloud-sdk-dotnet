@@ -52,6 +52,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         public ImageLimitConfig ImageLimits{ get; set; }
 
         /// <summary>
+        /// 默认是否IP直通，用于模块创建，虚机购买等具有直通参数场景时的默认参数。
+        /// </summary>
+        [JsonProperty("DefaultIPDirect")]
+        public bool? DefaultIPDirect{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -67,6 +73,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArraySimple(map, prefix + "ImageWhiteSet.", this.ImageWhiteSet);
             this.SetParamArrayObj(map, prefix + "InstanceNetworkLimitConfigs.", this.InstanceNetworkLimitConfigs);
             this.SetParamObj(map, prefix + "ImageLimits.", this.ImageLimits);
+            this.SetParamSimple(map, prefix + "DefaultIPDirect", this.DefaultIPDirect);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

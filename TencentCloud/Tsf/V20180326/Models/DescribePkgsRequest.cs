@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RepositoryId")]
         public string RepositoryId{ get; set; }
 
+        /// <summary>
+        /// 程序包类型数组支持（fatjar jar war tar.gz zip）
+        /// </summary>
+        [JsonProperty("PackageTypeList")]
+        public string[] PackageTypeList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "RepositoryType", this.RepositoryType);
             this.SetParamSimple(map, prefix + "RepositoryId", this.RepositoryId);
+            this.SetParamArraySimple(map, prefix + "PackageTypeList.", this.PackageTypeList);
         }
     }
 }

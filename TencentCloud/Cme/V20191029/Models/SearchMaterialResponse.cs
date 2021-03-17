@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 素材信息，仅返回基础信息。
+        /// 媒体信息，仅返回基础信息。
         /// </summary>
         [JsonProperty("MaterialInfoSet")]
         public MaterialInfo[] MaterialInfoSet{ get; set; }

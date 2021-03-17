@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 素材 ID 列表，N 从 0 开始取值，最大 19。
+        /// 媒体 ID 列表，N 从 0 开始取值，最大 19。
         /// </summary>
         [JsonProperty("MaterialIds")]
         public string[] MaterialIds{ get; set; }
@@ -45,7 +45,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验媒体的访问权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

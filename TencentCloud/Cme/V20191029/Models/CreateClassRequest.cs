@@ -43,7 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验分类创建权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

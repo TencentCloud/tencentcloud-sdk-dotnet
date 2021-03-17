@@ -25,59 +25,77 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 素材 Id。
+        /// 媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 素材类型，取值为：音频（AUDIO）、视频（VIDEO）、图片（IMAGE）、链接（LINK）、字幕 （SUBTITLE）、转场（TRANSITION）、滤镜（FILTER）、文本文字（TEXT）、图文动效（TEXT_IMAGE）。
+        /// 媒体类型，取值为：
+        /// <li> AUDIO :音频;</li>
+        /// <li> VIDEO :视频;</li>
+        /// <li> IMAGE :图片;</li>
+        /// <li> LINK  :链接.</li>
+        /// <li> OTHER : 其他.</li>
         /// </summary>
         [JsonProperty("MaterialType")]
         public string MaterialType{ get; set; }
 
         /// <summary>
-        /// 素材归属实体。
+        /// 媒体归属实体。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 素材名称。
+        /// 媒体名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 素材文件的创建时间，使用 ISO 日期格式。
+        /// 媒体文件的创建时间，使用 ISO 日期格式。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 素材文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
+        /// 媒体文件的最近更新时间（如修改视频属性、发起视频处理等会触发更新媒体文件信息的操作），使用 ISO 日期格式。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 素材的分类目录路径。
+        /// 媒体的分类路径。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 素材绑定的标签信息列表 。
+        /// 预置标签列表。
+        /// </summary>
+        [JsonProperty("PresetTagSet")]
+        public PresetTagInfo[] PresetTagSet{ get; set; }
+
+        /// <summary>
+        /// 人工标签列表。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public string[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 媒体文件的预览图。
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
+        /// <summary>
+        /// 媒体绑定的标签信息列表 。
+        /// 该字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagInfoSet")]
         public MaterialTagInfo[] TagInfoSet{ get; set; }
-
-        /// <summary>
-        /// 素材媒体文件的预览图。
-        /// </summary>
-        [JsonProperty("PreviewUrl")]
-        public string PreviewUrl{ get; set; }
 
 
         /// <summary>
@@ -92,8 +110,10 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
-            this.SetParamArrayObj(map, prefix + "TagInfoSet.", this.TagInfoSet);
+            this.SetParamArrayObj(map, prefix + "PresetTagSet.", this.PresetTagSet);
+            this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
+            this.SetParamArrayObj(map, prefix + "TagInfoSet.", this.TagInfoSet);
         }
     }
 }

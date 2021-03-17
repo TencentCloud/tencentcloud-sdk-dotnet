@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }
 
+        /// <summary>
+        /// 服务配置信息列表
+        /// </summary>
+        [JsonProperty("ServiceConfigList")]
+        public ServiceConfig[] ServiceConfigList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationResourceType", this.ApplicationResourceType);
             this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
             this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
+            this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
         }
     }
 }

@@ -31,25 +31,25 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 素材 Id。
+        /// 媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 素材归属。
+        /// 媒体或分类路径归属。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 素材名称，不能超过30个字符。
+        /// 媒体名称，不能超过30个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 素材分类路径，例如填写"/a/b"，则代表该素材存储的路径为"/a/b"。
+        /// 媒体分类路径，例如填写"/a/b"，则代表该媒体存储的路径为"/a/b"。若修改分类路径，则 Owner 字段必填。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -231,6 +231,8 @@
     <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\Tag.cs" />

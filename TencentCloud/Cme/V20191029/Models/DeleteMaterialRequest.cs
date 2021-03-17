@@ -31,13 +31,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 素材 Id。
+        /// 媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。填写用户的 Id，用于标识调用者及校验媒体删除权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 开启公网访问状态，包括开启中，开启成功以及关闭和更新失败等
+        /// 开启公网访问状态，开启中（Opening）、已开启（Opened）、关闭（Closed）
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

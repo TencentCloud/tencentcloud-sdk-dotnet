@@ -173,6 +173,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 动态部署并发布Bcos合约
+        /// </summary>
+        /// <param name="req"><see cref="DeployDynamicBcosContractRequest"/></param>
+        /// <returns><see cref="DeployDynamicBcosContractResponse"/></returns>
+        public async Task<DeployDynamicBcosContractResponse> DeployDynamicBcosContract(DeployDynamicBcosContractRequest req)
+        {
+             JsonResponseModel<DeployDynamicBcosContractResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployDynamicBcosContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployDynamicBcosContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 动态部署并发布Bcos合约
+        /// </summary>
+        /// <param name="req"><see cref="DeployDynamicBcosContractRequest"/></param>
+        /// <returns><see cref="DeployDynamicBcosContractResponse"/></returns>
+        public DeployDynamicBcosContractResponse DeployDynamicBcosContractSync(DeployDynamicBcosContractRequest req)
+        {
+             JsonResponseModel<DeployDynamicBcosContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployDynamicBcosContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployDynamicBcosContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 动态部署合约
         /// </summary>
         /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
@@ -244,6 +284,166 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DownloadUserCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadUserCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用块高查询Bcos区块信息
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosBlockByNumberRequest"/></param>
+        /// <returns><see cref="GetBcosBlockByNumberResponse"/></returns>
+        public async Task<GetBcosBlockByNumberResponse> GetBcosBlockByNumber(GetBcosBlockByNumberRequest req)
+        {
+             JsonResponseModel<GetBcosBlockByNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBcosBlockByNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosBlockByNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用块高查询Bcos区块信息
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosBlockByNumberRequest"/></param>
+        /// <returns><see cref="GetBcosBlockByNumberResponse"/></returns>
+        public GetBcosBlockByNumberResponse GetBcosBlockByNumberSync(GetBcosBlockByNumberRequest req)
+        {
+             JsonResponseModel<GetBcosBlockByNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBcosBlockByNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosBlockByNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos分页查询当前群组下的区块列表
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosBlockListRequest"/></param>
+        /// <returns><see cref="GetBcosBlockListResponse"/></returns>
+        public async Task<GetBcosBlockListResponse> GetBcosBlockList(GetBcosBlockListRequest req)
+        {
+             JsonResponseModel<GetBcosBlockListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBcosBlockList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosBlockListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos分页查询当前群组下的区块列表
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosBlockListRequest"/></param>
+        /// <returns><see cref="GetBcosBlockListResponse"/></returns>
+        public GetBcosBlockListResponse GetBcosBlockListSync(GetBcosBlockListRequest req)
+        {
+             JsonResponseModel<GetBcosBlockListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBcosBlockList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosBlockListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos根据交易哈希查看交易详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosTransByHashRequest"/></param>
+        /// <returns><see cref="GetBcosTransByHashResponse"/></returns>
+        public async Task<GetBcosTransByHashResponse> GetBcosTransByHash(GetBcosTransByHashRequest req)
+        {
+             JsonResponseModel<GetBcosTransByHashResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBcosTransByHash");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosTransByHashResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos根据交易哈希查看交易详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosTransByHashRequest"/></param>
+        /// <returns><see cref="GetBcosTransByHashResponse"/></returns>
+        public GetBcosTransByHashResponse GetBcosTransByHashSync(GetBcosTransByHashRequest req)
+        {
+             JsonResponseModel<GetBcosTransByHashResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBcosTransByHash");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosTransByHashResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos分页查询当前群组的交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosTransListRequest"/></param>
+        /// <returns><see cref="GetBcosTransListResponse"/></returns>
+        public async Task<GetBcosTransListResponse> GetBcosTransList(GetBcosTransListRequest req)
+        {
+             JsonResponseModel<GetBcosTransListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBcosTransList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosTransListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Bcos分页查询当前群组的交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetBcosTransListRequest"/></param>
+        /// <returns><see cref="GetBcosTransListResponse"/></returns>
+        public GetBcosTransListResponse GetBcosTransListSync(GetBcosTransListRequest req)
+        {
+             JsonResponseModel<GetBcosTransListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBcosTransList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBcosTransListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -924,6 +1124,46 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "Invoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行Bcos交易，支持动态部署的合约
+        /// </summary>
+        /// <param name="req"><see cref="InvokeBcosTransRequest"/></param>
+        /// <returns><see cref="InvokeBcosTransResponse"/></returns>
+        public async Task<InvokeBcosTransResponse> InvokeBcosTrans(InvokeBcosTransRequest req)
+        {
+             JsonResponseModel<InvokeBcosTransResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvokeBcosTrans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeBcosTransResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 执行Bcos交易，支持动态部署的合约
+        /// </summary>
+        /// <param name="req"><see cref="InvokeBcosTransRequest"/></param>
+        /// <returns><see cref="InvokeBcosTransResponse"/></returns>
+        public InvokeBcosTransResponse InvokeBcosTransSync(InvokeBcosTransRequest req)
+        {
+             JsonResponseModel<InvokeBcosTransResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InvokeBcosTrans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeBcosTransResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

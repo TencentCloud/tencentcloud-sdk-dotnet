@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 团队 ID 列表，限30个。
+        /// 团队 ID 列表，限30个。若不填，则默认获取平台下所有团队。
         /// </summary>
         [JsonProperty("TeamIds")]
         public string[] TeamIds{ get; set; }

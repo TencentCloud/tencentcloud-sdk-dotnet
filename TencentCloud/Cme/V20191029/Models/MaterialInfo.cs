@@ -25,38 +25,45 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 素材基本信息。
+        /// 媒体基本信息。
         /// </summary>
         [JsonProperty("BasicInfo")]
         public MaterialBasicInfo BasicInfo{ get; set; }
 
         /// <summary>
-        /// 视频素材信息。
+        /// 视频媒体信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoMaterial")]
         public VideoMaterial VideoMaterial{ get; set; }
 
         /// <summary>
-        /// 音频素材信息。
+        /// 音频媒体信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioMaterial")]
         public AudioMaterial AudioMaterial{ get; set; }
 
         /// <summary>
-        /// 图片素材信息。
+        /// 图片媒体信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ImageMaterial")]
         public ImageMaterial ImageMaterial{ get; set; }
 
         /// <summary>
-        /// 链接素材信息。
+        /// 链接媒体信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LinkMaterial")]
         public LinkMaterial LinkMaterial{ get; set; }
+
+        /// <summary>
+        /// 其他类型媒体信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherMaterial")]
+        public OtherMaterial OtherMaterial{ get; set; }
 
 
         /// <summary>
@@ -69,6 +76,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "AudioMaterial.", this.AudioMaterial);
             this.SetParamObj(map, prefix + "ImageMaterial.", this.ImageMaterial);
             this.SetParamObj(map, prefix + "LinkMaterial.", this.LinkMaterial);
+            this.SetParamObj(map, prefix + "OtherMaterial.", this.OtherMaterial);
         }
     }
 }

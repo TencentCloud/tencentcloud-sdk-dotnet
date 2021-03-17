@@ -96,6 +96,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployWaitTime")]
         public ulong? DeployWaitTime{ get; set; }
 
+        /// <summary>
+        /// 启动脚本 base64编码
+        /// </summary>
+        [JsonProperty("StartScript")]
+        public string StartScript{ get; set; }
+
+        /// <summary>
+        /// 停止脚本 base64编码
+        /// </summary>
+        [JsonProperty("StopScript")]
+        public string StopScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "DeployBatch.", this.DeployBatch);
             this.SetParamSimple(map, prefix + "DeployExeMode", this.DeployExeMode);
             this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
+            this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
+            this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
         }
     }
 }

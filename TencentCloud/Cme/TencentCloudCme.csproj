@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.240</VersionPrefix>
+    <VersionPrefix>3.0.241</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -146,10 +146,15 @@
     <Compile Include="V20191029\Models\ModifyTeamResponse.cs" />
     <Compile Include="V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="V20191029\Models\MoveClassResponse.cs" />
+    <Compile Include="V20191029\Models\MoveResourceRequest.cs" />
+    <Compile Include="V20191029\Models\MoveResourceResponse.cs" />
+    <Compile Include="V20191029\Models\OtherMaterial.cs" />
     <Compile Include="V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="V20191029\Models\PlatformInfo.cs" />
+    <Compile Include="V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="V20191029\Models\ProjectInfo.cs" />
     <Compile Include="V20191029\Models\Resource.cs" />
+    <Compile Include="V20191029\Models\ResourceInfo.cs" />
     <Compile Include="V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
     <Compile Include="V20191029\Models\RevokeResourceAuthorizationResponse.cs" />
     <Compile Include="V20191029\Models\SearchMaterialRequest.cs" />
