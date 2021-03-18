@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID
+        /// 负载均衡实例ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器ID数组
+        /// 负载均衡监听器ID数组。
         /// </summary>
         [JsonProperty("SourceListenerIds")]
         public string[] SourceListenerIds{ get; set; }
 
         /// <summary>
-        /// 负载均衡转发规则的ID数组
+        /// 负载均衡转发规则的ID数组。
         /// </summary>
         [JsonProperty("SourceLocationIds")]
         public string[] SourceLocationIds{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 目标组的ID数组
+        /// 目标组的ID数组。
         /// </summary>
         [JsonProperty("TargetGroupIds")]
         public string[] TargetGroupIds{ get; set; }

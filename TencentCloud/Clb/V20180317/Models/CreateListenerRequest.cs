@@ -25,31 +25,31 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例 ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 要将监听器创建到哪些端口，每个端口对应一个新的监听器
+        /// 要将监听器创建到哪些端口，每个端口对应一个新的监听器。
         /// </summary>
         [JsonProperty("Ports")]
         public long?[] Ports{ get; set; }
 
         /// <summary>
-        /// 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）
+        /// 监听器协议： TCP | UDP | HTTP | HTTPS | TCP_SSL（TCP_SSL 正在内测中，如需使用请通过工单申请）。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数
+        /// 要创建的监听器名称列表，名称与Ports数组按序一一对应，如不需立即命名，则无需提供此参数。
         /// </summary>
         [JsonProperty("ListenerNames")]
         public string[] ListenerNames{ get; set; }
 
         /// <summary>
-        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string SessionType{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭
+        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器，0:关闭；1:开启， 默认关闭。
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }

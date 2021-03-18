@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 目标组ID
+        /// 目标组ID。
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 待解绑的服务器信息
+        /// 待解绑的服务器信息。
         /// </summary>
         [JsonProperty("TargetGroupInstances")]
         public TargetGroupInstance[] TargetGroupInstances{ get; set; }

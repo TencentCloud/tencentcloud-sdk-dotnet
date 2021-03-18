@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Status")]
         public string[] Status{ get; set; }
 
+        /// <summary>
+        /// IdList
+        /// </summary>
+        [JsonProperty("MicroserviceIdList")]
+        public string[] MicroserviceIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "MicroserviceIdList.", this.MicroserviceIdList);
         }
     }
 }

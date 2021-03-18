@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 创建的转发规则的唯一标识数组
+        /// 创建的转发规则的唯一标识数组。
         /// </summary>
         [JsonProperty("LocationIds")]
         public string[] LocationIds{ get; set; }

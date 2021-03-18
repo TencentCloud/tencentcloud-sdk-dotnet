@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 日志主题的 ID
+        /// 日志主题的 ID。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }

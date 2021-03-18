@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例 ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器 ID
+        /// 负载均衡监听器 ID。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 转发规则的新的转发路径，如不需修改Url，则不需提供此参数
+        /// 转发规则的新的转发路径，如不需修改Url，则不需提供此参数。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 健康检查信息
+        /// 健康检查信息。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
@@ -62,25 +62,25 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 会话保持时间
+        /// 会话保持时间。
         /// </summary>
         [JsonProperty("SessionExpireTime")]
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC
+        /// 负载均衡实例与后端服务之间的转发协议，默认HTTP，可取值：HTTP、HTTPS、TRPC。
         /// </summary>
         [JsonProperty("ForwardType")]
         public string ForwardType{ get; set; }
 
         /// <summary>
-        /// TRPC被调服务器路由，ForwardType为TRPC时必填
+        /// TRPC被调服务器路由，ForwardType为TRPC时必填。
         /// </summary>
         [JsonProperty("TrpcCallee")]
         public string TrpcCallee{ get; set; }
 
         /// <summary>
-        /// TRPC调用服务接口，ForwardType为TRPC时必填
+        /// TRPC调用服务接口，ForwardType为TRPC时必填。
         /// </summary>
         [JsonProperty("TrpcFunc")]
         public string TrpcFunc{ get; set; }

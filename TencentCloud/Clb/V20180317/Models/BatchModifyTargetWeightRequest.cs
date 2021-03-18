@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例 ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 要批量修改权重的列表
+        /// 要批量修改权重的列表。
         /// </summary>
         [JsonProperty("ModifyList")]
         public RsWeightRule[] ModifyList{ get; set; }

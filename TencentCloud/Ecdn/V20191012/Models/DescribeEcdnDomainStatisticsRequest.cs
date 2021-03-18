@@ -39,16 +39,10 @@ namespace TencentCloud.Ecdn.V20191012.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计指标名称。flux：流量，单位为 byte
+        /// 统计指标名称:
+        /// flux：流量，单位为 byte
         /// bandwidth：带宽，单位为 bps
         /// request：请求数，单位为 次
-        /// delay：响应时间，单位为ms
-        /// static_request ： 静态请求数，单位为 次
-        /// static_flux：静态流量，单位为 byte
-        /// static_bandwidth ： 静态带宽，单位为 bps
-        /// dynamic_request：动态请求数，单位为 次
-        /// dynamic_flux：动态流量，单位为 byte
-        /// dynamic_bandwidth：动态带宽，单位为 bps
         /// </summary>
         [JsonProperty("Metrics")]
         public string[] Metrics{ get; set; }
@@ -78,6 +72,16 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 统计区域:
+        /// mainland: 境内
+        /// oversea: 境外
+        /// global: 全部
+        /// 默认 global
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +95,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamArraySimple(map, prefix + "Projects.", this.Projects);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -25,25 +25,25 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例ID
+        /// 负载均衡实例 ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 源监听器ID
+        /// 源监听器 ID。
         /// </summary>
         [JsonProperty("SourceListenerId")]
         public string SourceListenerId{ get; set; }
 
         /// <summary>
-        /// 目标监听器ID
+        /// 目标监听器 ID。
         /// </summary>
         [JsonProperty("TargetListenerId")]
         public string TargetListenerId{ get; set; }
 
         /// <summary>
-        /// 转发规则之间的重定向关系
+        /// 转发规则之间的重定向关系。
         /// </summary>
         [JsonProperty("RewriteInfos")]
         public RewriteLocationMap[] RewriteInfos{ get; set; }

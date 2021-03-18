@@ -37,19 +37,19 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// HTTPS:443监听器下需要重定向的域名，若不填，对HTTPS:443监听器下的所有域名都设置重定向。
+        /// HTTPS:443监听器下需要重定向的域名，若不填，则对HTTPS:443监听器下的所有域名都设置重定向。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 重定向状态码，可取值301,302,307
+        /// 重定向状态码，可取值301,302,307。
         /// </summary>
         [JsonProperty("RewriteCodes")]
         public long?[] RewriteCodes{ get; set; }
 
         /// <summary>
-        /// 重定向是否携带匹配的url
+        /// 重定向是否携带匹配的URL。
         /// </summary>
         [JsonProperty("TakeUrls")]
         public bool?[] TakeUrls{ get; set; }

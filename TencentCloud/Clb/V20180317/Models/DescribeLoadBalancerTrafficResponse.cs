@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 按出带宽从高到低排序后的负载均衡信息
+        /// 按出带宽从高到低排序后的负载均衡信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancerTraffic")]

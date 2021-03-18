@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器 ID
+        /// 负载均衡监听器ID。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 新的监听器名称
+        /// 新的监听器名称。
         /// </summary>
         [JsonProperty("ListenerName")]
         public string ListenerName{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SessionExpireTime{ get; set; }
 
         /// <summary>
-        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器
+        /// 健康检查相关参数，此参数仅适用于TCP/UDP/TCP_SSL监听器。
         /// </summary>
         [JsonProperty("HealthCheck")]
         public HealthCheck HealthCheck{ get; set; }
 
         /// <summary>
-        /// 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器
+        /// 证书相关信息，此参数仅适用于HTTPS/TCP_SSL监听器。
         /// </summary>
         [JsonProperty("Certificate")]
         public CertificateInput Certificate{ get; set; }
@@ -68,13 +68,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Scheduler{ get; set; }
 
         /// <summary>
-        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI
+        /// 是否开启SNI特性，此参数仅适用于HTTPS监听器。注意：未开启SNI的监听器可以开启SNI；已开启SNI的监听器不能关闭SNI。
         /// </summary>
         [JsonProperty("SniSwitch")]
         public long? SniSwitch{ get; set; }
 
         /// <summary>
-        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器
+        /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }

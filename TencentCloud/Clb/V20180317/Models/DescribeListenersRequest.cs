@@ -25,25 +25,25 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 要查询的负载均衡监听器 ID数组
+        /// 要查询的负载均衡监听器ID数组。
         /// </summary>
         [JsonProperty("ListenerIds")]
         public string[] ListenerIds{ get; set; }
 
         /// <summary>
-        /// 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL
+        /// 要查询的监听器协议类型，取值 TCP | UDP | HTTP | HTTPS | TCP_SSL。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 要查询的监听器的端口
+        /// 要查询的监听器的端口。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }

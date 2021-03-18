@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 解绑失败的监听器ID
+        /// 解绑失败的监听器ID。
         /// </summary>
         [JsonProperty("FailListenerIdSet")]
         public string[] FailListenerIdSet{ get; set; }

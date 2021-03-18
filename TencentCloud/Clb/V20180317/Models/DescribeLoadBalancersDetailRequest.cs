@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 返回负载均衡列表起始偏移量，默认0
+        /// 返回负载均衡列表起始偏移量，默认0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

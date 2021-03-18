@@ -25,31 +25,31 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器 ID
+        /// 负载均衡监听器ID。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的ID组成的数组
+        /// 要删除的转发规则的ID组成的数组。
         /// </summary>
         [JsonProperty("LocationIds")]
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效
+        /// 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效
+        /// 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

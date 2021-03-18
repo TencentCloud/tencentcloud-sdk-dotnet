@@ -25,37 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 负载均衡监听器 ID
+        /// 负载均衡监听器ID。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 待绑定的后端服务列表，数组长度最大支持20
+        /// 待绑定的后端服务列表，数组长度最大支持20。
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一
+        /// 转发规则的ID，当绑定后端服务到七层转发规则时，必须提供此参数或Domain+Url两者之一。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 目标转发规则的域名，提供LocationId参数时本参数不生效
+        /// 目标转发规则的域名，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 目标转发规则的URL，提供LocationId参数时本参数不生效
+        /// 目标转发规则的URL，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

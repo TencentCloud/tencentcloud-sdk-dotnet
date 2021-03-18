@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 集群中资源列表
+        /// 集群中资源列表。
         /// </summary>
         [JsonProperty("ClusterResourceSet")]
         public ClusterResource[] ClusterResourceSet{ get; set; }
 
         /// <summary>
-        /// 集群中资源总数
+        /// 集群中资源总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

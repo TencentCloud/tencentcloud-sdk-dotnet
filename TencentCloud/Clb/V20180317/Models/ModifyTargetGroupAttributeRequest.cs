@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 目标组的ID
+        /// 目标组的ID。
         /// </summary>
         [JsonProperty("TargetGroupId")]
         public string TargetGroupId{ get; set; }
 
         /// <summary>
-        /// 目标组的新名称
+        /// 目标组的新名称。
         /// </summary>
         [JsonProperty("TargetGroupName")]
         public string TargetGroupName{ get; set; }
 
         /// <summary>
-        /// 目标组的新默认端口
+        /// 目标组的新默认端口。
         /// </summary>
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }

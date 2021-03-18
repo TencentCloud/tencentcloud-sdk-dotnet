@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 过滤字段
+        /// </summary>
+        [JsonProperty("PodNameList")]
+        public string[] PodNameList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "PodNameList.", this.PodNameList);
         }
     }
 }

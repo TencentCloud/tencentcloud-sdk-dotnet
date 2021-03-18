@@ -93,6 +93,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos根据块高查询区块信息
         /// </summary>
         /// <param name="req"><see cref="BlockByNumberHandlerRequest"/></param>
@@ -113,6 +115,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos根据块高查询区块信息
         /// </summary>
         /// <param name="req"><see cref="BlockByNumberHandlerRequest"/></param>
@@ -213,6 +217,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// 动态部署合约
         /// </summary>
         /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
@@ -233,6 +239,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// 动态部署合约
         /// </summary>
         /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
@@ -493,6 +501,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos分页查询当前群组下的区块列表
         /// </summary>
         /// <param name="req"><see cref="GetBlockListHandlerRequest"/></param>
@@ -513,6 +523,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos分页查询当前群组下的区块列表
         /// </summary>
         /// <param name="req"><see cref="GetBlockListHandlerRequest"/></param>
@@ -933,6 +945,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos根据交易哈希查看交易详细信息
         /// </summary>
         /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
@@ -953,6 +967,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos根据交易哈希查看交易详细信息
         /// </summary>
         /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
@@ -973,6 +989,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos分页查询当前群组的交易信息列表
         /// </summary>
         /// <param name="req"><see cref="GetTransListHandlerRequest"/></param>
@@ -993,6 +1011,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos分页查询当前群组的交易信息列表
         /// </summary>
         /// <param name="req"><see cref="GetTransListHandlerRequest"/></param>
@@ -1213,6 +1233,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos发送交易
         /// </summary>
         /// <param name="req"><see cref="SendTransactionHandlerRequest"/></param>
@@ -1233,6 +1255,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// Bcos发送交易
         /// </summary>
         /// <param name="req"><see cref="SendTransactionHandlerRequest"/></param>
@@ -1293,6 +1317,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// 根据动态部署的合约发送交易
         /// </summary>
         /// <param name="req"><see cref="TransByDynamicContractHandlerRequest"/></param>
@@ -1313,6 +1339,8 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 版本升级
+        /// 
         /// 根据动态部署的合约发送交易
         /// </summary>
         /// <param name="req"><see cref="TransByDynamicContractHandlerRequest"/></param>

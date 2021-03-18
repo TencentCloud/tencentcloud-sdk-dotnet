@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 监听器列表
+        /// 监听器列表。
         /// </summary>
         [JsonProperty("Listeners")]
         public Listener[] Listeners{ get; set; }
 
         /// <summary>
-        /// 总的监听器个数
+        /// 总的监听器个数（根据端口、协议、监听器ID过滤后）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 返回集群中资源列表数目，默认20，最大值100
+        /// 返回集群中资源列表数目，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 返回集群中资源列表起始偏移量，默认0
+        /// 返回集群中资源列表起始偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

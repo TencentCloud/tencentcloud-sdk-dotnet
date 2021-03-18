@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 重定向转发规则构成的数组，若无重定向规则，则返回空数组
+        /// 重定向转发规则构成的数组，若无重定向规则，则返回空数组。
         /// </summary>
         [JsonProperty("RewriteSet")]
         public RuleOutput[] RewriteSet{ get; set; }

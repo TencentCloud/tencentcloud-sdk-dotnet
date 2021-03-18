@@ -25,37 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID，格式如 lb-12345678
+        /// 负载均衡实例 ID，格式如 lb-12345678。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 监听器 ID，格式如 lbl-12345678
+        /// 监听器 ID，格式如 lbl-12345678。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要解绑的后端服务列表，数组长度最大支持20
+        /// 要解绑的后端服务列表，数组长度最大支持20。
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+Url两者之一
+        /// 转发规则的ID，格式如 loc-12345678，当从七层转发规则解绑机器时，必须提供此参数或Domain+URL两者之一。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 目标规则的域名，提供LocationId参数时本参数不生效
+        /// 目标规则的域名，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 目标规则的URL，提供LocationId参数时本参数不生效
+        /// 目标规则的URL，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

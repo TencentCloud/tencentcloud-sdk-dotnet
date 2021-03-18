@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 请求ID，即接口返回的 RequestId 参数
+        /// 请求ID，即接口返回的 RequestId 参数。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

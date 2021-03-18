@@ -1,0 +1,130 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{18E4740C-9C8B-37F5-AF27-B5C1E6829210}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.242</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Iotvideoindustry</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201201\IotvideoindustryClient.cs" />
+    <Compile Include="V20201201\Models\AllDeviceInfo.cs" />
+    <Compile Include="V20201201\Models\BindGroupDevicesRequest.cs" />
+    <Compile Include="V20201201\Models\BindGroupDevicesResponse.cs" />
+    <Compile Include="V20201201\Models\ControlDevicePTZRequest.cs" />
+    <Compile Include="V20201201\Models\ControlDevicePTZResponse.cs" />
+    <Compile Include="V20201201\Models\CreateDeviceGroupRequest.cs" />
+    <Compile Include="V20201201\Models\CreateDeviceGroupResponse.cs" />
+    <Compile Include="V20201201\Models\CreateDeviceRequest.cs" />
+    <Compile Include="V20201201\Models\CreateDeviceResponse.cs" />
+    <Compile Include="V20201201\Models\CreateRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\CreateRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\CreateTimeTemplateRequest.cs" />
+    <Compile Include="V20201201\Models\CreateTimeTemplateResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteDeviceGroupRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteDeviceGroupResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteTimeTemplateRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteTimeTemplateResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeAllDeviceListRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeAllDeviceListResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeDeviceGroupRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeDeviceGroupResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeDevicePassWordRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeDevicePassWordResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeDeviceStreamsData.cs" />
+    <Compile Include="V20201201\Models\DescribeDeviceStreamsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeDeviceStreamsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupByIdRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupByIdResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupByPathRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupByPathResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupDevicesRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupDevicesResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeSIPServerRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeSIPServerResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeStatisticDetailsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeStatisticDetailsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeStatisticSummaryRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeStatisticSummaryResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeSubGroupsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeSubGroupsResponse.cs" />
+    <Compile Include="V20201201\Models\DevGroupInfo.cs" />
+    <Compile Include="V20201201\Models\DeviceItem.cs" />
+    <Compile Include="V20201201\Models\GetRecordDatesByDevRequest.cs" />
+    <Compile Include="V20201201\Models\GetRecordDatesByDevResponse.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlanByDevRequest.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlanByDevResponse.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlanByIdRequest.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlanByIdResponse.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlansRequest.cs" />
+    <Compile Include="V20201201\Models\GetRecordPlansResponse.cs" />
+    <Compile Include="V20201201\Models\GetTimeTemplateByIdRequest.cs" />
+    <Compile Include="V20201201\Models\GetTimeTemplateByIdResponse.cs" />
+    <Compile Include="V20201201\Models\GetTimeTemplatesRequest.cs" />
+    <Compile Include="V20201201\Models\GetTimeTemplatesResponse.cs" />
+    <Compile Include="V20201201\Models\GetVideoListByConRequest.cs" />
+    <Compile Include="V20201201\Models\GetVideoListByConResponse.cs" />
+    <Compile Include="V20201201\Models\GroupDeviceItem.cs" />
+    <Compile Include="V20201201\Models\GroupInfo.cs" />
+    <Compile Include="V20201201\Models\GroupItem.cs" />
+    <Compile Include="V20201201\Models\ModifyDeviceDataRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyDeviceDataResponse.cs" />
+    <Compile Include="V20201201\Models\RecordPlanItem.cs" />
+    <Compile Include="V20201201\Models\RecordTaskItem.cs" />
+    <Compile Include="V20201201\Models\ServerConfiguration.cs" />
+    <Compile Include="V20201201\Models\StatisticItem.cs" />
+    <Compile Include="V20201201\Models\TimeTemplateItem.cs" />
+    <Compile Include="V20201201\Models\TimeTemplateSpec.cs" />
+    <Compile Include="V20201201\Models\UpdateDeviceGroupRequest.cs" />
+    <Compile Include="V20201201\Models\UpdateDeviceGroupResponse.cs" />
+    <Compile Include="V20201201\Models\UpdateDevicePassWordRequest.cs" />
+    <Compile Include="V20201201\Models\UpdateDevicePassWordResponse.cs" />
+    <Compile Include="V20201201\Models\UpdateRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\UpdateRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\UpdateTimeTemplateRequest.cs" />
+    <Compile Include="V20201201\Models\UpdateTimeTemplateResponse.cs" />
+  </ItemGroup>
+</Project>

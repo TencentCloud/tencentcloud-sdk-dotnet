@@ -25,25 +25,25 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 目标组ID，与Filters互斥
+        /// 目标组ID，与Filters互斥。
         /// </summary>
         [JsonProperty("TargetGroupIds")]
         public string[] TargetGroupIds{ get; set; }
 
         /// <summary>
-        /// 显示条数限制，默认为20
+        /// 显示条数限制，默认为20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 显示的偏移起始量
+        /// 显示的偏移起始量。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName
+        /// 过滤条件数组，与TargetGroupIds互斥，支持TargetGroupVpcId和TargetGroupName。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

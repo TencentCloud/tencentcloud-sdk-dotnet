@@ -25,13 +25,13 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡ID
+        /// 负载均衡ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 绑定目标
+        /// 绑定目标。
         /// </summary>
         [JsonProperty("Targets")]
         public BatchTarget[] Targets{ get; set; }

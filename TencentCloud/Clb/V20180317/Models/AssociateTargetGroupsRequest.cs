@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 绑定的关系数组
+        /// 绑定的关系数组。
         /// </summary>
         [JsonProperty("Associations")]
         public TargetGroupAssociation[] Associations{ get; set; }

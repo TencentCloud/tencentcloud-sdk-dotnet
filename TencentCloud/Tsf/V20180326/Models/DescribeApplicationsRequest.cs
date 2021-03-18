@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApplicationResourceTypeList")]
         public string[] ApplicationResourceTypeList{ get; set; }
 
+        /// <summary>
+        /// IdList
+        /// </summary>
+        [JsonProperty("ApplicationIdList")]
+        public string[] ApplicationIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationType", this.ApplicationType);
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
+            this.SetParamArraySimple(map, prefix + "ApplicationIdList.", this.ApplicationIdList);
         }
     }
 }
