@@ -37,6 +37,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public FirewallRuleInfo[] FirewallRuleSet{ get; set; }
 
         /// <summary>
+        /// 防火墙版本号。
+        /// </summary>
+        [JsonProperty("FirewallVersion")]
+        public ulong? FirewallVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "FirewallRuleSet.", this.FirewallRuleSet);
+            this.SetParamSimple(map, prefix + "FirewallVersion", this.FirewallVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

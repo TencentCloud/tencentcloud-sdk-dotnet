@@ -25,11 +25,11 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 国内CDN节点的日志下载列表。
+        /// 日志下载链接总数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DomesticCdnLogs")]
-        public CdnLogInfo[] DomesticCdnLogs{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
         /// 海外CDN节点的日志下载列表。如果域名没有开启海外加速，忽略该参数。
@@ -37,6 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("OverseaCdnLogs")]
         public CdnLogInfo[] OverseaCdnLogs{ get; set; }
+
+        /// <summary>
+        /// 国内CDN节点的日志下载列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomesticCdnLogs")]
+        public CdnLogInfo[] DomesticCdnLogs{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,8 +57,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "OverseaCdnLogs.", this.OverseaCdnLogs);
+            this.SetParamArrayObj(map, prefix + "DomesticCdnLogs.", this.DomesticCdnLogs);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

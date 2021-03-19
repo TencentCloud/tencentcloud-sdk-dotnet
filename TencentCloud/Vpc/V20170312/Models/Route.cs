@@ -105,6 +105,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PublishedToVbc")]
         public bool? PublishedToVbc{ get; set; }
 
+        /// <summary>
+        /// 路由策略创建时间
+        /// </summary>
+        [JsonProperty("CreatedTime")]
+        public string CreatedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "DestinationIpv6CidrBlock", this.DestinationIpv6CidrBlock);
             this.SetParamSimple(map, prefix + "RouteItemId", this.RouteItemId);
             this.SetParamSimple(map, prefix + "PublishedToVbc", this.PublishedToVbc);
+            this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
         }
     }
 }

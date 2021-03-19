@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.242</VersionPrefix>
+    <VersionPrefix>3.0.243</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -142,6 +142,8 @@
     <Compile Include="V20180228\Models\DescribeMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachineListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineOsListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMachineOsListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachinesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMachinesResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMaliciousRequestsRequest.cs" />
@@ -270,6 +272,7 @@
     <Compile Include="V20180228\Models\OpenProVersionPrepaidResponse.cs" />
     <Compile Include="V20180228\Models\OpenProVersionRequest.cs" />
     <Compile Include="V20180228\Models\OpenProVersionResponse.cs" />
+    <Compile Include="V20180228\Models\OsName.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
     <Compile Include="V20180228\Models\PrivilegeRule.cs" />

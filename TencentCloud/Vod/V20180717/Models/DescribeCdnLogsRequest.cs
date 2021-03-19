@@ -43,6 +43,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// 分页拉取的最大返回结果数。默认值：100；最大值：1000。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 分页拉取的起始偏移量。默认值：0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

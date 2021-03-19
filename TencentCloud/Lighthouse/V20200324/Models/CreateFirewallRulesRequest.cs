@@ -36,6 +36,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("FirewallRules")]
         public FirewallRule[] FirewallRules{ get; set; }
 
+        /// <summary>
+        /// 防火墙当前版本。用户每次更新防火墙规则时版本会自动加1，防止规则已过期，不填不考虑冲突。
+        /// </summary>
+        [JsonProperty("FirewallVersion")]
+        public ulong? FirewallVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "FirewallRules.", this.FirewallRules);
+            this.SetParamSimple(map, prefix + "FirewallVersion", this.FirewallVersion);
         }
     }
 }

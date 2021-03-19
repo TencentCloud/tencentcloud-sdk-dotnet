@@ -1773,6 +1773,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询可筛选操作系统列表.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineOsListRequest"/></param>
+        /// <returns><see cref="DescribeMachineOsListResponse"/></returns>
+        public async Task<DescribeMachineOsListResponse> DescribeMachineOsList(DescribeMachineOsListRequest req)
+        {
+             JsonResponseModel<DescribeMachineOsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachineOsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineOsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可筛选操作系统列表.
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineOsListRequest"/></param>
+        /// <returns><see cref="DescribeMachineOsListResponse"/></returns>
+        public DescribeMachineOsListResponse DescribeMachineOsListSync(DescribeMachineOsListRequest req)
+        {
+             JsonResponseModel<DescribeMachineOsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachineOsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineOsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeMachines) 用于获取区域主机列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>

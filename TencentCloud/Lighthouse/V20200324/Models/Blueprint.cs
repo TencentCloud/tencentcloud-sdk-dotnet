@@ -110,6 +110,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("SupportAutomationTools")]
         public bool? SupportAutomationTools{ get; set; }
 
+        /// <summary>
+        /// 镜像所需内存大小, 单位: GB
+        /// </summary>
+        [JsonProperty("RequiredMemorySize")]
+        public long? RequiredMemorySize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
             this.SetParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
+            this.SetParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string UniqSubnetId{ get; set; }
 
         /// <summary>
-        /// vpc描述符，例如：vpc-xxx,如果传了该字段则UniqSubnetId必传
+        /// vpc描述符，例如：vpc-a23yt67j,如果传了该字段则UniqSubnetId必传
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }

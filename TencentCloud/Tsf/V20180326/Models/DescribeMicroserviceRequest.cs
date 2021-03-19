@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 可选，根据部署组ID进行过滤
+        /// </summary>
+        [JsonProperty("GroupIds")]
+        public string[] GroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MicroserviceId", this.MicroserviceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
         }
     }
 }

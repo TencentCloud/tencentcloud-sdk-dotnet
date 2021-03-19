@@ -773,6 +773,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询固件升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTaskRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTaskResponse"/></returns>
+        public async Task<DescribeFirmwareTaskResponse> DescribeFirmwareTask(DescribeFirmwareTaskRequest req)
+        {
+             JsonResponseModel<DescribeFirmwareTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirmwareTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirmwareTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询固件升级任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirmwareTaskRequest"/></param>
+        /// <returns><see cref="DescribeFirmwareTaskResponse"/></returns>
+        public DescribeFirmwareTaskResponse DescribeFirmwareTaskSync(DescribeFirmwareTaskRequest req)
+        {
+             JsonResponseModel<DescribeFirmwareTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirmwareTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirmwareTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供查询LoRa自定义频点详情的能力
         /// </summary>
         /// <param name="req"><see cref="DescribeLoRaFrequencyRequest"/></param>
@@ -1293,6 +1333,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// </summary>
+        /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
+        /// <returns><see cref="ListFirmwaresResponse"/></returns>
+        public async Task<ListFirmwaresResponse> ListFirmwares(ListFirmwaresRequest req)
+        {
+             JsonResponseModel<ListFirmwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListFirmwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListFirmwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// </summary>
+        /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
+        /// <returns><see cref="ListFirmwaresResponse"/></returns>
+        public ListFirmwaresResponse ListFirmwaresSync(ListFirmwaresRequest req)
+        {
+             JsonResponseModel<ListFirmwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListFirmwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListFirmwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改LoRa自定义频点
         /// </summary>
         /// <param name="req"><see cref="ModifyLoRaFrequencyRequest"/></param>
@@ -1684,6 +1764,86 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "SearchTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFirmwareRequest"/></param>
+        /// <returns><see cref="UpdateFirmwareResponse"/></returns>
+        public async Task<UpdateFirmwareResponse> UpdateFirmware(UpdateFirmwareRequest req)
+        {
+             JsonResponseModel<UpdateFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateFirmware）用于对指定设备发起固件升级请求 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateFirmwareRequest"/></param>
+        /// <returns><see cref="UpdateFirmwareResponse"/></returns>
+        public UpdateFirmwareResponse UpdateFirmwareSync(UpdateFirmwareRequest req)
+        {
+             JsonResponseModel<UpdateFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadFirmware）用于上传设备固件至平台
+        /// </summary>
+        /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
+        /// <returns><see cref="UploadFirmwareResponse"/></returns>
+        public async Task<UploadFirmwareResponse> UploadFirmware(UploadFirmwareRequest req)
+        {
+             JsonResponseModel<UploadFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UploadFirmware）用于上传设备固件至平台
+        /// </summary>
+        /// <param name="req"><see cref="UploadFirmwareRequest"/></param>
+        /// <returns><see cref="UploadFirmwareResponse"/></returns>
+        public UploadFirmwareResponse UploadFirmwareSync(UploadFirmwareRequest req)
+        {
+             JsonResponseModel<UploadFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFirmwareResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

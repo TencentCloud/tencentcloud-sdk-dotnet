@@ -40,7 +40,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 主机状态。
         /// <li>OFFLINE: 离线  </li>
         /// <li>ONLINE: 在线</li>
-        /// <li>MACHINE_STOPPED: 已关机</li>
+        /// <li>SHUTDOWN: 已关机</li>
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
@@ -154,6 +154,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 是否有资产扫描接口，0无，1有
+        /// </summary>
+        [JsonProperty("HasAssetScan")]
+        public ulong? HasAssetScan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -180,6 +186,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
             this.SetParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
         }
     }
 }
