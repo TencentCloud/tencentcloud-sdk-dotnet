@@ -42,6 +42,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// CVM实例公网IP
+        /// </summary>
+        [JsonProperty("IpAddress")]
+        public string IpAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "FleetId", this.FleetId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
         }
     }
 }

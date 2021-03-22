@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
+        /// <summary>
+        /// 网关实体ID
+        /// </summary>
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }
     }
 }

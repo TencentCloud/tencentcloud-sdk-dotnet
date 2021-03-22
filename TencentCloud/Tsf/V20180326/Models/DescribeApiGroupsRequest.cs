@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
+        /// <summary>
+        /// 网关实体ID
+        /// </summary>
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }
     }
 }

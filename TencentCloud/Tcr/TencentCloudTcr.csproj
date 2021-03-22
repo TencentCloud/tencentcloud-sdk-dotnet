@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.243</VersionPrefix>
+    <VersionPrefix>3.0.244</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,8 @@
     <Compile Include="V20190924\Models\CreateRepositoryPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateRepositoryRequest.cs" />
     <Compile Include="V20190924\Models\CreateRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\CreateSecurityPolicyRequest.cs" />
+    <Compile Include="V20190924\Models\CreateSecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\CreateUserPersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateUserPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
@@ -100,6 +102,8 @@
     <Compile Include="V20190924\Models\DeleteRepositoryPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryRequest.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteSecurityPolicyRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteSecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\DeleteWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\DeleteWebhookTriggerResponse.cs" />
     <Compile Include="V20190924\Models\DescribeApplicationTriggerLogPersonalRequest.cs" />
@@ -150,6 +154,8 @@
     <Compile Include="V20190924\Models\DescribeRepositoryOwnerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoryPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeSecurityPoliciesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeSecurityPoliciesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeUserQuotaPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeUserQuotaPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeWebhookTriggerLogRequest.cs" />
@@ -182,6 +188,8 @@
     <Compile Include="V20190924\Models\ModifyRepositoryInfoPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyRepositoryRequest.cs" />
     <Compile Include="V20190924\Models\ModifyRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\ModifySecurityPolicyRequest.cs" />
+    <Compile Include="V20190924\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20190924\Models\ModifyUserPasswordPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyUserPasswordPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyWebhookTriggerRequest.cs" />
@@ -203,6 +211,7 @@
     <Compile Include="V20190924\Models\RespLimit.cs" />
     <Compile Include="V20190924\Models\SameImagesResp.cs" />
     <Compile Include="V20190924\Models\SearchUserRepositoryResp.cs" />
+    <Compile Include="V20190924\Models\SecurityPolicy.cs" />
     <Compile Include="V20190924\Models\Tag.cs" />
     <Compile Include="V20190924\Models\TagInfo.cs" />
     <Compile Include="V20190924\Models\TagInfoResp.cs" />

@@ -37,7 +37,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         public string Ticket{ get; set; }
 
         /// <summary>
-        /// 用户操作来源的外网 IP
+        /// 透传业务侧获取到的验证码使用者的IP
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }

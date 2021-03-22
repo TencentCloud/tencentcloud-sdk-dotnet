@@ -1013,6 +1013,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitRuleRequest"/></param>
+        /// <returns><see cref="CreateUnitRuleResponse"/></returns>
+        public async Task<CreateUnitRuleResponse> CreateUnitRule(CreateUnitRuleRequest req)
+        {
+             JsonResponseModel<CreateUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateUnitRuleRequest"/></param>
+        /// <returns><see cref="CreateUnitRuleResponse"/></returns>
+        public CreateUnitRuleResponse CreateUnitRuleSync(CreateUnitRuleRequest req)
+        {
+             JsonResponseModel<CreateUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除Api分组
         /// </summary>
         /// <param name="req"><see cref="DeleteApiGroupRequest"/></param>
@@ -1606,6 +1646,86 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除单元化命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DeleteUnitNamespacesResponse"/></returns>
+        public async Task<DeleteUnitNamespacesResponse> DeleteUnitNamespaces(DeleteUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DeleteUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除单元化命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DeleteUnitNamespacesResponse"/></returns>
+        public DeleteUnitNamespacesResponse DeleteUnitNamespacesSync(DeleteUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DeleteUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUnitRuleRequest"/></param>
+        /// <returns><see cref="DeleteUnitRuleResponse"/></returns>
+        public async Task<DeleteUnitRuleResponse> DeleteUnitRule(DeleteUnitRuleRequest req)
+        {
+             JsonResponseModel<DeleteUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUnitRuleRequest"/></param>
+        /// <returns><see cref="DeleteUnitRuleResponse"/></returns>
+        public DeleteUnitRuleResponse DeleteUnitRuleSync(DeleteUnitRuleRequest req)
+        {
+             JsonResponseModel<DeleteUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUnitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2528,6 +2648,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDownloadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询生效的单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnabledUnitRuleRequest"/></param>
+        /// <returns><see cref="DescribeEnabledUnitRuleResponse"/></returns>
+        public async Task<DescribeEnabledUnitRuleResponse> DescribeEnabledUnitRule(DescribeEnabledUnitRuleRequest req)
+        {
+             JsonResponseModel<DescribeEnabledUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnabledUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnabledUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询生效的单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnabledUnitRuleRequest"/></param>
+        /// <returns><see cref="DescribeEnabledUnitRuleResponse"/></returns>
+        public DescribeEnabledUnitRuleResponse DescribeEnabledUnitRuleSync(DescribeEnabledUnitRuleRequest req)
+        {
+             JsonResponseModel<DescribeEnabledUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnabledUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnabledUnitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3977,6 +4137,126 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询单元化命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeUnitNamespacesResponse"/></returns>
+        public async Task<DescribeUnitNamespacesResponse> DescribeUnitNamespaces(DescribeUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeUnitNamespacesResponse"/></returns>
+        public DescribeUnitNamespacesResponse DescribeUnitNamespacesSync(DescribeUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRuleRequest"/></param>
+        /// <returns><see cref="DescribeUnitRuleResponse"/></returns>
+        public async Task<DescribeUnitRuleResponse> DescribeUnitRule(DescribeUnitRuleRequest req)
+        {
+             JsonResponseModel<DescribeUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化规则详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRuleRequest"/></param>
+        /// <returns><see cref="DescribeUnitRuleResponse"/></returns>
+        public DescribeUnitRuleResponse DescribeUnitRuleSync(DescribeUnitRuleRequest req)
+        {
+             JsonResponseModel<DescribeUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRulesRequest"/></param>
+        /// <returns><see cref="DescribeUnitRulesResponse"/></returns>
+        public async Task<DescribeUnitRulesResponse> DescribeUnitRules(DescribeUnitRulesRequest req)
+        {
+             JsonResponseModel<DescribeUnitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单元化规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitRulesRequest"/></param>
+        /// <returns><see cref="DescribeUnitRulesResponse"/></returns>
+        public DescribeUnitRulesResponse DescribeUnitRulesSync(DescribeUnitRulesRequest req)
+        {
+             JsonResponseModel<DescribeUnitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// TSF会将软件包上传到腾讯云对象存储（COS）。调用此接口获取上传信息，如目标地域，桶，包Id，存储路径，鉴权信息等，之后请使用COS API（或SDK）进行上传。
         /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
         /// </summary>
@@ -4010,6 +4290,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUploadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可用于被导入的命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsableUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeUsableUnitNamespacesResponse"/></returns>
+        public async Task<DescribeUsableUnitNamespacesResponse> DescribeUsableUnitNamespaces(DescribeUsableUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeUsableUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsableUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsableUnitNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询可用于被导入的命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsableUnitNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeUsableUnitNamespacesResponse"/></returns>
+        public DescribeUsableUnitNamespacesResponse DescribeUsableUnitNamespacesSync(DescribeUsableUnitNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeUsableUnitNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsableUnitNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsableUnitNamespacesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4090,6 +4410,86 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DisableTaskFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用单元化路由
+        /// </summary>
+        /// <param name="req"><see cref="DisableUnitRouteRequest"/></param>
+        /// <returns><see cref="DisableUnitRouteResponse"/></returns>
+        public async Task<DisableUnitRouteResponse> DisableUnitRoute(DisableUnitRouteRequest req)
+        {
+             JsonResponseModel<DisableUnitRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableUnitRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUnitRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用单元化路由
+        /// </summary>
+        /// <param name="req"><see cref="DisableUnitRouteRequest"/></param>
+        /// <returns><see cref="DisableUnitRouteResponse"/></returns>
+        public DisableUnitRouteResponse DisableUnitRouteSync(DisableUnitRouteRequest req)
+        {
+             JsonResponseModel<DisableUnitRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableUnitRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUnitRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DisableUnitRuleRequest"/></param>
+        /// <returns><see cref="DisableUnitRuleResponse"/></returns>
+        public async Task<DisableUnitRuleResponse> DisableUnitRule(DisableUnitRuleRequest req)
+        {
+             JsonResponseModel<DisableUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="DisableUnitRuleRequest"/></param>
+        /// <returns><see cref="DisableUnitRuleResponse"/></returns>
+        public DisableUnitRuleResponse DisableUnitRuleSync(DisableUnitRuleRequest req)
+        {
+             JsonResponseModel<DisableUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUnitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4210,6 +4610,86 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "EnableTaskFlow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTaskFlowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用单元化路由
+        /// </summary>
+        /// <param name="req"><see cref="EnableUnitRouteRequest"/></param>
+        /// <returns><see cref="EnableUnitRouteResponse"/></returns>
+        public async Task<EnableUnitRouteResponse> EnableUnitRoute(EnableUnitRouteRequest req)
+        {
+             JsonResponseModel<EnableUnitRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableUnitRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableUnitRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用单元化路由
+        /// </summary>
+        /// <param name="req"><see cref="EnableUnitRouteRequest"/></param>
+        /// <returns><see cref="EnableUnitRouteResponse"/></returns>
+        public EnableUnitRouteResponse EnableUnitRouteSync(EnableUnitRouteRequest req)
+        {
+             JsonResponseModel<EnableUnitRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableUnitRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableUnitRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="EnableUnitRuleRequest"/></param>
+        /// <returns><see cref="EnableUnitRuleResponse"/></returns>
+        public async Task<EnableUnitRuleResponse> EnableUnitRule(EnableUnitRuleRequest req)
+        {
+             JsonResponseModel<EnableUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="EnableUnitRuleRequest"/></param>
+        /// <returns><see cref="EnableUnitRuleResponse"/></returns>
+        public EnableUnitRuleResponse EnableUnitRuleSync(EnableUnitRuleRequest req)
+        {
+             JsonResponseModel<EnableUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableUnitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5621,6 +6101,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 批量更新API超时
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiTimeoutsRequest"/></param>
+        /// <returns><see cref="UpdateApiTimeoutsResponse"/></returns>
+        public async Task<UpdateApiTimeoutsResponse> UpdateApiTimeouts(UpdateApiTimeoutsRequest req)
+        {
+             JsonResponseModel<UpdateApiTimeoutsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiTimeouts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiTimeoutsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量更新API超时
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiTimeoutsRequest"/></param>
+        /// <returns><see cref="UpdateApiTimeoutsResponse"/></returns>
+        public UpdateApiTimeoutsResponse UpdateApiTimeoutsSync(UpdateApiTimeoutsRequest req)
+        {
+             JsonResponseModel<UpdateApiTimeoutsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiTimeouts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiTimeoutsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新API
         /// </summary>
         /// <param name="req"><see cref="UpdateGatewayApiRequest"/></param>
@@ -5732,6 +6252,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "UpdateRepository");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRepositoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUnitRuleRequest"/></param>
+        /// <returns><see cref="UpdateUnitRuleResponse"/></returns>
+        public async Task<UpdateUnitRuleResponse> UpdateUnitRule(UpdateUnitRuleRequest req)
+        {
+             JsonResponseModel<UpdateUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新单元化规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUnitRuleRequest"/></param>
+        /// <returns><see cref="UpdateUnitRuleResponse"/></returns>
+        public UpdateUnitRuleResponse UpdateUnitRuleSync(UpdateUnitRuleRequest req)
+        {
+             JsonResponseModel<UpdateUnitRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUnitRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUnitRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

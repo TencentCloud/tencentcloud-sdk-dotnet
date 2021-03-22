@@ -533,6 +533,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityPolicyRequest"/></param>
+        /// <returns><see cref="CreateSecurityPolicyResponse"/></returns>
+        public async Task<CreateSecurityPolicyResponse> CreateSecurityPolicy(CreateSecurityPolicyRequest req)
+        {
+             JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateSecurityPolicyRequest"/></param>
+        /// <returns><see cref="CreateSecurityPolicyResponse"/></returns>
+        public CreateSecurityPolicyResponse CreateSecurityPolicySync(CreateSecurityPolicyRequest req)
+        {
+             JsonResponseModel<CreateSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建个人用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserPersonalRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRepositoryPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRepositoryPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
+        public async Task<DeleteSecurityPolicyResponse> DeleteSecurityPolicy(DeleteSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DeleteSecurityPolicyResponse"/></returns>
+        public DeleteSecurityPolicyResponse DeleteSecurityPolicySync(DeleteSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DeleteSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +2133,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPoliciesResponse"/></returns>
+        public async Task<DescribeSecurityPoliciesResponse> DescribeSecurityPolicies(DescribeSecurityPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPoliciesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPoliciesResponse"/></returns>
+        public DescribeSecurityPoliciesResponse DescribeSecurityPoliciesSync(DescribeSecurityPoliciesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询个人用户配额
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaPersonalRequest"/></param>
@@ -2564,6 +2684,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRepositoryInfoPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRepositoryInfoPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例公网访问白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
+        public async Task<ModifySecurityPolicyResponse> ModifySecurityPolicy(ModifySecurityPolicyRequest req)
+        {
+             JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例公网访问白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifySecurityPolicyRequest"/></param>
+        /// <returns><see cref="ModifySecurityPolicyResponse"/></returns>
+        public ModifySecurityPolicyResponse ModifySecurityPolicySync(ModifySecurityPolicyRequest req)
+        {
+             JsonResponseModel<ModifySecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

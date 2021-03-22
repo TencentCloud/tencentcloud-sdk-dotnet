@@ -152,6 +152,14 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// 云盘类型选择策略，取值范围：
+        /// <br><li>ORIGINAL：使用设置的云盘类型
+        /// <br><li>AUTOMATIC：自动选择当前可用的云盘类型
+        /// </summary>
+        [JsonProperty("DiskTypePolicy")]
+        public string DiskTypePolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +186,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
         }
     }
 }

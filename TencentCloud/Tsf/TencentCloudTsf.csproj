@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.243</VersionPrefix>
+    <VersionPrefix>3.0.244</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -117,6 +117,8 @@
     <Compile Include="V20180326\Models\CreateTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\CreateTaskRequest.cs" />
     <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
+    <Compile Include="V20180326\Models\CreateUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\CreateUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationRequest.cs" />
@@ -148,6 +150,10 @@
     <Compile Include="V20180326\Models\DeleteServerlessGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeleteTaskRequest.cs" />
     <Compile Include="V20180326\Models\DeleteTaskResponse.cs" />
+    <Compile Include="V20180326\Models\DeleteUnitNamespacesRequest.cs" />
+    <Compile Include="V20180326\Models\DeleteUnitNamespacesResponse.cs" />
+    <Compile Include="V20180326\Models\DeleteUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DeleteUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeployGroupRequest.cs" />
@@ -194,6 +200,8 @@
     <Compile Include="V20180326\Models\DescribeCreateGatewayApiStatusResponse.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoRequest.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeEnabledUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeEnabledUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
@@ -266,18 +274,34 @@
     <Compile Include="V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitNamespacesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitNamespacesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitRulesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitRulesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUploadInfoRequest.cs" />
     <Compile Include="V20180326\Models\DescribeUploadInfoResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeUsableUnitNamespacesRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeUsableUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DisableTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\DisableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\DisableTaskRequest.cs" />
     <Compile Include="V20180326\Models\DisableTaskResponse.cs" />
+    <Compile Include="V20180326\Models\DisableUnitRouteRequest.cs" />
+    <Compile Include="V20180326\Models\DisableUnitRouteResponse.cs" />
+    <Compile Include="V20180326\Models\DisableUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DisableUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskRequest.cs" />
     <Compile Include="V20180326\Models\EnableTaskResponse.cs" />
+    <Compile Include="V20180326\Models\EnableUnitRouteRequest.cs" />
+    <Compile Include="V20180326\Models\EnableUnitRouteResponse.cs" />
+    <Compile Include="V20180326\Models\EnableUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\EnableUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\Env.cs" />
     <Compile Include="V20180326\Models\ExecuteTaskFlowRequest.cs" />
     <Compile Include="V20180326\Models\ExecuteTaskFlowResponse.cs" />
@@ -414,21 +438,31 @@
     <Compile Include="V20180326\Models\TsfPageNamespace.cs" />
     <Compile Include="V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="V20180326\Models\TsfPageSimpleGroup.cs" />
+    <Compile Include="V20180326\Models\TsfPageUnitNamespace.cs" />
+    <Compile Include="V20180326\Models\TsfPageUnitRule.cs" />
     <Compile Include="V20180326\Models\TsfPageVmGroup.cs" />
     <Compile Include="V20180326\Models\UnbindApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\UnbindApiGroupResponse.cs" />
+    <Compile Include="V20180326\Models\UnitNamespace.cs" />
+    <Compile Include="V20180326\Models\UnitRule.cs" />
+    <Compile Include="V20180326\Models\UnitRuleItem.cs" />
+    <Compile Include="V20180326\Models\UnitRuleTag.cs" />
     <Compile Include="V20180326\Models\UpdateApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\UpdateApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\UpdateApiRateLimitRuleRequest.cs" />
     <Compile Include="V20180326\Models\UpdateApiRateLimitRuleResponse.cs" />
     <Compile Include="V20180326\Models\UpdateApiRateLimitRulesRequest.cs" />
     <Compile Include="V20180326\Models\UpdateApiRateLimitRulesResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateApiTimeoutsRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateApiTimeoutsResponse.cs" />
     <Compile Include="V20180326\Models\UpdateGatewayApiRequest.cs" />
     <Compile Include="V20180326\Models\UpdateGatewayApiResponse.cs" />
     <Compile Include="V20180326\Models\UpdateHealthCheckSettingsRequest.cs" />
     <Compile Include="V20180326\Models\UpdateHealthCheckSettingsResponse.cs" />
     <Compile Include="V20180326\Models\UpdateRepositoryRequest.cs" />
     <Compile Include="V20180326\Models\UpdateRepositoryResponse.cs" />
+    <Compile Include="V20180326\Models\UpdateUnitRuleRequest.cs" />
+    <Compile Include="V20180326\Models\UpdateUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\VmGroup.cs" />
     <Compile Include="V20180326\Models\VmGroupSimple.cs" />
   </ItemGroup>

@@ -1033,6 +1033,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 使用视频编辑模板直接导出视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByTemplateRequest"/></param>
+        /// <returns><see cref="ExportVideoByTemplateResponse"/></returns>
+        public async Task<ExportVideoByTemplateResponse> ExportVideoByTemplate(ExportVideoByTemplateRequest req)
+        {
+             JsonResponseModel<ExportVideoByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportVideoByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用视频编辑模板直接导出视频。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVideoByTemplateRequest"/></param>
+        /// <returns><see cref="ExportVideoByTemplateResponse"/></returns>
+        public ExportVideoByTemplateResponse ExportVideoByTemplateSync(ExportVideoByTemplateRequest req)
+        {
+             JsonResponseModel<ExportVideoByTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVideoByTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVideoByTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用视频智能拆条数据导出视频，将指定的视频拆条片段导出为一个视频。
         /// </summary>
         /// <param name="req"><see cref="ExportVideoByVideoSegmentationDataRequest"/></param>

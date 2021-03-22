@@ -55,7 +55,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 配置绑定的实例ID，当配置级别为"Instance"时需要传入，只能为一个实例。
+        /// 配置绑定的实例ID，当配置级别为"Instance"时需要传入且只能为一个实例；当配置级别为“User”时，此参数不填。
         /// </summary>
         [JsonProperty("BindInstanceIds")]
         public string[] BindInstanceIds{ get; set; }

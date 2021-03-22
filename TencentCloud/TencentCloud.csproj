@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.243</VersionPrefix>
+    <VersionPrefix>3.0.244</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2979,6 +2979,8 @@
     <Compile Include="Cme\V20191029\Models\Entity.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\ExportVideoByTemplateRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\ExportVideoByTemplateResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByVideoSegmentationDataRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByVideoSegmentationDataResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoEditProjectRequest.cs" />
@@ -3010,6 +3012,7 @@
     <Compile Include="Cme\V20191029\Models\MaterialTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaMetaData.cs" />
+    <Compile Include="Cme\V20191029\Models\MediaReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaTrack.cs" />
     <Compile Include="Cme\V20191029\Models\MediaTrackItem.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialRequest.cs" />
@@ -3036,6 +3039,7 @@
     <Compile Include="Cme\V20191029\Models\SearchMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\SearchMaterialResponse.cs" />
     <Compile Include="Cme\V20191029\Models\SearchScope.cs" />
+    <Compile Include="Cme\V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SortBy.cs" />
     <Compile Include="Cme\V20191029\Models\SwitcherPgmOutputConfig.cs" />
     <Compile Include="Cme\V20191029\Models\SwitcherProjectInput.cs" />
@@ -10273,6 +10277,8 @@
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateSecurityPolicyRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateUserPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateUserPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateWebhookTriggerRequest.cs" />
@@ -10301,6 +10307,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteRepositoryPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteRepositoryRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteRepositoryResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteSecurityPolicyRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteWebhookTriggerRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteWebhookTriggerResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeApplicationTriggerLogPersonalRequest.cs" />
@@ -10351,6 +10359,8 @@
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoryOwnerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoryPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoryPersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeSecurityPoliciesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeSecurityPoliciesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeUserQuotaPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeUserQuotaPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeWebhookTriggerLogRequest.cs" />
@@ -10383,6 +10393,8 @@
     <Compile Include="Tcr\V20190924\Models\ModifyRepositoryInfoPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyRepositoryRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyRepositoryResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifySecurityPolicyRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyUserPasswordPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyUserPasswordPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyWebhookTriggerRequest.cs" />
@@ -10404,6 +10416,7 @@
     <Compile Include="Tcr\V20190924\Models\RespLimit.cs" />
     <Compile Include="Tcr\V20190924\Models\SameImagesResp.cs" />
     <Compile Include="Tcr\V20190924\Models\SearchUserRepositoryResp.cs" />
+    <Compile Include="Tcr\V20190924\Models\SecurityPolicy.cs" />
     <Compile Include="Tcr\V20190924\Models\Tag.cs" />
     <Compile Include="Tcr\V20190924\Models\TagInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\TagInfoResp.cs" />
@@ -11208,6 +11221,8 @@
     <Compile Include="Tsf\V20180326\Models\CreateTaskFlowResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateTaskRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateTaskResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApplicationRequest.cs" />
@@ -11239,6 +11254,10 @@
     <Compile Include="Tsf\V20180326\Models\DeleteServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteTaskRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteTaskResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteUnitNamespacesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteUnitNamespacesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployContainerGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployGroupRequest.cs" />
@@ -11285,6 +11304,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeCreateGatewayApiStatusResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeDownloadInfoRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeDownloadInfoResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeEnabledUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeEnabledUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
@@ -11357,18 +11378,34 @@
     <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitNamespacesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitNamespacesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitRuleResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitRulesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitRulesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUploadInfoRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUploadInfoResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUsableUnitNamespacesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUsableUnitNamespacesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DisableTaskFlowRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DisableTaskFlowResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DisableTaskRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DisableTaskResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableUnitRouteRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableUnitRouteResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DisableUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DraftApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DraftApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\EnableTaskFlowRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\EnableTaskFlowResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\EnableTaskRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\EnableTaskResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableUnitRouteRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableUnitRouteResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\EnableUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\Env.cs" />
     <Compile Include="Tsf\V20180326\Models\ExecuteTaskFlowRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ExecuteTaskFlowResponse.cs" />
@@ -11505,21 +11542,31 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageNamespace.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageUnitNamespace.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageUnitRule.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageVmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\UnbindApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UnbindApiGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\UnitNamespace.cs" />
+    <Compile Include="Tsf\V20180326\Models\UnitRule.cs" />
+    <Compile Include="Tsf\V20180326\Models\UnitRuleItem.cs" />
+    <Compile Include="Tsf\V20180326\Models\UnitRuleTag.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiRateLimitRuleRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiRateLimitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiRateLimitRulesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateApiRateLimitRulesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateApiTimeoutsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateApiTimeoutsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateGatewayApiRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateGatewayApiResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateHealthCheckSettingsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateHealthCheckSettingsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateUnitRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\UpdateUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
     <Compile Include="Tsw\V20200924\TswClient.cs" />

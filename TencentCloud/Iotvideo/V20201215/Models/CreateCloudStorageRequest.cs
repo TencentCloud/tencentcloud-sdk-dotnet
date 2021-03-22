@@ -37,7 +37,9 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 云存套餐ID
+        /// 云存套餐ID：
+        /// yc1m3d：全时3天存储月套餐。
+        /// ye1m3d：事件3天存储套餐。
         /// </summary>
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
