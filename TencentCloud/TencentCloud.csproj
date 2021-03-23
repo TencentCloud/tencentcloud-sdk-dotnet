@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.244</VersionPrefix>
+    <VersionPrefix>3.0.245</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -9742,6 +9742,8 @@
     <Compile Include="Tat\V20201028\Models\InvokeCommandResponse.cs" />
     <Compile Include="Tat\V20201028\Models\ModifyCommandRequest.cs" />
     <Compile Include="Tat\V20201028\Models\ModifyCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\PreviewReplacedCommandContentRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\PreviewReplacedCommandContentResponse.cs" />
     <Compile Include="Tat\V20201028\Models\RegionInfo.cs" />
     <Compile Include="Tat\V20201028\Models\RunCommandRequest.cs" />
     <Compile Include="Tat\V20201028\Models\RunCommandResponse.cs" />
@@ -11169,6 +11171,8 @@
     <Compile Include="Tsf\V20180326\Models\ApplicationForPage.cs" />
     <Compile Include="Tsf\V20180326\Models\BindApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\BindApiGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\BindPluginRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\BindPluginResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ChangeApiUsableStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ChangeApiUsableStatusResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\Cluster.cs" />
@@ -11324,6 +11328,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeGroupUseDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupsWithPluginRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupsWithPluginResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageRepositoryRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsRequest.cs" />
@@ -11344,6 +11350,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribePathRewritesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePkgsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePkgsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePluginInstancesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribePluginInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePodInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePodInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePublicConfigReleaseLogsRequest.cs" />
@@ -11417,6 +11425,8 @@
     <Compile Include="Tsf\V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupApiVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupIds.cs" />
+    <Compile Include="Tsf\V20180326\Models\GatewayPlugin.cs" />
+    <Compile Include="Tsf\V20180326\Models\GatewayPluginBoundParam.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupApiUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupDailyUseStatistics.cs" />
@@ -11536,6 +11546,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigReleaseLog.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayDeployGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageInstance.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageMicroservice.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageMsInstance.cs" />

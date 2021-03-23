@@ -425,6 +425,46 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 此接口用于预览自定义参数替换后的命令内容。不会触发真实执行。
+        /// </summary>
+        /// <param name="req"><see cref="PreviewReplacedCommandContentRequest"/></param>
+        /// <returns><see cref="PreviewReplacedCommandContentResponse"/></returns>
+        public async Task<PreviewReplacedCommandContentResponse> PreviewReplacedCommandContent(PreviewReplacedCommandContentRequest req)
+        {
+             JsonResponseModel<PreviewReplacedCommandContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PreviewReplacedCommandContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewReplacedCommandContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于预览自定义参数替换后的命令内容。不会触发真实执行。
+        /// </summary>
+        /// <param name="req"><see cref="PreviewReplacedCommandContentRequest"/></param>
+        /// <returns><see cref="PreviewReplacedCommandContentResponse"/></returns>
+        public PreviewReplacedCommandContentResponse PreviewReplacedCommandContentSync(PreviewReplacedCommandContentRequest req)
+        {
+             JsonResponseModel<PreviewReplacedCommandContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PreviewReplacedCommandContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PreviewReplacedCommandContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 执行命令，调用成功返回执行活动ID（inv-xxxxxxxx），每个执行活动内部有一个或多个执行任务（invt-xxxxxxxx），每个执行任务代表命令在一台 CVM 或一台 Lighthouse 上的执行记录。
         /// 
         /// * 如果指定实例未安装 agent，或 agent 不在线，返回失败

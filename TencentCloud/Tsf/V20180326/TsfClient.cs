@@ -173,6 +173,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 插件与网关分组/API批量绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindPluginRequest"/></param>
+        /// <returns><see cref="BindPluginResponse"/></returns>
+        public async Task<BindPluginResponse> BindPlugin(BindPluginRequest req)
+        {
+             JsonResponseModel<BindPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 插件与网关分组/API批量绑定
+        /// </summary>
+        /// <param name="req"><see cref="BindPluginRequest"/></param>
+        /// <returns><see cref="BindPluginResponse"/></returns>
+        public BindPluginResponse BindPluginSync(BindPluginRequest req)
+        {
+             JsonResponseModel<BindPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 启用或禁用API
         /// </summary>
         /// <param name="req"><see cref="ChangeApiUsableStatusRequest"/></param>
@@ -3057,6 +3097,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询某个插件下绑定或未绑定的API分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsWithPluginRequest"/></param>
+        /// <returns><see cref="DescribeGroupsWithPluginResponse"/></returns>
+        public async Task<DescribeGroupsWithPluginResponse> DescribeGroupsWithPlugin(DescribeGroupsWithPluginRequest req)
+        {
+             JsonResponseModel<DescribeGroupsWithPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupsWithPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupsWithPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某个插件下绑定或未绑定的API分组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsWithPluginRequest"/></param>
+        /// <returns><see cref="DescribeGroupsWithPluginResponse"/></returns>
+        public DescribeGroupsWithPluginResponse DescribeGroupsWithPluginSync(DescribeGroupsWithPluginRequest req)
+        {
+             JsonResponseModel<DescribeGroupsWithPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupsWithPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupsWithPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 镜像仓库列表 
         /// </summary>
         /// <param name="req"><see cref="DescribeImageRepositoryRequest"/></param>
@@ -3448,6 +3528,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribePkgs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePkgsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 分页查询网关分组/API绑定（或未绑定）的插件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginInstancesRequest"/></param>
+        /// <returns><see cref="DescribePluginInstancesResponse"/></returns>
+        public async Task<DescribePluginInstancesResponse> DescribePluginInstances(DescribePluginInstancesRequest req)
+        {
+             JsonResponseModel<DescribePluginInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 分页查询网关分组/API绑定（或未绑定）的插件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginInstancesRequest"/></param>
+        /// <returns><see cref="DescribePluginInstancesResponse"/></returns>
+        public DescribePluginInstancesResponse DescribePluginInstancesSync(DescribePluginInstancesRequest req)
+        {
+             JsonResponseModel<DescribePluginInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

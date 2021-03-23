@@ -77,6 +77,34 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("SaveCommand")]
         public bool? SaveCommand{ get; set; }
 
+        /// <summary>
+        /// 是否启用自定义参数功能。
+        /// 一旦创建，此值不提供修改。
+        /// 默认值：false。
+        /// </summary>
+        [JsonProperty("EnableParameter")]
+        public bool? EnableParameter{ get; set; }
+
+        /// <summary>
+        /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+        /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+        /// 如果 Parameters 未提供，将使用这里的默认值进行替换。
+        /// 自定义参数最多20个。
+        /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+        /// </summary>
+        [JsonProperty("DefaultParameters")]
+        public string DefaultParameters{ get; set; }
+
+        /// <summary>
+        /// Command 的自定义参数。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+        /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+        /// 如果未提供该参数取值，将使用 DefaultParameters 进行替换。
+        /// 自定义参数最多20个。
+        /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+        /// </summary>
+        [JsonProperty("Parameters")]
+        public string Parameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +119,9 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "SaveCommand", this.SaveCommand);
+            this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
+            this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string TimeTemplateId{ get; set; }
 
         /// <summary>
+        /// 触发录制的事件类别 1:全部
+        /// </summary>
+        [JsonProperty("EventId")]
+        public long? EventId{ get; set; }
+
+        /// <summary>
         /// 该录制计划绑定的设备列表
         /// </summary>
         [JsonProperty("Devices")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamArrayObj(map, prefix + "Devices.", this.Devices);
         }
     }

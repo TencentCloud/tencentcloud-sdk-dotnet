@@ -44,6 +44,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public float? Angel{ get; set; }
 
         /// <summary>
+        /// 图片为PDF时，返回PDF的总页数，默认为0
+        /// </summary>
+        [JsonProperty("PdfPageSize")]
+        public long? PdfPageSize{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +64,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "TextDetections.", this.TextDetections);
             this.SetParamSimple(map, prefix + "Language", this.Language);
             this.SetParamSimple(map, prefix + "Angel", this.Angel);
+            this.SetParamSimple(map, prefix + "PdfPageSize", this.PdfPageSize);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

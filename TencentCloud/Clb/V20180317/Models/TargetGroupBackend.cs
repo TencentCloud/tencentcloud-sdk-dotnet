@@ -89,6 +89,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EniId")]
         public string EniId{ get; set; }
 
+        /// <summary>
+        /// 后端服务的可用区ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "RegisteredTime", this.RegisteredTime);
             this.SetParamSimple(map, prefix + "EniId", this.EniId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

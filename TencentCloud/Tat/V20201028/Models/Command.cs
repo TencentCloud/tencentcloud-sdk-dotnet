@@ -78,6 +78,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("UpdatedTime")]
         public string UpdatedTime{ get; set; }
 
+        /// <summary>
+        /// 是否启用自定义参数功能。
+        /// </summary>
+        [JsonProperty("EnableParameter")]
+        public bool? EnableParameter{ get; set; }
+
+        /// <summary>
+        /// 自定义参数的默认取值。
+        /// </summary>
+        [JsonProperty("DefaultParameters")]
+        public string DefaultParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
+            this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
+            this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         }
     }
 }

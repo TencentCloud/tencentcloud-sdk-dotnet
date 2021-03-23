@@ -43,10 +43,24 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string TimeTemplateId{ get; set; }
 
         /// <summary>
+        /// 触发录制的事件 1：全部
+        /// </summary>
+        [JsonProperty("EventId")]
+        public long? EventId{ get; set; }
+
+        /// <summary>
         /// 录制设备列表
         /// </summary>
         [JsonProperty("Devices")]
         public DeviceItem[] Devices{ get; set; }
+
+        /// <summary>
+        /// 是否更新绑定此录制计划的设备列表
+        /// 0 - 不更新
+        /// 1 - 更新，如果Devices参数为空则清空设备列表，Devices不为空则全量更新设备列表
+        /// </summary>
+        [JsonProperty("IsModifyDevices")]
+        public long? IsModifyDevices{ get; set; }
 
 
         /// <summary>
@@ -57,7 +71,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
+            this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamArrayObj(map, prefix + "Devices.", this.Devices);
+            this.SetParamSimple(map, prefix + "IsModifyDevices", this.IsModifyDevices);
         }
     }
 }

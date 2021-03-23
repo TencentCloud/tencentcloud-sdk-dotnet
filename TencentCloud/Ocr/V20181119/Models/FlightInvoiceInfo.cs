@@ -26,7 +26,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         
         /// <summary>
         /// 识别出的字段名称(关键字)，支持以下字段：
-        /// 票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号。
+        /// 票价、合计金额、填开日期、有效身份证件号码、电子客票号码、验证码、旅客姓名、填开单位、其他税费、燃油附加费、民航发展基金、保险费、销售单位代号、始发地、目的地、航班号、时间、日期、座位等级、承运人、发票消费类型、国内国际标签、印刷序号、客票级别/类别、客票生效日期、有效期截止日期、免费行李。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -37,6 +37,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 多个行程的字段所在行号，下标从0开始，非行字段或未能识别行号的该值返回-1。
+        /// </summary>
+        [JsonProperty("Row")]
+        public long? Row{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Row", this.Row);
         }
     }
 }

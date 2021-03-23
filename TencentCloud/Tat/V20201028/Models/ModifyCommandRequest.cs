@@ -66,6 +66,17 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
 
+        /// <summary>
+        /// 启用自定义参数功能时，自定义参数的默认取值。字段类型为json encoded string。如：{\"varA\": \"222\"}。
+        /// 采取整体全覆盖式修改，即修改时必须提供所有新默认值。
+        /// 必须 Command 的 EnableParameter 为 true 时，才允许修改这个值。
+        /// key为自定义参数名称，value为该参数的默认取值。kv均为字符串型。
+        /// 自定义参数最多20个。
+        /// 自定义参数名称需符合以下规范：字符数目上限64，可选范围【a-zA-Z0-9-_】。
+        /// </summary>
+        [JsonProperty("DefaultParameters")]
+        public string DefaultParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +90,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "CommandType", this.CommandType);
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
         }
     }
 }

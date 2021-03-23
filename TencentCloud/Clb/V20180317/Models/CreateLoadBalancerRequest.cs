@@ -148,6 +148,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ClusterTag{ get; set; }
 
         /// <summary>
+        /// 仅适用于公网负载均衡。设置跨可用区容灾时的备可用区ID，例如 100001 或 ap-guangzhou-1
+        /// 注：备可用区是主可用区故障后，需要承载流量的可用区。可通过 DescribeMasterZones 接口查询一个地域的主/备可用区的列表。
+        /// </summary>
+        [JsonProperty("SlaveZoneId")]
+        public string SlaveZoneId{ get; set; }
+
+        /// <summary>
         /// EIP 的唯一 ID，形如：eip-11112222，仅适用于内网负载均衡绑定EIP。
         /// </summary>
         [JsonProperty("EipAddressId")]
@@ -179,6 +186,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
+            this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
         }
     }
