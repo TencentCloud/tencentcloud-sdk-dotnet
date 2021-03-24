@@ -90,6 +90,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientIPMethod")]
         public long? ClientIPMethod{ get; set; }
 
+        /// <summary>
+        /// 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+        /// </summary>
+        [JsonProperty("FailoverSwitch")]
+        public long? FailoverSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
             this.SetParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
+            this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
         }
     }
 }

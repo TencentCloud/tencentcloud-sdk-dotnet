@@ -42,7 +42,6 @@ namespace TencentCloud.Dayu.V20180709.Models
         /// "Key": "Type" 此字段弃用
         /// "Key": "ElasticLimit" 表示资源实例的弹性防护值
         /// "Key": "DDoSAI" 表示资源实例的DDoS AI防护开关
-        /// "Key": "Bandwidth" 表示资源实例的保底防护值
         /// "Key": "OverloadCount" 表示资源实例受到超过弹性防护值的次数
         /// "Key": "Status" 表示资源实例的状态(idle:运行中, attacking:攻击中, blocking:封堵中, isolate:隔离中)
         /// "Key": "Lbid" 此字段弃用
@@ -59,6 +58,10 @@ namespace TencentCloud.Dayu.V20180709.Models
         /// "Key": "DefendStatus" 表示资源实例的DDoS防护状态(防护开启或临时关闭)
         /// "Key": "UndefendExpire" 表示资源实例的DDoS防护临时关闭结束时间
         /// "Key": "Tgw" 表示资源实例是否是新资源
+        /// "Key": "Bandwidth" 表示资源实例的保底防护值，只针对高防包和高防IP
+        /// "Key": "DdosMax" 表示资源实例的保底防护值，只针对高防IP专业版
+        /// "Key": "GFBandwidth" 表示资源实例的保底业务带宽，只针对高防IP
+        /// "Key": "ServiceBandwidth" 表示资源实例的保底业务带宽，只针对高防IP专业版
         /// </summary>
         [JsonProperty("ServicePacks")]
         public KeyValueRecord[] ServicePacks{ get; set; }

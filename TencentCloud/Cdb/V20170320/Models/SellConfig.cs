@@ -25,19 +25,19 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 设备类型
+        /// 设备类型（废弃）
         /// </summary>
         [JsonProperty("Device")]
         public string Device{ get; set; }
 
         /// <summary>
-        /// 售卖规格描述
+        /// 售卖规格描述（废弃）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 实例类型
+        /// 实例类型（废弃）
         /// </summary>
         [JsonProperty("CdbType")]
         public string CdbType{ get; set; }
@@ -97,16 +97,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Info{ get; set; }
 
         /// <summary>
-        /// 状态值
+        /// 状态值，0 表示该规格对外售卖
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 标签值
+        /// 标签值（废弃）
         /// </summary>
         [JsonProperty("Tag")]
         public long? Tag{ get; set; }
+
+        /// <summary>
+        /// 实例类型，可能的取值范围有：UNIVERSAL (通用型), EXCLUSIVE (独享型), BASIC (基础型)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// 实例类型描述，可能的取值范围有：通用型， 独享型， 基础型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceTypeName")]
+        public string DeviceTypeName{ get; set; }
 
 
         /// <summary>
@@ -128,6 +142,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Info", this.Info);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
         }
     }
 }

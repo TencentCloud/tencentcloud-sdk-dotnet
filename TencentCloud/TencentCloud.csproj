@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.245</VersionPrefix>
+    <VersionPrefix>3.0.246</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6886,12 +6886,16 @@
     <Compile Include="Iotvideo\V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductModelDefinition.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SearchKeyword.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\StatusStatistic.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\TransferCloudStorageRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\TransferCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoBatch.cs" />

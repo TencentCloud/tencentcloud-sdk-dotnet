@@ -43,19 +43,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SearchValue{ get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// 每页条数，默认为10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移值
+        /// 偏移值，默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// '': 全部，'0'：筛选停用规则，'1'：筛选启用规则
+        /// 状态，'': 全部，'0'：筛选停用规则，'1'：筛选启用规则
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

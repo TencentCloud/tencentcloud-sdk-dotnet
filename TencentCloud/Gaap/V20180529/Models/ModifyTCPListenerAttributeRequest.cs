@@ -72,6 +72,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("HealthCheck")]
         public ulong? HealthCheck{ get; set; }
 
+        /// <summary>
+        /// 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+        /// </summary>
+        [JsonProperty("FailoverSwitch")]
+        public ulong? FailoverSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "DelayLoop", this.DelayLoop);
             this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
             this.SetParamSimple(map, prefix + "HealthCheck", this.HealthCheck);
+            this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("QueryTime")]
         public string QueryTime{ get; set; }
 
+        /// <summary>
+        /// 播放域名列表，若不填，表示总体数据。
+        /// </summary>
+        [JsonProperty("PlayDomains")]
+        public string[] PlayDomains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "QueryTime", this.QueryTime);
+            this.SetParamArraySimple(map, prefix + "PlayDomains.", this.PlayDomains);
         }
     }
 }

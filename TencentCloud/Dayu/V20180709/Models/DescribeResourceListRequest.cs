@@ -55,7 +55,7 @@ namespace TencentCloud.Dayu.V20180709.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// IP搜索列表，可选，当不为空时表示安装IP搜索资源；
+        /// IP搜索列表，可选，当不为空时表示按照IP搜索资源；
         /// </summary>
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }

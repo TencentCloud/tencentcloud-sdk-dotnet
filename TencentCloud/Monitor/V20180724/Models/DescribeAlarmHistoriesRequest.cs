@@ -49,13 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 起始时间，默认一天前的时间戳
+        /// 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，默认当前时间戳
+        /// 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

@@ -37,6 +37,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? IsModifying{ get; set; }
 
         /// <summary>
+        /// 当前复制方式，0 异步，1 同步
+        /// </summary>
+        [JsonProperty("CurrentSyncMode")]
+        public long? CurrentSyncMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
             this.SetParamSimple(map, prefix + "IsModifying", this.IsModifying);
+            this.SetParamSimple(map, prefix + "CurrentSyncMode", this.CurrentSyncMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

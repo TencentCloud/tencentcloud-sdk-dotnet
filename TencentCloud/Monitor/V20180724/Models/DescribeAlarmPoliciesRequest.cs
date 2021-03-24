@@ -134,7 +134,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] Enable{ get; set; }
 
         /// <summary>
-        /// 是否未配置通知规则，1：未配置，0：配置
+        /// 传 1 查询未配置通知规则的告警策略；不传或传其他数值，查询所有策略。
         /// </summary>
         [JsonProperty("NotBindingNoticeRule")]
         public long? NotBindingNoticeRule{ get; set; }

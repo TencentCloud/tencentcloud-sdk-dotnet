@@ -1893,6 +1893,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 重置云存服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageResponse"/></returns>
+        public async Task<ResetCloudStorageResponse> ResetCloudStorage(ResetCloudStorageRequest req)
+        {
+             JsonResponseModel<ResetCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置云存服务
+        /// </summary>
+        /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
+        /// <returns><see cref="ResetCloudStorageResponse"/></returns>
+        public ResetCloudStorageResponse ResetCloudStorageSync(ResetCloudStorageRequest req)
+        {
+             JsonResponseModel<ResetCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于重试设备升级任务
         /// </summary>
         /// <param name="req"><see cref="RetryDeviceFirmwareTaskRequest"/></param>
@@ -1964,6 +2004,46 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "SetForwardAuth");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetForwardAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 转移云存服务
+        /// </summary>
+        /// <param name="req"><see cref="TransferCloudStorageRequest"/></param>
+        /// <returns><see cref="TransferCloudStorageResponse"/></returns>
+        public async Task<TransferCloudStorageResponse> TransferCloudStorage(TransferCloudStorageRequest req)
+        {
+             JsonResponseModel<TransferCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TransferCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 转移云存服务
+        /// </summary>
+        /// <param name="req"><see cref="TransferCloudStorageRequest"/></param>
+        /// <returns><see cref="TransferCloudStorageResponse"/></returns>
+        public TransferCloudStorageResponse TransferCloudStorageSync(TransferCloudStorageRequest req)
+        {
+             JsonResponseModel<TransferCloudStorageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TransferCloudStorage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferCloudStorageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

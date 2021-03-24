@@ -31,7 +31,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// directory 时填充路径，如 /xxx/test
         /// path 时填充绝对路径，如 /xxx/test.html
         /// index 时填充 /
-        /// default 时填充 "no max-age"
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RulePaths")]
@@ -44,7 +43,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// directory：指定路径生效
         /// path：指定绝对路径生效
         /// index：首页
-        /// default: 源站无max-age时生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleType")]

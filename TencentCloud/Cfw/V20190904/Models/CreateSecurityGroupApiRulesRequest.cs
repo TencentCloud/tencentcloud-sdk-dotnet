@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Direction{ get; set; }
 
         /// <summary>
-        /// 0：后插，1：前插，2：中插
+        /// 插入类型，0：后插，1：前插，2：中插
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

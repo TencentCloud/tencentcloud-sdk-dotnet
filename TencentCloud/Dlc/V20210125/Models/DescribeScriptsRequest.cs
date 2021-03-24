@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 按字段爱旭，支持如下字段类型，update-time
+        /// 按字段排序，支持如下字段类型，update-time
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }

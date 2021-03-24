@@ -43,8 +43,9 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string EniLBIp{ get; set; }
 
         /// <summary>
-        /// true：use instance name as subdomain
-        /// false: use instancename+"-vpc" as subdomain
+        /// true：为默认域名，公网域名一致
+        /// false: 使用vpc域名
+        /// 默认为vpc域名
         /// </summary>
         [JsonProperty("UsePublicDomain")]
         public bool? UsePublicDomain{ get; set; }

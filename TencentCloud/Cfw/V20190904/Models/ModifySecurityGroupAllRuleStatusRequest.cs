@@ -43,7 +43,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string EdgeId{ get; set; }
 
         /// <summary>
-        /// NAT地域
+        /// NAT地域, 腾讯云地域的英文简写
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }

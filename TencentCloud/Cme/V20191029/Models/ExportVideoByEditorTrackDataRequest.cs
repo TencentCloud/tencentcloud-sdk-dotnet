@@ -48,7 +48,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ExportDestination{ get; set; }
 
         /// <summary>
-        /// 在线编辑轨道数据。
+        /// 在线编辑轨道数据。轨道数据相关介绍，请查看 [视频合成协议](https://cloud.tencent.com/document/product/1156/51225)。
         /// </summary>
         [JsonProperty("TrackData")]
         public string TrackData{ get; set; }

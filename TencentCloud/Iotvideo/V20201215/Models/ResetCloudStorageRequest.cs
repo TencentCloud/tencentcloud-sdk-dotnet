@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Iotvideo.V20201215.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBSecurityGroupsRequest : AbstractModel
+    public class ResetCloudStorageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 数据库引擎名称，本接口取值：mariadb。
+        /// 产品ID
         /// </summary>
-        [JsonProperty("Product")]
-        public string Product{ get; set; }
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
         /// <summary>
-        /// 实例ID。
+        /// 设备名称
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Product", this.Product);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
         }
     }
 }

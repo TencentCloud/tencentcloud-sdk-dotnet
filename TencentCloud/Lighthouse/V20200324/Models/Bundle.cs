@@ -111,6 +111,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 取值范围:
         /// "ACTIVITY": 活动套餐,
         /// "NORMAL": 普通套餐
+        /// "CAREFREE": 无忧套餐
         /// </summary>
         [JsonProperty("BundleDisplayLabel")]
         public string BundleDisplayLabel{ get; set; }
