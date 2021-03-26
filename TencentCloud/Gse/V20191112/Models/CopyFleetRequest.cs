@@ -103,7 +103,7 @@ namespace TencentCloud.Gse.V20191112.Models
         public string SelectedScalingType{ get; set; }
 
         /// <summary>
-        /// 是否选择云联网：CCN_SELECTED 或者 CCN_UNSELECTED；默认是 CCN_UNSELECTED
+        /// 是否选择云联网：CCN_SELECTED_BEFORE_CREATE（创建前关联）， CCN_SELECTED_AFTER_CREATE（创建后关联）或者 CCN_UNSELECTED（不关联）；默认是 CCN_UNSELECTED
         /// </summary>
         [JsonProperty("SelectedCcnType")]
         public string SelectedCcnType{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("SelectedTimerType")]
         public string SelectedTimerType{ get; set; }
 
+        /// <summary>
+        /// 云联网信息，包含对应的账号信息及所属id
+        /// </summary>
+        [JsonProperty("CcnInfos")]
+        public CcnInfo[] CcnInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamSimple(map, prefix + "SelectedTimerType", this.SelectedTimerType);
+            this.SetParamArrayObj(map, prefix + "CcnInfos.", this.CcnInfos);
         }
     }
 }

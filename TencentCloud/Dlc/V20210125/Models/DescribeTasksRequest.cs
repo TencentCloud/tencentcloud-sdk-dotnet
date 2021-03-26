@@ -52,19 +52,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，desc表示正序，asc表示反序
+        /// 排序方式，desc表示正序，asc表示反序， 默认为asc。
         /// </summary>
         [JsonProperty("Sorting")]
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        /// 起始时间点，格式为yyyy-mm-dd HH:MM:SS。默认为45天前的当前时刻
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。
+        /// 结束时间点，格式为yyyy-mm-dd HH:MM:SS时间跨度在(0,30天]，支持最近45天数据查询。默认为当前时刻
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

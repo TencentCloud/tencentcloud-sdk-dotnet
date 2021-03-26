@@ -1003,6 +1003,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetRelatedResourcesRequest"/></param>
+        /// <returns><see cref="DescribeFleetRelatedResourcesResponse"/></returns>
+        public async Task<DescribeFleetRelatedResourcesResponse> DescribeFleetRelatedResources(DescribeFleetRelatedResourcesRequest req)
+        {
+             JsonResponseModel<DescribeFleetRelatedResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFleetRelatedResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetRelatedResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFleetRelatedResourcesRequest"/></param>
+        /// <returns><see cref="DescribeFleetRelatedResourcesResponse"/></returns>
+        public DescribeFleetRelatedResourcesResponse DescribeFleetRelatedResourcesSync(DescribeFleetRelatedResourcesRequest req)
+        {
+             JsonResponseModel<DescribeFleetRelatedResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFleetRelatedResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFleetRelatedResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticDetailsRequest"/></param>
@@ -1754,6 +1794,46 @@ namespace TencentCloud.Gse.V20191112
              {
                  var strResp = this.InternalRequestSync(req, "DetachCcnInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachCcnInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取游戏服务器实例的日志URL。
+        /// </summary>
+        /// <param name="req"><see cref="GetGameServerInstanceLogUrlRequest"/></param>
+        /// <returns><see cref="GetGameServerInstanceLogUrlResponse"/></returns>
+        public async Task<GetGameServerInstanceLogUrlResponse> GetGameServerInstanceLogUrl(GetGameServerInstanceLogUrlRequest req)
+        {
+             JsonResponseModel<GetGameServerInstanceLogUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetGameServerInstanceLogUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetGameServerInstanceLogUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取游戏服务器实例的日志URL。
+        /// </summary>
+        /// <param name="req"><see cref="GetGameServerInstanceLogUrlRequest"/></param>
+        /// <returns><see cref="GetGameServerInstanceLogUrlResponse"/></returns>
+        public GetGameServerInstanceLogUrlResponse GetGameServerInstanceLogUrlSync(GetGameServerInstanceLogUrlRequest req)
+        {
+             JsonResponseModel<GetGameServerInstanceLogUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetGameServerInstanceLogUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetGameServerInstanceLogUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.246</VersionPrefix>
+    <VersionPrefix>3.0.247</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -176,6 +176,8 @@
     <Compile Include="V20190924\Models\ManageImageLifecycleGlobalPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ManageInternalEndpointRequest.cs" />
     <Compile Include="V20190924\Models\ManageInternalEndpointResponse.cs" />
+    <Compile Include="V20190924\Models\ManageReplicationRequest.cs" />
+    <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />
@@ -203,7 +205,9 @@
     <Compile Include="V20190924\Models\RegistryStatus.cs" />
     <Compile Include="V20190924\Models\RenewInstanceRequest.cs" />
     <Compile Include="V20190924\Models\RenewInstanceResponse.cs" />
+    <Compile Include="V20190924\Models\ReplicationFilter.cs" />
     <Compile Include="V20190924\Models\ReplicationRegistry.cs" />
+    <Compile Include="V20190924\Models\ReplicationRule.cs" />
     <Compile Include="V20190924\Models\RepoInfo.cs" />
     <Compile Include="V20190924\Models\RepoInfoResp.cs" />
     <Compile Include="V20190924\Models\RepoIsExistResp.cs" />

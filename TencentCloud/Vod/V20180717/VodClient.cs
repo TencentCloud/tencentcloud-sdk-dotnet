@@ -2399,6 +2399,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口可以查询用户已经购买的预付费商品的信息，包括：
+        ///     1. 商品的类型、生效和失效日期。
+        ///     2. 商品中每种资源的额度和剩余额度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrepaidProductsRequest"/></param>
+        /// <returns><see cref="DescribePrepaidProductsResponse"/></returns>
+        public async Task<DescribePrepaidProductsResponse> DescribePrepaidProducts(DescribePrepaidProductsRequest req)
+        {
+             JsonResponseModel<DescribePrepaidProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrepaidProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrepaidProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口可以查询用户已经购买的预付费商品的信息，包括：
+        ///     1. 商品的类型、生效和失效日期。
+        ///     2. 商品中每种资源的额度和剩余额度。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrepaidProductsRequest"/></param>
+        /// <returns><see cref="DescribePrepaidProductsResponse"/></returns>
+        public DescribePrepaidProductsResponse DescribePrepaidProductsSync(DescribePrepaidProductsRequest req)
+        {
+             JsonResponseModel<DescribePrepaidProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrepaidProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrepaidProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据任务流模板名字，获取任务流模板详情列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeProcedureTemplatesRequest"/></param>

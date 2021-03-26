@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SQLStatement{ get; set; }
 
         /// <summary>
-        /// 脚本描述,
+        /// 脚本描述， 不能超过50个字符
         /// </summary>
         [JsonProperty("ScriptDesc")]
         public string ScriptDesc{ get; set; }

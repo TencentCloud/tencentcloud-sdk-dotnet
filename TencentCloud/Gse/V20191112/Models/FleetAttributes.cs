@@ -154,6 +154,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("SystemDiskInfo")]
         public DiskInfo SystemDiskInfo{ get; set; }
 
+        /// <summary>
+        /// 云联网相关信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RelatedCcnInfos")]
+        public RelatedCcnInfo[] RelatedCcnInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
+            this.SetParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
         }
     }
 }

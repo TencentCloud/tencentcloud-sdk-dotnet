@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.246</VersionPrefix>
+    <VersionPrefix>3.0.247</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5290,6 +5290,7 @@
     <Compile Include="Faceid\V20180301\Models\DetectInfoIdCardData.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectInfoText.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectInfoVideoData.cs" />
+    <Compile Include="Faceid\V20180301\Models\EidInfo.cs" />
     <Compile Include="Faceid\V20180301\Models\Encryption.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceResponse.cs" />
@@ -5297,6 +5298,11 @@
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoEnhancedResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetDetectInfoResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetEidResultRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetEidResultResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetEidTokenConfig.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetEidTokenRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetEidTokenResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetFaceIdResultRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetFaceIdResultResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetFaceIdTokenRequest.cs" />
@@ -5690,6 +5696,7 @@
     <Compile Include="Gse\V20191112\Models\AssetSupportSys.cs" />
     <Compile Include="Gse\V20191112\Models\AttachCcnInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\AttachCcnInstancesResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\CcnInfo.cs" />
     <Compile Include="Gse\V20191112\Models\CcnInstanceSets.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetRequest.cs" />
     <Compile Include="Gse\V20191112\Models\CopyFleetResponse.cs" />
@@ -5736,6 +5743,8 @@
     <Compile Include="Gse\V20191112\Models\DescribeFleetEventsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetPortSettingsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetPortSettingsResponse.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetRelatedResourcesRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\DescribeFleetRelatedResourcesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticDetailsRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticDetailsResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DescribeFleetStatisticFlowsRequest.cs" />
@@ -5781,6 +5790,7 @@
     <Compile Include="Gse\V20191112\Models\Filter.cs" />
     <Compile Include="Gse\V20191112\Models\FleetAttributes.cs" />
     <Compile Include="Gse\V20191112\Models\FleetCapacity.cs" />
+    <Compile Include="Gse\V20191112\Models\FleetRelatedResource.cs" />
     <Compile Include="Gse\V20191112\Models\FleetStatisticDetail.cs" />
     <Compile Include="Gse\V20191112\Models\FleetStatisticFlows.cs" />
     <Compile Include="Gse\V20191112\Models\FleetStatisticTimes.cs" />
@@ -5791,6 +5801,8 @@
     <Compile Include="Gse\V20191112\Models\GameServerSessionPlacement.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSessionQueue.cs" />
     <Compile Include="Gse\V20191112\Models\GameServerSessionQueueDestination.cs" />
+    <Compile Include="Gse\V20191112\Models\GetGameServerInstanceLogUrlRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\GetGameServerInstanceLogUrlResponse.cs" />
     <Compile Include="Gse\V20191112\Models\GetGameServerSessionLogUrlRequest.cs" />
     <Compile Include="Gse\V20191112\Models\GetGameServerSessionLogUrlResponse.cs" />
     <Compile Include="Gse\V20191112\Models\GetInstanceAccessRequest.cs" />
@@ -5825,6 +5837,7 @@
     <Compile Include="Gse\V20191112\Models\PutTimerScalingPolicyRequest.cs" />
     <Compile Include="Gse\V20191112\Models\PutTimerScalingPolicyResponse.cs" />
     <Compile Include="Gse\V20191112\Models\QuotaResource.cs" />
+    <Compile Include="Gse\V20191112\Models\RelatedCcnInfo.cs" />
     <Compile Include="Gse\V20191112\Models\ResolveAliasRequest.cs" />
     <Compile Include="Gse\V20191112\Models\ResolveAliasResponse.cs" />
     <Compile Include="Gse\V20191112\Models\ResourceCreationLimitPolicy.cs" />
@@ -10387,6 +10400,8 @@
     <Compile Include="Tcr\V20190924\Models\ManageImageLifecycleGlobalPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageInternalEndpointRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageInternalEndpointResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageReplicationRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceTokenRequest.cs" />
@@ -10414,7 +10429,9 @@
     <Compile Include="Tcr\V20190924\Models\RegistryStatus.cs" />
     <Compile Include="Tcr\V20190924\Models\RenewInstanceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\RenewInstanceResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationFilter.cs" />
     <Compile Include="Tcr\V20190924\Models\ReplicationRegistry.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationRule.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoIsExistResp.cs" />
@@ -11958,6 +11975,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeMediaProcessUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribePersonSamplesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribePersonSamplesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribePrepaidProductsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribePrepaidProductsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeProcedureTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeReviewDetailsRequest.cs" />
@@ -12146,6 +12165,8 @@
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ProductInstance.cs" />
+    <Compile Include="Vod\V20180717\Models\ProductInstanceRecource.cs" />
     <Compile Include="Vod\V20180717\Models\ProhibitedAsrReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ProhibitedAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ProhibitedConfigureInfo.cs" />

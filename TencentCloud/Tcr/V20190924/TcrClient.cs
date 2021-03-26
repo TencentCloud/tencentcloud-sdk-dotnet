@@ -2453,6 +2453,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 管理实例同步
+        /// </summary>
+        /// <param name="req"><see cref="ManageReplicationRequest"/></param>
+        /// <returns><see cref="ManageReplicationResponse"/></returns>
+        public async Task<ManageReplicationResponse> ManageReplication(ManageReplicationRequest req)
+        {
+             JsonResponseModel<ManageReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ManageReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 管理实例同步
+        /// </summary>
+        /// <param name="req"><see cref="ManageReplicationRequest"/></param>
+        /// <returns><see cref="ManageReplicationResponse"/></returns>
+        public ManageReplicationResponse ManageReplicationSync(ManageReplicationRequest req)
+        {
+             JsonResponseModel<ManageReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ManageReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于修改应用更新触发器
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationTriggerPersonalRequest"/></param>

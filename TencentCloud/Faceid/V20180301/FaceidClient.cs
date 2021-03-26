@@ -453,6 +453,86 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+        /// </summary>
+        /// <param name="req"><see cref="GetEidResultRequest"/></param>
+        /// <returns><see cref="GetEidResultResponse"/></returns>
+        public async Task<GetEidResultResponse> GetEidResult(GetEidResultRequest req)
+        {
+             JsonResponseModel<GetEidResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetEidResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEidResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 完成验证后，用EidToken调用本接口获取结果信息，EidToken生成后三天内（3\*24\*3,600秒）可多次拉取。
+        /// </summary>
+        /// <param name="req"><see cref="GetEidResultRequest"/></param>
+        /// <returns><see cref="GetEidResultResponse"/></returns>
+        public GetEidResultResponse GetEidResultSync(GetEidResultRequest req)
+        {
+             JsonResponseModel<GetEidResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetEidResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEidResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 每次调用人脸核身小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetEidTokenRequest"/></param>
+        /// <returns><see cref="GetEidTokenResponse"/></returns>
+        public async Task<GetEidTokenResponse> GetEidToken(GetEidTokenRequest req)
+        {
+             JsonResponseModel<GetEidTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetEidToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEidTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 每次调用人脸核身小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetEidTokenRequest"/></param>
+        /// <returns><see cref="GetEidTokenResponse"/></returns>
+        public GetEidTokenResponse GetEidTokenSync(GetEidTokenRequest req)
+        {
+             JsonResponseModel<GetEidTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetEidToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetEidTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 完成验证后，用FaceIdToken调用本接口获取结果信息，FaceIdToken生成后三天内（3\*24\*3,600秒）可多次拉取。
         /// </summary>
         /// <param name="req"><see cref="GetFaceIdResultRequest"/></param>

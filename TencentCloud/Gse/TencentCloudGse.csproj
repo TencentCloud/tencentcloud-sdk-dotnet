@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9E9460D-61B2-3328-83C0-53F617E11D0C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.246</VersionPrefix>
+    <VersionPrefix>3.0.247</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20191112\Models\AssetSupportSys.cs" />
     <Compile Include="V20191112\Models\AttachCcnInstancesRequest.cs" />
     <Compile Include="V20191112\Models\AttachCcnInstancesResponse.cs" />
+    <Compile Include="V20191112\Models\CcnInfo.cs" />
     <Compile Include="V20191112\Models\CcnInstanceSets.cs" />
     <Compile Include="V20191112\Models\CopyFleetRequest.cs" />
     <Compile Include="V20191112\Models\CopyFleetResponse.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="V20191112\Models\DescribeFleetEventsResponse.cs" />
     <Compile Include="V20191112\Models\DescribeFleetPortSettingsRequest.cs" />
     <Compile Include="V20191112\Models\DescribeFleetPortSettingsResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeFleetRelatedResourcesRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeFleetRelatedResourcesResponse.cs" />
     <Compile Include="V20191112\Models\DescribeFleetStatisticDetailsRequest.cs" />
     <Compile Include="V20191112\Models\DescribeFleetStatisticDetailsResponse.cs" />
     <Compile Include="V20191112\Models\DescribeFleetStatisticFlowsRequest.cs" />
@@ -142,6 +145,7 @@
     <Compile Include="V20191112\Models\Filter.cs" />
     <Compile Include="V20191112\Models\FleetAttributes.cs" />
     <Compile Include="V20191112\Models\FleetCapacity.cs" />
+    <Compile Include="V20191112\Models\FleetRelatedResource.cs" />
     <Compile Include="V20191112\Models\FleetStatisticDetail.cs" />
     <Compile Include="V20191112\Models\FleetStatisticFlows.cs" />
     <Compile Include="V20191112\Models\FleetStatisticTimes.cs" />
@@ -152,6 +156,8 @@
     <Compile Include="V20191112\Models\GameServerSessionPlacement.cs" />
     <Compile Include="V20191112\Models\GameServerSessionQueue.cs" />
     <Compile Include="V20191112\Models\GameServerSessionQueueDestination.cs" />
+    <Compile Include="V20191112\Models\GetGameServerInstanceLogUrlRequest.cs" />
+    <Compile Include="V20191112\Models\GetGameServerInstanceLogUrlResponse.cs" />
     <Compile Include="V20191112\Models\GetGameServerSessionLogUrlRequest.cs" />
     <Compile Include="V20191112\Models\GetGameServerSessionLogUrlResponse.cs" />
     <Compile Include="V20191112\Models\GetInstanceAccessRequest.cs" />
@@ -186,6 +192,7 @@
     <Compile Include="V20191112\Models\PutTimerScalingPolicyRequest.cs" />
     <Compile Include="V20191112\Models\PutTimerScalingPolicyResponse.cs" />
     <Compile Include="V20191112\Models\QuotaResource.cs" />
+    <Compile Include="V20191112\Models\RelatedCcnInfo.cs" />
     <Compile Include="V20191112\Models\ResolveAliasRequest.cs" />
     <Compile Include="V20191112\Models\ResolveAliasResponse.cs" />
     <Compile Include="V20191112\Models\ResourceCreationLimitPolicy.cs" />

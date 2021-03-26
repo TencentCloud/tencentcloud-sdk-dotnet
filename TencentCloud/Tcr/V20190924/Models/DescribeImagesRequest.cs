@@ -43,7 +43,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RepositoryName{ get; set; }
 
         /// <summary>
-        /// 指定镜像版本(Tag)，不填默认返回仓库内全部容器镜像
+        /// 指定镜像版本进行查找，当前为模糊搜索
         /// </summary>
         [JsonProperty("ImageVersion")]
         public string ImageVersion{ get; set; }
