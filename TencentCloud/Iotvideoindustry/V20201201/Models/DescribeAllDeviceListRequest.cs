@@ -25,7 +25,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
     {
         
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

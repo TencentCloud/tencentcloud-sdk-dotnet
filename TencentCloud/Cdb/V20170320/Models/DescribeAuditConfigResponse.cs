@@ -38,6 +38,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string LogType{ get; set; }
 
         /// <summary>
+        /// 是否正在关闭审计。目前支持的值包括："false"-否，"true"-是
+        /// </summary>
+        [JsonProperty("IsClosing")]
+        public string IsClosing{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
+            this.SetParamSimple(map, prefix + "IsClosing", this.IsClosing);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

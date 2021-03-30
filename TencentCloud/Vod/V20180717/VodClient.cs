@@ -2135,6 +2135,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
+        /// 如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDrmDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDrmDataKeyResponse"/></returns>
+        public async Task<DescribeDrmDataKeyResponse> DescribeDrmDataKey(DescribeDrmDataKeyRequest req)
+        {
+             JsonResponseModel<DescribeDrmDataKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDrmDataKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrmDataKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本 API 是 [旧版本加密](https://cloud.tencent.com/document/product/266/9638) 中[DescribeDrmDataKey 的 API 2017 接口](https://cloud.tencent.com/document/product/266/9643)的升级版本。
+        /// 如果您是新接入点播加密的用户，不要使用该 API。请参考[视频加密综述](https://cloud.tencent.com/document/product/266/45552)使用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDrmDataKeyRequest"/></param>
+        /// <returns><see cref="DescribeDrmDataKeyResponse"/></returns>
+        public DescribeDrmDataKeyResponse DescribeDrmDataKeySync(DescribeDrmDataKeyRequest req)
+        {
+             JsonResponseModel<DescribeDrmDataKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDrmDataKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrmDataKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsStateRequest"/></param>
@@ -2896,6 +2938,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTranscodeTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询点播域名信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodDomainsRequest"/></param>
+        /// <returns><see cref="DescribeVodDomainsResponse"/></returns>
+        public async Task<DescribeVodDomainsResponse> DescribeVodDomains(DescribeVodDomainsRequest req)
+        {
+             JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVodDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVodDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询点播域名信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVodDomainsRequest"/></param>
+        /// <returns><see cref="DescribeVodDomainsResponse"/></returns>
+        public DescribeVodDomainsResponse DescribeVodDomainsSync(DescribeVodDomainsRequest req)
+        {
+             JsonResponseModel<DescribeVodDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVodDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVodDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,7 +25,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
     {
         
         /// <summary>
-        /// 分组路径
+        /// 分组路径，格式为/aaa(/bbb/ccc)
         /// </summary>
         [JsonProperty("GroupPath")]
         public string GroupPath{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Ape.V20200513.Models
         [JsonProperty("DimensionsNameId")]
         public long? DimensionsNameId{ get; set; }
 
+        /// <summary>
+        /// 平台用户标识
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ape.V20200513.Models
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
             this.SetParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

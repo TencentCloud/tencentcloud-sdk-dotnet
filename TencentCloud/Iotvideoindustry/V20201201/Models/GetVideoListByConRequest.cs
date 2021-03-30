@@ -31,19 +31,19 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制量
+        /// 限制量，默认200
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 0：查询指定日期的录像；1：查询最近一天的录像
+        /// 0：查询指定日期的录像；1：查询最近一天的录像；默认0
         /// </summary>
         [JsonProperty("LatestDay")]
         public long? LatestDay{ get; set; }

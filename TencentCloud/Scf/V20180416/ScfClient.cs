@@ -387,7 +387,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 该接口根据传入的参数创建命名空间。
+        /// 该接口根据传入的参数删除命名空间。
         /// </summary>
         /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
         /// <returns><see cref="DeleteNamespaceResponse"/></returns>
@@ -407,7 +407,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 该接口根据传入的参数创建命名空间。
+        /// 该接口根据传入的参数删除命名空间。
         /// </summary>
         /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
         /// <returns><see cref="DeleteNamespaceResponse"/></returns>

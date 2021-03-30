@@ -37,7 +37,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 是否全时录制，即7*24小时录制
+        /// 是否全时录制，即7*24小时录制。
+        /// 0：非全时录制；1：全时录制。默认1
         /// </summary>
         [JsonProperty("IsAllWeek")]
         public long? IsAllWeek{ get; set; }

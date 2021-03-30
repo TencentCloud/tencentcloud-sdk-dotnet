@@ -935,7 +935,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口()用于查询设备含有录像文件的日期列表。
+        /// 本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
         /// </summary>
         /// <param name="req"><see cref="GetRecordDatesByDevRequest"/></param>
         /// <returns><see cref="GetRecordDatesByDevResponse"/></returns>
@@ -955,7 +955,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 本接口()用于查询设备含有录像文件的日期列表。
+        /// 本接口(GetRecordDatesByDev)用于查询设备含有录像文件的日期列表。
         /// </summary>
         /// <param name="req"><see cref="GetRecordDatesByDevRequest"/></param>
         /// <returns><see cref="GetRecordDatesByDevResponse"/></returns>

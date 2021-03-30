@@ -453,6 +453,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建从实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationInstanceRequest"/></param>
+        /// <returns><see cref="CreateReplicationInstanceResponse"/></returns>
+        public async Task<CreateReplicationInstanceResponse> CreateReplicationInstance(CreateReplicationInstanceRequest req)
+        {
+             JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建从实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationInstanceRequest"/></param>
+        /// <returns><see cref="CreateReplicationInstanceResponse"/></returns>
+        public CreateReplicationInstanceResponse CreateReplicationInstanceSync(CreateReplicationInstanceRequest req)
+        {
+             JsonResponseModel<CreateReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于企业版创建镜像仓库
         /// </summary>
         /// <param name="req"><see cref="CreateRepositoryRequest"/></param>

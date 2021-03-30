@@ -44,15 +44,23 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 备库的配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SlaveConfig")]
         public SlaveConfig SlaveConfig{ get; set; }
 
         /// <summary>
         /// 强同步实例第二备库的配置信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BackupConfig")]
         public BackupConfig BackupConfig{ get; set; }
+
+        /// <summary>
+        /// 是否切换备库。
+        /// </summary>
+        [JsonProperty("Switched")]
+        public bool? Switched{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -71,6 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamObj(map, prefix + "SlaveConfig.", this.SlaveConfig);
             this.SetParamObj(map, prefix + "BackupConfig.", this.BackupConfig);
+            this.SetParamSimple(map, prefix + "Switched", this.Switched);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

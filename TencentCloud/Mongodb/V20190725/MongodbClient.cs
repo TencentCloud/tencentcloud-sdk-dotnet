@@ -133,6 +133,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口用来创建某个备份文件的下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateBackupDownloadTaskResponse"/></returns>
+        public async Task<CreateBackupDownloadTaskResponse> CreateBackupDownloadTask(CreateBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用来创建某个备份文件的下载任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="CreateBackupDownloadTaskResponse"/></returns>
+        public CreateBackupDownloadTaskResponse CreateBackupDownloadTaskSync(CreateBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<CreateBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDBInstance)用于创建包年包月的MongoDB云数据库实例。接口支持的售卖规格，可从查询云数据库的售卖规格（DescribeSpecInfo）获取。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstanceRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Mongodb.V20190725
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupAccess");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份下载任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
+        public async Task<DescribeBackupDownloadTaskResponse> DescribeBackupDownloadTask(DescribeBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询备份下载任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadTaskResponse"/></returns>
+        public DescribeBackupDownloadTaskResponse DescribeBackupDownloadTaskSync(DescribeBackupDownloadTaskRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

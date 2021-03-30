@@ -37,6 +37,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Items{ get; set; }
 
         /// <summary>
+        /// 数据库名以及字符集
+        /// </summary>
+        [JsonProperty("DatabaseList")]
+        public DatabasesWithCharacterLists[] DatabaseList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
+            this.SetParamArrayObj(map, prefix + "DatabaseList.", this.DatabaseList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

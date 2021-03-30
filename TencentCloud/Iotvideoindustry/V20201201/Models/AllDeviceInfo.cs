@@ -32,14 +32,14 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备类型
+        /// 设备类型；2：IPC
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }
 
         /// <summary>
-        /// 设备状态
+        /// 设备状态；0：设备不在线；1：设备在线；2：设备隔离中；3：设备未注册
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceCode{ get; set; }
 
         /// <summary>
-        /// 是否存在录像
+        /// 是否存在录像,，0:不存在；1：存在
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsRecord")]

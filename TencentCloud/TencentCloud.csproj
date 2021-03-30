@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.247</VersionPrefix>
+    <VersionPrefix>3.0.248</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1771,6 +1771,7 @@
     <Compile Include="Cdb\V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
+    <Compile Include="Cdb\V20170320\Models\DatabasesWithCharacterLists.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DeleteAuditLogFileRequest.cs" />
@@ -7596,11 +7597,15 @@
     <Compile Include="Mongodb\V20190725\MongodbClient.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\AssignProjectResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\BackupDownloadTask.cs" />
+    <Compile Include="Mongodb\V20190725\Models\BackupDownloadTaskStatus.cs" />
     <Compile Include="Mongodb\V20190725\Models\BackupFile.cs" />
     <Compile Include="Mongodb\V20190725\Models\BackupInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ClientConnection.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateBackupDBInstanceResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDownloadTaskRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\CreateBackupDownloadTaskResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceHourResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\CreateDBInstanceRequest.cs" />
@@ -7612,6 +7617,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeBackupAccessResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeBackupDownloadTaskRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeBackupDownloadTaskResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeClientConnectionsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeCurrentOpRequest.cs" />
@@ -7651,6 +7658,7 @@
     <Compile Include="Mongodb\V20190725\Models\RenameInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\RenewDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ReplicaSetInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\ShardInfo.cs" />
@@ -10292,6 +10300,8 @@
     <Compile Include="Tcr\V20190924\Models\CreateNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespaceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateReplicationInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateReplicationInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryRequest.cs" />
@@ -11735,6 +11745,7 @@
     <Compile Include="Vod\V20180717\VodClient.cs" />
     <Compile Include="Vod\V20180717\Models\AIAnalysisTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\AIRecognitionTemplateItem.cs" />
+    <Compile Include="Vod\V20180717\Models\AccelerateAreaInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\AdaptiveDynamicStreamingTemplate.cs" />
@@ -11963,6 +11974,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeDailyMostPlayedStatResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDrmDataKeyRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeDrmDataKeyResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
@@ -11999,10 +12012,14 @@
     <Compile Include="Vod\V20180717\Models\DescribeTasksResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeTranscodeTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeVodDomainsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeVodDomainsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWatermarkTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWordSamplesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeWordSamplesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DomainDetailInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\DomainHTTPSConfig.cs" />
     <Compile Include="Vod\V20180717\Models\DrmStreamingsInfo.cs" />
     <Compile Include="Vod\V20180717\Models\DrmStreamingsInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\EditMediaFileInfo.cs" />
@@ -12088,6 +12105,8 @@
     <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimeOffsetItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaSourceData.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSubtitleInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSubtitleItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaTrack.cs" />
     <Compile Include="Vod\V20180717\Models\MediaTrackItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaTranscodeInfo.cs" />
@@ -12180,6 +12199,7 @@
     <Compile Include="Vod\V20180717\Models\PullUploadTask.cs" />
     <Compile Include="Vod\V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="Vod\V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\RefererAuthPolicy.cs" />
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ResolutionNameInfo.cs" />
@@ -12190,6 +12210,7 @@
     <Compile Include="Vod\V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\SimpleAesEdkPair.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\SimpleHlsClipResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SnapshotByTimeOffset2017.cs" />
@@ -12234,6 +12255,7 @@
     <Compile Include="Vod\V20180717\Models\TranscodeTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\TranscodeTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\TransitionOpertion.cs" />
+    <Compile Include="Vod\V20180717\Models\UrlSignatureAuthPolicy.cs" />
     <Compile Include="Vod\V20180717\Models\UserDefineAsrTextReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\UserDefineAsrTextReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\UserDefineConfigureInfo.cs" />

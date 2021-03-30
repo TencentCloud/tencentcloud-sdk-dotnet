@@ -48,6 +48,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 目标实例的地域ID，如广州是1
+        /// </summary>
+        [JsonProperty("DestinationRegionId")]
+        public ulong? DestinationRegionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "DestinationRegistryId", this.DestinationRegistryId);
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "DestinationRegionId", this.DestinationRegionId);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

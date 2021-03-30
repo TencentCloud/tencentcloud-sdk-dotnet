@@ -95,6 +95,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMiniProgramReviewInfo MiniProgramReviewInfo{ get; set; }
 
         /// <summary>
+        /// 字幕信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubtitleInfo")]
+        public MediaSubtitleInfo SubtitleInfo{ get; set; }
+
+        /// <summary>
         /// 媒体文件唯一标识 ID。
         /// </summary>
         [JsonProperty("FileId")]
@@ -116,6 +123,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "KeyFrameDescInfo.", this.KeyFrameDescInfo);
             this.SetParamObj(map, prefix + "AdaptiveDynamicStreamingInfo.", this.AdaptiveDynamicStreamingInfo);
             this.SetParamObj(map, prefix + "MiniProgramReviewInfo.", this.MiniProgramReviewInfo);
+            this.SetParamObj(map, prefix + "SubtitleInfo.", this.SubtitleInfo);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
         }
     }
