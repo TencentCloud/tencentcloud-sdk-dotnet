@@ -72,6 +72,12 @@ namespace TencentCloud.Asw.V20200722.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 是否允许日志投递
+        /// </summary>
+        [JsonProperty("EnableCLS")]
+        public bool? EnableCLS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Asw.V20200722.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RoleResource", this.RoleResource);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("DeleteStream")]
         public string DeleteStream{ get; set; }
 
+        /// <summary>
+        /// Flv 参数，目前支持add_keyframe_index
+        /// </summary>
+        [JsonProperty("FlvFlags")]
+        public string FlvFlags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ie.V20200304.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeleteStream", this.DeleteStream);
+            this.SetParamSimple(map, prefix + "FlvFlags", this.FlvFlags);
         }
     }
 }

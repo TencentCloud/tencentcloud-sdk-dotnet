@@ -99,6 +99,25 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ClearTags{ get; set; }
 
         /// <summary>
+        /// 新增一组字幕。单个媒体文件最多 16 个字幕。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+        /// </summary>
+        [JsonProperty("AddSubtitles")]
+        public MediaSubtitleInput[] AddSubtitles{ get; set; }
+
+        /// <summary>
+        /// 待删除字幕的唯一标识。同一个请求中，AddSubtitles 中指定的字幕 Id 必须与 DeleteSubtitleIds 都不相同。
+        /// </summary>
+        [JsonProperty("DeleteSubtitleIds")]
+        public string[] DeleteSubtitleIds{ get; set; }
+
+        /// <summary>
+        /// 取值 1 表示清空媒体文件所有的字幕信息，其他值无意义。
+        /// 同一个请求里，ClearSubtitles 与 AddSubtitles不能同时出现。
+        /// </summary>
+        [JsonProperty("ClearSubtitles")]
+        public long? ClearSubtitles{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -122,6 +141,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "AddTags.", this.AddTags);
             this.SetParamArraySimple(map, prefix + "DeleteTags.", this.DeleteTags);
             this.SetParamSimple(map, prefix + "ClearTags", this.ClearTags);
+            this.SetParamArrayObj(map, prefix + "AddSubtitles.", this.AddSubtitles);
+            this.SetParamArraySimple(map, prefix + "DeleteSubtitleIds.", this.DeleteSubtitleIds);
+            this.SetParamSimple(map, prefix + "ClearSubtitles", this.ClearSubtitles);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }

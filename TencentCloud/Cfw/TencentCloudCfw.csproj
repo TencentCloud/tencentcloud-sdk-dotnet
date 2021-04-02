@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.248</VersionPrefix>
+    <VersionPrefix>3.0.249</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20190904\CfwClient.cs" />
     <Compile Include="V20190904\Models\AcListsData.cs" />
     <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
+    <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
@@ -63,6 +64,8 @@
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeCfwEipsRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeRuleOverviewRequest.cs" />
@@ -77,6 +80,8 @@
     <Compile Include="V20190904\Models\DescribeTableStatusResponse.cs" />
     <Compile Include="V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />
+    <Compile Include="V20190904\Models\ExpandCfwVerticalResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusRequest.cs" />
@@ -91,12 +96,15 @@
     <Compile Include="V20190904\Models\ModifySequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="V20190904\Models\NatFwEipsInfo.cs" />
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
     <Compile Include="V20190904\Models\SecurityGroupApiRuleData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
+    <Compile Include="V20190904\Models\SetNatFwDnatRuleRequest.cs" />
+    <Compile Include="V20190904\Models\SetNatFwDnatRuleResponse.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
   </ItemGroup>
 </Project>

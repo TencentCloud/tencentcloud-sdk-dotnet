@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.248</VersionPrefix>
+    <VersionPrefix>3.0.249</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -424,6 +424,8 @@
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingNotification.cs" />
+    <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ClearLaunchConfigurationAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\CompleteLifecycleActionRequest.cs" />
     <Compile Include="As\V20180419\Models\CompleteLifecycleActionResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateAutoScalingGroupFromInstanceRequest.cs" />
@@ -609,6 +611,8 @@
     <Compile Include="Asw\V20200722\Models\StartExecutionRequest.cs" />
     <Compile Include="Asw\V20200722\Models\StartExecutionResponse.cs" />
     <Compile Include="Asw\V20200722\Models\StateMachine.cs" />
+    <Compile Include="Asw\V20200722\Models\StopExecutionRequest.cs" />
+    <Compile Include="Asw\V20200722\Models\StopExecutionResponse.cs" />
     <Compile Include="Ba\V20200720\BaClient.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlRequest.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlResponse.cs" />
@@ -2362,6 +2366,7 @@
     <Compile Include="Cfw\V20190904\CfwClient.cs" />
     <Compile Include="Cfw\V20190904\Models\AcListsData.cs" />
     <Compile Include="Cfw\V20190904\Models\AssociatedInstanceInfo.cs" />
+    <Compile Include="Cfw\V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateAcRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
@@ -2378,6 +2383,8 @@
     <Compile Include="Cfw\V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeRuleOverviewRequest.cs" />
@@ -2392,6 +2399,8 @@
     <Compile Include="Cfw\V20190904\Models\DescribeTableStatusResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusRequest.cs" />
@@ -2406,12 +2415,15 @@
     <Compile Include="Cfw\V20190904\Models\ModifySequenceRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyTableStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\NatFwEipsInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\RuleInfoData.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\SecurityGroupApiRuleData.cs" />
     <Compile Include="Cfw\V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="Cfw\V20190904\Models\SequenceData.cs" />
+    <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\SwitchListsData.cs" />
     <Compile Include="Chdfs\V20201112\ChdfsClient.cs" />
     <Compile Include="Chdfs\V20201112\Models\AccessGroup.cs" />
@@ -4091,6 +4103,8 @@
     <Compile Include="Dayu\V20180709\Models\DescribeBasicCCThresholdResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBasicDeviceThresholdRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBasicDeviceThresholdResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeBizHttpStatusRequest.cs" />
+    <Compile Include="Dayu\V20180709\Models\DescribeBizHttpStatusResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBizTrendRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribeCCAlarmThresholdRequest.cs" />
@@ -4189,6 +4203,7 @@
     <Compile Include="Dayu\V20180709\Models\DescribleNewL7RulesResponse.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleRegionCountRequest.cs" />
     <Compile Include="Dayu\V20180709\Models\DescribleRegionCountResponse.cs" />
+    <Compile Include="Dayu\V20180709\Models\HttpStatusMap.cs" />
     <Compile Include="Dayu\V20180709\Models\IpBlackWhite.cs" />
     <Compile Include="Dayu\V20180709\Models\IpBlockData.cs" />
     <Compile Include="Dayu\V20180709\Models\IpUnBlockData.cs" />
@@ -5164,6 +5179,7 @@
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DiskGroup.cs" />
     <Compile Include="Emr\V20190103\Models\DiskSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="Emr\V20190103\Models\Execution.cs" />
     <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
@@ -5190,6 +5206,7 @@
     <Compile Include="Emr\V20190103\Models\OutterResource.cs" />
     <Compile Include="Emr\V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
+    <Compile Include="Emr\V20190103\Models\PodParameter.cs" />
     <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
     <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
@@ -8616,6 +8633,7 @@
     <Compile Include="Partners\V20180321\Models\AgentBillElem.cs" />
     <Compile Include="Partners\V20180321\Models\AgentClientElem.cs" />
     <Compile Include="Partners\V20180321\Models\AgentDealElem.cs" />
+    <Compile Include="Partners\V20180321\Models\AgentDealNewElem.cs" />
     <Compile Include="Partners\V20180321\Models\AgentPayDealsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\AgentPayDealsResponse.cs" />
     <Compile Include="Partners\V20180321\Models\AgentSalesmanElem.cs" />
@@ -8626,6 +8644,7 @@
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DealGoodsPriceElem.cs" />
+    <Compile Include="Partners\V20180321\Models\DealGoodsPriceNewElem.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentAuditedClientsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentAuditedClientsResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentBillsRequest.cs" />
@@ -8634,6 +8653,8 @@
     <Compile Include="Partners\V20180321\Models\DescribeAgentClientGradeResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentClientsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentClientsResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentDealsByCacheRequest.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentDealsByCacheResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentDealsCacheRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentDealsCacheResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsRequest.cs" />
@@ -10061,6 +10082,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
@@ -11852,6 +11875,8 @@
     <Compile Include="Vod\V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AsrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\AttachMediaSubtitlesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\AttachMediaSubtitlesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\AudioTrackItem.cs" />
@@ -12106,6 +12131,7 @@
     <Compile Include="Vod\V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaSourceData.cs" />
     <Compile Include="Vod\V20180717\Models\MediaSubtitleInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\MediaSubtitleInput.cs" />
     <Compile Include="Vod\V20180717\Models\MediaSubtitleItem.cs" />
     <Compile Include="Vod\V20180717\Models\MediaTrack.cs" />
     <Compile Include="Vod\V20180717\Models\MediaTrackItem.cs" />

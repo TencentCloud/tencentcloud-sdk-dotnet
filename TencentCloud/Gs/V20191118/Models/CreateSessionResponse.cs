@@ -31,13 +31,13 @@ namespace TencentCloud.Gs.V20191118.Models
         public string ServerSession{ get; set; }
 
         /// <summary>
-        /// 【多人游戏】角色编号；比如1、2、3、4
+        /// 【已废弃】
         /// </summary>
         [JsonProperty("RoleNumber")]
         public string RoleNumber{ get; set; }
 
         /// <summary>
-        /// 【多人云游】角色；Player表示玩家；Viewer表示观察者
+        /// 【互动云游】角色；Player表示玩家；Viewer表示观察者
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

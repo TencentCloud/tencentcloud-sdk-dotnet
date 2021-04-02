@@ -284,6 +284,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
 
+        /// <summary>
+        /// 是否浮动规格，1是，0否
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDynamicSpec")]
+        public long? IsDynamicSpec{ get; set; }
+
+        /// <summary>
+        /// 浮动规格值json字符串
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DynamicPodSpec")]
+        public string DynamicPodSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -327,6 +341,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoFlag", this.AutoFlag);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
+            this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+            this.SetParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
         }
     }
 }

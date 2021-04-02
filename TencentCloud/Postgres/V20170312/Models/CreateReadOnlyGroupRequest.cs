@@ -84,6 +84,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("MinDelayEliminateReserve")]
         public ulong? MinDelayEliminateReserve{ get; set; }
 
+        /// <summary>
+        /// 安全组id
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "MaxReplayLag", this.MaxReplayLag);
             this.SetParamSimple(map, prefix + "MaxReplayLatency", this.MaxReplayLatency);
             this.SetParamSimple(map, prefix + "MinDelayEliminateReserve", this.MinDelayEliminateReserve);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

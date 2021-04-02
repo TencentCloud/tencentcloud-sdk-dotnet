@@ -43,7 +43,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameId{ get; set; }
 
         /// <summary>
-        /// 游戏区域，ap-guangzhou、ap-shanghai、ap-beijing、ap-chengdu、ap-chongqing、ap-nanjing等
+        /// 【已废弃】只在TrylockWorker时生效
         /// </summary>
         [JsonProperty("GameRegion")]
         public string GameRegion{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Gs.V20191118.Models
         public string GameParas{ get; set; }
 
         /// <summary>
-        /// 分辨率,，可设置为1080p或720p
+        /// 分辨率,，可设置为1080p或720p或1920x1080格式
         /// </summary>
         [JsonProperty("Resolution")]
         public string Resolution{ get; set; }
@@ -67,25 +67,25 @@ namespace TencentCloud.Gs.V20191118.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 【废弃】资源池编号
+        /// 【已废弃】
         /// </summary>
         [JsonProperty("SetNo")]
         public ulong? SetNo{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，固定码率，后端不动态调整(MaxBitrate和MinBitrate将无效)
+        /// 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，动态调整最大码率
+        /// 单位Mbps，动态调整最大码率，有一定浮动范围
         /// </summary>
         [JsonProperty("MaxBitrate")]
         public ulong? MaxBitrate{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，动态调整最小码率
+        /// 单位Mbps，动态调整最小码率，有一定浮动范围
         /// </summary>
         [JsonProperty("MinBitrate")]
         public ulong? MinBitrate{ get; set; }
@@ -97,25 +97,25 @@ namespace TencentCloud.Gs.V20191118.Models
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// 游戏用户IP，用于就近调度，例如125.127.178.228
+        /// 【已废弃】只在TrylockWorker时生效
         /// </summary>
         [JsonProperty("UserIp")]
         public string UserIp{ get; set; }
 
         /// <summary>
-        /// 优化项，便于客户灰度开启新的优化项，默认为0
+        /// 【已废弃】优化项，便于客户灰度开启新的优化项，默认为0
         /// </summary>
         [JsonProperty("Optimization")]
         public ulong? Optimization{ get; set; }
 
         /// <summary>
-        /// 【多人云游】游戏主机用户ID
+        /// 【互动云游】游戏主机用户ID
         /// </summary>
         [JsonProperty("HostUserId")]
         public string HostUserId{ get; set; }
 
         /// <summary>
-        /// 【多人云游】角色；Player表示玩家；Viewer表示观察者
+        /// 【互动云游】角色；Player表示玩家；Viewer表示观察者
         /// </summary>
         [JsonProperty("Role")]
         public string Role{ get; set; }

@@ -166,6 +166,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("FailType")]
         public string FailType{ get; set; }
 
+        /// <summary>
+        /// 私有仓库地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepoUrl")]
+        public string RepoUrl{ get; set; }
+
+        /// <summary>
+        /// 是否私有仓库代码变更触发自动部署
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoDeployOnCodeChange")]
+        public bool? AutoDeployOnCodeChange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +205,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
             this.SetParamSimple(map, prefix + "FailType", this.FailType);
+            this.SetParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
+            this.SetParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
         }
     }
 }

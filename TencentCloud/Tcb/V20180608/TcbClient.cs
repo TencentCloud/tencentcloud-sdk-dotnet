@@ -613,6 +613,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 云项目部署列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseProjectVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseProjectVersionListResponse"/></returns>
+        public async Task<DescribeCloudBaseProjectVersionListResponse> DescribeCloudBaseProjectVersionList(DescribeCloudBaseProjectVersionListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseProjectVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseProjectVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseProjectVersionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云项目部署列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseProjectVersionListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseProjectVersionListResponse"/></returns>
+        public DescribeCloudBaseProjectVersionListResponse DescribeCloudBaseProjectVersionListSync(DescribeCloudBaseProjectVersionListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseProjectVersionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseProjectVersionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseProjectVersionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看容器托管的集群状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>

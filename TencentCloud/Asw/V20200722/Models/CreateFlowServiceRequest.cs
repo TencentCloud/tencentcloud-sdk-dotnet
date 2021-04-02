@@ -66,6 +66,18 @@ namespace TencentCloud.Asw.V20200722.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 是否开启CLS日志投递功能
+        /// </summary>
+        [JsonProperty("EnableCLS")]
+        public bool? EnableCLS{ get; set; }
+
+        /// <summary>
+        /// 该状态机的默认输入
+        /// </summary>
+        [JsonProperty("Input")]
+        public string Input{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Asw.V20200722.Models
             this.SetParamSimple(map, prefix + "FlowServiceChineseName", this.FlowServiceChineseName);
             this.SetParamSimple(map, prefix + "RoleResource", this.RoleResource);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
+            this.SetParamSimple(map, prefix + "Input", this.Input);
         }
     }
 }

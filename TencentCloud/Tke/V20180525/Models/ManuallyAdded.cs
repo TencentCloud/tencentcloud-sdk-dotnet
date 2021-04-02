@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 加入中节的点数量
+        /// 加入中的节点数量
         /// </summary>
         [JsonProperty("Joining")]
         public long? Joining{ get; set; }

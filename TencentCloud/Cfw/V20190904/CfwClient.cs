@@ -373,6 +373,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 查询防火墙弹性公网ip
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
+        /// <returns><see cref="DescribeCfwEipsResponse"/></returns>
+        public async Task<DescribeCfwEipsResponse> DescribeCfwEips(DescribeCfwEipsRequest req)
+        {
+             JsonResponseModel<DescribeCfwEipsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCfwEips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfwEipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询防火墙弹性公网ip
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
+        /// <returns><see cref="DescribeCfwEipsResponse"/></returns>
+        public DescribeCfwEipsResponse DescribeCfwEipsSync(DescribeCfwEipsRequest req)
+        {
+             JsonResponseModel<DescribeCfwEipsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCfwEips");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfwEipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// nat规则列表概况
         /// </summary>
         /// <param name="req"><see cref="DescribeNatRuleOverviewRequest"/></param>
@@ -644,6 +684,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVpcRuleOverview");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcRuleOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 防火墙垂直扩容
+        /// </summary>
+        /// <param name="req"><see cref="ExpandCfwVerticalRequest"/></param>
+        /// <returns><see cref="ExpandCfwVerticalResponse"/></returns>
+        public async Task<ExpandCfwVerticalResponse> ExpandCfwVertical(ExpandCfwVerticalRequest req)
+        {
+             JsonResponseModel<ExpandCfwVerticalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExpandCfwVertical");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExpandCfwVerticalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 防火墙垂直扩容
+        /// </summary>
+        /// <param name="req"><see cref="ExpandCfwVerticalRequest"/></param>
+        /// <returns><see cref="ExpandCfwVerticalResponse"/></returns>
+        public ExpandCfwVerticalResponse ExpandCfwVerticalSync(ExpandCfwVerticalRequest req)
+        {
+             JsonResponseModel<ExpandCfwVerticalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExpandCfwVertical");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExpandCfwVerticalResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -964,6 +1044,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "RunSyncAsset");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunSyncAssetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="SetNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="SetNatFwDnatRuleResponse"/></returns>
+        public async Task<SetNatFwDnatRuleResponse> SetNatFwDnatRule(SetNatFwDnatRuleRequest req)
+        {
+             JsonResponseModel<SetNatFwDnatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetNatFwDnatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNatFwDnatRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置防火墙Dnat规则
+        /// </summary>
+        /// <param name="req"><see cref="SetNatFwDnatRuleRequest"/></param>
+        /// <returns><see cref="SetNatFwDnatRuleResponse"/></returns>
+        public SetNatFwDnatRuleResponse SetNatFwDnatRuleSync(SetNatFwDnatRuleRequest req)
+        {
+             JsonResponseModel<SetNatFwDnatRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetNatFwDnatRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetNatFwDnatRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,16 +25,16 @@ namespace TencentCloud.Ft.V20200304.Models
     {
         
         /// <summary>
-        /// 人脸框左上角横坐标。
-        /// </summary>
-        [JsonProperty("X")]
-        public long? X{ get; set; }
-
-        /// <summary>
         /// 人脸框左上角纵坐标。
         /// </summary>
         [JsonProperty("Y")]
         public long? Y{ get; set; }
+
+        /// <summary>
+        /// 人脸框左上角横坐标。
+        /// </summary>
+        [JsonProperty("X")]
+        public long? X{ get; set; }
 
         /// <summary>
         /// 人脸框宽度。
@@ -54,8 +54,8 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "X", this.X);
             this.SetParamSimple(map, prefix + "Y", this.Y);
+            this.SetParamSimple(map, prefix + "X", this.X);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
         }

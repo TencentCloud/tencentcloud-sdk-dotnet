@@ -1333,6 +1333,46 @@ namespace TencentCloud.Dayu.V20180709
         }
 
         /// <summary>
+        /// 获取业务流量状态码统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public async Task<DescribeBizHttpStatusResponse> DescribeBizHttpStatus(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取业务流量状态码统计
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizHttpStatusRequest"/></param>
+        /// <returns><see cref="DescribeBizHttpStatusResponse"/></returns>
+        public DescribeBizHttpStatusResponse DescribeBizHttpStatusSync(DescribeBizHttpStatusRequest req)
+        {
+             JsonResponseModel<DescribeBizHttpStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizHttpStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizHttpStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取业务流量曲线
         /// </summary>
         /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>

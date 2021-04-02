@@ -138,6 +138,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("MateFps")]
         public ulong? MateFps{ get; set; }
 
+        /// <summary>
+        /// 推流参数
+        /// </summary>
+        [JsonProperty("StreamParam")]
+        public string StreamParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "MetaVideoRate", this.MetaVideoRate);
             this.SetParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
             this.SetParamSimple(map, prefix + "MateFps", this.MateFps);
+            this.SetParamSimple(map, prefix + "StreamParam", this.StreamParam);
         }
     }
 }

@@ -58,6 +58,15 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("Denoise")]
         public Denoise Denoise{ get; set; }
 
+        /// <summary>
+        /// 开启添加静音，可选项：
+        /// 0：不开启，
+        /// 1：开启，
+        /// 默认不开启
+        /// </summary>
+        [JsonProperty("EnableMuteAudio")]
+        public long? EnableMuteAudio{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +78,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
+            this.SetParamSimple(map, prefix + "EnableMuteAudio", this.EnableMuteAudio);
         }
     }
 }

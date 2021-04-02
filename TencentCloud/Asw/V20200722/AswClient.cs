@@ -372,5 +372,45 @@ namespace TencentCloud.Asw.V20200722
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 终止某个状态机
+        /// </summary>
+        /// <param name="req"><see cref="StopExecutionRequest"/></param>
+        /// <returns><see cref="StopExecutionResponse"/></returns>
+        public async Task<StopExecutionResponse> StopExecution(StopExecutionRequest req)
+        {
+             JsonResponseModel<StopExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终止某个状态机
+        /// </summary>
+        /// <param name="req"><see cref="StopExecutionRequest"/></param>
+        /// <returns><see cref="StopExecutionResponse"/></returns>
+        public StopExecutionResponse StopExecutionSync(StopExecutionRequest req)
+        {
+             JsonResponseModel<StopExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

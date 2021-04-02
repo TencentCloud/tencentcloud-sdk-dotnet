@@ -138,6 +138,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }
 
+        /// <summary>
+        /// 安全组id
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamSimple(map, prefix + "ReadOnlyGroupId", this.ReadOnlyGroupId);
             this.SetParamObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

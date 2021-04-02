@@ -146,6 +146,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("YarnNodeLabel")]
         public string YarnNodeLabel{ get; set; }
 
+        /// <summary>
+        /// POD自定义权限和自定义参数
+        /// </summary>
+        [JsonProperty("PodParameter")]
+        public PodParameter PodParameter{ get; set; }
+
+        /// <summary>
+        /// 扩容的Master节点的数量。
+        /// </summary>
+        [JsonProperty("MasterCount")]
+        public ulong? MasterCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ClickHouseClusterName", this.ClickHouseClusterName);
             this.SetParamSimple(map, prefix + "ClickHouseClusterType", this.ClickHouseClusterType);
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
+            this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
+            this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
         }
     }
 }

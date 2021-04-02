@@ -90,6 +90,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }
 
+        /// <summary>
+        /// 是否代码变更触发自动部署
+        /// </summary>
+        [JsonProperty("AutoDeployOnCodeChange")]
+        public bool? AutoDeployOnCodeChange{ get; set; }
+
+        /// <summary>
+        /// 私有仓库地址
+        /// </summary>
+        [JsonProperty("RepoUrl")]
+        public string RepoUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "NetworkConfig", this.NetworkConfig);
             this.SetParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
+            this.SetParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
+            this.SetParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
         }
     }
 }

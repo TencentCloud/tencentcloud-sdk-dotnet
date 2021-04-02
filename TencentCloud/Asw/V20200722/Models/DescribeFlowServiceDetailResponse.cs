@@ -77,6 +77,27 @@ namespace TencentCloud.Asw.V20200722.Models
         public string FlowServiceChineseName{ get; set; }
 
         /// <summary>
+        /// 是否开启日志CLS服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableCLS")]
+        public bool? EnableCLS{ get; set; }
+
+        /// <summary>
+        /// CLS日志查看地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLSUrl")]
+        public string CLSUrl{ get; set; }
+
+        /// <summary>
+        /// 工作流提示输入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowInput")]
+        public string FlowInput{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -96,6 +117,9 @@ namespace TencentCloud.Asw.V20200722.Models
             this.SetParamSimple(map, prefix + "CreateDate", this.CreateDate);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "FlowServiceChineseName", this.FlowServiceChineseName);
+            this.SetParamSimple(map, prefix + "EnableCLS", this.EnableCLS);
+            this.SetParamSimple(map, prefix + "CLSUrl", this.CLSUrl);
+            this.SetParamSimple(map, prefix + "FlowInput", this.FlowInput);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

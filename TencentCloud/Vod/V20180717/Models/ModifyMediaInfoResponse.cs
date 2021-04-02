@@ -32,6 +32,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string CoverUrl{ get; set; }
 
         /// <summary>
+        /// 新增的字幕信息。
+        /// </summary>
+        [JsonProperty("AddedSubtitleSet")]
+        public MediaSubtitleItem[] AddedSubtitleSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+            this.SetParamArrayObj(map, prefix + "AddedSubtitleSet.", this.AddedSubtitleSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

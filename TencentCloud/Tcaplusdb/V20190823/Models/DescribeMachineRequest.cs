@@ -25,7 +25,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 是否按ipv6过滤
+        /// 不为0，表示查询支持ipv6的机器
         /// </summary>
         [JsonProperty("Ipv6Enable")]
         public long? Ipv6Enable{ get; set; }

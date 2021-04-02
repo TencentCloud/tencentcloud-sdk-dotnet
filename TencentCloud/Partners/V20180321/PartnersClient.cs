@@ -375,6 +375,46 @@ namespace TencentCloud.Partners.V20180321
         /// <summary>
         /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
         /// </summary>
+        /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
+        /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>
+        public async Task<DescribeAgentDealsByCacheResponse> DescribeAgentDealsByCache(DescribeAgentDealsByCacheRequest req)
+        {
+             JsonResponseModel<DescribeAgentDealsByCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgentDealsByCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentDealsByCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
+        /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>
+        public DescribeAgentDealsByCacheResponse DescribeAgentDealsByCacheSync(DescribeAgentDealsByCacheRequest req)
+        {
+             JsonResponseModel<DescribeAgentDealsByCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgentDealsByCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgentDealsByCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>
         public async Task<DescribeAgentDealsCacheResponse> DescribeAgentDealsCache(DescribeAgentDealsCacheRequest req)
@@ -393,7 +433,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>

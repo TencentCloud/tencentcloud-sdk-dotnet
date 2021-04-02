@@ -147,6 +147,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] Filters{ get; set; }
 
         /// <summary>
+        /// 媒体文件存储地区，如 ap-chongqing，参见[地域列表](https://cloud.tencent.com/document/product/266/9760#.E5.B7.B2.E6.94.AF.E6.8C.81.E5.9C.B0.E5.9F.9F.E5.88.97.E8.A1.A8)。
+        /// <li>单个存储地区长度限制：20个字符。</li>
+        /// <li>数组长度限制：20。</li>
+        /// </summary>
+        [JsonProperty("StorageRegions")]
+        public string[] StorageRegions{ get; set; }
+
+        /// <summary>
         /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
         [JsonProperty("SubAppId")]
@@ -221,6 +229,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);

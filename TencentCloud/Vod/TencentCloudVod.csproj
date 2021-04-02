@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.248</VersionPrefix>
+    <VersionPrefix>3.0.249</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -154,6 +154,8 @@
     <Compile Include="V20180717\Models\AsrFullTextConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\AsrWordsConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\AttachMediaSubtitlesRequest.cs" />
+    <Compile Include="V20180717\Models\AttachMediaSubtitlesResponse.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfo.cs" />
     <Compile Include="V20180717\Models\AudioTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\AudioTrackItem.cs" />
@@ -408,6 +410,7 @@
     <Compile Include="V20180717\Models\MediaSnapshotByTimePicInfoItem.cs" />
     <Compile Include="V20180717\Models\MediaSourceData.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleInfo.cs" />
+    <Compile Include="V20180717\Models\MediaSubtitleInput.cs" />
     <Compile Include="V20180717\Models\MediaSubtitleItem.cs" />
     <Compile Include="V20180717\Models\MediaTrack.cs" />
     <Compile Include="V20180717\Models\MediaTrackItem.cs" />

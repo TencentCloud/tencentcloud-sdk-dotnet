@@ -72,6 +72,19 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("PodVolumes")]
         public PodVolume[] PodVolumes{ get; set; }
 
+        /// <summary>
+        /// 是否浮动规格，1是，0否
+        /// </summary>
+        [JsonProperty("IsDynamicSpec")]
+        public ulong? IsDynamicSpec{ get; set; }
+
+        /// <summary>
+        /// 浮动规格
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DynamicPodSpec")]
+        public DynamicPodSpec DynamicPodSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +99,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArraySimple(map, prefix + "DataVolumes.", this.DataVolumes);
             this.SetParamSimple(map, prefix + "CpuType", this.CpuType);
             this.SetParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
+            this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
+            this.SetParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
         }
     }
 }

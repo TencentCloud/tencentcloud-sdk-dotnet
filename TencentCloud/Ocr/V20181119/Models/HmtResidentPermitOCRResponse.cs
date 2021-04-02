@@ -74,6 +74,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Authority{ get; set; }
 
         /// <summary>
+        /// 签发次数
+        /// </summary>
+        [JsonProperty("VisaNum")]
+        public string VisaNum{ get; set; }
+
+        /// <summary>
+        /// 通行证号码
+        /// </summary>
+        [JsonProperty("PassNo")]
+        public string PassNo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +105,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "CardType", this.CardType);
             this.SetParamSimple(map, prefix + "ValidDate", this.ValidDate);
             this.SetParamSimple(map, prefix + "Authority", this.Authority);
+            this.SetParamSimple(map, prefix + "VisaNum", this.VisaNum);
+            this.SetParamSimple(map, prefix + "PassNo", this.PassNo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
