@@ -26,9 +26,10 @@ namespace TencentCloud.Cme.V20191029.Models
         
         /// <summary>
         /// 片段类型。取值有：
-        /// <li>Video：视频片段。</li>
-        /// <li>Audio：音频片段。</li>
-        /// <li>Empty：空白片段。</li>
+        /// <li>Video：视频片段；</li>
+        /// <li>Audio：音频片段；</li>
+        /// <li>Empty：空白片段；</li>
+        /// <li>Transition：转场。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -52,6 +53,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("EmptyItem")]
         public EmptyTrackItem EmptyItem{ get; set; }
 
+        /// <summary>
+        /// 转场，当 Type = Transition 时有效。
+        /// </summary>
+        [JsonProperty("TransitionItem")]
+        public MediaTransitionItem TransitionItem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "VideoItem.", this.VideoItem);
             this.SetParamObj(map, prefix + "AudioItem.", this.AudioItem);
             this.SetParamObj(map, prefix + "EmptyItem.", this.EmptyItem);
+            this.SetParamObj(map, prefix + "TransitionItem.", this.TransitionItem);
         }
     }
 }

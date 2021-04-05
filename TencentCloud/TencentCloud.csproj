@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.249</VersionPrefix>
+    <VersionPrefix>3.0.250</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3017,6 +3017,7 @@
     <Compile Include="Cme\V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ListMediaResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\LivePullInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\LiveStreamClipProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\LoginStatusInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MaterialBasicInfo.cs" />
@@ -3028,6 +3029,7 @@
     <Compile Include="Cme\V20191029\Models\MediaReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\MediaTrack.cs" />
     <Compile Include="Cme\V20191029\Models\MediaTrackItem.cs" />
+    <Compile Include="Cme\V20191029\Models\MediaTransitionItem.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyMaterialResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ModifyProjectRequest.cs" />
@@ -3049,11 +3051,15 @@
     <Compile Include="Cme\V20191029\Models\ResourceInfo.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\RtmpPushInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SearchMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\SearchMaterialResponse.cs" />
     <Compile Include="Cme\V20191029\Models\SearchScope.cs" />
     <Compile Include="Cme\V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SortBy.cs" />
+    <Compile Include="Cme\V20191029\Models\StreamConnectOutput.cs" />
+    <Compile Include="Cme\V20191029\Models\StreamConnectProjectInput.cs" />
+    <Compile Include="Cme\V20191029\Models\StreamInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SwitcherPgmOutputConfig.cs" />
     <Compile Include="Cme\V20191029\Models\SwitcherProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\TaskBaseInfo.cs" />
@@ -3068,6 +3074,7 @@
     <Compile Include="Cme\V20191029\Models\VideoSegmentationProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\VideoStreamInfo.cs" />
     <Compile Include="Cme\V20191029\Models\VideoTrackItem.cs" />
+    <Compile Include="Cme\V20191029\Models\VodPullInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\WeiboPublishInfo.cs" />
     <Compile Include="Cmq\V20190304\CmqClient.cs" />
     <Compile Include="Cmq\V20190304\Models\ClearQueueRequest.cs" />
@@ -6449,6 +6456,10 @@
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceClientKeyRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceClientKeyResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResourceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResourceResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResourcesRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResourcesResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceShadowRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeDeviceShadowResponse.cs" />
@@ -6472,12 +6483,20 @@
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevicesRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeMultiDevicesResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductResourceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductResourceResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductResourcesRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeProductResourcesResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductTasksRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductTasksResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductsRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeProductsResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribePushResourceTaskStatisticsRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribePushResourceTaskStatisticsResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeResourceTasksRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DescribeResourceTasksResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DescribeTasksRequest.cs" />
@@ -6485,6 +6504,7 @@
     <Compile Include="Iotcloud\V20180614\Models\DeviceInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceLabel.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceProperty.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeviceResourceInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceTag.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeviceUpdateStatus.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleRequest.cs" />
@@ -6494,10 +6514,13 @@
     <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\FirmwareTaskInfo.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\GetUserResourceInfoRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\GetUserResourceInfoResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\MultiDevicesInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductMetadata.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductProperties.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\ProductResourceInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\ProductTaskInfo.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishAsDeviceRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\PublishAsDeviceResponse.cs" />

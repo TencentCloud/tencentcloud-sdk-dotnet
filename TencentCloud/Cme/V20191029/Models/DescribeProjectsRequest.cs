@@ -47,6 +47,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>VIDEO_EDIT：视频编辑。</li>
         /// <li>SWITCHER：导播台。</li>
         /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
+        /// <li>STREAM_CONNECT：云转推。</li>
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }

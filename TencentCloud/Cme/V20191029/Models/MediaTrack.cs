@@ -27,7 +27,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 轨道类型，取值有：
         /// <ul>
-        /// <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>EmptyTrackItem</li></ul> </li>
+        /// <li>Video ：视频轨道。视频轨道由以下 Item 组成：<ul><li>VideoTrackItem</li><li>EmptyTrackItem</li><li>MediaTransitionItem</li></ul> </li>
         /// <li>Audio ：音频轨道。音频轨道由以下 Item 组成：<ul><li>AudioTrackItem</li><li>EmptyTrackItem</li></ul> </li>
         /// </ul>
         /// </summary>

@@ -41,13 +41,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// 偏移量，默认值是0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量。
+        /// 返回数量，默认值是20，最大是100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

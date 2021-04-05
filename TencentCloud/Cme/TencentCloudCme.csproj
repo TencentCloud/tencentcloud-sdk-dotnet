@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.249</VersionPrefix>
+    <VersionPrefix>3.0.250</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,7 @@
     <Compile Include="V20191029\Models\LinkMaterialInfo.cs" />
     <Compile Include="V20191029\Models\ListMediaRequest.cs" />
     <Compile Include="V20191029\Models\ListMediaResponse.cs" />
+    <Compile Include="V20191029\Models\LivePullInputInfo.cs" />
     <Compile Include="V20191029\Models\LiveStreamClipProjectInput.cs" />
     <Compile Include="V20191029\Models\LoginStatusInfo.cs" />
     <Compile Include="V20191029\Models\MaterialBasicInfo.cs" />
@@ -139,6 +140,7 @@
     <Compile Include="V20191029\Models\MediaReplacementInfo.cs" />
     <Compile Include="V20191029\Models\MediaTrack.cs" />
     <Compile Include="V20191029\Models\MediaTrackItem.cs" />
+    <Compile Include="V20191029\Models\MediaTransitionItem.cs" />
     <Compile Include="V20191029\Models\ModifyMaterialRequest.cs" />
     <Compile Include="V20191029\Models\ModifyMaterialResponse.cs" />
     <Compile Include="V20191029\Models\ModifyProjectRequest.cs" />
@@ -160,11 +162,15 @@
     <Compile Include="V20191029\Models\ResourceInfo.cs" />
     <Compile Include="V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
     <Compile Include="V20191029\Models\RevokeResourceAuthorizationResponse.cs" />
+    <Compile Include="V20191029\Models\RtmpPushInputInfo.cs" />
     <Compile Include="V20191029\Models\SearchMaterialRequest.cs" />
     <Compile Include="V20191029\Models\SearchMaterialResponse.cs" />
     <Compile Include="V20191029\Models\SearchScope.cs" />
     <Compile Include="V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="V20191029\Models\SortBy.cs" />
+    <Compile Include="V20191029\Models\StreamConnectOutput.cs" />
+    <Compile Include="V20191029\Models\StreamConnectProjectInput.cs" />
+    <Compile Include="V20191029\Models\StreamInputInfo.cs" />
     <Compile Include="V20191029\Models\SwitcherPgmOutputConfig.cs" />
     <Compile Include="V20191029\Models\SwitcherProjectInput.cs" />
     <Compile Include="V20191029\Models\TaskBaseInfo.cs" />
@@ -179,6 +185,7 @@
     <Compile Include="V20191029\Models\VideoSegmentationProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoStreamInfo.cs" />
     <Compile Include="V20191029\Models\VideoTrackItem.cs" />
+    <Compile Include="V20191029\Models\VodPullInputInfo.cs" />
     <Compile Include="V20191029\Models\WeiboPublishInfo.cs" />
   </ItemGroup>
 </Project>
