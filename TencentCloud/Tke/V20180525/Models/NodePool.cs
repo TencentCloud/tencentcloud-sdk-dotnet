@@ -127,6 +127,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// 集群属于节点podCIDR大小自定义模式时，节点池需要带上pod数量属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DesiredPodNum")]
+        public long? DesiredPodNum{ get; set; }
+
+        /// <summary>
+        /// 用户自定义脚本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserScript")]
+        public string UserScript{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +163,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "DesiredPodNum", this.DesiredPodNum);
+            this.SetParamSimple(map, prefix + "UserScript", this.UserScript);
         }
     }
 }

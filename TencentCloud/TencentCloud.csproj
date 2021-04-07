@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.251</VersionPrefix>
+    <VersionPrefix>3.0.252</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1713,10 +1713,13 @@
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeTelSessionRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeTelSessionResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\IVRKeyPressedElement.cs" />
     <Compile Include="Ccc\V20200210\Models\Message.cs" />
     <Compile Include="Ccc\V20200210\Models\MessageBody.cs" />
+    <Compile Include="Ccc\V20200210\Models\PSTNSession.cs" />
     <Compile Include="Ccc\V20200210\Models\PSTNSessionInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\ServeParticipant.cs" />
@@ -3055,6 +3058,7 @@
     <Compile Include="Cme\V20191029\Models\SearchMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\SearchMaterialResponse.cs" />
     <Compile Include="Cme\V20191029\Models\SearchScope.cs" />
+    <Compile Include="Cme\V20191029\Models\SlotInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SortBy.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectOutput.cs" />
@@ -3070,6 +3074,7 @@
     <Compile Include="Cme\V20191029\Models\VODExportInfo.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEditProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEditProjectOutput.cs" />
+    <Compile Include="Cme\V20191029\Models\VideoEditTemplateMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\VideoMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\VideoSegmentationProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\VideoStreamInfo.cs" />
@@ -9964,6 +9969,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\CreateBackupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateClusterRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateClusterResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\CreateSnapshotsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\CreateSnapshotsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateTableGroupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateTableGroupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\CreateTablesRequest.cs" />
@@ -9972,6 +9979,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteIdlFilesResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteSnapshotsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexRequest.cs" />
@@ -9988,6 +9997,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeMachineResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupTagsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupTagsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DescribeTableGroupsRequest.cs" />
@@ -10011,6 +10022,9 @@
     <Compile Include="Tcaplusdb\V20190823\Models\Filter.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfoWithoutContent.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ImportSnapshotsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ImportSnapshotsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\KeyFile.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\MachineInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterMachineResponse.cs" />
@@ -10020,6 +10034,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterPasswordResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterTagsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyClusterTagsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifySnapshotsRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\ModifySnapshotsResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupNameRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupNameResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ModifyTableGroupTagsRequest.cs" />
@@ -10047,6 +10063,9 @@
     <Compile Include="Tcaplusdb\V20190823\Models\ServerMachineInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SnapshotInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SnapshotInfoNew.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SnapshotResult.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableGroupInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableInfoNew.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\TableResultNew.cs" />

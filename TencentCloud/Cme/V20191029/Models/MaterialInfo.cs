@@ -59,6 +59,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public LinkMaterial LinkMaterial{ get; set; }
 
         /// <summary>
+        /// 模板媒体信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoEditTemplateMaterial")]
+        public VideoEditTemplateMaterial VideoEditTemplateMaterial{ get; set; }
+
+        /// <summary>
         /// 其他类型媒体信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -76,6 +83,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "AudioMaterial.", this.AudioMaterial);
             this.SetParamObj(map, prefix + "ImageMaterial.", this.ImageMaterial);
             this.SetParamObj(map, prefix + "LinkMaterial.", this.LinkMaterial);
+            this.SetParamObj(map, prefix + "VideoEditTemplateMaterial.", this.VideoEditTemplateMaterial);
             this.SetParamObj(map, prefix + "OtherMaterial.", this.OtherMaterial);
         }
     }

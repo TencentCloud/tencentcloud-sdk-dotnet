@@ -31,7 +31,7 @@ namespace TencentCloud.Cfs.V20190719.Models
         public ulong? FsLimit{ get; set; }
 
         /// <summary>
-        /// 文件系统ID
+        /// 文件系统ID，目前仅支持标准型文件系统。
         /// </summary>
         [JsonProperty("FileSystemId")]
         public string FileSystemId{ get; set; }

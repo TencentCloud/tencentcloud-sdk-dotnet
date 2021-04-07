@@ -452,5 +452,45 @@ namespace TencentCloud.Ccc.V20200210
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取 PSTN 会话信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelSessionRequest"/></param>
+        /// <returns><see cref="DescribeTelSessionResponse"/></returns>
+        public async Task<DescribeTelSessionResponse> DescribeTelSession(DescribeTelSessionRequest req)
+        {
+             JsonResponseModel<DescribeTelSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTelSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取 PSTN 会话信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTelSessionRequest"/></param>
+        /// <returns><see cref="DescribeTelSessionResponse"/></returns>
+        public DescribeTelSessionResponse DescribeTelSessionSync(DescribeTelSessionRequest req)
+        {
+             JsonResponseModel<DescribeTelSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTelSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

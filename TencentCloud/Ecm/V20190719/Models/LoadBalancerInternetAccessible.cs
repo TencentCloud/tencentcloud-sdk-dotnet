@@ -25,7 +25,7 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 最大出带宽，单位Mbps。
+        /// 最大出带宽，单位Mbps。默认值10
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }

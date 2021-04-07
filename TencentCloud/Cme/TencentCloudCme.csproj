@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.251</VersionPrefix>
+    <VersionPrefix>3.0.252</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -166,6 +166,7 @@
     <Compile Include="V20191029\Models\SearchMaterialRequest.cs" />
     <Compile Include="V20191029\Models\SearchMaterialResponse.cs" />
     <Compile Include="V20191029\Models\SearchScope.cs" />
+    <Compile Include="V20191029\Models\SlotInfo.cs" />
     <Compile Include="V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="V20191029\Models\SortBy.cs" />
     <Compile Include="V20191029\Models\StreamConnectOutput.cs" />
@@ -181,6 +182,7 @@
     <Compile Include="V20191029\Models\VODExportInfo.cs" />
     <Compile Include="V20191029\Models\VideoEditProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoEditProjectOutput.cs" />
+    <Compile Include="V20191029\Models\VideoEditTemplateMaterial.cs" />
     <Compile Include="V20191029\Models\VideoMaterial.cs" />
     <Compile Include="V20191029\Models\VideoSegmentationProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoStreamInfo.cs" />

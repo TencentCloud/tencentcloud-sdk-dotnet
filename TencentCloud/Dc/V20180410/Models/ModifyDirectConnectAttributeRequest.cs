@@ -96,6 +96,12 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// 物理专线带宽
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public ulong? Bandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "FaultReportContactPerson", this.FaultReportContactPerson);
             this.SetParamSimple(map, prefix + "FaultReportContactNumber", this.FaultReportContactNumber);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
         }
     }
 }

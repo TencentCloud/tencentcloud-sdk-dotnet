@@ -213,6 +213,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 构造表格过去时间点的快照
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotsRequest"/></param>
+        /// <returns><see cref="CreateSnapshotsResponse"/></returns>
+        public async Task<CreateSnapshotsResponse> CreateSnapshots(CreateSnapshotsRequest req)
+        {
+             JsonResponseModel<CreateSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 构造表格过去时间点的快照
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotsRequest"/></param>
+        /// <returns><see cref="CreateSnapshotsResponse"/></returns>
+        public CreateSnapshotsResponse CreateSnapshotsSync(CreateSnapshotsRequest req)
+        {
+             JsonResponseModel<CreateSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在TcaplusDB集群下创建表格组
         /// </summary>
         /// <param name="req"><see cref="CreateTableGroupRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DeleteIdlFiles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIdlFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除表格的快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
+        public async Task<DeleteSnapshotsResponse> DeleteSnapshots(DeleteSnapshotsRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除表格的快照
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
+        public DeleteSnapshotsResponse DeleteSnapshotsSync(DeleteSnapshotsRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -684,6 +764,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
+        public async Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询快照列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
+        public DescribeSnapshotsResponse DescribeSnapshotsSync(DescribeSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1053,6 +1173,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 将快照数据导入到新表或当前表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSnapshotsRequest"/></param>
+        /// <returns><see cref="ImportSnapshotsResponse"/></returns>
+        public async Task<ImportSnapshotsResponse> ImportSnapshots(ImportSnapshotsRequest req)
+        {
+             JsonResponseModel<ImportSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将快照数据导入到新表或当前表
+        /// </summary>
+        /// <param name="req"><see cref="ImportSnapshotsRequest"/></param>
+        /// <returns><see cref="ImportSnapshotsResponse"/></returns>
+        public ImportSnapshotsResponse ImportSnapshotsSync(ImportSnapshotsRequest req)
+        {
+             JsonResponseModel<ImportSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改独占集群机器
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
@@ -1204,6 +1364,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterTags");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格快照的过期时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotsRequest"/></param>
+        /// <returns><see cref="ModifySnapshotsResponse"/></returns>
+        public async Task<ModifySnapshotsResponse> ModifySnapshots(ModifySnapshotsRequest req)
+        {
+             JsonResponseModel<ModifySnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改表格快照的过期时间
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotsRequest"/></param>
+        /// <returns><see cref="ModifySnapshotsResponse"/></returns>
+        public ModifySnapshotsResponse ModifySnapshotsSync(ModifySnapshotsRequest req)
+        {
+             JsonResponseModel<ModifySnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
