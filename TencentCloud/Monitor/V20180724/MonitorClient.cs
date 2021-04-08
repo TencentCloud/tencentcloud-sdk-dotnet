@@ -821,7 +821,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 获取基础指标详情
+        /// 获取基础指标属性
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>
         /// <returns><see cref="DescribeBaseMetricsResponse"/></returns>
@@ -841,7 +841,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 获取基础指标详情
+        /// 获取基础指标属性
         /// </summary>
         /// <param name="req"><see cref="DescribeBaseMetricsRequest"/></param>
         /// <returns><see cref="DescribeBaseMetricsResponse"/></returns>

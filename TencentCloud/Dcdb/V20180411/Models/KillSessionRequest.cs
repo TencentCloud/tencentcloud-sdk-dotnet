@@ -37,10 +37,16 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long?[] SessionId{ get; set; }
 
         /// <summary>
-        /// 分片ID
+        /// 分片ID，与ShardSerialId设置一个
         /// </summary>
         [JsonProperty("ShardId")]
         public string ShardId{ get; set; }
+
+        /// <summary>
+        /// 分片序列ID，与ShardId设置一个
+        /// </summary>
+        [JsonProperty("ShardSerialId")]
+        public string ShardSerialId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "SessionId.", this.SessionId);
             this.SetParamSimple(map, prefix + "ShardId", this.ShardId);
+            this.SetParamSimple(map, prefix + "ShardSerialId", this.ShardSerialId);
         }
     }
 }

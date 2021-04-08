@@ -493,6 +493,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 删除安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWxGatewayRouteRequest"/></param>
+        /// <returns><see cref="DeleteWxGatewayRouteResponse"/></returns>
+        public async Task<DeleteWxGatewayRouteResponse> DeleteWxGatewayRoute(DeleteWxGatewayRouteRequest req)
+        {
+             JsonResponseModel<DeleteWxGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWxGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWxGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWxGatewayRouteRequest"/></param>
+        /// <returns><see cref="DeleteWxGatewayRouteResponse"/></returns>
+        public DeleteWxGatewayRouteResponse DeleteWxGatewayRouteSync(DeleteWxGatewayRouteRequest req)
+        {
+             JsonResponseModel<DeleteWxGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWxGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWxGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全域名列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuthDomainsRequest"/></param>
@@ -1530,6 +1570,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "EstablishCloudBaseRunServer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishCloudBaseRunServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建或修改安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="EstablishWxGatewayRouteRequest"/></param>
+        /// <returns><see cref="EstablishWxGatewayRouteResponse"/></returns>
+        public async Task<EstablishWxGatewayRouteResponse> EstablishWxGatewayRoute(EstablishWxGatewayRouteRequest req)
+        {
+             JsonResponseModel<EstablishWxGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EstablishWxGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishWxGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建或修改安全网关路由
+        /// </summary>
+        /// <param name="req"><see cref="EstablishWxGatewayRouteRequest"/></param>
+        /// <returns><see cref="EstablishWxGatewayRouteResponse"/></returns>
+        public EstablishWxGatewayRouteResponse EstablishWxGatewayRouteSync(EstablishWxGatewayRouteRequest req)
+        {
+             JsonResponseModel<EstablishWxGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EstablishWxGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishWxGatewayRouteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

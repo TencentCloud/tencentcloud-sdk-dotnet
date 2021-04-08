@@ -333,6 +333,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 删除ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteAclRuleResponse"/></returns>
+        public async Task<DeleteAclRuleResponse> DeleteAclRule(DeleteAclRuleRequest req)
+        {
+             JsonResponseModel<DeleteAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除ACL规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAclRuleRequest"/></param>
+        /// <returns><see cref="DeleteAclRuleResponse"/></returns>
+        public DeleteAclRuleResponse DeleteAclRuleSync(DeleteAclRuleRequest req)
+        {
+             JsonResponseModel<DeleteAclRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAclRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAclRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除ckafka主题
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>

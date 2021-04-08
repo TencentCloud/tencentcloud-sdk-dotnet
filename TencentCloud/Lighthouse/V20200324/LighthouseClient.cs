@@ -53,6 +53,92 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
+        /// <li>仅支持回滚到原系统盘。</li>
+        /// <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
+        /// <li>回滚快照时，实例的状态必须为 STOPPED 或 RUNNING，可通过 DescribeInstances 接口查询实例状态。处于 RUNNING 状态的实例会强制关机，然后回滚快照。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInstanceSnapshotRequest"/></param>
+        /// <returns><see cref="ApplyInstanceSnapshotResponse"/></returns>
+        public async Task<ApplyInstanceSnapshotResponse> ApplyInstanceSnapshot(ApplyInstanceSnapshotRequest req)
+        {
+             JsonResponseModel<ApplyInstanceSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyInstanceSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInstanceSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ApplyInstanceSnapshot）用于回滚指定实例的系统盘快照。
+        /// <li>仅支持回滚到原系统盘。</li>
+        /// <li>用于回滚的快照必须处于 NORMAL 状态。快照状态可以通 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。</li>
+        /// <li>回滚快照时，实例的状态必须为 STOPPED 或 RUNNING，可通过 DescribeInstances 接口查询实例状态。处于 RUNNING 状态的实例会强制关机，然后回滚快照。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ApplyInstanceSnapshotRequest"/></param>
+        /// <returns><see cref="ApplyInstanceSnapshotResponse"/></returns>
+        public ApplyInstanceSnapshotResponse ApplyInstanceSnapshotSync(ApplyInstanceSnapshotRequest req)
+        {
+             JsonResponseModel<ApplyInstanceSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyInstanceSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyInstanceSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateBlueprint) 用于创建镜像。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
+        /// <returns><see cref="CreateBlueprintResponse"/></returns>
+        public async Task<CreateBlueprintResponse> CreateBlueprint(CreateBlueprintRequest req)
+        {
+             JsonResponseModel<CreateBlueprintResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBlueprint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlueprintResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateBlueprint) 用于创建镜像。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
+        /// <returns><see cref="CreateBlueprintResponse"/></returns>
+        public CreateBlueprintResponse CreateBlueprintSync(CreateBlueprintRequest req)
+        {
+             JsonResponseModel<CreateBlueprintResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBlueprint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBlueprintResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateFirewallRules）用于在实例上添加防火墙规则。
         /// 
         /// 
@@ -113,6 +199,86 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceSnapshotRequest"/></param>
+        /// <returns><see cref="CreateInstanceSnapshotResponse"/></returns>
+        public async Task<CreateInstanceSnapshotResponse> CreateInstanceSnapshot(CreateInstanceSnapshotRequest req)
+        {
+             JsonResponseModel<CreateInstanceSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstanceSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateInstanceSnapshot）用于创建指定实例的系统盘快照。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstanceSnapshotRequest"/></param>
+        /// <returns><see cref="CreateInstanceSnapshotResponse"/></returns>
+        public CreateInstanceSnapshotResponse CreateInstanceSnapshotSync(CreateInstanceSnapshotRequest req)
+        {
+             JsonResponseModel<CreateInstanceSnapshotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstanceSnapshot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstanceSnapshotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteBlueprints) 用于删除镜像。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlueprintsRequest"/></param>
+        /// <returns><see cref="DeleteBlueprintsResponse"/></returns>
+        public async Task<DeleteBlueprintsResponse> DeleteBlueprints(DeleteBlueprintsRequest req)
+        {
+             JsonResponseModel<DeleteBlueprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBlueprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlueprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DeleteBlueprints) 用于删除镜像。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBlueprintsRequest"/></param>
+        /// <returns><see cref="DeleteBlueprintsResponse"/></returns>
+        public DeleteBlueprintsResponse DeleteBlueprintsSync(DeleteBlueprintsRequest req)
+        {
+             JsonResponseModel<DeleteBlueprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBlueprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlueprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteFirewallRules）用于删除实例的防火墙规则。
         /// 
         /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接删除指定的规则。
@@ -162,6 +328,48 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFirewallRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteSnapshots）用于删除快照。
+        /// 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
+        public async Task<DeleteSnapshotsResponse> DeleteSnapshots(DeleteSnapshotsRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteSnapshots）用于删除快照。
+        /// 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSnapshotsRequest"/></param>
+        /// <returns><see cref="DeleteSnapshotsResponse"/></returns>
+        public DeleteSnapshotsResponse DeleteSnapshotsSync(DeleteSnapshotsRequest req)
+        {
+             JsonResponseModel<DeleteSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -372,6 +580,128 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesTrafficPackages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
+        public async Task<DescribeSnapshotsResponse> DescribeSnapshots(DescribeSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSnapshots）用于查询快照的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsResponse"/></returns>
+        public DescribeSnapshotsResponse DescribeSnapshotsSync(DescribeSnapshotsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlueprintAttributeRequest"/></param>
+        /// <returns><see cref="ModifyBlueprintAttributeResponse"/></returns>
+        public async Task<ModifyBlueprintAttributeResponse> ModifyBlueprintAttribute(ModifyBlueprintAttributeRequest req)
+        {
+             JsonResponseModel<ModifyBlueprintAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBlueprintAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlueprintAttributeRequest"/></param>
+        /// <returns><see cref="ModifyBlueprintAttributeResponse"/></returns>
+        public ModifyBlueprintAttributeResponse ModifyBlueprintAttributeSync(ModifyBlueprintAttributeRequest req)
+        {
+             JsonResponseModel<ModifyBlueprintAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBlueprintAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
+        /// <li>“快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotAttributeRequest"/></param>
+        /// <returns><see cref="ModifySnapshotAttributeResponse"/></returns>
+        public async Task<ModifySnapshotAttributeResponse> ModifySnapshotAttribute(ModifySnapshotAttributeRequest req)
+        {
+             JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySnapshotAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifySnapshotAttribute）用于修改指定快照的属性。
+        /// <li>“快照名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行快照管理操作的依据。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifySnapshotAttributeRequest"/></param>
+        /// <returns><see cref="ModifySnapshotAttributeResponse"/></returns>
+        public ModifySnapshotAttributeResponse ModifySnapshotAttributeSync(ModifySnapshotAttributeRequest req)
+        {
+             JsonResponseModel<ModifySnapshotAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySnapshotAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySnapshotAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

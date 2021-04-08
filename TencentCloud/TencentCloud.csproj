@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.252</VersionPrefix>
+    <VersionPrefix>3.0.253</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2617,6 +2617,8 @@
     <Compile Include="Ckafka\V20190819\Models\CreateUserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteAclRuleRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteAclRuleResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicRequest.cs" />
@@ -7148,12 +7150,22 @@
     <Compile Include="Kms\V20190118\Models\VerifyByAsymmetricKeyResponse.cs" />
     <Compile Include="Kms\V20190118\Models\WhiteboxKeyInfo.cs" />
     <Compile Include="Lighthouse\V20200324\LighthouseClient.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ApplyInstanceSnapshotRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ApplyInstanceSnapshotResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Blueprint.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Bundle.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateBlueprintRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateBlueprintResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateFirewallRulesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteSnapshotsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
@@ -7164,6 +7176,8 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesTrafficPackagesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeInstancesTrafficPackagesResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRule.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRuleInfo.cs" />
@@ -7172,11 +7186,16 @@
     <Compile Include="Lighthouse\V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InternetAccessible.cs" />
     <Compile Include="Lighthouse\V20200324\Models\LoginSettings.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Price.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetInstanceRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetInstanceResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Snapshot.cs" />
     <Compile Include="Lighthouse\V20200324\Models\StartInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\StartInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\StopInstancesRequest.cs" />
@@ -10118,6 +10137,8 @@
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteWxGatewayRouteRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteWxGatewayRouteResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
@@ -10173,6 +10194,8 @@
     <Compile Include="Tcb\V20180608\Models\EnvInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\EstablishCloudBaseRunServerResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\EstablishWxGatewayRouteRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\EstablishWxGatewayRouteResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ExtensionFile.cs" />
     <Compile Include="Tcb\V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FreequotaInfo.cs" />
@@ -11680,6 +11703,11 @@
     <Compile Include="Tsw\V20200924\Models\AgentShell.cs" />
     <Compile Include="Tsw\V20200924\Models\DescribeAgentShellRequest.cs" />
     <Compile Include="Tsw\V20200924\Models\DescribeAgentShellResponse.cs" />
+    <Compile Include="Tsw\V20210412\TswClient.cs" />
+    <Compile Include="Tsw\V20210412\Models\DescribeComponentAlertObjectRequest.cs" />
+    <Compile Include="Tsw\V20210412\Models\DescribeComponentAlertObjectResponse.cs" />
+    <Compile Include="Tsw\V20210412\Models\DescribeServiceAlertObjectRequest.cs" />
+    <Compile Include="Tsw\V20210412\Models\DescribeServiceAlertObjectResponse.cs" />
     <Compile Include="Tts\V20190823\TtsClient.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceRequest.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceResponse.cs" />
