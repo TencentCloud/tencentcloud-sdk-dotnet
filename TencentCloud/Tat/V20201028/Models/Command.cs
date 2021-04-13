@@ -90,6 +90,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
+        /// <summary>
+        /// 命令的结构化描述。公共命令有值，用户命令为空字符串。
+        /// </summary>
+        [JsonProperty("FormattedDescription")]
+        public string FormattedDescription{ get; set; }
+
+        /// <summary>
+        /// 命令创建者。TAT 代表公共命令，USER 代表个人命令。
+        /// </summary>
+        [JsonProperty("CreatedBy")]
+        public string CreatedBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
+            this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         }
     }
 }

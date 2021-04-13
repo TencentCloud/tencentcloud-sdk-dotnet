@@ -181,6 +181,46 @@ namespace TencentCloud.Cloudaudit.V20190319
         }
 
         /// <summary>
+        /// 查询云审计日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public async Task<DescribeEventsResponse> DescribeEvents(DescribeEventsRequest req)
+        {
+             JsonResponseModel<DescribeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云审计日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventsRequest"/></param>
+        /// <returns><see cref="DescribeEventsResponse"/></returns>
+        public DescribeEventsResponse DescribeEventsSync(DescribeEventsRequest req)
+        {
+             JsonResponseModel<DescribeEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询AttributeKey的有效取值范围
         /// </summary>
         /// <param name="req"><see cref="GetAttributeKeyRequest"/></param>

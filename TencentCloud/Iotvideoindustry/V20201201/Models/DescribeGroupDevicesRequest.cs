@@ -48,6 +48,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("NickName")]
         public string NickName{ get; set; }
 
+        /// <summary>
+        /// 过滤不可录制设备
+        /// </summary>
+        [JsonProperty("Recordable")]
+        public long? Recordable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
+            this.SetParamSimple(map, prefix + "Recordable", this.Recordable);
         }
     }
 }

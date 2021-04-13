@@ -102,6 +102,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceArea")]
         public string InstanceArea{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +125,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AttachedTime", this.AttachedTime);
             this.SetParamSimple(map, prefix + "CcnUin", this.CcnUin);
             this.SetParamSimple(map, prefix + "InstanceArea", this.InstanceArea);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

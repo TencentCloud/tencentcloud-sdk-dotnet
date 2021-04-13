@@ -43,7 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 告警策略类型，由 DescribeAllNamespaces 获得，例如 cvm_device
+        /// 告警策略类型，由 [DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 获得，例如 cvm_device
         /// </summary>
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
@@ -61,25 +61,31 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? Enable{ get; set; }
 
         /// <summary>
-        /// 项目 Id -1=无项目 0=默认项目，可不传 默认为-1
+        /// 项目 Id，对于区分项目的产品必须传入非 -1 的值。 -1=无项目 0=默认项目，如不传 默认为 -1。支持的项目 Id 可以在控制台 [账号中心-项目管理](https://console.cloud.tencent.com/project) 中查看。
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 指标触发条件
+        /// 触发条件模板 Id ，可不传
+        /// </summary>
+        [JsonProperty("ConditionTemplateId")]
+        public long? ConditionTemplateId{ get; set; }
+
+        /// <summary>
+        /// 指标触发条件，支持的指标可以从 [DescribeAlarmMetrics](https://cloud.tencent.com/document/product/248/51283) 查询。
         /// </summary>
         [JsonProperty("Condition")]
         public AlarmPolicyCondition Condition{ get; set; }
 
         /// <summary>
-        /// 事件触发条件
+        /// 事件触发条件，支持的事件可以从 [DescribeAlarmEvents](https://cloud.tencent.com/document/product/248/51284) 查询。
         /// </summary>
         [JsonProperty("EventCondition")]
         public AlarmPolicyEventCondition EventCondition{ get; set; }
 
         /// <summary>
-        /// 通知规则 Id 列表，由 DescribeAlarmNotices 获得
+        /// 通知规则 Id 列表，由 [DescribeAlarmNotices](https://cloud.tencent.com/document/product/248/51280) 获得
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
@@ -103,6 +109,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);

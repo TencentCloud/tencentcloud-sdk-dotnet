@@ -37,7 +37,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 规格有效标志，取值：0-停止售卖，1-开放售卖
+        /// 计算资源规格，单位为CPU核心数
         /// </summary>
         [JsonProperty("Cpu")]
         public ulong? Cpu{ get; set; }

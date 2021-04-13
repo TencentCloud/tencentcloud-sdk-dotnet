@@ -25,16 +25,17 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 资源名称
-        /// </summary>
-        [JsonProperty("ResourceName")]
-        public string ResourceName{ get; set; }
-
-        /// <summary>
         /// 资源类型
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
+
+        /// <summary>
+        /// 资源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
         }
     }
 }

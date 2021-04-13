@@ -749,6 +749,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 智慧零售-发票开具V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateInvoiceV2Request"/></param>
+        /// <returns><see cref="CreateInvoiceV2Response"/></returns>
+        public async Task<CreateInvoiceV2Response> CreateInvoiceV2(CreateInvoiceV2Request req)
+        {
+             JsonResponseModel<CreateInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInvoiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-发票开具V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateInvoiceV2Request"/></param>
+        /// <returns><see cref="CreateInvoiceV2Response"/></returns>
+        public CreateInvoiceV2Response CreateInvoiceV2Sync(CreateInvoiceV2Request req)
+        {
+             JsonResponseModel<CreateInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInvoiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 智慧零售-商户注册
         /// </summary>
         /// <param name="req"><see cref="CreateMerchantRequest"/></param>
@@ -820,6 +860,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateRedInvoice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedInvoiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-发票红冲V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedInvoiceV2Request"/></param>
+        /// <returns><see cref="CreateRedInvoiceV2Response"/></returns>
+        public async Task<CreateRedInvoiceV2Response> CreateRedInvoiceV2(CreateRedInvoiceV2Request req)
+        {
+             JsonResponseModel<CreateRedInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRedInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedInvoiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-发票红冲V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateRedInvoiceV2Request"/></param>
+        /// <returns><see cref="CreateRedInvoiceV2Response"/></returns>
+        public CreateRedInvoiceV2Response CreateRedInvoiceV2Sync(CreateRedInvoiceV2Request req)
+        {
+             JsonResponseModel<CreateRedInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRedInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRedInvoiceV2Response>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1940,6 +2020,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryInvoice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInvoiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-发票查询V2
+        /// </summary>
+        /// <param name="req"><see cref="QueryInvoiceV2Request"/></param>
+        /// <returns><see cref="QueryInvoiceV2Response"/></returns>
+        public async Task<QueryInvoiceV2Response> QueryInvoiceV2(QueryInvoiceV2Request req)
+        {
+             JsonResponseModel<QueryInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInvoiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-发票查询V2
+        /// </summary>
+        /// <param name="req"><see cref="QueryInvoiceV2Request"/></param>
+        /// <returns><see cref="QueryInvoiceV2Response"/></returns>
+        public QueryInvoiceV2Response QueryInvoiceV2Sync(QueryInvoiceV2Request req)
+        {
+             JsonResponseModel<QueryInvoiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryInvoiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryInvoiceV2Response>>(strResp);
              }
              catch (JsonSerializationException e)
              {

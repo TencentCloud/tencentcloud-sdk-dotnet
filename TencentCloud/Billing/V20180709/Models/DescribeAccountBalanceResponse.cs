@@ -31,6 +31,78 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? Balance{ get; set; }
 
         /// <summary>
+        /// 查询的用户Uin
+        /// </summary>
+        [JsonProperty("Uin")]
+        public ulong? Uin{ get; set; }
+
+        /// <summary>
+        /// 当前真实可用余额
+        /// </summary>
+        [JsonProperty("RealBalance")]
+        public float? RealBalance{ get; set; }
+
+        /// <summary>
+        /// 现金账户余额
+        /// </summary>
+        [JsonProperty("CashAccountBalance")]
+        public float? CashAccountBalance{ get; set; }
+
+        /// <summary>
+        /// 收益转入账户余额
+        /// </summary>
+        [JsonProperty("IncomeIntoAccountBalance")]
+        public float? IncomeIntoAccountBalance{ get; set; }
+
+        /// <summary>
+        /// 赠送账户余额
+        /// </summary>
+        [JsonProperty("PresentAccountBalance")]
+        public float? PresentAccountBalance{ get; set; }
+
+        /// <summary>
+        /// 冻结金额
+        /// </summary>
+        [JsonProperty("FreezeAmount")]
+        public float? FreezeAmount{ get; set; }
+
+        /// <summary>
+        /// 欠费金额
+        /// </summary>
+        [JsonProperty("OweAmount")]
+        public float? OweAmount{ get; set; }
+
+        /// <summary>
+        /// 是否允许欠费消费
+        /// </summary>
+        [JsonProperty("IsAllowArrears")]
+        public bool? IsAllowArrears{ get; set; }
+
+        /// <summary>
+        /// 是否限制信用额度
+        /// </summary>
+        [JsonProperty("IsCreditLimited")]
+        public bool? IsCreditLimited{ get; set; }
+
+        /// <summary>
+        /// 信用额度
+        /// </summary>
+        [JsonProperty("CreditAmount")]
+        public float? CreditAmount{ get; set; }
+
+        /// <summary>
+        /// 可用信用额度
+        /// </summary>
+        [JsonProperty("CreditBalance")]
+        public float? CreditBalance{ get; set; }
+
+        /// <summary>
+        /// 真实可用信用额度
+        /// </summary>
+        [JsonProperty("RealCreditBalance")]
+        public float? RealCreditBalance{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +115,18 @@ namespace TencentCloud.Billing.V20180709.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Balance", this.Balance);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "RealBalance", this.RealBalance);
+            this.SetParamSimple(map, prefix + "CashAccountBalance", this.CashAccountBalance);
+            this.SetParamSimple(map, prefix + "IncomeIntoAccountBalance", this.IncomeIntoAccountBalance);
+            this.SetParamSimple(map, prefix + "PresentAccountBalance", this.PresentAccountBalance);
+            this.SetParamSimple(map, prefix + "FreezeAmount", this.FreezeAmount);
+            this.SetParamSimple(map, prefix + "OweAmount", this.OweAmount);
+            this.SetParamSimple(map, prefix + "IsAllowArrears", this.IsAllowArrears);
+            this.SetParamSimple(map, prefix + "IsCreditLimited", this.IsCreditLimited);
+            this.SetParamSimple(map, prefix + "CreditAmount", this.CreditAmount);
+            this.SetParamSimple(map, prefix + "CreditBalance", this.CreditBalance);
+            this.SetParamSimple(map, prefix + "RealCreditBalance", this.RealCreditBalance);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

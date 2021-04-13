@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Module{ get; set; }
 
         /// <summary>
-        /// 策略组id，如传入PolicyId则该字段可传入任意值
+        /// 策略组id，如传入 PolicyId 则该字段被忽略可传入任意值如 0
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] UniqueId{ get; set; }
 
         /// <summary>
-        /// 实例分组id, 如果按实例分组删除的话UniqueId参数是无效的
+        /// 实例分组id，如果按实例分组删除的话UniqueId参数是无效的
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
         /// <summary>
-        /// 告警策略ID，使用此字段时GroupId可传入任意值
+        /// 告警策略ID，使用此字段时 GroupId 会被忽略
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

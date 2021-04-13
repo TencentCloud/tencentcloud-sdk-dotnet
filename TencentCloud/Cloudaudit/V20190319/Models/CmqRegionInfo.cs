@@ -25,16 +25,16 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// cmq地域
-        /// </summary>
-        [JsonProperty("CmqRegion")]
-        public string CmqRegion{ get; set; }
-
-        /// <summary>
         /// 地域描述
         /// </summary>
         [JsonProperty("CmqRegionName")]
         public string CmqRegionName{ get; set; }
+
+        /// <summary>
+        /// cmq地域
+        /// </summary>
+        [JsonProperty("CmqRegion")]
+        public string CmqRegion{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "CmqRegionName", this.CmqRegionName);
+            this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
         }
     }
 }

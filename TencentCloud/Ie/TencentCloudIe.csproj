@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.253</VersionPrefix>
+    <VersionPrefix>3.0.254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,7 @@
     <Compile Include="V20200304\Models\MediaQualityRestorationTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaRecognitionInfo.cs" />
     <Compile Include="V20200304\Models\MediaRecognitionTaskResult.cs" />
+    <Compile Include="V20200304\Models\MediaResultInfo.cs" />
     <Compile Include="V20200304\Models\MediaSourceInfo.cs" />
     <Compile Include="V20200304\Models\MediaTargetInfo.cs" />
     <Compile Include="V20200304\Models\MuxInfo.cs" />
@@ -115,6 +116,8 @@
     <Compile Include="V20200304\Models\QualityControlInfoTaskResult.cs" />
     <Compile Include="V20200304\Models\QualityControlItem.cs" />
     <Compile Include="V20200304\Models\QualityControlResultItems.cs" />
+    <Compile Include="V20200304\Models\ResultAudioInfo.cs" />
+    <Compile Include="V20200304\Models\ResultVideoInfo.cs" />
     <Compile Include="V20200304\Models\SaveInfo.cs" />
     <Compile Include="V20200304\Models\ScratchRepair.cs" />
     <Compile Include="V20200304\Models\SectionTime.cs" />

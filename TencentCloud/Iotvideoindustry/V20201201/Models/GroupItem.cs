@@ -94,6 +94,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 分组状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupStatus")]
+        public long? GroupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "ExtraInformation", this.ExtraInformation);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
         }
     }
 }

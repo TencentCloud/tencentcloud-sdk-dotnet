@@ -37,13 +37,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 指定要查询任务的时间范围，StartTime指定开始时间
+        /// 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 指定要查询任务的时间范围，StartTime指定结束时间
+        /// 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试
+        /// 根据任务状态过滤。0-等待执行，1-正在下载，2-下载完成，3-下载失败，4-等待重试。不填默认返回所有类型
         /// </summary>
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }

@@ -103,7 +103,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例密码，不设置该参数则需要在创建完成后通过设置密码接口初始化实例密码。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
+        /// 实例密码，不设置该参数则默认密码规则为 实例ID+"@"+主账户uin。举例实例id为cmgo-higv73ed，uin为100000001，则默认密码为"cmgo-higv73ed@100000001"。密码必须是8-16位字符，且至少包含字母、数字和字符 !@#%^*() 中的两种
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

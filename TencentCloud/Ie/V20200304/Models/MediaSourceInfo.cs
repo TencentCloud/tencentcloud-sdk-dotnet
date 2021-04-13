@@ -32,6 +32,7 @@ namespace TencentCloud.Ie.V20200304.Models
 
         /// <summary>
         /// 媒体源ID标记，用于多个输入源时，请内媒体源的定位，对于多输入的任务，一般要求必选。
+        /// ID只能包含字母、数字、下划线、中划线，长读不能超过128。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }

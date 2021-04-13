@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 策略组id，如传入PolicyId则该字段可传入任意值
+        /// 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public BindingPolicyObjectDimension[] Dimensions{ get; set; }
 
         /// <summary>
-        /// 告警策略ID，使用此字段时GroupId可传入任意值
+        /// 告警策略ID，使用此字段时 GroupId 会被忽略
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }

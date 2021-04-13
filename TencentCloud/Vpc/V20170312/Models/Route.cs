@@ -40,7 +40,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// NAT：NAT网关; 
         /// NORMAL_CVM：普通云服务器；
         /// EIP：云服务器的公网IP；
-        /// CCN：云联网。
+        /// CCN：云联网；
+        /// LOCAL_GATEWAY：本地网关。
         /// </summary>
         [JsonProperty("GatewayType")]
         public string GatewayType{ get; set; }

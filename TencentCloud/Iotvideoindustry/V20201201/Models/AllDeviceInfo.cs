@@ -87,6 +87,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("IsRecord")]
         public long? IsRecord{ get; set; }
 
+        /// <summary>
+        /// 该设备是否可录制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Recordable")]
+        public long? Recordable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "GroupPath", this.GroupPath);
             this.SetParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
             this.SetParamSimple(map, prefix + "IsRecord", this.IsRecord);
+            this.SetParamSimple(map, prefix + "Recordable", this.Recordable);
         }
     }
 }

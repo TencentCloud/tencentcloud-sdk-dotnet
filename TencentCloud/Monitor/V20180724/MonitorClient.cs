@@ -1349,7 +1349,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 编辑告警策略触发条件
+        /// 修改告警策略触发条件
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>
@@ -1369,7 +1369,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 编辑告警策略触发条件
+        /// 修改告警策略触发条件
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmPolicyConditionRequest"/></param>
         /// <returns><see cref="ModifyAlarmPolicyConditionResponse"/></returns>

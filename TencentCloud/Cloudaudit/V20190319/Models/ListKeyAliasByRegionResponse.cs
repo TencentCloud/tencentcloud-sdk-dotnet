@@ -25,16 +25,16 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 密钥别名
-        /// </summary>
-        [JsonProperty("KeyMetadatas")]
-        public KeyMetadata[] KeyMetadatas{ get; set; }
-
-        /// <summary>
         /// CMK的总数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 密钥别名
+        /// </summary>
+        [JsonProperty("KeyMetadatas")]
+        public KeyMetadata[] KeyMetadatas{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "KeyMetadatas.", this.KeyMetadatas);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

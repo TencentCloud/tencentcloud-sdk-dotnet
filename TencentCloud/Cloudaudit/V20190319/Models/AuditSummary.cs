@@ -25,12 +25,6 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 跟踪集名称
-        /// </summary>
-        [JsonProperty("AuditName")]
-        public string AuditName{ get; set; }
-
-        /// <summary>
         /// 跟踪集状态，1：开启，0：关闭
         /// </summary>
         [JsonProperty("AuditStatus")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         [JsonProperty("CosBucketName")]
         public string CosBucketName{ get; set; }
+
+        /// <summary>
+        /// 跟踪集名称
+        /// </summary>
+        [JsonProperty("AuditName")]
+        public string AuditName{ get; set; }
 
         /// <summary>
         /// 日志前缀
@@ -54,9 +54,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "AuditStatus", this.AuditStatus);
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
+            this.SetParamSimple(map, prefix + "AuditName", this.AuditName);
             this.SetParamSimple(map, prefix + "LogFilePrefix", this.LogFilePrefix);
         }
     }

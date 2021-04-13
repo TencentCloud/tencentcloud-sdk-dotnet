@@ -2107,6 +2107,46 @@ namespace TencentCloud.Iotvideo.V20191126
         }
 
         /// <summary>
+        /// 修改设备信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceRequest"/></param>
+        /// <returns><see cref="ModifyDeviceResponse"/></returns>
+        public async Task<ModifyDeviceResponse> ModifyDevice(ModifyDeviceRequest req)
+        {
+             JsonResponseModel<ModifyDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改设备信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDeviceRequest"/></param>
+        /// <returns><see cref="ModifyDeviceResponse"/></returns>
+        public ModifyDeviceResponse ModifyDeviceSync(ModifyDeviceRequest req)
+        {
+             JsonResponseModel<ModifyDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDeviceAction）用于修改设备物模型的行为（Action）。
         /// 
         /// 可对ctlVal数据属性进行写入,如:Action.takePhoto.ctlVal,设备在线且成功发送到设备才返回,物模型写入数据时,不需要传入时标信息,平台以当前时标作为数据的时标更新物模型中的时标信息。

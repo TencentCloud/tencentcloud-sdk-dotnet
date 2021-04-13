@@ -31,6 +31,20 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 文件大小，部分任务支持，单位：字节
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileSize")]
+        public ulong? FileSize{ get; set; }
+
+        /// <summary>
+        /// 媒体信息，对于媒体文件，部分任务支持返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaInfo")]
+        public MediaResultInfo MediaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +52,8 @@ namespace TencentCloud.Ie.V20200304.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
+            this.SetParamObj(map, prefix + "MediaInfo.", this.MediaInfo);
         }
     }
 }

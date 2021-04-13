@@ -1681,6 +1681,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 该接口用于创建用于CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLocalGatewayRequest"/></param>
+        /// <returns><see cref="CreateLocalGatewayResponse"/></returns>
+        public async Task<CreateLocalGatewayResponse> CreateLocalGateway(CreateLocalGatewayRequest req)
+        {
+             JsonResponseModel<CreateLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLocalGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于创建用于CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLocalGatewayRequest"/></param>
+        /// <returns><see cref="CreateLocalGatewayResponse"/></returns>
+        public CreateLocalGatewayResponse CreateLocalGatewaySync(CreateLocalGatewayRequest req)
+        {
+             JsonResponseModel<CreateLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLocalGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateNatGateway)用于创建NAT网关。
         /// </summary>
         /// <param name="req"><see cref="CreateNatGatewayRequest"/></param>
@@ -2994,6 +3034,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteIp6Translators");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIp6TranslatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLocalGatewayRequest"/></param>
+        /// <returns><see cref="DeleteLocalGatewayResponse"/></returns>
+        public async Task<DeleteLocalGatewayResponse> DeleteLocalGateway(DeleteLocalGatewayRequest req)
+        {
+             JsonResponseModel<DeleteLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLocalGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLocalGatewayRequest"/></param>
+        /// <returns><see cref="DeleteLocalGatewayResponse"/></returns>
+        public DeleteLocalGatewayResponse DeleteLocalGatewaySync(DeleteLocalGatewayRequest req)
+        {
+             JsonResponseModel<DeleteLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLocalGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4904,6 +4984,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeIpGeolocationInfos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpGeolocationInfosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalGatewayRequest"/></param>
+        /// <returns><see cref="DescribeLocalGatewayResponse"/></returns>
+        public async Task<DescribeLocalGatewayResponse> DescribeLocalGateway(DescribeLocalGatewayRequest req)
+        {
+             JsonResponseModel<DescribeLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalGatewayRequest"/></param>
+        /// <returns><see cref="DescribeLocalGatewayResponse"/></returns>
+        public DescribeLocalGatewayResponse DescribeLocalGatewaySync(DescribeLocalGatewayRequest req)
+        {
+             JsonResponseModel<DescribeLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7483,6 +7603,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 修改CCN关联实例属性，目前仅修改备注description
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnAttachedInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnAttachedInstancesAttributeResponse"/></returns>
+        public async Task<ModifyCcnAttachedInstancesAttributeResponse> ModifyCcnAttachedInstancesAttribute(ModifyCcnAttachedInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcnAttachedInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CCN关联实例属性，目前仅修改备注description
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcnAttachedInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCcnAttachedInstancesAttributeResponse"/></returns>
+        public ModifyCcnAttachedInstancesAttributeResponse ModifyCcnAttachedInstancesAttributeSync(ModifyCcnAttachedInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCcnAttachedInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcnAttachedInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyCcnAttribute）用于修改云联网（CCN）的相关属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyCcnAttributeRequest"/></param>
@@ -7954,6 +8114,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIpv6AddressesAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIpv6AddressesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalGatewayRequest"/></param>
+        /// <returns><see cref="ModifyLocalGatewayResponse"/></returns>
+        public async Task<ModifyLocalGatewayResponse> ModifyLocalGateway(ModifyLocalGatewayRequest req)
+        {
+             JsonResponseModel<ModifyLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改CDC的本地网关。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalGatewayRequest"/></param>
+        /// <returns><see cref="ModifyLocalGatewayResponse"/></returns>
+        public ModifyLocalGatewayResponse ModifyLocalGatewaySync(ModifyLocalGatewayRequest req)
+        {
+             JsonResponseModel<ModifyLocalGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLocalGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

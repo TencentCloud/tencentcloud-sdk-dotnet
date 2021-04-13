@@ -72,6 +72,20 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("CreateTime")]
         public long? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 分组状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupStatus")]
+        public long? GroupStatus{ get; set; }
+
+        /// <summary>
+        /// 设备不存在时产生的错误
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Error")]
+        public string Error{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "GroupDescribe", this.GroupDescribe);
             this.SetParamSimple(map, prefix + "ExtraInformation", this.ExtraInformation);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "GroupStatus", this.GroupStatus);
+            this.SetParamSimple(map, prefix + "Error", this.Error);
         }
     }
 }

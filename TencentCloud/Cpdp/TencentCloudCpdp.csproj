@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.253</VersionPrefix>
+    <VersionPrefix>3.0.254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,9 @@
     <Compile Include="V20190820\Models\CreateInvoiceResponse.cs" />
     <Compile Include="V20190820\Models\CreateInvoiceResult.cs" />
     <Compile Include="V20190820\Models\CreateInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceResultV2.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceV2Request.cs" />
+    <Compile Include="V20190820\Models\CreateInvoiceV2Response.cs" />
     <Compile Include="V20190820\Models\CreateMerchantRequest.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResult.cs" />
@@ -105,6 +108,9 @@
     <Compile Include="V20190820\Models\CreateRedInvoiceResponse.cs" />
     <Compile Include="V20190820\Models\CreateRedInvoiceResult.cs" />
     <Compile Include="V20190820\Models\CreateRedInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceResultV2.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceV2Request.cs" />
+    <Compile Include="V20190820\Models\CreateRedInvoiceV2Response.cs" />
     <Compile Include="V20190820\Models\CreateSinglePayRequest.cs" />
     <Compile Include="V20190820\Models\CreateSinglePayResponse.cs" />
     <Compile Include="V20190820\Models\CreateSinglePayResult.cs" />
@@ -175,6 +181,8 @@
     <Compile Include="V20190820\Models\QueryInvoiceResponse.cs" />
     <Compile Include="V20190820\Models\QueryInvoiceResult.cs" />
     <Compile Include="V20190820\Models\QueryInvoiceResultData.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceV2Request.cs" />
+    <Compile Include="V20190820\Models\QueryInvoiceV2Response.cs" />
     <Compile Include="V20190820\Models\QueryItem.cs" />
     <Compile Include="V20190820\Models\QueryMemberBindRequest.cs" />
     <Compile Include="V20190820\Models\QueryMemberBindResponse.cs" />

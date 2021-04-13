@@ -25,16 +25,22 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 资源对
+        /// 日志ID
         /// </summary>
-        [JsonProperty("Resources")]
-        public Resource Resources{ get; set; }
+        [JsonProperty("EventId")]
+        public string EventId{ get; set; }
 
         /// <summary>
-        /// 主账号ID
+        /// 用户名
         /// </summary>
-        [JsonProperty("AccountID")]
-        public long? AccountID{ get; set; }
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
+        /// <summary>
+        /// 事件时间
+        /// </summary>
+        [JsonProperty("EventTime")]
+        public string EventTime{ get; set; }
 
         /// <summary>
         /// 日志详情
@@ -43,16 +49,16 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string CloudAuditEvent{ get; set; }
 
         /// <summary>
+        /// 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+        /// </summary>
+        [JsonProperty("ResourceTypeCn")]
+        public string ResourceTypeCn{ get; set; }
+
+        /// <summary>
         /// 鉴权错误码
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
-
-        /// <summary>
-        /// 日志ID
-        /// </summary>
-        [JsonProperty("EventId")]
-        public string EventId{ get; set; }
 
         /// <summary>
         /// 事件名称
@@ -61,28 +67,17 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string EventName{ get; set; }
 
         /// <summary>
-        /// 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+        /// 证书ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EventNameCn")]
-        public string EventNameCn{ get; set; }
-
-        /// <summary>
-        /// 事件地域
-        /// </summary>
-        [JsonProperty("EventRegion")]
-        public string EventRegion{ get; set; }
+        [JsonProperty("SecretId")]
+        public string SecretId{ get; set; }
 
         /// <summary>
         /// 请求来源
         /// </summary>
         [JsonProperty("EventSource")]
         public string EventSource{ get; set; }
-
-        /// <summary>
-        /// 事件时间
-        /// </summary>
-        [JsonProperty("EventTime")]
-        public string EventTime{ get; set; }
 
         /// <summary>
         /// 请求ID
@@ -97,28 +92,35 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string ResourceRegion{ get; set; }
 
         /// <summary>
-        /// 资源类型中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
+        /// 主账号ID
         /// </summary>
-        [JsonProperty("ResourceTypeCn")]
-        public string ResourceTypeCn{ get; set; }
-
-        /// <summary>
-        /// 证书ID
-        /// </summary>
-        [JsonProperty("SecretId")]
-        public string SecretId{ get; set; }
+        [JsonProperty("AccountID")]
+        public long? AccountID{ get; set; }
 
         /// <summary>
         /// 源IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceIPAddress")]
         public string SourceIPAddress{ get; set; }
 
         /// <summary>
-        /// 用户名
+        /// 事件名称中文描述（此字段请按需使用，如果您是其他语言使用者，可以忽略该字段描述）
         /// </summary>
-        [JsonProperty("Username")]
-        public string Username{ get; set; }
+        [JsonProperty("EventNameCn")]
+        public string EventNameCn{ get; set; }
+
+        /// <summary>
+        /// 资源对
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource Resources{ get; set; }
+
+        /// <summary>
+        /// 事件地域
+        /// </summary>
+        [JsonProperty("EventRegion")]
+        public string EventRegion{ get; set; }
 
 
         /// <summary>
@@ -126,22 +128,22 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Resources.", this.Resources);
-            this.SetParamSimple(map, prefix + "AccountID", this.AccountID);
-            this.SetParamSimple(map, prefix + "CloudAuditEvent", this.CloudAuditEvent);
-            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
-            this.SetParamSimple(map, prefix + "EventName", this.EventName);
-            this.SetParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
-            this.SetParamSimple(map, prefix + "EventRegion", this.EventRegion);
-            this.SetParamSimple(map, prefix + "EventSource", this.EventSource);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "EventTime", this.EventTime);
+            this.SetParamSimple(map, prefix + "CloudAuditEvent", this.CloudAuditEvent);
+            this.SetParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "EventName", this.EventName);
+            this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
+            this.SetParamSimple(map, prefix + "EventSource", this.EventSource);
             this.SetParamSimple(map, prefix + "RequestID", this.RequestID);
             this.SetParamSimple(map, prefix + "ResourceRegion", this.ResourceRegion);
-            this.SetParamSimple(map, prefix + "ResourceTypeCn", this.ResourceTypeCn);
-            this.SetParamSimple(map, prefix + "SecretId", this.SecretId);
+            this.SetParamSimple(map, prefix + "AccountID", this.AccountID);
             this.SetParamSimple(map, prefix + "SourceIPAddress", this.SourceIPAddress);
-            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
+            this.SetParamObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "EventRegion", this.EventRegion);
         }
     }
 }

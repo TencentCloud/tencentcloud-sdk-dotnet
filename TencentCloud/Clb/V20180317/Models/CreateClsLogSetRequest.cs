@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
 
+        /// <summary>
+        /// 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+        /// </summary>
+        [JsonProperty("LogsetType")]
+        public string LogsetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
+            this.SetParamSimple(map, prefix + "LogsetType", this.LogsetType);
         }
     }
 }

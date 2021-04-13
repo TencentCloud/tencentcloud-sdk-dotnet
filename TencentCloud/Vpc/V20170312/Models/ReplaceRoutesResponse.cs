@@ -25,6 +25,18 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
+        /// 原路由策略信息。
+        /// </summary>
+        [JsonProperty("OldRouteSet")]
+        public Route[] OldRouteSet{ get; set; }
+
+        /// <summary>
+        /// 修改后的路由策略信息。
+        /// </summary>
+        [JsonProperty("NewRouteSet")]
+        public Route[] NewRouteSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "OldRouteSet.", this.OldRouteSet);
+            this.SetParamArrayObj(map, prefix + "NewRouteSet.", this.NewRouteSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

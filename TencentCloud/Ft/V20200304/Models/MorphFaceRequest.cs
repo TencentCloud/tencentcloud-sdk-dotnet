@@ -58,7 +58,7 @@ namespace TencentCloud.Ft.V20200304.Models
         public long? Fps{ get; set; }
 
         /// <summary>
-        /// 视频类型，取值[0,2]，其中0为MP4，1为GIF，2为MOV。目前仅支持MP4格式，默认为MP4格式
+        /// 视频类型，取值0。目前仅支持MP4格式，默认为MP4格式
         /// </summary>
         [JsonProperty("OutputType")]
         public long? OutputType{ get; set; }

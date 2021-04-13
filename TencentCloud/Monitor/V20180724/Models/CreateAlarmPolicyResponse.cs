@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 用于实例、实例组绑定和解绑接口（BindingPolicyObject、UnBindingAllPolicyObject、UnBindingPolicyObject）的策略 ID
+        /// 可用于实例、实例组的绑定和解绑接口（[BindingPolicyObject](https://cloud.tencent.com/document/product/248/40421)、[UnBindingAllPolicyObject](https://cloud.tencent.com/document/product/248/40568)、[UnBindingPolicyObject](https://cloud.tencent.com/document/product/248/40567)）的策略 ID
         /// </summary>
         [JsonProperty("OriginId")]
         public string OriginId{ get; set; }

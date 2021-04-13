@@ -2553,7 +2553,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 增加、删除、更新负载均衡的日志服务(CLS)主题
+        /// 增加、删除、更新负载均衡的日志服务(CLS)主题。
         /// </summary>
         /// <param name="req"><see cref="SetLoadBalancerClsLogRequest"/></param>
         /// <returns><see cref="SetLoadBalancerClsLogResponse"/></returns>
@@ -2573,7 +2573,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 增加、删除、更新负载均衡的日志服务(CLS)主题
+        /// 增加、删除、更新负载均衡的日志服务(CLS)主题。
         /// </summary>
         /// <param name="req"><see cref="SetLoadBalancerClsLogRequest"/></param>
         /// <returns><see cref="SetLoadBalancerClsLogResponse"/></returns>

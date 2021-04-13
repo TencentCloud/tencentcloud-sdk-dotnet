@@ -39,6 +39,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
+        /// 设备虚拟组信息，仅在创建NVR/VMS时返回该值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VirtualGroupId")]
+        public string VirtualGroupId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "VirtualGroupId", this.VirtualGroupId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

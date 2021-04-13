@@ -2169,6 +2169,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 获取客户节点上的出入带宽月峰和计费带宽信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonthPeakNetworkRequest"/></param>
+        /// <returns><see cref="DescribeMonthPeakNetworkResponse"/></returns>
+        public async Task<DescribeMonthPeakNetworkResponse> DescribeMonthPeakNetwork(DescribeMonthPeakNetworkRequest req)
+        {
+             JsonResponseModel<DescribeMonthPeakNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMonthPeakNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonthPeakNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取客户节点上的出入带宽月峰和计费带宽信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMonthPeakNetworkRequest"/></param>
+        /// <returns><see cref="DescribeMonthPeakNetworkResponse"/></returns>
+        public DescribeMonthPeakNetworkResponse DescribeMonthPeakNetworkSync(DescribeMonthPeakNetworkRequest req)
+        {
+             JsonResponseModel<DescribeMonthPeakNetworkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMonthPeakNetwork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonthPeakNetworkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询弹性网卡列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNetworkInterfacesRequest"/></param>

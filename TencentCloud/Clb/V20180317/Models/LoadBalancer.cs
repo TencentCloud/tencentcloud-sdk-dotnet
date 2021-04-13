@@ -364,6 +364,20 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("NfvInfo")]
         public string NfvInfo{ get; set; }
 
+        /// <summary>
+        /// 负载均衡日志服务(CLS)的健康检查日志集ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthLogSetId")]
+        public string HealthLogSetId{ get; set; }
+
+        /// <summary>
+        /// 负载均衡日志服务(CLS)的健康检查日志主题ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthLogTopicId")]
+        public string HealthLogTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -419,6 +433,8 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "MixIpTarget", this.MixIpTarget);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "NfvInfo", this.NfvInfo);
+            this.SetParamSimple(map, prefix + "HealthLogSetId", this.HealthLogSetId);
+            this.SetParamSimple(map, prefix + "HealthLogTopicId", this.HealthLogTopicId);
         }
     }
 }

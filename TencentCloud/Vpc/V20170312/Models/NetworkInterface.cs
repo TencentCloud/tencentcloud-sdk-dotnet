@@ -133,6 +133,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
+        /// <summary>
+        /// 网卡所关联的CDC实例ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +163,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

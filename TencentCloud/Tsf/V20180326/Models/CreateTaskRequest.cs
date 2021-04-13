@@ -37,13 +37,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string TaskContent{ get; set; }
 
         /// <summary>
-        /// 执行类型，UNICAST/BROADCAST
+        /// 执行类型，unicast/broadcast
         /// </summary>
         [JsonProperty("ExecuteType")]
         public string ExecuteType{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型,java
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

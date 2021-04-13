@@ -31,6 +31,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LogsetId{ get; set; }
 
         /// <summary>
+        /// 健康检查日志集的 ID。
+        /// </summary>
+        [JsonProperty("HealthLogsetId")]
+        public string HealthLogsetId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "LogsetId", this.LogsetId);
+            this.SetParamSimple(map, prefix + "HealthLogsetId", this.HealthLogsetId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

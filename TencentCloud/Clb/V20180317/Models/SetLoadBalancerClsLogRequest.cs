@@ -25,22 +25,28 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡实例 ID
+        /// 负载均衡实例 ID。
         /// </summary>
         [JsonProperty("LoadBalancerId")]
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 日志服务(CLS)的日志集ID
+        /// 日志服务(CLS)的日志集ID。
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// 日志服务(CLS)的日志主题ID
+        /// 日志服务(CLS)的日志主题ID。
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
+
+        /// <summary>
+        /// 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+        /// </summary>
+        [JsonProperty("LogType")]
+        public string LogType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
             this.SetParamSimple(map, prefix + "LogTopicId", this.LogTopicId);
+            this.SetParamSimple(map, prefix + "LogType", this.LogType);
         }
     }
 }

@@ -37,6 +37,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string PolicyId{ get; set; }
 
         /// <summary>
+        /// 触发条件模板 Id，可不传
+        /// </summary>
+        [JsonProperty("ConditionTemplateId")]
+        public long? ConditionTemplateId{ get; set; }
+
+        /// <summary>
         /// 指标触发条件
         /// </summary>
         [JsonProperty("Condition")]
@@ -56,6 +62,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
+            this.SetParamSimple(map, prefix + "ConditionTemplateId", this.ConditionTemplateId);
             this.SetParamObj(map, prefix + "Condition.", this.Condition);
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
         }

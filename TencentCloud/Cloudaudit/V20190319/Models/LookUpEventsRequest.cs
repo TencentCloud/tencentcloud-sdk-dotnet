@@ -25,22 +25,28 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 结束时间
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public long? EndTime{ get; set; }
-
-        /// <summary>
         /// 开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
         /// 检索条件
         /// </summary>
         [JsonProperty("LookupAttributes")]
         public LookupAttribute[] LookupAttributes{ get; set; }
+
+        /// <summary>
+        /// 查看更多日志的凭证
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
 
         /// <summary>
         /// 返回日志的最大条数
@@ -54,24 +60,18 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
-        /// <summary>
-        /// 查看更多日志的凭证
-        /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
         }
     }
 }

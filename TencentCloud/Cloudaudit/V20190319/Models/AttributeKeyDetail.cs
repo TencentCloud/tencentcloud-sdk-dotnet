@@ -25,22 +25,10 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
-        /// 中文标签
-        /// </summary>
-        [JsonProperty("Label")]
-        public string Label{ get; set; }
-
-        /// <summary>
         /// 输入框类型
         /// </summary>
         [JsonProperty("LabelType")]
         public string LabelType{ get; set; }
-
-        /// <summary>
-        /// 展示排序
-        /// </summary>
-        [JsonProperty("Order")]
-        public long? Order{ get; set; }
 
         /// <summary>
         /// 初始化展示
@@ -49,10 +37,22 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public string Starter{ get; set; }
 
         /// <summary>
+        /// 展示排序
+        /// </summary>
+        [JsonProperty("Order")]
+        public long? Order{ get; set; }
+
+        /// <summary>
         /// AttributeKey值
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
+
+        /// <summary>
+        /// 中文标签
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "LabelType", this.LabelType);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Starter", this.Starter);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

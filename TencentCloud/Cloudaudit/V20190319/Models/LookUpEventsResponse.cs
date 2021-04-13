@@ -25,22 +25,25 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
     {
         
         /// <summary>
+        /// 查看更多日志的凭证
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
+
+        /// <summary>
         /// 日志集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Events")]
         public Event[] Events{ get; set; }
 
         /// <summary>
         /// 日志集合是否结束
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
-
-        /// <summary>
-        /// 查看更多日志的凭证
-        /// </summary>
-        [JsonProperty("NextToken")]
-        public string NextToken{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +57,9 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamArrayObj(map, prefix + "Events.", this.Events);
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
-            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

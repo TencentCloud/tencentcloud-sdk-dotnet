@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.253</VersionPrefix>
+    <VersionPrefix>3.0.254</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2885,6 +2885,8 @@
     <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeEventsRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DescribeEventsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\Event.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\GetAttributeKeyResponse.cs" />
@@ -3229,6 +3231,9 @@
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateInvoiceResultV2.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateInvoiceV2Request.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateInvoiceV2Response.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResult.cs" />
@@ -3238,6 +3243,9 @@
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResultV2.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceV2Request.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceV2Response.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResult.cs" />
@@ -3308,6 +3316,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryInvoiceV2Request.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryInvoiceV2Response.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMemberBindRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMemberBindResponse.cs" />
@@ -4962,6 +4972,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeModuleDetailResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeModuleRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeModuleResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeMonthPeakNetworkRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeMonthPeakNetworkResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeNetworkInterfacesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeNetworkInterfacesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeNodeRequest.cs" />
@@ -5092,6 +5104,7 @@
     <Compile Include="Ecm\V20190719\Models\Module.cs" />
     <Compile Include="Ecm\V20190719\Models\ModuleCounter.cs" />
     <Compile Include="Ecm\V20190719\Models\ModuleItem.cs" />
+    <Compile Include="Ecm\V20190719\Models\MonthNetwork.cs" />
     <Compile Include="Ecm\V20190719\Models\NetworkInterface.cs" />
     <Compile Include="Ecm\V20190719\Models\NetworkInterfaceAttachment.cs" />
     <Compile Include="Ecm\V20190719\Models\NetworkStorageRange.cs" />
@@ -6220,6 +6233,7 @@
     <Compile Include="Ie\V20200304\Models\MediaQualityRestorationTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\MediaRecognitionInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaRecognitionTaskResult.cs" />
+    <Compile Include="Ie\V20200304\Models\MediaResultInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaSourceInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaTargetInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MuxInfo.cs" />
@@ -6231,6 +6245,8 @@
     <Compile Include="Ie\V20200304\Models\QualityControlInfoTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\QualityControlItem.cs" />
     <Compile Include="Ie\V20200304\Models\QualityControlResultItems.cs" />
+    <Compile Include="Ie\V20200304\Models\ResultAudioInfo.cs" />
+    <Compile Include="Ie\V20200304\Models\ResultVideoInfo.cs" />
     <Compile Include="Ie\V20200304\Models\SaveInfo.cs" />
     <Compile Include="Ie\V20200304\Models\ScratchRepair.cs" />
     <Compile Include="Ie\V20200304\Models\SectionTime.cs" />
@@ -6806,6 +6822,8 @@
     <Compile Include="Iotvideo\V20191126\Models\ModifyDeviceActionResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyDevicePropertyRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyDevicePropertyResponse.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ModifyDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20191126\Models\ModifyDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyProductRequest.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyProductResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\ModifyVerContentRequest.cs" />
@@ -11269,6 +11287,9 @@
     <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
+    <Compile Include="Tse\V20201207\TseClient.cs" />
+    <Compile Include="Tse\V20201207\Models\ManageConfigRequest.cs" />
+    <Compile Include="Tse\V20201207\Models\ManageConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesResponse.cs" />
@@ -12469,6 +12490,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateHaVipResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateNatGatewayRequest.cs" />
@@ -12534,6 +12557,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteHaVipResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteIp6TranslatorsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteIp6TranslatorsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayDestinationIpPortTranslationNatRuleResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteNatGatewayRequest.cs" />
@@ -12628,6 +12653,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationDatabaseUrlResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationInfosRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeIpGeolocationInfosResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
@@ -12756,6 +12783,7 @@
     <Compile Include="Vpc\V20170312\Models\Ipv6Address.cs" />
     <Compile Include="Vpc\V20170312\Models\Ipv6SubnetCidrBlock.cs" />
     <Compile Include="Vpc\V20170312\Models\ItemPrice.cs" />
+    <Compile Include="Vpc\V20170312\Models\LocalGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\MigrateNetworkInterfaceRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\MigrateNetworkInterfaceResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\MigratePrivateIpAddressRequest.cs" />
@@ -12774,6 +12802,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyAssistantCidrResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyBandwidthPackageAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyCcnAttachedInstancesAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyCcnAttachedInstancesAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyCcnRegionBandwidthLimitsTypeRequest.cs" />
@@ -12798,6 +12828,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyIp6TranslatorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyIpv6AddressesAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyLocalGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyNatGatewayDestinationIpPortTranslationNatRuleRequest.cs" />

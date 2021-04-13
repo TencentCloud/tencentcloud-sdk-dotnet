@@ -26,6 +26,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         
         /// <summary>
         /// 查询跟踪集概要集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuditSummarys")]
         public AuditSummary[] AuditSummarys{ get; set; }
