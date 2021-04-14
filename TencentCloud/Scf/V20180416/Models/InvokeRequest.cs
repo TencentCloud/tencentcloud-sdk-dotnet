@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InvocationType{ get; set; }
 
         /// <summary>
-        /// 触发函数的版本号
+        /// 触发函数的版本号或别名
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string ClientContext{ get; set; }
 
         /// <summary>
-        /// 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的logMsg字段会包含对应的函数执行日志
+        /// 同步调用时指定该字段，返回值会包含4K的日志，可选值为None和Tail，默认值为None。当该值为Tail时，返回参数中的Log字段会包含对应的函数执行日志
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

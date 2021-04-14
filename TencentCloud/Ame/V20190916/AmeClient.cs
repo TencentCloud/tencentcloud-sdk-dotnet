@@ -453,6 +453,86 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 根据资源方，需要变更的参数，请求该接口进行变更，为空的参数默认为无变更
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMusicOnShelvesRequest"/></param>
+        /// <returns><see cref="ModifyMusicOnShelvesResponse"/></returns>
+        public async Task<ModifyMusicOnShelvesResponse> ModifyMusicOnShelves(ModifyMusicOnShelvesRequest req)
+        {
+             JsonResponseModel<ModifyMusicOnShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMusicOnShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMusicOnShelvesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据资源方，需要变更的参数，请求该接口进行变更，为空的参数默认为无变更
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMusicOnShelvesRequest"/></param>
+        /// <returns><see cref="ModifyMusicOnShelvesResponse"/></returns>
+        public ModifyMusicOnShelvesResponse ModifyMusicOnShelvesSync(ModifyMusicOnShelvesRequest req)
+        {
+             JsonResponseModel<ModifyMusicOnShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMusicOnShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMusicOnShelvesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据资源方所传歌曲信息，进行歌曲上架，多个歌曲同时请求时，需构造复合结构进行请求
+        /// </summary>
+        /// <param name="req"><see cref="PutMusicOnTheShelvesRequest"/></param>
+        /// <returns><see cref="PutMusicOnTheShelvesResponse"/></returns>
+        public async Task<PutMusicOnTheShelvesResponse> PutMusicOnTheShelves(PutMusicOnTheShelvesRequest req)
+        {
+             JsonResponseModel<PutMusicOnTheShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutMusicOnTheShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMusicOnTheShelvesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据资源方所传歌曲信息，进行歌曲上架，多个歌曲同时请求时，需构造复合结构进行请求
+        /// </summary>
+        /// <param name="req"><see cref="PutMusicOnTheShelvesRequest"/></param>
+        /// <returns><see cref="PutMusicOnTheShelvesResponse"/></returns>
+        public PutMusicOnTheShelvesResponse PutMusicOnTheShelvesSync(PutMusicOnTheShelvesRequest req)
+        {
+             JsonResponseModel<PutMusicOnTheShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutMusicOnTheShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMusicOnTheShelvesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 客户上报用户数据功能，为了更好地为用户提供优质服务
         /// </summary>
         /// <param name="req"><see cref="ReportDataRequest"/></param>
@@ -484,6 +564,46 @@ namespace TencentCloud.Ame.V20190916
              {
                  var strResp = this.InternalRequestSync(req, "ReportData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据资源方所传MusicId进行将歌曲进行下架，多个MusicId使用逗号隔开
+        /// </summary>
+        /// <param name="req"><see cref="TakeMusicOffShelvesRequest"/></param>
+        /// <returns><see cref="TakeMusicOffShelvesResponse"/></returns>
+        public async Task<TakeMusicOffShelvesResponse> TakeMusicOffShelves(TakeMusicOffShelvesRequest req)
+        {
+             JsonResponseModel<TakeMusicOffShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TakeMusicOffShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TakeMusicOffShelvesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据资源方所传MusicId进行将歌曲进行下架，多个MusicId使用逗号隔开
+        /// </summary>
+        /// <param name="req"><see cref="TakeMusicOffShelvesRequest"/></param>
+        /// <returns><see cref="TakeMusicOffShelvesResponse"/></returns>
+        public TakeMusicOffShelvesResponse TakeMusicOffShelvesSync(TakeMusicOffShelvesRequest req)
+        {
+             JsonResponseModel<TakeMusicOffShelvesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TakeMusicOffShelves");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TakeMusicOffShelvesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

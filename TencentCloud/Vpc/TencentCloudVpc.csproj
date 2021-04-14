@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.254</VersionPrefix>
+    <VersionPrefix>3.0.255</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -174,6 +174,12 @@
     <Compile Include="V20170312\Models\CreateSubnetResponse.cs" />
     <Compile Include="V20170312\Models\CreateSubnetsRequest.cs" />
     <Compile Include="V20170312\Models\CreateSubnetsResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointServiceRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointServiceResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpcRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpcResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpnConnectionRequest.cs" />
@@ -237,6 +243,12 @@
     <Compile Include="V20170312\Models\DeleteServiceTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetRequest.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointServiceRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointServiceResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpcResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpnConnectionRequest.cs" />
@@ -349,6 +361,12 @@
     <Compile Include="V20170312\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTemplateLimitsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTemplateLimitsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointServiceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcIpv6AddressesRequest.cs" />
@@ -395,6 +413,8 @@
     <Compile Include="V20170312\Models\DisassociateNetworkAclSubnetsResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
+    <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
+    <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="V20170312\Models\EnableCcnRoutesRequest.cs" />
@@ -403,6 +423,10 @@
     <Compile Include="V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\EnableRoutesRequest.cs" />
     <Compile Include="V20170312\Models\EnableRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
+    <Compile Include="V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
+    <Compile Include="V20170312\Models\EndPoint.cs" />
+    <Compile Include="V20170312\Models\EndPointService.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\FilterObject.cs" />
     <Compile Include="V20170312\Models\FlowLog.cs" />
@@ -512,6 +536,12 @@
     <Compile Include="V20170312\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointServiceAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointServiceAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnConnectionAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpnConnectionAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpnGatewayAttributeRequest.cs" />
@@ -601,6 +631,7 @@
     <Compile Include="V20170312\Models\UnassignPrivateIpAddressesRequest.cs" />
     <Compile Include="V20170312\Models\UnassignPrivateIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\Vpc.cs" />
+    <Compile Include="V20170312\Models\VpcEndPointServiceUser.cs" />
     <Compile Include="V20170312\Models\VpcIpv6Address.cs" />
     <Compile Include="V20170312\Models\VpcLimit.cs" />
     <Compile Include="V20170312\Models\VpcPrivateIpAddress.cs" />

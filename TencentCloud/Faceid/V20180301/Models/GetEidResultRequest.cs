@@ -25,7 +25,7 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 人脸核身流程的标识，调用DetectAuth接口时生成。
+        /// 人脸核身流程的标识，调用GetEidToken接口时生成的。
         /// </summary>
         [JsonProperty("EidToken")]
         public string EidToken{ get; set; }

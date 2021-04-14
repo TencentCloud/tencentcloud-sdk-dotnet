@@ -2469,6 +2469,126 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 创建终端节点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointResponse"/></returns>
+        public async Task<CreateVpcEndPointResponse> CreateVpcEndPoint(CreateVpcEndPointRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建终端节点。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointResponse"/></returns>
+        public CreateVpcEndPointResponse CreateVpcEndPointSync(CreateVpcEndPointRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建终端节点服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>
+        public async Task<CreateVpcEndPointServiceResponse> CreateVpcEndPointService(CreateVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建终端节点服务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>
+        public CreateVpcEndPointServiceResponse CreateVpcEndPointServiceSync(CreateVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建终端服务白名单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointServiceWhiteListResponse"/></returns>
+        public async Task<CreateVpcEndPointServiceWhiteListResponse> CreateVpcEndPointServiceWhiteList(CreateVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建终端服务白名单。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="CreateVpcEndPointServiceWhiteListResponse"/></returns>
+        public CreateVpcEndPointServiceWhiteListResponse CreateVpcEndPointServiceWhiteListSync(CreateVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateVpnConnection）用于创建VPN通道。
         /// </summary>
         /// <param name="req"><see cref="CreateVpnConnectionRequest"/></param>
@@ -3654,6 +3774,128 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteVpc");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointResponse"/></returns>
+        public async Task<DeleteVpcEndPointResponse> DeleteVpcEndPoint(DeleteVpcEndPointRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointResponse"/></returns>
+        public DeleteVpcEndPointResponse DeleteVpcEndPointSync(DeleteVpcEndPointRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点服务。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>
+        public async Task<DeleteVpcEndPointServiceResponse> DeleteVpcEndPointService(DeleteVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点服务。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointServiceResponse"/></returns>
+        public DeleteVpcEndPointServiceResponse DeleteVpcEndPointServiceSync(DeleteVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点服务白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointServiceWhiteListResponse"/></returns>
+        public async Task<DeleteVpcEndPointServiceWhiteListResponse> DeleteVpcEndPointServiceWhiteList(DeleteVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除终端节点服务白名单。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="DeleteVpcEndPointServiceWhiteListResponse"/></returns>
+        public DeleteVpcEndPointServiceWhiteListResponse DeleteVpcEndPointServiceWhiteListSync(DeleteVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpcEndPointServiceWhiteListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5873,6 +6115,126 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询终端节点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointResponse"/></returns>
+        public async Task<DescribeVpcEndPointResponse> DescribeVpcEndPoint(DescribeVpcEndPointRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询终端节点列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointResponse"/></returns>
+        public DescribeVpcEndPointResponse DescribeVpcEndPointSync(DescribeVpcEndPointRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcEndPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询终端节点服务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointServiceResponse"/></returns>
+        public async Task<DescribeVpcEndPointServiceResponse> DescribeVpcEndPointService(DescribeVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询终端节点服务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointServiceRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointServiceResponse"/></returns>
+        public DescribeVpcEndPointServiceResponse DescribeVpcEndPointServiceSync(DescribeVpcEndPointServiceRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcEndPointService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询终端节点服务的服务白名单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointServiceWhiteListResponse"/></returns>
+        public async Task<DescribeVpcEndPointServiceWhiteListResponse> DescribeVpcEndPointServiceWhiteList(DescribeVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询终端节点服务的服务白名单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeVpcEndPointServiceWhiteListResponse"/></returns>
+        public DescribeVpcEndPointServiceWhiteListResponse DescribeVpcEndPointServiceWhiteListSync(DescribeVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  本接口（DescribeVpcInstances）用于查询VPC下的云主机实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcInstancesRequest"/></param>
@@ -6785,6 +7147,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 终端节点解绑安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateVpcEndPointSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateVpcEndPointSecurityGroupsResponse"/></returns>
+        public async Task<DisassociateVpcEndPointSecurityGroupsResponse> DisassociateVpcEndPointSecurityGroups(DisassociateVpcEndPointSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateVpcEndPointSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 终端节点解绑安全组。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateVpcEndPointSecurityGroupsRequest"/></param>
+        /// <returns><see cref="DisassociateVpcEndPointSecurityGroupsResponse"/></returns>
+        public DisassociateVpcEndPointSecurityGroupsResponse DisassociateVpcEndPointSecurityGroupsSync(DisassociateVpcEndPointSecurityGroupsRequest req)
+        {
+             JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateVpcEndPointSecurityGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateVpcEndPointSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DownloadCustomerGatewayConfiguration)用于下载VPN通道配置。
         /// </summary>
         /// <param name="req"><see cref="DownloadCustomerGatewayConfigurationRequest"/></param>
@@ -6940,6 +7342,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 是否接受终端节点连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcEndPointConnectRequest"/></param>
+        /// <returns><see cref="EnableVpcEndPointConnectResponse"/></returns>
+        public async Task<EnableVpcEndPointConnectResponse> EnableVpcEndPointConnect(EnableVpcEndPointConnectRequest req)
+        {
+             JsonResponseModel<EnableVpcEndPointConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableVpcEndPointConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcEndPointConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 是否接受终端节点连接请求。
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcEndPointConnectRequest"/></param>
+        /// <returns><see cref="EnableVpcEndPointConnectResponse"/></returns>
+        public EnableVpcEndPointConnectResponse EnableVpcEndPointConnectSync(EnableVpcEndPointConnectRequest req)
+        {
+             JsonResponseModel<EnableVpcEndPointConnectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableVpcEndPointConnect");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcEndPointConnectResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8788,6 +9230,128 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVpcAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointAttributeResponse"/></returns>
+        public async Task<ModifyVpcEndPointAttributeResponse> ModifyVpcEndPointAttribute(ModifyVpcEndPointAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpcEndPointAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointAttributeResponse"/></returns>
+        public ModifyVpcEndPointAttributeResponse ModifyVpcEndPointAttributeSync(ModifyVpcEndPointAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpcEndPointAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点服务属性。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointServiceAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointServiceAttributeResponse"/></returns>
+        public async Task<ModifyVpcEndPointServiceAttributeResponse> ModifyVpcEndPointServiceAttribute(ModifyVpcEndPointServiceAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpcEndPointServiceAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点服务属性。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointServiceAttributeRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointServiceAttributeResponse"/></returns>
+        public ModifyVpcEndPointServiceAttributeResponse ModifyVpcEndPointServiceAttributeSync(ModifyVpcEndPointServiceAttributeRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpcEndPointServiceAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointServiceAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点服务白名单属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointServiceWhiteListResponse"/></returns>
+        public async Task<ModifyVpcEndPointServiceWhiteListResponse> ModifyVpcEndPointServiceWhiteList(ModifyVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改终端节点服务白名单属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVpcEndPointServiceWhiteListRequest"/></param>
+        /// <returns><see cref="ModifyVpcEndPointServiceWhiteListResponse"/></returns>
+        public ModifyVpcEndPointServiceWhiteListResponse ModifyVpcEndPointServiceWhiteListSync(ModifyVpcEndPointServiceWhiteListRequest req)
+        {
+             JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVpcEndPointServiceWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVpcEndPointServiceWhiteListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

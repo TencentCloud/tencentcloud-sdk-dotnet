@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.254</VersionPrefix>
+    <VersionPrefix>3.0.255</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -115,13 +115,21 @@
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
     <Compile Include="Ame\V20190916\Models\Item.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
+    <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesResponse.cs" />
     <Compile Include="Ame\V20190916\Models\Music.cs" />
+    <Compile Include="Ame\V20190916\Models\MusicDetailInfo.cs" />
     <Compile Include="Ame\V20190916\Models\MusicOpenDetail.cs" />
     <Compile Include="Ame\V20190916\Models\Package.cs" />
     <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
+    <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataResponse.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
+    <Compile Include="Ame\V20190916\Models\TakeMusicOffShelves.cs" />
+    <Compile Include="Ame\V20190916\Models\TakeMusicOffShelvesRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\TakeMusicOffShelvesResponse.cs" />
     <Compile Include="Ame\V20190916\Models\UseRange.cs" />
     <Compile Include="Ams\V20201229\AmsClient.cs" />
     <Compile Include="Ams\V20201229\Models\AudioResult.cs" />
@@ -8444,22 +8452,35 @@
     <Compile Include="Oceanus\V20190422\Models\CreateResourceConfigResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\CreateResourceRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\CreateResourceResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteResourceConfigsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteResourceConfigsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteResourcesRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DeleteResourcesResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourceConfigsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourceConfigsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourceRelatedJobsRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourceRelatedJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeResourcesResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeSystemResourcesResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\Filter.cs" />
     <Compile Include="Oceanus\V20190422\Models\JobConfig.cs" />
     <Compile Include="Oceanus\V20190422\Models\JobV1.cs" />
     <Compile Include="Oceanus\V20190422\Models\Property.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceConfigItem.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceItem.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceLoc.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceLocParam.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceRef.cs" />
     <Compile Include="Oceanus\V20190422\Models\ResourceRefDetail.cs" />
+    <Compile Include="Oceanus\V20190422\Models\ResourceRefJobInfo.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobDescription.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsResponse.cs" />
@@ -11225,8 +11246,12 @@
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreatePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeletePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
@@ -11235,6 +11260,8 @@
     <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribePictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
@@ -11259,9 +11286,12 @@
     <Compile Include="Trtc\V20190722\Models\EventList.cs" />
     <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyPictureRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\OneSdkAppIdUsagesInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\OutputParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\PictureInfo.cs" />
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
@@ -12522,6 +12552,12 @@
     <Compile Include="Vpc\V20170312\Models\CreateSubnetResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateSubnetsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionRequest.cs" />
@@ -12585,6 +12621,12 @@
     <Compile Include="Vpc\V20170312\Models\DeleteServiceTemplateResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteSubnetRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpcRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpcResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnConnectionRequest.cs" />
@@ -12697,6 +12739,12 @@
     <Compile Include="Vpc\V20170312\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeTemplateLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeTemplateLimitsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcInstancesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcIpv6AddressesRequest.cs" />
@@ -12743,6 +12791,8 @@
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkAclSubnetsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisassociateNetworkInterfaceSecurityGroupsResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateVpcEndPointSecurityGroupsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisassociateVpcEndPointSecurityGroupsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesRequest.cs" />
@@ -12751,6 +12801,10 @@
     <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\EndPoint.cs" />
+    <Compile Include="Vpc\V20170312\Models\EndPointService.cs" />
     <Compile Include="Vpc\V20170312\Models\Filter.cs" />
     <Compile Include="Vpc\V20170312\Models\FilterObject.cs" />
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
@@ -12860,6 +12914,12 @@
     <Compile Include="Vpc\V20170312\Models\ModifySubnetAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpcAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceAttributeRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceAttributeResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceWhiteListRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpcEndPointServiceWhiteListResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnConnectionAttributeRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnConnectionAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeRequest.cs" />
@@ -12949,6 +13009,7 @@
     <Compile Include="Vpc\V20170312\Models\UnassignPrivateIpAddressesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\UnassignPrivateIpAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Vpc.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpcEndPointServiceUser.cs" />
     <Compile Include="Vpc\V20170312\Models\VpcIpv6Address.cs" />
     <Compile Include="Vpc\V20170312\Models\VpcLimit.cs" />
     <Compile Include="Vpc\V20170312\Models\VpcPrivateIpAddress.cs" />

@@ -493,7 +493,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 每次调用人脸核身小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// 每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req"><see cref="GetEidTokenRequest"/></param>
         /// <returns><see cref="GetEidTokenResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 每次调用人脸核身小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// 每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
         /// </summary>
         /// <param name="req"><see cref="GetEidTokenRequest"/></param>
         /// <returns><see cref="GetEidTokenResponse"/></returns>

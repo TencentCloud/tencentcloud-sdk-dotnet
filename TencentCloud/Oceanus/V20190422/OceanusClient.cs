@@ -213,6 +213,86 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 删除资源版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceConfigsRequest"/></param>
+        /// <returns><see cref="DeleteResourceConfigsResponse"/></returns>
+        public async Task<DeleteResourceConfigsResponse> DeleteResourceConfigs(DeleteResourceConfigsRequest req)
+        {
+             JsonResponseModel<DeleteResourceConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteResourceConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除资源版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourceConfigsRequest"/></param>
+        /// <returns><see cref="DeleteResourceConfigsResponse"/></returns>
+        public DeleteResourceConfigsResponse DeleteResourceConfigsSync(DeleteResourceConfigsRequest req)
+        {
+             JsonResponseModel<DeleteResourceConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteResourceConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourceConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除资源接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourcesRequest"/></param>
+        /// <returns><see cref="DeleteResourcesResponse"/></returns>
+        public async Task<DeleteResourcesResponse> DeleteResources(DeleteResourcesRequest req)
+        {
+             JsonResponseModel<DeleteResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除资源接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteResourcesRequest"/></param>
+        /// <returns><see cref="DeleteResourcesResponse"/></returns>
+        public DeleteResourcesResponse DeleteResourcesSync(DeleteResourcesRequest req)
+        {
+             JsonResponseModel<DeleteResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除作业表配置
         /// </summary>
         /// <param name="req"><see cref="DeleteTableConfigRequest"/></param>
@@ -324,6 +404,126 @@ namespace TencentCloud.Oceanus.V20190422
              {
                  var strResp = this.InternalRequestSync(req, "DescribeJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述资源配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceConfigsRequest"/></param>
+        /// <returns><see cref="DescribeResourceConfigsResponse"/></returns>
+        public async Task<DescribeResourceConfigsResponse> DescribeResourceConfigs(DescribeResourceConfigsRequest req)
+        {
+             JsonResponseModel<DescribeResourceConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述资源配置接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceConfigsRequest"/></param>
+        /// <returns><see cref="DescribeResourceConfigsResponse"/></returns>
+        public DescribeResourceConfigsResponse DescribeResourceConfigsSync(DescribeResourceConfigsRequest req)
+        {
+             JsonResponseModel<DescribeResourceConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资源关联作业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceRelatedJobsRequest"/></param>
+        /// <returns><see cref="DescribeResourceRelatedJobsResponse"/></returns>
+        public async Task<DescribeResourceRelatedJobsResponse> DescribeResourceRelatedJobs(DescribeResourceRelatedJobsRequest req)
+        {
+             JsonResponseModel<DescribeResourceRelatedJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceRelatedJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceRelatedJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取资源关联作业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceRelatedJobsRequest"/></param>
+        /// <returns><see cref="DescribeResourceRelatedJobsResponse"/></returns>
+        public DescribeResourceRelatedJobsResponse DescribeResourceRelatedJobsSync(DescribeResourceRelatedJobsRequest req)
+        {
+             JsonResponseModel<DescribeResourceRelatedJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceRelatedJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceRelatedJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述资源接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeResourcesResponse"/></returns>
+        public async Task<DescribeResourcesResponse> DescribeResources(DescribeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述资源接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeResourcesResponse"/></returns>
+        public DescribeResourcesResponse DescribeResourcesSync(DescribeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourcesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

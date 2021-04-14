@@ -53,6 +53,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="req"><see cref="CreatePictureRequest"/></param>
+        /// <returns><see cref="CreatePictureResponse"/></returns>
+        public async Task<CreatePictureResponse> CreatePicture(CreatePictureRequest req)
+        {
+             JsonResponseModel<CreatePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传图片
+        /// </summary>
+        /// <param name="req"><see cref="CreatePictureRequest"/></param>
+        /// <returns><see cref="CreatePictureResponse"/></returns>
+        public CreatePictureResponse CreatePictureSync(CreatePictureRequest req)
+        {
+             JsonResponseModel<CreatePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建异常信息
         /// </summary>
         /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "CreateTroubleInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除图片
+        /// </summary>
+        /// <param name="req"><see cref="DeletePictureRequest"/></param>
+        /// <returns><see cref="DeletePictureResponse"/></returns>
+        public async Task<DeletePictureResponse> DeletePicture(DeletePictureRequest req)
+        {
+             JsonResponseModel<DeletePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除图片
+        /// </summary>
+        /// <param name="req"><see cref="DeletePictureRequest"/></param>
+        /// <returns><see cref="DeletePictureResponse"/></returns>
+        public DeletePictureResponse DeletePictureSync(DeletePictureRequest req)
+        {
+             JsonResponseModel<DeletePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePictureResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -246,6 +326,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeHistoryScale");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某图片相关参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePictureRequest"/></param>
+        /// <returns><see cref="DescribePictureResponse"/></returns>
+        public async Task<DescribePictureResponse> DescribePicture(DescribePictureRequest req)
+        {
+             JsonResponseModel<DescribePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询某图片相关参数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePictureRequest"/></param>
+        /// <returns><see cref="DescribePictureResponse"/></returns>
+        public DescribePictureResponse DescribePictureSync(DescribePictureRequest req)
+        {
+             JsonResponseModel<DescribePictureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePictureResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -676,6 +796,46 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DismissRoomByStrRoomId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改图片相关参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPictureRequest"/></param>
+        /// <returns><see cref="ModifyPictureResponse"/></returns>
+        public async Task<ModifyPictureResponse> ModifyPicture(ModifyPictureRequest req)
+        {
+             JsonResponseModel<ModifyPictureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPictureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改图片相关参数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPictureRequest"/></param>
+        /// <returns><see cref="ModifyPictureResponse"/></returns>
+        public ModifyPictureResponse ModifyPictureSync(ModifyPictureRequest req)
+        {
+             JsonResponseModel<ModifyPictureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPicture");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPictureResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

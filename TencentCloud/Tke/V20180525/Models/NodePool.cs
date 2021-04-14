@@ -43,7 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterInstanceId{ get; set; }
 
         /// <summary>
-        /// LifeState 状态
+        /// LifeState 状态，当前节点池生命周期状态包括：creating，normal，updating，deleting，deleted
         /// </summary>
         [JsonProperty("LifeState")]
         public string LifeState{ get; set; }
