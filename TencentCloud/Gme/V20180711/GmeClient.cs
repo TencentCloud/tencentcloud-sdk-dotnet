@@ -375,6 +375,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 修改房间信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomInfoRequest"/></param>
+        /// <returns><see cref="ModifyRoomInfoResponse"/></returns>
+        public async Task<ModifyRoomInfoResponse> ModifyRoomInfo(ModifyRoomInfoRequest req)
+        {
+             JsonResponseModel<ModifyRoomInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRoomInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改房间信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoomInfoRequest"/></param>
+        /// <returns><see cref="ModifyRoomInfoResponse"/></returns>
+        public ModifyRoomInfoResponse ModifyRoomInfoSync(ModifyRoomInfoRequest req)
+        {
+             JsonResponseModel<ModifyRoomInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRoomInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoomInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
         /// </br></br>
         /// 

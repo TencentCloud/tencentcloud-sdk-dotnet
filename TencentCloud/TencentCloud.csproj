@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.255</VersionPrefix>
+    <VersionPrefix>3.0.256</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3062,6 +3062,7 @@
     <Compile Include="Cme\V20191029\Models\PlatformInfo.cs" />
     <Compile Include="Cme\V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ProjectInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\RecordReplayProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\Resource.cs" />
     <Compile Include="Cme\V20191029\Models\ResourceInfo.cs" />
     <Compile Include="Cme\V20191029\Models\RevokeResourceAuthorizationRequest.cs" />
@@ -5662,6 +5663,8 @@
     <Compile Include="Gme\V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\ModifyRoomInfoRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\ModifyRoomInfoResponse.cs" />
     <Compile Include="Gme\V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\RealtimeSpeechConf.cs" />
     <Compile Include="Gme\V20180711\Models\ScanDetail.cs" />
@@ -10523,6 +10526,8 @@
     <Compile Include="Tcr\V20190924\Models\DescribeWebhookTriggerLogResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeWebhookTriggerRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeWebhookTriggerResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DownloadHelmChartRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DownloadHelmChartResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DupImageTagResp.cs" />
     <Compile Include="Tcr\V20190924\Models\DuplicateImagePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DuplicateImagePersonalResponse.cs" />

@@ -2333,6 +2333,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 用于在TCR中下载helm chart
+        /// </summary>
+        /// <param name="req"><see cref="DownloadHelmChartRequest"/></param>
+        /// <returns><see cref="DownloadHelmChartResponse"/></returns>
+        public async Task<DownloadHelmChartResponse> DownloadHelmChart(DownloadHelmChartRequest req)
+        {
+             JsonResponseModel<DownloadHelmChartResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadHelmChart");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadHelmChartResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在TCR中下载helm chart
+        /// </summary>
+        /// <param name="req"><see cref="DownloadHelmChartRequest"/></param>
+        /// <returns><see cref="DownloadHelmChartResponse"/></returns>
+        public DownloadHelmChartResponse DownloadHelmChartSync(DownloadHelmChartRequest req)
+        {
+             JsonResponseModel<DownloadHelmChartResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadHelmChart");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadHelmChartResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于在个人版镜像仓库中复制镜像版本
         /// </summary>
         /// <param name="req"><see cref="DuplicateImagePersonalRequest"/></param>

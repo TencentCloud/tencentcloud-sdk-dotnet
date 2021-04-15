@@ -112,6 +112,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogCollect")]
         public long? LogCollect{ get; set; }
 
+        /// <summary>
+        /// 作业的最大并行度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxParallelism")]
+        public ulong? MaxParallelism{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +138,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
             this.SetParamSimple(map, prefix + "LogCollect", this.LogCollect);
+            this.SetParamSimple(map, prefix + "MaxParallelism", this.MaxParallelism);
         }
     }
 }

@@ -173,6 +173,8 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
+        /// 该服务已不再对外提供能力
+        /// 
         /// 筛选敏感易骚扰人群
         /// </summary>
         /// <param name="req"><see cref="RecognizeEffectiveFlowRequest"/></param>
@@ -193,6 +195,8 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
+        /// 该服务已不再对外提供能力
+        /// 
         /// 筛选敏感易骚扰人群
         /// </summary>
         /// <param name="req"><see cref="RecognizeEffectiveFlowRequest"/></param>
