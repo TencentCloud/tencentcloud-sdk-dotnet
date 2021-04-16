@@ -775,6 +775,52 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 获取回放视频流(NVR录制用)
+        /// RecordId和StartTime/EndTime互斥
+        /// 当存在RecordId时，StartTime和EndTime无效
+        /// 当RecordId为空，StartTime和EndTime生效
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordStreamRequest"/></param>
+        /// <returns><see cref="DescribeRecordStreamResponse"/></returns>
+        public async Task<DescribeRecordStreamResponse> DescribeRecordStream(DescribeRecordStreamRequest req)
+        {
+             JsonResponseModel<DescribeRecordStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取回放视频流(NVR录制用)
+        /// RecordId和StartTime/EndTime互斥
+        /// 当存在RecordId时，StartTime和EndTime无效
+        /// 当RecordId为空，StartTime和EndTime生效
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordStreamRequest"/></param>
+        /// <returns><see cref="DescribeRecordStreamResponse"/></returns>
+        public DescribeRecordStreamResponse DescribeRecordStreamSync(DescribeRecordStreamRequest req)
+        {
+             JsonResponseModel<DescribeRecordStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取SIP服务器相关配置，用户可以通过这些配置项，将设备通过GB28181协议注册到本服务。
         /// </summary>
         /// <param name="req"><see cref="DescribeSIPServerRequest"/></param>
@@ -926,6 +972,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据时间获取回放文件列表(云端录制用)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoListRequest"/></param>
+        /// <returns><see cref="DescribeVideoListResponse"/></returns>
+        public async Task<DescribeVideoListResponse> DescribeVideoList(DescribeVideoListRequest req)
+        {
+             JsonResponseModel<DescribeVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据时间获取回放文件列表(云端录制用)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoListRequest"/></param>
+        /// <returns><see cref="DescribeVideoListResponse"/></returns>
+        public DescribeVideoListResponse DescribeVideoListSync(DescribeVideoListRequest req)
+        {
+             JsonResponseModel<DescribeVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

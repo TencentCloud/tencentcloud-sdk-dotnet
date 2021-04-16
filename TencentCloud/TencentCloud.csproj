@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.256</VersionPrefix>
+    <VersionPrefix>3.0.257</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3409,6 +3409,10 @@
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderInSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadTaxListRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadTaxListResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadTaxPaymentRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadTaxPaymentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\WithdrawBill.cs" />
     <Compile Include="Cpdp\V20190820\Models\WithdrawCashMembershipRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\WithdrawCashMembershipResponse.cs" />
@@ -7029,6 +7033,9 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupDevicesResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupsRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamData.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamRequest.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeSIPServerRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeSIPServerResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeStatisticDetailsRequest.cs" />
@@ -7037,6 +7044,8 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeStatisticSummaryResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeSubGroupsRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeSubGroupsResponse.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeVideoListRequest.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeVideoListResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DevGroupInfo.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DeviceItem.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\GetRecordDatesByDevRequest.cs" />
@@ -9051,6 +9060,8 @@
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionRequest.cs" />
     <Compile Include="Redis\V20180412\Models\UpgradeInstanceVersionResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeVersionToMultiAvailabilityZonesRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\UpgradeVersionToMultiAvailabilityZonesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ZoneCapacityConf.cs" />
     <Compile Include="Rkp\V20191209\RkpClient.cs" />
     <Compile Include="Rkp\V20191209\Models\DevInfoQ.cs" />

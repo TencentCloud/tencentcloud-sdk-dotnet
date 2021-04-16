@@ -3271,6 +3271,86 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 直播平台-上传代理商完税列表
+        /// </summary>
+        /// <param name="req"><see cref="UploadTaxListRequest"/></param>
+        /// <returns><see cref="UploadTaxListResponse"/></returns>
+        public async Task<UploadTaxListResponse> UploadTaxList(UploadTaxListRequest req)
+        {
+             JsonResponseModel<UploadTaxListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadTaxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadTaxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-上传代理商完税列表
+        /// </summary>
+        /// <param name="req"><see cref="UploadTaxListRequest"/></param>
+        /// <returns><see cref="UploadTaxListResponse"/></returns>
+        public UploadTaxListResponse UploadTaxListSync(UploadTaxListRequest req)
+        {
+             JsonResponseModel<UploadTaxListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadTaxList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadTaxListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-上传代理商完税证明
+        /// </summary>
+        /// <param name="req"><see cref="UploadTaxPaymentRequest"/></param>
+        /// <returns><see cref="UploadTaxPaymentResponse"/></returns>
+        public async Task<UploadTaxPaymentResponse> UploadTaxPayment(UploadTaxPaymentRequest req)
+        {
+             JsonResponseModel<UploadTaxPaymentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadTaxPayment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadTaxPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-上传代理商完税证明
+        /// </summary>
+        /// <param name="req"><see cref="UploadTaxPaymentRequest"/></param>
+        /// <returns><see cref="UploadTaxPaymentResponse"/></returns>
+        public UploadTaxPaymentResponse UploadTaxPaymentSync(UploadTaxPaymentRequest req)
+        {
+             JsonResponseModel<UploadTaxPaymentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadTaxPayment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadTaxPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员提现-不验证。此接口受理会员发起的提现申请。会员子账户的可提现余额、可用余额会减少，市场的资金汇总账户(监管账户)会减少相应的发生金额，提现到会员申请的收款账户。		
         /// </summary>
         /// <param name="req"><see cref="WithdrawCashMembershipRequest"/></param>

@@ -25,7 +25,7 @@ namespace TencentCloud.Billing.V20180709.Models
     {
         
         /// <summary>
-        /// 云账户信息中的”展示可用余额”字段，单位为"分"
+        /// 接口做过变更,为兼容老接口,本字段与RealBalance相同,为当前真实可用余额,单位 分
         /// </summary>
         [JsonProperty("Balance")]
         public long? Balance{ get; set; }
@@ -37,37 +37,37 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Uin{ get; set; }
 
         /// <summary>
-        /// 当前真实可用余额
+        /// 当前真实可用余额,单位 分
         /// </summary>
         [JsonProperty("RealBalance")]
         public float? RealBalance{ get; set; }
 
         /// <summary>
-        /// 现金账户余额
+        /// 现金账户余额,单位 分
         /// </summary>
         [JsonProperty("CashAccountBalance")]
         public float? CashAccountBalance{ get; set; }
 
         /// <summary>
-        /// 收益转入账户余额
+        /// 收益转入账户余额,单位 分
         /// </summary>
         [JsonProperty("IncomeIntoAccountBalance")]
         public float? IncomeIntoAccountBalance{ get; set; }
 
         /// <summary>
-        /// 赠送账户余额
+        /// 赠送账户余额,单位 分
         /// </summary>
         [JsonProperty("PresentAccountBalance")]
         public float? PresentAccountBalance{ get; set; }
 
         /// <summary>
-        /// 冻结金额
+        /// 冻结金额,单位 分
         /// </summary>
         [JsonProperty("FreezeAmount")]
         public float? FreezeAmount{ get; set; }
 
         /// <summary>
-        /// 欠费金额
+        /// 欠费金额,单位 分
         /// </summary>
         [JsonProperty("OweAmount")]
         public float? OweAmount{ get; set; }

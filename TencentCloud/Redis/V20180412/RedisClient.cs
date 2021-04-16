@@ -2572,5 +2572,45 @@ namespace TencentCloud.Redis.V20180412
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 升级实例支持多AZ
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
+        public async Task<UpgradeVersionToMultiAvailabilityZonesResponse> UpgradeVersionToMultiAvailabilityZones(UpgradeVersionToMultiAvailabilityZonesRequest req)
+        {
+             JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeVersionToMultiAvailabilityZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级实例支持多AZ
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>
+        /// <returns><see cref="UpgradeVersionToMultiAvailabilityZonesResponse"/></returns>
+        public UpgradeVersionToMultiAvailabilityZonesResponse UpgradeVersionToMultiAvailabilityZonesSync(UpgradeVersionToMultiAvailabilityZonesRequest req)
+        {
+             JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeVersionToMultiAvailabilityZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeVersionToMultiAvailabilityZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

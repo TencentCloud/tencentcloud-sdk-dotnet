@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18E4740C-9C8B-37F5-AF27-B5C1E6829210}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.256</VersionPrefix>
+    <VersionPrefix>3.0.257</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,9 @@
     <Compile Include="V20201201\Models\DescribeGroupDevicesResponse.cs" />
     <Compile Include="V20201201\Models\DescribeGroupsRequest.cs" />
     <Compile Include="V20201201\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeRecordStreamData.cs" />
+    <Compile Include="V20201201\Models\DescribeRecordStreamRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeRecordStreamResponse.cs" />
     <Compile Include="V20201201\Models\DescribeSIPServerRequest.cs" />
     <Compile Include="V20201201\Models\DescribeSIPServerResponse.cs" />
     <Compile Include="V20201201\Models\DescribeStatisticDetailsRequest.cs" />
@@ -91,6 +94,8 @@
     <Compile Include="V20201201\Models\DescribeStatisticSummaryResponse.cs" />
     <Compile Include="V20201201\Models\DescribeSubGroupsRequest.cs" />
     <Compile Include="V20201201\Models\DescribeSubGroupsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeVideoListRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeVideoListResponse.cs" />
     <Compile Include="V20201201\Models\DevGroupInfo.cs" />
     <Compile Include="V20201201\Models\DeviceItem.cs" />
     <Compile Include="V20201201\Models\GetRecordDatesByDevRequest.cs" />
