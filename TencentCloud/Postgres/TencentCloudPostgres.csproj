@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.257</VersionPrefix>
+    <VersionPrefix>3.0.258</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\DisIsolateDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
@@ -107,6 +109,8 @@
     <Compile Include="V20170312\Models\InquiryPriceRenewDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceUpgradeDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\IsolateDBInstancesRequest.cs" />
+    <Compile Include="V20170312\Models\IsolateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3
+        /// 取值范围[0,1]，填0无实际含义; 填1：指定录制文件格式为mp3。此参数不建议使用，建议在实时音视频控制台配置纯音频录制模板。
         /// </summary>
         [JsonProperty("RecordAudioOnly")]
         public ulong? RecordAudioOnly{ get; set; }

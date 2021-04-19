@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.257</VersionPrefix>
+    <VersionPrefix>3.0.258</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5659,6 +5659,8 @@
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeRoomInfoRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeRoomInfoResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResult.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResultListResponse.cs" />
@@ -5671,6 +5673,7 @@
     <Compile Include="Gme\V20180711\Models\ModifyRoomInfoResponse.cs" />
     <Compile Include="Gme\V20180711\Models\RealTimeSpeechStatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\RealtimeSpeechConf.cs" />
+    <Compile Include="Gme\V20180711\Models\RoomUser.cs" />
     <Compile Include="Gme\V20180711\Models\ScanDetail.cs" />
     <Compile Include="Gme\V20180711\Models\ScanPiece.cs" />
     <Compile Include="Gme\V20180711\Models\ScanVoiceRequest.cs" />
@@ -8827,6 +8830,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeZonesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DestroyDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DestroyDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="Postgres\V20170312\Models\Filter.cs" />
     <Compile Include="Postgres\V20170312\Models\InitDBInstancesRequest.cs" />
@@ -8837,6 +8842,8 @@
     <Compile Include="Postgres\V20170312\Models\InquiryPriceRenewDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\InquiryPriceUpgradeDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\InquiryPriceUpgradeDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\IsolateDBInstancesRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\IsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />

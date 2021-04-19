@@ -253,6 +253,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 获取房间内用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomInfoRequest"/></param>
+        /// <returns><see cref="DescribeRoomInfoResponse"/></returns>
+        public async Task<DescribeRoomInfoResponse> DescribeRoomInfo(DescribeRoomInfoRequest req)
+        {
+             JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoomInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取房间内用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRoomInfoRequest"/></param>
+        /// <returns><see cref="DescribeRoomInfoResponse"/></returns>
+        public DescribeRoomInfoResponse DescribeRoomInfoSync(DescribeRoomInfoRequest req)
+        {
+             JsonResponseModel<DescribeRoomInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoomInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeScanResultList)用于查询语音检测结果，查询任务列表最多支持100个。
         /// <p style="color:red">如果在提交语音检测任务时未设置 Callback 字段，则需要通过本接口获取检测结果</p>
         /// </summary>
