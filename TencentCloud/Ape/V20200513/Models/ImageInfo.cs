@@ -48,6 +48,22 @@ namespace TencentCloud.Ape.V20200513.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 平台用户下载图片购买的价格(单位:分)
+        /// </summary>
+        [JsonProperty("DownloadPrice")]
+        public ulong? DownloadPrice{ get; set; }
+
+        /// <summary>
+        /// 下载类型。匹配集合中的任意元素：
+        /// <li>Single: 单张购买下载</li>
+        /// <li>BasicEnterpriseMember: 企业基础会员下载</li>
+        /// <li>AdvancedEnterpriseMember: 企业高级会员下载</li>
+        /// <li>DistinguishedEnterpriseMember: 企业尊享会员下载</li>
+        /// </summary>
+        [JsonProperty("DownloadType")]
+        public string DownloadType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +74,8 @@ namespace TencentCloud.Ape.V20200513.Models
             this.SetParamSimple(map, prefix + "LicenseScopeId", this.LicenseScopeId);
             this.SetParamSimple(map, prefix + "DimensionsNameId", this.DimensionsNameId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "DownloadPrice", this.DownloadPrice);
+            this.SetParamSimple(map, prefix + "DownloadType", this.DownloadType);
         }
     }
 }

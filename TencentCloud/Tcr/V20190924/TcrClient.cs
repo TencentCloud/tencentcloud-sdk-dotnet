@@ -613,6 +613,86 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 手动执行版本保留
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagRetentionExecutionRequest"/></param>
+        /// <returns><see cref="CreateTagRetentionExecutionResponse"/></returns>
+        public async Task<CreateTagRetentionExecutionResponse> CreateTagRetentionExecution(CreateTagRetentionExecutionRequest req)
+        {
+             JsonResponseModel<CreateTagRetentionExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTagRetentionExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagRetentionExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 手动执行版本保留
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagRetentionExecutionRequest"/></param>
+        /// <returns><see cref="CreateTagRetentionExecutionResponse"/></returns>
+        public CreateTagRetentionExecutionResponse CreateTagRetentionExecutionSync(CreateTagRetentionExecutionRequest req)
+        {
+             JsonResponseModel<CreateTagRetentionExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTagRetentionExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagRetentionExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="CreateTagRetentionRuleResponse"/></returns>
+        public async Task<CreateTagRetentionRuleResponse> CreateTagRetentionRule(CreateTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<CreateTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagRetentionRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="CreateTagRetentionRuleResponse"/></returns>
+        public CreateTagRetentionRuleResponse CreateTagRetentionRuleSync(CreateTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<CreateTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTagRetentionRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建个人用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserPersonalRequest"/></param>
@@ -1204,6 +1284,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecurityPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="DeleteTagRetentionRuleResponse"/></returns>
+        public async Task<DeleteTagRetentionRuleResponse> DeleteTagRetentionRule(DeleteTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<DeleteTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTagRetentionRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="DeleteTagRetentionRuleResponse"/></returns>
+        public DeleteTagRetentionRuleResponse DeleteTagRetentionRuleSync(DeleteTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<DeleteTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTagRetentionRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2213,6 +2333,126 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 查询版本保留执行记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionExecutionRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionExecutionResponse"/></returns>
+        public async Task<DescribeTagRetentionExecutionResponse> DescribeTagRetentionExecution(DescribeTagRetentionExecutionRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagRetentionExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本保留执行记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionExecutionRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionExecutionResponse"/></returns>
+        public DescribeTagRetentionExecutionResponse DescribeTagRetentionExecutionSync(DescribeTagRetentionExecutionRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionExecutionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagRetentionExecution");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionExecutionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本保留执行任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionExecutionTaskRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionExecutionTaskResponse"/></returns>
+        public async Task<DescribeTagRetentionExecutionTaskResponse> DescribeTagRetentionExecutionTask(DescribeTagRetentionExecutionTaskRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionExecutionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagRetentionExecutionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionExecutionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本保留执行任务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionExecutionTaskRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionExecutionTaskResponse"/></returns>
+        public DescribeTagRetentionExecutionTaskResponse DescribeTagRetentionExecutionTaskSync(DescribeTagRetentionExecutionTaskRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionExecutionTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagRetentionExecutionTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionExecutionTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionRulesRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionRulesResponse"/></returns>
+        public async Task<DescribeTagRetentionRulesResponse> DescribeTagRetentionRules(DescribeTagRetentionRulesRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTagRetentionRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTagRetentionRulesRequest"/></param>
+        /// <returns><see cref="DescribeTagRetentionRulesResponse"/></returns>
+        public DescribeTagRetentionRulesResponse DescribeTagRetentionRulesSync(DescribeTagRetentionRulesRequest req)
+        {
+             JsonResponseModel<DescribeTagRetentionRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTagRetentionRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTagRetentionRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询个人用户配额
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaPersonalRequest"/></param>
@@ -2844,6 +3084,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifySecurityPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="ModifyTagRetentionRuleResponse"/></returns>
+        public async Task<ModifyTagRetentionRuleResponse> ModifyTagRetentionRule(ModifyTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<ModifyTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTagRetentionRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新版本保留规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTagRetentionRuleRequest"/></param>
+        /// <returns><see cref="ModifyTagRetentionRuleResponse"/></returns>
+        public ModifyTagRetentionRuleResponse ModifyTagRetentionRuleSync(ModifyTagRetentionRuleRequest req)
+        {
+             JsonResponseModel<ModifyTagRetentionRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTagRetentionRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTagRetentionRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

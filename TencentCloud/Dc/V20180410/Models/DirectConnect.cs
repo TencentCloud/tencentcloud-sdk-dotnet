@@ -216,6 +216,34 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("SignLaw")]
         public bool? SignLaw{ get; set; }
 
+        /// <summary>
+        /// 物理专线是否为LocalZone
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocalZone")]
+        public bool? LocalZone{ get; set; }
+
+        /// <summary>
+        /// 该物理专线下vlan 0的专线通道数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VlanZeroDirectConnectTunnelCount")]
+        public ulong? VlanZeroDirectConnectTunnelCount{ get; set; }
+
+        /// <summary>
+        /// 该物理专线下非vlan 0的专线通道数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherVlanDirectConnectTunnelCount")]
+        public ulong? OtherVlanDirectConnectTunnelCount{ get; set; }
+
+        /// <summary>
+        /// 物理专线最小带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MinBandwidth")]
+        public ulong? MinBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,6 +278,10 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "ChargeState", this.ChargeState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "SignLaw", this.SignLaw);
+            this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
+            this.SetParamSimple(map, prefix + "VlanZeroDirectConnectTunnelCount", this.VlanZeroDirectConnectTunnelCount);
+            this.SetParamSimple(map, prefix + "OtherVlanDirectConnectTunnelCount", this.OtherVlanDirectConnectTunnelCount);
+            this.SetParamSimple(map, prefix + "MinBandwidth", this.MinBandwidth);
         }
     }
 }

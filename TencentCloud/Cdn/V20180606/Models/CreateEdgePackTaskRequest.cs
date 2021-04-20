@@ -37,16 +37,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CosUriFrom{ get; set; }
 
         /// <summary>
-        /// 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
-        /// </summary>
-        [JsonProperty("CosUriTo")]
-        public string CosUriTo{ get; set; }
-
-        /// <summary>
         /// BlockID 的值, WALLE为1903654775(0x71777777)，VasDolly为2282837503(0x881155ff),传0或不传时默认为 WALLE 方案
         /// </summary>
         [JsonProperty("BlockID")]
         public ulong? BlockID{ get; set; }
+
+        /// <summary>
+        /// 拓展之后的 apk 目标存储路径,如 /out/xxxx.apk
+        /// </summary>
+        [JsonProperty("CosUriTo")]
+        public string CosUriTo{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "CosBucket", this.CosBucket);
             this.SetParamSimple(map, prefix + "CosUriFrom", this.CosUriFrom);
-            this.SetParamSimple(map, prefix + "CosUriTo", this.CosUriTo);
             this.SetParamSimple(map, prefix + "BlockID", this.BlockID);
+            this.SetParamSimple(map, prefix + "CosUriTo", this.CosUriTo);
         }
     }
 }

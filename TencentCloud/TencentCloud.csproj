@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.258</VersionPrefix>
+    <VersionPrefix>3.0.259</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -10456,6 +10456,10 @@
     <Compile Include="Tcr\V20190924\Models\CreateRepositoryResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateSecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateSecurityPolicyResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateTagRetentionExecutionRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateTagRetentionExecutionResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateTagRetentionRuleRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateTagRetentionRuleResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateUserPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateUserPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateWebhookTriggerRequest.cs" />
@@ -10486,6 +10490,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteRepositoryResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteSecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteSecurityPolicyResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteTagRetentionRuleRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteTagRetentionRuleResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteWebhookTriggerRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteWebhookTriggerResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeApplicationTriggerLogPersonalRequest.cs" />
@@ -10538,6 +10544,12 @@
     <Compile Include="Tcr\V20190924\Models\DescribeRepositoryPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeSecurityPoliciesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeSecurityPoliciesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionExecutionRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionExecutionResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionExecutionTaskRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionExecutionTaskResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionRulesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeTagRetentionRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeUserQuotaPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeUserQuotaPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeWebhookTriggerLogRequest.cs" />
@@ -10576,6 +10588,8 @@
     <Compile Include="Tcr\V20190924\Models\ModifyRepositoryResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifySecurityPolicyResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyTagRetentionRuleRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyTagRetentionRuleResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyUserPasswordPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyUserPasswordPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyWebhookTriggerRequest.cs" />
@@ -10597,6 +10611,10 @@
     <Compile Include="Tcr\V20190924\Models\RepoIsExistResp.cs" />
     <Compile Include="Tcr\V20190924\Models\RepositoryInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\RespLimit.cs" />
+    <Compile Include="Tcr\V20190924\Models\RetentionExecution.cs" />
+    <Compile Include="Tcr\V20190924\Models\RetentionPolicy.cs" />
+    <Compile Include="Tcr\V20190924\Models\RetentionRule.cs" />
+    <Compile Include="Tcr\V20190924\Models\RetentionTask.cs" />
     <Compile Include="Tcr\V20190924\Models\SameImagesResp.cs" />
     <Compile Include="Tcr\V20190924\Models\SearchUserRepositoryResp.cs" />
     <Compile Include="Tcr\V20190924\Models\SecurityPolicy.cs" />

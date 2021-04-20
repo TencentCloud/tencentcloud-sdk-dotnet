@@ -165,6 +165,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("ClustersZone")]
         public ClustersZone ClustersZone{ get; set; }
 
+        /// <summary>
+        /// 集群版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClustersVersion")]
+        public string ClustersVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +199,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "LoadBalanceDirectorCount", this.LoadBalanceDirectorCount);
             this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamObj(map, prefix + "ClustersZone.", this.ClustersZone);
+            this.SetParamSimple(map, prefix + "ClustersVersion", this.ClustersVersion);
         }
     }
 }
