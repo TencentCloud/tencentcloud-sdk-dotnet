@@ -1,0 +1,73 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{EBF09988-881F-3852-A591-FBE38A1DB706}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.261</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Btoe</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.4.0" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210303\BtoeClient.cs" />
+    <Compile Include="V20210303\Models\CreateAudioDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateAudioDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateDataDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateDataDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateDocDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateDocDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoCertRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoCertResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoSealRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositNoSealResponse.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateHashDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateImageDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateImageDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateVideoDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateVideoDepositResponse.cs" />
+    <Compile Include="V20210303\Models\CreateWebpageDepositRequest.cs" />
+    <Compile Include="V20210303\Models\CreateWebpageDepositResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositCertRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositCertResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositFileRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositFileResponse.cs" />
+    <Compile Include="V20210303\Models\GetDepositInfoRequest.cs" />
+    <Compile Include="V20210303\Models\GetDepositInfoResponse.cs" />
+  </ItemGroup>
+</Project>

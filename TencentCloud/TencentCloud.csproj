@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.260</VersionPrefix>
+    <VersionPrefix>3.0.261</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1363,6 +1363,31 @@
     <Compile Include="Bri\V20190328\Models\BRIResponse.cs" />
     <Compile Include="Bri\V20190328\Models\DescribeBRIRequest.cs" />
     <Compile Include="Bri\V20190328\Models\DescribeBRIResponse.cs" />
+    <Compile Include="Btoe\V20210303\BtoeClient.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateAudioDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateAudioDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateDataDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateDataDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateDocDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateDocDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositNoCertRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositNoCertResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositNoSealRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositNoSealResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateHashDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateImageDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateImageDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateVideoDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateVideoDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateWebpageDepositRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\CreateWebpageDepositResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositCertRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositCertResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositFileRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositFileResponse.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositInfoRequest.cs" />
+    <Compile Include="Btoe\V20210303\Models\GetDepositInfoResponse.cs" />
     <Compile Include="Cam\V20190116\CamClient.cs" />
     <Compile Include="Cam\V20190116\Models\AccessKey.cs" />
     <Compile Include="Cam\V20190116\Models\AddUserRequest.cs" />
