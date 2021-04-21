@@ -115,6 +115,14 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CustomerIDCRoutes")]
         public RouteFilterPrefix[] CustomerIDCRoutes{ get; set; }
 
+        /// <summary>
+        /// 是否开启巨帧
+        /// 1：开启
+        /// 0：不开启
+        /// </summary>
+        [JsonProperty("JumboEnable")]
+        public long? JumboEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +144,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
             this.SetParamSimple(map, prefix + "IPv6Enable", this.IPv6Enable);
             this.SetParamArrayObj(map, prefix + "CustomerIDCRoutes.", this.CustomerIDCRoutes);
+            this.SetParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.259</VersionPrefix>
+    <VersionPrefix>3.0.260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,6 +98,8 @@
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
@@ -141,6 +143,7 @@
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\MonitorData.cs" />
+    <Compile Include="V20170312\Models\NodeInfo.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\ParamConstraint.cs" />

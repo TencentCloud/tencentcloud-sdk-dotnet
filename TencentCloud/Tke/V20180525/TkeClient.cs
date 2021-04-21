@@ -1053,7 +1053,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除一个云原生Promehtheus配置模板
+        /// 删除一个云原生Prometheus配置模板
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusTemplateRequest"/></param>
         /// <returns><see cref="DeletePrometheusTemplateResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除一个云原生Promehtheus配置模板
+        /// 删除一个云原生Prometheus配置模板
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusTemplateRequest"/></param>
         /// <returns><see cref="DeletePrometheusTemplateResponse"/></returns>

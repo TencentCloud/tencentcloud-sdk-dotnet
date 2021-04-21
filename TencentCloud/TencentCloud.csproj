@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.259</VersionPrefix>
+    <VersionPrefix>3.0.260</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4331,6 +4331,8 @@
     <Compile Include="Dbbrain\V20191016\Models\ContactItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportTaskResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportUrlRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\CreateDBDiagReportUrlResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\CreateSchedulerMailProfileRequest.cs" />
@@ -4347,6 +4349,8 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagEventResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagHistoryResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagReportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeDBDiagReportTasksResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDBSpaceStatusResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeDiagDBInstancesRequest.cs" />
@@ -4363,6 +4367,12 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogTopSqlsResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogUserHostStatsRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceSchemaTimeSeriesRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceSchemasRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceSchemasResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
@@ -4370,7 +4380,10 @@
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\EventInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\GroupItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\HealthReportTask.cs" />
     <Compile Include="Dbbrain\V20191016\Models\HealthScoreInfo.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\HealthStatus.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\InstanceBasicInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\InstanceConfs.cs" />
     <Compile Include="Dbbrain\V20191016\Models\InstanceInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\IssueTypeInfo.cs" />
@@ -4383,7 +4396,12 @@
     <Compile Include="Dbbrain\V20191016\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\ProfileInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SchemaItem.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SchemaSpaceData.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SchemaSpaceTimeSeries.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\ScoreDetail.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\ScoreItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SecLogExportTaskInfo.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\SlowLogHost.cs" />
     <Compile Include="Dbbrain\V20191016\Models\SlowLogTopSqlItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
@@ -7572,6 +7590,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeOrdersRequest.cs" />
@@ -7615,6 +7635,7 @@
     <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\MonitorData.cs" />
+    <Compile Include="Mariadb\V20170312\Models\NodeInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ParamConstraint.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 返回的Top表数量，最大值为20，默认为最大值。
+        /// 返回的Top表数量，最大值为100，默认为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

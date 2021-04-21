@@ -979,6 +979,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeInstanceNodeInfo）用于获取数据库实例主备节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeInstanceNodeInfoResponse> DescribeInstanceNodeInfo(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceNodeInfo）用于获取数据库实例主备节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeInstanceNodeInfoResponse"/></returns>
+        public DescribeInstanceNodeInfoResponse DescribeInstanceNodeInfoSync(DescribeInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeLogFileRetentionPeriod)用于查看数据库备份日志的备份天数的设置情况。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogFileRetentionPeriodRequest"/></param>

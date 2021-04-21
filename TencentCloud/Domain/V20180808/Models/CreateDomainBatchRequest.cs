@@ -43,7 +43,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 付费模式 0手动在线付费，1使用余额付费
+        /// 付费模式 0手动在线付费，1使用余额付费，2使用特惠包
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
@@ -56,6 +56,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 使用的特惠包ID，PayMode为2时必填
+        /// </summary>
+        [JsonProperty("PackageResourceId")]
+        public string PackageResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "PackageResourceId", this.PackageResourceId);
         }
     }
 }

@@ -1441,7 +1441,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 查询一个地域的负载均衡实例列表
+        /// 查询一个地域的负载均衡实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
         /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>
@@ -1461,7 +1461,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 查询一个地域的负载均衡实例列表
+        /// 查询一个地域的负载均衡实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLoadBalancersRequest"/></param>
         /// <returns><see cref="DescribeLoadBalancersResponse"/></returns>

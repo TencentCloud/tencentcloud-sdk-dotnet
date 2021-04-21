@@ -31,10 +31,16 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 录像详情列表
+        /// 已废弃
         /// </summary>
         [JsonProperty("VideoList")]
         public RecordTaskItem VideoList{ get; set; }
+
+        /// <summary>
+        /// 录像详情列表
+        /// </summary>
+        [JsonProperty("RecordList")]
+        public RecordTaskItem[] RecordList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamObj(map, prefix + "VideoList.", this.VideoList);
+            this.SetParamArrayObj(map, prefix + "RecordList.", this.RecordList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

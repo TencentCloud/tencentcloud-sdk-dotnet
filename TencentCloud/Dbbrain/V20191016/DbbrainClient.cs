@@ -133,6 +133,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 创建健康报告的浏览地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlResponse"/></returns>
+        public async Task<CreateDBDiagReportUrlResponse> CreateDBDiagReportUrl(CreateDBDiagReportUrlRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBDiagReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建健康报告的浏览地址。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBDiagReportUrlRequest"/></param>
+        /// <returns><see cref="CreateDBDiagReportUrlResponse"/></returns>
+        public CreateDBDiagReportUrlResponse CreateDBDiagReportUrlSync(CreateDBDiagReportUrlRequest req)
+        {
+             JsonResponseModel<CreateDBDiagReportUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBDiagReportUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBDiagReportUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
@@ -453,6 +493,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 查询健康报告生成任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportTasksResponse"/></returns>
+        public async Task<DescribeDBDiagReportTasksResponse> DescribeDBDiagReportTasks(DescribeDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询健康报告生成任务列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagReportTasksRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagReportTasksResponse"/></returns>
+        public DescribeDBDiagReportTasksResponse DescribeDBDiagReportTasksSync(DescribeDBDiagReportTasksRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagReportTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBDiagReportTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagReportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定时间段内的实例空间使用概览，包括磁盘增长量(MB)、磁盘剩余(MB)、磁盘总量(MB)及预计可用天数。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSpaceStatusRequest"/></param>
@@ -764,6 +844,126 @@ namespace TencentCloud.Dbbrain.V20191016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSlowLogTopSqls");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogTopSqlsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取慢日志来源地址统计分布图。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogUserHostStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogUserHostStatsResponse"/></returns>
+        public async Task<DescribeSlowLogUserHostStatsResponse> DescribeSlowLogUserHostStats(DescribeSlowLogUserHostStatsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowLogUserHostStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取慢日志来源地址统计分布图。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowLogUserHostStatsRequest"/></param>
+        /// <returns><see cref="DescribeSlowLogUserHostStatsResponse"/></returns>
+        public DescribeSlowLogUserHostStatsResponse DescribeSlowLogUserHostStatsSync(DescribeSlowLogUserHostStatsRequest req)
+        {
+             JsonResponseModel<DescribeSlowLogUserHostStatsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowLogUserHostStats");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowLogUserHostStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例占用空间最大的前几个库在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemaTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemaTimeSeriesResponse"/></returns>
+        public async Task<DescribeTopSpaceSchemaTimeSeriesResponse> DescribeTopSpaceSchemaTimeSeries(DescribeTopSpaceSchemaTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceSchemaTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例占用空间最大的前几个库在指定时间段内的每日由DBbrain定时采集的空间数据，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemaTimeSeriesRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemaTimeSeriesResponse"/></returns>
+        public DescribeTopSpaceSchemaTimeSeriesResponse DescribeTopSpaceSchemaTimeSeriesSync(DescribeTopSpaceSchemaTimeSeriesRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceSchemaTimeSeries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemaTimeSeriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例Top库的实时空间统计信息，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemasRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemasResponse"/></returns>
+        public async Task<DescribeTopSpaceSchemasResponse> DescribeTopSpaceSchemas(DescribeTopSpaceSchemasRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopSpaceSchemas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例Top库的实时空间统计信息，默认返回按大小排序。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopSpaceSchemasRequest"/></param>
+        /// <returns><see cref="DescribeTopSpaceSchemasResponse"/></returns>
+        public DescribeTopSpaceSchemasResponse DescribeTopSpaceSchemasSync(DescribeTopSpaceSchemasRequest req)
+        {
+             JsonResponseModel<DescribeTopSpaceSchemasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopSpaceSchemas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopSpaceSchemasResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

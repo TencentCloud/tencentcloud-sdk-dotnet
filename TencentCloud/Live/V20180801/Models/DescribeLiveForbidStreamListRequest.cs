@@ -38,6 +38,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
+        /// <summary>
+        /// 搜索的推流 id 名称。
+        /// </summary>
+        [JsonProperty("StreamName")]
+        public string StreamName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
         }
     }
 }
