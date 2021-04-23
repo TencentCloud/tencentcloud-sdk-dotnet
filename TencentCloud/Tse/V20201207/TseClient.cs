@@ -53,6 +53,86 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询微服务注册引擎实例访问地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
+        /// <returns><see cref="DescribeSREInstanceAccessAddressResponse"/></returns>
+        public async Task<DescribeSREInstanceAccessAddressResponse> DescribeSREInstanceAccessAddress(DescribeSREInstanceAccessAddressRequest req)
+        {
+             JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSREInstanceAccessAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微服务注册引擎实例访问地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
+        /// <returns><see cref="DescribeSREInstanceAccessAddressResponse"/></returns>
+        public DescribeSREInstanceAccessAddressResponse DescribeSREInstanceAccessAddressSync(DescribeSREInstanceAccessAddressRequest req)
+        {
+             JsonResponseModel<DescribeSREInstanceAccessAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSREInstanceAccessAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstanceAccessAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询微服务注册中心实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSREInstancesRequest"/></param>
+        /// <returns><see cref="DescribeSREInstancesResponse"/></returns>
+        public async Task<DescribeSREInstancesResponse> DescribeSREInstances(DescribeSREInstancesRequest req)
+        {
+             JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSREInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询微服务注册中心实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSREInstancesRequest"/></param>
+        /// <returns><see cref="DescribeSREInstancesResponse"/></returns>
+        public DescribeSREInstancesResponse DescribeSREInstancesSync(DescribeSREInstancesRequest req)
+        {
+             JsonResponseModel<DescribeSREInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSREInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 管理配置
         /// </summary>
         /// <param name="req"><see cref="ManageConfigRequest"/></param>

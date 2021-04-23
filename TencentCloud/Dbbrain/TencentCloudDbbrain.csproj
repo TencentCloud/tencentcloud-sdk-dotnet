@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.261</VersionPrefix>
+    <VersionPrefix>3.0.262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
+    <Compile Include="V20191016\Models\DescribeUserSqlAdviceRequest.cs" />
+    <Compile Include="V20191016\Models\DescribeUserSqlAdviceResponse.cs" />
     <Compile Include="V20191016\Models\DiagHistoryEventItem.cs" />
     <Compile Include="V20191016\Models\EventInfo.cs" />
     <Compile Include="V20191016\Models\GroupItem.cs" />

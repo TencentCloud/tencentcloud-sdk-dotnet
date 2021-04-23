@@ -31,7 +31,7 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 需要进行转码文件地址
+        /// 经过URL编码后的转码文件地址。URL 编码会将字符转换为可通过因特网传输的格式，比如文档地址为http://example.com/测试.pdf，经过URL编码之后为http://example.com/%E6%B5%8B%E8%AF%95.pdf。为了提高URL解析的成功率，请对URL进行编码。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

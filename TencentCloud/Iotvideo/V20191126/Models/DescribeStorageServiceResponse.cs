@@ -68,6 +68,10 @@ namespace TencentCloud.Iotvideo.V20191126.Models
 
         /// <summary>
         /// 服务状态
+        /// 1：正常使用中
+        /// 2：待续费。设备云存服务已到期，但是历史云存数据未过期。续费后仍可查看这些历史数据。
+        /// 3：已过期。查询不到设备保存在云端的数据。
+        /// 4：等待服务生效。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

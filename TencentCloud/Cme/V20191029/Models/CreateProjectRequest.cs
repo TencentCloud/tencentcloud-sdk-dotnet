@@ -31,17 +31,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 项目类别，取值有：
-        /// <li>VIDEO_EDIT：视频编辑。</li>
-        /// <li>SWITCHER：导播台。</li>
-        /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
-        /// <li>STREAM_CONNECT：云转推。</li>
-        /// <li>RECORD_REPLAY：录制回放。</li>
-        /// </summary>
-        [JsonProperty("Category")]
-        public string Category{ get; set; }
-
-        /// <summary>
         /// 项目名称，不可超过30个字符。
         /// </summary>
         [JsonProperty("Name")]
@@ -52,6 +41,17 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
+
+        /// <summary>
+        /// 项目类别，取值有：
+        /// <li>VIDEO_EDIT：视频编辑。</li>
+        /// <li>SWITCHER：导播台。</li>
+        /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
+        /// <li>STREAM_CONNECT：云转推。</li>
+        /// <li>RECORD_REPLAY：录制回放。</li>
+        /// </summary>
+        [JsonProperty("Category")]
+        public string Category{ get; set; }
 
         /// <summary>
         /// 画布宽高比。
@@ -109,9 +109,9 @@ namespace TencentCloud.Cme.V20191029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
-            this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);

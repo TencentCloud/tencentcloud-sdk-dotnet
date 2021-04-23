@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.261</VersionPrefix>
+    <VersionPrefix>3.0.262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,9 @@
 
   <ItemGroup>
     <Compile Include="V20180808\ApigatewayClient.cs" />
+    <Compile Include="V20180808\Models\APIDoc.cs" />
+    <Compile Include="V20180808\Models\APIDocInfo.cs" />
+    <Compile Include="V20180808\Models\APIDocs.cs" />
     <Compile Include="V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="V20180808\Models\ApiIdStatus.cs" />
@@ -65,7 +68,11 @@
     <Compile Include="V20180808\Models\BindSecretIdsResponse.cs" />
     <Compile Include="V20180808\Models\BindSubDomainRequest.cs" />
     <Compile Include="V20180808\Models\BindSubDomainResponse.cs" />
+    <Compile Include="V20180808\Models\BuildAPIDocRequest.cs" />
+    <Compile Include="V20180808\Models\BuildAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\ConstantParameter.cs" />
+    <Compile Include="V20180808\Models\CreateAPIDocRequest.cs" />
+    <Compile Include="V20180808\Models\CreateAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiRequest.cs" />
@@ -77,6 +84,8 @@
     <Compile Include="V20180808\Models\CreateServiceResponse.cs" />
     <Compile Include="V20180808\Models\CreateUsagePlanRequest.cs" />
     <Compile Include="V20180808\Models\CreateUsagePlanResponse.cs" />
+    <Compile Include="V20180808\Models\DeleteAPIDocRequest.cs" />
+    <Compile Include="V20180808\Models\DeleteAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\DeleteApiRequest.cs" />
@@ -92,6 +101,10 @@
     <Compile Include="V20180808\Models\DemoteServiceUsagePlanRequest.cs" />
     <Compile Include="V20180808\Models\DemoteServiceUsagePlanResponse.cs" />
     <Compile Include="V20180808\Models\DesApisStatus.cs" />
+    <Compile Include="V20180808\Models\DescribeAPIDocDetailRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeAPIDocDetailResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeAPIDocsRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeAPIDocsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -161,6 +174,8 @@
     <Compile Include="V20180808\Models\LogQuery.cs" />
     <Compile Include="V20180808\Models\MicroService.cs" />
     <Compile Include="V20180808\Models\MicroServiceReq.cs" />
+    <Compile Include="V20180808\Models\ModifyAPIDocRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyAPIDocResponse.cs" />
     <Compile Include="V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\ModifyApiEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\ModifyApiIncrementRequest.cs" />
@@ -187,6 +202,8 @@
     <Compile Include="V20180808\Models\ReqParameter.cs" />
     <Compile Include="V20180808\Models\RequestConfig.cs" />
     <Compile Include="V20180808\Models\RequestParameter.cs" />
+    <Compile Include="V20180808\Models\ResetAPIDocPasswordRequest.cs" />
+    <Compile Include="V20180808\Models\ResetAPIDocPasswordResponse.cs" />
     <Compile Include="V20180808\Models\ResponseErrorCodeReq.cs" />
     <Compile Include="V20180808\Models\Service.cs" />
     <Compile Include="V20180808\Models\ServiceConfig.cs" />

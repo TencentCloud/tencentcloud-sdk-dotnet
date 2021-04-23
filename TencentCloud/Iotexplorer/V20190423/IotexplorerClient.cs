@@ -1093,6 +1093,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// </summary>
+        /// <param name="req"><see cref="GetCOSURLRequest"/></param>
+        /// <returns><see cref="GetCOSURLResponse"/></returns>
+        public async Task<GetCOSURLResponse> GetCOSURL(GetCOSURLRequest req)
+        {
+             JsonResponseModel<GetCOSURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCOSURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCOSURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// </summary>
+        /// <param name="req"><see cref="GetCOSURLRequest"/></param>
+        /// <returns><see cref="GetCOSURLResponse"/></returns>
+        public GetCOSURLResponse GetCOSURLSync(GetCOSURLRequest req)
+        {
+             JsonResponseModel<GetCOSURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCOSURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCOSURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查询某个产品下的设备列表
         /// </summary>
         /// <param name="req"><see cref="GetDeviceListRequest"/></param>

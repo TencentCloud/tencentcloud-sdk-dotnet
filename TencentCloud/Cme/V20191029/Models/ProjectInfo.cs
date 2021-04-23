@@ -43,7 +43,6 @@ namespace TencentCloud.Cme.V20191029.Models
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 项目类别，取值：
         /// 项目类别，取值有：
         /// <li>VIDEO_EDIT：视频编辑。</li>
         /// <li>SWITCHER：导播台。</li>
@@ -65,6 +64,13 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }
+
+        /// <summary>
+        /// 云转推项目信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StreamConnectProjectInfo")]
+        public StreamConnectProjectInfo StreamConnectProjectInfo{ get; set; }
 
         /// <summary>
         /// 项目创建时间，格式按照 ISO 8601 标准表示。
@@ -90,6 +96,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
+            this.SetParamObj(map, prefix + "StreamConnectProjectInfo.", this.StreamConnectProjectInfo);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

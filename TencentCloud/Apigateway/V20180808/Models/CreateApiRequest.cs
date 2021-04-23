@@ -73,7 +73,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ApiType{ get; set; }
 
         /// <summary>
-        /// API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。默认为NONE。
+        /// API 鉴权类型。支持SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、APP（应用认证）。默认为NONE。
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }

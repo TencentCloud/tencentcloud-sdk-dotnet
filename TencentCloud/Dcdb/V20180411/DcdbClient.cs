@@ -577,6 +577,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceNodeInfoResponse"/></returns>
+        public async Task<DescribeDCDBInstanceNodeInfoResponse> DescribeDCDBInstanceNodeInfo(DescribeDCDBInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDCDBInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDCDBInstanceNodeInfo）用于获取实例节点信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDCDBInstanceNodeInfoRequest"/></param>
+        /// <returns><see cref="DescribeDCDBInstanceNodeInfoResponse"/></returns>
+        public DescribeDCDBInstanceNodeInfoResponse DescribeDCDBInstanceNodeInfoSync(DescribeDCDBInstanceNodeInfoRequest req)
+        {
+             JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDCDBInstanceNodeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDCDBInstanceNodeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询云数据库实例列表，支持通过项目ID、实例ID、内网地址、实例名称等来筛选实例。
         /// 如果不指定任何筛选条件，则默认返回10条实例记录，单次请求最多支持返回100条实例记录。
         /// </summary>

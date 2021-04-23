@@ -38,6 +38,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
 
         /// <summary>
         /// 定单服务状态
+        /// 1;订单正在使用。
+        /// 2:订单未开始。
+        /// 3:订单已经使用过，现在暂时未开始使用(该订单从其他服务转移而来)。
+        /// 4:订单已过期。
+        /// 5:订单已被退订。
+        /// 6:定单已被转移到其他云存服务。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。
+        /// 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion。InstanceId
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -221,6 +221,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 构建 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="BuildAPIDocRequest"/></param>
+        /// <returns><see cref="BuildAPIDocResponse"/></returns>
+        public async Task<BuildAPIDocResponse> BuildAPIDoc(BuildAPIDocRequest req)
+        {
+             JsonResponseModel<BuildAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BuildAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BuildAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 构建 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="BuildAPIDocRequest"/></param>
+        /// <returns><see cref="BuildAPIDocResponse"/></returns>
+        public BuildAPIDocResponse BuildAPIDocSync(BuildAPIDocRequest req)
+        {
+             JsonResponseModel<BuildAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BuildAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BuildAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="CreateAPIDocRequest"/></param>
+        /// <returns><see cref="CreateAPIDocResponse"/></returns>
+        public async Task<CreateAPIDocResponse> CreateAPIDoc(CreateAPIDocRequest req)
+        {
+             JsonResponseModel<CreateAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="CreateAPIDocRequest"/></param>
+        /// <returns><see cref="CreateAPIDocResponse"/></returns>
+        public CreateAPIDocResponse CreateAPIDocSync(CreateAPIDocRequest req)
+        {
+             JsonResponseModel<CreateAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateApi）用于创建 API 接口，创建 API 前，用户需要先创建服务，每个 API 都有自己归属的服务。
         /// </summary>
         /// <param name="req"><see cref="CreateApiRequest"/></param>
@@ -416,6 +496,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "CreateUsagePlan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUsagePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAPIDocRequest"/></param>
+        /// <returns><see cref="DeleteAPIDocResponse"/></returns>
+        public async Task<DeleteAPIDocResponse> DeleteAPIDoc(DeleteAPIDocRequest req)
+        {
+             JsonResponseModel<DeleteAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAPIDocRequest"/></param>
+        /// <returns><see cref="DeleteAPIDocResponse"/></returns>
+        public DeleteAPIDocResponse DeleteAPIDocSync(DeleteAPIDocRequest req)
+        {
+             JsonResponseModel<DeleteAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAPIDocResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -702,6 +822,86 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DemoteServiceUsagePlan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DemoteServiceUsagePlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 API 文档详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPIDocDetailRequest"/></param>
+        /// <returns><see cref="DescribeAPIDocDetailResponse"/></returns>
+        public async Task<DescribeAPIDocDetailResponse> DescribeAPIDocDetail(DescribeAPIDocDetailRequest req)
+        {
+             JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAPIDocDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAPIDocDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 API 文档详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPIDocDetailRequest"/></param>
+        /// <returns><see cref="DescribeAPIDocDetailResponse"/></returns>
+        public DescribeAPIDocDetailResponse DescribeAPIDocDetailSync(DescribeAPIDocDetailRequest req)
+        {
+             JsonResponseModel<DescribeAPIDocDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAPIDocDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAPIDocDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 API 文档列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPIDocsRequest"/></param>
+        /// <returns><see cref="DescribeAPIDocsResponse"/></returns>
+        public async Task<DescribeAPIDocsResponse> DescribeAPIDocs(DescribeAPIDocsRequest req)
+        {
+             JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAPIDocs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAPIDocsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 API 文档列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAPIDocsRequest"/></param>
+        /// <returns><see cref="DescribeAPIDocsResponse"/></returns>
+        public DescribeAPIDocsResponse DescribeAPIDocsSync(DescribeAPIDocsRequest req)
+        {
+             JsonResponseModel<DescribeAPIDocsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAPIDocs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAPIDocsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1811,6 +2011,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 修改 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAPIDocRequest"/></param>
+        /// <returns><see cref="ModifyAPIDocResponse"/></returns>
+        public async Task<ModifyAPIDocResponse> ModifyAPIDoc(ModifyAPIDocRequest req)
+        {
+             JsonResponseModel<ModifyAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改 API 文档
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAPIDocRequest"/></param>
+        /// <returns><see cref="ModifyAPIDocResponse"/></returns>
+        public ModifyAPIDocResponse ModifyAPIDocSync(ModifyAPIDocRequest req)
+        {
+             JsonResponseModel<ModifyAPIDocResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAPIDoc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAPIDocResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyApi）用于修改 API 接口，可调用此接口对已经配置的 API 接口进行编辑修改。修改后的 API 需要重新发布 API 所在的服务到对应环境方能生效。
         /// </summary>
         /// <param name="req"><see cref="ModifyApiRequest"/></param>
@@ -2164,6 +2404,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置API文档密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetAPIDocPasswordRequest"/></param>
+        /// <returns><see cref="ResetAPIDocPasswordResponse"/></returns>
+        public async Task<ResetAPIDocPasswordResponse> ResetAPIDocPassword(ResetAPIDocPasswordRequest req)
+        {
+             JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetAPIDocPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAPIDocPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置API文档密码
+        /// </summary>
+        /// <param name="req"><see cref="ResetAPIDocPasswordRequest"/></param>
+        /// <returns><see cref="ResetAPIDocPasswordResponse"/></returns>
+        public ResetAPIDocPasswordResponse ResetAPIDocPasswordSync(ResetAPIDocPasswordRequest req)
+        {
+             JsonResponseModel<ResetAPIDocPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetAPIDocPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAPIDocPasswordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

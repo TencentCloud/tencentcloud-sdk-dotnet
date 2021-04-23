@@ -48,6 +48,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("ForceBind")]
         public bool? ForceBind{ get; set; }
 
+        /// <summary>
+        /// 设备昵称
+        /// </summary>
+        [JsonProperty("Nick")]
+        public string Nick{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "Tid", this.Tid);
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "ForceBind", this.ForceBind);
+            this.SetParamSimple(map, prefix + "Nick", this.Nick);
         }
     }
 }

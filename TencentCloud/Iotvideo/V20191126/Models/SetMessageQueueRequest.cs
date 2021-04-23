@@ -44,6 +44,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         /// 3.控制状态变更
         /// 4.状态信息变更
         /// 5.事件发布
+        /// 6.系统事件
         /// </summary>
         [JsonProperty("MsgType")]
         public string MsgType{ get; set; }

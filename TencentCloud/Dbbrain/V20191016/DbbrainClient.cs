@@ -1053,6 +1053,46 @@ namespace TencentCloud.Dbbrain.V20191016
         }
 
         /// <summary>
+        /// 获取SQL优化建议。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
+        /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>
+        public async Task<DescribeUserSqlAdviceResponse> DescribeUserSqlAdvice(DescribeUserSqlAdviceRequest req)
+        {
+             JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserSqlAdvice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSqlAdviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取SQL优化建议。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
+        /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>
+        public DescribeUserSqlAdviceResponse DescribeUserSqlAdviceSync(DescribeUserSqlAdviceRequest req)
+        {
+             JsonResponseModel<DescribeUserSqlAdviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserSqlAdvice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserSqlAdviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例巡检开关。
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.261</VersionPrefix>
+    <VersionPrefix>3.0.262</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -243,6 +243,9 @@
     <Compile Include="Ape\V20200513\Models\ImageItem.cs" />
     <Compile Include="Ape\V20200513\Models\ImageMarshal.cs" />
     <Compile Include="Apigateway\V20180808\ApigatewayClient.cs" />
+    <Compile Include="Apigateway\V20180808\Models\APIDoc.cs" />
+    <Compile Include="Apigateway\V20180808\Models\APIDocInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\APIDocs.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiIdStatus.cs" />
@@ -263,7 +266,11 @@
     <Compile Include="Apigateway\V20180808\Models\BindSecretIdsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindSubDomainRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindSubDomainResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BuildAPIDocRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BuildAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ConstantParameter.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateAPIDocRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiRequest.cs" />
@@ -275,6 +282,8 @@
     <Compile Include="Apigateway\V20180808\Models\CreateServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiRequest.cs" />
@@ -290,6 +299,10 @@
     <Compile Include="Apigateway\V20180808\Models\DemoteServiceUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DemoteServiceUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DesApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocDetailRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocDetailResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -359,6 +372,8 @@
     <Compile Include="Apigateway\V20180808\Models\LogQuery.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroService.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiIncrementRequest.cs" />
@@ -385,6 +400,8 @@
     <Compile Include="Apigateway\V20180808\Models\ReqParameter.cs" />
     <Compile Include="Apigateway\V20180808\Models\RequestConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\RequestParameter.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ResetAPIDocPasswordRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ResetAPIDocPasswordResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ResponseErrorCodeReq.cs" />
     <Compile Include="Apigateway\V20180808\Models\Service.cs" />
     <Compile Include="Apigateway\V20180808\Models\ServiceConfig.cs" />
@@ -3045,6 +3062,8 @@
     <Compile Include="Cme\V20191029\Models\GenerateVideoSegmentationSchemeByAiResponse.cs" />
     <Compile Include="Cme\V20191029\Models\GrantResourceAuthorizationRequest.cs" />
     <Compile Include="Cme\V20191029\Models\GrantResourceAuthorizationResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\HandleStreamConnectProjectRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\HandleStreamConnectProjectResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ImageMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\ImportMaterialRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ImportMaterialResponse.cs" />
@@ -3100,6 +3119,8 @@
     <Compile Include="Cme\V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SortBy.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectOutput.cs" />
+    <Compile Include="Cme\V20191029\Models\StreamConnectOutputInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\StreamConnectProjectInfo.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\StreamInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SwitcherPgmOutputConfig.cs" />
@@ -4402,6 +4423,8 @@
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesRequest.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DescribeTopSpaceTablesResponse.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeUserSqlAdviceRequest.cs" />
+    <Compile Include="Dbbrain\V20191016\Models\DescribeUserSqlAdviceResponse.cs" />
     <Compile Include="Dbbrain\V20191016\Models\DiagHistoryEventItem.cs" />
     <Compile Include="Dbbrain\V20191016\Models\EventInfo.cs" />
     <Compile Include="Dbbrain\V20191016\Models\GroupItem.cs" />
@@ -4494,6 +4517,7 @@
     <Compile Include="Dcdb\V20180411\Models\AddShardConfig.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\BriefNodeInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -4529,6 +4553,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstancesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBPriceRequest.cs" />
@@ -6696,6 +6722,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\EventHistoryItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FirmwareInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetCOSURLRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetCOSURLResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetLoRaGatewayListRequest.cs" />
@@ -11028,6 +11056,8 @@
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeQualityMetricsRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeQualityMetricsResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeRequest.cs" />
@@ -11074,6 +11104,7 @@
     <Compile Include="Tiw\V20190919\Models\StopWhiteboardPushResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamControl.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamLayout.cs" />
+    <Compile Include="Tiw\V20190919\Models\TimeValue.cs" />
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
     <Compile Include="Tiw\V20190919\Models\WhiteboardPushBackupParam.cs" />
@@ -11405,8 +11436,14 @@
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
     <Compile Include="Tse\V20201207\TseClient.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressRequest.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeSREInstancesRequest.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeSREInstancesResponse.cs" />
+    <Compile Include="Tse\V20201207\Models\Filter.cs" />
     <Compile Include="Tse\V20201207\Models\ManageConfigRequest.cs" />
     <Compile Include="Tse\V20201207\Models\ManageConfigResponse.cs" />
+    <Compile Include="Tse\V20201207\Models\SREInstance.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesResponse.cs" />

@@ -213,6 +213,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 查询互动白板质量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityMetricsRequest"/></param>
+        /// <returns><see cref="DescribeQualityMetricsResponse"/></returns>
+        public async Task<DescribeQualityMetricsResponse> DescribeQualityMetrics(DescribeQualityMetricsRequest req)
+        {
+             JsonResponseModel<DescribeQualityMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQualityMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询互动白板质量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityMetricsRequest"/></param>
+        /// <returns><see cref="DescribeQualityMetricsResponse"/></returns>
+        public DescribeQualityMetricsResponse DescribeQualityMetricsSync(DescribeQualityMetricsRequest req)
+        {
+             JsonResponseModel<DescribeQualityMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQualityMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询文档转码任务的执行进度与转码结果
         /// </summary>
         /// <param name="req"><see cref="DescribeTranscodeRequest"/></param>

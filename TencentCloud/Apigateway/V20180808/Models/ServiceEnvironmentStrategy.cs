@@ -55,6 +55,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Strategy")]
         public long? Strategy{ get; set; }
 
+        /// <summary>
+        /// 最大限流值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxStrategy")]
+        public long? MaxStrategy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "VersionName", this.VersionName);
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
+            this.SetParamSimple(map, prefix + "MaxStrategy", this.MaxStrategy);
         }
     }
 }

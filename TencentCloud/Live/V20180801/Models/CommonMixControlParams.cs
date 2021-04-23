@@ -38,6 +38,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("AllowCopy")]
         public long? AllowCopy{ get; set; }
 
+        /// <summary>
+        /// 取值范围[0,1]
+        /// 填1时，透传原始流的sei
+        /// </summary>
+        [JsonProperty("PassInputSei")]
+        public long? PassInputSei{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "UseMixCropCenter", this.UseMixCropCenter);
             this.SetParamSimple(map, prefix + "AllowCopy", this.AllowCopy);
+            this.SetParamSimple(map, prefix + "PassInputSei", this.PassInputSei);
         }
     }
 }

@@ -42,6 +42,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("TtlMinutes")]
         public ulong? TtlMinutes{ get; set; }
 
+        /// <summary>
+        /// 旧的AccessToken。续期Token时，此参数为必须。
+        /// </summary>
+        [JsonProperty("OldAccessToken")]
+        public string OldAccessToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "AccessId", this.AccessId);
             this.SetParamSimple(map, prefix + "UniqueId", this.UniqueId);
             this.SetParamSimple(map, prefix + "TtlMinutes", this.TtlMinutes);
+            this.SetParamSimple(map, prefix + "OldAccessToken", this.OldAccessToken);
         }
     }
 }
