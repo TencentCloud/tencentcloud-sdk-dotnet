@@ -48,6 +48,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("ExecEndTime")]
         public string ExecEndTime{ get; set; }
 
+        /// <summary>
+        /// 命令最终输出被截断的字节数。
+        /// </summary>
+        [JsonProperty("Dropped")]
+        public ulong? Dropped{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Output", this.Output);
             this.SetParamSimple(map, prefix + "ExecStartTime", this.ExecStartTime);
             this.SetParamSimple(map, prefix + "ExecEndTime", this.ExecEndTime);
+            this.SetParamSimple(map, prefix + "Dropped", this.Dropped);
         }
     }
 }

@@ -413,6 +413,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 创建微信云托管
+        /// </summary>
+        /// <param name="req"><see cref="CreateWxCloudBaseRunEnvRequest"/></param>
+        /// <returns><see cref="CreateWxCloudBaseRunEnvResponse"/></returns>
+        public async Task<CreateWxCloudBaseRunEnvResponse> CreateWxCloudBaseRunEnv(CreateWxCloudBaseRunEnvRequest req)
+        {
+             JsonResponseModel<CreateWxCloudBaseRunEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWxCloudBaseRunEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWxCloudBaseRunEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建微信云托管
+        /// </summary>
+        /// <param name="req"><see cref="CreateWxCloudBaseRunEnvRequest"/></param>
+        /// <returns><see cref="CreateWxCloudBaseRunEnvResponse"/></returns>
+        public CreateWxCloudBaseRunEnvResponse CreateWxCloudBaseRunEnvSync(CreateWxCloudBaseRunEnvRequest req)
+        {
+             JsonResponseModel<CreateWxCloudBaseRunEnvResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWxCloudBaseRunEnv");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWxCloudBaseRunEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除云项目
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudBaseProjectLatestVersionRequest"/></param>
@@ -1450,6 +1490,86 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSmsQuotas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管环境信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxCloudBaseRunEnvsRequest"/></param>
+        /// <returns><see cref="DescribeWxCloudBaseRunEnvsResponse"/></returns>
+        public async Task<DescribeWxCloudBaseRunEnvsResponse> DescribeWxCloudBaseRunEnvs(DescribeWxCloudBaseRunEnvsRequest req)
+        {
+             JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWxCloudBaseRunEnvs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管环境信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxCloudBaseRunEnvsRequest"/></param>
+        /// <returns><see cref="DescribeWxCloudBaseRunEnvsResponse"/></returns>
+        public DescribeWxCloudBaseRunEnvsResponse DescribeWxCloudBaseRunEnvsSync(DescribeWxCloudBaseRunEnvsRequest req)
+        {
+             JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWxCloudBaseRunEnvs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxCloudBaseRunEnvsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管子网
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxCloudBaseRunSubNetsRequest"/></param>
+        /// <returns><see cref="DescribeWxCloudBaseRunSubNetsResponse"/></returns>
+        public async Task<DescribeWxCloudBaseRunSubNetsResponse> DescribeWxCloudBaseRunSubNets(DescribeWxCloudBaseRunSubNetsRequest req)
+        {
+             JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWxCloudBaseRunSubNets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管子网
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWxCloudBaseRunSubNetsRequest"/></param>
+        /// <returns><see cref="DescribeWxCloudBaseRunSubNetsResponse"/></returns>
+        public DescribeWxCloudBaseRunSubNetsResponse DescribeWxCloudBaseRunSubNetsSync(DescribeWxCloudBaseRunSubNetsRequest req)
+        {
+             JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWxCloudBaseRunSubNets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWxCloudBaseRunSubNetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

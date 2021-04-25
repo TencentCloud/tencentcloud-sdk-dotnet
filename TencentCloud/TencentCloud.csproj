@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.262</VersionPrefix>
+    <VersionPrefix>3.0.263</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -242,6 +242,13 @@
     <Compile Include="Ape\V20200513\Models\ImageInfo.cs" />
     <Compile Include="Ape\V20200513\Models\ImageItem.cs" />
     <Compile Include="Ape\V20200513\Models\ImageMarshal.cs" />
+    <Compile Include="Api\V20201106\ApiClient.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeZonesRequest.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="Api\V20201106\Models\RegionInfo.cs" />
+    <Compile Include="Api\V20201106\Models\ZoneInfo.cs" />
     <Compile Include="Apigateway\V20180808\ApigatewayClient.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDoc.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDocInfo.cs" />
@@ -5418,6 +5425,8 @@
     <Compile Include="Faceid\V20180301\Models\DetectInfoText.cs" />
     <Compile Include="Faceid\V20180301\Models\DetectInfoVideoData.cs" />
     <Compile Include="Faceid\V20180301\Models\EidInfo.cs" />
+    <Compile Include="Faceid\V20180301\Models\EncryptedPhoneVerificationRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\EncryptedPhoneVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\Encryption.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetActionSequenceResponse.cs" />
@@ -10266,6 +10275,8 @@
     <Compile Include="Tcb\V20180608\Models\CreatePostpayPackageResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunEnvRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DatabasesInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
@@ -10319,6 +10330,10 @@
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreRequest.cs" />

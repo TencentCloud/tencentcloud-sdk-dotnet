@@ -333,6 +333,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+        /// </summary>
+        /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>
+        /// <returns><see cref="EncryptedPhoneVerificationResponse"/></returns>
+        public async Task<EncryptedPhoneVerificationResponse> EncryptedPhoneVerification(EncryptedPhoneVerificationRequest req)
+        {
+             JsonResponseModel<EncryptedPhoneVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EncryptedPhoneVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptedPhoneVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+        /// </summary>
+        /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>
+        /// <returns><see cref="EncryptedPhoneVerificationResponse"/></returns>
+        public EncryptedPhoneVerificationResponse EncryptedPhoneVerificationSync(EncryptedPhoneVerificationRequest req)
+        {
+             JsonResponseModel<EncryptedPhoneVerificationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EncryptedPhoneVerification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EncryptedPhoneVerificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 使用动作活体检测模式前，需调用本接口获取动作顺序。
         /// </summary>
         /// <param name="req"><see cref="GetActionSequenceRequest"/></param>

@@ -49,6 +49,12 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
+        /// 视频播放URL
+        /// </summary>
+        [JsonProperty("VideoURL")]
+        public string VideoURL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Listover", this.Listover);
             this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "VideoURL", this.VideoURL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
