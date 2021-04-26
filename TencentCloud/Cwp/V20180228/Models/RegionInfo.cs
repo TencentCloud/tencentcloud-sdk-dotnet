@@ -48,6 +48,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
+        /// <summary>
+        /// 地域英文名
+        /// </summary>
+        [JsonProperty("RegionNameEn")]
+        public string RegionNameEn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionCode", this.RegionCode);
+            this.SetParamSimple(map, prefix + "RegionNameEn", this.RegionNameEn);
         }
     }
 }

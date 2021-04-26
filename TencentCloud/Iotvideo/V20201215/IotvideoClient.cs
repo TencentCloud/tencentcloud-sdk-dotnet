@@ -1573,6 +1573,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 获取视频防盗链播放URL
+        /// </summary>
+        /// <param name="req"><see cref="GenerateSignedVideoURLRequest"/></param>
+        /// <returns><see cref="GenerateSignedVideoURLResponse"/></returns>
+        public async Task<GenerateSignedVideoURLResponse> GenerateSignedVideoURL(GenerateSignedVideoURLRequest req)
+        {
+             JsonResponseModel<GenerateSignedVideoURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateSignedVideoURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateSignedVideoURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取视频防盗链播放URL
+        /// </summary>
+        /// <param name="req"><see cref="GenerateSignedVideoURLRequest"/></param>
+        /// <returns><see cref="GenerateSignedVideoURLResponse"/></returns>
+        public GenerateSignedVideoURLResponse GenerateSignedVideoURLSync(GenerateSignedVideoURLRequest req)
+        {
+             JsonResponseModel<GenerateSignedVideoURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateSignedVideoURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateSignedVideoURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（GetAllFirmwareVersion）用于获取所有的版本列表 
         /// </summary>
         /// <param name="req"><see cref="GetAllFirmwareVersionRequest"/></param>

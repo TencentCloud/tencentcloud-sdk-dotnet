@@ -48,6 +48,12 @@ namespace TencentCloud.Dayu.V20180709.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 运营商，0：电信；1：联通；2：移动；5：BGP
+        /// </summary>
+        [JsonProperty("IspCode")]
+        public ulong? IspCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dayu.V20180709.Models
             this.SetParamSimple(map, prefix + "BizType", this.BizType);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "IspCode", this.IspCode);
         }
     }
 }

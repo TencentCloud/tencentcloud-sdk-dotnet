@@ -8889,6 +8889,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 修改弹性网卡服务质量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
+        /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
+        public async Task<ModifyNetworkInterfaceQosResponse> ModifyNetworkInterfaceQos(ModifyNetworkInterfaceQosRequest req)
+        {
+             JsonResponseModel<ModifyNetworkInterfaceQosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkInterfaceQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkInterfaceQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改弹性网卡服务质量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
+        /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
+        public ModifyNetworkInterfaceQosResponse ModifyNetworkInterfaceQosSync(ModifyNetworkInterfaceQosRequest req)
+        {
+             JsonResponseModel<ModifyNetworkInterfaceQosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNetworkInterfaceQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkInterfaceQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyPrivateIpAddressesAttribute）用于修改弹性网卡内网IP属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyPrivateIpAddressesAttributeRequest"/></param>

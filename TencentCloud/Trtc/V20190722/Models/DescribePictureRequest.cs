@@ -25,25 +25,25 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 应用id
+        /// 应用ID
         /// </summary>
         [JsonProperty("SdkAppId")]
         public ulong? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 图片id,不传时返回该应用下所有图片
+        /// 图片ID，不填时返回该应用下所有图片
         /// </summary>
         [JsonProperty("PictureId")]
         public ulong? PictureId{ get; set; }
 
         /// <summary>
-        /// 每页数量
+        /// 每页数量，不填时默认为10
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码，不填时默认为1
         /// </summary>
         [JsonProperty("PageNo")]
         public ulong? PageNo{ get; set; }

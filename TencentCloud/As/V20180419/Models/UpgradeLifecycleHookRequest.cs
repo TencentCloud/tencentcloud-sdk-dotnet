@@ -49,7 +49,7 @@ namespace TencentCloud.As.V20180419.Models
         public string DefaultResult{ get; set; }
 
         /// <summary>
-        /// 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到3600秒，默认值为300秒
+        /// 生命周期挂钩超时之前可以经过的最长时间（以秒为单位），范围从30到7200秒，默认值为300秒
         /// </summary>
         [JsonProperty("HeartbeatTimeout")]
         public long? HeartbeatTimeout{ get; set; }

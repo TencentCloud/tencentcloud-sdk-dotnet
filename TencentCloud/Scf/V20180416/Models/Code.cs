@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosObjectName{ get; set; }
 
         /// <summary>
-        /// 包含函数代码文件及其依赖项的 zip 格式文件，使用该接口时要求将 zip 文件的内容转成 base64 编码，最大支持20M
+        /// 包含函数代码文件及其依赖项的 zip 格式文件，zip包大小上限为 50MB，使用该接口时要求将 zip 文件的内容转成 base64 编码
         /// </summary>
         [JsonProperty("ZipFile")]
         public string ZipFile{ get; set; }

@@ -149,7 +149,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UploadType{ get; set; }
 
         /// <summary>
-        /// Repo的类型(coding/gitlab/github/coding)
+        /// Repo的类型(gitlab/github/coding)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RepoType")]

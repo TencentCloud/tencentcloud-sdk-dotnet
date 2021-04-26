@@ -1813,6 +1813,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取机器地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMachineRegionsResponse"/></returns>
+        public async Task<DescribeMachineRegionsResponse> DescribeMachineRegions(DescribeMachineRegionsRequest req)
+        {
+             JsonResponseModel<DescribeMachineRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachineRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取机器地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineRegionsRequest"/></param>
+        /// <returns><see cref="DescribeMachineRegionsResponse"/></returns>
+        public DescribeMachineRegionsResponse DescribeMachineRegionsSync(DescribeMachineRegionsRequest req)
+        {
+             JsonResponseModel<DescribeMachineRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachineRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeMachines) 用于获取区域主机列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeMachinesRequest"/></param>

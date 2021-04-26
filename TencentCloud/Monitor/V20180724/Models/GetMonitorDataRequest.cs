@@ -31,7 +31,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 指标名称，如CPUUsage。各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的指标英文名即为MetricName
+        /// 指标名称，如CPUUsage，仅支持单指标拉取。各个云产品的详细指标说明请参阅各个产品[监控指标](https://cloud.tencent.com/document/product/248/6140)文档，对应的指标英文名即为MetricName
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

@@ -150,6 +150,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否开启异步属性，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("AsyncRunEnable")]
+        public string AsyncRunEnable{ get; set; }
+
+        /// <summary>
+        /// 是否开启事件追踪，TRUE 为开启，FALSE为关闭
+        /// </summary>
+        [JsonProperty("TraceEnable")]
+        public string TraceEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+            this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
         }
     }
 }
