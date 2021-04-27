@@ -60,6 +60,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupResourceType")]
         public string GroupResourceType{ get; set; }
 
+        /// <summary>
+        /// 部署组备注
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "GroupDesc", this.GroupDesc);
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

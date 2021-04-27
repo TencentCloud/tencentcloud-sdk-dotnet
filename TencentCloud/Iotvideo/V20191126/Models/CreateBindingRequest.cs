@@ -49,7 +49,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         public bool? ForceBind{ get; set; }
 
         /// <summary>
-        /// 设备昵称
+        /// 设备昵称，最多不超过64个字符
         /// </summary>
         [JsonProperty("Nick")]
         public string Nick{ get; set; }

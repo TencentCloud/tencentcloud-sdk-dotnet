@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.264</VersionPrefix>
+    <VersionPrefix>3.0.265</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -136,6 +136,8 @@
     <Compile Include="V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeImpactedHostsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeImportMachineInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMachineInfoRequest.cs" />
@@ -222,6 +224,7 @@
     <Compile Include="V20180228\Models\EditReverseShellRuleResponse.cs" />
     <Compile Include="V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="V20180228\Models\EditTagsResponse.cs" />
+    <Compile Include="V20180228\Models\EffectiveMachineInfo.cs" />
     <Compile Include="V20180228\Models\ExportAttackLogsRequest.cs" />
     <Compile Include="V20180228\Models\ExportAttackLogsResponse.cs" />
     <Compile Include="V20180228\Models\ExportBashEventsRequest.cs" />
@@ -240,6 +243,10 @@
     <Compile Include="V20180228\Models\ExportReverseShellEventsResponse.cs" />
     <Compile Include="V20180228\Models\ExportTasksRequest.cs" />
     <Compile Include="V20180228\Models\ExportTasksResponse.cs" />
+    <Compile Include="V20180228\Models\ExportVulDetectionExcelRequest.cs" />
+    <Compile Include="V20180228\Models\ExportVulDetectionExcelResponse.cs" />
+    <Compile Include="V20180228\Models\ExportVulDetectionReportRequest.cs" />
+    <Compile Include="V20180228\Models\ExportVulDetectionReportResponse.cs" />
     <Compile Include="V20180228\Models\Filter.cs" />
     <Compile Include="V20180228\Models\Filters.cs" />
     <Compile Include="V20180228\Models\HistoryAccount.cs" />

@@ -262,6 +262,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("StopScript")]
         public string StopScript{ get; set; }
 
+        /// <summary>
+        /// 部署组备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +309,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
             this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

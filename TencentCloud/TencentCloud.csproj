@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.264</VersionPrefix>
+    <VersionPrefix>3.0.265</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2998,6 +2998,7 @@
     <Compile Include="Cloudhsm\V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\Vpc.cs" />
     <Compile Include="Cme\V20191029\CmeClient.cs" />
+    <Compile Include="Cme\V20191029\Models\AccountInfo.cs" />
     <Compile Include="Cme\V20191029\Models\AddMemberInfo.cs" />
     <Compile Include="Cme\V20191029\Models\AddTeamMemberRequest.cs" />
     <Compile Include="Cme\V20191029\Models\AddTeamMemberResponse.cs" />
@@ -3028,6 +3029,8 @@
     <Compile Include="Cme\V20191029\Models\DeleteTeamMembersResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DeleteTeamRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DeleteTeamResponse.cs" />
+    <Compile Include="Cme\V20191029\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeClassResponse.cs" />
     <Compile Include="Cme\V20191029\Models\DescribeJoinTeamsRequest.cs" />
@@ -3816,6 +3819,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeLoginWhiteListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeLoginWhiteListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachineInfoRequest.cs" />
@@ -3902,6 +3907,7 @@
     <Compile Include="Cwp\V20180228\Models\EditReverseShellRuleResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\EditTagsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\EffectiveMachineInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAttackLogsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAttackLogsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportBashEventsRequest.cs" />
@@ -3920,6 +3926,10 @@
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportVulDetectionExcelRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportVulDetectionExcelResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportVulDetectionReportRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportVulDetectionReportResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\Filter.cs" />
     <Compile Include="Cwp\V20180228\Models\Filters.cs" />
     <Compile Include="Cwp\V20180228\Models\HistoryAccount.cs" />
@@ -8847,8 +8857,12 @@
     <Compile Include="Partners\V20180321\Models\DescribeAgentDealsCacheResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsV2Request.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentPayDealsV2Response.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsV2Request.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsV2Response.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosRequest.cs" />
@@ -11494,6 +11508,7 @@
     <Compile Include="Tsf\V20180326\Models\ConfigReleaseLog.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainGroupResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\ContainerEvent.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainerGroupDetail.cs" />
     <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
@@ -11613,6 +11628,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeConfigSummaryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeConfigsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeConfigsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeContainerEventsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeContainerEventsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDetailRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupsRequest.cs" />
@@ -11699,6 +11716,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitApiUseDetailRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeUnitApiUseDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitNamespacesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitNamespacesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitRuleRequest.cs" />
@@ -11734,6 +11753,7 @@
     <Compile Include="Tsf\V20180326\Models\ExecuteTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ExpandGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\FieldRef.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupApiVo.cs" />
@@ -11745,6 +11765,8 @@
     <Compile Include="Tsf\V20180326\Models\GroupDailyUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPod.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPodResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\GroupUnitApiDailyUseStatistics.cs" />
+    <Compile Include="Tsf\V20180326\Models\GroupUnitApiUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupUseStatisticsEntity.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\HealthCheckSetting.cs" />
@@ -11761,6 +11783,8 @@
     <Compile Include="Tsf\V20180326\Models\LaneRule.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneRules.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDataPoint.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDataPointMap.cs" />
     <Compile Include="Tsf\V20180326\Models\Microservice.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupResponse.cs" />
@@ -11813,6 +11837,7 @@
     <Compile Include="Tsf\V20180326\Models\RemoveInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RepositoryInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\RepositoryList.cs" />
+    <Compile Include="Tsf\V20180326\Models\ResourceFieldRef.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationPublicConfigRequest.cs" />
@@ -11858,6 +11883,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigReleaseLog.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageContainerEvent.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageInstance.cs" />
@@ -11891,6 +11917,7 @@
     <Compile Include="Tsf\V20180326\Models\UpdateRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateUnitRuleRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\UpdateUnitRuleResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ValueFrom.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
     <Compile Include="Tsw\V20200924\TswClient.cs" />

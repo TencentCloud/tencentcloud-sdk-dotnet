@@ -37,6 +37,26 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
+        /// 过滤条件：任务创建时间。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public TimeRange CreateTime{ get; set; }
+
+        /// <summary>
+        /// 过滤条件：任务结束时间。
+        /// </summary>
+        [JsonProperty("FinishTime")]
+        public TimeRange FinishTime{ get; set; }
+
+        /// <summary>
+        /// 排序方式。Sort.Field 可选：
+        /// <li> CreateTime 任务创建时间。</li>
+        /// <li>FinishTime 任务结束时间。</li>
+        /// </summary>
+        [JsonProperty("Sort")]
+        public SortBy Sort{ get; set; }
+
+        /// <summary>
         /// 返回记录条数，默认值：10，最大值：100。
         /// </summary>
         [JsonProperty("Limit")]
@@ -62,6 +82,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
+            this.SetParamObj(map, prefix + "FinishTime.", this.FinishTime);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);

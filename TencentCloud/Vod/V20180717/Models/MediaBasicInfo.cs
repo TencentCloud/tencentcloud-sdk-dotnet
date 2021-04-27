@@ -132,6 +132,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 媒体文件的存储类别：
+        /// <li>STANDARD：标准存储。</li>
+        /// <li>STANDARD_IA：低频存储。</li>
+        /// </summary>
+        [JsonProperty("StorageClass")]
+        public string StorageClass{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +163,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Vid", this.Vid);
             this.SetParamSimple(map, prefix + "Category", this.Category);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StorageClass", this.StorageClass);
         }
     }
 }

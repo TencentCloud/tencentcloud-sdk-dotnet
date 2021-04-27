@@ -25,10 +25,16 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 无
+        /// 歌曲变更信息
         /// </summary>
         [JsonProperty("MusicDetailInfos")]
         public MusicDetailInfo MusicDetailInfos{ get; set; }
+
+        /// <summary>
+        /// ame对接资源方密钥
+        /// </summary>
+        [JsonProperty("AmeKey")]
+        public string AmeKey{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Ame.V20190916.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "MusicDetailInfos.", this.MusicDetailInfos);
+            this.SetParamSimple(map, prefix + "AmeKey", this.AmeKey);
         }
     }
 }

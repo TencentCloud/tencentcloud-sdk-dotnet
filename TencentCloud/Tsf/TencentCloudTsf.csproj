@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.264</VersionPrefix>
+    <VersionPrefix>3.0.265</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -75,6 +75,7 @@
     <Compile Include="V20180326\Models\ConfigReleaseLog.cs" />
     <Compile Include="V20180326\Models\ContainGroup.cs" />
     <Compile Include="V20180326\Models\ContainGroupResult.cs" />
+    <Compile Include="V20180326\Models\ContainerEvent.cs" />
     <Compile Include="V20180326\Models\ContainerGroupDetail.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
@@ -194,6 +195,8 @@
     <Compile Include="V20180326\Models\DescribeConfigSummaryResponse.cs" />
     <Compile Include="V20180326\Models\DescribeConfigsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeConfigsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeContainerEventsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeContainerEventsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupDetailRequest.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeContainerGroupsRequest.cs" />
@@ -280,6 +283,8 @@
     <Compile Include="V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitApiUseDetailRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeUnitApiUseDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUnitNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeUnitRuleRequest.cs" />
@@ -315,6 +320,7 @@
     <Compile Include="V20180326\Models\ExecuteTaskResponse.cs" />
     <Compile Include="V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="V20180326\Models\ExpandGroupResponse.cs" />
+    <Compile Include="V20180326\Models\FieldRef.cs" />
     <Compile Include="V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\GatewayGroupApiVo.cs" />
@@ -326,6 +332,8 @@
     <Compile Include="V20180326\Models\GroupDailyUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupPod.cs" />
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
+    <Compile Include="V20180326\Models\GroupUnitApiDailyUseStatistics.cs" />
+    <Compile Include="V20180326\Models\GroupUnitApiUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupUseStatisticsEntity.cs" />
     <Compile Include="V20180326\Models\HealthCheckConfig.cs" />
     <Compile Include="V20180326\Models\HealthCheckSetting.cs" />
@@ -342,6 +350,8 @@
     <Compile Include="V20180326\Models\LaneRule.cs" />
     <Compile Include="V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="V20180326\Models\LaneRules.cs" />
+    <Compile Include="V20180326\Models\MetricDataPoint.cs" />
+    <Compile Include="V20180326\Models\MetricDataPointMap.cs" />
     <Compile Include="V20180326\Models\Microservice.cs" />
     <Compile Include="V20180326\Models\ModifyContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\ModifyContainerGroupResponse.cs" />
@@ -394,6 +404,7 @@
     <Compile Include="V20180326\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180326\Models\RepositoryInfo.cs" />
     <Compile Include="V20180326\Models\RepositoryList.cs" />
+    <Compile Include="V20180326\Models\ResourceFieldRef.cs" />
     <Compile Include="V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="V20180326\Models\RevocationConfigResponse.cs" />
     <Compile Include="V20180326\Models\RevocationPublicConfigRequest.cs" />
@@ -439,6 +450,7 @@
     <Compile Include="V20180326\Models\TsfPageConfig.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigReleaseLog.cs" />
+    <Compile Include="V20180326\Models\TsfPageContainerEvent.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="V20180326\Models\TsfPageInstance.cs" />
@@ -472,6 +484,7 @@
     <Compile Include="V20180326\Models\UpdateRepositoryResponse.cs" />
     <Compile Include="V20180326\Models\UpdateUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\UpdateUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\ValueFrom.cs" />
     <Compile Include="V20180326\Models\VmGroup.cs" />
     <Compile Include="V20180326\Models\VmGroupSimple.cs" />
   </ItemGroup>

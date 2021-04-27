@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.264</VersionPrefix>
+    <VersionPrefix>3.0.265</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20191029\CmeClient.cs" />
+    <Compile Include="V20191029\Models\AccountInfo.cs" />
     <Compile Include="V20191029\Models\AddMemberInfo.cs" />
     <Compile Include="V20191029\Models\AddTeamMemberRequest.cs" />
     <Compile Include="V20191029\Models\AddTeamMemberResponse.cs" />
@@ -75,6 +76,8 @@
     <Compile Include="V20191029\Models\DeleteTeamMembersResponse.cs" />
     <Compile Include="V20191029\Models\DeleteTeamRequest.cs" />
     <Compile Include="V20191029\Models\DeleteTeamResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20191029\Models\DescribeClassRequest.cs" />
     <Compile Include="V20191029\Models\DescribeClassResponse.cs" />
     <Compile Include="V20191029\Models\DescribeJoinTeamsRequest.cs" />

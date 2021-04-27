@@ -52,6 +52,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupApis")]
         public GatewayGroupApiVo[] GroupApis{ get; set; }
 
+        /// <summary>
+        /// 网关实例的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayInstanceType")]
+        public string GatewayInstanceType{ get; set; }
+
+        /// <summary>
+        /// 网关实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
             this.SetParamSimple(map, prefix + "GroupApiCount", this.GroupApiCount);
             this.SetParamArrayObj(map, prefix + "GroupApis.", this.GroupApis);
+            this.SetParamSimple(map, prefix + "GatewayInstanceType", this.GatewayInstanceType);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }
     }
 }

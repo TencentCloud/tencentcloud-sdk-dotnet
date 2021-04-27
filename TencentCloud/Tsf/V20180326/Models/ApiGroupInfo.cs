@@ -108,6 +108,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("GroupType")]
         public string GroupType{ get; set; }
 
+        /// <summary>
+        /// 网关实例的类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayInstanceType")]
+        public string GatewayInstanceType{ get; set; }
+
+        /// <summary>
+        /// 网关实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayInstanceId")]
+        public string GatewayInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "AclMode", this.AclMode);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "GroupType", this.GroupType);
+            this.SetParamSimple(map, prefix + "GatewayInstanceType", this.GatewayInstanceType);
+            this.SetParamSimple(map, prefix + "GatewayInstanceId", this.GatewayInstanceId);
         }
     }
 }

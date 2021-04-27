@@ -143,6 +143,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DeployDesc")]
         public string DeployDesc{ get; set; }
 
+        /// <summary>
+        /// 部署组备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Alias")]
+        public string Alias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "GroupResourceType", this.GroupResourceType);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "DeployDesc", this.DeployDesc);
+            this.SetParamSimple(map, prefix + "Alias", this.Alias);
         }
     }
 }

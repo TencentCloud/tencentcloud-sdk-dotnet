@@ -2535,6 +2535,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 获取容器事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContainerEventsRequest"/></param>
+        /// <returns><see cref="DescribeContainerEventsResponse"/></returns>
+        public async Task<DescribeContainerEventsResponse> DescribeContainerEvents(DescribeContainerEventsRequest req)
+        {
+             JsonResponseModel<DescribeContainerEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeContainerEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContainerEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取容器事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContainerEventsRequest"/></param>
+        /// <returns><see cref="DescribeContainerEventsResponse"/></returns>
+        public DescribeContainerEventsResponse DescribeContainerEventsSync(DescribeContainerEventsRequest req)
+        {
+             JsonResponseModel<DescribeContainerEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeContainerEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContainerEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  容器部署组详情
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>
@@ -4248,6 +4288,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTaskLastStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskLastStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitApiUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeUnitApiUseDetailResponse"/></returns>
+        public async Task<DescribeUnitApiUseDetailResponse> DescribeUnitApiUseDetail(DescribeUnitApiUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeUnitApiUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnitApiUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitApiUseDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnitApiUseDetailRequest"/></param>
+        /// <returns><see cref="DescribeUnitApiUseDetailResponse"/></returns>
+        public DescribeUnitApiUseDetailResponse DescribeUnitApiUseDetailSync(DescribeUnitApiUseDetailRequest req)
+        {
+             JsonResponseModel<DescribeUnitApiUseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnitApiUseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnitApiUseDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

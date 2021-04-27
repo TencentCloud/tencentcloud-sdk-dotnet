@@ -1653,6 +1653,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询批量导入机器信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeImportMachineInfoResponse"/></returns>
+        public async Task<DescribeImportMachineInfoResponse> DescribeImportMachineInfo(DescribeImportMachineInfoRequest req)
+        {
+             JsonResponseModel<DescribeImportMachineInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImportMachineInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImportMachineInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询批量导入机器信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImportMachineInfoRequest"/></param>
+        /// <returns><see cref="DescribeImportMachineInfoResponse"/></returns>
+        public DescribeImportMachineInfoResponse DescribeImportMachineInfoSync(DescribeImportMachineInfoRequest req)
+        {
+             JsonResponseModel<DescribeImportMachineInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImportMachineInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImportMachineInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取异地登录白名单列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLoginWhiteListRequest"/></param>
@@ -3724,6 +3764,86 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "ExportTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出本次漏洞检测Excel
+        /// </summary>
+        /// <param name="req"><see cref="ExportVulDetectionExcelRequest"/></param>
+        /// <returns><see cref="ExportVulDetectionExcelResponse"/></returns>
+        public async Task<ExportVulDetectionExcelResponse> ExportVulDetectionExcel(ExportVulDetectionExcelRequest req)
+        {
+             JsonResponseModel<ExportVulDetectionExcelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportVulDetectionExcel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVulDetectionExcelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出本次漏洞检测Excel
+        /// </summary>
+        /// <param name="req"><see cref="ExportVulDetectionExcelRequest"/></param>
+        /// <returns><see cref="ExportVulDetectionExcelResponse"/></returns>
+        public ExportVulDetectionExcelResponse ExportVulDetectionExcelSync(ExportVulDetectionExcelRequest req)
+        {
+             JsonResponseModel<ExportVulDetectionExcelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVulDetectionExcel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVulDetectionExcelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出漏洞检测报告。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVulDetectionReportRequest"/></param>
+        /// <returns><see cref="ExportVulDetectionReportResponse"/></returns>
+        public async Task<ExportVulDetectionReportResponse> ExportVulDetectionReport(ExportVulDetectionReportRequest req)
+        {
+             JsonResponseModel<ExportVulDetectionReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportVulDetectionReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVulDetectionReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出漏洞检测报告。
+        /// </summary>
+        /// <param name="req"><see cref="ExportVulDetectionReportRequest"/></param>
+        /// <returns><see cref="ExportVulDetectionReportResponse"/></returns>
+        public ExportVulDetectionReportResponse ExportVulDetectionReportSync(ExportVulDetectionReportRequest req)
+        {
+             JsonResponseModel<ExportVulDetectionReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportVulDetectionReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportVulDetectionReportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

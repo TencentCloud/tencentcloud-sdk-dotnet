@@ -62,29 +62,23 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Namespaces{ get; set; }
 
         /// <summary>
-        /// 告警对象列表，外层数组，对应多个实例
-        /// 内层数组，每个数组对应一个实例，里面的object对应的是这个实例的维度信息。格式为
-        /// [
-        /// 	[{"name":"unInstanceId","value":"ins-qr888845g"}],
-        /// 	[{"name":"unInstanceId","value":"ins-qr8d555g"}]
-        /// 	...
-        /// ]
-        /// 不同云产品参数示例详见
-        /// [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
+        /// 告警对象列表，JSON 字符串。外层数组，对应多个实例，内层为对象的维度。例如“云服务器-基础监控”可写为：
+        /// `[ {"Dimensions": {"unInstanceId": "ins-qr8d555g"}}, {"Dimensions": {"unInstanceId": "ins-qr8d555h"}} ]`
+        /// 具体也可以参考下方的示例 2。
+        /// 
+        /// 不同云产品参数示例详见 [维度信息Dimensions列表](https://cloud.tencent.com/document/product/248/50397)
         /// </summary>
         [JsonProperty("Dimensions")]
         public string Dimensions{ get; set; }
 
         /// <summary>
-        /// 根据接收人的uid搜索，需要调用访问管理的api查询。详见
-        /// [拉取子用户](https://cloud.tencent.com/document/product/598/34587)
+        /// 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// 根据接收组的uid搜索，需要调用访问管理的api查询，详见
-        /// [查询用户组列表](https://cloud.tencent.com/document/product/598/34589)
+        /// 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }
@@ -116,7 +110,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// 通知模版的id列表，可查询通知模版列表获取。
-        /// [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280)
+        /// 可使用 [查询通知模板列表](https://cloud.tencent.com/document/product/248/51280) 接口查询。
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }

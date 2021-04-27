@@ -509,6 +509,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 获取用户账号信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
+        public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
+        {
+             JsonResponseModel<DescribeAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户账号信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
+        /// <returns><see cref="DescribeAccountsResponse"/></returns>
+        public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
+        {
+             JsonResponseModel<DescribeAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定归属者下所有的分类信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeClassRequest"/></param>

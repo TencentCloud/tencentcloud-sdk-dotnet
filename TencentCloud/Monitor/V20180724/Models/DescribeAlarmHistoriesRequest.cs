@@ -49,19 +49,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 起始时间，默认一天前的时间戳。对应 FirstOccurTime，告警首次出现时间。
+        /// 起始时间，默认一天前的时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 晚于 `StartTime` 才可能被搜索到。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间，默认当前时间戳。对应 FirstOccurTime，告警首次出现时间。
+        /// 结束时间，默认当前时间戳。对应 `FirstOccurTime` 告警首次出现时间，告警历史的 `FirstOccurTime` 早于 `EndTime` 才可能被搜索到。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控 "
+        /// 根据监控类型过滤 不选默认查所有类型 "MT_QCE"=云产品监控
         /// </summary>
         [JsonProperty("MonitorTypes")]
         public string[] MonitorTypes{ get; set; }
@@ -80,6 +80,7 @@ namespace TencentCloud.Monitor.V20180724.Models
 
         /// <summary>
         /// 根据项目ID过滤，-1=无项目 0=默认项目
+        /// 可在此页面查询 [项目管理](https://console.cloud.tencent.com/project)
         /// </summary>
         [JsonProperty("ProjectIds")]
         public long?[] ProjectIds{ get; set; }
@@ -91,7 +92,8 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long?[] InstanceGroupIds{ get; set; }
 
         /// <summary>
-        /// 根据策略类型过滤
+        /// 根据策略类型过滤，策略类型是监控类型之下的概念，在这里两者都需要传入，例如 `[{"MonitorType": "MT_QCE", "Namespace": "cvm_device"}]`
+        /// 可使用 [查询所有名字空间 DescribeAllNamespaces](https://cloud.tencent.com/document/product/248/48683) 接口查询
         /// </summary>
         [JsonProperty("Namespaces")]
         public MonitorTypeNamespace[] Namespaces{ get; set; }
@@ -115,13 +117,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 根据接收人搜索
+        /// 根据接收人搜索，可以使用“访问管理”的 [拉取子用户 ListUsers](https://cloud.tencent.com/document/product/598/34587) 接口获取用户列表 或 [查询子用户 GetUser](https://cloud.tencent.com/document/product/598/34590) 接口查询子用户详情，此处填入返回结果中的 `Uid` 字段
         /// </summary>
         [JsonProperty("ReceiverUids")]
         public long?[] ReceiverUids{ get; set; }
 
         /// <summary>
-        /// 根据接收组搜索
+        /// 根据接收组搜索，可以使用“访问管理”的 [查询用户组列表 ListGroups](https://cloud.tencent.com/document/product/598/34589) 接口获取用户组列表 或 [列出用户关联的用户组 ListGroupsForUser](https://cloud.tencent.com/document/product/598/34588) 查询某个子用户所在的用户组列表 ，此处填入返回结果中的 `GroupId ` 字段
         /// </summary>
         [JsonProperty("ReceiverGroups")]
         public long?[] ReceiverGroups{ get; set; }
