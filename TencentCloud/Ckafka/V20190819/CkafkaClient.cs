@@ -573,6 +573,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 用于查看ckafka的可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCkafkaZoneRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
+        public async Task<DescribeCkafkaZoneResponse> DescribeCkafkaZone(DescribeCkafkaZoneRequest req)
+        {
+             JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCkafkaZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCkafkaZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查看ckafka的可用区列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCkafkaZoneRequest"/></param>
+        /// <returns><see cref="DescribeCkafkaZoneResponse"/></returns>
+        public DescribeCkafkaZoneResponse DescribeCkafkaZoneSync(DescribeCkafkaZoneRequest req)
+        {
+             JsonResponseModel<DescribeCkafkaZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCkafkaZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCkafkaZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询消费分组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeConsumerGroupRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 枚举地域,只支持广州地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionRequest"/></param>
+        /// <returns><see cref="DescribeRegionResponse"/></returns>
+        public async Task<DescribeRegionResponse> DescribeRegion(DescribeRegionRequest req)
+        {
+             JsonResponseModel<DescribeRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 枚举地域,只支持广州地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionRequest"/></param>
+        /// <returns><see cref="DescribeRegionResponse"/></returns>
+        public DescribeRegionResponse DescribeRegionSync(DescribeRegionRequest req)
+        {
+             JsonResponseModel<DescribeRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

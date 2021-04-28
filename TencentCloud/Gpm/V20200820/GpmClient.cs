@@ -732,5 +732,45 @@ namespace TencentCloud.Gpm.V20200820
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
+        /// <returns><see cref="StartMatchingBackfillResponse"/></returns>
+        public async Task<StartMatchingBackfillResponse> StartMatchingBackfill(StartMatchingBackfillRequest req)
+        {
+             JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartMatchingBackfill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchingBackfillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
+        /// </summary>
+        /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
+        /// <returns><see cref="StartMatchingBackfillResponse"/></returns>
+        public StartMatchingBackfillResponse StartMatchingBackfillSync(StartMatchingBackfillRequest req)
+        {
+             JsonResponseModel<StartMatchingBackfillResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartMatchingBackfill");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartMatchingBackfillResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

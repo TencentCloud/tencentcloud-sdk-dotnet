@@ -230,6 +230,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("ISP")]
         public string ISP{ get; set; }
 
+        /// <summary>
+        /// 物理位置信息。注意该字段目前为保留字段，均为空值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhysicalPosition")]
+        public PhysicalPosition PhysicalPosition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +270,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "VirtualPrivateCloud.", this.VirtualPrivateCloud);
             this.SetParamSimple(map, prefix + "ISP", this.ISP);
+            this.SetParamObj(map, prefix + "PhysicalPosition.", this.PhysicalPosition);
         }
     }
 }

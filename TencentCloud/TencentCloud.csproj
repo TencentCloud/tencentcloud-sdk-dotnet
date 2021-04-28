@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.265</VersionPrefix>
+    <VersionPrefix>3.0.266</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2461,12 +2461,15 @@
     <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\IocListData.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllSwitchStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyBlockIgnoreListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifySecurityGroupAllRuleStatusRequest.cs" />
@@ -2654,6 +2657,7 @@
     <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ClusterInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Config.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
@@ -2686,6 +2690,8 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeACLResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeAppInfoRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeAppInfoResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeCkafkaZoneRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeCkafkaZoneResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeConsumerGroupRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeConsumerGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeGroup.cs" />
@@ -2701,6 +2707,8 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesDetailResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeRegionRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeRegionResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeRouteRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeRouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicAttributesRequest.cs" />
@@ -2740,6 +2748,8 @@
     <Compile Include="Ckafka\V20190819\Models\OperateResponseData.cs" />
     <Compile Include="Ckafka\V20190819\Models\Partition.cs" />
     <Compile Include="Ckafka\V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Price.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Region.cs" />
     <Compile Include="Ckafka\V20190819\Models\Route.cs" />
     <Compile Include="Ckafka\V20190819\Models\RouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\SubscribedInfo.cs" />
@@ -2754,6 +2764,8 @@
     <Compile Include="Ckafka\V20190819\Models\User.cs" />
     <Compile Include="Ckafka\V20190819\Models\UserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\VipEntity.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ZoneInfo.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ZoneResponse.cs" />
     <Compile Include="Clb\V20180317\ClbClient.cs" />
     <Compile Include="Clb\V20180317\Models\AssociateTargetGroupsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\AssociateTargetGroupsResponse.cs" />
@@ -5217,6 +5229,7 @@
     <Compile Include="Ecm\V20190719\Models\PeakFamilyInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakNetwork.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakNetworkRegionInfo.cs" />
+    <Compile Include="Ecm\V20190719\Models\PhysicalPosition.cs" />
     <Compile Include="Ecm\V20190719\Models\Position.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIPAddressInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIpAddressSpecification.cs" />
@@ -5825,6 +5838,8 @@
     <Compile Include="Gpm\V20200820\Models\ReportTrendData.cs" />
     <Compile Include="Gpm\V20200820\Models\RuleBriefInfo.cs" />
     <Compile Include="Gpm\V20200820\Models\RuleInfo.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingBackfillRequest.cs" />
+    <Compile Include="Gpm\V20200820\Models\StartMatchingBackfillResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingRequest.cs" />
     <Compile Include="Gpm\V20200820\Models\StartMatchingResponse.cs" />
     <Compile Include="Gpm\V20200820\Models\StringKV.cs" />
@@ -12442,6 +12457,8 @@
     <Compile Include="Vod\V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyEventConfigRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyEventConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />

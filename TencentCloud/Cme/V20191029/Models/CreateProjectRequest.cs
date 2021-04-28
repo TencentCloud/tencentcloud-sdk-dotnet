@@ -54,6 +54,15 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Category{ get; set; }
 
         /// <summary>
+        /// 项目模式，一个项目可以有多种模式并相互切换。
+        /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
+        /// <li>Default：默认模式。</li>
+        /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
+        /// <summary>
         /// 画布宽高比。
         /// 该字段已经废弃，请使用具体项目输入中的 AspectRatio 字段。
         /// </summary>
@@ -112,6 +121,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Category", this.Category);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamObj(map, prefix + "SwitcherProjectInput.", this.SwitcherProjectInput);

@@ -66,7 +66,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string CoverUrl{ get; set; }
 
         /// <summary>
-        /// 云转推项目信息。
+        /// 云转推项目信息，仅当项目类别取值 STREAM_CONNECT 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StreamConnectProjectInfo")]

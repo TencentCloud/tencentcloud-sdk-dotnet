@@ -853,6 +853,52 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 支持对拦截列表、忽略列表如下操作：
+        /// 批量增加拦截IP、忽略IP/域名
+        /// 批量删除拦截IP、忽略IP/域名
+        /// 批量修改拦截IP、忽略IP/域名生效事件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="ModifyBlockIgnoreListResponse"/></returns>
+        public async Task<ModifyBlockIgnoreListResponse> ModifyBlockIgnoreList(ModifyBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<ModifyBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 支持对拦截列表、忽略列表如下操作：
+        /// 批量增加拦截IP、忽略IP/域名
+        /// 批量删除拦截IP、忽略IP/域名
+        /// 批量修改拦截IP、忽略IP/域名生效事件
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBlockIgnoreListRequest"/></param>
+        /// <returns><see cref="ModifyBlockIgnoreListResponse"/></returns>
+        public ModifyBlockIgnoreListResponse ModifyBlockIgnoreListSync(ModifyBlockIgnoreListRequest req)
+        {
+             JsonResponseModel<ModifyBlockIgnoreListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBlockIgnoreList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlockIgnoreListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改单个防火墙开关
         /// </summary>
         /// <param name="req"><see cref="ModifyItemSwitchStatusRequest"/></param>

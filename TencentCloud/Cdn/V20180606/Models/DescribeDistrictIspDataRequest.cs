@@ -85,6 +85,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
+        /// <summary>
+        /// 时间粒度，支持以下几种模式（默认5min）：
+        /// min：1 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过10分钟，可返回 1 分钟粒度明细数据
+        /// 5min：5 分钟粒度，支持近 60 天内的数据查询，每次查询时间区间不超过3 小时，可返回 5 分钟粒度明细数据
+        /// </summary>
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +107,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "Isps.", this.Isps);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
         }
     }
 }

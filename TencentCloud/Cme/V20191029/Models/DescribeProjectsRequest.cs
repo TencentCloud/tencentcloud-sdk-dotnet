@@ -54,6 +54,15 @@ namespace TencentCloud.Cme.V20191029.Models
         public string[] CategorySet{ get; set; }
 
         /// <summary>
+        /// 项目模式，一个项目可以有多种模式并相互切换。
+        /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
+        /// <li>Default：默认模式。</li>
+        /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// </summary>
+        [JsonProperty("Modes")]
+        public string[] Modes{ get; set; }
+
+        /// <summary>
         /// 列表排序，支持下列排序字段：
         /// <li>CreateTime：创建时间；</li>
         /// <li>UpdateTime：更新时间。</li>
@@ -95,6 +104,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamArraySimple(map, prefix + "ProjectIds.", this.ProjectIds);
             this.SetParamArraySimple(map, prefix + "AspectRatioSet.", this.AspectRatioSet);
             this.SetParamArraySimple(map, prefix + "CategorySet.", this.CategorySet);
+            this.SetParamArraySimple(map, prefix + "Modes.", this.Modes);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);

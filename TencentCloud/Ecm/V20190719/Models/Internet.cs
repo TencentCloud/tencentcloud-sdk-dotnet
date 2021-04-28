@@ -25,14 +25,14 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 实例的内网相关信息列表。
+        /// 实例的内网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PrivateIPAddressSet")]
         public PrivateIPAddressInfo[] PrivateIPAddressSet{ get; set; }
 
         /// <summary>
-        /// 实例的公网相关信息列表。
+        /// 实例的公网相关信息列表。顺序为主网卡在前，辅助网卡按绑定先后顺序排列。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PublicIPAddressSet")]

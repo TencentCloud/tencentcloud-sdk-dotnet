@@ -56,6 +56,15 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
+        /// <summary>
+        /// 项目模式，一个项目可以有多种模式并相互切换。
+        /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
+        /// <li>Defualt：默认模式。</li>
+        /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +76,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

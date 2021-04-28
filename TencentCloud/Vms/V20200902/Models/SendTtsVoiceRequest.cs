@@ -45,6 +45,7 @@ namespace TencentCloud.Vms.V20200902.Models
 
         /// <summary>
         /// 模板参数，若模板没有参数，请提供为空数组。
+        /// 注：语音消息的内容长度不超过350字。
         /// </summary>
         [JsonProperty("TemplateParamSet")]
         public string[] TemplateParamSet{ get; set; }

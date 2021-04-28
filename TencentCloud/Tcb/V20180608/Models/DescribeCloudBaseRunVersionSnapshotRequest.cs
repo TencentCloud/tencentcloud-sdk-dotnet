@@ -49,13 +49,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量。默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制大小
+        /// 限制大小。默认10，最大20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
