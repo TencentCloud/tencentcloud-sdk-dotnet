@@ -2217,6 +2217,54 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 腾讯云点播为客户提供了媒体上传、媒体管理、媒体处理等等服务，在这些服务执行过程或执行结束时，腾讯云点播也提供各种对应的事件通知，方便开发者感知服务处理状态，并做下一步的业务操作。
+        /// 
+        /// 开发者可以通过本接口来查询当前配置事件通知的接收方式、接收地址以及哪些事件开启了接收回调通知。
+        /// 
+        /// 默认接口请求频率限制：100次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventConfigRequest"/></param>
+        /// <returns><see cref="DescribeEventConfigResponse"/></returns>
+        public async Task<DescribeEventConfigResponse> DescribeEventConfig(DescribeEventConfigRequest req)
+        {
+             JsonResponseModel<DescribeEventConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEventConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 腾讯云点播为客户提供了媒体上传、媒体管理、媒体处理等等服务，在这些服务执行过程或执行结束时，腾讯云点播也提供各种对应的事件通知，方便开发者感知服务处理状态，并做下一步的业务操作。
+        /// 
+        /// 开发者可以通过本接口来查询当前配置事件通知的接收方式、接收地址以及哪些事件开启了接收回调通知。
+        /// 
+        /// 默认接口请求频率限制：100次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventConfigRequest"/></param>
+        /// <returns><see cref="DescribeEventConfigResponse"/></returns>
+        public DescribeEventConfigResponse DescribeEventConfigSync(DescribeEventConfigRequest req)
+        {
+             JsonResponseModel<DescribeEventConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEventConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 该接口用于业务服务器获取 [可靠回调](https://cloud.tencent.com/document/product/266/33779#.E5.8F.AF.E9.9D.A0.E5.9B.9E.E8.B0.83) 事件通知的状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeEventsStateRequest"/></param>

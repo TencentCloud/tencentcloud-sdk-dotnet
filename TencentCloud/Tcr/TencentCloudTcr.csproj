@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.266</VersionPrefix>
+    <VersionPrefix>3.0.267</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -152,6 +152,8 @@
     <Compile Include="V20190924\Models\DescribeNamespacesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstancesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstancesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeRepositoriesRequest.cs" />
