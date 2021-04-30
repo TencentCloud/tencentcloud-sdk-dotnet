@@ -15,27 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cme.V20191029.Models
+namespace TencentCloud.Tsw.V20210412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateProjectResponse : AbstractModel
+    public class DescribeTokenResponse : AbstractModel
     {
         
         /// <summary>
-        /// 项目 Id。
+        /// token
         /// </summary>
-        [JsonProperty("ProjectId")]
-        public string ProjectId{ get; set; }
-
-        /// <summary>
-        /// 输入源推流信息。
-        ///  <li> 当 Catagory 为 STREAM_CONNECT 时，数组返回长度为 2 ，第 0 个代表主输入源，第 1 个代表备输入源。只有当各自输入源类型为推流时才有有效内容。</li>
-        /// </summary>
-        [JsonProperty("RtmpPushInputInfoSet")]
-        public RtmpPushInputInfo[] RtmpPushInputInfoSet{ get; set; }
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,8 +42,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArrayObj(map, prefix + "RtmpPushInputInfoSet.", this.RtmpPushInputInfoSet);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

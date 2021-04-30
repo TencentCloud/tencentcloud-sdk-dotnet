@@ -132,5 +132,45 @@ namespace TencentCloud.Tsw.V20210412
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 查询token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public async Task<DescribeTokenResponse> DescribeToken(DescribeTokenRequest req)
+        {
+             JsonResponseModel<DescribeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询token
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTokenRequest"/></param>
+        /// <returns><see cref="DescribeTokenResponse"/></returns>
+        public DescribeTokenResponse DescribeTokenSync(DescribeTokenRequest req)
+        {
+             JsonResponseModel<DescribeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

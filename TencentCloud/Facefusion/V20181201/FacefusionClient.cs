@@ -137,7 +137,7 @@ namespace TencentCloud.Facefusion.V20181201
         }
 
         /// <summary>
-        /// 人脸融合活动专用版
+        /// 人脸融合活动专用版，不推荐使用。人脸融合接口建议使用[人脸融合](https://cloud.tencent.com/document/product/670/31061)或[选脸融合](https://cloud.tencent.com/document/product/670/37736)接口
         /// </summary>
         /// <param name="req"><see cref="FaceFusionLiteRequest"/></param>
         /// <returns><see cref="FaceFusionLiteResponse"/></returns>
@@ -157,7 +157,7 @@ namespace TencentCloud.Facefusion.V20181201
         }
 
         /// <summary>
-        /// 人脸融合活动专用版
+        /// 人脸融合活动专用版，不推荐使用。人脸融合接口建议使用[人脸融合](https://cloud.tencent.com/document/product/670/31061)或[选脸融合](https://cloud.tencent.com/document/product/670/37736)接口
         /// </summary>
         /// <param name="req"><see cref="FaceFusionLiteRequest"/></param>
         /// <returns><see cref="FaceFusionLiteResponse"/></returns>

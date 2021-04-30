@@ -67,7 +67,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PayeeId{ get; set; }
 
         /// <summary>
-        /// 收款方姓名，微信，支付宝可选；平安模式下必传
+        /// 收款方姓名。支付宝可选；微信，平安模式下必传
         /// </summary>
         [JsonProperty("PayeeName")]
         public string PayeeName{ get; set; }

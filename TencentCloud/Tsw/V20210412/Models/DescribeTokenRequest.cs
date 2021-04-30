@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cme.V20191029.Models
+namespace TencentCloud.Tsw.V20210412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HandleStreamConnectProjectResponse : AbstractModel
+    public class DescribeTokenRequest : AbstractModel
     {
         
         /// <summary>
-        /// 输入源推流地址，当 Operation 取值 AddInput 且 InputType 为 RtmpPush 类型时有效。
+        /// 命名空间
         /// </summary>
-        [JsonProperty("StreamInputRtmpPushUrl")]
-        public string StreamInputRtmpPushUrl{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Namespace")]
+        public string Namespace{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StreamInputRtmpPushUrl", this.StreamInputRtmpPushUrl);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
         }
     }
 }
