@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.268</VersionPrefix>
+    <VersionPrefix>3.0.269</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -10830,6 +10830,26 @@
     <Compile Include="Tdmq\V20200217\Models\Topic.cs" />
     <Compile Include="Tdmq\V20200217\Models\TopicRecord.cs" />
     <Compile Include="Tdmq\V20200217\Models\VpcBindRecord.cs" />
+    <Compile Include="Tem\V20201221\TemClient.cs" />
+    <Compile Include="Tem\V20201221\Models\CosToken.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateCosTokenRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateCosTokenResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeNamespacesRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressInfo.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRule.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRuleBackend.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRulePath.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressRuleValue.cs" />
+    <Compile Include="Tem\V20201221\Models\IngressTls.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyIngressRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyIngressResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyNamespaceRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\NamespacePage.cs" />
+    <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="Tia\V20180226\TiaClient.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobRequest.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobResponse.cs" />

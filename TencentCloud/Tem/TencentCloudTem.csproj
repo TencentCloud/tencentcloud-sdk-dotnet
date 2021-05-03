@@ -1,0 +1,68 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.269</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Tem</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201221\TemClient.cs" />
+    <Compile Include="V20201221\Models\CosToken.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenRequest.cs" />
+    <Compile Include="V20201221\Models\CreateCosTokenResponse.cs" />
+    <Compile Include="V20201221\Models\CreateNamespaceRequest.cs" />
+    <Compile Include="V20201221\Models\CreateNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeNamespacesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20201221\Models\IngressInfo.cs" />
+    <Compile Include="V20201221\Models\IngressRule.cs" />
+    <Compile Include="V20201221\Models\IngressRuleBackend.cs" />
+    <Compile Include="V20201221\Models\IngressRulePath.cs" />
+    <Compile Include="V20201221\Models\IngressRuleValue.cs" />
+    <Compile Include="V20201221\Models\IngressTls.cs" />
+    <Compile Include="V20201221\Models\ModifyIngressRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyIngressResponse.cs" />
+    <Compile Include="V20201221\Models\ModifyNamespaceRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\NamespacePage.cs" />
+    <Compile Include="V20201221\Models\TemNamespaceInfo.cs" />
+  </ItemGroup>
+</Project>
