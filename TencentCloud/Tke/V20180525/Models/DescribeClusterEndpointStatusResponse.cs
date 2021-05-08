@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 查询集群访问端口状态（Created 开启成功，Creating 开启中中，NotFound 未开启）
+        /// 查询集群访问端口状态（Created 开启成功，Creating 开启中，NotFound 未开启）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

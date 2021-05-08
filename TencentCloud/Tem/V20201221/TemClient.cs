@@ -93,7 +93,47 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 创建命名空间
+        /// 生成Cos临时秘钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosTokenV2Request"/></param>
+        /// <returns><see cref="CreateCosTokenV2Response"/></returns>
+        public async Task<CreateCosTokenV2Response> CreateCosTokenV2(CreateCosTokenV2Request req)
+        {
+             JsonResponseModel<CreateCosTokenV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCosTokenV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosTokenV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成Cos临时秘钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCosTokenV2Request"/></param>
+        /// <returns><see cref="CreateCosTokenV2Response"/></returns>
+        public CreateCosTokenV2Response CreateCosTokenV2Sync(CreateCosTokenV2Request req)
+        {
+             JsonResponseModel<CreateCosTokenV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCosTokenV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCosTokenV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建环境
         /// </summary>
         /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
         /// <returns><see cref="CreateNamespaceResponse"/></returns>
@@ -113,7 +153,7 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 创建命名空间
+        /// 创建环境
         /// </summary>
         /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
         /// <returns><see cref="CreateNamespaceResponse"/></returns>
@@ -133,7 +173,253 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 获取租户命名空间列表
+        /// 绑定云资源
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceRequest"/></param>
+        /// <returns><see cref="CreateResourceResponse"/></returns>
+        public async Task<CreateResourceResponse> CreateResource(CreateResourceRequest req)
+        {
+             JsonResponseModel<CreateResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定云资源
+        /// </summary>
+        /// <param name="req"><see cref="CreateResourceRequest"/></param>
+        /// <returns><see cref="CreateResourceResponse"/></returns>
+        public CreateResourceResponse CreateResourceSync(CreateResourceRequest req)
+        {
+             JsonResponseModel<CreateResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceV2Request"/></param>
+        /// <returns><see cref="CreateServiceV2Response"/></returns>
+        public async Task<CreateServiceV2Response> CreateServiceV2(CreateServiceV2Request req)
+        {
+             JsonResponseModel<CreateServiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateServiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateServiceV2Request"/></param>
+        /// <returns><see cref="CreateServiceV2Response"/></returns>
+        public CreateServiceV2Response CreateServiceV2Sync(CreateServiceV2Request req)
+        {
+             JsonResponseModel<CreateServiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateServiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Ingress 规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIngressRequest"/></param>
+        /// <returns><see cref="DeleteIngressResponse"/></returns>
+        public async Task<DeleteIngressResponse> DeleteIngress(DeleteIngressRequest req)
+        {
+             JsonResponseModel<DeleteIngressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIngress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIngressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Ingress 规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIngressRequest"/></param>
+        /// <returns><see cref="DeleteIngressResponse"/></returns>
+        public DeleteIngressResponse DeleteIngressSync(DeleteIngressRequest req)
+        {
+             JsonResponseModel<DeleteIngressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIngress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIngressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务部署
+        ///  - 创建新版本
+        ///  - 部署新版本
+        ///  - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
+        /// </summary>
+        /// <param name="req"><see cref="DeployServiceV2Request"/></param>
+        /// <returns><see cref="DeployServiceV2Response"/></returns>
+        public async Task<DeployServiceV2Response> DeployServiceV2(DeployServiceV2Request req)
+        {
+             JsonResponseModel<DeployServiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeployServiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployServiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务部署
+        ///  - 创建新版本
+        ///  - 部署新版本
+        ///  - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
+        /// </summary>
+        /// <param name="req"><see cref="DeployServiceV2Request"/></param>
+        /// <returns><see cref="DeployServiceV2Response"/></returns>
+        public DeployServiceV2Response DeployServiceV2Sync(DeployServiceV2Request req)
+        {
+             JsonResponseModel<DeployServiceV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeployServiceV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployServiceV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 Ingress 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIngressRequest"/></param>
+        /// <returns><see cref="DescribeIngressResponse"/></returns>
+        public async Task<DescribeIngressResponse> DescribeIngress(DescribeIngressRequest req)
+        {
+             JsonResponseModel<DescribeIngressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIngress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIngressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 Ingress 规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIngressRequest"/></param>
+        /// <returns><see cref="DescribeIngressResponse"/></returns>
+        public DescribeIngressResponse DescribeIngressSync(DescribeIngressRequest req)
+        {
+             JsonResponseModel<DescribeIngressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIngress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIngressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 Ingress 规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIngressesRequest"/></param>
+        /// <returns><see cref="DescribeIngressesResponse"/></returns>
+        public async Task<DescribeIngressesResponse> DescribeIngresses(DescribeIngressesRequest req)
+        {
+             JsonResponseModel<DescribeIngressesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIngresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIngressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 Ingress 规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIngressesRequest"/></param>
+        /// <returns><see cref="DescribeIngressesResponse"/></returns>
+        public DescribeIngressesResponse DescribeIngressesSync(DescribeIngressesRequest req)
+        {
+             JsonResponseModel<DescribeIngressesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIngresses");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIngressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取租户环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNamespacesRequest"/></param>
         /// <returns><see cref="DescribeNamespacesResponse"/></returns>
@@ -153,7 +439,7 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 获取租户命名空间列表
+        /// 获取租户环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNamespacesRequest"/></param>
         /// <returns><see cref="DescribeNamespacesResponse"/></returns>
@@ -164,6 +450,46 @@ namespace TencentCloud.Tem.V20201221
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNamespaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取服务下面运行pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceRunPodListV2Request"/></param>
+        /// <returns><see cref="DescribeServiceRunPodListV2Response"/></returns>
+        public async Task<DescribeServiceRunPodListV2Response> DescribeServiceRunPodListV2(DescribeServiceRunPodListV2Request req)
+        {
+             JsonResponseModel<DescribeServiceRunPodListV2Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceRunPodListV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceRunPodListV2Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取服务下面运行pod列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceRunPodListV2Request"/></param>
+        /// <returns><see cref="DescribeServiceRunPodListV2Response"/></returns>
+        public DescribeServiceRunPodListV2Response DescribeServiceRunPodListV2Sync(DescribeServiceRunPodListV2Request req)
+        {
+             JsonResponseModel<DescribeServiceRunPodListV2Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceRunPodListV2");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceRunPodListV2Response>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,7 +539,7 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 编辑命名空间
+        /// 编辑环境
         /// </summary>
         /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
         /// <returns><see cref="ModifyNamespaceResponse"/></returns>
@@ -233,7 +559,7 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
-        /// 编辑命名空间
+        /// 编辑环境
         /// </summary>
         /// <param name="req"><see cref="ModifyNamespaceRequest"/></param>
         /// <returns><see cref="ModifyNamespaceResponse"/></returns>

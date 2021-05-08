@@ -99,6 +99,58 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（AssociateInstancesKeyPairs）用于绑定用户指定密钥对到实例。
+        /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后绑定。
+        /// * 将密钥的公钥写入到实例的 SSH 配置当中，用户就可以通过该密钥的私钥来登录实例。
+        /// * 如果实例原来绑定过密钥，那么原来的密钥将失效。
+        /// * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="AssociateInstancesKeyPairsResponse"/></returns>
+        public async Task<AssociateInstancesKeyPairsResponse> AssociateInstancesKeyPairs(AssociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<AssociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AssociateInstancesKeyPairs）用于绑定用户指定密钥对到实例。
+        /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后绑定。
+        /// * 将密钥的公钥写入到实例的 SSH 配置当中，用户就可以通过该密钥的私钥来登录实例。
+        /// * 如果实例原来绑定过密钥，那么原来的密钥将失效。
+        /// * 如果实例原来是通过密码登录，绑定密钥后无法使用密码登录。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。如果批量实例存在不允许操作的实例，操作会以特定错误码返回。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="AssociateInstancesKeyPairsResponse"/></returns>
+        public AssociateInstancesKeyPairsResponse AssociateInstancesKeyPairsSync(AssociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<AssociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateBlueprint) 用于创建镜像。
         /// </summary>
         /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
@@ -239,6 +291,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（CreateKeyPair）用于创建一个密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
+        /// <returns><see cref="CreateKeyPairResponse"/></returns>
+        public async Task<CreateKeyPairResponse> CreateKeyPair(CreateKeyPairRequest req)
+        {
+             JsonResponseModel<CreateKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateKeyPair）用于创建一个密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
+        /// <returns><see cref="CreateKeyPairResponse"/></returns>
+        public CreateKeyPairResponse CreateKeyPairSync(CreateKeyPairRequest req)
+        {
+             JsonResponseModel<CreateKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DeleteBlueprints) 用于删除镜像。
         /// </summary>
         /// <param name="req"><see cref="DeleteBlueprintsRequest"/></param>
@@ -337,6 +429,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DeleteKeyPairs）用于删除密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKeyPairsRequest"/></param>
+        /// <returns><see cref="DeleteKeyPairsResponse"/></returns>
+        public async Task<DeleteKeyPairsResponse> DeleteKeyPairs(DeleteKeyPairsRequest req)
+        {
+             JsonResponseModel<DeleteKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteKeyPairs）用于删除密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteKeyPairsRequest"/></param>
+        /// <returns><see cref="DeleteKeyPairsResponse"/></returns>
+        public DeleteKeyPairsResponse DeleteKeyPairsSync(DeleteKeyPairsRequest req)
+        {
+             JsonResponseModel<DeleteKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteSnapshots）用于删除快照。
         /// 快照必须处于 NORMAL 状态，快照状态可以通过 DescribeSnapshots 接口查询，见输出参数中 SnapshotState 字段解释。
         /// </summary>
@@ -370,6 +502,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSnapshots");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSnapshotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintInstancesRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintInstancesResponse"/></returns>
+        public async Task<DescribeBlueprintInstancesResponse> DescribeBlueprintInstances(DescribeBlueprintInstancesRequest req)
+        {
+             JsonResponseModel<DescribeBlueprintInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlueprintInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlueprintInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBlueprintInstances）用于查询镜像实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlueprintInstancesRequest"/></param>
+        /// <returns><see cref="DescribeBlueprintInstancesResponse"/></returns>
+        public DescribeBlueprintInstancesResponse DescribeBlueprintInstancesSync(DescribeBlueprintInstancesRequest req)
+        {
+             JsonResponseModel<DescribeBlueprintInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlueprintInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlueprintInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -499,6 +671,176 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模版。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallRulesTemplateRequest"/></param>
+        /// <returns><see cref="DescribeFirewallRulesTemplateResponse"/></returns>
+        public async Task<DescribeFirewallRulesTemplateResponse> DescribeFirewallRulesTemplate(DescribeFirewallRulesTemplateRequest req)
+        {
+             JsonResponseModel<DescribeFirewallRulesTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirewallRulesTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallRulesTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模版。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirewallRulesTemplateRequest"/></param>
+        /// <returns><see cref="DescribeFirewallRulesTemplateResponse"/></returns>
+        public DescribeFirewallRulesTemplateResponse DescribeFirewallRulesTemplateSync(DescribeFirewallRulesTemplateRequest req)
+        {
+             JsonResponseModel<DescribeFirewallRulesTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirewallRulesTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirewallRulesTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralResourceQuotasRequest"/></param>
+        /// <returns><see cref="DescribeGeneralResourceQuotasResponse"/></returns>
+        public async Task<DescribeGeneralResourceQuotasResponse> DescribeGeneralResourceQuotas(DescribeGeneralResourceQuotasRequest req)
+        {
+             JsonResponseModel<DescribeGeneralResourceQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGeneralResourceQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralResourceQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeGeneralResourceQuotas）用于查询通用资源配额信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralResourceQuotasRequest"/></param>
+        /// <returns><see cref="DescribeGeneralResourceQuotasResponse"/></returns>
+        public DescribeGeneralResourceQuotasResponse DescribeGeneralResourceQuotasSync(DescribeGeneralResourceQuotasRequest req)
+        {
+             JsonResponseModel<DescribeGeneralResourceQuotasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGeneralResourceQuotas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralResourceQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询实例默认登录密钥属性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
+        public async Task<DescribeInstanceLoginKeyPairAttributeResponse> DescribeInstanceLoginKeyPairAttribute(DescribeInstanceLoginKeyPairAttributeRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLoginKeyPairAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceLoginKeyPairAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLoginKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询实例默认登录密钥属性。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceLoginKeyPairAttributeRequest"/></param>
+        /// <returns><see cref="DescribeInstanceLoginKeyPairAttributeResponse"/></returns>
+        public DescribeInstanceLoginKeyPairAttributeResponse DescribeInstanceLoginKeyPairAttributeSync(DescribeInstanceLoginKeyPairAttributeRequest req)
+        {
+             JsonResponseModel<DescribeInstanceLoginKeyPairAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceLoginKeyPairAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLoginKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceVncUrl）用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
+        /// 
+        /// * 处于 RUNNING 状态的机器可使用此功能。
+        /// * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
+        /// * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
+        /// * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
+        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
+        public async Task<DescribeInstanceVncUrlResponse> DescribeInstanceVncUrl(DescribeInstanceVncUrlRequest req)
+        {
+             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceVncUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstanceVncUrl）用于查询实例管理终端地址，获取的地址可用于实例的 VNC 登录。
+        /// 
+        /// * 处于 RUNNING 状态的机器可使用此功能。
+        /// * 管理终端地址的有效期为 15 秒，调用接口成功后如果 15 秒内不使用该链接进行访问，管理终端地址自动失效，您需要重新查询。
+        /// * 管理终端地址一旦被访问，将自动失效，您需要重新查询。
+        /// * 如果连接断开，每分钟内重新连接的次数不能超过 30 次。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceVncUrlRequest"/></param>
+        /// <returns><see cref="DescribeInstanceVncUrlResponse"/></returns>
+        public DescribeInstanceVncUrlResponse DescribeInstanceVncUrlSync(DescribeInstanceVncUrlRequest req)
+        {
+             JsonResponseModel<DescribeInstanceVncUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceVncUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceVncUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstances）用于查询一个或多个实例的详细信息。
         /// 
         /// * 可以根据实例 ID、实例名称或者实例的内网 IP 查询实例的详细信息。
@@ -549,6 +891,86 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeInstancesDeniedActions）用于查询一个或多个实例的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDeniedActionsResponse"/></returns>
+        public async Task<DescribeInstancesDeniedActionsResponse> DescribeInstancesDeniedActions(DescribeInstancesDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstancesDeniedActions）用于查询一个或多个实例的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDeniedActionsResponse"/></returns>
+        public DescribeInstancesDeniedActionsResponse DescribeInstancesDeniedActionsSync(DescribeInstancesDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstancesReturnable）用于查询实例是否可退还。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesReturnableRequest"/></param>
+        /// <returns><see cref="DescribeInstancesReturnableResponse"/></returns>
+        public async Task<DescribeInstancesReturnableResponse> DescribeInstancesReturnable(DescribeInstancesReturnableRequest req)
+        {
+             JsonResponseModel<DescribeInstancesReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesReturnableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeInstancesReturnable）用于查询实例是否可退还。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesReturnableRequest"/></param>
+        /// <returns><see cref="DescribeInstancesReturnableResponse"/></returns>
+        public DescribeInstancesReturnableResponse DescribeInstancesReturnableSync(DescribeInstancesReturnableRequest req)
+        {
+             JsonResponseModel<DescribeInstancesReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesReturnableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstancesTrafficPackages）用于查询一个或多个实例的流量包详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesTrafficPackagesRequest"/></param>
@@ -580,6 +1002,166 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesTrafficPackages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeKeyPairs) 用于查询用户密钥对信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeyPairsRequest"/></param>
+        /// <returns><see cref="DescribeKeyPairsResponse"/></returns>
+        public async Task<DescribeKeyPairsResponse> DescribeKeyPairs(DescribeKeyPairsRequest req)
+        {
+             JsonResponseModel<DescribeKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeKeyPairs) 用于查询用户密钥对信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKeyPairsRequest"/></param>
+        /// <returns><see cref="DescribeKeyPairsResponse"/></returns>
+        public DescribeKeyPairsResponse DescribeKeyPairsSync(DescribeKeyPairsRequest req)
+        {
+             JsonResponseModel<DescribeKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyInstanceBundlesRequest"/></param>
+        /// <returns><see cref="DescribeModifyInstanceBundlesResponse"/></returns>
+        public async Task<DescribeModifyInstanceBundlesResponse> DescribeModifyInstanceBundles(DescribeModifyInstanceBundlesRequest req)
+        {
+             JsonResponseModel<DescribeModifyInstanceBundlesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeModifyInstanceBundles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyInstanceBundlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeModifyInstanceBundles）用于查询实例可变更套餐列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeModifyInstanceBundlesRequest"/></param>
+        /// <returns><see cref="DescribeModifyInstanceBundlesResponse"/></returns>
+        public DescribeModifyInstanceBundlesResponse DescribeModifyInstanceBundlesSync(DescribeModifyInstanceBundlesRequest req)
+        {
+             JsonResponseModel<DescribeModifyInstanceBundlesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeModifyInstanceBundles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeModifyInstanceBundlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRegions）用于查询地域信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public async Task<DescribeRegionsResponse> DescribeRegions(DescribeRegionsRequest req)
+        {
+             JsonResponseModel<DescribeRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeRegions）用于查询地域信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
+        /// <returns><see cref="DescribeRegionsResponse"/></returns>
+        public DescribeRegionsResponse DescribeRegionsSync(DescribeRegionsRequest req)
+        {
+             JsonResponseModel<DescribeRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询重置实例的镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResetInstanceBlueprintsRequest"/></param>
+        /// <returns><see cref="DescribeResetInstanceBlueprintsResponse"/></returns>
+        public async Task<DescribeResetInstanceBlueprintsResponse> DescribeResetInstanceBlueprints(DescribeResetInstanceBlueprintsRequest req)
+        {
+             JsonResponseModel<DescribeResetInstanceBlueprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResetInstanceBlueprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResetInstanceBlueprintsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询重置实例的镜像信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResetInstanceBlueprintsRequest"/></param>
+        /// <returns><see cref="DescribeResetInstanceBlueprintsResponse"/></returns>
+        public DescribeResetInstanceBlueprintsResponse DescribeResetInstanceBlueprintsSync(DescribeResetInstanceBlueprintsRequest req)
+        {
+             JsonResponseModel<DescribeResetInstanceBlueprintsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResetInstanceBlueprints");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResetInstanceBlueprintsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -629,6 +1211,258 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeSnapshotsDeniedActions）用于查询一个或多个快照的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsDeniedActionsResponse"/></returns>
+        public async Task<DescribeSnapshotsDeniedActionsResponse> DescribeSnapshotsDeniedActions(DescribeSnapshotsDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotsDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeSnapshotsDeniedActions）用于查询一个或多个快照的操作限制列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotsDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotsDeniedActionsResponse"/></returns>
+        public DescribeSnapshotsDeniedActionsResponse DescribeSnapshotsDeniedActionsSync(DescribeSnapshotsDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotsDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotsDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotsDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
+        /// 
+        /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
+        /// * 解绑密钥后，实例可以通过原来设置的密码登录。
+        /// * 如果原来没有设置密码，解绑后将无法使用 SSH 登录。可以调用 ResetInstancesPassword 接口来设置登录密码。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="DisassociateInstancesKeyPairsResponse"/></returns>
+        public async Task<DisassociateInstancesKeyPairsResponse> DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
+        /// 
+        /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
+        /// * 解绑密钥后，实例可以通过原来设置的密码登录。
+        /// * 如果原来没有设置密码，解绑后将无法使用 SSH 登录。可以调用 ResetInstancesPassword 接口来设置登录密码。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="DisassociateInstancesKeyPairsResponse"/></returns>
+        public DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairsSync(DisassociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ImportKeyPair）用于导入用户指定密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="ImportKeyPairRequest"/></param>
+        /// <returns><see cref="ImportKeyPairResponse"/></returns>
+        public async Task<ImportKeyPairResponse> ImportKeyPair(ImportKeyPairRequest req)
+        {
+             JsonResponseModel<ImportKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ImportKeyPair）用于导入用户指定密钥对。
+        /// </summary>
+        /// <param name="req"><see cref="ImportKeyPairRequest"/></param>
+        /// <returns><see cref="ImportKeyPairResponse"/></returns>
+        public ImportKeyPairResponse ImportKeyPairSync(ImportKeyPairRequest req)
+        {
+             JsonResponseModel<ImportKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquirePriceCreateBlueprint) 用于创建镜像询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateBlueprintRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateBlueprintResponse"/></returns>
+        public async Task<InquirePriceCreateBlueprintResponse> InquirePriceCreateBlueprint(InquirePriceCreateBlueprintRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateBlueprintResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateBlueprint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateBlueprintResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquirePriceCreateBlueprint) 用于创建镜像询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateBlueprintRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateBlueprintResponse"/></returns>
+        public InquirePriceCreateBlueprintResponse InquirePriceCreateBlueprintSync(InquirePriceCreateBlueprintRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateBlueprintResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateBlueprint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateBlueprintResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquiryPriceCreateInstances）用于创建实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateInstancesResponse"/></returns>
+        public async Task<InquirePriceCreateInstancesResponse> InquirePriceCreateInstances(InquirePriceCreateInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquiryPriceCreateInstances）用于创建实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateInstancesResponse"/></returns>
+        public InquirePriceCreateInstancesResponse InquirePriceCreateInstancesSync(InquirePriceCreateInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceCreateInstances）用于续费实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>
+        public async Task<InquirePriceRenewInstancesResponse> InquirePriceRenewInstances(InquirePriceRenewInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceCreateInstances）用于续费实例询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>
+        public InquirePriceRenewInstancesResponse InquirePriceRenewInstancesSync(InquirePriceRenewInstancesRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyBlueprintAttributeRequest"/></param>
@@ -660,6 +1494,262 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlueprintAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
+        /// 
+        /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
+        /// 
+        /// 在 FirewallRule 参数中：
+        /// * Protocol 字段支持输入 TCP，UDP，ICMP，ALL。
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
+        /// * Action 字段只允许输入 ACCEPT 或 DROP。
+        /// * FirewallRuleDescription 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallRuleDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyFirewallRuleDescriptionResponse"/></returns>
+        public async Task<ModifyFirewallRuleDescriptionResponse> ModifyFirewallRuleDescription(ModifyFirewallRuleDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyFirewallRuleDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFirewallRuleDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallRuleDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyFirewallRuleDescription）用于修改单条防火墙规则描述。
+        /// 
+        /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接修改防火墙规则备注。
+        /// 
+        /// 在 FirewallRule 参数中：
+        /// * Protocol 字段支持输入 TCP，UDP，ICMP，ALL。
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
+        /// * Action 字段只允许输入 ACCEPT 或 DROP。
+        /// * FirewallRuleDescription 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallRuleDescriptionRequest"/></param>
+        /// <returns><see cref="ModifyFirewallRuleDescriptionResponse"/></returns>
+        public ModifyFirewallRuleDescriptionResponse ModifyFirewallRuleDescriptionSync(ModifyFirewallRuleDescriptionRequest req)
+        {
+             JsonResponseModel<ModifyFirewallRuleDescriptionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFirewallRuleDescription");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallRuleDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyFirewallRules）用于重置实例防火墙规则。
+        /// 
+        /// 本接口先删除当前实例的所有防火墙规则，然后添加新的规则。
+        /// 
+        /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接重置防火墙规则。
+        /// 
+        /// 在 FirewallRules 参数中：
+        /// * Protocol 字段支持输入 TCP，UDP，ICMP，ALL。
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
+        /// * Action 字段只允许输入 ACCEPT 或 DROP。
+        /// * FirewallRuleDescription 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallRulesRequest"/></param>
+        /// <returns><see cref="ModifyFirewallRulesResponse"/></returns>
+        public async Task<ModifyFirewallRulesResponse> ModifyFirewallRules(ModifyFirewallRulesRequest req)
+        {
+             JsonResponseModel<ModifyFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyFirewallRules）用于重置实例防火墙规则。
+        /// 
+        /// 本接口先删除当前实例的所有防火墙规则，然后添加新的规则。
+        /// 
+        /// * FirewallVersion 用于指定要操作的防火墙的版本。传入 FirewallVersion 版本号若不等于当前防火墙的最新版本，将返回失败；若不传 FirewallVersion 则直接重置防火墙规则。
+        /// 
+        /// 在 FirewallRules 参数中：
+        /// * Protocol 字段支持输入 TCP，UDP，ICMP，ALL。
+        /// * Port 字段允许输入 ALL，或者一个单独的端口号，或者用逗号分隔的离散端口号，或者用减号分隔的两个端口号代表的端口范围。当 Port 为范围时，减号分隔的第一个端口号小于第二个端口号。当 Protocol 字段不是 TCP 或 UDP 时，Port 字段只能为空或 ALL。Port 字段长度不得超过 64。
+        /// * CidrBlock 字段允许输入符合 cidr 格式标准的任意字符串。租户之间网络隔离规则优先于防火墙中的内网规则。
+        /// * Action 字段只允许输入 ACCEPT 或 DROP。
+        /// * FirewallRuleDescription 字段长度不得超过 64。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFirewallRulesRequest"/></param>
+        /// <returns><see cref="ModifyFirewallRulesResponse"/></returns>
+        public ModifyFirewallRulesResponse ModifyFirewallRulesSync(ModifyFirewallRulesRequest req)
+        {
+             JsonResponseModel<ModifyFirewallRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFirewallRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFirewallRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancesAttribute）用于修改实例的属性。
+        /// * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
+        public async Task<ModifyInstancesAttributeResponse> ModifyInstancesAttribute(ModifyInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyInstancesAttribute）用于修改实例的属性。
+        /// * “实例名称”仅为方便用户自己管理之用，腾讯云并不以此名称作为提交工单或是进行实例管理操作的依据。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesAttributeResponse"/></returns>
+        public ModifyInstancesAttributeResponse ModifyInstancesAttributeSync(ModifyInstancesAttributeRequest req)
+        {
+             JsonResponseModel<ModifyInstancesAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancesAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于设置实例默认登录密钥对属性。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
+        public async Task<ModifyInstancesLoginKeyPairAttributeResponse> ModifyInstancesLoginKeyPairAttribute(ModifyInstancesLoginKeyPairAttributeRequest req)
+        {
+             JsonResponseModel<ModifyInstancesLoginKeyPairAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancesLoginKeyPairAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesLoginKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于设置实例默认登录密钥对属性。
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesLoginKeyPairAttributeRequest"/></param>
+        /// <returns><see cref="ModifyInstancesLoginKeyPairAttributeResponse"/></returns>
+        public ModifyInstancesLoginKeyPairAttributeResponse ModifyInstancesLoginKeyPairAttributeSync(ModifyInstancesLoginKeyPairAttributeRequest req)
+        {
+             JsonResponseModel<ModifyInstancesLoginKeyPairAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancesLoginKeyPairAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesLoginKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInstancesRenewFlag) 用于修改包年包月实例续费标识。
+        /// 
+        /// * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
+        /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
+        public async Task<ModifyInstancesRenewFlagResponse> ModifyInstancesRenewFlag(ModifyInstancesRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyInstancesRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancesRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInstancesRenewFlag) 用于修改包年包月实例续费标识。
+        /// 
+        /// * 实例被标识为自动续费后，每次在实例到期时，会自动续费一个月。
+        /// * 支持批量操作。每次请求批量实例的上限为100。
+        /// * 实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态(LatestOperationState)为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancesRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyInstancesRenewFlagResponse"/></returns>
+        public ModifyInstancesRenewFlagResponse ModifyInstancesRenewFlagSync(ModifyInstancesRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyInstancesRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancesRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancesRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -811,6 +1901,52 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（ResetInstancesPassword）用于将实例操作系统的密码重置为用户指定的密码。
+        /// * 只修改管理员帐号的密码。实例的操作系统不同，管理员帐号也会不一样（Windows 为 Administrator，Ubuntu 为 ubuntu ，其它系统为 root）。
+        /// * 支持批量操作。将多个实例操作系统的密码重置为相同的密码。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public async Task<ResetInstancesPasswordResponse> ResetInstancesPassword(ResetInstancesPasswordRequest req)
+        {
+             JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetInstancesPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ResetInstancesPassword）用于将实例操作系统的密码重置为用户指定的密码。
+        /// * 只修改管理员帐号的密码。实例的操作系统不同，管理员帐号也会不一样（Windows 为 Administrator，Ubuntu 为 ubuntu ，其它系统为 root）。
+        /// * 支持批量操作。将多个实例操作系统的密码重置为相同的密码。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="ResetInstancesPasswordRequest"/></param>
+        /// <returns><see cref="ResetInstancesPasswordResponse"/></returns>
+        public ResetInstancesPasswordResponse ResetInstancesPasswordSync(ResetInstancesPasswordRequest req)
+        {
+             JsonResponseModel<ResetInstancesPasswordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetInstancesPassword");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetInstancesPasswordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（StartInstances）用于启动一个或多个实例。
         /// 
         /// * 只有状态为 STOPPED 的实例才可以进行此操作。
@@ -900,6 +2036,54 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "StopInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateInstances) 用于退还实例。
+        /// 
+        /// * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。
+        /// * 支持批量操作，每次请求批量实例的上限为100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态 (LatestOperationState) 为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
+        /// <returns><see cref="TerminateInstancesResponse"/></returns>
+        public async Task<TerminateInstancesResponse> TerminateInstances(TerminateInstancesRequest req)
+        {
+             JsonResponseModel<TerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (TerminateInstances) 用于退还实例。
+        /// 
+        /// * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。
+        /// * 支持批量操作，每次请求批量实例的上限为100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态 (LatestOperationState) 为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateInstancesRequest"/></param>
+        /// <returns><see cref="TerminateInstancesResponse"/></returns>
+        public TerminateInstancesResponse TerminateInstancesSync(TerminateInstancesRequest req)
+        {
+             JsonResponseModel<TerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

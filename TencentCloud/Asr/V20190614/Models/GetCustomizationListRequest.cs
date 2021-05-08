@@ -31,13 +31,13 @@ namespace TencentCloud.Asr.V20190614.Models
         public string[] TagInfos{ get; set; }
 
         /// <summary>
-        /// 分页大小
+        /// 分页大小，默认1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页offset
+        /// 分页offset，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

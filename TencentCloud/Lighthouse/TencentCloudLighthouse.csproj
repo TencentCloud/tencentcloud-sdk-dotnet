@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.271</VersionPrefix>
+    <VersionPrefix>3.0.272</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,7 +47,11 @@
     <Compile Include="V20200324\LighthouseClient.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotResponse.cs" />
+    <Compile Include="V20200324\Models\AssociateInstancesKeyPairsRequest.cs" />
+    <Compile Include="V20200324\Models\AssociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\Blueprint.cs" />
+    <Compile Include="V20200324\Models\BlueprintInstance.cs" />
+    <Compile Include="V20200324\Models\BlueprintPrice.cs" />
     <Compile Include="V20200324\Models\Bundle.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintResponse.cs" />
@@ -55,47 +59,111 @@
     <Compile Include="V20200324\Models\CreateFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotRequest.cs" />
     <Compile Include="V20200324\Models\CreateInstanceSnapshotResponse.cs" />
+    <Compile Include="V20200324\Models\CreateKeyPairRequest.cs" />
+    <Compile Include="V20200324\Models\CreateKeyPairResponse.cs" />
     <Compile Include="V20200324\Models\DeleteBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteBlueprintsResponse.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DeleteFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DeleteKeyPairsRequest.cs" />
+    <Compile Include="V20200324\Models\DeleteKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="V20200324\Models\DeleteSnapshotsResponse.cs" />
+    <Compile Include="V20200324\Models\DeniedAction.cs" />
+    <Compile Include="V20200324\Models\DescribeBlueprintInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeGeneralResourceQuotasResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstanceLoginKeyPairAttributeRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstanceLoginKeyPairAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstanceVncUrlRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesDeniedActionsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesDeniedActionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesReturnableRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesReturnableResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesTrafficPackagesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesTrafficPackagesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeKeyPairsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeModifyInstanceBundlesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeModifyInstanceBundlesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeResetInstanceBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeSnapshotsDeniedActionsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeSnapshotsResponse.cs" />
+    <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
+    <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\Filter.cs" />
     <Compile Include="V20200324\Models\FirewallRule.cs" />
     <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
+    <Compile Include="V20200324\Models\GeneralResourceQuota.cs" />
+    <Compile Include="V20200324\Models\ImportKeyPairRequest.cs" />
+    <Compile Include="V20200324\Models\ImportKeyPairResponse.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateBlueprintRequest.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateBlueprintResponse.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\InquirePriceRenewInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\InquirePriceRenewInstancesResponse.cs" />
     <Compile Include="V20200324\Models\Instance.cs" />
+    <Compile Include="V20200324\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20200324\Models\InstanceDeniedActions.cs" />
     <Compile Include="V20200324\Models\InstancePrice.cs" />
+    <Compile Include="V20200324\Models\InstanceReturnable.cs" />
     <Compile Include="V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="V20200324\Models\InternetAccessible.cs" />
+    <Compile Include="V20200324\Models\KeyPair.cs" />
     <Compile Include="V20200324\Models\LoginSettings.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyBundle.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallRulesRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyFirewallRulesResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesAttributeRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesLoginKeyPairAttributeRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesLoginKeyPairAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesRenewFlagRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyInstancesRenewFlagResponse.cs" />
     <Compile Include="V20200324\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifySnapshotAttributeResponse.cs" />
     <Compile Include="V20200324\Models\Price.cs" />
     <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\RegionInfo.cs" />
+    <Compile Include="V20200324\Models\ResetInstanceBlueprint.cs" />
     <Compile Include="V20200324\Models\ResetInstanceRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />
+    <Compile Include="V20200324\Models\ResetInstancesPasswordRequest.cs" />
+    <Compile Include="V20200324\Models\ResetInstancesPasswordResponse.cs" />
     <Compile Include="V20200324\Models\Snapshot.cs" />
+    <Compile Include="V20200324\Models\SnapshotDeniedActions.cs" />
+    <Compile Include="V20200324\Models\Software.cs" />
+    <Compile Include="V20200324\Models\SoftwareDetail.cs" />
     <Compile Include="V20200324\Models\StartInstancesRequest.cs" />
     <Compile Include="V20200324\Models\StartInstancesResponse.cs" />
     <Compile Include="V20200324\Models\StopInstancesRequest.cs" />
     <Compile Include="V20200324\Models\StopInstancesResponse.cs" />
     <Compile Include="V20200324\Models\SystemDisk.cs" />
+    <Compile Include="V20200324\Models\TerminateInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\TerminateInstancesResponse.cs" />
     <Compile Include="V20200324\Models\TrafficPackage.cs" />
   </ItemGroup>
 </Project>

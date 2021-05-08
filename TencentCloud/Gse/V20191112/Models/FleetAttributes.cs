@@ -161,6 +161,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("RelatedCcnInfos")]
         public RelatedCcnInfo[] RelatedCcnInfos{ get; set; }
 
+        /// <summary>
+        /// fleet公网出带宽最大值，默认100Mbps，范围1-200Mbps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternetMaxBandwidthOut")]
+        public long? InternetMaxBandwidthOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +194,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamArrayObj(map, prefix + "DataDiskInfo.", this.DataDiskInfo);
             this.SetParamObj(map, prefix + "SystemDiskInfo.", this.SystemDiskInfo);
             this.SetParamArrayObj(map, prefix + "RelatedCcnInfos.", this.RelatedCcnInfos);
+            this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
         }
     }
 }

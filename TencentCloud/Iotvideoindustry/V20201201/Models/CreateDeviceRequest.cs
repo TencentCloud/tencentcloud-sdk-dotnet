@@ -37,6 +37,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string PassWord{ get; set; }
 
         /// <summary>
+        /// 设备类型 2:国标IPC设备; 3:NVR设备
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public long? DeviceType{ get; set; }
+
+        /// <summary>
         /// 设备需要绑定的分组ID，参数为空则默认绑定到根分组
         /// </summary>
         [JsonProperty("GroupId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "PassWord", this.PassWord);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }

@@ -31,7 +31,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string VocabId{ get; set; }
 
         /// <summary>
-        /// 热词表名称
+        /// 热词表名称，长度在1-255之间
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -50,7 +50,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string WordWeightStr{ get; set; }
 
         /// <summary>
-        /// 热词表描述
+        /// 热词表描述，长度在0-1000之间
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

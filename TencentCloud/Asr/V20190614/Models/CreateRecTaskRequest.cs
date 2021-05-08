@@ -62,13 +62,13 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? SourceType{ get; set; }
 
         /// <summary>
-        /// 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)
+        /// 是否开启说话人分离，0：不开启，1：开启(仅支持8k_zh，16k_zh，16k_zh_video引擎模型，单声道音频)，默认值为 0。
         /// </summary>
         [JsonProperty("SpeakerDiarization")]
         public long? SpeakerDiarization{ get; set; }
 
         /// <summary>
-        /// 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。
+        /// 说话人分离人数（需配合开启说话人分离使用），取值范围：0-10，0代表自动分离（目前仅支持≤6个人），1-10代表指定说话人数分离。默认值为 0。
         /// 注：话者分离目前是beta版本，请根据您的需要谨慎使用
         /// </summary>
         [JsonProperty("SpeakerNumber")]
@@ -123,13 +123,13 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? ConvertNumMode{ get; set; }
 
         /// <summary>
-        /// 附加参数
+        /// 附加参数(该参数无意义，忽略即可)
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认为0。
+        /// 是否过滤标点符号（目前支持中文普通话引擎）。 0：不过滤，1：过滤句末标点，2：过滤所有标点。默认值为 0。
         /// </summary>
         [JsonProperty("FilterPunc")]
         public long? FilterPunc{ get; set; }
