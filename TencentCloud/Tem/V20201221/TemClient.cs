@@ -294,9 +294,6 @@ namespace TencentCloud.Tem.V20201221
 
         /// <summary>
         /// 服务部署
-        ///  - 创建新版本
-        ///  - 部署新版本
-        ///  - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
         /// </summary>
         /// <param name="req"><see cref="DeployServiceV2Request"/></param>
         /// <returns><see cref="DeployServiceV2Response"/></returns>
@@ -317,9 +314,6 @@ namespace TencentCloud.Tem.V20201221
 
         /// <summary>
         /// 服务部署
-        ///  - 创建新版本
-        ///  - 部署新版本
-        ///  - 一个服务只能有一个版本，所以前端无需关心版本及版本ID
         /// </summary>
         /// <param name="req"><see cref="DeployServiceV2Request"/></param>
         /// <returns><see cref="DeployServiceV2Response"/></returns>

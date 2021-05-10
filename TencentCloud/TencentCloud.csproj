@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.272</VersionPrefix>
+    <VersionPrefix>3.0.273</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -12349,6 +12349,8 @@
     <Compile Include="Vod\V20180717\Models\CreateClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateHeadTailTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateHeadTailTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageProcessingTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageProcessingTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateImageSpriteTask2017.cs" />
@@ -12385,6 +12387,8 @@
     <Compile Include="Vod\V20180717\Models\DeleteClassResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteContentReviewTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteHeadTailTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteHeadTailTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteImageProcessingTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteImageProcessingTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteImageSpriteTemplateRequest.cs" />
@@ -12437,6 +12441,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeEventConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeEventsStateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeHeadTailTemplatesRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeHeadTailTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
@@ -12503,6 +12509,8 @@
     <Compile Include="Vod\V20180717\Models\FrameTagConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HeadTailConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\HeadTailTaskInput.cs" />
+    <Compile Include="Vod\V20180717\Models\HeadTailTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightSegmentItem.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
@@ -12587,6 +12595,8 @@
     <Compile Include="Vod\V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyEventConfigRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyEventConfigResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyHeadTailTemplateRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyHeadTailTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyImageSpriteTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyMediaInfoRequest.cs" />

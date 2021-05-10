@@ -30,6 +30,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ServiceId")]
         public string ServiceId{ get; set; }
 
+        /// <summary>
+        /// 跳过删除前置条件校验（仅支持独享实例上的服务）
+        /// </summary>
+        [JsonProperty("SkipVerification")]
+        public long? SkipVerification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ServiceId", this.ServiceId);
+            this.SetParamSimple(map, prefix + "SkipVerification", this.SkipVerification);
         }
     }
 }

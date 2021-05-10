@@ -519,6 +519,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 创建片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="CreateHeadTailTemplateResponse"/></returns>
+        public async Task<CreateHeadTailTemplateResponse> CreateHeadTailTemplate(CreateHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<CreateHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="CreateHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="CreateHeadTailTemplateResponse"/></returns>
+        public CreateHeadTailTemplateResponse CreateHeadTailTemplateSync(CreateHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<CreateHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建一个用户自定义的图片处理模板，数量上限：16。最多支持三次操作，例如：裁剪-缩略-裁剪。
         /// </summary>
         /// <param name="req"><see cref="CreateImageProcessingTemplateRequest"/></param>
@@ -1196,6 +1236,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="DeleteHeadTailTemplateResponse"/></returns>
+        public async Task<DeleteHeadTailTemplateResponse> DeleteHeadTailTemplate(DeleteHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<DeleteHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="DeleteHeadTailTemplateResponse"/></returns>
+        public DeleteHeadTailTemplateResponse DeleteHeadTailTemplateSync(DeleteHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<DeleteHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteHeadTailTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2296,6 +2376,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEventsState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventsStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取片头片尾模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHeadTailTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeHeadTailTemplatesResponse"/></returns>
+        public async Task<DescribeHeadTailTemplatesResponse> DescribeHeadTailTemplates(DescribeHeadTailTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeHeadTailTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHeadTailTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHeadTailTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取片头片尾模板列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHeadTailTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeHeadTailTemplatesResponse"/></returns>
+        public DescribeHeadTailTemplatesResponse DescribeHeadTailTemplatesSync(DescribeHeadTailTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeHeadTailTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHeadTailTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHeadTailTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3716,6 +3836,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyEventConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEventConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="ModifyHeadTailTemplateResponse"/></returns>
+        public async Task<ModifyHeadTailTemplateResponse> ModifyHeadTailTemplate(ModifyHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<ModifyHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHeadTailTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改片头片尾模板。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyHeadTailTemplateRequest"/></param>
+        /// <returns><see cref="ModifyHeadTailTemplateResponse"/></returns>
+        public ModifyHeadTailTemplateResponse ModifyHeadTailTemplateSync(ModifyHeadTailTemplateRequest req)
+        {
+             JsonResponseModel<ModifyHeadTailTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyHeadTailTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyHeadTailTemplateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -85,6 +85,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("RouterCount")]
         public ulong? RouterCount{ get; set; }
 
+        /// <summary>
+        /// 扩容的Master节点数量。
+        /// </summary>
+        [JsonProperty("MasterCount")]
+        public ulong? MasterCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "TaskCount", this.TaskCount);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RouterCount", this.RouterCount);
+            this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
         }
     }
 }

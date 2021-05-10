@@ -43,6 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
+        /// 片头片尾列表，支持多片头片尾，最大可支持 10 个。
+        /// </summary>
+        [JsonProperty("HeadTailSet")]
+        public HeadTailTaskInput[] HeadTailSet{ get; set; }
+
+        /// <summary>
         /// 转码后的视频的起始时间偏移，单位：秒。
         /// <li>不填或填0，表示转码后的视频从原始视频的起始位置开始；</li>
         /// <li>当数值大于0时（假设为 n），表示转码后的视频从原始视频的第 n 秒位置开始；</li>
@@ -69,6 +75,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
+            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
