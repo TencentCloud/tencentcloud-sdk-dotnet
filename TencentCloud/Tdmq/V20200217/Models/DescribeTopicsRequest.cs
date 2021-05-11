@@ -66,6 +66,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// * TopicName
+        /// 按照主题名字查询，精确查询。
+        /// 类型：String
+        /// 必选：否
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +87,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

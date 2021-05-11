@@ -30,6 +30,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// <li>LOC：表示地名，如北京、华山</li>
         /// <li>ORG：表示机构团体名，如腾讯、最高人民法院、人大附中</li>
         /// <li>PRODUCTION：表示产品名，如QQ、微信、iPhone</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NerTokens")]
         public NerToken[] NerTokens{ get; set; }

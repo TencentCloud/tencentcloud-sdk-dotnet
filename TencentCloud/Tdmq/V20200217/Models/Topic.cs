@@ -163,6 +163,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 生产者上限。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProducerLimit")]
+        public string ProducerLimit{ get; set; }
+
+        /// <summary>
+        /// 消费者上限。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsumerLimit")]
+        public string ConsumerLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +202,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
+            this.SetParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
         }
     }
 }

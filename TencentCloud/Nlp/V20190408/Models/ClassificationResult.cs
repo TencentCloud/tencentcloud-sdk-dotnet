@@ -31,22 +31,66 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string FirstClassName{ get; set; }
 
         /// <summary>
-        /// 一级分类概率
-        /// </summary>
-        [JsonProperty("FirstClassProbability")]
-        public float? FirstClassProbability{ get; set; }
-
-        /// <summary>
         /// 二级分类名称
         /// </summary>
         [JsonProperty("SecondClassName")]
         public string SecondClassName{ get; set; }
 
         /// <summary>
+        /// 一级分类概率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstClassProbability")]
+        public float? FirstClassProbability{ get; set; }
+
+        /// <summary>
         /// 二级分类概率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecondClassProbability")]
         public float? SecondClassProbability{ get; set; }
+
+        /// <summary>
+        /// 三级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThirdClassName")]
+        public string ThirdClassName{ get; set; }
+
+        /// <summary>
+        /// 三级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ThirdClassProbability")]
+        public float? ThirdClassProbability{ get; set; }
+
+        /// <summary>
+        /// 四级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FourthClassName")]
+        public string FourthClassName{ get; set; }
+
+        /// <summary>
+        /// 四级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FourthClassProbability")]
+        public float? FourthClassProbability{ get; set; }
+
+        /// <summary>
+        /// 五级分类名称，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FifthClassName")]
+        public string FifthClassName{ get; set; }
+
+        /// <summary>
+        /// 五级分类概率，仅有当新闻领域五分类可能出现，详情见文本分类文档
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FifthClassProbability")]
+        public float? FifthClassProbability{ get; set; }
 
 
         /// <summary>
@@ -55,9 +99,15 @@ namespace TencentCloud.Nlp.V20190408.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FirstClassName", this.FirstClassName);
-            this.SetParamSimple(map, prefix + "FirstClassProbability", this.FirstClassProbability);
             this.SetParamSimple(map, prefix + "SecondClassName", this.SecondClassName);
+            this.SetParamSimple(map, prefix + "FirstClassProbability", this.FirstClassProbability);
             this.SetParamSimple(map, prefix + "SecondClassProbability", this.SecondClassProbability);
+            this.SetParamSimple(map, prefix + "ThirdClassName", this.ThirdClassName);
+            this.SetParamSimple(map, prefix + "ThirdClassProbability", this.ThirdClassProbability);
+            this.SetParamSimple(map, prefix + "FourthClassName", this.FourthClassName);
+            this.SetParamSimple(map, prefix + "FourthClassProbability", this.FourthClassProbability);
+            this.SetParamSimple(map, prefix + "FifthClassName", this.FifthClassName);
+            this.SetParamSimple(map, prefix + "FifthClassProbability", this.FifthClassProbability);
         }
     }
 }

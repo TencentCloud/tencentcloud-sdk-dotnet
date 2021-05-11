@@ -25,6 +25,12 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
+        /// 被搜索的词条文本。
+        /// </summary>
+        [JsonProperty("Text")]
+        public string Text{ get; set; }
+
+        /// <summary>
         /// 0表示词条不存在，1表示存在。
         /// </summary>
         [JsonProperty("IsExist")]
@@ -32,18 +38,14 @@ namespace TencentCloud.Nlp.V20190408.Models
 
         /// <summary>
         /// 匹配到的词条文本。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchText")]
         public string MatchText{ get; set; }
 
         /// <summary>
-        /// 被搜索的词条文本。
-        /// </summary>
-        [JsonProperty("Text")]
-        public string Text{ get; set; }
-
-        /// <summary>
         /// 词条的词性。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Pos")]
         public string Pos{ get; set; }
@@ -54,9 +56,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "IsExist", this.IsExist);
             this.SetParamSimple(map, prefix + "MatchText", this.MatchText);
-            this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "Pos", this.Pos);
         }
     }

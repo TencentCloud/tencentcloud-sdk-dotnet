@@ -37,7 +37,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 资源类型，占时只支持jar，填1
+        /// 资源类型。目前只支持 JAR，取值为 1
         /// </summary>
         [JsonProperty("ResourceType")]
         public long? ResourceType{ get; set; }

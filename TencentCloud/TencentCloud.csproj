@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.273</VersionPrefix>
+    <VersionPrefix>3.0.274</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3568,6 +3568,8 @@
     <Compile Include="Cr\V20180321\Models\UploadFileRequest.cs" />
     <Compile Include="Cr\V20180321\Models\UploadFileResponse.cs" />
     <Compile Include="Cvm\V20170312\CvmClient.cs" />
+    <Compile Include="Cvm\V20170312\Models\AccountQuota.cs" />
+    <Compile Include="Cvm\V20170312\Models\AccountQuotaOverview.cs" />
     <Compile Include="Cvm\V20170312\Models\ActionTimer.cs" />
     <Compile Include="Cvm\V20170312\Models\AllocateHostsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\AllocateHostsResponse.cs" />
@@ -3589,6 +3591,8 @@
     <Compile Include="Cvm\V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeAccountQuotaRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeAccountQuotaResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupQuotaResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupsRequest.cs" />
@@ -3638,6 +3642,7 @@
     <Compile Include="Cvm\V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DisasterRecoverGroup.cs" />
+    <Compile Include="Cvm\V20170312\Models\DisasterRecoverGroupQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\EnhancedService.cs" />
     <Compile Include="Cvm\V20170312\Models\Externals.cs" />
     <Compile Include="Cvm\V20170312\Models\Filter.cs" />
@@ -3645,6 +3650,7 @@
     <Compile Include="Cvm\V20170312\Models\HostResource.cs" />
     <Compile Include="Cvm\V20170312\Models\Image.cs" />
     <Compile Include="Cvm\V20170312\Models\ImageOsList.cs" />
+    <Compile Include="Cvm\V20170312\Models\ImageQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\ImportImageRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ImportImageResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ImportKeyPairRequest.cs" />
@@ -3702,6 +3708,8 @@
     <Compile Include="Cvm\V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="Cvm\V20170312\Models\OsVersion.cs" />
     <Compile Include="Cvm\V20170312\Models\Placement.cs" />
+    <Compile Include="Cvm\V20170312\Models\PostPaidQuota.cs" />
+    <Compile Include="Cvm\V20170312\Models\PrePaidQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\Price.cs" />
     <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingResponse.cs" />
@@ -3736,6 +3744,7 @@
     <Compile Include="Cvm\V20170312\Models\SharePermission.cs" />
     <Compile Include="Cvm\V20170312\Models\Snapshot.cs" />
     <Compile Include="Cvm\V20170312\Models\SpotMarketOptions.cs" />
+    <Compile Include="Cvm\V20170312\Models\SpotPaidQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\StartInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\StartInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\StopInstancesRequest.cs" />
@@ -3834,6 +3843,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeESHitsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeESHitsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeGeneralStatRequest.cs" />
@@ -5390,6 +5401,8 @@
     <Compile Include="Es\V20180416\Models\DescribeInstanceOperationsResponse.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstancesResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DiagnoseInstanceRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DiagnoseInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\DictInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsAcl.cs" />
     <Compile Include="Es\V20180416\Models\EsDictionaryInfo.cs" />
@@ -5413,6 +5426,8 @@
     <Compile Include="Es\V20180416\Models\SubTaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\TagInfo.cs" />
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateDiagnoseSettingsRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateDiagnoseSettingsResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdatePluginsRequest.cs" />
@@ -7340,6 +7355,8 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBlueprintsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundleDiscountRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeBundleDiscountResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeFirewallRulesRequest.cs" />
@@ -7374,6 +7391,7 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DiscountDetail.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Filter.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRule.cs" />
     <Compile Include="Lighthouse\V20200324\Models\FirewallRuleInfo.cs" />
@@ -7410,6 +7428,7 @@
     <Compile Include="Lighthouse\V20200324\Models\ModifyInstancesRenewFlagResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ModifySnapshotAttributeResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\PolicyDetail.cs" />
     <Compile Include="Lighthouse\V20200324\Models\Price.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesResponse.cs" />
@@ -7982,6 +8001,8 @@
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmPolicyResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlertRuleRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\CreateAlertRuleResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\CreatePolicyGroupRequest.cs" />
@@ -7993,6 +8014,8 @@
     <Compile Include="Monitor\V20180724\Models\DeleteAlarmNoticesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DeleteAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DeleteAlarmPolicyResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlertRulesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DeleteAlertRulesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DeletePolicyGroupResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
@@ -8016,6 +8039,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeAlarmPoliciesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAlarmPolicyResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlertRulesRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeAlertRulesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAllNamespacesRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeAllNamespacesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBaseMetricsRequest.cs" />
@@ -8103,6 +8128,8 @@
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Monitor\V20180724\Models\Point.cs" />
     <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
+    <Compile Include="Monitor\V20180724\Models\PrometheusRuleKV.cs" />
+    <Compile Include="Monitor\V20180724\Models\PrometheusRuleSet.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\PutMonitorDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\ReceiverInfo.cs" />
@@ -8117,6 +8144,10 @@
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingPolicyObjectResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateAlertRuleRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateAlertRuleResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateAlertRuleStateRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\UpdateAlertRuleStateResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\UserNotice.cs" />
@@ -10389,6 +10420,8 @@
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunServerDBClusterRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunServerDBClusterResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DatabasesInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
@@ -10888,6 +10921,7 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeTopicsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Environment.cs" />
     <Compile Include="Tdmq\V20200217\Models\EnvironmentRole.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Filter.cs" />
     <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterResponse.cs" />

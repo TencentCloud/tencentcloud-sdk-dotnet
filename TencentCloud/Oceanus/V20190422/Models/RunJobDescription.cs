@@ -37,13 +37,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public long? RunType{ get; set; }
 
         /// <summary>
-        /// SQL类型作业启动参数：指定数据源消费起始时间点
+        /// 已废弃。旧版 SQL 类型作业启动参数：指定数据源消费起始时间点
         /// </summary>
         [JsonProperty("StartMode")]
         public string StartMode{ get; set; }
 
         /// <summary>
-        /// 已发布上线的作业配置版本
+        /// 当前作业的某个版本
         /// </summary>
         [JsonProperty("JobConfigVersion")]
         public ulong? JobConfigVersion{ get; set; }

@@ -59,6 +59,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ModeType")]
         public string ModeType{ get; set; }
 
+        /// <summary>
+        /// 专线网关可用区
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +76,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

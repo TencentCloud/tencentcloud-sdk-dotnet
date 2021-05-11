@@ -25,16 +25,16 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 待删除的词条集合。
-        /// </summary>
-        [JsonProperty("WordItems")]
-        public WordItem[] WordItems{ get; set; }
-
-        /// <summary>
         /// 自定义词库ID。
         /// </summary>
         [JsonProperty("DictId")]
         public string DictId{ get; set; }
+
+        /// <summary>
+        /// 待删除的词条集合。
+        /// </summary>
+        [JsonProperty("WordItems")]
+        public WordItem[] WordItems{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "WordItems.", this.WordItems);
             this.SetParamSimple(map, prefix + "DictId", this.DictId);
+            this.SetParamArrayObj(map, prefix + "WordItems.", this.WordItems);
         }
     }
 }

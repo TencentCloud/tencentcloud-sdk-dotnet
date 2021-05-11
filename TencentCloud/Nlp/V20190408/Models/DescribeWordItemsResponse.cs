@@ -25,16 +25,17 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 词条信息列表。
-        /// </summary>
-        [JsonProperty("WordItems")]
-        public WordItem[] WordItems{ get; set; }
-
-        /// <summary>
         /// 词条记录总条数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 词条信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WordItems")]
+        public WordItem[] WordItems{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +49,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "WordItems.", this.WordItems);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "WordItems.", this.WordItems);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,16 +25,16 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 相似度分数
-        /// </summary>
-        [JsonProperty("Score")]
-        public float? Score{ get; set; }
-
-        /// <summary>
         /// 目标文本句子
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
+
+        /// <summary>
+        /// 相似度分数
+        /// </summary>
+        [JsonProperty("Score")]
+        public float? Score{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "Text", this.Text);
+            this.SetParamSimple(map, prefix + "Score", this.Score);
         }
     }
 }

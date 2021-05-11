@@ -31,16 +31,28 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string TokenId{ get; set; }
 
         /// <summary>
+        /// 实例 ID
+        /// </summary>
+        [JsonProperty("RegistryId")]
+        public string RegistryId{ get; set; }
+
+        /// <summary>
         /// 启用或禁用实例长期访问凭证
         /// </summary>
         [JsonProperty("Enable")]
         public bool? Enable{ get; set; }
 
         /// <summary>
-        /// 实例 ID
+        /// 访问凭证描述
         /// </summary>
-        [JsonProperty("RegistryId")]
-        public string RegistryId{ get; set; }
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
+        /// <summary>
+        /// 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+        /// </summary>
+        [JsonProperty("ModifyFlag")]
+        public long? ModifyFlag{ get; set; }
 
 
         /// <summary>
@@ -49,8 +61,10 @@ namespace TencentCloud.Tcr.V20190924.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TokenId", this.TokenId);
-            this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "ModifyFlag", this.ModifyFlag);
         }
     }
 }

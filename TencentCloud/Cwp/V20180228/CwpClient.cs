@@ -1493,6 +1493,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取ES查询文档列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeESHitsRequest"/></param>
+        /// <returns><see cref="DescribeESHitsResponse"/></returns>
+        public async Task<DescribeESHitsResponse> DescribeESHits(DescribeESHitsRequest req)
+        {
+             JsonResponseModel<DescribeESHitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeESHits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeESHitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取ES查询文档列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeESHitsRequest"/></param>
+        /// <returns><see cref="DescribeESHitsResponse"/></returns>
+        public DescribeESHitsResponse DescribeESHitsSync(DescribeESHitsRequest req)
+        {
+             JsonResponseModel<DescribeESHitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeESHits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeESHitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeExportMachines) 用于导出区域主机列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeExportMachinesRequest"/></param>

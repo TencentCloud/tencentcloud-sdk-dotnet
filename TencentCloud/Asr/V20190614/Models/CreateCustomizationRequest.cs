@@ -31,7 +31,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string ModelName{ get; set; }
 
         /// <summary>
-        /// 文本文件的下载地址，服务会从该地址下载文件， 以训练模型，目前仅支持腾讯云cos
+        /// 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
         /// </summary>
         [JsonProperty("TextUrl")]
         public string TextUrl{ get; set; }

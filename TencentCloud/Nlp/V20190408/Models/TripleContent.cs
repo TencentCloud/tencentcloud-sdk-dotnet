@@ -25,28 +25,32 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 实体id
+        /// 实体流行度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("Popular")]
+        public long? Popular{ get; set; }
 
         /// <summary>
         /// 实体名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
         /// 实体order
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
         /// <summary>
-        /// 实体流行度
+        /// 实体id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Popular")]
-        public long? Popular{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
 
         /// <summary>
@@ -54,10 +58,10 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Popular", this.Popular);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "Popular", this.Popular);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

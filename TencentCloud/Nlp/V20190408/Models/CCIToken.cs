@@ -25,6 +25,12 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
+        /// 错别字内容
+        /// </summary>
+        [JsonProperty("Word")]
+        public string Word{ get; set; }
+
+        /// <summary>
         /// 错别字的起始位置，从0开始
         /// </summary>
         [JsonProperty("BeginOffset")]
@@ -36,21 +42,15 @@ namespace TencentCloud.Nlp.V20190408.Models
         [JsonProperty("CorrectWord")]
         public string CorrectWord{ get; set; }
 
-        /// <summary>
-        /// 错别字内容
-        /// </summary>
-        [JsonProperty("Word")]
-        public string Word{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Word", this.Word);
             this.SetParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
             this.SetParamSimple(map, prefix + "CorrectWord", this.CorrectWord);
-            this.SetParamSimple(map, prefix + "Word", this.Word);
         }
     }
 }

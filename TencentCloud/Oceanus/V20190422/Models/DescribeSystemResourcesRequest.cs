@@ -31,19 +31,19 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，仅当设置 Limit 参数时有效
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 条数限制
+        /// 条数限制，默认返回 20 条
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+        /// 查询资源配置列表， 如果不填写，返回该 ResourceIds.N 下所有作业配置列表
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

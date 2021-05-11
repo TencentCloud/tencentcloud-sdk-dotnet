@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.273</VersionPrefix>
+    <VersionPrefix>3.0.274</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,8 @@
     <Compile Include="V20200324\Models\DescribeBlueprintInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBlueprintsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeBundleDiscountRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeBundleDiscountResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
@@ -108,6 +110,7 @@
     <Compile Include="V20200324\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="V20200324\Models\DiscountDetail.cs" />
     <Compile Include="V20200324\Models\Filter.cs" />
     <Compile Include="V20200324\Models\FirewallRule.cs" />
     <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
@@ -144,6 +147,7 @@
     <Compile Include="V20200324\Models\ModifyInstancesRenewFlagResponse.cs" />
     <Compile Include="V20200324\Models\ModifySnapshotAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifySnapshotAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\PolicyDetail.cs" />
     <Compile Include="V20200324\Models\Price.cs" />
     <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />

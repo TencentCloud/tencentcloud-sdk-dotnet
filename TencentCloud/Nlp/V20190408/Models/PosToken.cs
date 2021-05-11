@@ -25,16 +25,22 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 起始位置
+        /// 基础词
         /// </summary>
-        [JsonProperty("BeginOffset")]
-        public ulong? BeginOffset{ get; set; }
+        [JsonProperty("Word")]
+        public string Word{ get; set; }
 
         /// <summary>
         /// 长度
         /// </summary>
         [JsonProperty("Length")]
-        public ulong? Length{ get; set; }
+        public long? Length{ get; set; }
+
+        /// <summary>
+        /// 起始位置
+        /// </summary>
+        [JsonProperty("BeginOffset")]
+        public long? BeginOffset{ get; set; }
 
         /// <summary>
         /// 词性
@@ -42,22 +48,16 @@ namespace TencentCloud.Nlp.V20190408.Models
         [JsonProperty("Pos")]
         public string Pos{ get; set; }
 
-        /// <summary>
-        /// 基础词
-        /// </summary>
-        [JsonProperty("Word")]
-        public string Word{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
-            this.SetParamSimple(map, prefix + "Length", this.Length);
-            this.SetParamSimple(map, prefix + "Pos", this.Pos);
             this.SetParamSimple(map, prefix + "Word", this.Word);
+            this.SetParamSimple(map, prefix + "Length", this.Length);
+            this.SetParamSimple(map, prefix + "BeginOffset", this.BeginOffset);
+            this.SetParamSimple(map, prefix + "Pos", this.Pos);
         }
     }
 }

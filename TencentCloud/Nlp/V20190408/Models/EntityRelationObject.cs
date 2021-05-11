@@ -25,22 +25,25 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
+        /// object对应popular值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Popular")]
+        public long?[] Popular{ get; set; }
+
+        /// <summary>
         /// object对应id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Id")]
         public string[] Id{ get; set; }
 
         /// <summary>
         /// object对应name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string[] Name{ get; set; }
-
-        /// <summary>
-        /// object对应popular值
-        /// </summary>
-        [JsonProperty("Popular")]
-        public long?[] Popular{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "Popular.", this.Popular);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
             this.SetParamArraySimple(map, prefix + "Name.", this.Name);
-            this.SetParamArraySimple(map, prefix + "Popular.", this.Popular);
         }
     }
 }

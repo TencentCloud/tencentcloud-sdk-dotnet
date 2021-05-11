@@ -26,21 +26,24 @@ namespace TencentCloud.Nlp.V20190408.Models
         
         /// <summary>
         /// 实体关系查询返回关系的object
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Object")]
         public EntityRelationObject[] Object{ get; set; }
 
         /// <summary>
-        /// 实体关系查询返回关系的subject
-        /// </summary>
-        [JsonProperty("Subject")]
-        public EntityRelationSubject[] Subject{ get; set; }
-
-        /// <summary>
         /// 实体关系查询返回的关系名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Relation")]
         public string Relation{ get; set; }
+
+        /// <summary>
+        /// 实体关系查询返回关系的subject
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Subject")]
+        public EntityRelationSubject[] Subject{ get; set; }
 
 
         /// <summary>
@@ -49,8 +52,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Object.", this.Object);
-            this.SetParamArrayObj(map, prefix + "Subject.", this.Subject);
             this.SetParamSimple(map, prefix + "Relation", this.Relation);
+            this.SetParamArrayObj(map, prefix + "Subject.", this.Subject);
         }
     }
 }

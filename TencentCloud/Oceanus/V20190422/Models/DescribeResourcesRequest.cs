@@ -31,13 +31,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，仅当设置 Limit 参数时有效
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 条数限制
+        /// 条数限制。如果不填，默认返回 20 条
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

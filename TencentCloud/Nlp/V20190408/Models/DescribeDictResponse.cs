@@ -26,6 +26,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         
         /// <summary>
         /// 查询到的词库信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Dicts")]
         public DictInfo[] Dicts{ get; set; }

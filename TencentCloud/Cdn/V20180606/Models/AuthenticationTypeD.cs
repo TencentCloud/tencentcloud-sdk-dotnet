@@ -34,7 +34,7 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 签名过期时间设置
-        /// 单位为秒，最大可设置为 31536000
+        /// 单位为秒，最大可设置为 630720000
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }

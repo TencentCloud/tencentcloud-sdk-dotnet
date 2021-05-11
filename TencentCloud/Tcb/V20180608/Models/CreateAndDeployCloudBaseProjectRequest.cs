@@ -55,7 +55,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public KVPair[] Parameters{ get; set; }
 
         /// <summary>
-        /// 环境别名
+        /// 环境别名。要以a-z开头，不能包含a-zA-z0-9-以外的字符
         /// </summary>
         [JsonProperty("EnvAlias")]
         public string EnvAlias{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string NetworkConfig{ get; set; }
 
         /// <summary>
-        /// 免费额度的"basic", 不使用的用""
+        /// 用户享有的免费额度级别，目前只能为“basic”，不传该字段或该字段为空，标识不享受免费额度。
         /// </summary>
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }

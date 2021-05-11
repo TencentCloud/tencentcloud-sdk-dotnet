@@ -451,6 +451,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeAccountQuota)用于查询用户配额详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAccountQuotaResponse"/></returns>
+        public async Task<DescribeAccountQuotaResponse> DescribeAccountQuota(DescribeAccountQuotaRequest req)
+        {
+             JsonResponseModel<DescribeAccountQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAccountQuota)用于查询用户配额详情。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountQuotaRequest"/></param>
+        /// <returns><see cref="DescribeAccountQuotaResponse"/></returns>
+        public DescribeAccountQuotaResponse DescribeAccountQuotaSync(DescribeAccountQuotaRequest req)
+        {
+             JsonResponseModel<DescribeAccountQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisasterRecoverGroupQuotaRequest"/></param>

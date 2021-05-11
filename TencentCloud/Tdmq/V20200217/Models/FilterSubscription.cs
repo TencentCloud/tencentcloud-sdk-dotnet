@@ -42,6 +42,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ConsumerHasExpired")]
         public bool? ConsumerHasExpired{ get; set; }
 
+        /// <summary>
+        /// 按照订阅名过滤，精确查询。
+        /// </summary>
+        [JsonProperty("SubscriptionNames")]
+        public string[] SubscriptionNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ConsumerHasCount", this.ConsumerHasCount);
             this.SetParamSimple(map, prefix + "ConsumerHasBacklog", this.ConsumerHasBacklog);
             this.SetParamSimple(map, prefix + "ConsumerHasExpired", this.ConsumerHasExpired);
+            this.SetParamArraySimple(map, prefix + "SubscriptionNames.", this.SubscriptionNames);
         }
     }
 }

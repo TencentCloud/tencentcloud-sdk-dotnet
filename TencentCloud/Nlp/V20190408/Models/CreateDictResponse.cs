@@ -26,6 +26,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         
         /// <summary>
         /// 创建的自定义词库ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DictId")]
         public string DictId{ get; set; }

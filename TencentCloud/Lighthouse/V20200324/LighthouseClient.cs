@@ -591,6 +591,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBundleDiscountRequest"/></param>
+        /// <returns><see cref="DescribeBundleDiscountResponse"/></returns>
+        public async Task<DescribeBundleDiscountResponse> DescribeBundleDiscount(DescribeBundleDiscountRequest req)
+        {
+             JsonResponseModel<DescribeBundleDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBundleDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundleDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBundleDiscount）用于查询套餐折扣信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBundleDiscountRequest"/></param>
+        /// <returns><see cref="DescribeBundleDiscountResponse"/></returns>
+        public DescribeBundleDiscountResponse DescribeBundleDiscountSync(DescribeBundleDiscountRequest req)
+        {
+             JsonResponseModel<DescribeBundleDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBundleDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundleDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBundles）用于查询套餐信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeBundlesRequest"/></param>

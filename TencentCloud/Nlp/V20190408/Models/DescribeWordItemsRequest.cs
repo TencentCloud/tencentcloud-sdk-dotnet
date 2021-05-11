@@ -31,16 +31,16 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string DictId{ get; set; }
 
         /// <summary>
-        /// 每页数据量，范围为1~100，默认为10。
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
         /// 分页偏移量，从0开始，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 每页数据量，范围为1~100，默认为10。
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
         /// <summary>
         /// 待检索的词条文本，支持模糊匹配。
@@ -55,8 +55,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DictId", this.DictId);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Text", this.Text);
         }
     }

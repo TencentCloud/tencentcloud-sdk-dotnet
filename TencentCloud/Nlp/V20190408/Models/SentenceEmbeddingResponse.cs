@@ -25,16 +25,16 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 句向量的维度
-        /// </summary>
-        [JsonProperty("Dimension")]
-        public ulong? Dimension{ get; set; }
-
-        /// <summary>
         /// 句向量数组
         /// </summary>
         [JsonProperty("Vector")]
         public float?[] Vector{ get; set; }
+
+        /// <summary>
+        /// 句向量的维度
+        /// </summary>
+        [JsonProperty("Dimension")]
+        public ulong? Dimension{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
             this.SetParamArraySimple(map, prefix + "Vector.", this.Vector);
+            this.SetParamSimple(map, prefix + "Dimension", this.Dimension);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

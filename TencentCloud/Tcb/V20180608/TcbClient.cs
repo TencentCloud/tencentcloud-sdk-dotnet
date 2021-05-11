@@ -453,6 +453,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 开通微信云托管MySQL数据库服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateWxCloudBaseRunServerDBClusterRequest"/></param>
+        /// <returns><see cref="CreateWxCloudBaseRunServerDBClusterResponse"/></returns>
+        public async Task<CreateWxCloudBaseRunServerDBClusterResponse> CreateWxCloudBaseRunServerDBCluster(CreateWxCloudBaseRunServerDBClusterRequest req)
+        {
+             JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWxCloudBaseRunServerDBCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通微信云托管MySQL数据库服务
+        /// </summary>
+        /// <param name="req"><see cref="CreateWxCloudBaseRunServerDBClusterRequest"/></param>
+        /// <returns><see cref="CreateWxCloudBaseRunServerDBClusterResponse"/></returns>
+        public CreateWxCloudBaseRunServerDBClusterResponse CreateWxCloudBaseRunServerDBClusterSync(CreateWxCloudBaseRunServerDBClusterRequest req)
+        {
+             JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWxCloudBaseRunServerDBCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWxCloudBaseRunServerDBClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除云项目
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudBaseProjectLatestVersionRequest"/></param>

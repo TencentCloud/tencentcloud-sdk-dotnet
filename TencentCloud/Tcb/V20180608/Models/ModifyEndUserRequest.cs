@@ -38,6 +38,8 @@ namespace TencentCloud.Tcb.V20180608.Models
 
         /// <summary>
         /// 帐号的状态
+        /// <li>ENABLE</li>
+        /// <li>DISABLE</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

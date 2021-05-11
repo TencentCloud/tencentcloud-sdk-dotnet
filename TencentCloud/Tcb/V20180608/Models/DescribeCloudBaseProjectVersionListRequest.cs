@@ -49,13 +49,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 起始时间
+        /// 起始时间 2021-03-27 12:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 终止时间
+        /// 终止时间 2021-03-27 12:00:00
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

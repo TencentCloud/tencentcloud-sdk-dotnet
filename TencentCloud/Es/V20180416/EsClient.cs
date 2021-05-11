@@ -253,6 +253,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 智能运维诊断集群
+        /// </summary>
+        /// <param name="req"><see cref="DiagnoseInstanceRequest"/></param>
+        /// <returns><see cref="DiagnoseInstanceResponse"/></returns>
+        public async Task<DiagnoseInstanceResponse> DiagnoseInstance(DiagnoseInstanceRequest req)
+        {
+             JsonResponseModel<DiagnoseInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DiagnoseInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DiagnoseInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智能运维诊断集群
+        /// </summary>
+        /// <param name="req"><see cref="DiagnoseInstanceRequest"/></param>
+        /// <returns><see cref="DiagnoseInstanceResponse"/></returns>
+        public DiagnoseInstanceResponse DiagnoseInstanceSync(DiagnoseInstanceRequest req)
+        {
+             JsonResponseModel<DiagnoseInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DiagnoseInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DiagnoseInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取接收客户端请求的节点类型
         /// </summary>
         /// <param name="req"><see cref="GetRequestTargetNodeTypesRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "RestartNodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新智能运维配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDiagnoseSettingsRequest"/></param>
+        /// <returns><see cref="UpdateDiagnoseSettingsResponse"/></returns>
+        public async Task<UpdateDiagnoseSettingsResponse> UpdateDiagnoseSettings(UpdateDiagnoseSettingsRequest req)
+        {
+             JsonResponseModel<UpdateDiagnoseSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDiagnoseSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDiagnoseSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新智能运维配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDiagnoseSettingsRequest"/></param>
+        /// <returns><see cref="UpdateDiagnoseSettingsResponse"/></returns>
+        public UpdateDiagnoseSettingsResponse UpdateDiagnoseSettingsSync(UpdateDiagnoseSettingsRequest req)
+        {
+             JsonResponseModel<UpdateDiagnoseSettingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDiagnoseSettings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDiagnoseSettingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

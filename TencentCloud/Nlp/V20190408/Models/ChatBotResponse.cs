@@ -25,16 +25,16 @@ namespace TencentCloud.Nlp.V20190408.Models
     {
         
         /// <summary>
-        /// 对于当前输出回复的自信度
-        /// </summary>
-        [JsonProperty("Confidence")]
-        public float? Confidence{ get; set; }
-
-        /// <summary>
         /// 闲聊回复
         /// </summary>
         [JsonProperty("Reply")]
         public string Reply{ get; set; }
+
+        /// <summary>
+        /// 对于当前输出回复的自信度
+        /// </summary>
+        [JsonProperty("Confidence")]
+        public float? Confidence{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Reply", this.Reply);
+            this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

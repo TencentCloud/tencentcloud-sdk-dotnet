@@ -31,16 +31,16 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
-        /// </summary>
-        [JsonProperty("Flag")]
-        public ulong? Flag{ get; set; }
-
-        /// <summary>
         /// 服务的id,  主要用于儿童闲聊接口，比如手Q的openid
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
+
+        /// <summary>
+        /// 0: 通用闲聊, 1:儿童闲聊, 默认是通用闲聊
+        /// </summary>
+        [JsonProperty("Flag")]
+        public ulong? Flag{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamSimple(map, prefix + "Flag", this.Flag);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "Flag", this.Flag);
         }
     }
 }
