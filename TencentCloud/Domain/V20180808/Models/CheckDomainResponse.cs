@@ -75,7 +75,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public ulong? FeeRenew{ get; set; }
 
         /// <summary>
-        /// 域名真实价格
+        /// 域名真实价格, 溢价词时价格跟年限有关，非溢价词时价格为1年的价格
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RealPrice")]

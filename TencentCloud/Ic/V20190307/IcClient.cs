@@ -173,6 +173,46 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 编辑卡片备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserCardRemarkRequest"/></param>
+        /// <returns><see cref="ModifyUserCardRemarkResponse"/></returns>
+        public async Task<ModifyUserCardRemarkResponse> ModifyUserCardRemark(ModifyUserCardRemarkRequest req)
+        {
+             JsonResponseModel<ModifyUserCardRemarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserCardRemark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserCardRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑卡片备注
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserCardRemarkRequest"/></param>
+        /// <returns><see cref="ModifyUserCardRemarkResponse"/></returns>
+        public ModifyUserCardRemarkResponse ModifyUserCardRemarkSync(ModifyUserCardRemarkRequest req)
+        {
+             JsonResponseModel<ModifyUserCardRemarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserCardRemark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserCardRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
         /// 续费的必要条件：
         /// 1、单次续费的卡片不可以超过 100张。

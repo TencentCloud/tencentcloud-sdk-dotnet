@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.274</VersionPrefix>
+    <VersionPrefix>3.0.275</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6313,6 +6313,8 @@
     <Compile Include="Ic\V20190307\Models\DescribeCardResponse.cs" />
     <Compile Include="Ic\V20190307\Models\DescribeCardsRequest.cs" />
     <Compile Include="Ic\V20190307\Models\DescribeCardsResponse.cs" />
+    <Compile Include="Ic\V20190307\Models\ModifyUserCardRemarkRequest.cs" />
+    <Compile Include="Ic\V20190307\Models\ModifyUserCardRemarkResponse.cs" />
     <Compile Include="Ic\V20190307\Models\RenewCardsRequest.cs" />
     <Compile Include="Ic\V20190307\Models\RenewCardsResponse.cs" />
     <Compile Include="Ic\V20190307\Models\ResRenew.cs" />
@@ -7944,6 +7946,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogsRequest.cs" />
@@ -7976,6 +7980,8 @@
     <Compile Include="Mongodb\V20190725\Models\ReplicaSetInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\ResetDBInstancePasswordResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\SecurityGroup.cs" />
+    <Compile Include="Mongodb\V20190725\Models\SecurityGroupBound.cs" />
     <Compile Include="Mongodb\V20190725\Models\ShardInfo.cs" />
     <Compile Include="Mongodb\V20190725\Models\SlowLogPattern.cs" />
     <Compile Include="Mongodb\V20190725\Models\SpecItem.cs" />
@@ -10509,6 +10515,8 @@
     <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\RollUpdateCloudBaseRunServerVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />

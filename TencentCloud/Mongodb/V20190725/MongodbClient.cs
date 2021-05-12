@@ -577,6 +577,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 查询实例绑定的安全组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
+        public async Task<DescribeSecurityGroupResponse> DescribeSecurityGroup(DescribeSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例绑定的安全组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>
+        /// <returns><see cref="DescribeSecurityGroupResponse"/></returns>
+        public DescribeSecurityGroupResponse DescribeSecurityGroupSync(DescribeSecurityGroupRequest req)
+        {
+             JsonResponseModel<DescribeSecurityGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeSlowLogPatterns）用于获取数据库实例慢日志的统计信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogPatternsRequest"/></param>

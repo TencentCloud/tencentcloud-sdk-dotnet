@@ -42,6 +42,18 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("ClsLogTopicId")]
         public string ClsLogTopicId{ get; set; }
 
+        /// <summary>
+        /// cls日志集id
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// cls日志名称
+        /// </summary>
+        [JsonProperty("ClsLogTopicName")]
+        public string ClsLogTopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "OutputType", this.OutputType);
             this.SetParamSimple(map, prefix + "ClsLogsetName", this.ClsLogsetName);
             this.SetParamSimple(map, prefix + "ClsLogTopicId", this.ClsLogTopicId);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsLogTopicName", this.ClsLogTopicName);
         }
     }
 }

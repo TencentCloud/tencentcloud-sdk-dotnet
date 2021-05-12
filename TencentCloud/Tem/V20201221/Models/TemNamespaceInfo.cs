@@ -121,6 +121,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }
 
+        /// <summary>
+        /// 是否开启tsw
+        /// </summary>
+        [JsonProperty("EnableTswTraceService")]
+        public bool? EnableTswTraceService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "TcbEnvStatus", this.TcbEnvStatus);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         }
     }
 }

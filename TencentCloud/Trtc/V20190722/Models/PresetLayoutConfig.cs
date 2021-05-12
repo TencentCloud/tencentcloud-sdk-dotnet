@@ -61,7 +61,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? LocationY{ get; set; }
 
         /// <summary>
-        /// 该画面在输出时的层级，单位为像素值，不填默认为0。
+        /// 该画面在输出时的层级，不填默认为0。
         /// </summary>
         [JsonProperty("ZOrder")]
         public ulong? ZOrder{ get; set; }

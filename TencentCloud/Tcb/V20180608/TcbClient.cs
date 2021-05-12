@@ -1938,5 +1938,45 @@ namespace TencentCloud.Tcb.V20180608
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 针对特定的版本，进行滚动更新
+        /// </summary>
+        /// <param name="req"><see cref="RollUpdateCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="RollUpdateCloudBaseRunServerVersionResponse"/></returns>
+        public async Task<RollUpdateCloudBaseRunServerVersionResponse> RollUpdateCloudBaseRunServerVersion(RollUpdateCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollUpdateCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 针对特定的版本，进行滚动更新
+        /// </summary>
+        /// <param name="req"><see cref="RollUpdateCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="RollUpdateCloudBaseRunServerVersionResponse"/></returns>
+        public RollUpdateCloudBaseRunServerVersionResponse RollUpdateCloudBaseRunServerVersionSync(RollUpdateCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollUpdateCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
