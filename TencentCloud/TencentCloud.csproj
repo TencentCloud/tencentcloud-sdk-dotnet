@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.275</VersionPrefix>
+    <VersionPrefix>3.0.276</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3782,6 +3782,10 @@
     <Compile Include="Cwp\V20180228\Models\CreateOpenPortTaskResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProcessTaskRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProcessTaskResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateSearchLogRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateSearchLogResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateSearchTemplateRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateSearchTemplateResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateUsualLoginPlacesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateUsualLoginPlacesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DefendAttackLog.cs" />
@@ -3813,6 +3817,8 @@
     <Compile Include="Cwp\V20180228\Models\DeleteReverseShellEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteReverseShellRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteReverseShellRulesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DeleteSearchTemplateRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DeleteSearchTemplateResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteTagsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteUsualLoginPlacesRequest.cs" />
@@ -3843,6 +3849,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeESAggregationsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeESAggregationsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESHitsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESHitsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesRequest.cs" />
@@ -3851,10 +3859,16 @@
     <Compile Include="Cwp\V20180228\Models\DescribeGeneralStatResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeHistoryAccountsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeHistoryServiceRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeHistoryServiceResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImpactedHostsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeIndexListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeIndexListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeLogStorageStatisticRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeLoginWhiteListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeLoginWhiteListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMachineInfoRequest.cs" />
@@ -3903,6 +3917,12 @@
     <Compile Include="Cwp\V20180228\Models\DescribeRiskDnsListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchExportListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchExportListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchLogsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchLogsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchTemplatesRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSearchTemplatesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventsCntRequest.cs" />
@@ -4014,6 +4034,7 @@
     <Compile Include="Cwp\V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShell.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShellRule.cs" />
+    <Compile Include="Cwp\V20180228\Models\SearchTemplate.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityEventInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityTrend.cs" />
@@ -6326,6 +6347,7 @@
     <Compile Include="Ic\V20190307\Models\SmsSid.cs" />
     <Compile Include="Ie\V20200304\IeClient.cs" />
     <Compile Include="Ie\V20200304\Models\ArtifactReduction.cs" />
+    <Compile Include="Ie\V20200304\Models\AudioEnhance.cs" />
     <Compile Include="Ie\V20200304\Models\AudioInfo.cs" />
     <Compile Include="Ie\V20200304\Models\AudioInfoResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\CallbackInfo.cs" />
@@ -6372,6 +6394,7 @@
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResultItem.cs" />
     <Compile Include="Ie\V20200304\Models\HighlightsTaskResultItemSegment.cs" />
     <Compile Include="Ie\V20200304\Models\IntervalTime.cs" />
+    <Compile Include="Ie\V20200304\Models\LoudnessInfo.cs" />
     <Compile Include="Ie\V20200304\Models\LowLightEnhance.cs" />
     <Compile Include="Ie\V20200304\Models\MediaCuttingInfo.cs" />
     <Compile Include="Ie\V20200304\Models\MediaCuttingOutForm.cs" />
@@ -6396,6 +6419,7 @@
     <Compile Include="Ie\V20200304\Models\QualityControlInfoTaskResult.cs" />
     <Compile Include="Ie\V20200304\Models\QualityControlItem.cs" />
     <Compile Include="Ie\V20200304\Models\QualityControlResultItems.cs" />
+    <Compile Include="Ie\V20200304\Models\RemoveReverb.cs" />
     <Compile Include="Ie\V20200304\Models\ResultAudioInfo.cs" />
     <Compile Include="Ie\V20200304\Models\ResultVideoInfo.cs" />
     <Compile Include="Ie\V20200304\Models\SaveInfo.cs" />
@@ -11346,6 +11370,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterPublicLB.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
+    <Compile Include="Tke\V20180525\Models\CommonName.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointRequest.cs" />
@@ -11399,6 +11424,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointStatusRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />

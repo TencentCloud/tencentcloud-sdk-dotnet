@@ -455,7 +455,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。最大跨度为14天。
+        /// 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。
         /// </summary>
         /// <param name="req"><see cref="GetStatisticsReportRequest"/></param>
         /// <returns><see cref="GetStatisticsReportResponse"/></returns>
@@ -475,7 +475,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。最大跨度为14天。
+        /// 获取近期发送的统计情况，包含发送量、送达率、打开率、退信率等一系列数据。
         /// </summary>
         /// <param name="req"><see cref="GetStatisticsReportRequest"/></param>
         /// <returns><see cref="GetStatisticsReportResponse"/></returns>

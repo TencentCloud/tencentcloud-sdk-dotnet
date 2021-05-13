@@ -94,6 +94,13 @@ namespace TencentCloud.Gse.V20191112.Models
         [JsonProperty("ReserveValue")]
         public long? ReserveValue{ get; set; }
 
+        /// <summary>
+        /// 实例的私有IP地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrivateIpAddress")]
+        public string PrivateIpAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Gse.V20191112.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "ReserveValue", this.ReserveValue);
+            this.SetParamSimple(map, prefix + "PrivateIpAddress", this.PrivateIpAddress);
         }
     }
 }

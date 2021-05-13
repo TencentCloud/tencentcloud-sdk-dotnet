@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.275</VersionPrefix>
+    <VersionPrefix>3.0.276</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="V20200304\IeClient.cs" />
     <Compile Include="V20200304\Models\ArtifactReduction.cs" />
+    <Compile Include="V20200304\Models\AudioEnhance.cs" />
     <Compile Include="V20200304\Models\AudioInfo.cs" />
     <Compile Include="V20200304\Models\AudioInfoResultItem.cs" />
     <Compile Include="V20200304\Models\CallbackInfo.cs" />
@@ -92,6 +93,7 @@
     <Compile Include="V20200304\Models\HighlightsTaskResultItem.cs" />
     <Compile Include="V20200304\Models\HighlightsTaskResultItemSegment.cs" />
     <Compile Include="V20200304\Models\IntervalTime.cs" />
+    <Compile Include="V20200304\Models\LoudnessInfo.cs" />
     <Compile Include="V20200304\Models\LowLightEnhance.cs" />
     <Compile Include="V20200304\Models\MediaCuttingInfo.cs" />
     <Compile Include="V20200304\Models\MediaCuttingOutForm.cs" />
@@ -116,6 +118,7 @@
     <Compile Include="V20200304\Models\QualityControlInfoTaskResult.cs" />
     <Compile Include="V20200304\Models\QualityControlItem.cs" />
     <Compile Include="V20200304\Models\QualityControlResultItems.cs" />
+    <Compile Include="V20200304\Models\RemoveReverb.cs" />
     <Compile Include="V20200304\Models\ResultAudioInfo.cs" />
     <Compile Include="V20200304\Models\ResultVideoInfo.cs" />
     <Compile Include="V20200304\Models\SaveInfo.cs" />

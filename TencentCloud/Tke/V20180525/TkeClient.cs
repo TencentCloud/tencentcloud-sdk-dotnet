@@ -1253,6 +1253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
+        /// <returns><see cref="DescribeClusterCommonNamesResponse"/></returns>
+        public async Task<DescribeClusterCommonNamesResponse> DescribeClusterCommonNames(DescribeClusterCommonNamesRequest req)
+        {
+             JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterCommonNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterCommonNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
+        /// <returns><see cref="DescribeClusterCommonNamesResponse"/></returns>
+        public DescribeClusterCommonNamesResponse DescribeClusterCommonNamesSync(DescribeClusterCommonNamesRequest req)
+        {
+             JsonResponseModel<DescribeClusterCommonNamesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterCommonNames");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterCommonNamesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterEndpointStatusRequest"/></param>

@@ -67,6 +67,24 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("EnableMuteAudio")]
         public long? EnableMuteAudio{ get; set; }
 
+        /// <summary>
+        /// 音频响度信息
+        /// </summary>
+        [JsonProperty("LoudnessInfo")]
+        public LoudnessInfo LoudnessInfo{ get; set; }
+
+        /// <summary>
+        /// 音频音效增强
+        /// </summary>
+        [JsonProperty("AudioEnhance")]
+        public AudioEnhance AudioEnhance{ get; set; }
+
+        /// <summary>
+        /// 去除混音
+        /// </summary>
+        [JsonProperty("RemoveReverb")]
+        public RemoveReverb RemoveReverb{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +97,9 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamObj(map, prefix + "Denoise.", this.Denoise);
             this.SetParamSimple(map, prefix + "EnableMuteAudio", this.EnableMuteAudio);
+            this.SetParamObj(map, prefix + "LoudnessInfo.", this.LoudnessInfo);
+            this.SetParamObj(map, prefix + "AudioEnhance.", this.AudioEnhance);
+            this.SetParamObj(map, prefix + "RemoveReverb.", this.RemoveReverb);
         }
     }
 }
