@@ -1773,6 +1773,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 本接口用于查询开启vpc-cni模式的任务进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnableVpcCniProgressResponse"/></returns>
+        public async Task<DescribeEnableVpcCniProgressResponse> DescribeEnableVpcCniProgress(DescribeEnableVpcCniProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnableVpcCniProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询开启vpc-cni模式的任务进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>
+        /// <returns><see cref="DescribeEnableVpcCniProgressResponse"/></returns>
+        public DescribeEnableVpcCniProgressResponse DescribeEnableVpcCniProgressSync(DescribeEnableVpcCniProgressRequest req)
+        {
+             JsonResponseModel<DescribeEnableVpcCniProgressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnableVpcCniProgress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnableVpcCniProgressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询已经存在的节点，判断是否可以加入集群
         /// </summary>
         /// <param name="req"><see cref="DescribeExistedInstancesRequest"/></param>
@@ -2244,6 +2284,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="EnableVpcCniNetworkTypeResponse"/></returns>
+        public async Task<EnableVpcCniNetworkTypeResponse> EnableVpcCniNetworkType(EnableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// GR集群可以通过本接口附加vpc-cni容器网络插件，开启vpc-cni容器网络能力
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="EnableVpcCniNetworkTypeResponse"/></returns>
+        public EnableVpcCniNetworkTypeResponse EnableVpcCniNetworkTypeSync(EnableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<EnableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcCniNetworkTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

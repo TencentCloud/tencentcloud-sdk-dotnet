@@ -413,6 +413,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// DescribeGuideScanInfo新手引导扫描接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGuideScanInfoRequest"/></param>
+        /// <returns><see cref="DescribeGuideScanInfoResponse"/></returns>
+        public async Task<DescribeGuideScanInfoResponse> DescribeGuideScanInfo(DescribeGuideScanInfoRequest req)
+        {
+             JsonResponseModel<DescribeGuideScanInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGuideScanInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGuideScanInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeGuideScanInfo新手引导扫描接口信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGuideScanInfoRequest"/></param>
+        /// <returns><see cref="DescribeGuideScanInfoResponse"/></returns>
+        public DescribeGuideScanInfoResponse DescribeGuideScanInfoSync(DescribeGuideScanInfoRequest req)
+        {
+             JsonResponseModel<DescribeGuideScanInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGuideScanInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGuideScanInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// nat规则列表概况
         /// </summary>
         /// <param name="req"><see cref="DescribeNatRuleOverviewRequest"/></param>

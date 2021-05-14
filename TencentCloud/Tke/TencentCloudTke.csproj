@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.276</VersionPrefix>
+    <VersionPrefix>3.0.277</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,6 +148,8 @@
     <Compile Include="V20180525\Models\DescribeEKSClusterCredentialResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeImagesRequest.cs" />
@@ -174,6 +176,8 @@
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
     <Compile Include="V20180525\Models\EksCluster.cs" />
+    <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
+    <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
     <Compile Include="V20180525\Models\ExistedInstance.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />

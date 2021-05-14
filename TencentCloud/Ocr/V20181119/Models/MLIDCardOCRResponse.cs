@@ -83,8 +83,9 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// MyPR    永居证
         /// MyTentera   军官证
         /// MyKAS    临时身份证
-        /// POLIS  警察
+        /// POLIS  警察证
         /// IKAD   劳工证
+        /// MyKid 儿童卡
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

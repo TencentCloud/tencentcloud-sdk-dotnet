@@ -1453,6 +1453,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 用于在企业版中返回Chart的下载信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChartDownloadInfoRequest"/></param>
+        /// <returns><see cref="DescribeChartDownloadInfoResponse"/></returns>
+        public async Task<DescribeChartDownloadInfoResponse> DescribeChartDownloadInfo(DescribeChartDownloadInfoRequest req)
+        {
+             JsonResponseModel<DescribeChartDownloadInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChartDownloadInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChartDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在企业版中返回Chart的下载信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChartDownloadInfoRequest"/></param>
+        /// <returns><see cref="DescribeChartDownloadInfoResponse"/></returns>
+        public DescribeChartDownloadInfoResponse DescribeChartDownloadInfoSync(DescribeChartDownloadInfoRequest req)
+        {
+             JsonResponseModel<DescribeChartDownloadInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChartDownloadInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChartDownloadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例公网访问入口状态
         /// </summary>
         /// <param name="req"><see cref="DescribeExternalEndpointStatusRequest"/></param>
