@@ -31,7 +31,7 @@ namespace TencentCloud.Tem.V20201221.Models
         public string NamespaceId{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 资源类型，目前支持文件系统：CFS；日志服务：CLS；注册中心：TSE_SRE
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tem.V20201221.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// 来源渠道
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }

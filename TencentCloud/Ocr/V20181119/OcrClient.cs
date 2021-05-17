@@ -3035,6 +3035,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 此接口基于企业四要素授权“姓名、证件号码、企业标识、企业全称”，验证企业信息是否一致。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyEnterpriseFourFactorsRequest"/></param>
+        /// <returns><see cref="VerifyEnterpriseFourFactorsResponse"/></returns>
+        public async Task<VerifyEnterpriseFourFactorsResponse> VerifyEnterpriseFourFactors(VerifyEnterpriseFourFactorsRequest req)
+        {
+             JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyEnterpriseFourFactors");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口基于企业四要素授权“姓名、证件号码、企业标识、企业全称”，验证企业信息是否一致。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyEnterpriseFourFactorsRequest"/></param>
+        /// <returns><see cref="VerifyEnterpriseFourFactorsResponse"/></returns>
+        public VerifyEnterpriseFourFactorsResponse VerifyEnterpriseFourFactorsSync(VerifyEnterpriseFourFactorsRequest req)
+        {
+             JsonResponseModel<VerifyEnterpriseFourFactorsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyEnterpriseFourFactors");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyEnterpriseFourFactorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持OFD格式的增值税电子普通发票和增值税电子专用发票的识别，返回发票代码、发票号码、开票日期、验证码、机器编号、密码区，购买方和销售方信息，包括名称、纳税人识别号、地址电话、开户行及账号，以及价税合计、开票人、收款人、复核人、税额、不含税金额等字段信息。
         /// </summary>
         /// <param name="req"><see cref="VerifyOfdVatInvoiceOCRRequest"/></param>

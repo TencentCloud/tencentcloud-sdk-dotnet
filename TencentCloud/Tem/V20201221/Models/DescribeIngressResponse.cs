@@ -25,7 +25,7 @@ namespace TencentCloud.Tem.V20201221.Models
     {
         
         /// <summary>
-        /// ingressInfo
+        /// Ingress 规则配置
         /// </summary>
         [JsonProperty("Result")]
         public IngressInfo Result{ get; set; }

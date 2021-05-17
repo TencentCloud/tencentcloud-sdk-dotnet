@@ -24,12 +24,40 @@ namespace TencentCloud.Tke.V20180525.Models
     public class SetNodePoolNodeProtectionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 集群id
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// 节点池id
+        /// </summary>
+        [JsonProperty("NodePoolId")]
+        public string NodePoolId{ get; set; }
+
+        /// <summary>
+        /// 节点id
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
+        /// <summary>
+        /// 节点是否需要移出保护
+        /// </summary>
+        [JsonProperty("ProtectedFromScaleIn")]
+        public bool? ProtectedFromScaleIn{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "NodePoolId", this.NodePoolId);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "ProtectedFromScaleIn", this.ProtectedFromScaleIn);
         }
     }
 }

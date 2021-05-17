@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20201221.Models
         public string EksNamespace{ get; set; }
 
         /// <summary>
-        /// 来源
+        /// 来源渠道
         /// </summary>
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }

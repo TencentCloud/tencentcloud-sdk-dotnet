@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.277</VersionPrefix>
+    <VersionPrefix>3.0.278</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,7 @@
     <Compile Include="V20181119\Models\ClassifyDetectOCRRequest.cs" />
     <Compile Include="V20181119\Models\ClassifyDetectOCRResponse.cs" />
     <Compile Include="V20181119\Models\Coord.cs" />
+    <Compile Include="V20181119\Models\Detail.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRRequest.cs" />
     <Compile Include="V20181119\Models\DriverLicenseOCRResponse.cs" />
     <Compile Include="V20181119\Models\DutyPaidProofInfo.cs" />
@@ -217,6 +218,8 @@
     <Compile Include="V20181119\Models\VerifyBasicBizLicenseResponse.cs" />
     <Compile Include="V20181119\Models\VerifyBizLicenseRequest.cs" />
     <Compile Include="V20181119\Models\VerifyBizLicenseResponse.cs" />
+    <Compile Include="V20181119\Models\VerifyEnterpriseFourFactorsRequest.cs" />
+    <Compile Include="V20181119\Models\VerifyEnterpriseFourFactorsResponse.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VerifyOfdVatInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\VinOCRRequest.cs" />

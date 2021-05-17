@@ -37,25 +37,28 @@ namespace TencentCloud.Tem.V20201221.Models
         public string ServiceId{ get; set; }
 
         /// <summary>
-        /// 单页条数
+        /// 单页条数，默认值20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页下标
+        /// 分页下标，默认值0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// pod状态
+        /// 实例状态 
+        /// - Running 
+        /// - Pending 
+        /// - Error
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 名字
+        /// 实例名字
         /// </summary>
         [JsonProperty("PodName")]
         public string PodName{ get; set; }

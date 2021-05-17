@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20201221.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 是否使用默认镜像服务
+        /// 是否使用默认镜像服务 1-是，0-否
         /// </summary>
         [JsonProperty("UseDefaultImageService")]
         public long? UseDefaultImageService{ get; set; }
@@ -79,13 +79,18 @@ namespace TencentCloud.Tem.V20201221.Models
         public string[] SubnetList{ get; set; }
 
         /// <summary>
-        /// 编程语言
+        /// 编程语言 
+        /// - JAVA
+        /// - OTHER
         /// </summary>
         [JsonProperty("CodingLanguage")]
         public string CodingLanguage{ get; set; }
 
         /// <summary>
-        /// 部署方式
+        /// 部署方式 
+        /// - IMAGE
+        /// - JAR
+        /// - WAR
         /// </summary>
         [JsonProperty("DeployMode")]
         public string DeployMode{ get; set; }
