@@ -1,0 +1,89 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.280</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Privatedns</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201028\PrivatednsClient.cs" />
+    <Compile Include="V20201028\Models\AuditLog.cs" />
+    <Compile Include="V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateZoneResponse.cs" />
+    <Compile Include="V20201028\Models\DatePoint.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneRequest.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateZoneResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeAuditLogRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeAuditLogResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeDashboardRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneRecordListResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneResponse.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneServiceRequest.cs" />
+    <Compile Include="V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeRequestDataRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeRequestDataResponse.cs" />
+    <Compile Include="V20201028\Models\Filter.cs" />
+    <Compile Include="V20201028\Models\FlowUsage.cs" />
+    <Compile Include="V20201028\Models\MetricData.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneRecordRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneRecordResponse.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneResponse.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
+    <Compile Include="V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="V20201028\Models\PrivateZone.cs" />
+    <Compile Include="V20201028\Models\PrivateZoneRecord.cs" />
+    <Compile Include="V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
+    <Compile Include="V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
+    <Compile Include="V20201028\Models\TagInfo.cs" />
+    <Compile Include="V20201028\Models\VpcInfo.cs" />
+  </ItemGroup>
+</Project>
