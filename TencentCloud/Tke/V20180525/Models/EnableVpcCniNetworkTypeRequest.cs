@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Subnets")]
         public string[] Subnets{ get; set; }
 
+        /// <summary>
+        /// 在固定IP模式下，Pod销毁后退还IP的时间，传参必须大于300；不传默认IP永不销毁。
+        /// </summary>
+        [JsonProperty("ExpiredSeconds")]
+        public ulong? ExpiredSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "VpcCniType", this.VpcCniType);
             this.SetParamSimple(map, prefix + "EnableStaticIp", this.EnableStaticIp);
             this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+            this.SetParamSimple(map, prefix + "ExpiredSeconds", this.ExpiredSeconds);
         }
     }
 }

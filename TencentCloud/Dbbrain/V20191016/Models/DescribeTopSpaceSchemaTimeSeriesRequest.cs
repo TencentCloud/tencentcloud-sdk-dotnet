@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20191016.Models
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 开始日期，最早为当日的前第29天，默认为截止日期的前第6天。
+        /// 开始日期，如“2021-01-01”，最早为当日的前第29天，默认为截止日期的前第6天。
         /// </summary>
         [JsonProperty("StartDate")]
         public string StartDate{ get; set; }
 
         /// <summary>
-        /// 截止日期，最早为当日的前第29天，默认为当日。
+        /// 截止日期，如“2021-01-01”，最早为当日的前第29天，默认为当日。
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

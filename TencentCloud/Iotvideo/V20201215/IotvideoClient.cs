@@ -533,6 +533,86 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 查询账户余额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBalanceRequest"/></param>
+        /// <returns><see cref="DescribeBalanceResponse"/></returns>
+        public async Task<DescribeBalanceResponse> DescribeBalance(DescribeBalanceRequest req)
+        {
+             JsonResponseModel<DescribeBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账户余额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBalanceRequest"/></param>
+        /// <returns><see cref="DescribeBalanceResponse"/></returns>
+        public DescribeBalanceResponse DescribeBalanceSync(DescribeBalanceRequest req)
+        {
+             JsonResponseModel<DescribeBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取账户流水
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBalanceTransactionsRequest"/></param>
+        /// <returns><see cref="DescribeBalanceTransactionsResponse"/></returns>
+        public async Task<DescribeBalanceTransactionsResponse> DescribeBalanceTransactions(DescribeBalanceTransactionsRequest req)
+        {
+             JsonResponseModel<DescribeBalanceTransactionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBalanceTransactions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBalanceTransactionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取账户流水
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBalanceTransactionsRequest"/></param>
+        /// <returns><see cref="DescribeBalanceTransactionsResponse"/></returns>
+        public DescribeBalanceTransactionsResponse DescribeBalanceTransactionsSync(DescribeBalanceTransactionsRequest req)
+        {
+             JsonResponseModel<DescribeBalanceTransactionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBalanceTransactions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBalanceTransactionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取批次详情
         /// </summary>
         /// <param name="req"><see cref="DescribeBatchRequest"/></param>

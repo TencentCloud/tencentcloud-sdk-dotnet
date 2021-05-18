@@ -25,10 +25,16 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 账户余额，单位分
+        /// 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
         /// </summary>
         [JsonProperty("Balance")]
         public ulong? Balance{ get; set; }
+
+        /// <summary>
+        /// 账户现金余额，单位分
+        /// </summary>
+        [JsonProperty("Cash")]
+        public long? Cash{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Balance", this.Balance);
+            this.SetParamSimple(map, prefix + "Cash", this.Cash);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

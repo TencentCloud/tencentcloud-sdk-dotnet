@@ -53,6 +53,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
+        /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
+        public async Task<BatchUpdateFirmwareResponse> BatchUpdateFirmware(BatchUpdateFirmwareRequest req)
+        {
+             JsonResponseModel<BatchUpdateFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchUpdateFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchUpdateFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
+        /// </summary>
+        /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
+        /// <returns><see cref="BatchUpdateFirmwareResponse"/></returns>
+        public BatchUpdateFirmwareResponse BatchUpdateFirmwareSync(BatchUpdateFirmwareRequest req)
+        {
+             JsonResponseModel<BatchUpdateFirmwareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchUpdateFirmware");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchUpdateFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（BindDevices）用于网关设备批量绑定子设备 
         /// </summary>
         /// <param name="req"><see cref="BindDevicesRequest"/></param>
@@ -1804,6 +1844,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "EnableTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// </summary>
+        /// <param name="req"><see cref="GetCOSURLRequest"/></param>
+        /// <returns><see cref="GetCOSURLResponse"/></returns>
+        public async Task<GetCOSURLResponse> GetCOSURL(GetCOSURLRequest req)
+        {
+             JsonResponseModel<GetCOSURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCOSURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCOSURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
+        /// </summary>
+        /// <param name="req"><see cref="GetCOSURLRequest"/></param>
+        /// <returns><see cref="GetCOSURLResponse"/></returns>
+        public GetCOSURLResponse GetCOSURLSync(GetCOSURLRequest req)
+        {
+             JsonResponseModel<GetCOSURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCOSURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCOSURLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

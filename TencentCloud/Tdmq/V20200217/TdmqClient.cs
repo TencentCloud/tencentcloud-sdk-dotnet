@@ -53,6 +53,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 清空cmq消息队列中的消息
+        /// </summary>
+        /// <param name="req"><see cref="ClearCmqQueueRequest"/></param>
+        /// <returns><see cref="ClearCmqQueueResponse"/></returns>
+        public async Task<ClearCmqQueueResponse> ClearCmqQueue(ClearCmqQueueRequest req)
+        {
+             JsonResponseModel<ClearCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ClearCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清空cmq消息队列中的消息
+        /// </summary>
+        /// <param name="req"><see cref="ClearCmqQueueRequest"/></param>
+        /// <returns><see cref="ClearCmqQueueResponse"/></returns>
+        public ClearCmqQueueResponse ClearCmqQueueSync(ClearCmqQueueRequest req)
+        {
+             JsonResponseModel<ClearCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ClearCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清空订阅者消息标签
+        /// </summary>
+        /// <param name="req"><see cref="ClearCmqSubscriptionFilterTagsRequest"/></param>
+        /// <returns><see cref="ClearCmqSubscriptionFilterTagsResponse"/></returns>
+        public async Task<ClearCmqSubscriptionFilterTagsResponse> ClearCmqSubscriptionFilterTags(ClearCmqSubscriptionFilterTagsRequest req)
+        {
+             JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ClearCmqSubscriptionFilterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清空订阅者消息标签
+        /// </summary>
+        /// <param name="req"><see cref="ClearCmqSubscriptionFilterTagsRequest"/></param>
+        /// <returns><see cref="ClearCmqSubscriptionFilterTagsResponse"/></returns>
+        public ClearCmqSubscriptionFilterTagsResponse ClearCmqSubscriptionFilterTagsSync(ClearCmqSubscriptionFilterTagsRequest req)
+        {
+             JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ClearCmqSubscriptionFilterTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ClearCmqSubscriptionFilterTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户的集群
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>
@@ -84,6 +164,126 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "CreateCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqQueueRequest"/></param>
+        /// <returns><see cref="CreateCmqQueueResponse"/></returns>
+        public async Task<CreateCmqQueueResponse> CreateCmqQueue(CreateCmqQueueRequest req)
+        {
+             JsonResponseModel<CreateCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq队列接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqQueueRequest"/></param>
+        /// <returns><see cref="CreateCmqQueueResponse"/></returns>
+        public CreateCmqQueueResponse CreateCmqQueueSync(CreateCmqQueueRequest req)
+        {
+             JsonResponseModel<CreateCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq订阅接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqSubscribeRequest"/></param>
+        /// <returns><see cref="CreateCmqSubscribeResponse"/></returns>
+        public async Task<CreateCmqSubscribeResponse> CreateCmqSubscribe(CreateCmqSubscribeRequest req)
+        {
+             JsonResponseModel<CreateCmqSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCmqSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq订阅接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqSubscribeRequest"/></param>
+        /// <returns><see cref="CreateCmqSubscribeResponse"/></returns>
+        public CreateCmqSubscribeResponse CreateCmqSubscribeSync(CreateCmqSubscribeRequest req)
+        {
+             JsonResponseModel<CreateCmqSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCmqSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqTopicRequest"/></param>
+        /// <returns><see cref="CreateCmqTopicResponse"/></returns>
+        public async Task<CreateCmqTopicResponse> CreateCmqTopic(CreateCmqTopicRequest req)
+        {
+             JsonResponseModel<CreateCmqTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCmqTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建cmq主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateCmqTopicRequest"/></param>
+        /// <returns><see cref="CreateCmqTopicResponse"/></returns>
+        public CreateCmqTopicResponse CreateCmqTopicSync(CreateCmqTopicRequest req)
+        {
+             JsonResponseModel<CreateCmqTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCmqTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCmqTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -244,6 +444,126 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DeleteCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq队列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqQueueRequest"/></param>
+        /// <returns><see cref="DeleteCmqQueueResponse"/></returns>
+        public async Task<DeleteCmqQueueResponse> DeleteCmqQueue(DeleteCmqQueueRequest req)
+        {
+             JsonResponseModel<DeleteCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq队列
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqQueueRequest"/></param>
+        /// <returns><see cref="DeleteCmqQueueResponse"/></returns>
+        public DeleteCmqQueueResponse DeleteCmqQueueSync(DeleteCmqQueueRequest req)
+        {
+             JsonResponseModel<DeleteCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteCmqSubscribeResponse"/></returns>
+        public async Task<DeleteCmqSubscribeResponse> DeleteCmqSubscribe(DeleteCmqSubscribeRequest req)
+        {
+             JsonResponseModel<DeleteCmqSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCmqSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq订阅
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqSubscribeRequest"/></param>
+        /// <returns><see cref="DeleteCmqSubscribeResponse"/></returns>
+        public DeleteCmqSubscribeResponse DeleteCmqSubscribeSync(DeleteCmqSubscribeRequest req)
+        {
+             JsonResponseModel<DeleteCmqSubscribeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCmqSubscribe");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqSubscribeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqTopicRequest"/></param>
+        /// <returns><see cref="DeleteCmqTopicResponse"/></returns>
+        public async Task<DeleteCmqTopicResponse> DeleteCmqTopic(DeleteCmqTopicRequest req)
+        {
+             JsonResponseModel<DeleteCmqTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCmqTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除cmq主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCmqTopicRequest"/></param>
+        /// <returns><see cref="DeleteCmqTopicResponse"/></returns>
+        public DeleteCmqTopicResponse DeleteCmqTopicSync(DeleteCmqTopicRequest req)
+        {
+             JsonResponseModel<DeleteCmqTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCmqTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCmqTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,6 +853,246 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 枚举cmq死信队列源队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
+        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
+        public async Task<DescribeCmqDeadLetterSourceQueuesResponse> DescribeCmqDeadLetterSourceQueues(DescribeCmqDeadLetterSourceQueuesRequest req)
+        {
+             JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqDeadLetterSourceQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 枚举cmq死信队列源队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqDeadLetterSourceQueuesRequest"/></param>
+        /// <returns><see cref="DescribeCmqDeadLetterSourceQueuesResponse"/></returns>
+        public DescribeCmqDeadLetterSourceQueuesResponse DescribeCmqDeadLetterSourceQueuesSync(DescribeCmqDeadLetterSourceQueuesRequest req)
+        {
+             JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqDeadLetterSourceQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqDeadLetterSourceQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq队列详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqQueueDetailResponse"/></returns>
+        public async Task<DescribeCmqQueueDetailResponse> DescribeCmqQueueDetail(DescribeCmqQueueDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqQueueDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqQueueDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueueDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq队列详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqQueueDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqQueueDetailResponse"/></returns>
+        public DescribeCmqQueueDetailResponse DescribeCmqQueueDetailSync(DescribeCmqQueueDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqQueueDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqQueueDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueueDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq全量队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqQueuesRequest"/></param>
+        /// <returns><see cref="DescribeCmqQueuesResponse"/></returns>
+        public async Task<DescribeCmqQueuesResponse> DescribeCmqQueues(DescribeCmqQueuesRequest req)
+        {
+             JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq全量队列
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqQueuesRequest"/></param>
+        /// <returns><see cref="DescribeCmqQueuesResponse"/></returns>
+        public DescribeCmqQueuesResponse DescribeCmqQueuesSync(DescribeCmqQueuesRequest req)
+        {
+             JsonResponseModel<DescribeCmqQueuesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqQueues");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqQueuesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq订阅详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqSubscriptionDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqSubscriptionDetailResponse"/></returns>
+        public async Task<DescribeCmqSubscriptionDetailResponse> DescribeCmqSubscriptionDetail(DescribeCmqSubscriptionDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqSubscriptionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqSubscriptionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqSubscriptionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq订阅详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqSubscriptionDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqSubscriptionDetailResponse"/></returns>
+        public DescribeCmqSubscriptionDetailResponse DescribeCmqSubscriptionDetailSync(DescribeCmqSubscriptionDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqSubscriptionDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqSubscriptionDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqSubscriptionDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq主题详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqTopicDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqTopicDetailResponse"/></returns>
+        public async Task<DescribeCmqTopicDetailResponse> DescribeCmqTopicDetail(DescribeCmqTopicDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqTopicDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqTopicDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询cmq主题详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqTopicDetailRequest"/></param>
+        /// <returns><see cref="DescribeCmqTopicDetailResponse"/></returns>
+        public DescribeCmqTopicDetailResponse DescribeCmqTopicDetailSync(DescribeCmqTopicDetailRequest req)
+        {
+             JsonResponseModel<DescribeCmqTopicDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqTopicDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 枚举cmq全量主题
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCmqTopicsResponse"/></returns>
+        public async Task<DescribeCmqTopicsResponse> DescribeCmqTopics(DescribeCmqTopicsRequest req)
+        {
+             JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCmqTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 枚举cmq全量主题
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCmqTopicsRequest"/></param>
+        /// <returns><see cref="DescribeCmqTopicsResponse"/></returns>
+        public DescribeCmqTopicsResponse DescribeCmqTopicsSync(DescribeCmqTopicsRequest req)
+        {
+             JsonResponseModel<DescribeCmqTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCmqTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCmqTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定命名空间的属性
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentAttributesRequest"/></param>
@@ -813,6 +1373,126 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 修改cmq队列属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqQueueAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqQueueAttributeResponse"/></returns>
+        public async Task<ModifyCmqQueueAttributeResponse> ModifyCmqQueueAttribute(ModifyCmqQueueAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqQueueAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCmqQueueAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqQueueAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改cmq队列属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqQueueAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqQueueAttributeResponse"/></returns>
+        public ModifyCmqQueueAttributeResponse ModifyCmqQueueAttributeSync(ModifyCmqQueueAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqQueueAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCmqQueueAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqQueueAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改cmq订阅属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqSubscriptionAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqSubscriptionAttributeResponse"/></returns>
+        public async Task<ModifyCmqSubscriptionAttributeResponse> ModifyCmqSubscriptionAttribute(ModifyCmqSubscriptionAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqSubscriptionAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCmqSubscriptionAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqSubscriptionAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改cmq订阅属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqSubscriptionAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqSubscriptionAttributeResponse"/></returns>
+        public ModifyCmqSubscriptionAttributeResponse ModifyCmqSubscriptionAttributeSync(ModifyCmqSubscriptionAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqSubscriptionAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCmqSubscriptionAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqSubscriptionAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改cmq主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqTopicAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqTopicAttributeResponse"/></returns>
+        public async Task<ModifyCmqTopicAttributeResponse> ModifyCmqTopicAttribute(ModifyCmqTopicAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqTopicAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCmqTopicAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqTopicAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改cmq主题属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCmqTopicAttributeRequest"/></param>
+        /// <returns><see cref="ModifyCmqTopicAttributeResponse"/></returns>
+        public ModifyCmqTopicAttributeResponse ModifyCmqTopicAttributeSync(ModifyCmqTopicAttributeRequest req)
+        {
+             JsonResponseModel<ModifyCmqTopicAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCmqTopicAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCmqTopicAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改指定命名空间的属性值
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvironmentAttributesRequest"/></param>
@@ -893,6 +1573,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 发送cmq主题消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishCmqMsgRequest"/></param>
+        /// <returns><see cref="PublishCmqMsgResponse"/></returns>
+        public async Task<PublishCmqMsgResponse> PublishCmqMsg(PublishCmqMsgRequest req)
+        {
+             JsonResponseModel<PublishCmqMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishCmqMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishCmqMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送cmq主题消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishCmqMsgRequest"/></param>
+        /// <returns><see cref="PublishCmqMsgResponse"/></returns>
+        public PublishCmqMsgResponse PublishCmqMsgSync(PublishCmqMsgRequest req)
+        {
+             JsonResponseModel<PublishCmqMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishCmqMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishCmqMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据时间戳进行消息回溯，精确到毫秒
         /// </summary>
         /// <param name="req"><see cref="ResetMsgSubOffsetByTimestampRequest"/></param>
@@ -924,6 +1644,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ResetMsgSubOffsetByTimestamp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetMsgSubOffsetByTimestampResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回溯cmq队列
+        /// </summary>
+        /// <param name="req"><see cref="RewindCmqQueueRequest"/></param>
+        /// <returns><see cref="RewindCmqQueueResponse"/></returns>
+        public async Task<RewindCmqQueueResponse> RewindCmqQueue(RewindCmqQueueRequest req)
+        {
+             JsonResponseModel<RewindCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RewindCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RewindCmqQueueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 回溯cmq队列
+        /// </summary>
+        /// <param name="req"><see cref="RewindCmqQueueRequest"/></param>
+        /// <returns><see cref="RewindCmqQueueResponse"/></returns>
+        public RewindCmqQueueResponse RewindCmqQueueSync(RewindCmqQueueRequest req)
+        {
+             JsonResponseModel<RewindCmqQueueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RewindCmqQueue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RewindCmqQueueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1733,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 发送cmq消息
+        /// </summary>
+        /// <param name="req"><see cref="SendCmqMsgRequest"/></param>
+        /// <returns><see cref="SendCmqMsgResponse"/></returns>
+        public async Task<SendCmqMsgResponse> SendCmqMsg(SendCmqMsgRequest req)
+        {
+             JsonResponseModel<SendCmqMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendCmqMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCmqMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发送cmq消息
+        /// </summary>
+        /// <param name="req"><see cref="SendCmqMsgRequest"/></param>
+        /// <returns><see cref="SendCmqMsgResponse"/></returns>
+        public SendCmqMsgResponse SendCmqMsgSync(SendCmqMsgRequest req)
+        {
+             JsonResponseModel<SendCmqMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendCmqMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendCmqMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发送单条消息
         /// </summary>
         /// <param name="req"><see cref="SendMessagesRequest"/></param>
@@ -1004,6 +1804,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "SendMessages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMessagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑cmq死信队列
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCmqDeadLetterRequest"/></param>
+        /// <returns><see cref="UnbindCmqDeadLetterResponse"/></returns>
+        public async Task<UnbindCmqDeadLetterResponse> UnbindCmqDeadLetter(UnbindCmqDeadLetterRequest req)
+        {
+             JsonResponseModel<UnbindCmqDeadLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindCmqDeadLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCmqDeadLetterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑cmq死信队列
+        /// </summary>
+        /// <param name="req"><see cref="UnbindCmqDeadLetterRequest"/></param>
+        /// <returns><see cref="UnbindCmqDeadLetterResponse"/></returns>
+        public UnbindCmqDeadLetterResponse UnbindCmqDeadLetterSync(UnbindCmqDeadLetterRequest req)
+        {
+             JsonResponseModel<UnbindCmqDeadLetterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindCmqDeadLetter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindCmqDeadLetterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

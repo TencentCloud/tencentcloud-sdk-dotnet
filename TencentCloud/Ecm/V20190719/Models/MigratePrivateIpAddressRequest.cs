@@ -25,13 +25,13 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// ECM 地域
+        /// ECM 地域，形如ap-xian-ecm。
         /// </summary>
         [JsonProperty("EcmRegion")]
         public string EcmRegion{ get; set; }
 
         /// <summary>
-        /// 当内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
+        /// 当前内网IP绑定的弹性网卡实例ID，例如：eni-11112222。
         /// </summary>
         [JsonProperty("SourceNetworkInterfaceId")]
         public string SourceNetworkInterfaceId{ get; set; }

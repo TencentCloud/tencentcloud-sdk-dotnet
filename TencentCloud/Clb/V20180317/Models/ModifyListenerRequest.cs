@@ -79,6 +79,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("KeepaliveEnable")]
         public long? KeepaliveEnable{ get; set; }
 
+        /// <summary>
+        /// 解绑后端目标时，是否发RST给客户端，此参数仅适用于TCP监听器。
+        /// </summary>
+        [JsonProperty("DeregisterTargetRst")]
+        public bool? DeregisterTargetRst{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +100,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
+            this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         }
     }
 }

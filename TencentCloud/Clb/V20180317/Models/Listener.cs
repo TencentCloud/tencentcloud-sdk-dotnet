@@ -140,6 +140,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Toa")]
         public bool? Toa{ get; set; }
 
+        /// <summary>
+        /// 解绑后端目标时，是否发RST给客户端，（此参数仅对于TCP监听器有意义）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeregisterTargetRst")]
+        public bool? DeregisterTargetRst{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "Toa", this.Toa);
+            this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
         }
     }
 }

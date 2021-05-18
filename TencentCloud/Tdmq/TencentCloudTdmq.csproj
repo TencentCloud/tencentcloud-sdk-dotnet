@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1732CBF0-BE93-36A0-A593-39E6D6FF17BA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.278</VersionPrefix>
+    <VersionPrefix>3.0.279</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,12 +46,28 @@
   <ItemGroup>
     <Compile Include="V20200217\TdmqClient.cs" />
     <Compile Include="V20200217\Models\BindCluster.cs" />
+    <Compile Include="V20200217\Models\ClearCmqQueueRequest.cs" />
+    <Compile Include="V20200217\Models\ClearCmqQueueResponse.cs" />
+    <Compile Include="V20200217\Models\ClearCmqSubscriptionFilterTagsRequest.cs" />
+    <Compile Include="V20200217\Models\ClearCmqSubscriptionFilterTagsResponse.cs" />
     <Compile Include="V20200217\Models\Cluster.cs" />
+    <Compile Include="V20200217\Models\CmqDeadLetterPolicy.cs" />
+    <Compile Include="V20200217\Models\CmqDeadLetterSource.cs" />
+    <Compile Include="V20200217\Models\CmqQueue.cs" />
+    <Compile Include="V20200217\Models\CmqSubscription.cs" />
+    <Compile Include="V20200217\Models\CmqTopic.cs" />
+    <Compile Include="V20200217\Models\CmqTransactionPolicy.cs" />
     <Compile Include="V20200217\Models\Connection.cs" />
     <Compile Include="V20200217\Models\Consumer.cs" />
     <Compile Include="V20200217\Models\ConsumersSchedule.cs" />
     <Compile Include="V20200217\Models\CreateClusterRequest.cs" />
     <Compile Include="V20200217\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20200217\Models\CreateCmqQueueRequest.cs" />
+    <Compile Include="V20200217\Models\CreateCmqQueueResponse.cs" />
+    <Compile Include="V20200217\Models\CreateCmqSubscribeRequest.cs" />
+    <Compile Include="V20200217\Models\CreateCmqSubscribeResponse.cs" />
+    <Compile Include="V20200217\Models\CreateCmqTopicRequest.cs" />
+    <Compile Include="V20200217\Models\CreateCmqTopicResponse.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="V20200217\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="V20200217\Models\CreateSubscriptionRequest.cs" />
@@ -60,6 +76,12 @@
     <Compile Include="V20200217\Models\CreateTopicResponse.cs" />
     <Compile Include="V20200217\Models\DeleteClusterRequest.cs" />
     <Compile Include="V20200217\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqQueueRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqQueueResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqSubscribeRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqSubscribeResponse.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqTopicRequest.cs" />
+    <Compile Include="V20200217\Models\DeleteCmqTopicResponse.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="V20200217\Models\DeleteEnvironmentsResponse.cs" />
     <Compile Include="V20200217\Models\DeleteSubscriptionsRequest.cs" />
@@ -74,6 +96,18 @@
     <Compile Include="V20200217\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="V20200217\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20200217\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqDeadLetterSourceQueuesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqDeadLetterSourceQueuesResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqQueueDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqQueueDetailResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqQueuesRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqQueuesResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqSubscriptionDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqSubscriptionDetailResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqTopicDetailRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqTopicDetailResponse.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqTopicsRequest.cs" />
+    <Compile Include="V20200217\Models\DescribeCmqTopicsResponse.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
     <Compile Include="V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
@@ -92,16 +126,28 @@
     <Compile Include="V20200217\Models\FilterSubscription.cs" />
     <Compile Include="V20200217\Models\ModifyClusterRequest.cs" />
     <Compile Include="V20200217\Models\ModifyClusterResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqQueueAttributeRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqQueueAttributeResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqSubscriptionAttributeRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqSubscriptionAttributeResponse.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqTopicAttributeRequest.cs" />
+    <Compile Include="V20200217\Models\ModifyCmqTopicAttributeResponse.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
     <Compile Include="V20200217\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20200217\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20200217\Models\PartitionsTopic.cs" />
     <Compile Include="V20200217\Models\Producer.cs" />
+    <Compile Include="V20200217\Models\PublishCmqMsgRequest.cs" />
+    <Compile Include="V20200217\Models\PublishCmqMsgResponse.cs" />
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="V20200217\Models\RewindCmqQueueRequest.cs" />
+    <Compile Include="V20200217\Models\RewindCmqQueueResponse.cs" />
     <Compile Include="V20200217\Models\SendBatchMessagesRequest.cs" />
     <Compile Include="V20200217\Models\SendBatchMessagesResponse.cs" />
+    <Compile Include="V20200217\Models\SendCmqMsgRequest.cs" />
+    <Compile Include="V20200217\Models\SendCmqMsgResponse.cs" />
     <Compile Include="V20200217\Models\SendMessagesRequest.cs" />
     <Compile Include="V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="V20200217\Models\Subscription.cs" />
@@ -109,6 +155,8 @@
     <Compile Include="V20200217\Models\Tag.cs" />
     <Compile Include="V20200217\Models\Topic.cs" />
     <Compile Include="V20200217\Models\TopicRecord.cs" />
+    <Compile Include="V20200217\Models\UnbindCmqDeadLetterRequest.cs" />
+    <Compile Include="V20200217\Models\UnbindCmqDeadLetterResponse.cs" />
     <Compile Include="V20200217\Models\VpcBindRecord.cs" />
   </ItemGroup>
 </Project>

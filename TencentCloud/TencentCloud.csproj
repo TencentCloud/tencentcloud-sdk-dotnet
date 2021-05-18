@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.278</VersionPrefix>
+    <VersionPrefix>3.0.279</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6619,6 +6619,8 @@
     <Compile Include="Iotcloud\V20180614\IotcloudClient.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Attribute.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BatchPublishMessage.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\BatchUpdateFirmwareRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\BatchUpdateFirmwareResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BatchUpdateShadow.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BindDevicesRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BindDevicesResponse.cs" />
@@ -6716,6 +6718,8 @@
     <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\FirmwareTaskInfo.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\GetCOSURLRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\GetCOSURLResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\GetUserResourceInfoRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\GetUserResourceInfoResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\MultiDevicesInfo.cs" />
@@ -7042,6 +7046,7 @@
     <Compile Include="Iotvideo\V20191126\Models\VersionData.cs" />
     <Compile Include="Iotvideo\V20201215\IotvideoClient.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ActionHistory.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\BalanceTransaction.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
@@ -7069,6 +7074,10 @@
     <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceTransactionsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceTransactionsResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBatchRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBatchResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBatchsRequest.cs" />
@@ -9010,6 +9019,7 @@
     <Compile Include="Partners\V20180321\Models\AgentTransferMoneyResponse.cs" />
     <Compile Include="Partners\V20180321\Models\AuditApplyClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\AuditApplyClientResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\ClientBaseElem.cs" />
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DealGoodsPriceElem.cs" />
@@ -9036,6 +9046,8 @@
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsV2Response.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceResponse.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeClientBaseInfoRequest.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeClientBaseInfoResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeSalesmansRequest.cs" />
@@ -10929,12 +10941,28 @@
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
     <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
     <Compile Include="Tdmq\V20200217\Models\BindCluster.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ClearCmqSubscriptionFilterTagsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ClearCmqSubscriptionFilterTagsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Cluster.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqDeadLetterPolicy.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqDeadLetterSource.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqQueue.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqSubscription.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqTopic.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CmqTransactionPolicy.cs" />
     <Compile Include="Tdmq\V20200217\Models\Connection.cs" />
     <Compile Include="Tdmq\V20200217\Models\Consumer.cs" />
     <Compile Include="Tdmq\V20200217\Models\ConsumersSchedule.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqSubscribeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqSubscribeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqTopicRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateCmqTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionRequest.cs" />
@@ -10943,6 +10971,12 @@
     <Compile Include="Tdmq\V20200217\Models\CreateTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqSubscribeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqSubscribeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqTopicRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteCmqTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsRequest.cs" />
@@ -10957,6 +10991,18 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeClustersRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeClustersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqDeadLetterSourceQueuesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqDeadLetterSourceQueuesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqQueueDetailRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqQueueDetailResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqQueuesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqQueuesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqSubscriptionDetailRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqSubscriptionDetailResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqTopicDetailRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqTopicDetailResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqTopicsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeCmqTopicsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentAttributesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentRolesRequest.cs" />
@@ -10975,16 +11021,28 @@
     <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqQueueAttributeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqQueueAttributeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqSubscriptionAttributeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqSubscriptionAttributeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqTopicAttributeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyCmqTopicAttributeResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyTopicRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\PartitionsTopic.cs" />
     <Compile Include="Tdmq\V20200217\Models\Producer.cs" />
+    <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendCmqMsgRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendCmqMsgResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMessagesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
@@ -10992,6 +11050,8 @@
     <Compile Include="Tdmq\V20200217\Models\Tag.cs" />
     <Compile Include="Tdmq\V20200217\Models\Topic.cs" />
     <Compile Include="Tdmq\V20200217\Models\TopicRecord.cs" />
+    <Compile Include="Tdmq\V20200217\Models\UnbindCmqDeadLetterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\UnbindCmqDeadLetterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\VpcBindRecord.cs" />
     <Compile Include="Tem\V20201221\TemClient.cs" />
     <Compile Include="Tem\V20201221\Models\CosToken.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.278</VersionPrefix>
+    <VersionPrefix>3.0.279</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -201,6 +201,7 @@
     <Compile Include="V20191126\Models\VersionData.cs" />
     <Compile Include="V20201215\IotvideoClient.cs" />
     <Compile Include="V20201215\Models\ActionHistory.cs" />
+    <Compile Include="V20201215\Models\BalanceTransaction.cs" />
     <Compile Include="V20201215\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="V20201215\Models\BatchUpdateFirmwareResponse.cs" />
     <Compile Include="V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
@@ -228,6 +229,10 @@
     <Compile Include="V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\DeleteProductRequest.cs" />
     <Compile Include="V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeBalanceRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeBalanceResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeBalanceTransactionsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeBalanceTransactionsResponse.cs" />
     <Compile Include="V20201215\Models\DescribeBatchRequest.cs" />
     <Compile Include="V20201215\Models\DescribeBatchResponse.cs" />
     <Compile Include="V20201215\Models\DescribeBatchsRequest.cs" />

@@ -1,0 +1,71 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tdmq.V20200217.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateCmqTopicRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 主题名字，在单个地域同一帐号下唯一。主题名称是一个不超过64个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线（-）。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
+        /// <summary>
+        /// 消息最大长度。取值范围 1024-65536 Byte（即1-64K），默认值 65536。
+        /// </summary>
+        [JsonProperty("MaxMsgSize")]
+        public ulong? MaxMsgSize{ get; set; }
+
+        /// <summary>
+        /// 用于指定主题的消息匹配策略。1：表示标签匹配策略；2：表示路由匹配策略，默认值为标签匹配策略。
+        /// </summary>
+        [JsonProperty("FilterType")]
+        public ulong? FilterType{ get; set; }
+
+        /// <summary>
+        /// 消息保存时间。取值范围60 - 86400 s（即1分钟 - 1天），默认值86400。
+        /// </summary>
+        [JsonProperty("MsgRetentionSeconds")]
+        public ulong? MsgRetentionSeconds{ get; set; }
+
+        /// <summary>
+        /// 是否开启消息轨迹标识，true表示开启，false表示不开启，不填表示不开启。
+        /// </summary>
+        [JsonProperty("Trace")]
+        public bool? Trace{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
+            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
+            this.SetParamSimple(map, prefix + "Trace", this.Trace);
+        }
+    }
+}
+
