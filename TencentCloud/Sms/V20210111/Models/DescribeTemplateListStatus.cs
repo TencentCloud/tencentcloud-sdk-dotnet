@@ -25,24 +25,19 @@ namespace TencentCloud.Sms.V20210111.Models
     {
         
         /// <summary>
-        /// 模板Id
+        /// 模板ID。
         /// </summary>
         [JsonProperty("TemplateId")]
         public ulong? TemplateId{ get; set; }
 
         /// <summary>
-        /// 是否国际/港澳台短信：
-        /// 0：表示国内短信。
-        /// 1：表示国际/港澳台短信。
+        /// 是否国际/港澳台短信，其中0表示国内短信，1表示国际/港澳台短信。
         /// </summary>
         [JsonProperty("International")]
         public ulong? International{ get; set; }
 
         /// <summary>
-        /// 申请签名状态。其中：
-        /// 0：表示审核通过。
-        /// 1：表示审核中。
-        /// -1：表示审核未通过或审核失败。
+        /// 申请模板状态，其中0表示审核通过，1表示审核中，-1表示审核未通过或审核失败。
         /// </summary>
         [JsonProperty("StatusCode")]
         public long? StatusCode{ get; set; }
@@ -65,6 +60,12 @@ namespace TencentCloud.Sms.V20210111.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 模板内容。
+        /// </summary>
+        [JsonProperty("TemplateContent")]
+        public string TemplateContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +78,7 @@ namespace TencentCloud.Sms.V20210111.Models
             this.SetParamSimple(map, prefix + "ReviewReply", this.ReviewReply);
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "TemplateContent", this.TemplateContent);
         }
     }
 }

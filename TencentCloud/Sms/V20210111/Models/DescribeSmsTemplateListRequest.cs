@@ -26,6 +26,7 @@ namespace TencentCloud.Sms.V20210111.Models
         
         /// <summary>
         /// 模板 ID 数组。
+        /// 注：默认数组长度最大100。
         /// </summary>
         [JsonProperty("TemplateIdSet")]
         public ulong?[] TemplateIdSet{ get; set; }
