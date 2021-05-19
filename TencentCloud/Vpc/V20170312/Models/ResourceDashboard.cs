@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// Vpc实例ID，例如：vpc-f1xjkw1b。
+        /// Vpc实例ID，例如：vpc-bq4bzxpj。
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? Pcx{ get; set; }
 
         /// <summary>
-        /// 当前已使用的IP总数。
+        /// 统计当前除云服务器 IP、弹性网卡IP和网络探测IP以外的所有已使用的IP总数。云服务器 IP、弹性网卡IP和网络探测IP单独计数。
         /// </summary>
         [JsonProperty("Ip")]
         public ulong? Ip{ get; set; }
