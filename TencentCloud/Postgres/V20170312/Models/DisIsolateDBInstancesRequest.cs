@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 是否使用代金券
+        /// 是否使用代金券：true-使用,false-不使用，默认不使用
         /// </summary>
         [JsonProperty("AutoVoucher")]
         public bool? AutoVoucher{ get; set; }

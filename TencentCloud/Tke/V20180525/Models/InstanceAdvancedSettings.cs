@@ -73,6 +73,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraArgs")]
         public InstanceExtraArgs ExtraArgs{ get; set; }
 
+        /// <summary>
+        /// 该节点属于podCIDR大小自定义模式时，可指定节点上运行的pod数量上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DesiredPodNumber")]
+        public long? DesiredPodNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
         }
     }
 }

@@ -2187,6 +2187,48 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询直播域名 Referer 黑白名单配置。
+        /// 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainRefererResponse"/></returns>
+        public async Task<DescribeLiveDomainRefererResponse> DescribeLiveDomainReferer(DescribeLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询直播域名 Referer 黑白名单配置。
+        /// 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainRefererResponse"/></returns>
+        public DescribeLiveDomainRefererResponse DescribeLiveDomainRefererSync(DescribeLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据域名状态、类型等信息查询用户的域名信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDomainsRequest"/></param>
@@ -3910,6 +3952,48 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCert");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置直播域名 Referer 黑白名单。
+        /// 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainRefererResponse"/></returns>
+        public async Task<ModifyLiveDomainRefererResponse> ModifyLiveDomainReferer(ModifyLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainRefererResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置直播域名 Referer 黑白名单。
+        /// 由于 Referer 信息包含在 http 协议中，在开启配置后，播放协议为 rtmp 或 webrtc 不会校验 Referer 配置，仍可正常播放。如需配置 Referer 鉴权建议使用 http-flv 或 http-hls 协议播放。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainRefererRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainRefererResponse"/></returns>
+        public ModifyLiveDomainRefererResponse ModifyLiveDomainRefererSync(ModifyLiveDomainRefererRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainRefererResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainReferer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainRefererResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -173,7 +173,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例。
+        /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
         /// <returns><see cref="CreateDBInstancesResponse"/></returns>
@@ -204,6 +204,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "CreateDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
+        /// <returns><see cref="CreateInstancesResponse"/></returns>
+        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest req)
+        {
+             JsonResponseModel<CreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (CreateInstances) 用于创建一个或者多个PostgreSQL实例，通过此接口创建的实例无需进行初始化，可直接使用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
+        /// <returns><see cref="CreateInstancesResponse"/></returns>
+        public CreateInstancesResponse CreateInstancesSync(CreateInstancesRequest req)
+        {
+             JsonResponseModel<CreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

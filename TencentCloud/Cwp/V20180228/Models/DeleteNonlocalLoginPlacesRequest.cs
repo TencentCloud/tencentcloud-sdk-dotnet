@@ -42,6 +42,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Ip")]
         public string[] Ip{ get; set; }
 
+        /// <summary>
+        /// 主机Uuid
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "DelType", this.DelType);
             this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
             this.SetParamArraySimple(map, prefix + "Ip.", this.Ip);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本，目前支持：9.3.5、9.5.4、10.4三种版本。
+        /// PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }

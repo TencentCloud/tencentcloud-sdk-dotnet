@@ -382,8 +382,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>
@@ -404,8 +402,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>

@@ -36,6 +36,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 过滤字段值
+        /// </summary>
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

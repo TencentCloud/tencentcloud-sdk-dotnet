@@ -165,6 +165,19 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("ProxyList")]
         public ProxyDetailInfo[] ProxyList{ get; set; }
 
+        /// <summary>
+        /// 是否开启审核 0-不开启 1-开启
+        /// </summary>
+        [JsonProperty("Censorship")]
+        public long? Censorship{ get; set; }
+
+        /// <summary>
+        /// 审批人uin列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbaUins")]
+        public string[] DbaUins{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -193,6 +206,8 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "DiskVolume", this.DiskVolume);
             this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
             this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
+            this.SetParamSimple(map, prefix + "Censorship", this.Censorship);
+            this.SetParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
         }
     }
 }

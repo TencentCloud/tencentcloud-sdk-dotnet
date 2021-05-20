@@ -26,9 +26,17 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         
         /// <summary>
         /// 创建的备份任务ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
+
+        /// <summary>
+        /// 创建的备份申请ID列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationIds")]
+        public string[] ApplicationIds{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +51,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamArraySimple(map, prefix + "ApplicationIds.", this.ApplicationIds);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

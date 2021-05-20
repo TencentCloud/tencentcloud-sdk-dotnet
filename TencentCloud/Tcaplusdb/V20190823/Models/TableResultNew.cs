@@ -80,6 +80,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }
 
+        /// <summary>
+        /// 腾讯云申请审核单Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TableGroupId", this.TableGroupId);
             this.SetParamObj(map, prefix + "Error.", this.Error);
             this.SetParamArraySimple(map, prefix + "TaskIds.", this.TaskIds);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

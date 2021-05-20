@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public VatInvoiceItem[] Items{ get; set; }
 
         /// <summary>
-        /// 图片为PDF时，返回PDF的总页数，默认为0
+        /// 默认值为0。如果图片为PDF时，返回PDF的总页数。
         /// </summary>
         [JsonProperty("PdfPageSize")]
         public long? PdfPageSize{ get; set; }

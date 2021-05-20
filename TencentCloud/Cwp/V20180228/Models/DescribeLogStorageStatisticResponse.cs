@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 总容量
+        /// 总容量（单位：GB）
         /// </summary>
         [JsonProperty("TotalSize")]
         public ulong? TotalSize{ get; set; }
 
         /// <summary>
-        /// 已使用容量
+        /// 已使用容量（单位：GB）
         /// </summary>
         [JsonProperty("UsedSize")]
         public ulong? UsedSize{ get; set; }

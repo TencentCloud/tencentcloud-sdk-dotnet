@@ -573,6 +573,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 获取审批管理的申请单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public async Task<DescribeApplicationsResponse> DescribeApplications(DescribeApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取审批管理的申请单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取集群关联的标签列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterTagsRequest"/></param>
@@ -1213,6 +1253,86 @@ namespace TencentCloud.Tcaplusdb.V20190823
         }
 
         /// <summary>
+        /// 合并指定表格
+        /// </summary>
+        /// <param name="req"><see cref="MergeTablesDataRequest"/></param>
+        /// <returns><see cref="MergeTablesDataResponse"/></returns>
+        public async Task<MergeTablesDataResponse> MergeTablesData(MergeTablesDataRequest req)
+        {
+             JsonResponseModel<MergeTablesDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MergeTablesData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MergeTablesDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合并指定表格
+        /// </summary>
+        /// <param name="req"><see cref="MergeTablesDataRequest"/></param>
+        /// <returns><see cref="MergeTablesDataResponse"/></returns>
+        public MergeTablesDataResponse MergeTablesDataSync(MergeTablesDataRequest req)
+        {
+             JsonResponseModel<MergeTablesDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MergeTablesData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MergeTablesDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群审批状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCensorshipRequest"/></param>
+        /// <returns><see cref="ModifyCensorshipResponse"/></returns>
+        public async Task<ModifyCensorshipResponse> ModifyCensorship(ModifyCensorshipRequest req)
+        {
+             JsonResponseModel<ModifyCensorshipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCensorship");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCensorshipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群审批状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCensorshipRequest"/></param>
+        /// <returns><see cref="ModifyCensorshipResponse"/></returns>
+        public ModifyCensorshipResponse ModifyCensorshipSync(ModifyCensorshipRequest req)
+        {
+             JsonResponseModel<ModifyCensorshipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCensorship");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCensorshipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改独占集群机器
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterMachineRequest"/></param>
@@ -1764,6 +1884,46 @@ namespace TencentCloud.Tcaplusdb.V20190823
              {
                  var strResp = this.InternalRequestSync(req, "SetTableIndex");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTableIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新申请单状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplyRequest"/></param>
+        /// <returns><see cref="UpdateApplyResponse"/></returns>
+        public async Task<UpdateApplyResponse> UpdateApply(UpdateApplyRequest req)
+        {
+             JsonResponseModel<UpdateApplyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApply");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApplyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新申请单状态
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApplyRequest"/></param>
+        /// <returns><see cref="UpdateApplyResponse"/></returns>
+        public UpdateApplyResponse UpdateApplySync(UpdateApplyRequest req)
+        {
+             JsonResponseModel<UpdateApplyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApply");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApplyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
