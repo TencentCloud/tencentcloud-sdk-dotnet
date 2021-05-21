@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.284</VersionPrefix>
+    <VersionPrefix>3.0.285</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4754,6 +4754,90 @@
     <Compile Include="Dlc\V20210125\Models\TextFile.cs" />
     <Compile Include="Dlc\V20210125\Models\ViewBaseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\ViewResponseInfo.cs" />
+    <Compile Include="Dnspod\V20210323\DnspodClient.cs" />
+    <Compile Include="Dnspod\V20210323\Models\AddRecordBatch.cs" />
+    <Compile Include="Dnspod\V20210323\Models\BatchRecordInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainAliasRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainAliasResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainBatchDetail.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainBatchRecord.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainBatchRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainGroupRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainGroupResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateDomainResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordBatchDetail.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordBatchRecord.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordBatchRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordBatchResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\CreateRecordResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteDomainAliasRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteDomainAliasResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteDomainRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteDomainResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteRecordRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteRecordResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteShareDomainRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DeleteShareDomainResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskDetail.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainListRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainListResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainLogListRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainLogListResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainPurviewRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainPurviewResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainShareInfoRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainShareInfoResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordLineListRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordLineListResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordListRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordListResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordTypeRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeRecordTypeResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeUserDetailRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeUserDetailResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainCountInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainCreateInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainListItem.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainShareInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\LineGroupInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\LineInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\LockInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainLockRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainLockResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainOwnerRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainOwnerResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainRemarkRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainRemarkResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainStatusRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainStatusResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainUnlockRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDomainUnlockResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDynamicDNSRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyDynamicDNSResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordBatchDetail.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordBatchRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordBatchResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordRemarkRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordRemarkResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordStatusRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifyRecordStatusResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\PurviewInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\RecordCountInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\RecordInfo.cs" />
+    <Compile Include="Dnspod\V20210323\Models\RecordListItem.cs" />
+    <Compile Include="Dnspod\V20210323\Models\UserInfo.cs" />
     <Compile Include="Domain\V20180808\DomainClient.cs" />
     <Compile Include="Domain\V20180808\Models\BatchModifyDomainInfoRequest.cs" />
     <Compile Include="Domain\V20180808\Models\BatchModifyDomainInfoResponse.cs" />

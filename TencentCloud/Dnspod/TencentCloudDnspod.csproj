@@ -1,0 +1,132 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.285</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Dnspod</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210323\DnspodClient.cs" />
+    <Compile Include="V20210323\Models\AddRecordBatch.cs" />
+    <Compile Include="V20210323\Models\BatchRecordInfo.cs" />
+    <Compile Include="V20210323\Models\CreateDomainAliasRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainAliasResponse.cs" />
+    <Compile Include="V20210323\Models\CreateDomainBatchDetail.cs" />
+    <Compile Include="V20210323\Models\CreateDomainBatchRecord.cs" />
+    <Compile Include="V20210323\Models\CreateDomainBatchRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="V20210323\Models\CreateDomainGroupRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainGroupResponse.cs" />
+    <Compile Include="V20210323\Models\CreateDomainRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDomainResponse.cs" />
+    <Compile Include="V20210323\Models\CreateRecordBatchDetail.cs" />
+    <Compile Include="V20210323\Models\CreateRecordBatchRecord.cs" />
+    <Compile Include="V20210323\Models\CreateRecordBatchRequest.cs" />
+    <Compile Include="V20210323\Models\CreateRecordBatchResponse.cs" />
+    <Compile Include="V20210323\Models\CreateRecordRequest.cs" />
+    <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainAliasRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteRecordRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteRecordResponse.cs" />
+    <Compile Include="V20210323\Models\DeleteShareDomainRequest.cs" />
+    <Compile Include="V20210323\Models\DeleteShareDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeBatchTaskDetail.cs" />
+    <Compile Include="V20210323\Models\DescribeBatchTaskRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeBatchTaskResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainLogListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainLogListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainPurviewRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainPurviewResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainShareInfoRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeDomainShareInfoResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordLineListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordLineListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordListRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordListResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordTypeRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeRecordTypeResponse.cs" />
+    <Compile Include="V20210323\Models\DescribeUserDetailRequest.cs" />
+    <Compile Include="V20210323\Models\DescribeUserDetailResponse.cs" />
+    <Compile Include="V20210323\Models\DomainCountInfo.cs" />
+    <Compile Include="V20210323\Models\DomainCreateInfo.cs" />
+    <Compile Include="V20210323\Models\DomainInfo.cs" />
+    <Compile Include="V20210323\Models\DomainListItem.cs" />
+    <Compile Include="V20210323\Models\DomainShareInfo.cs" />
+    <Compile Include="V20210323\Models\LineGroupInfo.cs" />
+    <Compile Include="V20210323\Models\LineInfo.cs" />
+    <Compile Include="V20210323\Models\LockInfo.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainLockRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainLockResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainOwnerRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainOwnerResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainRemarkRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainRemarkResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainStatusRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainStatusResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainUnlockRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDomainUnlockResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyDynamicDNSRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyDynamicDNSResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordBatchDetail.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordBatchRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordBatchResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordRemarkRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordRemarkResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordStatusRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyRecordStatusResponse.cs" />
+    <Compile Include="V20210323\Models\PurviewInfo.cs" />
+    <Compile Include="V20210323\Models\RecordCountInfo.cs" />
+    <Compile Include="V20210323\Models\RecordInfo.cs" />
+    <Compile Include="V20210323\Models\RecordListItem.cs" />
+    <Compile Include="V20210323\Models\UserInfo.cs" />
+  </ItemGroup>
+</Project>
