@@ -46,11 +46,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 是否开启临时目录
+        /// 是否开启临时目录逐步废弃，请使用 EmptyDir
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableEmptyDirVolume")]
         public bool? EnableEmptyDirVolume{ get; set; }
+
+        /// <summary>
+        /// emptydir数据卷详细信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EmptyDir")]
+        public CloudBaseRunEmptyDirVolumeSource EmptyDir{ get; set; }
 
 
         /// <summary>
@@ -62,6 +69,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "NFS.", this.NFS);
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "EnableEmptyDirVolume", this.EnableEmptyDirVolume);
+            this.SetParamObj(map, prefix + "EmptyDir.", this.EmptyDir);
         }
     }
 }

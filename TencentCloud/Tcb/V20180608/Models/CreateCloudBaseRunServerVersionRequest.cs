@@ -246,6 +246,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsCreateJnsGw")]
         public long? IsCreateJnsGw{ get; set; }
 
+        /// <summary>
+        /// 数据卷挂载参数
+        /// </summary>
+        [JsonProperty("ServiceVolumeMounts")]
+        public CloudBaseRunServiceVolumeMount[] ServiceVolumeMounts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +295,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "Security.", this.Security);
             this.SetParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
             this.SetParamSimple(map, prefix + "IsCreateJnsGw", this.IsCreateJnsGw);
+            this.SetParamArrayObj(map, prefix + "ServiceVolumeMounts.", this.ServiceVolumeMounts);
         }
     }
 }

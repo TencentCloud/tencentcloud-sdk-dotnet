@@ -78,6 +78,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SkipValidateOptions")]
         public string[] SkipValidateOptions{ get; set; }
 
+        /// <summary>
+        /// 参数InstanceAdvancedSettingsOverride数组用于定制化地配置各台instance，与InstanceIds顺序对应。当传入InstanceAdvancedSettingsOverrides数组时，将覆盖默认参数InstanceAdvancedSettings；当没有传入参数InstanceAdvancedSettingsOverrides时，InstanceAdvancedSettings参数对每台instance生效。
+        /// 
+        /// 参数InstanceAdvancedSettingsOverride数组的长度应与InstanceIds数组一致；当长度大于InstanceIds数组长度时将报错；当长度小于InstanceIds数组时，没有对应配置的instace将使用默认配置。
+        /// </summary>
+        [JsonProperty("InstanceAdvancedSettingsOverrides")]
+        public InstanceAdvancedSettings[] InstanceAdvancedSettingsOverrides{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +101,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamObj(map, prefix + "NodePool.", this.NodePool);
             this.SetParamArraySimple(map, prefix + "SkipValidateOptions.", this.SkipValidateOptions);
+            this.SetParamArrayObj(map, prefix + "InstanceAdvancedSettingsOverrides.", this.InstanceAdvancedSettingsOverrides);
         }
     }
 }

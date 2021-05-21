@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("DestinationInstanceId")]
         public string DestinationInstanceId{ get; set; }
 
+        /// <summary>
+        /// 网卡绑定类型：0 标准型 1 扩展型。
+        /// </summary>
+        [JsonProperty("AttachType")]
+        public ulong? AttachType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamSimple(map, prefix + "SourceInstanceId", this.SourceInstanceId);
             this.SetParamSimple(map, prefix + "DestinationInstanceId", this.DestinationInstanceId);
+            this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
         }
     }
 }

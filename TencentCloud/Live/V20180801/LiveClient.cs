@@ -3399,6 +3399,52 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询指定时间段范围内启动和结束的录制任务列表。
+        /// - 使用前提
+        /// 1. 仅用于查询由 CreateRecordTask 接口创建的录制任务。
+        /// 2. 不能查询被 DeleteRecordTask 接口删除以及已过期（平台侧保留3个月）的录制任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public async Task<DescribeRecordTaskResponse> DescribeRecordTask(DescribeRecordTaskRequest req)
+        {
+             JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定时间段范围内启动和结束的录制任务列表。
+        /// - 使用前提
+        /// 1. 仅用于查询由 CreateRecordTask 接口创建的录制任务。
+        /// 2. 不能查询被 DeleteRecordTask 接口删除以及已过期（平台侧保留3个月）的录制任务。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordTaskRequest"/></param>
+        /// <returns><see cref="DescribeRecordTaskResponse"/></returns>
+        public DescribeRecordTaskResponse DescribeRecordTaskSync(DescribeRecordTaskRequest req)
+        {
+             JsonResponseModel<DescribeRecordTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口用来查询直播增值业务--截图的张数
         /// </summary>
         /// <param name="req"><see cref="DescribeScreenShotSheetNumListRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.283</VersionPrefix>
+    <VersionPrefix>3.0.284</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,9 +53,11 @@
     <Compile Include="V20180608\Models\CloudBaseCodeRepoName.cs" />
     <Compile Include="V20180608\Models\CloudBaseEsInfo.cs" />
     <Compile Include="V20180608\Models\CloudBaseProjectVersion.cs" />
+    <Compile Include="V20180608\Models\CloudBaseRunEmptyDirVolumeSource.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
+    <Compile Include="V20180608\Models\CloudBaseRunServiceVolumeMount.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunSideSpec.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="V20180608\Models\CloudBaseRunVpcInfo.cs" />
@@ -176,5 +178,6 @@
     <Compile Include="V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
+    <Compile Include="V20180608\Models\Tag.cs" />
   </ItemGroup>
 </Project>

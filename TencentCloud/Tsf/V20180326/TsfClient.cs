@@ -4297,6 +4297,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 翻页查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
+        /// <returns><see cref="DescribeTaskRecordsResponse"/></returns>
+        public async Task<DescribeTaskRecordsResponse> DescribeTaskRecords(DescribeTaskRecordsRequest req)
+        {
+             JsonResponseModel<DescribeTaskRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 翻页查询任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskRecordsRequest"/></param>
+        /// <returns><see cref="DescribeTaskRecordsResponse"/></returns>
+        public DescribeTaskRecordsResponse DescribeTaskRecordsSync(DescribeTaskRecordsRequest req)
+        {
+             JsonResponseModel<DescribeTaskRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询网关API监控明细数据（仅单元化网关），非单元化网关使用DescribeApiUseDetail
         /// </summary>
         /// <param name="req"><see cref="DescribeUnitApiUseDetailRequest"/></param>

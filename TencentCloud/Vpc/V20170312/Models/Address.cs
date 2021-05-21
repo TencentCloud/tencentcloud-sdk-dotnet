@@ -134,6 +134,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InternetChargeType")]
         public string InternetChargeType{ get; set; }
 
+        /// <summary>
+        /// 弹性公网IP关联的标签列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "LocalBgp", this.LocalBgp);
             this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

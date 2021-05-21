@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.283</VersionPrefix>
+    <VersionPrefix>3.0.284</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7670,6 +7670,8 @@
     <Compile Include="Live\V20180801\Models\DescribeProvinceIspPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeRecordTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeScreenShotSheetNumListRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeScreenShotSheetNumListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeStreamDayPlayInfoListRequest.cs" />
@@ -7743,6 +7745,7 @@
     <Compile Include="Live\V20180801\Models\PushDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\PushQualityData.cs" />
     <Compile Include="Live\V20180801\Models\RecordParam.cs" />
+    <Compile Include="Live\V20180801\Models\RecordTask.cs" />
     <Compile Include="Live\V20180801\Models\RecordTemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\RefererAuthConfig.cs" />
     <Compile Include="Live\V20180801\Models\ResumeDelayLiveStreamRequest.cs" />
@@ -10554,9 +10557,11 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseCodeRepoName.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseEsInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseProjectVersion.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunEmptyDirVolumeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunServiceVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunSideSpec.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcInfo.cs" />
@@ -10677,6 +10682,7 @@
     <Compile Include="Tcb\V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\Tag.cs" />
     <Compile Include="Tcex\V20200727\TcexClient.cs" />
     <Compile Include="Tcex\V20200727\Models\AlgorithmResult.cs" />
     <Compile Include="Tcex\V20200727\Models\DescribeInvocationResultRequest.cs" />
@@ -12111,6 +12117,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskRecordsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeTaskRecordsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitApiUseDetailRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitApiUseDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeUnitNamespacesRequest.cs" />
@@ -12268,6 +12276,7 @@
     <Compile Include="Tsf\V20180326\Models\TaskIdInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskLastExecuteStatus.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskRecord.cs" />
+    <Compile Include="Tsf\V20180326\Models\TaskRecordPage.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskRule.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />

@@ -41,6 +41,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// <li>zone - String - （过滤条件）可用区。</li>
         /// <li>tag-key - String -是否必填：否- （过滤条件）按照标签键进行过滤。</li>
         /// <li>tag:tag-key - String - 是否必填：否 - （过滤条件）按照标签键值对进行过滤。 tag-key使用具体的标签键进行替换。使用请参考示例2。</li>
+        /// <li>cdc-id - String - 是否必填：否 - （过滤条件）按照cdc信息进行过滤。过滤出来制定cdc下的子网。</li>
+        /// <li>is-cdc-subnet - String - 是否必填：否 - （过滤条件）按照是否是cdc子网进行过滤。取值：“0”-非cdc子网，“1”--cdc子网</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

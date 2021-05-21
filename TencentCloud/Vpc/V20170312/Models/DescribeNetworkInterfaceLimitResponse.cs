@@ -25,16 +25,30 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 弹性网卡配额
+        /// 标准型弹性网卡配额
         /// </summary>
         [JsonProperty("EniQuantity")]
         public long? EniQuantity{ get; set; }
 
         /// <summary>
-        /// 每个弹性网卡可以分配的IP配额
+        /// 每个标准型弹性网卡可以分配的IP配额
         /// </summary>
         [JsonProperty("EniPrivateIpAddressQuantity")]
         public long? EniPrivateIpAddressQuantity{ get; set; }
+
+        /// <summary>
+        /// 扩展型网卡配额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtendEniQuantity")]
+        public long? ExtendEniQuantity{ get; set; }
+
+        /// <summary>
+        /// 每个扩展型弹性网卡可以分配的IP配额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtendEniPrivateIpAddressQuantity")]
+        public long? ExtendEniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +64,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "EniQuantity", this.EniQuantity);
             this.SetParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
+            this.SetParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
+            this.SetParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

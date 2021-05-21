@@ -140,6 +140,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CdcId")]
         public string CdcId{ get; set; }
 
+        /// <summary>
+        /// 弹性网卡类型：0:标准型/1:扩展型。默认值为0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachType")]
+        public ulong? AttachType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EniType", this.EniType);
             this.SetParamSimple(map, prefix + "Business", this.Business);
             this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "AttachType", this.AttachType);
         }
     }
 }
