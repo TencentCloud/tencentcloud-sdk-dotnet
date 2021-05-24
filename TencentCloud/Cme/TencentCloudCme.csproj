@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.285</VersionPrefix>
+    <VersionPrefix>3.0.286</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,7 @@
     <Compile Include="V20191029\Models\DescribeTeamsResponse.cs" />
     <Compile Include="V20191029\Models\EmptyTrackItem.cs" />
     <Compile Include="V20191029\Models\Entity.cs" />
+    <Compile Include="V20191029\Models\EventContent.cs" />
     <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
     <Compile Include="V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
     <Compile Include="V20191029\Models\ExportVideoByTemplateRequest.cs" />
@@ -159,6 +160,8 @@
     <Compile Include="V20191029\Models\MoveResourceRequest.cs" />
     <Compile Include="V20191029\Models\MoveResourceResponse.cs" />
     <Compile Include="V20191029\Models\OtherMaterial.cs" />
+    <Compile Include="V20191029\Models\ParseEventRequest.cs" />
+    <Compile Include="V20191029\Models\ParseEventResponse.cs" />
     <Compile Include="V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="V20191029\Models\PlatformInfo.cs" />
     <Compile Include="V20191029\Models\PresetTagInfo.cs" />
@@ -175,6 +178,7 @@
     <Compile Include="V20191029\Models\SlotInfo.cs" />
     <Compile Include="V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="V20191029\Models\SortBy.cs" />
+    <Compile Include="V20191029\Models\StorageNewFileCreatedEvent.cs" />
     <Compile Include="V20191029\Models\StreamConnectOutput.cs" />
     <Compile Include="V20191029\Models\StreamConnectOutputInfo.cs" />
     <Compile Include="V20191029\Models\StreamConnectProjectInfo.cs" />

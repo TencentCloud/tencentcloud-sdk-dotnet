@@ -284,6 +284,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceNodes")]
         public long? InstanceNodes{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagList")]
+        public TagInfoItem[] TagList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -332,6 +339,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
+            this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
         }
     }
 }

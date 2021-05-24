@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.285</VersionPrefix>
+    <VersionPrefix>3.0.286</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1976,6 +1976,8 @@
     <Compile Include="Cdb\V20170320\Models\MasterInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAccountMaxUserConnectionsRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyAccountMaxUserConnectionsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPasswordRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPasswordResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountPrivilegesRequest.cs" />
@@ -2071,6 +2073,7 @@
     <Compile Include="Cdb\V20170320\Models\TableNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\TablePrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\TagInfoItem.cs" />
     <Compile Include="Cdb\V20170320\Models\TagInfoUnit.cs" />
     <Compile Include="Cdb\V20170320\Models\TagsInfoOfInstance.cs" />
     <Compile Include="Cdb\V20170320\Models\TaskDetail.cs" />
@@ -3084,6 +3087,7 @@
     <Compile Include="Cme\V20191029\Models\DescribeTeamsResponse.cs" />
     <Compile Include="Cme\V20191029\Models\EmptyTrackItem.cs" />
     <Compile Include="Cme\V20191029\Models\Entity.cs" />
+    <Compile Include="Cme\V20191029\Models\EventContent.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataRequest.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByEditorTrackDataResponse.cs" />
     <Compile Include="Cme\V20191029\Models\ExportVideoByTemplateRequest.cs" />
@@ -3139,6 +3143,8 @@
     <Compile Include="Cme\V20191029\Models\MoveResourceRequest.cs" />
     <Compile Include="Cme\V20191029\Models\MoveResourceResponse.cs" />
     <Compile Include="Cme\V20191029\Models\OtherMaterial.cs" />
+    <Compile Include="Cme\V20191029\Models\ParseEventRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\ParseEventResponse.cs" />
     <Compile Include="Cme\V20191029\Models\PenguinMediaPlatformPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\PlatformInfo.cs" />
     <Compile Include="Cme\V20191029\Models\PresetTagInfo.cs" />
@@ -3155,6 +3161,7 @@
     <Compile Include="Cme\V20191029\Models\SlotInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SlotReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\SortBy.cs" />
+    <Compile Include="Cme\V20191029\Models\StorageNewFileCreatedEvent.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectOutput.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectOutputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\StreamConnectProjectInfo.cs" />

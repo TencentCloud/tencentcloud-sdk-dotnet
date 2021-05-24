@@ -94,8 +94,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="CheckBatchStatusRequest"/></param>
         /// <returns><see cref="CheckBatchStatusResponse"/></returns>
@@ -116,8 +114,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( CheckBatchStatus ) 用于查询批量操作日志状态 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="CheckBatchStatusRequest"/></param>
         /// <returns><see cref="CheckBatchStatusResponse"/></returns>
@@ -177,9 +173,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( CreateDomainBatch ) 用于批量注册域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
         /// <returns><see cref="CreateDomainBatchResponse"/></returns>
@@ -199,9 +193,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( CreateDomainBatch ) 用于批量注册域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( CreateDomainBatch ) 用于批量域名注册 。
         /// </summary>
         /// <param name="req"><see cref="CreateDomainBatchRequest"/></param>
         /// <returns><see cref="CreateDomainBatchResponse"/></returns>
@@ -261,7 +253,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
+        /// 本接口 ( DeleteTemplate ) 用于删除信息模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
         /// <returns><see cref="DeleteTemplateResponse"/></returns>
@@ -281,7 +273,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( DeleteTemplate ) 用于删除域名信息模板。
+        /// 本接口 ( DeleteTemplate ) 用于删除信息模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteTemplateRequest"/></param>
         /// <returns><see cref="DeleteTemplateResponse"/></returns>
@@ -381,7 +373,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>
@@ -401,7 +393,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基础信息。
+        /// 本接口 (  DescribeDomainBaseInfo) 获取域名基本信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainBaseInfoRequest"/></param>
         /// <returns><see cref="DescribeDomainBaseInfoResponse"/></returns>
@@ -421,7 +413,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
+        /// 本接口 (  DescribeDomainNameList ) 我的域名列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
         /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
@@ -441,7 +433,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (  DescribeDomainNameList ) 获取域名列表。
+        /// 本接口 (  DescribeDomainNameList ) 我的域名列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainNameListRequest"/></param>
         /// <returns><see cref="DescribeDomainNameListResponse"/></returns>
@@ -541,7 +533,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (DescribeTemplateList) 用于获取模板列表。
+        /// 本接口 (DescribeTemplateList) 用于获取信息模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
         /// <returns><see cref="DescribeTemplateListResponse"/></returns>
@@ -561,7 +553,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 (DescribeTemplateList) 用于获取模板列表。
+        /// 本接口 (DescribeTemplateList) 用于获取信息模板列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateListRequest"/></param>
         /// <returns><see cref="DescribeTemplateListResponse"/></returns>
@@ -581,9 +573,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( ModifyDomainDNSBatch) 用于批量修改域名DNS信息 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>
@@ -603,9 +593,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( ModifyDomainDNSBatch) 用于批量修改域名DNS信息 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( ModifyDomainDNSBatch) 用于批量域名 DNS 修改 。
         /// </summary>
         /// <param name="req"><see cref="ModifyDomainDNSBatchRequest"/></param>
         /// <returns><see cref="ModifyDomainDNSBatchResponse"/></returns>
@@ -666,8 +654,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RenewDomainBatchRequest"/></param>
         /// <returns><see cref="RenewDomainBatchResponse"/></returns>
@@ -688,8 +674,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( RenewDomainBatch ) 用于批量续费域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="RenewDomainBatchRequest"/></param>
         /// <returns><see cref="RenewDomainBatchResponse"/></returns>
@@ -710,8 +694,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
         /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
@@ -732,8 +714,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( SetDomainAutoRenew ) 用于设置域名自动续费。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="SetDomainAutoRenewRequest"/></param>
         /// <returns><see cref="SetDomainAutoRenewResponse"/></returns>
@@ -754,8 +734,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="TransferInDomainBatchRequest"/></param>
         /// <returns><see cref="TransferInDomainBatchResponse"/></returns>
@@ -776,8 +754,6 @@ namespace TencentCloud.Domain.V20180808
 
         /// <summary>
         /// 本接口 ( TransferInDomainBatch ) 用于批量转入域名 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="TransferInDomainBatchRequest"/></param>
         /// <returns><see cref="TransferInDomainBatchResponse"/></returns>
@@ -797,9 +773,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( TransferProhibitionBatch ) 用于批量禁止域名转移 。
         /// </summary>
         /// <param name="req"><see cref="TransferProhibitionBatchRequest"/></param>
         /// <returns><see cref="TransferProhibitionBatchResponse"/></returns>
@@ -819,9 +793,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( TransferInDomainBatch ) 用于批量禁止域名转移 。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
+        /// 本接口 ( TransferProhibitionBatch ) 用于批量禁止域名转移 。
         /// </summary>
         /// <param name="req"><see cref="TransferProhibitionBatchRequest"/></param>
         /// <returns><see cref="TransferProhibitionBatchResponse"/></returns>
@@ -841,7 +813,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+        /// 本接口 ( UpdateProhibitionBatch ) 用于批量禁止更新锁。
         /// </summary>
         /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
         /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>
@@ -861,7 +833,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( UpdateProhibitionBatch ) 用于批量设置禁止域名更新 。
+        /// 本接口 ( UpdateProhibitionBatch ) 用于批量禁止更新锁。
         /// </summary>
         /// <param name="req"><see cref="UpdateProhibitionBatchRequest"/></param>
         /// <returns><see cref="UpdateProhibitionBatchResponse"/></returns>
@@ -881,7 +853,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( UploadImage ) 用于上传资质照片 。
+        /// 本接口 ( UploadImage ) 用于证件图片上传 。
         /// </summary>
         /// <param name="req"><see cref="UploadImageRequest"/></param>
         /// <returns><see cref="UploadImageResponse"/></returns>
@@ -901,7 +873,7 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
-        /// 本接口 ( UploadImage ) 用于上传资质照片 。
+        /// 本接口 ( UploadImage ) 用于证件图片上传 。
         /// </summary>
         /// <param name="req"><see cref="UploadImageRequest"/></param>
         /// <returns><see cref="UploadImageResponse"/></returns>

@@ -213,7 +213,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息。
+        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息。
+        /// 本接口(CreateAccounts)用于创建云数据库的账户，需要指定新的账户名和域名，以及所对应的密码，同时可以设置账号的备注信息以及最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="CreateAccountsRequest"/></param>
         /// <returns><see cref="CreateAccountsResponse"/></returns>
@@ -3252,6 +3252,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
+        /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
+        public async Task<ModifyAccountMaxUserConnectionsResponse> ModifyAccountMaxUserConnections(ModifyAccountMaxUserConnectionsRequest req)
+        {
+             JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountMaxUserConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>
+        /// <returns><see cref="ModifyAccountMaxUserConnectionsResponse"/></returns>
+        public ModifyAccountMaxUserConnectionsResponse ModifyAccountMaxUserConnectionsSync(ModifyAccountMaxUserConnectionsRequest req)
+        {
+             JsonResponseModel<ModifyAccountMaxUserConnectionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountMaxUserConnections");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountMaxUserConnectionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -64,6 +64,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ColumnPrivileges")]
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }
 
+        /// <summary>
+        /// 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+        /// </summary>
+        [JsonProperty("ModifyAction")]
+        public string ModifyAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "DatabasePrivileges.", this.DatabasePrivileges);
             this.SetParamArrayObj(map, prefix + "TablePrivileges.", this.TablePrivileges);
             this.SetParamArrayObj(map, prefix + "ColumnPrivileges.", this.ColumnPrivileges);
+            this.SetParamSimple(map, prefix + "ModifyAction", this.ModifyAction);
         }
     }
 }

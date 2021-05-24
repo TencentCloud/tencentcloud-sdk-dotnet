@@ -55,10 +55,16 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ModifyPasswordTime{ get; set; }
 
         /// <summary>
-        /// 账号的创建时间
+        /// 该值已废弃
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 用户最大可用实例连接数
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public long? MaxUserConnections{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "ModifyPasswordTime", this.ModifyPasswordTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

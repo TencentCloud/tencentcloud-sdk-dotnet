@@ -37,6 +37,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public AccountInfo[] Items{ get; set; }
 
         /// <summary>
+        /// 用户可设置实例最大连接数。
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public long? MaxUserConnections{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

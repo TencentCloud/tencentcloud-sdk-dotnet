@@ -267,6 +267,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CustomerIPv6Address")]
         public string CustomerIPv6Address{ get; set; }
 
+        /// <summary>
+        /// 专线通道是否支持巨帧。1 支持，0 不支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JumboEnable")]
+        public long? JumboEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -311,6 +318,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "TencentBackupIPv6Address", this.TencentBackupIPv6Address);
             this.SetParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
             this.SetParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
+            this.SetParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
         }
     }
 }

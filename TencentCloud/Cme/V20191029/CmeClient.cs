@@ -1767,6 +1767,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 该接口接受制作云回调给客户的事件内容，将其转化为对应的 EventContent 结构，请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  即可使用。
+        /// </summary>
+        /// <param name="req"><see cref="ParseEventRequest"/></param>
+        /// <returns><see cref="ParseEventResponse"/></returns>
+        public async Task<ParseEventResponse> ParseEvent(ParseEventRequest req)
+        {
+             JsonResponseModel<ParseEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ParseEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口接受制作云回调给客户的事件内容，将其转化为对应的 EventContent 结构，请不要实际调用该接口，只需要将接收到的事件内容直接使用 JSON 解析到 EventContent  即可使用。
+        /// </summary>
+        /// <param name="req"><see cref="ParseEventRequest"/></param>
+        /// <returns><see cref="ParseEventResponse"/></returns>
+        public ParseEventResponse ParseEventSync(ParseEventRequest req)
+        {
+             JsonResponseModel<ParseEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ParseEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ParseEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  资源所属实体对目标实体回收目标资源的相应权限，若原本没有相应权限则不产生变更。
         /// </summary>
         /// <param name="req"><see cref="RevokeResourceAuthorizationRequest"/></param>

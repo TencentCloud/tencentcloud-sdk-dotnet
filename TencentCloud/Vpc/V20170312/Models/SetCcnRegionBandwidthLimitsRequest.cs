@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CcnRegionBandwidthLimits")]
         public CcnRegionBandwidthLimit[] CcnRegionBandwidthLimits{ get; set; }
 
+        /// <summary>
+        /// 是否设置带宽为默认值。
+        /// </summary>
+        [JsonProperty("SetDefaultLimitFlag")]
+        public bool? SetDefaultLimitFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "CcnId", this.CcnId);
             this.SetParamArrayObj(map, prefix + "CcnRegionBandwidthLimits.", this.CcnRegionBandwidthLimits);
+            this.SetParamSimple(map, prefix + "SetDefaultLimitFlag", this.SetDefaultLimitFlag);
         }
     }
 }
