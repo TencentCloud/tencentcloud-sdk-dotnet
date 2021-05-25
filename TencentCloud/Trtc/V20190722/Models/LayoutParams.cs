@@ -78,6 +78,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("PureAudioHoldPlaceMode")]
         public ulong? PureAudioHoldPlaceMode{ get; set; }
 
+        /// <summary>
+        /// 水印参数。
+        /// </summary>
+        [JsonProperty("WaterMarkParams")]
+        public WaterMarkParams WaterMarkParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamArrayObj(map, prefix + "PresetLayoutConfig.", this.PresetLayoutConfig);
             this.SetParamSimple(map, prefix + "PlaceHolderMode", this.PlaceHolderMode);
             this.SetParamSimple(map, prefix + "PureAudioHoldPlaceMode", this.PureAudioHoldPlaceMode);
+            this.SetParamObj(map, prefix + "WaterMarkParams.", this.WaterMarkParams);
         }
     }
 }

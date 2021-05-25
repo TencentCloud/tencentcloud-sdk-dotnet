@@ -43,6 +43,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// <li> ap-guangzhou-4 </li>
         /// <li> ap-guangzhou-6 </li>
         /// <li> ap-tokyo-1 </li>
+        /// <li> ap-tokyo-2 </li>
         /// <li> ap-singapore-1 </li>
         /// <li> ap-singapore-2 </li>
         /// <li> ap-singapore-3 </li>

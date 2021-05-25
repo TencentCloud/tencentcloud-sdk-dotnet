@@ -1,0 +1,98 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.287</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Mrs</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200910\MrsClient.cs" />
+    <Compile Include="V20200910\Models\Advice.cs" />
+    <Compile Include="V20200910\Models\AspectRatio.cs" />
+    <Compile Include="V20200910\Models\BlockInfo.cs" />
+    <Compile Include="V20200910\Models\Check.cs" />
+    <Compile Include="V20200910\Models\Desc.cs" />
+    <Compile Include="V20200910\Models\DiagCert.cs" />
+    <Compile Include="V20200910\Models\DiagCertItem.cs" />
+    <Compile Include="V20200910\Models\DischargeDiagnosis.cs" />
+    <Compile Include="V20200910\Models\DiseaseMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\Elastic.cs" />
+    <Compile Include="V20200910\Models\FamilyMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\FirstPage.cs" />
+    <Compile Include="V20200910\Models\HandleParam.cs" />
+    <Compile Include="V20200910\Models\HistologyLevel.cs" />
+    <Compile Include="V20200910\Models\HistologyType.cs" />
+    <Compile Include="V20200910\Models\IHCInfo.cs" />
+    <Compile Include="V20200910\Models\ImageInfo.cs" />
+    <Compile Include="V20200910\Models\ImageToClassRequest.cs" />
+    <Compile Include="V20200910\Models\ImageToClassResponse.cs" />
+    <Compile Include="V20200910\Models\ImageToObjectRequest.cs" />
+    <Compile Include="V20200910\Models\ImageToObjectResponse.cs" />
+    <Compile Include="V20200910\Models\Indicator.cs" />
+    <Compile Include="V20200910\Models\IndicatorItem.cs" />
+    <Compile Include="V20200910\Models\Invas.cs" />
+    <Compile Include="V20200910\Models\Lymph.cs" />
+    <Compile Include="V20200910\Models\MedDoc.cs" />
+    <Compile Include="V20200910\Models\MenstrualMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\Multiple.cs" />
+    <Compile Include="V20200910\Models\NormPart.cs" />
+    <Compile Include="V20200910\Models\NormSize.cs" />
+    <Compile Include="V20200910\Models\ObstericalMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\Organ.cs" />
+    <Compile Include="V20200910\Models\Part.cs" />
+    <Compile Include="V20200910\Models\PathologyReport.cs" />
+    <Compile Include="V20200910\Models\PatientInfo.cs" />
+    <Compile Include="V20200910\Models\PersonalMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\ReportInfo.cs" />
+    <Compile Include="V20200910\Models\Size.cs" />
+    <Compile Include="V20200910\Models\Summary.cs" />
+    <Compile Include="V20200910\Models\SymptomInfo.cs" />
+    <Compile Include="V20200910\Models\Template.cs" />
+    <Compile Include="V20200910\Models\TextToClassRequest.cs" />
+    <Compile Include="V20200910\Models\TextToClassResponse.cs" />
+    <Compile Include="V20200910\Models\TextToObjectRequest.cs" />
+    <Compile Include="V20200910\Models\TextToObjectResponse.cs" />
+    <Compile Include="V20200910\Models\TextType.cs" />
+    <Compile Include="V20200910\Models\TreatmentRecord.cs" />
+    <Compile Include="V20200910\Models\TuberInfo.cs" />
+    <Compile Include="V20200910\Models\Value.cs" />
+  </ItemGroup>
+</Project>

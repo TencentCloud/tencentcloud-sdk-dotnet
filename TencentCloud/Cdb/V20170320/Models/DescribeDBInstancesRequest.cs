@@ -180,6 +180,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeployGroupIds")]
         public string[] DeployGroupIds{ get; set; }
 
+        /// <summary>
+        /// 是否以标签键为过滤条件。
+        /// </summary>
+        [JsonProperty("TagKeysForSearch")]
+        public string[] TagKeysForSearch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +218,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WithRo", this.WithRo);
             this.SetParamSimple(map, prefix + "WithMaster", this.WithMaster);
             this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
+            this.SetParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
         }
     }
 }

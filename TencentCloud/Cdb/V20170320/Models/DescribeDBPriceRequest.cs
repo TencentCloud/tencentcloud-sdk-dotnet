@@ -25,46 +25,46 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。
-        /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
-
-        /// <summary>
-        /// 实例数量，默认值为 1，最小值 1，最大值为 100。
-        /// </summary>
-        [JsonProperty("GoodsNum")]
-        public long? GoodsNum{ get; set; }
-
-        /// <summary>
-        /// 实例内存大小，单位：MB。
-        /// </summary>
-        [JsonProperty("Memory")]
-        public long? Memory{ get; set; }
-
-        /// <summary>
-        /// 实例硬盘大小，单位：GB。
-        /// </summary>
-        [JsonProperty("Volume")]
-        public long? Volume{ get; set; }
-
-        /// <summary>
-        /// 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。
-        /// </summary>
-        [JsonProperty("PayType")]
-        public string PayType{ get; set; }
-
-        /// <summary>
         /// 实例时长，单位：月，最小值 1，最大值为 36；查询按量计费价格时，该字段无效。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。
+        /// 可用区信息，格式如 "ap-guangzhou-2"。具体能设置的值请通过 <a href="https://cloud.tencent.com/document/api/236/17229">DescribeDBZoneConfig</a> 接口查询。InstanceId为空时该参数为必填项。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 实例数量，默认值为 1，最小值 1，最大值为 100。InstanceId为空时该参数为必填项。
+        /// </summary>
+        [JsonProperty("GoodsNum")]
+        public long? GoodsNum{ get; set; }
+
+        /// <summary>
+        /// 实例内存大小，单位：MB。InstanceId为空时该参数为必填项。
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 实例硬盘大小，单位：GB。InstanceId为空时该参数为必填项。
+        /// </summary>
+        [JsonProperty("Volume")]
+        public long? Volume{ get; set; }
+
+        /// <summary>
+        /// 实例类型，默认为 master，支持值包括：master - 表示主实例，ro - 表示只读实例，dr - 表示灾备实例。InstanceId为空时该参数为必填项。
         /// </summary>
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
+
+        /// <summary>
+        /// 付费类型，支持值包括：PRE_PAID - 包年包月，HOUR_PAID - 按量计费。InstanceId为空时该参数为必填项。
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
 
         /// <summary>
         /// 数据复制方式，默认为 0，支持值包括：0 - 表示异步复制，1 - 表示半同步复制，2 - 表示强同步复制。
@@ -90,23 +90,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
+        /// <summary>
+        /// 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
-            this.SetParamSimple(map, prefix + "PayType", this.PayType);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
             this.SetParamSimple(map, prefix + "ProtectMode", this.ProtectMode);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

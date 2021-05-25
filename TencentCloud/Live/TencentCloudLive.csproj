@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.286</VersionPrefix>
+    <VersionPrefix>3.0.287</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,8 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCertRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCertResponse.cs" />
+    <Compile Include="V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRuleRequest.cs" />
@@ -109,6 +111,8 @@
     <Compile Include="V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
@@ -175,6 +179,8 @@
     <Compile Include="V20180801\Models\DescribeLivePackageInfoResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePullStreamTasksRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeLivePullStreamTasksResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\DescribeLivePushAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\DescribeLiveRecordRulesRequest.cs" />
@@ -274,6 +280,8 @@
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayDomainResponse.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePullStreamTaskRequest.cs" />
+    <Compile Include="V20180801\Models\ModifyLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveRecordTemplateRequest.cs" />
@@ -296,9 +304,11 @@
     <Compile Include="V20180801\Models\ProIspPlaySumInfo.cs" />
     <Compile Include="V20180801\Models\PublishTimeInfo.cs" />
     <Compile Include="V20180801\Models\PullStreamConfig.cs" />
+    <Compile Include="V20180801\Models\PullStreamTaskInfo.cs" />
     <Compile Include="V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="V20180801\Models\PushDataInfo.cs" />
     <Compile Include="V20180801\Models\PushQualityData.cs" />
+    <Compile Include="V20180801\Models\RecentPullInfo.cs" />
     <Compile Include="V20180801\Models\RecordParam.cs" />
     <Compile Include="V20180801\Models\RecordTask.cs" />
     <Compile Include="V20180801\Models\RecordTemplateInfo.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.286</VersionPrefix>
+    <VersionPrefix>3.0.287</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7615,6 +7615,8 @@
     <Compile Include="Live\V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveCertResponse.cs" />
+    <Compile Include="Live\V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\CreateLiveRecordRuleRequest.cs" />
@@ -7645,6 +7647,8 @@
     <Compile Include="Live\V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveDomainResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DeleteLivePullStreamTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRequest.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordResponse.cs" />
     <Compile Include="Live\V20180801\Models\DeleteLiveRecordRuleRequest.cs" />
@@ -7711,6 +7715,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLivePackageInfoResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePlayAuthKeyResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePullStreamTasksRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLivePullStreamTasksResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePushAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLivePushAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveRecordRulesRequest.cs" />
@@ -7810,6 +7816,8 @@
     <Compile Include="Live\V20180801\Models\ModifyLivePlayAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayDomainRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePlayDomainResponse.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePullStreamTaskRequest.cs" />
+    <Compile Include="Live\V20180801\Models\ModifyLivePullStreamTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyRequest.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLivePushAuthKeyResponse.cs" />
     <Compile Include="Live\V20180801\Models\ModifyLiveRecordTemplateRequest.cs" />
@@ -7832,9 +7840,11 @@
     <Compile Include="Live\V20180801\Models\ProIspPlaySumInfo.cs" />
     <Compile Include="Live\V20180801\Models\PublishTimeInfo.cs" />
     <Compile Include="Live\V20180801\Models\PullStreamConfig.cs" />
+    <Compile Include="Live\V20180801\Models\PullStreamTaskInfo.cs" />
     <Compile Include="Live\V20180801\Models\PushAuthKeyInfo.cs" />
     <Compile Include="Live\V20180801\Models\PushDataInfo.cs" />
     <Compile Include="Live\V20180801\Models\PushQualityData.cs" />
+    <Compile Include="Live\V20180801\Models\RecentPullInfo.cs" />
     <Compile Include="Live\V20180801\Models\RecordParam.cs" />
     <Compile Include="Live\V20180801\Models\RecordTask.cs" />
     <Compile Include="Live\V20180801\Models\RecordTemplateInfo.cs" />
@@ -8663,6 +8673,56 @@
     <Compile Include="Mps\V20190612\Models\WorkflowInfo.cs" />
     <Compile Include="Mps\V20190612\Models\WorkflowTask.cs" />
     <Compile Include="Mps\V20190612\Models\WorkflowTrigger.cs" />
+    <Compile Include="Mrs\V20200910\MrsClient.cs" />
+    <Compile Include="Mrs\V20200910\Models\Advice.cs" />
+    <Compile Include="Mrs\V20200910\Models\AspectRatio.cs" />
+    <Compile Include="Mrs\V20200910\Models\BlockInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\Check.cs" />
+    <Compile Include="Mrs\V20200910\Models\Desc.cs" />
+    <Compile Include="Mrs\V20200910\Models\DiagCert.cs" />
+    <Compile Include="Mrs\V20200910\Models\DiagCertItem.cs" />
+    <Compile Include="Mrs\V20200910\Models\DischargeDiagnosis.cs" />
+    <Compile Include="Mrs\V20200910\Models\DiseaseMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\Elastic.cs" />
+    <Compile Include="Mrs\V20200910\Models\FamilyMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\FirstPage.cs" />
+    <Compile Include="Mrs\V20200910\Models\HandleParam.cs" />
+    <Compile Include="Mrs\V20200910\Models\HistologyLevel.cs" />
+    <Compile Include="Mrs\V20200910\Models\HistologyType.cs" />
+    <Compile Include="Mrs\V20200910\Models\IHCInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\ImageInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\ImageToClassRequest.cs" />
+    <Compile Include="Mrs\V20200910\Models\ImageToClassResponse.cs" />
+    <Compile Include="Mrs\V20200910\Models\ImageToObjectRequest.cs" />
+    <Compile Include="Mrs\V20200910\Models\ImageToObjectResponse.cs" />
+    <Compile Include="Mrs\V20200910\Models\Indicator.cs" />
+    <Compile Include="Mrs\V20200910\Models\IndicatorItem.cs" />
+    <Compile Include="Mrs\V20200910\Models\Invas.cs" />
+    <Compile Include="Mrs\V20200910\Models\Lymph.cs" />
+    <Compile Include="Mrs\V20200910\Models\MedDoc.cs" />
+    <Compile Include="Mrs\V20200910\Models\MenstrualMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\Multiple.cs" />
+    <Compile Include="Mrs\V20200910\Models\NormPart.cs" />
+    <Compile Include="Mrs\V20200910\Models\NormSize.cs" />
+    <Compile Include="Mrs\V20200910\Models\ObstericalMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\Organ.cs" />
+    <Compile Include="Mrs\V20200910\Models\Part.cs" />
+    <Compile Include="Mrs\V20200910\Models\PathologyReport.cs" />
+    <Compile Include="Mrs\V20200910\Models\PatientInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\PersonalMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\ReportInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\Size.cs" />
+    <Compile Include="Mrs\V20200910\Models\Summary.cs" />
+    <Compile Include="Mrs\V20200910\Models\SymptomInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\Template.cs" />
+    <Compile Include="Mrs\V20200910\Models\TextToClassRequest.cs" />
+    <Compile Include="Mrs\V20200910\Models\TextToClassResponse.cs" />
+    <Compile Include="Mrs\V20200910\Models\TextToObjectRequest.cs" />
+    <Compile Include="Mrs\V20200910\Models\TextToObjectResponse.cs" />
+    <Compile Include="Mrs\V20200910\Models\TextType.cs" />
+    <Compile Include="Mrs\V20200910\Models\TreatmentRecord.cs" />
+    <Compile Include="Mrs\V20200910\Models\TuberInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\Value.cs" />
     <Compile Include="Ms\V20180408\MsClient.cs" />
     <Compile Include="Ms\V20180408\Models\AdInfo.cs" />
     <Compile Include="Ms\V20180408\Models\AppDetailInfo.cs" />
@@ -11960,7 +12020,10 @@
     <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
+    <Compile Include="Trtc\V20190722\Models\WaterMarkParams.cs" />
     <Compile Include="Tse\V20201207\TseClient.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeConfigRequest.cs" />
+    <Compile Include="Tse\V20201207\Models\DescribeConfigResponse.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressRequest.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstancesRequest.cs" />

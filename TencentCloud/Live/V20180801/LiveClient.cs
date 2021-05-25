@@ -433,6 +433,56 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到直播系统。
+        /// 注意：
+        /// 1. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
+        /// 2. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
+        /// 3. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
+        /// 4. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="CreateLivePullStreamTaskResponse"/></returns>
+        public async Task<CreateLivePullStreamTaskResponse> CreateLivePullStreamTask(CreateLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播拉流任务。支持将外部已有的点播文件，或者直播源拉取过来转推到直播系统。
+        /// 注意：
+        /// 1. 源流视频编码目前只支持: H264, H265。其他编码格式建议先进行转码处理。
+        /// 2. 源流音频编码目前只支持: AAC。其他编码格式建议先进行转码处理。
+        /// 3. 拉流转推功能为计费增值服务，计费规则详情可参见[计费文档](https://cloud.tencent.com/document/product/267/53308)。
+        /// 4. 拉流转推功能仅提供内容拉取与推送服务，请确保内容已获得授权并符合内容传播相关的法律法规。若内容有侵权或违规相关问题，云直播会停止相关的功能服务并保留追究法律责任的权利。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="CreateLivePullStreamTaskResponse"/></returns>
+        public CreateLivePullStreamTaskResponse CreateLivePullStreamTaskSync(CreateLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<CreateLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// - 使用前提
         ///   1. 录制文件存放于点播平台，所以用户如需使用录制功能，需首先自行开通点播服务。
         ///   2. 录制文件存放后相关费用（含存储以及下行播放流量）按照点播平台计费方式收取，具体请参考 [对应文档](https://cloud.tencent.com/document/product/266/2838)。
@@ -1054,6 +1104,52 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除接口 CreateLivePullStreamTask 创建的拉流任务。
+        /// 注意：
+        /// 1. 入参中的 TaskId 为 CreateLivePullStreamTask 接口创建时返回的TaskId。
+        /// 2. 也可通过 DescribeLivePullStreamTasks 进行查询创建的任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="DeleteLivePullStreamTaskResponse"/></returns>
+        public async Task<DeleteLivePullStreamTaskResponse> DeleteLivePullStreamTask(DeleteLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除接口 CreateLivePullStreamTask 创建的拉流任务。
+        /// 注意：
+        /// 1. 入参中的 TaskId 为 CreateLivePullStreamTask 接口创建时返回的TaskId。
+        /// 2. 也可通过 DescribeLivePullStreamTasks 进行查询创建的任务。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="DeleteLivePullStreamTaskResponse"/></returns>
+        public DeleteLivePullStreamTaskResponse DeleteLivePullStreamTaskSync(DeleteLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<DeleteLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLivePullStreamTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2380,6 +2476,48 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLivePlayAuthKey");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePlayAuthKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
+        /// 排序方式：默认按更新时间 倒序排列。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTasksRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTasksResponse"/></returns>
+        public async Task<DescribeLivePullStreamTasksResponse> DescribeLivePullStreamTasks(DescribeLivePullStreamTasksRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLivePullStreamTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询使用 CreateLivePullStreamTask 接口创建的直播拉流任务。
+        /// 排序方式：默认按更新时间 倒序排列。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLivePullStreamTasksRequest"/></param>
+        /// <returns><see cref="DescribeLivePullStreamTasksResponse"/></returns>
+        public DescribeLivePullStreamTasksResponse DescribeLivePullStreamTasksSync(DescribeLivePullStreamTasksRequest req)
+        {
+             JsonResponseModel<DescribeLivePullStreamTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLivePullStreamTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLivePullStreamTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4120,6 +4258,50 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLivePlayDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePlayDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新直播拉流任务。 
+        /// 1. 不支持修改目标地址，如需推到新地址，请创建新任务。
+        /// 2. 不支持修改任务类型，如需更换，请创建新任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="ModifyLivePullStreamTaskResponse"/></returns>
+        public async Task<ModifyLivePullStreamTaskResponse> ModifyLivePullStreamTask(ModifyLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePullStreamTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新直播拉流任务。 
+        /// 1. 不支持修改目标地址，如需推到新地址，请创建新任务。
+        /// 2. 不支持修改任务类型，如需更换，请创建新任务。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLivePullStreamTaskRequest"/></param>
+        /// <returns><see cref="ModifyLivePullStreamTaskResponse"/></returns>
+        public ModifyLivePullStreamTaskResponse ModifyLivePullStreamTaskSync(ModifyLivePullStreamTaskRequest req)
+        {
+             JsonResponseModel<ModifyLivePullStreamTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLivePullStreamTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLivePullStreamTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
