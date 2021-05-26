@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.287</VersionPrefix>
+    <VersionPrefix>3.0.288</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3039,6 +3039,7 @@
     <Compile Include="Cme\V20191029\Models\Authorizer.cs" />
     <Compile Include="Cme\V20191029\Models\CMEExportInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ClassInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\CosPublishInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\CreateClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\CreateClassResponse.cs" />
     <Compile Include="Cme\V20191029\Models\CreateLinkRequest.cs" />
@@ -5438,6 +5439,15 @@
     <Compile Include="Ecm\V20190719\Models\ZoneInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\ZoneInstanceCountISP.cs" />
     <Compile Include="Ecm\V20190719\Models\ZoneInstanceInfo.cs" />
+    <Compile Include="Eis\V20200715\EisClient.cs" />
+    <Compile Include="Eis\V20200715\Models\DescribeEisConnectorConfigRequest.cs" />
+    <Compile Include="Eis\V20200715\Models\DescribeEisConnectorConfigResponse.cs" />
+    <Compile Include="Eis\V20200715\Models\EisConnectionOperation.cs" />
+    <Compile Include="Eis\V20200715\Models\EisConnectorSummary.cs" />
+    <Compile Include="Eis\V20200715\Models\ListEisConnectorOperationsRequest.cs" />
+    <Compile Include="Eis\V20200715\Models\ListEisConnectorOperationsResponse.cs" />
+    <Compile Include="Eis\V20200715\Models\ListEisConnectorsRequest.cs" />
+    <Compile Include="Eis\V20200715\Models\ListEisConnectorsResponse.cs" />
     <Compile Include="Emr\V20190103\EmrClient.cs" />
     <Compile Include="Emr\V20190103\Models\BootstrapAction.cs" />
     <Compile Include="Emr\V20190103\Models\COSSettings.cs" />

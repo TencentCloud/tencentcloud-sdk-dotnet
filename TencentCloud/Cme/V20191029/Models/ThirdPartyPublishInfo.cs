@@ -48,6 +48,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("KuaishouPublishInfo")]
         public KuaishouPublishInfo KuaishouPublishInfo{ get; set; }
 
+        /// <summary>
+        /// 腾讯云对象存储发布信息， 如果使用的发布通道为腾讯云对象存储时必填。
+        /// </summary>
+        [JsonProperty("CosPublishInfo")]
+        public CosPublishInputInfo CosPublishInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "PenguinMediaPlatformPublishInfo.", this.PenguinMediaPlatformPublishInfo);
             this.SetParamObj(map, prefix + "WeiboPublishInfo.", this.WeiboPublishInfo);
             this.SetParamObj(map, prefix + "KuaishouPublishInfo.", this.KuaishouPublishInfo);
+            this.SetParamObj(map, prefix + "CosPublishInfo.", this.CosPublishInfo);
         }
     }
 }

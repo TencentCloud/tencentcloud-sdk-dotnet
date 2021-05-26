@@ -122,6 +122,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("EventRegion")]
         public string EventRegion{ get; set; }
 
+        /// <summary>
+        /// IP 归属地
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +150,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "EventNameCn", this.EventNameCn);
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamSimple(map, prefix + "EventRegion", this.EventRegion);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }
