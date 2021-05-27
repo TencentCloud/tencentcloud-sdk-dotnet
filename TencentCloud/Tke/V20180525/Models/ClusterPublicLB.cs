@@ -42,6 +42,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SecurityPolicies")]
         public string[] SecurityPolicies{ get; set; }
 
+        /// <summary>
+        /// 外网访问相关的扩展参数，格式为json
+        /// </summary>
+        [JsonProperty("ExtraParam")]
+        public string ExtraParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
             this.SetParamArraySimple(map, prefix + "AllowFromCidrs.", this.AllowFromCidrs);
             this.SetParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
+            this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         }
     }
 }

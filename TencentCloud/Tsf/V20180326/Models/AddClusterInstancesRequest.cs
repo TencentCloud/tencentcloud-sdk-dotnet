@@ -91,7 +91,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// 部署组ID
+        /// 安全组 ID 列表
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

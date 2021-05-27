@@ -48,6 +48,30 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("IpProtocol")]
         public string IpProtocol{ get; set; }
 
+        /// <summary>
+        /// 安全组id代表的地址集合
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 地址组id代表的地址集合
+        /// </summary>
+        [JsonProperty("AddressModule")]
+        public string AddressModule{ get; set; }
+
+        /// <summary>
+        /// 服务组id代表的协议和端口集合
+        /// </summary>
+        [JsonProperty("ServiceModule")]
+        public string ServiceModule{ get; set; }
+
+        /// <summary>
+        /// 描述
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "CidrIp", this.CidrIp);
             this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "AddressModule", this.AddressModule);
+            this.SetParamSimple(map, prefix + "ServiceModule", this.ServiceModule);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }
 }

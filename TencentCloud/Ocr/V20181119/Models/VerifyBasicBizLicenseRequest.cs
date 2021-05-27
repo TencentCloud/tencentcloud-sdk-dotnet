@@ -76,6 +76,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("RegCapital")]
         public long? RegCapital{ get; set; }
 
+        /// <summary>
+        /// true表示展示成立/注册日期
+        /// </summary>
+        [JsonProperty("EstablishTime")]
+        public bool? EstablishTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "RegCapital", this.RegCapital);
+            this.SetParamSimple(map, prefix + "EstablishTime", this.EstablishTime);
         }
     }
 }

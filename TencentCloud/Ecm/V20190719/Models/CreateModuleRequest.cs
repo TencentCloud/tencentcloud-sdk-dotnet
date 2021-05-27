@@ -62,8 +62,8 @@ namespace TencentCloud.Ecm.V20190719.Models
 
         /// <summary>
         /// 是否关闭IP直通。取值范围：
-        /// 1：表示关闭IP直通
-        /// 0：表示开通IP直通
+        /// true：表示关闭IP直通
+        /// false：表示开通IP直通
         /// </summary>
         [JsonProperty("CloseIpDirect")]
         public bool? CloseIpDirect{ get; set; }

@@ -30,6 +30,7 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// image-type - String - 是否必填： 否 - （过滤条件）按照镜像类型进行过滤。取值范围：
         /// PRIVATE_IMAGE: 私有镜像 (本帐户创建的镜像) 
         /// PUBLIC_IMAGE: 公共镜像 (腾讯云官方镜像)
+        /// instance-type -String - 是否必填: 否 - (过滤条件) 按机型过滤支持的镜像
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -53,7 +53,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 上传图片
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="CreatePictureRequest"/></param>
         /// <returns><see cref="CreatePictureResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 上传图片
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="CreatePictureRequest"/></param>
         /// <returns><see cref="CreatePictureResponse"/></returns>
@@ -133,7 +133,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 删除图片
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="DeletePictureRequest"/></param>
         /// <returns><see cref="DeletePictureResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 删除图片
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="DeletePictureRequest"/></param>
         /// <returns><see cref="DeletePictureResponse"/></returns>
@@ -335,7 +335,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询某图片相关参数。
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="DescribePictureRequest"/></param>
         /// <returns><see cref="DescribePictureResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询某图片相关参数。
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="DescribePictureRequest"/></param>
         /// <returns><see cref="DescribePictureResponse"/></returns>
@@ -805,7 +805,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 修改图片相关参数。
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="ModifyPictureRequest"/></param>
         /// <returns><see cref="ModifyPictureResponse"/></returns>
@@ -825,7 +825,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 修改图片相关参数。
+        /// 此接口已废弃，调用将报错。如需使用相关功能请参见 [控制台指南 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769)  。
         /// </summary>
         /// <param name="req"><see cref="ModifyPictureRequest"/></param>
         /// <returns><see cref="ModifyPictureResponse"/></returns>

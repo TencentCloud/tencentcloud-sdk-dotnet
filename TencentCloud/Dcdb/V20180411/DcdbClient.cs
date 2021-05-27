@@ -979,6 +979,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 获取实例灾备详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDcnDetailRequest"/></param>
+        /// <returns><see cref="DescribeDcnDetailResponse"/></returns>
+        public async Task<DescribeDcnDetailResponse> DescribeDcnDetail(DescribeDcnDetailRequest req)
+        {
+             JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDcnDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDcnDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例灾备详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDcnDetailRequest"/></param>
+        /// <returns><see cref="DescribeDcnDetailResponse"/></returns>
+        public DescribeDcnDetailResponse DescribeDcnDetailSync(DescribeDcnDetailRequest req)
+        {
+             JsonResponseModel<DescribeDcnDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDcnDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDcnDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeOrders）用于查询分布式数据库订单信息。传入订单ID来查询订单关联的分布式数据库实例，和对应的任务流程ID。
         /// </summary>
         /// <param name="req"><see cref="DescribeOrdersRequest"/></param>

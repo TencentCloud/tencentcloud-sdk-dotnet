@@ -127,6 +127,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string RegCapital{ get; set; }
 
         /// <summary>
+        /// 成立/注册日期，只有输入参数EstablishTime为true时展示，默认为空
+        /// </summary>
+        [JsonProperty("EstablishTime")]
+        public string EstablishTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -155,6 +161,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Dom", this.Dom);
             this.SetParamObj(map, prefix + "RegNumResult.", this.RegNumResult);
             this.SetParamSimple(map, prefix + "RegCapital", this.RegCapital);
+            this.SetParamSimple(map, prefix + "EstablishTime", this.EstablishTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
