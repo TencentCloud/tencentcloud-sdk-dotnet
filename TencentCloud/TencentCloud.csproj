@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.290</VersionPrefix>
+    <VersionPrefix>3.0.291</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3322,6 +3322,8 @@
     <Compile Include="Cpdp\V20190820\Models\BindRelateAcctSmallAmountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAcctUnionPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAcctUnionPayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ChannelContractInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ChannelReturnContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\CheckAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CheckAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CheckAmountRequest.cs" />
@@ -3329,6 +3331,12 @@
     <Compile Include="Cpdp\V20190820\Models\ClearItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractOrderInSubOrder.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractSyncInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ContractUserInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
@@ -3372,6 +3380,8 @@
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ExternalContractUserInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ExternalReturnContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
@@ -3413,6 +3423,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCommonTransferRechargeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCommonTransferRechargeResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryContractRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryContractResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCustAcctIdBalanceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryCustAcctIdBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryDeclareData.cs" />
@@ -3486,6 +3498,9 @@
     <Compile Include="Cpdp\V20190820\Models\RegisterBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ResponseQueryContract.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ResponseTerminateContract.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ReturnContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevResigterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevResigterBillSupportWithdrawResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ReviseMbrPropertyRequest.cs" />
@@ -3494,6 +3509,11 @@
     <Compile Include="Cpdp\V20190820\Models\RevokeMemberRechargeThirdPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\SceneInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\SyncContractDataRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\SyncContractDataResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\TerminateContractRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\TerminateContractResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\TranItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\TransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\TransferDetailRequest.cs" />

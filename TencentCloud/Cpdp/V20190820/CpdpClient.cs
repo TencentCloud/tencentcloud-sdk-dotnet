@@ -587,6 +587,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+        /// </summary>
+        /// <param name="req"><see cref="ContractOrderRequest"/></param>
+        /// <returns><see cref="ContractOrderResponse"/></returns>
+        public async Task<ContractOrderResponse> ContractOrder(ContractOrderRequest req)
+        {
+             JsonResponseModel<ContractOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ContractOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContractOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+        /// </summary>
+        /// <param name="req"><see cref="ContractOrderRequest"/></param>
+        /// <returns><see cref="ContractOrderResponse"/></returns>
+        public ContractOrderResponse ContractOrderSync(ContractOrderRequest req)
+        {
+             JsonResponseModel<ContractOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ContractOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ContractOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 子商户入驻聚鑫平台
         /// </summary>
         /// <param name="req"><see cref="CreateAcctRequest"/></param>
@@ -1909,6 +1949,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 通过此接口查询签约数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryContractRequest"/></param>
+        /// <returns><see cref="QueryContractResponse"/></returns>
+        public async Task<QueryContractResponse> QueryContract(QueryContractRequest req)
+        {
+             JsonResponseModel<QueryContractResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口查询签约数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryContractRequest"/></param>
+        /// <returns><see cref="QueryContractResponse"/></returns>
+        public QueryContractResponse QueryContractSync(QueryContractRequest req)
+        {
+             JsonResponseModel<QueryContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询银行子账户余额。查询会员子账户以及平台的功能子账户的余额。
         /// </summary>
         /// <param name="req"><see cref="QueryCustAcctIdBalanceRequest"/></param>
@@ -3102,6 +3182,86 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "RevokeRechargeByThirdPay");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RevokeRechargeByThirdPayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对于存量的签约关系导入或者部分场景下米大师无法收到签约通知的场景，需要由调用方主动将签约状态同步至米大师
+        /// </summary>
+        /// <param name="req"><see cref="SyncContractDataRequest"/></param>
+        /// <returns><see cref="SyncContractDataResponse"/></returns>
+        public async Task<SyncContractDataResponse> SyncContractData(SyncContractDataRequest req)
+        {
+             JsonResponseModel<SyncContractDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncContractData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncContractDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对于存量的签约关系导入或者部分场景下米大师无法收到签约通知的场景，需要由调用方主动将签约状态同步至米大师
+        /// </summary>
+        /// <param name="req"><see cref="SyncContractDataRequest"/></param>
+        /// <returns><see cref="SyncContractDataResponse"/></returns>
+        public SyncContractDataResponse SyncContractDataSync(SyncContractDataRequest req)
+        {
+             JsonResponseModel<SyncContractDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncContractData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncContractDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口进行解约
+        /// </summary>
+        /// <param name="req"><see cref="TerminateContractRequest"/></param>
+        /// <returns><see cref="TerminateContractResponse"/></returns>
+        public async Task<TerminateContractResponse> TerminateContract(TerminateContractRequest req)
+        {
+             JsonResponseModel<TerminateContractResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口进行解约
+        /// </summary>
+        /// <param name="req"><see cref="TerminateContractRequest"/></param>
+        /// <returns><see cref="TerminateContractResponse"/></returns>
+        public TerminateContractResponse TerminateContractSync(TerminateContractRequest req)
+        {
+             JsonResponseModel<TerminateContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateContractResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
