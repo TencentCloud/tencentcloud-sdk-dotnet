@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{26FC94F0-2BCB-31B6-AE8F-F07F65A3D412}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.289</VersionPrefix>
+    <VersionPrefix>3.0.290</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20191112\Models\DescribeHSMByVpcIdResponse.cs" />
     <Compile Include="V20191112\Models\DescribeSubnetRequest.cs" />
     <Compile Include="V20191112\Models\DescribeSubnetResponse.cs" />
+    <Compile Include="V20191112\Models\DescribeSupportedHsmRequest.cs" />
+    <Compile Include="V20191112\Models\DescribeSupportedHsmResponse.cs" />
     <Compile Include="V20191112\Models\DescribeUsgRequest.cs" />
     <Compile Include="V20191112\Models\DescribeUsgResponse.cs" />
     <Compile Include="V20191112\Models\DescribeUsgRuleRequest.cs" />
@@ -61,6 +63,8 @@
     <Compile Include="V20191112\Models\DescribeVsmAttributesResponse.cs" />
     <Compile Include="V20191112\Models\DescribeVsmsRequest.cs" />
     <Compile Include="V20191112\Models\DescribeVsmsResponse.cs" />
+    <Compile Include="V20191112\Models\DeviceInfo.cs" />
+    <Compile Include="V20191112\Models\HsmInfo.cs" />
     <Compile Include="V20191112\Models\InquiryPriceBuyVsmRequest.cs" />
     <Compile Include="V20191112\Models\InquiryPriceBuyVsmResponse.cs" />
     <Compile Include="V20191112\Models\ModifyVsmAttributesRequest.cs" />
@@ -73,5 +77,6 @@
     <Compile Include="V20191112\Models\UsgPolicy.cs" />
     <Compile Include="V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="V20191112\Models\Vpc.cs" />
+    <Compile Include="V20191112\Models\VsmInfo.cs" />
   </ItemGroup>
 </Project>

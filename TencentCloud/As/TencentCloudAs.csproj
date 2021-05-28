@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DF6825D5-FAEE-38FB-A622-37599AD65B25}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.289</VersionPrefix>
+    <VersionPrefix>3.0.290</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -153,6 +153,10 @@
     <Compile Include="V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180419\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180419\Models\ScaleInInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\ScaleInInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\ScaleOutInstancesRequest.cs" />
+    <Compile Include="V20180419\Models\ScaleOutInstancesResponse.cs" />
     <Compile Include="V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="V20180419\Models\ScheduledAction.cs" />
     <Compile Include="V20180419\Models\ServiceSettings.cs" />

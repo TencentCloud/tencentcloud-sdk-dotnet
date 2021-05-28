@@ -173,6 +173,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 针对VPC-CNI模式的集群，增加集群容器网络可使用的子网
+        /// </summary>
+        /// <param name="req"><see cref="AddVpcCniSubnetsRequest"/></param>
+        /// <returns><see cref="AddVpcCniSubnetsResponse"/></returns>
+        public async Task<AddVpcCniSubnetsResponse> AddVpcCniSubnets(AddVpcCniSubnetsRequest req)
+        {
+             JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddVpcCniSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddVpcCniSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 针对VPC-CNI模式的集群，增加集群容器网络可使用的子网
+        /// </summary>
+        /// <param name="req"><see cref="AddVpcCniSubnetsRequest"/></param>
+        /// <returns><see cref="AddVpcCniSubnetsResponse"/></returns>
+        public AddVpcCniSubnetsResponse AddVpcCniSubnetsSync(AddVpcCniSubnetsRequest req)
+        {
+             JsonResponseModel<AddVpcCniSubnetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddVpcCniSubnets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddVpcCniSubnetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查给定节点列表中哪些是可升级的 
         /// </summary>
         /// <param name="req"><see cref="CheckInstancesUpgradeAbleRequest"/></param>

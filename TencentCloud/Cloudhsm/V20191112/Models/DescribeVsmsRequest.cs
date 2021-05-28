@@ -48,6 +48,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// 设备所属的厂商名称，根据厂商来进行筛选
+        /// </summary>
+        [JsonProperty("Manufacturer")]
+        public string Manufacturer{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
         }
     }
 }

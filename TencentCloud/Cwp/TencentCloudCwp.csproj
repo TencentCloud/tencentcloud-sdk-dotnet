@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.289</VersionPrefix>
+    <VersionPrefix>3.0.290</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,7 @@
     <Compile Include="V20180228\Models\BashEvent.cs" />
     <Compile Include="V20180228\Models\BashRule.cs" />
     <Compile Include="V20180228\Models\BruteAttack.cs" />
+    <Compile Include="V20180228\Models\BruteAttackInfo.cs" />
     <Compile Include="V20180228\Models\ChargePrepaid.cs" />
     <Compile Include="V20180228\Models\CloseProVersionRequest.cs" />
     <Compile Include="V20180228\Models\CloseProVersionResponse.cs" />
@@ -126,6 +127,8 @@
     <Compile Include="V20180228\Models\DescribeBashEventsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBashRulesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBashRulesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBruteAttackListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBruteAttackListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBruteAttacksRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBruteAttacksResponse.cs" />
     <Compile Include="V20180228\Models\DescribeComponentInfoRequest.cs" />

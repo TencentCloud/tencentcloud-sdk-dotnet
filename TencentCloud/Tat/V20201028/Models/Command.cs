@@ -102,6 +102,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("CreatedBy")]
         public string CreatedBy{ get; set; }
 
+        /// <summary>
+        /// 命令关联的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
             this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

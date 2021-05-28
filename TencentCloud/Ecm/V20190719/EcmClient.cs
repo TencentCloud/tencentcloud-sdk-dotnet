@@ -4625,7 +4625,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 创建ECM实例
+        /// 创建ECM实例。
         /// </summary>
         /// <param name="req"><see cref="RunInstancesRequest"/></param>
         /// <returns><see cref="RunInstancesResponse"/></returns>
@@ -4645,7 +4645,7 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
-        /// 创建ECM实例
+        /// 创建ECM实例。
         /// </summary>
         /// <param name="req"><see cref="RunInstancesRequest"/></param>
         /// <returns><see cref="RunInstancesResponse"/></returns>

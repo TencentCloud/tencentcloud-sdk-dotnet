@@ -173,6 +173,46 @@ namespace TencentCloud.Cloudhsm.V20191112
         }
 
         /// <summary>
+        /// 获取当前地域所支持的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedHsmRequest"/></param>
+        /// <returns><see cref="DescribeSupportedHsmResponse"/></returns>
+        public async Task<DescribeSupportedHsmResponse> DescribeSupportedHsm(DescribeSupportedHsmRequest req)
+        {
+             JsonResponseModel<DescribeSupportedHsmResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSupportedHsm");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedHsmResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取当前地域所支持的设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedHsmRequest"/></param>
+        /// <returns><see cref="DescribeSupportedHsmResponse"/></returns>
+        public DescribeSupportedHsmResponse DescribeSupportedHsmSync(DescribeSupportedHsmRequest req)
+        {
+             JsonResponseModel<DescribeSupportedHsmResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSupportedHsm");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedHsmResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据用户的AppId获取用户安全组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUsgRequest"/></param>

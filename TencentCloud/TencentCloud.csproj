@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.289</VersionPrefix>
+    <VersionPrefix>3.0.290</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -557,6 +557,10 @@
     <Compile Include="As\V20180419\Models\RemoveInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="As\V20180419\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="As\V20180419\Models\ScaleInInstancesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ScaleInInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\ScaleOutInstancesRequest.cs" />
+    <Compile Include="As\V20180419\Models\ScaleOutInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\ScalingPolicy.cs" />
     <Compile Include="As\V20180419\Models\ScheduledAction.cs" />
     <Compile Include="As\V20180419\Models\ServiceSettings.cs" />
@@ -3005,6 +3009,8 @@
     <Compile Include="Cloudhsm\V20191112\Models\DescribeHSMByVpcIdResponse.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeSubnetRequest.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeSubnetResponse.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\DescribeSupportedHsmRequest.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\DescribeSupportedHsmResponse.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeUsgRequest.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeUsgResponse.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeUsgRuleRequest.cs" />
@@ -3015,6 +3021,8 @@
     <Compile Include="Cloudhsm\V20191112\Models\DescribeVsmAttributesResponse.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeVsmsRequest.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\DescribeVsmsResponse.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\DeviceInfo.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\HsmInfo.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\InquiryPriceBuyVsmRequest.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\InquiryPriceBuyVsmResponse.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\ModifyVsmAttributesRequest.cs" />
@@ -3027,6 +3035,7 @@
     <Compile Include="Cloudhsm\V20191112\Models\UsgPolicy.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\Vpc.cs" />
+    <Compile Include="Cloudhsm\V20191112\Models\VsmInfo.cs" />
     <Compile Include="Cme\V20191029\CmeClient.cs" />
     <Compile Include="Cme\V20191029\Models\AccountInfo.cs" />
     <Compile Include="Cme\V20191029\Models\AddMemberInfo.cs" />
@@ -3783,6 +3792,7 @@
     <Compile Include="Cwp\V20180228\Models\BashEvent.cs" />
     <Compile Include="Cwp\V20180228\Models\BashRule.cs" />
     <Compile Include="Cwp\V20180228\Models\BruteAttack.cs" />
+    <Compile Include="Cwp\V20180228\Models\BruteAttackInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ChargePrepaid.cs" />
     <Compile Include="Cwp\V20180228\Models\CloseProVersionRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CloseProVersionResponse.cs" />
@@ -3853,6 +3863,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeBashEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashRulesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBruteAttacksRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBruteAttacksResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentInfoRequest.cs" />
@@ -4541,6 +4553,90 @@
     <Compile Include="Dbbrain\V20191016\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20191016\Models\TimeSlice.cs" />
     <Compile Include="Dbbrain\V20191016\Models\UserProfile.cs" />
+    <Compile Include="Dbbrain\V20210527\DbbrainClient.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\AddUserContactRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ContactItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserContactRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserContactResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserGroupRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserGroupResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagEventRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagEventResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagHistoryRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagHistoryResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagReportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBDiagReportTasksResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBSpaceStatusRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDBSpaceStatusResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDiagDBInstancesRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeDiagDBInstancesResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeHealthScoreRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeHealthScoreResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeMailProfileRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogExportTasksResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogTimeSeriesStatsRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogTimeSeriesStatsResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogTopSqlsRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogTopSqlsResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemaTimeSeriesRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemasResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceTableTimeSeriesRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceTableTimeSeriesResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceTablesRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceTablesResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeUserSqlAdviceRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeUserSqlAdviceResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DiagHistoryEventItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\EventInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\GroupItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\HealthReportTask.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\HealthScoreInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\HealthStatus.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\InstanceBasicInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\InstanceConfs.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\InstanceInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\IssueTypeInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MailConfiguration.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MonitorFloatMetric.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MonitorFloatMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MonitorMetric.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MonitorMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ProfileInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SchemaItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SchemaSpaceData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SchemaSpaceTimeSeries.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ScoreDetail.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ScoreItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SecLogExportTaskInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SlowLogHost.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SlowLogTopSqlItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\TableSpaceData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\TableSpaceTimeSeries.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\TimeSlice.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\UserProfile.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
@@ -5061,6 +5157,8 @@
     <Compile Include="Ecdn\V20191012\Models\CacheKey.cs" />
     <Compile Include="Ecdn\V20191012\Models\CacheRule.cs" />
     <Compile Include="Ecdn\V20191012\Models\ClientCert.cs" />
+    <Compile Include="Ecdn\V20191012\Models\CreateVerifyRecordRequest.cs" />
+    <Compile Include="Ecdn\V20191012\Models\CreateVerifyRecordResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DeleteEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\DeleteEcdnDomainResponse.cs" />
     <Compile Include="Ecdn\V20191012\Models\DescribeDomainsConfigRequest.cs" />
@@ -10445,6 +10543,7 @@
     <Compile Include="Tat\V20201028\Models\RegionInfo.cs" />
     <Compile Include="Tat\V20201028\Models\RunCommandRequest.cs" />
     <Compile Include="Tat\V20201028\Models\RunCommandResponse.cs" />
+    <Compile Include="Tat\V20201028\Models\Tag.cs" />
     <Compile Include="Tat\V20201028\Models\TaskResult.cs" />
     <Compile Include="Tav\V20190118\TavClient.cs" />
     <Compile Include="Tav\V20190118\Models\GetLocalEngineRequest.cs" />
@@ -11709,6 +11808,8 @@
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />

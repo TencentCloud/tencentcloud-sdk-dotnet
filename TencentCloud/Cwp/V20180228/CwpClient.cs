@@ -1453,6 +1453,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取密码破解列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBruteAttackListRequest"/></param>
+        /// <returns><see cref="DescribeBruteAttackListResponse"/></returns>
+        public async Task<DescribeBruteAttackListResponse> DescribeBruteAttackList(DescribeBruteAttackListRequest req)
+        {
+             JsonResponseModel<DescribeBruteAttackListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBruteAttackList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBruteAttackListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取密码破解列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBruteAttackListRequest"/></param>
+        /// <returns><see cref="DescribeBruteAttackListResponse"/></returns>
+        public DescribeBruteAttackListResponse DescribeBruteAttackListSync(DescribeBruteAttackListRequest req)
+        {
+             JsonResponseModel<DescribeBruteAttackListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBruteAttackList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBruteAttackListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口{DescribeBruteAttacks}用于获取暴力破解事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeBruteAttacksRequest"/></param>

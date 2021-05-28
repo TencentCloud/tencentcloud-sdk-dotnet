@@ -66,6 +66,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Cni")]
         public bool? Cni{ get; set; }
 
+        /// <summary>
+        /// service的网络模式，当前参数只适用于ipvs+bpf模式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KubeProxyMode")]
+        public string KubeProxyMode{ get; set; }
+
+        /// <summary>
+        /// 用于分配service的IP range，不得与 VPC CIDR 冲突，也不得与同 VPC 内其他集群 CIDR 冲突
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceCIDR")]
+        public string ServiceCIDR{ get; set; }
+
+        /// <summary>
+        /// 集群关联的容器子网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Subnets")]
+        public string[] Subnets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +100,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Ipvs", this.Ipvs);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "Cni", this.Cni);
+            this.SetParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
+            this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+            this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
         }
     }
 }

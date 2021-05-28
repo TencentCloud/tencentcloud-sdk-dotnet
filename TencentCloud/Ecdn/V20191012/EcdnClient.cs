@@ -93,6 +93,46 @@ namespace TencentCloud.Ecdn.V20191012
         }
 
         /// <summary>
+        /// 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+        /// </summary>
+        /// <param name="req"><see cref="CreateVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateVerifyRecordResponse"/></returns>
+        public async Task<CreateVerifyRecordResponse> CreateVerifyRecord(CreateVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成一条子域名解析，提示客户添加到域名解析上，用于泛域名及域名取回校验归属权
+        /// </summary>
+        /// <param name="req"><see cref="CreateVerifyRecordRequest"/></param>
+        /// <returns><see cref="CreateVerifyRecordResponse"/></returns>
+        public CreateVerifyRecordResponse CreateVerifyRecordSync(CreateVerifyRecordRequest req)
+        {
+             JsonResponseModel<CreateVerifyRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVerifyRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVerifyRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
         /// </summary>
         /// <param name="req"><see cref="DeleteEcdnDomainRequest"/></param>

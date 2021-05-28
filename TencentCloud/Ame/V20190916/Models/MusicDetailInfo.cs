@@ -60,6 +60,42 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
+        /// <summary>
+        /// 场景信息
+        /// </summary>
+        [JsonProperty("Scene")]
+        public string[] Scene{ get; set; }
+
+        /// <summary>
+        /// 应用地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string[] Region{ get; set; }
+
+        /// <summary>
+        /// 授权期限
+        /// </summary>
+        [JsonProperty("AuthPeriod")]
+        public string AuthPeriod{ get; set; }
+
+        /// <summary>
+        /// 商业化权益
+        /// </summary>
+        [JsonProperty("Commercialization")]
+        public string Commercialization{ get; set; }
+
+        /// <summary>
+        /// 跨平台传播权益
+        /// </summary>
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
+
+        /// <summary>
+        /// 传播渠道
+        /// </summary>
+        [JsonProperty("Channel")]
+        public string Channel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +108,12 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamArraySimple(map, prefix + "HitWords.", this.HitWords);
             this.SetParamSimple(map, prefix + "Bpm", this.Bpm);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamArraySimple(map, prefix + "Scene.", this.Scene);
+            this.SetParamArraySimple(map, prefix + "Region.", this.Region);
+            this.SetParamSimple(map, prefix + "AuthPeriod", this.AuthPeriod);
+            this.SetParamSimple(map, prefix + "Commercialization", this.Commercialization);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
         }
     }
 }

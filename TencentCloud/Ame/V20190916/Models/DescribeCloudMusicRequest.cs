@@ -31,8 +31,11 @@ namespace TencentCloud.Ame.V20190916.Models
         public string MusicId{ get; set; }
 
         /// <summary>
-        /// MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
-        /// MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
+        /// 歌曲类型，可选值有：
+        /// <li>MP3-128K-FTW：含有水印的试听资源；</li>
+        /// <li>MP3-320K-FTD-P：320kbps歌曲热门片段；</li>
+        /// <li>MP3-320K-FTD：320kbps已核验歌曲完整资源。</li>
+        /// 默认为：MP3-128K-FTW
         /// </summary>
         [JsonProperty("MusicType")]
         public string MusicType{ get; set; }
