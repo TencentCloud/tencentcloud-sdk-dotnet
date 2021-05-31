@@ -25,37 +25,37 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡监听器 ID
+        /// 负载均衡监听器 ID。
         /// </summary>
         [JsonProperty("ListenerId")]
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 要修改权重的后端机器列表
+        /// 要修改权重的后端机器列表。
         /// </summary>
         [JsonProperty("Targets")]
         public Target[] Targets{ get; set; }
 
         /// <summary>
-        /// 转发规则的ID，七层规则时需要此参数，4层规则不需要
+        /// 转发规则的ID，七层规则时需要此参数，4层规则不需要。
         /// </summary>
         [JsonProperty("LocationId")]
         public string LocationId{ get; set; }
 
         /// <summary>
-        /// 目标规则的域名，提供LocationId参数时本参数不生效
+        /// 目标规则的域名，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 目标规则的URL，提供LocationId参数时本参数不生效
+        /// 目标规则的URL，提供LocationId参数时本参数不生效。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 后端服务新的转发权重，取值范围：0~100。
+        /// 后端服务修改后的转发权重，取值范围：[0，100]。此参数的优先级低于前述[Target](https://cloud.tencent.com/document/api/214/30694#Target)中的Weight参数，即最终的权重值以Target中的Weight参数值为准，仅当Target中的Weight参数为空时，才以RsWeightRule中的Weight参数为准。
         /// </summary>
         [JsonProperty("Weight")]
         public long? Weight{ get; set; }

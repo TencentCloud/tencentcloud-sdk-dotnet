@@ -105,6 +105,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
 
+        /// <summary>
+        /// 如果保存命令，可为命令设置标签。列表长度不超过10。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +128,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "EnableParameter", this.EnableParameter);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

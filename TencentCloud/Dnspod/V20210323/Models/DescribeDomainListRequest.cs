@@ -25,19 +25,19 @@ namespace TencentCloud.Dnspod.V20210323.Models
     {
         
         /// <summary>
-        /// 域名分组类型，默认为ALL
+        /// 域名分组类型，默认为ALL。可取值为ALL，MINE，SHARE，ISMARK，PAUSE，VIP，RECENT，SHARE_OUT。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 记录开始的偏移, 第一条记录为 0, 依次类推
+        /// 记录开始的偏移, 第一条记录为 0, 依次类推。默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 要获取的域名数量, 比如获取20个, 则为20
+        /// 要获取的域名数量, 比如获取20个, 则为20。默认值为3000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

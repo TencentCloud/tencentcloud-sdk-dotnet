@@ -60,6 +60,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("FirmwareDescription")]
         public string FirmwareDescription{ get; set; }
 
+        /// <summary>
+        /// 固件升级模块；可选值 mcu|moudule
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamSimple(map, prefix + "FirmwareName", this.FirmwareName);
             this.SetParamSimple(map, prefix + "FirmwareDescription", this.FirmwareDescription);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
         }
     }
 }

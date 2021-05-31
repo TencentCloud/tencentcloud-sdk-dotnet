@@ -90,6 +90,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("PublicAccess")]
         public long? PublicAccess{ get; set; }
 
+        /// <summary>
+        /// OA PUBLIC MINIAPP VPC
+        /// </summary>
+        [JsonProperty("OpenAccessTypes")]
+        public string[] OpenAccessTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
             this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
+            this.SetParamArraySimple(map, prefix + "OpenAccessTypes.", this.OpenAccessTypes);
         }
     }
 }

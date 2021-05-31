@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Domain.V20180808.Models
+namespace TencentCloud.Ame.V20190916.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckDomainRequest : AbstractModel
+    public class DescribeKTVMusicDetailResponse : AbstractModel
     {
         
         /// <summary>
-        /// 所查询域名名称
+        /// 歌曲基础信息
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
+        [JsonProperty("KTVMusicBaseInfo")]
+        public KTVMusicBaseInfo KTVMusicBaseInfo{ get; set; }
 
         /// <summary>
-        /// 年限。该参数为空时无法查询溢价词域名
+        /// 播放凭证
         /// </summary>
-        [JsonProperty("Period")]
-        public string Period{ get; set; }
+        [JsonProperty("PlayToken")]
+        public string PlayToken{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
+            this.SetParamSimple(map, prefix + "PlayToken", this.PlayToken);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

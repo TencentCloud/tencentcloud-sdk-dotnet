@@ -71,6 +71,12 @@ namespace TencentCloud.Iotcloud.V20180614.Models
         public string ProductName{ get; set; }
 
         /// <summary>
+        /// 固件类型。选项：mcu、module
+        /// </summary>
+        [JsonProperty("FwType")]
+        public string FwType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -89,6 +95,7 @@ namespace TencentCloud.Iotcloud.V20180614.Models
             this.SetParamSimple(map, prefix + "Md5sum", this.Md5sum);
             this.SetParamSimple(map, prefix + "Createtime", this.Createtime);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "FwType", this.FwType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

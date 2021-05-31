@@ -31,7 +31,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 域名状态，”enable” 、”disable” 分别代表启用和暂
+        /// 域名状态，”enable” 、”disable” 分别代表启用和暂停
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

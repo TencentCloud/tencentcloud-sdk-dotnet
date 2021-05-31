@@ -25,16 +25,16 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 函数处理方法名称。名称格式支持“文件名称.函数名称”形式（java 名称格式 包名.类名::方法名），文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
-        /// </summary>
-        [JsonProperty("Handler")]
-        public string Handler{ get; set; }
-
-        /// <summary>
         /// 要修改的函数名称
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
+
+        /// <summary>
+        /// 函数处理方法名称。名称格式支持“文件名称.函数名称”形式（java 名称格式 包名.类名::方法名），文件名称和函数名称之间以"."隔开，文件名称和函数名称要求以字母开始和结尾，中间允许插入字母、数字、下划线和连接符，文件名称和函数名字的长度要求 2-60 个字符
+        /// </summary>
+        [JsonProperty("Handler")]
+        public string Handler{ get; set; }
 
         /// <summary>
         /// 对象存储桶名称
@@ -96,8 +96,8 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Handler", this.Handler);
             this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
+            this.SetParamSimple(map, prefix + "Handler", this.Handler);
             this.SetParamSimple(map, prefix + "CosBucketName", this.CosBucketName);
             this.SetParamSimple(map, prefix + "CosObjectName", this.CosObjectName);
             this.SetParamSimple(map, prefix + "ZipFile", this.ZipFile);

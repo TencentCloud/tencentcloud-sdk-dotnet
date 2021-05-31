@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Domain.V20180808.Models
+namespace TencentCloud.Ame.V20190916.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckDomainRequest : AbstractModel
+    public class DescribeKTVMusicDetailRequest : AbstractModel
     {
         
         /// <summary>
-        /// 所查询域名名称
+        /// 曲目 Id
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
-
-        /// <summary>
-        /// 年限。该参数为空时无法查询溢价词域名
-        /// </summary>
-        [JsonProperty("Period")]
-        public string Period{ get; set; }
+        [JsonProperty("MusicId")]
+        public string MusicId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Domain.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "MusicId", this.MusicId);
         }
     }
 }

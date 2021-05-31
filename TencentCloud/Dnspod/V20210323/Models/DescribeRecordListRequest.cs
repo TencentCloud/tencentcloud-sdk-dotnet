@@ -73,25 +73,25 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段
+        /// 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
 
         /// <summary>
-        /// 排序方式，正序：ASC，逆序：DESC
+        /// 排序方式，正序：ASC，逆序：DESC。默认值为ASC。
         /// </summary>
         [JsonProperty("SortType")]
         public string SortType{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 偏移量，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数量，当前Limit最大支持3000
+        /// 限制数量，当前Limit最大支持3000。默认值为3000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
