@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.292</VersionPrefix>
+    <VersionPrefix>3.0.293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -107,6 +107,8 @@
     <Compile Include="V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="V20180411\Models\DescribeFlowRequest.cs" />
+    <Compile Include="V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20180411\Models\DescribeOrdersResponse.cs" />
     <Compile Include="V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -119,6 +121,10 @@
     <Compile Include="V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksRequest.cs" />
     <Compile Include="V20180411\Models\DescribeUserTasksResponse.cs" />
+    <Compile Include="V20180411\Models\DestroyDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\DestroyDCDBInstanceResponse.cs" />
+    <Compile Include="V20180411\Models\DestroyHourDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\DestroyHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180411\Models\ExpandShardConfig.cs" />

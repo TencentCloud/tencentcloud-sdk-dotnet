@@ -31,7 +31,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string TimeRangeBegin{ get; set; }
 
         /// <summary>
-        /// 筛选参数：
+        /// 筛选参数：ZoneId：私有域ID；Domain：私有域；OperatorUin：操作者账号ID
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

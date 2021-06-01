@@ -56,6 +56,12 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("PackageId")]
         public string PackageId{ get; set; }
 
+        /// <summary>
+        /// 如果当前设备已开启云存套餐，Override=1会使用新套餐覆盖原有套餐。不传此参数则默认为0。
+        /// </summary>
+        [JsonProperty("Override")]
+        public ulong? Override{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
+            this.SetParamSimple(map, prefix + "Override", this.Override);
         }
     }
 }

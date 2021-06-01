@@ -25,7 +25,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// 请求量统计起始时间
+        /// 请求量统计起始时间，格式：2020-11-22 00:00:00
         /// </summary>
         [JsonProperty("TimeRangeBegin")]
         public string TimeRangeBegin{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 请求量统计结束时间
+        /// 请求量统计结束时间，格式：2020-11-22 23:59:59
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }

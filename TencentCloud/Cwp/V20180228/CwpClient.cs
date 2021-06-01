@@ -3893,6 +3893,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 导出资产管理内核模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportAssetCoreModuleListRequest"/></param>
+        /// <returns><see cref="ExportAssetCoreModuleListResponse"/></returns>
+        public async Task<ExportAssetCoreModuleListResponse> ExportAssetCoreModuleList(ExportAssetCoreModuleListRequest req)
+        {
+             JsonResponseModel<ExportAssetCoreModuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportAssetCoreModuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportAssetCoreModuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出资产管理内核模块列表
+        /// </summary>
+        /// <param name="req"><see cref="ExportAssetCoreModuleListRequest"/></param>
+        /// <returns><see cref="ExportAssetCoreModuleListResponse"/></returns>
+        public ExportAssetCoreModuleListResponse ExportAssetCoreModuleListSync(ExportAssetCoreModuleListRequest req)
+        {
+             JsonResponseModel<ExportAssetCoreModuleListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportAssetCoreModuleList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportAssetCoreModuleListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 导出网络攻击日志
         /// </summary>
         /// <param name="req"><see cref="ExportAttackLogsRequest"/></param>

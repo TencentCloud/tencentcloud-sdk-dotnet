@@ -73,6 +73,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long? CurrentDeleteMonthly{ get; set; }
 
         /// <summary>
+        /// 微信网关体验版可购买月份数
+        /// </summary>
+        [JsonProperty("MaxFreeTrialNum")]
+        public long? MaxFreeTrialNum{ get; set; }
+
+        /// <summary>
+        /// 微信网关体验版已购买月份数
+        /// </summary>
+        [JsonProperty("CurrentFreeTrialNum")]
+        public long? CurrentFreeTrialNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -92,6 +104,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "CurrentDeleteTotal", this.CurrentDeleteTotal);
             this.SetParamSimple(map, prefix + "MaxDeleteMonthly", this.MaxDeleteMonthly);
             this.SetParamSimple(map, prefix + "CurrentDeleteMonthly", this.CurrentDeleteMonthly);
+            this.SetParamSimple(map, prefix + "MaxFreeTrialNum", this.MaxFreeTrialNum);
+            this.SetParamSimple(map, prefix + "CurrentFreeTrialNum", this.CurrentFreeTrialNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

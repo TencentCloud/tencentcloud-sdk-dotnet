@@ -49,7 +49,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 是否开启子域名递归, ENABLED， DISABLED
+        /// 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
         /// </summary>
         [JsonProperty("DnsForwardStatus")]
         public string DnsForwardStatus{ get; set; }

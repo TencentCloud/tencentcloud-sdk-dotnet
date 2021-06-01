@@ -120,6 +120,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("FilterInstanceType")]
         public string FilterInstanceType{ get; set; }
 
+        /// <summary>
+        /// 按实例状态筛选
+        /// </summary>
+        [JsonProperty("Status")]
+        public long?[] Status{ get; set; }
+
+        /// <summary>
+        /// 排除实例状态
+        /// </summary>
+        [JsonProperty("ExcludeStatus")]
+        public long?[] ExcludeStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArraySimple(map, prefix + "ExclusterIds.", this.ExclusterIds);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamSimple(map, prefix + "FilterInstanceType", this.FilterInstanceType);
+            this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "ExcludeStatus.", this.ExcludeStatus);
         }
     }
 }

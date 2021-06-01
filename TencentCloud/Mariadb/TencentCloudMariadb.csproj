@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.292</VersionPrefix>
+    <VersionPrefix>3.0.293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,12 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20170312\MariadbClient.cs" />
+    <Compile Include="V20170312\Models\Account.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\ColumnPrivilege.cs" />
     <Compile Include="V20170312\Models\ConstraintRange.cs" />
     <Compile Include="V20170312\Models\CopyAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\CopyAccountPrivilegesResponse.cs" />
@@ -65,6 +67,7 @@
     <Compile Include="V20170312\Models\DBInstance.cs" />
     <Compile Include="V20170312\Models\DBParamValue.cs" />
     <Compile Include="V20170312\Models\Database.cs" />
+    <Compile Include="V20170312\Models\DatabasePrivilege.cs" />
     <Compile Include="V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="V20170312\Models\Deal.cs" />
     <Compile Include="V20170312\Models\DeleteAccountRequest.cs" />
@@ -119,10 +122,13 @@
     <Compile Include="V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="V20170312\Models\DestroyHourDBInstanceRequest.cs" />
+    <Compile Include="V20170312\Models\DestroyHourDBInstanceResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\FlushBinlogRequest.cs" />
     <Compile Include="V20170312\Models\FlushBinlogResponse.cs" />
+    <Compile Include="V20170312\Models\FunctionPrivilege.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
@@ -133,6 +139,8 @@
     <Compile Include="V20170312\Models\LogFileInfo.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="V20170312\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyAccountPrivilegesResponse.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
@@ -153,6 +161,7 @@
     <Compile Include="V20170312\Models\ParamDesc.cs" />
     <Compile Include="V20170312\Models\ParamModifyResult.cs" />
     <Compile Include="V20170312\Models\PerformanceMonitorSet.cs" />
+    <Compile Include="V20170312\Models\ProcedurePrivilege.cs" />
     <Compile Include="V20170312\Models\RegionInfo.cs" />
     <Compile Include="V20170312\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\RenewDBInstanceResponse.cs" />
@@ -167,8 +176,10 @@
     <Compile Include="V20170312\Models\SlowLogData.cs" />
     <Compile Include="V20170312\Models\SpecConfigInfo.cs" />
     <Compile Include="V20170312\Models\SqlLogItem.cs" />
+    <Compile Include="V20170312\Models\TablePrivilege.cs" />
     <Compile Include="V20170312\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="V20170312\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="V20170312\Models\ViewPrivileges.cs" />
     <Compile Include="V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="V20170312\Models\ZonesInfo.cs" />
   </ItemGroup>

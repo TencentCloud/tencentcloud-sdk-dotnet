@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.292</VersionPrefix>
+    <VersionPrefix>3.0.293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3041,6 +3041,93 @@
     <Compile Include="Cloudhsm\V20191112\Models\UsgRuleDetail.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\Vpc.cs" />
     <Compile Include="Cloudhsm\V20191112\Models\VsmInfo.cs" />
+    <Compile Include="Cls\V20201016\ClsClient.cs" />
+    <Compile Include="Cls\V20201016\Models\AlarmInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\AlarmNotice.cs" />
+    <Compile Include="Cls\V20201016\Models\AlarmTarget.cs" />
+    <Compile Include="Cls\V20201016\Models\AlarmTargetInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateAlarmRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateExportRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateExportResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateIndexRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateMachineGroupRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateTopicRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateTopicResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteAlarmRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteExportRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteExportResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteIndexRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteMachineGroupRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteTopicRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteTopicResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeAlarmNoticesRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeAlarmNoticesResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeAlarmsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeExportsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeExportsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeIndexRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogContextRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogContextResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachineGroupsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachineGroupsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachinesRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachinesResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribePartitionsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribePartitionsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeTopicsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeTopicsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ExportInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\Filter.cs" />
+    <Compile Include="Cls\V20201016\Models\FullTextInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\GetAlarmLogRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\KeyValueInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\LogContextInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\LogInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\LogItem.cs" />
+    <Compile Include="Cls\V20201016\Models\LogItems.cs" />
+    <Compile Include="Cls\V20201016\Models\MachineGroupInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\MachineGroupTypeInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\MachineInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\MergePartitionRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\MergePartitionResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyAlarmNoticeRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyAlarmNoticeResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyAlarmRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyIndexRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyMachineGroupRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyTopicRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyTopicResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\MonitorTime.cs" />
+    <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
+    <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\RuleInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\RuleKeyValueInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\RuleTagInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\SearchLogRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\SearchLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\SplitPartitionRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\SplitPartitionResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\Tag.cs" />
+    <Compile Include="Cls\V20201016\Models\TopicInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ValueInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\WebCallback.cs" />
     <Compile Include="Cme\V20191029\CmeClient.cs" />
     <Compile Include="Cme\V20191029\Models\AccountInfo.cs" />
     <Compile Include="Cme\V20191029\Models\AddMemberInfo.cs" />
@@ -4011,6 +4098,8 @@
     <Compile Include="Cwp\V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\EditTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EffectiveMachineInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAttackLogsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAttackLogsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportBashEventsRequest.cs" />
@@ -4783,6 +4872,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFlowRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeOrdersRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
@@ -4795,6 +4886,10 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeUserTasksResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyDCDBInstanceResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DestroyHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ExpandShardConfig.cs" />
@@ -8010,12 +8105,14 @@
     <Compile Include="Lp\V20200224\Models\QueryLoginProtectionRequest.cs" />
     <Compile Include="Lp\V20200224\Models\QueryLoginProtectionResponse.cs" />
     <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
+    <Compile Include="Mariadb\V20170312\Models\Account.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ColumnPrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\ConstraintRange.cs" />
     <Compile Include="Mariadb\V20170312\Models\CopyAccountPrivilegesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CopyAccountPrivilegesResponse.cs" />
@@ -8030,6 +8127,7 @@
     <Compile Include="Mariadb\V20170312\Models\DBInstance.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBParamValue.cs" />
     <Compile Include="Mariadb\V20170312\Models\Database.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DatabasePrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="Mariadb\V20170312\Models\Deal.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountRequest.cs" />
@@ -8084,10 +8182,13 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeUpgradePriceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DestroyHourDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DestroyHourDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\FlushBinlogRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\FlushBinlogResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\FunctionPrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
@@ -8098,6 +8199,8 @@
     <Compile Include="Mariadb\V20170312\Models\LogFileInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyAccountPrivilegesRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ModifyAccountPrivilegesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyBackupTimeResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
@@ -8118,6 +8221,7 @@
     <Compile Include="Mariadb\V20170312\Models\ParamDesc.cs" />
     <Compile Include="Mariadb\V20170312\Models\ParamModifyResult.cs" />
     <Compile Include="Mariadb\V20170312\Models\PerformanceMonitorSet.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ProcedurePrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\RegionInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\RenewDBInstanceResponse.cs" />
@@ -8132,8 +8236,10 @@
     <Compile Include="Mariadb\V20170312\Models\SlowLogData.cs" />
     <Compile Include="Mariadb\V20170312\Models\SpecConfigInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\SqlLogItem.cs" />
+    <Compile Include="Mariadb\V20170312\Models\TablePrivilege.cs" />
     <Compile Include="Mariadb\V20170312\Models\UpgradeDBInstanceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\UpgradeDBInstanceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ViewPrivileges.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZonesInfo.cs" />
     <Compile Include="Memcached\V20190318\MemcachedClient.cs" />

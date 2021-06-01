@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.292</VersionPrefix>
+    <VersionPrefix>3.0.293</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -250,6 +250,8 @@
     <Compile Include="V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="V20180228\Models\EditTagsResponse.cs" />
     <Compile Include="V20180228\Models\EffectiveMachineInfo.cs" />
+    <Compile Include="V20180228\Models\ExportAssetCoreModuleListRequest.cs" />
+    <Compile Include="V20180228\Models\ExportAssetCoreModuleListResponse.cs" />
     <Compile Include="V20180228\Models\ExportAttackLogsRequest.cs" />
     <Compile Include="V20180228\Models\ExportAttackLogsResponse.cs" />
     <Compile Include="V20180228\Models\ExportBashEventsRequest.cs" />

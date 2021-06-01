@@ -79,7 +79,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string StatusDesc{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 实例状态：0 创建中，1 流程处理中， 2 运行中，3 实例未初始化，-1 实例已隔离，-2 实例已删除，4 实例初始化中，5 实例删除中，6 实例重启中，7 数据迁移中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

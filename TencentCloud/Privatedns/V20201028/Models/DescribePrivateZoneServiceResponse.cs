@@ -25,7 +25,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
     {
         
         /// <summary>
-        /// 私有域解析服务开通状态
+        /// 私有域解析服务开通状态。ENABLED已开通，DISABLED未开通
         /// </summary>
         [JsonProperty("ServiceStatus")]
         public string ServiceStatus{ get; set; }

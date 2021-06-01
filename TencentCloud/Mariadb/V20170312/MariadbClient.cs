@@ -1379,6 +1379,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DestroyHourDBInstance）用于销毁按量计费实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
+        public async Task<DestroyHourDBInstanceResponse> DestroyHourDBInstance(DestroyHourDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DestroyHourDBInstance）用于销毁按量计费实例。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyHourDBInstanceRequest"/></param>
+        /// <returns><see cref="DestroyHourDBInstanceResponse"/></returns>
+        public DestroyHourDBInstanceResponse DestroyHourDBInstanceSync(DestroyHourDBInstanceRequest req)
+        {
+             JsonResponseModel<DestroyHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DisassociateSecurityGroups)用于安全组批量解绑实例。
         /// </summary>
         /// <param name="req"><see cref="DisassociateSecurityGroupsRequest"/></param>
@@ -1614,6 +1654,56 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAccountDescription");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountDescriptionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。
+        /// 
+        /// **注意**
+        /// - 系统保留库："mysql"，只开放["SELECT"]权限
+        /// - 只读账号授予读写权限会报错
+        /// - 不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public async Task<ModifyAccountPrivilegesResponse> ModifyAccountPrivileges(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountPrivileges)用于修改云数据库的账户的权限信息。
+        /// 
+        /// **注意**
+        /// - 系统保留库："mysql"，只开放["SELECT"]权限
+        /// - 只读账号授予读写权限会报错
+        /// - 不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountPrivilegesRequest"/></param>
+        /// <returns><see cref="ModifyAccountPrivilegesResponse"/></returns>
+        public ModifyAccountPrivilegesResponse ModifyAccountPrivilegesSync(ModifyAccountPrivilegesRequest req)
+        {
+             JsonResponseModel<ModifyAccountPrivilegesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountPrivileges");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountPrivilegesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

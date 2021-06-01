@@ -30,6 +30,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 重启时间
+        /// </summary>
+        [JsonProperty("RestartTime")]
+        public string RestartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "RestartTime", this.RestartTime);
         }
     }
 }
