@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'NULL'， 默认为AES-CBC-128
+        /// 加密算法，可选值：'3DES-CBC', 'AES-CBC-128', 'AES-CBC-192', 'AES-CBC-256', 'DES-CBC', 'SM4', 'NULL'， 默认为AES-CBC-128
         /// </summary>
         [JsonProperty("EncryptAlgorithm")]
         public string EncryptAlgorithm{ get; set; }
 
         /// <summary>
-        /// 认证算法：可选值：'MD5', 'SHA1'，默认为
+        /// 认证算法：可选值：'MD5', 'SHA1'，'SHA-256' 默认为
         /// </summary>
         [JsonProperty("IntegrityAlgorith")]
         public string IntegrityAlgorith{ get; set; }

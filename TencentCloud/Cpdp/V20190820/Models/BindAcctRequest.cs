@@ -139,6 +139,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasEnvironment")]
         public string MidasEnvironment{ get; set; }
 
+        /// <summary>
+        /// 经办人信息
+        /// </summary>
+        [JsonProperty("AgencyClientInfo")]
+        public AgencyClientInfo AgencyClientInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -161,6 +167,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "EiconBankBranchId", this.EiconBankBranchId);
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+            this.SetParamObj(map, prefix + "AgencyClientInfo.", this.AgencyClientInfo);
         }
     }
 }

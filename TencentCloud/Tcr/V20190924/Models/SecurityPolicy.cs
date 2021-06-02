@@ -37,7 +37,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 192.168.1.0/24
+        /// 运行访问的公网IP地址端
         /// </summary>
         [JsonProperty("CidrBlock")]
         public string CidrBlock{ get; set; }

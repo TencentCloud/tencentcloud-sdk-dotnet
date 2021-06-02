@@ -85,6 +85,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// 子商户类型：
         /// 个人: personal
         /// 企业: enterprise
+        /// 个体工商户: individual
         /// 缺省: enterprise
         /// </summary>
         [JsonProperty("SubMchType")]
@@ -144,6 +145,19 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MidasEnvironment")]
         public string MidasEnvironment{ get; set; }
 
+        /// <summary>
+        /// 店铺名称
+        /// 企业、个体工商户必输
+        /// </summary>
+        [JsonProperty("SubMerchantStoreName")]
+        public string SubMerchantStoreName{ get; set; }
+
+        /// <summary>
+        /// 公司信息
+        /// </summary>
+        [JsonProperty("OrganizationInfo")]
+        public OrganizationInfo OrganizationInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +181,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "EncryptType", this.EncryptType);
             this.SetParamSimple(map, prefix + "SubAcctNo", this.SubAcctNo);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+            this.SetParamSimple(map, prefix + "SubMerchantStoreName", this.SubMerchantStoreName);
+            this.SetParamObj(map, prefix + "OrganizationInfo.", this.OrganizationInfo);
         }
     }
 }

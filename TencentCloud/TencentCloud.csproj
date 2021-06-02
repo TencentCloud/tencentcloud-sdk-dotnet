@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.293</VersionPrefix>
+    <VersionPrefix>3.0.294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1421,6 +1421,33 @@
     <Compile Include="Btoe\V20210303\Models\GetDepositFileResponse.cs" />
     <Compile Include="Btoe\V20210303\Models\GetDepositInfoRequest.cs" />
     <Compile Include="Btoe\V20210303\Models\GetDepositInfoResponse.cs" />
+    <Compile Include="Btoe\V20210514\BtoeClient.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateAudioDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateAudioDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateDataDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateDataDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateDocDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateDocDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositNoCertRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositNoCertResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositNoSealRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositNoSealResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateHashDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateImageDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateImageDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateVideoDepositRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\CreateVideoDepositResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositCertRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositCertResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositFileRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositFileResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositInfoRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\GetDepositInfoResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\VerifyEvidenceBlockChainTxHashRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\VerifyEvidenceBlockChainTxHashResponse.cs" />
+    <Compile Include="Btoe\V20210514\Models\VerifyEvidenceHashRequest.cs" />
+    <Compile Include="Btoe\V20210514\Models\VerifyEvidenceHashResponse.cs" />
     <Compile Include="Cam\V20190116\CamClient.cs" />
     <Compile Include="Cam\V20190116\Models\AccessKey.cs" />
     <Compile Include="Cam\V20190116\Models\AddUserRequest.cs" />
@@ -3382,6 +3409,7 @@
     <Compile Include="Cms\V20190321\Models\User.cs" />
     <Compile Include="Cpdp\V20190820\CpdpClient.cs" />
     <Compile Include="Cpdp\V20190820\Models\Acct.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AgencyClientInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPaymentBatch.cs" />
     <Compile Include="Cpdp\V20190820\Models\AnchorContractInfo.cs" />
@@ -3487,6 +3515,7 @@
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrderItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OrganizationInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctInfoListRequest.cs" />
@@ -3586,10 +3615,13 @@
     <Compile Include="Cpdp\V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RegisterBehaviorRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RegisterBehaviorResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillSupportWithdrawResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RegisterInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\ResponseQueryContract.cs" />
     <Compile Include="Cpdp\V20190820\Models\ResponseTerminateContract.cs" />
     <Compile Include="Cpdp\V20190820\Models\ReturnContractInfo.cs" />
@@ -11246,6 +11278,8 @@
     <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInternalEndpointDnsRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInternalEndpointDnsResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateMultipleSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespacePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateNamespaceRequest.cs" />
@@ -11282,6 +11316,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInternalEndpointDnsRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInternalEndpointDnsResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteMultipleSecurityPolicyRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteMultipleSecurityPolicyResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespacePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteNamespaceRequest.cs" />

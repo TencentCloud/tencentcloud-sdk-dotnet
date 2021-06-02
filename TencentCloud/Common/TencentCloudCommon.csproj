@@ -3,7 +3,7 @@
     <RootNamespace>TencentCloud</RootNamespace>
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0C5CE89-418D-399D-AED0-9B87D308C5C7}</ProjectGuid>
-    <VersionPrefix>3.0.293</VersionPrefix>
+    <VersionPrefix>3.0.294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl></PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>

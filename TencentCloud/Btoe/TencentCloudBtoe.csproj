@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{EBF09988-881F-3852-A591-FBE38A1DB706}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.293</VersionPrefix>
+    <VersionPrefix>3.0.294</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,5 +69,32 @@
     <Compile Include="V20210303\Models\GetDepositFileResponse.cs" />
     <Compile Include="V20210303\Models\GetDepositInfoRequest.cs" />
     <Compile Include="V20210303\Models\GetDepositInfoResponse.cs" />
+    <Compile Include="V20210514\BtoeClient.cs" />
+    <Compile Include="V20210514\Models\CreateAudioDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateAudioDepositResponse.cs" />
+    <Compile Include="V20210514\Models\CreateDataDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateDataDepositResponse.cs" />
+    <Compile Include="V20210514\Models\CreateDocDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateDocDepositResponse.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositNoCertRequest.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositNoCertResponse.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositNoSealRequest.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositNoSealResponse.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateHashDepositResponse.cs" />
+    <Compile Include="V20210514\Models\CreateImageDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateImageDepositResponse.cs" />
+    <Compile Include="V20210514\Models\CreateVideoDepositRequest.cs" />
+    <Compile Include="V20210514\Models\CreateVideoDepositResponse.cs" />
+    <Compile Include="V20210514\Models\GetDepositCertRequest.cs" />
+    <Compile Include="V20210514\Models\GetDepositCertResponse.cs" />
+    <Compile Include="V20210514\Models\GetDepositFileRequest.cs" />
+    <Compile Include="V20210514\Models\GetDepositFileResponse.cs" />
+    <Compile Include="V20210514\Models\GetDepositInfoRequest.cs" />
+    <Compile Include="V20210514\Models\GetDepositInfoResponse.cs" />
+    <Compile Include="V20210514\Models\VerifyEvidenceBlockChainTxHashRequest.cs" />
+    <Compile Include="V20210514\Models\VerifyEvidenceBlockChainTxHashResponse.cs" />
+    <Compile Include="V20210514\Models\VerifyEvidenceHashRequest.cs" />
+    <Compile Include="V20210514\Models\VerifyEvidenceHashResponse.cs" />
   </ItemGroup>
 </Project>

@@ -373,6 +373,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 用于在TCR实例中，创建多个白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultipleSecurityPolicyRequest"/></param>
+        /// <returns><see cref="CreateMultipleSecurityPolicyResponse"/></returns>
+        public async Task<CreateMultipleSecurityPolicyResponse> CreateMultipleSecurityPolicy(CreateMultipleSecurityPolicyRequest req)
+        {
+             JsonResponseModel<CreateMultipleSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMultipleSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMultipleSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于在TCR实例中，创建多个白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateMultipleSecurityPolicyRequest"/></param>
+        /// <returns><see cref="CreateMultipleSecurityPolicyResponse"/></returns>
+        public CreateMultipleSecurityPolicyResponse CreateMultipleSecurityPolicySync(CreateMultipleSecurityPolicyRequest req)
+        {
+             JsonResponseModel<CreateMultipleSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMultipleSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMultipleSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于在企业版中创建命名空间
         /// </summary>
         /// <param name="req"><see cref="CreateNamespaceRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInternalEndpointDns");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInternalEndpointDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除实例多个公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultipleSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DeleteMultipleSecurityPolicyResponse"/></returns>
+        public async Task<DeleteMultipleSecurityPolicyResponse> DeleteMultipleSecurityPolicy(DeleteMultipleSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DeleteMultipleSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMultipleSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMultipleSecurityPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除实例多个公网访问白名单策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMultipleSecurityPolicyRequest"/></param>
+        /// <returns><see cref="DeleteMultipleSecurityPolicyResponse"/></returns>
+        public DeleteMultipleSecurityPolicyResponse DeleteMultipleSecurityPolicySync(DeleteMultipleSecurityPolicyRequest req)
+        {
+             JsonResponseModel<DeleteMultipleSecurityPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMultipleSecurityPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMultipleSecurityPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

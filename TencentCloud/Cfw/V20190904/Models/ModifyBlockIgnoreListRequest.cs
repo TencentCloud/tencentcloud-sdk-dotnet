@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public IocListData[] IOC{ get; set; }
 
         /// <summary>
-        /// 默认值:delete（删除）、edit（编辑）、add（添加）  其他值无效
+        /// 可选值：delete（删除）、edit（编辑）、add（添加）  其他值无效
         /// </summary>
         [JsonProperty("IocAction")]
         public string IocAction{ get; set; }

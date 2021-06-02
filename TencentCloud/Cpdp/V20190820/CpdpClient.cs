@@ -2951,6 +2951,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 商户查询是否签约和签约行为上报
+        /// </summary>
+        /// <param name="req"><see cref="RegisterBehaviorRequest"/></param>
+        /// <returns><see cref="RegisterBehaviorResponse"/></returns>
+        public async Task<RegisterBehaviorResponse> RegisterBehavior(RegisterBehaviorRequest req)
+        {
+             JsonResponseModel<RegisterBehaviorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RegisterBehavior");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterBehaviorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 商户查询是否签约和签约行为上报
+        /// </summary>
+        /// <param name="req"><see cref="RegisterBehaviorRequest"/></param>
+        /// <returns><see cref="RegisterBehaviorResponse"/></returns>
+        public RegisterBehaviorResponse RegisterBehaviorSync(RegisterBehaviorRequest req)
+        {
+             JsonResponseModel<RegisterBehaviorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RegisterBehavior");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterBehaviorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 登记挂账(支持撤销)
         /// </summary>
         /// <param name="req"><see cref="RegisterBillRequest"/></param>
