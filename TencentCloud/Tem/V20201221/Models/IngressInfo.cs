@@ -83,6 +83,19 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 是否混合 https，默认 false，可选值 true 代表有 https 协议监听
+        /// </summary>
+        [JsonProperty("Mixed")]
+        public bool? Mixed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +111,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamArrayObj(map, prefix + "Tls.", this.Tls);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Mixed", this.Mixed);
         }
     }
 }

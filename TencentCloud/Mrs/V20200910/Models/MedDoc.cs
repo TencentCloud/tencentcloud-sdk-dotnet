@@ -25,52 +25,52 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// “”
+        /// 建议
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Advice")]
         public Advice Advice{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 诊断结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Diagnosis")]
         public DiagCertItem[] Diagnosis{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 疾病史
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseaseMedicalHistory")]
         public DiseaseMedicalHistory DiseaseMedicalHistory{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 个人史
         /// </summary>
         [JsonProperty("PersonalMedicalHistory")]
         public PersonalMedicalHistory PersonalMedicalHistory{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 婚孕史
         /// </summary>
         [JsonProperty("ObstericalMedicalHistory")]
         public ObstericalMedicalHistory ObstericalMedicalHistory{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 家族史
         /// </summary>
         [JsonProperty("FamilyMedicalHistory")]
         public FamilyMedicalHistory FamilyMedicalHistory{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 月经史
         /// </summary>
         [JsonProperty("MenstrualMedicalHistory")]
         public MenstrualMedicalHistory MenstrualMedicalHistory{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 诊疗记录
         /// </summary>
         [JsonProperty("TreatmentRecord")]
         public TreatmentRecord TreatmentRecord{ get; set; }

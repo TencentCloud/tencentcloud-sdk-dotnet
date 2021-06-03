@@ -15,35 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Mrs.V20200910.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HistologyLevel : AbstractModel
+    public class EndGameServerSessionAndProcessResponse : AbstractModel
     {
         
         /// <summary>
-        /// 等级
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Grade")]
-        public string Grade{ get; set; }
-
-        /// <summary>
-        /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Index")]
-        public long?[] Index{ get; set; }
-
-        /// <summary>
-        /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Src")]
-        public string Src{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +36,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Grade", this.Grade);
-            this.SetParamArraySimple(map, prefix + "Index.", this.Index);
-            this.SetParamSimple(map, prefix + "Src", this.Src);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -25,16 +25,22 @@ namespace TencentCloud.Tem.V20201221.Models
     {
         
         /// <summary>
-        /// host 数组
+        /// host 数组, 空数组表示全部域名的默认证书
         /// </summary>
         [JsonProperty("Hosts")]
         public string[] Hosts{ get; set; }
 
         /// <summary>
-        /// secret name
+        /// secret name，如使用证书，则填空字符串
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
+
+        /// <summary>
+        /// SSL Certificate Id
+        /// </summary>
+        [JsonProperty("CertificateId")]
+        public string CertificateId{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Tem.V20201221.Models
         {
             this.SetParamArraySimple(map, prefix + "Hosts.", this.Hosts);
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
         }
     }
 }

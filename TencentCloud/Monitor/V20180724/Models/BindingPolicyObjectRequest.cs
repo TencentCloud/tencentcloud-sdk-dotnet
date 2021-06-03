@@ -25,16 +25,22 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
+        /// 必填。固定值"monitor"
+        /// </summary>
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
+
+        /// <summary>
         /// 策略组id，如传入 PolicyId 则该字段会被忽略可传入任意值如 0
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }
 
         /// <summary>
-        /// 必填。固定值"monitor"
+        /// 告警策略ID，使用此字段时 GroupId 会被忽略
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("PolicyId")]
+        public string PolicyId{ get; set; }
 
         /// <summary>
         /// 实例分组ID
@@ -48,23 +54,17 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Dimensions")]
         public BindingPolicyObjectDimension[] Dimensions{ get; set; }
 
-        /// <summary>
-        /// 告警策略ID，使用此字段时 GroupId 会被忽略
-        /// </summary>
-        [JsonProperty("PolicyId")]
-        public string PolicyId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
-            this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
         }
     }
 }

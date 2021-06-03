@@ -1803,6 +1803,46 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程。
+        /// </summary>
+        /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
+        /// <returns><see cref="EndGameServerSessionAndProcessResponse"/></returns>
+        public async Task<EndGameServerSessionAndProcessResponse> EndGameServerSessionAndProcess(EndGameServerSessionAndProcessRequest req)
+        {
+             JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EndGameServerSessionAndProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndGameServerSessionAndProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程。
+        /// </summary>
+        /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
+        /// <returns><see cref="EndGameServerSessionAndProcessResponse"/></returns>
+        public EndGameServerSessionAndProcessResponse EndGameServerSessionAndProcessSync(EndGameServerSessionAndProcessRequest req)
+        {
+             JsonResponseModel<EndGameServerSessionAndProcessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EndGameServerSessionAndProcess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EndGameServerSessionAndProcessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取游戏服务器实例的日志URL。
         /// </summary>
         /// <param name="req"><see cref="GetGameServerInstanceLogUrlRequest"/></param>

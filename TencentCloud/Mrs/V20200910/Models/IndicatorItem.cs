@@ -25,56 +25,56 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// “”
+        /// 英文缩写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 标准缩写
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Scode")]
         public string Scode{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 项目名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 标准名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sname")]
         public string Sname{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 单位
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 参考范围
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Range")]
         public string Range{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 上下箭头
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Arrow")]

@@ -25,189 +25,189 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// ""
+        /// 入院
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DmissionCondition")]
         public string DmissionCondition{ get; set; }
 
         /// <summary>
-        /// ""
+        /// 主诉
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChiefComplaint")]
         public string ChiefComplaint{ get; set; }
 
         /// <summary>
-        /// ""
+        /// 现病史
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiseasePresent")]
         public string DiseasePresent{ get; set; }
 
         /// <summary>
-        /// ""
+        /// 主要症状体征
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SymptomsAndSigns")]
         public string SymptomsAndSigns{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 辅助检查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuxiliaryExamination")]
         public string AuxiliaryExamination{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 体格检查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BodyExamination")]
         public string BodyExamination{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 专科检查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecialistExamination")]
         public string SpecialistExamination{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 精神检查
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MentalExamination")]
         public string MentalExamination{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 检查记录
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckRecord")]
         public string CheckRecord{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 化验结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InspectResult")]
         public string InspectResult{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 切口愈合情况
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IncisionHealing")]
         public string IncisionHealing{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 处理意见
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TreatmentSuggestion")]
         public string TreatmentSuggestion{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 门诊随访要求
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FollowUpRequirements")]
         public string FollowUpRequirements{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 诊疗经过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CheckAndTreatmentProcess")]
         public string CheckAndTreatmentProcess{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 手术经过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SurgeryCondition")]
         public string SurgeryCondition{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 入院情况
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ConditionChanges")]
         public string ConditionChanges{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 出院情况
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DischargeCondition")]
         public string DischargeCondition{ get; set; }
 
         /// <summary>
-        /// “”
+        /// pTNM信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNM")]
         public string PTNM{ get; set; }
 
         /// <summary>
-        /// “”
+        /// pTNMM信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNMM")]
         public string PTNMM{ get; set; }
 
         /// <summary>
-        /// “”
+        /// pTNMN信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNMN")]
         public string PTNMN{ get; set; }
 
         /// <summary>
-        /// “”
+        /// pTNMT信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PTNMT")]
         public string PTNMT{ get; set; }
 
         /// <summary>
-        /// “”
+        /// ECOG信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ECOG")]
         public string ECOG{ get; set; }
 
         /// <summary>
-        /// “”
+        /// NRS信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NRS")]
         public string NRS{ get; set; }
 
         /// <summary>
-        /// “”
+        /// KPS信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("KPS")]
         public string KPS{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 死亡日期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DeathDate")]
         public string DeathDate{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 复发日期
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelapseDate")]
         public string RelapseDate{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 观测天数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObservationDays")]

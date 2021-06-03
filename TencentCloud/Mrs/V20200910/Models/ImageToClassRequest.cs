@@ -25,7 +25,7 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 图片列表
+        /// 图片列表，允许传入多张图片，支持传入图片的url或base64编码
         /// </summary>
         [JsonProperty("ImageInfoList")]
         public ImageInfo[] ImageInfoList{ get; set; }

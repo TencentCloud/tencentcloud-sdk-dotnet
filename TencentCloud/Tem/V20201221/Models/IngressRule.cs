@@ -37,6 +37,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("Host")]
         public string Host{ get; set; }
 
+        /// <summary>
+        /// 协议，选项为 http， https，默认为 http
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Tem.V20201221.Models
         {
             this.SetParamObj(map, prefix + "Http.", this.Http);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

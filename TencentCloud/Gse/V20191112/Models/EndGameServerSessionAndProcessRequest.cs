@@ -15,41 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mrs.V20200910.Models
+namespace TencentCloud.Gse.V20191112.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IHCInfo : AbstractModel
+    public class EndGameServerSessionAndProcessRequest : AbstractModel
     {
         
         /// <summary>
-        /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 游戏服务器会话ID
         /// </summary>
-        [JsonProperty("Index")]
-        public long?[] Index{ get; set; }
+        [JsonProperty("GameServerSessionId")]
+        public string GameServerSessionId{ get; set; }
 
         /// <summary>
-        /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// CVM的公网IP地址
         /// </summary>
-        [JsonProperty("Src")]
-        public string Src{ get; set; }
+        [JsonProperty("IpAddress")]
+        public string IpAddress{ get; set; }
 
         /// <summary>
-        /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 端口号，最小值不小于1，最大值不超过60000
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 值
-        /// </summary>
-        [JsonProperty("Value")]
-        public Value Value{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
 
 
         /// <summary>
@@ -57,10 +48,9 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Index.", this.Index);
-            this.SetParamSimple(map, prefix + "Src", this.Src);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "GameServerSessionId", this.GameServerSessionId);
+            this.SetParamSimple(map, prefix + "IpAddress", this.IpAddress);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

@@ -15,41 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mrs.V20200910.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IHCInfo : AbstractModel
+    public class DescribeFlowTrendResponse : AbstractModel
     {
         
         /// <summary>
-        /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 流量趋势数据
         /// </summary>
-        [JsonProperty("Index")]
-        public long?[] Index{ get; set; }
+        [JsonProperty("Data")]
+        public BotStatPointItem[] Data{ get; set; }
 
         /// <summary>
-        /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Src")]
-        public string Src{ get; set; }
-
-        /// <summary>
-        /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 值
-        /// </summary>
-        [JsonProperty("Value")]
-        public Value Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -57,10 +42,8 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Index.", this.Index);
-            this.SetParamSimple(map, prefix + "Src", this.Src);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

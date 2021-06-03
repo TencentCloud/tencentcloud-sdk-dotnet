@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D9E9460D-61B2-3328-83C0-53F617E11D0C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.294</VersionPrefix>
+    <VersionPrefix>3.0.295</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,8 @@
     <Compile Include="V20191112\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="V20191112\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="V20191112\Models\DiskInfo.cs" />
+    <Compile Include="V20191112\Models\EndGameServerSessionAndProcessRequest.cs" />
+    <Compile Include="V20191112\Models\EndGameServerSessionAndProcessResponse.cs" />
     <Compile Include="V20191112\Models\Event.cs" />
     <Compile Include="V20191112\Models\ExtraInfos.cs" />
     <Compile Include="V20191112\Models\Filter.cs" />

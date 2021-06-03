@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.294</VersionPrefix>
+    <VersionPrefix>3.0.295</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6358,6 +6358,8 @@
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesRequest.cs" />
     <Compile Include="Gse\V20191112\Models\DetachCcnInstancesResponse.cs" />
     <Compile Include="Gse\V20191112\Models\DiskInfo.cs" />
+    <Compile Include="Gse\V20191112\Models\EndGameServerSessionAndProcessRequest.cs" />
+    <Compile Include="Gse\V20191112\Models\EndGameServerSessionAndProcessResponse.cs" />
     <Compile Include="Gse\V20191112\Models\Event.cs" />
     <Compile Include="Gse\V20191112\Models\ExtraInfos.cs" />
     <Compile Include="Gse\V20191112\Models\Filter.cs" />
@@ -14052,6 +14054,7 @@
     <Compile Include="Waf\V20180125\WafClient.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleRequest.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskRequest.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
@@ -14064,6 +14067,8 @@
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeFlowTrendRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeFlowTrendResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusRequest.cs" />

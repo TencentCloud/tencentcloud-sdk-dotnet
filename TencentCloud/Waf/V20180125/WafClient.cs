@@ -293,6 +293,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 获取waf流量访问趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTrendRequest"/></param>
+        /// <returns><see cref="DescribeFlowTrendResponse"/></returns>
+        public async Task<DescribeFlowTrendResponse> DescribeFlowTrend(DescribeFlowTrendRequest req)
+        {
+             JsonResponseModel<DescribeFlowTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取waf流量访问趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTrendRequest"/></param>
+        /// <returns><see cref="DescribeFlowTrendResponse"/></returns>
+        public DescribeFlowTrendResponse DescribeFlowTrendSync(DescribeFlowTrendRequest req)
+        {
+             JsonResponseModel<DescribeFlowTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserClbWafRegionsRequest"/></param>

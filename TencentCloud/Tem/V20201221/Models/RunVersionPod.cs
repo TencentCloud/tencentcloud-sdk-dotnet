@@ -49,10 +49,24 @@ namespace TencentCloud.Tem.V20201221.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// pod的ip
+        /// 实例的ip
         /// </summary>
         [JsonProperty("PodIp")]
         public string PodIp{ get; set; }
+
+        /// <summary>
+        /// 可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 部署版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeployVersion")]
+        public string DeployVersion{ get; set; }
 
 
         /// <summary>
@@ -65,6 +79,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "PodIp", this.PodIp);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
         }
     }
 }

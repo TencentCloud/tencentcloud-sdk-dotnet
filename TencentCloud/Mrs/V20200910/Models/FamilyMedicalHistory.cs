@@ -25,21 +25,21 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// ""
+        /// 家族成员史
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelativeHistory")]
         public string RelativeHistory{ get; set; }
 
         /// <summary>
-        /// ""
+        /// 家族肿瘤史
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RelativeCancerHistory")]
         public string RelativeCancerHistory{ get; set; }
 
         /// <summary>
-        /// ""
+        /// 家族遗传史
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("GeneticHistory")]

@@ -15,41 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mrs.V20200910.Models
+namespace TencentCloud.Waf.V20180125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class IHCInfo : AbstractModel
+    public class BotStatPointItem : AbstractModel
     {
         
         /// <summary>
-        /// 原文位置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 横坐标
         /// </summary>
-        [JsonProperty("Index")]
-        public long?[] Index{ get; set; }
+        [JsonProperty("TimeStamp")]
+        public string TimeStamp{ get; set; }
 
         /// <summary>
-        /// 原文
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// value的所属对象
         /// </summary>
-        [JsonProperty("Src")]
-        public string Src{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// 名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 值
+        /// 纵列表
         /// </summary>
         [JsonProperty("Value")]
-        public Value Value{ get; set; }
+        public long? Value{ get; set; }
+
+        /// <summary>
+        /// Key对应的页面展示内容
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -57,10 +54,10 @@ namespace TencentCloud.Mrs.V20200910.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Index.", this.Index);
-            this.SetParamSimple(map, prefix + "Src", this.Src);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "TimeStamp", this.TimeStamp);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

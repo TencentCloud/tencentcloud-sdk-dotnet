@@ -46,7 +46,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public Size[] Size{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 多发
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Multiple")]
@@ -81,35 +81,35 @@ namespace TencentCloud.Mrs.V20200910.Models
         public BlockInfo RearEcho{ get; set; }
 
         /// <summary>
-        /// 质地
+        /// 质地弹性
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Elastic")]
         public Elastic Elastic{ get; set; }
 
         /// <summary>
-        /// 形态
+        /// 形状
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Shape")]
         public BlockInfo Shape{ get; set; }
 
         /// <summary>
-        /// 形态属性
+        /// 形态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ShapeAttr")]
         public BlockInfo ShapeAttr{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 皮髓质信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SkinMedulla")]
         public BlockInfo SkinMedulla{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 变化趋势
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Trend")]
@@ -158,14 +158,14 @@ namespace TencentCloud.Mrs.V20200910.Models
         public BlockInfo Activity{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 手术情况
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operation")]
         public BlockInfo Operation{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 血液cdfi
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CDFI")]
@@ -179,77 +179,77 @@ namespace TencentCloud.Mrs.V20200910.Models
         public long?[] Index{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 大小状态
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SizeStatus")]
         public BlockInfo SizeStatus{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 内部回声分布
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InnerEchoDistribution")]
         public BlockInfo InnerEchoDistribution{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 内部回声类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InnerEchoType")]
         public BlockInfo[] InnerEchoType{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 轮廓
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Outline")]
         public BlockInfo Outline{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 结构
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Structure")]
         public BlockInfo Structure{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 密度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Density")]
         public BlockInfo Density{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 血管
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vas")]
         public BlockInfo Vas{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 囊壁
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cysticwall")]
         public BlockInfo Cysticwall{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 被膜
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Capsule")]
         public BlockInfo Capsule{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 峡部厚度
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsthmusThicknese")]
         public Size IsthmusThicknese{ get; set; }
 
         /// <summary>
-        /// “”
+        /// 原文
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Src")]
