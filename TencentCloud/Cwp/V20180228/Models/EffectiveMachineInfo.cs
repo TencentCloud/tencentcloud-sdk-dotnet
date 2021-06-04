@@ -59,6 +59,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
 
+        /// <summary>
+        /// 云镜Uuid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachinePrivateIp", this.MachinePrivateIp);
             this.SetParamArrayObj(map, prefix + "MachineTag.", this.MachineTag);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
         }
     }
 }

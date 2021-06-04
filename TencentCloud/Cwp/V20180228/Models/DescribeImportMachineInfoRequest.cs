@@ -36,6 +36,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ImportType")]
         public string ImportType{ get; set; }
 
+        /// <summary>
+        /// 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+        /// </summary>
+        [JsonProperty("IsQueryProMachine")]
+        public bool? IsQueryProMachine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamArraySimple(map, prefix + "MachineList.", this.MachineList);
             this.SetParamSimple(map, prefix + "ImportType", this.ImportType);
+            this.SetParamSimple(map, prefix + "IsQueryProMachine", this.IsQueryProMachine);
         }
     }
 }

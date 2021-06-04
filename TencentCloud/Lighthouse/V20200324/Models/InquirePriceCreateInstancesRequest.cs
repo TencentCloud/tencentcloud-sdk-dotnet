@@ -43,7 +43,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 应用镜像 ID，使用收费应用镜像时必填。
+        /// 应用镜像 ID，使用收费应用镜像时必填。可通过[DescribeBlueprints](https://cloud.tencent.com/document/product/1207/47689)接口返回值中的BlueprintId获取。
         /// </summary>
         [JsonProperty("BlueprintId")]
         public string BlueprintId{ get; set; }

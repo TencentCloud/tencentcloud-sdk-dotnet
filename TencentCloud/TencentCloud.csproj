@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.295</VersionPrefix>
+    <VersionPrefix>3.0.296</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -9669,6 +9669,8 @@
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyTypeInfo.cs" />
+    <Compile Include="Redis\V20180412\Models\ChangeReplicaToMasterRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ChangeReplicaToMasterResponse.cs" />
     <Compile Include="Redis\V20180412\Models\CleanUpInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\CleanUpInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ClearInstanceRequest.cs" />
@@ -11621,6 +11623,8 @@
     <Compile Include="Tem\V20201221\Models\DescribeIngressesResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeNamespacesRequest.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeRelatedIngressesRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeRunPodPage.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
@@ -11636,8 +11640,13 @@
     <Compile Include="Tem\V20201221\Models\ModifyIngressResponse.cs" />
     <Compile Include="Tem\V20201221\Models\ModifyNamespaceRequest.cs" />
     <Compile Include="Tem\V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyServiceInfoRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\ModifyServiceInfoResponse.cs" />
     <Compile Include="Tem\V20201221\Models\NamespacePage.cs" />
     <Compile Include="Tem\V20201221\Models\Pair.cs" />
+    <Compile Include="Tem\V20201221\Models\PortMapping.cs" />
+    <Compile Include="Tem\V20201221\Models\RestartServiceRunPodRequest.cs" />
+    <Compile Include="Tem\V20201221\Models\RestartServiceRunPodResponse.cs" />
     <Compile Include="Tem\V20201221\Models\RunVersionPod.cs" />
     <Compile Include="Tem\V20201221\Models\StorageConf.cs" />
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />

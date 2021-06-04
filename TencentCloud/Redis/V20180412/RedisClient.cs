@@ -93,6 +93,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 该接口仅支持多AZ实例副本组提主
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public async Task<ChangeReplicaToMasterResponse> ChangeReplicaToMaster(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口仅支持多AZ实例副本组提主
+        /// </summary>
+        /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
+        /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
+        public ChangeReplicaToMasterResponse ChangeReplicaToMasterSync(ChangeReplicaToMasterRequest req)
+        {
+             JsonResponseModel<ChangeReplicaToMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeReplicaToMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeReplicaToMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 回收站实例立即下线
         /// </summary>
         /// <param name="req"><see cref="CleanUpInstanceRequest"/></param>

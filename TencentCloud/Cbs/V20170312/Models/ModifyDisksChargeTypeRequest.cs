@@ -36,6 +36,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskChargePrepaid")]
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// 后付费模式
+        /// </summary>
+        [JsonProperty("DiskChargePostpaid")]
+        public bool? DiskChargePostpaid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskChargePostpaid", this.DiskChargePostpaid);
         }
     }
 }

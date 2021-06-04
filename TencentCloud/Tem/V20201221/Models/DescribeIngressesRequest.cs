@@ -42,6 +42,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// ingress 规则名列表
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "EksNamespace", this.EksNamespace);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
         }
     }
 }

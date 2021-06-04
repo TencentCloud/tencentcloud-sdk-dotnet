@@ -174,6 +174,18 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("ImageArgs")]
         public string[] ImageArgs{ get; set; }
 
+        /// <summary>
+        /// 服务端口映射
+        /// </summary>
+        [JsonProperty("PortMappings")]
+        public PortMapping[] PortMappings{ get; set; }
+
+        /// <summary>
+        /// 是否添加默认注册中心配置
+        /// </summary>
+        [JsonProperty("UseRegistryDefaultConfig")]
+        public bool? UseRegistryDefaultConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +216,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ImageCommand", this.ImageCommand);
             this.SetParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
+            this.SetParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+            this.SetParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
         }
     }
 }

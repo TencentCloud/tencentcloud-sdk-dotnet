@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.295</VersionPrefix>
+    <VersionPrefix>3.0.296</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,8 @@
     <Compile Include="V20201221\Models\DescribeIngressesResponse.cs" />
     <Compile Include="V20201221\Models\DescribeNamespacesRequest.cs" />
     <Compile Include="V20201221\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesRequest.cs" />
+    <Compile Include="V20201221\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="V20201221\Models\DescribeRunPodPage.cs" />
     <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
     <Compile Include="V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
@@ -81,8 +83,13 @@
     <Compile Include="V20201221\Models\ModifyIngressResponse.cs" />
     <Compile Include="V20201221\Models\ModifyNamespaceRequest.cs" />
     <Compile Include="V20201221\Models\ModifyNamespaceResponse.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoRequest.cs" />
+    <Compile Include="V20201221\Models\ModifyServiceInfoResponse.cs" />
     <Compile Include="V20201221\Models\NamespacePage.cs" />
     <Compile Include="V20201221\Models\Pair.cs" />
+    <Compile Include="V20201221\Models\PortMapping.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodRequest.cs" />
+    <Compile Include="V20201221\Models\RestartServiceRunPodResponse.cs" />
     <Compile Include="V20201221\Models\RunVersionPod.cs" />
     <Compile Include="V20201221\Models\StorageConf.cs" />
     <Compile Include="V20201221\Models\StorageMountConf.cs" />

@@ -60,6 +60,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// 是否开启tsw服务
+        /// </summary>
+        [JsonProperty("EnableTswTraceService")]
+        public bool? EnableTswTraceService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
         }
     }
 }
