@@ -495,7 +495,7 @@ namespace TencentCloud.Btoe.V20210514
         }
 
         /// <summary>
-        /// 用户向BTOE核验存证结果中的区块链交易hash
+        /// 用户向BTOE核验存证结果中的区块链交易hash的真实性
         /// </summary>
         /// <param name="req"><see cref="VerifyEvidenceBlockChainTxHashRequest"/></param>
         /// <returns><see cref="VerifyEvidenceBlockChainTxHashResponse"/></returns>
@@ -515,7 +515,7 @@ namespace TencentCloud.Btoe.V20210514
         }
 
         /// <summary>
-        /// 用户向BTOE核验存证结果中的区块链交易hash
+        /// 用户向BTOE核验存证结果中的区块链交易hash的真实性
         /// </summary>
         /// <param name="req"><see cref="VerifyEvidenceBlockChainTxHashRequest"/></param>
         /// <returns><see cref="VerifyEvidenceBlockChainTxHashResponse"/></returns>

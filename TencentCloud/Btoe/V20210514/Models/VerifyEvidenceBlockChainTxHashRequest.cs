@@ -25,7 +25,7 @@ namespace TencentCloud.Btoe.V20210514.Models
     {
         
         /// <summary>
-        /// ‘区块链交易hash，在"存证基本信息查询”中可以获取
+        /// 区块链交易 hash，在“存证基本信息查询（GetDepositInfo）”接口中可以获取。
         /// </summary>
         [JsonProperty("EvidenceTxHash")]
         public string EvidenceTxHash{ get; set; }

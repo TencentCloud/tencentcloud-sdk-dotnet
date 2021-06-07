@@ -37,7 +37,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string RegionName{ get; set; }
 
         /// <summary>
-        /// 地域是否可用状态。
+        /// 地域是否可用状态，取值为AVAILABLE。
         /// </summary>
         [JsonProperty("RegionState")]
         public string RegionState{ get; set; }

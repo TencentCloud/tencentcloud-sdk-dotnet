@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.296</VersionPrefix>
+    <VersionPrefix>3.0.297</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -145,6 +145,8 @@
     <Compile Include="Ams\V20201229\Models\BucketInfo.cs" />
     <Compile Include="Ams\V20201229\Models\CancelTaskRequest.cs" />
     <Compile Include="Ams\V20201229\Models\CancelTaskResponse.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationSyncTaskRequest.cs" />
+    <Compile Include="Ams\V20201229\Models\CreateAudioModerationSyncTaskResponse.cs" />
     <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskRequest.cs" />
     <Compile Include="Ams\V20201229\Models\CreateAudioModerationTaskResponse.cs" />
     <Compile Include="Ams\V20201229\Models\DescribeTaskDetailRequest.cs" />
@@ -153,12 +155,14 @@
     <Compile Include="Ams\V20201229\Models\DescribeTasksResponse.cs" />
     <Compile Include="Ams\V20201229\Models\InputInfo.cs" />
     <Compile Include="Ams\V20201229\Models\MediaInfo.cs" />
+    <Compile Include="Ams\V20201229\Models\MoanResult.cs" />
     <Compile Include="Ams\V20201229\Models\StorageInfo.cs" />
     <Compile Include="Ams\V20201229\Models\TaskData.cs" />
     <Compile Include="Ams\V20201229\Models\TaskFilter.cs" />
     <Compile Include="Ams\V20201229\Models\TaskInput.cs" />
     <Compile Include="Ams\V20201229\Models\TaskLabel.cs" />
     <Compile Include="Ams\V20201229\Models\TaskResult.cs" />
+    <Compile Include="Ams\V20201229\Models\TextResult.cs" />
     <Compile Include="Ams\V20200608\AmsClient.cs" />
     <Compile Include="Ams\V20200608\Models\AmsDetailInfo.cs" />
     <Compile Include="Ams\V20200608\Models\AudioResult.cs" />
@@ -11593,6 +11597,8 @@
     <Compile Include="Tdmq\V20200217\Models\SendCmqMsgResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMessagesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMessagesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendMsgRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\SendMsgResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\SubscriptionTopic.cs" />
     <Compile Include="Tdmq\V20200217\Models\Tag.cs" />

@@ -79,7 +79,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 镜像所需系统盘大小。
+        /// 镜像所需系统盘大小，单位 GB。
         /// </summary>
         [JsonProperty("RequiredSystemDiskSize")]
         public long? RequiredSystemDiskSize{ get; set; }

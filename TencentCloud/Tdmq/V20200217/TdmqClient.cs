@@ -1813,6 +1813,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 此接口仅用于测试发生消息，不能作为现网正式生产使用
+        /// </summary>
+        /// <param name="req"><see cref="SendMsgRequest"/></param>
+        /// <returns><see cref="SendMsgResponse"/></returns>
+        public async Task<SendMsgResponse> SendMsg(SendMsgRequest req)
+        {
+             JsonResponseModel<SendMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口仅用于测试发生消息，不能作为现网正式生产使用
+        /// </summary>
+        /// <param name="req"><see cref="SendMsgRequest"/></param>
+        /// <returns><see cref="SendMsgResponse"/></returns>
+        public SendMsgResponse SendMsgSync(SendMsgRequest req)
+        {
+             JsonResponseModel<SendMsgResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendMsg");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑cmq死信队列
         /// </summary>
         /// <param name="req"><see cref="UnbindCmqDeadLetterRequest"/></param>

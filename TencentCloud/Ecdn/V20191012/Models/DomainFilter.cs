@@ -36,6 +36,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// - https：是否配置https，on，off或processing。
         /// - originPullProtocol：回源协议类型，支持http，follow或https。
         /// - area：加速区域，支持mainland，overseas或global。
+        /// - tagKey：标签键。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
