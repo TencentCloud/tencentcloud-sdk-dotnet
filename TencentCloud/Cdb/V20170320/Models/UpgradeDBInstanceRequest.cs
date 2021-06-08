@@ -84,6 +84,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("InstanceRole")]
         public string InstanceRole{ get; set; }
 
+        /// <summary>
+        /// 实例隔离类型。支持值包括： "UNIVERSAL" - 通用型实例， "EXCLUSIVE" - 独享型实例， "BASIC" - 基础版实例。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
+
+        /// <summary>
+        /// 升级后的实例cpu核数， 如果不传将根据 Memory 指定的内存值自动填充对应的cpu值。
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamSimple(map, prefix + "BackupZone", this.BackupZone);
             this.SetParamSimple(map, prefix + "InstanceRole", this.InstanceRole);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
         }
     }
 }
