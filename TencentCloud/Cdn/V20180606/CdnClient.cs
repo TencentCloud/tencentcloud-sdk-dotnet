@@ -2047,6 +2047,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPurgeFetchTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyPurgeFetchTaskStatusResponse"/></returns>
+        public async Task<ModifyPurgeFetchTaskStatusResponse> ModifyPurgeFetchTaskStatus(ModifyPurgeFetchTaskStatusRequest req)
+        {
+             JsonResponseModel<ModifyPurgeFetchTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPurgeFetchTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPurgeFetchTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ModifyPurgeFetchTaskStatus 用于上报定时刷新预热任务执行状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPurgeFetchTaskStatusRequest"/></param>
+        /// <returns><see cref="ModifyPurgeFetchTaskStatusResponse"/></returns>
+        public ModifyPurgeFetchTaskStatusResponse ModifyPurgeFetchTaskStatusSync(ModifyPurgeFetchTaskStatusRequest req)
+        {
+             JsonResponseModel<ModifyPurgeFetchTaskStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPurgeFetchTaskStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPurgeFetchTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// PurgePathCache 用于批量提交目录刷新，根据域名的加速区域进行对应区域的刷新。
         /// 默认情况下境内、境外加速区域每日目录刷新额度为各 100 条，每次最多可提交 20 条。
         /// </summary>

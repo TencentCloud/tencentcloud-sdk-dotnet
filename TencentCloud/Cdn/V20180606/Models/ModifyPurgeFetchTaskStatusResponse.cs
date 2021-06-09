@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodes : AbstractModel
+    public class ModifyPurgeFetchTaskStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 节点ID
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
-
-        /// <summary>
-        /// 节点角色
-        /// </summary>
-        [JsonProperty("NodeRole")]
-        public string NodeRole{ get; set; }
-
-        /// <summary>
-        /// 分片ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public long? ClusterId{ get; set; }
-
-        /// <summary>
-        /// 可用区ID
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public long? ZoneId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

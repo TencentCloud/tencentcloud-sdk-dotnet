@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.298</VersionPrefix>
+    <VersionPrefix>3.0.299</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2297,6 +2297,8 @@
     <Compile Include="Cdn\V20180606\Models\MapInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAge.cs" />
     <Compile Include="Cdn\V20180606\Models\MaxAgeRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\ModifyPurgeFetchTaskStatusRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ModifyPurgeFetchTaskStatusResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\OfflineCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Origin.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginAuthentication.cs" />
@@ -6814,6 +6816,8 @@
     <Compile Include="Ie\V20200304\Models\VideoEnhance.cs" />
     <Compile Include="Ie\V20200304\Models\VideoInfo.cs" />
     <Compile Include="Ie\V20200304\Models\VideoInfoResultItem.cs" />
+    <Compile Include="Ie\V20200304\Models\VideoRepair.cs" />
+    <Compile Include="Ie\V20200304\Models\VideoSuperResolution.cs" />
     <Compile Include="Iir\V20200417\IirClient.cs" />
     <Compile Include="Iir\V20200417\Models\Location.cs" />
     <Compile Include="Iir\V20200417\Models\ProductInfo.cs" />

@@ -50,6 +50,7 @@ namespace TencentCloud.Ie.V20200304.Models
 
         /// <summary>
         /// 超分参数，可选项：2，目前仅支持2倍超分。
+        /// 注意：此参数已经弃用，超分可以使用VideoSuperResolution参数
         /// </summary>
         [JsonProperty("WdSuperResolution")]
         public long? WdSuperResolution{ get; set; }
@@ -79,6 +80,18 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("LowLightEnhance")]
         public LowLightEnhance LowLightEnhance{ get; set; }
 
+        /// <summary>
+        /// 视频超分参数
+        /// </summary>
+        [JsonProperty("VideoSuperResolution")]
+        public VideoSuperResolution VideoSuperResolution{ get; set; }
+
+        /// <summary>
+        /// 视频画质修复参数
+        /// </summary>
+        [JsonProperty("VideoRepair")]
+        public VideoRepair VideoRepair{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +107,8 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "WdFps", this.WdFps);
             this.SetParamObj(map, prefix + "ScratchRepair.", this.ScratchRepair);
             this.SetParamObj(map, prefix + "LowLightEnhance.", this.LowLightEnhance);
+            this.SetParamObj(map, prefix + "VideoSuperResolution.", this.VideoSuperResolution);
+            this.SetParamObj(map, prefix + "VideoRepair.", this.VideoRepair);
         }
     }
 }

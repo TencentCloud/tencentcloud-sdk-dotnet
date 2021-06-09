@@ -48,6 +48,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 节点角色
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Slot", this.Slot);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

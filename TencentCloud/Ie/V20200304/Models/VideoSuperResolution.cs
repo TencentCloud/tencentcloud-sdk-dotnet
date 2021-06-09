@@ -15,38 +15,30 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ie.V20200304.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodes : AbstractModel
+    public class VideoSuperResolution : AbstractModel
     {
         
         /// <summary>
-        /// 节点ID
+        /// 超分视频类型：可选值：lq,hq
+        /// lq: 针对低清晰度有较多噪声视频的超分;
+        /// hq: 针对高清晰度视频超分;
+        /// 默认取值：lq。
         /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 节点角色
+        /// 超分倍数，可选值：2。
+        /// 注意：当前只支持两倍超分。
         /// </summary>
-        [JsonProperty("NodeRole")]
-        public string NodeRole{ get; set; }
-
-        /// <summary>
-        /// 分片ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public long? ClusterId{ get; set; }
-
-        /// <summary>
-        /// 可用区ID
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public long? ZoneId{ get; set; }
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
 
 
         /// <summary>
@@ -54,10 +46,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

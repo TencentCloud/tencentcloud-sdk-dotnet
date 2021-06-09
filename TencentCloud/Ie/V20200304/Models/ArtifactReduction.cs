@@ -35,8 +35,7 @@ namespace TencentCloud.Ie.V20200304.Models
         /// edaf,
         /// wdaf，
         /// 默认edaf。
-        /// 注意：edaf：速度快，去毛刺效果强，保护边缘效果较弱；
-        /// wdaf：速度慢，保护边缘效果好
+        /// 注意：此参数已经弃用
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }

@@ -54,6 +54,12 @@ namespace TencentCloud.Iotvideo.V20191126.Models
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
+        /// <summary>
+        /// 绑定过程中的会话token，由设备通过SDK接口确认是否允许绑定的token，用于增加设备被绑定的安全性
+        /// </summary>
+        [JsonProperty("BindToken")]
+        public string BindToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotvideo.V20191126.Models
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "ForceBind", this.ForceBind);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
+            this.SetParamSimple(map, prefix + "BindToken", this.BindToken);
         }
     }
 }

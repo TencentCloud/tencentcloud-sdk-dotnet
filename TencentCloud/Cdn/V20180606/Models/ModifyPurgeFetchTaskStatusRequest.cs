@@ -15,38 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodes : AbstractModel
+    public class ModifyPurgeFetchTaskStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 节点ID
+        /// 执行时间
         /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
+        [JsonProperty("ExecutionTime")]
+        public string ExecutionTime{ get; set; }
 
         /// <summary>
-        /// 节点角色
+        /// 执行状态
+        /// success: 成功
+        /// failed: 失败
         /// </summary>
-        [JsonProperty("NodeRole")]
-        public string NodeRole{ get; set; }
+        [JsonProperty("ExecutionStatus")]
+        public string ExecutionStatus{ get; set; }
 
         /// <summary>
-        /// 分片ID
+        /// 任务 ID
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public long? ClusterId{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 可用区ID
+        /// 执行状态详情
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public long? ZoneId{ get; set; }
+        [JsonProperty("ExecutionStatusDesc")]
+        public string ExecutionStatusDesc{ get; set; }
 
 
         /// <summary>
@@ -54,10 +56,10 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ExecutionTime", this.ExecutionTime);
+            this.SetParamSimple(map, prefix + "ExecutionStatus", this.ExecutionStatus);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "ExecutionStatusDesc", this.ExecutionStatusDesc);
         }
     }
 }

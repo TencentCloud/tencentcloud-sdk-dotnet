@@ -15,38 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Ie.V20200304.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RedisNodes : AbstractModel
+    public class VideoRepair : AbstractModel
     {
         
         /// <summary>
-        /// 节点ID
+        /// 画质修复类型，可选值：weak，normal，strong;
+        /// 默认值: weak
         /// </summary>
-        [JsonProperty("NodeId")]
-        public string NodeId{ get; set; }
-
-        /// <summary>
-        /// 节点角色
-        /// </summary>
-        [JsonProperty("NodeRole")]
-        public string NodeRole{ get; set; }
-
-        /// <summary>
-        /// 分片ID
-        /// </summary>
-        [JsonProperty("ClusterId")]
-        public long? ClusterId{ get; set; }
-
-        /// <summary>
-        /// 可用区ID
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public long? ZoneId{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -54,10 +37,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
-            this.SetParamSimple(map, prefix + "NodeRole", this.NodeRole);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }
