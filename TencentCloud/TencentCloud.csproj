@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.301</VersionPrefix>
+    <VersionPrefix>3.0.302</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3939,6 +3939,7 @@
     <Compile Include="Cwp\V20180228\Models\AddMachineTagResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\AgentVul.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetFilters.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetKeyVal.cs" />
     <Compile Include="Cwp\V20180228\Models\BashEvent.cs" />
     <Compile Include="Cwp\V20180228\Models\BashRule.cs" />
     <Compile Include="Cwp\V20180228\Models\BruteAttack.cs" />
@@ -4003,6 +4004,10 @@
     <Compile Include="Cwp\V20180228\Models\DescribeAgentVulsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAlarmAttributeRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAlarmAttributeResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetRecentMachineInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetRecentMachineInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogsRequest.cs" />
@@ -4220,6 +4225,8 @@
     <Compile Include="Cwp\V20180228\Models\SetBashEventsStatusResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\SwitchBashRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\SwitchBashRulesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\SyncAssetScanRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\SyncAssetScanResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\Tag.cs" />
     <Compile Include="Cwp\V20180228\Models\TagMachine.cs" />
     <Compile Include="Cwp\V20180228\Models\TrustMaliciousRequestRequest.cs" />
@@ -11638,6 +11645,7 @@
     <Compile Include="Tem\V20201221\Models\DescribeRunPodPage.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Request.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeServiceRunPodListV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\EksService.cs" />
     <Compile Include="Tem\V20201221\Models\EsInfo.cs" />
     <Compile Include="Tem\V20201221\Models\IngressInfo.cs" />
     <Compile Include="Tem\V20201221\Models\IngressRule.cs" />
@@ -11652,6 +11660,7 @@
     <Compile Include="Tem\V20201221\Models\ModifyNamespaceResponse.cs" />
     <Compile Include="Tem\V20201221\Models\ModifyServiceInfoRequest.cs" />
     <Compile Include="Tem\V20201221\Models\ModifyServiceInfoResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\MountedSettingConf.cs" />
     <Compile Include="Tem\V20201221\Models\NamespacePage.cs" />
     <Compile Include="Tem\V20201221\Models\Pair.cs" />
     <Compile Include="Tem\V20201221\Models\PortMapping.cs" />

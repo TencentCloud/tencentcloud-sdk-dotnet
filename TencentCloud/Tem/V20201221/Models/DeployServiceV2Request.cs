@@ -186,6 +186,18 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("UseRegistryDefaultConfig")]
         public bool? UseRegistryDefaultConfig{ get; set; }
 
+        /// <summary>
+        /// 挂载配置信息
+        /// </summary>
+        [JsonProperty("SettingConfs")]
+        public MountedSettingConf[] SettingConfs{ get; set; }
+
+        /// <summary>
+        /// eks 访问设置
+        /// </summary>
+        [JsonProperty("EksService")]
+        public EksService EksService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -218,6 +230,8 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamArraySimple(map, prefix + "ImageArgs.", this.ImageArgs);
             this.SetParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
             this.SetParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
+            this.SetParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
+            this.SetParamObj(map, prefix + "EksService.", this.EksService);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.301</VersionPrefix>
+    <VersionPrefix>3.0.302</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,7 @@
     <Compile Include="V20180228\Models\AddMachineTagResponse.cs" />
     <Compile Include="V20180228\Models\AgentVul.cs" />
     <Compile Include="V20180228\Models\AssetFilters.cs" />
+    <Compile Include="V20180228\Models\AssetKeyVal.cs" />
     <Compile Include="V20180228\Models\BashEvent.cs" />
     <Compile Include="V20180228\Models\BashRule.cs" />
     <Compile Include="V20180228\Models\BruteAttack.cs" />
@@ -117,6 +118,10 @@
     <Compile Include="V20180228\Models\DescribeAgentVulsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAlarmAttributeRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAlarmAttributeResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeAssetInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeAssetInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeAssetRecentMachineInfoRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeAssetRecentMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackLogInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAttackLogInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAttackLogsRequest.cs" />
@@ -334,6 +339,8 @@
     <Compile Include="V20180228\Models\SetBashEventsStatusResponse.cs" />
     <Compile Include="V20180228\Models\SwitchBashRulesRequest.cs" />
     <Compile Include="V20180228\Models\SwitchBashRulesResponse.cs" />
+    <Compile Include="V20180228\Models\SyncAssetScanRequest.cs" />
+    <Compile Include="V20180228\Models\SyncAssetScanResponse.cs" />
     <Compile Include="V20180228\Models\Tag.cs" />
     <Compile Include="V20180228\Models\TagMachine.cs" />
     <Compile Include="V20180228\Models\TrustMaliciousRequestRequest.cs" />
