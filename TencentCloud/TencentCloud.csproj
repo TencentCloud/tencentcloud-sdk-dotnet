@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.302</VersionPrefix>
+    <VersionPrefix>3.0.303</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -14104,9 +14104,41 @@
     <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />
     <Compile Include="Waf\V20180125\Models\Strategy.cs" />
     <Compile Include="Wav\V20210129\WavClient.cs" />
+    <Compile Include="Wav\V20210129\Models\ActivityDetail.cs" />
+    <Compile Include="Wav\V20210129\Models\ActivityJoinDetail.cs" />
+    <Compile Include="Wav\V20210129\Models\ChannelCodeInnerDetail.cs" />
+    <Compile Include="Wav\V20210129\Models\ChatArchivingDetail.cs" />
+    <Compile Include="Wav\V20210129\Models\ChatArchivingMsgTypeVideo.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateChannelCodeRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateChannelCodeResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateCorpTagRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateCorpTagResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\ExternalContact.cs" />
+    <Compile Include="Wav\V20210129\Models\ExternalContactSimpleInfo.cs" />
+    <Compile Include="Wav\V20210129\Models\ExternalContactTag.cs" />
+    <Compile Include="Wav\V20210129\Models\FollowUser.cs" />
     <Compile Include="Wav\V20210129\Models\LiveCodeDetail.cs" />
+    <Compile Include="Wav\V20210129\Models\MiniAppCodeInfo.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryActivityJoinListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryActivityJoinListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryActivityListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryActivityListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryActivityLiveCodeListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryActivityLiveCodeListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryChannelCodeListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryChannelCodeListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryChatArchivingListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryChatArchivingListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalContactDetailRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalContactDetailResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalContactListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalContactListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\TagDetailInfo.cs" />
+    <Compile Include="Wav\V20210129\Models\TagGroup.cs" />
+    <Compile Include="Wav\V20210129\Models\TagInfo.cs" />
+    <Compile Include="Wav\V20210129\Models\WeComTagDetail.cs" />
     <Compile Include="Wss\V20180426\WssClient.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertRequest.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertResponse.cs" />
