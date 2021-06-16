@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SQL")]
         public string SQL{ get; set; }
 
+        /// <summary>
+        /// 任务的配置信息
+        /// </summary>
+        [JsonProperty("Config")]
+        public KVPair[] Config{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SQL", this.SQL);
+            this.SetParamArrayObj(map, prefix + "Config.", this.Config);
         }
     }
 }

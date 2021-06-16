@@ -26,7 +26,8 @@ namespace TencentCloud.Cme.V20191029.Models
         
         /// <summary>
         /// 事件类型，可取值为：
-        /// <li>Storage.NewFileCreated：新文件产生。</li>
+        /// <li>Storage.NewFileCreated：新文件产生；</li>
+        /// <li>Project.StreamConnect.StatusChanged：云转推项目状态变更。</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -37,6 +38,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("StorageNewFileCreatedEvent")]
         public StorageNewFileCreatedEvent StorageNewFileCreatedEvent{ get; set; }
 
+        /// <summary>
+        /// 云转推项目状态变更事件信息。仅当 EventType 为 Project.StreamConnect.StatusChanged 时有效。
+        /// </summary>
+        [JsonProperty("ProjectStreamConnectStatusChangedEvent")]
+        public ProjectStreamConnectStatusChangedEvent ProjectStreamConnectStatusChangedEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamObj(map, prefix + "StorageNewFileCreatedEvent.", this.StorageNewFileCreatedEvent);
+            this.SetParamObj(map, prefix + "ProjectStreamConnectStatusChangedEvent.", this.ProjectStreamConnectStatusChangedEvent);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.303</VersionPrefix>
+    <VersionPrefix>3.0.304</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20180228\Models\CreateOpenPortTaskResponse.cs" />
     <Compile Include="V20180228\Models\CreateProcessTaskRequest.cs" />
     <Compile Include="V20180228\Models\CreateProcessTaskResponse.cs" />
+    <Compile Include="V20180228\Models\CreateProtectServerRequest.cs" />
+    <Compile Include="V20180228\Models\CreateProtectServerResponse.cs" />
     <Compile Include="V20180228\Models\CreateSearchLogRequest.cs" />
     <Compile Include="V20180228\Models\CreateSearchLogResponse.cs" />
     <Compile Include="V20180228\Models\CreateSearchTemplateRequest.cs" />
@@ -110,6 +112,8 @@
     <Compile Include="V20180228\Models\DeleteTagsResponse.cs" />
     <Compile Include="V20180228\Models\DeleteUsualLoginPlacesRequest.cs" />
     <Compile Include="V20180228\Models\DeleteUsualLoginPlacesResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteWebPageEventLogRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAccountsRequest.cs" />
@@ -234,6 +238,8 @@
     <Compile Include="V20180228\Models\DescribeVulScanResultResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageGeneralizeRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeWebPageGeneralizeResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWeeklyReportBruteAttacksRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWeeklyReportBruteAttacksResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWeeklyReportInfoRequest.cs" />
@@ -306,6 +312,8 @@
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectSettingRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="V20180228\Models\NonLocalLoginPlace.cs" />
     <Compile Include="V20180228\Models\OpenPort.cs" />
     <Compile Include="V20180228\Models\OpenPortStatistics.cs" />
@@ -320,6 +328,7 @@
     <Compile Include="V20180228\Models\ProVersionMachine.cs" />
     <Compile Include="V20180228\Models\Process.cs" />
     <Compile Include="V20180228\Models\ProcessStatistics.cs" />
+    <Compile Include="V20180228\Models\ProtectHostConfig.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\RegionInfo.cs" />
@@ -329,6 +338,8 @@
     <Compile Include="V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
+    <Compile Include="V20180228\Models\ScanVulRequest.cs" />
+    <Compile Include="V20180228\Models\ScanVulResponse.cs" />
     <Compile Include="V20180228\Models\SearchTemplate.cs" />
     <Compile Include="V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="V20180228\Models\SecurityEventInfo.cs" />

@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatabaseInfo")]
         public DatabaseInfo DatabaseInfo{ get; set; }
 
+        /// <summary>
+        /// 数据源名称，默认为CosDataCatalog
+        /// </summary>
+        [JsonProperty("DatasourceConnectionName")]
+        public string DatasourceConnectionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "DatabaseInfo.", this.DatabaseInfo);
+            this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
         }
     }
 }

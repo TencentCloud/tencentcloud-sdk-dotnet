@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 网络计费类型,，取值范围：
+        /// 网络计费类型，取值范围：
         /// <li>按流量包付费：TRAFFIC_POSTPAID_BY_HOUR</li>
         /// <li>按带宽付费： BANDWIDTH_POSTPAID_BY_HOUR</li>
         /// </summary>

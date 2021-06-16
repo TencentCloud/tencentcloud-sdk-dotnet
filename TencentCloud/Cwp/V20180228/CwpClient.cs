@@ -293,6 +293,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 添加房展防护服务器
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectServerRequest"/></param>
+        /// <returns><see cref="CreateProtectServerResponse"/></returns>
+        public async Task<CreateProtectServerResponse> CreateProtectServer(CreateProtectServerRequest req)
+        {
+             JsonResponseModel<CreateProtectServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProtectServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProtectServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加房展防护服务器
+        /// </summary>
+        /// <param name="req"><see cref="CreateProtectServerRequest"/></param>
+        /// <returns><see cref="CreateProtectServerResponse"/></returns>
+        public CreateProtectServerResponse CreateProtectServerSync(CreateProtectServerRequest req)
+        {
+             JsonResponseModel<CreateProtectServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProtectServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProtectServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加历史搜索记录
         /// </summary>
         /// <param name="req"><see cref="CreateSearchLogRequest"/></param>
@@ -1084,6 +1124,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DeleteUsualLoginPlaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUsualLoginPlacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 网站防篡改-删除事件记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebPageEventLogRequest"/></param>
+        /// <returns><see cref="DeleteWebPageEventLogResponse"/></returns>
+        public async Task<DeleteWebPageEventLogResponse> DeleteWebPageEventLog(DeleteWebPageEventLogRequest req)
+        {
+             JsonResponseModel<DeleteWebPageEventLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWebPageEventLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWebPageEventLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 网站防篡改-删除事件记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWebPageEventLogRequest"/></param>
+        /// <returns><see cref="DeleteWebPageEventLogResponse"/></returns>
+        public DeleteWebPageEventLogResponse DeleteWebPageEventLogSync(DeleteWebPageEventLogRequest req)
+        {
+             JsonResponseModel<DeleteWebPageEventLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWebPageEventLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWebPageEventLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3573,6 +3653,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 查询网站防篡改 概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageGeneralizeRequest"/></param>
+        /// <returns><see cref="DescribeWebPageGeneralizeResponse"/></returns>
+        public async Task<DescribeWebPageGeneralizeResponse> DescribeWebPageGeneralize(DescribeWebPageGeneralizeRequest req)
+        {
+             JsonResponseModel<DescribeWebPageGeneralizeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWebPageGeneralize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebPageGeneralizeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询网站防篡改 概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWebPageGeneralizeRequest"/></param>
+        /// <returns><see cref="DescribeWebPageGeneralizeResponse"/></returns>
+        public DescribeWebPageGeneralizeResponse DescribeWebPageGeneralizeSync(DescribeWebPageGeneralizeRequest req)
+        {
+             JsonResponseModel<DescribeWebPageGeneralizeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWebPageGeneralize");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWebPageGeneralizeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeWeeklyReportBruteAttacks) 用于获取专业周报密码破解数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeWeeklyReportBruteAttacksRequest"/></param>
@@ -4773,6 +4893,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 网站防篡改-修改网站防护设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectSettingRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectSettingResponse"/></returns>
+        public async Task<ModifyWebPageProtectSettingResponse> ModifyWebPageProtectSetting(ModifyWebPageProtectSettingRequest req)
+        {
+             JsonResponseModel<ModifyWebPageProtectSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWebPageProtectSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWebPageProtectSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 网站防篡改-修改网站防护设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWebPageProtectSettingRequest"/></param>
+        /// <returns><see cref="ModifyWebPageProtectSettingResponse"/></returns>
+        public ModifyWebPageProtectSettingResponse ModifyWebPageProtectSettingSync(ModifyWebPageProtectSettingRequest req)
+        {
+             JsonResponseModel<ModifyWebPageProtectSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWebPageProtectSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWebPageProtectSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (OpenProVersion) 用于开通专业版。
         /// </summary>
         /// <param name="req"><see cref="OpenProVersionRequest"/></param>
@@ -4964,6 +5124,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "RescanImpactedHost");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RescanImpactedHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 漏洞管理 - 一键检测
+        /// </summary>
+        /// <param name="req"><see cref="ScanVulRequest"/></param>
+        /// <returns><see cref="ScanVulResponse"/></returns>
+        public async Task<ScanVulResponse> ScanVul(ScanVulRequest req)
+        {
+             JsonResponseModel<ScanVulResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScanVul");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanVulResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 漏洞管理 - 一键检测
+        /// </summary>
+        /// <param name="req"><see cref="ScanVulRequest"/></param>
+        /// <returns><see cref="ScanVulResponse"/></returns>
+        public ScanVulResponse ScanVulSync(ScanVulRequest req)
+        {
+             JsonResponseModel<ScanVulResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScanVul");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanVulResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -69,7 +69,9 @@ namespace TencentCloud.Monitor.V20180724.Models
         public PrometheusRuleKV[] Labels{ get; set; }
 
         /// <summary>
-        /// 注释列表
+        /// 注释列表。
+        /// 
+        /// 告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description。
         /// </summary>
         [JsonProperty("Annotations")]
         public PrometheusRuleKV[] Annotations{ get; set; }

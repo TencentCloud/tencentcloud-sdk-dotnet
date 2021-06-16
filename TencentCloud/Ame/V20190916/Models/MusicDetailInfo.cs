@@ -61,31 +61,31 @@ namespace TencentCloud.Ame.V20190916.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 场景信息
+        /// 应用歌曲信息,1.图文/短视频,2.网络直播,3.网络电台FM,4.免费游戏,5.商业游戏,6.网店网站设计,7.广告营销,8.网络长视频
         /// </summary>
         [JsonProperty("Scene")]
         public string[] Scene{ get; set; }
 
         /// <summary>
-        /// 应用地域
+        /// 应用地域,1. 中国大陆,2. 中国含港澳台,3. 全球
         /// </summary>
         [JsonProperty("Region")]
         public string[] Region{ get; set; }
 
         /// <summary>
-        /// 授权期限
+        /// 授权时间,1. 1年, 5. 随片永久
         /// </summary>
         [JsonProperty("AuthPeriod")]
         public string AuthPeriod{ get; set; }
 
         /// <summary>
-        /// 商业化权益
+        /// 商业化授权，1. 支持商业化 ,2. 不支持商业化
         /// </summary>
         [JsonProperty("Commercialization")]
         public string Commercialization{ get; set; }
 
         /// <summary>
-        /// 跨平台传播权益
+        /// 跨平台传播，1. 支持跨平台传播 ,2. 不支持跨平台传播
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }

@@ -143,6 +143,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("UltraNum")]
         public string UltraNum{ get; set; }
 
+        /// <summary>
+        /// 临床诊断
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Diagnose")]
+        public string Diagnose{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "MedicalRecordNum", this.MedicalRecordNum);
             this.SetParamSimple(map, prefix + "ReportName", this.ReportName);
             this.SetParamSimple(map, prefix + "UltraNum", this.UltraNum);
+            this.SetParamSimple(map, prefix + "Diagnose", this.Diagnose);
         }
     }
 }

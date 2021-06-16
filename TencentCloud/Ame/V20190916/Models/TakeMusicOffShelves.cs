@@ -32,6 +32,7 @@ namespace TencentCloud.Ame.V20190916.Models
 
         /// <summary>
         /// 当曲目临时下架时：已订购客户无影响，无需消息通知。当曲目封杀下架后，推送消息至已订购老客户，枚举值，判断是否上/下架
+        /// 在售状态，0在售，1临时下架，2永久下架
         /// </summary>
         [JsonProperty("SaleStatus")]
         public string SaleStatus{ get; set; }

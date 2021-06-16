@@ -87,6 +87,27 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("ReportType")]
         public string ReportType{ get; set; }
 
+        /// <summary>
+        /// 门诊病历信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedicalRecordInfo")]
+        public MedicalRecordInfo MedicalRecordInfo{ get; set; }
+
+        /// <summary>
+        /// 出入院信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Hospitalization")]
+        public Hospitalization Hospitalization{ get; set; }
+
+        /// <summary>
+        /// 手术记录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Surgery")]
+        public Surgery Surgery{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +123,9 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "FirstPage.", this.FirstPage);
             this.SetParamObj(map, prefix + "Indicator.", this.Indicator);
             this.SetParamSimple(map, prefix + "ReportType", this.ReportType);
+            this.SetParamObj(map, prefix + "MedicalRecordInfo.", this.MedicalRecordInfo);
+            this.SetParamObj(map, prefix + "Hospitalization.", this.Hospitalization);
+            this.SetParamObj(map, prefix + "Surgery.", this.Surgery);
         }
     }
 }

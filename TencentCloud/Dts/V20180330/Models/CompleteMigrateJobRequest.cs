@@ -30,6 +30,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("JobId")]
         public string JobId{ get; set; }
 
+        /// <summary>
+        /// 完成任务的方式,仅支持旧版MySQL迁移任务。waitForSync-等待主从差距为0才停止,immediately-立即完成，不会等待主从差距一致。默认为waitForSync
+        /// </summary>
+        [JsonProperty("CompleteMode")]
+        public string CompleteMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "CompleteMode", this.CompleteMode);
         }
     }
 }

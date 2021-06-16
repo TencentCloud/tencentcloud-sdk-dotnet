@@ -30,6 +30,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("SQLTask")]
         public SQLTask SQLTask{ get; set; }
 
+        /// <summary>
+        /// Spark SQL查询任务
+        /// </summary>
+        [JsonProperty("SparkSQLTask")]
+        public SQLTask SparkSQLTask{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "SQLTask.", this.SQLTask);
+            this.SetParamObj(map, prefix + "SparkSQLTask.", this.SparkSQLTask);
         }
     }
 }

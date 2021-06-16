@@ -66,6 +66,76 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("IdCard")]
         public string IdCard{ get; set; }
 
+        /// <summary>
+        /// 健康卡号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCardNo")]
+        public string HealthCardNo{ get; set; }
+
+        /// <summary>
+        /// 社保卡号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SocialSecurityCardNo")]
+        public string SocialSecurityCardNo{ get; set; }
+
+        /// <summary>
+        /// 出生日期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Birthday")]
+        public string Birthday{ get; set; }
+
+        /// <summary>
+        /// 民族
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ethnicity")]
+        public string Ethnicity{ get; set; }
+
+        /// <summary>
+        /// 婚姻状况
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Married")]
+        public string Married{ get; set; }
+
+        /// <summary>
+        /// 职业
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Profession")]
+        public string Profession{ get; set; }
+
+        /// <summary>
+        /// 教育程度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EducationBackground")]
+        public string EducationBackground{ get; set; }
+
+        /// <summary>
+        /// 国籍
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Nationality")]
+        public string Nationality{ get; set; }
+
+        /// <summary>
+        /// 籍贯
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BirthPlace")]
+        public string BirthPlace{ get; set; }
+
+        /// <summary>
+        /// 医保类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedicalInsuranceType")]
+        public string MedicalInsuranceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +148,16 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Address", this.Address);
             this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
+            this.SetParamSimple(map, prefix + "HealthCardNo", this.HealthCardNo);
+            this.SetParamSimple(map, prefix + "SocialSecurityCardNo", this.SocialSecurityCardNo);
+            this.SetParamSimple(map, prefix + "Birthday", this.Birthday);
+            this.SetParamSimple(map, prefix + "Ethnicity", this.Ethnicity);
+            this.SetParamSimple(map, prefix + "Married", this.Married);
+            this.SetParamSimple(map, prefix + "Profession", this.Profession);
+            this.SetParamSimple(map, prefix + "EducationBackground", this.EducationBackground);
+            this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
+            this.SetParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
+            this.SetParamSimple(map, prefix + "MedicalInsuranceType", this.MedicalInsuranceType);
         }
     }
 }

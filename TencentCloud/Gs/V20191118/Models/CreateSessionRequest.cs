@@ -73,19 +73,19 @@ namespace TencentCloud.Gs.V20191118.Models
         public ulong? SetNo{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，固定码率，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
+        /// 单位Mbps，固定码率建议值，有一定浮动范围，后端不动态调整(MaxBitrate和MinBitrate将无效)
         /// </summary>
         [JsonProperty("Bitrate")]
         public ulong? Bitrate{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，动态调整最大码率，有一定浮动范围
+        /// 单位Mbps，动态调整最大码率建议值，会按实际情况调整
         /// </summary>
         [JsonProperty("MaxBitrate")]
         public ulong? MaxBitrate{ get; set; }
 
         /// <summary>
-        /// 单位Mbps，动态调整最小码率，有一定浮动范围
+        /// 单位Mbps，动态调整最小码率建议值，会按实际情况调整
         /// </summary>
         [JsonProperty("MinBitrate")]
         public ulong? MinBitrate{ get; set; }

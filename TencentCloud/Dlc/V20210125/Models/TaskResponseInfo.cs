@@ -115,6 +115,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("OutputMessage")]
         public string OutputMessage{ get; set; }
 
+        /// <summary>
+        /// 执行SQL的引擎类型
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +142,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Error", this.Error);
             this.SetParamSimple(map, prefix + "Percentage", this.Percentage);
             this.SetParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

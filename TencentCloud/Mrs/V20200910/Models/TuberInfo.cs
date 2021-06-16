@@ -81,7 +81,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public BlockInfo RearEcho{ get; set; }
 
         /// <summary>
-        /// 质地弹性
+        /// 弹性质地
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Elastic")]

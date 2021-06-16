@@ -37,7 +37,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public HandleParam HandleParam{ get; set; }
 
         /// <summary>
-        /// 图片类型
+        /// 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

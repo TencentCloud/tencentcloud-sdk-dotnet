@@ -173,7 +173,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建 Prometheus 告警规则
+        /// 创建 Prometheus 告警规则。
+        /// 
+        /// 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
         /// </summary>
         /// <param name="req"><see cref="CreateAlertRuleRequest"/></param>
         /// <returns><see cref="CreateAlertRuleResponse"/></returns>
@@ -193,7 +195,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建 Prometheus 告警规则
+        /// 创建 Prometheus 告警规则。
+        /// 
+        /// 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
         /// </summary>
         /// <param name="req"><see cref="CreateAlertRuleRequest"/></param>
         /// <returns><see cref="CreateAlertRuleResponse"/></returns>
@@ -1969,7 +1973,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 更新 Prometheus 的报警规则
+        /// 更新 Prometheus 的报警规则。
+        /// 
+        /// 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
         /// </summary>
         /// <param name="req"><see cref="UpdateAlertRuleRequest"/></param>
         /// <returns><see cref="UpdateAlertRuleResponse"/></returns>
@@ -1989,7 +1995,9 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 更新 Prometheus 的报警规则
+        /// 更新 Prometheus 的报警规则。
+        /// 
+        /// 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
         /// </summary>
         /// <param name="req"><see cref="UpdateAlertRuleRequest"/></param>
         /// <returns><see cref="UpdateAlertRuleResponse"/></returns>

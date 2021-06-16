@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.303</VersionPrefix>
+    <VersionPrefix>3.0.304</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3284,6 +3284,7 @@
     <Compile Include="Cme\V20191029\Models\PlatformInfo.cs" />
     <Compile Include="Cme\V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ProjectInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\ProjectStreamConnectStatusChangedEvent.cs" />
     <Compile Include="Cme\V20191029\Models\RecordReplayProjectInput.cs" />
     <Compile Include="Cme\V20191029\Models\Resource.cs" />
     <Compile Include="Cme\V20191029\Models\ResourceInfo.cs" />
@@ -3955,6 +3956,8 @@
     <Compile Include="Cwp\V20180228\Models\CreateOpenPortTaskResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProcessTaskRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProcessTaskResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateProtectServerRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateProtectServerResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchLogRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchLogResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchTemplateRequest.cs" />
@@ -3996,6 +3999,8 @@
     <Compile Include="Cwp\V20180228\Models\DeleteTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteUsualLoginPlacesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DeleteUsualLoginPlacesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DeleteWebPageEventLogRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountStatisticsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountsRequest.cs" />
@@ -4120,6 +4125,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeVulScanResultResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeWebPageGeneralizeRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeWebPageGeneralizeResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeWeeklyReportBruteAttacksRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeWeeklyReportBruteAttacksResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeWeeklyReportInfoRequest.cs" />
@@ -4192,6 +4199,8 @@
     <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\NonLocalLoginPlace.cs" />
     <Compile Include="Cwp\V20180228\Models\OpenPort.cs" />
     <Compile Include="Cwp\V20180228\Models\OpenPortStatistics.cs" />
@@ -4206,6 +4215,7 @@
     <Compile Include="Cwp\V20180228\Models\ProVersionMachine.cs" />
     <Compile Include="Cwp\V20180228\Models\Process.cs" />
     <Compile Include="Cwp\V20180228\Models\ProcessStatistics.cs" />
+    <Compile Include="Cwp\V20180228\Models\ProtectHostConfig.cs" />
     <Compile Include="Cwp\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\RegionInfo.cs" />
@@ -4215,6 +4225,8 @@
     <Compile Include="Cwp\V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShell.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShellRule.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\SearchTemplate.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityEventInfo.cs" />
@@ -4990,6 +5002,8 @@
     <Compile Include="Dlc\V20210125\Models\CreateDatabaseResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateStoreLocationRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateStoreLocationResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTableRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTableResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTaskRequest.cs" />
@@ -5013,6 +5027,7 @@
     <Compile Include="Dlc\V20210125\Models\DescribeViewsResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\Execution.cs" />
     <Compile Include="Dlc\V20210125\Models\Filter.cs" />
+    <Compile Include="Dlc\V20210125\Models\KVPair.cs" />
     <Compile Include="Dlc\V20210125\Models\Other.cs" />
     <Compile Include="Dlc\V20210125\Models\Partition.cs" />
     <Compile Include="Dlc\V20210125\Models\Property.cs" />
@@ -7427,6 +7442,8 @@
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageEvent.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageTimeData.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageTimeInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateBatchRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateBatchResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateCloudStorageRequest.cs" />
@@ -7528,6 +7545,8 @@
     <Compile Include="Iotvideo\V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductModelDefinition.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductTemplate.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\PublishMessageRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\PublishMessageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
@@ -8983,6 +9002,7 @@
     <Compile Include="Mrs\V20200910\Models\HandleParam.cs" />
     <Compile Include="Mrs\V20200910\Models\HistologyLevel.cs" />
     <Compile Include="Mrs\V20200910\Models\HistologyType.cs" />
+    <Compile Include="Mrs\V20200910\Models\Hospitalization.cs" />
     <Compile Include="Mrs\V20200910\Models\IHCInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageToClassRequest.cs" />
@@ -8994,6 +9014,7 @@
     <Compile Include="Mrs\V20200910\Models\Invas.cs" />
     <Compile Include="Mrs\V20200910\Models\Lymph.cs" />
     <Compile Include="Mrs\V20200910\Models\MedDoc.cs" />
+    <Compile Include="Mrs\V20200910\Models\MedicalRecordInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\MenstrualMedicalHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\Multiple.cs" />
     <Compile Include="Mrs\V20200910\Models\NormPart.cs" />
@@ -9007,6 +9028,9 @@
     <Compile Include="Mrs\V20200910\Models\ReportInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\Size.cs" />
     <Compile Include="Mrs\V20200910\Models\Summary.cs" />
+    <Compile Include="Mrs\V20200910\Models\Surgery.cs" />
+    <Compile Include="Mrs\V20200910\Models\SurgeryAttr.cs" />
+    <Compile Include="Mrs\V20200910\Models\SurgeryHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\SymptomInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\Template.cs" />
     <Compile Include="Mrs\V20200910\Models\TextToClassRequest.cs" />
@@ -12369,6 +12393,7 @@
     <Compile Include="Tsf\V20180326\Models\BindApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\BindPluginRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\BindPluginResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\BusinessLogV2.cs" />
     <Compile Include="Tsf\V20180326\Models\ChangeApiUsableStatusRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ChangeApiUsableStatusResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\Cluster.cs" />
@@ -12716,6 +12741,10 @@
     <Compile Include="Tsf\V20180326\Models\RollbackConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RollbackConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\SchedulingStrategy.cs" />
+    <Compile Include="Tsf\V20180326\Models\SearchBusinessLogRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\SearchBusinessLogResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\SearchStdoutLogRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\SearchStdoutLogResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceConfig.cs" />
@@ -12731,6 +12760,7 @@
     <Compile Include="Tsf\V20180326\Models\StartContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\StartGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\StartGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\StdoutLogV2.cs" />
     <Compile Include="Tsf\V20180326\Models\StopContainerGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\StopContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\StopGroupRequest.cs" />
@@ -12751,6 +12781,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfApiListResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApiGroupInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApplication.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageBusinessLogV2.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageCluster.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigRelease.cs" />
@@ -12764,6 +12795,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageNamespace.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageSimpleGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageStdoutLogV2.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageUnitNamespace.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageUnitRule.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageVmGroup.cs" />
@@ -12804,6 +12836,12 @@
     <Compile Include="Tsw\V20210412\Models\DescribeTokenRequest.cs" />
     <Compile Include="Tsw\V20210412\Models\DescribeTokenResponse.cs" />
     <Compile Include="Tts\V20190823\TtsClient.cs" />
+    <Compile Include="Tts\V20190823\Models\CreateTtsTaskRequest.cs" />
+    <Compile Include="Tts\V20190823\Models\CreateTtsTaskRespData.cs" />
+    <Compile Include="Tts\V20190823\Models\CreateTtsTaskResponse.cs" />
+    <Compile Include="Tts\V20190823\Models\DescribeTtsTaskStatusRequest.cs" />
+    <Compile Include="Tts\V20190823\Models\DescribeTtsTaskStatusRespData.cs" />
+    <Compile Include="Tts\V20190823\Models\DescribeTtsTaskStatusResponse.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceRequest.cs" />
     <Compile Include="Tts\V20190823\Models\TextToVoiceResponse.cs" />
     <Compile Include="Ump\V20200918\UmpClient.cs" />

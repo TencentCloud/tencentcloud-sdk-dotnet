@@ -133,6 +133,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
+        /// <returns><see cref="CreateStoreLocationResponse"/></returns>
+        public async Task<CreateStoreLocationResponse> CreateStoreLocation(CreateStoreLocationRequest req)
+        {
+             JsonResponseModel<CreateStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
+        /// <returns><see cref="CreateStoreLocationResponse"/></returns>
+        public CreateStoreLocationResponse CreateStoreLocationSync(CreateStoreLocationRequest req)
+        {
+             JsonResponseModel<CreateStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateTable）用于生成建表SQL。
         /// </summary>
         /// <param name="req"><see cref="CreateTableRequest"/></param>

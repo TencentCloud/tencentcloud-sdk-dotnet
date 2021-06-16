@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D5105570-47F7-3684-9382-C377FFC01784}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.303</VersionPrefix>
+    <VersionPrefix>3.0.304</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,12 @@
 
   <ItemGroup>
     <Compile Include="V20190823\TtsClient.cs" />
+    <Compile Include="V20190823\Models\CreateTtsTaskRequest.cs" />
+    <Compile Include="V20190823\Models\CreateTtsTaskRespData.cs" />
+    <Compile Include="V20190823\Models\CreateTtsTaskResponse.cs" />
+    <Compile Include="V20190823\Models\DescribeTtsTaskStatusRequest.cs" />
+    <Compile Include="V20190823\Models\DescribeTtsTaskStatusRespData.cs" />
+    <Compile Include="V20190823\Models\DescribeTtsTaskStatusResponse.cs" />
     <Compile Include="V20190823\Models\TextToVoiceRequest.cs" />
     <Compile Include="V20190823\Models\TextToVoiceResponse.cs" />
   </ItemGroup>

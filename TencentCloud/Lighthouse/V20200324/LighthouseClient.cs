@@ -1171,7 +1171,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 查询重置实例的镜像信息
+        /// 本接口（DescribeResetInstanceBlueprints）查询重置实例的镜像信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResetInstanceBlueprintsRequest"/></param>
         /// <returns><see cref="DescribeResetInstanceBlueprintsResponse"/></returns>
@@ -1191,7 +1191,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 查询重置实例的镜像信息
+        /// 本接口（DescribeResetInstanceBlueprints）查询重置实例的镜像信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeResetInstanceBlueprintsRequest"/></param>
         /// <returns><see cref="DescribeResetInstanceBlueprintsResponse"/></returns>

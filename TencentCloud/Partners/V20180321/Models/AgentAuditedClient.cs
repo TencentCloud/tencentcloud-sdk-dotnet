@@ -91,7 +91,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? HasOverdueBill{ get; set; }
 
         /// <summary>
-        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量)/direct(直销)/direct_newopp(直销(新商机))/空
+        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量已关联)/old_newchecking(存量-新关联考核中)/old_newnotpass(存量-新关联未达标)/direct(直销)/direct_newopp(直销(新商机))/空
         /// </summary>
         [JsonProperty("ClientType")]
         public string ClientType{ get; set; }
