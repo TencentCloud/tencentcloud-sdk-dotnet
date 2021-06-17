@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.304</VersionPrefix>
+    <VersionPrefix>3.0.305</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8310,6 +8310,11 @@
     <Compile Include="Mariadb\V20170312\Models\ViewPrivileges.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZonesInfo.cs" />
+    <Compile Include="Market\V20191010\MarketClient.cs" />
+    <Compile Include="Market\V20191010\Models\GetCateTreeRequest.cs" />
+    <Compile Include="Market\V20191010\Models\GetCateTreeResponse.cs" />
+    <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountRequest.cs" />
+    <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountResponse.cs" />
     <Compile Include="Memcached\V20190318\MemcachedClient.cs" />
     <Compile Include="Memcached\V20190318\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Memcached\V20190318\Models\DescribeInstancesResponse.cs" />
@@ -11527,6 +11532,8 @@
     <Compile Include="Tcr\V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
     <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\BindCluster.cs" />
     <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueResponse.cs" />
@@ -11622,6 +11629,8 @@
     <Compile Include="Tdmq\V20200217\Models\Producer.cs" />
     <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ReceiveMessageRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueRequest.cs" />

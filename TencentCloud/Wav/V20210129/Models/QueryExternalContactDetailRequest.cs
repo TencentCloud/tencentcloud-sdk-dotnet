@@ -31,13 +31,13 @@ namespace TencentCloud.Wav.V20210129.Models
         public string ExternalUserId{ get; set; }
 
         /// <summary>
-        /// 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填
+        /// 用于分页查询的游标，字符串类型，由上一次调用返回，首次调用可不填。当客户在企业内的跟进人超过500人时需要使用cursor参数进行分页获取
         /// </summary>
         [JsonProperty("Cursor")]
         public string Cursor{ get; set; }
 
         /// <summary>
-        /// 返回的最大记录数，整型，最大值100，默认值50，超过最大值时取最大值
+        /// 当前接口Limit不需要传参， 保留Limit只是为了保持向后兼容性， Limit默认值为500，当返回结果超过500时， NextCursor才有返回值
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

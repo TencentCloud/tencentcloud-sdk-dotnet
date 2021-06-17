@@ -31,7 +31,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 需要升级至的算法模型版本。默认为最新版本。
+        /// 需要升级至的算法模型版本。默认为最新版本。不可逆向升级
         /// </summary>
         [JsonProperty("FaceModelVersion")]
         public string FaceModelVersion{ get; set; }

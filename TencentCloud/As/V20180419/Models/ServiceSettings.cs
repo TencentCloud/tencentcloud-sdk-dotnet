@@ -39,6 +39,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ScalingMode")]
         public string ScalingMode{ get; set; }
 
+        /// <summary>
+        /// 开启负载均衡不健康替换服务。若开启则对于负载均衡健康检查判断不健康的实例，弹性伸缩服务会进行替换。若不指定该参数，则默认为 False。
+        /// </summary>
+        [JsonProperty("ReplaceLoadBalancerUnhealthy")]
+        public bool? ReplaceLoadBalancerUnhealthy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "ReplaceMonitorUnhealthy", this.ReplaceMonitorUnhealthy);
             this.SetParamSimple(map, prefix + "ScalingMode", this.ScalingMode);
+            this.SetParamSimple(map, prefix + "ReplaceLoadBalancerUnhealthy", this.ReplaceLoadBalancerUnhealthy);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Topic name
+        /// 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Payload{ get; set; }
 
         /// <summary>
-        /// String 类型的 token，用来校验客户端和服务端之间的连接
+        /// String 类型的 token，可以不填，系统会自动获取
         /// </summary>
         [JsonProperty("StringToken")]
         public string StringToken{ get; set; }

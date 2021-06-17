@@ -25,13 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// Token 是用来做鉴权使用的
-        /// </summary>
-        [JsonProperty("StringToken")]
-        public string StringToken{ get; set; }
-
-        /// <summary>
-        /// 消息要发送的topic的名字
+        /// 消息要发送的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
@@ -41,6 +35,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         [JsonProperty("Payload")]
         public string Payload{ get; set; }
+
+        /// <summary>
+        /// Token 是用来做鉴权使用的，可以不填，系统会自动获取
+        /// </summary>
+        [JsonProperty("StringToken")]
+        public string StringToken{ get; set; }
 
         /// <summary>
         /// 设置 producer 的名字，要求全局唯一，用户不配置，系统会随机生成
@@ -66,9 +66,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StringToken", this.StringToken);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
             this.SetParamSimple(map, prefix + "Payload", this.Payload);
+            this.SetParamSimple(map, prefix + "StringToken", this.StringToken);
             this.SetParamSimple(map, prefix + "ProducerName", this.ProducerName);
             this.SetParamSimple(map, prefix + "SendTimeout", this.SendTimeout);
             this.SetParamSimple(map, prefix + "MaxPendingMessages", this.MaxPendingMessages);

@@ -79,6 +79,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 应用数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationCount")]
+        public ulong? ApplicationCount{ get; set; }
+
+        /// <summary>
+        /// 设备注册总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceCount")]
+        public ulong? DeviceCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +108,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "NativeAppCount", this.NativeAppCount);
             this.SetParamSimple(map, prefix + "WebAppCount", this.WebAppCount);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "ApplicationCount", this.ApplicationCount);
+            this.SetParamSimple(map, prefix + "DeviceCount", this.DeviceCount);
         }
     }
 }

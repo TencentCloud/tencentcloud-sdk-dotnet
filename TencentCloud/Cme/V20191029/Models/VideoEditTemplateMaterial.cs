@@ -36,6 +36,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("SlotSet")]
         public SlotInfo[] SlotSet{ get; set; }
 
+        /// <summary>
+        /// 模板预览视频 URL 地址 。
+        /// </summary>
+        [JsonProperty("PreviewVideoUrl")]
+        public string PreviewVideoUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamArrayObj(map, prefix + "SlotSet.", this.SlotSet);
+            this.SetParamSimple(map, prefix + "PreviewVideoUrl", this.PreviewVideoUrl);
         }
     }
 }

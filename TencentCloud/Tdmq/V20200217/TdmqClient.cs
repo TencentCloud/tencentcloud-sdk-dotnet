@@ -53,6 +53,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 根据提供的 MessageID 确认指定 topic 中的消息
+        /// </summary>
+        /// <param name="req"><see cref="AcknowledgeMessageRequest"/></param>
+        /// <returns><see cref="AcknowledgeMessageResponse"/></returns>
+        public async Task<AcknowledgeMessageResponse> AcknowledgeMessage(AcknowledgeMessageRequest req)
+        {
+             JsonResponseModel<AcknowledgeMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AcknowledgeMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcknowledgeMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据提供的 MessageID 确认指定 topic 中的消息
+        /// </summary>
+        /// <param name="req"><see cref="AcknowledgeMessageRequest"/></param>
+        /// <returns><see cref="AcknowledgeMessageResponse"/></returns>
+        public AcknowledgeMessageResponse AcknowledgeMessageSync(AcknowledgeMessageRequest req)
+        {
+             JsonResponseModel<AcknowledgeMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AcknowledgeMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AcknowledgeMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 清空cmq消息队列中的消息
         /// </summary>
         /// <param name="req"><see cref="ClearCmqQueueRequest"/></param>
@@ -1604,6 +1644,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "PublishCmqMsg");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishCmqMsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收发送到指定 topic 中的消息
+        /// </summary>
+        /// <param name="req"><see cref="ReceiveMessageRequest"/></param>
+        /// <returns><see cref="ReceiveMessageResponse"/></returns>
+        public async Task<ReceiveMessageResponse> ReceiveMessage(ReceiveMessageRequest req)
+        {
+             JsonResponseModel<ReceiveMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReceiveMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReceiveMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接收发送到指定 topic 中的消息
+        /// </summary>
+        /// <param name="req"><see cref="ReceiveMessageRequest"/></param>
+        /// <returns><see cref="ReceiveMessageResponse"/></returns>
+        public ReceiveMessageResponse ReceiveMessageSync(ReceiveMessageRequest req)
+        {
+             JsonResponseModel<ReceiveMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReceiveMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReceiveMessageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

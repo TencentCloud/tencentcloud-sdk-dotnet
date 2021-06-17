@@ -64,8 +64,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasSignature{ get; set; }
 
         /// <summary>
-        /// 短信验证码
-        /// BindType==2必填
+        /// 短信验证码或指令号
+        /// BindType==2必填，平安渠道必填
         /// </summary>
         [JsonProperty("CheckCode")]
         public string CheckCode{ get; set; }

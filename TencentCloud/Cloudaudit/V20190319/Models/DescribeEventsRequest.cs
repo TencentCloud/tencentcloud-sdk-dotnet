@@ -54,6 +54,12 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         [JsonProperty("LookupAttributes")]
         public LookupAttribute[] LookupAttributes{ get; set; }
 
+        /// <summary>
+        /// 是否返回 IP 归属地（1 返回，0 不返回）
+        /// </summary>
+        [JsonProperty("IsReturnLocation")]
+        public ulong? IsReturnLocation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
             this.SetParamArrayObj(map, prefix + "LookupAttributes.", this.LookupAttributes);
+            this.SetParamSimple(map, prefix + "IsReturnLocation", this.IsReturnLocation);
         }
     }
 }

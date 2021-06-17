@@ -73,11 +73,18 @@ namespace TencentCloud.Wav.V20210129.Models
         public ulong? MsgTime{ get; set; }
 
         /// <summary>
-        /// MsgType=video时的消息体
+        /// MsgType=video时的消息体，忽略此字段，见BodyJson字段
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Video")]
         public ChatArchivingMsgTypeVideo Video{ get; set; }
+
+        /// <summary>
+        /// 根据MsgType的不同取值，解析内容不同，参考：https://open.work.weixin.qq.com/api/doc/90000/90135/91774
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BodyJson")]
+        public string BodyJson{ get; set; }
 
 
         /// <summary>
@@ -93,6 +100,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "MsgTime", this.MsgTime);
             this.SetParamObj(map, prefix + "Video.", this.Video);
+            this.SetParamSimple(map, prefix + "BodyJson", this.BodyJson);
         }
     }
 }

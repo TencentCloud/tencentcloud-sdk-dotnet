@@ -72,7 +72,7 @@ namespace TencentCloud.Iai.V20180301.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 无法升级的人脸Id信息，文件格式
+        /// 无法升级的人脸Id信息，文件格式为json。半小时有效
         /// </summary>
         [JsonProperty("FailedFacesUrl")]
         public string FailedFacesUrl{ get; set; }

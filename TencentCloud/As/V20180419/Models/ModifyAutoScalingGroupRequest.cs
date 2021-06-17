@@ -144,6 +144,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("MultiZoneSubnetPolicy")]
         public string MultiZoneSubnetPolicy{ get; set; }
 
+        /// <summary>
+        /// 伸缩组实例健康检查类型，取值如下：<br><li>CVM：根据实例网络状态判断实例是否处于不健康状态，不健康的网络状态即发生实例 PING 不可达事件，详细判断标准可参考[实例健康检查](https://cloud.tencent.com/document/product/377/8553)<br><li>CLB：根据 CLB 的健康检查状态判断实例是否处于不健康状态，CLB健康检查原理可参考[健康检查](https://cloud.tencent.com/document/product/214/6097)
+        /// </summary>
+        [JsonProperty("HealthCheckType")]
+        public string HealthCheckType{ get; set; }
+
+        /// <summary>
+        /// CLB健康检查宽限期。
+        /// </summary>
+        [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
+        public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +179,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "ServiceSettings.", this.ServiceSettings);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
             this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
+            this.SetParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
+            this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
         }
     }
 }
