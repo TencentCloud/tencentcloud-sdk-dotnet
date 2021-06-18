@@ -49,7 +49,7 @@ namespace TencentCloud.Soe.V20180724.Models
         public bool? DetectedStress{ get; set; }
 
         /// <summary>
-        /// 当前音节
+        /// 当前音节，当前评测识别的音素
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
@@ -72,6 +72,12 @@ namespace TencentCloud.Soe.V20180724.Models
         [JsonProperty("MatchTag")]
         public long? MatchTag{ get; set; }
 
+        /// <summary>
+        /// 参考字符，在单词诊断模式下，代表音素对应的原始文本
+        /// </summary>
+        [JsonProperty("ReferenceLetter")]
+        public string ReferenceLetter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Soe.V20180724.Models
             this.SetParamSimple(map, prefix + "Stress", this.Stress);
             this.SetParamSimple(map, prefix + "ReferencePhone", this.ReferencePhone);
             this.SetParamSimple(map, prefix + "MatchTag", this.MatchTag);
+            this.SetParamSimple(map, prefix + "ReferenceLetter", this.ReferenceLetter);
         }
     }
 }

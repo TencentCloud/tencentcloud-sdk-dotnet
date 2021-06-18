@@ -1373,6 +1373,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询静态托管域名任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostingDomainTaskRequest"/></param>
+        /// <returns><see cref="DescribeHostingDomainTaskResponse"/></returns>
+        public async Task<DescribeHostingDomainTaskResponse> DescribeHostingDomainTask(DescribeHostingDomainTaskRequest req)
+        {
+             JsonResponseModel<DescribeHostingDomainTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostingDomainTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostingDomainTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询静态托管域名任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostingDomainTaskRequest"/></param>
+        /// <returns><see cref="DescribeHostingDomainTaskResponse"/></returns>
+        public DescribeHostingDomainTaskResponse DescribeHostingDomainTaskSync(DescribeHostingDomainTaskRequest req)
+        {
+             JsonResponseModel<DescribeHostingDomainTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostingDomainTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostingDomainTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询后付费资源免费量
         /// </summary>
         /// <param name="req"><see cref="DescribePostpayFreeQuotasRequest"/></param>

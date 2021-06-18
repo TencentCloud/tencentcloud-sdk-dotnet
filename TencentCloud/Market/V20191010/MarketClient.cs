@@ -53,6 +53,46 @@ namespace TencentCloud.Market.V20191010
         }
 
         /// <summary>
+        /// 计量商品用量提醒，用于服务商调用云服务，云服务向客户发送提醒信息
+        /// </summary>
+        /// <param name="req"><see cref="FlowProductRemindRequest"/></param>
+        /// <returns><see cref="FlowProductRemindResponse"/></returns>
+        public async Task<FlowProductRemindResponse> FlowProductRemind(FlowProductRemindRequest req)
+        {
+             JsonResponseModel<FlowProductRemindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FlowProductRemind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlowProductRemindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 计量商品用量提醒，用于服务商调用云服务，云服务向客户发送提醒信息
+        /// </summary>
+        /// <param name="req"><see cref="FlowProductRemindRequest"/></param>
+        /// <returns><see cref="FlowProductRemindResponse"/></returns>
+        public FlowProductRemindResponse FlowProductRemindSync(FlowProductRemindRequest req)
+        {
+             JsonResponseModel<FlowProductRemindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FlowProductRemind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FlowProductRemindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取分类名称
         /// </summary>
         /// <param name="req"><see cref="GetCateTreeRequest"/></param>
@@ -94,8 +134,6 @@ namespace TencentCloud.Market.V20191010
 
         /// <summary>
         /// 该接口可以根据InstanceId查询实例的api的使用情况。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="GetUsagePlanUsageAmountRequest"/></param>
         /// <returns><see cref="GetUsagePlanUsageAmountResponse"/></returns>
@@ -116,8 +154,6 @@ namespace TencentCloud.Market.V20191010
 
         /// <summary>
         /// 该接口可以根据InstanceId查询实例的api的使用情况。
-        /// 
-        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="GetUsagePlanUsageAmountRequest"/></param>
         /// <returns><see cref="GetUsagePlanUsageAmountResponse"/></returns>

@@ -126,6 +126,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("BasePodNumber")]
         public long? BasePodNumber{ get; set; }
 
+        /// <summary>
+        /// 启用 CiliumMode 的模式，空值表示不启用，“clusterIP” 表示启用 Cilium 支持 ClusterIP
+        /// </summary>
+        [JsonProperty("CiliumMode")]
+        public string CiliumMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -148,6 +154,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
             this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
+            this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
         }
     }
 }

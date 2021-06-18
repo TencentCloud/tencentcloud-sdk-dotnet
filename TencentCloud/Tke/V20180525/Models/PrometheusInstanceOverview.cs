@@ -63,6 +63,27 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("COSBucket")]
         public string COSBucket{ get; set; }
 
+        /// <summary>
+        /// grafana默认地址，如果开启外网访问得为域名，否则为内网地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GrafanaURL")]
+        public string GrafanaURL{ get; set; }
+
+        /// <summary>
+        /// 关联集群总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BoundTotal")]
+        public ulong? BoundTotal{ get; set; }
+
+        /// <summary>
+        /// 运行正常的集群数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BoundNormal")]
+        public ulong? BoundNormal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +96,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
+            this.SetParamSimple(map, prefix + "GrafanaURL", this.GrafanaURL);
+            this.SetParamSimple(map, prefix + "BoundTotal", this.BoundTotal);
+            this.SetParamSimple(map, prefix + "BoundNormal", this.BoundNormal);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.305</VersionPrefix>
+    <VersionPrefix>3.0.306</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7818,6 +7818,8 @@
     <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsDeniedActionsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DescribeSnapshotsResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeZonesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DescribeZonesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DiscountDetail.cs" />
@@ -7879,6 +7881,7 @@
     <Compile Include="Lighthouse\V20200324\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TrafficPackage.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\ZoneInfo.cs" />
     <Compile Include="Live\V20180801\LiveClient.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamRequest.cs" />
     <Compile Include="Live\V20180801\Models\AddDelayLiveStreamResponse.cs" />
@@ -8311,6 +8314,8 @@
     <Compile Include="Mariadb\V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZonesInfo.cs" />
     <Compile Include="Market\V20191010\MarketClient.cs" />
+    <Compile Include="Market\V20191010\Models\FlowProductRemindRequest.cs" />
+    <Compile Include="Market\V20191010\Models\FlowProductRemindResponse.cs" />
     <Compile Include="Market\V20191010\Models\GetCateTreeRequest.cs" />
     <Compile Include="Market\V20191010\Models\GetCateTreeResponse.cs" />
     <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountRequest.cs" />
@@ -11112,6 +11117,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeExtensionUploadInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtraPkgBillingInfoResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeHostingDomainTaskRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeHostingDomainTaskResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayFreeQuotasRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayFreeQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribePostpayPackageFreeQuotasRequest.cs" />
