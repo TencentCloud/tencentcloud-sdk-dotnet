@@ -1,0 +1,164 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.307</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Antiddos</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200309\AntiddosClient.cs" />
+    <Compile Include="V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
+    <Compile Include="V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
+    <Compile Include="V20200309\Models\BGPIPInstance.cs" />
+    <Compile Include="V20200309\Models\BGPIPInstanceSpecification.cs" />
+    <Compile Include="V20200309\Models\BGPIPInstanceUsages.cs" />
+    <Compile Include="V20200309\Models\BGPInstance.cs" />
+    <Compile Include="V20200309\Models\BGPInstanceSpecification.cs" />
+    <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
+    <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
+    <Compile Include="V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSAIRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSAIResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSSpeedLimitConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSSpeedLimitConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDefaultAlarmThresholdRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDefaultAlarmThresholdResponse.cs" />
+    <Compile Include="V20200309\Models\CreateIPAlarmThresholdConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateIPAlarmThresholdConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreatePacketFilterConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreatePacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateProtocolBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateProtocolBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateSchedulingDomainRequest.cs" />
+    <Compile Include="V20200309\Models\CreateSchedulingDomainResponse.cs" />
+    <Compile Include="V20200309\Models\CreateWaterPrintConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateWaterPrintKeyRequest.cs" />
+    <Compile Include="V20200309\Models\CreateWaterPrintKeyResponse.cs" />
+    <Compile Include="V20200309\Models\DDoSAIRelation.cs" />
+    <Compile Include="V20200309\Models\DDoSGeoIPBlockConfig.cs" />
+    <Compile Include="V20200309\Models\DDoSGeoIPBlockConfigRelation.cs" />
+    <Compile Include="V20200309\Models\DDoSSpeedLimitConfig.cs" />
+    <Compile Include="V20200309\Models\DDoSSpeedLimitConfigRelation.cs" />
+    <Compile Include="V20200309\Models\DefaultAlarmThreshold.cs" />
+    <Compile Include="V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSGeoIPBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSSpeedLimitConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSSpeedLimitConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DeletePacketFilterConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeletePacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteWaterPrintConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteWaterPrintKeyRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPIPInstancesResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPInstancesRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListBGPInstancesResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSAIRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSAIResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSGeoIPBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSSpeedLimitConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListDDoSSpeedLimitConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListIPAlarmConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListIPAlarmConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListListenerRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListListenerResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListPacketFilterConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListPacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListSchedulingDomainRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListSchedulingDomainResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListWaterPrintConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListWaterPrintConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DisassociateDDoSEipAddressRequest.cs" />
+    <Compile Include="V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
+    <Compile Include="V20200309\Models\EipAddressPackRelation.cs" />
+    <Compile Include="V20200309\Models\EipAddressRelation.cs" />
+    <Compile Include="V20200309\Models\EipProductInfo.cs" />
+    <Compile Include="V20200309\Models\ForwardListener.cs" />
+    <Compile Include="V20200309\Models\IPAlarmThresholdRelation.cs" />
+    <Compile Include="V20200309\Models\IPLineInfo.cs" />
+    <Compile Include="V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="V20200309\Models\Layer4Rule.cs" />
+    <Compile Include="V20200309\Models\Layer7Rule.cs" />
+    <Compile Include="V20200309\Models\ListenerCcThreholdConfig.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSGeoIPBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSSpeedLimitConfigRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSSpeedLimitConfigResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyDomainUsrNameRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDomainUsrNameResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyPacketFilterConfigRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyPacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\PackInfo.cs" />
+    <Compile Include="V20200309\Models\PacketFilterConfig.cs" />
+    <Compile Include="V20200309\Models\PacketFilterRelation.cs" />
+    <Compile Include="V20200309\Models\PortSegment.cs" />
+    <Compile Include="V20200309\Models\ProtectThresholdRelation.cs" />
+    <Compile Include="V20200309\Models\ProtocolBlockConfig.cs" />
+    <Compile Include="V20200309\Models\ProtocolBlockRelation.cs" />
+    <Compile Include="V20200309\Models\ProxyTypeInfo.cs" />
+    <Compile Include="V20200309\Models\RegionInfo.cs" />
+    <Compile Include="V20200309\Models\SchedulingDomainInfo.cs" />
+    <Compile Include="V20200309\Models\SourceServer.cs" />
+    <Compile Include="V20200309\Models\SpeedValue.cs" />
+    <Compile Include="V20200309\Models\StaticPackRelation.cs" />
+    <Compile Include="V20200309\Models\WaterPrintConfig.cs" />
+    <Compile Include="V20200309\Models\WaterPrintKey.cs" />
+    <Compile Include="V20200309\Models\WaterPrintRelation.cs" />
+  </ItemGroup>
+</Project>

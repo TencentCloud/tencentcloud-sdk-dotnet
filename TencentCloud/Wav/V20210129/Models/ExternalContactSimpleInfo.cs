@@ -36,6 +36,13 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 添加了此外部联系人的企业成员的姓名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SalesName")]
+        public string SalesName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Wav.V20210129.Models
         {
             this.SetParamSimple(map, prefix + "ExternalUserId", this.ExternalUserId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
         }
     }
 }

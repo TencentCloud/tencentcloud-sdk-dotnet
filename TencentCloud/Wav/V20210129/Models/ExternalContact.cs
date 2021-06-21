@@ -55,6 +55,13 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("UnionId")]
         public string UnionId{ get; set; }
 
+        /// <summary>
+        /// 外部联系人联系电话
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Phone")]
+        public string Phone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "UnionId", this.UnionId);
+            this.SetParamSimple(map, prefix + "Phone", this.Phone);
         }
     }
 }

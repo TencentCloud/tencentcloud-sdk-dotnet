@@ -48,6 +48,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// 充当deployVersion入参
+        /// </summary>
+        [JsonProperty("TimeVersion")]
+        public string TimeVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "PkgName", this.PkgName);
             this.SetParamSimple(map, prefix + "OptType", this.OptType);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "TimeVersion", this.TimeVersion);
         }
     }
 }

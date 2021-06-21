@@ -107,6 +107,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Paymode")]
         public string Paymode{ get; set; }
 
+        /// <summary>
+        /// EKS集群的ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EKSClusterID")]
+        public string EKSClusterID{ get; set; }
+
+        /// <summary>
+        /// 集群创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +140,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamSimple(map, prefix + "StorageCapacity", this.StorageCapacity);
             this.SetParamSimple(map, prefix + "Paymode", this.Paymode);
+            this.SetParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

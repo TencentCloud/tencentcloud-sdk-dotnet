@@ -533,6 +533,46 @@ namespace TencentCloud.Tem.V20201221
         }
 
         /// <summary>
+        /// 生成包预签名下载链接
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDownloadUrlRequest"/></param>
+        /// <returns><see cref="GenerateDownloadUrlResponse"/></returns>
+        public async Task<GenerateDownloadUrlResponse> GenerateDownloadUrl(GenerateDownloadUrlRequest req)
+        {
+             JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenerateDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成包预签名下载链接
+        /// </summary>
+        /// <param name="req"><see cref="GenerateDownloadUrlRequest"/></param>
+        /// <returns><see cref="GenerateDownloadUrlResponse"/></returns>
+        public GenerateDownloadUrlResponse GenerateDownloadUrlSync(GenerateDownloadUrlRequest req)
+        {
+             JsonResponseModel<GenerateDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenerateDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenerateDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建或者更新 Ingress 规则
         /// </summary>
         /// <param name="req"><see cref="ModifyIngressRequest"/></param>

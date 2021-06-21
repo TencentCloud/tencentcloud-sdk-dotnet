@@ -198,6 +198,12 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("EksService")]
         public EksService EksService{ get; set; }
 
+        /// <summary>
+        /// 要回滚到的历史版本id
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -232,6 +238,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "UseRegistryDefaultConfig", this.UseRegistryDefaultConfig);
             this.SetParamArrayObj(map, prefix + "SettingConfs.", this.SettingConfs);
             this.SetParamObj(map, prefix + "EksService.", this.EksService);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }
