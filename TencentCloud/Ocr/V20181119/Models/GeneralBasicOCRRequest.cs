@@ -78,6 +78,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// 是否返回单字信息，默认关
+        /// </summary>
+        [JsonProperty("IsWords")]
+        public bool? IsWords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +96,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "LanguageType", this.LanguageType);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
         }
     }
 }

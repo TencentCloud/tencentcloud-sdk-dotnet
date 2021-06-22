@@ -102,6 +102,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("BoundStatus")]
         public string BoundStatus{ get; set; }
 
+        /// <summary>
+        /// 四层防护严格级别
+        /// </summary>
+        [JsonProperty("DDoSLevel")]
+        public string DDoSLevel{ get; set; }
+
+        /// <summary>
+        /// CC防护开关
+        /// </summary>
+        [JsonProperty("CCEnable")]
+        public long? CCEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +131,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamObj(map, prefix + "PackInfo.", this.PackInfo);
             this.SetParamArrayObj(map, prefix + "EipProductInfos.", this.EipProductInfos);
             this.SetParamSimple(map, prefix + "BoundStatus", this.BoundStatus);
+            this.SetParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
+            this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
         }
     }
 }

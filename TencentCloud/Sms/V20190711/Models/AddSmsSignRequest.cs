@@ -26,6 +26,7 @@ namespace TencentCloud.Sms.V20190711.Models
         
         /// <summary>
         /// 签名名称。
+        /// 注：不能重复申请已通过或待审核的签名。
         /// </summary>
         [JsonProperty("SignName")]
         public string SignName{ get; set; }

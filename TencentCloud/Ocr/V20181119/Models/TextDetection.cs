@@ -56,6 +56,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ItemPolygon")]
         public ItemCoord ItemPolygon{ get; set; }
 
+        /// <summary>
+        /// 识别出来的单字信息包括单字（包括单字Character和单字置信度confidence）， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+        /// </summary>
+        [JsonProperty("Words")]
+        public DetectedWords[] Words{ get; set; }
+
+        /// <summary>
+        /// 单字在原图中的四点坐标， 支持识别的接口：GeneralBasicOCR、GeneralAccurateOCR
+        /// </summary>
+        [JsonProperty("WordCoordPoint")]
+        public DetectedWordCoordPoint[] WordCoordPoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +79,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArrayObj(map, prefix + "Polygon.", this.Polygon);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
             this.SetParamObj(map, prefix + "ItemPolygon.", this.ItemPolygon);
+            this.SetParamArrayObj(map, prefix + "Words.", this.Words);
+            this.SetParamArrayObj(map, prefix + "WordCoordPoint.", this.WordCoordPoint);
         }
     }
 }

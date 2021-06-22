@@ -40,6 +40,13 @@ namespace TencentCloud.Tiia.V20190529.Models
         public ProductInfo ProductInfo{ get; set; }
 
         /// <summary>
+        /// 相似商品信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductInfoList")]
+        public ProductInfo[] ProductInfoList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -53,6 +60,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamArrayObj(map, prefix + "RegionDetected.", this.RegionDetected);
             this.SetParamObj(map, prefix + "ProductInfo.", this.ProductInfo);
+            this.SetParamArrayObj(map, prefix + "ProductInfoList.", this.ProductInfoList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

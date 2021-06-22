@@ -61,6 +61,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Describe")]
         public string Describe{ get; set; }
 
+        /// <summary>
+        /// 参考prometheus rule中的annotations
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Annotations")]
+        public Label[] Annotations{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Template", this.Template);
             this.SetParamSimple(map, prefix + "For", this.For);
             this.SetParamSimple(map, prefix + "Describe", this.Describe);
+            this.SetParamArrayObj(map, prefix + "Annotations.", this.Annotations);
         }
     }
 }

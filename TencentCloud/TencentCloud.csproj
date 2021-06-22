@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.307</VersionPrefix>
+    <VersionPrefix>3.0.308</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3424,6 +3424,7 @@
     <Compile Include="Cme\V20191029\Models\TaskBaseInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TeamInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TeamMemberInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\TextReplacementInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ThirdPartyPublishInfo.cs" />
     <Compile Include="Cme\V20191029\Models\TimeRange.cs" />
     <Compile Include="Cme\V20191029\Models\VODExportInfo.cs" />
@@ -5935,6 +5936,7 @@
     <Compile Include="Es\V20180416\Models\InstanceInfo.cs" />
     <Compile Include="Es\V20180416\Models\InstanceLog.cs" />
     <Compile Include="Es\V20180416\Models\KeyValue.cs" />
+    <Compile Include="Es\V20180416\Models\KibanaNodeInfo.cs" />
     <Compile Include="Es\V20180416\Models\LocalDiskInfo.cs" />
     <Compile Include="Es\V20180416\Models\MasterNodeInfo.cs" />
     <Compile Include="Es\V20180416\Models\NodeInfo.cs" />
@@ -5961,6 +5963,7 @@
     <Compile Include="Es\V20180416\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeLicenseRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpgradeLicenseResponse.cs" />
+    <Compile Include="Es\V20180416\Models\WebNodeTypeInfo.cs" />
     <Compile Include="Es\V20180416\Models\ZoneDetail.cs" />
     <Compile Include="Facefusion\V20181201\FacefusionClient.cs" />
     <Compile Include="Facefusion\V20181201\Models\DescribeMaterialListRequest.cs" />
@@ -9388,6 +9391,9 @@
     <Compile Include="Ocr\V20181119\Models\ArithmeticOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BankCardOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BankCardOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\BankSlipInfo.cs" />
+    <Compile Include="Ocr\V20181119\Models\BankSlipOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\BankSlipOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\BizLicenseVerifyResult.cs" />
@@ -9407,6 +9413,8 @@
     <Compile Include="Ocr\V20181119\Models\ClassifyDetectOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\Coord.cs" />
     <Compile Include="Ocr\V20181119\Models\Detail.cs" />
+    <Compile Include="Ocr\V20181119\Models\DetectedWordCoordPoint.cs" />
+    <Compile Include="Ocr\V20181119\Models\DetectedWords.cs" />
     <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\DriverLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\DutyPaidProofInfo.cs" />
@@ -13794,6 +13802,8 @@
     <Compile Include="Vpc\V20170312\Models\CreateVpnConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\CreateVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\CrossBorderCompliance.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\CustomerGatewayVendor.cs" />
@@ -13863,6 +13873,8 @@
     <Compile Include="Vpc\V20170312\Models\DeleteVpnConnectionResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DeleteVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAccountAttributesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAccountAttributesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeAddressQuotaRequest.cs" />
@@ -13991,6 +14003,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeVpnConnectionsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnGatewaysResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
@@ -14158,6 +14172,8 @@
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayAttributeResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -14248,6 +14264,8 @@
     <Compile Include="Vpc\V20170312\Models\VpnConnection.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\VpnGatewayQuota.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpnGatewayRoute.cs" />
+    <Compile Include="Vpc\V20170312\Models\VpnGatewayRouteModify.cs" />
     <Compile Include="Vpc\V20170312\Models\VpngwCcnRoutes.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />

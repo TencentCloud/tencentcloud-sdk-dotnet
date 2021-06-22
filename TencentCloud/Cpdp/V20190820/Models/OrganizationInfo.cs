@@ -44,6 +44,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 法人名称，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("LegalPersonName")]
         public string LegalPersonName{ get; set; }
@@ -56,6 +57,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 法人证件号码，如果SubMchName不是法人，需要另外送入法人信息（企业必输）
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
         /// </summary>
         [JsonProperty("LegalPersonIdCode")]
         public string LegalPersonIdCode{ get; set; }

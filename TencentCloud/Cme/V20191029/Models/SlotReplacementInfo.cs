@@ -32,10 +32,11 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 替换类型，可取值有：
-        /// <li> AUDIO :音频;</li>
-        /// <li> VIDEO :视频;</li>
-        /// <li> IMAGE :图片。</li>
-        /// 注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。
+        /// <li> AUDIO ：音频；</li>
+        /// <li> VIDEO ：视频；</li>
+        /// <li> IMAGE ：图片；</li>
+        /// <li> TEXT ：文本。</li>
+        /// 注意：这里必须保证替换的素材类型与模板轨道数据的素材类型一致。如果替换的类型为Text,，则必须保证模板轨道数据中相应卡槽的位置标记的是文本。
         /// </summary>
         [JsonProperty("ReplacementType")]
         public string ReplacementType{ get; set; }
@@ -46,6 +47,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("MediaReplacementInfo")]
         public MediaReplacementInfo MediaReplacementInfo{ get; set; }
 
+        /// <summary>
+        /// 文本替换信息，仅当要替换的卡槽类型为文本时有效。
+        /// </summary>
+        [JsonProperty("TextReplacementInfo")]
+        public TextReplacementInfo TextReplacementInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "ReplacementType", this.ReplacementType);
             this.SetParamObj(map, prefix + "MediaReplacementInfo.", this.MediaReplacementInfo);
+            this.SetParamObj(map, prefix + "TextReplacementInfo.", this.TextReplacementInfo);
         }
     }
 }
