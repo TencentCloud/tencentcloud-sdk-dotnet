@@ -25,16 +25,16 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 过滤字段名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 过滤字段内容数组
+        /// 一个或者多个过滤值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
+
+        /// <summary>
+        /// 过滤键的名称。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Ecm.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

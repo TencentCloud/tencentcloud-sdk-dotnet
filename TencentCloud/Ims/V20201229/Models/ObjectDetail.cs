@@ -25,32 +25,31 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 序号
+        /// 该参数用于返回识别对象的ID以方便识别和区分。
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 标签名称
+        /// 该参数用于返回命中的实体标签。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 标签值，
-        /// 当标签为二维码时，表示URL地址，如Name为QrCode时，Value为"http//abc.com/aaa"
+        /// 该参数用于返回对应实体标签所对应的值或内容。如：当标签为*二维码(QrCode)*时，该字段为识别出的二维码对应的URL地址。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
         /// <summary>
-        /// 分数
+        /// 该参数用于返回对应实体标签命中的分值，取值为**0-100**，如：*QrCode 99* 则代表相应识别内容命中二维码场景标签的概率非常高。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// 检测框坐标
+        /// 该字段用于返回实体检测框的坐标位置（左上角xy坐标、长宽、旋转角度）以方便快速定位实体的相关信息。
         /// </summary>
         [JsonProperty("Location")]
         public Location Location{ get; set; }

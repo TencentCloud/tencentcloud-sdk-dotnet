@@ -30,6 +30,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Urls")]
         public string[] Urls{ get; set; }
 
+        /// <summary>
+        /// URL封禁日期
+        /// </summary>
+        [JsonProperty("Date")]
+        public string Date{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Urls.", this.Urls);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
         }
     }
 }

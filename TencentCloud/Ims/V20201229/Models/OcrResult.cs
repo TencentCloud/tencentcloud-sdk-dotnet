@@ -25,46 +25,44 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 场景识别结果
+        /// 该字段表示识别场景，取值默认为OCR（图片OCR识别）。
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
 
         /// <summary>
-        /// 建议您拿到判断结果后的执行操作。
-        /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+        /// 该字段用于返回优先级最高的恶意标签对应的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-        /// 以及其他令人反感、不安全或不适宜的内容类型。
+        /// 该字段用于返回OCR检测结果所对应的优先级最高的恶意标签，表示模型推荐的审核结果，建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 子标签检测结果
+        /// 该字段用于返回当前标签（Label）下对应的子标签的检测结果，如：*Porn-SexBehavior*等子标签。
         /// </summary>
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
         /// <summary>
-        /// 该标签模型命中的分值
+        /// 该字段用于返回当前标签（Label）下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容；*色情 0*，则表明该文本不属于色情内容。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// ocr结果详情
+        /// 该字段用于返回OCR识别出的结果的详细内容，如：文本内容、对应标签、识别框位置等信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Details")]
         public OcrTextDetail[] Details{ get; set; }
 
         /// <summary>
-        /// ocr识别出的文本结果
+        /// 该字段用于返回OCR识别出的文字信息。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

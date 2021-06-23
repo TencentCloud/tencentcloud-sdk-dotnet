@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.308</VersionPrefix>
+    <VersionPrefix>3.0.309</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,7 @@
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceSpecification.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIRequest.cs" />
@@ -225,6 +226,8 @@
     <Compile Include="Antiddos\V20200309\Models\CreateDefaultAlarmThresholdResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateIPAlarmThresholdConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateIPAlarmThresholdConfigResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateL7RuleCertsRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateL7RuleCertsResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreatePacketFilterConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreatePacketFilterConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateProtocolBlockConfigRequest.cs" />
@@ -257,6 +260,8 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeL7RulesBySSLCertIdRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeL7RulesBySSLCertIdResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBGPIPInstancesResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListBGPInstancesRequest.cs" />
@@ -291,6 +296,7 @@
     <Compile Include="Antiddos\V20200309\Models\ForwardListener.cs" />
     <Compile Include="Antiddos\V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
+    <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer4Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer7Rule.cs" />
@@ -316,6 +322,7 @@
     <Compile Include="Antiddos\V20200309\Models\SourceServer.cs" />
     <Compile Include="Antiddos\V20200309\Models\SpeedValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\StaticPackRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\SuccessCode.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintRelation.cs" />
@@ -12191,6 +12198,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterPublicLB.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
     <Compile Include="Tke\V20180525\Models\CommonName.cs" />
+    <Compile Include="Tke\V20180525\Models\ControllerStatus.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointRequest.cs" />
@@ -12246,6 +12254,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterControllersRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterControllersResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointStatusRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />

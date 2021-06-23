@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.308</VersionPrefix>
+    <VersionPrefix>3.0.309</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,7 @@
     <Compile Include="V20200309\Models\BGPInstanceSpecification.cs" />
     <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
+    <Compile Include="V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIRequest.cs" />
@@ -66,6 +67,8 @@
     <Compile Include="V20200309\Models\CreateDefaultAlarmThresholdResponse.cs" />
     <Compile Include="V20200309\Models\CreateIPAlarmThresholdConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreateIPAlarmThresholdConfigResponse.cs" />
+    <Compile Include="V20200309\Models\CreateL7RuleCertsRequest.cs" />
+    <Compile Include="V20200309\Models\CreateL7RuleCertsResponse.cs" />
     <Compile Include="V20200309\Models\CreatePacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreatePacketFilterConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateProtocolBlockConfigRequest.cs" />
@@ -98,6 +101,8 @@
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPIPInstancesRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPIPInstancesResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListBGPInstancesRequest.cs" />
@@ -132,6 +137,7 @@
     <Compile Include="V20200309\Models\ForwardListener.cs" />
     <Compile Include="V20200309\Models\IPAlarmThresholdRelation.cs" />
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
+    <Compile Include="V20200309\Models\InsL7Rules.cs" />
     <Compile Include="V20200309\Models\InstanceRelation.cs" />
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
@@ -157,6 +163,7 @@
     <Compile Include="V20200309\Models\SourceServer.cs" />
     <Compile Include="V20200309\Models\SpeedValue.cs" />
     <Compile Include="V20200309\Models\StaticPackRelation.cs" />
+    <Compile Include="V20200309\Models\SuccessCode.cs" />
     <Compile Include="V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="V20200309\Models\WaterPrintRelation.cs" />

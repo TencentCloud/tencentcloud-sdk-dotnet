@@ -25,31 +25,31 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 左上角横坐标
+        /// 该参数用于返回检测框**左上角位置的横坐标**（x）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
         /// </summary>
         [JsonProperty("X")]
         public float? X{ get; set; }
 
         /// <summary>
-        /// 左上角纵坐标
+        /// 该参数用于返回检测框**左上角位置的纵坐标**（y）所在的像素位置，结合剩余参数可唯一确定检测框的大小和位置。
         /// </summary>
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
         /// <summary>
-        /// 宽度
+        /// 该参数用于返回**检测框的宽度**（由左上角出发在x轴向右延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
         /// </summary>
         [JsonProperty("Width")]
         public float? Width{ get; set; }
 
         /// <summary>
-        /// 高度
+        /// 该参数用于返回**检测框的高度**（由左上角出发在y轴向下延伸的长度），结合剩余参数可唯一确定检测框的大小和位置。
         /// </summary>
         [JsonProperty("Height")]
         public float? Height{ get; set; }
 
         /// <summary>
-        /// 检测框的旋转角度
+        /// 该参数用于返回**检测框的旋转角度**，该参数结合X和Y两个坐标参数可唯一确定检测框的具体位置；取值：**0-360**（**角度制**），方向为**逆时针旋转**。
         /// </summary>
         [JsonProperty("Rotate")]
         public float? Rotate{ get; set; }

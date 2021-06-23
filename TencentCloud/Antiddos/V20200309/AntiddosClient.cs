@@ -333,6 +333,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 批量配置L7转发规则的证书供SSL测调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7RuleCertsRequest"/></param>
+        /// <returns><see cref="CreateL7RuleCertsResponse"/></returns>
+        public async Task<CreateL7RuleCertsResponse> CreateL7RuleCerts(CreateL7RuleCertsRequest req)
+        {
+             JsonResponseModel<CreateL7RuleCertsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateL7RuleCerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateL7RuleCertsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量配置L7转发规则的证书供SSL测调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateL7RuleCertsRequest"/></param>
+        /// <returns><see cref="CreateL7RuleCertsResponse"/></returns>
+        public CreateL7RuleCertsResponse CreateL7RuleCertsSync(CreateL7RuleCertsRequest req)
+        {
+             JsonResponseModel<CreateL7RuleCertsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateL7RuleCerts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateL7RuleCertsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加DDoS防护的特征过滤规则
         /// </summary>
         /// <param name="req"><see cref="CreatePacketFilterConfigRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDefaultAlarmThreshold");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefaultAlarmThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询与证书ID对于域名匹配的七层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7RulesBySSLCertIdRequest"/></param>
+        /// <returns><see cref="DescribeL7RulesBySSLCertIdResponse"/></returns>
+        public async Task<DescribeL7RulesBySSLCertIdResponse> DescribeL7RulesBySSLCertId(DescribeL7RulesBySSLCertIdRequest req)
+        {
+             JsonResponseModel<DescribeL7RulesBySSLCertIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeL7RulesBySSLCertId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeL7RulesBySSLCertIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询与证书ID对于域名匹配的七层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeL7RulesBySSLCertIdRequest"/></param>
+        /// <returns><see cref="DescribeL7RulesBySSLCertIdResponse"/></returns>
+        public DescribeL7RulesBySSLCertIdResponse DescribeL7RulesBySSLCertIdSync(DescribeL7RulesBySSLCertIdRequest req)
+        {
+             JsonResponseModel<DescribeL7RulesBySSLCertIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeL7RulesBySSLCertId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeL7RulesBySSLCertIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

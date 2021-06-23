@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 指定删除的监听器ID数组，若不填则删除负载均衡的所有监听器。
+        /// 指定删除的监听器ID数组，最大为20个。若不填则删除负载均衡的所有监听器。
         /// </summary>
         [JsonProperty("ListenerIds")]
         public string[] ListenerIds{ get; set; }

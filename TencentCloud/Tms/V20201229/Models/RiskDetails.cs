@@ -25,13 +25,13 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 风险类别，RiskAccount，RiskIP, RiskIMEI
+        /// 该字段用于返回账号信息检测对应的风险类别，取值为：**RiskAccount**（账号存在风险）、**RiskIP**（IP地址存在风险）、**RiskIMEI**（移动设备识别码存在风险）。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 风险等级，1:疑似，2：恶意
+        /// 该字段用于返回账号信息检测对应的风险等级，取值为：**1**（疑似存在风险）和**2**（存在恶意风险）。
         /// </summary>
         [JsonProperty("Level")]
         public long? Level{ get; set; }

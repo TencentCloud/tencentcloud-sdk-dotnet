@@ -253,6 +253,8 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 废弃接口下架
+        /// 
         /// 获取坐席用户列表（废弃）
         /// </summary>
         /// <param name="req"><see cref="DescribeSeatUserListRequest"/></param>
@@ -273,6 +275,8 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 废弃接口下架
+        /// 
         /// 获取坐席用户列表（废弃）
         /// </summary>
         /// <param name="req"><see cref="DescribeSeatUserListRequest"/></param>

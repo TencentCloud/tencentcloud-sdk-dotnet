@@ -1333,6 +1333,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 用于查询Kubernetes的各个原生控制器是否开启
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterControllersRequest"/></param>
+        /// <returns><see cref="DescribeClusterControllersResponse"/></returns>
+        public async Task<DescribeClusterControllersResponse> DescribeClusterControllers(DescribeClusterControllersRequest req)
+        {
+             JsonResponseModel<DescribeClusterControllersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterControllers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterControllersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询Kubernetes的各个原生控制器是否开启
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterControllersRequest"/></param>
+        /// <returns><see cref="DescribeClusterControllersResponse"/></returns>
+        public DescribeClusterControllersResponse DescribeClusterControllersSync(DescribeClusterControllersRequest req)
+        {
+             JsonResponseModel<DescribeClusterControllersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterControllers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterControllersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群访问端口状态(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterEndpointStatusRequest"/></param>

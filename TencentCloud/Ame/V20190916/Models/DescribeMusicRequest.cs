@@ -37,7 +37,7 @@ namespace TencentCloud.Ame.V20190916.Models
         public string IdentityId{ get; set; }
 
         /// <summary>
-        /// MP3-320K-FTD-P  为获取64kbps歌曲热门片段。
+        /// MP3-320K-FTD-P  为获取320kbps歌曲热门片段。
         /// MP3-320K-FTD 为获取320kbps已核验歌曲完整资源。
         /// </summary>
         [JsonProperty("SubItemType")]

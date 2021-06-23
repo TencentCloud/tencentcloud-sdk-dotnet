@@ -25,46 +25,45 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 序号
+        /// 该字段用于返回识别对象的ID以方便识别和区分。
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 仅当Label为Custom自定义关键词时有效，表示自定义库id
+        /// 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的ID，以方便自定义库管理和配置。
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
-        /// 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+        /// 该字段**仅当Label为Custom：自定义关键词时该参数有效**,用于返回自定义库的名称,以方便自定义库管理和配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
 
         /// <summary>
-        /// 图片ID
+        /// 该字段用于返回识别图像对象的ID以方便文件管理。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-        /// 以及其他其他令人反感、不安全或不适宜的内容类型。
+        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 自定义标签
+        /// 该字段用于返回其他自定义标签以满足您的定制化场景需求，若无需求则可略过。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tag")]
         public string Tag{ get; set; }
 
         /// <summary>
-        /// 命中的模型分值
+        /// 该字段用于返回对应模型命中的分值，取值为**0-100**，如：*Porn 99* 则代表相应识别内容命中色情标签的分值为99。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }

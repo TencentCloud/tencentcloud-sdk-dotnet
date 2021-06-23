@@ -25,43 +25,45 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 用户IP
+        /// 该字段表示业务用户对应设备的IP地址。<br>
+        /// 备注:目前仅支持IPv4地址记录，不支持IPv6地址记录。
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// Mac地址
+        /// 该字段表示业务用户对应的MAC地址，以方便设备识别与管理；其格式与取值与标准MAC地址一致。
         /// </summary>
         [JsonProperty("Mac")]
         public string Mac{ get; set; }
 
         /// <summary>
-        /// 设备指纹Token
+        /// *内测中，敬请期待。*
         /// </summary>
         [JsonProperty("TokenId")]
         public string TokenId{ get; set; }
 
         /// <summary>
-        /// 设备指纹ID
+        /// *内测中，敬请期待。*
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 设备序列号
+        /// 该字段表示业务用户对应设备的**IMEI码**（国际移动设备识别码），该识别码可用于识别每一部独立的手机等移动通信设备，方便设备识别与管理。<br>备注：格式为**15-17位纯数字**。
         /// </summary>
         [JsonProperty("IMEI")]
         public string IMEI{ get; set; }
 
         /// <summary>
-        /// IOS设备，Identifier For Advertising（广告标识符）
+        /// **iOS设备专用**，该字段表示业务用户对应的**IDFA**(广告标识符),这是由苹果公司提供的用于追踪用户的广告标识符，由一串16进制的32位数字和字母组成。<br>
+        /// 备注：苹果公司自2021年iOS14更新后允许用户手动关闭或者开启IDFA，故此字符串标记有效性可能有所降低。
         /// </summary>
         [JsonProperty("IDFA")]
         public string IDFA{ get; set; }
 
         /// <summary>
-        /// IOS设备，IDFV - Identifier For Vendor（应用开发商标识符）
+        /// **iOS设备专用**，该字段表示业务用户对应的**IDFV**(应用开发商标识符),这是由苹果公司提供的用于标注应用开发商的标识符，由一串16进制的32位数字和字母组成，可被用于唯一标识设备。
         /// </summary>
         [JsonProperty("IDFV")]
         public string IDFV{ get; set; }

@@ -25,50 +25,49 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// OCR文本内容
+        /// 该字段用于返回OCR识别出的文本内容。<br>备注：OCR文本识别上限在**5000字节内**。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-        /// 以及其他令人反感、不安全或不适宜的内容类型。
+        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 仅当Label为Custom自定义关键词时有效，表示自定义库id
+        /// 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的ID，以方便自定义库管理和配置。
         /// </summary>
         [JsonProperty("LibId")]
         public string LibId{ get; set; }
 
         /// <summary>
-        /// 仅当Label为Custom自定义关键词时有效，表示自定义库名称
+        /// 该字段**仅当Label为Custom自定义关键词时有效**，用于返回自定义库的名称，以方便自定义库管理和配置。
         /// </summary>
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
 
         /// <summary>
-        /// 该标签下命中的关键词
+        /// 该参数用于返回在当前label下命中的关键词。
         /// </summary>
         [JsonProperty("Keywords")]
         public string[] Keywords{ get; set; }
 
         /// <summary>
-        /// 该标签模型命中的分值
+        /// 该参数用于返回在当前恶意标签下模型命中的分值，取值为**0-100**；分数越高，代表当前场景越符合该恶意标签所对应的场景。
         /// </summary>
         [JsonProperty("Score")]
         public ulong? Score{ get; set; }
 
         /// <summary>
-        /// OCR位置
+        /// 该参数用于返回OCR检测框在图片中的位置（左上角xy坐标、长宽、旋转角度），以方便快速定位识别文字的相关信息。
         /// </summary>
         [JsonProperty("Location")]
         public Location Location{ get; set; }
 
         /// <summary>
-        /// OCR文本识别置信度
+        /// 该参数用于返回OCR文本识别结果的置信度，取值在**0**（**置信度最低**）-**100**（**置信度最高**），越高代表对应图像越有可能是识别出的文字；如：*你好 99*，则表明OCR识别框内的文字大概率是”你好“。
         /// </summary>
         [JsonProperty("Rate")]
         public ulong? Rate{ get; set; }

@@ -25,55 +25,61 @@ namespace TencentCloud.Ims.V20201229.Models
     {
         
         /// <summary>
-        /// 业务用户ID 如填写，会根据账号历史恶意情况，判定消息有害结果，特别是有利于可疑恶意情况下的辅助判断。账号可以填写微信uin、QQ号、微信openid、QQopenid、字符串等。该字段和账号类别确定唯一账号。
+        /// 该字段表示业务用户ID,填写后，系统可根据账号过往违规历史优化审核结果判定，有利于存在可疑违规风险时的辅助判断。<br>
+        /// 备注：该字段可传入微信openid、QQopenid、字符串等账号信息，与账号类别参数（AccountType）配合使用可确定唯一账号。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 业务用户ID类型 "1-微信uin 2-QQ号 3-微信群uin 4-qq群号 5-微信openid 6-QQopenid 7-其它string"
-        /// </summary>
-        [JsonProperty("AccountType")]
-        public string AccountType{ get; set; }
-
-        /// <summary>
-        /// 用户昵称
+        /// 该字段表示业务用户对应的账号昵称信息。
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 性别 默认0 未知 1 男性 2 女性
+        /// 该字段表示业务用户ID对应的账号类型，取值：**1**-微信uin，**2**-QQ号，**3**-微信群uin，**4**-qq群号，**5**-微信openid，**6**-QQopenid，**7**-其它string。<br>
+        /// 该字段与账号ID参数（UserId）配合使用可确定唯一账号。
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
+
+        /// <summary>
+        /// 该字段表示业务用户对应账号的性别信息。<br>
+        /// 取值：**0**（默认值，代表性别未知）、**1**（男性）、**2**（女性）。
         /// </summary>
         [JsonProperty("Gender")]
         public ulong? Gender{ get; set; }
 
         /// <summary>
-        /// 年龄 默认0 未知
+        /// 该字段表示业务用户对应账号的年龄信息。<br>
+        /// 取值：**0**（默认值，代表年龄未知）-（**自定义年龄上限**）之间的整数。
         /// </summary>
         [JsonProperty("Age")]
         public ulong? Age{ get; set; }
 
         /// <summary>
-        /// 用户等级，默认0 未知 1 低 2 中 3 高
+        /// 该字段表示业务用户对应账号的等级信息。<br>
+        /// 取值：**0**（默认值，代表等级未知）、**1**（等级较低）、**2**（等级中等）、**3**（等级较高），目前**暂不支持自定义等级**。
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 该字段表示业务用户对应账号的手机号信息，支持全球各地区手机号的记录。<br>
+        /// 备注：请保持手机号格式的统一，如区号格式（086/+86）等。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户简介，长度不超过5000字
+        /// 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，**长度不超过5000个汉字字符**。
         /// </summary>
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 用户头像图片链接
+        /// 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。<br>备注：头像图片**大小不超过5MB**，建议**分辨率不低于256x256**；图片下载时间限制为3秒，超过则会返回下载超时。
         /// </summary>
         [JsonProperty("HeadUrl")]
         public string HeadUrl{ get; set; }
@@ -85,8 +91,8 @@ namespace TencentCloud.Ims.V20201229.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
-            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "Nickname", this.Nickname);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "Gender", this.Gender);
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "Level", this.Level);
