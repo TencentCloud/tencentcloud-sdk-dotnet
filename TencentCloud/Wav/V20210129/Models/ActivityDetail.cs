@@ -53,14 +53,14 @@ namespace TencentCloud.Wav.V20210129.Models
         public long? ActivityType{ get; set; }
 
         /// <summary>
-        /// 活动开始时间，单位：秒
+        /// 活动开始时间戳，单位：秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 活动结束时间，单位：秒
+        /// 活动结束时间戳，单位：秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
@@ -81,7 +81,7 @@ namespace TencentCloud.Wav.V20210129.Models
         public string PrivacyAgreementId{ get; set; }
 
         /// <summary>
-        /// 活动更新时间，单位：秒
+        /// 活动更新时间戳，单位：秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]

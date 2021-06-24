@@ -25,13 +25,17 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 媒资绑定模板 ID。
+        /// 媒资绑定模板 ID，可取值为：
+        /// <li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
+        /// <li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
+        /// 
+        /// 注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 媒资绑定媒体路径或文件 ID。
+        /// 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
         /// </summary>
         [JsonProperty("MediaKey")]
         public string MediaKey{ get; set; }

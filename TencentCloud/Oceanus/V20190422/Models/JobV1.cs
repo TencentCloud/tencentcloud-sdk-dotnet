@@ -74,7 +74,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 作业类型
+        /// 作业类型，1：sql作业，2：Jar作业
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("JobType")]
@@ -213,6 +213,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ClusterStatus")]
         public long? ClusterStatus{ get; set; }
 
+        /// <summary>
+        /// 细粒度下的运行的CU数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RunningCu")]
+        public float? RunningCu{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "WebUIUrl", this.WebUIUrl);
             this.SetParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
+            this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
         }
     }
 }

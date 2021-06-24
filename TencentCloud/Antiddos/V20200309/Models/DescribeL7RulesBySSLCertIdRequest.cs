@@ -24,12 +24,26 @@ namespace TencentCloud.Antiddos.V20200309.Models
     public class DescribeL7RulesBySSLCertIdRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 域名状态，可取bindable, binded, opened, closed, all，all表示全部状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 证书ID列表
+        /// </summary>
+        [JsonProperty("CertIds")]
+        public string[] CertIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "CertIds.", this.CertIds);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.309</VersionPrefix>
+    <VersionPrefix>3.0.310</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,9 +213,12 @@
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceSpecification.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateBoundIPRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateBoundIPResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />

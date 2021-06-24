@@ -84,6 +84,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogCollect")]
         public bool? LogCollect{ get; set; }
 
+        /// <summary>
+        /// JobManager规格
+        /// </summary>
+        [JsonProperty("JobManagerSpec")]
+        public float? JobManagerSpec{ get; set; }
+
+        /// <summary>
+        /// TaskManager规格
+        /// </summary>
+        [JsonProperty("TaskManagerSpec")]
+        public float? TaskManagerSpec{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
             this.SetParamSimple(map, prefix + "COSBucket", this.COSBucket);
             this.SetParamSimple(map, prefix + "LogCollect", this.LogCollect);
+            this.SetParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
+            this.SetParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
         }
     }
 }

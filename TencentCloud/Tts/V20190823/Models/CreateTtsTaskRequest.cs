@@ -74,7 +74,7 @@ namespace TencentCloud.Tts.V20190823.Models
         public ulong? SampleRate{ get; set; }
 
         /// <summary>
-        /// 返回音频格式，可取值：mp3（默认），mp3，pcm
+        /// 返回音频格式，可取值：mp3（默认），wav，pcm
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }

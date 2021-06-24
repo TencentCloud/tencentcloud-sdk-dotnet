@@ -21,20 +21,20 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateL7RuleCertsRequest : AbstractModel
+    public class CreateBoundIPResponse : AbstractModel
     {
         
         /// <summary>
-        /// SSL证书ID
+        /// 成功码
         /// </summary>
-        [JsonProperty("CertId")]
-        public string CertId{ get; set; }
+        [JsonProperty("Success")]
+        public SuccessCode Success{ get; set; }
 
         /// <summary>
-        /// L7域名转发规则列表
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("L7Rules")]
-        public InsL7Rules[] L7Rules{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamArrayObj(map, prefix + "L7Rules.", this.L7Rules);
+            this.SetParamObj(map, prefix + "Success.", this.Success);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
