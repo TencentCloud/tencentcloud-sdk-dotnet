@@ -57,6 +57,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableCandWord")]
         public bool? EnableCandWord{ get; set; }
 
+        /// <summary>
+        /// 预处理开关，功能是检测图片倾斜的角度，将原本倾斜的图片矫正。该参数默认值为true。
+        /// </summary>
+        [JsonProperty("Preprocess")]
+        public bool? Preprocess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "EnableCoordPoint", this.EnableCoordPoint);
             this.SetParamSimple(map, prefix + "EnableCandWord", this.EnableCandWord);
+            this.SetParamSimple(map, prefix + "Preprocess", this.Preprocess);
         }
     }
 }

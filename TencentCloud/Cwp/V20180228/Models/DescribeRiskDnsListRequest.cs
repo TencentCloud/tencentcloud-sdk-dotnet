@@ -48,13 +48,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序方式
+        /// 排序方式：根据请求次数排序：asc-升序/desc-降序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段
+        /// 排序字段：AccessCount-请求次数
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

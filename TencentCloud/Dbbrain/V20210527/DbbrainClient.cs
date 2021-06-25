@@ -693,6 +693,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 查询关系型数据库的实时线程列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySqlProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMySqlProcessListResponse"/></returns>
+        public async Task<DescribeMySqlProcessListResponse> DescribeMySqlProcessList(DescribeMySqlProcessListRequest req)
+        {
+             JsonResponseModel<DescribeMySqlProcessListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMySqlProcessList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMySqlProcessListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询关系型数据库的实时线程列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMySqlProcessListRequest"/></param>
+        /// <returns><see cref="DescribeMySqlProcessListResponse"/></returns>
+        public DescribeMySqlProcessListResponse DescribeMySqlProcessListSync(DescribeMySqlProcessListRequest req)
+        {
+             JsonResponseModel<DescribeMySqlProcessListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMySqlProcessList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMySqlProcessListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAuditLogDownloadUrlsRequest"/></param>

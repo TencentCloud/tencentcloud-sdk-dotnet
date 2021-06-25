@@ -25,7 +25,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
     {
         
         /// <summary>
-        /// 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+        /// 接收消息的topic的名字, 这里尽量需要使用topic的全路径，如果不指定，即：tenant/namespace/topic。默认使用的是：public/default
         /// </summary>
         [JsonProperty("Topic")]
         public string Topic{ get; set; }

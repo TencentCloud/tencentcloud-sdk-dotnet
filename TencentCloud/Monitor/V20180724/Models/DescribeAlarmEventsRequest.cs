@@ -36,6 +36,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 监控类型，如 MT_QCE。如果不填默认为 MT_QCE。
+        /// </summary>
+        [JsonProperty("MonitorType")]
+        public string MonitorType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
         }
     }
 }

@@ -43,13 +43,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键。
+        /// 排序键，目前支持 QueryTime,ExecTimes,RowsSent,LockTime以及RowsExamined 等排序键，默认为QueryTime。
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，支持ASC（升序）以及DESC（降序）。
+        /// 排序方式，支持ASC（升序）以及DESC（降序），默认为DESC。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

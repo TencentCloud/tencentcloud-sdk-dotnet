@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.310</VersionPrefix>
+    <VersionPrefix>3.0.311</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4885,6 +4885,8 @@
     <Compile Include="Dbbrain\V20210527\Models\DescribeHealthScoreResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeMySqlProcessListRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeMySqlProcessListResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -4922,6 +4924,7 @@
     <Compile Include="Dbbrain\V20210527\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorMetric.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorMetricSeriesData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\MySqlProcess.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ProfileInfo.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SchemaItem.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SchemaSpaceData.cs" />
@@ -9665,6 +9668,8 @@
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsV2Request.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeAgentSelfPayDealsV2Response.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeClientBalanceNewRequest.cs" />
+    <Compile Include="Partners\V20180321\Models\DescribeClientBalanceNewResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBaseInfoRequest.cs" />

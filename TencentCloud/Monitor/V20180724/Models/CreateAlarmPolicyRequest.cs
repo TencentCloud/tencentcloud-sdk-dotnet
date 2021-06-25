@@ -96,6 +96,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TriggerTasks")]
         public AlarmPolicyTriggerTask[] TriggerTasks{ get; set; }
 
+        /// <summary>
+        /// 全局过滤条件
+        /// </summary>
+        [JsonProperty("Filter")]
+        public AlarmPolicyFilter Filter{ get; set; }
+
+        /// <summary>
+        /// 聚合维度列表，指定按哪些维度 key 来做 group by
+        /// </summary>
+        [JsonProperty("GroupBy")]
+        public string[] GroupBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "EventCondition.", this.EventCondition);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
             this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
+            this.SetParamObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
         }
     }
 }

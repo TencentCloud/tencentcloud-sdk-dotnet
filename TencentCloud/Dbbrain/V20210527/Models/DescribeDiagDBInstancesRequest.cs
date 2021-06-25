@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数，分页值。
+        /// 分页参数，分页值，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

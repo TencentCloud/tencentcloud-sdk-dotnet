@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string MessageId{ get; set; }
 
         /// <summary>
-        /// Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，如果不指定，默认使用的是：public/default
+        /// Topic 名字（可从 receiveMessage 的返回值中获得）这里尽量需要使用topic的全路径，即：tenant/namespace/topic。如果不指定，默认使用的是：public/default
         /// </summary>
         [JsonProperty("AckTopic")]
         public string AckTopic{ get; set; }

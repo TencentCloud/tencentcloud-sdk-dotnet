@@ -613,7 +613,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientBalanceRequest"/></param>
         /// <returns><see cref="DescribeClientBalanceResponse"/></returns>
@@ -633,7 +633,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeClientBalanceNew】为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额.
         /// </summary>
         /// <param name="req"><see cref="DescribeClientBalanceRequest"/></param>
         /// <returns><see cref="DescribeClientBalanceResponse"/></returns>
@@ -644,6 +644,46 @@ namespace TencentCloud.Partners.V20180321
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClientBalance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientBalanceNewRequest"/></param>
+        /// <returns><see cref="DescribeClientBalanceNewResponse"/></returns>
+        public async Task<DescribeClientBalanceNewResponse> DescribeClientBalanceNew(DescribeClientBalanceNewRequest req)
+        {
+             JsonResponseModel<DescribeClientBalanceNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClientBalanceNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为合作伙伴提供查询客户余额能力。调用者必须是合作伙伴，只能查询自己名下客户余额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClientBalanceNewRequest"/></param>
+        /// <returns><see cref="DescribeClientBalanceNewResponse"/></returns>
+        public DescribeClientBalanceNewResponse DescribeClientBalanceNewSync(DescribeClientBalanceNewRequest req)
+        {
+             JsonResponseModel<DescribeClientBalanceNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClientBalanceNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClientBalanceNewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

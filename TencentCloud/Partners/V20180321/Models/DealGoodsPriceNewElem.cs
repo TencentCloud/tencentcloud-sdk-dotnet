@@ -25,10 +25,16 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 实付金额
+        /// 实付金额（单位：分）
         /// </summary>
         [JsonProperty("RealTotalCost")]
         public long? RealTotalCost{ get; set; }
+
+        /// <summary>
+        /// 原始金额（不含折扣，单位：分）
+        /// </summary>
+        [JsonProperty("OriginalTotalCost")]
+        public long? OriginalTotalCost{ get; set; }
 
 
         /// <summary>
@@ -37,6 +43,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
+            this.SetParamSimple(map, prefix + "OriginalTotalCost", this.OriginalTotalCost);
         }
     }
 }

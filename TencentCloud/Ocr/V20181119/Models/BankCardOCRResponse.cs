@@ -82,6 +82,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarningCode{ get; set; }
 
         /// <summary>
+        /// 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QualityValue")]
+        public long? QualityValue{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -101,6 +108,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "BorderCutImage", this.BorderCutImage);
             this.SetParamSimple(map, prefix + "CardNoImage", this.CardNoImage);
             this.SetParamArraySimple(map, prefix + "WarningCode.", this.WarningCode);
+            this.SetParamSimple(map, prefix + "QualityValue", this.QualityValue);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

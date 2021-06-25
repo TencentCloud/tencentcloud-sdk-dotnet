@@ -67,7 +67,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认20。
+        /// 返回数量，默认20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

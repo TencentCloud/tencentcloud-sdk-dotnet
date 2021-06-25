@@ -93,9 +93,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 新增分类，用于管理素材。
-        /// <li>分类层数不能超过10；</li>
-        /// <li>子分类数不能超过10。</li>
+        /// 新增分类，用于管理素材。分类层数不能超过20。
         /// </summary>
         /// <param name="req"><see cref="CreateClassRequest"/></param>
         /// <returns><see cref="CreateClassResponse"/></returns>
@@ -115,9 +113,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 新增分类，用于管理素材。
-        /// <li>分类层数不能超过10；</li>
-        /// <li>子分类数不能超过10。</li>
+        /// 新增分类，用于管理素材。分类层数不能超过20。
         /// </summary>
         /// <param name="req"><see cref="CreateClassRequest"/></param>
         /// <returns><see cref="CreateClassResponse"/></returns>

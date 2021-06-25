@@ -27,7 +27,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// <summary>
         /// 录制间隔。
         /// 单位秒，默认：1800。
-        /// 取值范围：300-7200。
+        /// 取值范围：60-7200。
         /// 此参数对 HLS 无效，当录制 HLS 时从推流到断流生成一个文件。
         /// </summary>
         [JsonProperty("RecordInterval")]
@@ -35,7 +35,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 录制存储时长。
-        /// 单位秒，取值范围： 0 - 93312000。
+        /// 单位秒，取值范围： 0 - 1500天。
         /// 0：表示永久存储。
         /// </summary>
         [JsonProperty("StorageTime")]
@@ -77,6 +77,29 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("VodFileName")]
         public string VodFileName{ get; set; }
 
+        /// <summary>
+        /// 任务流
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Procedure")]
+        public string Procedure{ get; set; }
+
+        /// <summary>
+        /// 视频存储策略。
+        /// normal：标准存储。
+        /// cold：低频存储。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageMode")]
+        public string StorageMode{ get; set; }
+
+        /// <summary>
+        /// 点播应用分类
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +111,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
             this.SetParamSimple(map, prefix + "VodFileName", this.VodFileName);
+            this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "StorageMode", this.StorageMode);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
         }
     }
 }

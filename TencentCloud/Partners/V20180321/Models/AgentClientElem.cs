@@ -67,7 +67,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public ulong? HasOverdueBill{ get; set; }
 
         /// <summary>
-        /// 1:待代理商审核;2:待腾讯云审核
+        /// 1:待代理商审核;2:待腾讯云审核4:待腾讯云渠道审批
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -86,6 +86,13 @@ namespace TencentCloud.Partners.V20180321.Models
         [JsonProperty("SalesName")]
         public string SalesName{ get; set; }
 
+        /// <summary>
+        /// 客户名称，此字段和控制台返回一致。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientName")]
+        public string ClientName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SalesUin", this.SalesUin);
             this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
+            this.SetParamSimple(map, prefix + "ClientName", this.ClientName);
         }
     }
 }

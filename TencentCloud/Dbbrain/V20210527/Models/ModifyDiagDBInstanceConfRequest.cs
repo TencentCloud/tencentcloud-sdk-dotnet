@@ -25,7 +25,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// 巡检开关。
+        /// 实例配置，包括巡检、概览开关等。
         /// </summary>
         [JsonProperty("InstanceConfs")]
         public InstanceConfs InstanceConfs{ get; set; }

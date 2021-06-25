@@ -25,19 +25,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// sql总锁等待时间
+        /// sql总锁等待时间，单位秒
         /// </summary>
         [JsonProperty("LockTime")]
         public float? LockTime{ get; set; }
 
         /// <summary>
-        /// 最大锁等待时间
+        /// 最大锁等待时间，单位秒
         /// </summary>
         [JsonProperty("LockTimeMax")]
         public float? LockTimeMax{ get; set; }
 
         /// <summary>
-        /// 最小锁等待时间
+        /// 最小锁等待时间，单位秒
         /// </summary>
         [JsonProperty("LockTimeMin")]
         public float? LockTimeMin{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? RowsExaminedMin{ get; set; }
 
         /// <summary>
-        /// 总耗时
+        /// 总耗时，单位秒
         /// </summary>
         [JsonProperty("QueryTime")]
         public float? QueryTime{ get; set; }
 
         /// <summary>
-        /// 最大执行时间
+        /// 最大执行时间，单位秒
         /// </summary>
         [JsonProperty("QueryTimeMax")]
         public float? QueryTimeMax{ get; set; }
 
         /// <summary>
-        /// 最小执行时间
+        /// 最小执行时间，单位秒
         /// </summary>
         [JsonProperty("QueryTimeMin")]
         public float? QueryTimeMin{ get; set; }
@@ -121,31 +121,31 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Schema{ get; set; }
 
         /// <summary>
-        /// 总耗时占比
+        /// 总耗时占比，单位%
         /// </summary>
         [JsonProperty("QueryTimeRatio")]
         public float? QueryTimeRatio{ get; set; }
 
         /// <summary>
-        /// sql总锁等待时间占比
+        /// sql总锁等待时间占比，单位%
         /// </summary>
         [JsonProperty("LockTimeRatio")]
         public float? LockTimeRatio{ get; set; }
 
         /// <summary>
-        /// 总扫描行数占比
+        /// 总扫描行数占比，单位%
         /// </summary>
         [JsonProperty("RowsExaminedRatio")]
         public float? RowsExaminedRatio{ get; set; }
 
         /// <summary>
-        /// 总返回行数占比
+        /// 总返回行数占比，单位%
         /// </summary>
         [JsonProperty("RowsSentRatio")]
         public float? RowsSentRatio{ get; set; }
 
         /// <summary>
-        /// 平均执行时间
+        /// 平均执行时间，单位秒
         /// </summary>
         [JsonProperty("QueryTimeAvg")]
         public float? QueryTimeAvg{ get; set; }
@@ -157,7 +157,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public float? RowsSentAvg{ get; set; }
 
         /// <summary>
-        /// 平均锁等待时间
+        /// 平均锁等待时间，单位秒
         /// </summary>
         [JsonProperty("LockTimeAvg")]
         public float? LockTimeAvg{ get; set; }

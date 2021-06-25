@@ -68,6 +68,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableBorderCheck")]
         public bool? EnableBorderCheck{ get; set; }
 
+        /// <summary>
+        /// 是否返回图片质量分数（图片质量分数是评价一个图片的模糊程度的标准），默认false。
+        /// </summary>
+        [JsonProperty("EnableQualityValue")]
+        public bool? EnableQualityValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "EnableCopyCheck", this.EnableCopyCheck);
             this.SetParamSimple(map, prefix + "EnableReshootCheck", this.EnableReshootCheck);
             this.SetParamSimple(map, prefix + "EnableBorderCheck", this.EnableBorderCheck);
+            this.SetParamSimple(map, prefix + "EnableQualityValue", this.EnableQualityValue);
         }
     }
 }
