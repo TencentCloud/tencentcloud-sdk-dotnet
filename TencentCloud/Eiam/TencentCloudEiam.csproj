@@ -1,0 +1,94 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{140B79ED-37B5-377F-AF01-141CBF107CFF}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.312</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Eiam</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210420\EiamClient.cs" />
+    <Compile Include="V20210420\Models\AddUserToUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\AddUserToUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\ApplicationAuthorizationInfo.cs" />
+    <Compile Include="V20210420\Models\CreateOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\CreateOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\CreateUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\CreateUserRequest.cs" />
+    <Compile Include="V20210420\Models\CreateUserResponse.cs" />
+    <Compile Include="V20210420\Models\DecribePublicKeyRequest.cs" />
+    <Compile Include="V20210420\Models\DecribePublicKeyResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteUserRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeApplicationRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeApplicationResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeUserInfoRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeUserInfoResponse.cs" />
+    <Compile Include="V20210420\Models\InheritedForm.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserRequest.cs" />
+    <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserResponse.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsOfUserRequest.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsOfUserResponse.cs" />
+    <Compile Include="V20210420\Models\ListUsersInOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\ListUsersInOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\ListUsersInUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\ListUsersInUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\OrgNodeChildInfo.cs" />
+    <Compile Include="V20210420\Models\OrgNodeChildUserInfo.cs" />
+    <Compile Include="V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
+    <Compile Include="V20210420\Models\RemoveUserFromUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\UpdateOrgNodeRequest.cs" />
+    <Compile Include="V20210420\Models\UpdateOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\UserInfo.cs" />
+  </ItemGroup>
+</Project>

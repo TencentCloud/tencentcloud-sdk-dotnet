@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.311</VersionPrefix>
+    <VersionPrefix>3.0.312</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -338,6 +338,7 @@
     <Compile Include="V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
+    <Compile Include="V20180228\Models\RiskDnsList.cs" />
     <Compile Include="V20180228\Models\ScanVulRequest.cs" />
     <Compile Include="V20180228\Models\ScanVulResponse.cs" />
     <Compile Include="V20180228\Models\SearchTemplate.cs" />

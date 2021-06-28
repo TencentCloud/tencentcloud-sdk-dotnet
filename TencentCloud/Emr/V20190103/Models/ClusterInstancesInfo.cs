@@ -254,6 +254,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ProductId")]
         public long? ProductId{ get; set; }
 
+        /// <summary>
+        /// 地区ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +296,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ServiceClass", this.ServiceClass);
             this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

@@ -59,6 +59,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("MountTarget")]
         public string MountTarget{ get; set; }
 
+        /// <summary>
+        /// 挂载设备名或分区名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiskPartition")]
+        public string DiskPartition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "AutoFormatAndMount", this.AutoFormatAndMount);
             this.SetParamSimple(map, prefix + "MountTarget", this.MountTarget);
+            this.SetParamSimple(map, prefix + "DiskPartition", this.DiskPartition);
         }
     }
 }

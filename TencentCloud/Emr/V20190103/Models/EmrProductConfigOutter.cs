@@ -136,6 +136,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("CbsEncrypt")]
         public long? CbsEncrypt{ get; set; }
 
+        /// <summary>
+        /// 自定义应用角色。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationRole")]
+        public string ApplicationRole{ get; set; }
+
+        /// <summary>
+        /// 安全组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroups")]
+        public string[] SecurityGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +172,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "SecurityOn", this.SecurityOn);
             this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
+            this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
+            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         }
     }
 }
