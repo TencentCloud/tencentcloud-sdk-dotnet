@@ -413,6 +413,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalUserMappingInfoRequest"/></param>
+        /// <returns><see cref="QueryExternalUserMappingInfoResponse"/></returns>
+        public async Task<QueryExternalUserMappingInfoResponse> QueryExternalUserMappingInfo(QueryExternalUserMappingInfoRequest req)
+        {
+             JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryExternalUserMappingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserMappingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalUserMappingInfoRequest"/></param>
+        /// <returns><see cref="QueryExternalUserMappingInfoResponse"/></returns>
+        public QueryExternalUserMappingInfoResponse QueryExternalUserMappingInfoSync(QueryExternalUserMappingInfoRequest req)
+        {
+             JsonResponseModel<QueryExternalUserMappingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryExternalUserMappingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserMappingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询小程序码列表接口
         /// </summary>
         /// <param name="req"><see cref="QueryMiniAppCodeListRequest"/></param>

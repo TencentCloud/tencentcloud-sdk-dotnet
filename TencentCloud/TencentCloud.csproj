@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.312</VersionPrefix>
+    <VersionPrefix>3.0.313</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5890,6 +5890,8 @@
     <Compile Include="Eiam\V20210420\Models\ListUsersInOrgNodeResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInUserGroupRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInUserGroupResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\ModifyUserInfoRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\ModifyUserInfoResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\OrgNodeChildInfo.cs" />
     <Compile Include="Eiam\V20210420\Models\OrgNodeChildUserInfo.cs" />
     <Compile Include="Eiam\V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
@@ -14386,6 +14388,7 @@
     <Compile Include="Wav\V20210129\Models\ExternalContact.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalContactSimpleInfo.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalContactTag.cs" />
+    <Compile Include="Wav\V20210129\Models\ExternalUserMappingInfo.cs" />
     <Compile Include="Wav\V20210129\Models\FollowUser.cs" />
     <Compile Include="Wav\V20210129\Models\LiveCodeDetail.cs" />
     <Compile Include="Wav\V20210129\Models\MiniAppCodeInfo.cs" />
@@ -14403,6 +14406,8 @@
     <Compile Include="Wav\V20210129\Models\QueryExternalContactDetailResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalContactListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalContactListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalUserMappingInfoRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryExternalUserMappingInfoResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\TagDetailInfo.cs" />

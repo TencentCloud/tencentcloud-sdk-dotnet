@@ -773,6 +773,46 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 通过用户名或用户 id 冻结用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserInfoRequest"/></param>
+        /// <returns><see cref="ModifyUserInfoResponse"/></returns>
+        public async Task<ModifyUserInfoResponse> ModifyUserInfo(ModifyUserInfoRequest req)
+        {
+             JsonResponseModel<ModifyUserInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过用户名或用户 id 冻结用户
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserInfoRequest"/></param>
+        /// <returns><see cref="ModifyUserInfoResponse"/></returns>
+        public ModifyUserInfoResponse ModifyUserInfoSync(ModifyUserInfoRequest req)
+        {
+             JsonResponseModel<ModifyUserInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 从用户组中移除用户
         /// </summary>
         /// <param name="req"><see cref="RemoveUserFromUserGroupRequest"/></param>

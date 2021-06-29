@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{140B79ED-37B5-377F-AF01-141CBF107CFF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.312</VersionPrefix>
+    <VersionPrefix>3.0.313</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -83,6 +83,8 @@
     <Compile Include="V20210420\Models\ListUsersInOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\ModifyUserInfoRequest.cs" />
+    <Compile Include="V20210420\Models\ModifyUserInfoResponse.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildInfo.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildUserInfo.cs" />
     <Compile Include="V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
