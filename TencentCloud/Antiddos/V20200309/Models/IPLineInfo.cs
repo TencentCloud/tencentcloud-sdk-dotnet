@@ -30,7 +30,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// "ctcc"：电信线路IP
         /// "cucc"：联通线路IP
         /// "cmcc"：移动线路IP
-        /// "abroad"：海外线路IP
+        /// "abroad"：境外线路IP
         /// ]
         /// </summary>
         [JsonProperty("Type")]
