@@ -321,6 +321,52 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 图像标签测试接口
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectLabelBetaRequest"/></param>
+        /// <returns><see cref="DetectLabelBetaResponse"/></returns>
+        public async Task<DetectLabelBetaResponse> DetectLabelBeta(DetectLabelBetaRequest req)
+        {
+             JsonResponseModel<DetectLabelBetaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectLabelBeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectLabelBetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 图像标签测试接口
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectLabelBetaRequest"/></param>
+        /// <returns><see cref="DetectLabelBetaResponse"/></returns>
+        public DetectLabelBetaResponse DetectLabelBetaSync(DetectLabelBetaRequest req)
+        {
+             JsonResponseModel<DetectLabelBetaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectLabelBeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectLabelBetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 可以识别输入的图片中是否包含不良行为，例如打架斗殴、赌博、抽烟等，可以应用于广告图、直播截图、短视频截图等审核，减少不良行为对平台内容质量的影响，维护健康向上的互联网环境。
         /// >     
         /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。

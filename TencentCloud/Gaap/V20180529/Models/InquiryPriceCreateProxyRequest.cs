@@ -66,6 +66,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("BillingType")]
         public long? BillingType{ get; set; }
 
+        /// <summary>
+        /// IP版本，可取值：IPv4、IPv6，默认值IPv4
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerRegion", this.RealServerRegion);
             this.SetParamSimple(map, prefix + "Concurrent", this.Concurrent);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gaap.V20180529.Models
+namespace TencentCloud.Cii.V20210408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRegionAndPriceRequest : AbstractModel
+    public class StructureResultObject : AbstractModel
     {
         
         /// <summary>
-        /// IP版本，可取值：IPv4、IPv6，默认值IPv4
+        /// 0表示正常返回
         /// </summary>
-        [JsonProperty("IPAddressVersion")]
-        public string IPAddressVersion{ get; set; }
+        [JsonProperty("Code")]
+        public ulong? Code{ get; set; }
+
+        /// <summary>
+        /// 报告类型
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
+        /// <summary>
+        /// 结构化结果
+        /// </summary>
+        [JsonProperty("StructureResult")]
+        public string StructureResult{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "StructureResult", this.StructureResult);
         }
     }
 }

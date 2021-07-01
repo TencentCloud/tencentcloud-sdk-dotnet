@@ -53,7 +53,7 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
-        /// 基于提供的客户及保单信息，启动结构化识别任务。
+        /// 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
         /// </summary>
         /// <param name="req"><see cref="CreateStructureTaskRequest"/></param>
         /// <returns><see cref="CreateStructureTaskResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
-        /// 基于提供的客户及保单信息，启动结构化识别任务。
+        /// 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
         /// </summary>
         /// <param name="req"><see cref="CreateStructureTaskRequest"/></param>
         /// <returns><see cref="CreateStructureTaskResponse"/></returns>
@@ -124,6 +124,46 @@ namespace TencentCloud.Cii.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStructCompareData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructCompareDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeStructureResult)用于查询结构化结果接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureResultRequest"/></param>
+        /// <returns><see cref="DescribeStructureResultResponse"/></returns>
+        public async Task<DescribeStructureResultResponse> DescribeStructureResult(DescribeStructureResultRequest req)
+        {
+             JsonResponseModel<DescribeStructureResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStructureResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeStructureResult)用于查询结构化结果接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureResultRequest"/></param>
+        /// <returns><see cref="DescribeStructureResultResponse"/></returns>
+        public DescribeStructureResultResponse DescribeStructureResultSync(DescribeStructureResultRequest req)
+        {
+             JsonResponseModel<DescribeStructureResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStructureResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

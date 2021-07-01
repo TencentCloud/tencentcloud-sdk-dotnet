@@ -210,6 +210,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ClientIPMethod")]
         public long?[] ClientIPMethod{ get; set; }
 
+        /// <summary>
+        /// IP版本：IPv4、IPv6
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPAddressVersion")]
+        public string IPAddressVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +250,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ModifyConfigTime", this.ModifyConfigTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
+            this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
         }
     }
 }

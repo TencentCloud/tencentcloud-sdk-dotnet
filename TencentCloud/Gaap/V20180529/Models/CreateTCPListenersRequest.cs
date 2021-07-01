@@ -96,6 +96,18 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("FailoverSwitch")]
         public long? FailoverSwitch{ get; set; }
 
+        /// <summary>
+        /// 健康阈值，表示连续检查成功多少次后认定源站健康。范围为1到10
+        /// </summary>
+        [JsonProperty("HealthyThreshold")]
+        public ulong? HealthyThreshold{ get; set; }
+
+        /// <summary>
+        /// 不健康阈值，表示连续检查失败多少次数后认为源站不健康。范围为1到10
+        /// </summary>
+        [JsonProperty("UnhealthyThreshold")]
+        public ulong? UnhealthyThreshold{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "RealServerPorts.", this.RealServerPorts);
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+            this.SetParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
+            this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
         }
     }
 }

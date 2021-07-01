@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.314</VersionPrefix>
+    <VersionPrefix>3.0.315</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2799,10 +2799,13 @@
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeStructureResultRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeStructureResultResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultResponse.cs" />
     <Compile Include="Cii\V20210408\Models\ResultObject.cs" />
     <Compile Include="Cii\V20210408\Models\ReviewDataTaskInfo.cs" />
+    <Compile Include="Cii\V20210408\Models\StructureResultObject.cs" />
     <Compile Include="Cii\V20201210\CiiClient.cs" />
     <Compile Include="Cii\V20201210\Models\CompareMetricsData.cs" />
     <Compile Include="Cii\V20201210\Models\CreateStructureTaskRequest.cs" />
@@ -12091,6 +12094,8 @@
     <Compile Include="Tiia\V20190529\Models\DetectCelebrityResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectDisgustRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectDisgustResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\DetectLabelBetaRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\DetectLabelBetaResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelItem.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectLabelResponse.cs" />

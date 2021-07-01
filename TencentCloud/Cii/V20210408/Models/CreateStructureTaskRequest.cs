@@ -61,6 +61,12 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("InsuranceTypes")]
         public string[] InsuranceTypes{ get; set; }
 
+        /// <summary>
+        /// 回调地址，接收Post请求传送结果
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
             this.SetParamArraySimple(map, prefix + "InsuranceTypes.", this.InsuranceTypes);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

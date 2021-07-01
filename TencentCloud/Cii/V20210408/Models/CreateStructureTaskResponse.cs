@@ -25,7 +25,7 @@ namespace TencentCloud.Cii.V20210408.Models
     {
         
         /// <summary>
-        /// 创建的主任务号
+        /// 创建的主任务号，用于查询结果
         /// </summary>
         [JsonProperty("MainTaskId")]
         public string MainTaskId{ get; set; }
