@@ -133,6 +133,94 @@ namespace TencentCloud.Mrs.V20200910
         }
 
         /// <summary>
+        /// 接口没有流量
+        /// 
+        /// 将输入的图片类型报告结构化
+        /// </summary>
+        /// <param name="req"><see cref="ReportImageStructuredRequest"/></param>
+        /// <returns><see cref="ReportImageStructuredResponse"/></returns>
+        public async Task<ReportImageStructuredResponse> ReportImageStructured(ReportImageStructuredRequest req)
+        {
+             JsonResponseModel<ReportImageStructuredResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportImageStructured");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportImageStructuredResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口没有流量
+        /// 
+        /// 将输入的图片类型报告结构化
+        /// </summary>
+        /// <param name="req"><see cref="ReportImageStructuredRequest"/></param>
+        /// <returns><see cref="ReportImageStructuredResponse"/></returns>
+        public ReportImageStructuredResponse ReportImageStructuredSync(ReportImageStructuredRequest req)
+        {
+             JsonResponseModel<ReportImageStructuredResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportImageStructured");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportImageStructuredResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口还未上线
+        /// 
+        /// 将输入的医疗报告文本内容进行结构化输出
+        /// </summary>
+        /// <param name="req"><see cref="ReportTextStructuredRequest"/></param>
+        /// <returns><see cref="ReportTextStructuredResponse"/></returns>
+        public async Task<ReportTextStructuredResponse> ReportTextStructured(ReportTextStructuredRequest req)
+        {
+             JsonResponseModel<ReportTextStructuredResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportTextStructured");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportTextStructuredResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口还未上线
+        /// 
+        /// 将输入的医疗报告文本内容进行结构化输出
+        /// </summary>
+        /// <param name="req"><see cref="ReportTextStructuredRequest"/></param>
+        /// <returns><see cref="ReportTextStructuredResponse"/></returns>
+        public ReportTextStructuredResponse ReportTextStructuredSync(ReportTextStructuredRequest req)
+        {
+             JsonResponseModel<ReportTextStructuredResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportTextStructured");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportTextStructuredResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 文本分类
         /// </summary>
         /// <param name="req"><see cref="TextToClassRequest"/></param>
