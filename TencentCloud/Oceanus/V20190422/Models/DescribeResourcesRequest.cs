@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 需要查询的资源ID数组
+        /// 需要查询的资源ID数组，数量不超过100个。如果填写了该参数则忽略Filters参数。
         /// </summary>
         [JsonProperty("ResourceIds")]
         public string[] ResourceIds{ get; set; }
@@ -43,7 +43,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询资源配置列表， 如果不填写，返回该ResourceId下所有作业配置列表
+        /// <li><strong>ResourceName</strong></li>
+        /// <p style="padding-left: 30px;">按照资源名字过滤，支持模糊过滤。传入的过滤名字不超过5个</p><p style="padding-left: 30px;">类型: String</p><p style="padding-left: 30px;">必选: 否</p>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

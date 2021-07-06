@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.317</VersionPrefix>
+    <VersionPrefix>3.0.318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -136,10 +136,16 @@
     <Compile Include="V20190116\Models\ListCollaboratorsResponse.cs" />
     <Compile Include="V20190116\Models\ListEntitiesForPolicyRequest.cs" />
     <Compile Include="V20190116\Models\ListEntitiesForPolicyResponse.cs" />
+    <Compile Include="V20190116\Models\ListGrantServiceAccessActionNode.cs" />
+    <Compile Include="V20190116\Models\ListGrantServiceAccessNode.cs" />
+    <Compile Include="V20190116\Models\ListGrantServiceAccessPolicy.cs" />
+    <Compile Include="V20190116\Models\ListGrantServiceAccessService.cs" />
     <Compile Include="V20190116\Models\ListGroupsForUserRequest.cs" />
     <Compile Include="V20190116\Models\ListGroupsForUserResponse.cs" />
     <Compile Include="V20190116\Models\ListGroupsRequest.cs" />
     <Compile Include="V20190116\Models\ListGroupsResponse.cs" />
+    <Compile Include="V20190116\Models\ListPoliciesGrantingServiceAccessRequest.cs" />
+    <Compile Include="V20190116\Models\ListPoliciesGrantingServiceAccessResponse.cs" />
     <Compile Include="V20190116\Models\ListPoliciesRequest.cs" />
     <Compile Include="V20190116\Models\ListPoliciesResponse.cs" />
     <Compile Include="V20190116\Models\ListPolicyVersionsRequest.cs" />

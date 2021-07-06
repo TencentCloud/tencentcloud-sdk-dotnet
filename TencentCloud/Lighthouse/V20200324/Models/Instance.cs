@@ -185,6 +185,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("OsName")]
         public string OsName{ get; set; }
 
+        /// <summary>
+        /// 可用区。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +221,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "PlatformType", this.PlatformType);
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
         }
     }
 }

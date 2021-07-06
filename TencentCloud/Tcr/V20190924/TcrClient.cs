@@ -253,6 +253,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 创建镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="CreateImmutableTagRulesResponse"/></returns>
+        public async Task<CreateImmutableTagRulesResponse> CreateImmutableTagRules(CreateImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="CreateImmutableTagRulesResponse"/></returns>
+        public CreateImmutableTagRulesResponse CreateImmutableTagRulesSync(CreateImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<CreateImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -1004,6 +1044,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DeleteImagePersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImagePersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  删除镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DeleteImmutableTagRulesResponse"/></returns>
+        public async Task<DeleteImmutableTagRulesResponse> DeleteImmutableTagRules(DeleteImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  删除镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DeleteImmutableTagRulesResponse"/></returns>
+        public DeleteImmutableTagRulesResponse DeleteImmutableTagRulesSync(DeleteImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DeleteImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImmutableTagRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1884,6 +1964,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "DescribeImages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeImmutableTagRulesResponse"/></returns>
+        public async Task<DescribeImmutableTagRulesResponse> DescribeImmutableTagRules(DescribeImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="DescribeImmutableTagRulesResponse"/></returns>
+        public DescribeImmutableTagRulesResponse DescribeImmutableTagRulesSync(DescribeImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<DescribeImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImmutableTagRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3004,6 +3124,46 @@ namespace TencentCloud.Tcr.V20190924
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApplicationTriggerPersonal");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationTriggerPersonalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="ModifyImmutableTagRulesResponse"/></returns>
+        public async Task<ModifyImmutableTagRulesResponse> ModifyImmutableTagRules(ModifyImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImmutableTagRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像不可变规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyImmutableTagRulesRequest"/></param>
+        /// <returns><see cref="ModifyImmutableTagRulesResponse"/></returns>
+        public ModifyImmutableTagRulesResponse ModifyImmutableTagRulesSync(ModifyImmutableTagRulesRequest req)
+        {
+             JsonResponseModel<ModifyImmutableTagRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyImmutableTagRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyImmutableTagRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

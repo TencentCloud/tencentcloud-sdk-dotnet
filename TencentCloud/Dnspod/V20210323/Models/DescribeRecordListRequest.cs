@@ -91,7 +91,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 限制数量，当前Limit最大支持3000。默认值为3000。
+        /// 限制数量，当前Limit最大支持3000。默认值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

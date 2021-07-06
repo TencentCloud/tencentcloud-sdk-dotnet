@@ -1853,6 +1853,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 获取所有已授权服务
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesGrantingServiceAccessRequest"/></param>
+        /// <returns><see cref="ListPoliciesGrantingServiceAccessResponse"/></returns>
+        public async Task<ListPoliciesGrantingServiceAccessResponse> ListPoliciesGrantingServiceAccess(ListPoliciesGrantingServiceAccessRequest req)
+        {
+             JsonResponseModel<ListPoliciesGrantingServiceAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListPoliciesGrantingServiceAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPoliciesGrantingServiceAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取所有已授权服务
+        /// </summary>
+        /// <param name="req"><see cref="ListPoliciesGrantingServiceAccessRequest"/></param>
+        /// <returns><see cref="ListPoliciesGrantingServiceAccessResponse"/></returns>
+        public ListPoliciesGrantingServiceAccessResponse ListPoliciesGrantingServiceAccessSync(ListPoliciesGrantingServiceAccessRequest req)
+        {
+             JsonResponseModel<ListPoliciesGrantingServiceAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListPoliciesGrantingServiceAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListPoliciesGrantingServiceAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（ListPolicyVersions）用于获取策略版本列表
         /// </summary>
         /// <param name="req"><see cref="ListPolicyVersionsRequest"/></param>

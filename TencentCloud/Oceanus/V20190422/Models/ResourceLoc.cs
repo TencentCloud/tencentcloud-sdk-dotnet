@@ -25,7 +25,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
-        /// 资源位置的存储类型，目前只支持COS
+        /// 资源位置的存储类型，目前只支持1:COS
         /// </summary>
         [JsonProperty("StorageType")]
         public long? StorageType{ get; set; }

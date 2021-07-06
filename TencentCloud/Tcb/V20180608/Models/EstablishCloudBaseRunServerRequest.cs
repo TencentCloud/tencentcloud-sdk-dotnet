@@ -96,6 +96,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("OpenAccessTypes")]
         public string[] OpenAccessTypes{ get; set; }
 
+        /// <summary>
+        /// 是否创建Path 0未传默认创建 1创建 2不创建
+        /// </summary>
+        [JsonProperty("IsCreatePath")]
+        public long? IsCreatePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamObj(map, prefix + "VpcInfo.", this.VpcInfo);
             this.SetParamSimple(map, prefix + "PublicAccess", this.PublicAccess);
             this.SetParamArraySimple(map, prefix + "OpenAccessTypes.", this.OpenAccessTypes);
+            this.SetParamSimple(map, prefix + "IsCreatePath", this.IsCreatePath);
         }
     }
 }

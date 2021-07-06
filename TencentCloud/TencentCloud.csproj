@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.317</VersionPrefix>
+    <VersionPrefix>3.0.318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1670,10 +1670,16 @@
     <Compile Include="Cam\V20190116\Models\ListCollaboratorsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListEntitiesForPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListEntitiesForPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListGrantServiceAccessActionNode.cs" />
+    <Compile Include="Cam\V20190116\Models\ListGrantServiceAccessNode.cs" />
+    <Compile Include="Cam\V20190116\Models\ListGrantServiceAccessPolicy.cs" />
+    <Compile Include="Cam\V20190116\Models\ListGrantServiceAccessService.cs" />
     <Compile Include="Cam\V20190116\Models\ListGroupsForUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListGroupsForUserResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListGroupsRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListGroupsResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListPoliciesGrantingServiceAccessRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListPoliciesGrantingServiceAccessResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListPolicyVersionsRequest.cs" />
@@ -1916,10 +1922,14 @@
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyResponse.cs" />
     <Compile Include="Ccc\V20200210\CccClient.cs" />
+    <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DeleteStaffRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DeleteStaffResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsRequest.cs" />
@@ -1938,6 +1948,7 @@
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelSessionRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelSessionResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\ErrStaffItem.cs" />
     <Compile Include="Ccc\V20200210\Models\IMCdrInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\IVRKeyPressedElement.cs" />
     <Compile Include="Ccc\V20200210\Models\Message.cs" />
@@ -1950,6 +1961,8 @@
     <Compile Include="Ccc\V20200210\Models\SkillGroupItem.cs" />
     <Compile Include="Ccc\V20200210\Models\StaffInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\UnbindStaffSkillGroupListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\UnbindStaffSkillGroupListResponse.cs" />
     <Compile Include="Cdb\V20170320\CdbClient.cs" />
     <Compile Include="Cdb\V20170320\Models\Account.cs" />
     <Compile Include="Cdb\V20170320\Models\AccountInfo.cs" />
@@ -3973,6 +3986,8 @@
     <Compile Include="Cvm\V20170312\Models\InquiryPriceResizeInstanceDisksResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\InquiryPriceRunInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\InquiryPriceRunInstancesResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\InquiryPriceTerminateInstancesRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\InquiryPriceTerminateInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\Instance.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceFamilyConfig.cs" />
@@ -11568,6 +11583,8 @@
     <Compile Include="Tcr\V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImageLifecyclePersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateImmutableTagRulesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CreateImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInstanceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateInstanceTokenRequest.cs" />
@@ -11606,6 +11623,8 @@
     <Compile Include="Tcr\V20190924\Models\DeleteImagePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImageRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteImageResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteImmutableTagRulesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DeleteImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DeleteInstanceTokenRequest.cs" />
@@ -11652,6 +11671,8 @@
     <Compile Include="Tcr\V20190924\Models\DescribeImagePersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeImagesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeImagesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeImmutableTagRulesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\DescribeImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInstanceStatusRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInstanceStatusResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\DescribeInstanceTokenRequest.cs" />
@@ -11703,6 +11724,7 @@
     <Compile Include="Tcr\V20190924\Models\Favors.cs" />
     <Compile Include="Tcr\V20190924\Models\Filter.cs" />
     <Compile Include="Tcr\V20190924\Models\Header.cs" />
+    <Compile Include="Tcr\V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="Tcr\V20190924\Models\Limit.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageExternalEndpointRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ManageExternalEndpointResponse.cs" />
@@ -11714,6 +11736,8 @@
     <Compile Include="Tcr\V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyNamespaceRequest.cs" />

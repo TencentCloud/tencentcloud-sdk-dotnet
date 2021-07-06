@@ -1985,6 +1985,52 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (InquiryPriceTerminateInstances) 用于退还实例询价。
+        /// 
+        /// * 查询退还实例可以返还的费用。
+        /// * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定[错误码](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceTerminateInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceTerminateInstancesResponse"/></returns>
+        public async Task<InquiryPriceTerminateInstancesResponse> InquiryPriceTerminateInstances(InquiryPriceTerminateInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceTerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquiryPriceTerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceTerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (InquiryPriceTerminateInstances) 用于退还实例询价。
+        /// 
+        /// * 查询退还实例可以返还的费用。
+        /// * 支持批量操作，每次请求批量实例的上限为100。如果批量实例存在不允许操作的实例，操作会以特定[错误码](#4.-.E9.94.99.E8.AF.AF.E7.A0.81)返回。
+        /// </summary>
+        /// <param name="req"><see cref="InquiryPriceTerminateInstancesRequest"/></param>
+        /// <returns><see cref="InquiryPriceTerminateInstancesResponse"/></returns>
+        public InquiryPriceTerminateInstancesResponse InquiryPriceTerminateInstancesSync(InquiryPriceTerminateInstancesRequest req)
+        {
+             JsonResponseModel<InquiryPriceTerminateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquiryPriceTerminateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceTerminateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisasterRecoverGroupAttributeRequest"/></param>

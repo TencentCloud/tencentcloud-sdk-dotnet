@@ -53,6 +53,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 绑定坐席所属技能组
+        /// </summary>
+        /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
+        /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>
+        public async Task<BindStaffSkillGroupListResponse> BindStaffSkillGroupList(BindStaffSkillGroupListRequest req)
+        {
+             JsonResponseModel<BindStaffSkillGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindStaffSkillGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindStaffSkillGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定坐席所属技能组
+        /// </summary>
+        /// <param name="req"><see cref="BindStaffSkillGroupListRequest"/></param>
+        /// <returns><see cref="BindStaffSkillGroupListResponse"/></returns>
+        public BindStaffSkillGroupListResponse BindStaffSkillGroupListSync(BindStaffSkillGroupListRequest req)
+        {
+             JsonResponseModel<BindStaffSkillGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindStaffSkillGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindStaffSkillGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建 SDK 登录 Token。
         /// </summary>
         /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
@@ -124,6 +164,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "CreateStaff");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除坐席信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStaffRequest"/></param>
+        /// <returns><see cref="DeleteStaffResponse"/></returns>
+        public async Task<DeleteStaffResponse> DeleteStaff(DeleteStaffRequest req)
+        {
+             JsonResponseModel<DeleteStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除坐席信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteStaffRequest"/></param>
+        /// <returns><see cref="DeleteStaffResponse"/></returns>
+        public DeleteStaffResponse DeleteStaffSync(DeleteStaffRequest req)
+        {
+             JsonResponseModel<DeleteStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStaffResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,7 +293,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取 PSTN 活动会话列表。
+        /// 获取当前正在通话的会话列表
         /// </summary>
         /// <param name="req"><see cref="DescribePSTNActiveSessionListRequest"/></param>
         /// <returns><see cref="DescribePSTNActiveSessionListResponse"/></returns>
@@ -233,7 +313,7 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
-        /// 获取 PSTN 活动会话列表。
+        /// 获取当前正在通话的会话列表
         /// </summary>
         /// <param name="req"><see cref="DescribePSTNActiveSessionListRequest"/></param>
         /// <returns><see cref="DescribePSTNActiveSessionListResponse"/></returns>
@@ -488,6 +568,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTelSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑坐席所属技能组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindStaffSkillGroupListRequest"/></param>
+        /// <returns><see cref="UnbindStaffSkillGroupListResponse"/></returns>
+        public async Task<UnbindStaffSkillGroupListResponse> UnbindStaffSkillGroupList(UnbindStaffSkillGroupListRequest req)
+        {
+             JsonResponseModel<UnbindStaffSkillGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindStaffSkillGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindStaffSkillGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑坐席所属技能组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindStaffSkillGroupListRequest"/></param>
+        /// <returns><see cref="UnbindStaffSkillGroupListResponse"/></returns>
+        public UnbindStaffSkillGroupListResponse UnbindStaffSkillGroupListSync(UnbindStaffSkillGroupListRequest req)
+        {
+             JsonResponseModel<UnbindStaffSkillGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindStaffSkillGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindStaffSkillGroupListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

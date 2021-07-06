@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.317</VersionPrefix>
+    <VersionPrefix>3.0.318</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,8 @@
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageLifecyclePersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
+    <Compile Include="V20190924\Models\CreateImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190924\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceTokenRequest.cs" />
@@ -96,6 +98,8 @@
     <Compile Include="V20190924\Models\DeleteImagePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImageResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImmutableTagRulesRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceTokenRequest.cs" />
@@ -142,6 +146,8 @@
     <Compile Include="V20190924\Models\DescribeImagePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeImagesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeImagesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImmutableTagRulesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceStatusRequest.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceTokenRequest.cs" />
@@ -193,6 +199,7 @@
     <Compile Include="V20190924\Models\Favors.cs" />
     <Compile Include="V20190924\Models\Filter.cs" />
     <Compile Include="V20190924\Models\Header.cs" />
+    <Compile Include="V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="V20190924\Models\Limit.cs" />
     <Compile Include="V20190924\Models\ManageExternalEndpointRequest.cs" />
     <Compile Include="V20190924\Models\ManageExternalEndpointResponse.cs" />
@@ -204,6 +211,8 @@
     <Compile Include="V20190924\Models\ManageReplicationResponse.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\ModifyNamespaceRequest.cs" />
