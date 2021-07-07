@@ -77,6 +77,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("FwType")]
         public string FwType{ get; set; }
 
+        /// <summary>
+        /// 创建者子 uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public long? CreateUserId{ get; set; }
+
+        /// <summary>
+        /// 创建者昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorNickName")]
+        public string CreatorNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +105,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "FwType", this.FwType);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+            this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
         }
     }
 }

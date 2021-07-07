@@ -72,6 +72,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }
 
+        /// <summary>
+        /// 按手机号筛选
+        /// </summary>
+        [JsonProperty("Phones")]
+        public string[] Phones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
+            this.SetParamArraySimple(map, prefix + "Phones.", this.Phones);
         }
     }
 }

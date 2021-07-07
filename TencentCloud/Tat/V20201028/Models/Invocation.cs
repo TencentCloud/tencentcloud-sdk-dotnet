@@ -96,6 +96,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
+        /// <summary>
+        /// 执行命令的实例类型，取值范围：CVM、LIGHTHOUSE。
+        /// </summary>
+        [JsonProperty("InstanceKind")]
+        public string InstanceKind{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +119,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
         }
     }
 }

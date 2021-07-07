@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Market.V20191010.Models
+namespace TencentCloud.Iotvideo.V20201215.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCateTreeResponse : AbstractModel
+    public class AIModelUsageInfo : AbstractModel
     {
         
         /// <summary>
-        /// 分类ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 开通时间
         /// </summary>
-        [JsonProperty("CateId")]
-        public ulong? CateId{ get; set; }
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 分类名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 资源总量
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 已使用资源数量
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Used")]
+        public ulong? Used{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Market.V20191010.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CateId", this.CateId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "Used", this.Used);
         }
     }
 }

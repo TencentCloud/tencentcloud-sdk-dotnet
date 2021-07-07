@@ -93,46 +93,6 @@ namespace TencentCloud.Market.V20191010
         }
 
         /// <summary>
-        /// 获取分类名称
-        /// </summary>
-        /// <param name="req"><see cref="GetCateTreeRequest"/></param>
-        /// <returns><see cref="GetCateTreeResponse"/></returns>
-        public async Task<GetCateTreeResponse> GetCateTree(GetCateTreeRequest req)
-        {
-             JsonResponseModel<GetCateTreeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCateTree");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCateTreeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取分类名称
-        /// </summary>
-        /// <param name="req"><see cref="GetCateTreeRequest"/></param>
-        /// <returns><see cref="GetCateTreeResponse"/></returns>
-        public GetCateTreeResponse GetCateTreeSync(GetCateTreeRequest req)
-        {
-             JsonResponseModel<GetCateTreeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCateTree");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCateTreeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 该接口可以根据InstanceId查询实例的api的使用情况。
         /// </summary>
         /// <param name="req"><see cref="GetUsagePlanUsageAmountRequest"/></param>

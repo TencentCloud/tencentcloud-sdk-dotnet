@@ -25,11 +25,17 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 一次核身流程的标识，有效时间为7,200秒；
+        /// 一次核身流程的标识，有效时间为600秒；
         /// 完成核身后，可用该标识获取验证结果信息。
         /// </summary>
         [JsonProperty("EidToken")]
         public string EidToken{ get; set; }
+
+        /// <summary>
+        /// 发起核身流程的URL，用于H5场景核身。
+        /// </summary>
+        [JsonProperty("Url")]
+        public string Url{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -44,6 +50,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EidToken", this.EidToken);
+            this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

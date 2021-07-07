@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.318</VersionPrefix>
+    <VersionPrefix>3.0.319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -200,10 +200,17 @@
     <Compile Include="V20191126\Models\UploadOtaVersionResponse.cs" />
     <Compile Include="V20191126\Models\VersionData.cs" />
     <Compile Include="V20201215\IotvideoClient.cs" />
+    <Compile Include="V20201215\Models\AIModelApplication.cs" />
+    <Compile Include="V20201215\Models\AIModelInfo.cs" />
+    <Compile Include="V20201215\Models\AIModelUsageInfo.cs" />
     <Compile Include="V20201215\Models\ActionHistory.cs" />
+    <Compile Include="V20201215\Models\ApplyAIModelRequest.cs" />
+    <Compile Include="V20201215\Models\ApplyAIModelResponse.cs" />
     <Compile Include="V20201215\Models\BalanceTransaction.cs" />
     <Compile Include="V20201215\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="V20201215\Models\BatchUpdateFirmwareResponse.cs" />
+    <Compile Include="V20201215\Models\CancelAIModelApplicationRequest.cs" />
+    <Compile Include="V20201215\Models\CancelAIModelApplicationResponse.cs" />
     <Compile Include="V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
     <Compile Include="V20201215\Models\CancelDeviceFirmwareTaskResponse.cs" />
     <Compile Include="V20201215\Models\CheckForwardAuthRequest.cs" />
@@ -213,8 +220,12 @@
     <Compile Include="V20201215\Models\CloudStorageTimeInfo.cs" />
     <Compile Include="V20201215\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="V20201215\Models\ControlDeviceDataResponse.cs" />
+    <Compile Include="V20201215\Models\CreateAIDetectionRequest.cs" />
+    <Compile Include="V20201215\Models\CreateAIDetectionResponse.cs" />
     <Compile Include="V20201215\Models\CreateBatchRequest.cs" />
     <Compile Include="V20201215\Models\CreateBatchResponse.cs" />
+    <Compile Include="V20201215\Models\CreateCOSCredentialsRequest.cs" />
+    <Compile Include="V20201215\Models\CreateCOSCredentialsResponse.cs" />
     <Compile Include="V20201215\Models\CreateCloudStorageRequest.cs" />
     <Compile Include="V20201215\Models\CreateCloudStorageResponse.cs" />
     <Compile Include="V20201215\Models\CreateForwardRuleRequest.cs" />
@@ -231,6 +242,14 @@
     <Compile Include="V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\DeleteProductRequest.cs" />
     <Compile Include="V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelApplicationsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelApplicationsResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelChannelRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelChannelResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelUsageRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelUsageResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelsRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeAIModelsResponse.cs" />
     <Compile Include="V20201215\Models\DescribeBalanceRequest.cs" />
     <Compile Include="V20201215\Models\DescribeBalanceResponse.cs" />
     <Compile Include="V20201215\Models\DescribeBalanceTransactionsRequest.cs" />
@@ -316,6 +335,8 @@
     <Compile Include="V20201215\Models\ProductTemplate.cs" />
     <Compile Include="V20201215\Models\PublishMessageRequest.cs" />
     <Compile Include="V20201215\Models\PublishMessageResponse.cs" />
+    <Compile Include="V20201215\Models\ReportAliveDeviceRequest.cs" />
+    <Compile Include="V20201215\Models\ReportAliveDeviceResponse.cs" />
     <Compile Include="V20201215\Models\ResetCloudStorageRequest.cs" />
     <Compile Include="V20201215\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
@@ -326,6 +347,8 @@
     <Compile Include="V20201215\Models\StatusStatistic.cs" />
     <Compile Include="V20201215\Models\TransferCloudStorageRequest.cs" />
     <Compile Include="V20201215\Models\TransferCloudStorageResponse.cs" />
+    <Compile Include="V20201215\Models\UpdateAIModelChannelRequest.cs" />
+    <Compile Include="V20201215\Models\UpdateAIModelChannelResponse.cs" />
     <Compile Include="V20201215\Models\UploadFirmwareRequest.cs" />
     <Compile Include="V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="V20201215\Models\VideoBatch.cs" />

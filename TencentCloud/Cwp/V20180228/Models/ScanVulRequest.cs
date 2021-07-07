@@ -54,6 +54,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("VulEmergency")]
         public ulong? VulEmergency{ get; set; }
 
+        /// <summary>
+        /// 超时时长 单位秒
+        /// </summary>
+        [JsonProperty("TimeoutPeriod")]
+        public ulong? TimeoutPeriod{ get; set; }
+
+        /// <summary>
+        /// 需要扫描的漏洞id
+        /// </summary>
+        [JsonProperty("VulIds")]
+        public ulong?[] VulIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "HostType", this.HostType);
             this.SetParamArraySimple(map, prefix + "QuuidList.", this.QuuidList);
             this.SetParamSimple(map, prefix + "VulEmergency", this.VulEmergency);
+            this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
+            this.SetParamArraySimple(map, prefix + "VulIds.", this.VulIds);
         }
     }
 }

@@ -421,6 +421,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 创建API网关插件。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public async Task<CreatePluginResponse> CreatePlugin(CreatePluginRequest req)
+        {
+             JsonResponseModel<CreatePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建API网关插件。
+        /// </summary>
+        /// <param name="req"><see cref="CreatePluginRequest"/></param>
+        /// <returns><see cref="CreatePluginResponse"/></returns>
+        public CreatePluginResponse CreatePluginSync(CreatePluginRequest req)
+        {
+             JsonResponseModel<CreatePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateService）用于创建服务。
         /// API 网关使用的最大单元为服务，每个服务中可创建多个 API 接口。每个服务有一个默认域名供客户调用，用户也可绑定自定义域名到此服务中。
         /// </summary>

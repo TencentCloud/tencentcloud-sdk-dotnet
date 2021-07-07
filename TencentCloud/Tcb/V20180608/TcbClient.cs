@@ -773,6 +773,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 独立网关中拉取云托管服务对应的配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunConfForGateWayRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunConfForGateWayResponse"/></returns>
+        public async Task<DescribeCloudBaseRunConfForGateWayResponse> DescribeCloudBaseRunConfForGateWay(DescribeCloudBaseRunConfForGateWayRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunConfForGateWay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 独立网关中拉取云托管服务对应的配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunConfForGateWayRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunConfForGateWayResponse"/></returns>
+        public DescribeCloudBaseRunConfForGateWayResponse DescribeCloudBaseRunConfForGateWaySync(DescribeCloudBaseRunConfForGateWayRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunConfForGateWay");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看容器托管的集群状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>
@@ -1810,6 +1850,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "EstablishWxGatewayRoute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstablishWxGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改容器内的版本流量配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseRunServerFlowConfRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseRunServerFlowConfResponse"/></returns>
+        public async Task<ModifyCloudBaseRunServerFlowConfResponse> ModifyCloudBaseRunServerFlowConf(ModifyCloudBaseRunServerFlowConfRequest req)
+        {
+             JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCloudBaseRunServerFlowConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改容器内的版本流量配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseRunServerFlowConfRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseRunServerFlowConfResponse"/></returns>
+        public ModifyCloudBaseRunServerFlowConfResponse ModifyCloudBaseRunServerFlowConfSync(ModifyCloudBaseRunServerFlowConfRequest req)
+        {
+             JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCloudBaseRunServerFlowConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudBaseRunServerFlowConfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

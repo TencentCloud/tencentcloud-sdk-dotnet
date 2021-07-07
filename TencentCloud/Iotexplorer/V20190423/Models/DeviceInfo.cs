@@ -120,6 +120,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("NwkSKey")]
         public string NwkSKey{ get; set; }
 
+        /// <summary>
+        /// 创建人Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public long? CreateUserId{ get; set; }
+
+        /// <summary>
+        /// 创建人昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatorNickName")]
+        public string CreatorNickName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +154,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DevEUI", this.DevEUI);
             this.SetParamSimple(map, prefix + "AppSKey", this.AppSKey);
             this.SetParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
+            this.SetParamSimple(map, prefix + "CreatorNickName", this.CreatorNickName);
         }
     }
 }

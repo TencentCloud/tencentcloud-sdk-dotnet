@@ -1413,6 +1413,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 获取密钥最近使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetSecurityLastUsedRequest"/></param>
+        /// <returns><see cref="GetSecurityLastUsedResponse"/></returns>
+        public async Task<GetSecurityLastUsedResponse> GetSecurityLastUsed(GetSecurityLastUsedRequest req)
+        {
+             JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSecurityLastUsed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecurityLastUsedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取密钥最近使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetSecurityLastUsedRequest"/></param>
+        /// <returns><see cref="GetSecurityLastUsedResponse"/></returns>
+        public GetSecurityLastUsedResponse GetSecurityLastUsedSync(GetSecurityLastUsedRequest req)
+        {
+             JsonResponseModel<GetSecurityLastUsedResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSecurityLastUsed");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSecurityLastUsedResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据删除TaskId获取服务相关角色删除状态
         /// </summary>
         /// <param name="req"><see cref="GetServiceLinkedRoleDeletionStatusRequest"/></param>

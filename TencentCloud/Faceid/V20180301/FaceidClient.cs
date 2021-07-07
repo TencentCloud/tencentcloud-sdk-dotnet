@@ -213,6 +213,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 用于轮询E证通H5场景EidToken验证状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckEidTokenStatusRequest"/></param>
+        /// <returns><see cref="CheckEidTokenStatusResponse"/></returns>
+        public async Task<CheckEidTokenStatusResponse> CheckEidTokenStatus(CheckEidTokenStatusRequest req)
+        {
+             JsonResponseModel<CheckEidTokenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckEidTokenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckEidTokenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于轮询E证通H5场景EidToken验证状态。
+        /// </summary>
+        /// <param name="req"><see cref="CheckEidTokenStatusRequest"/></param>
+        /// <returns><see cref="CheckEidTokenStatusResponse"/></returns>
+        public CheckEidTokenStatusResponse CheckEidTokenStatusSync(CheckEidTokenStatusRequest req)
+        {
+             JsonResponseModel<CheckEidTokenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckEidTokenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckEidTokenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 传入身份证人像面照片，识别身份证照片上的信息，并将姓名、身份证号、身份证人像照片与公安权威库的证件照进行比对，是否属于同一个人，从而验证身份证信息的真实性。
         /// </summary>
         /// <param name="req"><see cref="CheckIdCardInformationRequest"/></param>
@@ -533,7 +573,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// 每次调用E证通服务前，需先调用本接口获取EidToken，用来串联E证通流程，在验证完成后，用于获取E证通结果信息。
         /// </summary>
         /// <param name="req"><see cref="GetEidTokenRequest"/></param>
         /// <returns><see cref="GetEidTokenResponse"/></returns>
@@ -553,7 +593,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 每次调用E证通小程序服务前，需先调用本接口获取EidToken，用来串联核身流程，在验证完成后，用于获取验证结果信息。
+        /// 每次调用E证通服务前，需先调用本接口获取EidToken，用来串联E证通流程，在验证完成后，用于获取E证通结果信息。
         /// </summary>
         /// <param name="req"><see cref="GetEidTokenRequest"/></param>
         /// <returns><see cref="GetEidTokenResponse"/></returns>

@@ -73,7 +73,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 实例状态信息，0-创建中，1-运行中
+        /// 实例状态信息，1-流程中 ,2-运行中, -2-实例已隔离 ,-3-实例待回收, -4-实例已删除
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

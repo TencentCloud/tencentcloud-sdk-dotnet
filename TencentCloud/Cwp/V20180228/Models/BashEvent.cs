@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// ID
+        /// 数据ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// 规则等级
+        /// 规则等级：1-高 2-中 3-低
         /// </summary>
         [JsonProperty("RuleLevel")]
         public ulong? RuleLevel{ get; set; }
 
         /// <summary>
-        /// 处理状态
+        /// 处理状态： 0 = 待处理 1= 已处理, 2 = 已加白
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -101,6 +101,48 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("MachineName")]
         public string MachineName{ get; set; }
+
+        /// <summary>
+        /// 0: bash日志 1: 实时监控(雷霆版)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DetectBy")]
+        public ulong? DetectBy{ get; set; }
+
+        /// <summary>
+        /// 进程id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Pid")]
+        public string Pid{ get; set; }
+
+        /// <summary>
+        /// 进程名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Exe")]
+        public string Exe{ get; set; }
+
+        /// <summary>
+        /// 处理时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
+        /// <summary>
+        /// 规则类别  0=系统规则，1=用户规则
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleCategory")]
+        public ulong? RuleCategory{ get; set; }
+
+        /// <summary>
+        /// 自动生成的正则表达式
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegexBashCmd")]
+        public string RegexBashCmd{ get; set; }
 
 
         /// <summary>
@@ -121,6 +163,12 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
+            this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
+            this.SetParamSimple(map, prefix + "Pid", this.Pid);
+            this.SetParamSimple(map, prefix + "Exe", this.Exe);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "RuleCategory", this.RuleCategory);
+            this.SetParamSimple(map, prefix + "RegexBashCmd", this.RegexBashCmd);
         }
     }
 }

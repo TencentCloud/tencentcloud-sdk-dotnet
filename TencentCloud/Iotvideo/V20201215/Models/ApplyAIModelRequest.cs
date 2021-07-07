@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Market.V20191010.Models
+namespace TencentCloud.Iotvideo.V20201215.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCateTreeRequest : AbstractModel
+    public class ApplyAIModelRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分类ID
+        /// AI模型ID
         /// </summary>
-        [JsonProperty("CateId")]
-        public ulong? CateId{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
+
+        /// <summary>
+        /// 产品ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Market.V20191010.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CateId", this.CateId);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

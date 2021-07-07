@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.318</VersionPrefix>
+    <VersionPrefix>3.0.319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -420,6 +420,8 @@
     <Compile Include="Apigateway\V20180808\Models\CreateApiRsp.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreatePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreatePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanRequest.cs" />
@@ -1651,6 +1653,8 @@
     <Compile Include="Cam\V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetSAMLProviderResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetSecurityLastUsedRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserRequest.cs" />
@@ -4103,6 +4107,8 @@
     <Compile Include="Cwp\V20180228\Models\CreateProcessTaskResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProtectServerRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateProtectServerResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateScanMalwareSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\CreateScanMalwareSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchLogRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchLogResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateSearchTemplateRequest.cs" />
@@ -4214,6 +4220,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeMaliciousRequestsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwareInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwareInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMalwareTimingScanSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMalwareTimingScanSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwaresRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
@@ -4246,6 +4254,10 @@
     <Compile Include="Cwp\V20180228\Models\DescribeRiskDnsListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanTaskDetailsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanTaskDetailsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanVulSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanVulSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSearchExportListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSearchExportListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSearchLogsRequest.cs" />
@@ -4286,6 +4298,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeWeeklyReportsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EditBashRuleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\EditBashRuleResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\EditBashRulesRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\EditBashRulesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EditPrivilegeRuleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\EditPrivilegeRuleResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EditReverseShellRuleRequest.cs" />
@@ -4371,8 +4385,13 @@
     <Compile Include="Cwp\V20180228\Models\ReverseShell.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="Cwp\V20180228\Models\RiskDnsList.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanTaskDetails.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulAgainRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulAgainResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ScanVulRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ScanVulResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ScanVulSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\SearchTemplate.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityEventInfo.cs" />
@@ -4399,6 +4418,7 @@
     <Compile Include="Cwp\V20180228\Models\UpdateBaselineStrategyResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\UsualPlace.cs" />
     <Compile Include="Cwp\V20180228\Models\Vul.cs" />
+    <Compile Include="Cwp\V20180228\Models\VulDetailInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\WeeklyReport.cs" />
     <Compile Include="Cwp\V20180228\Models\WeeklyReportBruteAttack.cs" />
     <Compile Include="Cwp\V20180228\Models\WeeklyReportMalware.cs" />
@@ -6090,6 +6110,8 @@
     <Compile Include="Faceid\V20180301\Models\BankCardVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckBankCardInformationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckBankCardInformationResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\CheckEidTokenStatusRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\CheckEidTokenStatusResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckIdCardInformationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckIdCardInformationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckPhoneAndNameRequest.cs" />
@@ -7650,10 +7672,17 @@
     <Compile Include="Iotvideo\V20191126\Models\UploadOtaVersionResponse.cs" />
     <Compile Include="Iotvideo\V20191126\Models\VersionData.cs" />
     <Compile Include="Iotvideo\V20201215\IotvideoClient.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\AIModelApplication.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\AIModelInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\AIModelUsageInfo.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ActionHistory.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ApplyAIModelRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ApplyAIModelResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BalanceTransaction.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CancelAIModelApplicationRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CancelAIModelApplicationResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CheckForwardAuthRequest.cs" />
@@ -7663,8 +7692,12 @@
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageTimeInfo.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateAIDetectionRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateAIDetectionResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateBatchRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateBatchResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateCOSCredentialsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateCOSCredentialsResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateCloudStorageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleRequest.cs" />
@@ -7681,6 +7714,14 @@
     <Compile Include="Iotvideo\V20201215\Models\DeleteForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelApplicationsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelApplicationsResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelChannelRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelChannelResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelUsageRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelUsageResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelsRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeAIModelsResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeBalanceTransactionsRequest.cs" />
@@ -7766,6 +7807,8 @@
     <Compile Include="Iotvideo\V20201215\Models\ProductTemplate.cs" />
     <Compile Include="Iotvideo\V20201215\Models\PublishMessageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\PublishMessageResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ReportAliveDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ReportAliveDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
@@ -7776,6 +7819,8 @@
     <Compile Include="Iotvideo\V20201215\Models\StatusStatistic.cs" />
     <Compile Include="Iotvideo\V20201215\Models\TransferCloudStorageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\TransferCloudStorageResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\UpdateAIModelChannelRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\UpdateAIModelChannelResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoBatch.cs" />
@@ -8535,8 +8580,6 @@
     <Compile Include="Market\V20191010\MarketClient.cs" />
     <Compile Include="Market\V20191010\Models\FlowProductRemindRequest.cs" />
     <Compile Include="Market\V20191010\Models\FlowProductRemindResponse.cs" />
-    <Compile Include="Market\V20191010\Models\GetCateTreeRequest.cs" />
-    <Compile Include="Market\V20191010\Models\GetCateTreeResponse.cs" />
     <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountRequest.cs" />
     <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountResponse.cs" />
     <Compile Include="Memcached\V20190318\MemcachedClient.cs" />
@@ -11296,11 +11339,13 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseEsInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseProjectVersion.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunEmptyDirVolumeSource.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunForGatewayConf.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunServiceVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunSideSpec.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunVersionFlowItem.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVpcSubnet.cs" />
@@ -11343,6 +11388,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
@@ -11405,12 +11452,15 @@
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
     <Compile Include="Tcb\V20180608\Models\LogServiceInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\LoginStatistic.cs" />
+    <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerFlowConfRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerFlowConfResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEndUserRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEndUserResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\ObjectKV.cs" />
     <Compile Include="Tcb\V20180608\Models\OrderInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PackageFreeQuotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PlatformStatistic.cs" />

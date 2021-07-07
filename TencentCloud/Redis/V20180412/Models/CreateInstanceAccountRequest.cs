@@ -37,7 +37,13 @@ namespace TencentCloud.Redis.V20180412.Models
         public string AccountName{ get; set; }
 
         /// <summary>
-        /// 子账号密码
+        /// 1.长度8-30位,推荐使用12位以上的密码
+        /// 2.不能以"/"开头
+        /// 3.至少包含两项
+        ///     a.小写字母a-z
+        ///     b.大写字母A-Z
+        ///     c.数字0-9
+        ///     d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
         /// </summary>
         [JsonProperty("AccountPassword")]
         public string AccountPassword{ get; set; }

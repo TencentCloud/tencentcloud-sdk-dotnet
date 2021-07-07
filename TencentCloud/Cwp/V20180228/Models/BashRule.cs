@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 危险等级(1: 高危 2:中危 3: 低危)
+        /// 危险等级(0 ：无 1: 高危 2:中危 3: 低危)
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
@@ -96,6 +96,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Hostip")]
         public string Hostip{ get; set; }
 
+        /// <summary>
+        /// 生效服务器的uuid数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uuids")]
+        public string[] Uuids{ get; set; }
+
+        /// <summary>
+        /// 0=黑名单 1=白名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("White")]
+        public ulong? White{ get; set; }
+
+        /// <summary>
+        /// 是否处理之前的事件 0: 不处理 1:处理
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealOldEvents")]
+        public ulong? DealOldEvents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +135,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
             this.SetParamSimple(map, prefix + "Hostip", this.Hostip);
+            this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
+            this.SetParamSimple(map, prefix + "White", this.White);
+            this.SetParamSimple(map, prefix + "DealOldEvents", this.DealOldEvents);
         }
     }
 }

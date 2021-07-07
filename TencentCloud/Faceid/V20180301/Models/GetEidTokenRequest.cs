@@ -55,6 +55,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Config")]
         public GetEidTokenConfig Config{ get; set; }
 
+        /// <summary>
+        /// 最长长度1024位。用户从Url中进入核身认证结束后重定向的回调链接地址。EidToken会在该链接的query参数中。
+        /// </summary>
+        [JsonProperty("RedirectUrl")]
+        public string RedirectUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +72,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamObj(map, prefix + "Config.", this.Config);
+            this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
         }
     }
 }

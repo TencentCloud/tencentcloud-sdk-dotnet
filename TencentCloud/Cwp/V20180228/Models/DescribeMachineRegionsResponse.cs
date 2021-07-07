@@ -25,6 +25,36 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// CVM 云服务器地域列表
+        /// </summary>
+        [JsonProperty("CVM")]
+        public RegionInfo[] CVM{ get; set; }
+
+        /// <summary>
+        /// BM 黑石机器地域列表
+        /// </summary>
+        [JsonProperty("BM")]
+        public RegionInfo[] BM{ get; set; }
+
+        /// <summary>
+        /// LH 轻量应用服务器地域列表
+        /// </summary>
+        [JsonProperty("LH")]
+        public RegionInfo[] LH{ get; set; }
+
+        /// <summary>
+        /// ECM 边缘计算服务器地域列表
+        /// </summary>
+        [JsonProperty("ECM")]
+        public RegionInfo[] ECM{ get; set; }
+
+        /// <summary>
+        /// Other 混合云地域列表
+        /// </summary>
+        [JsonProperty("Other")]
+        public RegionInfo[] Other{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +66,11 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "CVM.", this.CVM);
+            this.SetParamArrayObj(map, prefix + "BM.", this.BM);
+            this.SetParamArrayObj(map, prefix + "LH.", this.LH);
+            this.SetParamArrayObj(map, prefix + "ECM.", this.ECM);
+            this.SetParamArrayObj(map, prefix + "Other.", this.Other);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -87,6 +87,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Normal")]
         public bool? Normal{ get; set; }
 
+        /// <summary>
+        /// 项目原文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ItemString")]
+        public string ItemString{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Range", this.Range);
             this.SetParamSimple(map, prefix + "Arrow", this.Arrow);
             this.SetParamSimple(map, prefix + "Normal", this.Normal);
+            this.SetParamSimple(map, prefix + "ItemString", this.ItemString);
         }
     }
 }

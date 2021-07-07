@@ -53,6 +53,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 申请AI模型
+        /// </summary>
+        /// <param name="req"><see cref="ApplyAIModelRequest"/></param>
+        /// <returns><see cref="ApplyAIModelResponse"/></returns>
+        public async Task<ApplyAIModelResponse> ApplyAIModel(ApplyAIModelRequest req)
+        {
+             JsonResponseModel<ApplyAIModelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyAIModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyAIModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请AI模型
+        /// </summary>
+        /// <param name="req"><see cref="ApplyAIModelRequest"/></param>
+        /// <returns><see cref="ApplyAIModelResponse"/></returns>
+        public ApplyAIModelResponse ApplyAIModelSync(ApplyAIModelRequest req)
+        {
+             JsonResponseModel<ApplyAIModelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyAIModel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyAIModelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（BatchUpdateFirmware）用于批量更新设备固件 
         /// </summary>
         /// <param name="req"><see cref="BatchUpdateFirmwareRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "BatchUpdateFirmware");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchUpdateFirmwareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消AI模型申请
+        /// </summary>
+        /// <param name="req"><see cref="CancelAIModelApplicationRequest"/></param>
+        /// <returns><see cref="CancelAIModelApplicationResponse"/></returns>
+        public async Task<CancelAIModelApplicationResponse> CancelAIModelApplication(CancelAIModelApplicationRequest req)
+        {
+             JsonResponseModel<CancelAIModelApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelAIModelApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAIModelApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消AI模型申请
+        /// </summary>
+        /// <param name="req"><see cref="CancelAIModelApplicationRequest"/></param>
+        /// <returns><see cref="CancelAIModelApplicationResponse"/></returns>
+        public CancelAIModelApplicationResponse CancelAIModelApplicationSync(CancelAIModelApplicationRequest req)
+        {
+             JsonResponseModel<CancelAIModelApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelAIModelApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAIModelApplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,6 +293,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 发起AI推理请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIDetectionRequest"/></param>
+        /// <returns><see cref="CreateAIDetectionResponse"/></returns>
+        public async Task<CreateAIDetectionResponse> CreateAIDetection(CreateAIDetectionRequest req)
+        {
+             JsonResponseModel<CreateAIDetectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAIDetection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIDetectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起AI推理请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateAIDetectionRequest"/></param>
+        /// <returns><see cref="CreateAIDetectionResponse"/></returns>
+        public CreateAIDetectionResponse CreateAIDetectionSync(CreateAIDetectionRequest req)
+        {
+             JsonResponseModel<CreateAIDetectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAIDetection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAIDetectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建批次
         /// </summary>
         /// <param name="req"><see cref="CreateBatchRequest"/></param>
@@ -244,6 +364,46 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "CreateBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建COS上传密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCOSCredentialsRequest"/></param>
+        /// <returns><see cref="CreateCOSCredentialsResponse"/></returns>
+        public async Task<CreateCOSCredentialsResponse> CreateCOSCredentials(CreateCOSCredentialsRequest req)
+        {
+             JsonResponseModel<CreateCOSCredentialsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCOSCredentials");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCOSCredentialsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建COS上传密钥
+        /// </summary>
+        /// <param name="req"><see cref="CreateCOSCredentialsRequest"/></param>
+        /// <returns><see cref="CreateCOSCredentialsResponse"/></returns>
+        public CreateCOSCredentialsResponse CreateCOSCredentialsSync(CreateCOSCredentialsRequest req)
+        {
+             JsonResponseModel<CreateCOSCredentialsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCOSCredentials");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCOSCredentialsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -564,6 +724,166 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "DeleteProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户AI模型申请记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeAIModelApplicationsResponse"/></returns>
+        public async Task<DescribeAIModelApplicationsResponse> DescribeAIModelApplications(DescribeAIModelApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeAIModelApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIModelApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户AI模型申请记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeAIModelApplicationsResponse"/></returns>
+        public DescribeAIModelApplicationsResponse DescribeAIModelApplicationsSync(DescribeAIModelApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeAIModelApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAIModelApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看AI推理结果推送配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelChannelRequest"/></param>
+        /// <returns><see cref="DescribeAIModelChannelResponse"/></returns>
+        public async Task<DescribeAIModelChannelResponse> DescribeAIModelChannel(DescribeAIModelChannelRequest req)
+        {
+             JsonResponseModel<DescribeAIModelChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIModelChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看AI推理结果推送配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelChannelRequest"/></param>
+        /// <returns><see cref="DescribeAIModelChannelResponse"/></returns>
+        public DescribeAIModelChannelResponse DescribeAIModelChannelSync(DescribeAIModelChannelRequest req)
+        {
+             JsonResponseModel<DescribeAIModelChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAIModelChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看AI模型资源包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelUsageRequest"/></param>
+        /// <returns><see cref="DescribeAIModelUsageResponse"/></returns>
+        public async Task<DescribeAIModelUsageResponse> DescribeAIModelUsage(DescribeAIModelUsageRequest req)
+        {
+             JsonResponseModel<DescribeAIModelUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIModelUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看AI模型资源包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelUsageRequest"/></param>
+        /// <returns><see cref="DescribeAIModelUsageResponse"/></returns>
+        public DescribeAIModelUsageResponse DescribeAIModelUsageSync(DescribeAIModelUsageRequest req)
+        {
+             JsonResponseModel<DescribeAIModelUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAIModelUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取AI模型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelsRequest"/></param>
+        /// <returns><see cref="DescribeAIModelsResponse"/></returns>
+        public async Task<DescribeAIModelsResponse> DescribeAIModels(DescribeAIModelsRequest req)
+        {
+             JsonResponseModel<DescribeAIModelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAIModels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取AI模型列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAIModelsRequest"/></param>
+        /// <returns><see cref="DescribeAIModelsResponse"/></returns>
+        public DescribeAIModelsResponse DescribeAIModelsSync(DescribeAIModelsRequest req)
+        {
+             JsonResponseModel<DescribeAIModelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAIModels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAIModelsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2093,6 +2413,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 上报活跃设备
+        /// </summary>
+        /// <param name="req"><see cref="ReportAliveDeviceRequest"/></param>
+        /// <returns><see cref="ReportAliveDeviceResponse"/></returns>
+        public async Task<ReportAliveDeviceResponse> ReportAliveDevice(ReportAliveDeviceRequest req)
+        {
+             JsonResponseModel<ReportAliveDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportAliveDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportAliveDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报活跃设备
+        /// </summary>
+        /// <param name="req"><see cref="ReportAliveDeviceRequest"/></param>
+        /// <returns><see cref="ReportAliveDeviceResponse"/></returns>
+        public ReportAliveDeviceResponse ReportAliveDeviceSync(ReportAliveDeviceRequest req)
+        {
+             JsonResponseModel<ReportAliveDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportAliveDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportAliveDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重置云存服务
         /// </summary>
         /// <param name="req"><see cref="ResetCloudStorageRequest"/></param>
@@ -2244,6 +2604,46 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "TransferCloudStorage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransferCloudStorageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新AI推理结果推送配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIModelChannelRequest"/></param>
+        /// <returns><see cref="UpdateAIModelChannelResponse"/></returns>
+        public async Task<UpdateAIModelChannelResponse> UpdateAIModelChannel(UpdateAIModelChannelRequest req)
+        {
+             JsonResponseModel<UpdateAIModelChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateAIModelChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAIModelChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新AI推理结果推送配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateAIModelChannelRequest"/></param>
+        /// <returns><see cref="UpdateAIModelChannelResponse"/></returns>
+        public UpdateAIModelChannelResponse UpdateAIModelChannelSync(UpdateAIModelChannelRequest req)
+        {
+             JsonResponseModel<UpdateAIModelChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateAIModelChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateAIModelChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

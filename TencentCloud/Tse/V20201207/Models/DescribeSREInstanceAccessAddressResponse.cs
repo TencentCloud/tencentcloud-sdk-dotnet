@@ -31,6 +31,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string IntranetAddress{ get; set; }
 
         /// <summary>
+        /// 公网访问地址
+        /// </summary>
+        [JsonProperty("InternetAddress")]
+        public string InternetAddress{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tse.V20201207.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
+            this.SetParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

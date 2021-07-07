@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.318</VersionPrefix>
+    <VersionPrefix>3.0.319</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,8 @@
     <Compile Include="V20180228\Models\CreateProcessTaskResponse.cs" />
     <Compile Include="V20180228\Models\CreateProtectServerRequest.cs" />
     <Compile Include="V20180228\Models\CreateProtectServerResponse.cs" />
+    <Compile Include="V20180228\Models\CreateScanMalwareSettingRequest.cs" />
+    <Compile Include="V20180228\Models\CreateScanMalwareSettingResponse.cs" />
     <Compile Include="V20180228\Models\CreateSearchLogRequest.cs" />
     <Compile Include="V20180228\Models\CreateSearchLogResponse.cs" />
     <Compile Include="V20180228\Models\CreateSearchTemplateRequest.cs" />
@@ -182,6 +184,8 @@
     <Compile Include="V20180228\Models\DescribeMaliciousRequestsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMalwareInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeMalwareTimingScanSettingRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeMalwareTimingScanSettingResponse.cs" />
     <Compile Include="V20180228\Models\DescribeMalwaresRequest.cs" />
     <Compile Include="V20180228\Models\DescribeMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\DescribeNonlocalLoginPlacesRequest.cs" />
@@ -214,6 +218,10 @@
     <Compile Include="V20180228\Models\DescribeRiskDnsListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleRequest.cs" />
     <Compile Include="V20180228\Models\DescribeScanMalwareScheduleResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeScanTaskDetailsRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeScanTaskDetailsResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeScanVulSettingRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeScanVulSettingResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSearchExportListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeSearchExportListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeSearchLogsRequest.cs" />
@@ -254,6 +262,8 @@
     <Compile Include="V20180228\Models\DescribeWeeklyReportsResponse.cs" />
     <Compile Include="V20180228\Models\EditBashRuleRequest.cs" />
     <Compile Include="V20180228\Models\EditBashRuleResponse.cs" />
+    <Compile Include="V20180228\Models\EditBashRulesRequest.cs" />
+    <Compile Include="V20180228\Models\EditBashRulesResponse.cs" />
     <Compile Include="V20180228\Models\EditPrivilegeRuleRequest.cs" />
     <Compile Include="V20180228\Models\EditPrivilegeRuleResponse.cs" />
     <Compile Include="V20180228\Models\EditReverseShellRuleRequest.cs" />
@@ -339,8 +349,13 @@
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="V20180228\Models\RiskDnsList.cs" />
+    <Compile Include="V20180228\Models\ScanTaskDetails.cs" />
+    <Compile Include="V20180228\Models\ScanVulAgainRequest.cs" />
+    <Compile Include="V20180228\Models\ScanVulAgainResponse.cs" />
     <Compile Include="V20180228\Models\ScanVulRequest.cs" />
     <Compile Include="V20180228\Models\ScanVulResponse.cs" />
+    <Compile Include="V20180228\Models\ScanVulSettingRequest.cs" />
+    <Compile Include="V20180228\Models\ScanVulSettingResponse.cs" />
     <Compile Include="V20180228\Models\SearchTemplate.cs" />
     <Compile Include="V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="V20180228\Models\SecurityEventInfo.cs" />
@@ -367,6 +382,7 @@
     <Compile Include="V20180228\Models\UpdateBaselineStrategyResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
     <Compile Include="V20180228\Models\Vul.cs" />
+    <Compile Include="V20180228\Models\VulDetailInfo.cs" />
     <Compile Include="V20180228\Models\WeeklyReport.cs" />
     <Compile Include="V20180228\Models\WeeklyReportBruteAttack.cs" />
     <Compile Include="V20180228\Models\WeeklyReportMalware.cs" />
