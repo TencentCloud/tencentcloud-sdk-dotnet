@@ -25,77 +25,74 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 是否命中
-        /// 0 未命中
-        /// 1 命中
+        /// 该字段用于返回审核内容是否命中审核模型；取值：0（**未命中**）、1（**命中**）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HitFlag")]
         public long? HitFlag{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-        /// 以及其他令人反感、不安全或不适宜的内容类型。
+        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 建议您拿到判断结果后的执行操作。
-        /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
+        /// 该字段用于返回后续操作建议。当您获取到判定结果后，返回值表示具体的后续建议操作。<br>
+        /// 返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 得分，0-100
+        /// 该字段用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高** ），越高代表文本越有可能属于当前返回的标签；如：*色情 99*，则表明该文本非常有可能属于色情内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 音频ASR文本
+        /// 该字段用于返回音频文件经ASR识别后的文本信息。最长可识别**5小时**的音频文件，若超出时长限制，接口将会报错。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }
 
         /// <summary>
-        /// 音频片段存储URL，有效期为1天
+        /// 该字段用于返回音频片段存储的链接地址，该地址有效期为1天。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
         /// <summary>
-        /// 音频时长
+        /// 该字段用于返回音频文件的时长，单位为秒。
         /// </summary>
         [JsonProperty("Duration")]
         public string Duration{ get; set; }
 
         /// <summary>
-        /// 拓展字段
+        /// 该字段用于返回额外附加信息，不同客户或Biztype下返回信息不同。
         /// </summary>
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 文本识别结果
+        /// 该字段用于返回音频文件经ASR识别后产生的文本的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
         /// </summary>
         [JsonProperty("TextResults")]
         public AudioResultDetailTextResult[] TextResults{ get; set; }
 
         /// <summary>
-        /// 音频呻吟检测结果
+        /// 该字段用于返回音频文件呻吟检测的详细审核结果。具体结果内容请参见AudioResultDetailMoanResult数据结构的细节描述。
         /// </summary>
         [JsonProperty("MoanResults")]
         public AudioResultDetailMoanResult[] MoanResults{ get; set; }
 
         /// <summary>
-        /// 音频语言检测结果
+        /// 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
         /// </summary>
         [JsonProperty("LanguageResults")]
         public AudioResultDetailLanguageResult[] LanguageResults{ get; set; }

@@ -25,52 +25,80 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 凭据名称。
+        /// 凭据名称
         /// </summary>
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
         /// <summary>
-        /// 凭据的描述信息。
+        /// 凭据的描述信息
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用于加密凭据的KMS KeyId。
+        /// 用于加密凭据的KMS KeyId
         /// </summary>
         [JsonProperty("KmsKeyId")]
         public string KmsKeyId{ get; set; }
 
         /// <summary>
-        /// 创建者UIN。
+        /// 创建者UIN
         /// </summary>
         [JsonProperty("CreateUin")]
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 凭据状态：Enabled、Disabled、PendingDelete
+        /// 凭据状态：Enabled、Disabled、PendingDelete、Creating、Failed
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳。
+        /// 凭据删除日期，对于status为PendingDelete 的有效，unix时间戳
         /// </summary>
         [JsonProperty("DeleteTime")]
         public ulong? DeleteTime{ get; set; }
 
         /// <summary>
-        /// 凭据创建时间，unix时间戳。
+        /// 凭据创建时间，unix时间戳
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥。
+        /// 用于加密凭据的KMS CMK类型，DEFAULT 表示SecretsManager 创建的默认密钥， CUSTOMER 表示用户指定的密钥
         /// </summary>
         [JsonProperty("KmsKeyType")]
         public string KmsKeyType{ get; set; }
+
+        /// <summary>
+        /// 1:--开启轮转；0--禁止轮转
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RotationStatus")]
+        public long? RotationStatus{ get; set; }
+
+        /// <summary>
+        /// 下一次轮转开始时间，uinx 时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextRotationTime")]
+        public ulong? NextRotationTime{ get; set; }
+
+        /// <summary>
+        /// 0 -- 用户自定义凭据；1 -- 云产品凭据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public long? SecretType{ get; set; }
+
+        /// <summary>
+        /// 云产品名称，仅在SecretType为1，即凭据类型为云产品凭据时生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
 
 
         /// <summary>
@@ -86,6 +114,10 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "KmsKeyType", this.KmsKeyType);
+            this.SetParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+            this.SetParamSimple(map, prefix + "NextRotationTime", this.NextRotationTime);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

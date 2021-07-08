@@ -173,6 +173,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建用户数据签名
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSigRequest"/></param>
+        /// <returns><see cref="CreateUserSigResponse"/></returns>
+        public async Task<CreateUserSigResponse> CreateUserSig(CreateUserSigRequest req)
+        {
+             JsonResponseModel<CreateUserSigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserSig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户数据签名
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserSigRequest"/></param>
+        /// <returns><see cref="CreateUserSigResponse"/></returns>
+        public CreateUserSigResponse CreateUserSigSync(CreateUserSigRequest req)
+        {
+             JsonResponseModel<CreateUserSigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserSig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserSigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除坐席信息
         /// </summary>
         /// <param name="req"><see cref="DeleteStaffRequest"/></param>

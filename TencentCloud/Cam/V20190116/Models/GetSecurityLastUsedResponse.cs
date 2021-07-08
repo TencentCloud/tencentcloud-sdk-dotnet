@@ -25,6 +25,12 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
+        /// 密钥ID最近访问列表
+        /// </summary>
+        [JsonProperty("SecretIdLastUsedRows")]
+        public SecretIdLastUsed[] SecretIdLastUsedRows{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "SecretIdLastUsedRows.", this.SecretIdLastUsedRows);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,35 +25,35 @@ namespace TencentCloud.Vm.V20201229.Models
     {
         
         /// <summary>
-        /// 语言分类，如中文、英文等；
+        /// 该字段用于返回语种检测结果所对应的语种标签，目前支持：**Arabic**（阿拉伯语）、**English**（英语）、**Mandarin**（普通话）、**Tibetan**（藏语）、**Uyghur**（维语）、**Other**（其他上面5类之外）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 得分
+        /// 该参数用于返回当前标签下的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于当前返回的语种标签；如：*Uyghur 99*，则表明该音频非常有可能属于维语内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 该参数用于返回对应语种标签的片段在音频文件内的开始时间，单位为毫秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 该参数用于返回对应语种标签的片段在音频文件内的结束时间，单位为毫秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }
 
         /// <summary>
-        /// 子标签码
+        /// *内测中，敬请期待*
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabelCode")]

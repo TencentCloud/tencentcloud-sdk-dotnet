@@ -24,12 +24,19 @@ namespace TencentCloud.Cam.V20190116.Models
     public class GetSecurityLastUsedRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 查询密钥ID列表
+        /// </summary>
+        [JsonProperty("SecretIdList")]
+        public string[] SecretIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SecretIdList.", this.SecretIdList);
         }
     }
 }

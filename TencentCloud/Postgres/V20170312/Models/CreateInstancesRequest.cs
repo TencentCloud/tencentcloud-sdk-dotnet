@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 是否需要支持Ipv6，1：是，0：否。
+        /// 是否需要支持Ipv6，1：是，0：否（默认）。
         /// </summary>
         [JsonProperty("NeedSupportIpv6")]
         public ulong? NeedSupportIpv6{ get; set; }

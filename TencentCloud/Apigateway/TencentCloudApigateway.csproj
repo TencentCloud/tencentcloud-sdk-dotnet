@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.319</VersionPrefix>
+    <VersionPrefix>3.0.320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,13 +52,18 @@
     <Compile Include="V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="V20180808\Models\ApiIdStatus.cs" />
     <Compile Include="V20180808\Models\ApiInfo.cs" />
+    <Compile Include="V20180808\Models\ApiInfoSummary.cs" />
     <Compile Include="V20180808\Models\ApiKey.cs" />
     <Compile Include="V20180808\Models\ApiKeysStatus.cs" />
     <Compile Include="V20180808\Models\ApiRequestConfig.cs" />
     <Compile Include="V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="V20180808\Models\ApisStatus.cs" />
+    <Compile Include="V20180808\Models\AttachPluginRequest.cs" />
+    <Compile Include="V20180808\Models\AttachPluginResponse.cs" />
     <Compile Include="V20180808\Models\AttachedApiInfo.cs" />
+    <Compile Include="V20180808\Models\AttachedApiSummary.cs" />
+    <Compile Include="V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentResponse.cs" />
@@ -94,6 +99,8 @@
     <Compile Include="V20180808\Models\DeleteApiResponse.cs" />
     <Compile Include="V20180808\Models\DeleteIPStrategyRequest.cs" />
     <Compile Include="V20180808\Models\DeleteIPStrategyResponse.cs" />
+    <Compile Include="V20180808\Models\DeletePluginRequest.cs" />
+    <Compile Include="V20180808\Models\DeletePluginResponse.cs" />
     <Compile Include="V20180808\Models\DeleteServiceRequest.cs" />
     <Compile Include="V20180808\Models\DeleteServiceResponse.cs" />
     <Compile Include="V20180808\Models\DeleteServiceSubDomainMappingRequest.cs" />
@@ -107,6 +114,8 @@
     <Compile Include="V20180808\Models\DescribeAPIDocDetailResponse.cs" />
     <Compile Include="V20180808\Models\DescribeAPIDocsRequest.cs" />
     <Compile Include="V20180808\Models\DescribeAPIDocsResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeAllPluginApisRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeAllPluginApisResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -127,6 +136,10 @@
     <Compile Include="V20180808\Models\DescribeIPStrategysStatusResponse.cs" />
     <Compile Include="V20180808\Models\DescribeLogSearchRequest.cs" />
     <Compile Include="V20180808\Models\DescribeLogSearchResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePluginApisRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePluginApisResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePluginRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePluginResponse.cs" />
     <Compile Include="V20180808\Models\DescribePluginsRequest.cs" />
     <Compile Include="V20180808\Models\DescribePluginsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
@@ -155,6 +168,8 @@
     <Compile Include="V20180808\Models\DescribeUsagePlanSecretIdsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeUsagePlansStatusRequest.cs" />
     <Compile Include="V20180808\Models\DescribeUsagePlansStatusResponse.cs" />
+    <Compile Include="V20180808\Models\DetachPluginRequest.cs" />
+    <Compile Include="V20180808\Models\DetachPluginResponse.cs" />
     <Compile Include="V20180808\Models\DisableApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\DisableApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\DocumentSDK.cs" />
@@ -186,6 +201,8 @@
     <Compile Include="V20180808\Models\ModifyApiResponse.cs" />
     <Compile Include="V20180808\Models\ModifyIPStrategyRequest.cs" />
     <Compile Include="V20180808\Models\ModifyIPStrategyResponse.cs" />
+    <Compile Include="V20180808\Models\ModifyPluginRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyPluginResponse.cs" />
     <Compile Include="V20180808\Models\ModifyServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\ModifyServiceEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\ModifyServiceRequest.cs" />

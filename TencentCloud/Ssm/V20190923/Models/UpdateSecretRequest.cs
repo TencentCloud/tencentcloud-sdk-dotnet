@@ -37,13 +37,14 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。SecretBinary 和 SecretString 只能一个不为空。
+        /// 新的凭据内容为二进制的场景使用该字段，并使用base64进行编码。
+        /// SecretBinary 和 SecretString 只能一个不为空。
         /// </summary>
         [JsonProperty("SecretBinary")]
         public string SecretBinary{ get; set; }
 
         /// <summary>
-        /// 新的凭据内容为文本的场景使用该字段，不需要base64编码。SecretBinary 和 SecretString 只能一个不为空。
+        /// 新的凭据内容为文本的场景使用该字段，不需要base64编码SecretBinary 和 SecretString 只能一个不为空。
         /// </summary>
         [JsonProperty("SecretString")]
         public string SecretString{ get; set; }

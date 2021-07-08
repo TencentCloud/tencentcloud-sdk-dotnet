@@ -43,7 +43,14 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? OrderType{ get; set; }
 
         /// <summary>
-        /// 根据凭据状态进行过滤，默认为0表示查询全部，1 表示查询Enabed 凭据列表，2表示查询Disabled 凭据列表， 3 表示查询PendingDelete 凭据列表。
+        /// 根据凭据状态进行过滤。
+        /// 默认为0表示查询全部。
+        /// 1 --  表示查询Enabled 凭据列表。
+        /// 2 --  表示查询Disabled 凭据列表。
+        /// 3 --  表示查询PendingDelete 凭据列表。
+        /// 4 --  表示PendingCreate。
+        /// 5 --  表示CreateFailed。
+        /// 其中状态PendingCreate和CreateFailed只有在SecretType为云产品凭据时生效
         /// </summary>
         [JsonProperty("State")]
         public ulong? State{ get; set; }
@@ -55,10 +62,18 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string SearchSecretName{ get; set; }
 
         /// <summary>
-        /// 标签过滤条件
+        /// 标签过滤条件。
         /// </summary>
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
+
+        /// <summary>
+        /// 0  -- 表示用户自定义凭据，默认为0。
+        /// 1  -- 表示用户云产品凭据。
+        /// 这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public ulong? SecretType{ get; set; }
 
 
         /// <summary>
@@ -72,6 +87,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
         }
     }
 }

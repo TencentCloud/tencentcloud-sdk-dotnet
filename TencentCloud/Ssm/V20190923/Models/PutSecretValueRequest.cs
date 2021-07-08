@@ -37,7 +37,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string VersionId{ get; set; }
 
         /// <summary>
-        /// 二进制凭据信息，使用base64编码。SecretBinary 和 SecretString 必须且只能设置一个。
+        /// 二进制凭据信息，使用base64编码。
+        /// SecretBinary 和 SecretString 必须且只能设置一个。
         /// </summary>
         [JsonProperty("SecretBinary")]
         public string SecretBinary{ get; set; }

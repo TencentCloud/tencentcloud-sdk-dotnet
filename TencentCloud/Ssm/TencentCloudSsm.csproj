@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2E555935-1AF9-3035-A549-EF9F2CEA0C32}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.319</VersionPrefix>
+    <VersionPrefix>3.0.320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,14 +45,24 @@
 
   <ItemGroup>
     <Compile Include="V20190923\SsmClient.cs" />
+    <Compile Include="V20190923\Models\CreateProductSecretRequest.cs" />
+    <Compile Include="V20190923\Models\CreateProductSecretResponse.cs" />
     <Compile Include="V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="V20190923\Models\CreateSecretResponse.cs" />
     <Compile Include="V20190923\Models\DeleteSecretRequest.cs" />
     <Compile Include="V20190923\Models\DeleteSecretResponse.cs" />
     <Compile Include="V20190923\Models\DeleteSecretVersionRequest.cs" />
     <Compile Include="V20190923\Models\DeleteSecretVersionResponse.cs" />
+    <Compile Include="V20190923\Models\DescribeAsyncRequestInfoRequest.cs" />
+    <Compile Include="V20190923\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="V20190923\Models\DescribeRotationDetailRequest.cs" />
+    <Compile Include="V20190923\Models\DescribeRotationDetailResponse.cs" />
+    <Compile Include="V20190923\Models\DescribeRotationHistoryRequest.cs" />
+    <Compile Include="V20190923\Models\DescribeRotationHistoryResponse.cs" />
     <Compile Include="V20190923\Models\DescribeSecretRequest.cs" />
     <Compile Include="V20190923\Models\DescribeSecretResponse.cs" />
+    <Compile Include="V20190923\Models\DescribeSupportedProductsRequest.cs" />
+    <Compile Include="V20190923\Models\DescribeSupportedProductsResponse.cs" />
     <Compile Include="V20190923\Models\DisableSecretRequest.cs" />
     <Compile Include="V20190923\Models\DisableSecretResponse.cs" />
     <Compile Include="V20190923\Models\EnableSecretRequest.cs" />
@@ -67,15 +77,20 @@
     <Compile Include="V20190923\Models\ListSecretVersionIdsResponse.cs" />
     <Compile Include="V20190923\Models\ListSecretsRequest.cs" />
     <Compile Include="V20190923\Models\ListSecretsResponse.cs" />
+    <Compile Include="V20190923\Models\ProductPrivilegeUnit.cs" />
     <Compile Include="V20190923\Models\PutSecretValueRequest.cs" />
     <Compile Include="V20190923\Models\PutSecretValueResponse.cs" />
     <Compile Include="V20190923\Models\RestoreSecretRequest.cs" />
     <Compile Include="V20190923\Models\RestoreSecretResponse.cs" />
+    <Compile Include="V20190923\Models\RotateProductSecretRequest.cs" />
+    <Compile Include="V20190923\Models\RotateProductSecretResponse.cs" />
     <Compile Include="V20190923\Models\SecretMetadata.cs" />
     <Compile Include="V20190923\Models\Tag.cs" />
     <Compile Include="V20190923\Models\TagFilter.cs" />
     <Compile Include="V20190923\Models\UpdateDescriptionRequest.cs" />
     <Compile Include="V20190923\Models\UpdateDescriptionResponse.cs" />
+    <Compile Include="V20190923\Models\UpdateRotationStatusRequest.cs" />
+    <Compile Include="V20190923\Models\UpdateRotationStatusResponse.cs" />
     <Compile Include="V20190923\Models\UpdateSecretRequest.cs" />
     <Compile Include="V20190923\Models\UpdateSecretResponse.cs" />
     <Compile Include="V20190923\Models\VersionInfo.cs" />

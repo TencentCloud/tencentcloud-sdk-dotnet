@@ -25,8 +25,7 @@ namespace TencentCloud.Vm.V20201229.Models
     {
         
         /// <summary>
-        /// 流检测时分片时长
-        /// 注意：此字段可能返回 0，表示取不到有效值。
+        /// 该字段用于返回对传入的视频流进行分片的片段时长，单位为秒。**默认值为5秒**，支持用户自定义配置。<br>备注：仅在审核文件为流媒体时生效；此字段返回0则代表未取到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

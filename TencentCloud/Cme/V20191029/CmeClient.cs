@@ -93,6 +93,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
+        /// </summary>
+        /// <param name="req"><see cref="CopyProjectRequest"/></param>
+        /// <returns><see cref="CopyProjectResponse"/></returns>
+        public async Task<CopyProjectResponse> CopyProject(CopyProjectRequest req)
+        {
+             JsonResponseModel<CopyProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 复制一个项目，包括项目素材及轨道数据。目前仅普通剪辑及模板制作项目可复制，其它类型的项目不支持复制。
+        /// </summary>
+        /// <param name="req"><see cref="CopyProjectRequest"/></param>
+        /// <returns><see cref="CopyProjectResponse"/></returns>
+        public CopyProjectResponse CopyProjectSync(CopyProjectRequest req)
+        {
+             JsonResponseModel<CopyProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增分类，用于管理素材。分类层数不能超过20。
         /// </summary>
         /// <param name="req"><see cref="CreateClassRequest"/></param>

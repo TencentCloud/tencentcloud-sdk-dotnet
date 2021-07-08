@@ -53,6 +53,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// 创建云产品凭据
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductSecretRequest"/></param>
+        /// <returns><see cref="CreateProductSecretResponse"/></returns>
+        public async Task<CreateProductSecretResponse> CreateProductSecret(CreateProductSecretRequest req)
+        {
+             JsonResponseModel<CreateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建云产品凭据
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductSecretRequest"/></param>
+        /// <returns><see cref="CreateProductSecretResponse"/></returns>
+        public CreateProductSecretResponse CreateProductSecretSync(CreateProductSecretRequest req)
+        {
+             JsonResponseModel<CreateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
         /// </summary>
         /// <param name="req"><see cref="CreateSecretRequest"/></param>
@@ -134,6 +174,7 @@ namespace TencentCloud.Ssm.V20190923
 
         /// <summary>
         /// 该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
+        /// 本接口仅适用于用户自定义凭据，本接口不能对云产品凭据进行操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecretVersionRequest"/></param>
         /// <returns><see cref="DeleteSecretVersionResponse"/></returns>
@@ -154,6 +195,7 @@ namespace TencentCloud.Ssm.V20190923
 
         /// <summary>
         /// 该接口用于直接删除指定凭据下的单个版本凭据，删除操作立即生效，对所有状态下的凭据版本都可以删除。
+        /// 本接口仅适用于用户自定义凭据，本接口不能对云产品凭据进行操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteSecretVersionRequest"/></param>
         /// <returns><see cref="DeleteSecretVersionResponse"/></returns>
@@ -164,6 +206,130 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSecretVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecretVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询异步任务的执行结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public async Task<DescribeAsyncRequestInfoResponse> DescribeAsyncRequestInfo(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询异步任务的执行结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>
+        /// <returns><see cref="DescribeAsyncRequestInfoResponse"/></returns>
+        public DescribeAsyncRequestInfoResponse DescribeAsyncRequestInfoSync(DescribeAsyncRequestInfoRequest req)
+        {
+             JsonResponseModel<DescribeAsyncRequestInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAsyncRequestInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAsyncRequestInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询凭据轮转策略详情。
+        /// 本接口只适用于云产品凭据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRotationDetailResponse"/></returns>
+        public async Task<DescribeRotationDetailResponse> DescribeRotationDetail(DescribeRotationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRotationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询凭据轮转策略详情。
+        /// 本接口只适用于云产品凭据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationDetailRequest"/></param>
+        /// <returns><see cref="DescribeRotationDetailResponse"/></returns>
+        public DescribeRotationDetailResponse DescribeRotationDetailSync(DescribeRotationDetailRequest req)
+        {
+             JsonResponseModel<DescribeRotationDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRotationDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询凭据轮转历史版本。
+        /// 本接口仅适用于云产品凭据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationHistoryRequest"/></param>
+        /// <returns><see cref="DescribeRotationHistoryResponse"/></returns>
+        public async Task<DescribeRotationHistoryResponse> DescribeRotationHistory(DescribeRotationHistoryRequest req)
+        {
+             JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRotationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询凭据轮转历史版本。
+        /// 本接口仅适用于云产品凭据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRotationHistoryRequest"/></param>
+        /// <returns><see cref="DescribeRotationHistoryResponse"/></returns>
+        public DescribeRotationHistoryResponse DescribeRotationHistorySync(DescribeRotationHistoryRequest req)
+        {
+             JsonResponseModel<DescribeRotationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRotationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRotationHistoryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -204,6 +370,46 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSecret");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询支持的云产品列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProductsRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProductsResponse"/></returns>
+        public async Task<DescribeSupportedProductsResponse> DescribeSupportedProducts(DescribeSupportedProductsRequest req)
+        {
+             JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSupportedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询支持的云产品列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSupportedProductsRequest"/></param>
+        /// <returns><see cref="DescribeSupportedProductsResponse"/></returns>
+        public DescribeSupportedProductsResponse DescribeSupportedProductsSync(DescribeSupportedProductsRequest req)
+        {
+             JsonResponseModel<DescribeSupportedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSupportedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSupportedProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -333,7 +539,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// 获取指定凭据名称和版本的凭据明文信息，只能获取启用状态的凭据明文。
+        /// 对于用户自定义凭据，通过指定凭据名称和版本来获取凭据的明文信息；
+        /// 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
         /// </summary>
         /// <param name="req"><see cref="GetSecretValueRequest"/></param>
         /// <returns><see cref="GetSecretValueResponse"/></returns>
@@ -353,7 +560,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// 获取指定凭据名称和版本的凭据明文信息，只能获取启用状态的凭据明文。
+        /// 对于用户自定义凭据，通过指定凭据名称和版本来获取凭据的明文信息；
+        /// 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
         /// </summary>
         /// <param name="req"><see cref="GetSecretValueRequest"/></param>
         /// <returns><see cref="GetSecretValueResponse"/></returns>
@@ -494,6 +702,7 @@ namespace TencentCloud.Ssm.V20190923
 
         /// <summary>
         /// 该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
+        /// 本接口仅适用于用户自定义凭据，对云产品凭据不能操作。
         /// </summary>
         /// <param name="req"><see cref="PutSecretValueRequest"/></param>
         /// <returns><see cref="PutSecretValueResponse"/></returns>
@@ -514,6 +723,7 @@ namespace TencentCloud.Ssm.V20190923
 
         /// <summary>
         /// 该接口在指定名称的凭据下增加新版本的凭据内容，一个凭据下最多可以支持10个版本。只能对处于Enabled 和 Disabled 状态的凭据添加新的版本。
+        /// 本接口仅适用于用户自定义凭据，对云产品凭据不能操作。
         /// </summary>
         /// <param name="req"><see cref="PutSecretValueRequest"/></param>
         /// <returns><see cref="PutSecretValueResponse"/></returns>
@@ -573,6 +783,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// 轮转云产品凭据。该接口仅适用于处于Enabled状态的云产品凭据，对于其他状态的云产品凭据或用户自定义凭据不适用。
+        /// </summary>
+        /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
+        /// <returns><see cref="RotateProductSecretResponse"/></returns>
+        public async Task<RotateProductSecretResponse> RotateProductSecret(RotateProductSecretRequest req)
+        {
+             JsonResponseModel<RotateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RotateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RotateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 轮转云产品凭据。该接口仅适用于处于Enabled状态的云产品凭据，对于其他状态的云产品凭据或用户自定义凭据不适用。
+        /// </summary>
+        /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
+        /// <returns><see cref="RotateProductSecretResponse"/></returns>
+        public RotateProductSecretResponse RotateProductSecretSync(RotateProductSecretRequest req)
+        {
+             JsonResponseModel<RotateProductSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RotateProductSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RotateProductSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于修改指定凭据的描述信息，仅能修改Enabled 和 Disabled 状态的凭据。
         /// </summary>
         /// <param name="req"><see cref="UpdateDescriptionRequest"/></param>
@@ -613,7 +863,54 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// 设置云产品凭据轮转策略，可以设置：
+        /// 是否开启轮转
+        /// 轮转周期
+        /// 轮转开始时间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRotationStatusRequest"/></param>
+        /// <returns><see cref="UpdateRotationStatusResponse"/></returns>
+        public async Task<UpdateRotationStatusResponse> UpdateRotationStatus(UpdateRotationStatusRequest req)
+        {
+             JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRotationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRotationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置云产品凭据轮转策略，可以设置：
+        /// 是否开启轮转
+        /// 轮转周期
+        /// 轮转开始时间
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRotationStatusRequest"/></param>
+        /// <returns><see cref="UpdateRotationStatusResponse"/></returns>
+        public UpdateRotationStatusResponse UpdateRotationStatusSync(UpdateRotationStatusRequest req)
+        {
+             JsonResponseModel<UpdateRotationStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRotationStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRotationStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于更新指定凭据名称和版本号的内容，调用该接口会对新的凭据内容加密后覆盖旧的内容。仅允许更新Enabled 和 Disabled 状态的凭据。
+        /// 本接口仅适用于用户自定义凭据，不能对云产品凭据操作。
         /// </summary>
         /// <param name="req"><see cref="UpdateSecretRequest"/></param>
         /// <returns><see cref="UpdateSecretResponse"/></returns>
@@ -634,6 +931,7 @@ namespace TencentCloud.Ssm.V20190923
 
         /// <summary>
         /// 该接口用于更新指定凭据名称和版本号的内容，调用该接口会对新的凭据内容加密后覆盖旧的内容。仅允许更新Enabled 和 Disabled 状态的凭据。
+        /// 本接口仅适用于用户自定义凭据，不能对云产品凭据操作。
         /// </summary>
         /// <param name="req"><see cref="UpdateSecretRequest"/></param>
         /// <returns><see cref="UpdateSecretResponse"/></returns>

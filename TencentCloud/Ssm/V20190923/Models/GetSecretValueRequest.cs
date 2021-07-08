@@ -32,6 +32,7 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 指定对应凭据的版本号。
+        /// 对于云产品凭据如Mysql凭据，通过指定凭据名称和历史版本号来获取历史轮转凭据的明文信息，如果要获取当前正在使用的凭据版本的明文，需要将版本号指定为：SSM_Current。
         /// </summary>
         [JsonProperty("VersionId")]
         public string VersionId{ get; set; }

@@ -82,7 +82,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public long?[] WarningCode{ get; set; }
 
         /// <summary>
-        /// 图片质量分数，请求enable_quality_value时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
+        /// 图片质量分数，请求EnableQualityValue时返回（取值范围：0-100，分数越低越模糊，建议阈值≥50）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QualityValue")]

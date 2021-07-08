@@ -53,6 +53,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 绑定插件到API上。
+        /// </summary>
+        /// <param name="req"><see cref="AttachPluginRequest"/></param>
+        /// <returns><see cref="AttachPluginResponse"/></returns>
+        public async Task<AttachPluginResponse> AttachPlugin(AttachPluginRequest req)
+        {
+             JsonResponseModel<AttachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定插件到API上。
+        /// </summary>
+        /// <param name="req"><see cref="AttachPluginRequest"/></param>
+        /// <returns><see cref="AttachPluginResponse"/></returns>
+        public AttachPluginResponse AttachPluginSync(AttachPluginRequest req)
+        {
+             JsonResponseModel<AttachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（BindEnvironment）用于绑定使用计划到服务或API。
         /// 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
         /// 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -705,6 +745,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 删除API网关插件
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public async Task<DeletePluginResponse> DeletePlugin(DeletePluginRequest req)
+        {
+             JsonResponseModel<DeletePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除API网关插件
+        /// </summary>
+        /// <param name="req"><see cref="DeletePluginRequest"/></param>
+        /// <returns><see cref="DeletePluginResponse"/></returns>
+        public DeletePluginResponse DeletePluginSync(DeletePluginRequest req)
+        {
+             JsonResponseModel<DeletePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteService）用于删除 API 网关中某个服务。
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceRequest"/></param>
@@ -942,6 +1022,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAPIDocs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAPIDocsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示插件相关的API列表，包括已绑定的和未绑定的API信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllPluginApisRequest"/></param>
+        /// <returns><see cref="DescribeAllPluginApisResponse"/></returns>
+        public async Task<DescribeAllPluginApisResponse> DescribeAllPluginApis(DescribeAllPluginApisRequest req)
+        {
+             JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllPluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllPluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示插件相关的API列表，包括已绑定的和未绑定的API信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllPluginApisRequest"/></param>
+        /// <returns><see cref="DescribeAllPluginApisResponse"/></returns>
+        public DescribeAllPluginApisResponse DescribeAllPluginApisSync(DescribeAllPluginApisRequest req)
+        {
+             JsonResponseModel<DescribeAllPluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllPluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllPluginApisResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1348,6 +1468,86 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLogSearch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogSearchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示插件详情，支持按照插件ID进行。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginRequest"/></param>
+        /// <returns><see cref="DescribePluginResponse"/></returns>
+        public async Task<DescribePluginResponse> DescribePlugin(DescribePluginRequest req)
+        {
+             JsonResponseModel<DescribePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 展示插件详情，支持按照插件ID进行。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginRequest"/></param>
+        /// <returns><see cref="DescribePluginResponse"/></returns>
+        public DescribePluginResponse DescribePluginSync(DescribePluginRequest req)
+        {
+             JsonResponseModel<DescribePluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定插件下绑定的API信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginApisRequest"/></param>
+        /// <returns><see cref="DescribePluginApisResponse"/></returns>
+        public async Task<DescribePluginApisResponse> DescribePluginApis(DescribePluginApisRequest req)
+        {
+             JsonResponseModel<DescribePluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定插件下绑定的API信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginApisRequest"/></param>
+        /// <returns><see cref="DescribePluginApisResponse"/></returns>
+        public DescribePluginApisResponse DescribePluginApisSync(DescribePluginApisRequest req)
+        {
+             JsonResponseModel<DescribePluginApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginApisResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1931,6 +2131,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 解除插件与API绑定
+        /// </summary>
+        /// <param name="req"><see cref="DetachPluginRequest"/></param>
+        /// <returns><see cref="DetachPluginResponse"/></returns>
+        public async Task<DetachPluginResponse> DetachPlugin(DetachPluginRequest req)
+        {
+             JsonResponseModel<DetachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解除插件与API绑定
+        /// </summary>
+        /// <param name="req"><see cref="DetachPluginRequest"/></param>
+        /// <returns><see cref="DetachPluginResponse"/></returns>
+        public DetachPluginResponse DetachPluginSync(DetachPluginRequest req)
+        {
+             JsonResponseModel<DetachPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisableApiKey）用于禁用一对 API 密钥。
         /// </summary>
         /// <param name="req"><see cref="DisableApiKeyRequest"/></param>
@@ -2242,6 +2482,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIPStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIPStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改API网关插件。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public async Task<ModifyPluginResponse> ModifyPlugin(ModifyPluginRequest req)
+        {
+             JsonResponseModel<ModifyPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPluginResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改API网关插件。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPluginRequest"/></param>
+        /// <returns><see cref="ModifyPluginResponse"/></returns>
+        public ModifyPluginResponse ModifyPluginSync(ModifyPluginRequest req)
+        {
+             JsonResponseModel<ModifyPluginResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPlugin");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPluginResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

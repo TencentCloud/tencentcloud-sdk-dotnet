@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.319</VersionPrefix>
+    <VersionPrefix>3.0.320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -392,13 +392,18 @@
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiIdStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiInfoSummary.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiKey.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiKeysStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiRequestConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiUsagePlanSet.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApisStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachPluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\AttachedApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AttachedApiSummary.cs" />
+    <Compile Include="Apigateway\V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
@@ -434,6 +439,8 @@
     <Compile Include="Apigateway\V20180808\Models\DeleteApiResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeletePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeletePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceSubDomainMappingRequest.cs" />
@@ -447,6 +454,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocDetailResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -467,6 +476,10 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategysStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeLogSearchResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginApisRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginApisResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribePluginsRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribePluginsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentListRequest.cs" />
@@ -495,6 +508,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlanSecretIdsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlansStatusRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlansStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DetachPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DetachPluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DisableApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DisableApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DocumentSDK.cs" />
@@ -526,6 +541,8 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyApiResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyPluginRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyPluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceRequest.cs" />
@@ -1709,6 +1726,7 @@
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\SecretIdLastUsed.cs" />
     <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
     <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionResponse.cs" />
     <Compile Include="Cam\V20190116\Models\SetMfaFlagRequest.cs" />
@@ -1932,6 +1950,8 @@
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateUserSigRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateUserSigResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesRequest.cs" />
@@ -2631,6 +2651,10 @@
     <Compile Include="Cfw\V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeBlockByIpTimesListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeBlockByIpTimesListResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeBlockStaticListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeBlockStaticListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeGuideScanInfoRequest.cs" />
@@ -2645,13 +2669,20 @@
     <Compile Include="Cfw\V20190904\Models\DescribeSwitchListsResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeSyncAssetStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTLogInfoRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTLogInfoResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTLogIpListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeTLogIpListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeTableStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeTableStatusResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeUnHandleEventTabListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeUnHandleEventTabListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\IocListData.cs" />
+    <Compile Include="Cfw\V20190904\Models\IpStatic.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyAllRuleStatusRequest.cs" />
@@ -2660,6 +2691,8 @@
     <Compile Include="Cfw\V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyBlockIgnoreListRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyBlockTopRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\ModifyBlockTopResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\ModifySecurityGroupAllRuleStatusRequest.cs" />
@@ -2679,7 +2712,11 @@
     <Compile Include="Cfw\V20190904\Models\SequenceData.cs" />
     <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\StaticInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\SwitchListsData.cs" />
+    <Compile Include="Cfw\V20190904\Models\TLogInfo.cs" />
+    <Compile Include="Cfw\V20190904\Models\UnHandleEvent.cs" />
+    <Compile Include="Cfw\V20190904\Models\UnHandleEventDetail.cs" />
     <Compile Include="Chdfs\V20201112\ChdfsClient.cs" />
     <Compile Include="Chdfs\V20201112\Models\AccessGroup.cs" />
     <Compile Include="Chdfs\V20201112\Models\AccessRule.cs" />
@@ -3319,6 +3356,8 @@
     <Compile Include="Cme\V20191029\Models\Authorizer.cs" />
     <Compile Include="Cme\V20191029\Models\CMEExportInfo.cs" />
     <Compile Include="Cme\V20191029\Models\ClassInfo.cs" />
+    <Compile Include="Cme\V20191029\Models\CopyProjectRequest.cs" />
+    <Compile Include="Cme\V20191029\Models\CopyProjectResponse.cs" />
     <Compile Include="Cme\V20191029\Models\CosPublishInputInfo.cs" />
     <Compile Include="Cme\V20191029\Models\CreateClassRequest.cs" />
     <Compile Include="Cme\V20191029\Models\CreateClassResponse.cs" />
@@ -10904,14 +10943,24 @@
     <Compile Include="Sslpod\V20190605\Models\ResolveDomainRequest.cs" />
     <Compile Include="Sslpod\V20190605\Models\ResolveDomainResponse.cs" />
     <Compile Include="Ssm\V20190923\SsmClient.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateProductSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateProductSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretVersionRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretVersionResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeAsyncRequestInfoRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeAsyncRequestInfoResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeRotationDetailRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeRotationDetailResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeRotationHistoryRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeRotationHistoryResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DescribeSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\DescribeSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeSupportedProductsRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\DescribeSupportedProductsResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DisableSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\DisableSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\EnableSecretRequest.cs" />
@@ -10926,15 +10975,20 @@
     <Compile Include="Ssm\V20190923\Models\ListSecretVersionIdsResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\ListSecretsRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\ListSecretsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\ProductPrivilegeUnit.cs" />
     <Compile Include="Ssm\V20190923\Models\PutSecretValueRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\PutSecretValueResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\RestoreSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\RestoreSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\RotateProductSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\RotateProductSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\SecretMetadata.cs" />
     <Compile Include="Ssm\V20190923\Models\Tag.cs" />
     <Compile Include="Ssm\V20190923\Models\TagFilter.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateDescriptionRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateDescriptionResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateRotationStatusRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\UpdateRotationStatusResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\UpdateSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\VersionInfo.cs" />

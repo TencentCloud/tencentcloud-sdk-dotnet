@@ -25,32 +25,31 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 编码格式
+        /// 该字段用于返回传入的媒体文件的编码格式，如wav、mp3、aac、flac、amr、3gp、 m4a、wma、ogg、ape等。
         /// </summary>
         [JsonProperty("Codecs")]
         public string Codecs{ get; set; }
 
         /// <summary>
-        /// 流检测时分片时长
-        /// 注意：此字段可能返回 0，表示取不到有效值。
+        /// 该字段用于返回对传入的流媒体文件进行分片的片段时长，单位为秒。**默认值为15秒**，支持用户自定义配置。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
-        /// 宽，单位为像素
+        /// *内测中，敬请期待*
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 高，单位为像素
+        /// *内测中，敬请期待*
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 缩略图
+        /// *内测中，敬请期待*
         /// </summary>
         [JsonProperty("Thumbnail")]
         public string Thumbnail{ get; set; }

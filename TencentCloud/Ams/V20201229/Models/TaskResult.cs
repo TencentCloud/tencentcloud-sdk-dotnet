@@ -25,28 +25,28 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 请求时传入的DataId
+        /// 该字段用于返回创建音频审核任务时在TaskInput结构内传入的DataId，用于标识具体审核任务。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
 
         /// <summary>
-        /// TaskId，任务ID
+        /// 该字段用于返回音频审核任务所生成的任务ID，用于标识具体审核任务，方便后续查询和管理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 错误码。如果code为OK，则表示创建成功，其他则参考公共错误码
+        /// 该字段用于返回任务创建的状态，如返回OK则代表任务创建成功，其他返回值可参考公共错误码。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 如果错误，该字段表示错误详情
+        /// **仅在Code的返回值为错误码时生效**，用于返回错误的详情内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Message")]

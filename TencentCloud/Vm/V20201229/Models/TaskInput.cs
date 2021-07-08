@@ -25,19 +25,19 @@ namespace TencentCloud.Vm.V20201229.Models
     {
         
         /// <summary>
-        /// 数据ID
+        /// 选填参数，该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 任务名
+        /// 选填参数，该字段表示审核任务所对应的任务名称，方便后续查询和管理审核任务。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 任务输入
+        /// 必填参数，该字段表示审核文件的访问参数，用于获取审核媒体文件，该参数内包括访问类型和访问地址。
         /// </summary>
         [JsonProperty("Input")]
         public StorageInfo Input{ get; set; }

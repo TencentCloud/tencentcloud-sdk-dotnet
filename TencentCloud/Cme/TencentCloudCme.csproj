@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.319</VersionPrefix>
+    <VersionPrefix>3.0.320</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20191029\Models\Authorizer.cs" />
     <Compile Include="V20191029\Models\CMEExportInfo.cs" />
     <Compile Include="V20191029\Models\ClassInfo.cs" />
+    <Compile Include="V20191029\Models\CopyProjectRequest.cs" />
+    <Compile Include="V20191029\Models\CopyProjectResponse.cs" />
     <Compile Include="V20191029\Models\CosPublishInputInfo.cs" />
     <Compile Include="V20191029\Models\CreateClassRequest.cs" />
     <Compile Include="V20191029\Models\CreateClassResponse.cs" />

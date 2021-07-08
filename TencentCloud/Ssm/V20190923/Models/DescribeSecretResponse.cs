@@ -49,7 +49,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? CreateUin{ get; set; }
 
         /// <summary>
-        /// 凭据状态：Enabled、Disabled、PendingDelete
+        /// 凭据状态：Enabled、Disabled、PendingDelete, Creating, Failed。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -65,6 +65,41 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// </summary>
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 0 --  用户自定义凭据类型；1 -- 云产品凭据类型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecretType")]
+        public long? SecretType{ get; set; }
+
+        /// <summary>
+        /// 云产品名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// 云产品实例ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceID")]
+        public string ResourceID{ get; set; }
+
+        /// <summary>
+        /// 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RotationStatus")]
+        public bool? RotationStatus{ get; set; }
+
+        /// <summary>
+        /// 轮转周期，默认以天为单位。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RotationFrequency")]
+        public long? RotationFrequency{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -85,6 +120,11 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DeleteTime", this.DeleteTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "ResourceID", this.ResourceID);
+            this.SetParamSimple(map, prefix + "RotationStatus", this.RotationStatus);
+            this.SetParamSimple(map, prefix + "RotationFrequency", this.RotationFrequency);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
