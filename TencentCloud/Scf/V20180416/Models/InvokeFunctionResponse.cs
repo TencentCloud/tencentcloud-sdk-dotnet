@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyIndexRequest : AbstractModel
+    public class InvokeFunctionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// 函数执行结果
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("Result")]
+        public Result Result{ get; set; }
 
         /// <summary>
-        /// 默认不生效
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
-
-        /// <summary>
-        /// 索引规则，Rule和Effective两个必须有一个参数存在
-        /// </summary>
-        [JsonProperty("Rule")]
-        public RuleInfo Rule{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "Rule.", this.Rule);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

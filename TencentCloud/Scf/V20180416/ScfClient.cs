@@ -947,6 +947,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        ///  SCF同步调用函数接口
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
+        /// <returns><see cref="InvokeFunctionResponse"/></returns>
+        public async Task<InvokeFunctionResponse> InvokeFunction(InvokeFunctionRequest req)
+        {
+             JsonResponseModel<InvokeFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvokeFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  SCF同步调用函数接口
+        /// </summary>
+        /// <param name="req"><see cref="InvokeFunctionRequest"/></param>
+        /// <returns><see cref="InvokeFunctionResponse"/></returns>
+        public InvokeFunctionResponse InvokeFunctionSync(InvokeFunctionRequest req)
+        {
+             JsonResponseModel<InvokeFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InvokeFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 返回一个函数下的全部别名，可以根据特定函数版本过滤。
         /// </summary>
         /// <param name="req"><see cref="ListAliasesRequest"/></param>

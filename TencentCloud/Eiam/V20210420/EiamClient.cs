@@ -213,46 +213,6 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
-        /// 获取JWT公钥信息
-        /// </summary>
-        /// <param name="req"><see cref="DecribePublicKeyRequest"/></param>
-        /// <returns><see cref="DecribePublicKeyResponse"/></returns>
-        public async Task<DecribePublicKeyResponse> DecribePublicKey(DecribePublicKeyRequest req)
-        {
-             JsonResponseModel<DecribePublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DecribePublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecribePublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取JWT公钥信息
-        /// </summary>
-        /// <param name="req"><see cref="DecribePublicKeyRequest"/></param>
-        /// <returns><see cref="DecribePublicKeyResponse"/></returns>
-        public DecribePublicKeyResponse DecribePublicKeySync(DecribePublicKeyRequest req)
-        {
-             JsonResponseModel<DecribePublicKeyResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DecribePublicKey");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DecribePublicKeyResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 删除一个机构节点
         /// </summary>
         /// <param name="req"><see cref="DeleteOrgNodeRequest"/></param>

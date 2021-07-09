@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyIndexRequest : AbstractModel
+    public class VpcInfo : AbstractModel
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// Vpc Id
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
-        /// 默认不生效
+        /// 子网ID
         /// </summary>
-        [JsonProperty("Status")]
-        public bool? Status{ get; set; }
-
-        /// <summary>
-        /// 索引规则，Rule和Effective两个必须有一个参数存在
-        /// </summary>
-        [JsonProperty("Rule")]
-        public RuleInfo Rule{ get; set; }
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamObj(map, prefix + "Rule.", this.Rule);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

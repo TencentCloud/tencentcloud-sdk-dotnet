@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Eiam.V20210420.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DecribePublicKeyRequest : AbstractModel
+    public class KillMasterGroupRequest : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID，是应用的全局唯一标识。
+        /// 实例ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 1.长度8-30位,推荐使用12位以上的密码
+        /// 2.不能以"/"开头
+        /// 3.至少包含两项
+        ///     a.小写字母a-z
+        ///     b.大写字母A-Z
+        ///     c.数字0-9
+        ///     d.()`~!@#$%^&*-+=_|{}[]:;<>,.?/
+        /// </summary>
+        [JsonProperty("Password")]
+        public string Password{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,8 @@ namespace TencentCloud.Eiam.V20210420.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Password", this.Password);
         }
     }
 }

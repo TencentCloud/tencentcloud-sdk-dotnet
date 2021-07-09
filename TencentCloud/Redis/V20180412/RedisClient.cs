@@ -1933,6 +1933,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 模拟故障
+        /// </summary>
+        /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
+        /// <returns><see cref="KillMasterGroupResponse"/></returns>
+        public async Task<KillMasterGroupResponse> KillMasterGroup(KillMasterGroupRequest req)
+        {
+             JsonResponseModel<KillMasterGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillMasterGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMasterGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 模拟故障
+        /// </summary>
+        /// <param name="req"><see cref="KillMasterGroupRequest"/></param>
+        /// <returns><see cref="KillMasterGroupResponse"/></returns>
+        public KillMasterGroupResponse KillMasterGroupSync(KillMasterGroupRequest req)
+        {
+             JsonResponseModel<KillMasterGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillMasterGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMasterGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 手动备份Redis实例
         /// </summary>
         /// <param name="req"><see cref="ManualBackupInstanceRequest"/></param>

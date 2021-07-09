@@ -133,7 +133,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 用于查询微服务注册中心实例列表
+        /// 用于查询微服务引擎实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstancesRequest"/></param>
         /// <returns><see cref="DescribeSREInstancesResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 用于查询微服务注册中心实例列表
+        /// 用于查询微服务引擎实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstancesRequest"/></param>
         /// <returns><see cref="DescribeSREInstancesResponse"/></returns>

@@ -38,7 +38,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 实例类型列表，不同实例机型指定了不同的资源规格，最多支持10种实例机型。
-        /// 启动配置，通过 InstanceType 表示单一实例类型，通过 InstanceTypes 表示多实例类型。指定 InstanceTypes 成功启动配置后，原有的 InstanceType 自动失效。
+        /// InstanceType 指定单一实例类型，通过设置 InstanceTypes可以指定多实例类型，并使原有的InstanceType失效。
         /// </summary>
         [JsonProperty("InstanceTypes")]
         public string[] InstanceTypes{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LaunchConfigurationName{ get; set; }
 
         /// <summary>
-        /// 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串
+        /// 经过 Base64 编码后的自定义数据，最大长度不超过16KB。如果要清空UserData，则指定其为空字符串。
         /// </summary>
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
@@ -75,7 +75,7 @@ namespace TencentCloud.As.V20180419.Models
 
         /// <summary>
         /// 公网带宽相关信息设置。
-        /// 本字段属复杂类型，修改时采取整字段全覆盖模式。即只修改复杂类型内部一个子字段时，也请提供全部所需子字段。
+        /// 当公网出带宽上限为0Mbps时，不支持修改为开通分配公网IP；相应的，当前为开通分配公网IP时，修改的公网出带宽上限值必须大于0Mbps。
         /// </summary>
         [JsonProperty("InternetAccessible")]
         public InternetAccessible InternetAccessible{ get; set; }
@@ -92,7 +92,8 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// 预付费模式，即包年包月相关参数设置。通过该参数可以指定包年包月实例的购买时长、是否设置自动续费等属性。
         /// 若修改实例的付费模式为预付费，则该参数必传；从预付费修改为其他付费模式时，本字段原信息会自动丢弃。
-        /// 本字段属复杂类型，修改时采取整字段全覆盖模式。即只修改复杂类型内部一个子字段时，也请提供全部所需子字段。
+        /// 当新增该字段时，必须传递购买实例的时长，其它未传递字段会设置为默认值。
+        /// 当修改本字段时，当前付费模式必须为预付费。
         /// </summary>
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
@@ -100,7 +101,8 @@ namespace TencentCloud.As.V20180419.Models
         /// <summary>
         /// 实例的市场相关选项，如竞价实例相关参数。
         /// 若修改实例的付费模式为竞价付费，则该参数必传；从竞价付费修改为其他付费模式时，本字段原信息会自动丢弃。
-        /// 本字段属复杂类型，修改时采取整字段全覆盖模式。即只修改复杂类型内部一个子字段时，也请提供全部所需子字段。
+        /// 当新增该字段时，必须传递竞价相关选项下的竞价出价，其它未传递字段会设置为默认值。
+        /// 当修改本字段时，当前付费模式必须为竞价付费。
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }
@@ -120,10 +122,28 @@ namespace TencentCloud.As.V20180419.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 实例数据盘配置信息。最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+        /// 实例数据盘配置信息。
+        /// 最多支持指定11块数据盘。采取整体修改，因此请提供修改后的全部值。
+        /// 数据盘类型默认与系统盘类型保持一致。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
+
+        /// <summary>
+        /// 云服务器主机名（HostName）的相关设置。
+        /// 不支持windows实例设置主机名。
+        /// 新增该属性时，必须传递云服务器的主机名，其它未传递字段会设置为默认值。
+        /// </summary>
+        [JsonProperty("HostNameSettings")]
+        public HostNameSettings HostNameSettings{ get; set; }
+
+        /// <summary>
+        /// 云服务器（InstanceName）实例名的相关设置。 
+        /// 如果用户在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 参照此字段进行设置，并传递给 CVM；如果用户未在启动配置中设置此字段，则伸缩组创建出的实例 InstanceName 按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置，并传递给 CVM。
+        /// 新增该属性时，必须传递云服务器的实例名称，其它未传递字段会设置为默认值。
+        /// </summary>
+        [JsonProperty("InstanceNameSettings")]
+        public InstanceNameSettings InstanceNameSettings{ get; set; }
 
 
         /// <summary>
@@ -145,6 +165,8 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
+            this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
+            this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
         }
     }
 }

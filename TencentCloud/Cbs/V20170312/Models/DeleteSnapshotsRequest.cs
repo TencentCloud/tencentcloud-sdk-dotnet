@@ -30,6 +30,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("SnapshotIds")]
         public string[] SnapshotIds{ get; set; }
 
+        /// <summary>
+        /// 是否强制删除快照关联的镜像
+        /// </summary>
+        [JsonProperty("DeleteBindImages")]
+        public bool? DeleteBindImages{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "SnapshotIds.", this.SnapshotIds);
+            this.SetParamSimple(map, prefix + "DeleteBindImages", this.DeleteBindImages);
         }
     }
 }

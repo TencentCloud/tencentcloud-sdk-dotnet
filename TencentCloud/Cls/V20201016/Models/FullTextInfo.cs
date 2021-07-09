@@ -36,6 +36,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }
 
+        /// <summary>
+        /// 是否包含中文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainZH")]
+        public bool? ContainZH{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "CaseSensitive", this.CaseSensitive);
             this.SetParamSimple(map, prefix + "Tokenizer", this.Tokenizer);
+            this.SetParamSimple(map, prefix + "ContainZH", this.ContainZH);
         }
     }
 }

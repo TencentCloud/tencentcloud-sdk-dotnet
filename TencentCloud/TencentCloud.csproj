@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.320</VersionPrefix>
+    <VersionPrefix>3.0.321</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5943,8 +5943,6 @@
     <Compile Include="Eiam\V20210420\Models\CreateUserGroupResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\CreateUserRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\CreateUserResponse.cs" />
-    <Compile Include="Eiam\V20210420\Models\DecribePublicKeyRequest.cs" />
-    <Compile Include="Eiam\V20210420\Models\DecribePublicKeyResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\DeleteOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\DeleteOrgNodeResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\DeleteUserGroupRequest.cs" />
@@ -10167,6 +10165,8 @@
     <Compile Include="Redis\V20180412\Models\InstanceSlowlogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTextParam.cs" />
+    <Compile Include="Redis\V20180412\Models\KillMasterGroupRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModfiyInstancePasswordRequest.cs" />
@@ -10296,6 +10296,8 @@
     <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\InvokeFunctionRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\InvokeFunctionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\InvokeRequest.cs" />
     <Compile Include="Scf\V20180416\Models\InvokeResponse.cs" />
     <Compile Include="Scf\V20180416\Models\LayerVersionInfo.cs" />
@@ -12758,10 +12760,12 @@
     <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstancesRequest.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstancesResponse.cs" />
+    <Compile Include="Tse\V20201207\Models\EnvInfo.cs" />
     <Compile Include="Tse\V20201207\Models\Filter.cs" />
     <Compile Include="Tse\V20201207\Models\ManageConfigRequest.cs" />
     <Compile Include="Tse\V20201207\Models\ManageConfigResponse.cs" />
     <Compile Include="Tse\V20201207\Models\SREInstance.cs" />
+    <Compile Include="Tse\V20201207\Models\VpcInfo.cs" />
     <Compile Include="Tsf\V20180326\TsfClient.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\AddClusterInstancesResponse.cs" />

@@ -37,6 +37,20 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("ClearDataDisks")]
         public bool? ClearDataDisks{ get; set; }
 
+        /// <summary>
+        /// 是否清空云服务器主机名相关设置信息，非必填，默认为 false。
+        /// 填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将不设置主机名。
+        /// </summary>
+        [JsonProperty("ClearHostNameSettings")]
+        public bool? ClearHostNameSettings{ get; set; }
+
+        /// <summary>
+        /// 是否清空云服务器实例名相关设置信息，非必填，默认为 false。
+        /// 填 true 代表清空主机名设置信息，清空后基于此新创建的云主机将按照“as-{{ 伸缩组AutoScalingGroupName }}”进行设置。
+        /// </summary>
+        [JsonProperty("ClearInstanceNameSettings")]
+        public bool? ClearInstanceNameSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +59,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
             this.SetParamSimple(map, prefix + "ClearDataDisks", this.ClearDataDisks);
+            this.SetParamSimple(map, prefix + "ClearHostNameSettings", this.ClearHostNameSettings);
+            this.SetParamSimple(map, prefix + "ClearInstanceNameSettings", this.ClearInstanceNameSettings);
         }
     }
 }

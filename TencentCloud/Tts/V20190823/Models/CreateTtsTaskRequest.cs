@@ -85,6 +85,12 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 旁白与对白文本解析，分别合成相应风格（仅适用于旁对白音色），默认 false
+        /// </summary>
+        [JsonProperty("VoiceoverDialogueSplit")]
+        public bool? VoiceoverDialogueSplit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "VoiceoverDialogueSplit", this.VoiceoverDialogueSplit);
         }
     }
 }
