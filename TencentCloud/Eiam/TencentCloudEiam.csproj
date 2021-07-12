@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{140B79ED-37B5-377F-AF01-141CBF107CFF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.321</VersionPrefix>
+    <VersionPrefix>3.0.322</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,10 @@
     <Compile Include="V20210420\Models\AddUserToUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\AddUserToUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\ApplicationAuthorizationInfo.cs" />
+    <Compile Include="V20210420\Models\ApplicationInfoSearchCriteria.cs" />
+    <Compile Include="V20210420\Models\ApplicationInformation.cs" />
+    <Compile Include="V20210420\Models\AuthorizationInfo.cs" />
+    <Compile Include="V20210420\Models\AuthorizationInfoSearchCriteria.cs" />
     <Compile Include="V20210420\Models\CreateOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\CreateOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\CreateUserGroupRequest.cs" />
@@ -64,11 +68,17 @@
     <Compile Include="V20210420\Models\DescribeApplicationResponse.cs" />
     <Compile Include="V20210420\Models\DescribeOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\DescribeOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\DescribePublicKeyRequest.cs" />
+    <Compile Include="V20210420\Models\DescribePublicKeyResponse.cs" />
     <Compile Include="V20210420\Models\DescribeUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\DescribeUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="V20210420\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20210420\Models\InheritedForm.cs" />
+    <Compile Include="V20210420\Models\ListApplicationAuthorizationsRequest.cs" />
+    <Compile Include="V20210420\Models\ListApplicationAuthorizationsResponse.cs" />
+    <Compile Include="V20210420\Models\ListApplicationsRequest.cs" />
+    <Compile Include="V20210420\Models\ListApplicationsResponse.cs" />
     <Compile Include="V20210420\Models\ListAuthorizedApplicationsToOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\ListAuthorizedApplicationsToOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserGroupRequest.cs" />
@@ -77,18 +87,27 @@
     <Compile Include="V20210420\Models\ListAuthorizedApplicationsToUserResponse.cs" />
     <Compile Include="V20210420\Models\ListUserGroupsOfUserRequest.cs" />
     <Compile Include="V20210420\Models\ListUserGroupsOfUserResponse.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsRequest.cs" />
+    <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
     <Compile Include="V20210420\Models\ListUsersInOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersInOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\ListUsersRequest.cs" />
+    <Compile Include="V20210420\Models\ListUsersResponse.cs" />
     <Compile Include="V20210420\Models\ModifyUserInfoRequest.cs" />
     <Compile Include="V20210420\Models\ModifyUserInfoResponse.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildInfo.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildUserInfo.cs" />
     <Compile Include="V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\RemoveUserFromUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\SortCondition.cs" />
     <Compile Include="V20210420\Models\UpdateOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\UpdateOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\UserGroupInfoSearchCriteria.cs" />
+    <Compile Include="V20210420\Models\UserGroupInformation.cs" />
     <Compile Include="V20210420\Models\UserInfo.cs" />
+    <Compile Include="V20210420\Models\UserInformation.cs" />
+    <Compile Include="V20210420\Models\UserSearchCriteria.cs" />
   </ItemGroup>
 </Project>

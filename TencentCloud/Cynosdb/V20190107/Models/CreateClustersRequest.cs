@@ -69,13 +69,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 普通实例内存
+        /// 普通实例内存,单位G
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 存储
+        /// 存储大小，单位G
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -87,7 +87,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 账号密码(8-64个字符，至少包含字母、数字、字符（支持的字符：_+-&=!@#$%^*()~）中的两种)
+        /// 账号密码(8-64个字符，包含大小写英文字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种)
         /// </summary>
         [JsonProperty("AdminPassword")]
         public string AdminPassword{ get; set; }
@@ -145,6 +145,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 普通实例存储上限，单位GB
+        /// 当DbType为MYSQL，且存储计费模式为预付费时，该参数需不大于cpu与memory对应存储规格上限
         /// </summary>
         [JsonProperty("StorageLimit")]
         public long? StorageLimit{ get; set; }
@@ -236,6 +237,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("AutoPauseDelay")]
         public long? AutoPauseDelay{ get; set; }
 
+        /// <summary>
+        /// 集群存储计费模式，按量计费：0，包年包月：1。默认按量计费
+        /// 当DbType为MYSQL时，在集群计算计费模式为后付费（包括DbMode为SERVERLESS）时，存储计费模式仅可为按量计费
+        /// 回档与克隆均不支持包年包月存储
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +284,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
             this.SetParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         }
     }
 }

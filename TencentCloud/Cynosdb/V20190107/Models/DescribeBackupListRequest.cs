@@ -42,6 +42,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 数据库类型，取值范围: 
+        /// <li> MYSQL </li>
+        /// </summary>
+        [JsonProperty("DbType")]
+        public string DbType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "DbType", this.DbType);
         }
     }
 }

@@ -533,6 +533,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 删除服务版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseRunServerVersionResponse"/></returns>
+        public async Task<DeleteCloudBaseRunServerVersionResponse> DeleteCloudBaseRunServerVersion(DeleteCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<DeleteCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除服务版本
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="DeleteCloudBaseRunServerVersionResponse"/></returns>
+        public DeleteCloudBaseRunServerVersionResponse DeleteCloudBaseRunServerVersionSync(DeleteCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<DeleteCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除终端用户
         /// </summary>
         /// <param name="req"><see cref="DeleteEndUserRequest"/></param>

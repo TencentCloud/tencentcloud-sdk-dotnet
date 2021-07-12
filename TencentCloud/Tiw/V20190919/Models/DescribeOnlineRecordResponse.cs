@@ -113,6 +113,13 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string ReplayUrl{ get; set; }
 
         /// <summary>
+        /// 视频流在录制过程中断流次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Interrupts")]
+        public Interrupt[] Interrupts{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -137,6 +144,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamArrayObj(map, prefix + "OmittedDurations.", this.OmittedDurations);
             this.SetParamArrayObj(map, prefix + "VideoInfos.", this.VideoInfos);
             this.SetParamSimple(map, prefix + "ReplayUrl", this.ReplayUrl);
+            this.SetParamArrayObj(map, prefix + "Interrupts.", this.Interrupts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

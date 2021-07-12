@@ -210,6 +210,26 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// serverless实例cpu下限
+        /// </summary>
+        [JsonProperty("MinCpu")]
+        public float? MinCpu{ get; set; }
+
+        /// <summary>
+        /// serverless实例cpu上限
+        /// </summary>
+        [JsonProperty("MaxCpu")]
+        public float? MaxCpu{ get; set; }
+
+        /// <summary>
+        /// serverless实例状态, 可能值：
+        /// resume
+        /// pause
+        /// </summary>
+        [JsonProperty("ServerlessStatus")]
+        public string ServerlessStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +267,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Charset", this.Charset);
             this.SetParamSimple(map, prefix + "CynosVersion", this.CynosVersion);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
+            this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
+            this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
         }
     }
 }

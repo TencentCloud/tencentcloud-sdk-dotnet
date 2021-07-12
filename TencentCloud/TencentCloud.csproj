@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.321</VersionPrefix>
+    <VersionPrefix>3.0.322</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5203,8 +5203,18 @@
     <Compile Include="Dcdb\V20180411\Models\UserTaskInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ZonesInfo.cs" />
     <Compile Include="Dlc\V20210125\DlcClient.cs" />
+    <Compile Include="Dlc\V20210125\Models\AddUsersToWorkGroupRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\AddUsersToWorkGroupResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\AttachUserPolicyRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\AttachUserPolicyResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\AttachWorkGroupPolicyRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\AttachWorkGroupPolicyResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\BindWorkGroupsToUserRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\BindWorkGroupsToUserResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CSV.cs" />
     <Compile Include="Dlc\V20210125\Models\CSVSerde.cs" />
+    <Compile Include="Dlc\V20210125\Models\CancelTaskRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CancelTaskResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\Column.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateDatabaseRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateDatabaseResponse.cs" />
@@ -5216,28 +5226,53 @@
     <Compile Include="Dlc\V20210125\Models\CreateTableResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTaskRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTaskResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateUserRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateUserResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateWorkGroupRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateWorkGroupResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DataFormat.cs" />
     <Compile Include="Dlc\V20210125\Models\DatabaseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\DatabaseResponseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteScriptRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteScriptResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteUserRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteUserResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteUsersFromWorkGroupRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteUsersFromWorkGroupResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteWorkGroupRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteWorkGroupResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeScriptsRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeScriptsResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeStoreLocationRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeStoreLocationResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTableRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTableResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTablesRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTablesResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTasksRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeUsersRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeUsersResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeViewsRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeViewsResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeWorkGroupsRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeWorkGroupsResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DetachUserPolicyRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DetachUserPolicyResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DetachWorkGroupPolicyRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DetachWorkGroupPolicyResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\Execution.cs" />
     <Compile Include="Dlc\V20210125\Models\Filter.cs" />
     <Compile Include="Dlc\V20210125\Models\KVPair.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifyUserRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifyUserResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifyWorkGroupRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifyWorkGroupResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\Other.cs" />
     <Compile Include="Dlc\V20210125\Models\Partition.cs" />
+    <Compile Include="Dlc\V20210125\Models\Policy.cs" />
     <Compile Include="Dlc\V20210125\Models\Property.cs" />
     <Compile Include="Dlc\V20210125\Models\SQLTask.cs" />
     <Compile Include="Dlc\V20210125\Models\Script.cs" />
@@ -5247,8 +5282,16 @@
     <Compile Include="Dlc\V20210125\Models\Task.cs" />
     <Compile Include="Dlc\V20210125\Models\TaskResponseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TextFile.cs" />
+    <Compile Include="Dlc\V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\UnbindWorkGroupsFromUserResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\UserIdSetOfWorkGroupId.cs" />
+    <Compile Include="Dlc\V20210125\Models\UserInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\UserMessage.cs" />
     <Compile Include="Dlc\V20210125\Models\ViewBaseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\ViewResponseInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\WorkGroupIdSetOfUserId.cs" />
+    <Compile Include="Dlc\V20210125\Models\WorkGroupInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\WorkGroupMessage.cs" />
     <Compile Include="Dnspod\V20210323\DnspodClient.cs" />
     <Compile Include="Dnspod\V20210323\Models\AddRecordBatch.cs" />
     <Compile Include="Dnspod\V20210323\Models\BatchRecordInfo.cs" />
@@ -5937,6 +5980,10 @@
     <Compile Include="Eiam\V20210420\Models\AddUserToUserGroupRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\AddUserToUserGroupResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ApplicationAuthorizationInfo.cs" />
+    <Compile Include="Eiam\V20210420\Models\ApplicationInfoSearchCriteria.cs" />
+    <Compile Include="Eiam\V20210420\Models\ApplicationInformation.cs" />
+    <Compile Include="Eiam\V20210420\Models\AuthorizationInfo.cs" />
+    <Compile Include="Eiam\V20210420\Models\AuthorizationInfoSearchCriteria.cs" />
     <Compile Include="Eiam\V20210420\Models\CreateOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\CreateOrgNodeResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\CreateUserGroupRequest.cs" />
@@ -5953,11 +6000,17 @@
     <Compile Include="Eiam\V20210420\Models\DescribeApplicationResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeOrgNodeResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\DescribePublicKeyRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\DescribePublicKeyResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeUserGroupRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeUserGroupResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeUserInfoRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\InheritedForm.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListApplicationAuthorizationsRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListApplicationAuthorizationsResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListApplicationsRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListApplicationsResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListAuthorizedApplicationsToOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ListAuthorizedApplicationsToOrgNodeResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListAuthorizedApplicationsToUserGroupRequest.cs" />
@@ -5966,19 +6019,28 @@
     <Compile Include="Eiam\V20210420\Models\ListAuthorizedApplicationsToUserResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUserGroupsOfUserRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUserGroupsOfUserResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListUserGroupsRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListUserGroupsResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInOrgNodeResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInUserGroupRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ListUsersInUserGroupResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListUsersRequest.cs" />
+    <Compile Include="Eiam\V20210420\Models\ListUsersResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\ModifyUserInfoRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\ModifyUserInfoResponse.cs" />
     <Compile Include="Eiam\V20210420\Models\OrgNodeChildInfo.cs" />
     <Compile Include="Eiam\V20210420\Models\OrgNodeChildUserInfo.cs" />
     <Compile Include="Eiam\V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\RemoveUserFromUserGroupResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\SortCondition.cs" />
     <Compile Include="Eiam\V20210420\Models\UpdateOrgNodeRequest.cs" />
     <Compile Include="Eiam\V20210420\Models\UpdateOrgNodeResponse.cs" />
+    <Compile Include="Eiam\V20210420\Models\UserGroupInfoSearchCriteria.cs" />
+    <Compile Include="Eiam\V20210420\Models\UserGroupInformation.cs" />
     <Compile Include="Eiam\V20210420\Models\UserInfo.cs" />
+    <Compile Include="Eiam\V20210420\Models\UserInformation.cs" />
+    <Compile Include="Eiam\V20210420\Models\UserSearchCriteria.cs" />
     <Compile Include="Eis\V20210601\EisClient.cs" />
     <Compile Include="Eis\V20210601\Models\AbstractRuntimeMC.cs" />
     <Compile Include="Eis\V20210601\Models\GetRuntimeMCRequest.cs" />
@@ -11432,6 +11494,8 @@
     <Compile Include="Tcb\V20180608\Models\DatabasesInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseProjectLatestVersionResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseRunServerVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DeleteCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteWxGatewayRouteRequest.cs" />
@@ -12375,6 +12439,7 @@
     <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeWhiteboardPushResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\Interrupt.cs" />
     <Compile Include="Tiw\V20190919\Models\LayoutParams.cs" />
     <Compile Include="Tiw\V20190919\Models\MixStream.cs" />
     <Compile Include="Tiw\V20190919\Models\OmittedDuration.cs" />

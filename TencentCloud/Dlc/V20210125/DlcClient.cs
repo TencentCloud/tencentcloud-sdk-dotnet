@@ -53,6 +53,206 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 添加用户到工作组
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersToWorkGroupRequest"/></param>
+        /// <returns><see cref="AddUsersToWorkGroupResponse"/></returns>
+        public async Task<AddUsersToWorkGroupResponse> AddUsersToWorkGroup(AddUsersToWorkGroupRequest req)
+        {
+             JsonResponseModel<AddUsersToWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddUsersToWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersToWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加用户到工作组
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersToWorkGroupRequest"/></param>
+        /// <returns><see cref="AddUsersToWorkGroupResponse"/></returns>
+        public AddUsersToWorkGroupResponse AddUsersToWorkGroupSync(AddUsersToWorkGroupRequest req)
+        {
+             JsonResponseModel<AddUsersToWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddUsersToWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersToWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定鉴权策略到用户
+        /// </summary>
+        /// <param name="req"><see cref="AttachUserPolicyRequest"/></param>
+        /// <returns><see cref="AttachUserPolicyResponse"/></returns>
+        public async Task<AttachUserPolicyResponse> AttachUserPolicy(AttachUserPolicyRequest req)
+        {
+             JsonResponseModel<AttachUserPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachUserPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定鉴权策略到用户
+        /// </summary>
+        /// <param name="req"><see cref="AttachUserPolicyRequest"/></param>
+        /// <returns><see cref="AttachUserPolicyResponse"/></returns>
+        public AttachUserPolicyResponse AttachUserPolicySync(AttachUserPolicyRequest req)
+        {
+             JsonResponseModel<AttachUserPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachUserPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定鉴权策略到工作组
+        /// </summary>
+        /// <param name="req"><see cref="AttachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="AttachWorkGroupPolicyResponse"/></returns>
+        public async Task<AttachWorkGroupPolicyResponse> AttachWorkGroupPolicy(AttachWorkGroupPolicyRequest req)
+        {
+             JsonResponseModel<AttachWorkGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachWorkGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachWorkGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定鉴权策略到工作组
+        /// </summary>
+        /// <param name="req"><see cref="AttachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="AttachWorkGroupPolicyResponse"/></returns>
+        public AttachWorkGroupPolicyResponse AttachWorkGroupPolicySync(AttachWorkGroupPolicyRequest req)
+        {
+             JsonResponseModel<AttachWorkGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachWorkGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachWorkGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定工作组到用户
+        /// </summary>
+        /// <param name="req"><see cref="BindWorkGroupsToUserRequest"/></param>
+        /// <returns><see cref="BindWorkGroupsToUserResponse"/></returns>
+        public async Task<BindWorkGroupsToUserResponse> BindWorkGroupsToUser(BindWorkGroupsToUserRequest req)
+        {
+             JsonResponseModel<BindWorkGroupsToUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindWorkGroupsToUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindWorkGroupsToUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定工作组到用户
+        /// </summary>
+        /// <param name="req"><see cref="BindWorkGroupsToUserRequest"/></param>
+        /// <returns><see cref="BindWorkGroupsToUserResponse"/></returns>
+        public BindWorkGroupsToUserResponse BindWorkGroupsToUserSync(BindWorkGroupsToUserRequest req)
+        {
+             JsonResponseModel<BindWorkGroupsToUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindWorkGroupsToUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindWorkGroupsToUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消任务执行
+        /// </summary>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
+        public async Task<CancelTaskResponse> CancelTask(CancelTaskRequest req)
+        {
+             JsonResponseModel<CancelTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消任务执行
+        /// </summary>
+        /// <param name="req"><see cref="CancelTaskRequest"/></param>
+        /// <returns><see cref="CancelTaskResponse"/></returns>
+        public CancelTaskResponse CancelTaskSync(CancelTaskRequest req)
+        {
+             JsonResponseModel<CancelTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDatabase）用于生成建库SQL语句。
         /// </summary>
         /// <param name="req"><see cref="CreateDatabaseRequest"/></param>
@@ -253,6 +453,86 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public async Task<CreateUserResponse> CreateUser(CreateUserRequest req)
+        {
+             JsonResponseModel<CreateUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserRequest"/></param>
+        /// <returns><see cref="CreateUserResponse"/></returns>
+        public CreateUserResponse CreateUserSync(CreateUserRequest req)
+        {
+             JsonResponseModel<CreateUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建工作组
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkGroupResponse"/></returns>
+        public async Task<CreateWorkGroupResponse> CreateWorkGroup(CreateWorkGroupRequest req)
+        {
+             JsonResponseModel<CreateWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建工作组
+        /// </summary>
+        /// <param name="req"><see cref="CreateWorkGroupRequest"/></param>
+        /// <returns><see cref="CreateWorkGroupResponse"/></returns>
+        public CreateWorkGroupResponse CreateWorkGroupSync(CreateWorkGroupRequest req)
+        {
+             JsonResponseModel<CreateWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DeleteScript）用于删除sql脚本。
         /// </summary>
         /// <param name="req"><see cref="DeleteScriptRequest"/></param>
@@ -284,6 +564,126 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteScript");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScriptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public async Task<DeleteUserResponse> DeleteUser(DeleteUserRequest req)
+        {
+             JsonResponseModel<DeleteUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUserRequest"/></param>
+        /// <returns><see cref="DeleteUserResponse"/></returns>
+        public DeleteUserResponse DeleteUserSync(DeleteUserRequest req)
+        {
+             JsonResponseModel<DeleteUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从工作组中删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersFromWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteUsersFromWorkGroupResponse"/></returns>
+        public async Task<DeleteUsersFromWorkGroupResponse> DeleteUsersFromWorkGroup(DeleteUsersFromWorkGroupRequest req)
+        {
+             JsonResponseModel<DeleteUsersFromWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUsersFromWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUsersFromWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从工作组中删除用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersFromWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteUsersFromWorkGroupResponse"/></returns>
+        public DeleteUsersFromWorkGroupResponse DeleteUsersFromWorkGroupSync(DeleteUsersFromWorkGroupRequest req)
+        {
+             JsonResponseModel<DeleteUsersFromWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUsersFromWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUsersFromWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除工作组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkGroupResponse"/></returns>
+        public async Task<DeleteWorkGroupResponse> DeleteWorkGroup(DeleteWorkGroupRequest req)
+        {
+             JsonResponseModel<DeleteWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除工作组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteWorkGroupRequest"/></param>
+        /// <returns><see cref="DeleteWorkGroupResponse"/></returns>
+        public DeleteWorkGroupResponse DeleteWorkGroupSync(DeleteWorkGroupRequest req)
+        {
+             JsonResponseModel<DeleteWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -364,6 +764,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeScripts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询计算结果存储位置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeStoreLocationResponse"/></returns>
+        public async Task<DescribeStoreLocationResponse> DescribeStoreLocation(DescribeStoreLocationRequest req)
+        {
+             JsonResponseModel<DescribeStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStoreLocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询计算结果存储位置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStoreLocationRequest"/></param>
+        /// <returns><see cref="DescribeStoreLocationResponse"/></returns>
+        public DescribeStoreLocationResponse DescribeStoreLocationSync(DescribeStoreLocationRequest req)
+        {
+             JsonResponseModel<DescribeStoreLocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStoreLocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStoreLocationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +933,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 获取用户列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public async Task<DescribeUsersResponse> DescribeUsers(DescribeUsersRequest req)
+        {
+             JsonResponseModel<DescribeUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersRequest"/></param>
+        /// <returns><see cref="DescribeUsersResponse"/></returns>
+        public DescribeUsersResponse DescribeUsersSync(DescribeUsersRequest req)
+        {
+             JsonResponseModel<DescribeUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeViews）用于查询数据视图列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeViewsRequest"/></param>
@@ -524,6 +1004,246 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeViews");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeViewsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取工作组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupsRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupsResponse"/></returns>
+        public async Task<DescribeWorkGroupsResponse> DescribeWorkGroups(DescribeWorkGroupsRequest req)
+        {
+             JsonResponseModel<DescribeWorkGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWorkGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取工作组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWorkGroupsRequest"/></param>
+        /// <returns><see cref="DescribeWorkGroupsResponse"/></returns>
+        public DescribeWorkGroupsResponse DescribeWorkGroupsSync(DescribeWorkGroupsRequest req)
+        {
+             JsonResponseModel<DescribeWorkGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWorkGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWorkGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑用户鉴权策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachUserPolicyRequest"/></param>
+        /// <returns><see cref="DetachUserPolicyResponse"/></returns>
+        public async Task<DetachUserPolicyResponse> DetachUserPolicy(DetachUserPolicyRequest req)
+        {
+             JsonResponseModel<DetachUserPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachUserPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑用户鉴权策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachUserPolicyRequest"/></param>
+        /// <returns><see cref="DetachUserPolicyResponse"/></returns>
+        public DetachUserPolicyResponse DetachUserPolicySync(DetachUserPolicyRequest req)
+        {
+             JsonResponseModel<DetachUserPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachUserPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑工作组鉴权策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="DetachWorkGroupPolicyResponse"/></returns>
+        public async Task<DetachWorkGroupPolicyResponse> DetachWorkGroupPolicy(DetachWorkGroupPolicyRequest req)
+        {
+             JsonResponseModel<DetachWorkGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachWorkGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachWorkGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑工作组鉴权策略
+        /// </summary>
+        /// <param name="req"><see cref="DetachWorkGroupPolicyRequest"/></param>
+        /// <returns><see cref="DetachWorkGroupPolicyResponse"/></returns>
+        public DetachWorkGroupPolicyResponse DetachWorkGroupPolicySync(DetachWorkGroupPolicyRequest req)
+        {
+             JsonResponseModel<DetachWorkGroupPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachWorkGroupPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachWorkGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public async Task<ModifyUserResponse> ModifyUser(ModifyUserRequest req)
+        {
+             JsonResponseModel<ModifyUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserRequest"/></param>
+        /// <returns><see cref="ModifyUserResponse"/></returns>
+        public ModifyUserResponse ModifyUserSync(ModifyUserRequest req)
+        {
+             JsonResponseModel<ModifyUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改工作组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkGroupResponse"/></returns>
+        public async Task<ModifyWorkGroupResponse> ModifyWorkGroup(ModifyWorkGroupRequest req)
+        {
+             JsonResponseModel<ModifyWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改工作组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWorkGroupRequest"/></param>
+        /// <returns><see cref="ModifyWorkGroupResponse"/></returns>
+        public ModifyWorkGroupResponse ModifyWorkGroupSync(ModifyWorkGroupRequest req)
+        {
+             JsonResponseModel<ModifyWorkGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWorkGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑用户上的用户组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
+        /// <returns><see cref="UnbindWorkGroupsFromUserResponse"/></returns>
+        public async Task<UnbindWorkGroupsFromUserResponse> UnbindWorkGroupsFromUser(UnbindWorkGroupsFromUserRequest req)
+        {
+             JsonResponseModel<UnbindWorkGroupsFromUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindWorkGroupsFromUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindWorkGroupsFromUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解绑用户上的用户组
+        /// </summary>
+        /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>
+        /// <returns><see cref="UnbindWorkGroupsFromUserResponse"/></returns>
+        public UnbindWorkGroupsFromUserResponse UnbindWorkGroupsFromUserSync(UnbindWorkGroupsFromUserRequest req)
+        {
+             JsonResponseModel<UnbindWorkGroupsFromUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindWorkGroupsFromUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindWorkGroupsFromUserResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

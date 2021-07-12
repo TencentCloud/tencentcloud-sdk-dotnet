@@ -194,6 +194,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ServerlessStatus")]
         public string ServerlessStatus{ get; set; }
 
+        /// <summary>
+        /// 集群预付费存储值大小
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// 集群存储为预付费时的存储ID，用于预付费存储变配
+        /// </summary>
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
+
+        /// <summary>
+        /// 集群存储付费模式。0-按量计费，1-包年包月
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
+
+        /// <summary>
+        /// 集群计算规格对应的最小存储值
+        /// </summary>
+        [JsonProperty("MinStorageSize")]
+        public long? MinStorageSize{ get; set; }
+
+        /// <summary>
+        /// 集群计算规格对应的最大存储值
+        /// </summary>
+        [JsonProperty("MaxStorageSize")]
+        public long? MaxStorageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +258,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "DbMode", this.DbMode);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "MinStorageSize", this.MinStorageSize);
+            this.SetParamSimple(map, prefix + "MaxStorageSize", this.MaxStorageSize);
         }
     }
 }
