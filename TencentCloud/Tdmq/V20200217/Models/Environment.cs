@@ -66,6 +66,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
+        /// <summary>
+        /// Topic数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNum")]
+        public long? TopicNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
         }
     }
 }

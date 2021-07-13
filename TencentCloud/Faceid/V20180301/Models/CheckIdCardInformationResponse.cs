@@ -106,6 +106,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public float? Quality{ get; set; }
 
         /// <summary>
+        /// 敏感数据加密信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -129,6 +136,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Portrait", this.Portrait);
             this.SetParamSimple(map, prefix + "Warnings", this.Warnings);
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

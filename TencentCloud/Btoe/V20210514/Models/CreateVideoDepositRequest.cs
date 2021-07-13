@@ -37,7 +37,7 @@ namespace TencentCloud.Btoe.V20210514.Models
         public string FileContent{ get; set; }
 
         /// <summary>
-        /// 对应数据Base64文件名称
+        /// 带后缀的文件名称，如music.mkv
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }

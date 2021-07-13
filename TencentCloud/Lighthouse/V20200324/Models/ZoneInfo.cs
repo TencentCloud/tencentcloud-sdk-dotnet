@@ -36,6 +36,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// 实例购买页可用区展示标签
+        /// </summary>
+        [JsonProperty("InstanceDisplayLabel")]
+        public string InstanceDisplayLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "InstanceDisplayLabel", this.InstanceDisplayLabel);
         }
     }
 }

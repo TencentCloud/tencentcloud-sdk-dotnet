@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 事件 ID 。
+        /// 事件唯一ID 。
         /// </summary>
         [JsonProperty("EventId")]
         public long? EventId{ get; set; }
@@ -55,34 +55,32 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public long? Severity{ get; set; }
 
         /// <summary>
-        /// 概要。
+        /// 诊断概要。
         /// </summary>
         [JsonProperty("Outline")]
         public string Outline{ get; set; }
 
         /// <summary>
-        /// 诊断项。
+        /// 诊断项说明。
         /// </summary>
         [JsonProperty("DiagItem")]
         public string DiagItem{ get; set; }
 
         /// <summary>
         /// 实例 ID 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 保留字段
+        /// 保留字段。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 地域
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 地域。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }

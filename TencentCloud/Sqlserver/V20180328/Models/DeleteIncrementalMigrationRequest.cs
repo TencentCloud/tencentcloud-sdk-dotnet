@@ -31,13 +31,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份导入任务ID
+        /// 备份导入任务ID，由CreateBackupMigration接口返回
         /// </summary>
         [JsonProperty("BackupMigrationId")]
         public string BackupMigrationId{ get; set; }
 
         /// <summary>
-        /// 增量备份导入任务ID
+        /// 增量备份导入任务ID，由CreateIncrementalMigration接口返回
         /// </summary>
         [JsonProperty("IncrementalMigrationId")]
         public string IncrementalMigrationId{ get; set; }

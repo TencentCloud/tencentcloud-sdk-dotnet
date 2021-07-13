@@ -49,31 +49,31 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long?[] StatusSet{ get; set; }
 
         /// <summary>
-        /// 分页，页大小
+        /// 分页，页大小，默认值：100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页，页数
+        /// 分页，页数，默认值：0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 排序字段，name,createTime,startTime,endTime
+        /// 排序字段，name；createTime；startTime；endTime，默认按照createTime递增排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，desc,asc
+        /// 排序方式，desc-递减排序，asc-递增排序。默认按照asc排序，且在OrderBy为有效值时，本参数有效
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 增量备份导入任务ID
+        /// 增量备份导入任务ID，由CreateIncrementalMigration接口返回
         /// </summary>
         [JsonProperty("IncrementalMigrationId")]
         public string IncrementalMigrationId{ get; set; }

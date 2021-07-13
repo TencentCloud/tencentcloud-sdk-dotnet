@@ -61,6 +61,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
+        /// <summary>
+        /// 是否需要对返回中的敏感信息进行加密。默认false。
+        /// 其中敏感信息包括：Response.IdNum、Response.Name
+        /// </summary>
+        [JsonProperty("IsEncrypt")]
+        public bool? IsEncrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
         }
     }
 }

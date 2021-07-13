@@ -85,6 +85,30 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long? CurrentFreeTrialNum{ get; set; }
 
         /// <summary>
+        /// 转支付限额总数
+        /// </summary>
+        [JsonProperty("ChangePayTotal")]
+        public long? ChangePayTotal{ get; set; }
+
+        /// <summary>
+        /// 当前已用转支付次数
+        /// </summary>
+        [JsonProperty("CurrentChangePayTotal")]
+        public long? CurrentChangePayTotal{ get; set; }
+
+        /// <summary>
+        /// 转支付每月限额
+        /// </summary>
+        [JsonProperty("ChangePayMonthly")]
+        public long? ChangePayMonthly{ get; set; }
+
+        /// <summary>
+        /// 本月已用转支付额度
+        /// </summary>
+        [JsonProperty("CurrentChangePayMonthly")]
+        public long? CurrentChangePayMonthly{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +130,10 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "CurrentDeleteMonthly", this.CurrentDeleteMonthly);
             this.SetParamSimple(map, prefix + "MaxFreeTrialNum", this.MaxFreeTrialNum);
             this.SetParamSimple(map, prefix + "CurrentFreeTrialNum", this.CurrentFreeTrialNum);
+            this.SetParamSimple(map, prefix + "ChangePayTotal", this.ChangePayTotal);
+            this.SetParamSimple(map, prefix + "CurrentChangePayTotal", this.CurrentChangePayTotal);
+            this.SetParamSimple(map, prefix + "ChangePayMonthly", this.ChangePayMonthly);
+            this.SetParamSimple(map, prefix + "CurrentChangePayMonthly", this.CurrentChangePayMonthly);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

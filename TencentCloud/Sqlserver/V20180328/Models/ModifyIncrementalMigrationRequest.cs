@@ -37,13 +37,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string BackupMigrationId{ get; set; }
 
         /// <summary>
-        /// 增量导入任务ID
+        /// 增量导入任务ID，由CreateIncrementalMigration接口返回
         /// </summary>
         [JsonProperty("IncrementalMigrationId")]
         public string IncrementalMigrationId{ get; set; }
 
         /// <summary>
-        /// 是否需要恢复，NO-不需要，YES-需要
+        /// 是否需要恢复，NO-不需要，YES-需要，默认不修改增量备份导入任务是否需要恢复的属性。
         /// </summary>
         [JsonProperty("IsRecovery")]
         public string IsRecovery{ get; set; }

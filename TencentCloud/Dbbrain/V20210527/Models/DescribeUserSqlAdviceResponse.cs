@@ -25,13 +25,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
     {
         
         /// <summary>
-        /// SQL优化建议，可解析为JSON数组。
+        /// SQL优化建议，可解析为JSON数组，无需优化时输出为空。
         /// </summary>
         [JsonProperty("Advices")]
         public string Advices{ get; set; }
 
         /// <summary>
-        /// SQL优化建议备注，可解析为String数组。
+        /// SQL优化建议备注，可解析为String数组，无需优化时输出为空。
         /// </summary>
         [JsonProperty("Comments")]
         public string Comments{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Tables{ get; set; }
 
         /// <summary>
-        /// SQL执行计划，可解析为JSON。
+        /// SQL执行计划，可解析为JSON，无需优化时输出为空。
         /// </summary>
         [JsonProperty("SqlPlan")]
         public string SqlPlan{ get; set; }
 
         /// <summary>
-        /// SQL优化后的成本节约详情，可解析为JSON。
+        /// SQL优化后的成本节约详情，可解析为JSON，无需优化时输出为空。
         /// </summary>
         [JsonProperty("Cost")]
         public string Cost{ get; set; }

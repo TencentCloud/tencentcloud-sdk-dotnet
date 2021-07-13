@@ -36,6 +36,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ProjectName")]
         public string ProjectName{ get; set; }
 
+        /// <summary>
+        /// 是否保留资源
+        /// </summary>
+        [JsonProperty("KeepResource")]
+        public bool? KeepResource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
+            this.SetParamSimple(map, prefix + "KeepResource", this.KeepResource);
         }
     }
 }

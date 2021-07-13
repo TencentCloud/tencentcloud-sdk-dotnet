@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.322</VersionPrefix>
+    <VersionPrefix>3.0.323</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1648,6 +1648,8 @@
     <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagIntlRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagIntlResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSubAccountsRequest.cs" />
@@ -1658,6 +1660,8 @@
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachUserPolicyResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetAccountSummaryRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetAccountSummaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetCustomMFATokenInfoResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetGroupRequest.cs" />
@@ -1714,6 +1718,7 @@
     <Compile Include="Cam\V20190116\Models\ListWeChatWorkSubAccountsRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListWeChatWorkSubAccountsResponse.cs" />
     <Compile Include="Cam\V20190116\Models\LoginActionFlag.cs" />
+    <Compile Include="Cam\V20190116\Models\LoginActionFlagIntl.cs" />
     <Compile Include="Cam\V20190116\Models\LoginActionMfaFlag.cs" />
     <Compile Include="Cam\V20190116\Models\OffsiteFlag.cs" />
     <Compile Include="Cam\V20190116\Models\PolicyVersionDetail.cs" />
