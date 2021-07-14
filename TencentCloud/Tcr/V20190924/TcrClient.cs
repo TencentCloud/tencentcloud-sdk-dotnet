@@ -133,6 +133,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 用于校验企业版实例信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceRequest"/></param>
+        /// <returns><see cref="CheckInstanceResponse"/></returns>
+        public async Task<CheckInstanceResponse> CheckInstance(CheckInstanceRequest req)
+        {
+             JsonResponseModel<CheckInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于校验企业版实例信息
+        /// </summary>
+        /// <param name="req"><see cref="CheckInstanceRequest"/></param>
+        /// <returns><see cref="CheckInstanceResponse"/></returns>
+        public CheckInstanceResponse CheckInstanceSync(CheckInstanceRequest req)
+        {
+             JsonResponseModel<CheckInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查待创建的实例名称是否符合规范
         /// </summary>
         /// <param name="req"><see cref="CheckInstanceNameRequest"/></param>

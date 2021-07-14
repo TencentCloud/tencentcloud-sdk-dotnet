@@ -94,6 +94,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
 
+        /// <summary>
+        /// 生命周期，单位为天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +118,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

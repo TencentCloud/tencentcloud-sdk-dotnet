@@ -819,7 +819,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
+        /// 本接口（DescribeDCDBUpgradePrice）用于查询变配分布式数据库实例价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBUpgradePriceRequest"/></param>
         /// <returns><see cref="DescribeDCDBUpgradePriceResponse"/></returns>
@@ -839,7 +839,7 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
-        /// 本接口（DescribeDCDBUpgradePrice）用于查询升级分布式数据库实例价格。
+        /// 本接口（DescribeDCDBUpgradePrice）用于查询变配分布式数据库实例价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeDCDBUpgradePriceRequest"/></param>
         /// <returns><see cref="DescribeDCDBUpgradePriceResponse"/></returns>

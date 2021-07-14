@@ -31,7 +31,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public string[] ShardInstanceIds{ get; set; }
 
         /// <summary>
-        /// 数据切分比例
+        /// 数据切分比例，固定50%
         /// </summary>
         [JsonProperty("SplitRate")]
         public long? SplitRate{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
+        /// 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/557/56485)。
         /// </summary>
         [JsonProperty("FlowId")]
         public long? FlowId{ get; set; }

@@ -25,14 +25,13 @@ namespace TencentCloud.Ie.V20200304.Models
     {
         
         /// <summary>
-        /// 音频流的流id
+        /// 音频流的流id。
         /// </summary>
         [JsonProperty("Stream")]
         public long? Stream{ get; set; }
 
         /// <summary>
         /// 音频采样率 。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sample")]
@@ -41,14 +40,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 音频声道数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Channel")]
         public long? Channel{ get; set; }
 
         /// <summary>
         /// 编码格式，如aac, mp3等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Codec")]
@@ -57,14 +54,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 码率，单位：bps。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 音频时长，单位：ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]

@@ -49,16 +49,16 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamBeginNotifyUrl{ get; set; }
 
         /// <summary>
+        /// 混流回调 URL。(参数已弃用)。
+        /// </summary>
+        [JsonProperty("StreamMixNotifyUrl")]
+        public string StreamMixNotifyUrl{ get; set; }
+
+        /// <summary>
         /// 断流回调 URL。
         /// </summary>
         [JsonProperty("StreamEndNotifyUrl")]
         public string StreamEndNotifyUrl{ get; set; }
-
-        /// <summary>
-        /// 混流回调 URL。
-        /// </summary>
-        [JsonProperty("StreamMixNotifyUrl")]
-        public string StreamMixNotifyUrl{ get; set; }
 
         /// <summary>
         /// 录制回调 URL。
@@ -94,8 +94,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "StreamBeginNotifyUrl", this.StreamBeginNotifyUrl);
-            this.SetParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
             this.SetParamSimple(map, prefix + "StreamMixNotifyUrl", this.StreamMixNotifyUrl);
+            this.SetParamSimple(map, prefix + "StreamEndNotifyUrl", this.StreamEndNotifyUrl);
             this.SetParamSimple(map, prefix + "RecordNotifyUrl", this.RecordNotifyUrl);
             this.SetParamSimple(map, prefix + "SnapshotNotifyUrl", this.SnapshotNotifyUrl);
             this.SetParamSimple(map, prefix + "PornCensorshipNotifyUrl", this.PornCensorshipNotifyUrl);

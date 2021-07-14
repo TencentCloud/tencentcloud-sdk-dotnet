@@ -60,6 +60,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("TagSet")]
         public string[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 歌曲时长
+        /// </summary>
+        [JsonProperty("Duration")]
+        public ulong? Duration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamArraySimple(map, prefix + "LyricistSet.", this.LyricistSet);
             this.SetParamArraySimple(map, prefix + "ComposerSet.", this.ComposerSet);
             this.SetParamArraySimple(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "Duration", this.Duration);
         }
     }
 }

@@ -108,6 +108,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 在实例上执行命令的用户名。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "FormattedDescription", this.FormattedDescription);
             this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

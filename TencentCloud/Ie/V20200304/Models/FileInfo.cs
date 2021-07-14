@@ -26,7 +26,6 @@ namespace TencentCloud.Ie.V20200304.Models
         
         /// <summary>
         /// 任务结束后生成的文件大小。
-        /// 注意：此字段可能返回 null，表示取不到有效值 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileSize")]
@@ -34,7 +33,6 @@ namespace TencentCloud.Ie.V20200304.Models
 
         /// <summary>
         /// 任务结束后生成的文件格式，例如：mp4,flv等等。
-        /// 注意：此字段可能返回 null，表示取不到有效值 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileType")]
@@ -43,14 +41,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 任务结束后生成的文件整体码率，单位：bps。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 任务结束后生成的文件时长，单位：ms。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
@@ -59,14 +55,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 任务结束后生成的文件视频信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoInfoResult")]
         public VideoInfoResultItem[] VideoInfoResult{ get; set; }
 
         /// <summary>
         /// 任务结束后生成的文件音频信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioInfoResult")]

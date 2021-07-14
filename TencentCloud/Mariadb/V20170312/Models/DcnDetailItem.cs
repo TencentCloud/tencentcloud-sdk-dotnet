@@ -90,6 +90,48 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DcnStatus")]
         public long? DcnStatus{ get; set; }
 
+        /// <summary>
+        /// 实例CPU核数
+        /// </summary>
+        [JsonProperty("Cpu")]
+        public long? Cpu{ get; set; }
+
+        /// <summary>
+        /// 实例内存大小，单位 GB
+        /// </summary>
+        [JsonProperty("Memory")]
+        public long? Memory{ get; set; }
+
+        /// <summary>
+        /// 实例存储大小，单位 GB
+        /// </summary>
+        [JsonProperty("Storage")]
+        public long? Storage{ get; set; }
+
+        /// <summary>
+        /// 付费模式
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// 实例创建时间，格式为 2006-01-02 15:04:05
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 实例到期时间，格式为 2006-01-02 15:04:05
+        /// </summary>
+        [JsonProperty("PeriodEndTime")]
+        public string PeriodEndTime{ get; set; }
+
+        /// <summary>
+        /// 1： 主实例（独享型）, 2: 主实例, 3： 灾备实例, 4： 灾备实例（独享型）
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +149,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "DcnFlag", this.DcnFlag);
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
+            this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
+            this.SetParamSimple(map, prefix + "Memory", this.Memory);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "PeriodEndTime", this.PeriodEndTime);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

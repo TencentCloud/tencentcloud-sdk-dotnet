@@ -93,8 +93,7 @@ namespace TencentCloud.Ie.V20200304.Models
         /// 编码器支持选项，可选值：
         /// h264,
         /// h265,
-        /// av1
-        /// 。
+        /// av1。
         /// 不填默认h264。
         /// </summary>
         [JsonProperty("VideoCodec")]

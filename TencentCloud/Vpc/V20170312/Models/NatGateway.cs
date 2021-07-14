@@ -119,6 +119,27 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupSet")]
         public string[] SecurityGroupSet{ get; set; }
 
+        /// <summary>
+        /// NAT网关的SNAT转发规则。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceIpTranslationNatRuleSet")]
+        public SourceIpTranslationNatRule[] SourceIpTranslationNatRuleSet{ get; set; }
+
+        /// <summary>
+        /// 是否独享型NAT。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsExclusive")]
+        public bool? IsExclusive{ get; set; }
+
+        /// <summary>
+        /// 独享型NAT所在的网关集群的带宽(单位:Mbps)，当IsExclusive为false时无此字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExclusiveGatewayBandwidth")]
+        public ulong? ExclusiveGatewayBandwidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +161,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArraySimple(map, prefix + "SecurityGroupSet.", this.SecurityGroupSet);
+            this.SetParamArrayObj(map, prefix + "SourceIpTranslationNatRuleSet.", this.SourceIpTranslationNatRuleSet);
+            this.SetParamSimple(map, prefix + "IsExclusive", this.IsExclusive);
+            this.SetParamSimple(map, prefix + "ExclusiveGatewayBandwidth", this.ExclusiveGatewayBandwidth);
         }
     }
 }

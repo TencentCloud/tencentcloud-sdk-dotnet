@@ -27,7 +27,6 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 子任务名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskName")]
         public string TaskName{ get; set; }
@@ -50,14 +49,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 子任务进度。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProgressRate")]
         public long? ProgressRate{ get; set; }
 
         /// <summary>
         /// 画质重生处理后文件的下载地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DownloadUrl")]
@@ -66,14 +63,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 画质重生处理后文件的MD5。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
         /// 画质重生处理后文件的详细信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FileInfo")]

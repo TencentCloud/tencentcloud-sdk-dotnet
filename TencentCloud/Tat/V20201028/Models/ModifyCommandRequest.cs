@@ -77,6 +77,13 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("DefaultParameters")]
         public string DefaultParameters{ get; set; }
 
+        /// <summary>
+        /// 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
+        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

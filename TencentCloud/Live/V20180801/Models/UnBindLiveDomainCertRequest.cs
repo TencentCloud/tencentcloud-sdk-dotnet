@@ -30,6 +30,16 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("DomainName")]
         public string DomainName{ get; set; }
 
+        /// <summary>
+        /// 枚举值：
+        /// gray: 解绑灰度规则
+        /// formal(默认): 解绑正式规则
+        /// 
+        /// 不传则为formal
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +47,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

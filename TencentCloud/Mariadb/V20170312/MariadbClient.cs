@@ -1339,7 +1339,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
+        /// 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询变配的价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeUpgradePriceRequest"/></param>
         /// <returns><see cref="DescribeUpgradePriceResponse"/></returns>
@@ -1359,7 +1359,7 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询扩容的价格。
+        /// 本接口（DescribeUpgradePrice）用于在扩容云数据库实例时，查询变配的价格。
         /// </summary>
         /// <param name="req"><see cref="DescribeUpgradePriceRequest"/></param>
         /// <returns><see cref="DescribeUpgradePriceResponse"/></returns>

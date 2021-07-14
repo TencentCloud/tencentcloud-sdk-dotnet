@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.323</VersionPrefix>
+    <VersionPrefix>3.0.324</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11754,6 +11754,8 @@
     <Compile Include="Tcr\V20190924\Models\BatchDeleteRepositoryPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CheckInstanceNameRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CheckInstanceNameResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\CheckInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
@@ -11934,6 +11936,7 @@
     <Compile Include="Tcr\V20190924\Models\NamespaceInfo.cs" />
     <Compile Include="Tcr\V20190924\Models\NamespaceInfoResp.cs" />
     <Compile Include="Tcr\V20190924\Models\NamespaceIsExistsResp.cs" />
+    <Compile Include="Tcr\V20190924\Models\PeerReplicationOption.cs" />
     <Compile Include="Tcr\V20190924\Models\Registry.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryChargePrepaid.cs" />
     <Compile Include="Tcr\V20190924\Models\RegistryCondition.cs" />
@@ -12889,6 +12892,8 @@
     <Compile Include="Tsf\V20180326\Models\CreateConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateContainGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateContainGroupResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateFileConfigRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\CreateFileConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateGatewayApiRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateGatewayApiResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateGroupRequest.cs" />
@@ -13000,6 +13005,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeDownloadInfoResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeEnabledUnitRuleRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeEnabledUnitRuleResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeFileConfigsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeFileConfigsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
@@ -13116,6 +13123,7 @@
     <Compile Include="Tsf\V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\FieldRef.cs" />
+    <Compile Include="Tsf\V20180326\Models\FileConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupApiVo.cs" />
@@ -13193,6 +13201,8 @@
     <Compile Include="Tsf\V20180326\Models\ReleaseApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleaseConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleaseConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ReleaseFileConfigRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\ReleaseFileConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleasePublicConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ReleasePublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RemoveInstancesRequest.cs" />
@@ -13253,6 +13263,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigReleaseLog.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageContainerEvent.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageFileConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageInstance.cs" />

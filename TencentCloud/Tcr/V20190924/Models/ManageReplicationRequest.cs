@@ -54,6 +54,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("DestinationRegionId")]
         public ulong? DestinationRegionId{ get; set; }
 
+        /// <summary>
+        /// 开启跨主账号实例同步配置项
+        /// </summary>
+        [JsonProperty("PeerReplicationOption")]
+        public PeerReplicationOption PeerReplicationOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "DestinationRegionId", this.DestinationRegionId);
+            this.SetParamObj(map, prefix + "PeerReplicationOption.", this.PeerReplicationOption);
         }
     }
 }

@@ -33,14 +33,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 视频宽度。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
         /// 视频高度。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Height")]
@@ -49,14 +47,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 视频码率，单位：bps。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Bitrate")]
         public long? Bitrate{ get; set; }
 
         /// <summary>
         /// 视频帧率，用分数格式表示，如：25/1, 99/32等等。
-        /// 注意：此字段可能返回 null，表示取不到有效值 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fps")]
@@ -65,14 +61,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 编码格式，如h264,h265等等 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
         /// <summary>
         /// 播放旋转角度，可选值0-360。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rotate")]
@@ -81,14 +75,12 @@ namespace TencentCloud.Ie.V20200304.Models
         /// <summary>
         /// 视频时长，单位：ms 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }
 
         /// <summary>
         /// 颜色空间，如yuv420p，yuv444p等等。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PixFormat")]

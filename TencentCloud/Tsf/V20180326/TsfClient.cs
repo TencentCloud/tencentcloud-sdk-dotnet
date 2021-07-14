@@ -573,6 +573,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 创建文件配置项
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileConfigRequest"/></param>
+        /// <returns><see cref="CreateFileConfigResponse"/></returns>
+        public async Task<CreateFileConfigResponse> CreateFileConfig(CreateFileConfigRequest req)
+        {
+             JsonResponseModel<CreateFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建文件配置项
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileConfigRequest"/></param>
+        /// <returns><see cref="CreateFileConfigResponse"/></returns>
+        public CreateFileConfigResponse CreateFileConfigSync(CreateFileConfigRequest req)
+        {
+             JsonResponseModel<CreateFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量导入API至api分组(也支持新建API到分组)
         /// </summary>
         /// <param name="req"><see cref="CreateGatewayApiRequest"/></param>
@@ -2768,6 +2808,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEnabledUnitRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnabledUnitRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询文件配置项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileConfigsRequest"/></param>
+        /// <returns><see cref="DescribeFileConfigsResponse"/></returns>
+        public async Task<DescribeFileConfigsResponse> DescribeFileConfigs(DescribeFileConfigsRequest req)
+        {
+             JsonResponseModel<DescribeFileConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询文件配置项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileConfigsRequest"/></param>
+        /// <returns><see cref="DescribeFileConfigsResponse"/></returns>
+        public DescribeFileConfigsResponse DescribeFileConfigsSync(DescribeFileConfigsRequest req)
+        {
+             JsonResponseModel<DescribeFileConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileConfigsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5612,6 +5692,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布文件配置
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseFileConfigRequest"/></param>
+        /// <returns><see cref="ReleaseFileConfigResponse"/></returns>
+        public async Task<ReleaseFileConfigResponse> ReleaseFileConfig(ReleaseFileConfigRequest req)
+        {
+             JsonResponseModel<ReleaseFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseFileConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布文件配置
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseFileConfigRequest"/></param>
+        /// <returns><see cref="ReleaseFileConfigResponse"/></returns>
+        public ReleaseFileConfigResponse ReleaseFileConfigSync(ReleaseFileConfigRequest req)
+        {
+             JsonResponseModel<ReleaseFileConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseFileConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseFileConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

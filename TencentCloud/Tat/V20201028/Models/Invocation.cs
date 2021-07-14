@@ -102,6 +102,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("InstanceKind")]
         public string InstanceKind{ get; set; }
 
+        /// <summary>
+        /// 在实例上执行命令时使用的用户名。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

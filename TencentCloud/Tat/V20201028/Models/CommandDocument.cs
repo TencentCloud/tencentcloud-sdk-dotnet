@@ -48,6 +48,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
+        /// <summary>
+        /// 执行用户。
+        /// </summary>
+        [JsonProperty("Username")]
+        public string Username{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "CommandType", this.CommandType);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+            this.SetParamSimple(map, prefix + "Username", this.Username);
         }
     }
 }

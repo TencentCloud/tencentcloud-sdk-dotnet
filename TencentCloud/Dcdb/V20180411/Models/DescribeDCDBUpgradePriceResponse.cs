@@ -37,6 +37,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? Price{ get; set; }
 
         /// <summary>
+        /// 变配明细计算公式
+        /// </summary>
+        [JsonProperty("Formula")]
+        public string Formula{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Formula", this.Formula);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

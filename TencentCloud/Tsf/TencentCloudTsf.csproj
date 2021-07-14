@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.323</VersionPrefix>
+    <VersionPrefix>3.0.324</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20180326\Models\CreateConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupRequest.cs" />
     <Compile Include="V20180326\Models\CreateContainGroupResponse.cs" />
+    <Compile Include="V20180326\Models\CreateFileConfigRequest.cs" />
+    <Compile Include="V20180326\Models\CreateFileConfigResponse.cs" />
     <Compile Include="V20180326\Models\CreateGatewayApiRequest.cs" />
     <Compile Include="V20180326\Models\CreateGatewayApiResponse.cs" />
     <Compile Include="V20180326\Models\CreateGroupRequest.cs" />
@@ -208,6 +210,8 @@
     <Compile Include="V20180326\Models\DescribeDownloadInfoResponse.cs" />
     <Compile Include="V20180326\Models\DescribeEnabledUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\DescribeEnabledUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeFileConfigsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeFileConfigsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateRequest.cs" />
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
@@ -324,6 +328,7 @@
     <Compile Include="V20180326\Models\ExpandGroupRequest.cs" />
     <Compile Include="V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="V20180326\Models\FieldRef.cs" />
+    <Compile Include="V20180326\Models\FileConfig.cs" />
     <Compile Include="V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\GatewayGroupApiVo.cs" />
@@ -401,6 +406,8 @@
     <Compile Include="V20180326\Models\ReleaseApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReleaseConfigResponse.cs" />
+    <Compile Include="V20180326\Models\ReleaseFileConfigRequest.cs" />
+    <Compile Include="V20180326\Models\ReleaseFileConfigResponse.cs" />
     <Compile Include="V20180326\Models\ReleasePublicConfigRequest.cs" />
     <Compile Include="V20180326\Models\ReleasePublicConfigResponse.cs" />
     <Compile Include="V20180326\Models\RemoveInstancesRequest.cs" />
@@ -461,6 +468,7 @@
     <Compile Include="V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigReleaseLog.cs" />
     <Compile Include="V20180326\Models\TsfPageContainerEvent.cs" />
+    <Compile Include="V20180326\Models\TsfPageFileConfig.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayPlugin.cs" />
     <Compile Include="V20180326\Models\TsfPageInstance.cs" />
