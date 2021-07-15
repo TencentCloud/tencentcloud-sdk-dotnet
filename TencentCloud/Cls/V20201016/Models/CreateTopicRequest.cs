@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 是否开启自动分裂，默认值为false
+        /// 是否开启自动分裂，默认值为true
         /// </summary>
         [JsonProperty("AutoSplit")]
         public bool? AutoSplit{ get; set; }
@@ -61,10 +61,16 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// 日志主题的存储类型，可选值 hot（热存储），cold（冷存储）默认为hot
+        /// 日志主题的存储类型，可选值 hot（实时存储），cold（离线存储）；默认为hot。若传入cold，请先联系客服进行开白。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }
+
+        /// <summary>
+        /// 生命周期，单位天；可取值范围1~366。默认30天
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

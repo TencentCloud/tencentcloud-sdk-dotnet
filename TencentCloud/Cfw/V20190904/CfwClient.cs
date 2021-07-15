@@ -373,7 +373,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeBlockByIpTimesList 告警中心阻断ip折线图
+        /// DescribeBlockByIpTimesList 告警中心阻断IP折线图
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockByIpTimesListRequest"/></param>
         /// <returns><see cref="DescribeBlockByIpTimesListResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeBlockByIpTimesList 告警中心阻断ip折线图
+        /// DescribeBlockByIpTimesList 告警中心阻断IP折线图
         /// </summary>
         /// <param name="req"><see cref="DescribeBlockByIpTimesListRequest"/></param>
         /// <returns><see cref="DescribeBlockByIpTimesListResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询防火墙弹性公网ip
+        /// 查询防火墙弹性公网IP
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
         /// <returns><see cref="DescribeCfwEipsResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 查询防火墙弹性公网ip
+        /// 查询防火墙弹性公网IP
         /// </summary>
         /// <param name="req"><see cref="DescribeCfwEipsRequest"/></param>
         /// <returns><see cref="DescribeCfwEipsResponse"/></returns>
@@ -773,7 +773,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeTLogIpList告警中心ip柱形图
+        /// DescribeTLogIpList告警中心IP柱形图
         /// </summary>
         /// <param name="req"><see cref="DescribeTLogIpListRequest"/></param>
         /// <returns><see cref="DescribeTLogIpListResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// DescribeTLogIpList告警中心ip柱形图
+        /// DescribeTLogIpList告警中心IP柱形图
         /// </summary>
         /// <param name="req"><see cref="DescribeTLogIpListRequest"/></param>
         /// <returns><see cref="DescribeTLogIpListResponse"/></returns>

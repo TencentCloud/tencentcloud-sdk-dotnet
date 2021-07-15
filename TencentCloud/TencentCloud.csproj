@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.324</VersionPrefix>
+    <VersionPrefix>3.0.325</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -388,6 +388,10 @@
     <Compile Include="Apigateway\V20180808\Models\APIDoc.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDocInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDocs.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppApiInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppApiInfos.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ApiAppInfos.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="Apigateway\V20180808\Models\ApiIdStatus.cs" />
@@ -405,6 +409,8 @@
     <Compile Include="Apigateway\V20180808\Models\AttachedApiSummary.cs" />
     <Compile Include="Apigateway\V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BindApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BindApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindIPStrategyRequest.cs" />
@@ -418,6 +424,8 @@
     <Compile Include="Apigateway\V20180808\Models\ConstantParameter.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiRequest.cs" />
@@ -433,6 +441,8 @@
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteApiRequest.cs" />
@@ -456,6 +466,14 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeAPIDocsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeAllPluginApisResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppBindApisStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppBindApisStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppsStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiAppsStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiBindApiAppsStatusRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiBindApiAppsStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -488,6 +506,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentReleaseHistoryResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceEnvironmentStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeServiceForApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeServiceForApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceReleaseVersionRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceReleaseVersionResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceRequest.cs" />
@@ -533,6 +553,8 @@
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyAPIDocResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiEnvironmentStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiIncrementRequest.cs" />
@@ -589,6 +611,10 @@
     <Compile Include="Apigateway\V20180808\Models\UnBindSubDomainResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UnReleaseServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\UnReleaseServiceResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UnbindApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UnbindApiAppResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpdateApiAppKeyRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpdateApiAppKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateServiceRequest.cs" />
@@ -3267,15 +3293,22 @@
     <Compile Include="Cls\V20201016\Models\AlarmNotice.cs" />
     <Compile Include="Cls\V20201016\Models\AlarmTarget.cs" />
     <Compile Include="Cls\V20201016\Models\AlarmTargetInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ConfigInfo.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConfigRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConfigResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateExportRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateIndexRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateLogsetRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateTopicRequest.cs" />
@@ -3284,10 +3317,16 @@
     <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteExportRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteIndexRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteLogsetRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteTopicRequest.cs" />
@@ -3296,12 +3335,20 @@
     <Compile Include="Cls\V20201016\Models\DescribeAlarmNoticesResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeAlarmsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigMachineGroupsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigMachineGroupsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeExportsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeIndexRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeIndexResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogContextRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogContextResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogsetsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogsetsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachineGroupConfigsRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeMachineGroupConfigsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeMachineGroupsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeMachineGroupsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeMachinesRequest.cs" />
@@ -3310,16 +3357,20 @@
     <Compile Include="Cls\V20201016\Models\DescribePartitionsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeTopicsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeTopicsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ExportInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ExtractRuleInfo.cs" />
     <Compile Include="Cls\V20201016\Models\Filter.cs" />
     <Compile Include="Cls\V20201016\Models\FullTextInfo.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="Cls\V20201016\Models\LogContextInfo.cs" />
     <Compile Include="Cls\V20201016\Models\LogInfo.cs" />
     <Compile Include="Cls\V20201016\Models\LogItem.cs" />
     <Compile Include="Cls\V20201016\Models\LogItems.cs" />
+    <Compile Include="Cls\V20201016\Models\LogsetInfo.cs" />
     <Compile Include="Cls\V20201016\Models\MachineGroupInfo.cs" />
     <Compile Include="Cls\V20201016\Models\MachineGroupTypeInfo.cs" />
     <Compile Include="Cls\V20201016\Models\MachineInfo.cs" />
@@ -3329,8 +3380,12 @@
     <Compile Include="Cls\V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConfigRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConfigResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyLogsetRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyTopicRequest.cs" />
@@ -9191,6 +9246,7 @@
     <Compile Include="Mps\V20190612\Models\DisableWorkflowRequest.cs" />
     <Compile Include="Mps\V20190612\Models\DisableWorkflowResponse.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaFileInfo.cs" />
+    <Compile Include="Mps\V20190612\Models\EditMediaOutputConfig.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaRequest.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaResponse.cs" />
     <Compile Include="Mps\V20190612\Models\EditMediaTask.cs" />
@@ -12117,6 +12173,7 @@
     <Compile Include="Tem\V20201221\Models\DeleteIngressResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DeployServiceV2Request.cs" />
     <Compile Include="Tem\V20201221\Models\DeployServiceV2Response.cs" />
+    <Compile Include="Tem\V20201221\Models\DeployStrategyConf.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressRequest.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressResponse.cs" />
     <Compile Include="Tem\V20201221\Models\DescribeIngressesRequest.cs" />
@@ -12132,6 +12189,7 @@
     <Compile Include="Tem\V20201221\Models\EsInfo.cs" />
     <Compile Include="Tem\V20201221\Models\GenerateDownloadUrlRequest.cs" />
     <Compile Include="Tem\V20201221\Models\GenerateDownloadUrlResponse.cs" />
+    <Compile Include="Tem\V20201221\Models\HealthCheckConfig.cs" />
     <Compile Include="Tem\V20201221\Models\IngressInfo.cs" />
     <Compile Include="Tem\V20201221\Models\IngressRule.cs" />
     <Compile Include="Tem\V20201221\Models\IngressRuleBackend.cs" />

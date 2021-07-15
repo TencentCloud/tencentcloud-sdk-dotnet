@@ -83,8 +83,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string CallbackKey{ get; set; }
 
         /// <summary>
-        /// 混流回调 URL，
-        /// 相关协议文档：[事件消息通知](/document/product/267/32744)。
+        /// 参数已弃用。
         /// </summary>
         [JsonProperty("StreamMixNotifyUrl")]
         public string StreamMixNotifyUrl{ get; set; }

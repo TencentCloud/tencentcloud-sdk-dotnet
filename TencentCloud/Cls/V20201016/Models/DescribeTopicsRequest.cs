@@ -63,8 +63,15 @@ namespace TencentCloud.Cls.V20201016.Models
         /// 
         /// 必选：否
         /// 
+        /// <br><li> storageType
         /// 
-        /// 每次请求的Filters的上限为10，Filter.Values的上限为5。
+        /// 按照【日志主题的存储类型】进行过滤。可选值 hot（实时存储），cold（离线存储）
+        /// 类型：String
+        /// 
+        /// 必选：否
+        /// 
+        /// 
+        /// 每次请求的Filters的上限为10，Filter.Values的上限为100。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

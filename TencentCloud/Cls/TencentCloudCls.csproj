@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.324</VersionPrefix>
+    <VersionPrefix>3.0.325</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,15 +49,22 @@
     <Compile Include="V20201016\Models\AlarmNotice.cs" />
     <Compile Include="V20201016\Models\AlarmTarget.cs" />
     <Compile Include="V20201016\Models\AlarmTargetInfo.cs" />
+    <Compile Include="V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
+    <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="V20201016\Models\ConfigInfo.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\CreateConfigRequest.cs" />
+    <Compile Include="V20201016\Models\CreateConfigResponse.cs" />
     <Compile Include="V20201016\Models\CreateExportRequest.cs" />
     <Compile Include="V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="V20201016\Models\CreateIndexRequest.cs" />
     <Compile Include="V20201016\Models\CreateIndexResponse.cs" />
+    <Compile Include="V20201016\Models\CreateLogsetRequest.cs" />
+    <Compile Include="V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\CreateTopicRequest.cs" />
@@ -66,10 +73,16 @@
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteConfigRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteConfigResponse.cs" />
     <Compile Include="V20201016\Models\DeleteExportRequest.cs" />
     <Compile Include="V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="V20201016\Models\DeleteIndexRequest.cs" />
     <Compile Include="V20201016\Models\DeleteIndexResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteLogsetRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteLogsetResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\DeleteTopicRequest.cs" />
@@ -78,12 +91,20 @@
     <Compile Include="V20201016\Models\DescribeAlarmNoticesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeConfigMachineGroupsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeConfigMachineGroupsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeConfigsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeConfigsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeExportsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
     <Compile Include="V20201016\Models\DescribeIndexResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextRequest.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeLogsetsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeLogsetsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeMachineGroupConfigsRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeMachineGroupConfigsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeMachineGroupsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeMachineGroupsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeMachinesRequest.cs" />
@@ -92,16 +113,20 @@
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeTopicsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeTopicsResponse.cs" />
+    <Compile Include="V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="V20201016\Models\ExportInfo.cs" />
+    <Compile Include="V20201016\Models\ExtractRuleInfo.cs" />
     <Compile Include="V20201016\Models\Filter.cs" />
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="V20201016\Models\LogContextInfo.cs" />
     <Compile Include="V20201016\Models\LogInfo.cs" />
     <Compile Include="V20201016\Models\LogItem.cs" />
     <Compile Include="V20201016\Models\LogItems.cs" />
+    <Compile Include="V20201016\Models\LogsetInfo.cs" />
     <Compile Include="V20201016\Models\MachineGroupInfo.cs" />
     <Compile Include="V20201016\Models\MachineGroupTypeInfo.cs" />
     <Compile Include="V20201016\Models\MachineInfo.cs" />
@@ -111,8 +136,12 @@
     <Compile Include="V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmRequest.cs" />
     <Compile Include="V20201016\Models\ModifyAlarmResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyConfigRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyConfigResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyLogsetRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\ModifyTopicRequest.cs" />

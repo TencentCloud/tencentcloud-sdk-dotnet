@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 待执行命令的实例ID列表。 支持实例类型：
+        /// 待执行命令的实例ID列表，上限100。支持实例类型：
         /// <li> CVM
         /// <li> LIGHTHOUSE
         /// </summary>

@@ -60,6 +60,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MaxSplitPartitions")]
         public long? MaxSplitPartitions{ get; set; }
 
+        /// <summary>
+        /// 生命周期，单位天；可取值范围1~366
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "AutoSplit", this.AutoSplit);
             this.SetParamSimple(map, prefix + "MaxSplitPartitions", this.MaxSplitPartitions);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

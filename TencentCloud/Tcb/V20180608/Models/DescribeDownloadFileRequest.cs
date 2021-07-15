@@ -25,7 +25,7 @@ namespace TencentCloud.Tcb.V20180608.Models
     {
         
         /// <summary>
-        /// 代码uri
+        /// 代码uri，格式如：extension://abcdefhhxxx.zip，对应 DescribeExtensionUploadInfo 接口的返回值
         /// </summary>
         [JsonProperty("CodeUri")]
         public string CodeUri{ get; set; }

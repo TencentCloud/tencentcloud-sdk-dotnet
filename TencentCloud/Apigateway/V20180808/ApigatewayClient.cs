@@ -93,6 +93,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（BindApiApp）用于绑定应用到API。
+        /// </summary>
+        /// <param name="req"><see cref="BindApiAppRequest"/></param>
+        /// <returns><see cref="BindApiAppResponse"/></returns>
+        public async Task<BindApiAppResponse> BindApiApp(BindApiAppRequest req)
+        {
+             JsonResponseModel<BindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（BindApiApp）用于绑定应用到API。
+        /// </summary>
+        /// <param name="req"><see cref="BindApiAppRequest"/></param>
+        /// <returns><see cref="BindApiAppResponse"/></returns>
+        public BindApiAppResponse BindApiAppSync(BindApiAppRequest req)
+        {
+             JsonResponseModel<BindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（BindEnvironment）用于绑定使用计划到服务或API。
         /// 用户在发布服务到某个环境中后，如果 API 需要鉴权，还需要绑定使用计划才能进行调用，此接口用户将使用计划绑定到特定环境。
         /// 目前支持绑定使用计划到API，但是同一个服务不能同时存在绑定到服务的使用计划和绑定到API的使用计划，所以对已经绑定过服务级别使用计划的环境，请先使用 服务级别使用计划降级 接口进行降级操作。
@@ -381,6 +421,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（CreateApiApp）用于创建应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiAppRequest"/></param>
+        /// <returns><see cref="CreateApiAppResponse"/></returns>
+        public async Task<CreateApiAppResponse> CreateApiApp(CreateApiAppRequest req)
+        {
+             JsonResponseModel<CreateApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateApiApp）用于创建应用。
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiAppRequest"/></param>
+        /// <returns><see cref="CreateApiAppResponse"/></returns>
+        public CreateApiAppResponse CreateApiAppSync(CreateApiAppRequest req)
+        {
+             JsonResponseModel<CreateApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateApiKey）用于创建一对新的 API 密钥。
         /// </summary>
         /// <param name="req"><see cref="CreateApiKeyRequest"/></param>
@@ -656,6 +736,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DeleteApi");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteApiApp）用于删除已经创建的应用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiAppRequest"/></param>
+        /// <returns><see cref="DeleteApiAppResponse"/></returns>
+        public async Task<DeleteApiAppResponse> DeleteApiApp(DeleteApiAppRequest req)
+        {
+             JsonResponseModel<DeleteApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteApiApp）用于删除已经创建的应用。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApiAppRequest"/></param>
+        /// <returns><see cref="DeleteApiAppResponse"/></returns>
+        public DeleteApiAppResponse DeleteApiAppSync(DeleteApiAppRequest req)
+        {
+             JsonResponseModel<DeleteApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApiAppResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1102,6 +1222,166 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApi");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiAppResponse"/></returns>
+        public async Task<DescribeApiAppResponse> DescribeApiApp(DescribeApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiApp）用于根据应用ID搜索应用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiAppResponse"/></returns>
+        public DescribeApiAppResponse DescribeApiAppSync(DescribeApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppBindApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppBindApisStatusResponse"/></returns>
+        public async Task<DescribeApiAppBindApisStatusResponse> DescribeApiAppBindApisStatus(DescribeApiAppBindApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiAppBindApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiAppBindApisStatus）查询应用绑定的Api列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppBindApisStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppBindApisStatusResponse"/></returns>
+        public DescribeApiAppBindApisStatusResponse DescribeApiAppBindApisStatusSync(DescribeApiAppBindApisStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppBindApisStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiAppBindApisStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppBindApisStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiAppsStatus）查询应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppsStatusResponse"/></returns>
+        public async Task<DescribeApiAppsStatusResponse> DescribeApiAppsStatus(DescribeApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiAppsStatus）查询应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiAppsStatusResponse"/></returns>
+        public DescribeApiAppsStatusResponse DescribeApiAppsStatusSync(DescribeApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiBindApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiBindApiAppsStatusResponse"/></returns>
+        public async Task<DescribeApiBindApiAppsStatusResponse> DescribeApiBindApiAppsStatus(DescribeApiBindApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiBindApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiBindApiAppsStatus）查询Api绑定的应用列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiBindApiAppsStatusRequest"/></param>
+        /// <returns><see cref="DescribeApiBindApiAppsStatusResponse"/></returns>
+        public DescribeApiBindApiAppsStatusResponse DescribeApiBindApiAppsStatusSync(DescribeApiBindApiAppsStatusRequest req)
+        {
+             JsonResponseModel<DescribeApiBindApiAppsStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiBindApiAppsStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiBindApiAppsStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1759,6 +2039,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（DescribeServiceForApiApp）用于应用使用者查询一个服务的详细信息、包括服务的描述、域名、协议等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeServiceForApiAppResponse"/></returns>
+        public async Task<DescribeServiceForApiAppResponse> DescribeServiceForApiApp(DescribeServiceForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeServiceForApiApp）用于应用使用者查询一个服务的详细信息、包括服务的描述、域名、协议等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeServiceForApiAppResponse"/></returns>
+        public DescribeServiceForApiAppResponse DescribeServiceForApiAppSync(DescribeServiceForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeServiceForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeServiceReleaseVersion）查询一个服务下面所有已经发布的版本列表。
         /// 用户在发布服务时，常有多个版本发布，可使用本接口查询已发布的版本。
         /// </summary>
@@ -2371,6 +2691,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（ModifyApiApp）用于修改已经创建的应用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAppRequest"/></param>
+        /// <returns><see cref="ModifyApiAppResponse"/></returns>
+        public async Task<ModifyApiAppResponse> ModifyApiApp(ModifyApiAppRequest req)
+        {
+             JsonResponseModel<ModifyApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyApiApp）用于修改已经创建的应用。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApiAppRequest"/></param>
+        /// <returns><see cref="ModifyApiAppResponse"/></returns>
+        public ModifyApiAppResponse ModifyApiAppSync(ModifyApiAppRequest req)
+        {
+             JsonResponseModel<ModifyApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyApiEnvironmentStrategy）用于修改API限流策略
         /// </summary>
         /// <param name="req"><see cref="ModifyApiEnvironmentStrategyRequest"/></param>
@@ -2968,6 +3328,86 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "UnReleaseService");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnReleaseServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnbindApiApp）用于解除应用和API绑定。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiAppRequest"/></param>
+        /// <returns><see cref="UnbindApiAppResponse"/></returns>
+        public async Task<UnbindApiAppResponse> UnbindApiApp(UnbindApiAppRequest req)
+        {
+             JsonResponseModel<UnbindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnbindApiApp）用于解除应用和API绑定。
+        /// </summary>
+        /// <param name="req"><see cref="UnbindApiAppRequest"/></param>
+        /// <returns><see cref="UnbindApiAppResponse"/></returns>
+        public UnbindApiAppResponse UnbindApiAppSync(UnbindApiAppRequest req)
+        {
+             JsonResponseModel<UnbindApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateApiAppKey）用于更新应用秘钥。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
+        /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>
+        public async Task<UpdateApiAppKeyResponse> UpdateApiAppKey(UpdateApiAppKeyRequest req)
+        {
+             JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateApiAppKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiAppKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateApiAppKey）用于更新应用秘钥。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
+        /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>
+        public UpdateApiAppKeyResponse UpdateApiAppKeySync(UpdateApiAppKeyRequest req)
+        {
+             JsonResponseModel<UpdateApiAppKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateApiAppKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateApiAppKeyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

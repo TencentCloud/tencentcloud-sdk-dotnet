@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 返回的事件列表
+        /// 返回的事件列表，若没有数据，会返回空数组。
         /// </summary>
         [JsonProperty("Data")]
         public EventList[] Data{ get; set; }

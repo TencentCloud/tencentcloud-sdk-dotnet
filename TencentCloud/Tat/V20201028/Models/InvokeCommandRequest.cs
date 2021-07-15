@@ -31,7 +31,7 @@ namespace TencentCloud.Tat.V20201028.Models
         public string CommandId{ get; set; }
 
         /// <summary>
-        /// 待执行命令的实例ID列表。
+        /// 待执行命令的实例ID列表，上限100。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

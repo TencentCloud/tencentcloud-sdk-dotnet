@@ -43,6 +43,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string OutputObjectPath{ get; set; }
 
         /// <summary>
+        /// 编辑后生成的文件配置。
+        /// </summary>
+        [JsonProperty("OutputConfig")]
+        public EditMediaOutputConfig OutputConfig{ get; set; }
+
+        /// <summary>
         /// 任务的事件通知信息，不填代表不获取事件通知。
         /// </summary>
         [JsonProperty("TaskNotifyConfig")]
@@ -75,6 +81,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamObj(map, prefix + "OutputStorage.", this.OutputStorage);
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
+            this.SetParamObj(map, prefix + "OutputConfig.", this.OutputConfig);
             this.SetParamObj(map, prefix + "TaskNotifyConfig.", this.TaskNotifyConfig);
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);

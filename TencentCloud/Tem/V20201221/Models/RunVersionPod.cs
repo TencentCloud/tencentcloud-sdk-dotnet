@@ -68,6 +68,13 @@ namespace TencentCloud.Tem.V20201221.Models
         [JsonProperty("DeployVersion")]
         public string DeployVersion{ get; set; }
 
+        /// <summary>
+        /// 重启次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RestartCount")]
+        public long? RestartCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Tem.V20201221.Models
             this.SetParamSimple(map, prefix + "PodIp", this.PodIp);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
+            this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
         }
     }
 }

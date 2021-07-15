@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.324</VersionPrefix>
+    <VersionPrefix>3.0.325</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,10 @@
     <Compile Include="V20180808\Models\APIDoc.cs" />
     <Compile Include="V20180808\Models\APIDocInfo.cs" />
     <Compile Include="V20180808\Models\APIDocs.cs" />
+    <Compile Include="V20180808\Models\ApiAppApiInfo.cs" />
+    <Compile Include="V20180808\Models\ApiAppApiInfos.cs" />
+    <Compile Include="V20180808\Models\ApiAppInfo.cs" />
+    <Compile Include="V20180808\Models\ApiAppInfos.cs" />
     <Compile Include="V20180808\Models\ApiEnvironmentStrategy.cs" />
     <Compile Include="V20180808\Models\ApiEnvironmentStrategyStataus.cs" />
     <Compile Include="V20180808\Models\ApiIdStatus.cs" />
@@ -65,6 +69,8 @@
     <Compile Include="V20180808\Models\AttachedApiSummary.cs" />
     <Compile Include="V20180808\Models\AvailableApiInfo.cs" />
     <Compile Include="V20180808\Models\Base64EncodedTriggerRule.cs" />
+    <Compile Include="V20180808\Models\BindApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\BindApiAppResponse.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="V20180808\Models\BindIPStrategyRequest.cs" />
@@ -78,6 +84,8 @@
     <Compile Include="V20180808\Models\ConstantParameter.cs" />
     <Compile Include="V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="V20180808\Models\CreateAPIDocResponse.cs" />
+    <Compile Include="V20180808\Models\CreateApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\CreateApiAppResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\CreateApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\CreateApiRequest.cs" />
@@ -93,6 +101,8 @@
     <Compile Include="V20180808\Models\CreateUsagePlanResponse.cs" />
     <Compile Include="V20180808\Models\DeleteAPIDocRequest.cs" />
     <Compile Include="V20180808\Models\DeleteAPIDocResponse.cs" />
+    <Compile Include="V20180808\Models\DeleteApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\DeleteApiAppResponse.cs" />
     <Compile Include="V20180808\Models\DeleteApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\DeleteApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\DeleteApiRequest.cs" />
@@ -116,6 +126,14 @@
     <Compile Include="V20180808\Models\DescribeAPIDocsResponse.cs" />
     <Compile Include="V20180808\Models\DescribeAllPluginApisRequest.cs" />
     <Compile Include="V20180808\Models\DescribeAllPluginApisResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppBindApisStatusRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppBindApisStatusResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppsStatusRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeApiAppsStatusResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeApiBindApiAppsStatusRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeApiBindApiAppsStatusResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApiKeyRequest.cs" />
@@ -148,6 +166,8 @@
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentReleaseHistoryResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\DescribeServiceEnvironmentStrategyResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeServiceForApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeServiceForApiAppResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceReleaseVersionRequest.cs" />
     <Compile Include="V20180808\Models\DescribeServiceReleaseVersionResponse.cs" />
     <Compile Include="V20180808\Models\DescribeServiceRequest.cs" />
@@ -193,6 +213,8 @@
     <Compile Include="V20180808\Models\MicroServiceReq.cs" />
     <Compile Include="V20180808\Models\ModifyAPIDocRequest.cs" />
     <Compile Include="V20180808\Models\ModifyAPIDocResponse.cs" />
+    <Compile Include="V20180808\Models\ModifyApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyApiAppResponse.cs" />
     <Compile Include="V20180808\Models\ModifyApiEnvironmentStrategyRequest.cs" />
     <Compile Include="V20180808\Models\ModifyApiEnvironmentStrategyResponse.cs" />
     <Compile Include="V20180808\Models\ModifyApiIncrementRequest.cs" />
@@ -249,6 +271,10 @@
     <Compile Include="V20180808\Models\UnBindSubDomainResponse.cs" />
     <Compile Include="V20180808\Models\UnReleaseServiceRequest.cs" />
     <Compile Include="V20180808\Models\UnReleaseServiceResponse.cs" />
+    <Compile Include="V20180808\Models\UnbindApiAppRequest.cs" />
+    <Compile Include="V20180808\Models\UnbindApiAppResponse.cs" />
+    <Compile Include="V20180808\Models\UpdateApiAppKeyRequest.cs" />
+    <Compile Include="V20180808\Models\UpdateApiAppKeyResponse.cs" />
     <Compile Include="V20180808\Models\UpdateApiKeyRequest.cs" />
     <Compile Include="V20180808\Models\UpdateApiKeyResponse.cs" />
     <Compile Include="V20180808\Models\UpdateServiceRequest.cs" />

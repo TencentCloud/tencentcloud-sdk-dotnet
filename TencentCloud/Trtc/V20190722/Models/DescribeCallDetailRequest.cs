@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string CommId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，14天内。本地unix时间戳（1588031999s）
+        /// 查询开始时间，14天内。本地unix时间戳（1588031999s），查询实时数据时，查询起止时间不超过1个小时。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
