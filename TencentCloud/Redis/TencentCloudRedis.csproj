@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.325</VersionPrefix>
+    <VersionPrefix>3.0.326</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,8 @@
   <ItemGroup>
     <Compile Include="V20180412\RedisClient.cs" />
     <Compile Include="V20180412\Models\Account.cs" />
+    <Compile Include="V20180412\Models\ApplyParamsTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
@@ -61,9 +63,13 @@
     <Compile Include="V20180412\Models\CreateInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\CreateInstancesRequest.cs" />
     <Compile Include="V20180412\Models\CreateInstancesResponse.cs" />
+    <Compile Include="V20180412\Models\CreateParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DelayDistribution.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="V20180412\Models\DeleteInstanceAccountResponse.cs" />
+    <Compile Include="V20180412\Models\DeleteParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="V20180412\Models\DescribeBackupUrlRequest.cs" />
@@ -113,6 +119,10 @@
     <Compile Include="V20180412\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplateInfoRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplateInfoResponse.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="V20180412\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -183,7 +193,11 @@
     <Compile Include="V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="V20180412\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyParamTemplateRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="V20180412\Models\Outbound.cs" />
+    <Compile Include="V20180412\Models\ParamTemplateInfo.cs" />
+    <Compile Include="V20180412\Models\ParameterDetail.cs" />
     <Compile Include="V20180412\Models\ProductConf.cs" />
     <Compile Include="V20180412\Models\ProxyNodes.cs" />
     <Compile Include="V20180412\Models\RedisBackupSet.cs" />

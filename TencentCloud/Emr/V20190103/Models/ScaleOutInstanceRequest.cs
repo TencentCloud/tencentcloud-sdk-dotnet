@@ -117,7 +117,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群提供的资源
+        /// 扩容所选资源类型，可选范围为"host","pod"，host为普通的CVM资源，Pod为TKE集群或EKS集群提供的资源
         /// </summary>
         [JsonProperty("HardwareResourceType")]
         public string HardwareResourceType{ get; set; }
@@ -154,9 +154,18 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 扩容的Master节点的数量。
+        /// 使用clickhouse集群扩容时，该参数不生效。
+        /// 使用kafka集群扩容时，该参数不生效。
+        /// 当HardwareResourceType=POD时，该参数不生效。
         /// </summary>
         [JsonProperty("MasterCount")]
         public ulong? MasterCount{ get; set; }
+
+        /// <summary>
+        /// 扩容后是否启动服务，true：启动，false：不启动
+        /// </summary>
+        [JsonProperty("StartServiceAfterScaleOut")]
+        public string StartServiceAfterScaleOut{ get; set; }
 
 
         /// <summary>
@@ -185,6 +194,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "YarnNodeLabel", this.YarnNodeLabel);
             this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
+            this.SetParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
         }
     }
 }

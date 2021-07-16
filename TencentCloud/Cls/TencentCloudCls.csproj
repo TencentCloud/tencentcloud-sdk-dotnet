@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.325</VersionPrefix>
+    <VersionPrefix>3.0.326</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,7 +52,9 @@
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="V20201016\Models\CompressInfo.cs" />
     <Compile Include="V20201016\Models\ConfigInfo.cs" />
+    <Compile Include="V20201016\Models\ContentInfo.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmRequest.cs" />
@@ -67,8 +69,11 @@
     <Compile Include="V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\CreateShipperRequest.cs" />
+    <Compile Include="V20201016\Models\CreateShipperResponse.cs" />
     <Compile Include="V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="V20201016\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20201016\Models\CsvInfo.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
@@ -85,6 +90,8 @@
     <Compile Include="V20201016\Models\DeleteLogsetResponse.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteShipperRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteShipperResponse.cs" />
     <Compile Include="V20201016\Models\DeleteTopicRequest.cs" />
     <Compile Include="V20201016\Models\DeleteTopicResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmNoticesRequest.cs" />
@@ -111,15 +118,21 @@
     <Compile Include="V20201016\Models\DescribeMachinesResponse.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsRequest.cs" />
     <Compile Include="V20201016\Models\DescribePartitionsResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeShipperTasksRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeShipperTasksResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeShippersRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeShippersResponse.cs" />
     <Compile Include="V20201016\Models\DescribeTopicsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeTopicsResponse.cs" />
     <Compile Include="V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="V20201016\Models\ExportInfo.cs" />
     <Compile Include="V20201016\Models\ExtractRuleInfo.cs" />
     <Compile Include="V20201016\Models\Filter.cs" />
+    <Compile Include="V20201016\Models\FilterRuleInfo.cs" />
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="V20201016\Models\JsonInfo.cs" />
     <Compile Include="V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="V20201016\Models\LogContextInfo.cs" />
@@ -144,16 +157,22 @@
     <Compile Include="V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ModifyMachineGroupResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyShipperRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyShipperResponse.cs" />
     <Compile Include="V20201016\Models\ModifyTopicRequest.cs" />
     <Compile Include="V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="V20201016\Models\MonitorTime.cs" />
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="V20201016\Models\PartitionInfo.cs" />
+    <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
+    <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />
     <Compile Include="V20201016\Models\RuleKeyValueInfo.cs" />
     <Compile Include="V20201016\Models\RuleTagInfo.cs" />
     <Compile Include="V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="V20201016\Models\SearchLogResponse.cs" />
+    <Compile Include="V20201016\Models\ShipperInfo.cs" />
+    <Compile Include="V20201016\Models\ShipperTaskInfo.cs" />
     <Compile Include="V20201016\Models\SplitPartitionRequest.cs" />
     <Compile Include="V20201016\Models\SplitPartitionResponse.cs" />
     <Compile Include="V20201016\Models\Tag.cs" />

@@ -53,7 +53,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 创建EMR实例
+        /// 创建EMR集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// 创建EMR实例
+        /// 创建EMR集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
         /// <returns><see cref="CreateInstanceResponse"/></returns>

@@ -25,7 +25,7 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 节点规格描述
+        /// 节点规格描述，如CVM.SA2。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Spec")]
@@ -33,6 +33,12 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 存储类型
+        /// 取值范围：
+        /// <li>4：表示云SSD。</li>
+        /// <li>5：表示高效云盘。</li>
+        /// <li>6：表示增强型SSD云硬盘。</li>
+        /// <li>11：表示吞吐型云硬盘。</li>
+        /// <li>12：表示极速型SSD云硬盘。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageType")]
@@ -40,6 +46,10 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 磁盘类型
+        /// 取值范围：
+        /// <li>CLOUD_SSD：表示云SSD。</li>
+        /// <li>CLOUD_PREMIUM：表示高效云盘。</li>
+        /// <li>CLOUD_BASIC：表示云硬盘。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskType")]
@@ -88,21 +98,21 @@ namespace TencentCloud.Emr.V20190103.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
-        /// 规格类型
+        /// 规格类型，如S2.MEDIUM8
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
         /// <summary>
-        /// 本地盘数量
+        /// 本地盘数量，该字段已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LocalDiskNum")]
         public ulong? LocalDiskNum{ get; set; }
 
         /// <summary>
-        /// 盘数量
+        /// 本地盘数量，如2
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiskNum")]

@@ -236,6 +236,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
+        /// <summary>
+        /// 回源S3私有鉴权
+        /// </summary>
+        [JsonProperty("AwsPrivateAccess")]
+        public AwsPrivateAccess AwsPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// 回源OSS私有鉴权
+        /// </summary>
+        [JsonProperty("OssPrivateAccess")]
+        public OssPrivateAccess OssPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -276,6 +288,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
+            this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
+            this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
         }
     }
 }

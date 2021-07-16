@@ -85,6 +85,20 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("DynamicPodSpec")]
         public DynamicPodSpec DynamicPodSpec{ get; set; }
 
+        /// <summary>
+        /// 代表vpc网络唯一id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 代表vpc子网唯一id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +115,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamArrayObj(map, prefix + "PodVolumes.", this.PodVolumes);
             this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
             this.SetParamObj(map, prefix + "DynamicPodSpec.", this.DynamicPodSpec);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

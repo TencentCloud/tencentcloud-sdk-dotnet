@@ -62,6 +62,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Currency")]
         public string Currency{ get; set; }
 
+        /// <summary>
+        /// 是否按量转包年包月。0：否，1：是。
+        /// </summary>
+        [JsonProperty("ModifyPayMode")]
+        public long? ModifyPayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
+            this.SetParamSimple(map, prefix + "ModifyPayMode", this.ModifyPayMode);
         }
     }
 }

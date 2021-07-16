@@ -54,6 +54,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TrackData{ get; set; }
 
         /// <summary>
+        /// 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
+        /// </summary>
+        [JsonProperty("CoverData")]
+        public string CoverData{ get; set; }
+
+        /// <summary>
         /// 导出的云剪素材信息。指定 ExportDestination = CME 时有效。
         /// </summary>
         [JsonProperty("CMEExportInfo")]
@@ -81,6 +87,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
             this.SetParamSimple(map, prefix + "TrackData", this.TrackData);
+            this.SetParamSimple(map, prefix + "CoverData", this.CoverData);
             this.SetParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
             this.SetParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);

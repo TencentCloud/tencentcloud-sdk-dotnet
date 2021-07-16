@@ -25,7 +25,10 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
-        /// 云盘类型("CLOUD_PREMIUM","CLOUD_SSD","CLOUD_BASIC")的一种
+        /// 云盘类型
+        /// <li>CLOUD_SSD：表示云SSD。</li>
+        /// <li>CLOUD_PREMIUM：表示高效云盘。</li>
+        /// <li>CLOUD_HSSD：表示增强型SSD云硬盘。</li>
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }

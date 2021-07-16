@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.325</VersionPrefix>
+    <VersionPrefix>3.0.326</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2501,6 +2501,7 @@
     <Compile Include="Cdn\V20180606\Models\OriginIp.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\OriginPullTimeout.cs" />
+    <Compile Include="Cdn\V20180606\Models\OssPrivateAccess.cs" />
     <Compile Include="Cdn\V20180606\Models\OverseaConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\PathBasedOriginRule.cs" />
     <Compile Include="Cdn\V20180606\Models\PathRule.cs" />
@@ -3296,7 +3297,9 @@
     <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\CompressInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConfigInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ContentInfo.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmRequest.cs" />
@@ -3311,8 +3314,11 @@
     <Compile Include="Cls\V20201016\Models\CreateLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateShipperRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateShipperResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateTopicResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CsvInfo.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmRequest.cs" />
@@ -3329,6 +3335,8 @@
     <Compile Include="Cls\V20201016\Models\DeleteLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteShipperRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteShipperResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteTopicRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteTopicResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeAlarmNoticesRequest.cs" />
@@ -3355,15 +3363,21 @@
     <Compile Include="Cls\V20201016\Models\DescribeMachinesResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribePartitionsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribePartitionsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeShipperTasksRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeShipperTasksResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeShippersRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeShippersResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeTopicsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeTopicsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ExcludePathInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ExportInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ExtractRuleInfo.cs" />
     <Compile Include="Cls\V20201016\Models\Filter.cs" />
+    <Compile Include="Cls\V20201016\Models\FilterRuleInfo.cs" />
     <Compile Include="Cls\V20201016\Models\FullTextInfo.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\JsonInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyValueInfo.cs" />
     <Compile Include="Cls\V20201016\Models\LogContextInfo.cs" />
@@ -3388,16 +3402,22 @@
     <Compile Include="Cls\V20201016\Models\ModifyLogsetResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyMachineGroupResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyShipperRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyShipperResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyTopicRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="Cls\V20201016\Models\MonitorTime.cs" />
     <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\RetryShipperTaskRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="Cls\V20201016\Models\RuleInfo.cs" />
     <Compile Include="Cls\V20201016\Models\RuleKeyValueInfo.cs" />
     <Compile Include="Cls\V20201016\Models\RuleTagInfo.cs" />
     <Compile Include="Cls\V20201016\Models\SearchLogRequest.cs" />
     <Compile Include="Cls\V20201016\Models\SearchLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ShipperInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ShipperTaskInfo.cs" />
     <Compile Include="Cls\V20201016\Models\SplitPartitionRequest.cs" />
     <Compile Include="Cls\V20201016\Models\SplitPartitionResponse.cs" />
     <Compile Include="Cls\V20201016\Models\Tag.cs" />
@@ -10173,6 +10193,8 @@
     <Compile Include="Rce\V20201103\Models\WeChatAccountInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
+    <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\BigKeyInfo.cs" />
@@ -10188,9 +10210,13 @@
     <Compile Include="Redis\V20180412\Models\CreateInstanceAccountResponse.cs" />
     <Compile Include="Redis\V20180412\Models\CreateInstancesRequest.cs" />
     <Compile Include="Redis\V20180412\Models\CreateInstancesResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DelayDistribution.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeBackupUrlRequest.cs" />
@@ -10240,6 +10266,10 @@
     <Compile Include="Redis\V20180412\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeMaintenanceWindowResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplateInfoRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplateInfoResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplatesRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProductInfoResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupRequest.cs" />
@@ -10310,7 +10340,11 @@
     <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyNetworkConfigResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyParamTemplateRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\Outbound.cs" />
+    <Compile Include="Redis\V20180412\Models\ParamTemplateInfo.cs" />
+    <Compile Include="Redis\V20180412\Models\ParameterDetail.cs" />
     <Compile Include="Redis\V20180412\Models\ProductConf.cs" />
     <Compile Include="Redis\V20180412\Models\ProxyNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RedisBackupSet.cs" />
@@ -11595,6 +11629,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvPostpaidDeductRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvPostpaidDeductResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeExtensionUploadInfoRequest.cs" />
@@ -11611,6 +11647,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeQuotaDataResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeSpecialCostItemsRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeSpecialCostItemsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />
@@ -11645,12 +11683,14 @@
     <Compile Include="Tcb\V20180608\Models\OrderInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PackageFreeQuotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PlatformStatistic.cs" />
+    <Compile Include="Tcb\V20180608\Models\PostPaidEnvDeductInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\RollUpdateCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\SmsFreeQuota.cs" />
+    <Compile Include="Tcb\V20180608\Models\SpecialCostItem.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\Tag.cs" />

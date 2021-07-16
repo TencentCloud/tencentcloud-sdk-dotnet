@@ -31,16 +31,22 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? NodeType{ get; set; }
 
         /// <summary>
+        /// 主节点或者副本节点的ID，创建时不需要传递此参数。
+        /// </summary>
+        [JsonProperty("NodeId")]
+        public long? NodeId{ get; set; }
+
+        /// <summary>
         /// 主节点或者副本节点的可用区ID
         /// </summary>
         [JsonProperty("ZoneId")]
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 主节点或者副本节点的ID，创建时不需要传递此参数。
+        /// 主节点或者副本节点的可用区名称
         /// </summary>
-        [JsonProperty("NodeId")]
-        public long? NodeId{ get; set; }
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
 
 
         /// <summary>
@@ -49,8 +55,9 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

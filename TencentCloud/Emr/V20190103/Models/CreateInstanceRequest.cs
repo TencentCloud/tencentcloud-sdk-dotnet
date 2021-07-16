@@ -30,6 +30,22 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <li>2：表示EMR-V2.0.1。</li>
         /// <li>4：表示EMR-V2.1.0。</li>
         /// <li>7：表示EMR-V3.0.0。</li>
+        /// <li>9：表示EMR-V2.2.0。</li>
+        /// <li>11：表示CLICKHOUSE-V1.0.0。</li>
+        /// <li>13：表示DRUID-V1.0.0。</li>
+        /// <li>15：表示EMR-V2.2.1。</li>
+        /// <li>16：表示EMR-V2.3.0。</li>
+        /// <li>17：表示CLICKHOUSE-V1.1.0。</li>
+        /// <li>19：表示EMR-V2.4.0。</li>
+        /// <li>20：表示EMR-V2.5.0。</li>
+        /// <li>22：表示CLICKHOUSE-V1.2.0。</li>
+        /// <li>24：表示EMR-TianQiong-V1.0.0。</li>
+        /// <li>25：表示EMR-V3.1.0。</li>
+        /// <li>26：表示DORIS-V1.0.0。</li>
+        /// <li>27：表示KAFKA-V1.0.0。</li>
+        /// <li>28：表示EMR-V3.2.0。</li>
+        /// <li>29：表示EMR-V2.5.1。</li>
+        /// <li>30：表示EMR-V2.6.0。</li>
         /// </summary>
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
@@ -41,11 +57,8 @@ namespace TencentCloud.Emr.V20190103.Models
         public VPCSettings VPCSettings{ get; set; }
 
         /// <summary>
-        /// 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）需要选择不同的必选组件：
-        /// <li>ProductId为1的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-        /// <li>ProductId为2的时候，必选组件包括：hadoop-2.7.3、knox-1.2.0、zookeeper-3.4.9</li>
-        /// <li>ProductId为4的时候，必选组件包括：hadoop-2.8.4、knox-1.2.0、zookeeper-3.4.9</li>
-        /// <li>ProductId为7的时候，必选组件包括：hadoop-3.1.2、knox-1.2.0、zookeeper-3.4.9</li>
+        /// 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
+        /// 填写实例值：hive、flink。
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
@@ -123,7 +136,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public string SgId{ get; set; }
 
         /// <summary>
-        /// 引导操作脚本设置。
+        /// [引导操作](https://cloud.tencent.com/document/product/589/35656)脚本设置。
         /// </summary>
         [JsonProperty("PreExecutedFileSettings")]
         public PreExecuteFileSettings[] PreExecutedFileSettings{ get; set; }
@@ -176,6 +189,7 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 分散置放群组ID列表，当前只支持指定一个。
+        /// 该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/product/213/15486 ) 的返回值中的SecurityGroupId字段来获取。
         /// </summary>
         [JsonProperty("DisasterRecoverGroupIds")]
         public string[] DisasterRecoverGroupIds{ get; set; }
@@ -189,7 +203,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// hive共享元数据库类型。取值范围：
         /// <li>EMR_NEW_META：表示集群默认创建</li>
-        /// <li>EMR_EXIT_METE：表示集群使用指定EMR-MetaDB。</li>
+        /// <li>EMR_EXIT_META：表示集群使用指定EMR-MetaDB。</li>
         /// <li>USER_CUSTOM_META：表示集群使用自定义MetaDB。</li>
         /// </summary>
         [JsonProperty("MetaType")]

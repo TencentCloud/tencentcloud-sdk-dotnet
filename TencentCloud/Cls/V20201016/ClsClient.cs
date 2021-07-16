@@ -373,6 +373,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 创建新的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
+        /// </summary>
+        /// <param name="req"><see cref="CreateShipperRequest"/></param>
+        /// <returns><see cref="CreateShipperResponse"/></returns>
+        public async Task<CreateShipperResponse> CreateShipper(CreateShipperRequest req)
+        {
+             JsonResponseModel<CreateShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建新的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
+        /// </summary>
+        /// <param name="req"><see cref="CreateShipperRequest"/></param>
+        /// <returns><see cref="CreateShipperResponse"/></returns>
+        public CreateShipperResponse CreateShipperSync(CreateShipperRequest req)
+        {
+             JsonResponseModel<CreateShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建日志主题。
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRequest"/></param>
@@ -724,6 +764,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除投递规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShipperRequest"/></param>
+        /// <returns><see cref="DeleteShipperResponse"/></returns>
+        public async Task<DeleteShipperResponse> DeleteShipper(DeleteShipperRequest req)
+        {
+             JsonResponseModel<DeleteShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除投递规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteShipperRequest"/></param>
+        /// <returns><see cref="DeleteShipperResponse"/></returns>
+        public DeleteShipperResponse DeleteShipperSync(DeleteShipperRequest req)
+        {
+             JsonResponseModel<DeleteShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteShipperResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1253,6 +1333,86 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 获取投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShipperTasksRequest"/></param>
+        /// <returns><see cref="DescribeShipperTasksResponse"/></returns>
+        public async Task<DescribeShipperTasksResponse> DescribeShipperTasks(DescribeShipperTasksRequest req)
+        {
+             JsonResponseModel<DescribeShipperTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeShipperTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeShipperTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取投递任务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShipperTasksRequest"/></param>
+        /// <returns><see cref="DescribeShipperTasksResponse"/></returns>
+        public DescribeShipperTasksResponse DescribeShipperTasksSync(DescribeShipperTasksRequest req)
+        {
+             JsonResponseModel<DescribeShipperTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeShipperTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeShipperTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取投递规则信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShippersRequest"/></param>
+        /// <returns><see cref="DescribeShippersResponse"/></returns>
+        public async Task<DescribeShippersResponse> DescribeShippers(DescribeShippersRequest req)
+        {
+             JsonResponseModel<DescribeShippersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeShippers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeShippersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取投递规则信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeShippersRequest"/></param>
+        /// <returns><see cref="DescribeShippersResponse"/></returns>
+        public DescribeShippersResponse DescribeShippersSync(DescribeShippersRequest req)
+        {
+             JsonResponseModel<DescribeShippersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeShippers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeShippersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  本接口用于获取日志主题列表，支持分页
         /// </summary>
         /// <param name="req"><see cref="DescribeTopicsRequest"/></param>
@@ -1613,6 +1773,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShipperRequest"/></param>
+        /// <returns><see cref="ModifyShipperResponse"/></returns>
+        public async Task<ModifyShipperResponse> ModifyShipper(ModifyShipperRequest req)
+        {
+             JsonResponseModel<ModifyShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改现有的投递规则，客户如果使用此接口，需要自行处理CLS对指定bucket的写权限。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyShipperRequest"/></param>
+        /// <returns><see cref="ModifyShipperResponse"/></returns>
+        public ModifyShipperResponse ModifyShipperSync(ModifyShipperRequest req)
+        {
+             JsonResponseModel<ModifyShipperResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyShipper");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyShipperResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改日志主题。
         /// </summary>
         /// <param name="req"><see cref="ModifyTopicRequest"/></param>
@@ -1644,6 +1844,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTopic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重试失败的投递任务
+        /// </summary>
+        /// <param name="req"><see cref="RetryShipperTaskRequest"/></param>
+        /// <returns><see cref="RetryShipperTaskResponse"/></returns>
+        public async Task<RetryShipperTaskResponse> RetryShipperTask(RetryShipperTaskRequest req)
+        {
+             JsonResponseModel<RetryShipperTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RetryShipperTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryShipperTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重试失败的投递任务
+        /// </summary>
+        /// <param name="req"><see cref="RetryShipperTaskRequest"/></param>
+        /// <returns><see cref="RetryShipperTaskResponse"/></returns>
+        public RetryShipperTaskResponse RetryShipperTaskSync(RetryShipperTaskRequest req)
+        {
+             JsonResponseModel<RetryShipperTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RetryShipperTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RetryShipperTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

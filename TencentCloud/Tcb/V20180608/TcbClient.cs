@@ -1333,6 +1333,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询环境后付费计费详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvPostpaidDeductRequest"/></param>
+        /// <returns><see cref="DescribeEnvPostpaidDeductResponse"/></returns>
+        public async Task<DescribeEnvPostpaidDeductResponse> DescribeEnvPostpaidDeduct(DescribeEnvPostpaidDeductRequest req)
+        {
+             JsonResponseModel<DescribeEnvPostpaidDeductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvPostpaidDeduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvPostpaidDeductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境后付费计费详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvPostpaidDeductRequest"/></param>
+        /// <returns><see cref="DescribeEnvPostpaidDeductResponse"/></returns>
+        public DescribeEnvPostpaidDeductResponse DescribeEnvPostpaidDeductSync(DescribeEnvPostpaidDeductRequest req)
+        {
+             JsonResponseModel<DescribeEnvPostpaidDeductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvPostpaidDeduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvPostpaidDeductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取环境列表，含环境下的各个资源信息。尤其是各资源的唯一标识，是请求各资源的关键参数
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvsRequest"/></param>
@@ -1650,6 +1690,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSmsQuotas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsQuotasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境1分钱抵扣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecialCostItemsRequest"/></param>
+        /// <returns><see cref="DescribeSpecialCostItemsResponse"/></returns>
+        public async Task<DescribeSpecialCostItemsResponse> DescribeSpecialCostItems(DescribeSpecialCostItemsRequest req)
+        {
+             JsonResponseModel<DescribeSpecialCostItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpecialCostItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecialCostItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境1分钱抵扣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpecialCostItemsRequest"/></param>
+        /// <returns><see cref="DescribeSpecialCostItemsResponse"/></returns>
+        public DescribeSpecialCostItemsResponse DescribeSpecialCostItemsSync(DescribeSpecialCostItemsRequest req)
+        {
+             JsonResponseModel<DescribeSpecialCostItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpecialCostItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpecialCostItemsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

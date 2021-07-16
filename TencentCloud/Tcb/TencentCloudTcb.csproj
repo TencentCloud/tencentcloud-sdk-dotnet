@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.325</VersionPrefix>
+    <VersionPrefix>3.0.326</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -131,6 +131,8 @@
     <Compile Include="V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvPostpaidDeductRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvPostpaidDeductResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeExtensionUploadInfoRequest.cs" />
@@ -147,6 +149,8 @@
     <Compile Include="V20180608\Models\DescribeQuotaDataResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSmsQuotasRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSmsQuotasResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeSpecialCostItemsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeSpecialCostItemsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />
@@ -181,12 +185,14 @@
     <Compile Include="V20180608\Models\OrderInfo.cs" />
     <Compile Include="V20180608\Models\PackageFreeQuotaInfo.cs" />
     <Compile Include="V20180608\Models\PlatformStatistic.cs" />
+    <Compile Include="V20180608\Models\PostPaidEnvDeductInfo.cs" />
     <Compile Include="V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvResponse.cs" />
     <Compile Include="V20180608\Models\RollUpdateCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\SmsFreeQuota.cs" />
+    <Compile Include="V20180608\Models\SpecialCostItem.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />

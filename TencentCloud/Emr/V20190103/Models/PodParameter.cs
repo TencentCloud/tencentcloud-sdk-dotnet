@@ -32,12 +32,120 @@ namespace TencentCloud.Emr.V20190103.Models
 
         /// <summary>
         /// 自定义权限
+        /// 如：
+        /// {
+        ///   "apiVersion": "v1",
+        ///   "clusters": [
+        ///     {
+        ///       "cluster": {
+        ///         "certificate-authority-data": "xxxxxx==",
+        ///         "server": "https://xxxxx.com"
+        ///       },
+        ///       "name": "cls-xxxxx"
+        ///     }
+        ///   ],
+        ///   "contexts": [
+        ///     {
+        ///       "context": {
+        ///         "cluster": "cls-xxxxx",
+        ///         "user": "100014xxxxx"
+        ///       },
+        ///       "name": "cls-a44yhcxxxxxxxxxx"
+        ///     }
+        ///   ],
+        ///   "current-context": "cls-a4xxxx-context-default",
+        ///   "kind": "Config",
+        ///   "preferences": {},
+        ///   "users": [
+        ///     {
+        ///       "name": "100014xxxxx",
+        ///       "user": {
+        ///         "client-certificate-data": "xxxxxx",
+        ///         "client-key-data": "xxxxxx"
+        ///       }
+        ///     }
+        ///   ]
+        /// }
         /// </summary>
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
         /// <summary>
         /// 自定义参数
+        /// 如：
+        /// {
+        ///     "apiVersion": "apps/v1",
+        ///     "kind": "Deployment",
+        ///     "metadata": {
+        ///       "name": "test-deployment",
+        ///       "labels": {
+        ///         "app": "test"
+        ///       }
+        ///     },
+        ///     "spec": {
+        ///       "replicas": 3,
+        ///       "selector": {
+        ///         "matchLabels": {
+        ///           "app": "test-app"
+        ///         }
+        ///       },
+        ///       "template": {
+        ///         "metadata": {
+        ///           "annotations": {
+        ///             "your-organization.com/department-v1": "test-example-v1",
+        ///             "your-organization.com/department-v2": "test-example-v2"
+        ///           },
+        ///           "labels": {
+        ///             "app": "test-app",
+        ///             "environment": "production"
+        ///           }
+        ///         },
+        ///         "spec": {
+        ///           "nodeSelector": {
+        ///             "your-organization/node-test": "test-node"
+        ///           },
+        ///           "containers": [
+        ///             {
+        ///               "name": "nginx",
+        ///               "image": "nginx:1.14.2",
+        ///               "ports": [
+        ///                 {
+        ///                   "containerPort": 80
+        ///                 }
+        ///               ]
+        ///             }
+        ///           ],
+        ///           "affinity": {
+        ///             "nodeAffinity": {
+        ///               "requiredDuringSchedulingIgnoredDuringExecution": {
+        ///                 "nodeSelectorTerms": [
+        ///                   {
+        ///                     "matchExpressions": [
+        ///                       {
+        ///                         "key": "disk-type",
+        ///                         "operator": "In",
+        ///                         "values": [
+        ///                           "ssd",
+        ///                           "sas"
+        ///                         ]
+        ///                       },
+        ///                       {
+        ///                         "key": "cpu-num",
+        ///                         "operator": "Gt",
+        ///                         "values": [
+        ///                           "6"
+        ///                         ]
+        ///                       }
+        ///                     ]
+        ///                   }
+        ///                 ]
+        ///               }
+        ///             }
+        ///           }
+        ///         }
+        ///       }
+        ///     }
+        ///   }
         /// </summary>
         [JsonProperty("Parameter")]
         public string Parameter{ get; set; }

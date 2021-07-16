@@ -38,7 +38,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string LogFormat{ get; set; }
 
         /// <summary>
-        /// 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+        /// 日志采集路径
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Path")]

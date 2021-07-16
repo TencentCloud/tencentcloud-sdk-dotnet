@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Output{ get; set; }
 
         /// <summary>
-        /// 通配符日志采集路径列表，以/**/分隔文件目录和文件名
+        /// 日志采集路径,包含文件名
         /// </summary>
         [JsonProperty("Path")]
         public string Path{ get; set; }
