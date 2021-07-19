@@ -151,6 +151,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (AttachCcn) 用于建立与云联网的关联。
+        /// </summary>
+        /// <param name="req"><see cref="AttachCcnRequest"/></param>
+        /// <returns><see cref="AttachCcnResponse"/></returns>
+        public async Task<AttachCcnResponse> AttachCcn(AttachCcnRequest req)
+        {
+             JsonResponseModel<AttachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (AttachCcn) 用于建立与云联网的关联。
+        /// </summary>
+        /// <param name="req"><see cref="AttachCcnRequest"/></param>
+        /// <returns><see cref="AttachCcnResponse"/></returns>
+        public AttachCcnResponse AttachCcnSync(AttachCcnRequest req)
+        {
+             JsonResponseModel<AttachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateBlueprint) 用于创建镜像。
         /// </summary>
         /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
@@ -662,6 +702,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBundles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBundlesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnAttachedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCcnAttachedInstancesResponse"/></returns>
+        public async Task<DescribeCcnAttachedInstancesResponse> DescribeCcnAttachedInstances(DescribeCcnAttachedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCcnAttachedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcnAttachedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeCcnAttachedInstances) 用于查询云联网关联的实例信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcnAttachedInstancesRequest"/></param>
+        /// <returns><see cref="DescribeCcnAttachedInstancesResponse"/></returns>
+        public DescribeCcnAttachedInstancesResponse DescribeCcnAttachedInstancesSync(DescribeCcnAttachedInstancesRequest req)
+        {
+             JsonResponseModel<DescribeCcnAttachedInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcnAttachedInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcnAttachedInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1331,6 +1411,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口 (AttachCcn) 用于解除与云联网的关联。
+        /// </summary>
+        /// <param name="req"><see cref="DetachCcnRequest"/></param>
+        /// <returns><see cref="DetachCcnResponse"/></returns>
+        public async Task<DetachCcnResponse> DetachCcn(DetachCcnRequest req)
+        {
+             JsonResponseModel<DetachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (AttachCcn) 用于解除与云联网的关联。
+        /// </summary>
+        /// <param name="req"><see cref="DetachCcnRequest"/></param>
+        /// <returns><see cref="DetachCcnResponse"/></returns>
+        public DetachCcnResponse DetachCcnSync(DetachCcnRequest req)
+        {
+             JsonResponseModel<DetachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
         /// 
         /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
@@ -1922,6 +2042,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "RebootInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResetAttachCcnRequest"/></param>
+        /// <returns><see cref="ResetAttachCcnResponse"/></returns>
+        public async Task<ResetAttachCcnResponse> ResetAttachCcn(ResetAttachCcnRequest req)
+        {
+             JsonResponseModel<ResetAttachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetAttachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAttachCcnResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
+        /// </summary>
+        /// <param name="req"><see cref="ResetAttachCcnRequest"/></param>
+        /// <returns><see cref="ResetAttachCcnResponse"/></returns>
+        public ResetAttachCcnResponse ResetAttachCcnSync(ResetAttachCcnRequest req)
+        {
+             JsonResponseModel<ResetAttachCcnResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetAttachCcn");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetAttachCcnResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

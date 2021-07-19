@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.326</VersionPrefix>
+    <VersionPrefix>3.0.327</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,10 +49,13 @@
     <Compile Include="V20200324\Models\ApplyInstanceSnapshotResponse.cs" />
     <Compile Include="V20200324\Models\AssociateInstancesKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\AssociateInstancesKeyPairsResponse.cs" />
+    <Compile Include="V20200324\Models\AttachCcnRequest.cs" />
+    <Compile Include="V20200324\Models\AttachCcnResponse.cs" />
     <Compile Include="V20200324\Models\Blueprint.cs" />
     <Compile Include="V20200324\Models\BlueprintInstance.cs" />
     <Compile Include="V20200324\Models\BlueprintPrice.cs" />
     <Compile Include="V20200324\Models\Bundle.cs" />
+    <Compile Include="V20200324\Models\CcnAttachedInstance.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\CreateBlueprintResponse.cs" />
     <Compile Include="V20200324\Models\CreateFirewallRulesRequest.cs" />
@@ -78,6 +81,8 @@
     <Compile Include="V20200324\Models\DescribeBundleDiscountResponse.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
@@ -110,6 +115,8 @@
     <Compile Include="V20200324\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="V20200324\Models\DescribeZonesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeZonesResponse.cs" />
+    <Compile Include="V20200324\Models\DetachCcnRequest.cs" />
+    <Compile Include="V20200324\Models\DetachCcnResponse.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DiscountDetail.cs" />
@@ -154,6 +161,8 @@
     <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="V20200324\Models\RegionInfo.cs" />
+    <Compile Include="V20200324\Models\ResetAttachCcnRequest.cs" />
+    <Compile Include="V20200324\Models\ResetAttachCcnResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstanceBlueprint.cs" />
     <Compile Include="V20200324\Models\ResetInstanceRequest.cs" />
     <Compile Include="V20200324\Models\ResetInstanceResponse.cs" />

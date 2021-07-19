@@ -99,6 +99,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("CommandDocument")]
         public CommandDocument CommandDocument{ get; set; }
 
+        /// <summary>
+        /// 执行任务失败时的错误信息。
+        /// </summary>
+        [JsonProperty("ErrorInfo")]
+        public string ErrorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
+            this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
         }
     }
 }
