@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.327</VersionPrefix>
+    <VersionPrefix>3.0.328</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -747,6 +747,7 @@
     <Compile Include="As\V20180419\Models\SetInstancesProtectionRequest.cs" />
     <Compile Include="As\V20180419\Models\SetInstancesProtectionResponse.cs" />
     <Compile Include="As\V20180419\Models\SpotMarketOptions.cs" />
+    <Compile Include="As\V20180419\Models\SpotMixedAllocationPolicy.cs" />
     <Compile Include="As\V20180419\Models\StartAutoScalingInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\StartAutoScalingInstancesResponse.cs" />
     <Compile Include="As\V20180419\Models\StopAutoScalingInstancesRequest.cs" />
@@ -832,6 +833,8 @@
     <Compile Include="Ba\V20200720\BaClient.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlRequest.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlResponse.cs" />
+    <Compile Include="Ba\V20200720\Models\SyncIcpOrderWebInfoRequest.cs" />
+    <Compile Include="Ba\V20200720\Models\SyncIcpOrderWebInfoResponse.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
     <Compile Include="Batch\V20170312\Models\Activity.cs" />
     <Compile Include="Batch\V20170312\Models\AgentRunningMode.cs" />
@@ -5159,6 +5162,8 @@
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\BriefNodeInfo.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CancelDcnJobRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CancelDcnJobResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloneAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CloseDBExtranetAccessRequest.cs" />
@@ -8631,6 +8636,8 @@
     <Compile Include="Mariadb\V20170312\Models\Account.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CancelDcnJobRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CancelDcnJobResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloneAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CloseDBExtranetAccessRequest.cs" />

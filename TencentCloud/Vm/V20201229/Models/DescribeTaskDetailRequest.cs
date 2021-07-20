@@ -25,13 +25,14 @@ namespace TencentCloud.Vm.V20201229.Models
     {
         
         /// <summary>
-        /// 任务ID，创建任务后返回的TaskId字段
+        /// 该字段表示创建视频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
+        /// <br>备注：查询接口单次最大查询量为**20条每次**。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 是否展示所有分片，默认只展示命中规则的分片
+        /// 该布尔字段表示是否展示全部的视频片段，取值：True(展示全部的视频分片)、False(只展示命中审核规则的视频分片)；默认值为False。
         /// </summary>
         [JsonProperty("ShowAllSegments")]
         public bool? ShowAllSegments{ get; set; }

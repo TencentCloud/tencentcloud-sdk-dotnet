@@ -92,5 +92,47 @@ namespace TencentCloud.Ba.V20200720
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
+        /// 只有指定的网站信息字段能被同步
+        /// </summary>
+        /// <param name="req"><see cref="SyncIcpOrderWebInfoRequest"/></param>
+        /// <returns><see cref="SyncIcpOrderWebInfoResponse"/></returns>
+        public async Task<SyncIcpOrderWebInfoResponse> SyncIcpOrderWebInfo(SyncIcpOrderWebInfoRequest req)
+        {
+             JsonResponseModel<SyncIcpOrderWebInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncIcpOrderWebInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncIcpOrderWebInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
+        /// 只有指定的网站信息字段能被同步
+        /// </summary>
+        /// <param name="req"><see cref="SyncIcpOrderWebInfoRequest"/></param>
+        /// <returns><see cref="SyncIcpOrderWebInfoResponse"/></returns>
+        public SyncIcpOrderWebInfoResponse SyncIcpOrderWebInfoSync(SyncIcpOrderWebInfoRequest req)
+        {
+             JsonResponseModel<SyncIcpOrderWebInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncIcpOrderWebInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncIcpOrderWebInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

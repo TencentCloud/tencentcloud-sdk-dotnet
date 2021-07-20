@@ -25,114 +25,106 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 该字段用于返回创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要查询任务详情的审核任务。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 审核时传入的数据Id
+        /// 该字段用于返回调用音频审核接口时在Tasks参数内传入的数据ID参数，方便数据的辨别和管理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 业务类型，用户可以在控制台查看自己配置的BizType
+        /// 该字段用于返回调用音频审核接口时传入的BizType参数，方便数据的辨别和管理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 任务名称
+        /// 该字段用于返回调用音频审核接口时传入的TaskInput参数中的任务名称，方便任务的识别与管理。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 查询内容审核任务的状态，可选值：
-        /// FINISH 已完成
-        /// PENDING 等待中
-        /// RUNNING 进行中
-        /// ERROR 出错
-        /// CANCELLED 已取消
+        /// 该字段用于返回所查询内容的任务状态。
+        /// <br>取值：**FINISH**（任务已完成）、**PENDING** （任务等待中）、**RUNNING** （任务进行中）、**ERROR** （任务出错）、**CANCELLED** （任务已取消）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 任务类型：可选AUDIO（点播音频），LIVE_AUDIO（直播音频）
+        /// 该字段用于返回调用音频审核接口时输入的音频审核类型，取值为：**AUDIO**（点播音频）和**LIVE_AUDIO**（直播音频），默认值为AUDIO。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 智能审核服务对于内容违规类型的等级，可选值：
-        /// Pass 建议通过；
-        /// Reveiw 建议复审；
-        /// Block 建议屏蔽；
+        /// 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Suggestion")]
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 智能审核服务对于内容违规类型的判断，详见返回值列表
-        /// 如：Label：Porn（色情）；
+        /// 该字段用于返回检测结果所对应的恶意标签。<br>返回值：**Normal**：正常，**Porn**：色情，**Abuse**：谩骂，**Ad**：广告，**Custom**：自定义违规；以及其他令人反感、不安全或不适宜的内容类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Labels")]
         public TaskLabel[] Labels{ get; set; }
 
         /// <summary>
-        /// 输入的媒体信息
+        /// 该字段用于返回审核服务的媒体内容信息，主要包括传入文件类型和访问地址。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputInfo")]
         public InputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 音频文本，备注：这里的文本最大只返回前1000个字符
+        /// 该字段用于返回音频文件识别出的对应文本内容，最大支持**前1000个字符**。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioText")]
         public string AudioText{ get; set; }
 
         /// <summary>
-        /// 音频片段审核信息
+        /// 该字段用于返回音频片段的审核结果，主要包括开始时间和音频审核的相应结果。<br>具体输出内容请参见AudioSegments及AudioResult数据结构的详细描述。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AudioSegments")]
         public AudioSegments[] AudioSegments{ get; set; }
 
         /// <summary>
-        /// 错误类型，如果任务状态为Error，则该字段不为空
+        /// 当任务状态为Error时，该字段用于返回对应错误的类型；任务状态非Error时，默认返回为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorType")]
         public string ErrorType{ get; set; }
 
         /// <summary>
-        /// 错误描述，如果任务状态为Error，则该字段不为空
+        /// 当任务状态为Error时，该字段用于返回对应错误的详细描述，任务状态非Error时默认返回为空。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorDescription")]
         public string ErrorDescription{ get; set; }
 
         /// <summary>
-        /// 任务创建时间，格式为 ISO 8601
+        /// 该字段用于返回被查询任务创建的时间，格式采用 ISO 8601标准。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CreatedAt")]
         public string CreatedAt{ get; set; }
 
         /// <summary>
-        /// 任务最后更新时间，格式为 ISO 8601
+        /// 该字段用于返回被查询任务最后更新时间，格式采用 ISO 8601标准。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdatedAt")]

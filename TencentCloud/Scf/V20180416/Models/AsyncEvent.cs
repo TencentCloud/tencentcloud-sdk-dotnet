@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Qualifier{ get; set; }
 
         /// <summary>
-        /// 事件状态
+        /// 事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

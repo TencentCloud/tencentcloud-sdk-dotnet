@@ -194,6 +194,29 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LoadBalancerHealthCheckGracePeriod")]
         public ulong? LoadBalancerHealthCheckGracePeriod{ get; set; }
 
+        /// <summary>
+        /// 实例分配策略，取值包括 LAUNCH_CONFIGURATION 和 SPOT_MIXED。
+        /// <br><li> LAUNCH_CONFIGURATION，代表传统的按照启动配置模式。
+        /// <br><li> SPOT_MIXED，代表竞价混合模式。目前仅支持启动配置为按量计费模式时使用混合模式，混合模式下，伸缩组将根据设定扩容按量或竞价机型。使用混合模式时，关联的启动配置的计费类型不可被修改。
+        /// </summary>
+        [JsonProperty("InstanceAllocationPolicy")]
+        public string InstanceAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// 竞价混合模式下，各计费类型实例的分配策略。
+        /// 仅当 InstanceAllocationPolicy 取 SPOT_MIXED 时才会返回有效值。
+        /// </summary>
+        [JsonProperty("SpotMixedAllocationPolicy")]
+        public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
+
+        /// <summary>
+        /// 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+        /// <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+        /// <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+        /// </summary>
+        [JsonProperty("CapacityRebalance")]
+        public bool? CapacityRebalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -228,6 +251,9 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "MultiZoneSubnetPolicy", this.MultiZoneSubnetPolicy);
             this.SetParamSimple(map, prefix + "HealthCheckType", this.HealthCheckType);
             this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
+            this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
+            this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+            this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         }
     }
 }

@@ -55,7 +55,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string[] UserGroupIds{ get; set; }
 
         /// <summary>
-        /// 用户手机号。
+        /// 用户手机号。例如：+86-1xxxxxxxxxx。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }

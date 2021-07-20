@@ -25,7 +25,7 @@ namespace TencentCloud.Ams.V20201229.Models
     {
         
         /// <summary>
-        /// 任务ID
+        /// 该字段表示创建音频审核任务后返回的任务ID（在Results参数中），用于标识需要取消的审核任务。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

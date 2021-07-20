@@ -72,6 +72,18 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Deployable")]
         public ulong? Deployable{ get; set; }
 
+        /// <summary>
+        /// 是否筛选上传托管的 1筛选，0不筛选
+        /// </summary>
+        [JsonProperty("Upload")]
+        public long? Upload{ get; set; }
+
+        /// <summary>
+        /// 是否筛选可续期证书 1筛选 0不筛选
+        /// </summary>
+        [JsonProperty("Renew")]
+        public long? Renew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +98,8 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ExpirationSort", this.ExpirationSort);
             this.SetParamArraySimple(map, prefix + "CertificateStatus.", this.CertificateStatus);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
+            this.SetParamSimple(map, prefix + "Upload", this.Upload);
+            this.SetParamSimple(map, prefix + "Renew", this.Renew);
         }
     }
 }

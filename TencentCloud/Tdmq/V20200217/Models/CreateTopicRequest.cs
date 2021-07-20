@@ -47,8 +47,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 1 ：全局顺序消息；
         /// 2 ：局部顺序消息；
         /// 3 ：重试队列；
-        /// 4 ：死信队列；
-        /// 5 ：事务消息。
+        /// 4 ：死信队列。
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{ABF9DEFB-1E5B-347B-95AC-C6F0CDA0A525}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.327</VersionPrefix>
+    <VersionPrefix>3.0.328</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,5 +47,7 @@
     <Compile Include="V20200720\BaClient.cs" />
     <Compile Include="V20200720\Models\CreateWeappQRUrlRequest.cs" />
     <Compile Include="V20200720\Models\CreateWeappQRUrlResponse.cs" />
+    <Compile Include="V20200720\Models\SyncIcpOrderWebInfoRequest.cs" />
+    <Compile Include="V20200720\Models\SyncIcpOrderWebInfoResponse.cs" />
   </ItemGroup>
 </Project>

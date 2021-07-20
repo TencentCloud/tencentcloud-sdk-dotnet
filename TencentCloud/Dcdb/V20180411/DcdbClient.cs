@@ -93,6 +93,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 取消DCN同步
+        /// </summary>
+        /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
+        /// <returns><see cref="CancelDcnJobResponse"/></returns>
+        public async Task<CancelDcnJobResponse> CancelDcnJob(CancelDcnJobRequest req)
+        {
+             JsonResponseModel<CancelDcnJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelDcnJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelDcnJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消DCN同步
+        /// </summary>
+        /// <param name="req"><see cref="CancelDcnJobRequest"/></param>
+        /// <returns><see cref="CancelDcnJobResponse"/></returns>
+        public CancelDcnJobResponse CancelDcnJobSync(CancelDcnJobRequest req)
+        {
+             JsonResponseModel<CancelDcnJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelDcnJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelDcnJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CloneAccount）用于克隆实例账户。
         /// </summary>
         /// <param name="req"><see cref="CloneAccountRequest"/></param>
