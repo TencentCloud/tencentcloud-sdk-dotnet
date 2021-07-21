@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 转发监听端口，取值1~65535
+        /// 转发监听端口下限，取值1~65535
         /// </summary>
         [JsonProperty("FrontendPort")]
         public long? FrontendPort{ get; set; }
@@ -39,6 +39,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ForwardProtocol")]
         public string ForwardProtocol{ get; set; }
 
+        /// <summary>
+        /// 转发监听端口上限，取值1~65535
+        /// </summary>
+        [JsonProperty("FrontendPortEnd")]
+        public long? FrontendPortEnd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamSimple(map, prefix + "FrontendPort", this.FrontendPort);
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
+            this.SetParamSimple(map, prefix + "FrontendPortEnd", this.FrontendPortEnd);
         }
     }
 }

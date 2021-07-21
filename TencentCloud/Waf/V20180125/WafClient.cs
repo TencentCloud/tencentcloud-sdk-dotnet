@@ -373,6 +373,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 本接口用于修改访问日志保存期限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>
+        /// <returns><see cref="ModifyAccessPeriodResponse"/></returns>
+        public async Task<ModifyAccessPeriodResponse> ModifyAccessPeriod(ModifyAccessPeriodRequest req)
+        {
+             JsonResponseModel<ModifyAccessPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccessPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改访问日志保存期限
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>
+        /// <returns><see cref="ModifyAccessPeriodResponse"/></returns>
+        public ModifyAccessPeriodResponse ModifyAccessPeriodSync(ModifyAccessPeriodRequest req)
+        {
+             JsonResponseModel<ModifyAccessPeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccessPeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccessPeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 开启或禁用自定义策略
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>

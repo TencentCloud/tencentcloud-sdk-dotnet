@@ -51,6 +51,15 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Keys")]
         public WaterPrintKey[] Keys{ get; set; }
 
+        /// <summary>
+        /// 水印检查模式, 取值[
+        /// checkall（普通模式）
+        /// shortfpcheckall（精简模式）
+        /// ]
+        /// </summary>
+        [JsonProperty("Verify")]
+        public string Verify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +70,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "OpenStatus", this.OpenStatus);
             this.SetParamArrayObj(map, prefix + "Listeners.", this.Listeners);
             this.SetParamArrayObj(map, prefix + "Keys.", this.Keys);
+            this.SetParamSimple(map, prefix + "Verify", this.Verify);
         }
     }
 }

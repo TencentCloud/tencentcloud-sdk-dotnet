@@ -1692,5 +1692,45 @@ namespace TencentCloud.Antiddos.V20200309
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 开启或关闭DDoS防护的水印防护配置
+        /// </summary>
+        /// <param name="req"><see cref="SwitchWaterPrintConfigRequest"/></param>
+        /// <returns><see cref="SwitchWaterPrintConfigResponse"/></returns>
+        public async Task<SwitchWaterPrintConfigResponse> SwitchWaterPrintConfig(SwitchWaterPrintConfigRequest req)
+        {
+             JsonResponseModel<SwitchWaterPrintConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchWaterPrintConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchWaterPrintConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启或关闭DDoS防护的水印防护配置
+        /// </summary>
+        /// <param name="req"><see cref="SwitchWaterPrintConfigRequest"/></param>
+        /// <returns><see cref="SwitchWaterPrintConfigResponse"/></returns>
+        public SwitchWaterPrintConfigResponse SwitchWaterPrintConfigSync(SwitchWaterPrintConfigRequest req)
+        {
+             JsonResponseModel<SwitchWaterPrintConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchWaterPrintConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchWaterPrintConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

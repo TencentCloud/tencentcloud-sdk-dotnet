@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.328</VersionPrefix>
+    <VersionPrefix>3.0.329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -326,6 +326,8 @@
     <Compile Include="Antiddos\V20200309\Models\SpeedValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\StaticPackRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\SuccessCode.cs" />
+    <Compile Include="Antiddos\V20200309\Models\SwitchWaterPrintConfigRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\SwitchWaterPrintConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="Antiddos\V20200309\Models\WaterPrintRelation.cs" />
@@ -7427,6 +7429,45 @@
     <Compile Include="Iot\V20180123\Models\UpdateProductResponse.cs" />
     <Compile Include="Iot\V20180123\Models\UpdateRuleRequest.cs" />
     <Compile Include="Iot\V20180123\Models\UpdateRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\IotcloudClient.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\Attribute.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\BindProductInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CertInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreateDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreateDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreatePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\CreatePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeletePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeletePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteProductRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeleteProductResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCABindedProductsRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCABindedProductsResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAsRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribePrivateCAsResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductCAResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DescribeProductResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceLabel.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\DeviceTag.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ProductMetadata.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ProductProperties.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDeviceLogLevelResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdateDevicesEnableStateResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCARequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\UpdatePrivateCAResponse.cs" />
     <Compile Include="Iotcloud\V20180614\IotcloudClient.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Attribute.cs" />
     <Compile Include="Iotcloud\V20180614\Models\BatchPublishMessage.cs" />
@@ -12538,6 +12579,8 @@
     <Compile Include="Tiw\V20190919\TiwClient.cs" />
     <Compile Include="Tiw\V20190919\Models\Canvas.cs" />
     <Compile Include="Tiw\V20190919\Models\Concat.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateSnapshotTaskRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\CreateSnapshotTaskResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateTranscodeRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateTranscodeResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateVideoGenerationTaskRequest.cs" />
@@ -12549,6 +12592,8 @@
     <Compile Include="Tiw\V20190919\Models\DescribeOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeQualityMetricsRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeQualityMetricsResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeSnapshotTaskRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeSnapshotTaskResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeRequest.cs" />
@@ -12586,6 +12631,9 @@
     <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackKeyResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\SetWhiteboardPushCallbackResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\SnapshotCOS.cs" />
+    <Compile Include="Tiw\V20190919\Models\SnapshotResult.cs" />
+    <Compile Include="Tiw\V20190919\Models\SnapshotWhiteboard.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\StartOnlineRecordResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\StartWhiteboardPushRequest.cs" />
@@ -14738,6 +14786,8 @@
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />

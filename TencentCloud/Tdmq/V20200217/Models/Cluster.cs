@@ -103,6 +103,34 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxStorageCapacity")]
         public long? MaxStorageCapacity{ get; set; }
 
+        /// <summary>
+        /// 集群版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Version")]
+        public string Version{ get; set; }
+
+        /// <summary>
+        /// 公网访问接入点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicEndPoint")]
+        public string PublicEndPoint{ get; set; }
+
+        /// <summary>
+        /// VPC访问接入点
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcEndPoint")]
+        public string VpcEndPoint{ get; set; }
+
+        /// <summary>
+        /// 命名空间数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NamespaceNum")]
+        public long? NamespaceNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +150,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxQps", this.MaxQps);
             this.SetParamSimple(map, prefix + "MessageRetentionTime", this.MessageRetentionTime);
             this.SetParamSimple(map, prefix + "MaxStorageCapacity", this.MaxStorageCapacity);
+            this.SetParamSimple(map, prefix + "Version", this.Version);
+            this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
+            this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+            this.SetParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
         }
     }
 }

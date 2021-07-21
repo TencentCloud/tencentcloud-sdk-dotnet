@@ -651,7 +651,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（CreateParamTemplate）用于创建参数模板。
+        /// 该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -671,7 +671,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（CreateParamTemplate）用于创建参数模板。
+        /// 该接口（CreateParamTemplate）用于创建参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -971,7 +971,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DeleteParamTemplate）用于删除参数模板。
+        /// 该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -991,7 +991,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DeleteParamTemplate）用于删除参数模板。
+        /// 该接口（DeleteParamTemplate）用于删除参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DeleteParamTemplateRequest"/></param>
         /// <returns><see cref="DeleteParamTemplateResponse"/></returns>
@@ -2463,7 +2463,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+        /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -2483,7 +2483,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情。
+        /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -3829,7 +3829,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（ModifyParamTemplate）用于修改参数模板。
+        /// 该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>
@@ -3849,7 +3849,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（ModifyParamTemplate）用于修改参数模板。
+        /// 该接口（ModifyParamTemplate）用于修改参数模板，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="ModifyParamTemplateRequest"/></param>
         /// <returns><see cref="ModifyParamTemplateResponse"/></returns>

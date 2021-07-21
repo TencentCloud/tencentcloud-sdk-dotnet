@@ -53,6 +53,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// 命令执行路径, 默认以Command配置的WorkingDirectory执行。
+        /// </summary>
+        [JsonProperty("WorkingDirectory")]
+        public string WorkingDirectory{ get; set; }
+
+        /// <summary>
+        /// 命令超时时间，取值范围[1, 86400]。默认以Command配置的Timeout执行。
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +75,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

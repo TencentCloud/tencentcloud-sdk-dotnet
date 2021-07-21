@@ -36,6 +36,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("NewOwnerUin")]
         public string NewOwnerUin{ get; set; }
 
+        /// <summary>
+        /// 是否同时转移对应的 DNS 解析域名，默认false
+        /// </summary>
+        [JsonProperty("TransferDns")]
+        public bool? TransferDns{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Domain.V20180808.Models
         {
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "NewOwnerUin", this.NewOwnerUin);
+            this.SetParamSimple(map, prefix + "TransferDns", this.TransferDns);
         }
     }
 }

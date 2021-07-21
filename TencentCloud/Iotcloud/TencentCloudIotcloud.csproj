@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E52C27D4-C9DE-3FC7-9236-F3BDC08EFC51}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.328</VersionPrefix>
+    <VersionPrefix>3.0.329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -44,6 +44,45 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210408\IotcloudClient.cs" />
+    <Compile Include="V20210408\Models\Attribute.cs" />
+    <Compile Include="V20210408\Models\BindProductInfo.cs" />
+    <Compile Include="V20210408\Models\CertInfo.cs" />
+    <Compile Include="V20210408\Models\CreateDeviceRequest.cs" />
+    <Compile Include="V20210408\Models\CreateDeviceResponse.cs" />
+    <Compile Include="V20210408\Models\CreatePrivateCARequest.cs" />
+    <Compile Include="V20210408\Models\CreatePrivateCAResponse.cs" />
+    <Compile Include="V20210408\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="V20210408\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20210408\Models\DeletePrivateCARequest.cs" />
+    <Compile Include="V20210408\Models\DeletePrivateCAResponse.cs" />
+    <Compile Include="V20210408\Models\DeleteProductRequest.cs" />
+    <Compile Include="V20210408\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeDeviceRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCABindedProductsRequest.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCABindedProductsResponse.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCARequest.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCAResponse.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCAsRequest.cs" />
+    <Compile Include="V20210408\Models\DescribePrivateCAsResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeProductCARequest.cs" />
+    <Compile Include="V20210408\Models\DescribeProductCAResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeProductRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeProductResponse.cs" />
+    <Compile Include="V20210408\Models\DeviceInfo.cs" />
+    <Compile Include="V20210408\Models\DeviceLabel.cs" />
+    <Compile Include="V20210408\Models\DeviceTag.cs" />
+    <Compile Include="V20210408\Models\ProductMetadata.cs" />
+    <Compile Include="V20210408\Models\ProductProperties.cs" />
+    <Compile Include="V20210408\Models\UpdateDeviceLogLevelRequest.cs" />
+    <Compile Include="V20210408\Models\UpdateDeviceLogLevelResponse.cs" />
+    <Compile Include="V20210408\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="V20210408\Models\UpdateDevicesEnableStateResponse.cs" />
+    <Compile Include="V20210408\Models\UpdatePrivateCARequest.cs" />
+    <Compile Include="V20210408\Models\UpdatePrivateCAResponse.cs" />
     <Compile Include="V20180614\IotcloudClient.cs" />
     <Compile Include="V20180614\Models\Attribute.cs" />
     <Compile Include="V20180614\Models\BatchPublishMessage.cs" />

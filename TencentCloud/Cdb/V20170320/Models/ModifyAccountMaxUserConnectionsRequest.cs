@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 设置账户最大可用连接数。
+        /// 设置账户最大可用连接数，最大可设置值为10240。
         /// </summary>
         [JsonProperty("MaxUserConnections")]
         public long? MaxUserConnections{ get; set; }

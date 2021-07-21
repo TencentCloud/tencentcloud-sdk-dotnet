@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.328</VersionPrefix>
+    <VersionPrefix>3.0.329</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -167,6 +167,8 @@
     <Compile Include="V20200309\Models\SpeedValue.cs" />
     <Compile Include="V20200309\Models\StaticPackRelation.cs" />
     <Compile Include="V20200309\Models\SuccessCode.cs" />
+    <Compile Include="V20200309\Models\SwitchWaterPrintConfigRequest.cs" />
+    <Compile Include="V20200309\Models\SwitchWaterPrintConfigResponse.cs" />
     <Compile Include="V20200309\Models\WaterPrintConfig.cs" />
     <Compile Include="V20200309\Models\WaterPrintKey.cs" />
     <Compile Include="V20200309\Models\WaterPrintRelation.cs" />

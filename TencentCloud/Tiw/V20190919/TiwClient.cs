@@ -53,6 +53,46 @@ namespace TencentCloud.Tiw.V20190919
         }
 
         /// <summary>
+        /// 创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotTaskRequest"/></param>
+        /// <returns><see cref="CreateSnapshotTaskResponse"/></returns>
+        public async Task<CreateSnapshotTaskResponse> CreateSnapshotTask(CreateSnapshotTaskRequest req)
+        {
+             JsonResponseModel<CreateSnapshotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSnapshotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建白板板书生成任务, 在任务结束后，如果提供了回调地址，将通过回调地址通知板书生成结果
+        /// </summary>
+        /// <param name="req"><see cref="CreateSnapshotTaskRequest"/></param>
+        /// <returns><see cref="CreateSnapshotTaskResponse"/></returns>
+        public CreateSnapshotTaskResponse CreateSnapshotTaskSync(CreateSnapshotTaskRequest req)
+        {
+             JsonResponseModel<CreateSnapshotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSnapshotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSnapshotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建一个文档转码任务
         /// </summary>
         /// <param name="req"><see cref="CreateTranscodeRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Tiw.V20190919
              {
                  var strResp = this.InternalRequestSync(req, "DescribeQualityMetrics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定白板板书生成任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotTaskRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotTaskResponse"/></returns>
+        public async Task<DescribeSnapshotTaskResponse> DescribeSnapshotTask(DescribeSnapshotTaskRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSnapshotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定白板板书生成任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSnapshotTaskRequest"/></param>
+        /// <returns><see cref="DescribeSnapshotTaskResponse"/></returns>
+        public DescribeSnapshotTaskResponse DescribeSnapshotTaskSync(DescribeSnapshotTaskRequest req)
+        {
+             JsonResponseModel<DescribeSnapshotTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSnapshotTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSnapshotTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
