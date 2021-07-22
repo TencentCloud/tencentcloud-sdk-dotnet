@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.329</VersionPrefix>
+    <VersionPrefix>3.0.330</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -10163,6 +10163,8 @@
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
@@ -10842,6 +10844,7 @@
     <Compile Include="Sqlserver\V20180328\Models\DBRemark.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DatabaseTuple.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DatabaseTupleStatus.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DbNormalDetail.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DbRollbackTimeInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DealInfo.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DeleteAccountRequest.cs" />
@@ -10878,6 +10881,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBsNormalRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeDBsNormalResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeDBsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeFlowStatusRequest.cs" />
@@ -10961,6 +10966,12 @@
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBNameResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyDBRemarkResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCDCRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCDCResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCTRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseCTResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseMdfRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\ModifyDatabaseMdfResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyIncrementalMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\ModifyMaintenanceSpanRequest.cs" />
@@ -12138,6 +12149,7 @@
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\BindCluster.cs" />
+    <Compile Include="Tdmq\V20200217\Models\BundleSetOpt.cs" />
     <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ClearCmqQueueResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ClearCmqSubscriptionFilterTagsRequest.cs" />
@@ -12206,6 +12218,10 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentRolesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeEnvironmentsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeNamespaceBundlesOptRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeNamespaceBundlesOptResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeNodeHealthOptRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeNodeHealthOptResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeSubscriptionsRequest.cs" />
@@ -12651,6 +12667,8 @@
     <Compile Include="Tke\V20180525\TkeClient.cs" />
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AddClusterCIDRRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\AddClusterCIDRResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolRequest.cs" />
@@ -12783,6 +12801,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DnsServerConf.cs" />
     <Compile Include="Tke\V20180525\Models\EksCluster.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
@@ -14494,6 +14514,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeVpcPrivateIpAddressesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcResourceDashboardRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcResourceDashboardResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcTaskResultRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeVpcTaskResultResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpcsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeVpnConnectionsRequest.cs" />

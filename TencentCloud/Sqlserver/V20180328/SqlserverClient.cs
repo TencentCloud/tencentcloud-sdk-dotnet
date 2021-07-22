@@ -1333,6 +1333,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
+        /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
+        public async Task<DescribeDBsNormalResponse> DescribeDBsNormal(DescribeDBsNormalRequest req)
+        {
+             JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBsNormal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBsNormalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBsNormal)用于查询数据库配置信息，此接口不包含数据库的关联账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBsNormalRequest"/></param>
+        /// <returns><see cref="DescribeDBsNormalResponse"/></returns>
+        public DescribeDBsNormalResponse DescribeDBsNormalSync(DescribeDBsNormalRequest req)
+        {
+             JsonResponseModel<DescribeDBsNormalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBsNormal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBsNormalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeFlowStatus)用于查询流程状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowStatusRequest"/></param>
@@ -2724,6 +2764,126 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBRemark");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBRemarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseCDC)用于开启、关闭数据库数据变更捕获(CDC)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCDCRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCDCResponse"/></returns>
+        public async Task<ModifyDatabaseCDCResponse> ModifyDatabaseCDC(ModifyDatabaseCDCRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseCDC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCDCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseCDC)用于开启、关闭数据库数据变更捕获(CDC)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCDCRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCDCResponse"/></returns>
+        public ModifyDatabaseCDCResponse ModifyDatabaseCDCSync(ModifyDatabaseCDCRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCDCResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseCDC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCDCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCTRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCTResponse"/></returns>
+        public async Task<ModifyDatabaseCTResponse> ModifyDatabaseCT(ModifyDatabaseCTRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseCT");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCTResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseCT)用于启用、禁用数据库数据变更跟踪(CT)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseCTRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseCTResponse"/></returns>
+        public ModifyDatabaseCTResponse ModifyDatabaseCTSync(ModifyDatabaseCTRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseCTResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseCT");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseCTResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
+        public async Task<ModifyDatabaseMdfResponse> ModifyDatabaseMdf(ModifyDatabaseMdfRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDatabaseMdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseMdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDatabaseMdf)用于收缩数据库mdf(Shrink mdf)
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDatabaseMdfRequest"/></param>
+        /// <returns><see cref="ModifyDatabaseMdfResponse"/></returns>
+        public ModifyDatabaseMdfResponse ModifyDatabaseMdfSync(ModifyDatabaseMdfRequest req)
+        {
+             JsonResponseModel<ModifyDatabaseMdfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDatabaseMdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDatabaseMdfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

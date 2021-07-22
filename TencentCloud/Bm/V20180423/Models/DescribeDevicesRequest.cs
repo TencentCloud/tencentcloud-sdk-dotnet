@@ -31,7 +31,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 返回数量
+        /// 返回数量，默认为20，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -132,6 +132,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("Order")]
         public ulong? Order{ get; set; }
 
+        /// <summary>
+        /// 按照维保方式过滤。可取值为 Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+        /// </summary>
+        [JsonProperty("MaintainStatus")]
+        public string MaintainStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "IsLuckyDevice", this.IsLuckyDevice);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
         }
     }
 }

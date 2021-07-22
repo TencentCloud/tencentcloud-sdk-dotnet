@@ -264,7 +264,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 可以指定`IPv6`地址申请，地址类型不能为主`IP`，`IPv6`地址暂时只支持作为辅助`IP`。
         /// * 地址必须要在弹性网卡所在子网内，而且不能被占用。
@@ -289,7 +289,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（AssignIpv6Addresses）用于弹性网卡申请`IPv6`地址。<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// * 一个弹性网卡支持绑定的IP地址是有限制的，更多资源限制信息详见<a href="/document/product/576/18527">弹性网卡使用限制</a>。
         /// * 可以指定`IPv6`地址申请，地址类型不能为主`IP`，`IPv6`地址暂时只支持作为辅助`IP`。
         /// * 地址必须要在弹性网卡所在子网内，而且不能被占用。
@@ -3119,8 +3119,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
         /// <returns><see cref="DeleteHaVipResponse"/></returns>
@@ -3140,8 +3140,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（DeleteHaVip）用于删除高可用虚拟IP（HAVIP）。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="DeleteHaVipRequest"/></param>
         /// <returns><see cref="DeleteHaVipResponse"/></returns>
@@ -6577,6 +6577,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeVpcTaskResult）用于查询VPC任务执行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
+        public async Task<DescribeVpcTaskResultResponse> DescribeVpcTaskResult(DescribeVpcTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeVpcTaskResult）用于查询VPC任务执行结果。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeVpcTaskResultResponse"/></returns>
+        public DescribeVpcTaskResultResponse DescribeVpcTaskResultSync(DescribeVpcTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeVpcTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpcs）用于查询私有网络列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcsRequest"/></param>
@@ -7551,8 +7591,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="HaVipAssociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipAssociateAddressIpResponse"/></returns>
@@ -7572,8 +7612,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（HaVipAssociateAddressIp）用于高可用虚拟IP（HAVIP）绑定弹性公网IP（EIP）。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="HaVipAssociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipAssociateAddressIpResponse"/></returns>
@@ -7593,8 +7633,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="HaVipDisassociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipDisassociateAddressIpResponse"/></returns>
@@ -7614,8 +7654,8 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口
+        /// 本接口（HaVipDisassociateAddressIp）用于将高可用虚拟IP（HAVIP）已绑定的弹性公网IP（EIP）解除绑定。<br />
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="HaVipDisassociateAddressIpRequest"/></param>
         /// <returns><see cref="HaVipDisassociateAddressIpResponse"/></returns>
@@ -10456,7 +10496,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="UnassignIpv6AddressesRequest"/></param>
         /// <returns><see cref="UnassignIpv6AddressesResponse"/></returns>
@@ -10477,7 +10517,7 @@ namespace TencentCloud.Vpc.V20170312
 
         /// <summary>
         /// 本接口（UnassignIpv6Addresses）用于释放弹性网卡`IPv6`地址。<br />
-        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`QueryTask`接口。
+        /// 本接口是异步完成，如需查询异步任务执行结果，请使用本接口返回的`RequestId`轮询`DescribeVpcTaskResult`接口。
         /// </summary>
         /// <param name="req"><see cref="UnassignIpv6AddressesRequest"/></param>
         /// <returns><see cref="UnassignIpv6AddressesResponse"/></returns>

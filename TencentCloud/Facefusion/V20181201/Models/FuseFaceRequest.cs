@@ -37,7 +37,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string ModelId{ get; set; }
 
         /// <summary>
-        /// 返回图像方式（url 或 base64) ，二选一。url有效期为30天。
+        /// 返回图像方式（url 或 base64) ，二选一。url有效期为7天。
         /// </summary>
         [JsonProperty("RspImgType")]
         public string RspImgType{ get; set; }

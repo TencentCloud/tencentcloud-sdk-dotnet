@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.329</VersionPrefix>
+    <VersionPrefix>3.0.330</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -381,6 +381,8 @@
     <Compile Include="V20170312\Models\DescribeVpcPrivateIpAddressesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcResourceDashboardRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcResourceDashboardResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcTaskResultRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpcTaskResultResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnConnectionsRequest.cs" />

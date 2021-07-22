@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.329</VersionPrefix>
+    <VersionPrefix>3.0.330</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,8 @@
     <Compile Include="V20180525\TkeClient.cs" />
     <Compile Include="V20180525\Models\AcquireClusterAdminRoleRequest.cs" />
     <Compile Include="V20180525\Models\AcquireClusterAdminRoleResponse.cs" />
+    <Compile Include="V20180525\Models\AddClusterCIDRRequest.cs" />
+    <Compile Include="V20180525\Models\AddClusterCIDRResponse.cs" />
     <Compile Include="V20180525\Models\AddExistedInstancesRequest.cs" />
     <Compile Include="V20180525\Models\AddExistedInstancesResponse.cs" />
     <Compile Include="V20180525\Models\AddNodeToNodePoolRequest.cs" />
@@ -179,6 +181,8 @@
     <Compile Include="V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
+    <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
     <Compile Include="V20180525\Models\EksCluster.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />

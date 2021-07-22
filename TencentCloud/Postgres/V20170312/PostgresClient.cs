@@ -1493,6 +1493,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 当升级完成后，对处于等待切换状态下的实例，强制实例立即切换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySwitchTimePeriodRequest"/></param>
+        /// <returns><see cref="ModifySwitchTimePeriodResponse"/></returns>
+        public async Task<ModifySwitchTimePeriodResponse> ModifySwitchTimePeriod(ModifySwitchTimePeriodRequest req)
+        {
+             JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySwitchTimePeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySwitchTimePeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当升级完成后，对处于等待切换状态下的实例，强制实例立即切换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifySwitchTimePeriodRequest"/></param>
+        /// <returns><see cref="ModifySwitchTimePeriodResponse"/></returns>
+        public ModifySwitchTimePeriodResponse ModifySwitchTimePeriodSync(ModifySwitchTimePeriodRequest req)
+        {
+             JsonResponseModel<ModifySwitchTimePeriodResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySwitchTimePeriod");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySwitchTimePeriodResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通外网。
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
@@ -1813,7 +1853,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（UpgradeDBInstance）用于升级实例。
+        /// 本接口（UpgradeDBInstance）用于升级实例配置。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>
@@ -1833,7 +1873,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（UpgradeDBInstance）用于升级实例。
+        /// 本接口（UpgradeDBInstance）用于升级实例配置。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="UpgradeDBInstanceResponse"/></returns>

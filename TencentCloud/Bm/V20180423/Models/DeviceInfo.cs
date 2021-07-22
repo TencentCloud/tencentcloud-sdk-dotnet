@@ -169,6 +169,20 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("IsLuckyDevice")]
         public ulong? IsLuckyDevice{ get; set; }
 
+        /// <summary>
+        /// 标识机器维保状态。Maintain: 在保;  WillExpire: 即将过保; Expire: 已过保
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaintainStatus")]
+        public string MaintainStatus{ get; set; }
+
+        /// <summary>
+        /// 维保信息描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaintainMessage")]
+        public string MaintainMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +213,8 @@ namespace TencentCloud.Bm.V20180423.Models
             this.SetParamSimple(map, prefix + "VpcCidrBlock", this.VpcCidrBlock);
             this.SetParamSimple(map, prefix + "SubnetCidrBlock", this.SubnetCidrBlock);
             this.SetParamSimple(map, prefix + "IsLuckyDevice", this.IsLuckyDevice);
+            this.SetParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
+            this.SetParamSimple(map, prefix + "MaintainMessage", this.MaintainMessage);
         }
     }
 }

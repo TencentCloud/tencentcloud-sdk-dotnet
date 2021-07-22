@@ -60,6 +60,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ActivityId")]
         public long? ActivityId{ get; set; }
 
+        /// <summary>
+        /// 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+        /// </summary>
+        [JsonProperty("SwitchTag")]
+        public long? SwitchTag{ get; set; }
+
+        /// <summary>
+        /// 切换开始时间
+        /// </summary>
+        [JsonProperty("SwitchStartTime")]
+        public string SwitchStartTime{ get; set; }
+
+        /// <summary>
+        /// 切换截止时间
+        /// </summary>
+        [JsonProperty("SwitchEndTime")]
+        public string SwitchEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
+            this.SetParamSimple(map, prefix + "SwitchTag", this.SwitchTag);
+            this.SetParamSimple(map, prefix + "SwitchStartTime", this.SwitchStartTime);
+            this.SetParamSimple(map, prefix + "SwitchEndTime", this.SwitchEndTime);
         }
     }
 }

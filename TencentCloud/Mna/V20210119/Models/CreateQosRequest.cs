@@ -69,6 +69,12 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("Capacity")]
         public Capacity Capacity{ get; set; }
 
+        /// <summary>
+        /// 应用模板ID
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamObj(map, prefix + "DeviceInfo.", this.DeviceInfo);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamObj(map, prefix + "Capacity.", this.Capacity);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

@@ -1253,6 +1253,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 运营端获取命名空间bundle列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespaceBundlesOptRequest"/></param>
+        /// <returns><see cref="DescribeNamespaceBundlesOptResponse"/></returns>
+        public async Task<DescribeNamespaceBundlesOptResponse> DescribeNamespaceBundlesOpt(DescribeNamespaceBundlesOptRequest req)
+        {
+             JsonResponseModel<DescribeNamespaceBundlesOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNamespaceBundlesOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespaceBundlesOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 运营端获取命名空间bundle列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNamespaceBundlesOptRequest"/></param>
+        /// <returns><see cref="DescribeNamespaceBundlesOptResponse"/></returns>
+        public DescribeNamespaceBundlesOptResponse DescribeNamespaceBundlesOptSync(DescribeNamespaceBundlesOptRequest req)
+        {
+             JsonResponseModel<DescribeNamespaceBundlesOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNamespaceBundlesOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNamespaceBundlesOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 运营端获节点健康状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeHealthOptRequest"/></param>
+        /// <returns><see cref="DescribeNodeHealthOptResponse"/></returns>
+        public async Task<DescribeNodeHealthOptResponse> DescribeNodeHealthOpt(DescribeNodeHealthOptRequest req)
+        {
+             JsonResponseModel<DescribeNodeHealthOptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNodeHealthOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodeHealthOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 运营端获节点健康状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodeHealthOptRequest"/></param>
+        /// <returns><see cref="DescribeNodeHealthOptResponse"/></returns>
+        public DescribeNodeHealthOptResponse DescribeNodeHealthOptSync(DescribeNodeHealthOptRequest req)
+        {
+             JsonResponseModel<DescribeNodeHealthOptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNodeHealthOpt");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodeHealthOptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取生产者列表，仅显示在线的生产者
         /// </summary>
         /// <param name="req"><see cref="DescribeProducersRequest"/></param>

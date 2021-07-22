@@ -93,6 +93,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 给GR集群增加可用的ClusterCIDR
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterCIDRRequest"/></param>
+        /// <returns><see cref="AddClusterCIDRResponse"/></returns>
+        public async Task<AddClusterCIDRResponse> AddClusterCIDR(AddClusterCIDRRequest req)
+        {
+             JsonResponseModel<AddClusterCIDRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddClusterCIDR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterCIDRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 给GR集群增加可用的ClusterCIDR
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterCIDRRequest"/></param>
+        /// <returns><see cref="AddClusterCIDRResponse"/></returns>
+        public AddClusterCIDRResponse AddClusterCIDRSync(AddClusterCIDRRequest req)
+        {
+             JsonResponseModel<AddClusterCIDRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddClusterCIDR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterCIDRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加已经存在的实例到集群
         /// </summary>
         /// <param name="req"><see cref="AddExistedInstancesRequest"/></param>
@@ -2364,6 +2404,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRouteTableConflicts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRouteTableConflictsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
+        /// </summary>
+        /// <param name="req"><see cref="DisableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="DisableVpcCniNetworkTypeResponse"/></returns>
+        public async Task<DisableVpcCniNetworkTypeResponse> DisableVpcCniNetworkType(DisableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<DisableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
+        /// </summary>
+        /// <param name="req"><see cref="DisableVpcCniNetworkTypeRequest"/></param>
+        /// <returns><see cref="DisableVpcCniNetworkTypeResponse"/></returns>
+        public DisableVpcCniNetworkTypeResponse DisableVpcCniNetworkTypeSync(DisableVpcCniNetworkTypeRequest req)
+        {
+             JsonResponseModel<DisableVpcCniNetworkTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableVpcCniNetworkType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
