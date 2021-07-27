@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 返回数据库的详细配置信息，比如：数据库是否开启CDC、CT等
+        /// 返回数据库的详细配置信息，例如：数据库是否开启CDC、CT等
         /// </summary>
         [JsonProperty("DBList")]
         public DbNormalDetail[] DBList{ get; set; }

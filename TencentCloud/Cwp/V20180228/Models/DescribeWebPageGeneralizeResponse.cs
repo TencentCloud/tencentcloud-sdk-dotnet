@@ -55,7 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TamperNum{ get; set; }
 
         /// <summary>
-        /// 今日防护
+        /// 今日防护数
         /// </summary>
         [JsonProperty("ProtectToday")]
         public ulong? ProtectToday{ get; set; }

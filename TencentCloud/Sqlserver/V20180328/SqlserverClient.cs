@@ -1453,6 +1453,86 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
+        public async Task<DescribeInstanceParamRecordsResponse> DescribeInstanceParamRecords(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstanceParamRecords）用于查询实例参数修改历史。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamRecordsResponse"/></returns>
+        public DescribeInstanceParamRecordsResponse DescribeInstanceParamRecordsSync(DescribeInstanceParamRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParamRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstanceParams）用于查询实例的参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（DescribeInstanceParams）用于查询实例的参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeMaintenanceSpan）根据实例ID查询该实例的可维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="DescribeMaintenanceSpanRequest"/></param>
@@ -2924,6 +3004,50 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIncrementalMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIncrementalMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
+        /// <b>注意</b>：如果修改的参数是需要<b>重启实例</b>的，那么实例将会按照WaitSwitch参数的设置(可能是立即执行也可能在可维护时间窗内自动执行)在执行参数修改时<b>重启实例</b>。
+        /// 您可以通过DescribeInstanceParams接口查询修改参数时是否会重启实例，以免导致您的实例不符合预期重启。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public async Task<ModifyInstanceParamResponse> ModifyInstanceParam(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceParam)用于修改云数据库实例的参数。
+        /// <b>注意</b>：如果修改的参数是需要<b>重启实例</b>的，那么实例将会按照WaitSwitch参数的设置(可能是立即执行也可能在可维护时间窗内自动执行)在执行参数修改时<b>重启实例</b>。
+        /// 您可以通过DescribeInstanceParams接口查询修改参数时是否会重启实例，以免导致您的实例不符合预期重启。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceParamRequest"/></param>
+        /// <returns><see cref="ModifyInstanceParamResponse"/></returns>
+        public ModifyInstanceParamResponse ModifyInstanceParamSync(ModifyInstanceParamRequest req)
+        {
+             JsonResponseModel<ModifyInstanceParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceParamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -132,6 +132,12 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("HiddenMarkInfo")]
         public HiddenMarkInfo HiddenMarkInfo{ get; set; }
 
+        /// <summary>
+        /// 文本水印参数信息。
+        /// </summary>
+        [JsonProperty("TextMarkInfo")]
+        public TextMarkInfoItem[] TextMarkInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +157,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "Hdr", this.Hdr);
             this.SetParamObj(map, prefix + "VideoEnhance.", this.VideoEnhance);
             this.SetParamObj(map, prefix + "HiddenMarkInfo.", this.HiddenMarkInfo);
+            this.SetParamArrayObj(map, prefix + "TextMarkInfo.", this.TextMarkInfo);
         }
     }
 }

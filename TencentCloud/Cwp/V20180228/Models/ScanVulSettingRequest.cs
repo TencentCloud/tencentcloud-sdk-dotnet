@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong?[] VulLevels{ get; set; }
 
         /// <summary>
-        /// 定期检测时间
+        /// 定期检测时间，如：02:10:50
         /// </summary>
         [JsonProperty("TimerTime")]
         public string TimerTime{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulEmergency{ get; set; }
 
         /// <summary>
-        /// 扫描开始时间
+        /// 扫描开始时间，如：00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 扫描结束时间
+        /// 扫描结束时间，如：08:00
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

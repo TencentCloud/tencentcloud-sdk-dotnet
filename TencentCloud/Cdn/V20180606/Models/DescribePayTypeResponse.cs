@@ -28,6 +28,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 计费类型：
         /// flux：流量计费
         /// bandwidth：带宽计费
+        /// request：请求数计费
         /// 日结计费方式切换时，若当日产生消耗，则此字段表示第二天即将生效的计费方式，若未产生消耗，则表示已经生效的计费方式。
         /// </summary>
         [JsonProperty("PayType")]
@@ -42,12 +43,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string BillingCycle{ get; set; }
 
         /// <summary>
-        /// 计费方式：
-        /// monthMax：日峰值月平均计费，月结模式
-        /// day95：日 95 带宽计费，月结模式
-        /// month95：月95带宽计费，月结模式
-        /// sum：总流量计费，日结与月结均有流量计费模式
-        /// max：峰值带宽计费，日结模式
+        /// monthMax：日峰值月平均，月结模式
+        /// day95：日 95 带宽，月结模式
+        /// month95：月95带宽，月结模式
+        /// sum：总流量/总请求数，日结或月结模式
+        /// max：峰值带宽，日结模式
         /// </summary>
         [JsonProperty("StatType")]
         public string StatType{ get; set; }
@@ -64,6 +64,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// 当前生效计费类型：
         /// flux：流量计费
         /// bandwidth：带宽计费
+        /// request：请求数计费
         /// </summary>
         [JsonProperty("CurrentPayType")]
         public string CurrentPayType{ get; set; }

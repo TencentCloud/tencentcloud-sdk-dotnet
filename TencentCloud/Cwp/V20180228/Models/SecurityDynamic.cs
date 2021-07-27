@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// 安全事件发生事件。
+        /// 安全事件发生时间。
         /// </summary>
         [JsonProperty("EventTime")]
         public string EventTime{ get; set; }

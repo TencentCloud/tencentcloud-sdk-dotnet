@@ -43,13 +43,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TimerInterval{ get; set; }
 
         /// <summary>
-        /// 定期检测时间
+        /// 定期检测时间，如：00:00
         /// </summary>
         [JsonProperty("TimerTime")]
         public string TimerTime{ get; set; }
 
         /// <summary>
-        /// 是否紧急漏洞
+        /// 是否紧急漏洞：0-否 1-是
         /// </summary>
         [JsonProperty("VulEmergency")]
         public ulong? VulEmergency{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 一键扫描超时时长
+        /// 一键扫描超时时长，如：1800秒（s）
         /// </summary>
         [JsonProperty("ClickTimeout")]
         public ulong? ClickTimeout{ get; set; }

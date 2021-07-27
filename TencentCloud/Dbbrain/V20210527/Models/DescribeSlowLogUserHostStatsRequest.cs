@@ -48,6 +48,12 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// SOL模板的MD5值
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
         }
     }
 }

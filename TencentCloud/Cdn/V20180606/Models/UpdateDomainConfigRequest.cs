@@ -277,6 +277,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OssPrivateAccess")]
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// WebSocket配置
+        /// </summary>
+        [JsonProperty("WebSocket")]
+        public WebSocket WebSocket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -324,6 +330,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+            this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
         }
     }
 }

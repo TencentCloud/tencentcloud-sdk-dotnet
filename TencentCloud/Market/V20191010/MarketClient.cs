@@ -132,5 +132,45 @@ namespace TencentCloud.Market.V20191010
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 同步企微的用户信息和订单信息到云市场
+        /// </summary>
+        /// <param name="req"><see cref="SyncUserAndOrderInfoRequest"/></param>
+        /// <returns><see cref="SyncUserAndOrderInfoResponse"/></returns>
+        public async Task<SyncUserAndOrderInfoResponse> SyncUserAndOrderInfo(SyncUserAndOrderInfoRequest req)
+        {
+             JsonResponseModel<SyncUserAndOrderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncUserAndOrderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncUserAndOrderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步企微的用户信息和订单信息到云市场
+        /// </summary>
+        /// <param name="req"><see cref="SyncUserAndOrderInfoRequest"/></param>
+        /// <returns><see cref="SyncUserAndOrderInfoResponse"/></returns>
+        public SyncUserAndOrderInfoResponse SyncUserAndOrderInfoSync(SyncUserAndOrderInfoRequest req)
+        {
+             JsonResponseModel<SyncUserAndOrderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncUserAndOrderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncUserAndOrderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

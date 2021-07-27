@@ -78,6 +78,48 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RenewFlag")]
         public long? RenewFlag{ get; set; }
 
+        /// <summary>
+        /// 支持指定版本Kafka版本（0.10.2/1.1.1/2.4.2） 。指定专业版参数specificationsType=pro
+        /// </summary>
+        [JsonProperty("KafkaVersion")]
+        public string KafkaVersion{ get; set; }
+
+        /// <summary>
+        /// 专业版必须填写 （专业版：profession、标准版：standard） 默认是standard。专业版填profession
+        /// </summary>
+        [JsonProperty("SpecificationsType")]
+        public string SpecificationsType{ get; set; }
+
+        /// <summary>
+        /// 磁盘大小,专业版不填写默认最小磁盘,填写后根据磁盘带宽分区数弹性计算
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// 带宽,专业版不填写默认最小带宽,填写后根据磁盘带宽分区数弹性计算
+        /// </summary>
+        [JsonProperty("BandWidth")]
+        public long? BandWidth{ get; set; }
+
+        /// <summary>
+        /// 分区大小,专业版不填写默认最小分区数,填写后根据磁盘带宽分区数弹性计算
+        /// </summary>
+        [JsonProperty("Partition")]
+        public long? Partition{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 磁盘类型（ssd填写CLOUD_SSD，sata填写CLOUD_BASIC）
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +135,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MsgRetentionTime", this.MsgRetentionTime);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "KafkaVersion", this.KafkaVersion);
+            this.SetParamSimple(map, prefix + "SpecificationsType", this.SpecificationsType);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "BandWidth", this.BandWidth);
+            this.SetParamSimple(map, prefix + "Partition", this.Partition);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

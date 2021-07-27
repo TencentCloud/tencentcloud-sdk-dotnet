@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 开始时间。
+        /// 开始时间，如：2021-07-10
         /// </summary>
         [JsonProperty("BeginDate")]
         public string BeginDate{ get; set; }
 
         /// <summary>
-        /// 结束时间。
+        /// 结束时间，如：2021-07-10
         /// </summary>
         [JsonProperty("EndDate")]
         public string EndDate{ get; set; }

@@ -43,7 +43,11 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// <summary>
         /// 指定查询指标，支持的类型有：
         /// flux：流量，单位为 byte
+        /// fluxIn：上行流量，单位为 byte，该指标仅ecdn支持查询
+        /// fluxOut：下行流量，单位为 byte，该指标仅ecdn支持查询
         /// bandwidth：带宽，单位为 bps
+        /// bandwidthIn：上行带宽，单位为 bps，该指标仅ecdn支持查询
+        /// bandwidthOut：下行带宽，单位为 bps，该指标仅ecdn支持查询
         /// request：请求数，单位为 次
         /// hitRequest：命中请求数，单位为 次
         /// requestHitRate：请求命中率，单位为 %，保留小数点后两位
@@ -149,6 +153,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AreaType")]
         public string AreaType{ get; set; }
 
+        /// <summary>
+        /// 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +179,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "AreaType", this.AreaType);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

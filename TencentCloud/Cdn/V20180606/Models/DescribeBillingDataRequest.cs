@@ -91,6 +91,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
+        /// <summary>
+        /// 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "District", this.District);
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

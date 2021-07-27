@@ -61,7 +61,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 是否全局规则(默认否)
+        /// 是否全局规则(默认否)：1-全局，0-非全局
         /// </summary>
         [JsonProperty("IsGlobal")]
         public ulong? IsGlobal{ get; set; }

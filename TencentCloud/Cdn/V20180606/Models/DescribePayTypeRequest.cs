@@ -33,6 +33,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 指定查询的产品数据，可选为cdn或者ecdn，默认为cdn
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -40,6 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

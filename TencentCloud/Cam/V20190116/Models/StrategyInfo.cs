@@ -103,6 +103,27 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("IsServiceLinkedPolicy")]
         public ulong? IsServiceLinkedPolicy{ get; set; }
 
+        /// <summary>
+        /// 关联策略实体数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachEntityCount")]
+        public long? AttachEntityCount{ get; set; }
+
+        /// <summary>
+        /// 关联权限边界实体数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AttachEntityBoundaryCount")]
+        public long? AttachEntityBoundaryCount{ get; set; }
+
+        /// <summary>
+        /// 最后编辑时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +142,9 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Deactived", this.Deactived);
             this.SetParamArraySimple(map, prefix + "DeactivedDetail.", this.DeactivedDetail);
             this.SetParamSimple(map, prefix + "IsServiceLinkedPolicy", this.IsServiceLinkedPolicy);
+            this.SetParamSimple(map, prefix + "AttachEntityCount", this.AttachEntityCount);
+            this.SetParamSimple(map, prefix + "AttachEntityBoundaryCount", this.AttachEntityBoundaryCount);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

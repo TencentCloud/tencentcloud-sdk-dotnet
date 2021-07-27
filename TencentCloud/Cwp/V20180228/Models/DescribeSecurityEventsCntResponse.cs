@@ -97,6 +97,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public SecurityEventInfo AttackLogs{ get; set; }
 
         /// <summary>
+        /// 受影响机器数
+        /// </summary>
+        [JsonProperty("EffectMachineCount")]
+        public ulong? EffectMachineCount{ get; set; }
+
+        /// <summary>
+        /// 所有事件总数
+        /// </summary>
+        [JsonProperty("EventsCount")]
+        public ulong? EventsCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +132,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "EmergencyVul.", this.EmergencyVul);
             this.SetParamObj(map, prefix + "BaseLine.", this.BaseLine);
             this.SetParamObj(map, prefix + "AttackLogs.", this.AttackLogs);
+            this.SetParamSimple(map, prefix + "EffectMachineCount", this.EffectMachineCount);
+            this.SetParamSimple(map, prefix + "EventsCount", this.EventsCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

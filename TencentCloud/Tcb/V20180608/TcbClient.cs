@@ -653,6 +653,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询活动记录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivityRecordRequest"/></param>
+        /// <returns><see cref="DescribeActivityRecordResponse"/></returns>
+        public async Task<DescribeActivityRecordResponse> DescribeActivityRecord(DescribeActivityRecordRequest req)
+        {
+             JsonResponseModel<DescribeActivityRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeActivityRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActivityRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询活动记录信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivityRecordRequest"/></param>
+        /// <returns><see cref="DescribeActivityRecordResponse"/></returns>
+        public DescribeActivityRecordResponse DescribeActivityRecordSync(DescribeActivityRecordRequest req)
+        {
+             JsonResponseModel<DescribeActivityRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeActivityRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActivityRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全域名列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuthDomainsRequest"/></param>
@@ -2170,6 +2210,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "ReinstateEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReinstateEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新活动详情
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceActivityRecordRequest"/></param>
+        /// <returns><see cref="ReplaceActivityRecordResponse"/></returns>
+        public async Task<ReplaceActivityRecordResponse> ReplaceActivityRecord(ReplaceActivityRecordRequest req)
+        {
+             JsonResponseModel<ReplaceActivityRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReplaceActivityRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceActivityRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新活动详情
+        /// </summary>
+        /// <param name="req"><see cref="ReplaceActivityRecordRequest"/></param>
+        /// <returns><see cref="ReplaceActivityRecordResponse"/></returns>
+        public ReplaceActivityRecordResponse ReplaceActivityRecordSync(ReplaceActivityRecordRequest req)
+        {
+             JsonResponseModel<ReplaceActivityRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReplaceActivityRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceActivityRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -104,6 +104,13 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("ObjectNumberFormat")]
         public NumberFormat ObjectNumberFormat{ get; set; }
 
+        /// <summary>
+        /// 片头片尾参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HeadTailParameter")]
+        public HeadTailParameter HeadTailParameter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "OutputObjectPath", this.OutputObjectPath);
             this.SetParamSimple(map, prefix + "SegmentObjectName", this.SegmentObjectName);
             this.SetParamObj(map, prefix + "ObjectNumberFormat.", this.ObjectNumberFormat);
+            this.SetParamObj(map, prefix + "HeadTailParameter.", this.HeadTailParameter);
         }
     }
 }

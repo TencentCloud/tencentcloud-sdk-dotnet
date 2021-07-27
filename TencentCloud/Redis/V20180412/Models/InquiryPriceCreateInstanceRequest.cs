@@ -25,12 +25,6 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public ulong? ZoneId{ get; set; }
-
-        /// <summary>
         /// 实例类型：2 – Redis2.8内存版(标准架构)，3 – CKV 3.2内存版(标准架构)，4 – CKV 3.2内存版(集群架构)，6 – Redis4.0内存版(标准架构)，7 – Redis4.0内存版(集群架构)，8 – Redis5.0内存版(标准架构)，9 – Redis5.0内存版(集群架构)。
         /// </summary>
         [JsonProperty("TypeId")]
@@ -62,6 +56,12 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? BillingMode{ get; set; }
 
         /// <summary>
+        /// 实例所属的可用区ID，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public ulong? ZoneId{ get; set; }
+
+        /// <summary>
         /// 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
         /// </summary>
         [JsonProperty("RedisShardNum")]
@@ -79,21 +79,28 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }
 
+        /// <summary>
+        /// 实例所属的可用区名称，可参考[地域和可用区](https://cloud.tencent.com/document/product/239/4106)  。
+        /// </summary>
+        [JsonProperty("ZoneName")]
+        public string ZoneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "TypeId", this.TypeId);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
             this.SetParamSimple(map, prefix + "GoodsNum", this.GoodsNum);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "BillingMode", this.BillingMode);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "RedisShardNum", this.RedisShardNum);
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
             this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
+            this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
         }
     }
 }

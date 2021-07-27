@@ -53,46 +53,6 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
-        /// 查看配置项
-        /// </summary>
-        /// <param name="req"><see cref="DescribeConfigRequest"/></param>
-        /// <returns><see cref="DescribeConfigResponse"/></returns>
-        public async Task<DescribeConfigResponse> DescribeConfig(DescribeConfigRequest req)
-        {
-             JsonResponseModel<DescribeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查看配置项
-        /// </summary>
-        /// <param name="req"><see cref="DescribeConfigRequest"/></param>
-        /// <returns><see cref="DescribeConfigResponse"/></returns>
-        public DescribeConfigResponse DescribeConfigSync(DescribeConfigRequest req)
-        {
-             JsonResponseModel<DescribeConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询微服务注册引擎实例访问地址
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
@@ -164,46 +124,6 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSREInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 管理配置
-        /// </summary>
-        /// <param name="req"><see cref="ManageConfigRequest"/></param>
-        /// <returns><see cref="ManageConfigResponse"/></returns>
-        public async Task<ManageConfigResponse> ManageConfig(ManageConfigRequest req)
-        {
-             JsonResponseModel<ManageConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ManageConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 管理配置
-        /// </summary>
-        /// <param name="req"><see cref="ManageConfigRequest"/></param>
-        /// <returns><see cref="ManageConfigResponse"/></returns>
-        public ManageConfigResponse ManageConfigSync(ManageConfigRequest req)
-        {
-             JsonResponseModel<ManageConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ManageConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ManageConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

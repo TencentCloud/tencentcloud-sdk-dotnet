@@ -37,6 +37,20 @@ namespace TencentCloud.Redis.V20180412.Models
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
+        /// 文件名称（仅tendis实例有值）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Filenames")]
+        public string[] Filenames{ get; set; }
+
+        /// <summary>
+        /// 备份文件信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupInfos")]
+        public BackupDownloadInfo[] BackupInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +64,8 @@ namespace TencentCloud.Redis.V20180412.Models
         {
             this.SetParamArraySimple(map, prefix + "DownloadUrl.", this.DownloadUrl);
             this.SetParamArraySimple(map, prefix + "InnerDownloadUrl.", this.InnerDownloadUrl);
+            this.SetParamArraySimple(map, prefix + "Filenames.", this.Filenames);
+            this.SetParamArrayObj(map, prefix + "BackupInfos.", this.BackupInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

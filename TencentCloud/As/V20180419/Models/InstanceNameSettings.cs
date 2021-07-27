@@ -28,6 +28,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 云服务器的实例名。
         /// 
         /// 点号（.）和短横线（-）不能作为 InstanceName 的首尾字符，不能连续使用。
+        /// 字符长度为[2, 40]，允许支持多个点号，点之间为一段，每段允许字母（不限制大小写）、数字和短横线（-）组成。不允许为纯数字。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

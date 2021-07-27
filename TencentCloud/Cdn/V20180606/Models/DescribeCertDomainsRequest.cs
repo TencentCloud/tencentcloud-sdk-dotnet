@@ -30,6 +30,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Cert")]
         public string Cert{ get; set; }
 
+        /// <summary>
+        /// 托管证书ID，Cert和CertId不能均未空，都填写时以CerId为准。
+        /// </summary>
+        [JsonProperty("CertId")]
+        public string CertId{ get; set; }
+
+        /// <summary>
+        /// 域名所属产品，cdn或ecdn，默认cdn。
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Cert", this.Cert);
+            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

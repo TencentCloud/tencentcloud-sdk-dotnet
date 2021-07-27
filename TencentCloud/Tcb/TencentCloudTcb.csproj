@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.330</VersionPrefix>
+    <VersionPrefix>3.0.331</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20180608\TcbClient.cs" />
+    <Compile Include="V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
@@ -97,6 +98,8 @@
     <Compile Include="V20180608\Models\DeleteEndUserResponse.cs" />
     <Compile Include="V20180608\Models\DeleteWxGatewayRouteRequest.cs" />
     <Compile Include="V20180608\Models\DeleteWxGatewayRouteResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeActivityRecordRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeActivityRecordResponse.cs" />
     <Compile Include="V20180608\Models\DescribeAuthDomainsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeAuthDomainsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseBuildServiceRequest.cs" />
@@ -189,6 +192,8 @@
     <Compile Include="V20180608\Models\PostpayEnvQuota.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvRequest.cs" />
     <Compile Include="V20180608\Models\ReinstateEnvResponse.cs" />
+    <Compile Include="V20180608\Models\ReplaceActivityRecordRequest.cs" />
+    <Compile Include="V20180608\Models\ReplaceActivityRecordResponse.cs" />
     <Compile Include="V20180608\Models\RollUpdateCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\SmsFreeQuota.cs" />
