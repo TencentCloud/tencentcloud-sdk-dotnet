@@ -163,6 +163,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricsInfo")]
         public AlarmHistoryMetric[] MetricsInfo{ get; set; }
 
+        /// <summary>
+        /// 告警实例的维度信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Dimensions")]
+        public string Dimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +199,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "PolicyExists", this.PolicyExists);
             this.SetParamArrayObj(map, prefix + "MetricsInfo.", this.MetricsInfo);
+            this.SetParamSimple(map, prefix + "Dimensions", this.Dimensions);
         }
     }
 }

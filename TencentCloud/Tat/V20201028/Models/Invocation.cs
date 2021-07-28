@@ -108,6 +108,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// 调用来源。
+        /// </summary>
+        [JsonProperty("InvocationSource")]
+        public string InvocationSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +133,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
         }
     }
 }

@@ -375,6 +375,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 本接口（CreateCustomHeader）用于创建HTTP/HTTPS监听器的自定义header，客户端请求通过访问该监听器时，会将监听器中配置的header信息发送到源站。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomHeaderRequest"/></param>
+        /// <returns><see cref="CreateCustomHeaderResponse"/></returns>
+        public async Task<CreateCustomHeaderResponse> CreateCustomHeader(CreateCustomHeaderRequest req)
+        {
+             JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateCustomHeader）用于创建HTTP/HTTPS监听器的自定义header，客户端请求通过访问该监听器时，会将监听器中配置的header信息发送到源站。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomHeaderRequest"/></param>
+        /// <returns><see cref="CreateCustomHeaderResponse"/></returns>
+        public CreateCustomHeaderResponse CreateCustomHeaderSync(CreateCustomHeaderRequest req)
+        {
+             JsonResponseModel<CreateCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateDomain）用于创建HTTP/HTTPS监听器的访问域名，客户端请求通过访问该域名来请求后端业务。
         /// 该接口仅支持version3.0的通道。
         /// </summary>
@@ -1257,6 +1297,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>
+        /// <returns><see cref="DescribeBlackHeaderResponse"/></returns>
+        public async Task<DescribeBlackHeaderResponse> DescribeBlackHeader(DescribeBlackHeaderRequest req)
+        {
+             JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBlackHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlackHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBlackHeader）用于查询禁用的自定义header 名称
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBlackHeaderRequest"/></param>
+        /// <returns><see cref="DescribeBlackHeaderResponse"/></returns>
+        public DescribeBlackHeaderResponse DescribeBlackHeaderSync(DescribeBlackHeaderRequest req)
+        {
+             JsonResponseModel<DescribeBlackHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBlackHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlackHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCertificateDetail）用于查询证书详情，包括证书ID，证书名字，证书类型，证书内容以及密钥等信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCertificateDetailRequest"/></param>
@@ -1368,6 +1448,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCountryAreaMapping");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCountryAreaMappingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCustomHeader）用于自定义header列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomHeaderRequest"/></param>
+        /// <returns><see cref="DescribeCustomHeaderResponse"/></returns>
+        public async Task<DescribeCustomHeaderResponse> DescribeCustomHeader(DescribeCustomHeaderRequest req)
+        {
+             JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomHeaderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCustomHeader）用于自定义header列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomHeaderRequest"/></param>
+        /// <returns><see cref="DescribeCustomHeaderResponse"/></returns>
+        public DescribeCustomHeaderResponse DescribeCustomHeaderSync(DescribeCustomHeaderRequest req)
+        {
+             JsonResponseModel<DescribeCustomHeaderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomHeader");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomHeaderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

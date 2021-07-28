@@ -453,6 +453,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 按顺序创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTasksInOrderRequest"/></param>
+        /// <returns><see cref="CreateTasksInOrderResponse"/></returns>
+        public async Task<CreateTasksInOrderResponse> CreateTasksInOrder(CreateTasksInOrderRequest req)
+        {
+             JsonResponseModel<CreateTasksInOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTasksInOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTasksInOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 按顺序创建任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateTasksInOrderRequest"/></param>
+        /// <returns><see cref="CreateTasksInOrderResponse"/></returns>
+        public CreateTasksInOrderResponse CreateTasksInOrderSync(CreateTasksInOrderRequest req)
+        {
+             JsonResponseModel<CreateTasksInOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTasksInOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTasksInOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>

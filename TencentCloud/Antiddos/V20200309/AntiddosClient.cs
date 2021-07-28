@@ -853,6 +853,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取基础防护攻击状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDeviceStatusRequest"/></param>
+        /// <returns><see cref="DescribeBasicDeviceStatusResponse"/></returns>
+        public async Task<DescribeBasicDeviceStatusResponse> DescribeBasicDeviceStatus(DescribeBasicDeviceStatusRequest req)
+        {
+             JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBasicDeviceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取基础防护攻击状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDeviceStatusRequest"/></param>
+        /// <returns><see cref="DescribeBasicDeviceStatusResponse"/></returns>
+        public DescribeBasicDeviceStatusResponse DescribeBasicDeviceStatusSync(DescribeBasicDeviceStatusRequest req)
+        {
+             JsonResponseModel<DescribeBasicDeviceStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBasicDeviceStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取DDoS防护的IP黑白名单
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>

@@ -43,10 +43,16 @@ namespace TencentCloud.Tcb.V20180608.Models
         public long?[] ActivityIdList{ get; set; }
 
         /// <summary>
-        /// 过滤状态码
+        /// 过滤状态码，已废弃
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// 状态码过滤数组，空数组时不过滤
+        /// </summary>
+        [JsonProperty("Statuses")]
+        public long?[] Statuses{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArraySimple(map, prefix + "Statuses.", this.Statuses);
         }
     }
 }

@@ -105,6 +105,12 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("ErrorInfo")]
         public string ErrorInfo{ get; set; }
 
+        /// <summary>
+        /// 调用来源。
+        /// </summary>
+        [JsonProperty("InvocationSource")]
+        public string InvocationSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamObj(map, prefix + "CommandDocument.", this.CommandDocument);
             this.SetParamSimple(map, prefix + "ErrorInfo", this.ErrorInfo);
+            this.SetParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
         }
     }
 }

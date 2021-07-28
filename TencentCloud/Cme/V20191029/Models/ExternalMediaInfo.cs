@@ -35,7 +35,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 'https://' 或者 'http://' 去掉。
+        /// 媒资绑定媒体路径或文件 ID，如果要绑定 URL 类型的媒体，请将 URL 的 <code> 'https://' </code>或者<code> 'http://' </code>去掉。
         /// </summary>
         [JsonProperty("MediaKey")]
         public string MediaKey{ get; set; }

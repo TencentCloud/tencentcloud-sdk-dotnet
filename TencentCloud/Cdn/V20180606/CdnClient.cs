@@ -213,6 +213,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// CreateScdnDomain 用于创建 SCDN 加速域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
+        /// <returns><see cref="CreateScdnDomainResponse"/></returns>
+        public async Task<CreateScdnDomainResponse> CreateScdnDomain(CreateScdnDomainRequest req)
+        {
+             JsonResponseModel<CreateScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateScdnDomain 用于创建 SCDN 加速域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateScdnDomainRequest"/></param>
+        /// <returns><see cref="CreateScdnDomainResponse"/></returns>
+        public CreateScdnDomainResponse CreateScdnDomainSync(CreateScdnDomainRequest req)
+        {
+             JsonResponseModel<CreateScdnDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScdnDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScdnDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// CreateScdnFailedLogTask 用于重试创建失败的事件日志任务
         /// </summary>
         /// <param name="req"><see cref="CreateScdnFailedLogTaskRequest"/></param>

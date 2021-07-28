@@ -117,6 +117,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// 签约方式
+        /// </summary>
+        [JsonProperty("ContractMethod")]
+        public string ContractMethod{ get; set; }
+
+        /// <summary>
+        /// 签约代扣穿透查询存量数据迁移模式
+        /// </summary>
+        [JsonProperty("MigrateMode")]
+        public string MigrateMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +149,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "TerminationReason", this.TerminationReason);
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "ContractMethod", this.ContractMethod);
+            this.SetParamSimple(map, prefix + "MigrateMode", this.MigrateMode);
         }
     }
 }

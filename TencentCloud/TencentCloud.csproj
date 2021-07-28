@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.331</VersionPrefix>
+    <VersionPrefix>3.0.332</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -259,6 +259,8 @@
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintKeyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -301,6 +303,7 @@
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\KeyValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer4Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer7Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\ListenerCcThreholdConfig.cs" />
@@ -2375,6 +2378,8 @@
     <Compile Include="Cdn\V20180606\Models\CreateDiagnoseUrlResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateEdgePackTaskResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnDomainRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\CreateScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnFailedLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskRequest.cs" />
@@ -5228,6 +5233,8 @@
     <Compile Include="Dlc\V20210125\Models\CreateTableResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTaskRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTaskResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateTasksInOrderRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateTasksInOrderResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateUserRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateUserResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateWorkGroupRequest.cs" />
@@ -5283,6 +5290,7 @@
     <Compile Include="Dlc\V20210125\Models\TableResponseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\Task.cs" />
     <Compile Include="Dlc\V20210125\Models\TaskResponseInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\TasksInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TextFile.cs" />
     <Compile Include="Dlc\V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\UnbindWorkGroupsFromUserResponse.cs" />
@@ -6341,6 +6349,8 @@
     <Compile Include="Gaap\V20180529\Models\CountryAreaMap.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateCertificateRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateCertificateResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateCustomHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateCustomHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainErrorPageInfoRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainRequest.cs" />
@@ -6385,12 +6395,16 @@
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsByDestRegionResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeAccessRegionsResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeBlackHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeBlackHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificatesRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCertificatesResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCountryAreaMappingRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeCountryAreaMappingResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeCustomHeaderRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeCustomHeaderResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDestRegionsRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDestRegionsResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDomainErrorPageInfoByIdsRequest.cs" />
