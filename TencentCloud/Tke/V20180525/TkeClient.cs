@@ -2413,6 +2413,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcCniPodLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcCniPodLimitsResponse"/></returns>
+        public async Task<DescribeVpcCniPodLimitsResponse> DescribeVpcCniPodLimits(DescribeVpcCniPodLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpcCniPodLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpcCniPodLimitsRequest"/></param>
+        /// <returns><see cref="DescribeVpcCniPodLimitsResponse"/></returns>
+        public DescribeVpcCniPodLimitsResponse DescribeVpcCniPodLimitsSync(DescribeVpcCniPodLimitsRequest req)
+        {
+             JsonResponseModel<DescribeVpcCniPodLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpcCniPodLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcCniPodLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
         /// </summary>
         /// <param name="req"><see cref="DisableVpcCniNetworkTypeRequest"/></param>

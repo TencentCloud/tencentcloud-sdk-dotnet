@@ -37,6 +37,12 @@ namespace TencentCloud.Tse.V20201207.Models
         public string InternetAddress{ get; set; }
 
         /// <summary>
+        /// apollo多环境公网ip
+        /// </summary>
+        [JsonProperty("EnvAddressInfos")]
+        public EnvAddressInfo[] EnvAddressInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
             this.SetParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
+            this.SetParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

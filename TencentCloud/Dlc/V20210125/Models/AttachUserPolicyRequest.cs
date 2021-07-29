@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 用户Id，和子用户uin相同，需要先使用CreateUser接口创建用户。可以使用DescribeUsers接口查看。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }

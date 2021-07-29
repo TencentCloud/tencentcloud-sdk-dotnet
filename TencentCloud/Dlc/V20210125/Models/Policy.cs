@@ -25,25 +25,25 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 需要授权的数据源名称，*代表拥有全部数据源权限
+        /// 需要授权的数据源名称，当前仅支持COSDataCatalog或者*
         /// </summary>
         [JsonProperty("Catalog")]
         public string Catalog{ get; set; }
 
         /// <summary>
-        /// 需要授权的数据库名称，*代表拥有全部数据库名称
+        /// 需要授权的数据库名，填*代表当前Catalog下所有数据库
         /// </summary>
         [JsonProperty("Database")]
         public string Database{ get; set; }
 
         /// <summary>
-        /// 需要授权的表名称，*代表拥有全部表权限
+        /// 需要授权的表名，填*代表当前Database下所有表
         /// </summary>
         [JsonProperty("Table")]
         public string Table{ get; set; }
 
         /// <summary>
-        /// 授权的操作，当前只支持“ALL”
+        /// 授权粒度，当前只支持ALL，即全部权限
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

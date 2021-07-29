@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.332</VersionPrefix>
+    <VersionPrefix>3.0.333</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -481,6 +481,8 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeApiBindApiAppsStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiEnvironmentStrategyResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiForApiAppRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeApiForApiAppResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApiKeysStatusRequest.cs" />
@@ -5235,6 +5237,8 @@
     <Compile Include="Dlc\V20210125\Models\CreateTaskResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTasksInOrderRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTasksInOrderResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateTasksRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateTasksResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateUserRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateUserResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateWorkGroupRequest.cs" />
@@ -12754,6 +12758,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DnsServerConf.cs" />
@@ -12798,6 +12804,8 @@
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="Tke\V20180525\Models\NodePool.cs" />
     <Compile Include="Tke\V20180525\Models\NodePoolOption.cs" />
+    <Compile Include="Tke\V20180525\Models\PodLimitsByType.cs" />
+    <Compile Include="Tke\V20180525\Models\PodLimitsInstance.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAgentOverview.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertHistoryItem.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
@@ -12966,6 +12974,7 @@
     <Compile Include="Tse\V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstancesRequest.cs" />
     <Compile Include="Tse\V20201207\Models\DescribeSREInstancesResponse.cs" />
+    <Compile Include="Tse\V20201207\Models\EnvAddressInfo.cs" />
     <Compile Include="Tse\V20201207\Models\EnvInfo.cs" />
     <Compile Include="Tse\V20201207\Models\Filter.cs" />
     <Compile Include="Tse\V20201207\Models\SREInstance.cs" />
@@ -14778,6 +14787,7 @@
     <Compile Include="Wav\V20210129\Models\ExternalContactTag.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalUserMappingInfo.cs" />
     <Compile Include="Wav\V20210129\Models\FollowUser.cs" />
+    <Compile Include="Wav\V20210129\Models\LicenseInfo.cs" />
     <Compile Include="Wav\V20210129\Models\LiveCodeDetail.cs" />
     <Compile Include="Wav\V20210129\Models\MiniAppCodeInfo.cs" />
     <Compile Include="Wav\V20210129\Models\QueryActivityJoinListRequest.cs" />
@@ -14796,6 +14806,8 @@
     <Compile Include="Wav\V20210129\Models\QueryExternalContactListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalUserMappingInfoRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalUserMappingInfoResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryLicenseInfoRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryLicenseInfoResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\TagDetailInfo.cs" />

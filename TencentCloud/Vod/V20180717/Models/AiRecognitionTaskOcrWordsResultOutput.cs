@@ -26,9 +26,22 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 文本关键词识别结果集。
+        /// <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 ResultSetFileUrl 对应的文件中获取。
         /// </summary>
         [JsonProperty("ResultSet")]
         public AiRecognitionTaskOcrWordsResultItem[] ResultSet{ get; set; }
+
+        /// <summary>
+        /// 文本关键词识别结果集文件 URL。文件的内容为 JSON，数据结构与 ResultSet 字段一致。 （文件不会永久存储，到达ResultSetFileUrlExpireTime 时间点后文件将被删除）。
+        /// </summary>
+        [JsonProperty("ResultSetFileUrl")]
+        public string ResultSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// 文本关键词识别结果集文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("ResultSetFileUrlExpireTime")]
+        public string ResultSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ResultSet.", this.ResultSet);
+            this.SetParamSimple(map, prefix + "ResultSetFileUrl", this.ResultSetFileUrl);
+            this.SetParamSimple(map, prefix + "ResultSetFileUrlExpireTime", this.ResultSetFileUrlExpireTime);
         }
     }
 }

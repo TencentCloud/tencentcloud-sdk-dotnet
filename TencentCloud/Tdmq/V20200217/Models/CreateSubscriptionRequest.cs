@@ -66,6 +66,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AutoCreatePolicyTopic")]
         public bool? AutoCreatePolicyTopic{ get; set; }
 
+        /// <summary>
+        /// 指定死信和重试主题名称规范，LEGACY表示历史命名规则，COMMUNITY表示Pulsar社区命名规范
+        /// </summary>
+        [JsonProperty("PostFixPattern")]
+        public string PostFixPattern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "AutoCreatePolicyTopic", this.AutoCreatePolicyTopic);
+            this.SetParamSimple(map, prefix + "PostFixPattern", this.PostFixPattern);
         }
     }
 }

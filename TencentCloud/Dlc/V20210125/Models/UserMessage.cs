@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 用户Id，和CAM侧子用户Uin匹配
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -38,13 +38,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string UserDescription{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// 当前用户的创建者
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 当前用户的创建时间，形如2021-07-28 16:19:32
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

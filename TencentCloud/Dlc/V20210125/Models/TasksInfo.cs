@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SQL{ get; set; }
 
         /// <summary>
-        /// 任务的配置信息
+        /// 任务的配置信息，当前仅支持SparkSQLTask任务。
         /// </summary>
         [JsonProperty("Config")]
         public KVPair[] Config{ get; set; }

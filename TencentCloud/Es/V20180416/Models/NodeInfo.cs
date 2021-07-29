@@ -40,7 +40,6 @@ namespace TencentCloud.Es.V20180416.Models
         /// 节点类型<li>hotData: 热数据节点</li>
         /// <li>warmData: 冷数据节点</li>
         /// <li>dedicatedMaster: 专用主节点</li>
-        /// <li>kibana: Kibana节点</li>
         /// 默认值为hotData
         /// </summary>
         [JsonProperty("Type")]

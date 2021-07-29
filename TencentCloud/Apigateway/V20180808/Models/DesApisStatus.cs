@@ -100,7 +100,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public bool? IsDebugAfterCharge{ get; set; }
 
         /// <summary>
-        /// API 鉴权类型。取值为SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH。
+        /// API 鉴权类型。取值为SECRET（密钥对鉴权）、NONE（免鉴权）、OAUTH、EIAM。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthType")]

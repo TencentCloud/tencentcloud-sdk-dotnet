@@ -128,6 +128,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("EnvInfos")]
         public EnvInfo[] EnvInfos{ get; set; }
 
+        /// <summary>
+        /// 引擎所在的区域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineRegion")]
+        public string EngineRegion{ get; set; }
+
+        /// <summary>
+        /// 注册引擎是否开启公网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableInternet")]
+        public bool? EnableInternet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EKSClusterID", this.EKSClusterID);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
+            this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
+            this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
         }
     }
 }

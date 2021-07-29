@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 工作组Id
+        /// 查询到的工作组唯一Id
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }
@@ -64,13 +64,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Policy[] PolicySet{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// 工作组的创建人
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 工作组的创建时间，形如2021-07-28 16:19:32
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

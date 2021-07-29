@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 查询的工作组Id
+        /// 查询的工作组Id，不填或填0表示不过滤。
         /// </summary>
         [JsonProperty("WorkGroupId")]
         public long? WorkGroupId{ get; set; }

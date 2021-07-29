@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户总数
+        /// 查询到的用户总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 用户集合
+        /// 查询到的授权用户信息集合
         /// </summary>
         [JsonProperty("UserSet")]
         public UserInfo[] UserSet{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("CountryId")]
         public ulong? CountryId{ get; set; }
 
+        /// <summary>
+        /// 位置名称
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CityId", this.CityId);
             this.SetParamSimple(map, prefix + "ProvinceId", this.ProvinceId);
             this.SetParamSimple(map, prefix + "CountryId", this.CountryId);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{509DA91F-DACF-378F-8095-070C5AD4268F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.332</VersionPrefix>
+    <VersionPrefix>3.0.333</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20210129\Models\ExternalContactTag.cs" />
     <Compile Include="V20210129\Models\ExternalUserMappingInfo.cs" />
     <Compile Include="V20210129\Models\FollowUser.cs" />
+    <Compile Include="V20210129\Models\LicenseInfo.cs" />
     <Compile Include="V20210129\Models\LiveCodeDetail.cs" />
     <Compile Include="V20210129\Models\MiniAppCodeInfo.cs" />
     <Compile Include="V20210129\Models\QueryActivityJoinListRequest.cs" />
@@ -77,6 +78,8 @@
     <Compile Include="V20210129\Models\QueryExternalContactListResponse.cs" />
     <Compile Include="V20210129\Models\QueryExternalUserMappingInfoRequest.cs" />
     <Compile Include="V20210129\Models\QueryExternalUserMappingInfoResponse.cs" />
+    <Compile Include="V20210129\Models\QueryLicenseInfoRequest.cs" />
+    <Compile Include="V20210129\Models\QueryLicenseInfoResponse.cs" />
     <Compile Include="V20210129\Models\QueryMiniAppCodeListRequest.cs" />
     <Compile Include="V20210129\Models\QueryMiniAppCodeListResponse.cs" />
     <Compile Include="V20210129\Models\TagDetailInfo.cs" />

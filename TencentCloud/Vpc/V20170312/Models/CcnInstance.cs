@@ -52,6 +52,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 实例关联的路由表ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RouteTableId")]
+        public string RouteTableId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceRegion", this.InstanceRegion);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "RouteTableId", this.RouteTableId);
         }
     }
 }

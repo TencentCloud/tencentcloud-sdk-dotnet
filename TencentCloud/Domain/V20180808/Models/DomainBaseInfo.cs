@@ -42,6 +42,7 @@ namespace TencentCloud.Domain.V20180808.Models
         /// InAudit：实名审核中
         /// Approved：实名审核通过
         /// Reject：实名审核失败
+        /// NoAudit: 无需实名认证
         /// </summary>
         [JsonProperty("RealNameAuditStatus")]
         public string RealNameAuditStatus{ get; set; }

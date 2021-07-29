@@ -453,6 +453,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 该接口获取license对应的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryLicenseInfoRequest"/></param>
+        /// <returns><see cref="QueryLicenseInfoResponse"/></returns>
+        public async Task<QueryLicenseInfoResponse> QueryLicenseInfo(QueryLicenseInfoRequest req)
+        {
+             JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryLicenseInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLicenseInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口获取license对应的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryLicenseInfoRequest"/></param>
+        /// <returns><see cref="QueryLicenseInfoResponse"/></returns>
+        public QueryLicenseInfoResponse QueryLicenseInfoSync(QueryLicenseInfoRequest req)
+        {
+             JsonResponseModel<QueryLicenseInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryLicenseInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryLicenseInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询小程序码列表接口
         /// </summary>
         /// <param name="req"><see cref="QueryMiniAppCodeListRequest"/></param>

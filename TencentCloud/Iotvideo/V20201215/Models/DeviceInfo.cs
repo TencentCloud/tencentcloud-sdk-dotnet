@@ -49,7 +49,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string DevicePsk{ get; set; }
 
         /// <summary>
-        /// 设备启用状态
+        /// 设备启用状态 0为停用 1为可用
         /// </summary>
         [JsonProperty("EnableState")]
         public ulong? EnableState{ get; set; }

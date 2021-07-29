@@ -1431,6 +1431,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（DescribeApiForApiApp）用于应用使用者查询部署于 API 网关的 API 接口的详细信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiForApiAppResponse"/></returns>
+        public async Task<DescribeApiForApiAppResponse> DescribeApiForApiApp(DescribeApiForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApiForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeApiForApiApp）用于应用使用者查询部署于 API 网关的 API 接口的详细信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApiForApiAppRequest"/></param>
+        /// <returns><see cref="DescribeApiForApiAppResponse"/></returns>
+        public DescribeApiForApiAppResponse DescribeApiForApiAppSync(DescribeApiForApiAppRequest req)
+        {
+             JsonResponseModel<DescribeApiForApiAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApiForApiApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApiForApiAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeApiKey）用于查询密钥详情。
         /// 用户在创建密钥后，可用此接口查询一个 API 密钥的详情，该接口会显示密钥 Key。
         /// </summary>

@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，当前主账号的子账号Uin，和CAM侧匹配
+        /// 需要授权的子用户uin，可以通过腾讯云控制台右上角 → “账号信息” → “账号ID进行查看”。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户描述
+        /// 用户描述信息，方便区分不同用户
         /// </summary>
         [JsonProperty("UserDescription")]
         public string UserDescription{ get; set; }

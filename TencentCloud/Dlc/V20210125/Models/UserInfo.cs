@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 用户Id，和CAM侧Uin匹配
+        /// 用户Id，和子用户uin相同
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户描述
+        /// 用户描述信息，方便区分不同用户
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDescription")]
@@ -45,13 +45,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Policy[] PolicySet{ get; set; }
 
         /// <summary>
-        /// 创建者
+        /// 当前用户的创建者
         /// </summary>
         [JsonProperty("Creator")]
         public string Creator{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，格式如2021-07-28 16:19:32
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
