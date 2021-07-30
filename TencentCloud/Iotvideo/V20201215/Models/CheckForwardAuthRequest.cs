@@ -31,7 +31,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string Skey{ get; set; }
 
         /// <summary>
-        /// 队列类型
+        /// 队列类型 0.CMQ  1.Ckafka
         /// </summary>
         [JsonProperty("QueueType")]
         public ulong? QueueType{ get; set; }

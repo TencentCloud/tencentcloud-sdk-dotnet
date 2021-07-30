@@ -93,6 +93,46 @@ namespace TencentCloud.Ba.V20200720
         }
 
         /// <summary>
+        /// 获取实名认证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGetAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeGetAuthInfoResponse"/></returns>
+        public async Task<DescribeGetAuthInfoResponse> DescribeGetAuthInfo(DescribeGetAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeGetAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGetAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGetAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实名认证信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGetAuthInfoRequest"/></param>
+        /// <returns><see cref="DescribeGetAuthInfoResponse"/></returns>
+        public DescribeGetAuthInfoResponse DescribeGetAuthInfoSync(DescribeGetAuthInfoRequest req)
+        {
+             JsonResponseModel<DescribeGetAuthInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGetAuthInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGetAuthInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将备案ICP订单下的一个网站信息 同步给订单下其他网站，需要被同步的网站被检查通过(isCheck:true)；
         /// 只有指定的网站信息字段能被同步
         /// </summary>

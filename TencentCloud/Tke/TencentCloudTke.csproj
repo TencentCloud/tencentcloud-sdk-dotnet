@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.333</VersionPrefix>
+    <VersionPrefix>3.0.334</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,6 +94,8 @@
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterResponse.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
@@ -117,6 +119,8 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterResponse.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
@@ -169,6 +173,8 @@
     <Compile Include="V20180525\Models\DescribePrometheusAlertHistoryResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusInstanceRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusOverviewsResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusTargetsRequest.cs" />
@@ -222,6 +228,8 @@
     <Compile Include="V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
     <Compile Include="V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
@@ -234,6 +242,7 @@
     <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="V20180525\Models\PrometheusConfigItem.cs" />
+    <Compile Include="V20180525\Models\PrometheusGrafanaInfo.cs" />
     <Compile Include="V20180525\Models\PrometheusInstanceOverview.cs" />
     <Compile Include="V20180525\Models\PrometheusJobTargets.cs" />
     <Compile Include="V20180525\Models\PrometheusNotification.cs" />

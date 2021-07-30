@@ -43,13 +43,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductID{ get; set; }
 
         /// <summary>
-        /// 消息类型
+        /// 消息类型 1设备上报信息 2设备状态变化通知 3为全选
         /// </summary>
         [JsonProperty("MsgType")]
         public ulong? MsgType{ get; set; }
 
         /// <summary>
-        /// 结果
+        /// 结果 2表示禁用 其他为成功
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }

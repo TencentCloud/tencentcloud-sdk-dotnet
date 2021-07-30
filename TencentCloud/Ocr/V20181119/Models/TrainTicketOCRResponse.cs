@@ -85,7 +85,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ID{ get; set; }
 
         /// <summary>
-        /// 发票消费类型
+        /// 发票消费类型：交通
         /// </summary>
         [JsonProperty("InvoiceType")]
         public string InvoiceType{ get; set; }
@@ -95,6 +95,54 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// </summary>
         [JsonProperty("SerialNumber")]
         public string SerialNumber{ get; set; }
+
+        /// <summary>
+        /// 加收票价
+        /// </summary>
+        [JsonProperty("AdditionalCost")]
+        public string AdditionalCost{ get; set; }
+
+        /// <summary>
+        /// 手续费
+        /// </summary>
+        [JsonProperty("HandlingFee")]
+        public string HandlingFee{ get; set; }
+
+        /// <summary>
+        /// 大写金额（票面有大写金额该字段才有值）
+        /// </summary>
+        [JsonProperty("LegalAmount")]
+        public string LegalAmount{ get; set; }
+
+        /// <summary>
+        /// 售票站
+        /// </summary>
+        [JsonProperty("TicketStation")]
+        public string TicketStation{ get; set; }
+
+        /// <summary>
+        /// 原票价（一般有手续费的才有原始票价字段）
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public string OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 发票类型：火车票、火车票补票、火车票退票凭证
+        /// </summary>
+        [JsonProperty("InvoiceStyle")]
+        public string InvoiceStyle{ get; set; }
+
+        /// <summary>
+        /// 收据号码
+        /// </summary>
+        [JsonProperty("ReceiptNumber")]
+        public string ReceiptNumber{ get; set; }
+
+        /// <summary>
+        /// 仅供报销使用：1为是，0为否
+        /// </summary>
+        [JsonProperty("IsReceipt")]
+        public string IsReceipt{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -120,6 +168,14 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ID", this.ID);
             this.SetParamSimple(map, prefix + "InvoiceType", this.InvoiceType);
             this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
+            this.SetParamSimple(map, prefix + "AdditionalCost", this.AdditionalCost);
+            this.SetParamSimple(map, prefix + "HandlingFee", this.HandlingFee);
+            this.SetParamSimple(map, prefix + "LegalAmount", this.LegalAmount);
+            this.SetParamSimple(map, prefix + "TicketStation", this.TicketStation);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "InvoiceStyle", this.InvoiceStyle);
+            this.SetParamSimple(map, prefix + "ReceiptNumber", this.ReceiptNumber);
+            this.SetParamSimple(map, prefix + "IsReceipt", this.IsReceipt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.333</VersionPrefix>
+    <VersionPrefix>3.0.334</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,8 @@
     <Compile Include="V20180608\TcbClient.cs" />
     <Compile Include="V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
+    <Compile Include="V20180608\Models\BindEnvGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\BindEnvGatewayResponse.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="V20180608\Models\CloudBaseCapabilities.cs" />

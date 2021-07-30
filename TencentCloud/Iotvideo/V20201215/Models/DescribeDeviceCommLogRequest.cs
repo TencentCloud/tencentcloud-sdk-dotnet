@@ -25,13 +25,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间 13位时间戳 单位毫秒
         /// </summary>
         [JsonProperty("MinTime")]
         public ulong? MinTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间 13位时间戳 单位毫秒
         /// </summary>
         [JsonProperty("MaxTime")]
         public ulong? MaxTime{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 返回条数
+        /// 返回条数 默认为50
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 类型：shadow 下行，device 上行
+        /// 类型：shadow 下行，device 上行 默认为空则全部查询
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

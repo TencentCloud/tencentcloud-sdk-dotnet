@@ -693,6 +693,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建告警规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertRuleResponse"/></returns>
+        public async Task<CreatePrometheusAlertRuleResponse> CreatePrometheusAlertRule(CreatePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建告警规则
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="CreatePrometheusAlertRuleResponse"/></returns>
+        public CreatePrometheusAlertRuleResponse CreatePrometheusAlertRuleSync(CreatePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<CreatePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建grafana监控面板
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusDashboardRequest"/></param>
@@ -1124,6 +1164,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEKSCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertRuleResponse"/></returns>
+        public async Task<DeletePrometheusAlertRuleResponse> DeletePrometheusAlertRule(DeletePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除告警规则
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="DeletePrometheusAlertRuleResponse"/></returns>
+        public DeletePrometheusAlertRuleResponse DeletePrometheusAlertRuleSync(DeletePrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<DeletePrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusAlertRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2173,6 +2253,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取实例详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceResponse"/></returns>
+        public async Task<DescribePrometheusInstanceResponse> DescribePrometheusInstance(DescribePrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstanceRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstanceResponse"/></returns>
+        public DescribePrometheusInstanceResponse DescribePrometheusInstanceSync(DescribePrometheusInstanceRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusOverviewsRequest"/></param>
@@ -2804,6 +2924,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNodePoolDesiredCapacityAboutAsg");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNodePoolDesiredCapacityAboutAsgResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警规则 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
+        public async Task<ModifyPrometheusAlertRuleResponse> ModifyPrometheusAlertRule(ModifyPrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警规则 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusAlertRuleResponse"/></returns>
+        public ModifyPrometheusAlertRuleResponse ModifyPrometheusAlertRuleSync(ModifyPrometheusAlertRuleRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusAlertRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrometheusAlertRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

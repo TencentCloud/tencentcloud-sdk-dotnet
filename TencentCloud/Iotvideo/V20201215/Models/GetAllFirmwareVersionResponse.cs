@@ -25,7 +25,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
     {
         
         /// <summary>
-        /// 无
+        /// 固件可用版本列表
         /// </summary>
         [JsonProperty("Version")]
         public string[] Version{ get; set; }

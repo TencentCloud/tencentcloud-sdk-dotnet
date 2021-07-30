@@ -43,7 +43,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。
+        /// 流水类型：All-全部类型；Recharge-充值；CreateOrder-新购。默认为All
         /// </summary>
         [JsonProperty("Operation")]
         public string Operation{ get; set; }

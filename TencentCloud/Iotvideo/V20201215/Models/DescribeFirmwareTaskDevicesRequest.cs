@@ -43,13 +43,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public SearchKeyword[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询偏移量
+        /// 查询偏移量 默认为0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 查询的数量
+        /// 查询的数量 默认为50
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

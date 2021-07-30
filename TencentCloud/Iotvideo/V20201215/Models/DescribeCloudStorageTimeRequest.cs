@@ -42,6 +42,24 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
+        /// <summary>
+        /// 开始时间，unix时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public ulong? StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间，unix时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public ulong? EndTime{ get; set; }
+
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
             this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

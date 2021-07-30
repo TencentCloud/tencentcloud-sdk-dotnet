@@ -31,7 +31,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 产品设备类型
+        /// 产品设备类型 1.普通设备 2.NVR设备
         /// </summary>
         [JsonProperty("DeviceType")]
         public ulong? DeviceType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public ulong? ProductVaildYears{ get; set; }
 
         /// <summary>
-        /// 设备功能码
+        /// 设备功能码 ypsxth音频双向通话 spdxth视频单向通话
         /// </summary>
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// 设备操作系统
+        /// 设备操作系统 android linux liteos
         /// </summary>
         [JsonProperty("ChipOs")]
         public string ChipOs{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductDescription{ get; set; }
 
         /// <summary>
-        /// 认证方式。2 PSK
+        /// 认证方式 只支持取值为2 psk认证
         /// </summary>
         [JsonProperty("EncryptionType")]
         public ulong? EncryptionType{ get; set; }

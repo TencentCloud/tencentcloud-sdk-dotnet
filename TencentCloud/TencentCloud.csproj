@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.333</VersionPrefix>
+    <VersionPrefix>3.0.334</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -840,6 +840,8 @@
     <Compile Include="Ba\V20200720\BaClient.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlRequest.cs" />
     <Compile Include="Ba\V20200720\Models\CreateWeappQRUrlResponse.cs" />
+    <Compile Include="Ba\V20200720\Models\DescribeGetAuthInfoRequest.cs" />
+    <Compile Include="Ba\V20200720\Models\DescribeGetAuthInfoResponse.cs" />
     <Compile Include="Ba\V20200720\Models\SyncIcpOrderWebInfoRequest.cs" />
     <Compile Include="Ba\V20200720\Models\SyncIcpOrderWebInfoResponse.cs" />
     <Compile Include="Batch\V20170312\BatchClient.cs" />
@@ -7840,6 +7842,8 @@
     <Compile Include="Iotvideo\V20201215\Models\BalanceTransaction.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\BatchUpdateFirmwareResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\BindCloudStorageUserRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\BindCloudStorageUserResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelAIModelApplicationRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelAIModelApplicationResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CancelDeviceFirmwareTaskRequest.cs" />
@@ -7849,6 +7853,7 @@
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageEvent.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageTimeData.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CloudStorageTimeInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CloudStorageUserInfo.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ControlDeviceDataResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateAIDetectionRequest.cs" />
@@ -7859,12 +7864,15 @@
     <Compile Include="Iotvideo\V20201215\Models\CreateCOSCredentialsResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateCloudStorageRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateCloudStorageResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateDataForwardRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\CreateDataForwardResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateTaskFileUrlRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\CreateTaskFileUrlResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DataForward.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeleteFirmwareRequest.cs" />
@@ -7901,6 +7909,10 @@
     <Compile Include="Iotvideo\V20201215\Models\DescribeCloudStorageThumbnailResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeCloudStorageTimeRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeCloudStorageTimeResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeCloudStorageUsersRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeCloudStorageUsersResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDataForwardListRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDataForwardListResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceActionHistoryRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceActionHistoryResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceCommLogRequest.cs" />
@@ -7913,6 +7925,8 @@
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceEventHistoryResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceStatusLogRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeDeviceStatusLogResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeDevicesResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeFirmwareRequest.cs" />
@@ -7935,9 +7949,12 @@
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductsRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductsResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeSDKLogRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeSDKLogResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceCommLogItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceInfo.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DeviceStatusLogItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DeviceUpdateStatus.cs" />
     <Compile Include="Iotvideo\V20201215\Models\EditFirmwareRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\EditFirmwareResponse.cs" />
@@ -7952,8 +7969,16 @@
     <Compile Include="Iotvideo\V20201215\Models\GetFirmwareURLResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ImportModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\InheritCloudStorageUserRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\InheritCloudStorageUserResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ListFirmwaresRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ListFirmwaresResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDataForwardRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDataForwardResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDataForwardStatusRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDataForwardStatusResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceLogLevelRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceLogLevelResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyDeviceResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyForwardRuleRequest.cs" />
@@ -7972,6 +7997,7 @@
     <Compile Include="Iotvideo\V20201215\Models\ResetCloudStorageResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\RetryDeviceFirmwareTaskResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\SDKLogItem.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SearchKeyword.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\SetForwardAuthResponse.cs" />
@@ -7984,6 +8010,8 @@
     <Compile Include="Iotvideo\V20201215\Models\UploadFirmwareResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoBatch.cs" />
     <Compile Include="Iotvideo\V20201215\Models\VideoProduct.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\WakeUpDeviceRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\WakeUpDeviceResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\IotvideoindustryClient.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\AllDeviceInfo.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\BindGroupDevicesRequest.cs" />
@@ -11565,6 +11593,8 @@
     <Compile Include="Tcb\V20180608\TcbClient.cs" />
     <Compile Include="Tcb\V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="Tcb\V20180608\Models\AuthDomain.cs" />
+    <Compile Include="Tcb\V20180608\Models\BindEnvGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\BindEnvGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseCapabilities.cs" />
@@ -12671,6 +12701,8 @@
     <Compile Include="Tke\V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateEKSClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateEKSClusterResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTemplateRequest.cs" />
@@ -12694,6 +12726,8 @@
     <Compile Include="Tke\V20180525\Models\DeleteClusterRouteTableResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteEKSClusterRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteEKSClusterResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
@@ -12746,6 +12780,8 @@
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertHistoryResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusOverviewsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTargetsRequest.cs" />
@@ -12799,6 +12835,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NodeCountSummary.cs" />
@@ -12811,6 +12849,7 @@
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusConfigItem.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusGrafanaInfo.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusInstanceOverview.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusJobTargets.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusNotification.cs" />

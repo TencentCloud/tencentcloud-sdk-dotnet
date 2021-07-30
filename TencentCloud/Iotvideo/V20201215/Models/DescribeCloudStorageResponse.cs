@@ -49,6 +49,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public ulong? ShiftDuration{ get; set; }
 
         /// <summary>
+        /// 云存用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "ShiftDuration", this.ShiftDuration);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

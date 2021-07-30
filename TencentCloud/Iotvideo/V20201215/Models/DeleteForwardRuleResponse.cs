@@ -43,7 +43,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductID{ get; set; }
 
         /// <summary>
-        /// 删除结果
+        /// 删除结果 0成功 其他不成功
         /// </summary>
         [JsonProperty("Result")]
         public ulong? Result{ get; set; }

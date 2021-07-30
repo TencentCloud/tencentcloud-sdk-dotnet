@@ -55,7 +55,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ActionId{ get; set; }
 
         /// <summary>
-        /// 查询条数
+        /// 查询条数 默认为0 最大不超过500
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

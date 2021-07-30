@@ -53,6 +53,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 绑定另外一个环境下的网关，callContainer请求可以访问到该网关
+        /// </summary>
+        /// <param name="req"><see cref="BindEnvGatewayRequest"/></param>
+        /// <returns><see cref="BindEnvGatewayResponse"/></returns>
+        public async Task<BindEnvGatewayResponse> BindEnvGateway(BindEnvGatewayRequest req)
+        {
+             JsonResponseModel<BindEnvGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindEnvGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindEnvGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定另外一个环境下的网关，callContainer请求可以访问到该网关
+        /// </summary>
+        /// <param name="req"><see cref="BindEnvGatewayRequest"/></param>
+        /// <returns><see cref="BindEnvGatewayResponse"/></returns>
+        public BindEnvGatewayResponse BindEnvGatewaySync(BindEnvGatewayRequest req)
+        {
+             JsonResponseModel<BindEnvGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindEnvGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindEnvGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 检查是否开通Tcb服务
         /// </summary>
         /// <param name="req"><see cref="CheckTcbServiceRequest"/></param>

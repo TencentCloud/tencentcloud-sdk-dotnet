@@ -31,13 +31,13 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 修改的产品名称
+        /// 修改的产品名称 （支持中文、英文、数字、下划线组合，最多不超过20个字符）
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 修改的产品描述
+        /// 修改的产品描述 （最多不超过128个字符）
         /// </summary>
         [JsonProperty("ProductDescription")]
         public string ProductDescription{ get; set; }

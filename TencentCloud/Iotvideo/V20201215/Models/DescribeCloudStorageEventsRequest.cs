@@ -66,6 +66,12 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 用户ID
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

@@ -116,6 +116,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("RequiredMemorySize")]
         public long? RequiredMemorySize{ get; set; }
 
+        /// <summary>
+        /// CVM镜像共享到轻量应用服务器轻量应用服务器后的CVM镜像ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "BlueprintName", this.BlueprintName);
             this.SetParamSimple(map, prefix + "SupportAutomationTools", this.SupportAutomationTools);
             this.SetParamSimple(map, prefix + "RequiredMemorySize", this.RequiredMemorySize);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }
