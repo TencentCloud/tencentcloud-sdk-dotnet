@@ -45,16 +45,6 @@ namespace TencentCloud.Live.V20180801.Models
         public long? InputType{ get; set; }
 
         /// <summary>
-        /// 输入画面在输出时的宽度。取值范围：
-        /// 像素：[0，2000]
-        /// 百分比：[0.01，0.99]
-        /// 不填默认为输入流的宽度。
-        /// 使用百分比时，期望输出为（百分比 * 背景宽）。
-        /// </summary>
-        [JsonProperty("ImageWidth")]
-        public float? ImageWidth{ get; set; }
-
-        /// <summary>
         /// 输入画面在输出时的高度。取值范围：
         /// 像素：[0，2000]
         /// 百分比：[0.01，0.99]
@@ -63,6 +53,16 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("ImageHeight")]
         public float? ImageHeight{ get; set; }
+
+        /// <summary>
+        /// 输入画面在输出时的宽度。取值范围：
+        /// 像素：[0，2000]
+        /// 百分比：[0.01，0.99]
+        /// 不填默认为输入流的宽度。
+        /// 使用百分比时，期望输出为（百分比 * 背景宽）。
+        /// </summary>
+        [JsonProperty("ImageWidth")]
+        public float? ImageWidth{ get; set; }
 
         /// <summary>
         /// 输入在输出画面的X偏移。取值范围：
@@ -114,8 +114,8 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "ImageLayer", this.ImageLayer);
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
-            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
             this.SetParamSimple(map, prefix + "ImageHeight", this.ImageHeight);
+            this.SetParamSimple(map, prefix + "ImageWidth", this.ImageWidth);
             this.SetParamSimple(map, prefix + "LocationX", this.LocationX);
             this.SetParamSimple(map, prefix + "LocationY", this.LocationY);
             this.SetParamSimple(map, prefix + "Color", this.Color);

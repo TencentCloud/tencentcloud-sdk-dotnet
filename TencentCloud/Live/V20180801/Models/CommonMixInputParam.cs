@@ -26,6 +26,8 @@ namespace TencentCloud.Live.V20180801.Models
         
         /// <summary>
         /// 输入流名称。80字节以内，仅含字母、数字以及下划线的字符串。
+        /// 当LayoutParams.InputType=0(音视频)/4(纯音频)/5(纯视频)时，该值为需要混流的流名称。
+        /// 当LayoutParams.InputType=2(图片)/3(画布)时，该值仅用作标识输入，可用类似Canvas1、Pictrue1的名称。
         /// </summary>
         [JsonProperty("InputStreamName")]
         public string InputStreamName{ get; set; }
