@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.335</VersionPrefix>
+    <VersionPrefix>3.0.336</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -44,6 +44,19 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Include="V20210701\TemClient.cs" />
+    <Compile Include="V20210701\Models\DeployServiceBatchDetail.cs" />
+    <Compile Include="V20210701\Models\DeployServicePodDetail.cs" />
+    <Compile Include="V20210701\Models\DeployStrategyConf.cs" />
+    <Compile Include="V20210701\Models\DescribeDeployApplicationDetailRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeDeployApplicationDetailResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeRunPodPage.cs" />
+    <Compile Include="V20210701\Models\ResumeDeployApplicationRequest.cs" />
+    <Compile Include="V20210701\Models\ResumeDeployApplicationResponse.cs" />
+    <Compile Include="V20210701\Models\RevertDeployApplicationRequest.cs" />
+    <Compile Include="V20210701\Models\RevertDeployApplicationResponse.cs" />
+    <Compile Include="V20210701\Models\RunVersionPod.cs" />
+    <Compile Include="V20210701\Models\TemDeployApplicationDetailInfo.cs" />
     <Compile Include="V20201221\TemClient.cs" />
     <Compile Include="V20201221\Models\CosToken.cs" />
     <Compile Include="V20201221\Models\CreateCosTokenRequest.cs" />

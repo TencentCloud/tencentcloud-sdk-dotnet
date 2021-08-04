@@ -25,13 +25,13 @@ namespace TencentCloud.Tms.V20200713.Models
     {
         
         /// <summary>
-        /// 文本内容Base64编码。原文长度需小于15000字节，即5000个汉字以内。
+        /// 文本内容Base64编码。限制原文长度不能超过10000个unicode字符
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略。 -- 该字段暂未开放。
+        /// 该字段用于标识业务场景。您可以在内容安全控制台创建对应的ID，配置不同的内容审核策略，通过接口调用，默认不填为0，后端使用默认策略
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Tms.V20200713.Models
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 账号相关信息字段，填入后可识别违规风险账号。
+        /// 账号相关信息字段，填入后可识别违规风险账号
         /// </summary>
         [JsonProperty("User")]
         public User User{ get; set; }
 
         /// <summary>
-        /// 设备相关信息字段，填入后可识别违规风险设备。
+        /// 设备相关信息字段，填入后可识别违规风险设备
         /// </summary>
         [JsonProperty("Device")]
         public Device Device{ get; set; }

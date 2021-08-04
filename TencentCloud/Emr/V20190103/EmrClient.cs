@@ -133,6 +133,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取账户的CVM配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmQuotaRequest"/></param>
+        /// <returns><see cref="DescribeCvmQuotaResponse"/></returns>
+        public async Task<DescribeCvmQuotaResponse> DescribeCvmQuota(DescribeCvmQuotaRequest req)
+        {
+             JsonResponseModel<DescribeCvmQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCvmQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCvmQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取账户的CVM配额
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCvmQuotaRequest"/></param>
+        /// <returns><see cref="DescribeCvmQuotaResponse"/></returns>
+        public DescribeCvmQuotaResponse DescribeCvmQuotaSync(DescribeCvmQuotaRequest req)
+        {
+             JsonResponseModel<DescribeCvmQuotaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCvmQuota");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCvmQuotaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 预付费集群隔离后续费资源查询
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>
@@ -524,6 +564,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "ScaleOutInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EMR同步TKE中POD状态
+        /// </summary>
+        /// <param name="req"><see cref="SyncPodStateRequest"/></param>
+        /// <returns><see cref="SyncPodStateResponse"/></returns>
+        public async Task<SyncPodStateResponse> SyncPodState(SyncPodStateRequest req)
+        {
+             JsonResponseModel<SyncPodStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncPodState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncPodStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EMR同步TKE中POD状态
+        /// </summary>
+        /// <param name="req"><see cref="SyncPodStateRequest"/></param>
+        /// <returns><see cref="SyncPodStateResponse"/></returns>
+        public SyncPodStateResponse SyncPodStateSync(SyncPodStateRequest req)
+        {
+             JsonResponseModel<SyncPodStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncPodState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncPodStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

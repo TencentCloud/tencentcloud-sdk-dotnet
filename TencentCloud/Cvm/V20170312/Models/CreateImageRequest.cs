@@ -31,7 +31,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 需要制作镜像的实例ID。
+        /// 需要制作镜像的实例ID。基于实例创建镜像时，为必填参数。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

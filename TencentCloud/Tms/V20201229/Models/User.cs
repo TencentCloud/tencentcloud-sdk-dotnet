@@ -72,6 +72,19 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
+        /// <summary>
+        /// 该字段表示业务用户头像图片的访问链接(URL)，支持PNG、JPG、JPEG、BMP、GIF、WEBP格式。
+        /// 备注：头像图片大小不超过5MB，建议分辨率不低于256x256；图片下载时间限制为3秒，超过则会返回下载超时。
+        /// </summary>
+        [JsonProperty("HeadUrl")]
+        public string HeadUrl{ get; set; }
+
+        /// <summary>
+        /// 该字段表示业务用户的简介信息，支持汉字、英文及特殊符号，长度不超过5000个汉字字符。
+        /// </summary>
+        [JsonProperty("Desc")]
+        public string Desc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +98,8 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "Age", this.Age);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
+            this.SetParamSimple(map, prefix + "HeadUrl", this.HeadUrl);
+            this.SetParamSimple(map, prefix + "Desc", this.Desc);
         }
     }
 }

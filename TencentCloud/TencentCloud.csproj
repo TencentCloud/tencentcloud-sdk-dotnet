@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.335</VersionPrefix>
+    <VersionPrefix>3.0.336</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2898,12 +2898,16 @@
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskInfo.cs" />
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskRequest.cs" />
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\CreateStructureTaskTestRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\CreateStructureTaskTestResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureResultRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureResultResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultTestRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultTestResponse.cs" />
     <Compile Include="Cii\V20210408\Models\ResultObject.cs" />
     <Compile Include="Cii\V20210408\Models\ReviewDataTaskInfo.cs" />
     <Compile Include="Cii\V20210408\Models\StructureResultObject.cs" />
@@ -3437,6 +3441,8 @@
     <Compile Include="Cls\V20201016\Models\SplitPartitionResponse.cs" />
     <Compile Include="Cls\V20201016\Models\Tag.cs" />
     <Compile Include="Cls\V20201016\Models\TopicInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\UploadLogRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\UploadLogResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ValueInfo.cs" />
     <Compile Include="Cls\V20201016\Models\WebCallback.cs" />
     <Compile Include="Cme\V20191029\CmeClient.cs" />
@@ -6093,6 +6099,8 @@
     <Compile Include="Emr\V20190103\Models\CustomMetaInfo.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeClusterNodesResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeCvmQuotaRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeCvmQuotaResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
@@ -6129,10 +6137,13 @@
     <Compile Include="Emr\V20190103\Models\PersistentVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\Placement.cs" />
     <Compile Include="Emr\V20190103\Models\PodParameter.cs" />
+    <Compile Include="Emr\V20190103\Models\PodSaleSpec.cs" />
     <Compile Include="Emr\V20190103\Models\PodSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\PodState.cs" />
     <Compile Include="Emr\V20190103\Models\PodVolume.cs" />
     <Compile Include="Emr\V20190103\Models\PreExecuteFileSettings.cs" />
     <Compile Include="Emr\V20190103\Models\PriceResource.cs" />
+    <Compile Include="Emr\V20190103\Models\QuotaEntity.cs" />
     <Compile Include="Emr\V20190103\Models\RenewInstancesInfo.cs" />
     <Compile Include="Emr\V20190103\Models\Resource.cs" />
     <Compile Include="Emr\V20190103\Models\RunJobFlowRequest.cs" />
@@ -6141,6 +6152,8 @@
     <Compile Include="Emr\V20190103\Models\ScaleOutInstanceResponse.cs" />
     <Compile Include="Emr\V20190103\Models\SearchItem.cs" />
     <Compile Include="Emr\V20190103\Models\Step.cs" />
+    <Compile Include="Emr\V20190103\Models\SyncPodStateRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\SyncPodStateResponse.cs" />
     <Compile Include="Emr\V20190103\Models\Tag.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceRequest.cs" />
     <Compile Include="Emr\V20190103\Models\TerminateInstanceResponse.cs" />
@@ -10424,6 +10437,9 @@
     <Compile Include="Rp\V20200224\RpClient.cs" />
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionRequest.cs" />
     <Compile Include="Rp\V20200224\Models\QueryRegisterProtectionResponse.cs" />
+    <Compile Include="Rum\V20210622\RumClient.cs" />
+    <Compile Include="Rum\V20210622\Models\CreateProjectRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\CreateProjectResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
@@ -11593,6 +11609,7 @@
     <Compile Include="Tcb\V20180608\TcbClient.cs" />
     <Compile Include="Tcb\V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="Tcb\V20180608\Models\AuthDomain.cs" />
+    <Compile Include="Tcb\V20180608\Models\BackendServiceInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\BindEnvGatewayRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\BindEnvGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CheckTcbServiceRequest.cs" />
@@ -11631,6 +11648,8 @@
     <Compile Include="Tcb\V20180608\Models\CreateHostingDomainResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreatePostpayPackageRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreatePostpayPackageResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateStandaloneGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\CreateStandaloneGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\CreateWxCloudBaseRunEnvRequest.cs" />
@@ -11702,12 +11721,18 @@
     <Compile Include="Tcb\V20180608\Models\DescribeSmsQuotasResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSpecialCostItemsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeSpecialCostItemsResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayPackageRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayPackageResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyEnvResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DestroyStandaloneGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DestroyStandaloneGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DestroyStaticStoreResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\EndUserInfo.cs" />
@@ -11746,9 +11771,15 @@
     <Compile Include="Tcb\V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="Tcb\V20180608\Models\SpecialCostItem.cs" />
+    <Compile Include="Tcb\V20180608\Models\StandaloneGatewayInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\StandaloneGatewayPackageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\StorageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\Tag.cs" />
+    <Compile Include="Tcb\V20180608\Models\TurnOffStandaloneGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\TurnOffStandaloneGatewayResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\TurnOnStandaloneGatewayRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\TurnOnStandaloneGatewayResponse.cs" />
     <Compile Include="Tcex\V20200727\TcexClient.cs" />
     <Compile Include="Tcex\V20200727\Models\AlgorithmResult.cs" />
     <Compile Include="Tcex\V20200727\Models\DescribeInvocationResultRequest.cs" />
@@ -12257,6 +12288,19 @@
     <Compile Include="Tdmq\V20200217\Models\UnbindCmqDeadLetterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\UnbindCmqDeadLetterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\VpcBindRecord.cs" />
+    <Compile Include="Tem\V20210701\TemClient.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployServiceBatchDetail.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployServicePodDetail.cs" />
+    <Compile Include="Tem\V20210701\Models\DeployStrategyConf.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeDeployApplicationDetailRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeDeployApplicationDetailResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\DescribeRunPodPage.cs" />
+    <Compile Include="Tem\V20210701\Models\ResumeDeployApplicationRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\ResumeDeployApplicationResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\RevertDeployApplicationRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\RevertDeployApplicationResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\RunVersionPod.cs" />
+    <Compile Include="Tem\V20210701\Models\TemDeployApplicationDetailInfo.cs" />
     <Compile Include="Tem\V20201221\TemClient.cs" />
     <Compile Include="Tem\V20201221\Models\CosToken.cs" />
     <Compile Include="Tem\V20201221\Models\CreateCosTokenRequest.cs" />

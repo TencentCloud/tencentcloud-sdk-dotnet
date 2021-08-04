@@ -216,6 +216,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ServerPath")]
         public string ServerPath{ get; set; }
 
+        /// <summary>
+        /// 是否更新Cls
+        /// </summary>
+        [JsonProperty("IsUpdateCls")]
+        public bool? IsUpdateCls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EnableUnion", this.EnableUnion);
             this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
             this.SetParamSimple(map, prefix + "ServerPath", this.ServerPath);
+            this.SetParamSimple(map, prefix + "IsUpdateCls", this.IsUpdateCls);
         }
     }
 }

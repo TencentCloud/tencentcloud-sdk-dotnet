@@ -93,6 +93,46 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
+        /// 本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStructureTaskTestRequest"/></param>
+        /// <returns><see cref="CreateStructureTaskTestResponse"/></returns>
+        public async Task<CreateStructureTaskTestResponse> CreateStructureTaskTest(CreateStructureTaskTestRequest req)
+        {
+             JsonResponseModel<CreateStructureTaskTestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStructureTaskTest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskTestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStructureTaskTestRequest"/></param>
+        /// <returns><see cref="CreateStructureTaskTestResponse"/></returns>
+        public CreateStructureTaskTestResponse CreateStructureTaskTestSync(CreateStructureTaskTestRequest req)
+        {
+             JsonResponseModel<CreateStructureTaskTestResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStructureTaskTest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskTestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
         /// </summary>
         /// <param name="req"><see cref="DescribeStructCompareDataRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Cii.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureTaskResultTestRequest"/></param>
+        /// <returns><see cref="DescribeStructureTaskResultTestResponse"/></returns>
+        public async Task<DescribeStructureTaskResultTestResponse> DescribeStructureTaskResultTest(DescribeStructureTaskResultTestRequest req)
+        {
+             JsonResponseModel<DescribeStructureTaskResultTestResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStructureTaskResultTest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultTestResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureTaskResultTestRequest"/></param>
+        /// <returns><see cref="DescribeStructureTaskResultTestResponse"/></returns>
+        public DescribeStructureTaskResultTestResponse DescribeStructureTaskResultTestSync(DescribeStructureTaskResultTestRequest req)
+        {
+             JsonResponseModel<DescribeStructureTaskResultTestResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResultTest");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultTestResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

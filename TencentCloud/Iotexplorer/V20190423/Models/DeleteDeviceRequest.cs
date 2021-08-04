@@ -36,6 +36,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("DeviceName")]
         public string DeviceName{ get; set; }
 
+        /// <summary>
+        /// 是否删除绑定设备
+        /// </summary>
+        [JsonProperty("ForceDelete")]
+        public bool? ForceDelete{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ForceDelete", this.ForceDelete);
         }
     }
 }

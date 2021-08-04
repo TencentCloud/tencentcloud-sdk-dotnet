@@ -25,27 +25,25 @@ namespace TencentCloud.Tms.V20200713.Models
     {
         
         /// <summary>
-        /// 您在入参时所填入的Biztype参数。 -- 该字段暂未开放。
+        /// 您在入参时所填入的Biztype参数
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 数据是否属于恶意类型。
-        ///  0：正常 1：可疑
+        /// 数据是否属于恶意类型，0：正常 1：可疑
         /// </summary>
         [JsonProperty("EvilFlag")]
         public long? EvilFlag{ get; set; }
 
         /// <summary>
-        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库。
-        /// 以及令人反感、不安全或不适宜的内容类型。
+        /// 恶意标签，Normal：正常，Porn：色情，Abuse：谩骂，Ad：广告，Custom：自定义词库，以及令人反感、不安全或不适宜的内容类型
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 建议您拿到判断结果后的执行操作。
+        /// 建议您拿到判断结果后的执行操作
         /// 建议值，Block：建议屏蔽，Review：建议复审，Pass：建议通过
         /// </summary>
         [JsonProperty("Suggestion")]
@@ -53,7 +51,7 @@ namespace TencentCloud.Tms.V20200713.Models
 
         /// <summary>
         /// 文本命中的关键词信息，用于提示您文本违规的具体原因，可能会返回多个命中的关键词。（如：加我微信）
-        /// 如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值。
+        /// 如返回值为空，Score不为空，即识别结果（Label）是来自于语义模型判断的返回值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Keywords")]
@@ -67,21 +65,21 @@ namespace TencentCloud.Tms.V20200713.Models
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 接口识别样本后返回的详细结果。
+        /// 接口识别样本后返回的详细结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetailResults")]
         public DetailResults[] DetailResults{ get; set; }
 
         /// <summary>
-        /// 接口识别样本中存在违规账号风险的检测结果。
+        /// 接口识别样本中存在违规账号风险的检测结果
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskDetails")]
         public RiskDetails[] RiskDetails{ get; set; }
 
         /// <summary>
-        /// 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同。
+        /// 扩展字段，用于特定信息返回，不同客户/Biztype下返回信息不同
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Extra")]

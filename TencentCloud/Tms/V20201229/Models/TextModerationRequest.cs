@@ -25,31 +25,31 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 该字段表示待检测文本内容的Base64编码，文本原文长度不能超过**15000字节**或**5000个汉字** （以先达到者为准）；若超出长度限制，接口将会报错。<br>备注：目前仅支持中文、英文、数字的检测与审核。
+        /// 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype。
+        /// 该字段表示策略的具体编号，用于接口调度，在内容安全控制台中可配置。若不传入Biztype参数（留空），则代表采用默认的识别策略；传入则会在审核时根据业务场景采取不同的审核策略。<br>备注：Biztype仅为数字、字母与下划线的组合，长度为3-32个字符；不同Biztype关联不同的业务场景与识别能力策略，调用前请确认正确的Biztype
         /// </summary>
         [JsonProperty("BizType")]
         public string BizType{ get; set; }
 
         /// <summary>
-        /// 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**。
+        /// 该字段表示您为待检测对象分配的数据ID，传入后可方便您对文件进行标识和管理。<br>取值：由英文字母（大小写均可）、数字及四个特殊符号（_，-，@，#）组成，**长度不超过64个字符**
         /// </summary>
         [JsonProperty("DataId")]
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户。
+        /// 该字段表示待检测对象对应的用户相关信息，传入后可便于甄别相应违规风险用户
         /// </summary>
         [JsonProperty("User")]
         public User User{ get; set; }
 
         /// <summary>
-        /// 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备。
+        /// 该字段表示待检测对象对应的设备相关信息，传入后可便于甄别相应违规风险设备
         /// </summary>
         [JsonProperty("Device")]
         public Device Device{ get; set; }

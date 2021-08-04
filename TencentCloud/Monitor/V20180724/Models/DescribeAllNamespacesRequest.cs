@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 根据使用场景过滤 "ST_DASHBOARD"=Dashboard类型 或 "ST_ALARM"=告警类型
+        /// 根据使用场景过滤 目前仅有"ST_ALARM"=告警类型
         /// </summary>
         [JsonProperty("SceneType")]
         public string SceneType{ get; set; }

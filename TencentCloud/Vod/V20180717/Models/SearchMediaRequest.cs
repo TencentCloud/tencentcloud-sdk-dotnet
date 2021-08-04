@@ -109,6 +109,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public TimeRange CreateTime{ get; set; }
 
         /// <summary>
+        /// 匹配过期时间在此时间段内的文件，无法检索到已过期文件。
+        /// <li>包含所指定的头尾时间点。</li>
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public TimeRange ExpireTime{ get; set; }
+
+        /// <summary>
         /// 排序方式。
         /// <li>Sort.Field 可选 CreateTime 。</li>
         /// <li>当 Text、 Names 或 Descriptions 不为空时，Sort.Field 字段无效， 搜索结果将以匹配度排序。</li>
@@ -159,6 +166,16 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// 存储类型数组。可选值有：
+        /// <li> STANDARD：标准存储。</li>
+        /// <li> STANDARD_IA：低频存储。</li>
+        /// <li> ARCHIVE：归档存储。</li>
+        /// <li> DEEP_ARCHIVE：深度归档存储。</li>
+        /// </summary>
+        [JsonProperty("StorageClasses")]
+        public string[] StorageClasses{ get; set; }
 
         /// <summary>
         /// （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
@@ -225,12 +242,14 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "StreamIds.", this.StreamIds);
             this.SetParamArraySimple(map, prefix + "Vids.", this.Vids);
             this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
+            this.SetParamObj(map, prefix + "ExpireTime.", this.ExpireTime);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

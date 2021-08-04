@@ -271,6 +271,20 @@ namespace TencentCloud.Scf.V20180416.Models
         public StatusReason[] StatusReasons{ get; set; }
 
         /// <summary>
+        /// 是否开启异步属性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AsyncRunEnable")]
+        public string AsyncRunEnable{ get; set; }
+
+        /// <summary>
+        /// 是否开启事件追踪
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TraceEnable")]
+        public string TraceEnable{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -322,6 +336,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
+            this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+            this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

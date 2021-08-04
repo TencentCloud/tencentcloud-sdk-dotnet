@@ -413,6 +413,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（CreateStandaloneGateway）用于创建独立网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="CreateStandaloneGatewayResponse"/></returns>
+        public async Task<CreateStandaloneGatewayResponse> CreateStandaloneGateway(CreateStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<CreateStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateStandaloneGateway）用于创建独立网关。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="CreateStandaloneGatewayResponse"/></returns>
+        public CreateStandaloneGatewayResponse CreateStandaloneGatewaySync(CreateStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<CreateStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建静态托管资源，包括COS和CDN，异步任务创建，查看创建结果需要根据DescribeStaticStore接口来查看
         /// </summary>
         /// <param name="req"><see cref="CreateStaticStoreRequest"/></param>
@@ -1819,6 +1859,86 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="DescribeStandaloneGatewayResponse"/></returns>
+        public async Task<DescribeStandaloneGatewayResponse> DescribeStandaloneGateway(DescribeStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<DescribeStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeStandaloneGateway）查询小租户网关套餐信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="DescribeStandaloneGatewayResponse"/></returns>
+        public DescribeStandaloneGatewayResponse DescribeStandaloneGatewaySync(DescribeStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<DescribeStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandaloneGatewayPackageRequest"/></param>
+        /// <returns><see cref="DescribeStandaloneGatewayPackageResponse"/></returns>
+        public async Task<DescribeStandaloneGatewayPackageResponse> DescribeStandaloneGatewayPackage(DescribeStandaloneGatewayPackageRequest req)
+        {
+             JsonResponseModel<DescribeStandaloneGatewayPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStandaloneGatewayPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandaloneGatewayPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeStandaloneGatewayPackage）用于查询小租户网关套餐信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStandaloneGatewayPackageRequest"/></param>
+        /// <returns><see cref="DescribeStandaloneGatewayPackageResponse"/></returns>
+        public DescribeStandaloneGatewayPackageResponse DescribeStandaloneGatewayPackageSync(DescribeStandaloneGatewayPackageRequest req)
+        {
+             JsonResponseModel<DescribeStandaloneGatewayPackageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStandaloneGatewayPackage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandaloneGatewayPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询微信云托管环境信息
         /// </summary>
         /// <param name="req"><see cref="DescribeWxCloudBaseRunEnvsRequest"/></param>
@@ -1930,6 +2050,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DestroyEnv");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DestroyStandaloneGateway）用于销毁小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="DestroyStandaloneGatewayResponse"/></returns>
+        public async Task<DestroyStandaloneGatewayResponse> DestroyStandaloneGateway(DestroyStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<DestroyStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DestroyStandaloneGateway）用于销毁小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="DestroyStandaloneGatewayResponse"/></returns>
+        public DestroyStandaloneGatewayResponse DestroyStandaloneGatewaySync(DestroyStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<DestroyStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyStandaloneGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2330,6 +2490,86 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "RollUpdateCloudBaseRunServerVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollUpdateCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="TurnOffStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="TurnOffStandaloneGatewayResponse"/></returns>
+        public async Task<TurnOffStandaloneGatewayResponse> TurnOffStandaloneGateway(TurnOffStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<TurnOffStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TurnOffStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnOffStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="TurnOffStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="TurnOffStandaloneGatewayResponse"/></returns>
+        public TurnOffStandaloneGatewayResponse TurnOffStandaloneGatewaySync(TurnOffStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<TurnOffStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TurnOffStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnOffStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="TurnOnStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="TurnOnStandaloneGatewayResponse"/></returns>
+        public async Task<TurnOnStandaloneGatewayResponse> TurnOnStandaloneGateway(TurnOnStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<TurnOnStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TurnOnStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnOnStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TurnOnStandaloneGateway）用于开启小租户网关。
+        /// </summary>
+        /// <param name="req"><see cref="TurnOnStandaloneGatewayRequest"/></param>
+        /// <returns><see cref="TurnOnStandaloneGatewayResponse"/></returns>
+        public TurnOnStandaloneGatewayResponse TurnOnStandaloneGatewaySync(TurnOnStandaloneGatewayRequest req)
+        {
+             JsonResponseModel<TurnOnStandaloneGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TurnOnStandaloneGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnOnStandaloneGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

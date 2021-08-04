@@ -73,7 +73,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
         public string Keyword{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。默认值为updated_on。
+        /// 排序字段，支持 name,line,type,value,weight,mx,ttl,updated_on 几个字段。
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }

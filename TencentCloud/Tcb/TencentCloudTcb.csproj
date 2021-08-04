@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.335</VersionPrefix>
+    <VersionPrefix>3.0.336</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20180608\TcbClient.cs" />
     <Compile Include="V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="V20180608\Models\AuthDomain.cs" />
+    <Compile Include="V20180608\Models\BackendServiceInfo.cs" />
     <Compile Include="V20180608\Models\BindEnvGatewayRequest.cs" />
     <Compile Include="V20180608\Models\BindEnvGatewayResponse.cs" />
     <Compile Include="V20180608\Models\CheckTcbServiceRequest.cs" />
@@ -85,6 +86,8 @@
     <Compile Include="V20180608\Models\CreateHostingDomainResponse.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageRequest.cs" />
     <Compile Include="V20180608\Models\CreatePostpayPackageResponse.cs" />
+    <Compile Include="V20180608\Models\CreateStandaloneGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\CreateStandaloneGatewayResponse.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\CreateStaticStoreResponse.cs" />
     <Compile Include="V20180608\Models\CreateWxCloudBaseRunEnvRequest.cs" />
@@ -156,12 +159,18 @@
     <Compile Include="V20180608\Models\DescribeSmsQuotasResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSpecialCostItemsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSpecialCostItemsResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeStandaloneGatewayPackageRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeStandaloneGatewayPackageResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeStandaloneGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeStandaloneGatewayResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />
     <Compile Include="V20180608\Models\DescribeWxCloudBaseRunSubNetsResponse.cs" />
     <Compile Include="V20180608\Models\DestroyEnvRequest.cs" />
     <Compile Include="V20180608\Models\DestroyEnvResponse.cs" />
+    <Compile Include="V20180608\Models\DestroyStandaloneGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\DestroyStandaloneGatewayResponse.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreRequest.cs" />
     <Compile Include="V20180608\Models\DestroyStaticStoreResponse.cs" />
     <Compile Include="V20180608\Models\EndUserInfo.cs" />
@@ -200,8 +209,14 @@
     <Compile Include="V20180608\Models\RollUpdateCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="V20180608\Models\SmsFreeQuota.cs" />
     <Compile Include="V20180608\Models\SpecialCostItem.cs" />
+    <Compile Include="V20180608\Models\StandaloneGatewayInfo.cs" />
+    <Compile Include="V20180608\Models\StandaloneGatewayPackageInfo.cs" />
     <Compile Include="V20180608\Models\StaticStorageInfo.cs" />
     <Compile Include="V20180608\Models\StorageInfo.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
+    <Compile Include="V20180608\Models\TurnOffStandaloneGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\TurnOffStandaloneGatewayResponse.cs" />
+    <Compile Include="V20180608\Models\TurnOnStandaloneGatewayRequest.cs" />
+    <Compile Include="V20180608\Models\TurnOnStandaloneGatewayResponse.cs" />
   </ItemGroup>
 </Project>
