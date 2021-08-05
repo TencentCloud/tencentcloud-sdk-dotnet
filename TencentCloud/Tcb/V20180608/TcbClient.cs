@@ -1173,6 +1173,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 根据用户传入的指标, 拉取一段时间内的监控数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeCurveDataResponse"/></returns>
+        public async Task<DescribeCurveDataResponse> DescribeCurveData(DescribeCurveDataRequest req)
+        {
+             JsonResponseModel<DescribeCurveDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCurveData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurveDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据用户传入的指标, 拉取一段时间内的监控数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCurveDataRequest"/></param>
+        /// <returns><see cref="DescribeCurveDataResponse"/></returns>
+        public DescribeCurveDataResponse DescribeCurveDataSync(DescribeCurveDataRequest req)
+        {
+             JsonResponseModel<DescribeCurveDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCurveData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCurveDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取数据库权限
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseACLRequest"/></param>

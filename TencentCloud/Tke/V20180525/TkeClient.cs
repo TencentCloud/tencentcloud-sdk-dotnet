@@ -2533,6 +2533,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取集群版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
+        /// <returns><see cref="DescribeVersionsResponse"/></returns>
+        public async Task<DescribeVersionsResponse> DescribeVersions(DescribeVersionsRequest req)
+        {
+             JsonResponseModel<DescribeVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取集群版本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVersionsRequest"/></param>
+        /// <returns><see cref="DescribeVersionsResponse"/></returns>
+        public DescribeVersionsResponse DescribeVersionsSync(DescribeVersionsRequest req)
+        {
+             JsonResponseModel<DescribeVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口查询当前用户和地域在指定可用区下的机型可支持的最大 TKE VPC-CNI 网络模式的 Pod 数量
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcCniPodLimitsRequest"/></param>

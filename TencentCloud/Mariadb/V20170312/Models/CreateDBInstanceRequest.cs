@@ -135,6 +135,18 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InitParams")]
         public DBParamValue[] InitParams{ get; set; }
 
+        /// <summary>
+        /// DCN源地域
+        /// </summary>
+        [JsonProperty("DcnRegion")]
+        public string DcnRegion{ get; set; }
+
+        /// <summary>
+        /// DCN源实例ID
+        /// </summary>
+        [JsonProperty("DcnInstanceId")]
+        public string DcnInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +171,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Ipv6Flag", this.Ipv6Flag);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
+            this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
+            this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
         }
     }
 }

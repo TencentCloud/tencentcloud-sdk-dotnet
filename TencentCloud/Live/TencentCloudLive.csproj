@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.0</VersionPrefix>
+    <VersionPrefix>3.0.337</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -231,6 +231,8 @@
     <Compile Include="V20180801\Models\DescribeProvinceIspPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribePullStreamConfigsRequest.cs" />
     <Compile Include="V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="V20180801\Models\DescribePushBandwidthAndFluxListRequest.cs" />
+    <Compile Include="V20180801\Models\DescribePushBandwidthAndFluxListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\DescribeRecordTaskResponse.cs" />
     <Compile Include="V20180801\Models\DescribeScreenShotSheetNumListRequest.cs" />

@@ -1135,6 +1135,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 根据指定offset位置的消息
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
+        public async Task<FetchMessageByOffsetResponse> FetchMessageByOffset(FetchMessageByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FetchMessageByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据指定offset位置的消息
+        /// </summary>
+        /// <param name="req"><see cref="FetchMessageByOffsetRequest"/></param>
+        /// <returns><see cref="FetchMessageByOffsetResponse"/></returns>
+        public FetchMessageByOffsetResponse FetchMessageByOffsetSync(FetchMessageByOffsetRequest req)
+        {
+             JsonResponseModel<FetchMessageByOffsetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FetchMessageByOffset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FetchMessageByOffsetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置Groups 消费分组offset
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupOffsetsRequest"/></param>

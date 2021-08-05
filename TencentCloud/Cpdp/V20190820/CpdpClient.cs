@@ -587,6 +587,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云鉴-消费订单确认接口
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmOrderRequest"/></param>
+        /// <returns><see cref="ConfirmOrderResponse"/></returns>
+        public async Task<ConfirmOrderResponse> ConfirmOrder(ConfirmOrderRequest req)
+        {
+             JsonResponseModel<ConfirmOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConfirmOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfirmOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单确认接口
+        /// </summary>
+        /// <param name="req"><see cref="ConfirmOrderRequest"/></param>
+        /// <returns><see cref="ConfirmOrderResponse"/></returns>
+        public ConfirmOrderResponse ConfirmOrderSync(ConfirmOrderRequest req)
+        {
+             JsonResponseModel<ConfirmOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ConfirmOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfirmOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 应用需要先带上签约信息调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
         /// </summary>
         /// <param name="req"><see cref="ContractOrderRequest"/></param>
@@ -860,6 +900,86 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateMerchant");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单发起的接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderRequest"/></param>
+        /// <returns><see cref="CreateOrderResponse"/></returns>
+        public async Task<CreateOrderResponse> CreateOrder(CreateOrderRequest req)
+        {
+             JsonResponseModel<CreateOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单发起的接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrderRequest"/></param>
+        /// <returns><see cref="CreateOrderResponse"/></returns>
+        public CreateOrderResponse CreateOrderSync(CreateOrderRequest req)
+        {
+             JsonResponseModel<CreateOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 商户新增的接口
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayMerchantRequest"/></param>
+        /// <returns><see cref="CreatePayMerchantResponse"/></returns>
+        public async Task<CreatePayMerchantResponse> CreatePayMerchant(CreatePayMerchantRequest req)
+        {
+             JsonResponseModel<CreatePayMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePayMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 商户新增的接口
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayMerchantRequest"/></param>
+        /// <returns><see cref="CreatePayMerchantResponse"/></returns>
+        public CreatePayMerchantResponse CreatePayMerchantSync(CreatePayMerchantRequest req)
+        {
+             JsonResponseModel<CreatePayMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePayMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayMerchantResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1380,6 +1500,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAgentTaxPaymentInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAgentTaxPaymentInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-商户信息修改的接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMerchantRequest"/></param>
+        /// <returns><see cref="ModifyMerchantResponse"/></returns>
+        public async Task<ModifyMerchantResponse> ModifyMerchant(ModifyMerchantRequest req)
+        {
+             JsonResponseModel<ModifyMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-商户信息修改的接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMerchantRequest"/></param>
+        /// <returns><see cref="ModifyMerchantResponse"/></returns>
+        public ModifyMerchantResponse ModifyMerchantSync(ModifyMerchantRequest req)
+        {
+             JsonResponseModel<ModifyMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMerchantResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2231,6 +2391,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云鉴-商户信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantRequest"/></param>
+        /// <returns><see cref="QueryMerchantResponse"/></returns>
+        public async Task<QueryMerchantResponse> QueryMerchant(QueryMerchantRequest req)
+        {
+             JsonResponseModel<QueryMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-商户信息查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantRequest"/></param>
+        /// <returns><see cref="QueryMerchantResponse"/></returns>
+        public QueryMerchantResponse QueryMerchantSync(QueryMerchantRequest req)
+        {
+             JsonResponseModel<QueryMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 跨境-对接方账户余额查询
         /// </summary>
         /// <param name="req"><see cref="QueryMerchantBalanceRequest"/></param>
@@ -2302,6 +2502,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryMerchantInfoForManagement");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantInfoForManagementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantOrderRequest"/></param>
+        /// <returns><see cref="QueryMerchantOrderResponse"/></returns>
+        public async Task<QueryMerchantOrderResponse> QueryMerchantOrder(QueryMerchantOrderRequest req)
+        {
+             JsonResponseModel<QueryMerchantOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMerchantOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单查询接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantOrderRequest"/></param>
+        /// <returns><see cref="QueryMerchantOrderResponse"/></returns>
+        public QueryMerchantOrderResponse QueryMerchantOrderSync(QueryMerchantOrderRequest req)
+        {
+             JsonResponseModel<QueryMerchantOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMerchantOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2942,6 +3182,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "RefundMemberTransaction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundMemberTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单退款的接口
+        /// </summary>
+        /// <param name="req"><see cref="RefundOrderRequest"/></param>
+        /// <returns><see cref="RefundOrderResponse"/></returns>
+        public async Task<RefundOrderResponse> RefundOrder(RefundOrderRequest req)
+        {
+             JsonResponseModel<RefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-消费订单退款的接口
+        /// </summary>
+        /// <param name="req"><see cref="RefundOrderRequest"/></param>
+        /// <returns><see cref="RefundOrderResponse"/></returns>
+        public RefundOrderResponse RefundOrderSync(RefundOrderRequest req)
+        {
+             JsonResponseModel<RefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -1693,6 +1693,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 修改边界防护L7转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7RulesEdgeRequest"/></param>
+        /// <returns><see cref="ModifyL7RulesEdgeResponse"/></returns>
+        public async Task<ModifyL7RulesEdgeResponse> ModifyL7RulesEdge(ModifyL7RulesEdgeRequest req)
+        {
+             JsonResponseModel<ModifyL7RulesEdgeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyL7RulesEdge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyL7RulesEdgeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改边界防护L7转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyL7RulesEdgeRequest"/></param>
+        /// <returns><see cref="ModifyL7RulesEdgeResponse"/></returns>
+        public ModifyL7RulesEdgeResponse ModifyL7RulesEdgeSync(ModifyL7RulesEdgeRequest req)
+        {
+             JsonResponseModel<ModifyL7RulesEdgeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyL7RulesEdge");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyL7RulesEdgeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改DDoS防护的特征过滤规则
         /// </summary>
         /// <param name="req"><see cref="ModifyPacketFilterConfigRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.336</VersionPrefix>
+    <VersionPrefix>3.0.337</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -304,6 +304,8 @@
     <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\KeyValue.cs" />
+    <Compile Include="Antiddos\V20200309\Models\L4RuleSource.cs" />
+    <Compile Include="Antiddos\V20200309\Models\L7RuleEntry.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer4Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\Layer7Rule.cs" />
     <Compile Include="Antiddos\V20200309\Models\ListenerCcThreholdConfig.cs" />
@@ -313,6 +315,8 @@
     <Compile Include="Antiddos\V20200309\Models\ModifyDDoSSpeedLimitConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyDomainUsrNameRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyDomainUsrNameResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyL7RulesEdgeRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ModifyL7RulesEdgeResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyPacketFilterConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\ModifyPacketFilterConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\PackInfo.cs" />
@@ -2956,6 +2960,7 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroupTopic.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreData.cs" />
@@ -3014,6 +3019,8 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DynamicRetentionTime.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Filter.cs" />
     <Compile Include="Ckafka\V20190819\Models\Group.cs" />
     <Compile Include="Ckafka\V20190819\Models\GroupInfoMember.cs" />
@@ -3745,6 +3752,8 @@
     <Compile Include="Cpdp\V20190820\Models\ClearItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ConfirmOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ConfirmOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\ContractOrderInSubOrder.cs" />
     <Compile Include="Cpdp\V20190820\Models\ContractOrderRequest.cs" />
@@ -3769,6 +3778,10 @@
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResponse.cs" />
@@ -3805,6 +3818,8 @@
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyMerchantRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
@@ -3865,6 +3880,10 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantBalanceResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderRequest.cs" />
@@ -3906,6 +3925,8 @@
     <Compile Include="Cpdp\V20190820\Models\RechargeMemberThirdPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundMemberTransactionRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundMemberTransactionResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundResponse.cs" />
@@ -8542,6 +8563,8 @@
     <Compile Include="Live\V20180801\Models\DescribeProvinceIspPlayInfoListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribePullStreamConfigsResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribePushBandwidthAndFluxListRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribePushBandwidthAndFluxListResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeRecordTaskRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeRecordTaskResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeScreenShotSheetNumListRequest.cs" />
@@ -11633,6 +11656,7 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseSecurityContext.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudRunServiceVolume.cs" />
+    <Compile Include="Tcb\V20180608\Models\ClsInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CodeSource.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\CommonServiceAPIResponse.cs" />
@@ -11687,6 +11711,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCurveDataRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCurveDataResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeDownloadFileRequest.cs" />
@@ -12838,6 +12864,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVersionsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
@@ -12927,6 +12955,7 @@
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpgradeNodeResetParam.cs" />
+    <Compile Include="Tke\V20180525\Models\VersionInstance.cs" />
     <Compile Include="Tkgdq\V20190411\TkgdqClient.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityRequest.cs" />
     <Compile Include="Tkgdq\V20190411\Models\DescribeEntityResponse.cs" />

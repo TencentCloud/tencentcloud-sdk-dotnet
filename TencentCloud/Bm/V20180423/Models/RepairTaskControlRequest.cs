@@ -36,6 +36,12 @@ namespace TencentCloud.Bm.V20180423.Models
         [JsonProperty("Operate")]
         public string Operate{ get; set; }
 
+        /// <summary>
+        /// 打回操作的备注信息
+        /// </summary>
+        [JsonProperty("OperateRemark")]
+        public string OperateRemark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Bm.V20180423.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "Operate", this.Operate);
+            this.SetParamSimple(map, prefix + "OperateRemark", this.OperateRemark);
         }
     }
 }

@@ -75,6 +75,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// fail：预热失败
         /// done：预热成功
         /// process：预热中
+        /// invalid: 预热无效(源站返回4xx或5xx状态码)
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

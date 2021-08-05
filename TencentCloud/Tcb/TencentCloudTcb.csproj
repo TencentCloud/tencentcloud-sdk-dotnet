@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.336</VersionPrefix>
+    <VersionPrefix>3.0.337</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -71,6 +71,7 @@
     <Compile Include="V20180608\Models\CloudBaseSecurityContext.cs" />
     <Compile Include="V20180608\Models\CloudRunServiceSimpleVersionSnapshot.cs" />
     <Compile Include="V20180608\Models\CloudRunServiceVolume.cs" />
+    <Compile Include="V20180608\Models\ClsInfo.cs" />
     <Compile Include="V20180608\Models\CodeSource.cs" />
     <Compile Include="V20180608\Models\CommonServiceAPIRequest.cs" />
     <Compile Include="V20180608\Models\CommonServiceAPIResponse.cs" />
@@ -125,6 +126,8 @@
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
     <Compile Include="V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeCurveDataRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeCurveDataResponse.cs" />
     <Compile Include="V20180608\Models\DescribeDatabaseACLRequest.cs" />
     <Compile Include="V20180608\Models\DescribeDatabaseACLResponse.cs" />
     <Compile Include="V20180608\Models\DescribeDownloadFileRequest.cs" />
