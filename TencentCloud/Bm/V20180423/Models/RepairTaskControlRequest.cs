@@ -37,7 +37,7 @@ namespace TencentCloud.Bm.V20180423.Models
         public string Operate{ get; set; }
 
         /// <summary>
-        /// 打回操作的备注信息
+        /// 需要重新维修操作的备注信息，可提供返场维修原因，以便驻场快速针对问题定位解决。
         /// </summary>
         [JsonProperty("OperateRemark")]
         public string OperateRemark{ get; set; }

@@ -204,6 +204,13 @@ namespace TencentCloud.Ic.V20190307.Models
         [JsonProperty("CertificationState")]
         public long? CertificationState{ get; set; }
 
+        /// <summary>
+        /// 其他流量信息,流量分离统计其他流量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherData")]
+        public float? OtherData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +244,7 @@ namespace TencentCloud.Ic.V20190307.Models
             this.SetParamSimple(map, prefix + "NeedSms", this.NeedSms);
             this.SetParamSimple(map, prefix + "Provider", this.Provider);
             this.SetParamSimple(map, prefix + "CertificationState", this.CertificationState);
+            this.SetParamSimple(map, prefix + "OtherData", this.OtherData);
         }
     }
 }

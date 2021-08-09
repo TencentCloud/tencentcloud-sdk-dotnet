@@ -3181,6 +3181,52 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询转码总量数据，可查询近30天内数据。
+        /// 注意：
+        /// 如果是查询某一天内，则返回5分钟粒度数据；
+        /// 如果是查询跨天或指定域名， 则返回1小时粒度数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
+        /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
+        public async Task<DescribeLiveTranscodeTotalInfoResponse> DescribeLiveTranscodeTotalInfo(DescribeLiveTranscodeTotalInfoRequest req)
+        {
+             JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTranscodeTotalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转码总量数据，可查询近30天内数据。
+        /// 注意：
+        /// 如果是查询某一天内，则返回5分钟粒度数据；
+        /// 如果是查询跨天或指定域名， 则返回1小时粒度数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTranscodeTotalInfoRequest"/></param>
+        /// <returns><see cref="DescribeLiveTranscodeTotalInfoResponse"/></returns>
+        public DescribeLiveTranscodeTotalInfoResponse DescribeLiveTranscodeTotalInfoSync(DescribeLiveTranscodeTotalInfoRequest req)
+        {
+             JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTranscodeTotalInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTranscodeTotalInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取单个水印信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveWatermarkRequest"/></param>

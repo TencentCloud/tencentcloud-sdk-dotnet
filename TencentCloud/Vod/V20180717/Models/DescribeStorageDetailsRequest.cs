@@ -52,6 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>InfrequentStorage：低频存储。</li>
         /// <li>ArchiveStorage：归档存储。</li>
         /// <li>DeepArchiveStorage：深度归档存储。</li>
+        /// <li>DeletedInfrequentStorage：低频存储提前删除量。</li>
         /// <li>DeletedArchiveStorage：归档提前删除量。</li>
         /// <li>DeletedDeepArchiveStorage：深度归档提前删除量。
         /// <li>ArchiveStandardRetrieval：归档标准取回量。</li>

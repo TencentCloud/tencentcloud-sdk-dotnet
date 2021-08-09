@@ -25,86 +25,92 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// 模块Id
+        /// 模块Id。
         /// </summary>
         [JsonProperty("ModuleId")]
         public string ModuleId{ get; set; }
 
         /// <summary>
-        /// 模块名称
+        /// 模块名称。
         /// </summary>
         [JsonProperty("ModuleName")]
         public string ModuleName{ get; set; }
 
         /// <summary>
         /// 模块状态：
-        /// NORMAL：正常
+        /// NORMAL：正常。
         /// DELETING：删除中 
-        /// DELETEFAILED：删除失败
+        /// DELETEFAILED：删除失败。
         /// </summary>
         [JsonProperty("ModuleState")]
         public string ModuleState{ get; set; }
 
         /// <summary>
-        /// 默认系统盘大小
+        /// 默认系统盘大小。
         /// </summary>
         [JsonProperty("DefaultSystemDiskSize")]
         public long? DefaultSystemDiskSize{ get; set; }
 
         /// <summary>
-        /// 默认数据盘大小
+        /// 默认数据盘大小。
         /// </summary>
         [JsonProperty("DefaultDataDiskSize")]
         public long? DefaultDataDiskSize{ get; set; }
 
         /// <summary>
-        /// 默认机型
+        /// 默认机型。
         /// </summary>
         [JsonProperty("InstanceTypeConfig")]
         public InstanceTypeConfig InstanceTypeConfig{ get; set; }
 
         /// <summary>
-        /// 默认镜像
+        /// 默认镜像。
         /// </summary>
         [JsonProperty("DefaultImage")]
         public Image DefaultImage{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 默认出带宽
+        /// 默认出带宽。
         /// </summary>
         [JsonProperty("DefaultBandwidth")]
         public long? DefaultBandwidth{ get; set; }
 
         /// <summary>
-        /// 标签集合
+        /// 标签集合。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
         /// <summary>
-        /// 是否关闭IP直通
+        /// 是否关闭IP直通。
         /// </summary>
         [JsonProperty("CloseIpDirect")]
         public long? CloseIpDirect{ get; set; }
 
         /// <summary>
-        /// 默认安全组id列表
+        /// 默认安全组id列表。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// 默认入带宽
+        /// 默认入带宽。
         /// </summary>
         [JsonProperty("DefaultBandwidthIn")]
         public long? DefaultBandwidthIn{ get; set; }
+
+        /// <summary>
+        /// 自定义脚本数据
+        /// </summary>
+        [JsonProperty("UserData")]
+        public string UserData{ get; set; }
 
 
         /// <summary>
@@ -125,6 +131,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "CloseIpDirect", this.CloseIpDirect);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
+            this.SetParamSimple(map, prefix + "UserData", this.UserData);
         }
     }
 }

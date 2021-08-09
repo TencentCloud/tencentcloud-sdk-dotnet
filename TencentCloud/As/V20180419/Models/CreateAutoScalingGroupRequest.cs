@@ -183,6 +183,16 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("SpotMixedAllocationPolicy")]
         public SpotMixedAllocationPolicy SpotMixedAllocationPolicy{ get; set; }
 
+        /// <summary>
+        /// 容量重平衡功能，仅对伸缩组内的竞价实例有效。取值范围：
+        /// <br><li> TRUE，开启该功能，当伸缩组内的竞价实例即将被竞价实例服务自动回收前，AS 主动发起竞价实例销毁流程，如果有配置过缩容 hook，则销毁前 hook 会生效。销毁流程启动后，AS 会异步开启一个扩容活动，用于补齐期望实例数。
+        /// <br><li> FALSE，不开启该功能，则 AS 等待竞价实例被销毁后才会去扩容补齐伸缩组期望实例数。
+        /// 
+        /// 默认取 FALSE。
+        /// </summary>
+        [JsonProperty("CapacityRebalance")]
+        public bool? CapacityRebalance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +222,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "LoadBalancerHealthCheckGracePeriod", this.LoadBalancerHealthCheckGracePeriod);
             this.SetParamSimple(map, prefix + "InstanceAllocationPolicy", this.InstanceAllocationPolicy);
             this.SetParamObj(map, prefix + "SpotMixedAllocationPolicy.", this.SpotMixedAllocationPolicy);
+            this.SetParamSimple(map, prefix + "CapacityRebalance", this.CapacityRebalance);
         }
     }
 }

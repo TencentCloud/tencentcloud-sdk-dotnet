@@ -92,5 +92,45 @@ namespace TencentCloud.Rum.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取PerformancePage信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageRequest"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageResponse"/></returns>
+        public async Task<DescribeDataPerformancePageResponse> DescribeDataPerformancePage(DescribeDataPerformancePageRequest req)
+        {
+             JsonResponseModel<DescribeDataPerformancePageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataPerformancePage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataPerformancePageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取PerformancePage信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPerformancePageRequest"/></param>
+        /// <returns><see cref="DescribeDataPerformancePageResponse"/></returns>
+        public DescribeDataPerformancePageResponse DescribeDataPerformancePageSync(DescribeDataPerformancePageRequest req)
+        {
+             JsonResponseModel<DescribeDataPerformancePageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataPerformancePage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataPerformancePageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

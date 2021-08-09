@@ -93,6 +93,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 本接口 (AssociateDDoSEipLoadBalancer) 用于将高防弹性公网IP绑定到负载均衡指定内网 IP 上。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDDoSEipLoadBalancerRequest"/></param>
+        /// <returns><see cref="AssociateDDoSEipLoadBalancerResponse"/></returns>
+        public async Task<AssociateDDoSEipLoadBalancerResponse> AssociateDDoSEipLoadBalancer(AssociateDDoSEipLoadBalancerRequest req)
+        {
+             JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateDDoSEipLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (AssociateDDoSEipLoadBalancer) 用于将高防弹性公网IP绑定到负载均衡指定内网 IP 上。
+        /// </summary>
+        /// <param name="req"><see cref="AssociateDDoSEipLoadBalancerRequest"/></param>
+        /// <returns><see cref="AssociateDDoSEipLoadBalancerResponse"/></returns>
+        public AssociateDDoSEipLoadBalancerResponse AssociateDDoSEipLoadBalancerSync(AssociateDDoSEipLoadBalancerRequest req)
+        {
+             JsonResponseModel<AssociateDDoSEipLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateDDoSEipLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateDDoSEipLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加DDoS防护的IP黑白名单
         /// </summary>
         /// <param name="req"><see cref="CreateBlackWhiteIpListRequest"/></param>

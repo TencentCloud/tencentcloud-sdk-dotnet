@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.337</VersionPrefix>
+    <VersionPrefix>3.0.338</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -206,6 +206,8 @@
     <Compile Include="Antiddos\V20200309\AntiddosClient.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipLoadBalancerRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipLoadBalancerResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstance.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceSpecification.cs" />
     <Compile Include="Antiddos\V20200309\Models\BGPIPInstanceUsages.cs" />
@@ -8545,6 +8547,8 @@
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTemplateResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTemplatesRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTemplatesResponse.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTotalInfoRequest.cs" />
+    <Compile Include="Live\V20180801\Models\DescribeLiveTranscodeTotalInfoResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarkRequest.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarkResponse.cs" />
     <Compile Include="Live\V20180801\Models\DescribeLiveWatermarkRulesRequest.cs" />
@@ -8663,6 +8667,7 @@
     <Compile Include="Live\V20180801\Models\TemplateInfo.cs" />
     <Compile Include="Live\V20180801\Models\TimeValue.cs" />
     <Compile Include="Live\V20180801\Models\TranscodeDetailInfo.cs" />
+    <Compile Include="Live\V20180801\Models\TranscodeTotalInfo.cs" />
     <Compile Include="Live\V20180801\Models\UnBindLiveDomainCertRequest.cs" />
     <Compile Include="Live\V20180801\Models\UnBindLiveDomainCertResponse.cs" />
     <Compile Include="Live\V20180801\Models\UpdateLiveWatermarkRequest.cs" />
@@ -9958,6 +9963,7 @@
     <Compile Include="Ocr\V20181119\Models\TollInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\TrainTicketOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\UsedVehicleInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoice.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceGoodsInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatInvoiceItem.cs" />
@@ -9969,6 +9975,7 @@
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VatRollInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\VehicleInvoiceInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleLicenseOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\VehicleRegCertInfo.cs" />
@@ -10463,6 +10470,8 @@
     <Compile Include="Rum\V20210622\RumClient.cs" />
     <Compile Include="Rum\V20210622\Models\CreateProjectRequest.cs" />
     <Compile Include="Rum\V20210622\Models\CreateProjectResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />

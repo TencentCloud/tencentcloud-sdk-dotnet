@@ -120,6 +120,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 是否支持CloudInit
+        /// </summary>
+        [JsonProperty("IsSupportCloudInit")]
+        public bool? IsSupportCloudInit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "SrcImage.", this.SrcImage);
             this.SetParamSimple(map, prefix + "ImageSource", this.ImageSource);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "IsSupportCloudInit", this.IsSupportCloudInit);
         }
     }
 }

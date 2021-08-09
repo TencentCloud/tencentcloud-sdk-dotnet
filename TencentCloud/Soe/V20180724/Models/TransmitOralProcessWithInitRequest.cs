@@ -26,6 +26,7 @@ namespace TencentCloud.Soe.V20180724.Models
         
         /// <summary>
         /// 流式数据包的序号，从1开始，当IsEnd字段为1后后续序号无意义，当IsLongLifeSession不为1且为非流式模式时无意义。
+        /// 注意：序号上限为3000，不能超过上限。
         /// </summary>
         [JsonProperty("SeqId")]
         public long? SeqId{ get; set; }
