@@ -1279,6 +1279,86 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigAssociateListResponse"/></returns>
+        public async Task<DescribeCustomizedConfigAssociateListResponse> DescribeCustomizedConfigAssociateList(DescribeCustomizedConfigAssociateListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomizedConfigAssociateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigAssociateListResponse"/></returns>
+        public DescribeCustomizedConfigAssociateListResponse DescribeCustomizedConfigAssociateListSync(DescribeCustomizedConfigAssociateListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigAssociateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomizedConfigAssociateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigAssociateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取个性化配置列表，返回用户 AppId 下指定类型的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigListResponse"/></returns>
+        public async Task<DescribeCustomizedConfigListResponse> DescribeCustomizedConfigList(DescribeCustomizedConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomizedConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取个性化配置列表，返回用户 AppId 下指定类型的配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomizedConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCustomizedConfigListResponse"/></returns>
+        public DescribeCustomizedConfigListResponse DescribeCustomizedConfigListSync(DescribeCustomizedConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCustomizedConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomizedConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomizedConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群信息列表，支持以集群类型、集群唯一ID、集群名字、集群标签、集群内vip、集群内负载均衡唯一id、集群网络类型、可用区等条件进行检索
         /// </summary>
         /// <param name="req"><see cref="DescribeExclusiveClustersRequest"/></param>
@@ -2542,6 +2622,46 @@ namespace TencentCloud.Clb.V20180317
              {
                  var strResp = this.InternalRequestSync(req, "ReplaceCertForLoadBalancers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReplaceCertForLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 负载均衡维度的个性化配置相关操作：创建、删除、修改、绑定、解绑
+        /// </summary>
+        /// <param name="req"><see cref="SetCustomizedConfigForLoadBalancerRequest"/></param>
+        /// <returns><see cref="SetCustomizedConfigForLoadBalancerResponse"/></returns>
+        public async Task<SetCustomizedConfigForLoadBalancerResponse> SetCustomizedConfigForLoadBalancer(SetCustomizedConfigForLoadBalancerRequest req)
+        {
+             JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetCustomizedConfigForLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 负载均衡维度的个性化配置相关操作：创建、删除、修改、绑定、解绑
+        /// </summary>
+        /// <param name="req"><see cref="SetCustomizedConfigForLoadBalancerRequest"/></param>
+        /// <returns><see cref="SetCustomizedConfigForLoadBalancerResponse"/></returns>
+        public SetCustomizedConfigForLoadBalancerResponse SetCustomizedConfigForLoadBalancerSync(SetCustomizedConfigForLoadBalancerRequest req)
+        {
+             JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetCustomizedConfigForLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCustomizedConfigForLoadBalancerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

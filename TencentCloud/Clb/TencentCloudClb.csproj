@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.338</VersionPrefix>
+    <VersionPrefix>3.0.339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20180317\Models\BatchRegisterTargetsRequest.cs" />
     <Compile Include="V20180317\Models\BatchRegisterTargetsResponse.cs" />
     <Compile Include="V20180317\Models\BatchTarget.cs" />
+    <Compile Include="V20180317\Models\BindDetailItem.cs" />
     <Compile Include="V20180317\Models\BlockedIP.cs" />
     <Compile Include="V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="V20180317\Models\CertificateInput.cs" />
@@ -72,6 +73,7 @@
     <Compile Include="V20180317\Models\ClusterItem.cs" />
     <Compile Include="V20180317\Models\ClusterResource.cs" />
     <Compile Include="V20180317\Models\ClustersZone.cs" />
+    <Compile Include="V20180317\Models\ConfigListItem.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="V20180317\Models\CreateListenerRequest.cs" />
@@ -122,6 +124,10 @@
     <Compile Include="V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClusterResourcesRequest.cs" />
     <Compile Include="V20180317\Models\DescribeClusterResourcesResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeExclusiveClustersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeExclusiveClustersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
@@ -205,6 +211,8 @@
     <Compile Include="V20180317\Models\RuleInput.cs" />
     <Compile Include="V20180317\Models\RuleOutput.cs" />
     <Compile Include="V20180317\Models\RuleTargets.cs" />
+    <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerRequest.cs" />
+    <Compile Include="V20180317\Models\SetCustomizedConfigForLoadBalancerResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerClsLogResponse.cs" />
     <Compile Include="V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />

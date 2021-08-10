@@ -2189,6 +2189,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云鉴-查询对账单下载地址的接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryDownloadBillURLRequest"/></param>
+        /// <returns><see cref="QueryDownloadBillURLResponse"/></returns>
+        public async Task<QueryDownloadBillURLResponse> QueryDownloadBillURL(QueryDownloadBillURLRequest req)
+        {
+             JsonResponseModel<QueryDownloadBillURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryDownloadBillURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDownloadBillURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云鉴-查询对账单下载地址的接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryDownloadBillURLRequest"/></param>
+        /// <returns><see cref="QueryDownloadBillURLResponse"/></returns>
+        public QueryDownloadBillURLResponse QueryDownloadBillURLSync(QueryDownloadBillURLRequest req)
+        {
+             JsonResponseModel<QueryDownloadBillURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryDownloadBillURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDownloadBillURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 跨境-查询汇率
         /// </summary>
         /// <param name="req"><see cref="QueryExchangeRateRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.338</VersionPrefix>
+    <VersionPrefix>3.0.339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,17 +45,36 @@
 
   <ItemGroup>
     <Compile Include="V20180125\WafClient.cs" />
+    <Compile Include="V20180125\Models\AccessFullTextInfo.cs" />
+    <Compile Include="V20180125\Models\AccessKeyValueInfo.cs" />
+    <Compile Include="V20180125\Models\AccessLogInfo.cs" />
+    <Compile Include="V20180125\Models\AccessLogItem.cs" />
+    <Compile Include="V20180125\Models\AccessLogItems.cs" />
+    <Compile Include="V20180125\Models\AccessRuleInfo.cs" />
+    <Compile Include="V20180125\Models\AccessRuleKeyValueInfo.cs" />
+    <Compile Include="V20180125\Models\AccessRuleTagInfo.cs" />
+    <Compile Include="V20180125\Models\AccessValueInfo.cs" />
     <Compile Include="V20180125\Models\AddCustomRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddCustomRuleResponse.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
+    <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
+    <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\CreateAttackDownloadTaskRequest.cs" />
     <Compile Include="V20180125\Models\CreateAttackDownloadTaskResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessExportsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessExportsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessFastAnalysisRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessFastAnalysisResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessIndexRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAccessIndexResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesResponse.cs" />
@@ -64,11 +83,14 @@
     <Compile Include="V20180125\Models\DescribeFlowTrendResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
+    <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
   </ItemGroup>
 </Project>

@@ -253,6 +253,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取呼入实时数据统计指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallInMetricsRequest"/></param>
+        /// <returns><see cref="DescribeCallInMetricsResponse"/></returns>
+        public async Task<DescribeCallInMetricsResponse> DescribeCallInMetrics(DescribeCallInMetricsRequest req)
+        {
+             JsonResponseModel<DescribeCallInMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCallInMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallInMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取呼入实时数据统计指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCallInMetricsRequest"/></param>
+        /// <returns><see cref="DescribeCallInMetricsResponse"/></returns>
+        public DescribeCallInMetricsResponse DescribeCallInMetricsSync(DescribeCallInMetricsRequest req)
+        {
+             JsonResponseModel<DescribeCallInMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCallInMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallInMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 包括具体聊天内容
         /// </summary>
         /// <param name="req"><see cref="DescribeChatMessagesRequest"/></param>
@@ -488,6 +528,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStaffInfoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStaffInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取坐席实时状态统计指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusMetricsRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusMetricsResponse"/></returns>
+        public async Task<DescribeStaffStatusMetricsResponse> DescribeStaffStatusMetrics(DescribeStaffStatusMetricsRequest req)
+        {
+             JsonResponseModel<DescribeStaffStatusMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStaffStatusMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStaffStatusMetricsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取坐席实时状态统计指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStaffStatusMetricsRequest"/></param>
+        /// <returns><see cref="DescribeStaffStatusMetricsResponse"/></returns>
+        public DescribeStaffStatusMetricsResponse DescribeStaffStatusMetricsSync(DescribeStaffStatusMetricsRequest req)
+        {
+             JsonResponseModel<DescribeStaffStatusMetricsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStaffStatusMetrics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStaffStatusMetricsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

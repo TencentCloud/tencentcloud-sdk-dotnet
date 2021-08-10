@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.338</VersionPrefix>
+    <VersionPrefix>3.0.339</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1995,6 +1995,9 @@
     <Compile Include="Ccc\V20200210\CccClient.cs" />
     <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\CallInMetrics.cs" />
+    <Compile Include="Ccc\V20200210\Models\CallInNumberMetrics.cs" />
+    <Compile Include="Ccc\V20200210\Models\CallInSkillGroupMetrics.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffRequest.cs" />
@@ -2003,6 +2006,8 @@
     <Compile Include="Ccc\V20200210\Models\CreateUserSigResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeCallInMetricsRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeCallInMetricsResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeIMCdrsRequest.cs" />
@@ -2015,6 +2020,8 @@
     <Compile Include="Ccc\V20200210\Models\DescribeSkillGroupInfoListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeStaffInfoListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeStaffInfoListResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeStaffStatusMetricsRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeStaffStatusMetricsResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCallInfoResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeTelCdrRequest.cs" />
@@ -2033,6 +2040,8 @@
     <Compile Include="Ccc\V20200210\Models\SkillGroupInfoItem.cs" />
     <Compile Include="Ccc\V20200210\Models\SkillGroupItem.cs" />
     <Compile Include="Ccc\V20200210\Models\StaffInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\StaffStatusExtra.cs" />
+    <Compile Include="Ccc\V20200210\Models\StaffStatusMetrics.cs" />
     <Compile Include="Ccc\V20200210\Models\TelCdrInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\UnbindStaffSkillGroupListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\UnbindStaffSkillGroupListResponse.cs" />
@@ -3084,6 +3093,7 @@
     <Compile Include="Clb\V20180317\Models\BatchRegisterTargetsRequest.cs" />
     <Compile Include="Clb\V20180317\Models\BatchRegisterTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\BatchTarget.cs" />
+    <Compile Include="Clb\V20180317\Models\BindDetailItem.cs" />
     <Compile Include="Clb\V20180317\Models\BlockedIP.cs" />
     <Compile Include="Clb\V20180317\Models\CertIdRelatedWithLoadBalancers.cs" />
     <Compile Include="Clb\V20180317\Models\CertificateInput.cs" />
@@ -3097,6 +3107,7 @@
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterResource.cs" />
     <Compile Include="Clb\V20180317\Models\ClustersZone.cs" />
+    <Compile Include="Clb\V20180317\Models\ConfigListItem.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateListenerRequest.cs" />
@@ -3147,6 +3158,10 @@
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
@@ -3230,6 +3245,8 @@
     <Compile Include="Clb\V20180317\Models\RuleInput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleOutput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleTargets.cs" />
+    <Compile Include="Clb\V20180317\Models\SetCustomizedConfigForLoadBalancerRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\SetCustomizedConfigForLoadBalancerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerClsLogResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsRequest.cs" />
@@ -3861,6 +3878,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryCustAcctIdBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryDeclareData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryDeclareResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryDownloadBillURLRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryDownloadBillURLResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateData.cs" />
@@ -14868,17 +14887,36 @@
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\WithdrawNotifyRoutesResponse.cs" />
     <Compile Include="Waf\V20180125\WafClient.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessFullTextInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessKeyValueInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessLogInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessLogItem.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessLogItems.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessRuleInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessRuleKeyValueInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessRuleTagInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\AccessValueInfo.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleRequest.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleResponse.cs" />
     <Compile Include="Waf\V20180125\Models\BotStatPointItem.cs" />
+    <Compile Include="Waf\V20180125\Models\CreateAccessExportRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskRequest.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAttackDownloadTaskResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteAccessExportRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteSessionResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessExportsRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessExportsResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessFastAnalysisRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessFastAnalysisResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessIndexRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAccessIndexResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesResponse.cs" />
@@ -14887,11 +14925,14 @@
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ExportAccessInfo.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />
+    <Compile Include="Waf\V20180125\Models\SearchAccessLogRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="Waf\V20180125\Models\Strategy.cs" />
     <Compile Include="Wav\V20210129\WavClient.cs" />
     <Compile Include="Wav\V20210129\Models\ActivityDetail.cs" />

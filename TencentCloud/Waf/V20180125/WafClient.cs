@@ -93,6 +93,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 本接口用于创建访问日志导出
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessExportRequest"/></param>
+        /// <returns><see cref="CreateAccessExportResponse"/></returns>
+        public async Task<CreateAccessExportResponse> CreateAccessExport(CreateAccessExportRequest req)
+        {
+             JsonResponseModel<CreateAccessExportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccessExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建访问日志导出
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccessExportRequest"/></param>
+        /// <returns><see cref="CreateAccessExportResponse"/></returns>
+        public CreateAccessExportResponse CreateAccessExportSync(CreateAccessExportRequest req)
+        {
+             JsonResponseModel<CreateAccessExportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccessExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccessExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建攻击日志下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateAttackDownloadTaskRequest"/></param>
@@ -124,6 +164,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "CreateAttackDownloadTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAttackDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于删除访问日志导出
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessExportRequest"/></param>
+        /// <returns><see cref="DeleteAccessExportResponse"/></returns>
+        public async Task<DeleteAccessExportResponse> DeleteAccessExport(DeleteAccessExportRequest req)
+        {
+             JsonResponseModel<DeleteAccessExportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccessExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessExportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于删除访问日志导出
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccessExportRequest"/></param>
+        /// <returns><see cref="DeleteAccessExportResponse"/></returns>
+        public DeleteAccessExportResponse DeleteAccessExportSync(DeleteAccessExportRequest req)
+        {
+             JsonResponseModel<DeleteAccessExportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccessExport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccessExportResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -244,6 +324,126 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取访问日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessExportsRequest"/></param>
+        /// <returns><see cref="DescribeAccessExportsResponse"/></returns>
+        public async Task<DescribeAccessExportsResponse> DescribeAccessExports(DescribeAccessExportsRequest req)
+        {
+             JsonResponseModel<DescribeAccessExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessExportsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取访问日志导出列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessExportsRequest"/></param>
+        /// <returns><see cref="DescribeAccessExportsResponse"/></returns>
+        public DescribeAccessExportsResponse DescribeAccessExportsSync(DescribeAccessExportsRequest req)
+        {
+             JsonResponseModel<DescribeAccessExportsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessExports");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessExportsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于访问日志的快速分析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessFastAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeAccessFastAnalysisResponse"/></returns>
+        public async Task<DescribeAccessFastAnalysisResponse> DescribeAccessFastAnalysis(DescribeAccessFastAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeAccessFastAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessFastAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessFastAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于访问日志的快速分析
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessFastAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeAccessFastAnalysisResponse"/></returns>
+        public DescribeAccessFastAnalysisResponse DescribeAccessFastAnalysisSync(DescribeAccessFastAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeAccessFastAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessFastAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessFastAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取访问日志索引配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessIndexRequest"/></param>
+        /// <returns><see cref="DescribeAccessIndexResponse"/></returns>
+        public async Task<DescribeAccessIndexResponse> DescribeAccessIndex(DescribeAccessIndexRequest req)
+        {
+             JsonResponseModel<DescribeAccessIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccessIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取访问日志索引配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccessIndexRequest"/></param>
+        /// <returns><see cref="DescribeAccessIndexResponse"/></returns>
+        public DescribeAccessIndexResponse DescribeAccessIndexSync(DescribeAccessIndexRequest req)
+        {
+             JsonResponseModel<DescribeAccessIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccessIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccessIndexResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -444,6 +644,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCustomRuleStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于搜索WAF访问日志
+        /// </summary>
+        /// <param name="req"><see cref="SearchAccessLogRequest"/></param>
+        /// <returns><see cref="SearchAccessLogResponse"/></returns>
+        public async Task<SearchAccessLogResponse> SearchAccessLog(SearchAccessLogRequest req)
+        {
+             JsonResponseModel<SearchAccessLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchAccessLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAccessLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于搜索WAF访问日志
+        /// </summary>
+        /// <param name="req"><see cref="SearchAccessLogRequest"/></param>
+        /// <returns><see cref="SearchAccessLogResponse"/></returns>
+        public SearchAccessLogResponse SearchAccessLogSync(SearchAccessLogRequest req)
+        {
+             JsonResponseModel<SearchAccessLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchAccessLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAccessLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
