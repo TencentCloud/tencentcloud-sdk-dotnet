@@ -293,6 +293,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 本接口用于校验姓名、身份证号、身份证有效期的真实性和一致性。
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdNameDateRequest"/></param>
+        /// <returns><see cref="CheckIdNameDateResponse"/></returns>
+        public async Task<CheckIdNameDateResponse> CheckIdNameDate(CheckIdNameDateRequest req)
+        {
+             JsonResponseModel<CheckIdNameDateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckIdNameDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIdNameDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验姓名、身份证号、身份证有效期的真实性和一致性。
+        /// </summary>
+        /// <param name="req"><see cref="CheckIdNameDateRequest"/></param>
+        /// <returns><see cref="CheckIdNameDateResponse"/></returns>
+        public CheckIdNameDateResponse CheckIdNameDateSync(CheckIdNameDateRequest req)
+        {
+             JsonResponseModel<CheckIdNameDateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckIdNameDate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckIdNameDateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 手机号二要素核验接口用于校验手机号和姓名的真实性和一致性，支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
         /// </summary>
         /// <param name="req"><see cref="CheckPhoneAndNameRequest"/></param>

@@ -26,7 +26,7 @@ namespace TencentCloud.Tts.V20190823.Models
         
         /// <summary>
         /// 合成语音的源文本，按UTF-8编码统一计算。
-        /// 中文最大支持110个汉字（全角标点符号算一个汉字）；英文最大支持350个字母（半角标点符号算一个字母）。
+        /// 中文最大支持150个汉字（全角标点符号算一个汉字）；英文最大支持500个字母（半角标点符号算一个字母）。
         /// </summary>
         [JsonProperty("Text")]
         public string Text{ get; set; }

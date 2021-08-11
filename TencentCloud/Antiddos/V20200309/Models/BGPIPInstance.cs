@@ -95,7 +95,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public StaticPackRelation StaticPackRelation{ get; set; }
 
         /// <summary>
-        /// 区分高防IP海外线路
+        /// 区分高防IP境外线路
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ZoneId")]
@@ -138,6 +138,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("EipAddressInfo")]
         public EipAddressRelation EipAddressInfo{ get; set; }
 
+        /// <summary>
+        /// 建议客户接入的域名，客户可使用域名接入。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +167,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "EipFlag", this.EipFlag);
             this.SetParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
             this.SetParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

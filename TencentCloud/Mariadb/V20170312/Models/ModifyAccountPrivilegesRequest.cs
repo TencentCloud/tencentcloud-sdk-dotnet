@@ -51,7 +51,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public DatabasePrivilege[] DatabasePrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库中表的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+        /// 数据库中表的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
         /// 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
         /// </summary>
         [JsonProperty("TablePrivileges")]
@@ -65,21 +65,21 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库视图的权限。Privileges 权限的可选值为：权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
+        /// 数据库视图的权限。Privileges 权限的可选值为："SELECT","INSERT","UPDATE","DELETE","CREATE", "DROP","REFERENCES","INDEX","ALTER","CREATE VIEW","SHOW VIEW", "TRIGGER"。
         /// 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
         /// </summary>
         [JsonProperty("ViewPrivileges")]
         public ViewPrivileges[] ViewPrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库函数的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+        /// 数据库函数的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
         /// 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
         /// </summary>
         [JsonProperty("FunctionPrivileges")]
         public FunctionPrivilege[] FunctionPrivileges{ get; set; }
 
         /// <summary>
-        /// 数据库存储过程的权限。Privileges 权限的可选值为：权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
+        /// 数据库存储过程的权限。Privileges 权限的可选值为："ALTER ROUTINE"，"EXECUTE"。
         /// 注意，不传该参数表示保留现有权限，如需清除，请在复杂类型Privileges字段传空数组。
         /// </summary>
         [JsonProperty("ProcedurePrivileges")]

@@ -1823,6 +1823,56 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(ModifyRealServerAccessStrategy)用于修改云数据库的VPCGW到RS的访问策略。
+        /// 
+        /// **注意**
+        /// - 修改策略后只对新建立的连接生效，老连接不受影响
+        /// - 就近访问只针对实例是跨可用区部署有用，单可用区部署实例就近与否并无作用
+        /// - DB每个Node对应一个proxy，如果开启就近访问，将会把连接集中到对应可用区的proxy上，可能造成热点问题，这种情况下如果是线上业务，请务必根据自己的业务请求量测试符合预期后再进行就近策略变更
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRealServerAccessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyRealServerAccessStrategyResponse"/></returns>
+        public async Task<ModifyRealServerAccessStrategyResponse> ModifyRealServerAccessStrategy(ModifyRealServerAccessStrategyRequest req)
+        {
+             JsonResponseModel<ModifyRealServerAccessStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRealServerAccessStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRealServerAccessStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyRealServerAccessStrategy)用于修改云数据库的VPCGW到RS的访问策略。
+        /// 
+        /// **注意**
+        /// - 修改策略后只对新建立的连接生效，老连接不受影响
+        /// - 就近访问只针对实例是跨可用区部署有用，单可用区部署实例就近与否并无作用
+        /// - DB每个Node对应一个proxy，如果开启就近访问，将会把连接集中到对应可用区的proxy上，可能造成热点问题，这种情况下如果是线上业务，请务必根据自己的业务请求量测试符合预期后再进行就近策略变更
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRealServerAccessStrategyRequest"/></param>
+        /// <returns><see cref="ModifyRealServerAccessStrategyResponse"/></returns>
+        public ModifyRealServerAccessStrategyResponse ModifyRealServerAccessStrategySync(ModifyRealServerAccessStrategyRequest req)
+        {
+             JsonResponseModel<ModifyRealServerAccessStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRealServerAccessStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRealServerAccessStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（OpenDBExtranetAccess）用于开通云数据库实例的外网访问。开通外网访问后，您可通过外网域名和端口访问实例，可使用查询实例列表接口获取外网域名和端口信息。
         /// </summary>
         /// <param name="req"><see cref="OpenDBExtranetAccessRequest"/></param>
