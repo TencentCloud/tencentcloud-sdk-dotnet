@@ -533,6 +533,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 合规详情项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocCspmComplianceRequest"/></param>
+        /// <returns><see cref="DescribeSocCspmComplianceResponse"/></returns>
+        public async Task<DescribeSocCspmComplianceResponse> DescribeSocCspmCompliance(DescribeSocCspmComplianceRequest req)
+        {
+             JsonResponseModel<DescribeSocCspmComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSocCspmCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocCspmComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合规详情项
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocCspmComplianceRequest"/></param>
+        /// <returns><see cref="DescribeSocCspmComplianceResponse"/></returns>
+        public DescribeSocCspmComplianceResponse DescribeSocCspmComplianceSync(DescribeSocCspmComplianceRequest req)
+        {
+             JsonResponseModel<DescribeSocCspmComplianceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSocCspmCompliance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocCspmComplianceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 漏洞列表页，获取漏洞详情信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVulDetailRequest"/></param>

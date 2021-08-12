@@ -25,10 +25,29 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 素材 ID。
+        /// 替换的媒体类型，取值有：
+        /// <li>CMEMaterialId：替换的媒体类型为媒体 ID；</li>
+        /// <li>ImageUrl：替换的媒体类型为图片 URL；</li>
+        /// 
+        /// 注：默认为 CMEMaterialId 。
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public string MediaType{ get; set; }
+
+        /// <summary>
+        /// 媒体 ID。
+        /// 当媒体类型取值为 CMEMaterialId 时有效。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
+
+        /// <summary>
+        /// 媒体 URL。
+        /// 当媒体类型取值为 ImageUrl 时有效，
+        /// 图片仅支持 jpg、png 格式，且大小不超过 2M 。
+        /// </summary>
+        [JsonProperty("MediaUrl")]
+        public string MediaUrl{ get; set; }
 
         /// <summary>
         /// 替换媒体选取的开始时间，单位为秒，默认为 0。
@@ -36,14 +55,24 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
+        /// <summary>
+        /// 预处理操作。
+        /// 注：目前该功能暂不支持，请勿使用。
+        /// </summary>
+        [JsonProperty("PreprocessOperation")]
+        public MediaPreprocessOperation PreprocessOperation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
             this.SetParamSimple(map, prefix + "MaterialId", this.MaterialId);
+            this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamObj(map, prefix + "PreprocessOperation.", this.PreprocessOperation);
         }
     }
 }

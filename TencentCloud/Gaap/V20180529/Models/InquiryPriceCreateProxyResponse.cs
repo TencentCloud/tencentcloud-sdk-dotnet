@@ -64,6 +64,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         public float? DiscountFlowUnitPrice{ get; set; }
 
         /// <summary>
+        /// 精品BGP的带宽费用价格，单位: 元/Mbps/天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cn2BandwidthPrice")]
+        public float? Cn2BandwidthPrice{ get; set; }
+
+        /// <summary>
+        /// 精品BGP的折后带宽费用价格，单位: 元/Mbps/天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cn2BandwidthPriceWithDiscount")]
+        public float? Cn2BandwidthPriceWithDiscount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -81,6 +95,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "FlowUnitPrice", this.FlowUnitPrice);
             this.SetParamSimple(map, prefix + "DiscountFlowUnitPrice", this.DiscountFlowUnitPrice);
+            this.SetParamSimple(map, prefix + "Cn2BandwidthPrice", this.Cn2BandwidthPrice);
+            this.SetParamSimple(map, prefix + "Cn2BandwidthPriceWithDiscount", this.Cn2BandwidthPriceWithDiscount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

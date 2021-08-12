@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.340</VersionPrefix>
+    <VersionPrefix>3.0.341</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,6 +81,8 @@
     <Compile Include="V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeSocCspmComplianceRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeSocCspmComplianceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeVulDetailRequest.cs" />
     <Compile Include="V20180608\Models\DescribeVulDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeVulListRequest.cs" />
@@ -90,6 +92,10 @@
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubList.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="V20180608\Models\SocCheckItem.cs" />
+    <Compile Include="V20180608\Models\SocComplianceInfoResp.cs" />
+    <Compile Include="V20180608\Models\SocComplianceItem.cs" />
+    <Compile Include="V20180608\Models\SocProductionItem.cs" />
     <Compile Include="V20180608\Models\Tag.cs" />
     <Compile Include="V20180608\Models\VulItem.cs" />
     <Compile Include="V20180608\Models\VulList.cs" />

@@ -75,6 +75,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("RestartCount")]
         public long? RestartCount{ get; set; }
 
+        /// <summary>
+        /// pod是否就绪
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ready")]
+        public bool? Ready{ get; set; }
+
+        /// <summary>
+        /// 容器状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerState")]
+        public string ContainerState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +103,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
             this.SetParamSimple(map, prefix + "RestartCount", this.RestartCount);
+            this.SetParamSimple(map, prefix + "Ready", this.Ready);
+            this.SetParamSimple(map, prefix + "ContainerState", this.ContainerState);
         }
     }
 }

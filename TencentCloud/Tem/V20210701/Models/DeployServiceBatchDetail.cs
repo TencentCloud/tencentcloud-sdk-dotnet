@@ -59,6 +59,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("BatchIndex")]
         public long? BatchIndex{ get; set; }
 
+        /// <summary>
+        /// 旧实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldPods")]
+        public DeployServicePodDetail[] OldPods{ get; set; }
+
+        /// <summary>
+        /// 新实例列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewPods")]
+        public DeployServicePodDetail[] NewPods{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +84,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "BatchStatus", this.BatchStatus);
             this.SetParamSimple(map, prefix + "PodNum", this.PodNum);
             this.SetParamSimple(map, prefix + "BatchIndex", this.BatchIndex);
+            this.SetParamArrayObj(map, prefix + "OldPods.", this.OldPods);
+            this.SetParamArrayObj(map, prefix + "NewPods.", this.NewPods);
         }
     }
 }

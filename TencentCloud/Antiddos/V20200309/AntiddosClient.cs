@@ -933,6 +933,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取业务流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizTrendResponse"/></returns>
+        public async Task<DescribeBizTrendResponse> DescribeBizTrend(DescribeBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取业务流量曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBizTrendResponse"/></returns>
+        public DescribeBizTrendResponse DescribeBizTrendSync(DescribeBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取DDoS防护的IP黑白名单
         /// </summary>
         /// <param name="req"><see cref="DescribeBlackWhiteIpListRequest"/></param>
@@ -964,6 +1004,86 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBlackWhiteIpList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
+        /// <returns><see cref="DescribeCCTrendResponse"/></returns>
+        public async Task<DescribeCCTrendResponse> DescribeCCTrend(DescribeCCTrendRequest req)
+        {
+             JsonResponseModel<DescribeCCTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
+        /// <returns><see cref="DescribeCCTrendResponse"/></returns>
+        public DescribeCCTrendResponse DescribeCCTrendSync(DescribeCCTrendRequest req)
+        {
+             JsonResponseModel<DescribeCCTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS攻击流量带宽和攻击包速率数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSTrendRequest"/></param>
+        /// <returns><see cref="DescribeDDoSTrendResponse"/></returns>
+        public async Task<DescribeDDoSTrendResponse> DescribeDDoSTrend(DescribeDDoSTrendRequest req)
+        {
+             JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS攻击流量带宽和攻击包速率数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSTrendRequest"/></param>
+        /// <returns><see cref="DescribeDDoSTrendResponse"/></returns>
+        public DescribeDDoSTrendResponse DescribeDDoSTrendSync(DescribeDDoSTrendRequest req)
+        {
+             JsonResponseModel<DescribeDDoSTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSTrendResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

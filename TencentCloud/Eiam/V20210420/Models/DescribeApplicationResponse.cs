@@ -102,6 +102,34 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string AuthorizeUrl{ get; set; }
 
         /// <summary>
+        /// 应用图标图片访问地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IconUrl")]
+        public string IconUrl{ get; set; }
+
+        /// <summary>
+        /// 安全等级。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecureLevel")]
+        public string SecureLevel{ get; set; }
+
+        /// <summary>
+        /// 应用状态。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppStatus")]
+        public bool? AppStatus{ get; set; }
+
+        /// <summary>
+        /// 描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -124,6 +152,10 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "ClientSecret", this.ClientSecret);
             this.SetParamSimple(map, prefix + "PublicKey", this.PublicKey);
             this.SetParamSimple(map, prefix + "AuthorizeUrl", this.AuthorizeUrl);
+            this.SetParamSimple(map, prefix + "IconUrl", this.IconUrl);
+            this.SetParamSimple(map, prefix + "SecureLevel", this.SecureLevel);
+            this.SetParamSimple(map, prefix + "AppStatus", this.AppStatus);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

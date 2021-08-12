@@ -48,8 +48,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 是否开启全路径缓存
-        /// on：开启全路径缓存（即关闭参数过滤）
-        /// off：关闭全路径缓存（即开启参数过滤）
+        /// on：开启全路径缓存（即关闭参数忽略）
+        /// off：关闭全路径缓存（即开启参数忽略）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FullUrlCache")]

@@ -98,6 +98,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// 网络类型，可取值：normal、cn2，默认值normal
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +122,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClonedProxyId", this.ClonedProxyId);
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
         }
     }
 }

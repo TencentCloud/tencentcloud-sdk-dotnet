@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.340</VersionPrefix>
+    <VersionPrefix>3.0.341</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,8 +104,14 @@
     <Compile Include="V20200309\Models\DeleteWaterPrintKeyResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBasicDeviceStatusResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeBizTrendRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCTrendRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSTrendRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdResponse.cs" />
     <Compile Include="V20200309\Models\DescribeL7RulesBySSLCertIdRequest.cs" />
@@ -169,6 +175,7 @@
     <Compile Include="V20200309\Models\ProtectThresholdRelation.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockConfig.cs" />
     <Compile Include="V20200309\Models\ProtocolBlockRelation.cs" />
+    <Compile Include="V20200309\Models\ProtocolPort.cs" />
     <Compile Include="V20200309\Models\ProxyTypeInfo.cs" />
     <Compile Include="V20200309\Models\RegionInfo.cs" />
     <Compile Include="V20200309\Models\SchedulingDomainInfo.cs" />

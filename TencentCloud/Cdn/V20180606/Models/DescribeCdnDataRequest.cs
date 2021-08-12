@@ -65,7 +65,9 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 指定查询域名列表
-        /// 最多可一次性查询 30 个加速域名明细
+        /// 查询单域名：指定单个域名
+        /// 查询多个域名：指定多个域名，最多可一次性查询 30 个
+        /// 查询账号下所有域名：不传参，默认查询账号维度
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

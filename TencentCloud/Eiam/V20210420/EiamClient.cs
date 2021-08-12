@@ -933,6 +933,46 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 更新一个应用的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
+        /// <returns><see cref="ModifyApplicationResponse"/></returns>
+        public async Task<ModifyApplicationResponse> ModifyApplication(ModifyApplicationRequest req)
+        {
+             JsonResponseModel<ModifyApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新一个应用的信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
+        /// <returns><see cref="ModifyApplicationResponse"/></returns>
+        public ModifyApplicationResponse ModifyApplicationSync(ModifyApplicationRequest req)
+        {
+             JsonResponseModel<ModifyApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过用户名或用户 id 冻结用户
         /// </summary>
         /// <param name="req"><see cref="ModifyUserInfoRequest"/></param>

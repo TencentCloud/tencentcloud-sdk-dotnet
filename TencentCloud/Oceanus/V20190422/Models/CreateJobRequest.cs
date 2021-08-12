@@ -60,6 +60,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 作业名所属文件夹ID，根目录为"root"
+        /// </summary>
+        [JsonProperty("FolderId")]
+        public string FolderId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "CuMem", this.CuMem);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
         }
     }
 }
