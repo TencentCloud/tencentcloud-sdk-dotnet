@@ -78,6 +78,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RequestHeaders")]
         public HttpHeaderRule[] RequestHeaders{ get; set; }
 
+        /// <summary>
+        /// 当Regex为false时，Path是否开启完全匹配。
+        /// false：关闭
+        /// true：开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FullMatch")]
+        public bool? FullMatch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +100,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "OriginArea", this.OriginArea);
             this.SetParamSimple(map, prefix + "ForwardUri", this.ForwardUri);
             this.SetParamArrayObj(map, prefix + "RequestHeaders.", this.RequestHeaders);
+            this.SetParamSimple(map, prefix + "FullMatch", this.FullMatch);
         }
     }
 }

@@ -79,7 +79,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public SystemDisk SystemDisk{ get; set; }
 
         /// <summary>
-        /// 实例数据盘信息。只包含随实例购买的数据盘。
+        /// 实例数据盘信息。
         /// </summary>
         [JsonProperty("DataDisks")]
         public DataDisk[] DataDisks{ get; set; }
@@ -233,6 +233,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("RdmaIpAddresses")]
         public string[] RdmaIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 实例隔离类型。取值范围：<br><li>ARREAR：表示欠费隔离<br></li><li>EXPIRE：表示到期隔离<br></li><li>MANMADE：表示主动退还隔离<br></li><li>NOTISOLATED：表示未隔离<br></li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolatedSource")]
+        public string IsolatedSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -272,6 +279,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
+            this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
         }
     }
 }

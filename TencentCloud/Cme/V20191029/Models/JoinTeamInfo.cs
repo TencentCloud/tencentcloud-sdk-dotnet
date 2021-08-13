@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 团队成员个数
+        /// 团队成员个数。
         /// </summary>
         [JsonProperty("MemberCount")]
         public ulong? MemberCount{ get; set; }

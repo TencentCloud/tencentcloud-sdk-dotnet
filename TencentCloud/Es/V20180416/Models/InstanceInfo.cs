@@ -373,6 +373,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("KibanaNodeInfo")]
         public KibanaNodeInfo KibanaNodeInfo{ get; set; }
 
+        /// <summary>
+        /// 可视化节点配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WebNodeTypeInfo")]
+        public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
+
+        /// <summary>
+        /// JDK类型，oracle或kona
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Jdk")]
+        public string Jdk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -434,6 +448,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamSimple(map, prefix + "KibanaConfig", this.KibanaConfig);
             this.SetParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
+            this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+            this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
         }
     }
 }

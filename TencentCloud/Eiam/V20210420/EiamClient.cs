@@ -413,6 +413,46 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 查询指定机构下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrgResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeOrgResourcesAuthorizationResponse"/></returns>
+        public async Task<DescribeOrgResourcesAuthorizationResponse> DescribeOrgResourcesAuthorization(DescribeOrgResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeOrgResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrgResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrgResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定机构下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrgResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeOrgResourcesAuthorizationResponse"/></returns>
+        public DescribeOrgResourcesAuthorizationResponse DescribeOrgResourcesAuthorizationSync(DescribeOrgResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeOrgResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrgResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrgResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取JWT公钥信息。
         /// </summary>
         /// <param name="req"><see cref="DescribePublicKeyRequest"/></param>
@@ -493,6 +533,46 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 查询指定用户组下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupResourcesAuthorizationResponse"/></returns>
+        public async Task<DescribeUserGroupResourcesAuthorizationResponse> DescribeUserGroupResourcesAuthorization(DescribeUserGroupResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserGroupResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定用户组下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserGroupResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeUserGroupResourcesAuthorizationResponse"/></returns>
+        public DescribeUserGroupResourcesAuthorizationResponse DescribeUserGroupResourcesAuthorizationSync(DescribeUserGroupResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserGroupResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserGroupResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过用户名或用户 id 搜索用户
         /// </summary>
         /// <param name="req"><see cref="DescribeUserInfoRequest"/></param>
@@ -524,6 +604,46 @@ namespace TencentCloud.Eiam.V20210420
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定用户下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeUserResourcesAuthorizationResponse"/></returns>
+        public async Task<DescribeUserResourcesAuthorizationResponse> DescribeUserResourcesAuthorization(DescribeUserResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeUserResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定用户下的资源授权列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserResourcesAuthorizationRequest"/></param>
+        /// <returns><see cref="DescribeUserResourcesAuthorizationResponse"/></returns>
+        public DescribeUserResourcesAuthorizationResponse DescribeUserResourcesAuthorizationSync(DescribeUserResourcesAuthorizationRequest req)
+        {
+             JsonResponseModel<DescribeUserResourcesAuthorizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserResourcesAuthorization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

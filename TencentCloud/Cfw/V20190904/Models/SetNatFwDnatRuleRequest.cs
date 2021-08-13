@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string OperationType{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id。
+        /// 防火墙实例id，该字段必须传递。
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }

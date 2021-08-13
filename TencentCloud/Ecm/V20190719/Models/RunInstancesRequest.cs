@@ -144,6 +144,12 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("InstanceChargeType")]
         public long? InstanceChargeType{ get; set; }
 
+        /// <summary>
+        /// 密钥对。
+        /// </summary>
+        [JsonProperty("KeyIds")]
+        public string[] KeyIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +173,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "SystemDiskSize", this.SystemDiskSize);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
         }
     }
 }

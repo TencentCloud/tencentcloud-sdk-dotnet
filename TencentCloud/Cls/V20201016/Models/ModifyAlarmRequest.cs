@@ -78,6 +78,24 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
+        /// <summary>
+        /// 用户自定义告警内容
+        /// </summary>
+        [JsonProperty("MessageTemplate")]
+        public string MessageTemplate{ get; set; }
+
+        /// <summary>
+        /// 用户自定义回调
+        /// </summary>
+        [JsonProperty("CallBack")]
+        public CallBackInfo CallBack{ get; set; }
+
+        /// <summary>
+        /// 多维分析
+        /// </summary>
+        [JsonProperty("Analysis")]
+        public AnalysisDimensional[] Analysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "AlarmNoticeIds.", this.AlarmNoticeIds);
             this.SetParamArrayObj(map, prefix + "AlarmTargets.", this.AlarmTargets);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
+            this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
+            this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
         }
     }
 }

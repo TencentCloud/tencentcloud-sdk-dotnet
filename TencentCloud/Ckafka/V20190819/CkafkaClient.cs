@@ -1095,6 +1095,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 查询订阅某主题消息分组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicSubscribeGroupRequest"/></param>
+        /// <returns><see cref="DescribeTopicSubscribeGroupResponse"/></returns>
+        public async Task<DescribeTopicSubscribeGroupResponse> DescribeTopicSubscribeGroup(DescribeTopicSubscribeGroupRequest req)
+        {
+             JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicSubscribeGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询订阅某主题消息分组信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicSubscribeGroupRequest"/></param>
+        /// <returns><see cref="DescribeTopicSubscribeGroupResponse"/></returns>
+        public DescribeTopicSubscribeGroupResponse DescribeTopicSubscribeGroupSync(DescribeTopicSubscribeGroupRequest req)
+        {
+             JsonResponseModel<DescribeTopicSubscribeGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicSubscribeGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSubscribeGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>

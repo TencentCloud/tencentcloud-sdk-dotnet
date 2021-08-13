@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.341</VersionPrefix>
+    <VersionPrefix>3.0.342</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,20 +46,33 @@
   <ItemGroup>
     <Compile Include="V20190904\CfwClient.cs" />
     <Compile Include="V20190904\Models\AcListsData.cs" />
+    <Compile Include="V20190904\Models\AssetZone.cs" />
     <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateAcRulesResponse.cs" />
+    <Compile Include="V20190904\Models\CreateChooseVpcsRequest.cs" />
+    <Compile Include="V20190904\Models\CreateChooseVpcsResponse.cs" />
+    <Compile Include="V20190904\Models\CreateNatFwInstanceRequest.cs" />
+    <Compile Include="V20190904\Models\CreateNatFwInstanceResponse.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesResponse.cs" />
+    <Compile Include="V20190904\Models\CreateSecurityGroupRulesRequest.cs" />
+    <Compile Include="V20190904\Models\CreateSecurityGroupRulesResponse.cs" />
     <Compile Include="V20190904\Models\DeleteAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteAcRuleResponse.cs" />
     <Compile Include="V20190904\Models\DeleteAllAccessControlRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteAllAccessControlRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteNatFwInstanceRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteNatFwInstanceResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteResourceGroupRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteResourceGroupResponse.cs" />
     <Compile Include="V20190904\Models\DeleteSecurityGroupAllRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteSecurityGroupAllRuleResponse.cs" />
     <Compile Include="V20190904\Models\DeleteSecurityGroupRuleRequest.cs" />
     <Compile Include="V20190904\Models\DeleteSecurityGroupRuleResponse.cs" />
+    <Compile Include="V20190904\Models\DeleteVpcInstanceRequest.cs" />
+    <Compile Include="V20190904\Models\DeleteVpcInstanceResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
@@ -72,12 +85,26 @@
     <Compile Include="V20190904\Models\DescribeCfwEipsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInfoCountRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInfoCountResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstanceRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstanceResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstanceWithRegionRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstanceWithRegionResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstancesInfoRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwInstancesInfoResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeNatFwVpcDnsLstResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeResourceGroupRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeResourceGroupResponse.cs" />
     <Compile Include="V20190904\Models\DescribeRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeRuleOverviewResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSecurityGroupListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSecurityGroupListResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeSourceAssetRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeSourceAssetResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
@@ -92,43 +119,81 @@
     <Compile Include="V20190904\Models\DescribeUnHandleEventTabListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
     <Compile Include="V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
+    <Compile Include="V20190904\Models\DnsVpcSwitch.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalResponse.cs" />
+    <Compile Include="V20190904\Models\InstanceInfo.cs" />
     <Compile Include="V20190904\Models\IocListData.cs" />
     <Compile Include="V20190904\Models\IpStatic.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllSwitchStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAllVPCSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAllVPCSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyAssetScanRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyAssetScanResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopResponse.cs" />
     <Compile Include="V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwReSelectRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwReSelectResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwSwitchRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwVpcDnsSwitchRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyNatFwVpcDnsSwitchResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyPublicIPSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyPublicIPSwitchStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyResourceGroupRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyResourceGroupResponse.cs" />
     <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupItemRuleStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupItemRuleStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupRuleRequest.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupRuleResponse.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupSequenceRulesRequest.cs" />
+    <Compile Include="V20190904\Models\ModifySecurityGroupSequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\ModifySequenceRulesRequest.cs" />
     <Compile Include="V20190904\Models\ModifySequenceRulesResponse.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyTableStatusResponse.cs" />
+    <Compile Include="V20190904\Models\ModifyVPCSwitchStatusRequest.cs" />
+    <Compile Include="V20190904\Models\ModifyVPCSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\NatFwEipsInfo.cs" />
+    <Compile Include="V20190904\Models\NatFwFilter.cs" />
+    <Compile Include="V20190904\Models\NatFwInstance.cs" />
+    <Compile Include="V20190904\Models\NatInstanceInfo.cs" />
+    <Compile Include="V20190904\Models\NewModeItems.cs" />
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
     <Compile Include="V20190904\Models\ScanInfo.cs" />
     <Compile Include="V20190904\Models\ScanResultInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupApiRuleData.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupBothWayInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupOrderIndexData.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleResponse.cs" />
+    <Compile Include="V20190904\Models\SetNatFwEipRequest.cs" />
+    <Compile Include="V20190904\Models\SetNatFwEipResponse.cs" />
     <Compile Include="V20190904\Models\StaticInfo.cs" />
+    <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchRequest.cs" />
+    <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchResponse.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
     <Compile Include="V20190904\Models\TLogInfo.cs" />
     <Compile Include="V20190904\Models\UnHandleEvent.cs" />
     <Compile Include="V20190904\Models\UnHandleEventDetail.cs" />
+    <Compile Include="V20190904\Models\VpcDnsInfo.cs" />
+    <Compile Include="V20190904\Models\VpcZoneData.cs" />
   </ItemGroup>
 </Project>

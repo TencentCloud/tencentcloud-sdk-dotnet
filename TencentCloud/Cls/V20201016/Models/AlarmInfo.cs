@@ -104,6 +104,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("CallBack")]
         public CallBackInfo CallBack{ get; set; }
 
+        /// <summary>
+        /// 多维分析设置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Analysis")]
+        public AnalysisDimensional[] Analysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "MessageTemplate", this.MessageTemplate);
             this.SetParamObj(map, prefix + "CallBack.", this.CallBack);
+            this.SetParamArrayObj(map, prefix + "Analysis.", this.Analysis);
         }
     }
 }

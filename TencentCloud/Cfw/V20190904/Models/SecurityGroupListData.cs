@@ -25,12 +25,6 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 规则ID
-        /// </summary>
-        [JsonProperty("Id")]
-        public ulong? Id{ get; set; }
-
-        /// <summary>
         /// 执行顺序
         /// </summary>
         [JsonProperty("OrderIndex")]
@@ -43,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+        /// 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
@@ -55,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB
+        /// 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }
@@ -85,6 +79,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Detail{ get; set; }
 
         /// <summary>
+        /// 单/双向下发，0:单向下发，1：双向下发
+        /// </summary>
+        [JsonProperty("BothWay")]
+        public ulong? BothWay{ get; set; }
+
+        /// <summary>
+        /// 规则ID
+        /// </summary>
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
+
+        /// <summary>
         /// 是否开关开启，0：未开启，1：开启
         /// </summary>
         [JsonProperty("Status")]
@@ -95,12 +101,6 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         [JsonProperty("IsNew")]
         public ulong? IsNew{ get; set; }
-
-        /// <summary>
-        /// 单/双向下发，0:单向下发，1：双向下发
-        /// </summary>
-        [JsonProperty("BothWay")]
-        public ulong? BothWay{ get; set; }
 
         /// <summary>
         /// 私有网络ID
@@ -144,13 +144,32 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Cidr")]
         public string Cidr{ get; set; }
 
+        /// <summary>
+        /// 端口协议类型参数模板id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceTemplateId")]
+        public string ServiceTemplateId{ get; set; }
+
+        /// <summary>
+        /// 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BothWayInfo")]
+        public SecurityGroupBothWayInfo[] BothWayInfo{ get; set; }
+
+        /// <summary>
+        /// 方向，0：出站，1：入站，默认1
+        /// </summary>
+        [JsonProperty("Direction")]
+        public ulong? Direction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "OrderIndex", this.OrderIndex);
             this.SetParamSimple(map, prefix + "SourceId", this.SourceId);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
@@ -160,15 +179,19 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamSimple(map, prefix + "Detail", this.Detail);
+            this.SetParamSimple(map, prefix + "BothWay", this.BothWay);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
-            this.SetParamSimple(map, prefix + "BothWay", this.BothWay);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "PrivateIp", this.PrivateIp);
             this.SetParamSimple(map, prefix + "Cidr", this.Cidr);
+            this.SetParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+            this.SetParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

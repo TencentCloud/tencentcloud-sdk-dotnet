@@ -36,6 +36,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
+        /// <summary>
+        /// 重启模式：0 滚动重启； 1 全量重启
+        /// </summary>
+        [JsonProperty("RestartMode")]
+        public long? RestartMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Es.V20180416.Models
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
+            this.SetParamSimple(map, prefix + "RestartMode", this.RestartMode);
         }
     }
 }
