@@ -66,7 +66,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string SrcIp{ get; set; }
 
         /// <summary>
-        /// 失败：FAILED；成功：SUCCESS
+        /// SUCCESS：破解成功；FAILED：破解失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -101,7 +101,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 阻断状态：0-未阻断；1-已阻断；2-阻断失败；3-内网攻击暂不支持阻断；4-安平暂不支持阻断
+        /// 阻断状态：1-阻断成功；非1-阻断失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BanStatus")]
@@ -156,6 +156,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("ModifyTime")]
         public string ModifyTime{ get; set; }
 
+        /// <summary>
+        /// 实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -181,6 +188,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

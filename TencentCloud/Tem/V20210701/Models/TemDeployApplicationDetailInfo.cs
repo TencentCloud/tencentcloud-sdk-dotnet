@@ -94,6 +94,34 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("CurrentBatchStatus")]
         public string CurrentBatchStatus{ get; set; }
 
+        /// <summary>
+        /// 新版本version
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewDeployVersion")]
+        public string NewDeployVersion{ get; set; }
+
+        /// <summary>
+        /// 旧版本version
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OldDeployVersion")]
+        public string OldDeployVersion{ get; set; }
+
+        /// <summary>
+        /// 包名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewVersionPackageInfo")]
+        public string NewVersionPackageInfo{ get; set; }
+
+        /// <summary>
+        /// 下一批次开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextBatchStartTime")]
+        public long? NextBatchStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +138,10 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "CurrentBatchIndex", this.CurrentBatchIndex);
             this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "CurrentBatchStatus", this.CurrentBatchStatus);
+            this.SetParamSimple(map, prefix + "NewDeployVersion", this.NewDeployVersion);
+            this.SetParamSimple(map, prefix + "OldDeployVersion", this.OldDeployVersion);
+            this.SetParamSimple(map, prefix + "NewVersionPackageInfo", this.NewVersionPackageInfo);
+            this.SetParamSimple(map, prefix + "NextBatchStartTime", this.NextBatchStartTime);
         }
     }
 }

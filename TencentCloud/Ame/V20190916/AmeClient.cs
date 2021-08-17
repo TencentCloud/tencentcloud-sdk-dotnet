@@ -293,7 +293,87 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 根据接口的模式及歌曲ID来取得歌词信息。
+        /// 根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVPlaylistDetailRequest"/></param>
+        /// <returns><see cref="DescribeKTVPlaylistDetailResponse"/></returns>
+        public async Task<DescribeKTVPlaylistDetailResponse> DescribeKTVPlaylistDetail(DescribeKTVPlaylistDetailRequest req)
+        {
+             JsonResponseModel<DescribeKTVPlaylistDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVPlaylistDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVPlaylistDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVPlaylistDetailRequest"/></param>
+        /// <returns><see cref="DescribeKTVPlaylistDetailResponse"/></returns>
+        public DescribeKTVPlaylistDetailResponse DescribeKTVPlaylistDetailSync(DescribeKTVPlaylistDetailRequest req)
+        {
+             JsonResponseModel<DescribeKTVPlaylistDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVPlaylistDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVPlaylistDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取即时广播曲库推荐歌单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
+        /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>
+        public async Task<DescribeKTVPlaylistsResponse> DescribeKTVPlaylists(DescribeKTVPlaylistsRequest req)
+        {
+             JsonResponseModel<DescribeKTVPlaylistsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVPlaylists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVPlaylistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取即时广播曲库推荐歌单列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
+        /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>
+        public DescribeKTVPlaylistsResponse DescribeKTVPlaylistsSync(DescribeKTVPlaylistsRequest req)
+        {
+             JsonResponseModel<DescribeKTVPlaylistsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVPlaylists");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVPlaylistsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLyricRequest"/></param>
         /// <returns><see cref="DescribeLyricResponse"/></returns>
@@ -313,7 +393,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 根据接口的模式及歌曲ID来取得歌词信息。
+        /// 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLyricRequest"/></param>
         /// <returns><see cref="DescribeLyricResponse"/></returns>

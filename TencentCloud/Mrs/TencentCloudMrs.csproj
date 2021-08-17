@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.342</VersionPrefix>
+    <VersionPrefix>3.0.343</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,86 +47,56 @@
     <Compile Include="V20200910\MrsClient.cs" />
     <Compile Include="V20200910\Models\Advice.cs" />
     <Compile Include="V20200910\Models\AspectRatio.cs" />
-    <Compile Include="V20200910\Models\Attribute.cs" />
-    <Compile Include="V20200910\Models\BasicInfo.cs" />
     <Compile Include="V20200910\Models\BlockInfo.cs" />
-    <Compile Include="V20200910\Models\Case.cs" />
-    <Compile Include="V20200910\Models\CaseHistory.cs" />
     <Compile Include="V20200910\Models\Check.cs" />
-    <Compile Include="V20200910\Models\Conclusion.cs" />
     <Compile Include="V20200910\Models\Desc.cs" />
     <Compile Include="V20200910\Models\DiagCert.cs" />
     <Compile Include="V20200910\Models\DiagCertItem.cs" />
     <Compile Include="V20200910\Models\DischargeDiagnosis.cs" />
-    <Compile Include="V20200910\Models\DiseaseHistory.cs" />
     <Compile Include="V20200910\Models\DiseaseMedicalHistory.cs" />
     <Compile Include="V20200910\Models\Elastic.cs" />
-    <Compile Include="V20200910\Models\FamilyHistory.cs" />
     <Compile Include="V20200910\Models\FamilyMedicalHistory.cs" />
-    <Compile Include="V20200910\Models\Finding.cs" />
     <Compile Include="V20200910\Models\FirstPage.cs" />
     <Compile Include="V20200910\Models\HandleParam.cs" />
-    <Compile Include="V20200910\Models\HealthHistory.cs" />
     <Compile Include="V20200910\Models\HistologyLevel.cs" />
     <Compile Include="V20200910\Models\HistologyType.cs" />
     <Compile Include="V20200910\Models\Hospitalization.cs" />
-    <Compile Include="V20200910\Models\IHC.cs" />
     <Compile Include="V20200910\Models\IHCInfo.cs" />
     <Compile Include="V20200910\Models\ImageInfo.cs" />
-    <Compile Include="V20200910\Models\ImageReport.cs" />
-    <Compile Include="V20200910\Models\ImageText.cs" />
     <Compile Include="V20200910\Models\ImageToClassRequest.cs" />
     <Compile Include="V20200910\Models\ImageToClassResponse.cs" />
     <Compile Include="V20200910\Models\ImageToObjectRequest.cs" />
     <Compile Include="V20200910\Models\ImageToObjectResponse.cs" />
     <Compile Include="V20200910\Models\Indicator.cs" />
     <Compile Include="V20200910\Models\IndicatorItem.cs" />
-    <Compile Include="V20200910\Models\Inspection.cs" />
     <Compile Include="V20200910\Models\Invas.cs" />
-    <Compile Include="V20200910\Models\Invasive.cs" />
-    <Compile Include="V20200910\Models\KindItem.cs" />
     <Compile Include="V20200910\Models\Lymph.cs" />
-    <Compile Include="V20200910\Models\MarryHistory.cs" />
     <Compile Include="V20200910\Models\MedDoc.cs" />
     <Compile Include="V20200910\Models\MedicalRecordInfo.cs" />
-    <Compile Include="V20200910\Models\MenstrualHistory.cs" />
     <Compile Include="V20200910\Models\MenstrualMedicalHistory.cs" />
-    <Compile Include="V20200910\Models\Metastasis.cs" />
     <Compile Include="V20200910\Models\Multiple.cs" />
     <Compile Include="V20200910\Models\NormPart.cs" />
     <Compile Include="V20200910\Models\NormSize.cs" />
     <Compile Include="V20200910\Models\ObstericalMedicalHistory.cs" />
     <Compile Include="V20200910\Models\Organ.cs" />
     <Compile Include="V20200910\Models\Part.cs" />
-    <Compile Include="V20200910\Models\Pathology.cs" />
     <Compile Include="V20200910\Models\PathologyReport.cs" />
     <Compile Include="V20200910\Models\PatientInfo.cs" />
-    <Compile Include="V20200910\Models\PersonalHistory.cs" />
-    <Compile Include="V20200910\Models\PersonalInfo.cs" />
     <Compile Include="V20200910\Models\PersonalMedicalHistory.cs" />
-    <Compile Include="V20200910\Models\ReportImageStructuredRequest.cs" />
-    <Compile Include="V20200910\Models\ReportImageStructuredResponse.cs" />
     <Compile Include="V20200910\Models\ReportInfo.cs" />
-    <Compile Include="V20200910\Models\ReportTextStructuredRequest.cs" />
-    <Compile Include="V20200910\Models\ReportTextStructuredResponse.cs" />
     <Compile Include="V20200910\Models\Size.cs" />
     <Compile Include="V20200910\Models\Summary.cs" />
     <Compile Include="V20200910\Models\Surgery.cs" />
     <Compile Include="V20200910\Models\SurgeryAttr.cs" />
     <Compile Include="V20200910\Models\SurgeryHistory.cs" />
-    <Compile Include="V20200910\Models\Symptom.cs" />
     <Compile Include="V20200910\Models\SymptomInfo.cs" />
     <Compile Include="V20200910\Models\Template.cs" />
-    <Compile Include="V20200910\Models\TestItem.cs" />
-    <Compile Include="V20200910\Models\TextReport.cs" />
     <Compile Include="V20200910\Models\TextToClassRequest.cs" />
     <Compile Include="V20200910\Models\TextToClassResponse.cs" />
     <Compile Include="V20200910\Models\TextToObjectRequest.cs" />
     <Compile Include="V20200910\Models\TextToObjectResponse.cs" />
     <Compile Include="V20200910\Models\TextType.cs" />
-    <Compile Include="V20200910\Models\Treatment.cs" />
     <Compile Include="V20200910\Models\TreatmentRecord.cs" />
-    <Compile Include="V20200910\Models\Tuber.cs" />
     <Compile Include="V20200910\Models\TuberInfo.cs" />
     <Compile Include="V20200910\Models\Value.cs" />
   </ItemGroup>

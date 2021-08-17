@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RepoName{ get; set; }
 
         /// <summary>
-        /// 触发器名称
+        /// 触发器名称，必填参数
         /// </summary>
         [JsonProperty("TriggerName")]
         public string TriggerName{ get; set; }

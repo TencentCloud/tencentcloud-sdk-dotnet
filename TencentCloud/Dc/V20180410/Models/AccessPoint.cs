@@ -88,6 +88,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 接入点类型。VXLAN/QCPL/QCAR
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessPointType")]
+        public string AccessPointType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +111,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "Coordinate.", this.Coordinate);
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "AccessPointType", this.AccessPointType);
         }
     }
 }

@@ -93,6 +93,46 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
+        /// 创建用于托管SSH密钥对的凭据
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSHKeyPairSecretRequest"/></param>
+        /// <returns><see cref="CreateSSHKeyPairSecretResponse"/></returns>
+        public async Task<CreateSSHKeyPairSecretResponse> CreateSSHKeyPairSecret(CreateSSHKeyPairSecretRequest req)
+        {
+             JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSSHKeyPairSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSHKeyPairSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用于托管SSH密钥对的凭据
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSHKeyPairSecretRequest"/></param>
+        /// <returns><see cref="CreateSSHKeyPairSecretResponse"/></returns>
+        public CreateSSHKeyPairSecretResponse CreateSSHKeyPairSecretSync(CreateSSHKeyPairSecretRequest req)
+        {
+             JsonResponseModel<CreateSSHKeyPairSecretResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSSHKeyPairSecret");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSHKeyPairSecretResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建新的凭据信息，通过KMS进行加密保护。每个Region最多可创建存储1000个凭据信息。
         /// </summary>
         /// <param name="req"><see cref="CreateSecretRequest"/></param>
@@ -530,6 +570,46 @@ namespace TencentCloud.Ssm.V20190923
              {
                  var strResp = this.InternalRequestSync(req, "GetRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取SSH密钥对凭据明文信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetSSHKeyPairValueRequest"/></param>
+        /// <returns><see cref="GetSSHKeyPairValueResponse"/></returns>
+        public async Task<GetSSHKeyPairValueResponse> GetSSHKeyPairValue(GetSSHKeyPairValueRequest req)
+        {
+             JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSSHKeyPairValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSSHKeyPairValueResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取SSH密钥对凭据明文信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetSSHKeyPairValueRequest"/></param>
+        /// <returns><see cref="GetSSHKeyPairValueResponse"/></returns>
+        public GetSSHKeyPairValueResponse GetSSHKeyPairValueSync(GetSSHKeyPairValueRequest req)
+        {
+             JsonResponseModel<GetSSHKeyPairValueResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSSHKeyPairValue");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSSHKeyPairValueResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

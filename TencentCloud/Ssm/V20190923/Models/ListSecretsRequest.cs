@@ -70,7 +70,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         /// <summary>
         /// 0  -- 表示用户自定义凭据，默认为0。
         /// 1  -- 表示用户云产品凭据。
-        /// 这个参数只能在云产品凭据(1)和用户自定义凭据(0)中二选一。
+        /// 2 -- 表示SSH密钥对凭据。
         /// </summary>
         [JsonProperty("SecretType")]
         public ulong? SecretType{ get; set; }

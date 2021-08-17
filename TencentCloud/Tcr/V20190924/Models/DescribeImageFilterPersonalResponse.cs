@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// payload
+        /// 返回tag镜像内容相同的tag列表
         /// </summary>
         [JsonProperty("Data")]
         public SameImagesResp Data{ get; set; }

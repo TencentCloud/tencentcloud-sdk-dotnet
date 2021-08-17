@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D56E3EFD-C760-38D8-8424-8856F2207A21}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.342</VersionPrefix>
+    <VersionPrefix>3.0.343</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,10 @@
     <Compile Include="V20190916\Models\DescribeItemsResponse.cs" />
     <Compile Include="V20190916\Models\DescribeKTVMusicDetailRequest.cs" />
     <Compile Include="V20190916\Models\DescribeKTVMusicDetailResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeKTVPlaylistDetailRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeKTVPlaylistDetailResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeKTVPlaylistsRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeKTVPlaylistsResponse.cs" />
     <Compile Include="V20190916\Models\DescribeLyricRequest.cs" />
     <Compile Include="V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="V20190916\Models\DescribeMusicRequest.cs" />
@@ -74,6 +78,7 @@
     <Compile Include="V20190916\Models\ImagePath.cs" />
     <Compile Include="V20190916\Models\Item.cs" />
     <Compile Include="V20190916\Models\KTVMusicBaseInfo.cs" />
+    <Compile Include="V20190916\Models\KTVPlaylistBaseInfo.cs" />
     <Compile Include="V20190916\Models\Lyric.cs" />
     <Compile Include="V20190916\Models\ModifyMusicOnShelvesRequest.cs" />
     <Compile Include="V20190916\Models\ModifyMusicOnShelvesResponse.cs" />

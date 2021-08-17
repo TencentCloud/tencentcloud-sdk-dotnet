@@ -31,7 +31,9 @@ namespace TencentCloud.Ame.V20190916.Models
         public string ItemId{ get; set; }
 
         /// <summary>
-        /// 歌词格式，可选项，可不填写，目前填写只能填LRC-LRC。该字段为预留的扩展字段。后续如果不填，会返回歌曲的所有格式的歌词。如果填写某个正确的格式，则只返回该格式的歌词。
+        /// 格式，可选项，可不填写，默认值为：LRC-LRC。
+        /// <li>LRC-LRC：歌词；</li>
+        /// <li>JSON-ST：波形图。</li>
         /// </summary>
         [JsonProperty("SubItemType")]
         public string SubItemType{ get; set; }

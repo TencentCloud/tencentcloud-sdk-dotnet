@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 仓库是否存在
+        /// 验证个人版仓库是否存在返回信息
         /// </summary>
         [JsonProperty("Data")]
         public RepoIsExistResp Data{ get; set; }

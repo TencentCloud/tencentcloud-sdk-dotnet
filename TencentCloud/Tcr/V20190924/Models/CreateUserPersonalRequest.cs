@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 用户密码
+        /// 用户密码，密码必须为8到16位
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

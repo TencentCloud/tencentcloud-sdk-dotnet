@@ -25,13 +25,13 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 同步实例Id
+        /// 同步实例Id，见实例返回列表中的同步实例ID
         /// </summary>
         [JsonProperty("ReplicationRegistryId")]
         public string ReplicationRegistryId{ get; set; }
 
         /// <summary>
-        /// 同步实例的地域ID
+        /// 同步实例的地域ID，见实例返回列表中地域ID
         /// </summary>
         [JsonProperty("ReplicationRegionId")]
         public ulong? ReplicationRegionId{ get; set; }

@@ -73,6 +73,13 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("NewPods")]
         public DeployServicePodDetail[] NewPods{ get; set; }
 
+        /// <summary>
+        /// =0：手动确认批次；>0：下一批次开始时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NextBatchStartTime")]
+        public long? NextBatchStartTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "BatchIndex", this.BatchIndex);
             this.SetParamArrayObj(map, prefix + "OldPods.", this.OldPods);
             this.SetParamArrayObj(map, prefix + "NewPods.", this.NewPods);
+            this.SetParamSimple(map, prefix + "NextBatchStartTime", this.NextBatchStartTime);
         }
     }
 }

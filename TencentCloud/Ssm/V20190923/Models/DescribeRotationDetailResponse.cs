@@ -25,7 +25,7 @@ namespace TencentCloud.Ssm.V20190923.Models
     {
         
         /// <summary>
-        /// 否允许轮转，True表示开启轮转，False表示禁止轮转。
+        /// 否允许轮转，true表示开启轮转，false表示禁止轮转。
         /// </summary>
         [JsonProperty("EnableRotation")]
         public bool? EnableRotation{ get; set; }

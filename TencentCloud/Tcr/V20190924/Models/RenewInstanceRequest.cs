@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 预付费自动续费标识和购买时长
+        /// 预付费自动续费标识和购买时长,0：手动续费，1：自动续费，2：不续费并且不通知;单位为月
         /// </summary>
         [JsonProperty("RegistryChargePrepaid")]
         public RegistryChargePrepaid RegistryChargePrepaid{ get; set; }

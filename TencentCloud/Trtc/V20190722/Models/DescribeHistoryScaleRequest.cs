@@ -25,19 +25,19 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用户sdkappid
+        /// 用户sdkappid(1400188366)
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，5天内。本地unix时间戳（1588031999s）
+        /// 查询开始时间，5天内。本地unix时间戳（1587571000s）
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588031999s）
+        /// 查询结束时间，本地unix时间戳（1588034999s）
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

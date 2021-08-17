@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2E555935-1AF9-3035-A549-EF9F2CEA0C32}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.342</VersionPrefix>
+    <VersionPrefix>3.0.343</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,8 @@
     <Compile Include="V20190923\SsmClient.cs" />
     <Compile Include="V20190923\Models\CreateProductSecretRequest.cs" />
     <Compile Include="V20190923\Models\CreateProductSecretResponse.cs" />
+    <Compile Include="V20190923\Models\CreateSSHKeyPairSecretRequest.cs" />
+    <Compile Include="V20190923\Models\CreateSSHKeyPairSecretResponse.cs" />
     <Compile Include="V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="V20190923\Models\CreateSecretResponse.cs" />
     <Compile Include="V20190923\Models\DeleteSecretRequest.cs" />
@@ -69,6 +71,8 @@
     <Compile Include="V20190923\Models\EnableSecretResponse.cs" />
     <Compile Include="V20190923\Models\GetRegionsRequest.cs" />
     <Compile Include="V20190923\Models\GetRegionsResponse.cs" />
+    <Compile Include="V20190923\Models\GetSSHKeyPairValueRequest.cs" />
+    <Compile Include="V20190923\Models\GetSSHKeyPairValueResponse.cs" />
     <Compile Include="V20190923\Models\GetSecretValueRequest.cs" />
     <Compile Include="V20190923\Models\GetSecretValueResponse.cs" />
     <Compile Include="V20190923\Models\GetServiceStatusRequest.cs" />

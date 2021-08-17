@@ -49,7 +49,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string CronSetting{ get; set; }
 
         /// <summary>
-        /// 是否禁用规则
+        /// 是否禁用规则，默认值为false
         /// </summary>
         [JsonProperty("Disabled")]
         public bool? Disabled{ get; set; }

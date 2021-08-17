@@ -31,7 +31,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         public string SrcText{ get; set; }
 
         /// <summary>
-        /// 目标句子
+        /// 目标句子（以句子数量为单位消耗资源包）
         /// </summary>
         [JsonProperty("TargetText")]
         public string[] TargetText{ get; set; }

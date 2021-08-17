@@ -32,9 +32,18 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 指定计划删除日期，单位（天），0（默认）表示立即删除， 1-30 表示预留的天数，超出该日期之后彻底删除。
+        /// 当凭据类型为SSH密钥对凭据时，此字段只能取值只能为0。
         /// </summary>
         [JsonProperty("RecoveryWindowInDays")]
         public ulong? RecoveryWindowInDays{ get; set; }
+
+        /// <summary>
+        /// 当凭据类型为SSH密钥对凭据时，此字段有效，取值：
+        /// True -- 表示不仅仅清理此凭据中存储的SSH密钥信息，还会将SSH密钥对从CVM侧进行清理。注意，如果SSH密钥此时绑定了CVM实例，那么会清理失败。
+        /// False --  表示仅仅清理此凭据中存储的SSH密钥信息，不在CVM进侧进行清理。
+        /// </summary>
+        [JsonProperty("CleanSSHKey")]
+        public bool? CleanSSHKey{ get; set; }
 
 
         /// <summary>
@@ -44,6 +53,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
             this.SetParamSimple(map, prefix + "RecoveryWindowInDays", this.RecoveryWindowInDays);
+            this.SetParamSimple(map, prefix + "CleanSSHKey", this.CleanSSHKey);
         }
     }
 }

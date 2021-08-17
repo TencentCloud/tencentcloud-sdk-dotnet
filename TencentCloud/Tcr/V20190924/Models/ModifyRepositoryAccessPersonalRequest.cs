@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RepoName{ get; set; }
 
         /// <summary>
-        /// 默认值为0
+        /// 默认值为0, 1公共，0私有
         /// </summary>
         [JsonProperty("Public")]
         public long? Public{ get; set; }

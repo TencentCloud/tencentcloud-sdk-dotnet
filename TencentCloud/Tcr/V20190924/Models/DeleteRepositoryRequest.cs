@@ -37,7 +37,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string NamespaceName{ get; set; }
 
         /// <summary>
-        /// 仓库名称的名称
+        /// 镜像仓库的名称
         /// </summary>
         [JsonProperty("RepositoryName")]
         public string RepositoryName{ get; set; }

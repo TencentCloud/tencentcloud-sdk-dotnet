@@ -25,7 +25,7 @@ namespace TencentCloud.Tcr.V20190924.Models
     {
         
         /// <summary>
-        /// 命名空间是否存在
+        /// 验证命名空间是否存在返回信息
         /// </summary>
         [JsonProperty("Data")]
         public NamespaceIsExistsResp Data{ get; set; }

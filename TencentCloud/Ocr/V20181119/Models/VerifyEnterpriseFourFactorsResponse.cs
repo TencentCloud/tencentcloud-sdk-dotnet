@@ -25,7 +25,7 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 核验一致性（1:一致，2:不一致）
+        /// 核验一致性（1:一致，2:不一致，3:查询无记录）
         /// </summary>
         [JsonProperty("State")]
         public long? State{ get; set; }

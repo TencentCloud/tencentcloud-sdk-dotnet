@@ -37,7 +37,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public long? RetentionId{ get; set; }
 
         /// <summary>
-        /// 是否模拟执行
+        /// 是否模拟执行，默认值为false，即非模拟执行
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }

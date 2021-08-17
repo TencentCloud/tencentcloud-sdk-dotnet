@@ -1025,6 +1025,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesModificationRequest"/></param>
+        /// <returns><see cref="DescribeInstancesModificationResponse"/></returns>
+        public async Task<DescribeInstancesModificationResponse> DescribeInstancesModification(DescribeInstancesModificationRequest req)
+        {
+             JsonResponseModel<DescribeInstancesModificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesModification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesModificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeInstancesModification) 用于查询指定实例支持调整的机型配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesModificationRequest"/></param>
+        /// <returns><see cref="DescribeInstancesModificationResponse"/></returns>
+        public DescribeInstancesModificationResponse DescribeInstancesModificationSync(DescribeInstancesModificationRequest req)
+        {
+             JsonResponseModel<DescribeInstancesModificationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesModification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesModificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeInstancesOperationLimit）用于查询实例操作限制。
         /// 
         /// * 目前支持调整配置操作限制次数查询。

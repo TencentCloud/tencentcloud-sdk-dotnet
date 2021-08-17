@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// ID
+        /// ID 主键
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ParentProcPath{ get; set; }
 
         /// <summary>
-        /// 处理状态
+        /// 处理状态：0-待处理 2-白名单
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -137,6 +137,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("ProcTree")]
         public string ProcTree{ get; set; }
+
+        /// <summary>
+        /// 检测方法
+        /// </summary>
+        [JsonProperty("DetectBy")]
+        public ulong? DetectBy{ get; set; }
 
 
         /// <summary>
@@ -163,6 +169,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "MachineName", this.MachineName);
             this.SetParamSimple(map, prefix + "ProcTree", this.ProcTree);
+            this.SetParamSimple(map, prefix + "DetectBy", this.DetectBy);
         }
     }
 }

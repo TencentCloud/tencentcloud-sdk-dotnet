@@ -49,7 +49,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Desc{ get; set; }
 
         /// <summary>
-        /// 1为修改描述 2为启动禁用，不填写默认为修改启动禁用
+        /// 1为修改描述 2为操作启动禁用，默认值为2
         /// </summary>
         [JsonProperty("ModifyFlag")]
         public long? ModifyFlag{ get; set; }

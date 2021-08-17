@@ -143,7 +143,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string InstanceState{ get; set; }
 
         /// <summary>
-        /// 授权状态 1 授权 0 未授权
+        /// 防篡改 授权状态 1 授权 0 未授权
         /// </summary>
         [JsonProperty("LicenseStatus")]
         public ulong? LicenseStatus{ get; set; }
@@ -159,6 +159,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("HasAssetScan")]
         public ulong? HasAssetScan{ get; set; }
+
+        /// <summary>
+        /// 机器所属专区类型 CVM 云服务器, BM 黑石, ECM 边缘计算, LH 轻量应用服务器 ,Other 混合云专区
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
 
 
         /// <summary>
@@ -187,6 +193,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "LicenseStatus", this.LicenseStatus);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
         }
     }
 }

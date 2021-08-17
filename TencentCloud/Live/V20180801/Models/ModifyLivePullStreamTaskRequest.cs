@@ -112,10 +112,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 指定播放文件索引。
-        /// 注意：
-        /// 1. 从1开始，不大于SourceUrls中文件个数。
-        /// 2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-        /// 3. 只有当前任务处于暂停时，指定后启动任务才会生效。
+        /// 注意： 从1开始，不大于SourceUrls中文件个数。
         /// </summary>
         [JsonProperty("FileIndex")]
         public long? FileIndex{ get; set; }
@@ -124,8 +121,6 @@ namespace TencentCloud.Live.V20180801.Models
         /// 指定播放文件偏移。
         /// 注意：
         /// 1. 单位：秒，配合FileIndex使用。
-        /// 2. 只有VodRefreshType为ContinueBeginPoint时指定才有效。
-        /// 3. 只有当前任务处于暂停时，指定后启动任务才会生效。
         /// </summary>
         [JsonProperty("OffsetTime")]
         public long? OffsetTime{ get; set; }

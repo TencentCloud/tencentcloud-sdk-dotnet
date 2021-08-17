@@ -25,7 +25,7 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
-        /// 歌词详情
+        /// 歌词或者波形图详情
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Lyric")]

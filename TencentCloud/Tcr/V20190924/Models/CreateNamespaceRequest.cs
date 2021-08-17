@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string RegistryId{ get; set; }
 
         /// <summary>
-        /// 命名空间的名称
+        /// 命名空间的名称（长度2-30个字符，只能包含小写字母、数字及分隔符("."、"_"、"-")，且不能以分隔符开头、结尾或连续）
         /// </summary>
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }

@@ -253,6 +253,20 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("SsaEventId")]
         public string SsaEventId{ get; set; }
 
+        /// <summary>
+        /// 是否新接入的云防事件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNewCfwEvent")]
+        public bool? IsNewCfwEvent{ get; set; }
+
+        /// <summary>
+        /// 出入站方向
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Direction")]
+        public string Direction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +306,8 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "SoarPlaybookType", this.SoarPlaybookType);
             this.SetParamSimple(map, prefix + "SoarRunId", this.SoarRunId);
             this.SetParamSimple(map, prefix + "SsaEventId", this.SsaEventId);
+            this.SetParamSimple(map, prefix + "IsNewCfwEvent", this.IsNewCfwEvent);
+            this.SetParamSimple(map, prefix + "Direction", this.Direction);
         }
     }
 }

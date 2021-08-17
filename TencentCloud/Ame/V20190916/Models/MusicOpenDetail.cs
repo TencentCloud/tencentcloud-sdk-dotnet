@@ -87,6 +87,13 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("LyricUrl")]
         public string LyricUrl{ get; set; }
 
+        /// <summary>
+        /// 波形图url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WaveformUrl")]
+        public string WaveformUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "LyricUrl", this.LyricUrl);
+            this.SetParamSimple(map, prefix + "WaveformUrl", this.WaveformUrl);
         }
     }
 }

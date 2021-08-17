@@ -38,7 +38,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Token{ get; set; }
 
         /// <summary>
-        /// 访问凭证过期时间戳
+        /// 访问凭证过期时间戳，是一个时间戳数字，无单位
         /// </summary>
         [JsonProperty("ExpTime")]
         public long? ExpTime{ get; set; }

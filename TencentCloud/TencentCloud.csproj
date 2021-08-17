@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.342</VersionPrefix>
+    <VersionPrefix>3.0.343</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -104,6 +104,10 @@
     <Compile Include="Ame\V20190916\Models\DescribeItemsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeKTVMusicDetailRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeKTVMusicDetailResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistDetailRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistDetailResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistsRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeLyricRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicRequest.cs" />
@@ -117,6 +121,7 @@
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
     <Compile Include="Ame\V20190916\Models\Item.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicBaseInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\KTVPlaylistBaseInfo.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
     <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesResponse.cs" />
@@ -3849,6 +3854,8 @@
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BankCardItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BindAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BindAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAccReUnionPayRequest.cs" />
@@ -3880,6 +3887,9 @@
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateInvoiceResponse.cs" />
@@ -3932,6 +3942,8 @@
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyAgentTaxPaymentInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyBindedAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ModifyBindedAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
@@ -4084,6 +4096,8 @@
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderInSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxListRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxListResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxPaymentRequest.cs" />
@@ -4211,6 +4225,8 @@
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceTypeConfigsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceVncUrlRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstanceVncUrlResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeInstancesModificationRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeInstancesModificationResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesOperationLimitRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesOperationLimitResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeInstancesRequest.cs" />
@@ -4275,6 +4291,7 @@
     <Compile Include="Cvm\V20170312\Models\InstanceMarketOptionsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceStatus.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceTypeConfig.cs" />
+    <Compile Include="Cvm\V20170312\Models\InstanceTypeConfigStatus.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceTypeQuotaItem.cs" />
     <Compile Include="Cvm\V20170312\Models\InternetAccessible.cs" />
     <Compile Include="Cvm\V20170312\Models\InternetBandwidthConfig.cs" />
@@ -8947,17 +8964,10 @@
     <Compile Include="Mariadb\V20170312\Models\ZoneChooseInfo.cs" />
     <Compile Include="Mariadb\V20170312\Models\ZonesInfo.cs" />
     <Compile Include="Market\V20191010\MarketClient.cs" />
-    <Compile Include="Market\V20191010\Models\Error.cs" />
     <Compile Include="Market\V20191010\Models\FlowProductRemindRequest.cs" />
     <Compile Include="Market\V20191010\Models\FlowProductRemindResponse.cs" />
     <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountRequest.cs" />
     <Compile Include="Market\V20191010\Models\GetUsagePlanUsageAmountResponse.cs" />
-    <Compile Include="Market\V20191010\Models\OfflineProductDeal.cs" />
-    <Compile Include="Market\V20191010\Models\SyncUserAndOrderInfoDetail.cs" />
-    <Compile Include="Market\V20191010\Models\SyncUserAndOrderInfoRequest.cs" />
-    <Compile Include="Market\V20191010\Models\SyncUserAndOrderInfoResponse.cs" />
-    <Compile Include="Market\V20191010\Models\WeChatOrderInfo.cs" />
-    <Compile Include="Market\V20191010\Models\WeChatUserInfo.cs" />
     <Compile Include="Memcached\V20190318\MemcachedClient.cs" />
     <Compile Include="Memcached\V20190318\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Memcached\V20190318\Models\DescribeInstancesResponse.cs" />
@@ -9639,86 +9649,56 @@
     <Compile Include="Mrs\V20200910\MrsClient.cs" />
     <Compile Include="Mrs\V20200910\Models\Advice.cs" />
     <Compile Include="Mrs\V20200910\Models\AspectRatio.cs" />
-    <Compile Include="Mrs\V20200910\Models\Attribute.cs" />
-    <Compile Include="Mrs\V20200910\Models\BasicInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\BlockInfo.cs" />
-    <Compile Include="Mrs\V20200910\Models\Case.cs" />
-    <Compile Include="Mrs\V20200910\Models\CaseHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\Check.cs" />
-    <Compile Include="Mrs\V20200910\Models\Conclusion.cs" />
     <Compile Include="Mrs\V20200910\Models\Desc.cs" />
     <Compile Include="Mrs\V20200910\Models\DiagCert.cs" />
     <Compile Include="Mrs\V20200910\Models\DiagCertItem.cs" />
     <Compile Include="Mrs\V20200910\Models\DischargeDiagnosis.cs" />
-    <Compile Include="Mrs\V20200910\Models\DiseaseHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\DiseaseMedicalHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\Elastic.cs" />
-    <Compile Include="Mrs\V20200910\Models\FamilyHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\FamilyMedicalHistory.cs" />
-    <Compile Include="Mrs\V20200910\Models\Finding.cs" />
     <Compile Include="Mrs\V20200910\Models\FirstPage.cs" />
     <Compile Include="Mrs\V20200910\Models\HandleParam.cs" />
-    <Compile Include="Mrs\V20200910\Models\HealthHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\HistologyLevel.cs" />
     <Compile Include="Mrs\V20200910\Models\HistologyType.cs" />
     <Compile Include="Mrs\V20200910\Models\Hospitalization.cs" />
-    <Compile Include="Mrs\V20200910\Models\IHC.cs" />
     <Compile Include="Mrs\V20200910\Models\IHCInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageInfo.cs" />
-    <Compile Include="Mrs\V20200910\Models\ImageReport.cs" />
-    <Compile Include="Mrs\V20200910\Models\ImageText.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageToClassRequest.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageToClassResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageToObjectRequest.cs" />
     <Compile Include="Mrs\V20200910\Models\ImageToObjectResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\Indicator.cs" />
     <Compile Include="Mrs\V20200910\Models\IndicatorItem.cs" />
-    <Compile Include="Mrs\V20200910\Models\Inspection.cs" />
     <Compile Include="Mrs\V20200910\Models\Invas.cs" />
-    <Compile Include="Mrs\V20200910\Models\Invasive.cs" />
-    <Compile Include="Mrs\V20200910\Models\KindItem.cs" />
     <Compile Include="Mrs\V20200910\Models\Lymph.cs" />
-    <Compile Include="Mrs\V20200910\Models\MarryHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\MedDoc.cs" />
     <Compile Include="Mrs\V20200910\Models\MedicalRecordInfo.cs" />
-    <Compile Include="Mrs\V20200910\Models\MenstrualHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\MenstrualMedicalHistory.cs" />
-    <Compile Include="Mrs\V20200910\Models\Metastasis.cs" />
     <Compile Include="Mrs\V20200910\Models\Multiple.cs" />
     <Compile Include="Mrs\V20200910\Models\NormPart.cs" />
     <Compile Include="Mrs\V20200910\Models\NormSize.cs" />
     <Compile Include="Mrs\V20200910\Models\ObstericalMedicalHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\Organ.cs" />
     <Compile Include="Mrs\V20200910\Models\Part.cs" />
-    <Compile Include="Mrs\V20200910\Models\Pathology.cs" />
     <Compile Include="Mrs\V20200910\Models\PathologyReport.cs" />
     <Compile Include="Mrs\V20200910\Models\PatientInfo.cs" />
-    <Compile Include="Mrs\V20200910\Models\PersonalHistory.cs" />
-    <Compile Include="Mrs\V20200910\Models\PersonalInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\PersonalMedicalHistory.cs" />
-    <Compile Include="Mrs\V20200910\Models\ReportImageStructuredRequest.cs" />
-    <Compile Include="Mrs\V20200910\Models\ReportImageStructuredResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\ReportInfo.cs" />
-    <Compile Include="Mrs\V20200910\Models\ReportTextStructuredRequest.cs" />
-    <Compile Include="Mrs\V20200910\Models\ReportTextStructuredResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\Size.cs" />
     <Compile Include="Mrs\V20200910\Models\Summary.cs" />
     <Compile Include="Mrs\V20200910\Models\Surgery.cs" />
     <Compile Include="Mrs\V20200910\Models\SurgeryAttr.cs" />
     <Compile Include="Mrs\V20200910\Models\SurgeryHistory.cs" />
-    <Compile Include="Mrs\V20200910\Models\Symptom.cs" />
     <Compile Include="Mrs\V20200910\Models\SymptomInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\Template.cs" />
-    <Compile Include="Mrs\V20200910\Models\TestItem.cs" />
-    <Compile Include="Mrs\V20200910\Models\TextReport.cs" />
     <Compile Include="Mrs\V20200910\Models\TextToClassRequest.cs" />
     <Compile Include="Mrs\V20200910\Models\TextToClassResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\TextToObjectRequest.cs" />
     <Compile Include="Mrs\V20200910\Models\TextToObjectResponse.cs" />
     <Compile Include="Mrs\V20200910\Models\TextType.cs" />
-    <Compile Include="Mrs\V20200910\Models\Treatment.cs" />
     <Compile Include="Mrs\V20200910\Models\TreatmentRecord.cs" />
-    <Compile Include="Mrs\V20200910\Models\Tuber.cs" />
     <Compile Include="Mrs\V20200910\Models\TuberInfo.cs" />
     <Compile Include="Mrs\V20200910\Models\Value.cs" />
     <Compile Include="Ms\V20180408\MsClient.cs" />
@@ -11336,6 +11316,8 @@
     <Compile Include="Ssm\V20190923\SsmClient.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateProductSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateProductSecretResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSSHKeyPairSecretRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\CreateSSHKeyPairSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\CreateSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\DeleteSecretRequest.cs" />
@@ -11358,6 +11340,8 @@
     <Compile Include="Ssm\V20190923\Models\EnableSecretResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetRegionsRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\GetRegionsResponse.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSSHKeyPairValueRequest.cs" />
+    <Compile Include="Ssm\V20190923\Models\GetSSHKeyPairValueResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetSecretValueRequest.cs" />
     <Compile Include="Ssm\V20190923\Models\GetSecretValueResponse.cs" />
     <Compile Include="Ssm\V20190923\Models\GetServiceStatusRequest.cs" />
@@ -12334,6 +12318,19 @@
     <Compile Include="Tcr\V20190924\Models\WebhookTarget.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTrigger.cs" />
     <Compile Include="Tcr\V20190924\Models\WebhookTriggerLog.cs" />
+    <Compile Include="Tdid\V20210519\TdidClient.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateCredentialRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateCredentialResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateSelectiveCredentialRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateSelectiveCredentialResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateTDidRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateTDidResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\FunctionArg.cs" />
+    <Compile Include="Tdid\V20210519\Models\Proof.cs" />
+    <Compile Include="Tdid\V20210519\Models\TransactionArg.cs" />
+    <Compile Include="Tdid\V20210519\Models\VerifyCredentialRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\VerifyCredentialResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\VerifyFunctionArg.cs" />
     <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageResponse.cs" />

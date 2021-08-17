@@ -32,8 +32,8 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 是否开启轮转。
-        /// True -- 开启轮转；
-        /// False -- 禁止轮转。
+        /// true -- 开启轮转；
+        /// false -- 禁止轮转。
         /// </summary>
         [JsonProperty("EnableRotation")]
         public bool? EnableRotation{ get; set; }
@@ -46,7 +46,7 @@ namespace TencentCloud.Ssm.V20190923.Models
 
         /// <summary>
         /// 用户设置的期望开始轮转时间，格式为：2006-01-02 15:04:05。
-        /// 当EnableRotation为True时，如果不填RotationBeginTime，则默认填充为当前时间。
+        /// 当EnableRotation为true时，如果不填RotationBeginTime，则默认填充为当前时间。
         /// </summary>
         [JsonProperty("RotationBeginTime")]
         public string RotationBeginTime{ get; set; }

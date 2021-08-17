@@ -25,6 +25,21 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
+        /// 操作的状态。取值范围：
+        /// SUCCESS :表示操作成功 
+        /// FAILED :表示操作失败 
+        /// PROCESSING :表示操作中。
+        /// </summary>
+        [JsonProperty("OperationState")]
+        public string OperationState{ get; set; }
+
+        /// <summary>
+        /// 开始时间。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
         /// 操作者的UIN。
         /// </summary>
         [JsonProperty("Operator")]
@@ -46,31 +61,16 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string Operation{ get; set; }
 
         /// <summary>
-        /// 操作的云盘ID。
-        /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
-
-        /// <summary>
-        /// 操作的状态。取值范围：
-        /// SUCCESS :表示操作成功 
-        /// FAILED :表示操作失败 
-        /// PROCESSING :表示操作中。
-        /// </summary>
-        [JsonProperty("OperationState")]
-        public string OperationState{ get; set; }
-
-        /// <summary>
-        /// 开始时间。
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
-
-        /// <summary>
         /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 操作的云盘ID。
+        /// </summary>
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
 
 
         /// <summary>
@@ -78,12 +78,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "OperationState", this.OperationState);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Operation", this.Operation);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
         }
     }
 }
