@@ -80,6 +80,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Branch")]
         public string Branch{ get; set; }
 
+        /// <summary>
+        /// coding项目ID，type为coding时需要填写
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -94,6 +101,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "CodingPackageVersion", this.CodingPackageVersion);
             this.SetParamSimple(map, prefix + "RawCode", this.RawCode);
             this.SetParamSimple(map, prefix + "Branch", this.Branch);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

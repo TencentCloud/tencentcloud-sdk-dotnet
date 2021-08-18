@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 消息保留策略
+        /// </summary>
+        [JsonProperty("RetentionPolicy")]
+        public RetentionPolicy RetentionPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MsgTTL", this.MsgTTL);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         }
     }
 }

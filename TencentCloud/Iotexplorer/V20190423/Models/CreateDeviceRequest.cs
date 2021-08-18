@@ -66,6 +66,12 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("NwkSKey")]
         public string NwkSKey{ get; set; }
 
+        /// <summary>
+        /// 手动指定设备的PSK密钥
+        /// </summary>
+        [JsonProperty("DefinedPsk")]
+        public string DefinedPsk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "DevEUI", this.DevEUI);
             this.SetParamSimple(map, prefix + "AppSKey", this.AppSKey);
             this.SetParamSimple(map, prefix + "NwkSKey", this.NwkSKey);
+            this.SetParamSimple(map, prefix + "DefinedPsk", this.DefinedPsk);
         }
     }
 }

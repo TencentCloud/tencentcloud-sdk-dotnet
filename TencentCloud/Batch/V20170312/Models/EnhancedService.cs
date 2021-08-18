@@ -36,6 +36,12 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("MonitorService")]
         public RunMonitorServiceEnabled MonitorService{ get; set; }
 
+        /// <summary>
+        /// 开启云自动化助手服务。若不指定该参数，则默认不开启云自动化助手服务。
+        /// </summary>
+        [JsonProperty("AutomationService")]
+        public RunAutomationServiceEnabled AutomationService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Batch.V20170312.Models
         {
             this.SetParamObj(map, prefix + "SecurityService.", this.SecurityService);
             this.SetParamObj(map, prefix + "MonitorService.", this.MonitorService);
+            this.SetParamObj(map, prefix + "AutomationService.", this.AutomationService);
         }
     }
 }

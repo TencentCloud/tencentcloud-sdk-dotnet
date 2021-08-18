@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.343</VersionPrefix>
+    <VersionPrefix>3.0.344</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -960,6 +960,7 @@
     <Compile Include="Batch\V20170312\Models\RedirectLocalInfo.cs" />
     <Compile Include="Batch\V20170312\Models\RetryJobsRequest.cs" />
     <Compile Include="Batch\V20170312\Models\RetryJobsResponse.cs" />
+    <Compile Include="Batch\V20170312\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Batch\V20170312\Models\SpotMarketOptions.cs" />
@@ -3885,6 +3886,11 @@
     <Compile Include="Cpdp\V20190820\Models\CreateAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentBatchData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentRecipient.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorData.cs" />
@@ -3917,6 +3923,9 @@
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePayResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePaymentData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePaymentRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateSinglePaymentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateTransferBatchRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateTransferBatchResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
@@ -3974,6 +3983,10 @@
     <Compile Include="Cpdp\V20190820\Models\QueryBankTransactionDetailsResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBankWithdrawCashDetailsRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBankWithdrawCashDetailsResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBatchPaymentResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBatchPaymentResultDataInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBatchPaymentResultRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryBatchPaymentResultResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBillDownloadURLResponse.cs" />
@@ -4032,6 +4045,9 @@
     <Compile Include="Cpdp\V20190820\Models\QuerySinglePayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySinglePayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySinglePayResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePaymentResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePaymentResultRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QuerySinglePaymentResultResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySingleTransactionStatusRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySingleTransactionStatusResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QuerySmallAmountTransferRequest.cs" />
@@ -4352,6 +4368,7 @@
     <Compile Include="Cvm\V20170312\Models\ResetInstancesTypeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ResizeInstanceDisksRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ResizeInstanceDisksResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="Cvm\V20170312\Models\RunInstancesRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\RunInstancesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RunMonitorServiceEnabled.cs" />
@@ -4577,6 +4594,8 @@
     <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyWarningSettingRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ModifyWarningSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectSettingRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\OpenPortStatistics.cs" />
@@ -4632,6 +4651,7 @@
     <Compile Include="Cwp\V20180228\Models\UpdateBaselineStrategyResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\UsualPlace.cs" />
     <Compile Include="Cwp\V20180228\Models\VulDetailInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\WarningObject.cs" />
     <Compile Include="Cws\V20180312\CwsClient.cs" />
     <Compile Include="Cws\V20180312\Models\CreateMonitorsRequest.cs" />
     <Compile Include="Cws\V20180312\Models\CreateMonitorsResponse.cs" />
@@ -10207,6 +10227,13 @@
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\RemovePayRelationForClientResponse.cs" />
     <Compile Include="Partners\V20180321\Models\UnbindClientElem.cs" />
+    <Compile Include="Pds\V20210701\PdsClient.cs" />
+    <Compile Include="Pds\V20210701\Models\DescribeNewUserAcquisitionRequest.cs" />
+    <Compile Include="Pds\V20210701\Models\DescribeNewUserAcquisitionResponse.cs" />
+    <Compile Include="Pds\V20210701\Models\DescribeStockEstimationRequest.cs" />
+    <Compile Include="Pds\V20210701\Models\DescribeStockEstimationResponse.cs" />
+    <Compile Include="Pds\V20210701\Models\Score.cs" />
+    <Compile Include="Pds\V20210701\Models\UserInfos.cs" />
     <Compile Include="Postgres\V20170312\PostgresClient.cs" />
     <Compile Include="Postgres\V20170312\Models\AccountInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
@@ -12438,6 +12465,7 @@
     <Compile Include="Tdmq\V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\RetentionPolicy.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesRequest.cs" />
@@ -13131,6 +13159,7 @@
     <Compile Include="Tke\V20180525\Models\RouteInfo.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="Tke\V20180525\Models\RouteTableInfo.cs" />
+    <Compile Include="Tke\V20180525\Models\RunAutomationServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="Tke\V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />

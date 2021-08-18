@@ -146,6 +146,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("SSLId")]
         public string SSLId{ get; set; }
 
+        /// <summary>
+        /// 同ruleId
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "CCStatus", this.CCStatus);
             this.SetParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
             this.SetParamSimple(map, prefix + "SSLId", this.SSLId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

@@ -3737,6 +3737,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 修改告警设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWarningSettingRequest"/></param>
+        /// <returns><see cref="ModifyWarningSettingResponse"/></returns>
+        public async Task<ModifyWarningSettingResponse> ModifyWarningSetting(ModifyWarningSettingRequest req)
+        {
+             JsonResponseModel<ModifyWarningSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWarningSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWarningSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改告警设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWarningSettingRequest"/></param>
+        /// <returns><see cref="ModifyWarningSettingResponse"/></returns>
+        public ModifyWarningSettingResponse ModifyWarningSettingSync(ModifyWarningSettingRequest req)
+        {
+             JsonResponseModel<ModifyWarningSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWarningSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWarningSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 网站防篡改-修改网站防护设置
         /// </summary>
         /// <param name="req"><see cref="ModifyWebPageProtectSettingRequest"/></param>

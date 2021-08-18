@@ -42,6 +42,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
+        /// <summary>
+        /// 是否强制删除，默认为false
+        /// </summary>
+        [JsonProperty("Force")]
+        public bool? Force{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamArrayObj(map, prefix + "TopicSets.", this.TopicSets);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "Force", this.Force);
         }
     }
 }

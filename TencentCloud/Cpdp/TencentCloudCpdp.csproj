@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.343</VersionPrefix>
+    <VersionPrefix>3.0.344</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -102,6 +102,11 @@
     <Compile Include="V20190820\Models\CreateAcctResponse.cs" />
     <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
     <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="V20190820\Models\CreateBatchPaymentBatchData.cs" />
+    <Compile Include="V20190820\Models\CreateBatchPaymentData.cs" />
+    <Compile Include="V20190820\Models\CreateBatchPaymentRecipient.cs" />
+    <Compile Include="V20190820\Models\CreateBatchPaymentRequest.cs" />
+    <Compile Include="V20190820\Models\CreateBatchPaymentResponse.cs" />
     <Compile Include="V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="V20190820\Models\CreateCustAcctIdResponse.cs" />
     <Compile Include="V20190820\Models\CreateExternalAnchorData.cs" />
@@ -134,6 +139,9 @@
     <Compile Include="V20190820\Models\CreateSinglePayRequest.cs" />
     <Compile Include="V20190820\Models\CreateSinglePayResponse.cs" />
     <Compile Include="V20190820\Models\CreateSinglePayResult.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePaymentData.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePaymentRequest.cs" />
+    <Compile Include="V20190820\Models\CreateSinglePaymentResponse.cs" />
     <Compile Include="V20190820\Models\CreateTransferBatchRequest.cs" />
     <Compile Include="V20190820\Models\CreateTransferBatchResponse.cs" />
     <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
@@ -191,6 +199,10 @@
     <Compile Include="V20190820\Models\QueryBankTransactionDetailsResponse.cs" />
     <Compile Include="V20190820\Models\QueryBankWithdrawCashDetailsRequest.cs" />
     <Compile Include="V20190820\Models\QueryBankWithdrawCashDetailsResponse.cs" />
+    <Compile Include="V20190820\Models\QueryBatchPaymentResultData.cs" />
+    <Compile Include="V20190820\Models\QueryBatchPaymentResultDataInfo.cs" />
+    <Compile Include="V20190820\Models\QueryBatchPaymentResultRequest.cs" />
+    <Compile Include="V20190820\Models\QueryBatchPaymentResultResponse.cs" />
     <Compile Include="V20190820\Models\QueryBillDownloadURLData.cs" />
     <Compile Include="V20190820\Models\QueryBillDownloadURLRequest.cs" />
     <Compile Include="V20190820\Models\QueryBillDownloadURLResponse.cs" />
@@ -249,6 +261,9 @@
     <Compile Include="V20190820\Models\QuerySinglePayRequest.cs" />
     <Compile Include="V20190820\Models\QuerySinglePayResponse.cs" />
     <Compile Include="V20190820\Models\QuerySinglePayResult.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePaymentResultData.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePaymentResultRequest.cs" />
+    <Compile Include="V20190820\Models\QuerySinglePaymentResultResponse.cs" />
     <Compile Include="V20190820\Models\QuerySingleTransactionStatusRequest.cs" />
     <Compile Include="V20190820\Models\QuerySingleTransactionStatusResponse.cs" />
     <Compile Include="V20190820\Models\QuerySmallAmountTransferRequest.cs" />

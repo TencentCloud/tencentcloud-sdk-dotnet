@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.343</VersionPrefix>
+    <VersionPrefix>3.0.344</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -247,6 +247,8 @@
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
     <Compile Include="V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyWarningSettingRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyWarningSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSettingRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectSettingResponse.cs" />
     <Compile Include="V20180228\Models\OpenPortStatistics.cs" />
@@ -302,5 +304,6 @@
     <Compile Include="V20180228\Models\UpdateBaselineStrategyResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
     <Compile Include="V20180228\Models\VulDetailInfo.cs" />
+    <Compile Include="V20180228\Models\WarningObject.cs" />
   </ItemGroup>
 </Project>

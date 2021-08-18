@@ -241,6 +241,8 @@ Project("{FF7DA1A4-A5D5-3EF1-A5B1-B43A74B2F34E}") = "TencentCloudOrganization", 
 EndProject
 Project("{40746A19-2F78-3BFC-A968-CEFEA27426D6}") = "TencentCloudPartners", "TencentCloud\Partners\TencentCloudPartners.csproj", "{40746A19-2F78-3BFC-A968-CEFEA27426D6}"
 EndProject
+Project("{D76746B6-2CCB-380E-AB72-8C32771147F7}") = "TencentCloudPds", "TencentCloud\Pds\TencentCloudPds.csproj", "{D76746B6-2CCB-380E-AB72-8C32771147F7}"
+EndProject
 Project("{A06AC0CF-076C-38E8-83FE-C7FFA375814C}") = "TencentCloudPostgres", "TencentCloud\Postgres\TencentCloudPostgres.csproj", "{A06AC0CF-076C-38E8-83FE-C7FFA375814C}"
 EndProject
 Project("{F711E1FC-542C-3536-9601-50E098B1102E}") = "TencentCloudPrivatedns", "TencentCloud\Privatedns\TencentCloudPrivatedns.csproj", "{F711E1FC-542C-3536-9601-50E098B1102E}"
@@ -849,6 +851,10 @@ Global
 		{40746A19-2F78-3BFC-A968-CEFEA27426D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{40746A19-2F78-3BFC-A968-CEFEA27426D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{40746A19-2F78-3BFC-A968-CEFEA27426D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D76746B6-2CCB-380E-AB72-8C32771147F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D76746B6-2CCB-380E-AB72-8C32771147F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D76746B6-2CCB-380E-AB72-8C32771147F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D76746B6-2CCB-380E-AB72-8C32771147F7}.Release|Any CPU.Build.0 = Release|Any CPU
 		{A06AC0CF-076C-38E8-83FE-C7FFA375814C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{A06AC0CF-076C-38E8-83FE-C7FFA375814C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A06AC0CF-076C-38E8-83FE-C7FFA375814C}.Release|Any CPU.ActiveCfg = Release|Any CPU
