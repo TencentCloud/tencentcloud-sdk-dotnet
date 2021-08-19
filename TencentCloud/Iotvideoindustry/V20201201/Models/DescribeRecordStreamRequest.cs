@@ -54,6 +54,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
+        /// <summary>
+        /// 通道唯一标识
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

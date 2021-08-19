@@ -51,6 +51,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
+        /// <summary>
+        /// 通道唯一标识
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

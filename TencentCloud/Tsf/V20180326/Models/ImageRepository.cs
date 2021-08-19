@@ -101,6 +101,34 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// TcrRepoInfo值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TcrRepoInfo")]
+        public TcrRepoInfo TcrRepoInfo{ get; set; }
+
+        /// <summary>
+        /// TcrBindingId值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TcrBindingId")]
+        public long? TcrBindingId{ get; set; }
+
+        /// <summary>
+        /// applicationid值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// ApplicationName值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public ScalableRule ApplicationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +146,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
+            this.SetParamSimple(map, prefix + "TcrBindingId", this.TcrBindingId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
         }
     }
 }

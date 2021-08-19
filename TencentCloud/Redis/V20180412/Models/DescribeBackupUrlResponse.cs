@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 外网下载地址（6小时）
+        /// 外网下载地址（6小时内链接有效），该字段正在逐步废弃中。
         /// </summary>
         [JsonProperty("DownloadUrl")]
         public string[] DownloadUrl{ get; set; }
 
         /// <summary>
-        /// 内网下载地址（6小时）
+        /// 内网下载地址（6小时内链接有效），该字段正在逐步废弃中。
         /// </summary>
         [JsonProperty("InnerDownloadUrl")]
         public string[] InnerDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 文件名称（仅tendis实例有值）
+        /// 文件名称，该字段正在逐步废弃中。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Filenames")]

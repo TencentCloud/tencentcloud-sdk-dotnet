@@ -103,6 +103,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("SizeByte")]
         public long? SizeByte{ get; set; }
 
+        /// <summary>
+        /// TcrRepoInfo值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TcrRepoInfo")]
+        public TcrRepoInfo TcrRepoInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +129,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "PushTime", this.PushTime);
             this.SetParamSimple(map, prefix + "SizeByte", this.SizeByte);
+            this.SetParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
         }
     }
 }

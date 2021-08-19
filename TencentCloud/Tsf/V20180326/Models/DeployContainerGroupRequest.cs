@@ -73,13 +73,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string JvmOpts{ get; set; }
 
         /// <summary>
-        /// 业务容器分配的 CPU 核数，对应 K8S 的 request
+        /// 业务容器分配的 CPU 核数，对应 K8S 的 request，默认0.25
         /// </summary>
         [JsonProperty("CpuRequest")]
         public string CpuRequest{ get; set; }
 
         /// <summary>
-        /// 业务容器分配的内存 MiB 数，对应 K8S 的 request
+        /// 业务容器分配的内存 MiB 数，对应 K8S 的 request，默认640 MiB
         /// </summary>
         [JsonProperty("MemRequest")]
         public string MemRequest{ get; set; }
@@ -198,6 +198,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("SchedulingStrategy")]
         public SchedulingStrategy SchedulingStrategy{ get; set; }
 
+        /// <summary>
+        /// 是否进行增量部署，默认为false，全量更新
+        /// </summary>
+        [JsonProperty("IncrementalDeployment")]
+        public bool? IncrementalDeployment{ get; set; }
+
+        /// <summary>
+        /// tcr或者不填
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public string RepoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +245,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "ServiceSetting.", this.ServiceSetting);
             this.SetParamSimple(map, prefix + "DeployAgent", this.DeployAgent);
             this.SetParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
+            this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
         }
     }
 }

@@ -42,6 +42,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 企业: tcr ；个人: personal或者不填
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public string RepoType{ get; set; }
+
+        /// <summary>
+        /// 应用id
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// TcrRepoInfo值
+        /// </summary>
+        [JsonProperty("TcrRepoInfo")]
+        public TcrRepoInfo TcrRepoInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
         }
     }
 }

@@ -94,6 +94,27 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Recordable")]
         public long? Recordable{ get; set; }
 
+        /// <summary>
+        /// 设备接入协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 组Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
+        /// <summary>
+        /// 组名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "DeviceCode", this.DeviceCode);
             this.SetParamSimple(map, prefix + "IsRecord", this.IsRecord);
             this.SetParamSimple(map, prefix + "Recordable", this.Recordable);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

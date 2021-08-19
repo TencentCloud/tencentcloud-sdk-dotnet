@@ -54,6 +54,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }
 
+        /// <summary>
+        /// * RoleName
+        /// 按照角色名进行过滤，精确查询。
+        /// 类型：String
+        /// 必选：否
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +74,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

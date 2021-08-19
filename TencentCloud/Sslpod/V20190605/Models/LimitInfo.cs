@@ -25,7 +25,10 @@ namespace TencentCloud.Sslpod.V20190605.Models
     {
         
         /// <summary>
-        /// 通知类型
+        /// 通知类型：
+        /// limit_emai：邮件
+        /// limit_wechat：微信
+        /// limit_phone：手机
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

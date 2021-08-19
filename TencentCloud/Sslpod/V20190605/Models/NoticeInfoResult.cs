@@ -31,7 +31,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 通知开关信息
+        /// 通知开关信息；0：关闭；15开启
         /// </summary>
         [JsonProperty("NoticeType")]
         public long? NoticeType{ get; set; }

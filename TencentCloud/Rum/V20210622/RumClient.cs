@@ -132,5 +132,45 @@ namespace TencentCloud.Rum.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取首页错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorRequest"/></param>
+        /// <returns><see cref="DescribeErrorResponse"/></returns>
+        public async Task<DescribeErrorResponse> DescribeError(DescribeErrorRequest req)
+        {
+             JsonResponseModel<DescribeErrorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeError");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取首页错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeErrorRequest"/></param>
+        /// <returns><see cref="DescribeErrorResponse"/></returns>
+        public DescribeErrorResponse DescribeErrorSync(DescribeErrorRequest req)
+        {
+             JsonResponseModel<DescribeErrorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeError");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeErrorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

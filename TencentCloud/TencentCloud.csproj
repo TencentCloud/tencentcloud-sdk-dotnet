@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.344</VersionPrefix>
+    <VersionPrefix>3.0.345</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8219,6 +8219,8 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\BindGroupDevicesResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\ControlDevicePTZRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\ControlDevicePTZResponse.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\ControlRecordStreamRequest.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\ControlRecordStreamResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\CreateDeviceGroupRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\CreateDeviceGroupResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\CreateDeviceRequest.cs" />
@@ -10609,6 +10611,8 @@
     <Compile Include="Rum\V20210622\Models\CreateProjectResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeErrorRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeErrorResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
@@ -13495,6 +13499,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeGroupGatewaysResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupInstancesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupReleaseRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupReleaseResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupUseDetailRequest.cs" />
@@ -13600,6 +13606,7 @@
     <Compile Include="Tsf\V20180326\Models\ExpandGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\FieldRef.cs" />
     <Compile Include="Tsf\V20180326\Models\FileConfig.cs" />
+    <Compile Include="Tsf\V20180326\Models\FileConfigRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupApiVo.cs" />
@@ -13611,6 +13618,7 @@
     <Compile Include="Tsf\V20180326\Models\GroupDailyUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPod.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupPodResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\GroupRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupUnitApiDailyUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupUnitApiUseStatistics.cs" />
     <Compile Include="Tsf\V20180326\Models\GroupUseStatisticsEntity.cs" />
@@ -13652,6 +13660,8 @@
     <Compile Include="Tsf\V20180326\Models\MsApiArray.cs" />
     <Compile Include="Tsf\V20180326\Models\MsInstance.cs" />
     <Compile Include="Tsf\V20180326\Models\Namespace.cs" />
+    <Compile Include="Tsf\V20180326\Models\OperateApplicationTcrBindingRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\OperateApplicationTcrBindingResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="Tsf\V20180326\Models\OverviewBasicResourceUsage.cs" />
@@ -13692,6 +13702,7 @@
     <Compile Include="Tsf\V20180326\Models\RevocationPublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RollbackConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RollbackConfigResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ScalableRule.cs" />
     <Compile Include="Tsf\V20180326\Models\SchedulingStrategy.cs" />
     <Compile Include="Tsf\V20180326\Models\SearchBusinessLogRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\SearchBusinessLogResponse.cs" />
@@ -13728,6 +13739,7 @@
     <Compile Include="Tsf\V20180326\Models\TaskRecord.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskRecordPage.cs" />
     <Compile Include="Tsf\V20180326\Models\TaskRule.cs" />
+    <Compile Include="Tsf\V20180326\Models\TcrRepoInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfApiListResponse.cs" />

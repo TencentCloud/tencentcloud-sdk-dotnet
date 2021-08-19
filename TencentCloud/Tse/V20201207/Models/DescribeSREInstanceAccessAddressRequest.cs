@@ -30,6 +30,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// VPC ID
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
+        /// 子网ID
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Tse.V20201207.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

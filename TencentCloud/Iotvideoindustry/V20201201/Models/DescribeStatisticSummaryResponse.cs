@@ -53,6 +53,20 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public float? StorageUsage{ get; set; }
 
         /// <summary>
+        /// X-P2P分享流量。单位 Byte
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("P2PFluxTotal")]
+        public float? P2PFluxTotal{ get; set; }
+
+        /// <summary>
+        /// X-P2P峰值带宽。 单位bps
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("P2PPeakValue")]
+        public float? P2PPeakValue{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -68,6 +82,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "NonRecordingDevice", this.NonRecordingDevice);
             this.SetParamSimple(map, prefix + "WatchFlux", this.WatchFlux);
             this.SetParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
+            this.SetParamSimple(map, prefix + "P2PFluxTotal", this.P2PFluxTotal);
+            this.SetParamSimple(map, prefix + "P2PPeakValue", this.P2PPeakValue);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

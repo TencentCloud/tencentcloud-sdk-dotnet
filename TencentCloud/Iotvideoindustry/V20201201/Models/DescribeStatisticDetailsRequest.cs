@@ -42,6 +42,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         /// 2.非录制设备数：NonRecordingDevice
         /// 3.观看流量总数：WatchFlux
         /// 4.已用存储容量总数：StorageUsage
+        /// 5. X-P2P分享流量: P2PFluxTotal
+        /// 6. X-P2P峰值带宽: P2PPeakValue
         /// </summary>
         [JsonProperty("StatisticField")]
         public string StatisticField{ get; set; }

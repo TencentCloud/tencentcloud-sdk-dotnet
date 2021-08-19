@@ -133,6 +133,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 对回放流进行控制，包括暂停、播放、拉动、结束等
+        /// </summary>
+        /// <param name="req"><see cref="ControlRecordStreamRequest"/></param>
+        /// <returns><see cref="ControlRecordStreamResponse"/></returns>
+        public async Task<ControlRecordStreamResponse> ControlRecordStream(ControlRecordStreamRequest req)
+        {
+             JsonResponseModel<ControlRecordStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ControlRecordStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ControlRecordStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对回放流进行控制，包括暂停、播放、拉动、结束等
+        /// </summary>
+        /// <param name="req"><see cref="ControlRecordStreamRequest"/></param>
+        /// <returns><see cref="ControlRecordStreamResponse"/></returns>
+        public ControlRecordStreamResponse ControlRecordStreamSync(ControlRecordStreamRequest req)
+        {
+             JsonResponseModel<ControlRecordStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ControlRecordStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ControlRecordStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateDevice) 用于创建设备。
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>

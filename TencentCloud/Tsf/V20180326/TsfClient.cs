@@ -3137,6 +3137,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询部署组相关的发布信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupReleaseRequest"/></param>
+        /// <returns><see cref="DescribeGroupReleaseResponse"/></returns>
+        public async Task<DescribeGroupReleaseResponse> DescribeGroupRelease(DescribeGroupReleaseRequest req)
+        {
+             JsonResponseModel<DescribeGroupReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询部署组相关的发布信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupReleaseRequest"/></param>
+        /// <returns><see cref="DescribeGroupReleaseResponse"/></returns>
+        public DescribeGroupReleaseResponse DescribeGroupReleaseSync(DescribeGroupReleaseRequest req)
+        {
+             JsonResponseModel<DescribeGroupReleaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupRelease");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupReleaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询网关分组监控明细数据
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupUseDetailRequest"/></param>
@@ -5452,6 +5492,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "ModifyUploadInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUploadInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定解绑tcr仓库
+        /// </summary>
+        /// <param name="req"><see cref="OperateApplicationTcrBindingRequest"/></param>
+        /// <returns><see cref="OperateApplicationTcrBindingResponse"/></returns>
+        public async Task<OperateApplicationTcrBindingResponse> OperateApplicationTcrBinding(OperateApplicationTcrBindingRequest req)
+        {
+             JsonResponseModel<OperateApplicationTcrBindingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OperateApplicationTcrBinding");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OperateApplicationTcrBindingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 绑定解绑tcr仓库
+        /// </summary>
+        /// <param name="req"><see cref="OperateApplicationTcrBindingRequest"/></param>
+        /// <returns><see cref="OperateApplicationTcrBindingResponse"/></returns>
+        public OperateApplicationTcrBindingResponse OperateApplicationTcrBindingSync(OperateApplicationTcrBindingRequest req)
+        {
+             JsonResponseModel<OperateApplicationTcrBindingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OperateApplicationTcrBinding");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OperateApplicationTcrBindingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

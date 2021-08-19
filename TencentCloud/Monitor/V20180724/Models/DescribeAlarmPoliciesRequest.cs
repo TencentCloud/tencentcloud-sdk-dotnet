@@ -133,6 +133,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NotBindingNoticeRule")]
         public long? NotBindingNoticeRule{ get; set; }
 
+        /// <summary>
+        /// 实例分组id
+        /// </summary>
+        [JsonProperty("InstanceGroupId")]
+        public long? InstanceGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "RuleTypes.", this.RuleTypes);
             this.SetParamArraySimple(map, prefix + "Enable.", this.Enable);
             this.SetParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
+            this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
         }
     }
 }

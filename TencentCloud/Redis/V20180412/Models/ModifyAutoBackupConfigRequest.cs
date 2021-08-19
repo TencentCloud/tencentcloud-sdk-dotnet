@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday
+        /// 日期 Monday，Tuesday，Wednesday，Thursday，Friday，Saturday，Sunday，该参数暂不支持修改。
         /// </summary>
         [JsonProperty("WeekDays")]
         public string[] WeekDays{ get; set; }

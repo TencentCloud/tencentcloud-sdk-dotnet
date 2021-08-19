@@ -48,6 +48,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Devices")]
         public DeviceItem[] Devices{ get; set; }
 
+        /// <summary>
+        /// 存储周期
+        /// </summary>
+        [JsonProperty("RecordStorageTime")]
+        public long? RecordStorageTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "TimeTemplateId", this.TimeTemplateId);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamArrayObj(map, prefix + "Devices.", this.Devices);
+            this.SetParamSimple(map, prefix + "RecordStorageTime", this.RecordStorageTime);
         }
     }
 }

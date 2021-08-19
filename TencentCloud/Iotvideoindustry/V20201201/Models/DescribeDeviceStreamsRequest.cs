@@ -36,6 +36,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("ExpireTime")]
         public ulong? ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 通道唯一标识
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         {
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

@@ -142,6 +142,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("EnableInternet")]
         public bool? EnableInternet{ get; set; }
 
+        /// <summary>
+        /// 私有网络列表信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcInfos")]
+        public VpcInfo[] VpcInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "EnvInfos.", this.EnvInfos);
             this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
             this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
+            this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
         }
     }
 }

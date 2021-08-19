@@ -30,6 +30,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ImageTags")]
         public DeleteImageTag[] ImageTags{ get; set; }
 
+        /// <summary>
+        /// 企业: tcr ；个人: personal或者不填
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public string RepoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ImageTags.", this.ImageTags);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
         }
     }
 }

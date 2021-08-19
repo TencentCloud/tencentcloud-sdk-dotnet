@@ -108,6 +108,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("StopScript")]
         public string StopScript{ get; set; }
 
+        /// <summary>
+        /// 是否进行增量部署，默认为false，全量更新
+        /// </summary>
+        [JsonProperty("IncrementalDeployment")]
+        public bool? IncrementalDeployment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DeployWaitTime", this.DeployWaitTime);
             this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
             this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
+            this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
         }
     }
 }

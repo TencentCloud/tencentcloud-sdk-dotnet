@@ -39,7 +39,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+        /// 访问源类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SourceType")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+        /// 访问目的类型，默认为0，0: IP, 1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资产分组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TargetType")]
@@ -136,7 +136,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 子网ID
+        /// 实例名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InstanceName")]

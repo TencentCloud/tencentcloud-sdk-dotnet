@@ -31,6 +31,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
+        /// <summary>
+        /// 通道唯一标识
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

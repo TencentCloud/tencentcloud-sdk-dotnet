@@ -62,19 +62,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 实例分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版、Redis4.0主从版不需要填写。
+        /// 实例分片数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版、Redis4.0标准架构不需要填写。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public long? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 实例副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+        /// 实例副本数量，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public long? RedisReplicasNum{ get; set; }
 
         /// <summary>
-        /// 是否支持副本只读，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写。
+        /// 是否支持副本只读，Redis2.8标准架构、CKV标准架构和Redis2.8单机版不需要填写。
         /// </summary>
         [JsonProperty("ReplicasReadonly")]
         public bool? ReplicasReadonly{ get; set; }

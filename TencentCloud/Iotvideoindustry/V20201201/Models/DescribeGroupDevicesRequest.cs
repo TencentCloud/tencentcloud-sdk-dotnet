@@ -54,6 +54,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Recordable")]
         public long? Recordable{ get; set; }
 
+        /// <summary>
+        /// 当Group是普通组的时候，支持根据deviceTypes筛选类型
+        /// </summary>
+        [JsonProperty("DeviceTypes")]
+        public long?[] DeviceTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamSimple(map, prefix + "Recordable", this.Recordable);
+            this.SetParamArraySimple(map, prefix + "DeviceTypes.", this.DeviceTypes);
         }
     }
 }

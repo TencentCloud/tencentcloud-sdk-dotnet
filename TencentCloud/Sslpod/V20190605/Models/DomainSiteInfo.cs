@@ -25,7 +25,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
     {
         
         /// <summary>
-        /// ID
+        /// ID标识
         /// </summary>
         [JsonProperty("Id")]
         public long? Id{ get; set; }
@@ -43,16 +43,25 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 是否自动获取IP
+        /// 是否自动获取IP：true：是，false:否
         /// </summary>
         [JsonProperty("AutoIP")]
         public bool? AutoIP{ get; set; }
 
         /// <summary>
-        /// 监控服务类型
+        /// 评级
+        /// "A+"，
+        ///  "A"，
+        /// "A-"，
+        /// "B"，
+        /// "C"，
+        /// "D"，
+        ///  "E"，
+        ///  "F"，
+        /// "T"，
         /// </summary>
-        [JsonProperty("ServerType")]
-        public long? ServerType{ get; set; }
+        [JsonProperty("Grade")]
+        public string Grade{ get; set; }
 
         /// <summary>
         /// 证书品牌
@@ -61,19 +70,33 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public string Brand{ get; set; }
 
         /// <summary>
-        /// 评级
+        /// 监控服务类型
+        /// 0 :Web
+        /// 1: SMTP
+        /// 2: IMAP
+        /// 3: POP3
         /// </summary>
-        [JsonProperty("Grade")]
-        public string Grade{ get; set; }
+        [JsonProperty("ServerType")]
+        public long? ServerType{ get; set; }
 
         /// <summary>
         /// 评级Code
+        /// 0："unknown"，
+        /// 1："A+"，
+        /// 2： "A"，
+        /// 3："A-"，
+        /// 4："B"，
+        /// 5："C"，
+        /// 6："D"，
+        /// 7： "E"，
+        /// 8： "F"，
+        /// 9："T"，
         /// </summary>
         [JsonProperty("GradeCode")]
         public long? GradeCode{ get; set; }
 
         /// <summary>
-        /// 是否监控告警
+        /// 是否监控告警；true：是，false:否
         /// </summary>
         [JsonProperty("Notice")]
         public bool? Notice{ get; set; }
@@ -92,7 +115,18 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 域名状态
+        /// 域名状态:
+        /// 连接异常，
+        /// 证书已过期，
+        /// 证书已吊销，
+        /// 证书黑名单，
+        /// 证书域名不匹配，
+        /// 证书不可信，
+        /// 证书密钥弱，
+        /// 证书即将过期，少于7天，
+        /// 证书即将过期，少于30天，
+        /// 正常，
+        /// 部分异常
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -113,9 +147,9 @@ namespace TencentCloud.Sslpod.V20190605.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "AutoIP", this.AutoIP);
-            this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
-            this.SetParamSimple(map, prefix + "Brand", this.Brand);
             this.SetParamSimple(map, prefix + "Grade", this.Grade);
+            this.SetParamSimple(map, prefix + "Brand", this.Brand);
+            this.SetParamSimple(map, prefix + "ServerType", this.ServerType);
             this.SetParamSimple(map, prefix + "GradeCode", this.GradeCode);
             this.SetParamSimple(map, prefix + "Notice", this.Notice);
             this.SetParamSimple(map, prefix + "AccountDomainId", this.AccountDomainId);

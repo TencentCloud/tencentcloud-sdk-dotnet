@@ -31,19 +31,19 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分片大小 单位 MB
+        /// 分片大小 单位 MB。该参数不支持与RedisShardNum或RedisReplicasNum同时输入。
         /// </summary>
         [JsonProperty("MemSize")]
         public ulong? MemSize{ get; set; }
 
         /// <summary>
-        /// 分片数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// 分片数量，标准架构不需要填写。该参数不支持与RedisReplicasNum或MemSize同时输入。
         /// </summary>
         [JsonProperty("RedisShardNum")]
         public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量，Redis2.8主从版、CKV主从版和Redis2.8单机版不需要填写
+        /// 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("DeviceIds")]
         public string[] DeviceIds{ get; set; }
 
+        /// <summary>
+        /// 设备类型过滤
+        /// </summary>
+        [JsonProperty("DeviceTypes")]
+        public long?[] DeviceTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NickName", this.NickName);
             this.SetParamArraySimple(map, prefix + "DeviceIds.", this.DeviceIds);
+            this.SetParamArraySimple(map, prefix + "DeviceTypes.", this.DeviceTypes);
         }
     }
 }

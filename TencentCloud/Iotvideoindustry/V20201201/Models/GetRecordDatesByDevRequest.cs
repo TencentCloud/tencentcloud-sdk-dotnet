@@ -42,6 +42,18 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 通道唯一标识
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
+        /// <summary>
+        /// 1: 云端录制 2: 本地录制
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

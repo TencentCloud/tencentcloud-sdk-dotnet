@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 页面大小：20
+        /// 页面大小：默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
