@@ -226,6 +226,14 @@ namespace TencentCloud.Common
             {
                 headers.Add("X-TC-Token", this.Credential.Token);
             }
+            if (this.Profile.Language == Language.EN_US)
+            {
+                headers.Add("X-TC-Language", "en-US");
+            }
+            else
+            {
+                headers.Add("X-TC-Language", "zh-CN");
+            }
             return headers;
         }
 
@@ -339,6 +347,15 @@ namespace TencentCloud.Common
             if (!string.IsNullOrEmpty(this.Credential.Token))
             {
                 param.Add("Token", this.Credential.Token);
+            }
+
+            if (this.Profile.Language == Language.EN_US)
+            {
+                param.Add("Language", "en-US");
+            }
+            else if (this.Profile.Language == Language.ZH_CN)
+            {
+                param.Add("Language", "zh-CN");
             }
 
             string endpoint = this.Endpoint;

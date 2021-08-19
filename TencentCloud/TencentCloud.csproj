@@ -46,6 +46,7 @@
     <Compile Include="Common\Http\HttpConnection.cs" />
     <Compile Include="Common\JsonResponseErrModel.cs" />
     <Compile Include="Common\JsonResponseModel.cs" />
+    <Compile Include="Common\Profile\Language.cs" />
     <Compile Include="Common\Profile\ClientProfile.cs" />
     <Compile Include="Common\Profile\HttpProfile.cs" />
     <Compile Include="Common\Sign.cs" />
