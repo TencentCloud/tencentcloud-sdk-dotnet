@@ -30,6 +30,7 @@ namespace TencentCloud.Common.Profile
         {
             this.SignMethod = signMethod;
             this.HttpProfile = httpProfile;
+            this.Language = Language.DEFAULT;
         }
 
         public ClientProfile(string signMethod)
@@ -39,9 +40,8 @@ namespace TencentCloud.Common.Profile
         }
 
         public ClientProfile()
+            : this(SIGN_SHA256)
         {
-            SignMethod = SIGN_SHA256;
-            HttpProfile = new HttpProfile();
         }
 
         /// <summary>
@@ -54,6 +54,10 @@ namespace TencentCloud.Common.Profile
         /// </summary>
         public string SignMethod { get; set; }
 
+        /// <summary>
+        /// valid choices: zh-CN, en-US
+        /// </summary>
+        public Language Language { get; set; }
 
         /// <summary>
         /// Signature process version 1, with HmacSHA1.
