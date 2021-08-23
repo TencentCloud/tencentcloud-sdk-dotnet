@@ -164,6 +164,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }
 
+        /// <summary>
+        /// 是否使用端口协议模板，0：否，1：是
+        /// </summary>
+        [JsonProperty("ProtocolPortType")]
+        public ulong? ProtocolPortType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -192,6 +198,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
             this.SetParamArrayObj(map, prefix + "BothWayInfo.", this.BothWayInfo);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
+            this.SetParamSimple(map, prefix + "ProtocolPortType", this.ProtocolPortType);
         }
     }
 }

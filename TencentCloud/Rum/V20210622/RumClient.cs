@@ -93,6 +93,46 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取LogUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsResponse"/></returns>
+        public async Task<DescribeDataLogUrlStatisticsResponse> DescribeDataLogUrlStatistics(DescribeDataLogUrlStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeDataLogUrlStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataLogUrlStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataLogUrlStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取LogUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataLogUrlStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDataLogUrlStatisticsResponse"/></returns>
+        public DescribeDataLogUrlStatisticsResponse DescribeDataLogUrlStatisticsSync(DescribeDataLogUrlStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeDataLogUrlStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataLogUrlStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataLogUrlStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取PerformancePage信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataPerformancePageRequest"/></param>

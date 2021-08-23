@@ -973,6 +973,86 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 慢查询统计分析接口，根据SQL语句抽象参数之后，进行聚合分析，并返回对应结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
+        public async Task<DescribeSlowQueryAnalysisResponse> DescribeSlowQueryAnalysis(DescribeSlowQueryAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowQueryAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 慢查询统计分析接口，根据SQL语句抽象参数之后，进行聚合分析，并返回对应结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
+        public DescribeSlowQueryAnalysisResponse DescribeSlowQueryAnalysisSync(DescribeSlowQueryAnalysisRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryAnalysisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowQueryAnalysis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryAnalysisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取慢查询列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
+        public async Task<DescribeSlowQueryListResponse> DescribeSlowQueryList(DescribeSlowQueryListRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSlowQueryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取慢查询列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
+        /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
+        public DescribeSlowQueryListResponse DescribeSlowQueryListSync(DescribeSlowQueryListRequest req)
+        {
+             JsonResponseModel<DescribeSlowQueryListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSlowQueryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSlowQueryListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeZones) 用于查询支持的可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>

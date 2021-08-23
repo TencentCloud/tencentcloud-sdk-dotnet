@@ -44,6 +44,7 @@ namespace TencentCloud.Cdb.V20170320.Models
 
         /// <summary>
         /// 审计日志保存时长。支持值包括：
+        /// 7 - 一周
         /// 30 - 一个月；
         /// 180 - 六个月；
         /// 365 - 一年；

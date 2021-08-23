@@ -25,7 +25,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 返回资源及状态
+        /// 返回资源及状态，状态码：
+        /// 1 - 封堵状态
+        /// 2 - 正常状态
+        /// 3 - 攻击状态
         /// </summary>
         [JsonProperty("Data")]
         public KeyValue[] Data{ get; set; }

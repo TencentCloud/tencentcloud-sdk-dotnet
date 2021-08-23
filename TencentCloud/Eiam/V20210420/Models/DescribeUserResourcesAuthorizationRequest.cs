@@ -31,13 +31,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 用户ID。
+        /// 用户ID。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 用户名。
+        /// 用户名。UserName 和 UserId 需至少一个不为空；都不为空时优先使用 UserName。
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }

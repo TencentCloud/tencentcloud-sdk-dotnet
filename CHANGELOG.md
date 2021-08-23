@@ -1,10 +1,29 @@
 # 本版本更新包含以下内容：
 
-## 物联网智能视频服务（行业版）(iotvideoindustry) 版本：2020-12-01
+## 数字身份管控平台（员工版）(eiam) 版本：2021-04-20
 
-### 第 9 次发布
+### 第 8 次发布
 
-发布时间：2021-08-19 08:01:00
+发布时间：2021-08-21 15:18:03
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeUserResourcesAuthorization](https://cloud.tencent.com/document/api/1442/60257)
+
+	* <font color="#dd0000">**修改入参**：</font>UserId
+
+
+
+
+## 云数据库 PostgreSQL(postgres) 版本：2017-03-12
+
+### 第 17 次发布
+
+发布时间：2021-08-23 08:07:32
 
 本次发布包含了以下内容：
 
@@ -12,203 +31,15 @@
 
 新增接口：
 
-* [ControlRecordStream](https://cloud.tencent.com/document/api/1361/60440)
-
-修改接口：
-
-* [ControlDevicePTZ](https://cloud.tencent.com/document/api/1361/53725)
-
-	* 新增入参：ChannelId
-
-* [CreateRecordPlan](https://cloud.tencent.com/document/api/1361/53742)
-
-	* 新增入参：RecordStorageTime
-
-* [DescribeAllDeviceList](https://cloud.tencent.com/document/api/1361/53721)
-
-	* 新增入参：DeviceTypes
-
-* [DescribeDeviceStreams](https://cloud.tencent.com/document/api/1361/53744)
-
-	* 新增入参：ChannelId
-
-* [DescribeGroupDevices](https://cloud.tencent.com/document/api/1361/53748)
-
-	* 新增入参：DeviceTypes
-
-* [DescribeRecordStream](https://cloud.tencent.com/document/api/1361/54758)
-
-	* 新增入参：ChannelId
-
-* [DescribeStatisticSummary](https://cloud.tencent.com/document/api/1361/53727)
-
-	* 新增出参：P2PFluxTotal, P2PPeakValue
-
-* [GetRecordDatesByDev](https://cloud.tencent.com/document/api/1361/53738)
-
-	* 新增入参：ChannelId, Type
-
-* [GetVideoListByCon](https://cloud.tencent.com/document/api/1361/53732)
-
-	* 新增入参：ChannelId, Type
-
-
-修改数据结构：
-
-* [AllDeviceInfo](https://cloud.tencent.com/document/api/1361/53754#AllDeviceInfo)
-
-	* 新增成员：Protocol, GroupId, GroupName
-
-* [DeviceItem](https://cloud.tencent.com/document/api/1361/53754#DeviceItem)
-
-	* 新增成员：ChannelId
-
-* [GroupDeviceItem](https://cloud.tencent.com/document/api/1361/53754#GroupDeviceItem)
-
-	* 新增成员：Protocol
-
-
-
-
-## 云监控(monitor) 版本：2018-07-24
-
-### 第 28 次发布
-
-发布时间：2021-08-19 08:07:10
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DescribeAlarmPolicies](https://cloud.tencent.com/document/api/248/51279)
-
-	* 新增入参：InstanceGroupId
-
-
-
-
-## 前端性能监控(rum) 版本：2021-06-22
-
-### 第 3 次发布
-
-发布时间：2021-08-19 08:00:11
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeError](https://cloud.tencent.com/document/api/1464/60439)
-
-
-
-## 分布式消息队列(tdmq) 版本：2020-02-17
-
-### 第 15 次发布
-
-发布时间：2021-08-19 08:11:36
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DescribeEnvironmentRoles](https://cloud.tencent.com/document/api/1179/49051)
-
-	* 新增入参：Filters
-
-
-
-
-## 腾讯云微服务引擎(tse) 版本：2020-12-07
-
-### 第 9 次发布
-
-发布时间：2021-08-19 08:00:53
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DescribeSREInstanceAccessAddress](https://cloud.tencent.com/document/api/1364/54941)
-
-	* 新增入参：VpcId, SubnetId
-
-
-修改数据结构：
-
-* [SREInstance](https://cloud.tencent.com/document/api/1364/54942#SREInstance)
-
-	* 新增成员：VpcInfos
-
-* [VpcInfo](https://cloud.tencent.com/document/api/1364/54942#VpcInfo)
-
-	* 新增成员：IntranetAddress
-
-
-
-
-## 腾讯微服务平台 TSF(tsf) 版本：2018-03-26
-
-### 第 56 次发布
-
-发布时间：2021-08-19 08:09:10
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [DescribeGroupRelease](https://cloud.tencent.com/document/api/649/60441)
-* [OperateApplicationTcrBinding](https://cloud.tencent.com/document/api/649/60442)
-
-修改接口：
-
-* [DeleteImageTags](https://cloud.tencent.com/document/api/649/36053)
-
-	* 新增入参：RepoType
-
-* [DeployContainerGroup](https://cloud.tencent.com/document/api/649/36071)
-
-	* 新增入参：IncrementalDeployment, RepoType
-
-* [DeployGroup](https://cloud.tencent.com/document/api/649/36070)
-
-	* 新增入参：IncrementalDeployment
-
-* [DescribeImageRepository](https://cloud.tencent.com/document/api/649/49526)
-
-	* 新增入参：RepoType, ApplicationId, TcrRepoInfo
-
-* [DescribeImageTags](https://cloud.tencent.com/document/api/649/36052)
-
-	* 新增入参：RepoType, TcrRepoInfo
-
+* [DescribeSlowQueryAnalysis](https://cloud.tencent.com/document/api/409/60541)
+* [DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)
 
 新增数据结构：
 
-* [FileConfigRelease](https://cloud.tencent.com/document/api/649/36099#FileConfigRelease)
-* [GroupRelease](https://cloud.tencent.com/document/api/649/36099#GroupRelease)
-* [ScalableRule](https://cloud.tencent.com/document/api/649/36099#ScalableRule)
-* [TcrRepoInfo](https://cloud.tencent.com/document/api/649/36099#TcrRepoInfo)
-
-修改数据结构：
-
-* [ImageRepository](https://cloud.tencent.com/document/api/649/36099#ImageRepository)
-
-	* 新增成员：TcrRepoInfo, TcrBindingId, ApplicationId, ApplicationName
-
-* [ImageTag](https://cloud.tencent.com/document/api/649/36099#ImageTag)
-
-	* 新增成员：TcrRepoInfo
-
+* [AnalysisItems](https://cloud.tencent.com/document/api/409/16778#AnalysisItems)
+* [Detail](https://cloud.tencent.com/document/api/409/16778#Detail)
+* [DurationAnalysis](https://cloud.tencent.com/document/api/409/16778#DurationAnalysis)
+* [RawSlowQuery](https://cloud.tencent.com/document/api/409/16778#RawSlowQuery)
 
 
 
@@ -7743,6 +7574,21 @@
 
 ## 云数据库 MySQL(cdb) 版本：2017-03-20
 
+### 第 65 次发布
+
+发布时间：2021-08-20 08:04:01
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeAuditConfig](https://cloud.tencent.com/document/api/236/45455)
+
+	* 新增出参：CreateTime
+
+
 ### 第 64 次发布
 
 发布时间：2021-08-11 08:04:02
@@ -11009,6 +10855,25 @@
 
 
 ## 云防火墙(cfw) 版本：2019-09-04
+
+### 第 8 次发布
+
+发布时间：2021-08-20 08:11:35
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [SecurityGroupBothWayInfo](https://cloud.tencent.com/document/api/1132/49071#SecurityGroupBothWayInfo)
+
+	* 新增成员：ProtocolPortType
+
+* [SecurityGroupListData](https://cloud.tencent.com/document/api/1132/49071#SecurityGroupListData)
+
+	* 新增成员：ProtocolPortType
+
 
 ### 第 7 次发布
 
@@ -23069,6 +22934,21 @@
 
 ## 数字身份管控平台（员工版）(eiam) 版本：2021-04-20
 
+### 第 8 次发布
+
+发布时间：2021-08-21 15:18:03
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeUserResourcesAuthorization](https://cloud.tencent.com/document/api/1442/60257)
+
+	* <font color="#dd0000">**修改入参**：</font>UserId
+
+
 ### 第 7 次发布
 
 发布时间：2021-08-13 08:12:10
@@ -30653,7 +30533,7 @@
 
 新增接口：
 
-* [[ControlRecordStream](https://cloud.tencent.com/document/api/1361/60440)](https://cloud.tencent.com/document/api/#/#)
+* [ControlRecordStream](https://cloud.tencent.com/document/api/1361/60440)
 
 修改接口：
 
@@ -38567,6 +38447,26 @@
 
 ## 云数据库 PostgreSQL(postgres) 版本：2017-03-12
 
+### 第 17 次发布
+
+发布时间：2021-08-23 08:07:32
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[DescribeSlowQueryAnalysis](https://cloud.tencent.com/document/api/409/60541)](https://cloud.tencent.com/document/api/#/#)
+* [[DescribeSlowQueryList](https://cloud.tencent.com/document/api/409/60540)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[AnalysisItems](https://cloud.tencent.com/document/api/409/16778#AnalysisItems)](https://cloud.tencent.com/document/api/409/16778#[AnalysisItems](https://cloud.tencent.com/document/api/409/16778#AnalysisItems))
+* [[Detail](https://cloud.tencent.com/document/api/409/16778#Detail)](https://cloud.tencent.com/document/api/409/16778#[Detail](https://cloud.tencent.com/document/api/409/16778#Detail))
+* [[DurationAnalysis](https://cloud.tencent.com/document/api/409/16778#DurationAnalysis)](https://cloud.tencent.com/document/api/409/16778#[DurationAnalysis](https://cloud.tencent.com/document/api/409/16778#DurationAnalysis))
+* [[RawSlowQuery](https://cloud.tencent.com/document/api/409/16778#RawSlowQuery)](https://cloud.tencent.com/document/api/409/16778#[RawSlowQuery](https://cloud.tencent.com/document/api/409/16778#RawSlowQuery))
+
 ### 第 16 次发布
 
 发布时间：2021-07-22 08:07:32
@@ -39856,6 +39756,18 @@
 
 ## 前端性能监控(rum) 版本：2021-06-22
 
+### 第 4 次发布
+
+发布时间：2021-08-20 08:00:08
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeDataLogUrlStatistics](https://cloud.tencent.com/document/api/1464/60495)
+
 ### 第 3 次发布
 
 发布时间：2021-08-19 08:00:11
@@ -39866,7 +39778,7 @@
 
 新增接口：
 
-* [[DescribeError](https://cloud.tencent.com/document/api/1464/60439)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeError](https://cloud.tencent.com/document/api/1464/60439)
 
 ### 第 2 次发布
 
@@ -39896,6 +39808,25 @@
 
 
 ## 云函数(scf) 版本：2018-04-16
+
+### 第 32 次发布
+
+发布时间：2021-08-20 08:07:56
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ListNamespaces](https://cloud.tencent.com/document/api/583/37158)
+
+	* 新增入参：SearchKey
+
+
+新增数据结构：
+
+* [SearchKey](https://cloud.tencent.com/document/api/583/17244#SearchKey)
 
 ### 第 31 次发布
 
@@ -50495,8 +50426,8 @@
 
 新增接口：
 
-* [[DescribeGroupRelease](https://cloud.tencent.com/document/api/649/60441)](https://cloud.tencent.com/document/api/#/#)
-* [[OperateApplicationTcrBinding](https://cloud.tencent.com/document/api/649/60442)](https://cloud.tencent.com/document/api/#/#)
+* [DescribeGroupRelease](https://cloud.tencent.com/document/api/649/60441)
+* [OperateApplicationTcrBinding](https://cloud.tencent.com/document/api/649/60442)
 
 修改接口：
 
@@ -50523,10 +50454,10 @@
 
 新增数据结构：
 
-* [[FileConfigRelease](https://cloud.tencent.com/document/api/649/36099#FileConfigRelease)](https://cloud.tencent.com/document/api/649/36099#[FileConfigRelease](https://cloud.tencent.com/document/api/649/36099#FileConfigRelease))
-* [[GroupRelease](https://cloud.tencent.com/document/api/649/36099#GroupRelease)](https://cloud.tencent.com/document/api/649/36099#[GroupRelease](https://cloud.tencent.com/document/api/649/36099#GroupRelease))
-* [[ScalableRule](https://cloud.tencent.com/document/api/649/36099#ScalableRule)](https://cloud.tencent.com/document/api/649/36099#[ScalableRule](https://cloud.tencent.com/document/api/649/36099#ScalableRule))
-* [[TcrRepoInfo](https://cloud.tencent.com/document/api/649/36099#TcrRepoInfo)](https://cloud.tencent.com/document/api/649/36099#[TcrRepoInfo](https://cloud.tencent.com/document/api/649/36099#TcrRepoInfo))
+* [FileConfigRelease](https://cloud.tencent.com/document/api/649/36099#FileConfigRelease)
+* [GroupRelease](https://cloud.tencent.com/document/api/649/36099#GroupRelease)
+* [ScalableRule](https://cloud.tencent.com/document/api/649/36099#ScalableRule)
+* [TcrRepoInfo](https://cloud.tencent.com/document/api/649/36099#TcrRepoInfo)
 
 修改数据结构：
 

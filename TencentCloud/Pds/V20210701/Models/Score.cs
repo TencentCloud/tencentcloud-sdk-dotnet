@@ -25,7 +25,7 @@ namespace TencentCloud.Pds.V20210701.Models
     {
         
         /// <summary>
-        /// 用户信誉分
+        /// 信誉分，1-5从低到高
         /// </summary>
         [JsonProperty("Star")]
         public long? Star{ get; set; }

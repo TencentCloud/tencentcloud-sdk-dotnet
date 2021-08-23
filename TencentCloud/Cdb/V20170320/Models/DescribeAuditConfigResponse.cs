@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 审计日志保存时长。目前支持的值包括：[0，30，180，365，1095，1825]。
+        /// 审计日志保存时长。目前支持的值包括：[0，7，30，180，365，1095，1825]。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LogExpireDay")]
@@ -44,6 +44,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string IsClosing{ get; set; }
 
         /// <summary>
+        /// 审计服务开通时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamSimple(map, prefix + "IsClosing", this.IsClosing);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -68,12 +68,14 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 截图宽度。默认：0（原始宽）。
+        /// 范围：0-3000 。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
         /// 截图高度。默认：0（原始高）。
+        /// 范围：0-2000 。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }
