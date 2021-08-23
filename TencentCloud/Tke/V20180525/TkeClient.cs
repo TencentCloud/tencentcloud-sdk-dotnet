@@ -2973,6 +2973,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 修改节点池的机型配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodePoolInstanceTypesRequest"/></param>
+        /// <returns><see cref="ModifyNodePoolInstanceTypesResponse"/></returns>
+        public async Task<ModifyNodePoolInstanceTypesResponse> ModifyNodePoolInstanceTypes(ModifyNodePoolInstanceTypesRequest req)
+        {
+             JsonResponseModel<ModifyNodePoolInstanceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNodePoolInstanceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNodePoolInstanceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改节点池的机型配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNodePoolInstanceTypesRequest"/></param>
+        /// <returns><see cref="ModifyNodePoolInstanceTypesResponse"/></returns>
+        public ModifyNodePoolInstanceTypesResponse ModifyNodePoolInstanceTypesSync(ModifyNodePoolInstanceTypesRequest req)
+        {
+             JsonResponseModel<ModifyNodePoolInstanceTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNodePoolInstanceTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNodePoolInstanceTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改告警规则 
         /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusAlertRuleRequest"/></param>
