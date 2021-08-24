@@ -64,6 +64,20 @@ namespace TencentCloud.Cls.V20201016.Models
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
+        /// 新的日志分析结果; UseNewAnalysis为true有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnalysisRecords")]
+        public string[] AnalysisRecords{ get; set; }
+
+        /// <summary>
+        /// 日志分析的列属性; UseNewAnalysis为true有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Columns")]
+        public Column[] Columns{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -81,6 +95,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamArraySimple(map, prefix + "ColNames.", this.ColNames);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
             this.SetParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
+            this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
+            this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

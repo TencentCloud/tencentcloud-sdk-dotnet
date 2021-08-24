@@ -43,7 +43,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 应用状态
+        /// 应用状态，true表示启用，false表示禁用。
         /// </summary>
         [JsonProperty("AppStatus")]
         public bool? AppStatus{ get; set; }

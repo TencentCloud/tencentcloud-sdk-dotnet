@@ -25,19 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// 流日志实例名字
         /// </summary>
         [JsonProperty("FlowLogName")]
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -61,6 +55,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CloudLogId{ get; set; }
 
         /// <summary>
+        /// 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
+        /// <summary>
         /// 流日志实例描述
         /// </summary>
         [JsonProperty("FlowLogDescription")]
@@ -78,12 +78,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogName", this.FlowLogName);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
             this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }

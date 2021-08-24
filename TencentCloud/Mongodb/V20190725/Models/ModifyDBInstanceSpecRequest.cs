@@ -48,6 +48,24 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("OplogSize")]
         public ulong? OplogSize{ get; set; }
 
+        /// <summary>
+        /// 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+        /// </summary>
+        [JsonProperty("NodeNum")]
+        public ulong? NodeNum{ get; set; }
+
+        /// <summary>
+        /// 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+        /// </summary>
+        [JsonProperty("ReplicateSetNum")]
+        public ulong? ReplicateSetNum{ get; set; }
+
+        /// <summary>
+        /// 实例配置变更的切换时间，参数为：0(默认)、1。0-调整完成时，1-维护时间内。注：调整节点数和分片数不支持在【维护时间内】变更。
+        /// </summary>
+        [JsonProperty("InMaintenance")]
+        public ulong? InMaintenance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
             this.SetParamSimple(map, prefix + "OplogSize", this.OplogSize);
+            this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
+            this.SetParamSimple(map, prefix + "InMaintenance", this.InMaintenance);
         }
     }
 }

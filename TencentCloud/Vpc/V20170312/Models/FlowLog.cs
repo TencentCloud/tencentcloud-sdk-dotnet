@@ -43,7 +43,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogName{ get; set; }
 
         /// <summary>
-        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE
+        /// 流日志所属资源类型，VPC|SUBNET|NETWORKINTERFACE|CCN
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

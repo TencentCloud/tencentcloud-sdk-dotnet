@@ -1193,6 +1193,46 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
+        /// 调用长安链合约执行交易
+        /// </summary>
+        /// <param name="req"><see cref="InvokeChainMakerContractRequest"/></param>
+        /// <returns><see cref="InvokeChainMakerContractResponse"/></returns>
+        public async Task<InvokeChainMakerContractResponse> InvokeChainMakerContract(InvokeChainMakerContractRequest req)
+        {
+             JsonResponseModel<InvokeChainMakerContractResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InvokeChainMakerContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeChainMakerContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用长安链合约执行交易
+        /// </summary>
+        /// <param name="req"><see cref="InvokeChainMakerContractRequest"/></param>
+        /// <returns><see cref="InvokeChainMakerContractResponse"/></returns>
+        public InvokeChainMakerContractResponse InvokeChainMakerContractSync(InvokeChainMakerContractRequest req)
+        {
+             JsonResponseModel<InvokeChainMakerContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InvokeChainMakerContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InvokeChainMakerContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询交易
         /// </summary>
         /// <param name="req"><see cref="QueryRequest"/></param>
@@ -1224,6 +1264,126 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "Query");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询长安链指定高度区块的交易
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerBlockTransactionRequest"/></param>
+        /// <returns><see cref="QueryChainMakerBlockTransactionResponse"/></returns>
+        public async Task<QueryChainMakerBlockTransactionResponse> QueryChainMakerBlockTransaction(QueryChainMakerBlockTransactionRequest req)
+        {
+             JsonResponseModel<QueryChainMakerBlockTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryChainMakerBlockTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerBlockTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询长安链指定高度区块的交易
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerBlockTransactionRequest"/></param>
+        /// <returns><see cref="QueryChainMakerBlockTransactionResponse"/></returns>
+        public QueryChainMakerBlockTransactionResponse QueryChainMakerBlockTransactionSync(QueryChainMakerBlockTransactionRequest req)
+        {
+             JsonResponseModel<QueryChainMakerBlockTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryChainMakerBlockTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerBlockTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用长安链合约查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerContractRequest"/></param>
+        /// <returns><see cref="QueryChainMakerContractResponse"/></returns>
+        public async Task<QueryChainMakerContractResponse> QueryChainMakerContract(QueryChainMakerContractRequest req)
+        {
+             JsonResponseModel<QueryChainMakerContractResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryChainMakerContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调用长安链合约查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerContractRequest"/></param>
+        /// <returns><see cref="QueryChainMakerContractResponse"/></returns>
+        public QueryChainMakerContractResponse QueryChainMakerContractSync(QueryChainMakerContractRequest req)
+        {
+             JsonResponseModel<QueryChainMakerContractResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryChainMakerContract");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerContractResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过交易ID查询长安链交易
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerTransactionRequest"/></param>
+        /// <returns><see cref="QueryChainMakerTransactionResponse"/></returns>
+        public async Task<QueryChainMakerTransactionResponse> QueryChainMakerTransaction(QueryChainMakerTransactionRequest req)
+        {
+             JsonResponseModel<QueryChainMakerTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryChainMakerTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过交易ID查询长安链交易
+        /// </summary>
+        /// <param name="req"><see cref="QueryChainMakerTransactionRequest"/></param>
+        /// <returns><see cref="QueryChainMakerTransactionResponse"/></returns>
+        public QueryChainMakerTransactionResponse QueryChainMakerTransactionSync(QueryChainMakerTransactionRequest req)
+        {
+             JsonResponseModel<QueryChainMakerTransactionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryChainMakerTransaction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryChainMakerTransactionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

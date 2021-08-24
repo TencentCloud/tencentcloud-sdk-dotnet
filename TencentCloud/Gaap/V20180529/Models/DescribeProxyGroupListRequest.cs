@@ -46,19 +46,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
+        /// 过滤条件。   
+        /// 每次请求的Filter.Values的上限为5。
+        /// RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
+        /// PackageType - String - 是否必填：否 - （过滤条件）通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
         /// 标签列表，当存在该字段时，拉取对应标签下的资源列表。
         /// 最多支持5个标签，当存在两个或两个以上的标签时，满足其中任意一个标签时，该通道组会被拉取出来。
         /// </summary>
         [JsonProperty("TagSet")]
         public TagPair[] TagSet{ get; set; }
-
-        /// <summary>
-        /// 过滤条件。   
-        /// 每次请求的Filter.Values的上限为5。
-        /// RealServerRegion - String - 是否必填：否 -（过滤条件）按照源站地域过滤，可参考DescribeDestRegions接口返回结果中的RegionId。
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -69,8 +70,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

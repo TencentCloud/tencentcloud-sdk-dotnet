@@ -54,6 +54,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("AuditionEnd")]
         public ulong? AuditionEnd{ get; set; }
 
+        /// <summary>
+        /// 标签名称
+        /// </summary>
+        [JsonProperty("TagNames")]
+        public string[] TagNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "AuditionBegin", this.AuditionBegin);
             this.SetParamSimple(map, prefix + "AuditionEnd", this.AuditionEnd);
+            this.SetParamArraySimple(map, prefix + "TagNames.", this.TagNames);
         }
     }
 }

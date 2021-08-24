@@ -53,6 +53,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgeDetectTaskRequest"/></param>
+        /// <returns><see cref="CreateAgeDetectTaskResponse"/></returns>
+        public async Task<CreateAgeDetectTaskResponse> CreateAgeDetectTask(CreateAgeDetectTaskRequest req)
+        {
+             JsonResponseModel<CreateAgeDetectTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAgeDetectTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAgeDetectTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建年龄语音识别任务的接口，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAgeDetectTaskRequest"/></param>
+        /// <returns><see cref="CreateAgeDetectTaskResponse"/></returns>
+        public CreateAgeDetectTaskResponse CreateAgeDetectTaskSync(CreateAgeDetectTaskRequest req)
+        {
+             JsonResponseModel<CreateAgeDetectTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAgeDetectTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAgeDetectTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateApp)用于创建一个GME应用。
         /// </summary>
         /// <param name="req"><see cref="CreateAppRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "CreateApp");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgeDetectTaskRequest"/></param>
+        /// <returns><see cref="DescribeAgeDetectTaskResponse"/></returns>
+        public async Task<DescribeAgeDetectTaskResponse> DescribeAgeDetectTask(DescribeAgeDetectTaskRequest req)
+        {
+             JsonResponseModel<DescribeAgeDetectTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAgeDetectTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgeDetectTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAgeDetectTaskRequest"/></param>
+        /// <returns><see cref="DescribeAgeDetectTaskResponse"/></returns>
+        public DescribeAgeDetectTaskResponse DescribeAgeDetectTaskSync(DescribeAgeDetectTaskRequest req)
+        {
+             JsonResponseModel<DescribeAgeDetectTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAgeDetectTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAgeDetectTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

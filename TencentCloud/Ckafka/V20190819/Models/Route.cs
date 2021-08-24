@@ -41,7 +41,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RouteId{ get; set; }
 
         /// <summary>
-        /// vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:腾讯云支持环境(一般用于内部实例) 5:SSL外网访问方式访问 6:黑石环境vpc）
+        /// vip网络类型（1:外网TGW  2:基础网络 3:VPC网络 4:支撑网络(标准版) 5:SSL外网访问方式访问 6:黑石环境vpc 7:支撑网络(专业版)）
         /// </summary>
         [JsonProperty("VipType")]
         public long? VipType{ get; set; }
@@ -66,6 +66,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DomainPort")]
         public long? DomainPort{ get; set; }
 
+        /// <summary>
+        /// 时间戳
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteTimestamp")]
+        public string DeleteTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "VipList.", this.VipList);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamSimple(map, prefix + "DomainPort", this.DomainPort);
+            this.SetParamSimple(map, prefix + "DeleteTimestamp", this.DeleteTimestamp);
         }
     }
 }

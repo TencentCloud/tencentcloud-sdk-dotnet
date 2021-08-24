@@ -25,16 +25,16 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 私用网络ID或者统一ID，建议使用统一ID
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// 流日志唯一ID
         /// </summary>
         [JsonProperty("FlowLogId")]
         public string FlowLogId{ get; set; }
+
+        /// <summary>
+        /// 私用网络ID或者统一ID，建议使用统一ID，删除云联网流日志时，可不填，其他流日志类型必填。
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogId", this.FlowLogId);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

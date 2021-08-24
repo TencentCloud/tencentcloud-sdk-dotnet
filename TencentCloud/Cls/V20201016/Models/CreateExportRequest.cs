@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 日志导出数量
+        /// 日志导出数量,  最大值1000万
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }

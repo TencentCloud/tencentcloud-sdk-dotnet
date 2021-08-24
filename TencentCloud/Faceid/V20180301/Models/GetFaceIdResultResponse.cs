@@ -76,6 +76,27 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Extra{ get; set; }
 
         /// <summary>
+        /// 设备风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+        /// 202、5001：设备疑似被Root
+        /// 203、5004：设备疑似被注入
+        /// 205：设备疑似被Hook
+        /// 206：设备疑似虚拟运行环境
+        /// 5007、1005：设备疑似摄像头被劫持
+        /// 8000：设备疑似存在异常篡改行为
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceInfoTag")]
+        public string DeviceInfoTag{ get; set; }
+
+        /// <summary>
+        /// 行为风险标签，仅错误码返回1007（设备疑似被劫持）时返回风险标签。标签说明：
+        /// 02：攻击风险
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskInfoTag")]
+        public string RiskInfoTag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +116,8 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
             this.SetParamSimple(map, prefix + "BestFrameBase64", this.BestFrameBase64);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "DeviceInfoTag", this.DeviceInfoTag);
+            this.SetParamSimple(map, prefix + "RiskInfoTag", this.RiskInfoTag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

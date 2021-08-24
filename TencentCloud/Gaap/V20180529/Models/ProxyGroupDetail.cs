@@ -136,6 +136,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// 通道组类型，可取值：Thunder、Accelerator，默认值Thunder
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,6 +166,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

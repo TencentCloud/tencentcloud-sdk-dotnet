@@ -3263,6 +3263,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(ModifyAccountHost)用于修改云数据库账户的主机。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public async Task<ModifyAccountHostResponse> ModifyAccountHost(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyAccountHost)用于修改云数据库账户的主机。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountHostRequest"/></param>
+        /// <returns><see cref="ModifyAccountHostResponse"/></returns>
+        public ModifyAccountHostResponse ModifyAccountHostSync(ModifyAccountHostRequest req)
+        {
+             JsonResponseModel<ModifyAccountHostResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountHost");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountHostResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyAccountMaxUserConnections)用于修改云数据库账户最大可用连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyAccountMaxUserConnectionsRequest"/></param>

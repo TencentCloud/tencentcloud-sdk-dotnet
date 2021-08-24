@@ -37,6 +37,13 @@ namespace TencentCloud.Live.V20180801.Models
         public DomainInfo[] DomainList{ get; set; }
 
         /// <summary>
+        /// 可继续添加域名数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateLimitCount")]
+        public long? CreateLimitCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Live.V20180801.Models
         {
             this.SetParamSimple(map, prefix + "AllCount", this.AllCount);
             this.SetParamArrayObj(map, prefix + "DomainList.", this.DomainList);
+            this.SetParamSimple(map, prefix + "CreateLimitCount", this.CreateLimitCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

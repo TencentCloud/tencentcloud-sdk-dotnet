@@ -60,6 +60,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// 通道组套餐类型，可取值：Thunder、Accelerator，默认值Thunder
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
             this.SetParamArrayObj(map, prefix + "AccessRegionSet.", this.AccessRegionSet);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

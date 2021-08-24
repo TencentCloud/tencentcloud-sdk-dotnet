@@ -36,6 +36,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPAddressVersion")]
         public string IPAddressVersion{ get; set; }
 
+        /// <summary>
+        /// 通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         {
             this.SetParamSimple(map, prefix + "DestRegion", this.DestRegion);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

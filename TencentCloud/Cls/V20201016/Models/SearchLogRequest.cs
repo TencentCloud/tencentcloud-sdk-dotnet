@@ -66,6 +66,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
+        /// <summary>
+        /// 为true代表使用新检索,响应参数AnalysisRecords和Columns有效， 为false时代表使用老检索方式, AnalysisResults和ColNames有效
+        /// </summary>
+        [JsonProperty("UseNewAnalysis")]
+        public bool? UseNewAnalysis{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "UseNewAnalysis", this.UseNewAnalysis);
         }
     }
 }

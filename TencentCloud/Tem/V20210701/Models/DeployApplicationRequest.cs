@@ -234,6 +234,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("CronHorizontalAutoscaler")]
         public CronHorizontalAutoscaler[] CronHorizontalAutoscaler{ get; set; }
 
+        /// <summary>
+        /// 是否启用log，1为启用，0为不启用
+        /// </summary>
+        [JsonProperty("LogEnable")]
+        public long? LogEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -274,6 +280,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "DeployStrategyConf.", this.DeployStrategyConf);
             this.SetParamArrayObj(map, prefix + "HorizontalAutoscaler.", this.HorizontalAutoscaler);
             this.SetParamArrayObj(map, prefix + "CronHorizontalAutoscaler.", this.CronHorizontalAutoscaler);
+            this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
         }
     }
 }

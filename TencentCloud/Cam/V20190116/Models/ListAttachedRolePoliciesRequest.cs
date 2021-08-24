@@ -54,6 +54,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
 
+        /// <summary>
+        /// 搜索关键字
+        /// </summary>
+        [JsonProperty("Keyword")]
+        public string Keyword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "RoleId", this.RoleId);
             this.SetParamSimple(map, prefix + "RoleName", this.RoleName);
             this.SetParamSimple(map, prefix + "PolicyType", this.PolicyType);
+            this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
         }
     }
 }

@@ -173,7 +173,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建异步上下文任务
+        /// 本接口用于创建离线上下文任务
         /// </summary>
         /// <param name="req"><see cref="CreateAsyncContextTaskRequest"/></param>
         /// <returns><see cref="CreateAsyncContextTaskResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建异步上下文任务
+        /// 本接口用于创建离线上下文任务
         /// </summary>
         /// <param name="req"><see cref="CreateAsyncContextTaskRequest"/></param>
         /// <returns><see cref="CreateAsyncContextTaskResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建异步检索任务
+        /// 本接口用于创建离线检索任务
         /// </summary>
         /// <param name="req"><see cref="CreateAsyncSearchTaskRequest"/></param>
         /// <returns><see cref="CreateAsyncSearchTaskResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建异步检索任务
+        /// 本接口用于创建离线检索任务
         /// </summary>
         /// <param name="req"><see cref="CreateAsyncSearchTaskRequest"/></param>
         /// <returns><see cref="CreateAsyncSearchTaskResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志导出
+        /// 本接口用于创建日志下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志导出
+        /// 本接口用于创建日志下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -613,7 +613,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除异步上下文任务
+        /// 本接口用于删除离线上下文任务
         /// </summary>
         /// <param name="req"><see cref="DeleteAsyncContextTaskRequest"/></param>
         /// <returns><see cref="DeleteAsyncContextTaskResponse"/></returns>
@@ -633,7 +633,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除异步上下文任务
+        /// 本接口用于删除离线上下文任务
         /// </summary>
         /// <param name="req"><see cref="DeleteAsyncContextTaskRequest"/></param>
         /// <returns><see cref="DeleteAsyncContextTaskResponse"/></returns>
@@ -653,7 +653,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除异步检索任务
+        /// 本接口用于删除离线检索任务
         /// </summary>
         /// <param name="req"><see cref="DeleteAsyncSearchTaskRequest"/></param>
         /// <returns><see cref="DeleteAsyncSearchTaskResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除异步检索任务
+        /// 本接口用于删除离线检索任务
         /// </summary>
         /// <param name="req"><see cref="DeleteAsyncSearchTaskRequest"/></param>
         /// <returns><see cref="DeleteAsyncSearchTaskResponse"/></returns>
@@ -773,7 +773,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除日志导出
+        /// 本接口用于删除日志下载任务
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
         /// <returns><see cref="DeleteExportResponse"/></returns>
@@ -793,7 +793,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除日志导出
+        /// 本接口用于删除日志下载任务
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
         /// <returns><see cref="DeleteExportResponse"/></returns>
@@ -1093,7 +1093,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步上下文任务的结果
+        /// 本接口用户获取离线上下文任务的结果
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncContextResultRequest"/></param>
         /// <returns><see cref="DescribeAsyncContextResultResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步上下文任务的结果
+        /// 本接口用户获取离线上下文任务的结果
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncContextResultRequest"/></param>
         /// <returns><see cref="DescribeAsyncContextResultResponse"/></returns>
@@ -1133,7 +1133,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取异步上下文任务列表
+        /// 本接口用于获取离线上下文任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncContextTasksRequest"/></param>
         /// <returns><see cref="DescribeAsyncContextTasksResponse"/></returns>
@@ -1153,7 +1153,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取异步上下文任务列表
+        /// 本接口用于获取离线上下文任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncContextTasksRequest"/></param>
         /// <returns><see cref="DescribeAsyncContextTasksResponse"/></returns>
@@ -1173,7 +1173,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步检索任务的结果
+        /// 本接口用户获取离线检索任务的结果
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncSearchResultRequest"/></param>
         /// <returns><see cref="DescribeAsyncSearchResultResponse"/></returns>
@@ -1193,7 +1193,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步检索任务的结果
+        /// 本接口用户获取离线检索任务的结果
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncSearchResultRequest"/></param>
         /// <returns><see cref="DescribeAsyncSearchResultResponse"/></returns>
@@ -1213,7 +1213,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步检索任务列表
+        /// 本接口用户获取离线检索任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncSearchTasksRequest"/></param>
         /// <returns><see cref="DescribeAsyncSearchTasksResponse"/></returns>
@@ -1233,7 +1233,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用户获取异步检索任务列表
+        /// 本接口用户获取离线检索任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncSearchTasksRequest"/></param>
         /// <returns><see cref="DescribeAsyncSearchTasksResponse"/></returns>
@@ -1333,7 +1333,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取日志导出列表
+        /// 本接口用于获取日志下载任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
         /// <returns><see cref="DescribeExportsResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取日志导出列表
+        /// 本接口用于获取日志下载任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExportsRequest"/></param>
         /// <returns><see cref="DescribeExportsResponse"/></returns>
