@@ -121,6 +121,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
+        /// <summary>
+        /// 任务进度明细
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProgressDetail")]
+        public string ProgressDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +150,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Percentage", this.Percentage);
             this.SetParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
         }
     }
 }

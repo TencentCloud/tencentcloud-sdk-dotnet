@@ -24,12 +24,19 @@ namespace TencentCloud.Tke.V20180525.Models
     public class RunAutomationServiceEnabled : AbstractModel
     {
         
+        /// <summary>
+        /// 是否开启云自动化助手。取值范围：<br><li>TRUE：表示开启云自动化助手服务<br><li>FALSE：表示不开启云自动化助手服务<br><br>默认取值：FALSE。
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

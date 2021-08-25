@@ -3417,6 +3417,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 根据任务id导出指定扫描任务详情 
+        /// </summary>
+        /// <param name="req"><see cref="ExportScanTaskDetailsRequest"/></param>
+        /// <returns><see cref="ExportScanTaskDetailsResponse"/></returns>
+        public async Task<ExportScanTaskDetailsResponse> ExportScanTaskDetails(ExportScanTaskDetailsRequest req)
+        {
+             JsonResponseModel<ExportScanTaskDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportScanTaskDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportScanTaskDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据任务id导出指定扫描任务详情 
+        /// </summary>
+        /// <param name="req"><see cref="ExportScanTaskDetailsRequest"/></param>
+        /// <returns><see cref="ExportScanTaskDetailsResponse"/></returns>
+        public ExportScanTaskDetailsResponse ExportScanTaskDetailsSync(ExportScanTaskDetailsRequest req)
+        {
+             JsonResponseModel<ExportScanTaskDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportScanTaskDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportScanTaskDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于异步导出数据量大的日志文件
         /// </summary>
         /// <param name="req"><see cref="ExportTasksRequest"/></param>

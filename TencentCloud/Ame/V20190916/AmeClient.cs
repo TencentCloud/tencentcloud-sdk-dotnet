@@ -453,6 +453,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 根据音乐信息查询音乐是否在售
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMusicSaleStatusRequest"/></param>
+        /// <returns><see cref="DescribeMusicSaleStatusResponse"/></returns>
+        public async Task<DescribeMusicSaleStatusResponse> DescribeMusicSaleStatus(DescribeMusicSaleStatusRequest req)
+        {
+             JsonResponseModel<DescribeMusicSaleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMusicSaleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMusicSaleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据音乐信息查询音乐是否在售
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMusicSaleStatusRequest"/></param>
+        /// <returns><see cref="DescribeMusicSaleStatusResponse"/></returns>
+        public DescribeMusicSaleStatusResponse DescribeMusicSaleStatusSync(DescribeMusicSaleStatusRequest req)
+        {
+             JsonResponseModel<DescribeMusicSaleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMusicSaleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMusicSaleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取曲库包下已核销歌曲列表接口
         /// </summary>
         /// <param name="req"><see cref="DescribePackageItemsRequest"/></param>

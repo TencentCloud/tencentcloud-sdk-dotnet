@@ -1509,6 +1509,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 获取对账中心账单下载地址的接口
+        /// </summary>
+        /// <param name="req"><see cref="DownloadReconciliationUrlRequest"/></param>
+        /// <returns><see cref="DownloadReconciliationUrlResponse"/></returns>
+        public async Task<DownloadReconciliationUrlResponse> DownloadReconciliationUrl(DownloadReconciliationUrlRequest req)
+        {
+             JsonResponseModel<DownloadReconciliationUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadReconciliationUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadReconciliationUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取对账中心账单下载地址的接口
+        /// </summary>
+        /// <param name="req"><see cref="DownloadReconciliationUrlRequest"/></param>
+        /// <returns><see cref="DownloadReconciliationUrlResponse"/></returns>
+        public DownloadReconciliationUrlResponse DownloadReconciliationUrlSync(DownloadReconciliationUrlRequest req)
+        {
+             JsonResponseModel<DownloadReconciliationUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadReconciliationUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadReconciliationUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员间交易接口
         /// </summary>
         /// <param name="req"><see cref="ExecuteMemberTransactionRequest"/></param>

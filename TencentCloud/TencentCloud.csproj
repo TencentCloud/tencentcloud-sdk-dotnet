@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.348</VersionPrefix>
+    <VersionPrefix>3.0.349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,6 +113,8 @@
     <Compile Include="Ame\V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeMusicSaleStatusRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeMusicSaleStatusResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribePackageItemsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribePackageItemsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribePackagesRequest.cs" />
@@ -129,6 +131,7 @@
     <Compile Include="Ame\V20190916\Models\Music.cs" />
     <Compile Include="Ame\V20190916\Models\MusicDetailInfo.cs" />
     <Compile Include="Ame\V20190916\Models\MusicOpenDetail.cs" />
+    <Compile Include="Ame\V20190916\Models\MusicStatus.cs" />
     <Compile Include="Ame\V20190916\Models\Package.cs" />
     <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
     <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesRequest.cs" />
@@ -2396,6 +2399,7 @@
     <Compile Include="Cdn\V20180606\Models\CacheOptResult.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheTagKey.cs" />
     <Compile Include="Cdn\V20180606\Models\CappingRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\CcTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnData.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIp.cs" />
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
@@ -2421,6 +2425,7 @@
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DDoSTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteClsLogTopicRequest.cs" />
@@ -2488,6 +2493,7 @@
     <Compile Include="Cdn\V20180606\Models\DisableClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DistrictIspInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainAreaConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\DomainBotCount.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\DomainLog.cs" />
     <Compile Include="Cdn\V20180606\Models\DownstreamCapping.cs" />
@@ -2527,8 +2533,16 @@
     <Compile Include="Cdn\V20180606\Models\ListScdnDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopBotDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopBotDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopCcDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopCcDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopDDoSDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopDDoSDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopWafDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopWafDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\LogSetInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\MainlandConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ManageClsTopicDomainsRequest.cs" />
@@ -2589,6 +2603,7 @@
     <Compile Include="Cdn\V20180606\Models\ScdnEventLogConditions.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnLogTaskDetail.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnTopDomainData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopUrlData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTypeData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnWafConfig.cs" />
@@ -3942,6 +3957,8 @@
     <Compile Include="Cpdp\V20190820\Models\DescribeOrderStatusResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DownloadBillResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DownloadReconciliationUrlRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DownloadReconciliationUrlResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExecuteMemberTransactionResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ExternalContractUserInfo.cs" />
@@ -4575,6 +4592,8 @@
     <Compile Include="Cwp\V20180228\Models\ExportPrivilegeEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportScanTaskDetailsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportScanTaskDetailsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportVulDetectionExcelRequest.cs" />

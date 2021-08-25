@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string SourceId{ get; set; }
 
         /// <summary>
-        /// 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+        /// 访问源类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100: 资源组
         /// </summary>
         [JsonProperty("SourceType")]
         public ulong? SourceType{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string TargetId{ get; set; }
 
         /// <summary>
-        /// 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 100:资源组
+        /// 访问目的类型，默认为0，1: VPC, 2: SUBNET, 3: CVM, 4: CLB, 5: ENI, 6: CDB, 7: 参数模板, 100:资源组
         /// </summary>
         [JsonProperty("TargetType")]
         public ulong? TargetType{ get; set; }
@@ -152,7 +152,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ServiceTemplateId{ get; set; }
 
         /// <summary>
-        /// 当BothWay为0的时候，填空，当BothWay为1的时候，为JSON字符串，数据来源于DescribeBothWayInstanceListByIp个接口，如果该接口返回数据为空，则不支持双向下发
+        /// 生成双向下发规则
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BothWayInfo")]

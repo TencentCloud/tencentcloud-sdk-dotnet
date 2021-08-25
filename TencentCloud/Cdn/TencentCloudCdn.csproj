@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.348</VersionPrefix>
+    <VersionPrefix>3.0.349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -77,6 +77,7 @@
     <Compile Include="V20180606\Models\CacheOptResult.cs" />
     <Compile Include="V20180606\Models\CacheTagKey.cs" />
     <Compile Include="V20180606\Models\CappingRule.cs" />
+    <Compile Include="V20180606\Models\CcTopData.cs" />
     <Compile Include="V20180606\Models\CdnData.cs" />
     <Compile Include="V20180606\Models\CdnIp.cs" />
     <Compile Include="V20180606\Models\CdnIpHistory.cs" />
@@ -102,6 +103,7 @@
     <Compile Include="V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="V20180606\Models\CreateVerifyRecordRequest.cs" />
     <Compile Include="V20180606\Models\CreateVerifyRecordResponse.cs" />
+    <Compile Include="V20180606\Models\DDoSTopData.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\DeleteClsLogTopicRequest.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="V20180606\Models\DisableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\DistrictIspInfo.cs" />
     <Compile Include="V20180606\Models\DomainAreaConfig.cs" />
+    <Compile Include="V20180606\Models\DomainBotCount.cs" />
     <Compile Include="V20180606\Models\DomainFilter.cs" />
     <Compile Include="V20180606\Models\DomainLog.cs" />
     <Compile Include="V20180606\Models\DownstreamCapping.cs" />
@@ -208,8 +211,16 @@
     <Compile Include="V20180606\Models\ListScdnDomainsResponse.cs" />
     <Compile Include="V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="V20180606\Models\ListScdnLogTasksResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopBotDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopBotDataResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopCcDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopCcDataResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopDDoSDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopDDoSDataResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDataRequest.cs" />
     <Compile Include="V20180606\Models\ListTopDataResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopWafDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopWafDataResponse.cs" />
     <Compile Include="V20180606\Models\LogSetInfo.cs" />
     <Compile Include="V20180606\Models\MainlandConfig.cs" />
     <Compile Include="V20180606\Models\ManageClsTopicDomainsRequest.cs" />
@@ -270,6 +281,7 @@
     <Compile Include="V20180606\Models\ScdnEventLogConditions.cs" />
     <Compile Include="V20180606\Models\ScdnLogTaskDetail.cs" />
     <Compile Include="V20180606\Models\ScdnTopData.cs" />
+    <Compile Include="V20180606\Models\ScdnTopDomainData.cs" />
     <Compile Include="V20180606\Models\ScdnTopUrlData.cs" />
     <Compile Include="V20180606\Models\ScdnTypeData.cs" />
     <Compile Include="V20180606\Models\ScdnWafConfig.cs" />

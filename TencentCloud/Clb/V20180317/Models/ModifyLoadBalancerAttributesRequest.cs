@@ -60,6 +60,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SnatPro")]
         public bool? SnatPro{ get; set; }
 
+        /// <summary>
+        /// 是否开启删除保护
+        /// </summary>
+        [JsonProperty("DeleteProtect")]
+        public bool? DeleteProtect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "InternetChargeInfo.", this.InternetChargeInfo);
             this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
+            this.SetParamSimple(map, prefix + "DeleteProtect", this.DeleteProtect);
         }
     }
 }

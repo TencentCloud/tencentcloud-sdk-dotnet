@@ -1991,6 +1991,126 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 获取Bot攻击的Top信息
+        /// </summary>
+        /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
+        /// <returns><see cref="ListTopBotDataResponse"/></returns>
+        public async Task<ListTopBotDataResponse> ListTopBotData(ListTopBotDataRequest req)
+        {
+             JsonResponseModel<ListTopBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Bot攻击的Top信息
+        /// </summary>
+        /// <param name="req"><see cref="ListTopBotDataRequest"/></param>
+        /// <returns><see cref="ListTopBotDataResponse"/></returns>
+        public ListTopBotDataResponse ListTopBotDataSync(ListTopBotDataRequest req)
+        {
+             JsonResponseModel<ListTopBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
+        /// <returns><see cref="ListTopCcDataResponse"/></returns>
+        public async Task<ListTopCcDataResponse> ListTopCcData(ListTopCcDataRequest req)
+        {
+             JsonResponseModel<ListTopCcDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopCcData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopCcDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopCcDataRequest"/></param>
+        /// <returns><see cref="ListTopCcDataResponse"/></returns>
+        public ListTopCcDataResponse ListTopCcDataSync(ListTopCcDataRequest req)
+        {
+             JsonResponseModel<ListTopCcDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopCcData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopCcDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
+        /// <returns><see cref="ListTopDDoSDataResponse"/></returns>
+        public async Task<ListTopDDoSDataResponse> ListTopDDoSData(ListTopDDoSDataRequest req)
+        {
+             JsonResponseModel<ListTopDDoSDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopDDoSData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopDDoSDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopDDoSDataRequest"/></param>
+        /// <returns><see cref="ListTopDDoSDataResponse"/></returns>
+        public ListTopDDoSDataResponse ListTopDDoSDataSync(ListTopDDoSDataRequest req)
+        {
+             JsonResponseModel<ListTopDDoSDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopDDoSData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopDDoSDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// ListTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
         /// 
         /// + 依据总流量、总请求数对访问 URL 排序，从大至小返回 TOP 1000 URL
@@ -2038,6 +2158,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListTopData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Waf攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopWafDataRequest"/></param>
+        /// <returns><see cref="ListTopWafDataResponse"/></returns>
+        public async Task<ListTopWafDataResponse> ListTopWafData(ListTopWafDataRequest req)
+        {
+             JsonResponseModel<ListTopWafDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopWafData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopWafDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Waf攻击Top数据
+        /// </summary>
+        /// <param name="req"><see cref="ListTopWafDataRequest"/></param>
+        /// <returns><see cref="ListTopWafDataResponse"/></returns>
+        public ListTopWafDataResponse ListTopWafDataSync(ListTopWafDataRequest req)
+        {
+             JsonResponseModel<ListTopWafDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopWafData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopWafDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

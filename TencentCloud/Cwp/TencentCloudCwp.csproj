@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.348</VersionPrefix>
+    <VersionPrefix>3.0.349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -224,6 +224,8 @@
     <Compile Include="V20180228\Models\ExportPrivilegeEventsResponse.cs" />
     <Compile Include="V20180228\Models\ExportReverseShellEventsRequest.cs" />
     <Compile Include="V20180228\Models\ExportReverseShellEventsResponse.cs" />
+    <Compile Include="V20180228\Models\ExportScanTaskDetailsRequest.cs" />
+    <Compile Include="V20180228\Models\ExportScanTaskDetailsResponse.cs" />
     <Compile Include="V20180228\Models\ExportTasksRequest.cs" />
     <Compile Include="V20180228\Models\ExportTasksResponse.cs" />
     <Compile Include="V20180228\Models\ExportVulDetectionExcelRequest.cs" />

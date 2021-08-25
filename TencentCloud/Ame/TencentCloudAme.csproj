@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D56E3EFD-C760-38D8-8424-8856F2207A21}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.348</VersionPrefix>
+    <VersionPrefix>3.0.349</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -69,6 +69,8 @@
     <Compile Include="V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="V20190916\Models\DescribeMusicRequest.cs" />
     <Compile Include="V20190916\Models\DescribeMusicResponse.cs" />
+    <Compile Include="V20190916\Models\DescribeMusicSaleStatusRequest.cs" />
+    <Compile Include="V20190916\Models\DescribeMusicSaleStatusResponse.cs" />
     <Compile Include="V20190916\Models\DescribePackageItemsRequest.cs" />
     <Compile Include="V20190916\Models\DescribePackageItemsResponse.cs" />
     <Compile Include="V20190916\Models\DescribePackagesRequest.cs" />
@@ -85,6 +87,7 @@
     <Compile Include="V20190916\Models\Music.cs" />
     <Compile Include="V20190916\Models\MusicDetailInfo.cs" />
     <Compile Include="V20190916\Models\MusicOpenDetail.cs" />
+    <Compile Include="V20190916\Models\MusicStatus.cs" />
     <Compile Include="V20190916\Models\Package.cs" />
     <Compile Include="V20190916\Models\PackageItem.cs" />
     <Compile Include="V20190916\Models\PutMusicOnTheShelvesRequest.cs" />

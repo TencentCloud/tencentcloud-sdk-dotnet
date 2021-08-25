@@ -78,6 +78,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("AffectRows")]
         public long? AffectRows{ get; set; }
 
+        /// <summary>
+        /// SQL 类型。支持多个类型同时查询。目前支持："SELECT", "INSERT", "UPDATE", "DELETE", "CREATE", "DROP", "ALTER", "SET", "REPLACE", "EXECUTE"。
+        /// </summary>
+        [JsonProperty("SqlTypes")]
+        public string[] SqlTypes{ get; set; }
+
+        /// <summary>
+        /// SQL 语句。支持传递多个sql语句。
+        /// </summary>
+        [JsonProperty("Sqls")]
+        public string[] Sqls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "SqlType", this.SqlType);
             this.SetParamSimple(map, prefix + "ExecTime", this.ExecTime);
             this.SetParamSimple(map, prefix + "AffectRows", this.AffectRows);
+            this.SetParamArraySimple(map, prefix + "SqlTypes.", this.SqlTypes);
+            this.SetParamArraySimple(map, prefix + "Sqls.", this.Sqls);
         }
     }
 }
