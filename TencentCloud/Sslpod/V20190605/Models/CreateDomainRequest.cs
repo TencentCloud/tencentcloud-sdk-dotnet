@@ -49,7 +49,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public string IP{ get; set; }
 
         /// <summary>
-        /// 是否开启通知告警
+        /// 是否开启通知告警；true：开启通知告警，false：关闭通知告警
         /// </summary>
         [JsonProperty("Notice")]
         public bool? Notice{ get; set; }

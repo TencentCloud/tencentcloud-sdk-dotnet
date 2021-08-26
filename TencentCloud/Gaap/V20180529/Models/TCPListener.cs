@@ -143,6 +143,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("UnhealthyThreshold")]
         public ulong? UnhealthyThreshold{ get; set; }
 
+        /// <summary>
+        /// 源站是否开启主备模式：1开启，0关闭，DOMAIN类型源站不支持开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailoverSwitch")]
+        public ulong? FailoverSwitch{ get; set; }
+
+        /// <summary>
+        /// 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionPersist")]
+        public ulong? SessionPersist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +180,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ClientIPMethod", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "HealthyThreshold", this.HealthyThreshold);
             this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
+            this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
+            this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         }
     }
 }

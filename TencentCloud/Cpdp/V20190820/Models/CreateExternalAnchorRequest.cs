@@ -54,6 +54,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("IdCardReverse")]
         public string IdCardReverse{ get; set; }
 
+        /// <summary>
+        /// 指定分配的代理商ID
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "IdNo", this.IdNo);
             this.SetParamSimple(map, prefix + "IdCardFront", this.IdCardFront);
             this.SetParamSimple(map, prefix + "IdCardReverse", this.IdCardReverse);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 转发地址。
+        /// 转发地址。如果有鉴权Token，则需要自行传入，例如 [{\"forward\":{\"api\":\"http://123.207.117.108:1080/sub.php\",\"token\":\"testtoken\"}}]
         /// </summary>
         [JsonProperty("ForwardAddr")]
         public string ForwardAddr{ get; set; }

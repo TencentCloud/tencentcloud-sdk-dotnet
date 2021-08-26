@@ -96,6 +96,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("CreateTime")]
         public ulong? CreateTime{ get; set; }
 
+        /// <summary>
+        /// 是否开启会话保持选项：0关闭， 非0开启，非0值为会话保持时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionPersist")]
+        public ulong? SessionPersist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +120,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
         }
     }
 }

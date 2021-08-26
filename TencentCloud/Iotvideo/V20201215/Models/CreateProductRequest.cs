@@ -49,19 +49,19 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string[] Features{ get; set; }
 
         /// <summary>
-        /// 设备操作系统 Linux
+        /// 设备操作系统，通用设备填default
         /// </summary>
         [JsonProperty("ChipOs")]
         public string ChipOs{ get; set; }
 
         /// <summary>
-        /// 芯片厂商id
+        /// 芯片厂商id，通用设备填default
         /// </summary>
         [JsonProperty("ChipManufactureId")]
         public string ChipManufactureId{ get; set; }
 
         /// <summary>
-        /// 芯片id
+        /// 芯片id，通用设备填default
         /// </summary>
         [JsonProperty("ChipId")]
         public string ChipId{ get; set; }

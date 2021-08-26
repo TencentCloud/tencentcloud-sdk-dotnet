@@ -43,13 +43,13 @@ namespace TencentCloud.Cfs.V20190719.Models
         public string FileSystemId{ get; set; }
 
         /// <summary>
-        /// 文件系统状态
+        /// 文件系统状态，可能出现状态包括：“creating”  创建中, “create_failed” 创建失败, “available” 可用, “unserviced” 不可用, “upgrading” 升级中， “deleting” 删除中。
         /// </summary>
         [JsonProperty("LifeCycleState")]
         public string LifeCycleState{ get; set; }
 
         /// <summary>
-        /// 文件系统已使用容量大小
+        /// 文件系统已使用容量大小，单位为 Byte
         /// </summary>
         [JsonProperty("SizeByte")]
         public ulong? SizeByte{ get; set; }

@@ -132,6 +132,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("BandwidthLimit")]
         public float? BandwidthLimit{ get; set; }
 
+        /// <summary>
+        /// 文件系统总容量
+        /// </summary>
+        [JsonProperty("Capacity")]
+        public ulong? Capacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "KmsKeyId", this.KmsKeyId);
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
+            this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
         }
     }
 }

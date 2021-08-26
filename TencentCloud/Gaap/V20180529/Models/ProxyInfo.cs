@@ -224,6 +224,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
 
+        /// <summary>
+        /// 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -259,6 +266,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArraySimple(map, prefix + "ClientIPMethod.", this.ClientIPMethod);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }
