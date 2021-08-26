@@ -48,7 +48,10 @@ namespace TencentCloudExamples
         {
             try
             {
-                Credential cred = new Credential {"SecretId", "SecretKey"};
+                Credential cred = new Credential {
+                    SecretId = "SecretId",
+                    SecretKey = "SecretKey"
+                };               
                 CvmClient client = new CvmClient(cred, "ap-guangzhou");
                 DescribeInstancesRequest req = new DescribeInstancesRequest();
                 DescribeInstancesResponse resp = client.DescribeInstancesSync(req);
