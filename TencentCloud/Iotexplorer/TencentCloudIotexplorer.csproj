@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.350</VersionPrefix>
+    <VersionPrefix>3.0.351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20190423\Models\CreateTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20190423\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteDevicesResponse.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaGatewayRequest.cs" />
@@ -96,6 +98,7 @@
     <Compile Include="V20190423\Models\DeviceData.cs" />
     <Compile Include="V20190423\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="V20190423\Models\DeviceInfo.cs" />
+    <Compile Include="V20190423\Models\DevicesItem.cs" />
     <Compile Include="V20190423\Models\DisableTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DisableTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\EnableTopicRuleRequest.cs" />
@@ -149,6 +152,8 @@
     <Compile Include="V20190423\Models\TopicRule.cs" />
     <Compile Include="V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="V20190423\Models\TopicRulePayload.cs" />
+    <Compile Include="V20190423\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="V20190423\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="V20190423\Models\UpdateFirmwareRequest.cs" />
     <Compile Include="V20190423\Models\UpdateFirmwareResponse.cs" />
     <Compile Include="V20190423\Models\UploadFirmwareRequest.cs" />

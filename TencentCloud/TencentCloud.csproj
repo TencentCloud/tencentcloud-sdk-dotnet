@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.350</VersionPrefix>
+    <VersionPrefix>3.0.351</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2777,6 +2777,8 @@
     <Compile Include="Cfw\V20190904\Models\DescribeNatFwVpcDnsLstResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatRuleOverviewResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeResourceGroupNewRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeResourceGroupNewResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeResourceGroupRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeResourceGroupResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeRuleOverviewRequest.cs" />
@@ -7799,6 +7801,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\CreateTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteDeviceRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteDevicesRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteDevicesResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteLoRaFrequencyRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteLoRaFrequencyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteLoRaGatewayRequest.cs" />
@@ -7830,6 +7834,7 @@
     <Compile Include="Iotexplorer\V20190423\Models\DeviceData.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeviceInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DevicesItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DisableTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DisableTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\EnableTopicRuleRequest.cs" />
@@ -7883,6 +7888,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\TopicRule.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRulePayload.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UpdateFirmwareRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UpdateFirmwareResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UploadFirmwareRequest.cs" />

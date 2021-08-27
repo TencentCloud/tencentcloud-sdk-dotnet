@@ -1053,6 +1053,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// DescribeResourceGroupNew资产中心资产树信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGroupNewRequest"/></param>
+        /// <returns><see cref="DescribeResourceGroupNewResponse"/></returns>
+        public async Task<DescribeResourceGroupNewResponse> DescribeResourceGroupNew(DescribeResourceGroupNewRequest req)
+        {
+             JsonResponseModel<DescribeResourceGroupNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceGroupNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceGroupNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeResourceGroupNew资产中心资产树信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceGroupNewRequest"/></param>
+        /// <returns><see cref="DescribeResourceGroupNewResponse"/></returns>
+        public DescribeResourceGroupNewResponse DescribeResourceGroupNewSync(DescribeResourceGroupNewRequest req)
+        {
+             JsonResponseModel<DescribeResourceGroupNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceGroupNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceGroupNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询规则列表概况
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleOverviewRequest"/></param>

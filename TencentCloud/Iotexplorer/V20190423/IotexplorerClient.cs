@@ -453,6 +453,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDevicesRequest"/></param>
+        /// <returns><see cref="DeleteDevicesResponse"/></returns>
+        public async Task<DeleteDevicesResponse> DeleteDevices(DeleteDevicesRequest req)
+        {
+             JsonResponseModel<DeleteDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDevicesRequest"/></param>
+        /// <returns><see cref="DeleteDevicesResponse"/></returns>
+        public DeleteDevicesResponse DeleteDevicesSync(DeleteDevicesRequest req)
+        {
+             JsonResponseModel<DeleteDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供删除LoRa自定义频点的能力
         /// </summary>
         /// <param name="req"><see cref="DeleteLoRaFrequencyRequest"/></param>
@@ -1804,6 +1844,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "SearchTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量禁用启用设备
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDevicesEnableStateRequest"/></param>
+        /// <returns><see cref="UpdateDevicesEnableStateResponse"/></returns>
+        public async Task<UpdateDevicesEnableStateResponse> UpdateDevicesEnableState(UpdateDevicesEnableStateRequest req)
+        {
+             JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDevicesEnableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDevicesEnableStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量禁用启用设备
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDevicesEnableStateRequest"/></param>
+        /// <returns><see cref="UpdateDevicesEnableStateResponse"/></returns>
+        public UpdateDevicesEnableStateResponse UpdateDevicesEnableStateSync(UpdateDevicesEnableStateRequest req)
+        {
+             JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDevicesEnableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDevicesEnableStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
