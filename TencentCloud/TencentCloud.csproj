@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.351</VersionPrefix>
+    <VersionPrefix>3.0.352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3127,6 +3127,8 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicSubscribeGroupRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicSubscribeGroupResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicSyncReplicaRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DynamicRetentionTime.cs" />
@@ -3170,6 +3172,8 @@
     <Compile Include="Ckafka\V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicDetail.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicDetailResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicInSyncReplicaInfo.cs" />
+    <Compile Include="Ckafka\V20190819\Models\TopicInSyncReplicaResult.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicResult.cs" />
     <Compile Include="Ckafka\V20190819\Models\TopicRetentionTimeConfigRsp.cs" />

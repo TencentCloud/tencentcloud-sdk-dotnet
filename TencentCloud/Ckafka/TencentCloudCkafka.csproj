@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.351</VersionPrefix>
+    <VersionPrefix>3.0.352</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -112,6 +112,8 @@
     <Compile Include="V20190819\Models\DescribeTopicResponse.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupRequest.cs" />
     <Compile Include="V20190819\Models\DescribeTopicSubscribeGroupResponse.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicSyncReplicaRequest.cs" />
+    <Compile Include="V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
     <Compile Include="V20190819\Models\DynamicRetentionTime.cs" />
@@ -155,6 +157,8 @@
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\TopicDetail.cs" />
     <Compile Include="V20190819\Models\TopicDetailResponse.cs" />
+    <Compile Include="V20190819\Models\TopicInSyncReplicaInfo.cs" />
+    <Compile Include="V20190819\Models\TopicInSyncReplicaResult.cs" />
     <Compile Include="V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="V20190819\Models\TopicResult.cs" />
     <Compile Include="V20190819\Models\TopicRetentionTimeConfigRsp.cs" />

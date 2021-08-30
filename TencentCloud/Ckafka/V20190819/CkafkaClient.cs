@@ -1135,6 +1135,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 获取Topic 副本详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicSyncReplicaRequest"/></param>
+        /// <returns><see cref="DescribeTopicSyncReplicaResponse"/></returns>
+        public async Task<DescribeTopicSyncReplicaResponse> DescribeTopicSyncReplica(DescribeTopicSyncReplicaRequest req)
+        {
+             JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicSyncReplica");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSyncReplicaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Topic 副本详情信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicSyncReplicaRequest"/></param>
+        /// <returns><see cref="DescribeTopicSyncReplicaResponse"/></returns>
+        public DescribeTopicSyncReplicaResponse DescribeTopicSyncReplicaSync(DescribeTopicSyncReplicaRequest req)
+        {
+             JsonResponseModel<DescribeTopicSyncReplicaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicSyncReplica");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicSyncReplicaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserRequest"/></param>
