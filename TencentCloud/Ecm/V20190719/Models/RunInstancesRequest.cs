@@ -150,6 +150,17 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("KeyIds")]
         public string[] KeyIds{ get; set; }
 
+        /// <summary>
+        /// 保持镜像的原始设置。该参数与Password或KeyIds.N不能同时指定。只有使用自定义镜像、共享镜像或外部导入镜像创建实例时才能指定该参数为TRUE。取值范围：
+        /// TRUE：表示保持镜像的登录设置
+        /// FALSE：表示不保持镜像的登录设置
+        /// 
+        /// 默认取值：FALSE。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeepImageLogin")]
+        public string KeepImageLogin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +185,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthIn", this.InternetMaxBandwidthIn);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
+            this.SetParamSimple(map, prefix + "KeepImageLogin", this.KeepImageLogin);
         }
     }
 }

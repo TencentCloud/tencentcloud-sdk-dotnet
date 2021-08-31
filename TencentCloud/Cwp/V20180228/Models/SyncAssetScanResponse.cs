@@ -25,6 +25,31 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 枚举值有(大写)：NOTASK（没有同步任务），SYNCING（同步中），FINISHED（同步完成）
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// 最新开始同步时间
+        /// </summary>
+        [JsonProperty("LatestStartTime")]
+        public string LatestStartTime{ get; set; }
+
+        /// <summary>
+        /// 最新结束同步时间
+        /// </summary>
+        [JsonProperty("LatestEndTime")]
+        public string LatestEndTime{ get; set; }
+
+        /// <summary>
+        /// 任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +61,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "LatestStartTime", this.LatestStartTime);
+            this.SetParamSimple(map, prefix + "LatestEndTime", this.LatestEndTime);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

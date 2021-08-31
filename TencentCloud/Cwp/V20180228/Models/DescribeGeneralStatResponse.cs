@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? AgentsOnline{ get; set; }
 
         /// <summary>
-        /// 主机安全客户端离线的总数
+        /// 主机安全客户端 离线+关机 的总数
         /// </summary>
         [JsonProperty("AgentsOffline")]
         public ulong? AgentsOffline{ get; set; }
@@ -79,6 +79,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? RiskMachine{ get; set; }
 
         /// <summary>
+        /// 已关机总数
+        /// </summary>
+        [JsonProperty("Shutdown")]
+        public ulong? Shutdown{ get; set; }
+
+        /// <summary>
+        /// 已离线总数
+        /// </summary>
+        [JsonProperty("Offline")]
+        public ulong? Offline{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -99,6 +111,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AgentsBasic", this.AgentsBasic);
             this.SetParamSimple(map, prefix + "AgentsProExpireWithInSevenDays", this.AgentsProExpireWithInSevenDays);
             this.SetParamSimple(map, prefix + "RiskMachine", this.RiskMachine);
+            this.SetParamSimple(map, prefix + "Shutdown", this.Shutdown);
+            this.SetParamSimple(map, prefix + "Offline", this.Offline);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

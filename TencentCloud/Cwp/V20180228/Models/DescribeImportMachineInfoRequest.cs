@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组
+        /// 服务器内网IP（默认）/ 服务器名称 / 服务器ID 数组 (最大 1000条)
         /// </summary>
         [JsonProperty("MachineList")]
         public string[] MachineList{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 历史搜索记录
+        /// 历史搜索记录 保留最新的10条
         /// </summary>
         [JsonProperty("Data")]
         public string[] Data{ get; set; }

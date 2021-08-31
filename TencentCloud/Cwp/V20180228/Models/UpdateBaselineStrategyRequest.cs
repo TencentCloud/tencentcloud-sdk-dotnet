@@ -61,13 +61,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
-        /// 云主机类型：cvm：虚拟主机，bms：裸金属，ecm：边缘计算主机
+        /// 云主机类型：
+        /// cvm：腾讯云服务器
+        /// bm：裸金属
+        /// ecm：边缘计算主机
+        /// lh:轻量应用服务器
+        /// other:混合云机器
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 主机地域
+        /// 主机地域 ap-guangzhou
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }

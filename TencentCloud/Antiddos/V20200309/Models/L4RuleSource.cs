@@ -36,6 +36,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
 
+        /// <summary>
+        /// 8000
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Port")]
+        public ulong? Port{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 白名单ID
+        /// 白名单ID (最大 100 条)
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

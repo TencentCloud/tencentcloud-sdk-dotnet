@@ -25,9 +25,12 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云主机类型。
-        /// <li>CVM：表示虚拟主机</li>
-        /// <li>BM:  表示黑石物理机</li>
+        /// 机器所属专区类型 
+        /// CVM 云服务器
+        /// BM 黑石
+        /// ECM 边缘计算
+        /// LH 轻量应用服务器
+        /// Other 混合云专区
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

@@ -25,23 +25,20 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云主机类型。
-        /// <li>CVM：表示虚拟主机</li>
-        /// <li>BM:  表示黑石物理机</li>
+        /// 云主机类型。(当前参数已作废,可以留空值 )
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 机器所属地域。
-        /// 如：ap-guangzhou，ap-shanghai
+        /// 机器所属地域。(当前参数已作废,可以留空值 )
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }
 
         /// <summary>
         /// 主机唯一标识Uuid数组。
-        /// 黑石的InstanceId，CVM的Uuid
+        /// 黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }

@@ -55,7 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulEmergency{ get; set; }
 
         /// <summary>
-        /// 超时时长 单位秒
+        /// 超时时长 单位秒 默认 3600 秒
         /// </summary>
         [JsonProperty("TimeoutPeriod")]
         public ulong? TimeoutPeriod{ get; set; }

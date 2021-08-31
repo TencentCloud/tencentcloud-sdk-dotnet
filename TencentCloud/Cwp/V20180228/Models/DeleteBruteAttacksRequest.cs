@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 暴力破解事件Id数组。
+        /// 暴力破解事件Id数组。(最大 100条)
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

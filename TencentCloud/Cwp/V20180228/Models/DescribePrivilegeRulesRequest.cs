@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// 返回数量，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

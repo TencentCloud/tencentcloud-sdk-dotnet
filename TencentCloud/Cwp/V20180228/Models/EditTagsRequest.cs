@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// CVM主机ID
+        /// Quuid
         /// </summary>
         [JsonProperty("Quuids")]
         public string[] Quuids{ get; set; }

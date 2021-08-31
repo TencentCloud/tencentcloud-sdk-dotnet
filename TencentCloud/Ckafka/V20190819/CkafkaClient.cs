@@ -373,6 +373,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 修改删除路由延迟触发时间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteTriggerTimeRequest"/></param>
+        /// <returns><see cref="DeleteRouteTriggerTimeResponse"/></returns>
+        public async Task<DeleteRouteTriggerTimeResponse> DeleteRouteTriggerTime(DeleteRouteTriggerTimeRequest req)
+        {
+             JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRouteTriggerTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTriggerTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改删除路由延迟触发时间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteTriggerTimeRequest"/></param>
+        /// <returns><see cref="DeleteRouteTriggerTimeResponse"/></returns>
+        public DeleteRouteTriggerTimeResponse DeleteRouteTriggerTimeSync(DeleteRouteTriggerTimeRequest req)
+        {
+             JsonResponseModel<DeleteRouteTriggerTimeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRouteTriggerTime");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteTriggerTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除ckafka主题
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRequest"/></param>

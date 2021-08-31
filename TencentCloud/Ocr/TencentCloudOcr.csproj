@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.352</VersionPrefix>
+    <VersionPrefix>3.0.353</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -178,6 +178,9 @@
     <Compile Include="V20181119\Models\ShipInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\ShipInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\SingleInvoiceInfo.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRRequest.cs" />
+    <Compile Include="V20181119\Models\SmartStructuralOCRResponse.cs" />
+    <Compile Include="V20181119\Models\StructuralItem.cs" />
     <Compile Include="V20181119\Models\TableCell.cs" />
     <Compile Include="V20181119\Models\TableDetectInfo.cs" />
     <Compile Include="V20181119\Models\TableOCRRequest.cs" />

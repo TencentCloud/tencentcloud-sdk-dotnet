@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 恶意请求记录ID数组，最大100条。
+        /// 恶意请求记录ID数组，(最大100条)
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

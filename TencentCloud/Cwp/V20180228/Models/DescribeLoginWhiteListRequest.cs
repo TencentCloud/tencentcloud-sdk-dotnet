@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// 返回数量，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -38,7 +38,10 @@ namespace TencentCloud.Cwp.V20180228.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Keywords - String - 是否必填：否 - 查询关键字 </li>
+        /// <li>IpOrAlias - String - 是否必填：否 - 查询关键字 </li>
+        /// <li>UserName - String - 是否必填：否 - 用户名筛选 </li>
+        /// <li>ModifyBeginTime - String - 是否必填：否 - 按照修改时间段筛选，开始时间 </li>
+        /// <li>ModifyEndTime - String - 是否必填：否 - 按照修改时间段筛选，结束时间 </li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

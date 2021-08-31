@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 是否同步
+        /// 是否同步：true-是 false-否；默认false
         /// </summary>
         [JsonProperty("Sync")]
         public bool? Sync{ get; set; }

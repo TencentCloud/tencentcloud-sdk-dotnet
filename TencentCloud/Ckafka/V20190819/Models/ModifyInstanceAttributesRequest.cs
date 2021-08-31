@@ -60,6 +60,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RebalanceTime")]
         public long? RebalanceTime{ get; set; }
 
+        /// <summary>
+        /// 时间戳
+        /// </summary>
+        [JsonProperty("PublicNetwork")]
+        public long? PublicNetwork{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
             this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
+            this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
         }
     }
 }

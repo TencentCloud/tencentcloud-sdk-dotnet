@@ -55,6 +55,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public RegionInfo[] Other{ get; set; }
 
         /// <summary>
+        /// 所有地域列表(包含以上所有地域)
+        /// </summary>
+        [JsonProperty("ALL")]
+        public RegionInfo[] ALL{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "LH.", this.LH);
             this.SetParamArrayObj(map, prefix + "ECM.", this.ECM);
             this.SetParamArrayObj(map, prefix + "Other.", this.Other);
+            this.SetParamArrayObj(map, prefix + "ALL.", this.ALL);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

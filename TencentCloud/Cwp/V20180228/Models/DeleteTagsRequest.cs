@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 标签ID
+        /// 标签ID (最大100 条)
         /// </summary>
         [JsonProperty("Ids")]
         public ulong?[] Ids{ get; set; }

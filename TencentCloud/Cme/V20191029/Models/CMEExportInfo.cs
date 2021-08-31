@@ -43,7 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 导出的媒体分类路径，长度不能超过15字符。
+        /// 导出的媒体分类路径，长度不能超过15字符。不存在默认创建。
         /// </summary>
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }

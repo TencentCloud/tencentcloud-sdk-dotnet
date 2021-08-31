@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Uuid{ get; set; }
 
         /// <summary>
-        /// cvm id， quuid、uuid必填一个
+        /// Quuid , Uuid 必填一项
         /// </summary>
         [JsonProperty("Quuid")]
         public string Quuid{ get; set; }
