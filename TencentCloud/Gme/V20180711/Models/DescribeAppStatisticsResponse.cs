@@ -27,8 +27,14 @@ namespace TencentCloud.Gme.V20180711.Models
         /// <summary>
         /// 应用用量统计数据
         /// </summary>
-        [JsonProperty("AppStatistics")]
-        public AppStatisticsItem[] AppStatistics{ get; set; }
+        [JsonProperty("Data")]
+        public DescribeAppStatisticsResp Data{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AppStatistics.", this.AppStatistics);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

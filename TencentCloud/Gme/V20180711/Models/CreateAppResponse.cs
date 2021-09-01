@@ -25,52 +25,16 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 应用ID，由后台自动生成。
+        /// 创建应用返回数据
         /// </summary>
-        [JsonProperty("BizId")]
-        public ulong? BizId{ get; set; }
+        [JsonProperty("Data")]
+        public CreateAppResp Data{ get; set; }
 
         /// <summary>
-        /// 应用名称，透传输入参数的AppName
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("AppName")]
-        public string AppName{ get; set; }
-
-        /// <summary>
-        /// 项目ID，透传输入的ProjectId
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
-        /// 应用密钥，GME SDK初始化时使用
-        /// </summary>
-        [JsonProperty("SecretKey")]
-        public string SecretKey{ get; set; }
-
-        /// <summary>
-        /// 服务创建时间戳
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
-
-        /// <summary>
-        /// 实时语音服务配置数据
-        /// </summary>
-        [JsonProperty("RealtimeSpeechConf")]
-        public RealtimeSpeechConf RealtimeSpeechConf{ get; set; }
-
-        /// <summary>
-        /// 语音消息及转文本服务配置数据
-        /// </summary>
-        [JsonProperty("VoiceMessageConf")]
-        public VoiceMessageConf VoiceMessageConf{ get; set; }
-
-        /// <summary>
-        /// 语音分析服务配置数据
-        /// </summary>
-        [JsonProperty("VoiceFilterConf")]
-        public VoiceFilterConf VoiceFilterConf{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -78,14 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizId", this.BizId);
-            this.SetParamSimple(map, prefix + "AppName", this.AppName);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamObj(map, prefix + "RealtimeSpeechConf.", this.RealtimeSpeechConf);
-            this.SetParamObj(map, prefix + "VoiceMessageConf.", this.VoiceMessageConf);
-            this.SetParamObj(map, prefix + "VoiceFilterConf.", this.VoiceFilterConf);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

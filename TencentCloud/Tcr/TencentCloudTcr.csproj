@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.353</VersionPrefix>
+    <VersionPrefix>3.0.354</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -215,6 +215,8 @@
     <Compile Include="V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20190924\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenRequest.cs" />
     <Compile Include="V20190924\Models\ModifyInstanceTokenResponse.cs" />
     <Compile Include="V20190924\Models\ModifyNamespaceRequest.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.353</VersionPrefix>
+    <VersionPrefix>3.0.354</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6923,10 +6923,12 @@
     <Compile Include="Gme\V20180711\Models\CreateAgeDetectTaskRequest.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAgeDetectTaskResponse.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\CreateAppResp.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAgeDetectTaskRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAgeDetectTaskResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResp.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeApplicationDataRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeApplicationDataResponse.cs" />
@@ -6943,6 +6945,7 @@
     <Compile Include="Gme\V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
     <Compile Include="Gme\V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyAppStatusResponse.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyRoomInfoRequest.cs" />
     <Compile Include="Gme\V20180711\Models\ModifyRoomInfoResponse.cs" />
@@ -8435,6 +8438,8 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupDevicesResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupsRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeIPCChannelsRequest.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeIPCChannelsResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamData.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeRecordStreamResponse.cs" />
@@ -12091,6 +12096,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeEndUserStatisticResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEndUsersResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvDealRegionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeEnvDealRegionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeEnvLimitRequest.cs" />
@@ -12491,6 +12498,8 @@
     <Compile Include="Tcr\V20190924\Models\ModifyApplicationTriggerPersonalResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyImmutableTagRulesResponse.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="Tcr\V20190924\Models\ModifyInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceTokenRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyInstanceTokenResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ModifyNamespaceRequest.cs" />

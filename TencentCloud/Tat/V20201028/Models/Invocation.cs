@@ -114,6 +114,30 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("InvocationSource")]
         public string InvocationSource{ get; set; }
 
+        /// <summary>
+        /// base64编码的命令内容
+        /// </summary>
+        [JsonProperty("CommandContent")]
+        public string CommandContent{ get; set; }
+
+        /// <summary>
+        /// 命令类型
+        /// </summary>
+        [JsonProperty("CommandType")]
+        public string CommandType{ get; set; }
+
+        /// <summary>
+        /// 执行命令过期时间， 单位秒
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public ulong? Timeout{ get; set; }
+
+        /// <summary>
+        /// 执行命令的工作路径
+        /// </summary>
+        [JsonProperty("WorkingDirectory")]
+        public string WorkingDirectory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +158,10 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "InstanceKind", this.InstanceKind);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "InvocationSource", this.InvocationSource);
+            this.SetParamSimple(map, prefix + "CommandContent", this.CommandContent);
+            this.SetParamSimple(map, prefix + "CommandType", this.CommandType);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
+            this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
         }
     }
 }

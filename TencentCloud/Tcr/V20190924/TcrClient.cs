@@ -3213,6 +3213,46 @@ namespace TencentCloud.Tcr.V20190924
         }
 
         /// <summary>
+        /// 更新实例信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public async Task<ModifyInstanceResponse> ModifyInstance(ModifyInstanceRequest req)
+        {
+             JsonResponseModel<ModifyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceRequest"/></param>
+        /// <returns><see cref="ModifyInstanceResponse"/></returns>
+        public ModifyInstanceResponse ModifyInstanceSync(ModifyInstanceRequest req)
+        {
+             JsonResponseModel<ModifyInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新实例内指定长期访问凭证的启用状态
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceTokenRequest"/></param>

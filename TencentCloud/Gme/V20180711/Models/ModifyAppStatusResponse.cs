@@ -25,16 +25,16 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// GME应用ID
+        /// 修改应用开关状态返回数据
         /// </summary>
-        [JsonProperty("BizId")]
-        public ulong? BizId{ get; set; }
+        [JsonProperty("Data")]
+        public ModifyAppStatusResp Data{ get; set; }
 
         /// <summary>
-        /// 应用状态，取值：open/close
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizId", this.BizId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

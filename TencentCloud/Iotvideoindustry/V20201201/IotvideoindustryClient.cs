@@ -815,6 +815,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 获取设备下属通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPCChannelsRequest"/></param>
+        /// <returns><see cref="DescribeIPCChannelsResponse"/></returns>
+        public async Task<DescribeIPCChannelsResponse> DescribeIPCChannels(DescribeIPCChannelsRequest req)
+        {
+             JsonResponseModel<DescribeIPCChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPCChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPCChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备下属通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPCChannelsRequest"/></param>
+        /// <returns><see cref="DescribeIPCChannelsResponse"/></returns>
+        public DescribeIPCChannelsResponse DescribeIPCChannelsSync(DescribeIPCChannelsRequest req)
+        {
+             JsonResponseModel<DescribeIPCChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPCChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPCChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取回放视频流(NVR录制用)
         /// RecordId和StartTime/EndTime互斥
         /// 当存在RecordId时，StartTime和EndTime无效

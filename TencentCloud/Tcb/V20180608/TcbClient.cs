@@ -1413,6 +1413,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取环境下单地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvDealRegionRequest"/></param>
+        /// <returns><see cref="DescribeEnvDealRegionResponse"/></returns>
+        public async Task<DescribeEnvDealRegionResponse> DescribeEnvDealRegion(DescribeEnvDealRegionRequest req)
+        {
+             JsonResponseModel<DescribeEnvDealRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvDealRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvDealRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境下单地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvDealRegionRequest"/></param>
+        /// <returns><see cref="DescribeEnvDealRegionResponse"/></returns>
+        public DescribeEnvDealRegionResponse DescribeEnvDealRegionSync(DescribeEnvDealRegionRequest req)
+        {
+             JsonResponseModel<DescribeEnvDealRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvDealRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvDealRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询后付费免费配额信息
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvFreeQuotaRequest"/></param>

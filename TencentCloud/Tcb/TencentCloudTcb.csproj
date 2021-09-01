@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.353</VersionPrefix>
+    <VersionPrefix>3.0.354</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -138,6 +138,8 @@
     <Compile Include="V20180608\Models\DescribeEndUserStatisticResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEndUsersRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEndUsersResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvDealRegionRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeEnvDealRegionResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvFreeQuotaRequest.cs" />
     <Compile Include="V20180608\Models\DescribeEnvFreeQuotaResponse.cs" />
     <Compile Include="V20180608\Models\DescribeEnvLimitRequest.cs" />

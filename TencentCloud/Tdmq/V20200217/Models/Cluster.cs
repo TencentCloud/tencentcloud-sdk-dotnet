@@ -131,6 +131,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NamespaceNum")]
         public long? NamespaceNum{ get; set; }
 
+        /// <summary>
+        /// 已使用存储限制，MB为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UsedStorageBudget")]
+        public long? UsedStorageBudget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -154,6 +161,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
             this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
             this.SetParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
+            this.SetParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
         }
     }
 }
