@@ -66,6 +66,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Principal")]
         public string Principal{ get; set; }
 
+        /// <summary>
+        /// 资源名称列表,Json字符串格式。ResourceName和resourceNameList只能指定其中一个。
+        /// </summary>
+        [JsonProperty("ResourceNameList")]
+        public string ResourceNameList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "Host", this.Host);
             this.SetParamSimple(map, prefix + "Principal", this.Principal);
+            this.SetParamSimple(map, prefix + "ResourceNameList", this.ResourceNameList);
         }
     }
 }

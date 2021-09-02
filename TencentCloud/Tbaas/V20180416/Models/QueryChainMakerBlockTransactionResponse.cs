@@ -45,7 +45,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public long? TxCount{ get; set; }
 
         /// <summary>
-        /// 区块时间戳
+        /// 区块时间戳，单位是秒
         /// </summary>
         [JsonProperty("BlockTimestamp")]
         public long? BlockTimestamp{ get; set; }

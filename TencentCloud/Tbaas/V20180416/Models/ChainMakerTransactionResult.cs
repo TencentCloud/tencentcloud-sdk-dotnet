@@ -73,7 +73,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 交易时间
+        /// 交易时间，单位是秒
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]

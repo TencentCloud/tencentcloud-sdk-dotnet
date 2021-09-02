@@ -25,16 +25,16 @@ namespace TencentCloud.Dts.V20180330.Models
     {
         
         /// <summary>
-        /// 目标实例ID，如cdb-jd92ijd8
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
         /// 目标实例地域，如ap-guangzhou
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
+
+        /// <summary>
+        /// 目标实例ID，如cdb-jd92ijd8
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 目标实例vip。已废弃，无需填写
@@ -72,8 +72,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);

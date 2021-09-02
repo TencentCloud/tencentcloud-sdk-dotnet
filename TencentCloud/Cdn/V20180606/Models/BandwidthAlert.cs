@@ -49,11 +49,34 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string CounterMeasure{ get; set; }
 
         /// <summary>
-        /// 上次触发带宽封顶阈值的时间
+        /// 境内区域上次触发带宽封顶阈值的时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastTriggerTime")]
         public string LastTriggerTime{ get; set; }
+
+        /// <summary>
+        /// 带宽封顶提醒开关
+        /// on：开启
+        /// off：关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlertSwitch")]
+        public string AlertSwitch{ get; set; }
+
+        /// <summary>
+        /// 带宽封顶阈值提醒百分比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlertPercentage")]
+        public long? AlertPercentage{ get; set; }
+
+        /// <summary>
+        /// 海外区域上次触发带宽封顶阈值的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastTriggerTimeOverseas")]
+        public string LastTriggerTimeOverseas{ get; set; }
 
 
         /// <summary>
@@ -65,6 +88,9 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "BpsThreshold", this.BpsThreshold);
             this.SetParamSimple(map, prefix + "CounterMeasure", this.CounterMeasure);
             this.SetParamSimple(map, prefix + "LastTriggerTime", this.LastTriggerTime);
+            this.SetParamSimple(map, prefix + "AlertSwitch", this.AlertSwitch);
+            this.SetParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
+            this.SetParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
         }
     }
 }

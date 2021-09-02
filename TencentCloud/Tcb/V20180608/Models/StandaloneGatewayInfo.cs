@@ -84,6 +84,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ServiceInfo")]
         public BackendServiceInfo ServiceInfo{ get; set; }
 
+        /// <summary>
+        /// 公网CLBIP
+        /// </summary>
+        [JsonProperty("PublicClbIp")]
+        public string PublicClbIp{ get; set; }
+
+        /// <summary>
+        /// 内网CLBIP
+        /// </summary>
+        [JsonProperty("InternalClbIp")]
+        public string InternalClbIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "GatewayDesc", this.GatewayDesc);
             this.SetParamSimple(map, prefix + "GateWayStatus", this.GateWayStatus);
             this.SetParamObj(map, prefix + "ServiceInfo.", this.ServiceInfo);
+            this.SetParamSimple(map, prefix + "PublicClbIp", this.PublicClbIp);
+            this.SetParamSimple(map, prefix + "InternalClbIp", this.InternalClbIp);
         }
     }
 }

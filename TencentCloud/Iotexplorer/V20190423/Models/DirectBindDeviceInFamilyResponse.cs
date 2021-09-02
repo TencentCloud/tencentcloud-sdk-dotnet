@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClustersRequest : AbstractModel
+    public class DirectBindDeviceInFamilyResponse : AbstractModel
     {
         
         /// <summary>
-        /// 起始下标，不填默认为0。
+        /// 返回设备信息
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("AppDeviceInfo")]
+        public AppDeviceInfo AppDeviceInfo{ get; set; }
 
         /// <summary>
-        /// 返回数量，不填则默认为10，最大值为20。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 集群ID列表过滤
-        /// </summary>
-        [JsonProperty("ClusterIdList")]
-        public string[] ClusterIdList{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamArraySimple(map, prefix + "ClusterIdList.", this.ClusterIdList);
+            this.SetParamObj(map, prefix + "AppDeviceInfo.", this.AppDeviceInfo);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

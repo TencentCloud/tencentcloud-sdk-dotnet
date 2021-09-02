@@ -1053,6 +1053,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 直接绑定设备和家庭
+        /// </summary>
+        /// <param name="req"><see cref="DirectBindDeviceInFamilyRequest"/></param>
+        /// <returns><see cref="DirectBindDeviceInFamilyResponse"/></returns>
+        public async Task<DirectBindDeviceInFamilyResponse> DirectBindDeviceInFamily(DirectBindDeviceInFamilyRequest req)
+        {
+             JsonResponseModel<DirectBindDeviceInFamilyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DirectBindDeviceInFamily");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DirectBindDeviceInFamilyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直接绑定设备和家庭
+        /// </summary>
+        /// <param name="req"><see cref="DirectBindDeviceInFamilyRequest"/></param>
+        /// <returns><see cref="DirectBindDeviceInFamilyResponse"/></returns>
+        public DirectBindDeviceInFamilyResponse DirectBindDeviceInFamilySync(DirectBindDeviceInFamilyRequest req)
+        {
+             JsonResponseModel<DirectBindDeviceInFamilyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DirectBindDeviceInFamily");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DirectBindDeviceInFamilyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 禁用规则
         /// </summary>
         /// <param name="req"><see cref="DisableTopicRuleRequest"/></param>

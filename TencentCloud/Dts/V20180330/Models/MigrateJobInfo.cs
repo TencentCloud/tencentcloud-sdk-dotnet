@@ -120,6 +120,13 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("ErrorInfo")]
         public ErrorInfo[] ErrorInfo{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +149,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Detail.", this.Detail);
             this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
