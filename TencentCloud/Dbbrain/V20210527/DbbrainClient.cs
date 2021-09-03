@@ -1133,6 +1133,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。
+        /// </summary>
+        /// <param name="req"><see cref="KillMySqlThreadsRequest"/></param>
+        /// <returns><see cref="KillMySqlThreadsResponse"/></returns>
+        public async Task<KillMySqlThreadsResponse> KillMySqlThreads(KillMySqlThreadsRequest req)
+        {
+             JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "KillMySqlThreads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMySqlThreadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据会话ID中断当前会话，该接口分为两次提交：第一次为预提交阶段，Stage为"Prepare"，得到的返回值包含SqlExecId；第二次为确认提交， Stage为"Commit"， 将SqlExecId的值作为参数传入，最终终止会话进程。
+        /// </summary>
+        /// <param name="req"><see cref="KillMySqlThreadsRequest"/></param>
+        /// <returns><see cref="KillMySqlThreadsResponse"/></returns>
+        public KillMySqlThreadsResponse KillMySqlThreadsSync(KillMySqlThreadsRequest req)
+        {
+             JsonResponseModel<KillMySqlThreadsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "KillMySqlThreads");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<KillMySqlThreadsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例巡检开关。
         /// </summary>
         /// <param name="req"><see cref="ModifyDiagDBInstanceConfRequest"/></param>

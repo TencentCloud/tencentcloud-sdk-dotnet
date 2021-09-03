@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.355</VersionPrefix>
+    <VersionPrefix>3.0.356</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1022,6 +1022,8 @@
     <Compile Include="Bda\V20200324\Models\GetGroupListResponse.cs" />
     <Compile Include="Bda\V20200324\Models\GetPersonListRequest.cs" />
     <Compile Include="Bda\V20200324\Models\GetPersonListResponse.cs" />
+    <Compile Include="Bda\V20200324\Models\GetSummaryInfoRequest.cs" />
+    <Compile Include="Bda\V20200324\Models\GetSummaryInfoResponse.cs" />
     <Compile Include="Bda\V20200324\Models\GroupInfo.cs" />
     <Compile Include="Bda\V20200324\Models\ImageRect.cs" />
     <Compile Include="Bda\V20200324\Models\KeyPointInfo.cs" />
@@ -5354,6 +5356,8 @@
     <Compile Include="Dbbrain\V20210527\Models\InstanceConfs.cs" />
     <Compile Include="Dbbrain\V20210527\Models\InstanceInfo.cs" />
     <Compile Include="Dbbrain\V20210527\Models\IssueTypeInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\KillMySqlThreadsRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\KillMySqlThreadsResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MailConfiguration.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />

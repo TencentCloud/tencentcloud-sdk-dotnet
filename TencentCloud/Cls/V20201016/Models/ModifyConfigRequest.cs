@@ -66,6 +66,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Output")]
         public string Output{ get; set; }
 
+        /// <summary>
+        /// 用户自定义解析字符串，Json格式序列化的字符串
+        /// </summary>
+        [JsonProperty("UserDefineRule")]
+        public string UserDefineRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
             this.SetParamSimple(map, prefix + "Output", this.Output);
+            this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         }
     }
 }

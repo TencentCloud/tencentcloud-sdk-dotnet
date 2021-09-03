@@ -60,6 +60,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("ExcludePaths")]
         public ExcludePathInfo[] ExcludePaths{ get; set; }
 
+        /// <summary>
+        /// 用户自定义采集规则，Json格式序列化的字符串
+        /// </summary>
+        [JsonProperty("UserDefineRule")]
+        public string UserDefineRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "LogType", this.LogType);
             this.SetParamObj(map, prefix + "ExtractRule.", this.ExtractRule);
             this.SetParamArrayObj(map, prefix + "ExcludePaths.", this.ExcludePaths);
+            this.SetParamSimple(map, prefix + "UserDefineRule", this.UserDefineRule);
         }
     }
 }

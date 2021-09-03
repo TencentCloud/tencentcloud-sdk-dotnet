@@ -15,38 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Dbbrain.V20210527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreatePluginRequest : AbstractModel
+    public class KillMySqlThreadsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 用户自定义的插件名称。最长50个字符，最短2个字符，支持 a-z,A-Z,0-9,_, 必须字母开头，字母或者数字结尾。
+        /// kill完成的sql会话ID列表。
         /// </summary>
-        [JsonProperty("PluginName")]
-        public string PluginName{ get; set; }
+        [JsonProperty("Threads")]
+        public long?[] Threads{ get; set; }
 
         /// <summary>
-        /// 插件类型。目前支持IPControl。
+        /// 执行ID， Prepare阶段的任务输出，用于Commit阶段中指定执行kill操作的会话ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PluginType")]
-        public string PluginType{ get; set; }
+        [JsonProperty("SqlExecId")]
+        public string SqlExecId{ get; set; }
 
         /// <summary>
-        /// 插件定义语句，支持json。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("PluginData")]
-        public string PluginData{ get; set; }
-
-        /// <summary>
-        /// 插件描述，限定200字以内。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +49,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PluginName", this.PluginName);
-            this.SetParamSimple(map, prefix + "PluginType", this.PluginType);
-            this.SetParamSimple(map, prefix + "PluginData", this.PluginData);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamArraySimple(map, prefix + "Threads.", this.Threads);
+            this.SetParamSimple(map, prefix + "SqlExecId", this.SqlExecId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

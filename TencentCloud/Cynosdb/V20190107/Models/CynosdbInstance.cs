@@ -267,18 +267,17 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ServerlessStatus{ get; set; }
 
         /// <summary>
-        /// 存储付费类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("StoragePayMode")]
-        public long? StoragePayMode{ get; set; }
-
-        /// <summary>
         /// 预付费存储Id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("StorageId")]
         public string StorageId{ get; set; }
+
+        /// <summary>
+        /// 存储付费类型
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public long? StoragePayMode{ get; set; }
 
 
         /// <summary>
@@ -326,8 +325,8 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "MinCpu", this.MinCpu);
             this.SetParamSimple(map, prefix + "MaxCpu", this.MaxCpu);
             this.SetParamSimple(map, prefix + "ServerlessStatus", this.ServerlessStatus);
-            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
             this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         }
     }
 }

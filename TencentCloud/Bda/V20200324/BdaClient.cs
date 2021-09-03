@@ -533,6 +533,46 @@ namespace TencentCloud.Bda.V20200324
         }
 
         /// <summary>
+        /// 获取人体库汇总信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetSummaryInfoRequest"/></param>
+        /// <returns><see cref="GetSummaryInfoResponse"/></returns>
+        public async Task<GetSummaryInfoResponse> GetSummaryInfo(GetSummaryInfoRequest req)
+        {
+             JsonResponseModel<GetSummaryInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetSummaryInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSummaryInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取人体库汇总信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetSummaryInfoRequest"/></param>
+        /// <returns><see cref="GetSummaryInfoResponse"/></returns>
+        public GetSummaryInfoResponse GetSummaryInfoSync(GetSummaryInfoRequest req)
+        {
+             JsonResponseModel<GetSummaryInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetSummaryInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSummaryInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改人体库名称、备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyGroupRequest"/></param>
