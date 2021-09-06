@@ -91,6 +91,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }
 
+        /// <summary>
+        /// 绑定的关联账号的vpc列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccountVpcSet")]
+        public AccountVpcInfoOutput[] AccountVpcSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         }
     }
 }

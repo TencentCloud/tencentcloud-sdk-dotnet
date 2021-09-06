@@ -36,6 +36,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("VpcSet")]
         public VpcInfo[] VpcSet{ get; set; }
 
+        /// <summary>
+        /// 私有域账号关联的全部VPC列表
+        /// </summary>
+        [JsonProperty("AccountVpcSet")]
+        public AccountVpcInfo[] AccountVpcSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamArrayObj(map, prefix + "VpcSet.", this.VpcSet);
+            this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
         }
     }
 }

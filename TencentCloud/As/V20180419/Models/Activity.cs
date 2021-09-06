@@ -111,6 +111,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("LifecycleActionResultSet")]
         public LifecycleActionResultInfo[] LifecycleActionResultSet{ get; set; }
 
+        /// <summary>
+        /// 伸缩活动状态详细描述。
+        /// </summary>
+        [JsonProperty("DetailedStatusMessageSet")]
+        public DetailedStatusMessage[] DetailedStatusMessageSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "ActivityRelatedInstanceSet.", this.ActivityRelatedInstanceSet);
             this.SetParamSimple(map, prefix + "StatusMessageSimplified", this.StatusMessageSimplified);
             this.SetParamArrayObj(map, prefix + "LifecycleActionResultSet.", this.LifecycleActionResultSet);
+            this.SetParamArrayObj(map, prefix + "DetailedStatusMessageSet.", this.DetailedStatusMessageSet);
         }
     }
 }

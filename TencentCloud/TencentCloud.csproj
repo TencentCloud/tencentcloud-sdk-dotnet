@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.356</VersionPrefix>
+    <VersionPrefix>3.0.358</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -119,6 +119,8 @@
     <Compile Include="Ame\V20190916\Models\DescribePackageItemsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribePackagesRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribePackagesResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePkgOfflineMusicRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribePkgOfflineMusicResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
@@ -132,6 +134,7 @@
     <Compile Include="Ame\V20190916\Models\MusicDetailInfo.cs" />
     <Compile Include="Ame\V20190916\Models\MusicOpenDetail.cs" />
     <Compile Include="Ame\V20190916\Models\MusicStatus.cs" />
+    <Compile Include="Ame\V20190916\Models\OfflineMusicDetail.cs" />
     <Compile Include="Ame\V20190916\Models\Package.cs" />
     <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
     <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesRequest.cs" />
@@ -722,6 +725,7 @@
     <Compile Include="As\V20180419\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\DetailedStatusMessage.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupRequest.cs" />
     <Compile Include="As\V20180419\Models\DisableAutoScalingGroupResponse.cs" />
     <Compile Include="As\V20180419\Models\EnableAutoScalingGroupRequest.cs" />
@@ -10556,6 +10560,8 @@
     <Compile Include="Postgres\V20170312\Models\Xlog.cs" />
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Privatedns\V20201028\PrivatednsClient.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLog.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLogInfo.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
@@ -12010,6 +12016,7 @@
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\VerifyIdlFilesResponse.cs" />
     <Compile Include="Tcb\V20180608\TcbClient.cs" />
+    <Compile Include="Tcb\V20180608\Models\ActivityInfoItem.cs" />
     <Compile Include="Tcb\V20180608\Models\ActivityRecordItem.cs" />
     <Compile Include="Tcb\V20180608\Models\AuthDomain.cs" />
     <Compile Include="Tcb\V20180608\Models\BackendServiceInfo.cs" />
@@ -12069,6 +12076,8 @@
     <Compile Include="Tcb\V20180608\Models\DeleteEndUserResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteWxGatewayRouteRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DeleteWxGatewayRouteResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeActivityInfoRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeActivityInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeActivityRecordRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeActivityRecordResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeAuthDomainsRequest.cs" />
@@ -12133,6 +12142,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayPackageResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeStandaloneGatewayResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeUserActivityInfoRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeUserActivityInfoResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunEnvsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeWxCloudBaseRunSubNetsRequest.cs" />

@@ -733,6 +733,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询活动信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivityInfoRequest"/></param>
+        /// <returns><see cref="DescribeActivityInfoResponse"/></returns>
+        public async Task<DescribeActivityInfoResponse> DescribeActivityInfo(DescribeActivityInfoRequest req)
+        {
+             JsonResponseModel<DescribeActivityInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeActivityInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActivityInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询活动信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeActivityInfoRequest"/></param>
+        /// <returns><see cref="DescribeActivityInfoResponse"/></returns>
+        public DescribeActivityInfoResponse DescribeActivityInfoSync(DescribeActivityInfoRequest req)
+        {
+             JsonResponseModel<DescribeActivityInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeActivityInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeActivityInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询活动记录信息
         /// </summary>
         /// <param name="req"><see cref="DescribeActivityRecordRequest"/></param>
@@ -2010,6 +2050,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStandaloneGatewayPackage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStandaloneGatewayPackageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户活动信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserActivityInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserActivityInfoResponse"/></returns>
+        public async Task<DescribeUserActivityInfoResponse> DescribeUserActivityInfo(DescribeUserActivityInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserActivityInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserActivityInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserActivityInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户活动信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserActivityInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserActivityInfoResponse"/></returns>
+        public DescribeUserActivityInfoResponse DescribeUserActivityInfoSync(DescribeUserActivityInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserActivityInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserActivityInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserActivityInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Statuses")]
         public long?[] Statuses{ get; set; }
 
+        /// <summary>
+        /// 根据是否软删除进行过滤，[0]未删除, [1] 删除，不传不过滤
+        /// </summary>
+        [JsonProperty("IsDeletedList")]
+        public long?[] IsDeletedList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArraySimple(map, prefix + "ActivityIdList.", this.ActivityIdList);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "Statuses.", this.Statuses);
+            this.SetParamArraySimple(map, prefix + "IsDeletedList.", this.IsDeletedList);
         }
     }
 }

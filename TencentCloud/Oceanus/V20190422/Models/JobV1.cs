@@ -220,6 +220,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("RunningCu")]
         public float? RunningCu{ get; set; }
 
+        /// <summary>
+        /// 作业运行的 Flink 版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +261,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "SchedulerType", this.SchedulerType);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         }
     }
 }

@@ -52,6 +52,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }
 
+        /// <summary>
+        /// 整型子状态码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubStatusInt")]
+        public long? SubStatusInt{ get; set; }
+
+        /// <summary>
+        /// 是否软删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsDeleted")]
+        public bool? IsDeleted{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +76,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
+            this.SetParamSimple(map, prefix + "SubStatusInt", this.SubStatusInt);
+            this.SetParamSimple(map, prefix + "IsDeleted", this.IsDeleted);
         }
     }
 }

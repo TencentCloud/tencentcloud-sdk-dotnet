@@ -333,7 +333,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 获取即时广播曲库推荐歌单列表。
+        /// 获取直播互动曲库推荐歌单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
         /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>
@@ -353,7 +353,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 获取即时广播曲库推荐歌单列表。
+        /// 获取直播互动曲库推荐歌单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
         /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>
@@ -564,6 +564,46 @@ namespace TencentCloud.Ame.V20190916
              {
                  var strResp = this.InternalRequestSync(req, "DescribePackages");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据购买曲库包用户可查询已回退的歌曲信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePkgOfflineMusicRequest"/></param>
+        /// <returns><see cref="DescribePkgOfflineMusicResponse"/></returns>
+        public async Task<DescribePkgOfflineMusicResponse> DescribePkgOfflineMusic(DescribePkgOfflineMusicRequest req)
+        {
+             JsonResponseModel<DescribePkgOfflineMusicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePkgOfflineMusic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePkgOfflineMusicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据购买曲库包用户可查询已回退的歌曲信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePkgOfflineMusicRequest"/></param>
+        /// <returns><see cref="DescribePkgOfflineMusicResponse"/></returns>
+        public DescribePkgOfflineMusicResponse DescribePkgOfflineMusicSync(DescribePkgOfflineMusicRequest req)
+        {
+             JsonResponseModel<DescribePkgOfflineMusicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePkgOfflineMusic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePkgOfflineMusicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
