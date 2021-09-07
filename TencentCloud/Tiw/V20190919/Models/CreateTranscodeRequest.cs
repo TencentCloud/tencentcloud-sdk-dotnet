@@ -44,6 +44,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public bool? IsStaticPPT{ get; set; }
 
         /// <summary>
+        /// 注意: 该参数已废弃, 请使用 MinScaleResolution
+        /// 
         /// 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
         /// 
         /// 注意分辨率宽高中间为英文字母"xyz"的"x"
@@ -82,6 +84,14 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("Priority")]
         public string Priority{ get; set; }
 
+        /// <summary>
+        /// 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+        /// 
+        /// 注意分辨率宽高中间为英文字母"xyz"的"x"
+        /// </summary>
+        [JsonProperty("MinScaleResolution")]
+        public string MinScaleResolution{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +106,7 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "CompressFileType", this.CompressFileType);
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
             this.SetParamSimple(map, prefix + "Priority", this.Priority);
+            this.SetParamSimple(map, prefix + "MinScaleResolution", this.MinScaleResolution);
         }
     }
 }

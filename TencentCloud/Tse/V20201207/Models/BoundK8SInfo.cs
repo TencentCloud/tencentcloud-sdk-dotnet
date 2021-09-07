@@ -15,34 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveForbidStreamListRequest : AbstractModel
+    public class BoundK8SInfo : AbstractModel
     {
         
         /// <summary>
-        /// 取得第几页，默认1。
+        /// 绑定的kubernetes集群ID
         /// </summary>
-        [JsonProperty("PageNum")]
-        public long? PageNum{ get; set; }
+        [JsonProperty("BoundClusterId")]
+        public string BoundClusterId{ get; set; }
 
         /// <summary>
-        /// 每页大小，最大100。 
-        /// 取值：1~100之前的任意整数。
-        /// 默认值：10。
+        /// 绑定的kubernetes的集群类型，分tke和eks两种
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
-
-        /// <summary>
-        /// 按流名称查询。
-        /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
+        [JsonProperty("BoundClusterType")]
+        public string BoundClusterType{ get; set; }
 
 
         /// <summary>
@@ -50,9 +43,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "BoundClusterId", this.BoundClusterId);
+            this.SetParamSimple(map, prefix + "BoundClusterType", this.BoundClusterType);
         }
     }
 }

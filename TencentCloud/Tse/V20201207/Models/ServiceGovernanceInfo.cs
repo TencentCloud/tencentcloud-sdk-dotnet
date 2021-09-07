@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Tse.V20201207.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeLiveForbidStreamListRequest : AbstractModel
+    public class ServiceGovernanceInfo : AbstractModel
     {
         
         /// <summary>
-        /// 取得第几页，默认1。
+        /// 引擎所在的地域
         /// </summary>
-        [JsonProperty("PageNum")]
-        public long? PageNum{ get; set; }
+        [JsonProperty("EngineRegion")]
+        public string EngineRegion{ get; set; }
 
         /// <summary>
-        /// 每页大小，最大100。 
-        /// 取值：1~100之前的任意整数。
-        /// 默认值：10。
+        /// 服务治理引擎绑定的kubernetes集群信息
         /// </summary>
-        [JsonProperty("PageSize")]
-        public long? PageSize{ get; set; }
+        [JsonProperty("BoundK8SInfos")]
+        public BoundK8SInfo[] BoundK8SInfos{ get; set; }
 
         /// <summary>
-        /// 按流名称查询。
+        /// 服务治理引擎绑定的网络信息
         /// </summary>
-        [JsonProperty("StreamName")]
-        public string StreamName{ get; set; }
+        [JsonProperty("VpcInfos")]
+        public VpcInfo[] VpcInfos{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
-            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
-            this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
+            this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
+            this.SetParamArrayObj(map, prefix + "BoundK8SInfos.", this.BoundK8SInfos);
+            this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
         }
     }
 }

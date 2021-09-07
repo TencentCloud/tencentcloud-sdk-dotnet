@@ -25,12 +25,6 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
-        /// </summary>
-        [JsonProperty("VpcId")]
-        public string VpcId{ get; set; }
-
-        /// <summary>
         /// VPN网关实例ID。
         /// </summary>
         [JsonProperty("VpnGatewayId")]
@@ -53,6 +47,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         [JsonProperty("PreShareKey")]
         public string PreShareKey{ get; set; }
+
+        /// <summary>
+        /// VPC实例ID。可通过[DescribeVpcs](https://cloud.tencent.com/document/product/215/15778)接口返回值中的VpcId获取。
+        /// CCN VPN 形的通道 可以不传VPCID
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
 
         /// <summary>
         /// SPD策略组，例如：{"10.0.0.5/24":["172.123.10.5/16"]}，10.0.0.5/24是vpc内网段172.123.10.5/16是IDC网段。用户指定VPC内哪些网段可以和您IDC中哪些网段通信。
@@ -96,17 +97,23 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("HealthCheckRemoteIp")]
         public string HealthCheckRemoteIp{ get; set; }
 
+        /// <summary>
+        /// 通道类型, 例如:["STATIC", "StaticRoute", "Policy"]
+        /// </summary>
+        [JsonProperty("RouteType")]
+        public string RouteType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "VpnGatewayId", this.VpnGatewayId);
             this.SetParamSimple(map, prefix + "CustomerGatewayId", this.CustomerGatewayId);
             this.SetParamSimple(map, prefix + "VpnConnectionName", this.VpnConnectionName);
             this.SetParamSimple(map, prefix + "PreShareKey", this.PreShareKey);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArrayObj(map, prefix + "SecurityPolicyDatabases.", this.SecurityPolicyDatabases);
             this.SetParamObj(map, prefix + "IKEOptionsSpecification.", this.IKEOptionsSpecification);
             this.SetParamObj(map, prefix + "IPSECOptionsSpecification.", this.IPSECOptionsSpecification);
@@ -114,6 +121,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EnableHealthCheck", this.EnableHealthCheck);
             this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
             this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
+            this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
         }
     }
 }

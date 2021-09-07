@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.358</VersionPrefix>
+    <VersionPrefix>3.0.359</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20201207\TseClient.cs" />
+    <Compile Include="V20201207\Models\BoundK8SInfo.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressRequest.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesRequest.cs" />
@@ -53,6 +54,7 @@
     <Compile Include="V20201207\Models\EnvInfo.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
+    <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="V20201207\Models\VpcInfo.cs" />
   </ItemGroup>
 </Project>

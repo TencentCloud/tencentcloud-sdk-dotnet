@@ -110,6 +110,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("ReservedConcurrencyMem")]
         public ulong? ReservedConcurrencyMem{ get; set; }
 
+        /// <summary>
+        /// 函数异步属性，取值 TRUE 或者 FALSE
+        /// </summary>
+        [JsonProperty("AsyncRunEnable")]
+        public string AsyncRunEnable{ get; set; }
+
+        /// <summary>
+        /// 异步函数是否开启调用追踪，取值 TRUE 或者 FALSE
+        /// </summary>
+        [JsonProperty("TraceEnable")]
+        public string TraceEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +142,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
             this.SetParamSimple(map, prefix + "TotalProvisionedConcurrencyMem", this.TotalProvisionedConcurrencyMem);
             this.SetParamSimple(map, prefix + "ReservedConcurrencyMem", this.ReservedConcurrencyMem);
+            this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
+            this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
         }
     }
 }
