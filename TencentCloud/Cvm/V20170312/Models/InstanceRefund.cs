@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Scf.V20180416.Models
+namespace TencentCloud.Cvm.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteReservedConcurrencyConfigRequest : AbstractModel
+    public class InstanceRefund : AbstractModel
     {
         
         /// <summary>
-        /// 需要删除最大独占配额的函数的名称
+        /// 实例Id。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FunctionName")]
-        public string FunctionName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 函数所属命名空间，默认为default
+        /// 退款数额。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Namespace")]
-        public string Namespace{ get; set; }
+        [JsonProperty("Refunds")]
+        public float? Refunds{ get; set; }
+
+        /// <summary>
+        /// 退款详情。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PriceDetail")]
+        public string PriceDetail{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
-            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Refunds", this.Refunds);
+            this.SetParamSimple(map, prefix + "PriceDetail", this.PriceDetail);
         }
     }
 }

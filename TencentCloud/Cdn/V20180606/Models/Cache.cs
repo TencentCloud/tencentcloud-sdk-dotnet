@@ -32,7 +32,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public SimpleCache SimpleCache{ get; set; }
 
         /// <summary>
-        /// 高级缓存过期时间配置（功能灰度中，尚未全量）
+        /// 高级缓存过期时间配置（已弃用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvancedCache")]

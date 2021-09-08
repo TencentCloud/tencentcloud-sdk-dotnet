@@ -30,6 +30,12 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("SecretName")]
         public string SecretName{ get; set; }
 
+        /// <summary>
+        /// 密钥对ID，是云服务器中密钥对的唯一标识。
+        /// </summary>
+        [JsonProperty("SSHKeyId")]
+        public string SSHKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SecretName", this.SecretName);
+            this.SetParamSimple(map, prefix + "SSHKeyId", this.SSHKeyId);
         }
     }
 }

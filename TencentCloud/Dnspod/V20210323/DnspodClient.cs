@@ -1292,5 +1292,45 @@ namespace TencentCloud.Dnspod.V20210323
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 暂停子域名的解析记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubdomainStatusRequest"/></param>
+        /// <returns><see cref="ModifySubdomainStatusResponse"/></returns>
+        public async Task<ModifySubdomainStatusResponse> ModifySubdomainStatus(ModifySubdomainStatusRequest req)
+        {
+             JsonResponseModel<ModifySubdomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubdomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubdomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停子域名的解析记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubdomainStatusRequest"/></param>
+        /// <returns><see cref="ModifySubdomainStatusResponse"/></returns>
+        public ModifySubdomainStatusResponse ModifySubdomainStatusSync(ModifySubdomainStatusRequest req)
+        {
+             JsonResponseModel<ModifySubdomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubdomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubdomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

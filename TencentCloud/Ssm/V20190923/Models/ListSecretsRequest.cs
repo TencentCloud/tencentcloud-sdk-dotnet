@@ -75,6 +75,16 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("SecretType")]
         public ulong? SecretType{ get; set; }
 
+        /// <summary>
+        /// 此参数仅在SecretType参数值为1时生效，
+        /// 当SecretType值为1时：
+        /// 如果ProductName值为空，则表示查询所有类型的云产品凭据
+        /// 如果ProductName值为Mysql，则表示查询Mysql数据库凭据
+        /// 如果ProductName值为Tdsql-mysql，则表示查询Tdsql（Mysql版本）的凭据
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +98,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "SearchSecretName", this.SearchSecretName);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "SecretType", this.SecretType);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
         }
     }
 }

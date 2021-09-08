@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 需要设置预置并发的函数的名称
+        /// 需要设置最大独占配额的函数的名称
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }
 
         /// <summary>
-        /// 函数保留并发内存，注：函数的保留并发内存总和上限：用户总并发内存配额 - 12800
+        /// 函数最大独占配额，注：函数的最大独占配额内存总和上限：用户总并发内存配额 - 12800
         /// </summary>
         [JsonProperty("ReservedConcurrencyMem")]
         public ulong? ReservedConcurrencyMem{ get; set; }

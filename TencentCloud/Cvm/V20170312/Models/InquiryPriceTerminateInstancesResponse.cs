@@ -25,6 +25,12 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
+        /// 退款详情。
+        /// </summary>
+        [JsonProperty("InstanceRefundsSet")]
+        public InstanceRefund[] InstanceRefundsSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "InstanceRefundsSet.", this.InstanceRefundsSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

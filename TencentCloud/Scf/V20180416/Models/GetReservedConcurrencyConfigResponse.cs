@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 该函数的保留并发内存。
+        /// 该函数的最大独占配额。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReservedMem")]

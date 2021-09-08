@@ -467,7 +467,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 删除函数的保留并发配置。
+        /// 删除函数的最大独占配额配置。
         /// </summary>
         /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
@@ -487,7 +487,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 删除函数的保留并发配置。
+        /// 删除函数的最大独占配额配置。
         /// </summary>
         /// <param name="req"><see cref="DeleteReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="DeleteReservedConcurrencyConfigResponse"/></returns>
@@ -867,7 +867,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 获取函数的保留并发详情。
+        /// 获取函数的最大独占配额详情。
         /// </summary>
         /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
@@ -887,7 +887,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 获取函数的保留并发详情。
+        /// 获取函数的最大独占配额详情。
         /// </summary>
         /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="GetReservedConcurrencyConfigResponse"/></returns>
@@ -1427,7 +1427,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 设置函数保留并发
+        /// 设置函数最大独占配额
         /// </summary>
         /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>
@@ -1447,7 +1447,7 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
-        /// 设置函数保留并发
+        /// 设置函数最大独占配额
         /// </summary>
         /// <param name="req"><see cref="PutReservedConcurrencyConfigRequest"/></param>
         /// <returns><see cref="PutReservedConcurrencyConfigResponse"/></returns>

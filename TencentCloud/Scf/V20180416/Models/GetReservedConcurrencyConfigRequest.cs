@@ -25,7 +25,7 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 需要获取预置并发详情的函数名称。
+        /// 需要获取最大独占配额详情的函数名称。
         /// </summary>
         [JsonProperty("FunctionName")]
         public string FunctionName{ get; set; }

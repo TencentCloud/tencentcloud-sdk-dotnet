@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.359</VersionPrefix>
+    <VersionPrefix>3.0.360</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4340,6 +4340,7 @@
     <Compile Include="Cvm\V20170312\Models\InstanceChargePrepaid.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceFamilyConfig.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceMarketOptionsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\InstanceRefund.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceStatus.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceTypeConfig.cs" />
     <Compile Include="Cvm\V20170312\Models\InstanceTypeConfigStatus.cs" />
@@ -5747,6 +5748,8 @@
     <Compile Include="Dnspod\V20210323\Models\ModifyRecordResponse.cs" />
     <Compile Include="Dnspod\V20210323\Models\ModifyRecordStatusRequest.cs" />
     <Compile Include="Dnspod\V20210323\Models\ModifyRecordStatusResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifySubdomainStatusRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\ModifySubdomainStatusResponse.cs" />
     <Compile Include="Dnspod\V20210323\Models\PurviewInfo.cs" />
     <Compile Include="Dnspod\V20210323\Models\RecordCountInfo.cs" />
     <Compile Include="Dnspod\V20210323\Models\RecordInfo.cs" />

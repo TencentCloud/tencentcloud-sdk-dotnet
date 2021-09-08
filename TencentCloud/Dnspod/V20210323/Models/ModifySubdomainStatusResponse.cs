@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Scf.V20180416.Models
+namespace TencentCloud.Dnspod.V20210323.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteReservedConcurrencyConfigRequest : AbstractModel
+    public class ModifySubdomainStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 需要删除最大独占配额的函数的名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("FunctionName")]
-        public string FunctionName{ get; set; }
-
-        /// <summary>
-        /// 函数所属命名空间，默认为default
-        /// </summary>
-        [JsonProperty("Namespace")]
-        public string Namespace{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FunctionName", this.FunctionName);
-            this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
