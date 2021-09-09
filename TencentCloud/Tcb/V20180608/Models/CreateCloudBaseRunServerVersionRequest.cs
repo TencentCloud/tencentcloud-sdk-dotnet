@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string EnvId{ get; set; }
 
         /// <summary>
-        /// 枚举（package/repository/image)
+        /// 枚举（package/repository/image/jar/war)
         /// </summary>
         [JsonProperty("UploadType")]
         public string UploadType{ get; set; }
@@ -252,6 +252,36 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ServiceVolumeMounts")]
         public CloudBaseRunServiceVolumeMount[] ServiceVolumeMounts{ get; set; }
 
+        /// <summary>
+        /// 是否有Dockerfile：0-default has, 1-has, 2-has not
+        /// </summary>
+        [JsonProperty("HasDockerfile")]
+        public long? HasDockerfile{ get; set; }
+
+        /// <summary>
+        /// 基础镜像
+        /// </summary>
+        [JsonProperty("BaseImage")]
+        public string BaseImage{ get; set; }
+
+        /// <summary>
+        /// 容器启动入口命令
+        /// </summary>
+        [JsonProperty("EntryPoint")]
+        public string EntryPoint{ get; set; }
+
+        /// <summary>
+        /// 仓库语言
+        /// </summary>
+        [JsonProperty("RepoLanguage")]
+        public string RepoLanguage{ get; set; }
+
+        /// <summary>
+        /// 用户实际上传文件名（仅UploadType为jar/war时必填）
+        /// </summary>
+        [JsonProperty("UploadFilename")]
+        public string UploadFilename{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -296,6 +326,11 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "ServiceVolumes.", this.ServiceVolumes);
             this.SetParamSimple(map, prefix + "IsCreateJnsGw", this.IsCreateJnsGw);
             this.SetParamArrayObj(map, prefix + "ServiceVolumeMounts.", this.ServiceVolumeMounts);
+            this.SetParamSimple(map, prefix + "HasDockerfile", this.HasDockerfile);
+            this.SetParamSimple(map, prefix + "BaseImage", this.BaseImage);
+            this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
+            this.SetParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
+            this.SetParamSimple(map, prefix + "UploadFilename", this.UploadFilename);
         }
     }
 }

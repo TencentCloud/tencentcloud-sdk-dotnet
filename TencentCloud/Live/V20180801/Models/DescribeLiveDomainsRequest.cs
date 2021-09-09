@@ -60,6 +60,15 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("DomainPrefix")]
         public string DomainPrefix{ get; set; }
 
+        /// <summary>
+        /// 播放区域，只在 DomainType=1 时该参数有意义。
+        /// 1: 国内。
+        /// 2: 全球。
+        /// 3: 海外。
+        /// </summary>
+        [JsonProperty("PlayType")]
+        public ulong? PlayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +81,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamSimple(map, prefix + "DomainPrefix", this.DomainPrefix);
+            this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
         }
     }
 }

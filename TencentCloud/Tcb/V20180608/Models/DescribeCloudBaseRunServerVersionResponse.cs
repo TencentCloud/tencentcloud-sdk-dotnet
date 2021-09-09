@@ -240,6 +240,34 @@ namespace TencentCloud.Tcb.V20180608.Models
         public float? MemSize{ get; set; }
 
         /// <summary>
+        /// 是否有Dockerfile：0-default has, 1-has, 2-has not
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HasDockerfile")]
+        public long? HasDockerfile{ get; set; }
+
+        /// <summary>
+        /// 基础镜像
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BaseImage")]
+        public string BaseImage{ get; set; }
+
+        /// <summary>
+        /// 容器启动入口命令
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EntryPoint")]
+        public string EntryPoint{ get; set; }
+
+        /// <summary>
+        /// 仓库语言
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RepoLanguage")]
+        public string RepoLanguage{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -283,6 +311,10 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "CpuSize", this.CpuSize);
             this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
+            this.SetParamSimple(map, prefix + "HasDockerfile", this.HasDockerfile);
+            this.SetParamSimple(map, prefix + "BaseImage", this.BaseImage);
+            this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
+            this.SetParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

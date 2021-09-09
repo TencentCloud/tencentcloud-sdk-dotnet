@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.360</VersionPrefix>
+    <VersionPrefix>3.0.361</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3068,8 +3068,11 @@
     <Compile Include="Ckafka\V20190819\CkafkaClient.cs" />
     <Compile Include="Ckafka\V20190819\Models\Acl.cs" />
     <Compile Include="Ckafka\V20190819\Models\AclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\AppIdResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchCreateAclRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchCreateAclResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ClusterInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Config.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />

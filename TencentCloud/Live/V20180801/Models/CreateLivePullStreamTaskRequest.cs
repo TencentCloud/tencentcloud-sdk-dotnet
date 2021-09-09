@@ -114,6 +114,13 @@ namespace TencentCloud.Live.V20180801.Models
         /// VodSourceFileStart：从点播源文件开始拉流回调，
         /// VodSourceFileFinish：从点播源文件拉流结束回调，
         /// ResetTaskConfig：任务更新回调。
+        /// 
+        /// TaskAlarm: 用于告警事件通知，AlarmType 示例:
+        /// PullFileUnstable - 文件拉取不稳定，
+        /// PushStreamUnstable - 推流不稳定，
+        /// PullFileFailed - 文件拉取出错，
+        /// PushStreamFailed - 推流出现失败，
+        /// FileEndEarly - 文件提前结束。
         /// </summary>
         [JsonProperty("CallbackEvents")]
         public string[] CallbackEvents{ get; set; }
