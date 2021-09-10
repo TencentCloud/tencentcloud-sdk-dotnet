@@ -335,6 +335,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 创建独享集群DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public async Task<CreateDedicatedClusterDCDBInstanceResponse> CreateDedicatedClusterDCDBInstance(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建独享集群DCDB实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDCDBInstanceResponse"/></returns>
+        public CreateDedicatedClusterDCDBInstanceResponse CreateDedicatedClusterDCDBInstanceSync(CreateDedicatedClusterDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDedicatedClusterDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>

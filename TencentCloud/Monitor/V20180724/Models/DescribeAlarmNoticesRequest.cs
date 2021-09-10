@@ -78,6 +78,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupIds")]
         public long?[] GroupIds{ get; set; }
 
+        /// <summary>
+        /// 根据通知模板 id 过滤，空数组/不传则不过滤
+        /// </summary>
+        [JsonProperty("NoticeIds")]
+        public string[] NoticeIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ReceiverType", this.ReceiverType);
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
         }
     }
 }

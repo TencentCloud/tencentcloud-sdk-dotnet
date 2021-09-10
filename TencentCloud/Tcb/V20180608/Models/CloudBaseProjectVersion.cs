@@ -180,6 +180,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("AutoDeployOnCodeChange")]
         public bool? AutoDeployOnCodeChange{ get; set; }
 
+        /// <summary>
+        /// ci部署进度（%）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BuildPercent")]
+        public long? BuildPercent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +214,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "FailType", this.FailType);
             this.SetParamSimple(map, prefix + "RepoUrl", this.RepoUrl);
             this.SetParamSimple(map, prefix + "AutoDeployOnCodeChange", this.AutoDeployOnCodeChange);
+            this.SetParamSimple(map, prefix + "BuildPercent", this.BuildPercent);
         }
     }
 }

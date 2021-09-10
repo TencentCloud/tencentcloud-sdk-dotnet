@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.361</VersionPrefix>
+    <VersionPrefix>3.0.362</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5463,6 +5463,8 @@
     <Compile Include="Dcdb\V20180411\Models\CreateAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateDCDBInstanceRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateDCDBInstanceResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateDedicatedClusterDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateDedicatedClusterDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBAccount.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBParamValue.cs" />
     <Compile Include="Dcdb\V20180411\Models\DCDBInstanceInfo.cs" />
@@ -9064,6 +9066,8 @@
     <Compile Include="Mariadb\V20170312\Models\CreateAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateDBInstanceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateDBInstanceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateDedicatedClusterDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateDedicatedClusterDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateTmpInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateTmpInstancesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBAccount.cs" />

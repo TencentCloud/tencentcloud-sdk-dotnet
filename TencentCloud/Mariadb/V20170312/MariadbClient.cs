@@ -335,6 +335,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 创建独享集群Mariadb实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDBInstanceResponse"/></returns>
+        public async Task<CreateDedicatedClusterDBInstanceResponse> CreateDedicatedClusterDBInstance(CreateDedicatedClusterDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDedicatedClusterDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建独享集群Mariadb实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateDedicatedClusterDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateDedicatedClusterDBInstanceResponse"/></returns>
+        public CreateDedicatedClusterDBInstanceResponse CreateDedicatedClusterDBInstanceSync(CreateDedicatedClusterDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateDedicatedClusterDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDedicatedClusterDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDedicatedClusterDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateTmpInstances）用于创建临时实例。
         /// </summary>
         /// <param name="req"><see cref="CreateTmpInstancesRequest"/></param>

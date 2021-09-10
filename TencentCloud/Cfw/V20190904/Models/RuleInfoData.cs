@@ -49,7 +49,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 策略
+        /// 策略, 0：观察，1：阻断，2：放行
         /// </summary>
         [JsonProperty("Strategy")]
         public string Strategy{ get; set; }

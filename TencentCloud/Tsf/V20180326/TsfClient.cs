@@ -2615,7 +2615,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  容器部署组详情
+        ///  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDetailResponse"/></returns>
@@ -2635,7 +2635,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        ///  容器部署组详情
+        ///  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>
         /// <returns><see cref="DescribeContainerGroupDetailResponse"/></returns>

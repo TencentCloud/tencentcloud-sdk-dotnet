@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideoindustry.V20201201.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIPCChannelsRequest : AbstractModel
+    public class CreateDedicatedClusterDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 偏移量，默认0
+        /// 分配资源ID数组
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 限制，默认0
+        /// 流程ID
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 设备Id
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DeviceId")]
-        public string DeviceId{ get; set; }
-
-        /// <summary>
-        /// 通道类型  0: 未知类型 1: 视频通道 2:  音频通道 3: 告警通道
-        /// </summary>
-        [JsonProperty("ChannelTypes")]
-        public ulong?[] ChannelTypes{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
-            this.SetParamArraySimple(map, prefix + "ChannelTypes.", this.ChannelTypes);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

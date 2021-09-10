@@ -653,7 +653,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。
+        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。已于2021.09.01日正式废弃，后续此接口将不再返回任何数据，新接口为DescribeSlowQueryList，详细请查看：https://cloud.tencent.com/document/product/409/60540
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。
+        /// 本接口（DescribeDBSlowlogs）用于获取慢查询日志。已于2021.09.01日正式废弃，后续此接口将不再返回任何数据，新接口为DescribeSlowQueryList，详细请查看：https://cloud.tencent.com/document/product/409/60540
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowlogsRequest"/></param>
         /// <returns><see cref="DescribeDBSlowlogsResponse"/></returns>
@@ -973,7 +973,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 慢查询统计分析接口，根据SQL语句抽象参数之后，进行聚合分析，并返回对应结果
+        /// 此接口（DescribeSlowQueryAnalysis）用于统计指定时间范围内的所有慢查询，根据SQL语句抽象参数后，进行聚合分析，并返回同类SQL列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 慢查询统计分析接口，根据SQL语句抽象参数之后，进行聚合分析，并返回对应结果
+        /// 此接口（DescribeSlowQueryAnalysis）用于统计指定时间范围内的所有慢查询，根据SQL语句抽象参数后，进行聚合分析，并返回同类SQL列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryAnalysisRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryAnalysisResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取慢查询列表
+        /// 此接口（DescribeSlowQueryList）用于查询指定时间范围内的所有慢查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 获取慢查询列表
+        /// 此接口（DescribeSlowQueryList）用于查询指定时间范围内的所有慢查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowQueryListRequest"/></param>
         /// <returns><see cref="DescribeSlowQueryListResponse"/></returns>

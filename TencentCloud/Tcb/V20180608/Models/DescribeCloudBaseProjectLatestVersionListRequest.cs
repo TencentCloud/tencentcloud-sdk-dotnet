@@ -60,6 +60,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
+        /// <summary>
+        /// ci的id
+        /// </summary>
+        [JsonProperty("CiId")]
+        public string CiId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ProjectName", this.ProjectName);
             this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "CiId", this.CiId);
         }
     }
 }

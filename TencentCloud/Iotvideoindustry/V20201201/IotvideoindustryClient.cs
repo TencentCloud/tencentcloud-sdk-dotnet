@@ -815,7 +815,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 获取设备下属通道
+        /// 获取IPC设备下属通道
         /// </summary>
         /// <param name="req"><see cref="DescribeIPCChannelsRequest"/></param>
         /// <returns><see cref="DescribeIPCChannelsResponse"/></returns>
@@ -835,7 +835,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
-        /// 获取设备下属通道
+        /// 获取IPC设备下属通道
         /// </summary>
         /// <param name="req"><see cref="DescribeIPCChannelsRequest"/></param>
         /// <returns><see cref="DescribeIPCChannelsResponse"/></returns>
