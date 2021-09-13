@@ -48,6 +48,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
+        /// <summary>
+        /// 分账标签值
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

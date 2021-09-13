@@ -45,6 +45,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RealTotalCostRatio")]
         public string RealTotalCostRatio{ get; set; }
 
+        /// <summary>
+        /// 原价，单位为元。TotalCost字段自账单3.0（即2021-05）之后开始生效，账单3.0之前返回"-"。合同价的情况下，TotalCost字段与官网价格存在差异，也返回“-”。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCost")]
+        public string TotalCost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
+            this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
         }
     }
 }

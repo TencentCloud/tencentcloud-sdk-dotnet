@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.362</VersionPrefix>
+    <VersionPrefix>3.0.363</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1124,6 +1124,7 @@
     <Compile Include="Billing\V20180709\Models\ProductInfo.cs" />
     <Compile Include="Billing\V20180709\Models\ProjectSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\RegionSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\SummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\TagSummaryOverviewItem.cs" />
     <Compile Include="Bizlive\V20190313\BizliveClient.cs" />
     <Compile Include="Bizlive\V20190313\Models\CreateSessionRequest.cs" />
@@ -10587,6 +10588,8 @@
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateDNSAccountListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribePrivateDNSAccountListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneRecordListRequest.cs" />
@@ -10606,6 +10609,7 @@
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\ModifyPrivateZoneVpcResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\PrivateDNSAccount.cs" />
     <Compile Include="Privatedns\V20201028\Models\PrivateZone.cs" />
     <Compile Include="Privatedns\V20201028\Models\PrivateZoneRecord.cs" />
     <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
@@ -10838,6 +10842,8 @@
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeErrorResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeLogListRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeLogListResponse.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
@@ -13308,6 +13314,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeEKSClusterCredentialResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEKSClustersRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEKSClustersResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeEKSContainerInstanceRegionsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeEKSContainerInstanceRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesRequest.cs" />
@@ -13343,6 +13351,7 @@
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DnsServerConf.cs" />
+    <Compile Include="Tke\V20180525\Models\EksCiRegionInfo.cs" />
     <Compile Include="Tke\V20180525\Models\EksCluster.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />

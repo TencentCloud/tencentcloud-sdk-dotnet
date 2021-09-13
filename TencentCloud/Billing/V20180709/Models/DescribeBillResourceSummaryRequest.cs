@@ -37,16 +37,16 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
-        /// </summary>
-        [JsonProperty("PeriodType")]
-        public string PeriodType{ get; set; }
-
-        /// <summary>
         /// 月份，格式为yyyy-mm。不能早于开通账单2.0的月份，最多可拉取24个月内的数据。
         /// </summary>
         [JsonProperty("Month")]
         public string Month{ get; set; }
+
+        /// <summary>
+        /// 周期类型，byUsedTime按计费周期/byPayTime按扣费周期。需要与费用中心该月份账单的周期保持一致。您可前往[账单概览](https://console.cloud.tencent.com/expense/bill/overview)页面顶部查看确认您的账单统计周期类型。
+        /// </summary>
+        [JsonProperty("PeriodType")]
+        public string PeriodType{ get; set; }
 
         /// <summary>
         /// 是否需要访问列表的总记录数，用于前端分页
@@ -81,8 +81,8 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "PeriodType", this.PeriodType);
             this.SetParamSimple(map, prefix + "Month", this.Month);
+            this.SetParamSimple(map, prefix + "PeriodType", this.PeriodType);
             this.SetParamSimple(map, prefix + "NeedRecordNum", this.NeedRecordNum);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);

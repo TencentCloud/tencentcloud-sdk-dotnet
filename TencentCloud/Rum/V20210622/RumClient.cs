@@ -212,5 +212,45 @@ namespace TencentCloud.Rum.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
+        /// <returns><see cref="DescribeLogListResponse"/></returns>
+        public async Task<DescribeLogListResponse> DescribeLogList(DescribeLogListRequest req)
+        {
+             JsonResponseModel<DescribeLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目下的日志列表（实例创建的项目下的日志列表）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogListRequest"/></param>
+        /// <returns><see cref="DescribeLogListResponse"/></returns>
+        public DescribeLogListResponse DescribeLogListSync(DescribeLogListRequest req)
+        {
+             JsonResponseModel<DescribeLogListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

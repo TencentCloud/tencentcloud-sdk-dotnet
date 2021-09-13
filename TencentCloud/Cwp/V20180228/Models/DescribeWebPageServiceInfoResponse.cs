@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 是否已购服务
+        /// 是否已购服务：true-是，false-否
         /// </summary>
         [JsonProperty("Status")]
         public bool? Status{ get; set; }

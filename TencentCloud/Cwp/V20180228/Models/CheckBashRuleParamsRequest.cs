@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 用户填入的正则表达式
+        /// 用户填入的正则表达式：“正则表达式“需与“提交EventId对应的命令内容”相匹配
         /// </summary>
         [JsonProperty("Rule")]
         public string Rule{ get; set; }

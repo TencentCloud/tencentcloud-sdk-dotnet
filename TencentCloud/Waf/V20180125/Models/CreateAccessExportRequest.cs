@@ -49,7 +49,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 日志导出数量
+        /// 日志导出数量，最大值100w
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

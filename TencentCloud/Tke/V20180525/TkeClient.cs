@@ -1973,6 +1973,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询容器实例支持的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstanceRegionsRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstanceRegionsResponse"/></returns>
+        public async Task<DescribeEKSContainerInstanceRegionsResponse> DescribeEKSContainerInstanceRegions(DescribeEKSContainerInstanceRegionsRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEKSContainerInstanceRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例支持的地域
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstanceRegionsRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstanceRegionsResponse"/></returns>
+        public DescribeEKSContainerInstanceRegionsResponse DescribeEKSContainerInstanceRegionsSync(DescribeEKSContainerInstanceRegionsRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEKSContainerInstanceRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于查询开启vpc-cni模式的任务进度
         /// </summary>
         /// <param name="req"><see cref="DescribeEnableVpcCniProgressRequest"/></param>

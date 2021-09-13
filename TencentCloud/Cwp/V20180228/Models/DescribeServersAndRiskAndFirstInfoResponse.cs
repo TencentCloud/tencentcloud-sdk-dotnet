@@ -43,7 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ServersCount{ get; set; }
 
         /// <summary>
-        /// 是否试用
+        /// 是否试用：true-是，false-否
         /// </summary>
         [JsonProperty("IsFirstCheck")]
         public bool? IsFirstCheck{ get; set; }

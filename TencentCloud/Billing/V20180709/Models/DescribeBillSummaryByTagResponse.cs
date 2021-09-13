@@ -38,6 +38,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public TagSummaryOverviewItem[] SummaryOverview{ get; set; }
 
         /// <summary>
+        /// 总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SummaryTotal")]
+        public SummaryTotal SummaryTotal{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +58,7 @@ namespace TencentCloud.Billing.V20180709.Models
         {
             this.SetParamSimple(map, prefix + "Ready", this.Ready);
             this.SetParamArrayObj(map, prefix + "SummaryOverview.", this.SummaryOverview);
+            this.SetParamObj(map, prefix + "SummaryTotal.", this.SummaryTotal);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
