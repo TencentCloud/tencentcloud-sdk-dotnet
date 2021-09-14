@@ -108,7 +108,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? BanStatus{ get; set; }
 
         /// <summary>
-        /// 事件类型
+        /// 事件类型：200-暴力破解事件，300-暴力破解成功事件（页面展示），400-暴力破解不存在的帐号事件
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EventType")]

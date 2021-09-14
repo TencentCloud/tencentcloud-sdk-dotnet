@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.363</VersionPrefix>
+    <VersionPrefix>3.0.364</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -81,9 +81,15 @@
     <Compile Include="Aai\V20180522\Models\TextToVoiceRequest.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceResponse.cs" />
     <Compile Include="Af\V20200226\AfClient.cs" />
+    <Compile Include="Af\V20200226\Models\DescribeAntiFraudRequest.cs" />
+    <Compile Include="Af\V20200226\Models\DescribeAntiFraudResponse.cs" />
+    <Compile Include="Af\V20200226\Models\FinanceAntiFraudCryptoFilter.cs" />
+    <Compile Include="Af\V20200226\Models\FinanceAntiFraudFilter.cs" />
+    <Compile Include="Af\V20200226\Models\FinanceAntiFraudRecord.cs" />
     <Compile Include="Af\V20200226\Models\QueryAntiFraudRequest.cs" />
     <Compile Include="Af\V20200226\Models\QueryAntiFraudResponse.cs" />
     <Compile Include="Af\V20200226\Models\RiskDetail.cs" />
+    <Compile Include="Af\V20200226\Models\RiskDetailInfo.cs" />
     <Compile Include="Afc\V20200226\AfcClient.cs" />
     <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipRequest.cs" />
     <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipResponse.cs" />
@@ -2740,12 +2746,15 @@
     <Compile Include="Cfw\V20190904\Models\CreateAcRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateChooseVpcsRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateChooseVpcsResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateDatabaseWhiteListRulesRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateDatabaseWhiteListRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupApiRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupRulesRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupRulesResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DatabaseWhiteListRuleData.cs" />
     <Compile Include="Cfw\V20190904\Models\DeleteAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DeleteAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DeleteAllAccessControlRuleRequest.cs" />
@@ -3281,6 +3290,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeExclusiveClustersResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLBListenersRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLBListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
@@ -3315,9 +3326,13 @@
     <Compile Include="Clb\V20180317\Models\HealthCheck.cs" />
     <Compile Include="Clb\V20180317\Models\InternetAccessible.cs" />
     <Compile Include="Clb\V20180317\Models\LBChargePrepaid.cs" />
+    <Compile Include="Clb\V20180317\Models\LBItem.cs" />
+    <Compile Include="Clb\V20180317\Models\LbRsItem.cs" />
+    <Compile Include="Clb\V20180317\Models\LbRsTargets.cs" />
     <Compile Include="Clb\V20180317\Models\Listener.cs" />
     <Compile Include="Clb\V20180317\Models\ListenerBackend.cs" />
     <Compile Include="Clb\V20180317\Models\ListenerHealth.cs" />
+    <Compile Include="Clb\V20180317\Models\ListenerItem.cs" />
     <Compile Include="Clb\V20180317\Models\LoadBalancer.cs" />
     <Compile Include="Clb\V20180317\Models\LoadBalancerDetail.cs" />
     <Compile Include="Clb\V20180317\Models\LoadBalancerHealth.cs" />
@@ -3362,6 +3377,7 @@
     <Compile Include="Clb\V20180317\Models\RuleInput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleOutput.cs" />
     <Compile Include="Clb\V20180317\Models\RuleTargets.cs" />
+    <Compile Include="Clb\V20180317\Models\RulesItems.cs" />
     <Compile Include="Clb\V20180317\Models\SetCustomizedConfigForLoadBalancerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetCustomizedConfigForLoadBalancerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerClsLogRequest.cs" />
@@ -7610,8 +7626,6 @@
     <Compile Include="Ims\V20201229\Models\Device.cs" />
     <Compile Include="Ims\V20201229\Models\ImageModerationRequest.cs" />
     <Compile Include="Ims\V20201229\Models\ImageModerationResponse.cs" />
-    <Compile Include="Ims\V20201229\Models\ImageRecognitionRequest.cs" />
-    <Compile Include="Ims\V20201229\Models\ImageRecognitionResponse.cs" />
     <Compile Include="Ims\V20201229\Models\LabelDetailItem.cs" />
     <Compile Include="Ims\V20201229\Models\LabelResult.cs" />
     <Compile Include="Ims\V20201229\Models\LibDetail.cs" />
@@ -10844,6 +10858,10 @@
     <Compile Include="Rum\V20210622\Models\DescribeErrorResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeLogListRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeLogListResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\Filter.cs" />
+    <Compile Include="Rum\V20210622\Models\RumProject.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
@@ -12181,6 +12199,7 @@
     <Compile Include="Tcb\V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FreequotaInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\HpaPolicy.cs" />
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
     <Compile Include="Tcb\V20180608\Models\LogServiceInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\LoginStatistic.cs" />
@@ -14364,6 +14383,8 @@
     <Compile Include="Vod\V20180717\Models\CreateSuperPlayerConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateVodDomainRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\CreateVodDomainResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\CreateWordSamplesRequest.cs" />
@@ -14401,6 +14422,8 @@
     <Compile Include="Vod\V20180717\Models\DeleteSuperPlayerConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteVodDomainRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DeleteVodDomainResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DeleteWordSamplesRequest.cs" />
@@ -14609,6 +14632,10 @@
     <Compile Include="Vod\V20180717\Models\ModifySuperPlayerConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyTranscodeTemplateResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyVodDomainAccelerateConfigRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyVodDomainAccelerateConfigResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyVodDomainConfigRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ModifyVodDomainConfigResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyWatermarkTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ModifyWordSampleRequest.cs" />

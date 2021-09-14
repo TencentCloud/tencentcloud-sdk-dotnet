@@ -1399,6 +1399,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>
+        /// <returns><see cref="DescribeLBListenersResponse"/></returns>
+        public async Task<DescribeLBListenersResponse> DescribeLBListeners(DescribeLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>
+        /// <returns><see cref="DescribeLBListenersResponse"/></returns>
+        public DescribeLBListenersResponse DescribeLBListenersSync(DescribeLBListenersRequest req)
+        {
+             JsonResponseModel<DescribeLBListenersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLBListeners");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLBListenersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeListeners 接口可根据负载均衡器 ID、监听器的协议或端口作为过滤条件获取监听器列表。如果不指定任何过滤条件，则返回该负载均衡实例下的所有监听器。
         /// </summary>
         /// <param name="req"><see cref="DescribeListenersRequest"/></param>

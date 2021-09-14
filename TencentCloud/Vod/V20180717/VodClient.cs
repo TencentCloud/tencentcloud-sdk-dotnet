@@ -919,6 +919,48 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于将加速域名添加到点播，一个用户最多添加20个加速域名。
+        /// 1.域名添加成功后点播会进行域名的部署，域名由部署状态变为在线状态大概需要2分钟的时间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVodDomainRequest"/></param>
+        /// <returns><see cref="CreateVodDomainResponse"/></returns>
+        public async Task<CreateVodDomainResponse> CreateVodDomain(CreateVodDomainRequest req)
+        {
+             JsonResponseModel<CreateVodDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVodDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVodDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于将加速域名添加到点播，一个用户最多添加20个加速域名。
+        /// 1.域名添加成功后点播会进行域名的部署，域名由部署状态变为在线状态大概需要2分钟的时间。
+        /// </summary>
+        /// <param name="req"><see cref="CreateVodDomainRequest"/></param>
+        /// <returns><see cref="CreateVodDomainResponse"/></returns>
+        public CreateVodDomainResponse CreateVodDomainSync(CreateVodDomainRequest req)
+        {
+             JsonResponseModel<CreateVodDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVodDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVodDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户自定义水印模板，数量上限：1000。
         /// </summary>
         /// <param name="req"><see cref="CreateWatermarkTemplateRequest"/></param>
@@ -1640,6 +1682,48 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTranscodeTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除点播加速域名。
+        /// 1、域名删除前需要先关闭所有区域的加速。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVodDomainRequest"/></param>
+        /// <returns><see cref="DeleteVodDomainResponse"/></returns>
+        public async Task<DeleteVodDomainResponse> DeleteVodDomain(DeleteVodDomainRequest req)
+        {
+             JsonResponseModel<DeleteVodDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVodDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVodDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于删除点播加速域名。
+        /// 1、域名删除前需要先关闭所有区域的加速。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVodDomainRequest"/></param>
+        /// <returns><see cref="DeleteVodDomainResponse"/></returns>
+        public DeleteVodDomainResponse DeleteVodDomainSync(DeleteVodDomainRequest req)
+        {
+             JsonResponseModel<DeleteVodDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVodDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVodDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4234,6 +4318,90 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTranscodeTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTranscodeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于开启或者关闭点播域名的加速区域。
+        /// 1、域名部署状态为 Online 状态时才允许开启或者关闭域名加速区域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVodDomainAccelerateConfigRequest"/></param>
+        /// <returns><see cref="ModifyVodDomainAccelerateConfigResponse"/></returns>
+        public async Task<ModifyVodDomainAccelerateConfigResponse> ModifyVodDomainAccelerateConfig(ModifyVodDomainAccelerateConfigRequest req)
+        {
+             JsonResponseModel<ModifyVodDomainAccelerateConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVodDomainAccelerateConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVodDomainAccelerateConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于开启或者关闭点播域名的加速区域。
+        /// 1、域名部署状态为 Online 状态时才允许开启或者关闭域名加速区域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVodDomainAccelerateConfigRequest"/></param>
+        /// <returns><see cref="ModifyVodDomainAccelerateConfigResponse"/></returns>
+        public ModifyVodDomainAccelerateConfigResponse ModifyVodDomainAccelerateConfigSync(ModifyVodDomainAccelerateConfigRequest req)
+        {
+             JsonResponseModel<ModifyVodDomainAccelerateConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVodDomainAccelerateConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVodDomainAccelerateConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改域名配置，可以修改域名的防盗链配置。
+        /// 1、域名部署状态为 Online 状态时才允许修改域名的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVodDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyVodDomainConfigResponse"/></returns>
+        public async Task<ModifyVodDomainConfigResponse> ModifyVodDomainConfig(ModifyVodDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyVodDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVodDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVodDomainConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改域名配置，可以修改域名的防盗链配置。
+        /// 1、域名部署状态为 Online 状态时才允许修改域名的配置。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVodDomainConfigRequest"/></param>
+        /// <returns><see cref="ModifyVodDomainConfigResponse"/></returns>
+        public ModifyVodDomainConfigResponse ModifyVodDomainConfigSync(ModifyVodDomainConfigRequest req)
+        {
+             JsonResponseModel<ModifyVodDomainConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVodDomainConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVodDomainConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

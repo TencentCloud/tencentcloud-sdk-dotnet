@@ -222,6 +222,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsUpdateCls")]
         public bool? IsUpdateCls{ get; set; }
 
+        /// <summary>
+        /// 自动扩缩容策略组
+        /// </summary>
+        [JsonProperty("PolicyDetail")]
+        public HpaPolicy[] PolicyDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -261,6 +267,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "OperatorRemark", this.OperatorRemark);
             this.SetParamSimple(map, prefix + "ServerPath", this.ServerPath);
             this.SetParamSimple(map, prefix + "IsUpdateCls", this.IsUpdateCls);
+            this.SetParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
         }
     }
 }

@@ -282,6 +282,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("UploadFilename")]
         public string UploadFilename{ get; set; }
 
+        /// <summary>
+        /// 自动扩缩容策略组
+        /// </summary>
+        [JsonProperty("PolicyDetail")]
+        public HpaPolicy[] PolicyDetail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +337,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "EntryPoint", this.EntryPoint);
             this.SetParamSimple(map, prefix + "RepoLanguage", this.RepoLanguage);
             this.SetParamSimple(map, prefix + "UploadFilename", this.UploadFilename);
+            this.SetParamArrayObj(map, prefix + "PolicyDetail.", this.PolicyDetail);
         }
     }
 }

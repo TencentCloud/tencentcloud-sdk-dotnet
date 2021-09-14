@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BDE94E8D-637D-390B-9317-7EDFE9243FE6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.363</VersionPrefix>
+    <VersionPrefix>3.0.364</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,8 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20200226\AfClient.cs" />
+    <Compile Include="V20200226\Models\DescribeAntiFraudRequest.cs" />
+    <Compile Include="V20200226\Models\DescribeAntiFraudResponse.cs" />
+    <Compile Include="V20200226\Models\FinanceAntiFraudCryptoFilter.cs" />
+    <Compile Include="V20200226\Models\FinanceAntiFraudFilter.cs" />
+    <Compile Include="V20200226\Models\FinanceAntiFraudRecord.cs" />
     <Compile Include="V20200226\Models\QueryAntiFraudRequest.cs" />
     <Compile Include="V20200226\Models\QueryAntiFraudResponse.cs" />
     <Compile Include="V20200226\Models\RiskDetail.cs" />
+    <Compile Include="V20200226\Models\RiskDetailInfo.cs" />
   </ItemGroup>
 </Project>

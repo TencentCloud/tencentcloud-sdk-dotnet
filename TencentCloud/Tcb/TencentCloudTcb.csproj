@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.363</VersionPrefix>
+    <VersionPrefix>3.0.364</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -194,6 +194,7 @@
     <Compile Include="V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="V20180608\Models\FreequotaInfo.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
+    <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
     <Compile Include="V20180608\Models\LogServiceInfo.cs" />
     <Compile Include="V20180608\Models\LoginStatistic.cs" />

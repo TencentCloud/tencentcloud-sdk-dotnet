@@ -127,6 +127,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public ExclusiveCluster ExclusiveCluster{ get; set; }
 
         /// <summary>
+        /// 创建性能独享型CLB，传SLA。
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
         /// 用于保证请求幂等性的字符串。该字符串由客户生成，需保证不同请求之间唯一，最大值不超过64个ASCII字符。若不指定该参数，则无法保证请求的幂等性。
         /// </summary>
         [JsonProperty("ClientToken")]
@@ -185,6 +191,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "BandwidthPackageId", this.BandwidthPackageId);
             this.SetParamObj(map, prefix + "ExclusiveCluster.", this.ExclusiveCluster);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);

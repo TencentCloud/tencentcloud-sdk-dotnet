@@ -57,6 +57,50 @@ namespace TencentCloud.Af.V20200226
         /// 可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
         /// 的损失。
         /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFraudRequest"/></param>
+        /// <returns><see cref="DescribeAntiFraudResponse"/></returns>
+        public async Task<DescribeAntiFraudResponse> DescribeAntiFraud(DescribeAntiFraudRequest req)
+        {
+             JsonResponseModel<DescribeAntiFraudResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAntiFraud");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFraudResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 天御反欺诈服务，主要应用于银行、证券、保险、消费金融等金融行业客户，通过腾讯的大数据风控能力，
+        /// 可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
+        /// 的损失。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAntiFraudRequest"/></param>
+        /// <returns><see cref="DescribeAntiFraudResponse"/></returns>
+        public DescribeAntiFraudResponse DescribeAntiFraudSync(DescribeAntiFraudRequest req)
+        {
+             JsonResponseModel<DescribeAntiFraudResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAntiFraud");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAntiFraudResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 天御反欺诈服务，主要应用于银行、证券、保险、消费金融等金融行业客户，通过腾讯的大数据风控能力，
+        /// 可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
+        /// 的损失。
+        /// </summary>
         /// <param name="req"><see cref="QueryAntiFraudRequest"/></param>
         /// <returns><see cref="QueryAntiFraudResponse"/></returns>
         public async Task<QueryAntiFraudResponse> QueryAntiFraud(QueryAntiFraudRequest req)

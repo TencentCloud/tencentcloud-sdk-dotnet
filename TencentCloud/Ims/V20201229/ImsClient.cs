@@ -164,45 +164,5 @@ namespace TencentCloud.Ims.V20201229
              return rsp.Response;
         }
 
-        /// <summary>
-        /// 图片内容审核服务能自动扫描图片，识别可能令人反感、不安全或不适宜的内容，同时支持用户配置图片黑名单，打击自定义识别类型的图片。
-        /// </summary>
-        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
-        /// <returns><see cref="ImageRecognitionResponse"/></returns>
-        public async Task<ImageRecognitionResponse> ImageRecognition(ImageRecognitionRequest req)
-        {
-             JsonResponseModel<ImageRecognitionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ImageRecognition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageRecognitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 图片内容审核服务能自动扫描图片，识别可能令人反感、不安全或不适宜的内容，同时支持用户配置图片黑名单，打击自定义识别类型的图片。
-        /// </summary>
-        /// <param name="req"><see cref="ImageRecognitionRequest"/></param>
-        /// <returns><see cref="ImageRecognitionResponse"/></returns>
-        public ImageRecognitionResponse ImageRecognitionSync(ImageRecognitionRequest req)
-        {
-             JsonResponseModel<ImageRecognitionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ImageRecognition");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageRecognitionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
     }
 }

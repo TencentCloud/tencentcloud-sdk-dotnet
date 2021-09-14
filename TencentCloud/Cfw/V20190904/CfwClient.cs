@@ -133,6 +133,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建暴露数据库白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseWhiteListRulesRequest"/></param>
+        /// <returns><see cref="CreateDatabaseWhiteListRulesResponse"/></returns>
+        public async Task<CreateDatabaseWhiteListRulesResponse> CreateDatabaseWhiteListRules(CreateDatabaseWhiteListRulesRequest req)
+        {
+             JsonResponseModel<CreateDatabaseWhiteListRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatabaseWhiteListRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseWhiteListRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建暴露数据库白名单规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatabaseWhiteListRulesRequest"/></param>
+        /// <returns><see cref="CreateDatabaseWhiteListRulesResponse"/></returns>
+        public CreateDatabaseWhiteListRulesResponse CreateDatabaseWhiteListRulesSync(CreateDatabaseWhiteListRulesRequest req)
+        {
+             JsonResponseModel<CreateDatabaseWhiteListRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatabaseWhiteListRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatabaseWhiteListRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建防火墙实例
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>

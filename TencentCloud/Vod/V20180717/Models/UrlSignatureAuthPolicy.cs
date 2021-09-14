@@ -26,7 +26,7 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)设置状态，可选值：
-        /// <li>Enabled: 启用；</li>
+        /// <li>Enabled: 启用。</li>
         /// <li>Disabled: 禁用。</li>
         /// </summary>
         [JsonProperty("Status")]
@@ -34,6 +34,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// [Key 防盗链](https://cloud.tencent.com/document/product/266/14047)中用于生成签名的密钥。
+        /// EncryptedKey 字符串的长度为8~40个字节，不能包含不可见字符。
         /// </summary>
         [JsonProperty("EncryptedKey")]
         public string EncryptedKey{ get; set; }
