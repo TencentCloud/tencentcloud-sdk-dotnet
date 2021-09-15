@@ -49,6 +49,15 @@ namespace TencentCloud.Cme.V20191029.Models
         public string LicenseId{ get; set; }
 
         /// <summary>
+        /// 平台状态，可取值为：
+        /// <li>Normal：正常，可使用。；</li>
+        /// <li>Stopped：已停用，暂无法使用；</li>
+        /// <li>Expired：已过期，需要重新购买会员包。</li>
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 创建时间，格式按照 ISO 8601 标准表示。
         /// </summary>
         [JsonProperty("CreateTime")]
@@ -70,6 +79,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "VodSubAppId", this.VodSubAppId);
             this.SetParamSimple(map, prefix + "LicenseId", this.LicenseId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }

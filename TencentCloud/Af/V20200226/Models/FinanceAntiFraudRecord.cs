@@ -53,6 +53,13 @@ namespace TencentCloud.Af.V20200226.Models
         public RiskDetailInfo[] RiskInfo{ get; set; }
 
         /// <summary>
+        /// 多模型返回结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherModelScores")]
+        public FinanceOtherModelScores[] OtherModelScores{ get; set; }
+
+        /// <summary>
         /// 业务侧错误码。成功时返回0，错误时返回非0值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -77,6 +84,7 @@ namespace TencentCloud.Af.V20200226.Models
             this.SetParamSimple(map, prefix + "IdFound", this.IdFound);
             this.SetParamSimple(map, prefix + "RiskScore", this.RiskScore);
             this.SetParamArrayObj(map, prefix + "RiskInfo.", this.RiskInfo);
+            this.SetParamArrayObj(map, prefix + "OtherModelScores.", this.OtherModelScores);
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "Message", this.Message);
         }

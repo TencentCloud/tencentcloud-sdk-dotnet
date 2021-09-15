@@ -59,7 +59,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页返回的记录条数，默认值：10。
+        /// 分页返回的记录条数，默认值：10。最大值：20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
