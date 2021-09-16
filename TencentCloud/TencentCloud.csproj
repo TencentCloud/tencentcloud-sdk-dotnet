@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.366</VersionPrefix>
+    <VersionPrefix>3.0.367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6065,6 +6065,8 @@
     <Compile Include="Ecm\V20190719\Models\AssociateAddressResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\AttachDisksRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\AttachDisksResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\AttachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Backend.cs" />
@@ -6077,6 +6079,8 @@
     <Compile Include="Ecm\V20190719\Models\BatchTarget.cs" />
     <Compile Include="Ecm\V20190719\Models\City.cs" />
     <Compile Include="Ecm\V20190719\Models\Country.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateDisksRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateDisksResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateHaVipRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateHaVipResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageRequest.cs" />
@@ -6123,6 +6127,8 @@
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSecurityGroupResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSnapshotsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteSubnetResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DeleteVpcRequest.cs" />
@@ -6139,6 +6145,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeCustomImageTaskResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeDefaultSubnetResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeDisksRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeDisksResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeImageRequest.cs" />
@@ -6185,6 +6193,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupPoliciesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeTargetHealthRequest.cs" />
@@ -6197,6 +6207,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeVpcsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeVpcsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DetachDisksRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DetachDisksResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DetachNetworkInterfaceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisableRoutesRequest.cs" />
@@ -6205,6 +6217,8 @@
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\Disk.cs" />
+    <Compile Include="Ecm\V20190719\Models\DiskChargePrepaid.cs" />
     <Compile Include="Ecm\V20190719\Models\DiskInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\EipQuota.cs" />
     <Compile Include="Ecm\V20190719\Models\EnableRoutesRequest.cs" />
@@ -6308,6 +6322,7 @@
     <Compile Include="Ecm\V20190719\Models\PeakNetwork.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakNetworkRegionInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PhysicalPosition.cs" />
+    <Compile Include="Ecm\V20190719\Models\Placement.cs" />
     <Compile Include="Ecm\V20190719\Models\Position.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIPAddressInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIpAddressSpecification.cs" />
@@ -6357,6 +6372,7 @@
     <Compile Include="Ecm\V20190719\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\SimpleModule.cs" />
+    <Compile Include="Ecm\V20190719\Models\Snapshot.cs" />
     <Compile Include="Ecm\V20190719\Models\SrcImage.cs" />
     <Compile Include="Ecm\V20190719\Models\StartInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\StartInstancesResponse.cs" />
@@ -6371,6 +6387,8 @@
     <Compile Include="Ecm\V20190719\Models\TargetsWeightRule.cs" />
     <Compile Include="Ecm\V20190719\Models\TaskInput.cs" />
     <Compile Include="Ecm\V20190719\Models\TaskOutput.cs" />
+    <Compile Include="Ecm\V20190719\Models\TerminateDisksRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\TerminateDisksResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\TerminateInstancesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\VirtualPrivateCloud.cs" />
@@ -10568,7 +10586,6 @@
     <Compile Include="Partners\V20180321\Models\AgentTransferMoneyResponse.cs" />
     <Compile Include="Partners\V20180321\Models\AuditApplyClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\AuditApplyClientResponse.cs" />
-    <Compile Include="Partners\V20180321\Models\ClientBaseElem.cs" />
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientRequest.cs" />
     <Compile Include="Partners\V20180321\Models\CreatePayRelationForClientResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DealGoodsPriceElem.cs" />
@@ -10597,8 +10614,6 @@
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceNewResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeClientBalanceResponse.cs" />
-    <Compile Include="Partners\V20180321\Models\DescribeClientBaseInfoRequest.cs" />
-    <Compile Include="Partners\V20180321\Models\DescribeClientBaseInfoResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosRequest.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeRebateInfosResponse.cs" />
     <Compile Include="Partners\V20180321\Models\DescribeSalesmansRequest.cs" />
@@ -11374,6 +11389,7 @@
     <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\Backup.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\BackupFile.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CloneDBRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CloneDBResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\CompleteExpansionRequest.cs" />
@@ -11432,6 +11448,8 @@
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupByFlowIdResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupCommandRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupCommandResponse.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupFilesRequest.cs" />
+    <Compile Include="Sqlserver\V20180328\Models\DescribeBackupFilesResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupMigrationRequest.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupMigrationResponse.cs" />
     <Compile Include="Sqlserver\V20180328\Models\DescribeBackupUploadSizeRequest.cs" />

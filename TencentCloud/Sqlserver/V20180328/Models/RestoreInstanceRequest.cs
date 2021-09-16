@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("RenameRestore")]
         public RenameRestoreDatabase[] RenameRestore{ get; set; }
 
+        /// <summary>
+        /// 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "TargetInstanceId", this.TargetInstanceId);
             this.SetParamArrayObj(map, prefix + "RenameRestore.", this.RenameRestore);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

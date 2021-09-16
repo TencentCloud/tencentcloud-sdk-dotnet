@@ -128,6 +128,7 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 折扣率
+        /// 当聚合之后折扣不唯一或者合同价的情况下，返回“-”
         /// </summary>
         [JsonProperty("Discount")]
         public string Discount{ get; set; }

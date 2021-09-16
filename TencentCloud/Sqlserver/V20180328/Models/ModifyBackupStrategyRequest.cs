@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupDay")]
         public ulong? BackupDay{ get; set; }
 
+        /// <summary>
+        /// 备份模式，master_pkg-主节点上打包备份文件；master_no_pkg-主节点单库备份文件；slave_pkg-从节点上打包备份文件；slave_no_pkg-从节点上单库备份文件，从节点上备份只有在always on容灾模式下支持。
+        /// </summary>
+        [JsonProperty("BackupModel")]
+        public string BackupModel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
             this.SetParamSimple(map, prefix + "BackupDay", this.BackupDay);
+            this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
         }
     }
 }

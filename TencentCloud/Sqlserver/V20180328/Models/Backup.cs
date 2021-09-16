@@ -25,13 +25,13 @@ namespace TencentCloud.Sqlserver.V20180328.Models
     {
         
         /// <summary>
-        /// 文件名
+        /// 文件名，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件名
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 文件大小，单位 KB
+        /// 文件大小，单位 KB，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取文件大小
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 内网下载地址
+        /// 内网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
         /// </summary>
         [JsonProperty("InternalAddr")]
         public string InternalAddr{ get; set; }
 
         /// <summary>
-        /// 外网下载地址
+        /// 外网下载地址，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取下载地址
         /// </summary>
         [JsonProperty("ExternalAddr")]
         public string ExternalAddr{ get; set; }
 
         /// <summary>
-        /// 备份文件唯一标识，RestoreInstance接口会用到该字段
+        /// 备份文件唯一标识，RestoreInstance接口会用到该字段，对于单库备份文件不返回此值；单库备份文件通过DescribeBackupFiles接口获取可回档的ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
@@ -91,10 +91,16 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public long? BackupWay{ get; set; }
 
         /// <summary>
-        /// 备份名称，可自定义
+        /// 备份任务名称，可自定义
         /// </summary>
         [JsonProperty("BackupName")]
         public string BackupName{ get; set; }
+
+        /// <summary>
+        /// 聚合Id，对于打包备份文件不返回此值。通过此值调用DescribeBackupFiles接口，获取单库备份文件的详细信息
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -114,6 +120,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Strategy", this.Strategy);
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

@@ -15,27 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeClientBaseInfoResponse : AbstractModel
+    public class TerminateDisksResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 代客基础信息数组
-        /// </summary>
-        [JsonProperty("ClientBaseSet")]
-        public ClientBaseElem[] ClientBaseSet{ get; set; }
-
-        /// <summary>
-        /// 符合条件的代客数
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -48,8 +36,6 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ClientBaseSet.", this.ClientBaseSet);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

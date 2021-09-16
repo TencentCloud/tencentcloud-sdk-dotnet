@@ -120,6 +120,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
+        /// <summary>
+        /// 实例唯一Uid列表
+        /// </summary>
+        [JsonProperty("UidSet")]
+        public string[] UidSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +146,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamArraySimple(map, prefix + "UidSet.", this.UidSet);
         }
     }
 }

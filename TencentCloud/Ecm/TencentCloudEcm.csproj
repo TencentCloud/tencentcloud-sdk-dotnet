@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F313119E-D8EA-3E66-991F-7C89745C570F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.366</VersionPrefix>
+    <VersionPrefix>3.0.367</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20190719\Models\AssociateAddressResponse.cs" />
     <Compile Include="V20190719\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20190719\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\AttachDisksRequest.cs" />
+    <Compile Include="V20190719\Models\AttachDisksResponse.cs" />
     <Compile Include="V20190719\Models\AttachNetworkInterfaceRequest.cs" />
     <Compile Include="V20190719\Models\AttachNetworkInterfaceResponse.cs" />
     <Compile Include="V20190719\Models\Backend.cs" />
@@ -72,6 +74,8 @@
     <Compile Include="V20190719\Models\BatchTarget.cs" />
     <Compile Include="V20190719\Models\City.cs" />
     <Compile Include="V20190719\Models\Country.cs" />
+    <Compile Include="V20190719\Models\CreateDisksRequest.cs" />
+    <Compile Include="V20190719\Models\CreateDisksResponse.cs" />
     <Compile Include="V20190719\Models\CreateHaVipRequest.cs" />
     <Compile Include="V20190719\Models\CreateHaVipResponse.cs" />
     <Compile Include="V20190719\Models\CreateImageRequest.cs" />
@@ -118,6 +122,8 @@
     <Compile Include="V20190719\Models\DeleteSecurityGroupPoliciesResponse.cs" />
     <Compile Include="V20190719\Models\DeleteSecurityGroupRequest.cs" />
     <Compile Include="V20190719\Models\DeleteSecurityGroupResponse.cs" />
+    <Compile Include="V20190719\Models\DeleteSnapshotsRequest.cs" />
+    <Compile Include="V20190719\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="V20190719\Models\DeleteSubnetRequest.cs" />
     <Compile Include="V20190719\Models\DeleteSubnetResponse.cs" />
     <Compile Include="V20190719\Models\DeleteVpcRequest.cs" />
@@ -134,6 +140,8 @@
     <Compile Include="V20190719\Models\DescribeCustomImageTaskResponse.cs" />
     <Compile Include="V20190719\Models\DescribeDefaultSubnetRequest.cs" />
     <Compile Include="V20190719\Models\DescribeDefaultSubnetResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeDisksRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeDisksResponse.cs" />
     <Compile Include="V20190719\Models\DescribeHaVipsRequest.cs" />
     <Compile Include="V20190719\Models\DescribeHaVipsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeImageRequest.cs" />
@@ -180,6 +188,8 @@
     <Compile Include="V20190719\Models\DescribeSecurityGroupPoliciesResponse.cs" />
     <Compile Include="V20190719\Models\DescribeSecurityGroupsRequest.cs" />
     <Compile Include="V20190719\Models\DescribeSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\DescribeSnapshotsRequest.cs" />
+    <Compile Include="V20190719\Models\DescribeSnapshotsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeSubnetsRequest.cs" />
     <Compile Include="V20190719\Models\DescribeSubnetsResponse.cs" />
     <Compile Include="V20190719\Models\DescribeTargetHealthRequest.cs" />
@@ -192,6 +202,8 @@
     <Compile Include="V20190719\Models\DescribeTaskStatusResponse.cs" />
     <Compile Include="V20190719\Models\DescribeVpcsRequest.cs" />
     <Compile Include="V20190719\Models\DescribeVpcsResponse.cs" />
+    <Compile Include="V20190719\Models\DetachDisksRequest.cs" />
+    <Compile Include="V20190719\Models\DetachDisksResponse.cs" />
     <Compile Include="V20190719\Models\DetachNetworkInterfaceRequest.cs" />
     <Compile Include="V20190719\Models\DetachNetworkInterfaceResponse.cs" />
     <Compile Include="V20190719\Models\DisableRoutesRequest.cs" />
@@ -200,6 +212,8 @@
     <Compile Include="V20190719\Models\DisassociateAddressResponse.cs" />
     <Compile Include="V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190719\Models\Disk.cs" />
+    <Compile Include="V20190719\Models\DiskChargePrepaid.cs" />
     <Compile Include="V20190719\Models\DiskInfo.cs" />
     <Compile Include="V20190719\Models\EipQuota.cs" />
     <Compile Include="V20190719\Models\EnableRoutesRequest.cs" />
@@ -303,6 +317,7 @@
     <Compile Include="V20190719\Models\PeakNetwork.cs" />
     <Compile Include="V20190719\Models\PeakNetworkRegionInfo.cs" />
     <Compile Include="V20190719\Models\PhysicalPosition.cs" />
+    <Compile Include="V20190719\Models\Placement.cs" />
     <Compile Include="V20190719\Models\Position.cs" />
     <Compile Include="V20190719\Models\PrivateIPAddressInfo.cs" />
     <Compile Include="V20190719\Models\PrivateIpAddressSpecification.cs" />
@@ -352,6 +367,7 @@
     <Compile Include="V20190719\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
     <Compile Include="V20190719\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
     <Compile Include="V20190719\Models\SimpleModule.cs" />
+    <Compile Include="V20190719\Models\Snapshot.cs" />
     <Compile Include="V20190719\Models\SrcImage.cs" />
     <Compile Include="V20190719\Models\StartInstancesRequest.cs" />
     <Compile Include="V20190719\Models\StartInstancesResponse.cs" />
@@ -366,6 +382,8 @@
     <Compile Include="V20190719\Models\TargetsWeightRule.cs" />
     <Compile Include="V20190719\Models\TaskInput.cs" />
     <Compile Include="V20190719\Models\TaskOutput.cs" />
+    <Compile Include="V20190719\Models\TerminateDisksRequest.cs" />
+    <Compile Include="V20190719\Models\TerminateDisksResponse.cs" />
     <Compile Include="V20190719\Models\TerminateInstancesRequest.cs" />
     <Compile Include="V20190719\Models\TerminateInstancesResponse.cs" />
     <Compile Include="V20190719\Models\VirtualPrivateCloud.cs" />

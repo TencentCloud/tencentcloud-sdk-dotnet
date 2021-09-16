@@ -31,16 +31,23 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
+        /// 修改的备份名称
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
+        /// <summary>
         /// 要修改名称的备份ID，可通过 [DescribeBackups](https://cloud.tencent.com/document/product/238/19943)  接口获取。
         /// </summary>
         [JsonProperty("BackupId")]
         public ulong? BackupId{ get; set; }
 
         /// <summary>
-        /// 修改的备份名称
+        /// 备份任务组ID，在单库备份文件模式下，可通过[DescribeBackups](https://cloud.tencent.com/document/product/238/19943) 接口获得。
+        ///  BackupId 和 GroupId 同时存在，按照BackupId进行修改。
         /// </summary>
-        [JsonProperty("BackupName")]
-        public string BackupName{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +56,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

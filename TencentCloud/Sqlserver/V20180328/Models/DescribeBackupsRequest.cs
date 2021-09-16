@@ -84,6 +84,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
+        /// <summary>
+        /// 是否分组查询，默认是0，单库备份情况下 0-兼容老方式不分组，1-单库备份分组后展示
+        /// </summary>
+        [JsonProperty("Group")]
+        public long? Group{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "Group", this.Group);
         }
     }
 }

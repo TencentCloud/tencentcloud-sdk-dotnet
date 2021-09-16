@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Partners.V20180321.Models
+namespace TencentCloud.Sqlserver.V20180328.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ClientBaseElem : AbstractModel
+    public class BackupFile : AbstractModel
     {
         
         /// <summary>
-        /// 代客关联的代理商UIN
+        /// 备份文件唯一标识
         /// </summary>
-        [JsonProperty("AgentUin")]
-        public string AgentUin{ get; set; }
+        [JsonProperty("Id")]
+        public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 代客UIN
+        /// 备份文件名称
         /// </summary>
-        [JsonProperty("ClientUin")]
-        public string ClientUin{ get; set; }
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
         /// <summary>
-        /// 代客关联类型 0:代理 1:转售
+        /// 文件大小(K)
         /// </summary>
-        [JsonProperty("ClientRelateType")]
-        public ulong? ClientRelateType{ get; set; }
+        [JsonProperty("Size")]
+        public ulong? Size{ get; set; }
 
         /// <summary>
-        /// 代理商合作模式 0:代理 1:转售
+        /// 备份文件的库的名称
         /// </summary>
-        [JsonProperty("AgentCooperationMode")]
-        public ulong? AgentCooperationMode{ get; set; }
+        [JsonProperty("DBs")]
+        public string[] DBs{ get; set; }
 
         /// <summary>
-        /// 代理商国家编码 China:中国  其他:海外，如US等
+        /// 下载地址
         /// </summary>
-        [JsonProperty("AgentCountry")]
-        public string AgentCountry{ get; set; }
+        [JsonProperty("DownloadLink")]
+        public string DownloadLink{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Partners.V20180321.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AgentUin", this.AgentUin);
-            this.SetParamSimple(map, prefix + "ClientUin", this.ClientUin);
-            this.SetParamSimple(map, prefix + "ClientRelateType", this.ClientRelateType);
-            this.SetParamSimple(map, prefix + "AgentCooperationMode", this.AgentCooperationMode);
-            this.SetParamSimple(map, prefix + "AgentCountry", this.AgentCountry);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
+            this.SetParamSimple(map, prefix + "DownloadLink", this.DownloadLink);
         }
     }
 }

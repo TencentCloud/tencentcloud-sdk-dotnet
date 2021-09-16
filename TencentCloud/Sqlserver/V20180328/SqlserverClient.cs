@@ -1013,6 +1013,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口(DescribeBackupFiles)用于在非打包备份模式下单个库对应的备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public async Task<DescribeBackupFilesResponse> DescribeBackupFiles(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeBackupFiles)用于在非打包备份模式下单个库对应的备份文件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupFilesRequest"/></param>
+        /// <returns><see cref="DescribeBackupFilesResponse"/></returns>
+        public DescribeBackupFilesResponse DescribeBackupFilesSync(DescribeBackupFilesRequest req)
+        {
+             JsonResponseModel<DescribeBackupFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeBackupMigration）用于创建增量备份导入任务。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupMigrationRequest"/></param>
@@ -2493,7 +2533,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupName)用于修改备份名称。
+        /// 本接口(ModifyBackupName)用于修改备份任务名称。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
         /// <returns><see cref="ModifyBackupNameResponse"/></returns>
@@ -2513,7 +2553,7 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
-        /// 本接口(ModifyBackupName)用于修改备份名称。
+        /// 本接口(ModifyBackupName)用于修改备份任务名称。
         /// </summary>
         /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
         /// <returns><see cref="ModifyBackupNameResponse"/></returns>
