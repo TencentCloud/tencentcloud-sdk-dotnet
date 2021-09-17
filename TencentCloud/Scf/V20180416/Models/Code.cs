@@ -108,6 +108,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("GitUserNameSecret")]
         public string GitUserNameSecret{ get; set; }
 
+        /// <summary>
+        /// 镜像部署时配置TCR镜像信息
+        /// </summary>
+        [JsonProperty("ImageConfig")]
+        public ImageConfig ImageConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "GitDirectory", this.GitDirectory);
             this.SetParamSimple(map, prefix + "GitCommitId", this.GitCommitId);
             this.SetParamSimple(map, prefix + "GitUserNameSecret", this.GitUserNameSecret);
+            this.SetParamObj(map, prefix + "ImageConfig.", this.ImageConfig);
         }
     }
 }

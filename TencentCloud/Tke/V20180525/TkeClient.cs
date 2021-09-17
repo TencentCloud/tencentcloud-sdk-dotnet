@@ -693,6 +693,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建容器实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="CreateEKSContainerInstancesResponse"/></returns>
+        public async Task<CreateEKSContainerInstancesResponse> CreateEKSContainerInstances(CreateEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<CreateEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建容器实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="CreateEKSContainerInstancesResponse"/></returns>
+        public CreateEKSContainerInstancesResponse CreateEKSContainerInstancesSync(CreateEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<CreateEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建告警规则
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEKSCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除容器实例，可批量删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEKSContainerInstancesResponse"/></returns>
+        public async Task<DeleteEKSContainerInstancesResponse> DeleteEKSContainerInstances(DeleteEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除容器实例，可批量删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="DeleteEKSContainerInstancesResponse"/></returns>
+        public DeleteEKSContainerInstancesResponse DeleteEKSContainerInstancesSync(DeleteEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<DeleteEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSContainerInstancesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1973,6 +2053,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询容器实例的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstanceEventRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstanceEventResponse"/></returns>
+        public async Task<DescribeEKSContainerInstanceEventResponse> DescribeEKSContainerInstanceEvent(DescribeEKSContainerInstanceEventRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstanceEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEKSContainerInstanceEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstanceEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例的事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstanceEventRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstanceEventResponse"/></returns>
+        public DescribeEKSContainerInstanceEventResponse DescribeEKSContainerInstanceEventSync(DescribeEKSContainerInstanceEventRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstanceEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEKSContainerInstanceEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstanceEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询容器实例支持的地域
         /// </summary>
         /// <param name="req"><see cref="DescribeEKSContainerInstanceRegionsRequest"/></param>
@@ -2004,6 +2124,86 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DescribeEKSContainerInstanceRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstanceRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstancesResponse"/></returns>
+        public async Task<DescribeEKSContainerInstancesResponse> DescribeEKSContainerInstances(DescribeEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="DescribeEKSContainerInstancesResponse"/></returns>
+        public DescribeEKSContainerInstancesResponse DescribeEKSContainerInstancesSync(DescribeEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<DescribeEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例中容器日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEksContainerInstanceLogRequest"/></param>
+        /// <returns><see cref="DescribeEksContainerInstanceLogResponse"/></returns>
+        public async Task<DescribeEksContainerInstanceLogResponse> DescribeEksContainerInstanceLog(DescribeEksContainerInstanceLogRequest req)
+        {
+             JsonResponseModel<DescribeEksContainerInstanceLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEksContainerInstanceLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEksContainerInstanceLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询容器实例中容器日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEksContainerInstanceLogRequest"/></param>
+        /// <returns><see cref="DescribeEksContainerInstanceLogResponse"/></returns>
+        public DescribeEksContainerInstanceLogResponse DescribeEksContainerInstanceLogSync(DescribeEksContainerInstanceLogRequest req)
+        {
+             JsonResponseModel<DescribeEksContainerInstanceLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEksContainerInstanceLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEksContainerInstanceLogResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3173,6 +3373,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 重启弹性容器实例，支持批量操作
+        /// </summary>
+        /// <param name="req"><see cref="RestartEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="RestartEKSContainerInstancesResponse"/></returns>
+        public async Task<RestartEKSContainerInstancesResponse> RestartEKSContainerInstances(RestartEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<RestartEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重启弹性容器实例，支持批量操作
+        /// </summary>
+        /// <param name="req"><see cref="RestartEKSContainerInstancesRequest"/></param>
+        /// <returns><see cref="RestartEKSContainerInstancesResponse"/></returns>
+        public RestartEKSContainerInstancesResponse RestartEKSContainerInstancesSync(RestartEKSContainerInstancesRequest req)
+        {
+             JsonResponseModel<RestartEKSContainerInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartEKSContainerInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 仅能设置节点池中处于伸缩组的节点
         /// </summary>
         /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
@@ -3324,6 +3564,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpdateEKSCluster");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新容器实例
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKSContainerInstanceRequest"/></param>
+        /// <returns><see cref="UpdateEKSContainerInstanceResponse"/></returns>
+        public async Task<UpdateEKSContainerInstanceResponse> UpdateEKSContainerInstance(UpdateEKSContainerInstanceRequest req)
+        {
+             JsonResponseModel<UpdateEKSContainerInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEKSContainerInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSContainerInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新容器实例
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEKSContainerInstanceRequest"/></param>
+        /// <returns><see cref="UpdateEKSContainerInstanceResponse"/></returns>
+        public UpdateEKSContainerInstanceResponse UpdateEKSContainerInstanceSync(UpdateEKSContainerInstanceRequest req)
+        {
+             JsonResponseModel<UpdateEKSContainerInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEKSContainerInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSContainerInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

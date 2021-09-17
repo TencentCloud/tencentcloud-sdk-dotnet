@@ -48,6 +48,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// Acl预设策略名称
+        /// </summary>
+        [JsonProperty("AclRuleName")]
+        public string AclRuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         }
     }
 }

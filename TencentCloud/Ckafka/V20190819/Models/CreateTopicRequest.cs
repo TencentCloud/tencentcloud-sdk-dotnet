@@ -96,6 +96,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
 
+        /// <summary>
+        /// 预设ACL规则, 1:打开  0:关闭，默认不打开
+        /// </summary>
+        [JsonProperty("EnableAclRule")]
+        public long? EnableAclRule{ get; set; }
+
+        /// <summary>
+        /// 预设ACL规则的名称
+        /// </summary>
+        [JsonProperty("AclRuleName")]
+        public string AclRuleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
+            this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
+            this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
         }
     }
 }

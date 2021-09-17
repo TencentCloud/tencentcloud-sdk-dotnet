@@ -60,6 +60,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
+        /// <summary>
+        /// 签署人类型，PERSON和ORGANIZATION
+        /// </summary>
+        [JsonProperty("ApproverType")]
+        public string ApproverType{ get; set; }
+
+        /// <summary>
+        /// 用户侧第三方id
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.367</VersionPrefix>
+    <VersionPrefix>3.0.368</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,8 @@
     <Compile Include="V20180525\Models\AddVpcCniSubnetsResponse.cs" />
     <Compile Include="V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
+    <Compile Include="V20180525\Models\Capabilities.cs" />
+    <Compile Include="V20180525\Models\CbsVolume.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
@@ -73,6 +75,8 @@
     <Compile Include="V20180525\Models\ClusterPublicLB.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
+    <Compile Include="V20180525\Models\Container.cs" />
+    <Compile Include="V20180525\Models\ContainerState.cs" />
     <Compile Include="V20180525\Models\ControllerStatus.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterAsGroupResponse.cs" />
@@ -94,12 +98,16 @@
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEKSContainerInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEKSContainerInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\DNSConfig.cs" />
+    <Compile Include="V20180525\Models\DNSConfigOption.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterAsGroupsResponse.cs" />
@@ -119,6 +127,8 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteEKSContainerInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteEKSContainerInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateRequest.cs" />
@@ -159,8 +169,14 @@
     <Compile Include="V20180525\Models\DescribeEKSClusterCredentialResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSContainerInstanceEventRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSContainerInstanceEventResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSContainerInstanceRegionsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEKSContainerInstanceRegionsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSContainerInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEksContainerInstanceLogRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEksContainerInstanceLogResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="V20180525\Models\DescribeExistedInstancesRequest.cs" />
@@ -196,11 +212,17 @@
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
+    <Compile Include="V20180525\Models\EipAttribute.cs" />
+    <Compile Include="V20180525\Models\EksCi.cs" />
     <Compile Include="V20180525\Models\EksCiRegionInfo.cs" />
+    <Compile Include="V20180525\Models\EksCiVolume.cs" />
     <Compile Include="V20180525\Models\EksCluster.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />
+    <Compile Include="V20180525\Models\EnvironmentVariable.cs" />
+    <Compile Include="V20180525\Models\Event.cs" />
+    <Compile Include="V20180525\Models\Exec.cs" />
     <Compile Include="V20180525\Models\ExistedInstance.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesForNode.cs" />
     <Compile Include="V20180525\Models\ExistedInstancesPara.cs" />
@@ -208,8 +230,10 @@
     <Compile Include="V20180525\Models\Filter.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
+    <Compile Include="V20180525\Models\HttpGet.cs" />
     <Compile Include="V20180525\Models\IPAddress.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
+    <Compile Include="V20180525\Models\ImageRegistryCredential.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
     <Compile Include="V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="V20180525\Models\InstanceDataDiskMountSetting.cs" />
@@ -219,6 +243,7 @@
     <Compile Include="V20180525\Models\InstanceUpgradePreCheckResultItem.cs" />
     <Compile Include="V20180525\Models\InstanceUpgradeProgressItem.cs" />
     <Compile Include="V20180525\Models\Label.cs" />
+    <Compile Include="V20180525\Models\LivenessOrReadinessProbe.cs" />
     <Compile Include="V20180525\Models\LoginSettings.cs" />
     <Compile Include="V20180525\Models\ManuallyAdded.cs" />
     <Compile Include="V20180525\Models\ModifyClusterAsGroupAttributeRequest.cs" />
@@ -239,11 +264,13 @@
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\NfsVolume.cs" />
     <Compile Include="V20180525\Models\NodeCountSummary.cs" />
     <Compile Include="V20180525\Models\NodePool.cs" />
     <Compile Include="V20180525\Models\NodePoolOption.cs" />
     <Compile Include="V20180525\Models\PodLimitsByType.cs" />
     <Compile Include="V20180525\Models\PodLimitsInstance.cs" />
+    <Compile Include="V20180525\Models\Probe.cs" />
     <Compile Include="V20180525\Models\PrometheusAgentOverview.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertHistoryItem.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
@@ -261,6 +288,8 @@
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolRequest.cs" />
     <Compile Include="V20180525\Models\RemoveNodeFromNodePoolResponse.cs" />
     <Compile Include="V20180525\Models\ResourceDeleteOption.cs" />
+    <Compile Include="V20180525\Models\RestartEKSContainerInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\RestartEKSContainerInstancesResponse.cs" />
     <Compile Include="V20180525\Models\RouteInfo.cs" />
     <Compile Include="V20180525\Models\RouteTableConflict.cs" />
     <Compile Include="V20180525\Models\RouteTableInfo.cs" />
@@ -268,6 +297,7 @@
     <Compile Include="V20180525\Models\RunInstancesForNode.cs" />
     <Compile Include="V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="V20180525\Models\RunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\SecurityContext.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="V20180525\Models\SyncPrometheusTemplateRequest.cs" />
@@ -276,14 +306,18 @@
     <Compile Include="V20180525\Models\TagSpecification.cs" />
     <Compile Include="V20180525\Models\Taint.cs" />
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
+    <Compile Include="V20180525\Models\TcpSocket.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="V20180525\Models\UpdateEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\UpdateEKSClusterResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateEKSContainerInstanceRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateEKSContainerInstanceResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeNodeResetParam.cs" />
     <Compile Include="V20180525\Models\VersionInstance.cs" />
+    <Compile Include="V20180525\Models\VolumeMount.cs" />
   </ItemGroup>
 </Project>

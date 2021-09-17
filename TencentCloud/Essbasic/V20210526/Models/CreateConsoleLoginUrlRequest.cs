@@ -55,6 +55,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 控制台指定模块，文件/合同管理:"DOCUMENT"，模版管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
+        /// </summary>
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
+
+        /// <summary>
+        /// 控制台指定模块Id
+        /// </summary>
+        [JsonProperty("ModuleId")]
+        public string ModuleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +78,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "ProxyOperatorName", this.ProxyOperatorName);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
         }
     }
 }

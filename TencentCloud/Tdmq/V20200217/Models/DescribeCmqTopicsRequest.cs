@@ -42,6 +42,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
+        /// <summary>
+        /// CMQ 主题名称列表过滤
+        /// </summary>
+        [JsonProperty("TopicNameList")]
+        public string[] TopicNameList{ get; set; }
+
+        /// <summary>
+        /// 标签过滤查找时，需要设置为 true
+        /// </summary>
+        [JsonProperty("IsTagFilter")]
+        public bool? IsTagFilter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamArraySimple(map, prefix + "TopicNameList.", this.TopicNameList);
+            this.SetParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
         }
     }
 }

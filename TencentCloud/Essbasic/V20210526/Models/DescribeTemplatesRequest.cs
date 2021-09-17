@@ -36,6 +36,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 模版唯一标识,可以通过模版列表处获取
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

@@ -66,6 +66,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
 
+        /// <summary>
+        /// 模板类型：1-静默签；2-静默签授权；3-普通模版
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public long? TemplateType{ get; set; }
+
+        /// <summary>
+        /// 模板中的流程参与人信息
+        /// </summary>
+        [JsonProperty("Recipients")]
+        public Recipient[] Recipients{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamArrayObj(map, prefix + "Recipients.", this.Recipients);
         }
     }
 }

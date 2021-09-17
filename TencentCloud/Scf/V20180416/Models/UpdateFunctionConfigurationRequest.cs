@@ -127,7 +127,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public CfsConfig CfsConfig{ get; set; }
 
         /// <summary>
-        /// 函数初始化执行超时时间，默认15秒
+        /// 函数初始化执行超时时间
         /// </summary>
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }

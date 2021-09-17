@@ -25,6 +25,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
+        /// Status 同步状态,全部同步失败接口会直接报错
+        /// 1-成功 
+        /// 2-部分成功
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 同步失败经办人及其失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedList")]
+        public SyncFailReason[] FailedList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +52,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "FailedList.", this.FailedList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

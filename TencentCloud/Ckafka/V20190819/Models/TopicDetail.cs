@@ -106,6 +106,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RetentionTimeConfig")]
         public TopicRetentionTimeConfigRsp RetentionTimeConfig{ get; set; }
 
+        /// <summary>
+        /// 0:正常，1：已删除，2：删除中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +132,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ForwardInterval", this.ForwardInterval);
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamObj(map, prefix + "RetentionTimeConfig.", this.RetentionTimeConfig);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }
