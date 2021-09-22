@@ -76,6 +76,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("AgentName")]
         public string AgentName{ get; set; }
 
+        /// <summary>
+        /// 交易状态描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TradeStatusDesc")]
+        public string TradeStatusDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
             this.SetParamSimple(map, prefix + "AgentName", this.AgentName);
+            this.SetParamSimple(map, prefix + "TradeStatusDesc", this.TradeStatusDesc);
         }
     }
 }

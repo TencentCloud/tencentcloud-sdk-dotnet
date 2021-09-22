@@ -25,9 +25,9 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// <br><li> name
+        /// <br><li> configName
         /// 
-        /// 按照【采集配置名称】进行过滤。
+        /// 按照【采集配置名称】进行模糊匹配过滤。
         /// 类型：String
         /// 
         /// 必选：否

@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 模版唯一标识,可以通过模版列表处获取
+        /// 模版唯一标识
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

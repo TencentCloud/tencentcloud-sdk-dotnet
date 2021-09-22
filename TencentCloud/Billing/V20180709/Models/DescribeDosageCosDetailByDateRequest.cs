@@ -37,7 +37,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string EndDate{ get; set; }
 
         /// <summary>
-        /// COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://tcloud-dev.oa.com/document/product/555/30925?!preview&!document=1
+        /// COS 存储桶名称，可通过Get Service 接口是用来获取请求者名下的所有存储空间列表（Bucket list）https://cloud.tencent.com/document/product/436/8291
         /// </summary>
         [JsonProperty("BucketName")]
         public string BucketName{ get; set; }

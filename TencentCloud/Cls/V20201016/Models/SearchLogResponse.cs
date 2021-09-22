@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 日志查询结果是否全部返回
+        /// 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }

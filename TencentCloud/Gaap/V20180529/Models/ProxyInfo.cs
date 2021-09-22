@@ -197,7 +197,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? ModifyConfigTime{ get; set; }
 
         /// <summary>
-        /// 通道类型
+        /// 通道类型，100表示THUNDER通道，103表示微软合作通道
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyType")]
@@ -230,6 +230,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
+
+        /// <summary>
+        /// 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
 
 
         /// <summary>
@@ -267,6 +274,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
         }
     }
 }

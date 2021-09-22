@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.368</VersionPrefix>
+    <VersionPrefix>3.0.369</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4454,13 +4454,20 @@
     <Compile Include="Cwp\V20180228\Models\AccountStatistics.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetFilters.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetKeyVal.cs" />
+    <Compile Include="Cwp\V20180228\Models\BanWhiteListDetail.cs" />
     <Compile Include="Cwp\V20180228\Models\BaselineBasicInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BaselineDetail.cs" />
+    <Compile Include="Cwp\V20180228\Models\BaselineEffectHost.cs" />
+    <Compile Include="Cwp\V20180228\Models\BaselineEventLevelInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\BaselineHostTopList.cs" />
+    <Compile Include="Cwp\V20180228\Models\BaselineInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BaselineRuleInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\BaselineRuleTopInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BashEvent.cs" />
     <Compile Include="Cwp\V20180228\Models\BashRule.cs" />
     <Compile Include="Cwp\V20180228\Models\BruteAttackInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BruteAttackRule.cs" />
+    <Compile Include="Cwp\V20180228\Models\BruteAttackRuleList.cs" />
     <Compile Include="Cwp\V20180228\Models\CancelIgnoreVulRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CancelIgnoreVulResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ChangeRuleEventsIgnoreStatusRequest.cs" />
@@ -4538,34 +4545,60 @@
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackVulTypeListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackVulTypeListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAvailableExpertServiceDetailRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAvailableExpertServiceDetailResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanModeRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanModeResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanRegionsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanRegionsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanStatusRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBanStatusResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBanWhiteListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBanWhiteListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineAnalysisDataRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineAnalysisDataResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineBasicInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineBasicInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineDetailRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineDetailResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineEffectHostListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineEffectHostListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineHostTopRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineHostTopResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineRuleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineRuleResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineScanScheduleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBaselineScanScheduleResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineStrategyDetailRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineStrategyDetailResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineStrategyListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineStrategyListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineTopRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBaselineTopResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashEventsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBashRulesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackRulesRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeBruteAttackRulesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentStatisticsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeComponentStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESAggregationsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESAggregationsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESHitsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeESHitsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeEmergencyResponseListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeEmergencyResponseListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeEmergencyVulListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeEmergencyVulListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExpertServiceListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExpertServiceListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExpertServiceOrderListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeExpertServiceOrderListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeExportMachinesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeGeneralStatRequest.cs" />
@@ -4578,6 +4611,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeHostLoginListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeIgnoreBaselineRuleRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeIgnoreBaselineRuleResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeIgnoreRuleEffectHostListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeIgnoreRuleEffectHostListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeIndexListRequest.cs" />
@@ -4600,6 +4635,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeMachinesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalWareListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalWareListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMaliciousRequestWhiteListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeMaliciousRequestWhiteListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwareFileRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwareFileResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeMalwareInfoRequest.cs" />
@@ -4628,6 +4665,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeProtectDirListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeProtectDirRelatedServerRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeProtectDirRelatedServerResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeProtectNetListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeProtectNetListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellEventsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeReverseShellRulesRequest.cs" />
@@ -4644,6 +4683,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeScanStateResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanTaskDetailsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanTaskDetailsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanTaskStatusRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeScanTaskStatusResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanVulSettingRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeScanVulSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSearchExportListRequest.cs" />
@@ -4678,6 +4719,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeVulCountByDatesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulHostCountScanTimeRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulHostCountScanTimeResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulHostTopRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulHostTopResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulInfoCvssRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulInfoCvssResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulLevelCountRequest.cs" />
@@ -4699,7 +4742,9 @@
     <Compile Include="Cwp\V20180228\Models\EditTagsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\EditTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\EffectiveMachineInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\EmergencyResponseInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\EmergencyVul.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExpertServiceOrderInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAssetWebServiceInfoListRequest.cs" />
@@ -4732,6 +4777,8 @@
     <Compile Include="Cwp\V20180228\Models\ExportReverseShellEventsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportScanTaskDetailsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportScanTaskDetailsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportSecurityTrendsRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\ExportSecurityTrendsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportTasksResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportVulDetectionExcelRequest.cs" />
@@ -4751,6 +4798,7 @@
     <Compile Include="Cwp\V20180228\Models\IgnoreBaselineRule.cs" />
     <Compile Include="Cwp\V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\IgnoreImpactedHostsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\InquiryPriceOpenProVersionPrepaidRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\InquiryPriceOpenProVersionPrepaidResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\LoginWhiteCombinedInfo.cs" />
@@ -4758,6 +4806,7 @@
     <Compile Include="Cwp\V20180228\Models\Machine.cs" />
     <Compile Include="Cwp\V20180228\Models\MachineTag.cs" />
     <Compile Include="Cwp\V20180228\Models\MalWareList.cs" />
+    <Compile Include="Cwp\V20180228\Models\MaliciousRequestWhiteListInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\MalwareInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\MalwareRisk.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyAutoOpenProVersionConfigRequest.cs" />
@@ -4798,6 +4847,7 @@
     <Compile Include="Cwp\V20180228\Models\ProtectHostConfig.cs" />
     <Compile Include="Cwp\V20180228\Models\ProtectMachine.cs" />
     <Compile Include="Cwp\V20180228\Models\ProtectMachineInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\ProtectNetInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ProtectStat.cs" />
     <Compile Include="Cwp\V20180228\Models\RecoverMalwaresRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\RecoverMalwaresResponse.cs" />
@@ -4820,6 +4870,7 @@
     <Compile Include="Cwp\V20180228\Models\ScanVulSettingRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ScanVulSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\SearchTemplate.cs" />
+    <Compile Include="Cwp\V20180228\Models\SecurityButlerInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityDynamic.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityEventInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\SecurityTrend.cs" />
@@ -4830,12 +4881,14 @@
     <Compile Include="Cwp\V20180228\Models\StandardModeConfig.cs" />
     <Compile Include="Cwp\V20180228\Models\StopNoticeBanTipsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\StopNoticeBanTipsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\Strategy.cs" />
     <Compile Include="Cwp\V20180228\Models\SwitchBashRulesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\SwitchBashRulesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\SyncAssetScanRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\SyncAssetScanResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\Tag.cs" />
     <Compile Include="Cwp\V20180228\Models\TagMachine.cs" />
+    <Compile Include="Cwp\V20180228\Models\TaskStatus.cs" />
     <Compile Include="Cwp\V20180228\Models\TrustMalwaresRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\TrustMalwaresResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\UntrustMalwaresRequest.cs" />
@@ -4846,6 +4899,8 @@
     <Compile Include="Cwp\V20180228\Models\UpdateMachineTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\UsualPlace.cs" />
     <Compile Include="Cwp\V20180228\Models\VulDetailInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\VulHostTopInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\VulLevelCountInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\VulLevelInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\VulTopInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\WarningInfoObj.cs" />
@@ -10805,12 +10860,17 @@
     <Compile Include="Privatedns\V20201028\Models\VpcInfo.cs" />
     <Compile Include="Rce\V20201103\RceClient.cs" />
     <Compile Include="Rce\V20201103\Models\AccountInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\DescribeRiskModelRequest.cs" />
+    <Compile Include="Rce\V20201103\Models\DescribeRiskModelResponse.cs" />
+    <Compile Include="Rce\V20201103\Models\InputDescribeRiskModelData.cs" />
     <Compile Include="Rce\V20201103\Models\InputDetails.cs" />
     <Compile Include="Rce\V20201103\Models\InputManageMarketingRisk.cs" />
     <Compile Include="Rce\V20201103\Models\ManageMarketingRiskRequest.cs" />
     <Compile Include="Rce\V20201103\Models\ManageMarketingRiskResponse.cs" />
     <Compile Include="Rce\V20201103\Models\OnlineScamInfo.cs" />
     <Compile Include="Rce\V20201103\Models\OtherAccountInfo.cs" />
+    <Compile Include="Rce\V20201103\Models\OutputDescribeRiskModel.cs" />
+    <Compile Include="Rce\V20201103\Models\OutputDescribeRiskModelValue.cs" />
     <Compile Include="Rce\V20201103\Models\OutputManageMarketingRisk.cs" />
     <Compile Include="Rce\V20201103\Models\OutputManageMarketingRiskValue.cs" />
     <Compile Include="Rce\V20201103\Models\QQAccountInfo.cs" />

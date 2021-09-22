@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 项目对应实例 id
+        /// 业务系统 ID
         /// </summary>
         [JsonProperty("InstanceID")]
         public string InstanceID{ get; set; }

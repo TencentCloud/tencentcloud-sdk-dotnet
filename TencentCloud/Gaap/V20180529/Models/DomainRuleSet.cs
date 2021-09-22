@@ -164,6 +164,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("DomainStatus")]
         public ulong? DomainStatus{ get; set; }
 
+        /// <summary>
+        /// 封禁解封状态：BANNED表示已封禁，RECOVER表示已解封或未封禁，BANNING表示封禁中，RECOVERING表示解封中，BAN_FAILED表示封禁失败，RECOVER_FAILED表示解封失败。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -189,6 +196,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
             this.SetParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
         }
     }
 }

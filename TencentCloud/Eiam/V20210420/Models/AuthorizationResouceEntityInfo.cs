@@ -45,6 +45,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("Resource")]
         public string Resource{ get; set; }
 
+        /// <summary>
+        /// 资源名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceName")]
+        public string ResourceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
+            this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
         }
     }
 }
