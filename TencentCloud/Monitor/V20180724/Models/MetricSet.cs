@@ -72,6 +72,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Dimensions")]
         public DimensionsDesc[] Dimensions{ get; set; }
 
+        /// <summary>
+        /// 指标中文名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricCName")]
+        public string MetricCName{ get; set; }
+
+        /// <summary>
+        /// 指标英文名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricEName")]
+        public string MetricEName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +100,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Periods.", this.Periods);
             this.SetParamObj(map, prefix + "Meaning.", this.Meaning);
             this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
+            this.SetParamSimple(map, prefix + "MetricCName", this.MetricCName);
+            this.SetParamSimple(map, prefix + "MetricEName", this.MetricEName);
         }
     }
 }

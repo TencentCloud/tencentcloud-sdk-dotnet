@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 实例是否需要移出保护。
+        /// 实例是否需要设置保护。
         /// </summary>
         [JsonProperty("ProtectedFromScaleIn")]
         public bool? ProtectedFromScaleIn{ get; set; }

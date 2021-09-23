@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5451259A-631D-33EF-A1C6-9932BD8DA8A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.369</VersionPrefix>
+    <VersionPrefix>3.0.370</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20210111\Models\DeleteSmsTemplateRequest.cs" />
     <Compile Include="V20210111\Models\DeleteSmsTemplateResponse.cs" />
     <Compile Include="V20210111\Models\DeleteTemplateStatus.cs" />
+    <Compile Include="V20210111\Models\DescribePhoneNumberInfoRequest.cs" />
+    <Compile Include="V20210111\Models\DescribePhoneNumberInfoResponse.cs" />
     <Compile Include="V20210111\Models\DescribeSignListStatus.cs" />
     <Compile Include="V20210111\Models\DescribeSmsSignListRequest.cs" />
     <Compile Include="V20210111\Models\DescribeSmsSignListResponse.cs" />
@@ -72,6 +74,7 @@
     <Compile Include="V20210111\Models\ModifySmsTemplateRequest.cs" />
     <Compile Include="V20210111\Models\ModifySmsTemplateResponse.cs" />
     <Compile Include="V20210111\Models\ModifyTemplateStatus.cs" />
+    <Compile Include="V20210111\Models\PhoneNumberInfo.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatus.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatusByPhoneNumberRequest.cs" />
     <Compile Include="V20210111\Models\PullSmsReplyStatusByPhoneNumberResponse.cs" />

@@ -36,6 +36,13 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("StructureResult")]
         public string StructureResult{ get; set; }
 
+        /// <summary>
+        /// 报告分类信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportType")]
+        public ClassifyInfo[] ReportType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Cii.V20210408.Models
         {
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
             this.SetParamSimple(map, prefix + "StructureResult", this.StructureResult);
+            this.SetParamArrayObj(map, prefix + "ReportType.", this.ReportType);
         }
     }
 }

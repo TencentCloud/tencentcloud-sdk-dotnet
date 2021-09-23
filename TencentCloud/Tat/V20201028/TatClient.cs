@@ -93,7 +93,48 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 此接口用于创建执行器。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInvokerRequest"/></param>
+        /// <returns><see cref="CreateInvokerResponse"/></returns>
+        public async Task<CreateInvokerResponse> CreateInvoker(CreateInvokerRequest req)
+        {
+             JsonResponseModel<CreateInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于创建执行器。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInvokerRequest"/></param>
+        /// <returns><see cref="CreateInvokerResponse"/></returns>
+        public CreateInvokerResponse CreateInvokerSync(CreateInvokerRequest req)
+        {
+             JsonResponseModel<CreateInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于删除命令。
+        /// 如果命令与执行器关联，则无法被删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteCommandRequest"/></param>
         /// <returns><see cref="DeleteCommandResponse"/></returns>
@@ -114,6 +155,7 @@ namespace TencentCloud.Tat.V20201028
 
         /// <summary>
         /// 此接口用于删除命令。
+        /// 如果命令与执行器关联，则无法被删除。
         /// </summary>
         /// <param name="req"><see cref="DeleteCommandRequest"/></param>
         /// <returns><see cref="DeleteCommandResponse"/></returns>
@@ -124,6 +166,46 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DeleteCommand");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于删除执行器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInvokerRequest"/></param>
+        /// <returns><see cref="DeleteInvokerResponse"/></returns>
+        public async Task<DeleteInvokerResponse> DeleteInvoker(DeleteInvokerRequest req)
+        {
+             JsonResponseModel<DeleteInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于删除执行器。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteInvokerRequest"/></param>
+        /// <returns><see cref="DeleteInvokerResponse"/></returns>
+        public DeleteInvokerResponse DeleteInvokerSync(DeleteInvokerRequest req)
+        {
+             JsonResponseModel<DeleteInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInvokerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -293,6 +375,86 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 此接口用于查询执行器的执行记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvokerRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInvokerRecordsResponse"/></returns>
+        public async Task<DescribeInvokerRecordsResponse> DescribeInvokerRecords(DescribeInvokerRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInvokerRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvokerRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvokerRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于查询执行器的执行记录。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvokerRecordsRequest"/></param>
+        /// <returns><see cref="DescribeInvokerRecordsResponse"/></returns>
+        public DescribeInvokerRecordsResponse DescribeInvokerRecordsSync(DescribeInvokerRecordsRequest req)
+        {
+             JsonResponseModel<DescribeInvokerRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvokerRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvokerRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于查询执行器信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvokersRequest"/></param>
+        /// <returns><see cref="DescribeInvokersResponse"/></returns>
+        public async Task<DescribeInvokersResponse> DescribeInvokers(DescribeInvokersRequest req)
+        {
+             JsonResponseModel<DescribeInvokersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvokers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvokersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于查询执行器信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvokersRequest"/></param>
+        /// <returns><see cref="DescribeInvokersResponse"/></returns>
+        public DescribeInvokersResponse DescribeInvokersSync(DescribeInvokersRequest req)
+        {
+             JsonResponseModel<DescribeInvokersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvokers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvokersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于查询 TAT 产品后台地域列表。
         /// RegionState 为 AVAILABLE，代表该地域的 TAT 后台服务已经可用；未返回，代表该地域的 TAT 后台服务尚不可用。
         /// </summary>
@@ -326,6 +488,86 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于停止执行器。
+        /// </summary>
+        /// <param name="req"><see cref="DisableInvokerRequest"/></param>
+        /// <returns><see cref="DisableInvokerResponse"/></returns>
+        public async Task<DisableInvokerResponse> DisableInvoker(DisableInvokerRequest req)
+        {
+             JsonResponseModel<DisableInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于停止执行器。
+        /// </summary>
+        /// <param name="req"><see cref="DisableInvokerRequest"/></param>
+        /// <returns><see cref="DisableInvokerResponse"/></returns>
+        public DisableInvokerResponse DisableInvokerSync(DisableInvokerRequest req)
+        {
+             JsonResponseModel<DisableInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于启用执行器。
+        /// </summary>
+        /// <param name="req"><see cref="EnableInvokerRequest"/></param>
+        /// <returns><see cref="EnableInvokerResponse"/></returns>
+        public async Task<EnableInvokerResponse> EnableInvoker(EnableInvokerRequest req)
+        {
+             JsonResponseModel<EnableInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于启用执行器。
+        /// </summary>
+        /// <param name="req"><see cref="EnableInvokerRequest"/></param>
+        /// <returns><see cref="EnableInvokerResponse"/></returns>
+        public EnableInvokerResponse EnableInvokerSync(EnableInvokerRequest req)
+        {
+             JsonResponseModel<EnableInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableInvokerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -418,6 +660,46 @@ namespace TencentCloud.Tat.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCommand");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于修改执行器。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInvokerRequest"/></param>
+        /// <returns><see cref="ModifyInvokerResponse"/></returns>
+        public async Task<ModifyInvokerResponse> ModifyInvoker(ModifyInvokerRequest req)
+        {
+             JsonResponseModel<ModifyInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInvokerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于修改执行器。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInvokerRequest"/></param>
+        /// <returns><see cref="ModifyInvokerResponse"/></returns>
+        public ModifyInvokerResponse ModifyInvokerSync(ModifyInvokerRequest req)
+        {
+             JsonResponseModel<ModifyInvokerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInvoker");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInvokerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

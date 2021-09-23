@@ -85,6 +85,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// waf规则等级，可取100|200|300
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WafLevel")]
+        public long? WafLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "AclRuleNumbers", this.AclRuleNumbers);
             this.SetParamSimple(map, prefix + "Bot", this.Bot);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "WafLevel", this.WafLevel);
         }
     }
 }
