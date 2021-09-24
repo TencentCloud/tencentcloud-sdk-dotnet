@@ -36,6 +36,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// 可分配proxy资源数
+        /// </summary>
+        [JsonProperty("AvailableCount")]
+        public long? AvailableCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         {
             this.SetParamSimple(map, prefix + "ProxyUid", this.ProxyUid);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "AvailableCount", this.AvailableCount);
         }
     }
 }

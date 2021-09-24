@@ -2293,6 +2293,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取导入第三方集群YAML定义
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterSpecResponse"/></returns>
+        public async Task<DescribeExternalClusterSpecResponse> DescribeExternalClusterSpec(DescribeExternalClusterSpecRequest req)
+        {
+             JsonResponseModel<DescribeExternalClusterSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExternalClusterSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalClusterSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取导入第三方集群YAML定义
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalClusterSpecRequest"/></param>
+        /// <returns><see cref="DescribeExternalClusterSpecResponse"/></returns>
+        public DescribeExternalClusterSpecResponse DescribeExternalClusterSpecSync(DescribeExternalClusterSpecRequest req)
+        {
+             JsonResponseModel<DescribeExternalClusterSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExternalClusterSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalClusterSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取镜像信息
         /// </summary>
         /// <param name="req"><see cref="DescribeImagesRequest"/></param>

@@ -49,7 +49,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] PushDomains{ get; set; }
 
         /// <summary>
-        /// 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，最大支持查询时间范围是186天当天）。
+        /// 数据维度，数据延迟1个半小时，可选值包括：1、Minute（5分钟粒度，最大支持查询时间范围是31天），2、Day（天粒度，默认值，按照北京时间做跨天处理，最大支持查询时间范围是186天当天）。
         /// </summary>
         [JsonProperty("Granularity")]
         public string Granularity{ get; set; }

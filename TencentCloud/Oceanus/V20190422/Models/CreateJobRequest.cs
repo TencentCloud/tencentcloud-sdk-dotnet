@@ -66,6 +66,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FolderId")]
         public string FolderId{ get; set; }
 
+        /// <summary>
+        /// 作业运行的Flink版本
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "CuMem", this.CuMem);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         }
     }
 }

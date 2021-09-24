@@ -40,6 +40,12 @@ namespace TencentCloud.Cii.V20210408.Models
         public StructureResultObject[] Results{ get; set; }
 
         /// <summary>
+        /// 主任务ID
+        /// </summary>
+        [JsonProperty("MainTaskId")]
+        public string MainTaskId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -53,6 +59,7 @@ namespace TencentCloud.Cii.V20210408.Models
         {
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

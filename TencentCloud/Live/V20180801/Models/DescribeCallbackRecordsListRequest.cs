@@ -43,13 +43,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 页码
+        /// 页码。
         /// </summary>
         [JsonProperty("PageNum")]
         public ulong? PageNum{ get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// 每页条数。
         /// </summary>
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
@@ -58,13 +58,14 @@ namespace TencentCloud.Live.V20180801.Models
         /// 事件类型。
         /// 0: "断流",
         /// 1: "推流",
-        /// 100: "录制"
+        /// 100: "录制"。
         /// </summary>
         [JsonProperty("EventType")]
         public ulong? EventType{ get; set; }
 
         /// <summary>
-        /// 回调结果。0为成功，其他为失败
+        /// 回调结果。
+        /// 0为成功，其他为失败。
         /// </summary>
         [JsonProperty("ResultCode")]
         public ulong? ResultCode{ get; set; }

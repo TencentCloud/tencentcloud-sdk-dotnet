@@ -207,7 +207,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public long? SortRule{ get; set; }
 
         /// <summary>
-        /// 表格分布式索引信息
+        /// 表格分布式索引/缓写、kafka数据订阅信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DbClusterInfoStruct")]

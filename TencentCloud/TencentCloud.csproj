@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.370</VersionPrefix>
+    <VersionPrefix>3.0.371</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -12201,6 +12201,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteIdlFilesResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteSnapshotsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableDataFlowRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableDataFlowResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableGroupResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\DeleteTableIndexRequest.cs" />
@@ -12246,6 +12248,7 @@
     <Compile Include="Tcaplusdb\V20190823\Models\IdlFileInfoWithoutContent.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ImportSnapshotsRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ImportSnapshotsResponse.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\KafkaInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\KeyFile.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\MachineInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\MergeTableResult.cs" />
@@ -12289,6 +12292,8 @@
     <Compile Include="Tcaplusdb\V20190823\Models\SelectedTableWithField.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ServerDetailInfo.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\ServerMachineInfo.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableDataFlowRequest.cs" />
+    <Compile Include="Tcaplusdb\V20190823\Models\SetTableDataFlowResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexRequest.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SetTableIndexResponse.cs" />
     <Compile Include="Tcaplusdb\V20190823\Models\SnapshotInfo.cs" />
@@ -13306,6 +13311,7 @@
     <Compile Include="Tiia\V20190529\TiiaClient.cs" />
     <Compile Include="Tiia\V20190529\Models\AssessQualityRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\AssessQualityResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\CarPlateContent.cs" />
     <Compile Include="Tiia\V20190529\Models\CarTagItem.cs" />
     <Compile Include="Tiia\V20190529\Models\Coord.cs" />
     <Compile Include="Tiia\V20190529\Models\CropImageRequest.cs" />
@@ -13613,6 +13619,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeEnableVpcCniProgressResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeExistedInstancesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeExternalClusterSpecRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeExternalClusterSpecResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeImagesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentInstancesRequest.cs" />

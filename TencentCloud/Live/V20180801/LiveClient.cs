@@ -1725,7 +1725,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 回调事件查询
+        /// 用于查询回调事件。
         /// </summary>
         /// <param name="req"><see cref="DescribeCallbackRecordsListRequest"/></param>
         /// <returns><see cref="DescribeCallbackRecordsListResponse"/></returns>
@@ -1745,7 +1745,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 回调事件查询
+        /// 用于查询回调事件。
         /// </summary>
         /// <param name="req"><see cref="DescribeCallbackRecordsListRequest"/></param>
         /// <returns><see cref="DescribeCallbackRecordsListResponse"/></returns>

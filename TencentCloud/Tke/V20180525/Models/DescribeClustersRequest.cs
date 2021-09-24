@@ -44,10 +44,44 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 过滤条件,当前只支持按照单个条件ClusterName进行过滤
+        /// ·  ClusterName
+        ///     按照【集群名】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  Tags
+        ///     按照【标签键值对】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  vpc-id
+        ///     按照【VPC】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  tag-key
+        ///     按照【标签键】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  tag-value
+        ///     按照【标签值】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  tag:tag-key
+        ///     按照【标签键值对】进行过滤。
+        ///     类型：String
+        ///     必选：否
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 集群类型，例如：MANAGED_CLUSTER
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
 
 
         /// <summary>
@@ -59,6 +93,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

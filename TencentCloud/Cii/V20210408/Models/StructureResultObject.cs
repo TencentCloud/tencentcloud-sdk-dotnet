@@ -42,6 +42,12 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("StructureResult")]
         public string StructureResult{ get; set; }
 
+        /// <summary>
+        /// 子任务ID
+        /// </summary>
+        [JsonProperty("SubTaskId")]
+        public string SubTaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "StructureResult", this.StructureResult);
+            this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         }
     }
 }

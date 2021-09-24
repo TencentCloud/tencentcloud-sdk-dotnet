@@ -51,7 +51,9 @@ namespace TencentCloud.Tat.V20201028.Models
         public string AgentStatus{ get; set; }
 
         /// <summary>
-        /// Agent运行环境
+        /// Agent运行环境，取值范围：
+        /// <li> Linux：Linux实例
+        /// <li> Windows：Windows实例
         /// </summary>
         [JsonProperty("Environment")]
         public string Environment{ get; set; }

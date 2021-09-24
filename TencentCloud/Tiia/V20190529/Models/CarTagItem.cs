@@ -66,6 +66,13 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("CarLocation")]
         public Coord[] CarLocation{ get; set; }
 
+        /// <summary>
+        /// 车牌信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateContent")]
+        public CarPlateContent PlateContent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Year", this.Year);
             this.SetParamArrayObj(map, prefix + "CarLocation.", this.CarLocation);
+            this.SetParamObj(map, prefix + "PlateContent.", this.PlateContent);
         }
     }
 }

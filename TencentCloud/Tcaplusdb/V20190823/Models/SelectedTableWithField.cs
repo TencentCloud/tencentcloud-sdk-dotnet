@@ -55,7 +55,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string TableType{ get; set; }
 
         /// <summary>
-        /// 待创建索引的字段列表
+        /// 待创建索引、缓写、数据订阅的字段列表
         /// </summary>
         [JsonProperty("SelectedFields")]
         public FieldInfo[] SelectedFields{ get; set; }
@@ -65,6 +65,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         /// </summary>
         [JsonProperty("ShardNum")]
         public ulong? ShardNum{ get; set; }
+
+        /// <summary>
+        /// ckafka实例信息
+        /// </summary>
+        [JsonProperty("KafkaInfo")]
+        public KafkaInfo KafkaInfo{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
             this.SetParamArrayObj(map, prefix + "SelectedFields.", this.SelectedFields);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
+            this.SetParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
         }
     }
 }

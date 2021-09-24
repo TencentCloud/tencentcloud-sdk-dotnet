@@ -54,6 +54,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 查询对应Flink版本的内置connector
+        /// </summary>
+        [JsonProperty("FlinkVersion")]
+        public string FlinkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
         }
     }
 }
