@@ -186,6 +186,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TagKeysForSearch")]
         public string[] TagKeysForSearch{ get; set; }
 
+        /// <summary>
+        /// 金融围拢 ID 。
+        /// </summary>
+        [JsonProperty("CageIds")]
+        public string[] CageIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "WithMaster", this.WithMaster);
             this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
             this.SetParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
+            this.SetParamArraySimple(map, prefix + "CageIds.", this.CageIds);
         }
     }
 }

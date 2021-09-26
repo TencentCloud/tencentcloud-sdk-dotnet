@@ -216,6 +216,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("AutoSyncFlag")]
         public long? AutoSyncFlag{ get; set; }
 
+        /// <summary>
+        /// 金融围拢 ID。
+        /// </summary>
+        [JsonProperty("CageId")]
+        public string CageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +260,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
+            this.SetParamSimple(map, prefix + "CageId", this.CageId);
         }
     }
 }

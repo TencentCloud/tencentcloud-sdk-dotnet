@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 控件名称
+        /// 控件简称
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
