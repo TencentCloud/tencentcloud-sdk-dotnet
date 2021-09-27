@@ -25,6 +25,18 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 基础版数量
+        /// </summary>
+        [JsonProperty("BasicVersionNum")]
+        public ulong? BasicVersionNum{ get; set; }
+
+        /// <summary>
+        /// 专业版数量
+        /// </summary>
+        [JsonProperty("ProVersionNum")]
+        public ulong? ProVersionNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "BasicVersionNum", this.BasicVersionNum);
+            this.SetParamSimple(map, prefix + "ProVersionNum", this.ProVersionNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

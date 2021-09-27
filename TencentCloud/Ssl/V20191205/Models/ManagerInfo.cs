@@ -112,6 +112,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("VerifyTime")]
         public string VerifyTime{ get; set; }
 
+        /// <summary>
+        /// 具体审核状态信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatusInfo")]
+        public ManagerStatusInfo[] StatusInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +139,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "SubmitAuditTime", this.SubmitAuditTime);
             this.SetParamSimple(map, prefix + "VerifyTime", this.VerifyTime);
+            this.SetParamArrayObj(map, prefix + "StatusInfo.", this.StatusInfo);
         }
     }
 }

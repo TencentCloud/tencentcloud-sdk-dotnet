@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+        /// 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
         /// </summary>
         [JsonProperty("NodeNum")]
         public ulong? NodeNum{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? Volume{ get; set; }
 
         /// <summary>
-        /// 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本
+        /// 版本号，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。参数与版本对应关系是MONGO_3_WT：MongoDB 3.2 WiredTiger存储引擎版本，MONGO_3_ROCKS：MongoDB 3.2 RocksDB存储引擎版本，MONGO_36_WT：MongoDB 3.6 WiredTiger存储引擎版本，MONGO_40_WT：MongoDB 4.0 WiredTiger存储引擎版本，MONGO_42_WT：MongoDB 4.2 WiredTiger存储引擎版本
         /// </summary>
         [JsonProperty("MongoVersion")]
         public string MongoVersion{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? GoodsNum{ get; set; }
 
         /// <summary>
-        /// 实例所属区域名称，格式如：ap-guangzhou-2
+        /// 实例所属区域名称，格式如：ap-guangzhou-2。注：此参数填写的是主可用区，如果选择多可用区部署，Zone必须是AvailabilityZoneList中的一个
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
@@ -127,13 +127,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 1:正式实例,2:临时实例,3:只读实例，4：灾备实例
+        /// 1:正式实例,2:临时实例,3:只读实例,4:灾备实例,5:克隆实例
         /// </summary>
         [JsonProperty("Clone")]
         public long? Clone{ get; set; }
 
         /// <summary>
-        /// 若是只读，灾备实例，Father必须填写，即主实例ID
+        /// 若是只读，灾备实例或克隆实例，Father必须填写，即主实例ID
         /// </summary>
         [JsonProperty("Father")]
         public string Father{ get; set; }
@@ -143,6 +143,42 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         [JsonProperty("SecurityGroup")]
         public string[] SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// 克隆实例回档时间。若是克隆实例，则必须填写，格式：2021-08-13 16:30:00。注：只能回档7天内的时间点
+        /// </summary>
+        [JsonProperty("RestoreTime")]
+        public string RestoreTime{ get; set; }
+
+        /// <summary>
+        /// 实例名称。注：名称只支持长度为60个字符的中文、英文、数字、下划线_、分隔符-
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 多可用区部署的节点列表，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：1、多可用区部署节点只能部署在3个不同可用区；2、为了保障跨可用区切换，不支持将集群的大多数节点部署在同一个可用区（如3节点集群不支持2个节点部署在同一个区）；3、不支持4.2及以上版本；4、不支持只读灾备实例；5、不能选择基础网络
+        /// </summary>
+        [JsonProperty("AvailabilityZoneList")]
+        public string[] AvailabilityZoneList{ get; set; }
+
+        /// <summary>
+        /// mongos cpu数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+        /// </summary>
+        [JsonProperty("MongosCpu")]
+        public ulong? MongosCpu{ get; set; }
+
+        /// <summary>
+        /// mongos 内存大小，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果
+        /// </summary>
+        [JsonProperty("MongosMemory")]
+        public ulong? MongosMemory{ get; set; }
+
+        /// <summary>
+        /// mongos 数量，购买MongoDB 4.2 WiredTiger存储引擎版本的分片集群时必须填写，具体支持的售卖版本请参照查询云数据库的售卖规格（DescribeSpecInfo）返回结果。注：为了保障高可用，最低需要购买3个mongos，上限为32个
+        /// </summary>
+        [JsonProperty("MongosNodeNum")]
+        public ulong? MongosNodeNum{ get; set; }
 
 
         /// <summary>
@@ -170,6 +206,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Clone", this.Clone);
             this.SetParamSimple(map, prefix + "Father", this.Father);
             this.SetParamArraySimple(map, prefix + "SecurityGroup.", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "RestoreTime", this.RestoreTime);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamArraySimple(map, prefix + "AvailabilityZoneList.", this.AvailabilityZoneList);
+            this.SetParamSimple(map, prefix + "MongosCpu", this.MongosCpu);
+            this.SetParamSimple(map, prefix + "MongosMemory", this.MongosMemory);
+            this.SetParamSimple(map, prefix + "MongosNodeNum", this.MongosNodeNum);
         }
     }
 }

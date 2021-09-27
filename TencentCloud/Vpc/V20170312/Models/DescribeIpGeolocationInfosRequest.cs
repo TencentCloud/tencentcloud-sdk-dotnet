@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 查询IP地址列表，支持IPv4和IPv6。
+        /// 需查询的IP地址列表，支持IPv4和IPv6。批量查询的IP地址上限为100个。
         /// </summary>
         [JsonProperty("AddressIps")]
         public string[] AddressIps{ get; set; }
 
         /// <summary>
-        /// 查询IP地址的字段信息，包括"Country","Province","City","Region","Isp","AsName","AsId"
+        /// 需查询的IP地址的字段信息。
         /// </summary>
         [JsonProperty("Fields")]
         public IpField Fields{ get; set; }

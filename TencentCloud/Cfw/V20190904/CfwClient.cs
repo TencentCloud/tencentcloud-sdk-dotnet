@@ -53,6 +53,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 添加互联网边界规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
+        /// <returns><see cref="AddAcRuleResponse"/></returns>
+        public async Task<AddAcRuleResponse> AddAcRule(AddAcRuleRequest req)
+        {
+             JsonResponseModel<AddAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加互联网边界规则
+        /// </summary>
+        /// <param name="req"><see cref="AddAcRuleRequest"/></param>
+        /// <returns><see cref="AddAcRuleResponse"/></returns>
+        public AddAcRuleResponse AddAcRuleSync(AddAcRuleRequest req)
+        {
+             JsonResponseModel<AddAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建规则
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "CreateNatFwInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatFwInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建防火墙实例和接入域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatFwInstanceWithDomainRequest"/></param>
+        /// <returns><see cref="CreateNatFwInstanceWithDomainResponse"/></returns>
+        public async Task<CreateNatFwInstanceWithDomainResponse> CreateNatFwInstanceWithDomain(CreateNatFwInstanceWithDomainRequest req)
+        {
+             JsonResponseModel<CreateNatFwInstanceWithDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNatFwInstanceWithDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatFwInstanceWithDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建防火墙实例和接入域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateNatFwInstanceWithDomainRequest"/></param>
+        /// <returns><see cref="CreateNatFwInstanceWithDomainResponse"/></returns>
+        public CreateNatFwInstanceWithDomainResponse CreateNatFwInstanceWithDomainSync(CreateNatFwInstanceWithDomainRequest req)
+        {
+             JsonResponseModel<CreateNatFwInstanceWithDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNatFwInstanceWithDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNatFwInstanceWithDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2412,6 +2492,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyVPCSwitchStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVPCSwitchStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除互联网边界规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveAcRuleResponse"/></returns>
+        public async Task<RemoveAcRuleResponse> RemoveAcRule(RemoveAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除互联网边界规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveAcRuleRequest"/></param>
+        /// <returns><see cref="RemoveAcRuleResponse"/></returns>
+        public RemoveAcRuleResponse RemoveAcRuleSync(RemoveAcRuleRequest req)
+        {
+             JsonResponseModel<RemoveAcRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveAcRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveAcRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

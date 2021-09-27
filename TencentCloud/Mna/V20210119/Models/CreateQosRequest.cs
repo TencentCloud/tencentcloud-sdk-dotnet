@@ -38,15 +38,15 @@ namespace TencentCloud.Mna.V20210119.Models
 
         /// <summary>
         /// 加速套餐
-        /// T100K：上/下行保障 100kbps
-        /// T200K：上/下行保障 200kbps
-        /// T400K：上/下行保障 400kbps
-        /// BD1M：下行带宽保障1Mbps
-        /// BD2M：下行带宽保障2Mbps
-        /// BD4M：下行带宽保障4Mbps
-        /// BU1M：上行带宽保障1Mbps
-        /// BU2M：上行带宽保障2Mbps
-        /// BU4M：上行带宽保障4Mbps
+        /// T100K：时延性保障 + 带宽保障上下行保障 100kbps
+        /// T200K：时延性保障 + 带宽保障上下行保障 200kbps
+        /// T400K：时延性保障 + 带宽保障上下行保障  400kbps
+        /// BD1M：带宽型保障 + 下行带宽保障1Mbps
+        /// BD2M：带宽型保障 + 下行带宽保障2Mbps
+        /// BD4M：带宽型保障 + 下行带宽保障4Mbps
+        /// BU1M：带宽型保障 + 上行带宽保障1Mbps
+        /// BU2M：带宽型保障 + 上行带宽保障2Mbps
+        /// BU4M：带宽型保障 + 上行带宽保障4Mbps
         /// </summary>
         [JsonProperty("QosMenu")]
         public string QosMenu{ get; set; }
@@ -75,6 +75,15 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
+        /// <summary>
+        /// 针对特殊协议进行加速
+        /// 1. IP （默认值）
+        /// 2. UDP
+        /// 3. TCP
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public ulong? Protocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +97,7 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamObj(map, prefix + "Capacity.", this.Capacity);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

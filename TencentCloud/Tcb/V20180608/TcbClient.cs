@@ -973,6 +973,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询环境下所有的vpc列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunAllVpcsRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunAllVpcsResponse"/></returns>
+        public async Task<DescribeCloudBaseRunAllVpcsResponse> DescribeCloudBaseRunAllVpcs(DescribeCloudBaseRunAllVpcsRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunAllVpcs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询环境下所有的vpc列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunAllVpcsRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunAllVpcsResponse"/></returns>
+        public DescribeCloudBaseRunAllVpcsResponse DescribeCloudBaseRunAllVpcsSync(DescribeCloudBaseRunAllVpcsRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunAllVpcs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunAllVpcsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 独立网关中拉取云托管服务对应的配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunConfForGateWayRequest"/></param>
@@ -1004,6 +1044,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunConfForGateWay");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunConfForGateWayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务、版本和操作类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunOperationTypesRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunOperationTypesResponse"/></returns>
+        public async Task<DescribeCloudBaseRunOperationTypesResponse> DescribeCloudBaseRunOperationTypes(DescribeCloudBaseRunOperationTypesRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunOperationTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务、版本和操作类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunOperationTypesRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunOperationTypesResponse"/></returns>
+        public DescribeCloudBaseRunOperationTypesResponse DescribeCloudBaseRunOperationTypesSync(DescribeCloudBaseRunOperationTypesRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunOperationTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunOperationTypesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1164,6 +1244,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRsByConditionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionRsByConditionResponse"/></returns>
+        public async Task<DescribeCloudBaseRunVersionRsByConditionResponse> DescribeCloudBaseRunVersionRsByCondition(DescribeCloudBaseRunVersionRsByConditionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunVersionRsByCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeCloudBaseRunVersionRsByCondition 获取云托管详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunVersionRsByConditionRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunVersionRsByConditionResponse"/></returns>
+        public DescribeCloudBaseRunVersionRsByConditionResponse DescribeCloudBaseRunVersionRsByConditionSync(DescribeCloudBaseRunVersionRsByConditionRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunVersionRsByCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunVersionRsByConditionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

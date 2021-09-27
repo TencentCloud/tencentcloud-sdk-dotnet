@@ -2253,6 +2253,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 批量设置产品禁用状态
+        /// </summary>
+        /// <param name="req"><see cref="SetProductsForbiddenStatusRequest"/></param>
+        /// <returns><see cref="SetProductsForbiddenStatusResponse"/></returns>
+        public async Task<SetProductsForbiddenStatusResponse> SetProductsForbiddenStatus(SetProductsForbiddenStatusRequest req)
+        {
+             JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetProductsForbiddenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetProductsForbiddenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量设置产品禁用状态
+        /// </summary>
+        /// <param name="req"><see cref="SetProductsForbiddenStatusRequest"/></param>
+        /// <returns><see cref="SetProductsForbiddenStatusResponse"/></returns>
+        public SetProductsForbiddenStatusResponse SetProductsForbiddenStatusSync(SetProductsForbiddenStatusRequest req)
+        {
+             JsonResponseModel<SetProductsForbiddenStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetProductsForbiddenStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetProductsForbiddenStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UnbindDevices）用于网关设备批量解绑子设备 
         /// </summary>
         /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
@@ -2364,6 +2404,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "UpdateDeviceShadow");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启用或者禁用设备 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDevicesEnableStateRequest"/></param>
+        /// <returns><see cref="UpdateDevicesEnableStateResponse"/></returns>
+        public async Task<UpdateDevicesEnableStateResponse> UpdateDevicesEnableState(UpdateDevicesEnableStateRequest req)
+        {
+             JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDevicesEnableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDevicesEnableStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量启用或者禁用设备 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDevicesEnableStateRequest"/></param>
+        /// <returns><see cref="UpdateDevicesEnableStateResponse"/></returns>
+        public UpdateDevicesEnableStateResponse UpdateDevicesEnableStateSync(UpdateDevicesEnableStateRequest req)
+        {
+             JsonResponseModel<UpdateDevicesEnableStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDevicesEnableState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDevicesEnableStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

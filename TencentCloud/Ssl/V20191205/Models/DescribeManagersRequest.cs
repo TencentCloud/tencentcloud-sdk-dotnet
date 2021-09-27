@@ -67,6 +67,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 管理人姓名/邮箱/部门精准匹配
+        /// </summary>
+        [JsonProperty("SearchKey")]
+        public string SearchKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "ManagerName", this.ManagerName);
             this.SetParamSimple(map, prefix + "ManagerMail", this.ManagerMail);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
         }
     }
 }

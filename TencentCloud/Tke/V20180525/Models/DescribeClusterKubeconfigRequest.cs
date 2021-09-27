@@ -30,6 +30,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 默认false 获取内网，是否获取外网访问的kubeconfig
+        /// </summary>
+        [JsonProperty("IsExtranet")]
+        public bool? IsExtranet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
         }
     }
 }

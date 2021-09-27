@@ -60,7 +60,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? IsGlobal{ get; set; }
 
         /// <summary>
-        /// 云主机类型：
+        /// 云服务器类型：
         /// cvm：腾讯云服务器
         /// bm：裸金属
         /// ecm：边缘计算主机

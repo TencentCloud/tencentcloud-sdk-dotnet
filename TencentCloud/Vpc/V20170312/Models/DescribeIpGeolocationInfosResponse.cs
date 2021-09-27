@@ -25,13 +25,13 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// IP地址信息列表
+        /// IP地址信息列表。
         /// </summary>
         [JsonProperty("AddressInfo")]
         public IpGeolocationInfo[] AddressInfo{ get; set; }
 
         /// <summary>
-        /// IP地址信息个数
+        /// IP地址信息个数。
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

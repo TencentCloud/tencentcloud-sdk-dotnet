@@ -78,6 +78,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ServiceConfigList")]
         public ServiceConfig[] ServiceConfigList{ get; set; }
 
+        /// <summary>
+        /// 忽略创建镜像仓库
+        /// </summary>
+        [JsonProperty("IgnoreCreateImageRepository")]
+        public bool? IgnoreCreateImageRepository{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ApplicationRuntimeType", this.ApplicationRuntimeType);
             this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
             this.SetParamArrayObj(map, prefix + "ServiceConfigList.", this.ServiceConfigList);
+            this.SetParamSimple(map, prefix + "IgnoreCreateImageRepository", this.IgnoreCreateImageRepository);
         }
     }
 }

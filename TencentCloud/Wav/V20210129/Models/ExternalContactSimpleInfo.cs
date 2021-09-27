@@ -43,6 +43,12 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("SalesName")]
         public string SalesName{ get; set; }
 
+        /// <summary>
+        /// 添加了此外部联系人的企业成员的归属部门id列表
+        /// </summary>
+        [JsonProperty("DepartmentIdList")]
+        public long?[] DepartmentIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "ExternalUserId", this.ExternalUserId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "SalesName", this.SalesName);
+            this.SetParamArraySimple(map, prefix + "DepartmentIdList.", this.DepartmentIdList);
         }
     }
 }

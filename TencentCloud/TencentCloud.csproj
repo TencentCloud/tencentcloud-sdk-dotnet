@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.372</VersionPrefix>
+    <VersionPrefix>3.0.373</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2394,6 +2394,7 @@
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeD.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeE.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeF.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedCCRules.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Authentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeA.cs" />
@@ -2616,6 +2617,7 @@
     <Compile Include="Cdn\V20180606\Models\ScdnErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnEventLogConditions.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnLogTaskDetail.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnSevenLayerRules.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopDomainData.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopUrlData.cs" />
@@ -2740,6 +2742,8 @@
     <Compile Include="Cfs\V20190719\Models\UpdateCfsRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\CfwClient.cs" />
     <Compile Include="Cfw\V20190904\Models\AcListsData.cs" />
+    <Compile Include="Cfw\V20190904\Models\AddAcRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\AddAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\AssetZone.cs" />
     <Compile Include="Cfw\V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\CfwNatDnatRule.cs" />
@@ -2751,6 +2755,8 @@
     <Compile Include="Cfw\V20190904\Models\CreateDatabaseWhiteListRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceWithDomainRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\CreateNatFwInstanceWithDomainResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupApiRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\CreateSecurityGroupRulesRequest.cs" />
@@ -2871,6 +2877,8 @@
     <Compile Include="Cfw\V20190904\Models\NatFwInstance.cs" />
     <Compile Include="Cfw\V20190904\Models\NatInstanceInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\NewModeItems.cs" />
+    <Compile Include="Cfw\V20190904\Models\RemoveAcRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\RemoveAcRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\RuleInfoData.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetResponse.cs" />
@@ -4453,8 +4461,36 @@
     <Compile Include="Cwp\V20180228\CwpClient.cs" />
     <Compile Include="Cwp\V20180228\Models\Account.cs" />
     <Compile Include="Cwp\V20180228\Models\AccountStatistics.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetAppBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetAppProcessInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetCoreModuleBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetCoreModuleDetail.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetCoreModuleParam.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetDatabaseBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetDatabaseDetail.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetDiskPartitionInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetEnvBaseInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetFilters.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetInitServiceBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetJarBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetJarDetail.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetKeyVal.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetMachineBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetMachineDetail.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetNetworkCardInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetPlanTask.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetPortBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetProcessBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetSystemPackageInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetUserBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetUserDetail.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetUserKeyInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebAppBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebAppPluginInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebFrameBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebLocationBaseInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebLocationInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\AssetWebServiceBaseInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BanWhiteListDetail.cs" />
     <Compile Include="Cwp\V20180228\Models\BaselineBasicInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\BaselineDetail.cs" />
@@ -4536,10 +4572,60 @@
     <Compile Include="Cwp\V20180228\Models\DescribeAccountStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetAppListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetAppListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetAppProcessListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetAppProcessListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetCoreModuleInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetCoreModuleInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetCoreModuleListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetCoreModuleListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetDatabaseInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetDatabaseInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetDatabaseListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetDatabaseListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetEnvListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetEnvListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetInitServiceListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetInitServiceListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetJarInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetJarInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetJarListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetJarListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetMachineDetailRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetMachineDetailResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetMachineListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetMachineListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetPlanTaskListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetPlanTaskListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetPortInfoListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetPortInfoListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetProcessInfoListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetProcessInfoListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetRecentMachineInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetRecentMachineInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetSystemPackageListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetSystemPackageListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetUserInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetUserInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetUserListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetUserListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebAppListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebAppListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebAppPluginListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebAppPluginListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebFrameListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebFrameListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebLocationInfoRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebLocationInfoResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebLocationListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebLocationListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebServiceInfoListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebServiceInfoListResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebServiceProcessListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeAssetWebServiceProcessListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogInfoRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogInfoResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAttackLogsRequest.cs" />
@@ -8177,6 +8263,8 @@
     <Compile Include="Iotcloud\V20180614\Models\RetryDeviceFirmwareTaskRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\RetryDeviceFirmwareTaskResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\SearchKeyword.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\SetProductsForbiddenStatusRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\StatusStatistic.cs" />
     <Compile Include="Iotcloud\V20180614\Models\Task.cs" />
     <Compile Include="Iotcloud\V20180614\Models\TaskInfo.cs" />
@@ -8187,6 +8275,8 @@
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceAvailableStateResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateDeviceShadowResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateTopicPolicyRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UpdateTopicPolicyResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\UploadFirmwareRequest.cs" />
@@ -11094,8 +11184,11 @@
     <Compile Include="Rum\V20210622\Models\DescribeLogListResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeProjectsRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeScoresRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeScoresResponse.cs" />
     <Compile Include="Rum\V20210622\Models\Filter.cs" />
     <Compile Include="Rum\V20210622\Models\RumProject.cs" />
+    <Compile Include="Rum\V20210622\Models\ScoreInfo.cs" />
     <Compile Include="Scf\V20180416\ScfClient.cs" />
     <Compile Include="Scf\V20180416\Models\AccessInfo.cs" />
     <Compile Include="Scf\V20180416\Models\Alias.cs" />
@@ -11781,6 +11874,7 @@
     <Compile Include="Ssl\V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="Ssl\V20191205\Models\DvAuths.cs" />
     <Compile Include="Ssl\V20191205\Models\ManagerInfo.cs" />
+    <Compile Include="Ssl\V20191205\Models\ManagerStatusInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateAliasRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateAliasResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateProjectRequest.cs" />
@@ -12385,8 +12479,12 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectLatestVersionListResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseProjectVersionListResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunAllVpcsRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunAllVpcsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
@@ -12395,6 +12493,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionRsByConditionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionRsByConditionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionSnapshotResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCurveDataRequest.cs" />

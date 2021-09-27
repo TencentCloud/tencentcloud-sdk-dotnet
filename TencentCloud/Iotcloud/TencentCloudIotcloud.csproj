@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E52C27D4-C9DE-3FC7-9236-F3BDC08EFC51}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.372</VersionPrefix>
+    <VersionPrefix>3.0.373</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,8 @@
     <Compile Include="V20180614\Models\RetryDeviceFirmwareTaskRequest.cs" />
     <Compile Include="V20180614\Models\RetryDeviceFirmwareTaskResponse.cs" />
     <Compile Include="V20180614\Models\SearchKeyword.cs" />
+    <Compile Include="V20180614\Models\SetProductsForbiddenStatusRequest.cs" />
+    <Compile Include="V20180614\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="V20180614\Models\StatusStatistic.cs" />
     <Compile Include="V20180614\Models\Task.cs" />
     <Compile Include="V20180614\Models\TaskInfo.cs" />
@@ -223,6 +225,8 @@
     <Compile Include="V20180614\Models\UpdateDeviceAvailableStateResponse.cs" />
     <Compile Include="V20180614\Models\UpdateDeviceShadowRequest.cs" />
     <Compile Include="V20180614\Models\UpdateDeviceShadowResponse.cs" />
+    <Compile Include="V20180614\Models\UpdateDevicesEnableStateRequest.cs" />
+    <Compile Include="V20180614\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="V20180614\Models\UpdateTopicPolicyRequest.cs" />
     <Compile Include="V20180614\Models\UpdateTopicPolicyResponse.cs" />
     <Compile Include="V20180614\Models\UploadFirmwareRequest.cs" />
