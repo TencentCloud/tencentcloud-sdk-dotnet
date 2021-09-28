@@ -84,6 +84,12 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("ClusterType")]
         public long? ClusterType{ get; set; }
 
+        /// <summary>
+        /// 密码认证类型，0 静态认证， 1 签名认证
+        /// </summary>
+        [JsonProperty("AuthType")]
+        public long? AuthType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
             this.SetParamArrayObj(map, prefix + "ProxyList.", this.ProxyList);
             this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
         }
     }
 }

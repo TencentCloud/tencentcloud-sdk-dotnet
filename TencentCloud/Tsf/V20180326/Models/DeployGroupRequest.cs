@@ -114,6 +114,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IncrementalDeployment")]
         public bool? IncrementalDeployment{ get; set; }
 
+        /// <summary>
+        /// JDK名称: konaJDK或openJDK
+        /// </summary>
+        [JsonProperty("JdkName")]
+        public string JdkName{ get; set; }
+
+        /// <summary>
+        /// JDK版本: 8或11 (openJDK只支持8)
+        /// </summary>
+        [JsonProperty("JdkVersion")]
+        public string JdkVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +147,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
             this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
+            this.SetParamSimple(map, prefix + "JdkName", this.JdkName);
+            this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
         }
     }
 }

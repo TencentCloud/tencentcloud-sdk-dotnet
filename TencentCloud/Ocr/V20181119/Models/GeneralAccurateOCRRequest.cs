@@ -46,6 +46,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("IsWords")]
         public bool? IsWords{ get; set; }
 
+        /// <summary>
+        /// 是否开启原图切图检测功能，开启后可提升“整图面积大，但单字符占比面积小”（例如：试卷）场景下的识别效果，默认关
+        /// </summary>
+        [JsonProperty("EnableDetectSplit")]
+        public bool? EnableDetectSplit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
+            this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
         }
     }
 }

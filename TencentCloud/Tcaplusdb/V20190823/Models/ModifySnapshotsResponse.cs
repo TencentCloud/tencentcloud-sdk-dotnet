@@ -25,13 +25,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
     {
         
         /// <summary>
-        /// 批量创建的快照数量
+        /// 批量修改的快照数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 批量创建的快照结果列表
+        /// 批量修改的快照结果列表
         /// </summary>
         [JsonProperty("TableResults")]
         public SnapshotResult[] TableResults{ get; set; }

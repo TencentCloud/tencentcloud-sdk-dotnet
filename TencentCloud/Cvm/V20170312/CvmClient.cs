@@ -1571,7 +1571,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。 
+        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>
@@ -1591,7 +1591,7 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
-        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。 
+        /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>
         /// <returns><see cref="ImportImageResponse"/></returns>

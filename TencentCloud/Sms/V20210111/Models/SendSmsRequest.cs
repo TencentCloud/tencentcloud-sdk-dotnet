@@ -46,7 +46,7 @@ namespace TencentCloud.Sms.V20210111.Models
 
         /// <summary>
         /// 短信签名内容，使用 UTF-8 编码，必须填写已审核通过的签名，例如：腾讯云，签名信息可登录 [短信控制台](https://console.cloud.tencent.com/smsv2) 查看。
-        /// <dx-alert infotype="notice" title="注意">国内短信为必填参数。</dx-alert>
+        /// <dx-alert infotype="notice" title="注意">发送国内短信该参数必填。</dx-alert>
         /// </summary>
         [JsonProperty("SignName")]
         public string SignName{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Sms.V20210111.Models
         public string[] TemplateParamSet{ get; set; }
 
         /// <summary>
-        /// 短信码号扩展号，默认未开通，如需开通请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+        /// 短信码号扩展号，默认未开通，如需开通请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
         /// </summary>
         [JsonProperty("ExtendCode")]
         public string ExtendCode{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Sms.V20210111.Models
 
         /// <summary>
         /// 国内短信无需填写该项；国际/港澳台短信已申请独立 SenderId 需要填写该字段，默认使用公共 SenderId，无需填写该字段。
-        /// 注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [sms helper](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
+        /// 注：月度使用量达到指定量级可申请独立 SenderId 使用，详情请联系 [腾讯云短信小助手](https://cloud.tencent.com/document/product/382/3773#.E6.8A.80.E6.9C.AF.E4.BA.A4.E6.B5.81)。
         /// </summary>
         [JsonProperty("SenderId")]
         public string SenderId{ get; set; }

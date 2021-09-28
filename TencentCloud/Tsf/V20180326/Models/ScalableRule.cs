@@ -66,6 +66,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Desc")]
         public string Desc{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ShrinkVmCountLimit", this.ShrinkVmCountLimit);
             this.SetParamSimple(map, prefix + "GroupCount", this.GroupCount);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

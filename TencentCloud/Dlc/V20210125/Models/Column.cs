@@ -44,6 +44,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 表示整个 numeric 的长度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Precision")]
+        public long? Precision{ get; set; }
+
+        /// <summary>
+        /// 表示小数部分的长度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scale")]
+        public long? Scale{ get; set; }
+
+        /// <summary>
+        /// 是否为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Nullable")]
+        public string Nullable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +74,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "Precision", this.Precision);
+            this.SetParamSimple(map, prefix + "Scale", this.Scale);
+            this.SetParamSimple(map, prefix + "Nullable", this.Nullable);
         }
     }
 }
