@@ -48,6 +48,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ServiceVersion")]
         public string ServiceVersion{ get; set; }
 
+        /// <summary>
+        /// 文件后缀
+        /// </summary>
+        [JsonProperty("Suffix")]
+        public string Suffix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
             this.SetParamSimple(map, prefix + "CIBusiness", this.CIBusiness);
             this.SetParamSimple(map, prefix + "ServiceVersion", this.ServiceVersion);
+            this.SetParamSimple(map, prefix + "Suffix", this.Suffix);
         }
     }
 }

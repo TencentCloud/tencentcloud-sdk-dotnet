@@ -132,5 +132,45 @@ namespace TencentCloud.Mna.V20210119
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取Qos加速状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQosRequest"/></param>
+        /// <returns><see cref="DescribeQosResponse"/></returns>
+        public async Task<DescribeQosResponse> DescribeQos(DescribeQosRequest req)
+        {
+             JsonResponseModel<DescribeQosResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Qos加速状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQosRequest"/></param>
+        /// <returns><see cref="DescribeQosResponse"/></returns>
+        public DescribeQosResponse DescribeQosSync(DescribeQosRequest req)
+        {
+             JsonResponseModel<DescribeQosResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQos");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
