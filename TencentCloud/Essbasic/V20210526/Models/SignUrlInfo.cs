@@ -103,6 +103,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
+        /// <summary>
+        /// 企业经办人 用户在渠道的编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +127,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "IdCardNumber", this.IdCardNumber);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
         }
     }
 }

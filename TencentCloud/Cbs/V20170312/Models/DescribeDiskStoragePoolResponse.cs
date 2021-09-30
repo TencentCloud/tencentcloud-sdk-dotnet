@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cii.V20210408.Models
+namespace TencentCloud.Cbs.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeStructureTaskResultTestRequest : AbstractModel
+    public class DescribeDiskStoragePoolResponse : AbstractModel
     {
         
         /// <summary>
-        /// 结构化任务ID
+        /// 符合条件的独享集群的数量
         /// </summary>
-        [JsonProperty("MainTaskId")]
-        public string MainTaskId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 独享集群的详细信息列表
+        /// </summary>
+        [JsonProperty("DiskStoragePoolSet")]
+        public Cdc[] DiskStoragePoolSet{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cii.V20210408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "DiskStoragePoolSet.", this.DiskStoragePoolSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

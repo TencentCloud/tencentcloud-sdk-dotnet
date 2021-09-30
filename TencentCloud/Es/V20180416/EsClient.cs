@@ -547,6 +547,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 更新实例Jdk配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJdkRequest"/></param>
+        /// <returns><see cref="UpdateJdkResponse"/></returns>
+        public async Task<UpdateJdkResponse> UpdateJdk(UpdateJdkRequest req)
+        {
+             JsonResponseModel<UpdateJdkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateJdk");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateJdkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新实例Jdk配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateJdkRequest"/></param>
+        /// <returns><see cref="UpdateJdkResponse"/></returns>
+        public UpdateJdkResponse UpdateJdkSync(UpdateJdkRequest req)
+        {
+             JsonResponseModel<UpdateJdkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateJdk");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateJdkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 变更插件列表
         /// </summary>
         /// <param name="req"><see cref="UpdatePluginsRequest"/></param>

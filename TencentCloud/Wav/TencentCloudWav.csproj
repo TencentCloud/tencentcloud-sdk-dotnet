@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{509DA91F-DACF-378F-8095-070C5AD4268F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.375</VersionPrefix>
+    <VersionPrefix>3.0.376</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20210129\Models\ChannelCodeInnerDetail.cs" />
     <Compile Include="V20210129\Models\ChatArchivingDetail.cs" />
     <Compile Include="V20210129\Models\ChatArchivingMsgTypeVideo.cs" />
+    <Compile Include="V20210129\Models\ClueInfoDetail.cs" />
     <Compile Include="V20210129\Models\CreateChannelCodeRequest.cs" />
     <Compile Include="V20210129\Models\CreateChannelCodeResponse.cs" />
     <Compile Include="V20210129\Models\CreateCorpTagRequest.cs" />
@@ -72,6 +73,8 @@
     <Compile Include="V20210129\Models\QueryChannelCodeListResponse.cs" />
     <Compile Include="V20210129\Models\QueryChatArchivingListRequest.cs" />
     <Compile Include="V20210129\Models\QueryChatArchivingListResponse.cs" />
+    <Compile Include="V20210129\Models\QueryClueInfoListRequest.cs" />
+    <Compile Include="V20210129\Models\QueryClueInfoListResponse.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactDetailRequest.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactDetailResponse.cs" />
     <Compile Include="V20210129\Models\QueryExternalContactListRequest.cs" />

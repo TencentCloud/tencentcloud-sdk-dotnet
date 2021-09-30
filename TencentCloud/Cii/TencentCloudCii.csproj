@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35BCDB53-B778-3509-BA78-8C30C7A1F123}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.375</VersionPrefix>
+    <VersionPrefix>3.0.376</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,19 +50,28 @@
     <Compile Include="V20210408\Models\CreateStructureTaskInfo.cs" />
     <Compile Include="V20210408\Models\CreateStructureTaskRequest.cs" />
     <Compile Include="V20210408\Models\CreateStructureTaskResponse.cs" />
-    <Compile Include="V20210408\Models\CreateStructureTaskTestRequest.cs" />
-    <Compile Include="V20210408\Models\CreateStructureTaskTestResponse.cs" />
+    <Compile Include="V20210408\Models\CreateUnderwriteTaskByIdRequest.cs" />
+    <Compile Include="V20210408\Models\CreateUnderwriteTaskByIdResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeMachineUnderwriteRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeMachineUnderwriteResponse.cs" />
     <Compile Include="V20210408\Models\DescribeStructCompareDataRequest.cs" />
     <Compile Include="V20210408\Models\DescribeStructCompareDataResponse.cs" />
+    <Compile Include="V20210408\Models\DescribeStructureDifferenceRequest.cs" />
+    <Compile Include="V20210408\Models\DescribeStructureDifferenceResponse.cs" />
     <Compile Include="V20210408\Models\DescribeStructureResultRequest.cs" />
     <Compile Include="V20210408\Models\DescribeStructureResultResponse.cs" />
     <Compile Include="V20210408\Models\DescribeStructureTaskResultRequest.cs" />
     <Compile Include="V20210408\Models\DescribeStructureTaskResultResponse.cs" />
-    <Compile Include="V20210408\Models\DescribeStructureTaskResultTestRequest.cs" />
-    <Compile Include="V20210408\Models\DescribeStructureTaskResultTestResponse.cs" />
+    <Compile Include="V20210408\Models\InsuranceResult.cs" />
+    <Compile Include="V20210408\Models\MachinePredict.cs" />
+    <Compile Include="V20210408\Models\MachineUnderwriteOutput.cs" />
+    <Compile Include="V20210408\Models\PerStructDifference.cs" />
     <Compile Include="V20210408\Models\ResultObject.cs" />
     <Compile Include="V20210408\Models\ReviewDataTaskInfo.cs" />
+    <Compile Include="V20210408\Models\StructureModifyItem.cs" />
+    <Compile Include="V20210408\Models\StructureOneItem.cs" />
     <Compile Include="V20210408\Models\StructureResultObject.cs" />
+    <Compile Include="V20210408\Models\UnderwriteItem.cs" />
     <Compile Include="V20201210\CiiClient.cs" />
     <Compile Include="V20201210\Models\CompareMetricsData.cs" />
     <Compile Include="V20201210\Models\CreateStructureTaskRequest.cs" />

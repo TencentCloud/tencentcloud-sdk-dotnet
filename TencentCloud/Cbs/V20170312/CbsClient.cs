@@ -589,6 +589,52 @@ namespace TencentCloud.Cbs.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDiskStoragePool）查询用户的云硬盘独享集群列表。
+        /// 
+        /// * 可以根据独享集群ID(CdcId)、集群区域名(zone)类型等信息来查询和过滤云硬盘独享集群详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘独享集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskStoragePoolRequest"/></param>
+        /// <returns><see cref="DescribeDiskStoragePoolResponse"/></returns>
+        public async Task<DescribeDiskStoragePoolResponse> DescribeDiskStoragePool(DescribeDiskStoragePoolRequest req)
+        {
+             JsonResponseModel<DescribeDiskStoragePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskStoragePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskStoragePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskStoragePool）查询用户的云硬盘独享集群列表。
+        /// 
+        /// * 可以根据独享集群ID(CdcId)、集群区域名(zone)类型等信息来查询和过滤云硬盘独享集群详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的云硬盘独享集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskStoragePoolRequest"/></param>
+        /// <returns><see cref="DescribeDiskStoragePoolResponse"/></returns>
+        public DescribeDiskStoragePoolResponse DescribeDiskStoragePoolSync(DescribeDiskStoragePoolRequest req)
+        {
+             JsonResponseModel<DescribeDiskStoragePoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskStoragePool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskStoragePoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDisks）用于查询云硬盘列表。
         /// 
         /// * 可以根据云硬盘ID、云硬盘类型或者云硬盘状态等信息来查询云硬盘的详细信息，不同条件之间为与(AND)的关系，过滤信息详细请见过滤器`Filter`。

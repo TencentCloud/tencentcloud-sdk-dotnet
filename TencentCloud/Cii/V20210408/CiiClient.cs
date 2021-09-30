@@ -93,17 +93,17 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
-        /// 本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+        /// 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
         /// </summary>
-        /// <param name="req"><see cref="CreateStructureTaskTestRequest"/></param>
-        /// <returns><see cref="CreateStructureTaskTestResponse"/></returns>
-        public async Task<CreateStructureTaskTestResponse> CreateStructureTaskTest(CreateStructureTaskTestRequest req)
+        /// <param name="req"><see cref="CreateUnderwriteTaskByIdRequest"/></param>
+        /// <returns><see cref="CreateUnderwriteTaskByIdResponse"/></returns>
+        public async Task<CreateUnderwriteTaskByIdResponse> CreateUnderwriteTaskById(CreateUnderwriteTaskByIdRequest req)
         {
-             JsonResponseModel<CreateStructureTaskTestResponse> rsp = null;
+             JsonResponseModel<CreateUnderwriteTaskByIdResponse> rsp = null;
              try
              {
-                 var strResp = await this.InternalRequest(req, "CreateStructureTaskTest");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskTestResponse>>(strResp);
+                 var strResp = await this.InternalRequest(req, "CreateUnderwriteTaskById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnderwriteTaskByIdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -113,17 +113,57 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
-        /// 本接口(CreateStructureTaskTest)基于提供的客户及保单信息，创建并启动结构化识别任务。用于路由到测试环境。
+        /// 本接口(CreateUnderwriteTaskById)用于根据结构化任务ID创建核保任务
         /// </summary>
-        /// <param name="req"><see cref="CreateStructureTaskTestRequest"/></param>
-        /// <returns><see cref="CreateStructureTaskTestResponse"/></returns>
-        public CreateStructureTaskTestResponse CreateStructureTaskTestSync(CreateStructureTaskTestRequest req)
+        /// <param name="req"><see cref="CreateUnderwriteTaskByIdRequest"/></param>
+        /// <returns><see cref="CreateUnderwriteTaskByIdResponse"/></returns>
+        public CreateUnderwriteTaskByIdResponse CreateUnderwriteTaskByIdSync(CreateUnderwriteTaskByIdRequest req)
         {
-             JsonResponseModel<CreateStructureTaskTestResponse> rsp = null;
+             JsonResponseModel<CreateUnderwriteTaskByIdResponse> rsp = null;
              try
              {
-                 var strResp = this.InternalRequestSync(req, "CreateStructureTaskTest");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStructureTaskTestResponse>>(strResp);
+                 var strResp = this.InternalRequestSync(req, "CreateUnderwriteTaskById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUnderwriteTaskByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineUnderwriteRequest"/></param>
+        /// <returns><see cref="DescribeMachineUnderwriteResponse"/></returns>
+        public async Task<DescribeMachineUnderwriteResponse> DescribeMachineUnderwrite(DescribeMachineUnderwriteRequest req)
+        {
+             JsonResponseModel<DescribeMachineUnderwriteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMachineUnderwrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineUnderwriteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeMachineUnderwrite)用于查询机器核保任务数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMachineUnderwriteRequest"/></param>
+        /// <returns><see cref="DescribeMachineUnderwriteResponse"/></returns>
+        public DescribeMachineUnderwriteResponse DescribeMachineUnderwriteSync(DescribeMachineUnderwriteRequest req)
+        {
+             JsonResponseModel<DescribeMachineUnderwriteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMachineUnderwrite");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMachineUnderwriteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -164,6 +204,46 @@ namespace TencentCloud.Cii.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStructCompareData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructCompareDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureDifferenceRequest"/></param>
+        /// <returns><see cref="DescribeStructureDifferenceResponse"/></returns>
+        public async Task<DescribeStructureDifferenceResponse> DescribeStructureDifference(DescribeStructureDifferenceRequest req)
+        {
+             JsonResponseModel<DescribeStructureDifferenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStructureDifference");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureDifferenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 结构化复核差异查询接口，对比结构化复核前后数据差异，返回差异的部分。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStructureDifferenceRequest"/></param>
+        /// <returns><see cref="DescribeStructureDifferenceResponse"/></returns>
+        public DescribeStructureDifferenceResponse DescribeStructureDifferenceSync(DescribeStructureDifferenceRequest req)
+        {
+             JsonResponseModel<DescribeStructureDifferenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStructureDifference");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureDifferenceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -244,46 +324,6 @@ namespace TencentCloud.Cii.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStructureTaskResultTestRequest"/></param>
-        /// <returns><see cref="DescribeStructureTaskResultTestResponse"/></returns>
-        public async Task<DescribeStructureTaskResultTestResponse> DescribeStructureTaskResultTest(DescribeStructureTaskResultTestRequest req)
-        {
-             JsonResponseModel<DescribeStructureTaskResultTestResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeStructureTaskResultTest");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultTestResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 依据任务ID获取结构化结果接口，该接口用于路由到测试环境。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeStructureTaskResultTestRequest"/></param>
-        /// <returns><see cref="DescribeStructureTaskResultTestResponse"/></returns>
-        public DescribeStructureTaskResultTestResponse DescribeStructureTaskResultTestSync(DescribeStructureTaskResultTestRequest req)
-        {
-             JsonResponseModel<DescribeStructureTaskResultTestResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResultTest");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultTestResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

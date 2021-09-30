@@ -333,6 +333,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 企业可通过此接口获取线索列表。
+        /// </summary>
+        /// <param name="req"><see cref="QueryClueInfoListRequest"/></param>
+        /// <returns><see cref="QueryClueInfoListResponse"/></returns>
+        public async Task<QueryClueInfoListResponse> QueryClueInfoList(QueryClueInfoListRequest req)
+        {
+             JsonResponseModel<QueryClueInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryClueInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClueInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过此接口获取线索列表。
+        /// </summary>
+        /// <param name="req"><see cref="QueryClueInfoListRequest"/></param>
+        /// <returns><see cref="QueryClueInfoListResponse"/></returns>
+        public QueryClueInfoListResponse QueryClueInfoListSync(QueryClueInfoListRequest req)
+        {
+             JsonResponseModel<QueryClueInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryClueInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryClueInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 企业可通过此接口，根据外部联系人的userid，拉取客户详情
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailRequest"/></param>

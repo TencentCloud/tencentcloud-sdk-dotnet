@@ -144,6 +144,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Tags")]
         public string[] Tags{ get; set; }
 
+        /// <summary>
+        /// 外网ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineWanIp")]
+        public string MachineWanIp{ get; set; }
+
+        /// <summary>
+        /// 主机在线状态 OFFLINE  ONLINE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineStatus")]
+        public string MachineStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +184,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
+            this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         }
     }
 }

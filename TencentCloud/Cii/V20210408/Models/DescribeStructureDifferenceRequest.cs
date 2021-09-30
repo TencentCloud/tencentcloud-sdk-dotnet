@@ -21,30 +21,20 @@ namespace TencentCloud.Cii.V20210408.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeStructureTaskResultTestResponse : AbstractModel
+    public class DescribeStructureDifferenceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 结果状态：
-        /// 0：返回成功
-        /// 1：结果未生成
-        /// 2：结果生成失败
+        /// 主任务号
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("MainTaskId")]
+        public string MainTaskId{ get; set; }
 
         /// <summary>
-        /// 结构化识别结果数组，每个数组元素对应一个图片的结构化结果，顺序和输入参数的ImageList或FileList对应。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 子任务号
         /// </summary>
-        [JsonProperty("Results")]
-        public ResultObject[] Results{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SubTaskId")]
+        public string SubTaskId{ get; set; }
 
 
         /// <summary>
@@ -52,9 +42,8 @@ namespace TencentCloud.Cii.V20210408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "MainTaskId", this.MainTaskId);
+            this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
         }
     }
 }

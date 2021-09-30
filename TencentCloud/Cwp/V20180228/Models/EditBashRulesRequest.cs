@@ -25,18 +25,6 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 规则名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 正则表达式
-        /// </summary>
-        [JsonProperty("Rule")]
-        public string Rule{ get; set; }
-
-        /// <summary>
         /// 规则ID（新增时不填）
         /// </summary>
         [JsonProperty("Id")]
@@ -55,10 +43,22 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string HostIp{ get; set; }
 
         /// <summary>
+        /// 规则名称，编辑时不可修改规则名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// 危险等级(0:无，1: 高危 2:中危 3: 低危)
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }
+
+        /// <summary>
+        /// 正则表达式 ，编辑时不可修改正则表达式，需要对内容QueryEscape后再base64
+        /// </summary>
+        [JsonProperty("Rule")]
+        public string Rule{ get; set; }
 
         /// <summary>
         /// 是否全局规则(默认否)：1-全局，0-非全局
@@ -90,12 +90,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamArraySimple(map, prefix + "Uuids.", this.Uuids);
             this.SetParamSimple(map, prefix + "HostIp", this.HostIp);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Level", this.Level);
+            this.SetParamSimple(map, prefix + "Rule", this.Rule);
             this.SetParamSimple(map, prefix + "IsGlobal", this.IsGlobal);
             this.SetParamSimple(map, prefix + "White", this.White);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
