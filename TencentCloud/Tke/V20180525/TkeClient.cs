@@ -1493,6 +1493,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查看集群认证配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAuthenticationOptionsResponse"/></returns>
+        public async Task<DescribeClusterAuthenticationOptionsResponse> DescribeClusterAuthenticationOptions(DescribeClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看集群认证配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="DescribeClusterAuthenticationOptionsResponse"/></returns>
+        public DescribeClusterAuthenticationOptionsResponse DescribeClusterAuthenticationOptionsSync(DescribeClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<DescribeClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取指定子账户在RBAC授权模式中对应kube-apiserver客户端证书的CommonName字段，如果没有客户端证书，将会签发一个，此接口有最大传入子账户数量上限，当前为50
         /// </summary>
         /// <param name="req"><see cref="DescribeClusterCommonNamesRequest"/></param>
@@ -3124,6 +3164,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyClusterAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群认证配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuthenticationOptionsResponse"/></returns>
+        public async Task<ModifyClusterAuthenticationOptionsResponse> ModifyClusterAuthenticationOptions(ModifyClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群认证配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterAuthenticationOptionsRequest"/></param>
+        /// <returns><see cref="ModifyClusterAuthenticationOptionsResponse"/></returns>
+        public ModifyClusterAuthenticationOptionsResponse ModifyClusterAuthenticationOptionsSync(ModifyClusterAuthenticationOptionsRequest req)
+        {
+             JsonResponseModel<ModifyClusterAuthenticationOptionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterAuthenticationOptions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterAuthenticationOptionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

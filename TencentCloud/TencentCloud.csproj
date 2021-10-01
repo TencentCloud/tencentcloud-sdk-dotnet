@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.377</VersionPrefix>
+    <VersionPrefix>3.0.378</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -13698,6 +13698,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterAsGroupsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterAuthenticationOptionsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterAuthenticationOptionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterCommonNamesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterControllersRequest.cs" />
@@ -13811,6 +13813,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyClusterAsGroupOptionAttributeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterAttributeResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAuthenticationOptionsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyClusterAuthenticationOptionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterEndpointSPResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyClusterNodePoolRequest.cs" />
@@ -13857,6 +13861,7 @@
     <Compile Include="Tke\V20180525\Models\RunMonitorServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\RunSecurityServiceEnabled.cs" />
     <Compile Include="Tke\V20180525\Models\SecurityContext.cs" />
+    <Compile Include="Tke\V20180525\Models\ServiceAccountAuthenticationOptions.cs" />
     <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\SyncPrometheusTemplateRequest.cs" />
