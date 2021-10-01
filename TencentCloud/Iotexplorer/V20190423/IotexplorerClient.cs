@@ -373,6 +373,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
+        /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
+        public async Task<CreateTopicPolicyResponse> CreateTopicPolicy(CreateTopicPolicyRequest req)
+        {
+             JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateTopicPolicy）用于创建一个Topic 
+        /// </summary>
+        /// <param name="req"><see cref="CreateTopicPolicyRequest"/></param>
+        /// <returns><see cref="CreateTopicPolicyResponse"/></returns>
+        public CreateTopicPolicyResponse CreateTopicPolicySync(CreateTopicPolicyRequest req)
+        {
+             JsonResponseModel<CreateTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建规则
         /// </summary>
         /// <param name="req"><see cref="CreateTopicRuleRequest"/></param>

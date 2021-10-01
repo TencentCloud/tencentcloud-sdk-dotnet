@@ -41,35 +41,35 @@ namespace TencentCloud.Live.V20180801.Models
         /// 204: 日结流量
         /// 205: 日结时长
         /// 206: 月结时长
-        /// 304: 日结流量
+        /// 304: 日结流量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageBillMode")]
         public long? PackageBillMode{ get; set; }
 
         /// <summary>
-        /// 总页数
+        /// 总页数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalPage")]
         public long? TotalPage{ get; set; }
 
         /// <summary>
-        /// 数据总条数
+        /// 数据总条数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalNum")]
         public long? TotalNum{ get; set; }
 
         /// <summary>
-        /// 当前页数
+        /// 当前页数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageNum")]
         public long? PageNum{ get; set; }
 
         /// <summary>
-        /// 当前每页数量
+        /// 当前每页数量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PageSize")]
