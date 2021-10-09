@@ -2871,6 +2871,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 商户查询已开通的支付方式列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantPayWayListRequest"/></param>
+        /// <returns><see cref="QueryMerchantPayWayListResponse"/></returns>
+        public async Task<QueryMerchantPayWayListResponse> QueryMerchantPayWayList(QueryMerchantPayWayListRequest req)
+        {
+             JsonResponseModel<QueryMerchantPayWayListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMerchantPayWayList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantPayWayListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 商户查询已开通的支付方式列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryMerchantPayWayListRequest"/></param>
+        /// <returns><see cref="QueryMerchantPayWayListResponse"/></returns>
+        public QueryMerchantPayWayListResponse QueryMerchantPayWayListSync(QueryMerchantPayWayListRequest req)
+        {
+             JsonResponseModel<QueryMerchantPayWayListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMerchantPayWayList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMerchantPayWayListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据订单号，或者用户Id，查询支付订单状态 
         /// </summary>
         /// <param name="req"><see cref="QueryOrderRequest"/></param>

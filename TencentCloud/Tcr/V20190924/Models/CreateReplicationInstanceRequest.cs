@@ -36,6 +36,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("ReplicationRegionId")]
         public ulong? ReplicationRegionId{ get; set; }
 
+        /// <summary>
+        /// 复制实例地域名称
+        /// </summary>
+        [JsonProperty("ReplicationRegionName")]
+        public string ReplicationRegionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
+            this.SetParamSimple(map, prefix + "ReplicationRegionName", this.ReplicationRegionName);
         }
     }
 }

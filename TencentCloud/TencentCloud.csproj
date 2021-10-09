@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.378</VersionPrefix>
+    <VersionPrefix>3.0.379</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4024,6 +4024,7 @@
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MerchantPayWayData.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundRequest.cs" />
@@ -4102,6 +4103,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantPayWayListRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMerchantPayWayListResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutOrderList.cs" />
@@ -13043,6 +13046,10 @@
     <Compile Include="Tdmq\V20200217\Models\CreateCmqTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRoleRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateEnvironmentRoleResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateRoleRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateRoleResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateTopicRequest.cs" />
@@ -13055,8 +13062,12 @@
     <Compile Include="Tdmq\V20200217\Models\DeleteCmqSubscribeResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteCmqTopicRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteCmqTopicResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentRolesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentRolesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteEnvironmentsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteRolesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteRolesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsRequest.cs" />
@@ -13093,6 +13104,8 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeNodeHealthOptResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeRolesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeRolesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeSubscriptionsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeSubscriptionsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeTopicsRequest.cs" />
@@ -13111,6 +13124,10 @@
     <Compile Include="Tdmq\V20200217\Models\ModifyCmqTopicAttributeResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentAttributesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentRoleRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyEnvironmentRoleResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyRoleRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyRoleResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyTopicRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyTopicResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\PartitionsTopic.cs" />
@@ -13124,6 +13141,7 @@
     <Compile Include="Tdmq\V20200217\Models\RetentionPolicy.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Role.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendBatchMessagesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendCmqMsgRequest.cs" />

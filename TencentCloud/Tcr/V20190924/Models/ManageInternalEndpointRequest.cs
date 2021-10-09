@@ -49,10 +49,16 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 请求的地域ID
+        /// 请求的地域ID，用于实例复制地域
         /// </summary>
         [JsonProperty("RegionId")]
         public ulong? RegionId{ get; set; }
+
+        /// <summary>
+        /// 请求的地域名称，用于实例复制地域
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

@@ -373,6 +373,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 创建环境角色授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentRoleResponse"/></returns>
+        public async Task<CreateEnvironmentRoleResponse> CreateEnvironmentRole(CreateEnvironmentRoleRequest req)
+        {
+             JsonResponseModel<CreateEnvironmentRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEnvironmentRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建环境角色授权
+        /// </summary>
+        /// <param name="req"><see cref="CreateEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="CreateEnvironmentRoleResponse"/></returns>
+        public CreateEnvironmentRoleResponse CreateEnvironmentRoleSync(CreateEnvironmentRoleRequest req)
+        {
+             JsonResponseModel<CreateEnvironmentRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEnvironmentRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleRequest"/></param>
+        /// <returns><see cref="CreateRoleResponse"/></returns>
+        public async Task<CreateRoleResponse> CreateRole(CreateRoleRequest req)
+        {
+             JsonResponseModel<CreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建角色
+        /// </summary>
+        /// <param name="req"><see cref="CreateRoleRequest"/></param>
+        /// <returns><see cref="CreateRoleResponse"/></returns>
+        public CreateRoleResponse CreateRoleSync(CreateRoleRequest req)
+        {
+             JsonResponseModel<CreateRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建一个主题的订阅关系
         /// </summary>
         /// <param name="req"><see cref="CreateSubscriptionRequest"/></param>
@@ -613,6 +693,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 删除环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentRolesResponse"/></returns>
+        public async Task<DeleteEnvironmentRolesResponse> DeleteEnvironmentRoles(DeleteEnvironmentRolesRequest req)
+        {
+             JsonResponseModel<DeleteEnvironmentRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEnvironmentRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEnvironmentRolesRequest"/></param>
+        /// <returns><see cref="DeleteEnvironmentRolesResponse"/></returns>
+        public DeleteEnvironmentRolesResponse DeleteEnvironmentRolesSync(DeleteEnvironmentRolesRequest req)
+        {
+             JsonResponseModel<DeleteEnvironmentRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEnvironmentRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量删除租户下的命名空间
         /// </summary>
         /// <param name="req"><see cref="DeleteEnvironmentsRequest"/></param>
@@ -644,6 +764,46 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEnvironments");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除角色，支持批量。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRolesRequest"/></param>
+        /// <returns><see cref="DeleteRolesResponse"/></returns>
+        public async Task<DeleteRolesResponse> DeleteRoles(DeleteRolesRequest req)
+        {
+             JsonResponseModel<DeleteRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除角色，支持批量。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRolesRequest"/></param>
+        /// <returns><see cref="DeleteRolesResponse"/></returns>
+        public DeleteRolesResponse DeleteRolesSync(DeleteRolesRequest req)
+        {
+             JsonResponseModel<DeleteRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRolesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1373,6 +1533,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRolesRequest"/></param>
+        /// <returns><see cref="DescribeRolesResponse"/></returns>
+        public async Task<DescribeRolesResponse> DescribeRoles(DescribeRolesRequest req)
+        {
+             JsonResponseModel<DescribeRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取角色列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRolesRequest"/></param>
+        /// <returns><see cref="DescribeRolesResponse"/></returns>
+        public DescribeRolesResponse DescribeRolesSync(DescribeRolesRequest req)
+        {
+             JsonResponseModel<DescribeRolesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRoles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRolesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询指定环境和主题下的订阅者列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSubscriptionsRequest"/></param>
@@ -1644,6 +1844,86 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ModifyEnvironmentAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvironmentAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyEnvironmentRoleResponse"/></returns>
+        public async Task<ModifyEnvironmentRoleResponse> ModifyEnvironmentRole(ModifyEnvironmentRoleRequest req)
+        {
+             JsonResponseModel<ModifyEnvironmentRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyEnvironmentRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改环境角色授权。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyEnvironmentRoleRequest"/></param>
+        /// <returns><see cref="ModifyEnvironmentRoleResponse"/></returns>
+        public ModifyEnvironmentRoleResponse ModifyEnvironmentRoleSync(ModifyEnvironmentRoleRequest req)
+        {
+             JsonResponseModel<ModifyEnvironmentRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyEnvironmentRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 角色修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoleRequest"/></param>
+        /// <returns><see cref="ModifyRoleResponse"/></returns>
+        public async Task<ModifyRoleResponse> ModifyRole(ModifyRoleRequest req)
+        {
+             JsonResponseModel<ModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 角色修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRoleRequest"/></param>
+        /// <returns><see cref="ModifyRoleResponse"/></returns>
+        public ModifyRoleResponse ModifyRoleSync(ModifyRoleRequest req)
+        {
+             JsonResponseModel<ModifyRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

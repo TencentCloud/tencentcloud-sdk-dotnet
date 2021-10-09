@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.378</VersionPrefix>
+    <VersionPrefix>3.0.379</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -163,6 +163,7 @@
     <Compile Include="V20190820\Models\FileItem.cs" />
     <Compile Include="V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="V20190820\Models\MerchantManagementResult.cs" />
+    <Compile Include="V20190820\Models\MerchantPayWayData.cs" />
     <Compile Include="V20190820\Models\MigrateOrderRefundQueryRequest.cs" />
     <Compile Include="V20190820\Models\MigrateOrderRefundQueryResponse.cs" />
     <Compile Include="V20190820\Models\MigrateOrderRefundRequest.cs" />
@@ -241,6 +242,8 @@
     <Compile Include="V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantOrderRequest.cs" />
     <Compile Include="V20190820\Models\QueryMerchantOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantPayWayListRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantPayWayListResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantRequest.cs" />
     <Compile Include="V20190820\Models\QueryMerchantResponse.cs" />
     <Compile Include="V20190820\Models\QueryOrderOutOrderList.cs" />
