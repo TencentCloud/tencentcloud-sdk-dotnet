@@ -51,7 +51,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 7 : WEB服务
         /// 99:其他</li>
         /// <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

@@ -213,6 +213,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 创建围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateFenceBindRequest"/></param>
+        /// <returns><see cref="CreateFenceBindResponse"/></returns>
+        public async Task<CreateFenceBindResponse> CreateFenceBind(CreateFenceBindRequest req)
+        {
+             JsonResponseModel<CreateFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="CreateFenceBindRequest"/></param>
+        /// <returns><see cref="CreateFenceBindResponse"/></returns>
+        public CreateFenceBindResponse CreateFenceBindSync(CreateFenceBindRequest req)
+        {
+             JsonResponseModel<CreateFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建 LoRa 自定义频点
         /// </summary>
         /// <param name="req"><see cref="CreateLoRaFrequencyRequest"/></param>
@@ -284,6 +324,86 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "CreateLoRaGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLoRaGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建围栏
+        /// </summary>
+        /// <param name="req"><see cref="CreatePositionFenceRequest"/></param>
+        /// <returns><see cref="CreatePositionFenceResponse"/></returns>
+        public async Task<CreatePositionFenceResponse> CreatePositionFence(CreatePositionFenceRequest req)
+        {
+             JsonResponseModel<CreatePositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建围栏
+        /// </summary>
+        /// <param name="req"><see cref="CreatePositionFenceRequest"/></param>
+        /// <returns><see cref="CreatePositionFenceResponse"/></returns>
+        public CreatePositionFenceResponse CreatePositionFenceSync(CreatePositionFenceRequest req)
+        {
+             JsonResponseModel<CreatePositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建位置空间
+        /// </summary>
+        /// <param name="req"><see cref="CreatePositionSpaceRequest"/></param>
+        /// <returns><see cref="CreatePositionSpaceResponse"/></returns>
+        public async Task<CreatePositionSpaceResponse> CreatePositionSpace(CreatePositionSpaceRequest req)
+        {
+             JsonResponseModel<CreatePositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePositionSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建位置空间
+        /// </summary>
+        /// <param name="req"><see cref="CreatePositionSpaceRequest"/></param>
+        /// <returns><see cref="CreatePositionSpaceResponse"/></returns>
+        public CreatePositionSpaceResponse CreatePositionSpaceSync(CreatePositionSpaceRequest req)
+        {
+             JsonResponseModel<CreatePositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePositionSpaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,6 +653,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 删除围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFenceBindRequest"/></param>
+        /// <returns><see cref="DeleteFenceBindResponse"/></returns>
+        public async Task<DeleteFenceBindResponse> DeleteFenceBind(DeleteFenceBindRequest req)
+        {
+             JsonResponseModel<DeleteFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFenceBindRequest"/></param>
+        /// <returns><see cref="DeleteFenceBindResponse"/></returns>
+        public DeleteFenceBindResponse DeleteFenceBindSync(DeleteFenceBindRequest req)
+        {
+             JsonResponseModel<DeleteFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供删除LoRa自定义频点的能力
         /// </summary>
         /// <param name="req"><see cref="DeleteLoRaFrequencyRequest"/></param>
@@ -604,6 +764,86 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLoRaGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLoRaGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除围栏
+        /// </summary>
+        /// <param name="req"><see cref="DeletePositionFenceRequest"/></param>
+        /// <returns><see cref="DeletePositionFenceResponse"/></returns>
+        public async Task<DeletePositionFenceResponse> DeletePositionFence(DeletePositionFenceRequest req)
+        {
+             JsonResponseModel<DeletePositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除围栏
+        /// </summary>
+        /// <param name="req"><see cref="DeletePositionFenceRequest"/></param>
+        /// <returns><see cref="DeletePositionFenceResponse"/></returns>
+        public DeletePositionFenceResponse DeletePositionFenceSync(DeletePositionFenceRequest req)
+        {
+             JsonResponseModel<DeletePositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除位置空间
+        /// </summary>
+        /// <param name="req"><see cref="DeletePositionSpaceRequest"/></param>
+        /// <returns><see cref="DeletePositionSpaceResponse"/></returns>
+        public async Task<DeletePositionSpaceResponse> DeletePositionSpace(DeletePositionSpaceRequest req)
+        {
+             JsonResponseModel<DeletePositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePositionSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除位置空间
+        /// </summary>
+        /// <param name="req"><see cref="DeletePositionSpaceRequest"/></param>
+        /// <returns><see cref="DeletePositionSpaceResponse"/></returns>
+        public DeletePositionSpaceResponse DeletePositionSpaceSync(DeletePositionSpaceRequest req)
+        {
+             JsonResponseModel<DeletePositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePositionSpaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -853,6 +1093,126 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取设备位置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePositionListRequest"/></param>
+        /// <returns><see cref="DescribeDevicePositionListResponse"/></returns>
+        public async Task<DescribeDevicePositionListResponse> DescribeDevicePositionList(DescribeDevicePositionListRequest req)
+        {
+             JsonResponseModel<DescribeDevicePositionListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDevicePositionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicePositionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备位置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDevicePositionListRequest"/></param>
+        /// <returns><see cref="DescribeDevicePositionListResponse"/></returns>
+        public DescribeDevicePositionListResponse DescribeDevicePositionListSync(DescribeDevicePositionListRequest req)
+        {
+             JsonResponseModel<DescribeDevicePositionListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDevicePositionList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDevicePositionListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取围栏绑定信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFenceBindListRequest"/></param>
+        /// <returns><see cref="DescribeFenceBindListResponse"/></returns>
+        public async Task<DescribeFenceBindListResponse> DescribeFenceBindList(DescribeFenceBindListRequest req)
+        {
+             JsonResponseModel<DescribeFenceBindListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFenceBindList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFenceBindListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取围栏绑定信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFenceBindListRequest"/></param>
+        /// <returns><see cref="DescribeFenceBindListResponse"/></returns>
+        public DescribeFenceBindListResponse DescribeFenceBindListSync(DescribeFenceBindListRequest req)
+        {
+             JsonResponseModel<DescribeFenceBindListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFenceBindList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFenceBindListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取围栏告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFenceEventListRequest"/></param>
+        /// <returns><see cref="DescribeFenceEventListResponse"/></returns>
+        public async Task<DescribeFenceEventListResponse> DescribeFenceEventList(DescribeFenceEventListRequest req)
+        {
+             JsonResponseModel<DescribeFenceEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFenceEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFenceEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取围栏告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFenceEventListRequest"/></param>
+        /// <returns><see cref="DescribeFenceEventListResponse"/></returns>
+        public DescribeFenceEventListResponse DescribeFenceEventListSync(DescribeFenceEventListRequest req)
+        {
+             JsonResponseModel<DescribeFenceEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFenceEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFenceEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询固件升级任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeFirmwareTaskRequest"/></param>
@@ -973,6 +1333,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取围栏列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePositionFenceListRequest"/></param>
+        /// <returns><see cref="DescribePositionFenceListResponse"/></returns>
+        public async Task<DescribePositionFenceListResponse> DescribePositionFenceList(DescribePositionFenceListRequest req)
+        {
+             JsonResponseModel<DescribePositionFenceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePositionFenceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePositionFenceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取围栏列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePositionFenceListRequest"/></param>
+        /// <returns><see cref="DescribePositionFenceListResponse"/></returns>
+        public DescribePositionFenceListResponse DescribePositionFenceListSync(DescribePositionFenceListRequest req)
+        {
+             JsonResponseModel<DescribePositionFenceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePositionFenceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePositionFenceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询项目详情
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectRequest"/></param>
@@ -1004,6 +1404,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取位置空间中围栏告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpaceFenceEventListRequest"/></param>
+        /// <returns><see cref="DescribeSpaceFenceEventListResponse"/></returns>
+        public async Task<DescribeSpaceFenceEventListResponse> DescribeSpaceFenceEventList(DescribeSpaceFenceEventListRequest req)
+        {
+             JsonResponseModel<DescribeSpaceFenceEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSpaceFenceEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpaceFenceEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取位置空间中围栏告警事件列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSpaceFenceEventListRequest"/></param>
+        /// <returns><see cref="DescribeSpaceFenceEventListResponse"/></returns>
+        public DescribeSpaceFenceEventListResponse DescribeSpaceFenceEventListSync(DescribeSpaceFenceEventListRequest req)
+        {
+             JsonResponseModel<DescribeSpaceFenceEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSpaceFenceEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSpaceFenceEventListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1293,6 +1733,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取设备历史位置
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceLocationHistoryRequest"/></param>
+        /// <returns><see cref="GetDeviceLocationHistoryResponse"/></returns>
+        public async Task<GetDeviceLocationHistoryResponse> GetDeviceLocationHistory(GetDeviceLocationHistoryRequest req)
+        {
+             JsonResponseModel<GetDeviceLocationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDeviceLocationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceLocationHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备历史位置
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceLocationHistoryRequest"/></param>
+        /// <returns><see cref="GetDeviceLocationHistoryResponse"/></returns>
+        public GetDeviceLocationHistoryResponse GetDeviceLocationHistorySync(GetDeviceLocationHistoryRequest req)
+        {
+             JsonResponseModel<GetDeviceLocationHistoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDeviceLocationHistory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceLocationHistoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取 LoRa 网关列表接口
         /// </summary>
         /// <param name="req"><see cref="GetLoRaGatewayListRequest"/></param>
@@ -1324,6 +1804,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "GetLoRaGatewayList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetLoRaGatewayListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取位置空间列表
+        /// </summary>
+        /// <param name="req"><see cref="GetPositionSpaceListRequest"/></param>
+        /// <returns><see cref="GetPositionSpaceListResponse"/></returns>
+        public async Task<GetPositionSpaceListResponse> GetPositionSpaceList(GetPositionSpaceListRequest req)
+        {
+             JsonResponseModel<GetPositionSpaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPositionSpaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPositionSpaceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取位置空间列表
+        /// </summary>
+        /// <param name="req"><see cref="GetPositionSpaceListRequest"/></param>
+        /// <returns><see cref="GetPositionSpaceListResponse"/></returns>
+        public GetPositionSpaceListResponse GetPositionSpaceListSync(GetPositionSpaceListRequest req)
+        {
+             JsonResponseModel<GetPositionSpaceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPositionSpaceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPositionSpaceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1533,6 +2053,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 更新围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
+        /// <returns><see cref="ModifyFenceBindResponse"/></returns>
+        public async Task<ModifyFenceBindResponse> ModifyFenceBind(ModifyFenceBindRequest req)
+        {
+             JsonResponseModel<ModifyFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新围栏绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
+        /// <returns><see cref="ModifyFenceBindResponse"/></returns>
+        public ModifyFenceBindResponse ModifyFenceBindSync(ModifyFenceBindRequest req)
+        {
+             JsonResponseModel<ModifyFenceBindResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFenceBind");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFenceBindResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改LoRa自定义频点
         /// </summary>
         /// <param name="req"><see cref="ModifyLoRaFrequencyRequest"/></param>
@@ -1653,6 +2213,86 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 更新围栏
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPositionFenceRequest"/></param>
+        /// <returns><see cref="ModifyPositionFenceResponse"/></returns>
+        public async Task<ModifyPositionFenceResponse> ModifyPositionFence(ModifyPositionFenceRequest req)
+        {
+             JsonResponseModel<ModifyPositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新围栏
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPositionFenceRequest"/></param>
+        /// <returns><see cref="ModifyPositionFenceResponse"/></returns>
+        public ModifyPositionFenceResponse ModifyPositionFenceSync(ModifyPositionFenceRequest req)
+        {
+             JsonResponseModel<ModifyPositionFenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPositionFence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPositionFenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新位置空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPositionSpaceRequest"/></param>
+        /// <returns><see cref="ModifyPositionSpaceResponse"/></returns>
+        public async Task<ModifyPositionSpaceResponse> ModifyPositionSpace(ModifyPositionSpaceRequest req)
+        {
+             JsonResponseModel<ModifyPositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPositionSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新位置空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPositionSpaceRequest"/></param>
+        /// <returns><see cref="ModifyPositionSpaceResponse"/></returns>
+        public ModifyPositionSpaceResponse ModifyPositionSpaceSync(ModifyPositionSpaceRequest req)
+        {
+             JsonResponseModel<ModifyPositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPositionSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改项目
         /// </summary>
         /// <param name="req"><see cref="ModifyProjectRequest"/></param>
@@ -1684,6 +2324,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "ModifyProject");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新位置空间产品属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpacePropertyRequest"/></param>
+        /// <returns><see cref="ModifySpacePropertyResponse"/></returns>
+        public async Task<ModifySpacePropertyResponse> ModifySpaceProperty(ModifySpacePropertyRequest req)
+        {
+             JsonResponseModel<ModifySpacePropertyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySpaceProperty");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpacePropertyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新位置空间产品属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifySpacePropertyRequest"/></param>
+        /// <returns><see cref="ModifySpacePropertyResponse"/></returns>
+        public ModifySpacePropertyResponse ModifySpacePropertySync(ModifySpacePropertyRequest req)
+        {
+             JsonResponseModel<ModifySpacePropertyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySpaceProperty");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySpacePropertyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1844,6 +2524,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "ReleaseStudioProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseStudioProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 搜索位置空间
+        /// </summary>
+        /// <param name="req"><see cref="SearchPositionSpaceRequest"/></param>
+        /// <returns><see cref="SearchPositionSpaceResponse"/></returns>
+        public async Task<SearchPositionSpaceResponse> SearchPositionSpace(SearchPositionSpaceRequest req)
+        {
+             JsonResponseModel<SearchPositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchPositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchPositionSpaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 搜索位置空间
+        /// </summary>
+        /// <param name="req"><see cref="SearchPositionSpaceRequest"/></param>
+        /// <returns><see cref="SearchPositionSpaceResponse"/></returns>
+        public SearchPositionSpaceResponse SearchPositionSpaceSync(SearchPositionSpaceRequest req)
+        {
+             JsonResponseModel<SearchPositionSpaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchPositionSpace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchPositionSpaceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

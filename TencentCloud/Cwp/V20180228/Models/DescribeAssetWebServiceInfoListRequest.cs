@@ -52,7 +52,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 9:IHS
         /// 10:Tengine</li>
         /// <li>OsType- string - 是否必填：否 - Windows/linux</li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

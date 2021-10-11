@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.379</VersionPrefix>
+    <VersionPrefix>3.0.380</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,10 +54,16 @@
     <Compile Include="V20190423\Models\ControlDeviceDataResponse.cs" />
     <Compile Include="V20190423\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20190423\Models\CreateDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\CreateFenceBindRequest.cs" />
+    <Compile Include="V20190423\Models\CreateFenceBindResponse.cs" />
     <Compile Include="V20190423\Models\CreateLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\CreateLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\CreateLoRaGatewayRequest.cs" />
     <Compile Include="V20190423\Models\CreateLoRaGatewayResponse.cs" />
+    <Compile Include="V20190423\Models\CreatePositionFenceRequest.cs" />
+    <Compile Include="V20190423\Models\CreatePositionFenceResponse.cs" />
+    <Compile Include="V20190423\Models\CreatePositionSpaceRequest.cs" />
+    <Compile Include="V20190423\Models\CreatePositionSpaceResponse.cs" />
     <Compile Include="V20190423\Models\CreateProjectRequest.cs" />
     <Compile Include="V20190423\Models\CreateProjectResponse.cs" />
     <Compile Include="V20190423\Models\CreateStudioProductRequest.cs" />
@@ -70,10 +76,16 @@
     <Compile Include="V20190423\Models\DeleteDeviceResponse.cs" />
     <Compile Include="V20190423\Models\DeleteDevicesRequest.cs" />
     <Compile Include="V20190423\Models\DeleteDevicesResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteFenceBindRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteFenceBindResponse.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaGatewayRequest.cs" />
     <Compile Include="V20190423\Models\DeleteLoRaGatewayResponse.cs" />
+    <Compile Include="V20190423\Models\DeletePositionFenceRequest.cs" />
+    <Compile Include="V20190423\Models\DeletePositionFenceResponse.cs" />
+    <Compile Include="V20190423\Models\DeletePositionSpaceRequest.cs" />
+    <Compile Include="V20190423\Models\DeletePositionSpaceResponse.cs" />
     <Compile Include="V20190423\Models\DeleteProjectRequest.cs" />
     <Compile Include="V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductRequest.cs" />
@@ -84,16 +96,26 @@
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeDevicePositionListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeDevicePositionListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFenceBindListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFenceBindListResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeFenceEventListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeFenceEventListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskResponse.cs" />
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionRequest.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="V20190423\Models\DescribePositionFenceListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribePositionFenceListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20190423\Models\DescribeProjectResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeSpaceFenceEventListRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeSpaceFenceEventListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DescribeStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
@@ -109,13 +131,21 @@
     <Compile Include="V20190423\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\EventHistoryItem.cs" />
+    <Compile Include="V20190423\Models\FenceAlarmPoint.cs" />
+    <Compile Include="V20190423\Models\FenceBindDeviceItem.cs" />
+    <Compile Include="V20190423\Models\FenceBindProductItem.cs" />
+    <Compile Include="V20190423\Models\FenceEventItem.cs" />
     <Compile Include="V20190423\Models\FirmwareInfo.cs" />
     <Compile Include="V20190423\Models\GetCOSURLRequest.cs" />
     <Compile Include="V20190423\Models\GetCOSURLResponse.cs" />
     <Compile Include="V20190423\Models\GetDeviceListRequest.cs" />
     <Compile Include="V20190423\Models\GetDeviceListResponse.cs" />
+    <Compile Include="V20190423\Models\GetDeviceLocationHistoryRequest.cs" />
+    <Compile Include="V20190423\Models\GetDeviceLocationHistoryResponse.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListRequest.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListResponse.cs" />
+    <Compile Include="V20190423\Models\GetPositionSpaceListRequest.cs" />
+    <Compile Include="V20190423\Models\GetPositionSpaceListResponse.cs" />
     <Compile Include="V20190423\Models\GetProjectListRequest.cs" />
     <Compile Include="V20190423\Models\GetProjectListResponse.cs" />
     <Compile Include="V20190423\Models\GetStudioProductListRequest.cs" />
@@ -129,18 +159,30 @@
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayLocation.cs" />
+    <Compile Include="V20190423\Models\ModifyFenceBindRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyFenceBindResponse.cs" />
     <Compile Include="V20190423\Models\ModifyLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\ModifyLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyLoRaGatewayRequest.cs" />
     <Compile Include="V20190423\Models\ModifyLoRaGatewayResponse.cs" />
     <Compile Include="V20190423\Models\ModifyModelDefinitionRequest.cs" />
     <Compile Include="V20190423\Models\ModifyModelDefinitionResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyPositionFenceRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyPositionFenceResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyPositionSpaceRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyPositionSpaceResponse.cs" />
     <Compile Include="V20190423\Models\ModifyProjectRequest.cs" />
     <Compile Include="V20190423\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20190423\Models\ModifySpacePropertyRequest.cs" />
+    <Compile Include="V20190423\Models\ModifySpacePropertyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\PositionFenceInfo.cs" />
+    <Compile Include="V20190423\Models\PositionFenceItem.cs" />
+    <Compile Include="V20190423\Models\PositionItem.cs" />
+    <Compile Include="V20190423\Models\PositionSpaceInfo.cs" />
     <Compile Include="V20190423\Models\ProductEntry.cs" />
     <Compile Include="V20190423\Models\ProductModelDefinition.cs" />
     <Compile Include="V20190423\Models\ProjectEntry.cs" />
@@ -150,6 +192,8 @@
     <Compile Include="V20190423\Models\ReleaseStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ReleaseStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\SearchKeyword.cs" />
+    <Compile Include="V20190423\Models\SearchPositionSpaceRequest.cs" />
+    <Compile Include="V20190423\Models\SearchPositionSpaceResponse.cs" />
     <Compile Include="V20190423\Models\SearchStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleRequest.cs" />

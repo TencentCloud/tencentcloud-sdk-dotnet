@@ -56,7 +56,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 10:TiDB</li>
         /// <li>Proto - String - 是否必填：否 - 协议：1:TCP, 2:UDP, 3:未知</li>
         /// <li>OsType - String - 是否必填：否 - 操作系统: linux/windows</li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

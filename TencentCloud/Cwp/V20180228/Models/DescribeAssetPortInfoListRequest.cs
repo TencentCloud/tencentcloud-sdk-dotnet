@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>OsType - uint64 - 是否必填：否 - windows/linux</li>
         /// <li>RunTimeStart - String - 是否必填：否 - 运行开始时间</li>
         /// <li>RunTimeEnd - String - 是否必填：否 - 运行结束时间</li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -52,7 +52,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// 2: 20%～50%  3: 50%～80%
         /// 4: 80%～100%</li>
         /// <li>Quuid：主机Quuid</li>
-        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )
+        /// <li>Os -String 是否必填: 否 - 操作系统( DescribeMachineOsList 接口 值 )</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
