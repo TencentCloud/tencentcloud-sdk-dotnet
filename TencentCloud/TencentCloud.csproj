@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.380</VersionPrefix>
+    <VersionPrefix>3.0.381</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2400,6 +2400,8 @@
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeF.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedCCRules.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedCache.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedScdnAclGroup.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvancedScdnAclRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Authentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\AuthenticationTypeB.cs" />
@@ -2596,6 +2598,7 @@
     <Compile Include="Cdn\V20180606\Models\Quic.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
     <Compile Include="Cdn\V20180606\Models\RangeOriginPull.cs" />
+    <Compile Include="Cdn\V20180606\Models\RangeOriginPullRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
     <Compile Include="Cdn\V20180606\Models\RefererRule.cs" />
     <Compile Include="Cdn\V20180606\Models\RegionMapRelation.cs" />
@@ -5118,6 +5121,7 @@
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ParamItem.cs" />
     <Compile Include="Cynosdb\V20190107\Models\PolicyRule.cs" />
     <Compile Include="Cynosdb\V20190107\Models\QueryFilter.cs" />
     <Compile Include="Cynosdb\V20190107\Models\SecurityGroup.cs" />
@@ -13011,6 +13015,7 @@
     <Compile Include="Tcr\V20190924\Models\RenewInstanceRequest.cs" />
     <Compile Include="Tcr\V20190924\Models\RenewInstanceResponse.cs" />
     <Compile Include="Tcr\V20190924\Models\ReplicationFilter.cs" />
+    <Compile Include="Tcr\V20190924\Models\ReplicationLog.cs" />
     <Compile Include="Tcr\V20190924\Models\ReplicationRegistry.cs" />
     <Compile Include="Tcr\V20190924\Models\ReplicationRule.cs" />
     <Compile Include="Tcr\V20190924\Models\RepoInfo.cs" />

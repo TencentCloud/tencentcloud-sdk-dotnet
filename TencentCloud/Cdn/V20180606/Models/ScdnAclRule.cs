@@ -25,19 +25,19 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 匹配关键字, params | url | ip | referer | user-agent
+        /// 匹配关键字
         /// </summary>
         [JsonProperty("MatchKey")]
         public string MatchKey{ get; set; }
 
         /// <summary>
-        /// 逻辑操作符，取值 exclude, include, notequal, equal, len-less, len-equal, len-more
+        /// 逻辑操作符，取值如下
         /// </summary>
         [JsonProperty("LogiOperator")]
         public string LogiOperator{ get; set; }
 
         /// <summary>
-        /// 匹配值
+        /// 匹配值。
         /// </summary>
         [JsonProperty("MatchValue")]
         public string MatchValue{ get; set; }

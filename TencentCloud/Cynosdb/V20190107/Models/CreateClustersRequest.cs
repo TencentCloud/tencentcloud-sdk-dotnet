@@ -245,6 +245,36 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("StoragePayMode")]
         public long? StoragePayMode{ get; set; }
 
+        /// <summary>
+        /// 安全组id数组
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
+        /// <summary>
+        /// 告警策略Id数组
+        /// </summary>
+        [JsonProperty("AlarmPolicyIds")]
+        public string[] AlarmPolicyIds{ get; set; }
+
+        /// <summary>
+        /// 参数数组
+        /// </summary>
+        [JsonProperty("ClusterParams")]
+        public ParamItem[] ClusterParams{ get; set; }
+
+        /// <summary>
+        /// 交易模式，0-下单且支付，1-下单
+        /// </summary>
+        [JsonProperty("DealMode")]
+        public long? DealMode{ get; set; }
+
+        /// <summary>
+        /// 参数模版ID
+        /// </summary>
+        [JsonProperty("ParamTemplateId")]
+        public long? ParamTemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +315,11 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "AutoPause", this.AutoPause);
             this.SetParamSimple(map, prefix + "AutoPauseDelay", this.AutoPauseDelay);
             this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamArraySimple(map, prefix + "AlarmPolicyIds.", this.AlarmPolicyIds);
+            this.SetParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
+            this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
+            this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
         }
     }
 }

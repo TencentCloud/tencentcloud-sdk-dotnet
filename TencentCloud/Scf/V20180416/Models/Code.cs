@@ -31,7 +31,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosBucketName{ get; set; }
 
         /// <summary>
-        /// 对象存储对象路径
+        /// 对象存储中代码包文件路径，以/开头
         /// </summary>
         [JsonProperty("CosObjectName")]
         public string CosObjectName{ get; set; }

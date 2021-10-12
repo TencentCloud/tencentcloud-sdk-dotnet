@@ -37,13 +37,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public ScdnAclRule[] Configure{ get; set; }
 
         /// <summary>
-        /// 规则行为，一般为refuse，重定向redirect
+        /// 执行动作，intercept|redirect
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
         /// <summary>
-        /// 规则是否生效中active|inactive
+        /// 规则是否生效，active|inactive
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

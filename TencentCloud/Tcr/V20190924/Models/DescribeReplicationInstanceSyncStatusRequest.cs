@@ -42,6 +42,24 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("ReplicationRegionId")]
         public ulong? ReplicationRegionId{ get; set; }
 
+        /// <summary>
+        /// 是否显示同步日志
+        /// </summary>
+        [JsonProperty("ShowReplicationLog")]
+        public bool? ShowReplicationLog{ get; set; }
+
+        /// <summary>
+        /// 日志页号, 默认0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 最大输出条数，默认5，最大为20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "ReplicationRegistryId", this.ReplicationRegistryId);
             this.SetParamSimple(map, prefix + "ReplicationRegionId", this.ReplicationRegionId);
+            this.SetParamSimple(map, prefix + "ShowReplicationLog", this.ShowReplicationLog);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

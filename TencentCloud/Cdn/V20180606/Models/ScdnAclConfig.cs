@@ -31,7 +31,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// Acl规则组，switch为on时必填
+        /// 新版本请使用AdvancedScriptData
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ScriptData")]
@@ -44,6 +44,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ErrorPage")]
         public ScdnErrorPage ErrorPage{ get; set; }
 
+        /// <summary>
+        /// Acl规则组，switch为on时必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedScriptData")]
+        public AdvancedScdnAclGroup[] AdvancedScriptData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "ScriptData.", this.ScriptData);
             this.SetParamObj(map, prefix + "ErrorPage.", this.ErrorPage);
+            this.SetParamArrayObj(map, prefix + "AdvancedScriptData.", this.AdvancedScriptData);
         }
     }
 }

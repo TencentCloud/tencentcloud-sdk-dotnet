@@ -37,6 +37,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string ReplicationTime{ get; set; }
 
         /// <summary>
+        /// 同步日志
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReplicationLog")]
+        public ReplicationLog ReplicationLog{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "ReplicationStatus", this.ReplicationStatus);
             this.SetParamSimple(map, prefix + "ReplicationTime", this.ReplicationTime);
+            this.SetParamObj(map, prefix + "ReplicationLog.", this.ReplicationLog);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

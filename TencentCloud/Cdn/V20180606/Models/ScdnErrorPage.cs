@@ -26,6 +26,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// 状态码
+        /// 执行动作为：intercept 默认传值 403
+        /// 执行动作为：redirect 默认传值 301
         /// </summary>
         [JsonProperty("RedirectCode")]
         public long? RedirectCode{ get; set; }

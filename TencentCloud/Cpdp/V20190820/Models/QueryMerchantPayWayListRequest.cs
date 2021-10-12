@@ -37,7 +37,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OpenKey{ get; set; }
 
         /// <summary>
-        /// 支付类型，逗号分隔
+        /// 支付类型，逗号分隔。1-现金，2-主扫，3-被扫，4-JSAPI。
         /// </summary>
         [JsonProperty("PayType")]
         public string PayType{ get; set; }

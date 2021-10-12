@@ -32,14 +32,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Compress{ get; set; }
 
         /// <summary>
-        /// 根据文件后缀类型压缩
-        /// 例如 jpg、txt
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("FileExtensions")]
-        public string[] FileExtensions{ get; set; }
-
-        /// <summary>
         /// 触发压缩的文件长度最小值，单位为字节数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -63,6 +55,39 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Algorithms")]
         public string[] Algorithms{ get; set; }
 
+        /// <summary>
+        /// 根据文件后缀类型压缩
+        /// 例如 jpg、txt
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileExtensions")]
+        public string[] FileExtensions{ get; set; }
+
+        /// <summary>
+        /// 规则类型：
+        /// all：所有文件生效
+        /// file：指定文件后缀生效
+        /// directory：指定路径生效
+        /// path：指定绝对路径生效
+        /// contentType：指定Content-Type头为特定值时生效
+        /// 当指定了此字段时，FileExtensions字段不生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleType")]
+        public string RuleType{ get; set; }
+
+        /// <summary>
+        /// CacheType 对应类型下的匹配内容：
+        /// all 时填充 *
+        /// file 时填充后缀名，如 jpg、txt
+        /// directory 时填充路径，如 /xxx/test
+        /// path 时填充绝对路径，如 /xxx/test.html
+        /// contentType 时填充 text/html
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RulePaths")]
+        public string[] RulePaths{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,10 +95,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
-            this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "MinLength", this.MinLength);
             this.SetParamSimple(map, prefix + "MaxLength", this.MaxLength);
             this.SetParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
+            this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
+            this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamArraySimple(map, prefix + "RulePaths.", this.RulePaths);
         }
     }
 }

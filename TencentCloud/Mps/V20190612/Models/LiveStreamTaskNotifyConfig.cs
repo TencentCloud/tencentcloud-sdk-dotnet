@@ -48,6 +48,18 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
 
+        /// <summary>
+        /// 通知类型，默认CMQ，指定URL时HTTP回调推送到 NotifyUrl 指定的地址。
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
+
+        /// <summary>
+        /// HTTP回调地址，NotifyType为URL时必填。
+        /// </summary>
+        [JsonProperty("NotifyUrl")]
+        public string NotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CmqRegion", this.CmqRegion);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
+            this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         }
     }
 }
