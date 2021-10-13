@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PrivateIpAddresses")]
         public PrivateIpAddressSpecification[] PrivateIpAddresses{ get; set; }
 
+        /// <summary>
+        /// 网卡绑定的子机实例ID，该参数仅用于指定网卡退还IP并解绑子机的场景，如果不涉及解绑子机，请勿填写。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamArrayObj(map, prefix + "PrivateIpAddresses.", this.PrivateIpAddresses);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

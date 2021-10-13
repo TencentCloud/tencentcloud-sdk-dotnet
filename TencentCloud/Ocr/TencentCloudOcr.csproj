@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.381</VersionPrefix>
+    <VersionPrefix>3.0.382</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,7 @@
     <Compile Include="V20181119\Models\MixedInvoiceItem.cs" />
     <Compile Include="V20181119\Models\MixedInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\MixedInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
     <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
@@ -161,6 +162,8 @@
     <Compile Include="V20181119\Models\QuestionObj.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="V20181119\Models\RecognizeOnlineTaxiItineraryOCRRequest.cs" />
+    <Compile Include="V20181119\Models\RecognizeOnlineTaxiItineraryOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeTableOCRRequest.cs" />
     <Compile Include="V20181119\Models\RecognizeTableOCRResponse.cs" />
     <Compile Include="V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />

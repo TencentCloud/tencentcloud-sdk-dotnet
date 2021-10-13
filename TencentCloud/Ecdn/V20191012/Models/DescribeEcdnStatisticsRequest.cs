@@ -54,7 +54,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
         /// 1 天	 1，5，15，30，60，120，240，1440 
         /// 2 ~ 3 天	15，30，60，120，240，1440
         /// 4 ~ 7 天	30，60，120，240，1440
-        /// 8 ~ 90 天	 60，120，240，1440
+        /// 8 ~ 31 天	 60，120，240，1440
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

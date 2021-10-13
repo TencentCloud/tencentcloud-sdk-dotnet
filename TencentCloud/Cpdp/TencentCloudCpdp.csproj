@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.381</VersionPrefix>
+    <VersionPrefix>3.0.382</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -179,6 +179,7 @@
     <Compile Include="V20190820\Models\Order.cs" />
     <Compile Include="V20190820\Models\OrderItem.cs" />
     <Compile Include="V20190820\Models\OrganizationInfo.cs" />
+    <Compile Include="V20190820\Models\PayOrderResult.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingResponse.cs" />
     <Compile Include="V20190820\Models\QueryAcctInfoListRequest.cs" />
@@ -250,6 +251,9 @@
     <Compile Include="V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="V20190820\Models\QueryOrderRequest.cs" />
     <Compile Include="V20190820\Models\QueryOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOrderStatusRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOrderStatusResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOrderStatusResult.cs" />
     <Compile Include="V20190820\Models\QueryOutwardOrderData.cs" />
     <Compile Include="V20190820\Models\QueryOutwardOrderRequest.cs" />
     <Compile Include="V20190820\Models\QueryOutwardOrderResponse.cs" />
@@ -292,9 +296,12 @@
     <Compile Include="V20190820\Models\RefundMemberTransactionResponse.cs" />
     <Compile Include="V20190820\Models\RefundOrderRequest.cs" />
     <Compile Include="V20190820\Models\RefundOrderResponse.cs" />
+    <Compile Include="V20190820\Models\RefundOrderResult.cs" />
     <Compile Include="V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="V20190820\Models\RefundRequest.cs" />
     <Compile Include="V20190820\Models\RefundResponse.cs" />
+    <Compile Include="V20190820\Models\RefundTlinxOrderRequest.cs" />
+    <Compile Include="V20190820\Models\RefundTlinxOrderResponse.cs" />
     <Compile Include="V20190820\Models\RegisterBehaviorRequest.cs" />
     <Compile Include="V20190820\Models\RegisterBehaviorResponse.cs" />
     <Compile Include="V20190820\Models\RegisterBillRequest.cs" />
@@ -333,6 +340,8 @@
     <Compile Include="V20190820\Models\UnifiedOrderInSubOrderList.cs" />
     <Compile Include="V20190820\Models\UnifiedOrderRequest.cs" />
     <Compile Include="V20190820\Models\UnifiedOrderResponse.cs" />
+    <Compile Include="V20190820\Models\UnifiedTlinxOrderRequest.cs" />
+    <Compile Include="V20190820\Models\UnifiedTlinxOrderResponse.cs" />
     <Compile Include="V20190820\Models\UploadExternalAnchorInfoRequest.cs" />
     <Compile Include="V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxListRequest.cs" />

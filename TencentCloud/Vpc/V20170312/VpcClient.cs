@@ -5435,6 +5435,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询专线绑定NAT的路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayDirectConnectGatewayRouteRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayDirectConnectGatewayRouteResponse"/></returns>
+        public async Task<DescribeNatGatewayDirectConnectGatewayRouteResponse> DescribeNatGatewayDirectConnectGatewayRoute(DescribeNatGatewayDirectConnectGatewayRouteRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNatGatewayDirectConnectGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询专线绑定NAT的路由
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNatGatewayDirectConnectGatewayRouteRequest"/></param>
+        /// <returns><see cref="DescribeNatGatewayDirectConnectGatewayRouteResponse"/></returns>
+        public DescribeNatGatewayDirectConnectGatewayRouteResponse DescribeNatGatewayDirectConnectGatewayRouteSync(DescribeNatGatewayDirectConnectGatewayRouteRequest req)
+        {
+             JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNatGatewayDirectConnectGatewayRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatGatewayDirectConnectGatewayRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeNatGatewaySourceIpTranslationNatRules）用于查询NAT网关SNAT转发规则对象数组。
         /// </summary>
         /// <param name="req"><see cref="DescribeNatGatewaySourceIpTranslationNatRulesRequest"/></param>
@@ -9806,6 +9846,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "NotifyRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<NotifyRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新专线直连nat路由，更新nat到专线的路由表
+        /// </summary>
+        /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
+        /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>
+        public async Task<RefreshDirectConnectGatewayRouteToNatGatewayResponse> RefreshDirectConnectGatewayRouteToNatGateway(RefreshDirectConnectGatewayRouteToNatGatewayRequest req)
+        {
+             JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefreshDirectConnectGatewayRouteToNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新专线直连nat路由，更新nat到专线的路由表
+        /// </summary>
+        /// <param name="req"><see cref="RefreshDirectConnectGatewayRouteToNatGatewayRequest"/></param>
+        /// <returns><see cref="RefreshDirectConnectGatewayRouteToNatGatewayResponse"/></returns>
+        public RefreshDirectConnectGatewayRouteToNatGatewayResponse RefreshDirectConnectGatewayRouteToNatGatewaySync(RefreshDirectConnectGatewayRouteToNatGatewayRequest req)
+        {
+             JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefreshDirectConnectGatewayRouteToNatGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshDirectConnectGatewayRouteToNatGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

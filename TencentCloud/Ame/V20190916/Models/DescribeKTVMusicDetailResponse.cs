@@ -43,6 +43,12 @@ namespace TencentCloud.Ame.V20190916.Models
         public string LyricsUrl{ get; set; }
 
         /// <summary>
+        /// 歌曲规格信息列表
+        /// </summary>
+        [JsonProperty("DefinitionInfoSet")]
+        public KTVMusicDefinitionInfo[] DefinitionInfoSet{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
             this.SetParamSimple(map, prefix + "PlayToken", this.PlayToken);
             this.SetParamSimple(map, prefix + "LyricsUrl", this.LyricsUrl);
+            this.SetParamArrayObj(map, prefix + "DefinitionInfoSet.", this.DefinitionInfoSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

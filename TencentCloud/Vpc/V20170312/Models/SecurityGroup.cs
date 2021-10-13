@@ -66,6 +66,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("TagSet")]
         public Tag[] TagSet{ get; set; }
 
+        /// <summary>
+        /// 安全组更新时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

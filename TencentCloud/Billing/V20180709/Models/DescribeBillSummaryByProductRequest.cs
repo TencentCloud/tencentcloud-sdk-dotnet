@@ -42,6 +42,17 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayerUin")]
         public string PayerUin{ get; set; }
 
+        /// <summary>
+        /// 款项类别，与L0账单上的汇总类别对应。
+        /// 此参数自账单3.0（即2021-05）之后开始生效。
+        /// 枚举值：
+        /// consume-消费
+        /// refund-退款
+        /// adjustment-调账
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +62,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "PayerUin", this.PayerUin);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
         }
     }
 }

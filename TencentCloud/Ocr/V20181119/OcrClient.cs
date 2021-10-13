@@ -2283,6 +2283,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>
+        /// <returns><see cref="RecognizeOnlineTaxiItineraryOCRResponse"/></returns>
+        public async Task<RecognizeOnlineTaxiItineraryOCRResponse> RecognizeOnlineTaxiItineraryOCR(RecognizeOnlineTaxiItineraryOCRRequest req)
+        {
+             JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeOnlineTaxiItineraryOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>
+        /// <returns><see cref="RecognizeOnlineTaxiItineraryOCRResponse"/></returns>
+        public RecognizeOnlineTaxiItineraryOCRResponse RecognizeOnlineTaxiItineraryOCRSync(RecognizeOnlineTaxiItineraryOCRRequest req)
+        {
+             JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeOnlineTaxiItineraryOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持中英文图片/ PDF内常规表格、无线表格、多表格的检测和识别，支持日文有线表格识别，返回每个单元格的文字内容，支持旋转的表格图片识别，且支持将识别结果保存为 Excel 格式。
         /// </summary>
         /// <param name="req"><see cref="RecognizeTableOCRRequest"/></param>

@@ -31,13 +31,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string CcnId{ get; set; }
 
         /// <summary>
-        /// CCN名称，最大长度不能超过60个字节。
+        /// CCN名称，最大长度不能超过60个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
         /// </summary>
         [JsonProperty("CcnName")]
         public string CcnName{ get; set; }
 
         /// <summary>
-        /// CCN描述信息，最大长度不能超过100个字节。
+        /// CCN描述信息，最大长度不能超过100个字节，限制：CcnName和CcnDescription必须至少选择一个参数输入，否则报错。
         /// </summary>
         [JsonProperty("CcnDescription")]
         public string CcnDescription{ get; set; }

@@ -73,6 +73,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("TopicNum")]
         public long? TopicNum{ get; set; }
 
+        /// <summary>
+        /// 消息保留策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionPolicy")]
+        public RetentionPolicy RetentionPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
+            this.SetParamObj(map, prefix + "RetentionPolicy.", this.RetentionPolicy);
         }
     }
 }

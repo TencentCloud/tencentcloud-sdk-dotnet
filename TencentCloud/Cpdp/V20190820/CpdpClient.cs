@@ -2951,6 +2951,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云支付-查询订单付款状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryOrderStatusRequest"/></param>
+        /// <returns><see cref="QueryOrderStatusResponse"/></returns>
+        public async Task<QueryOrderStatusResponse> QueryOrderStatus(QueryOrderStatusRequest req)
+        {
+             JsonResponseModel<QueryOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云支付-查询订单付款状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryOrderStatusRequest"/></param>
+        /// <returns><see cref="QueryOrderStatusResponse"/></returns>
+        public QueryOrderStatusResponse QueryOrderStatusSync(QueryOrderStatusRequest req)
+        {
+             JsonResponseModel<QueryOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 跨境-查询汇出结果
         /// </summary>
         /// <param name="req"><see cref="QueryOutwardOrderRequest"/></param>
@@ -3631,6 +3671,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云支付Tlinx退款接口
+        /// </summary>
+        /// <param name="req"><see cref="RefundTlinxOrderRequest"/></param>
+        /// <returns><see cref="RefundTlinxOrderResponse"/></returns>
+        public async Task<RefundTlinxOrderResponse> RefundTlinxOrder(RefundTlinxOrderRequest req)
+        {
+             JsonResponseModel<RefundTlinxOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundTlinxOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundTlinxOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云支付Tlinx退款接口
+        /// </summary>
+        /// <param name="req"><see cref="RefundTlinxOrderRequest"/></param>
+        /// <returns><see cref="RefundTlinxOrderResponse"/></returns>
+        public RefundTlinxOrderResponse RefundTlinxOrderSync(RefundTlinxOrderRequest req)
+        {
+             JsonResponseModel<RefundTlinxOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundTlinxOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundTlinxOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 商户查询是否签约和签约行为上报
         /// </summary>
         /// <param name="req"><see cref="RegisterBehaviorRequest"/></param>
@@ -4142,6 +4222,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "UnifiedOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnifiedOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云支付Tlinx统一下单接口
+        /// </summary>
+        /// <param name="req"><see cref="UnifiedTlinxOrderRequest"/></param>
+        /// <returns><see cref="UnifiedTlinxOrderResponse"/></returns>
+        public async Task<UnifiedTlinxOrderResponse> UnifiedTlinxOrder(UnifiedTlinxOrderRequest req)
+        {
+             JsonResponseModel<UnifiedTlinxOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnifiedTlinxOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnifiedTlinxOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云支付Tlinx统一下单接口
+        /// </summary>
+        /// <param name="req"><see cref="UnifiedTlinxOrderRequest"/></param>
+        /// <returns><see cref="UnifiedTlinxOrderResponse"/></returns>
+        public UnifiedTlinxOrderResponse UnifiedTlinxOrderSync(UnifiedTlinxOrderRequest req)
+        {
+             JsonResponseModel<UnifiedTlinxOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnifiedTlinxOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnifiedTlinxOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.381</VersionPrefix>
+    <VersionPrefix>3.0.382</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,7 @@
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
     <Compile Include="Ame\V20190916\Models\Item.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicBaseInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\KTVMusicDefinitionInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVPlaylistBaseInfo.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
     <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesRequest.cs" />
@@ -4043,6 +4044,7 @@
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrderItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrganizationInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\PayOrderResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctInfoListRequest.cs" />
@@ -4114,6 +4116,9 @@
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOrderStatusRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOrderStatusResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOrderStatusResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOutwardOrderData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOutwardOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOutwardOrderResponse.cs" />
@@ -4156,9 +4161,12 @@
     <Compile Include="Cpdp\V20190820\Models\RefundMemberTransactionResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundOrderResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundOutSubOrderRefundList.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RefundResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundTlinxOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\RefundTlinxOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBehaviorRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBehaviorResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\RegisterBillRequest.cs" />
@@ -4197,6 +4205,8 @@
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderInSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UnifiedTlinxOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UnifiedTlinxOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxListRequest.cs" />
@@ -10646,6 +10656,7 @@
     <Compile Include="Ocr\V20181119\Models\MixedInvoiceItem.cs" />
     <Compile Include="Ocr\V20181119\Models\MixedInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\MixedInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="Ocr\V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\OrgCodeCertOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\PassportOCRRequest.cs" />
@@ -10667,6 +10678,8 @@
     <Compile Include="Ocr\V20181119\Models\QuestionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeThaiIDCardOCRRequest.cs" />
@@ -15540,6 +15553,8 @@
     <Compile Include="Vpc\V20170312\Models\DescribeLocalGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDestinationIpPortTranslationNatRulesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDirectConnectGatewayRouteRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DescribeNatGatewayDirectConnectGatewayRouteResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaySourceIpTranslationNatRulesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DescribeNatGatewaysRequest.cs" />
@@ -15618,6 +15633,7 @@
     <Compile Include="Vpc\V20170312\Models\DhcpIp.cs" />
     <Compile Include="Vpc\V20170312\Models\DirectConnectGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\DirectConnectGatewayCcnRoute.cs" />
+    <Compile Include="Vpc\V20170312\Models\DirectConnectSubnet.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableGatewayFlowMonitorRequest.cs" />
@@ -15775,6 +15791,7 @@
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayCcnRoutesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\ModifyVpnGatewayRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\NatDirectConnectGatewayRoute.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGateway.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayAddress.cs" />
     <Compile Include="Vpc\V20170312\Models\NatGatewayDestinationIpPortTranslationNatRule.cs" />
@@ -15793,6 +15810,8 @@
     <Compile Include="Vpc\V20170312\Models\ProductQuota.cs" />
     <Compile Include="Vpc\V20170312\Models\Quota.cs" />
     <Compile Include="Vpc\V20170312\Models\ReferredSecurityGroup.cs" />
+    <Compile Include="Vpc\V20170312\Models\RefreshDirectConnectGatewayRouteToNatGatewayRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\RefreshDirectConnectGatewayRouteToNatGatewayResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\RejectAttachCcnInstancesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\RejectAttachCcnInstancesResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\ReleaseAddressesRequest.cs" />
