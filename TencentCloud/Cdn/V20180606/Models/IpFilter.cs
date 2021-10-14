@@ -57,6 +57,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterRules")]
         public IpFilterPathRule[] FilterRules{ get; set; }
 
+        /// <summary>
+        /// IP 黑白名单验证失败时返回的 HTTP Code
+        /// 合法值: 400~499
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +75,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArrayObj(map, prefix + "FilterRules.", this.FilterRules);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
         }
     }
 }

@@ -1429,6 +1429,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 查询在SCDN IP安全策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeScdnIpStrategyResponse"/></returns>
+        public async Task<DescribeScdnIpStrategyResponse> DescribeScdnIpStrategy(DescribeScdnIpStrategyRequest req)
+        {
+             JsonResponseModel<DescribeScdnIpStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScdnIpStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnIpStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询在SCDN IP安全策略
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnIpStrategyRequest"/></param>
+        /// <returns><see cref="DescribeScdnIpStrategyResponse"/></returns>
+        public DescribeScdnIpStrategyResponse DescribeScdnIpStrategySync(DescribeScdnIpStrategyRequest req)
+        {
+             JsonResponseModel<DescribeScdnIpStrategyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScdnIpStrategy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnIpStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取SCDN的Top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnTopDataRequest"/></param>

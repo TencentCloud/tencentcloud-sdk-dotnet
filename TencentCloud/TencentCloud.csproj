@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.382</VersionPrefix>
+    <VersionPrefix>3.0.383</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1702,6 +1702,8 @@
     <Compile Include="Cam\V20190116\Models\CreateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateServiceLinkedRoleResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
@@ -1730,6 +1732,8 @@
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSubAccountsRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSubAccountsResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DetachGroupPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DetachRolePolicyRequest.cs" />
@@ -1829,6 +1833,8 @@
     <Compile Include="Cam\V20190116\Models\UpdateSAMLProviderResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateUserSAMLConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\WeChatWorkSubAccount.cs" />
     <Compile Include="Captcha\V20190722\CaptchaClient.cs" />
     <Compile Include="Captcha\V20190722\Models\CaptchaOperDataInterceptUnit.cs" />
@@ -2498,6 +2504,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnIpStrategyRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnIpStrategyResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesRequest.cs" />
@@ -2624,6 +2632,8 @@
     <Compile Include="Cdn\V20180606\Models\ScdnDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnEventLogConditions.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnIpStrategy.cs" />
+    <Compile Include="Cdn\V20180606\Models\ScdnIpStrategyFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnLogTaskDetail.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnSevenLayerRules.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnTopData.cs" />
@@ -5963,8 +5973,12 @@
     <Compile Include="Domain\V20180808\Models\ContactInfo.cs" />
     <Compile Include="Domain\V20180808\Models\CreateDomainBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\CreatePhoneEmailRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\CreatePhoneEmailResponse.cs" />
     <Compile Include="Domain\V20180808\Models\CreateTemplateRequest.cs" />
     <Compile Include="Domain\V20180808\Models\CreateTemplateResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DeletePhoneEmailRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DeletePhoneEmailResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DeleteTemplateRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DeleteTemplateResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeBatchOperationLogDetailsRequest.cs" />
@@ -5977,6 +5991,8 @@
     <Compile Include="Domain\V20180808\Models\DescribeDomainNameListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribePhoneEmailListRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribePhoneEmailListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateRequest.cs" />
@@ -5989,9 +6005,12 @@
     <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\PhoneEmailData.cs" />
     <Compile Include="Domain\V20180808\Models\PriceInfo.cs" />
     <Compile Include="Domain\V20180808\Models\RenewDomainBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\SendPhoneEmailCodeRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\SendPhoneEmailCodeResponse.cs" />
     <Compile Include="Domain\V20180808\Models\SetDomainAutoRenewRequest.cs" />
     <Compile Include="Domain\V20180808\Models\SetDomainAutoRenewResponse.cs" />
     <Compile Include="Domain\V20180808\Models\TemplateInfo.cs" />
@@ -8359,6 +8378,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteStudioProductRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteStudioProductResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicPolicyRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
@@ -8387,6 +8408,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\DescribeSpaceFenceEventListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeStudioProductRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeStudioProductResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeTopicPolicyRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeviceData.cs" />
@@ -8425,6 +8448,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ListEventHistoryResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ListFirmwaresRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ListFirmwaresResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ListTopicPolicyRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ListTopicPolicyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\LoRaFrequencyEntry.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\LoRaGatewayLocation.cs" />
@@ -8446,6 +8471,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ModifySpacePropertyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyStudioProductRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyStudioProductResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ModifyTopicPolicyRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ModifyTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PositionFenceInfo.cs" />
@@ -8467,6 +8494,7 @@
     <Compile Include="Iotexplorer\V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\SearchTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\SearchTopicRuleResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\TopicItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRule.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRulePayload.cs" />
@@ -11940,6 +11968,7 @@
     <Compile Include="Ssl\V20191205\Models\DeleteCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteManagerRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DeleteManagerResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\DeployedResources.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateDetailResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateOperateLogsRequest.cs" />
@@ -11948,6 +11977,8 @@
     <Compile Include="Ssl\V20191205\Models\DescribeCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificatesRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeCertificatesResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeDeployedResourcesRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\DescribeDeployedResourcesResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeManagerDetailRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeManagerDetailResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DescribeManagersRequest.cs" />

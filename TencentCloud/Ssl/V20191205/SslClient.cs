@@ -533,6 +533,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 证书查询关联资源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployedResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDeployedResourcesResponse"/></returns>
+        public async Task<DescribeDeployedResourcesResponse> DescribeDeployedResources(DescribeDeployedResourcesRequest req)
+        {
+             JsonResponseModel<DescribeDeployedResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeployedResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployedResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 证书查询关联资源
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeployedResourcesRequest"/></param>
+        /// <returns><see cref="DescribeDeployedResourcesResponse"/></returns>
+        public DescribeDeployedResourcesResponse DescribeDeployedResourcesSync(DescribeDeployedResourcesRequest req)
+        {
+             JsonResponseModel<DescribeDeployedResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeployedResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployedResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询管理人详情
         /// </summary>
         /// <param name="req"><see cref="DescribeManagerDetailRequest"/></param>

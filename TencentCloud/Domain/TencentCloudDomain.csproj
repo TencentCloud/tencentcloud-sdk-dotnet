@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B15FC666-859E-397F-91C6-A33130097096}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.382</VersionPrefix>
+    <VersionPrefix>3.0.383</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,8 +56,12 @@
     <Compile Include="V20180808\Models\ContactInfo.cs" />
     <Compile Include="V20180808\Models\CreateDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\CreateDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\CreatePhoneEmailRequest.cs" />
+    <Compile Include="V20180808\Models\CreatePhoneEmailResponse.cs" />
     <Compile Include="V20180808\Models\CreateTemplateRequest.cs" />
     <Compile Include="V20180808\Models\CreateTemplateResponse.cs" />
+    <Compile Include="V20180808\Models\DeletePhoneEmailRequest.cs" />
+    <Compile Include="V20180808\Models\DeletePhoneEmailResponse.cs" />
     <Compile Include="V20180808\Models\DeleteTemplateRequest.cs" />
     <Compile Include="V20180808\Models\DeleteTemplateResponse.cs" />
     <Compile Include="V20180808\Models\DescribeBatchOperationLogDetailsRequest.cs" />
@@ -70,6 +74,8 @@
     <Compile Include="V20180808\Models\DescribeDomainNameListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeDomainPriceListRequest.cs" />
     <Compile Include="V20180808\Models\DescribeDomainPriceListResponse.cs" />
+    <Compile Include="V20180808\Models\DescribePhoneEmailListRequest.cs" />
+    <Compile Include="V20180808\Models\DescribePhoneEmailListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateListRequest.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateListResponse.cs" />
     <Compile Include="V20180808\Models\DescribeTemplateRequest.cs" />
@@ -82,9 +88,12 @@
     <Compile Include="V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
     <Compile Include="V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
     <Compile Include="V20180808\Models\ModifyDomainOwnerBatchResponse.cs" />
+    <Compile Include="V20180808\Models\PhoneEmailData.cs" />
     <Compile Include="V20180808\Models\PriceInfo.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchRequest.cs" />
     <Compile Include="V20180808\Models\RenewDomainBatchResponse.cs" />
+    <Compile Include="V20180808\Models\SendPhoneEmailCodeRequest.cs" />
+    <Compile Include="V20180808\Models\SendPhoneEmailCodeResponse.cs" />
     <Compile Include="V20180808\Models\SetDomainAutoRenewRequest.cs" />
     <Compile Include="V20180808\Models\SetDomainAutoRenewResponse.cs" />
     <Compile Include="V20180808\Models\TemplateInfo.cs" />

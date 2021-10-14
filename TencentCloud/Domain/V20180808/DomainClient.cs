@@ -213,6 +213,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 此接口用于创建有效的手机、邮箱
+        /// </summary>
+        /// <param name="req"><see cref="CreatePhoneEmailRequest"/></param>
+        /// <returns><see cref="CreatePhoneEmailResponse"/></returns>
+        public async Task<CreatePhoneEmailResponse> CreatePhoneEmail(CreatePhoneEmailRequest req)
+        {
+             JsonResponseModel<CreatePhoneEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePhoneEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePhoneEmailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于创建有效的手机、邮箱
+        /// </summary>
+        /// <param name="req"><see cref="CreatePhoneEmailRequest"/></param>
+        /// <returns><see cref="CreatePhoneEmailResponse"/></returns>
+        public CreatePhoneEmailResponse CreatePhoneEmailSync(CreatePhoneEmailRequest req)
+        {
+             JsonResponseModel<CreatePhoneEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePhoneEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePhoneEmailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 ( CreateTemplate ) 用于添加域名信息模板 。
         /// </summary>
         /// <param name="req"><see cref="CreateTemplateRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "CreateTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于删除已验证的手机邮箱
+        /// </summary>
+        /// <param name="req"><see cref="DeletePhoneEmailRequest"/></param>
+        /// <returns><see cref="DeletePhoneEmailResponse"/></returns>
+        public async Task<DeletePhoneEmailResponse> DeletePhoneEmail(DeletePhoneEmailRequest req)
+        {
+             JsonResponseModel<DeletePhoneEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePhoneEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePhoneEmailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于删除已验证的手机邮箱
+        /// </summary>
+        /// <param name="req"><see cref="DeletePhoneEmailRequest"/></param>
+        /// <returns><see cref="DeletePhoneEmailResponse"/></returns>
+        public DeletePhoneEmailResponse DeletePhoneEmailSync(DeletePhoneEmailRequest req)
+        {
+             JsonResponseModel<DeletePhoneEmailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePhoneEmail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePhoneEmailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -493,6 +573,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 本接口用于获取已验证的手机邮箱列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePhoneEmailListRequest"/></param>
+        /// <returns><see cref="DescribePhoneEmailListResponse"/></returns>
+        public async Task<DescribePhoneEmailListResponse> DescribePhoneEmailList(DescribePhoneEmailListRequest req)
+        {
+             JsonResponseModel<DescribePhoneEmailListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePhoneEmailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePhoneEmailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取已验证的手机邮箱列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePhoneEmailListRequest"/></param>
+        /// <returns><see cref="DescribePhoneEmailListResponse"/></returns>
+        public DescribePhoneEmailListResponse DescribePhoneEmailListSync(DescribePhoneEmailListRequest req)
+        {
+             JsonResponseModel<DescribePhoneEmailListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePhoneEmailList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePhoneEmailListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeTemplate) 用于获取模板信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplateRequest"/></param>
@@ -684,6 +804,46 @@ namespace TencentCloud.Domain.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "RenewDomainBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewDomainBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于发送手机邮箱验证码。
+        /// </summary>
+        /// <param name="req"><see cref="SendPhoneEmailCodeRequest"/></param>
+        /// <returns><see cref="SendPhoneEmailCodeResponse"/></returns>
+        public async Task<SendPhoneEmailCodeResponse> SendPhoneEmailCode(SendPhoneEmailCodeRequest req)
+        {
+             JsonResponseModel<SendPhoneEmailCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SendPhoneEmailCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendPhoneEmailCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于发送手机邮箱验证码。
+        /// </summary>
+        /// <param name="req"><see cref="SendPhoneEmailCodeRequest"/></param>
+        /// <returns><see cref="SendPhoneEmailCodeResponse"/></returns>
+        public SendPhoneEmailCodeResponse SendPhoneEmailCodeSync(SendPhoneEmailCodeRequest req)
+        {
+             JsonResponseModel<SendPhoneEmailCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SendPhoneEmailCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendPhoneEmailCodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

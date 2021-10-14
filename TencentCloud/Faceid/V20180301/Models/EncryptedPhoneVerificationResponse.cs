@@ -32,6 +32,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         /// 
         /// 【不收费结果码】
         /// -7: 身份证号码有误
+        /// -8: 参数错误
         /// -9: 没有记录
         /// -11: 验证中心服务繁忙
         /// </summary>

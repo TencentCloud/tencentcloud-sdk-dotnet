@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.382</VersionPrefix>
+    <VersionPrefix>3.0.383</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,8 @@
     <Compile Include="V20190423\Models\DeleteProjectResponse.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DeleteStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\DeleteTopicPolicyRequest.cs" />
+    <Compile Include="V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
@@ -118,6 +120,8 @@
     <Compile Include="V20190423\Models\DescribeSpaceFenceEventListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\DescribeStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeTopicPolicyRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DescribeTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\DeviceData.cs" />
@@ -156,6 +160,8 @@
     <Compile Include="V20190423\Models\ListEventHistoryResponse.cs" />
     <Compile Include="V20190423\Models\ListFirmwaresRequest.cs" />
     <Compile Include="V20190423\Models\ListFirmwaresResponse.cs" />
+    <Compile Include="V20190423\Models\ListTopicPolicyRequest.cs" />
+    <Compile Include="V20190423\Models\ListTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\LoRaFrequencyEntry.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayItem.cs" />
     <Compile Include="V20190423\Models\LoRaGatewayLocation.cs" />
@@ -177,6 +183,8 @@
     <Compile Include="V20190423\Models\ModifySpacePropertyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductRequest.cs" />
     <Compile Include="V20190423\Models\ModifyStudioProductResponse.cs" />
+    <Compile Include="V20190423\Models\ModifyTopicPolicyRequest.cs" />
+    <Compile Include="V20190423\Models\ModifyTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\ModifyTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\PositionFenceInfo.cs" />
@@ -198,6 +206,7 @@
     <Compile Include="V20190423\Models\SearchStudioProductResponse.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\SearchTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\TopicItem.cs" />
     <Compile Include="V20190423\Models\TopicRule.cs" />
     <Compile Include="V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="V20190423\Models\TopicRulePayload.cs" />

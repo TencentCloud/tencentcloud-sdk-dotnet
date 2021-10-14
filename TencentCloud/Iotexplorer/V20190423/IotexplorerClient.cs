@@ -933,6 +933,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（DeleteTopicPolicy）用于删除Topic 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTopicPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTopicPolicyResponse"/></returns>
+        public async Task<DeleteTopicPolicyResponse> DeleteTopicPolicy(DeleteTopicPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteTopicPolicy）用于删除Topic 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTopicPolicyRequest"/></param>
+        /// <returns><see cref="DeleteTopicPolicyResponse"/></returns>
+        public DeleteTopicPolicyResponse DeleteTopicPolicySync(DeleteTopicPolicyRequest req)
+        {
+             JsonResponseModel<DeleteTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteTopicRuleRequest"/></param>
@@ -1484,6 +1524,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStudioProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStudioProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
+        /// <returns><see cref="DescribeTopicPolicyResponse"/></returns>
+        public async Task<DescribeTopicPolicyResponse> DescribeTopicPolicy(DescribeTopicPolicyRequest req)
+        {
+             JsonResponseModel<DescribeTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTopicPolicy）用于查看Topic详细信息 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopicPolicyRequest"/></param>
+        /// <returns><see cref="DescribeTopicPolicyResponse"/></returns>
+        public DescribeTopicPolicyResponse DescribeTopicPolicySync(DescribeTopicPolicyRequest req)
+        {
+             JsonResponseModel<DescribeTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopicPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +2133,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 本接口（ListTopicPolicy）用于获取Topic列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTopicPolicyRequest"/></param>
+        /// <returns><see cref="ListTopicPolicyResponse"/></returns>
+        public async Task<ListTopicPolicyResponse> ListTopicPolicy(ListTopicPolicyRequest req)
+        {
+             JsonResponseModel<ListTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListTopicPolicy）用于获取Topic列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTopicPolicyRequest"/></param>
+        /// <returns><see cref="ListTopicPolicyResponse"/></returns>
+        public ListTopicPolicyResponse ListTopicPolicySync(ListTopicPolicyRequest req)
+        {
+             JsonResponseModel<ListTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新围栏绑定信息
         /// </summary>
         /// <param name="req"><see cref="ModifyFenceBindRequest"/></param>
@@ -2404,6 +2524,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "ModifyStudioProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStudioProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTopicPolicy）用于更新Topic信息 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicPolicyRequest"/></param>
+        /// <returns><see cref="ModifyTopicPolicyResponse"/></returns>
+        public async Task<ModifyTopicPolicyResponse> ModifyTopicPolicy(ModifyTopicPolicyRequest req)
+        {
+             JsonResponseModel<ModifyTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UpdateTopicPolicy）用于更新Topic信息 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTopicPolicyRequest"/></param>
+        /// <returns><see cref="ModifyTopicPolicyResponse"/></returns>
+        public ModifyTopicPolicyResponse ModifyTopicPolicySync(ModifyTopicPolicyRequest req)
+        {
+             JsonResponseModel<ModifyTopicPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTopicPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTopicPolicyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
