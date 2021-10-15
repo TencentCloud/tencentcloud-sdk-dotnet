@@ -30,6 +30,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 请求源带协议头，形如：https://console.cloud.tencent.com
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
         }
     }
 }

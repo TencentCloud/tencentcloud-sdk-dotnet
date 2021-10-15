@@ -84,8 +84,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// ADJUSTING表示配置变更中；
         /// ISOLATING表示隔离中；
         /// ISOLATED表示已隔离；
-        /// CLONING表示复制中；
-        /// UNKNOWN表示未知状态。
+        /// CLONING表示复制中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -218,7 +217,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型：normal、cn2
+        /// 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]
@@ -237,6 +236,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
+
+        /// <summary>
+        /// IP列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPList")]
+        public IPDetail[] IPList{ get; set; }
 
 
         /// <summary>
@@ -275,6 +281,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
+            this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
         }
     }
 }

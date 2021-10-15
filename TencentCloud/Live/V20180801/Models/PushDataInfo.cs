@@ -55,7 +55,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? VideoFps{ get; set; }
 
         /// <summary>
-        /// 推流视频码率，单位: bps。
+        /// 推流视频码率，单位: Kbps。
         /// </summary>
         [JsonProperty("VideoSpeed")]
         public ulong? VideoSpeed{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Live.V20180801.Models
         public ulong? AudioFps{ get; set; }
 
         /// <summary>
-        /// 推流音频码率，单位: bps。
+        /// 推流音频码率，单位: Kbps。
         /// </summary>
         [JsonProperty("AudioSpeed")]
         public ulong? AudioSpeed{ get; set; }

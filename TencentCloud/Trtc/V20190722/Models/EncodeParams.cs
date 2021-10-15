@@ -97,6 +97,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("AudioCodec")]
         public ulong? AudioCodec{ get; set; }
 
+        /// <summary>
+        /// 混流-输出流背景图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。BackgroundImageUrl和BackgroundImageId参数都填时，以BackgroundImageUrl为准。图片大小限制不超过10MB。
+        /// </summary>
+        [JsonProperty("BackgroundImageUrl")]
+        public string BackgroundImageUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "BackgroundColor", this.BackgroundColor);
             this.SetParamSimple(map, prefix + "BackgroundImageId", this.BackgroundImageId);
             this.SetParamSimple(map, prefix + "AudioCodec", this.AudioCodec);
+            this.SetParamSimple(map, prefix + "BackgroundImageUrl", this.BackgroundImageUrl);
         }
     }
 }

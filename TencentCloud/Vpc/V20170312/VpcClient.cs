@@ -177,6 +177,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 增加模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
+        /// <returns><see cref="AddTemplateMemberResponse"/></returns>
+        public async Task<AddTemplateMemberResponse> AddTemplateMember(AddTemplateMemberRequest req)
+        {
+             JsonResponseModel<AddTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddTemplateMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增加模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="AddTemplateMemberRequest"/></param>
+        /// <returns><see cref="AddTemplateMemberResponse"/></returns>
+        public AddTemplateMemberResponse AddTemplateMemberSync(AddTemplateMemberRequest req)
+        {
+             JsonResponseModel<AddTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddTemplateMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
         /// * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
         /// * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。
@@ -3808,6 +3848,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteSubnet");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSubnetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
+        /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
+        public async Task<DeleteTemplateMemberResponse> DeleteTemplateMember(DeleteTemplateMemberRequest req)
+        {
+             JsonResponseModel<DeleteTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTemplateMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteTemplateMemberRequest"/></param>
+        /// <returns><see cref="DeleteTemplateMemberResponse"/></returns>
+        public DeleteTemplateMemberResponse DeleteTemplateMemberSync(DeleteTemplateMemberRequest req)
+        {
+             JsonResponseModel<DeleteTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTemplateMemberResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -9484,6 +9564,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubnetAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubnetAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
+        /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>
+        public async Task<ModifyTemplateMemberResponse> ModifyTemplateMember(ModifyTemplateMemberRequest req)
+        {
+             JsonResponseModel<ModifyTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTemplateMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模版对象中的IP地址、协议端口、IP地址组、协议端口组。当前仅支持北京、泰国、北美地域请求。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyTemplateMemberRequest"/></param>
+        /// <returns><see cref="ModifyTemplateMemberResponse"/></returns>
+        public ModifyTemplateMemberResponse ModifyTemplateMemberSync(ModifyTemplateMemberRequest req)
+        {
+             JsonResponseModel<ModifyTemplateMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyTemplateMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTemplateMemberResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

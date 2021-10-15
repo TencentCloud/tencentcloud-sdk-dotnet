@@ -36,6 +36,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("DiagnoseLink")]
         public string DiagnoseLink{ get; set; }
 
+        /// <summary>
+        /// 请求源带协议头，形如：https://console.cloud.tencent.com
+        /// </summary>
+        [JsonProperty("Origin")]
+        public string Origin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "KeyWords", this.KeyWords);
             this.SetParamSimple(map, prefix + "DiagnoseLink", this.DiagnoseLink);
+            this.SetParamSimple(map, prefix + "Origin", this.Origin);
         }
     }
 }

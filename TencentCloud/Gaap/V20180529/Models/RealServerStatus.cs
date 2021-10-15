@@ -42,6 +42,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
+        /// <summary>
+        /// 绑定此源站的通道组ID，没有绑定时为空字符串。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

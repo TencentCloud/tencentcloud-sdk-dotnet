@@ -2289,7 +2289,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口 (TerminateInstances) 用于退还实例。
+        /// 本接口 (TerminateInstances) 用于销毁实例。
         /// 
         /// * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。
         /// * 支持批量操作，每次请求批量实例的上限为100。
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口 (TerminateInstances) 用于退还实例。
+        /// 本接口 (TerminateInstances) 用于销毁实例。
         /// 
         /// * 处于 SHUTDOWN 状态的实例，可通过本接口销毁，且不可恢复。
         /// * 支持批量操作，每次请求批量实例的上限为100。

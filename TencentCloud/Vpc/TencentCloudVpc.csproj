@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.383</VersionPrefix>
+    <VersionPrefix>3.0.384</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20170312\Models\AddBandwidthPackageResourcesResponse.cs" />
     <Compile Include="V20170312\Models\AddIp6RulesRequest.cs" />
     <Compile Include="V20170312\Models\AddIp6RulesResponse.cs" />
+    <Compile Include="V20170312\Models\AddTemplateMemberRequest.cs" />
+    <Compile Include="V20170312\Models\AddTemplateMemberResponse.cs" />
     <Compile Include="V20170312\Models\Address.cs" />
     <Compile Include="V20170312\Models\AddressChargePrepaid.cs" />
     <Compile Include="V20170312\Models\AddressTemplate.cs" />
@@ -245,6 +247,8 @@
     <Compile Include="V20170312\Models\DeleteServiceTemplateResponse.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetRequest.cs" />
     <Compile Include="V20170312\Models\DeleteSubnetResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteTemplateMemberRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteTemplateMemberResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpcEndPointServiceRequest.cs" />
@@ -471,6 +475,7 @@
     <Compile Include="V20170312\Models\Ipv6SubnetCidrBlock.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
     <Compile Include="V20170312\Models\LocalGateway.cs" />
+    <Compile Include="V20170312\Models\MemberInfo.cs" />
     <Compile Include="V20170312\Models\MigrateNetworkInterfaceRequest.cs" />
     <Compile Include="V20170312\Models\MigrateNetworkInterfaceResponse.cs" />
     <Compile Include="V20170312\Models\MigratePrivateIpAddressRequest.cs" />
@@ -547,6 +552,8 @@
     <Compile Include="V20170312\Models\ModifyServiceTemplateGroupAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifySubnetAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifySubnetAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyTemplateMemberRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyTemplateMemberResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyVpcAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyVpcEndPointAttributeRequest.cs" />

@@ -36,6 +36,24 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("RegionName")]
         public string RegionName{ get; set; }
 
+        /// <summary>
+        /// 机房所属大区
+        /// </summary>
+        [JsonProperty("RegionArea")]
+        public string RegionArea{ get; set; }
+
+        /// <summary>
+        /// 机房所属大区名
+        /// </summary>
+        [JsonProperty("RegionAreaName")]
+        public string RegionAreaName{ get; set; }
+
+        /// <summary>
+        /// 机房类型, dc表示DataCenter数据中心, ec表示EdgeComputing边缘节点
+        /// </summary>
+        [JsonProperty("IDCType")]
+        public string IDCType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +62,9 @@ namespace TencentCloud.Gaap.V20180529.Models
         {
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
             this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
+            this.SetParamSimple(map, prefix + "RegionArea", this.RegionArea);
+            this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
+            this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
         }
     }
 }
