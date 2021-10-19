@@ -41,7 +41,7 @@ namespace TencentCloud.Ie.V20200304.Models
         public long? Format{ get; set; }
 
         /// <summary>
-        /// 指定请求资源时，HTTP头部host的值。
+        /// 【不再支持】指定请求资源时，HTTP头部host的值。
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

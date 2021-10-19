@@ -21,26 +21,26 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDevicePositionListResponse : AbstractModel
+    public class ProductDevicesPositionItem : AbstractModel
     {
         
         /// <summary>
-        /// 产品设备位置信息列表
+        /// 设备位置列表
         /// </summary>
-        [JsonProperty("Positions")]
-        public ProductDevicesPositionItem[] Positions{ get; set; }
+        [JsonProperty("Items")]
+        public DevicePositionItem[] Items{ get; set; }
 
         /// <summary>
-        /// 产品设备位置信息的数目
+        /// 产品标识
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 设备位置数量
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +48,9 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Positions.", this.Positions);
+            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Total", this.Total);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

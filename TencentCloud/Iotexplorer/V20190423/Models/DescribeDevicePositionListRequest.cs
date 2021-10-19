@@ -24,12 +24,40 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     public class DescribeDevicePositionListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 产品标识列表
+        /// </summary>
+        [JsonProperty("ProductIdList")]
+        public string[] ProductIdList{ get; set; }
+
+        /// <summary>
+        /// 坐标类型
+        /// </summary>
+        [JsonProperty("CoordinateType")]
+        public long? CoordinateType{ get; set; }
+
+        /// <summary>
+        /// 分页偏移
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页的大小
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ProductIdList.", this.ProductIdList);
+            this.SetParamSimple(map, prefix + "CoordinateType", this.CoordinateType);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

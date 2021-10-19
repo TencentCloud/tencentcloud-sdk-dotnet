@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 加载后续内容的Context
+        /// 加载后续内容的Context，过期时间1小时
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
