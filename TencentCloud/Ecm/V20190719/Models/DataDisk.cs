@@ -15,35 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Price : AbstractModel
+    public class DataDisk : AbstractModel
     {
         
-        /// <summary>
-        /// 实例价格。
-        /// </summary>
-        [JsonProperty("InstancePrice")]
-        public InstancePrice InstancePrice{ get; set; }
-
-        /// <summary>
-        /// 数据盘价格。
-        /// </summary>
-        [JsonProperty("DataDiskPrices")]
-        public DataDiskPrice[] DataDiskPrices{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
-            this.SetParamArrayObj(map, prefix + "DataDiskPrices.", this.DataDiskPrices);
         }
     }
 }

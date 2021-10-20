@@ -161,6 +161,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("KeepImageLogin")]
         public string KeepImageLogin{ get; set; }
 
+        /// <summary>
+        /// 系统盘信息。
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public SystemDisk SystemDisk{ get; set; }
+
+        /// <summary>
+        /// 数据盘信息。
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +198,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamArraySimple(map, prefix + "KeyIds.", this.KeyIds);
             this.SetParamSimple(map, prefix + "KeepImageLogin", this.KeepImageLogin);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }
     }
 }

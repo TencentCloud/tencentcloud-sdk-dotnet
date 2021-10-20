@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F313119E-D8EA-3E66-991F-7C89745C570F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.385</VersionPrefix>
+    <VersionPrefix>3.0.386</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -100,6 +100,7 @@
     <Compile Include="V20190719\Models\CreateSubnetResponse.cs" />
     <Compile Include="V20190719\Models\CreateVpcRequest.cs" />
     <Compile Include="V20190719\Models\CreateVpcResponse.cs" />
+    <Compile Include="V20190719\Models\DataDisk.cs" />
     <Compile Include="V20190719\Models\DeleteHaVipRequest.cs" />
     <Compile Include="V20190719\Models\DeleteHaVipResponse.cs" />
     <Compile Include="V20190719\Models\DeleteImageRequest.cs" />
@@ -374,6 +375,7 @@
     <Compile Include="V20190719\Models\StopInstancesRequest.cs" />
     <Compile Include="V20190719\Models\StopInstancesResponse.cs" />
     <Compile Include="V20190719\Models\Subnet.cs" />
+    <Compile Include="V20190719\Models\SystemDisk.cs" />
     <Compile Include="V20190719\Models\Tag.cs" />
     <Compile Include="V20190719\Models\TagInfo.cs" />
     <Compile Include="V20190719\Models\TagSpecification.cs" />

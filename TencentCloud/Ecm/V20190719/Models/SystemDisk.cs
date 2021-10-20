@@ -15,26 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Price : AbstractModel
+    public class SystemDisk : AbstractModel
     {
         
         /// <summary>
-        /// 实例价格。
+        /// 硬盘类型。取值范围：
+        /// - LOCAL_BASIC：本地硬盘；
+        /// - CLOUD_PREMIUM：高性能云硬盘；
+        /// 默认取值：CLOUD_BASIC。
         /// </summary>
-        [JsonProperty("InstancePrice")]
-        public InstancePrice InstancePrice{ get; set; }
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
 
         /// <summary>
-        /// 数据盘价格。
+        /// 硬盘ID。此参数暂不可用。
         /// </summary>
-        [JsonProperty("DataDiskPrices")]
-        public DataDiskPrice[] DataDiskPrices{ get; set; }
+        [JsonProperty("DiskId")]
+        public string DiskId{ get; set; }
+
+        /// <summary>
+        /// 硬盘容量大小。单位GB。
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
 
 
         /// <summary>
@@ -42,8 +51,9 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
-            this.SetParamArrayObj(map, prefix + "DataDiskPrices.", this.DataDiskPrices);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
         }
     }
 }

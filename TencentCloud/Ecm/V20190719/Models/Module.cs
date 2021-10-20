@@ -112,6 +112,18 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("UserData")]
         public string UserData{ get; set; }
 
+        /// <summary>
+        /// 系统盘信息。
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public SystemDisk SystemDisk{ get; set; }
+
+        /// <summary>
+        /// 数据盘信息。
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +144,8 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
             this.SetParamSimple(map, prefix + "DefaultBandwidthIn", this.DefaultBandwidthIn);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }
     }
 }
