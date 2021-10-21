@@ -54,6 +54,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("IsTagFilter")]
         public bool? IsTagFilter{ get; set; }
 
+        /// <summary>
+        /// 过滤器。目前支持按标签过滤。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamArraySimple(map, prefix + "QueueNameList.", this.QueueNameList);
             this.SetParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

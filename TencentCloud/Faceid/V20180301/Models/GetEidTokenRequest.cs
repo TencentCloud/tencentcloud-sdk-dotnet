@@ -61,6 +61,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("RedirectUrl")]
         public string RedirectUrl{ get; set; }
 
+        /// <summary>
+        /// 敏感数据加密信息。对传入信息（姓名、身份证号）有加密需求的用户可使用此参数，详情请点击左侧链接。
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamSimple(map, prefix + "RedirectUrl", this.RedirectUrl);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }

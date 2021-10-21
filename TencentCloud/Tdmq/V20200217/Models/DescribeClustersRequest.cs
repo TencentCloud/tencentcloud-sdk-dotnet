@@ -42,6 +42,18 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClusterIdList")]
         public string[] ClusterIdList{ get; set; }
 
+        /// <summary>
+        /// 是否标签过滤
+        /// </summary>
+        [JsonProperty("IsTagFilter")]
+        public bool? IsTagFilter{ get; set; }
+
+        /// <summary>
+        /// 过滤器。目前支持按标签过滤。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "ClusterIdList.", this.ClusterIdList);
+            this.SetParamSimple(map, prefix + "IsTagFilter", this.IsTagFilter);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

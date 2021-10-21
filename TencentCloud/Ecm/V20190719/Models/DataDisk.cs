@@ -24,12 +24,30 @@ namespace TencentCloud.Ecm.V20190719.Models
     public class DataDisk : AbstractModel
     {
         
+        /// <summary>
+        /// 数据盘大小。单位GB。
+        /// </summary>
+        [JsonProperty("DiskSize")]
+        public long? DiskSize{ get; set; }
+
+        /// <summary>
+        /// 数据盘类型，取值范围：
+        /// - LOCAL_BASIC：本地硬盘
+        /// - CLOUD_PREMIUM：高性能云硬盘
+        /// 
+        /// 默认取值： LOCAL_BASIC。
+        /// </summary>
+        [JsonProperty("DiskType")]
+        public string DiskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }
     }
 }

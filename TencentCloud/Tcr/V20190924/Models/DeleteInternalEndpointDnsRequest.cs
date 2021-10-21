@@ -49,6 +49,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("UsePublicDomain")]
         public bool? UsePublicDomain{ get; set; }
 
+        /// <summary>
+        /// 解析地域，需要保证和vpc处于同一地域，如果不填则默认为主实例地域
+        /// </summary>
+        [JsonProperty("RegionName")]
+        public string RegionName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "EniLBIp", this.EniLBIp);
             this.SetParamSimple(map, prefix + "UsePublicDomain", this.UsePublicDomain);
+            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
         }
     }
 }

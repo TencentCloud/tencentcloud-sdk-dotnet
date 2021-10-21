@@ -43,6 +43,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("TopCount")]
         public ulong? TopCount{ get; set; }
 
+        /// <summary>
+        /// AttackIP表示查询攻击ip的top排行，AttackType表示攻击类型的top排行，为空默认为AttackType
+        /// </summary>
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "TopCount", this.TopCount);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
         }
     }
 }

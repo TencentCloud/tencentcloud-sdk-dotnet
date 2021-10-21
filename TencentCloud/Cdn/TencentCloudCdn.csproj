@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,7 @@
     <Compile Include="V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="V20180606\Models\ClientCert.cs" />
     <Compile Include="V20180606\Models\ClientInfo.cs" />
+    <Compile Include="V20180606\Models\ClsLogIpData.cs" />
     <Compile Include="V20180606\Models\ClsLogObject.cs" />
     <Compile Include="V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="V20180606\Models\Compatibility.cs" />
@@ -106,6 +107,9 @@
     <Compile Include="V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="V20180606\Models\CreateVerifyRecordRequest.cs" />
     <Compile Include="V20180606\Models\CreateVerifyRecordResponse.cs" />
+    <Compile Include="V20180606\Models\DDoSAttackBandwidthData.cs" />
+    <Compile Include="V20180606\Models\DDoSAttackIPTopData.cs" />
+    <Compile Include="V20180606\Models\DDoSStatsData.cs" />
     <Compile Include="V20180606\Models\DDoSTopData.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="V20180606\Models\DeleteCdnDomainResponse.cs" />
@@ -115,6 +119,8 @@
     <Compile Include="V20180606\Models\DeleteScdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\DescribeBillingDataRequest.cs" />
     <Compile Include="V20180606\Models\DescribeBillingDataResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeCcDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeCcDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeCdnDataRequest.cs" />
     <Compile Include="V20180606\Models\DescribeCdnDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeCdnDomainLogsRequest.cs" />
@@ -125,6 +131,8 @@
     <Compile Include="V20180606\Models\DescribeCdnOriginIpResponse.cs" />
     <Compile Include="V20180606\Models\DescribeCertDomainsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeCertDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeDDoSDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeDDoSDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeDiagnoseReportRequest.cs" />
     <Compile Include="V20180606\Models\DescribeDiagnoseReportResponse.cs" />
     <Compile Include="V20180606\Models\DescribeDistrictIspDataRequest.cs" />
@@ -133,6 +141,8 @@
     <Compile Include="V20180606\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="V20180606\Models\DescribeDomainsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeEventLogDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeEventLogDataResponse.cs" />
     <Compile Include="V20180606\Models\DescribeImageConfigRequest.cs" />
     <Compile Include="V20180606\Models\DescribeImageConfigResponse.cs" />
     <Compile Include="V20180606\Models\DescribeIpStatusRequest.cs" />
@@ -165,6 +175,8 @@
     <Compile Include="V20180606\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="V20180606\Models\DescribeUrlViolationsRequest.cs" />
     <Compile Include="V20180606\Models\DescribeUrlViolationsResponse.cs" />
+    <Compile Include="V20180606\Models\DescribeWafDataRequest.cs" />
+    <Compile Include="V20180606\Models\DescribeWafDataResponse.cs" />
     <Compile Include="V20180606\Models\DetailDomain.cs" />
     <Compile Include="V20180606\Models\DiagnoseData.cs" />
     <Compile Include="V20180606\Models\DiagnoseInfo.cs" />
@@ -188,6 +200,7 @@
     <Compile Include="V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="V20180606\Models\ErrorPage.cs" />
     <Compile Include="V20180606\Models\ErrorPageRule.cs" />
+    <Compile Include="V20180606\Models\EventLogStatsData.cs" />
     <Compile Include="V20180606\Models\FollowRedirect.cs" />
     <Compile Include="V20180606\Models\ForceRedirect.cs" />
     <Compile Include="V20180606\Models\GetDisableRecordsRequest.cs" />
@@ -220,6 +233,8 @@
     <Compile Include="V20180606\Models\ListTopBotDataResponse.cs" />
     <Compile Include="V20180606\Models\ListTopCcDataRequest.cs" />
     <Compile Include="V20180606\Models\ListTopCcDataResponse.cs" />
+    <Compile Include="V20180606\Models\ListTopClsLogDataRequest.cs" />
+    <Compile Include="V20180606\Models\ListTopClsLogDataResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDDoSDataRequest.cs" />
     <Compile Include="V20180606\Models\ListTopDDoSDataResponse.cs" />
     <Compile Include="V20180606\Models\ListTopDataRequest.cs" />

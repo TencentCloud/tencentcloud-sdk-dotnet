@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,7 +45,6 @@
 
   <ItemGroup>
     <Compile Include="V20180228\CwpClient.cs" />
-    <Compile Include="V20180228\Models\Account.cs" />
     <Compile Include="V20180228\Models\AccountStatistics.cs" />
     <Compile Include="V20180228\Models\AssetAppBaseInfo.cs" />
     <Compile Include="V20180228\Models\AssetAppProcessInfo.cs" />
@@ -156,8 +155,6 @@
     <Compile Include="V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAccountStatisticsResponse.cs" />
-    <Compile Include="V20180228\Models\DescribeAccountsRequest.cs" />
-    <Compile Include="V20180228\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeAssetAppProcessListRequest.cs" />

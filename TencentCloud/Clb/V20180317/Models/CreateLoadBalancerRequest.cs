@@ -169,6 +169,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("EipAddressId")]
         public string EipAddressId{ get; set; }
 
+        /// <summary>
+        /// Target是否放通来自CLB的流量。开启放通（true）：只验证CLB上的安全组；不开启放通（false）：需同时验证CLB和后端实例上的安全组。
+        /// </summary>
+        [JsonProperty("LoadBalancerPassToTarget")]
+        public bool? LoadBalancerPassToTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamSimple(map, prefix + "SlaveZoneId", this.SlaveZoneId);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);
+            this.SetParamSimple(map, prefix + "LoadBalancerPassToTarget", this.LoadBalancerPassToTarget);
         }
     }
 }

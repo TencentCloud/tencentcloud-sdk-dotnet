@@ -48,6 +48,24 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }
 
+        /// <summary>
+        /// 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
+        /// <summary>
+        /// CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -57,6 +75,9 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
             this.SetParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

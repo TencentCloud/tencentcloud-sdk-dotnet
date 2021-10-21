@@ -1293,50 +1293,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本接口 (DescribeAccounts) 用于获取帐号列表数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
-        /// <returns><see cref="DescribeAccountsResponse"/></returns>
-        public async Task<DescribeAccountsResponse> DescribeAccounts(DescribeAccountsRequest req)
-        {
-             JsonResponseModel<DescribeAccountsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAccounts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本接口 (DescribeAccounts) 用于获取帐号列表数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAccountsRequest"/></param>
-        /// <returns><see cref="DescribeAccountsResponse"/></returns>
-        public DescribeAccountsResponse DescribeAccountsSync(DescribeAccountsRequest req)
-        {
-             JsonResponseModel<DescribeAccountsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAccounts");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询应用列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetAppListRequest"/></param>

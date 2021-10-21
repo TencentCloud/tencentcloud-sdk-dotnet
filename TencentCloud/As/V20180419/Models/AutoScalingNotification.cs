@@ -48,6 +48,24 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("AutoScalingNotificationId")]
         public string AutoScalingNotificationId{ get; set; }
 
+        /// <summary>
+        /// 通知接收端类型。
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
+        /// <summary>
+        /// CMQ 队列名。
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
+        /// CMQ 主题名。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArraySimple(map, prefix + "NotificationUserGroupIds.", this.NotificationUserGroupIds);
             this.SetParamArraySimple(map, prefix + "NotificationTypes.", this.NotificationTypes);
             this.SetParamSimple(map, prefix + "AutoScalingNotificationId", this.AutoScalingNotificationId);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

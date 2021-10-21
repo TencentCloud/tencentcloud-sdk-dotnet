@@ -533,6 +533,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// CC统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
+        /// <returns><see cref="DescribeCcDataResponse"/></returns>
+        public async Task<DescribeCcDataResponse> DescribeCcData(DescribeCcDataRequest req)
+        {
+             JsonResponseModel<DescribeCcDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CC统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcDataRequest"/></param>
+        /// <returns><see cref="DescribeCcDataResponse"/></returns>
+        public DescribeCcDataResponse DescribeCcDataSync(DescribeCcDataRequest req)
+        {
+             JsonResponseModel<DescribeCcDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeCdnData 用于查询 CDN 实时访问监控数据，支持以下指标查询：
         /// 
         /// + 流量（单位为 byte）
@@ -759,6 +799,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// DDoS统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
+        /// <returns><see cref="DescribeDDoSDataResponse"/></returns>
+        public async Task<DescribeDDoSDataResponse> DescribeDDoSData(DescribeDDoSDataRequest req)
+        {
+             JsonResponseModel<DescribeDDoSDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DDoS统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSDataRequest"/></param>
+        /// <returns><see cref="DescribeDDoSDataResponse"/></returns>
+        public DescribeDDoSDataResponse DescribeDDoSDataSync(DescribeDDoSDataRequest req)
+        {
+             JsonResponseModel<DescribeDDoSDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeDiagnoseReport 用于获取指定报告id的内容
         /// </summary>
         /// <param name="req"><see cref="DescribeDiagnoseReportRequest"/></param>
@@ -912,6 +992,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDomainsConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainsConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeEventLogData 用于查询事件日志统计曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
+        /// <returns><see cref="DescribeEventLogDataResponse"/></returns>
+        public async Task<DescribeEventLogDataResponse> DescribeEventLogData(DescribeEventLogDataRequest req)
+        {
+             JsonResponseModel<DescribeEventLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEventLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeEventLogData 用于查询事件日志统计曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEventLogDataRequest"/></param>
+        /// <returns><see cref="DescribeEventLogDataResponse"/></returns>
+        public DescribeEventLogDataResponse DescribeEventLogDataSync(DescribeEventLogDataRequest req)
+        {
+             JsonResponseModel<DescribeEventLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEventLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEventLogDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1591,6 +1711,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// Waf统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
+        /// <returns><see cref="DescribeWafDataResponse"/></returns>
+        public async Task<DescribeWafDataResponse> DescribeWafData(DescribeWafDataRequest req)
+        {
+             JsonResponseModel<DescribeWafDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWafData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf统计数据查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafDataRequest"/></param>
+        /// <returns><see cref="DescribeWafDataResponse"/></returns>
+        public DescribeWafDataResponse DescribeWafDataSync(DescribeWafDataRequest req)
+        {
+             JsonResponseModel<DescribeWafDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWafData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DisableCaches 用于禁用 CDN 上指定 URL 的访问，禁用完成后，中国境内访问会直接返回 403。（注：接口尚在内测中，暂未全量开放；封禁URL并非无限期永久封禁）
         /// </summary>
         /// <param name="req"><see cref="DisableCachesRequest"/></param>
@@ -2102,6 +2262,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListTopCcData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopCcDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过CLS日志计算Top信息。支持近7天的日志数据。
+        /// </summary>
+        /// <param name="req"><see cref="ListTopClsLogDataRequest"/></param>
+        /// <returns><see cref="ListTopClsLogDataResponse"/></returns>
+        public async Task<ListTopClsLogDataResponse> ListTopClsLogData(ListTopClsLogDataRequest req)
+        {
+             JsonResponseModel<ListTopClsLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopClsLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopClsLogDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过CLS日志计算Top信息。支持近7天的日志数据。
+        /// </summary>
+        /// <param name="req"><see cref="ListTopClsLogDataRequest"/></param>
+        /// <returns><see cref="ListTopClsLogDataResponse"/></returns>
+        public ListTopClsLogDataResponse ListTopClsLogDataSync(ListTopClsLogDataRequest req)
+        {
+             JsonResponseModel<ListTopClsLogDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopClsLogData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopClsLogDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -129,6 +129,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("HttpVersion")]
         public string HttpVersion{ get; set; }
 
+        /// <summary>
+        /// 自定义探测相关参数。健康检查原IP类型：0（使用LB的VIP做为源IP），1（使用100.64网段IP做为源IP），默认值：0
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SourceIpType")]
+        public long? SourceIpType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "RecvContext", this.RecvContext);
             this.SetParamSimple(map, prefix + "CheckType", this.CheckType);
             this.SetParamSimple(map, prefix + "HttpVersion", this.HttpVersion);
+            this.SetParamSimple(map, prefix + "SourceIpType", this.SourceIpType);
         }
     }
 }

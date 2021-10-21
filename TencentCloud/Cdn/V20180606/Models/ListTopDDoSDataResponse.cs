@@ -25,10 +25,16 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// DDoS Top数据
+        /// DDoS 攻击类型的top数据，当Metric=AttackType的时候返回攻击类型的统计数据，IPData为空
         /// </summary>
         [JsonProperty("Data")]
         public DDoSTopData[] Data{ get; set; }
+
+        /// <summary>
+        /// ddos攻击ip的top数据，Metric=AttackIP的时候返回IPData，Data为空
+        /// </summary>
+        [JsonProperty("IPData")]
+        public DDoSAttackIPTopData[] IPData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArrayObj(map, prefix + "IPData.", this.IPData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

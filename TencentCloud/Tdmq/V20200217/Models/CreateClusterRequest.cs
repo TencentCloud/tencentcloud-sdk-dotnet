@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否开启公网访问，不填时默认开启
+        /// </summary>
+        [JsonProperty("PublicAccessEnabled")]
+        public bool? PublicAccessEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "BindClusterId", this.BindClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
         }
     }
 }

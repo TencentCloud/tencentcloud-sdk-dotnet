@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -140,6 +140,8 @@
     <Compile Include="V20180326\Models\DeleteImageTagsResponse.cs" />
     <Compile Include="V20180326\Models\DeleteLaneRequest.cs" />
     <Compile Include="V20180326\Models\DeleteLaneResponse.cs" />
+    <Compile Include="V20180326\Models\DeleteLaneRuleRequest.cs" />
+    <Compile Include="V20180326\Models\DeleteLaneRuleResponse.cs" />
     <Compile Include="V20180326\Models\DeleteMicroserviceRequest.cs" />
     <Compile Include="V20180326\Models\DeleteMicroserviceResponse.cs" />
     <Compile Include="V20180326\Models\DeleteNamespaceRequest.cs" />
@@ -216,6 +218,8 @@
     <Compile Include="V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayAllGroupApisResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayApisRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGatewayApisResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
@@ -468,6 +472,7 @@
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="V20180326\Models\TsfApiListResponse.cs" />
+    <Compile Include="V20180326\Models\TsfPageApiDetailInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApiGroupInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApplication.cs" />
     <Compile Include="V20180326\Models\TsfPageBusinessLogV2.cs" />

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,7 +54,11 @@
     <Compile Include="V20200910\Models\DiagCertItem.cs" />
     <Compile Include="V20200910\Models\DischargeDiagnosis.cs" />
     <Compile Include="V20200910\Models\DiseaseMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\EcgDescription.cs" />
+    <Compile Include="V20200910\Models\EcgDiagnosis.cs" />
+    <Compile Include="V20200910\Models\EcgItem.cs" />
     <Compile Include="V20200910\Models\Elastic.cs" />
+    <Compile Include="V20200910\Models\Electrocardiogram.cs" />
     <Compile Include="V20200910\Models\FamilyMedicalHistory.cs" />
     <Compile Include="V20200910\Models\FirstPage.cs" />
     <Compile Include="V20200910\Models\HandleParam.cs" />

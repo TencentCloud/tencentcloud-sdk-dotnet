@@ -136,6 +136,41 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("MedicalInsuranceType")]
         public string MedicalInsuranceType{ get; set; }
 
+        /// <summary>
+        /// 标准化年龄
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgeNorm")]
+        public string AgeNorm{ get; set; }
+
+        /// <summary>
+        /// 民族
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Nation")]
+        public string Nation{ get; set; }
+
+        /// <summary>
+        /// 婚姻代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MarriedCode")]
+        public string MarriedCode{ get; set; }
+
+        /// <summary>
+        /// 职业代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProfessionCode")]
+        public string ProfessionCode{ get; set; }
+
+        /// <summary>
+        /// 居民医保代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MedicalInsuranceTypeCode")]
+        public string MedicalInsuranceTypeCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +193,11 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Nationality", this.Nationality);
             this.SetParamSimple(map, prefix + "BirthPlace", this.BirthPlace);
             this.SetParamSimple(map, prefix + "MedicalInsuranceType", this.MedicalInsuranceType);
+            this.SetParamSimple(map, prefix + "AgeNorm", this.AgeNorm);
+            this.SetParamSimple(map, prefix + "Nation", this.Nation);
+            this.SetParamSimple(map, prefix + "MarriedCode", this.MarriedCode);
+            this.SetParamSimple(map, prefix + "ProfessionCode", this.ProfessionCode);
+            this.SetParamSimple(map, prefix + "MedicalInsuranceTypeCode", this.MedicalInsuranceTypeCode);
         }
     }
 }

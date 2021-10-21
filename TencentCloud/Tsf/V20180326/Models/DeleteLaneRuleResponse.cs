@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsResponse : AbstractModel
+    public class DeleteLaneRuleResponse : AbstractModel
     {
         
         /// <summary>
-        /// 帐号列表记录总数。
+        /// 操作状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 帐号数据列表。
-        /// </summary>
-        [JsonProperty("Accounts")]
-        public Account[] Accounts{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Accounts.", this.Accounts);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.386</VersionPrefix>
+    <VersionPrefix>3.0.387</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,14 @@
     <Compile Include="Aai\V20180522\Models\SimultaneousInterpretingResponse.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceRequest.cs" />
     <Compile Include="Aai\V20180522\Models\TextToVoiceResponse.cs" />
+    <Compile Include="Advisor\V20200721\AdvisorClient.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeStrategie.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeStrategiesCondition.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeStrategiesRequest.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeStrategiesResponse.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeTaskStrategyRisksRequest.cs" />
+    <Compile Include="Advisor\V20200721\Models\DescribeTaskStrategyRisksResponse.cs" />
+    <Compile Include="Advisor\V20200721\Models\RiskFieldsDesc.cs" />
     <Compile Include="Af\V20200226\AfClient.cs" />
     <Compile Include="Af\V20200226\Models\DescribeAntiFraudRequest.cs" />
     <Compile Include="Af\V20200226\Models\DescribeAntiFraudResponse.cs" />
@@ -2433,6 +2441,7 @@
     <Compile Include="Cdn\V20180606\Models\CdnIpHistory.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientCert.cs" />
     <Compile Include="Cdn\V20180606\Models\ClientInfo.cs" />
+    <Compile Include="Cdn\V20180606\Models\ClsLogIpData.cs" />
     <Compile Include="Cdn\V20180606\Models\ClsLogObject.cs" />
     <Compile Include="Cdn\V20180606\Models\ClsSearchLogs.cs" />
     <Compile Include="Cdn\V20180606\Models\Compatibility.cs" />
@@ -2453,6 +2462,9 @@
     <Compile Include="Cdn\V20180606\Models\CreateScdnLogTaskResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\CreateVerifyRecordResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DDoSAttackBandwidthData.cs" />
+    <Compile Include="Cdn\V20180606\Models\DDoSAttackIPTopData.cs" />
+    <Compile Include="Cdn\V20180606\Models\DDoSStatsData.cs" />
     <Compile Include="Cdn\V20180606\Models\DDoSTopData.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DeleteCdnDomainResponse.cs" />
@@ -2462,6 +2474,8 @@
     <Compile Include="Cdn\V20180606\Models\DeleteScdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeBillingDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeBillingDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCcDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeCcDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCdnDomainLogsRequest.cs" />
@@ -2472,6 +2486,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeCdnOriginIpResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeCertDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDDoSDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeDDoSDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDiagnoseReportRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDiagnoseReportResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDistrictIspDataRequest.cs" />
@@ -2480,6 +2496,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeDomainsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeEventLogDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeEventLogDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeImageConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeImageConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeIpStatusRequest.cs" />
@@ -2512,6 +2530,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeWafDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeWafDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DetailDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\DiagnoseData.cs" />
     <Compile Include="Cdn\V20180606\Models\DiagnoseInfo.cs" />
@@ -2535,6 +2555,7 @@
     <Compile Include="Cdn\V20180606\Models\EnableClsLogTopicResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ErrorPageRule.cs" />
+    <Compile Include="Cdn\V20180606\Models\EventLogStatsData.cs" />
     <Compile Include="Cdn\V20180606\Models\FollowRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\ForceRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
@@ -2567,6 +2588,8 @@
     <Compile Include="Cdn\V20180606\Models\ListTopBotDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopCcDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopCcDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopClsLogDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListTopClsLogDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDDoSDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDDoSDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopDataRequest.cs" />
@@ -4499,7 +4522,6 @@
     <Compile Include="Cvm\V20170312\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Cvm\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Cwp\V20180228\CwpClient.cs" />
-    <Compile Include="Cwp\V20180228\Models\Account.cs" />
     <Compile Include="Cwp\V20180228\Models\AccountStatistics.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetAppBaseInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\AssetAppProcessInfo.cs" />
@@ -4610,8 +4632,6 @@
     <Compile Include="Cwp\V20180228\Models\DeleteWebPageEventLogResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountStatisticsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAccountStatisticsResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\DescribeAccountsRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\DescribeAccountsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetAppListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetAppListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeAssetAppProcessListRequest.cs" />
@@ -10337,7 +10357,11 @@
     <Compile Include="Mrs\V20200910\Models\DiagCertItem.cs" />
     <Compile Include="Mrs\V20200910\Models\DischargeDiagnosis.cs" />
     <Compile Include="Mrs\V20200910\Models\DiseaseMedicalHistory.cs" />
+    <Compile Include="Mrs\V20200910\Models\EcgDescription.cs" />
+    <Compile Include="Mrs\V20200910\Models\EcgDiagnosis.cs" />
+    <Compile Include="Mrs\V20200910\Models\EcgItem.cs" />
     <Compile Include="Mrs\V20200910\Models\Elastic.cs" />
+    <Compile Include="Mrs\V20200910\Models\Electrocardiogram.cs" />
     <Compile Include="Mrs\V20200910\Models\FamilyMedicalHistory.cs" />
     <Compile Include="Mrs\V20200910\Models\FirstPage.cs" />
     <Compile Include="Mrs\V20200910\Models\HandleParam.cs" />
@@ -14234,6 +14258,8 @@
     <Compile Include="Tsf\V20180326\Models\DeleteImageTagsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteLaneRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteLaneResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteLaneRuleRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DeleteLaneRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteMicroserviceRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteMicroserviceResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteNamespaceRequest.cs" />
@@ -14310,6 +14336,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeFlowLastBatchStateResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayAllGroupApisRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayAllGroupApisResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGatewayApisRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGatewayApisResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayMonitorOverviewRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayMonitorOverviewResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
@@ -14562,6 +14590,7 @@
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfApiListResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageApiDetailInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApiGroupInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApplication.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageBusinessLogV2.cs" />

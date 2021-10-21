@@ -15,47 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Advisor.V20200721.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAccountsRequest : AbstractModel
+    public class DescribeTaskStrategyRisksRequest : AbstractModel
     {
         
         /// <summary>
-        /// 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Uuid表示，查询该主机下列表信息。
+        /// 评估项ID
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("StrategyId")]
+        public ulong? StrategyId{ get; set; }
 
         /// <summary>
-        /// 云镜客户端唯一Uuid。Username和Uuid必填其一，使用Username表示，查询该用户名下列表信息。
-        /// </summary>
-        [JsonProperty("Username")]
-        public string Username{ get; set; }
-
-        /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// 限制数量,默认100
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 偏移量,默认0
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 过滤条件。
-        /// <li>Username - String - 是否必填：否 - 帐号名</li>
-        /// <li>Privilege - String - 是否必填：否 - 帐号类型（ORDINARY: 普通帐号 | SUPPER: 超级管理员帐号）</li>
-        /// <li>MachineIp - String - 是否必填：否 - 主机内网IP</li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -63,11 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
-            this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

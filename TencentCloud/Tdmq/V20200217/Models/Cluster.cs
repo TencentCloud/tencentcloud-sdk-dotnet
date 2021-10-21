@@ -92,7 +92,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? MaxQps{ get; set; }
 
         /// <summary>
-        /// 消息保留时间
+        /// 最大消息保留时间，分钟为单位
         /// </summary>
         [JsonProperty("MessageRetentionTime")]
         public long? MessageRetentionTime{ get; set; }
@@ -138,6 +138,62 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UsedStorageBudget")]
         public long? UsedStorageBudget{ get; set; }
 
+        /// <summary>
+        /// 最大生产消息速率，以条数为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxPublishRateInMessages")]
+        public long? MaxPublishRateInMessages{ get; set; }
+
+        /// <summary>
+        /// 最大推送消息速率，以条数为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxDispatchRateInMessages")]
+        public long? MaxDispatchRateInMessages{ get; set; }
+
+        /// <summary>
+        /// 最大生产消息速率，以字节为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxPublishRateInBytes")]
+        public long? MaxPublishRateInBytes{ get; set; }
+
+        /// <summary>
+        /// 最大推送消息速率，以字节为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxDispatchRateInBytes")]
+        public long? MaxDispatchRateInBytes{ get; set; }
+
+        /// <summary>
+        /// 已创建主题数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicNum")]
+        public long? TopicNum{ get; set; }
+
+        /// <summary>
+        /// 最长消息延时，以秒为单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxMessageDelayInSeconds")]
+        public long? MaxMessageDelayInSeconds{ get; set; }
+
+        /// <summary>
+        /// 是否开启公网访问，不填时默认开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicAccessEnabled")]
+        public bool? PublicAccessEnabled{ get; set; }
+
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +218,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
             this.SetParamSimple(map, prefix + "NamespaceNum", this.NamespaceNum);
             this.SetParamSimple(map, prefix + "UsedStorageBudget", this.UsedStorageBudget);
+            this.SetParamSimple(map, prefix + "MaxPublishRateInMessages", this.MaxPublishRateInMessages);
+            this.SetParamSimple(map, prefix + "MaxDispatchRateInMessages", this.MaxDispatchRateInMessages);
+            this.SetParamSimple(map, prefix + "MaxPublishRateInBytes", this.MaxPublishRateInBytes);
+            this.SetParamSimple(map, prefix + "MaxDispatchRateInBytes", this.MaxDispatchRateInBytes);
+            this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
+            this.SetParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
+            this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

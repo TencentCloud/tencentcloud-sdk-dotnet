@@ -108,6 +108,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Surgery")]
         public Surgery Surgery{ get; set; }
 
+        /// <summary>
+        /// 心电图报告
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Electrocardiogram")]
+        public Electrocardiogram Electrocardiogram{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +133,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "MedicalRecordInfo.", this.MedicalRecordInfo);
             this.SetParamObj(map, prefix + "Hospitalization.", this.Hospitalization);
             this.SetParamObj(map, prefix + "Surgery.", this.Surgery);
+            this.SetParamObj(map, prefix + "Electrocardiogram.", this.Electrocardiogram);
         }
     }
 }
