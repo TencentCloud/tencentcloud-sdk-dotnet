@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpGeolocationInfosRequest : AbstractModel
+    public class DescribeResourceUrlsByFlowsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
+        /// 渠道应用相关信息
         /// </summary>
-        [JsonProperty("AddressIps")]
-        public string[] AddressIps{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 需查询的IP地址的字段信息。
+        /// 操作者的信息
         /// </summary>
-        [JsonProperty("Fields")]
-        public IpField Fields{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
+        /// 查询资源所对应的流程Id
+        /// </summary>
+        [JsonProperty("FlowIds")]
+        public string[] FlowIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AddressIps.", this.AddressIps);
-            this.SetParamObj(map, prefix + "Fields.", this.Fields);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
         }
     }
 }

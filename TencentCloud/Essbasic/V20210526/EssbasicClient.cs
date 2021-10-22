@@ -173,6 +173,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 根据流程信息批量获取资源下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUrlsByFlowsRequest"/></param>
+        /// <returns><see cref="DescribeResourceUrlsByFlowsResponse"/></returns>
+        public async Task<DescribeResourceUrlsByFlowsResponse> DescribeResourceUrlsByFlows(DescribeResourceUrlsByFlowsRequest req)
+        {
+             JsonResponseModel<DescribeResourceUrlsByFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceUrlsByFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUrlsByFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据流程信息批量获取资源下载链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUrlsByFlowsRequest"/></param>
+        /// <returns><see cref="DescribeResourceUrlsByFlowsResponse"/></returns>
+        public DescribeResourceUrlsByFlowsResponse DescribeResourceUrlsByFlowsSync(DescribeResourceUrlsByFlowsRequest req)
+        {
+             JsonResponseModel<DescribeResourceUrlsByFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceUrlsByFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUrlsByFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过此接口（DescribeTemplates）查询该企业在电子签渠道版中配置的有效模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTemplatesRequest"/></param>

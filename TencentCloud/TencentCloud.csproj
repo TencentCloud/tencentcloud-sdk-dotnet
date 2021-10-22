@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.387</VersionPrefix>
+    <VersionPrefix>3.0.388</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6847,17 +6847,21 @@
     <Compile Include="Essbasic\V20210526\Models\CreateFlowsByTemplatesResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateSignUrlsRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateSignUrlsResponse.cs" />
+    <Compile Include="Essbasic\V20210526\Models\DescribeResourceUrlsByFlowsRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\DescribeResourceUrlsByFlowsResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeTemplatesRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeTemplatesResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeUsageRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\FlowApproverInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FlowInfo.cs" />
+    <Compile Include="Essbasic\V20210526\Models\FlowResourceUrlInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FormField.cs" />
     <Compile Include="Essbasic\V20210526\Models\PrepareFlowsRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\PrepareFlowsResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\ProxyOrganizationOperator.cs" />
     <Compile Include="Essbasic\V20210526\Models\Recipient.cs" />
+    <Compile Include="Essbasic\V20210526\Models\ResourceUrlInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\SignUrlInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\SyncFailReason.cs" />
     <Compile Include="Essbasic\V20210526\Models\SyncProxyOrganizationOperatorsRequest.cs" />

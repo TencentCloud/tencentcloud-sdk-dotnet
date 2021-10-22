@@ -15,26 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Vpc.V20170312.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeIpGeolocationInfosRequest : AbstractModel
+    public class DescribeResourceUrlsByFlowsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 需查询的IP地址列表，目前仅支持IPv4地址。查询的IP地址数量上限为100个。
+        /// 流程资源对应链接信息
         /// </summary>
-        [JsonProperty("AddressIps")]
-        public string[] AddressIps{ get; set; }
+        [JsonProperty("FlowResourceUrlInfos")]
+        public FlowResourceUrlInfo[] FlowResourceUrlInfos{ get; set; }
 
         /// <summary>
-        /// 需查询的IP地址的字段信息。
+        /// 创建消息，对应多个合同ID，
+        /// 成功为“”,创建失败则对应失败消息
         /// </summary>
-        [JsonProperty("Fields")]
-        public IpField Fields{ get; set; }
+        [JsonProperty("ErrorMessages")]
+        public string[] ErrorMessages{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +49,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "AddressIps.", this.AddressIps);
-            this.SetParamObj(map, prefix + "Fields.", this.Fields);
+            this.SetParamArrayObj(map, prefix + "FlowResourceUrlInfos.", this.FlowResourceUrlInfos);
+            this.SetParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
