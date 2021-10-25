@@ -48,6 +48,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Namespace")]
         public string Namespace{ get; set; }
 
+        /// <summary>
+        /// 定时预置任务
+        /// </summary>
+        [JsonProperty("TriggerActions")]
+        public TriggerAction[] TriggerActions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
             this.SetParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
+            this.SetParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
         }
     }
 }

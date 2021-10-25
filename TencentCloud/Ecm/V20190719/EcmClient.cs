@@ -2475,6 +2475,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 使用本接口获取某种机型在某些区域的装箱配额（当使用虚拟机型时，返回的是一组相互关联的装箱配额）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackingQuotaGroupRequest"/></param>
+        /// <returns><see cref="DescribePackingQuotaGroupResponse"/></returns>
+        public async Task<DescribePackingQuotaGroupResponse> DescribePackingQuotaGroup(DescribePackingQuotaGroupRequest req)
+        {
+             JsonResponseModel<DescribePackingQuotaGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePackingQuotaGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackingQuotaGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用本接口获取某种机型在某些区域的装箱配额（当使用虚拟机型时，返回的是一组相互关联的装箱配额）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackingQuotaGroupRequest"/></param>
+        /// <returns><see cref="DescribePackingQuotaGroupResponse"/></returns>
+        public DescribePackingQuotaGroupResponse DescribePackingQuotaGroupSync(DescribePackingQuotaGroupRequest req)
+        {
+             JsonResponseModel<DescribePackingQuotaGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePackingQuotaGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackingQuotaGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// CPU 内存 硬盘等基础信息峰值数据
         /// </summary>
         /// <param name="req"><see cref="DescribePeakBaseOverviewRequest"/></param>

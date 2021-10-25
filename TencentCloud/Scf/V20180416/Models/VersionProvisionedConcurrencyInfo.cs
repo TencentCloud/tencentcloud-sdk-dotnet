@@ -54,6 +54,13 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }
 
+        /// <summary>
+        /// 预置并发定时任务。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TriggerActions")]
+        public TriggerAction[] TriggerActions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "StatusReason", this.StatusReason);
             this.SetParamSimple(map, prefix + "Qualifier", this.Qualifier);
+            this.SetParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
         }
     }
 }

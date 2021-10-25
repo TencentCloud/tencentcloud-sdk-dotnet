@@ -15,35 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Essbasic.V20210526.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResourceUrlInfo : AbstractModel
+    public class PackingQuotaGroup : AbstractModel
     {
         
         /// <summary>
-        /// 资源链接地址，过期时间5分钟
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 可用区
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
 
         /// <summary>
-        /// 资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 可用区id
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
 
         /// <summary>
-        /// 资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// ISP id
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("ISPId")]
+        public string ISPId{ get; set; }
+
+        /// <summary>
+        /// 一组相互关联的装箱配额
+        /// </summary>
+        [JsonProperty("PackingQuotaInfos")]
+        public PackingQuotaInfo[] PackingQuotaInfos{ get; set; }
 
 
         /// <summary>
@@ -51,9 +54,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "ISPId", this.ISPId);
+            this.SetParamArrayObj(map, prefix + "PackingQuotaInfos.", this.PackingQuotaInfos);
         }
     }
 }

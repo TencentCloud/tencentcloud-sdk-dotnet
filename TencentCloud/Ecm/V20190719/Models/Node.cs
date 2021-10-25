@@ -25,49 +25,49 @@ namespace TencentCloud.Ecm.V20190719.Models
     {
         
         /// <summary>
-        /// zone信息
+        /// zone信息。
         /// </summary>
         [JsonProperty("ZoneInfo")]
         public ZoneInfo ZoneInfo{ get; set; }
 
         /// <summary>
-        /// 国家信息
+        /// 国家信息。
         /// </summary>
         [JsonProperty("Country")]
         public Country Country{ get; set; }
 
         /// <summary>
-        /// 区域信息
+        /// 区域信息。
         /// </summary>
         [JsonProperty("Area")]
         public Area Area{ get; set; }
 
         /// <summary>
-        /// 省份信息
+        /// 省份信息。
         /// </summary>
         [JsonProperty("Province")]
         public Province Province{ get; set; }
 
         /// <summary>
-        /// 城市信息
+        /// 城市信息。
         /// </summary>
         [JsonProperty("City")]
         public City City{ get; set; }
 
         /// <summary>
-        /// Region信息
+        /// Region信息。
         /// </summary>
         [JsonProperty("RegionInfo")]
         public RegionInfo RegionInfo{ get; set; }
 
         /// <summary>
-        /// 运营商列表
+        /// 运营商列表。
         /// </summary>
         [JsonProperty("ISPSet")]
         public ISP[] ISPSet{ get; set; }
 
         /// <summary>
-        /// 运营商数量
+        /// 运营商数量。
         /// </summary>
         [JsonProperty("ISPNum")]
         public long? ISPNum{ get; set; }

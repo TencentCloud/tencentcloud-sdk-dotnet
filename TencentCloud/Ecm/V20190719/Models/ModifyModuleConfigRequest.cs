@@ -42,6 +42,24 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DefaultDataDiskSize")]
         public long? DefaultDataDiskSize{ get; set; }
 
+        /// <summary>
+        /// 默认系统盘大小，单位：G。范围不得超过数据盘范围大小，详看DescribeConfig。
+        /// </summary>
+        [JsonProperty("DefaultSystemDiskSize")]
+        public long? DefaultSystemDiskSize{ get; set; }
+
+        /// <summary>
+        /// 系统盘
+        /// </summary>
+        [JsonProperty("SystemDisk")]
+        public SystemDisk SystemDisk{ get; set; }
+
+        /// <summary>
+        /// 数据盘
+        /// </summary>
+        [JsonProperty("DataDisks")]
+        public DataDisk[] DataDisks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "DefaultDataDiskSize", this.DefaultDataDiskSize);
+            this.SetParamSimple(map, prefix + "DefaultSystemDiskSize", this.DefaultSystemDiskSize);
+            this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
+            this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.388</VersionPrefix>
+    <VersionPrefix>3.0.389</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6391,6 +6391,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribeNetworkInterfacesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeNodeRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeNodeResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribePackingQuotaGroupRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribePackingQuotaGroupResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakBaseOverviewRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewRequest.cs" />
@@ -6531,6 +6533,8 @@
     <Compile Include="Ecm\V20190719\Models\NodeInstanceNum.cs" />
     <Compile Include="Ecm\V20190719\Models\OperatorAction.cs" />
     <Compile Include="Ecm\V20190719\Models\OsVersion.cs" />
+    <Compile Include="Ecm\V20190719\Models\PackingQuotaGroup.cs" />
+    <Compile Include="Ecm\V20190719\Models\PackingQuotaInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakBase.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakFamilyInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PeakNetwork.cs" />
@@ -11445,6 +11449,7 @@
     <Compile Include="Scf\V20180416\Models\TerminateAsyncEventResponse.cs" />
     <Compile Include="Scf\V20180416\Models\TimeInterval.cs" />
     <Compile Include="Scf\V20180416\Models\Trigger.cs" />
+    <Compile Include="Scf\V20180416\Models\TriggerAction.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerCount.cs" />
     <Compile Include="Scf\V20180416\Models\TriggerInfo.cs" />
     <Compile Include="Scf\V20180416\Models\UpdateAliasRequest.cs" />

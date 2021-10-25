@@ -93,6 +93,21 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("ResourceReady")]
         public string ResourceReady{ get; set; }
 
+        /// <summary>
+        /// 安装标记。建议使用方统一转大小写之后再判断。
+        /// <li>QuickStart：快速启动来源</li>
+        /// <li>Activity：活动来源</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Flag")]
+        public string Flag{ get; set; }
+
+        /// <summary>
+        /// 下单时的参数
+        /// </summary>
+        [JsonProperty("ReqBody")]
+        public string ReqBody{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +123,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ExtensionId", this.ExtensionId);
             this.SetParamSimple(map, prefix + "ResourceReady", this.ResourceReady);
+            this.SetParamSimple(map, prefix + "Flag", this.Flag);
+            this.SetParamSimple(map, prefix + "ReqBody", this.ReqBody);
         }
     }
 }

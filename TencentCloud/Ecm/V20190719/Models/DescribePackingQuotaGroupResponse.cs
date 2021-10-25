@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Essbasic.V20210526.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResourceUrlInfo : AbstractModel
+    public class DescribePackingQuotaGroupResponse : AbstractModel
     {
         
         /// <summary>
-        /// 资源链接地址，过期时间5分钟
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 装箱配额组
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("PackingQuotaSet")]
+        public PackingQuotaGroup[] PackingQuotaSet{ get; set; }
 
         /// <summary>
-        /// 资源名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 资源类型
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "PackingQuotaSet.", this.PackingQuotaSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -15,35 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Essbasic.V20210526.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResourceUrlInfo : AbstractModel
+    public class TriggerAction : AbstractModel
     {
         
         /// <summary>
-        /// 资源链接地址，过期时间5分钟
+        /// 定时预置名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Url")]
-        public string Url{ get; set; }
+        [JsonProperty("TriggerName")]
+        public string TriggerName{ get; set; }
 
         /// <summary>
-        /// 资源名称
+        /// 定时预置并发数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("TriggerProvisionedConcurrencyNum")]
+        public ulong? TriggerProvisionedConcurrencyNum{ get; set; }
 
         /// <summary>
-        /// 资源类型
+        /// 设置定时触发器的时间配置，cron表达式。Cron 表达式有七个必需字段，按空格分隔。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Type")]
-        public string Type{ get; set; }
+        [JsonProperty("TriggerCronConfig")]
+        public string TriggerCronConfig{ get; set; }
 
 
         /// <summary>
@@ -51,9 +51,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Url", this.Url);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TriggerName", this.TriggerName);
+            this.SetParamSimple(map, prefix + "TriggerProvisionedConcurrencyNum", this.TriggerProvisionedConcurrencyNum);
+            this.SetParamSimple(map, prefix + "TriggerCronConfig", this.TriggerCronConfig);
         }
     }
 }
