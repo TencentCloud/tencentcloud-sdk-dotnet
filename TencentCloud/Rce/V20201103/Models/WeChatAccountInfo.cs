@@ -45,8 +45,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public string RandStr{ get; set; }
 
         /// <summary>
-        /// 如果WeChatSubType是1，填入授权的access_token（注意：不是普通access_token，详情请参阅官方说明文档。获取网页版本的access_token时，scope字段必需填写snsapi_userinfo。
-        /// 如果WeChatSubType是2，填入以session_key为密钥签名随机数RandStr（hmac_sha256签名算法）得到的字符串。
+        /// token
         /// </summary>
         [JsonProperty("WeChatAccessToken")]
         public string WeChatAccessToken{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A06AC0CF-076C-38E8-83FE-C7FFA375814C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.389</VersionPrefix>
+    <VersionPrefix>3.0.390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -78,6 +78,8 @@
     <Compile Include="V20170312\Models\DescribeDBErrlogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceAttributeRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstanceAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceParametersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDBInstanceParametersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBSlowlogsRequest.cs" />
@@ -88,6 +90,8 @@
     <Compile Include="V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeParamsEventRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeParamsEventResponse.cs" />
     <Compile Include="V20170312\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="V20170312\Models\DescribeProductConfigResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReadOnlyGroupsRequest.cs" />
@@ -109,6 +113,8 @@
     <Compile Include="V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="V20170312\Models\DurationAnalysis.cs" />
     <Compile Include="V20170312\Models\ErrLogDetail.cs" />
+    <Compile Include="V20170312\Models\EventInfo.cs" />
+    <Compile Include="V20170312\Models\EventItem.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesRequest.cs" />
     <Compile Include="V20170312\Models\InitDBInstancesResponse.cs" />
@@ -124,6 +130,8 @@
     <Compile Include="V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceParametersRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
@@ -137,6 +145,8 @@
     <Compile Include="V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="V20170312\Models\ParamEntry.cs" />
+    <Compile Include="V20170312\Models\ParamInfo.cs" />
     <Compile Include="V20170312\Models\PgDeal.cs" />
     <Compile Include="V20170312\Models\RawSlowQuery.cs" />
     <Compile Include="V20170312\Models\ReadOnlyGroup.cs" />

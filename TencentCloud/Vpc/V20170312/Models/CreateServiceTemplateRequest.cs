@@ -31,10 +31,16 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string ServiceTemplateName{ get; set; }
 
         /// <summary>
-        /// 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。
+        /// 支持单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
         /// </summary>
         [JsonProperty("Services")]
         public string[] Services{ get; set; }
+
+        /// <summary>
+        /// 支持添加备注，单个端口、多个端口、连续端口及所有端口，协议支持：TCP、UDP、ICMP、GRE 协议。Services与ServicesExtra必填其一。
+        /// </summary>
+        [JsonProperty("ServicesExtra")]
+        public ServicesInfo[] ServicesExtra{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "ServiceTemplateName", this.ServiceTemplateName);
             this.SetParamArraySimple(map, prefix + "Services.", this.Services);
+            this.SetParamArrayObj(map, prefix + "ServicesExtra.", this.ServicesExtra);
         }
     }
 }

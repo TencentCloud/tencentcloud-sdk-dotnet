@@ -613,6 +613,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 获取实例可修改参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
+        public async Task<DescribeDBInstanceParametersResponse> DescribeDBInstanceParameters(DescribeDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取实例可修改参数列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceParametersResponse"/></returns>
+        public DescribeDBInstanceParametersResponse DescribeDBInstanceParametersSync(DescribeDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDBInstances) 用于查询一个或多个实例的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBInstancesRequest"/></param>
@@ -804,6 +844,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeOrders");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取参数修改事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
+        /// <returns><see cref="DescribeParamsEventResponse"/></returns>
+        public async Task<DescribeParamsEventResponse> DescribeParamsEvent(DescribeParamsEventRequest req)
+        {
+             JsonResponseModel<DescribeParamsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamsEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取参数修改事件详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamsEventRequest"/></param>
+        /// <returns><see cref="DescribeParamsEventResponse"/></returns>
+        public DescribeParamsEventResponse DescribeParamsEventSync(DescribeParamsEventRequest req)
+        {
+             JsonResponseModel<DescribeParamsEventResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamsEvent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamsEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1444,6 +1524,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量修改参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
+        public async Task<ModifyDBInstanceParametersResponse> ModifyDBInstanceParameters(ModifyDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceParametersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量修改参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceParametersRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceParametersResponse"/></returns>
+        public ModifyDBInstanceParametersResponse ModifyDBInstanceParametersSync(ModifyDBInstanceParametersRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceParametersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceParameters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceParametersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

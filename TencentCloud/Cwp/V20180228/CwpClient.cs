@@ -5933,6 +5933,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 漏洞影响主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribeVulEffectHostListResponse"/></returns>
+        public async Task<DescribeVulEffectHostListResponse> DescribeVulEffectHostList(DescribeVulEffectHostListRequest req)
+        {
+             JsonResponseModel<DescribeVulEffectHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulEffectHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulEffectHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 漏洞影响主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulEffectHostListRequest"/></param>
+        /// <returns><see cref="DescribeVulEffectHostListResponse"/></returns>
+        public DescribeVulEffectHostListResponse DescribeVulEffectHostListSync(DescribeVulEffectHostListRequest req)
+        {
+             JsonResponseModel<DescribeVulEffectHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulEffectHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulEffectHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取待处理漏洞数+影响主机数
         /// </summary>
         /// <param name="req"><see cref="DescribeVulHostCountScanTimeRequest"/></param>
@@ -6084,6 +6124,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeVulLevelCount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulLevelCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulListRequest"/></param>
+        /// <returns><see cref="DescribeVulListResponse"/></returns>
+        public async Task<DescribeVulListResponse> DescribeVulList(DescribeVulListRequest req)
+        {
+             JsonResponseModel<DescribeVulListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVulList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取漏洞列表数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVulListRequest"/></param>
+        /// <returns><see cref="DescribeVulListResponse"/></returns>
+        public DescribeVulListResponse DescribeVulListSync(DescribeVulListRequest req)
+        {
+             JsonResponseModel<DescribeVulListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVulList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVulListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

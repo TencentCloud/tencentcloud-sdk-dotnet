@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.389</VersionPrefix>
+    <VersionPrefix>3.0.390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,7 @@
     <Compile Include="V20170312\Models\AddTemplateMemberResponse.cs" />
     <Compile Include="V20170312\Models\Address.cs" />
     <Compile Include="V20170312\Models\AddressChargePrepaid.cs" />
+    <Compile Include="V20170312\Models\AddressInfo.cs" />
     <Compile Include="V20170312\Models\AddressTemplate.cs" />
     <Compile Include="V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="V20170312\Models\AddressTemplateItem.cs" />
@@ -638,6 +639,7 @@
     <Compile Include="V20170312\Models\ServiceTemplate.cs" />
     <Compile Include="V20170312\Models\ServiceTemplateGroup.cs" />
     <Compile Include="V20170312\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="V20170312\Models\ServicesInfo.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />

@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 带备注的IP地址信息。
+        /// </summary>
+        [JsonProperty("AddressExtraSet")]
+        public AddressInfo[] AddressExtraSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
             this.SetParamArraySimple(map, prefix + "AddressSet.", this.AddressSet);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamArrayObj(map, prefix + "AddressExtraSet.", this.AddressExtraSet);
         }
     }
 }

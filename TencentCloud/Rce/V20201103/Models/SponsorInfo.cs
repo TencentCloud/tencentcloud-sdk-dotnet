@@ -25,31 +25,31 @@ namespace TencentCloud.Rce.V20201103.Models
     {
         
         /// <summary>
-        /// 助力场景建议填写：活动发起人微信OpenID。
+        /// OpenID
         /// </summary>
         [JsonProperty("SponsorOpenId")]
         public string SponsorOpenId{ get; set; }
 
         /// <summary>
-        /// 助力场景建议填写：发起人设备号。
+        /// 设备号
         /// </summary>
         [JsonProperty("SponsorDeviceNumber")]
         public string SponsorDeviceNumber{ get; set; }
 
         /// <summary>
-        /// 助力场景建议填写：发起人手机号。
+        /// 手机号
         /// </summary>
         [JsonProperty("SponsorPhone")]
         public string SponsorPhone{ get; set; }
 
         /// <summary>
-        /// 助力场景建议填写：发起人IP。
+        /// IP
         /// </summary>
         [JsonProperty("SponsorIp")]
         public string SponsorIp{ get; set; }
 
         /// <summary>
-        /// 助力场景建议填写：活动链接。
+        /// 链接
         /// </summary>
         [JsonProperty("CampaignUrl")]
         public string CampaignUrl{ get; set; }

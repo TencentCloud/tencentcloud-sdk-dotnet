@@ -42,6 +42,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Addresses")]
         public string[] Addresses{ get; set; }
 
+        /// <summary>
+        /// 支持添加备注的地址信息，支持 IP、CIDR、IP 范围。
+        /// </summary>
+        [JsonProperty("AddressesExtra")]
+        public AddressInfo[] AddressesExtra{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "AddressTemplateId", this.AddressTemplateId);
             this.SetParamSimple(map, prefix + "AddressTemplateName", this.AddressTemplateName);
             this.SetParamArraySimple(map, prefix + "Addresses.", this.Addresses);
+            this.SetParamArrayObj(map, prefix + "AddressesExtra.", this.AddressesExtra);
         }
     }
 }

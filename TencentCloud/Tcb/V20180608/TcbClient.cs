@@ -1093,6 +1093,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询云应用服务版本容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>
+        public async Task<DescribeCloudBaseRunPodListResponse> DescribeCloudBaseRunPodList(DescribeCloudBaseRunPodListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunPodListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunPodList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunPodListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询云应用服务版本容器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunPodListRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunPodListResponse"/></returns>
+        public DescribeCloudBaseRunPodListResponse DescribeCloudBaseRunPodListSync(DescribeCloudBaseRunPodListRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunPodListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunPodList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunPodListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查看容器托管的集群状态
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunResourceRequest"/></param>
@@ -1164,6 +1204,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunResourceForExtend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunResourceForExtendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单个服务的详情，版本以及详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerResponse"/></returns>
+        public async Task<DescribeCloudBaseRunServerResponse> DescribeCloudBaseRunServer(DescribeCloudBaseRunServerRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单个服务的详情，版本以及详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerResponse"/></returns>
+        public DescribeCloudBaseRunServerResponse DescribeCloudBaseRunServerSync(DescribeCloudBaseRunServerRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

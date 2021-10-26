@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.389</VersionPrefix>
+    <VersionPrefix>3.0.390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -387,6 +387,8 @@
     <Compile Include="V20180228\Models\DescribeVersionStatisticsResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulCountByDatesRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulCountByDatesResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVulEffectHostListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVulEffectHostListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulHostCountScanTimeRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulHostCountScanTimeResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulHostTopRequest.cs" />
@@ -395,6 +397,8 @@
     <Compile Include="V20180228\Models\DescribeVulInfoCvssResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulLevelCountRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulLevelCountResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeVulListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeVulListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeVulTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeVulTopResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWarningListRequest.cs" />
@@ -569,7 +573,9 @@
     <Compile Include="V20180228\Models\UpdateMachineTagsResponse.cs" />
     <Compile Include="V20180228\Models\UsualPlace.cs" />
     <Compile Include="V20180228\Models\VulDetailInfo.cs" />
+    <Compile Include="V20180228\Models\VulEffectHostList.cs" />
     <Compile Include="V20180228\Models\VulHostTopInfo.cs" />
+    <Compile Include="V20180228\Models\VulInfoList.cs" />
     <Compile Include="V20180228\Models\VulLevelCountInfo.cs" />
     <Compile Include="V20180228\Models\VulLevelInfo.cs" />
     <Compile Include="V20180228\Models\VulTopInfo.cs" />

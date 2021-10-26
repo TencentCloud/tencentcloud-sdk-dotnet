@@ -26,8 +26,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 过滤条件。
-        /// <li>service-template-name - String - （过滤条件）协议端口模板名称。</li>
-        /// <li>service-template-id - String - （过滤条件）协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+        /// <li>service-template-name - 协议端口模板名称。</li>
+        /// <li>service-template-id - 协议端口模板实例ID，例如：ppm-e6dy460g。</li>
+        /// <li>service-port- 协议端口。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

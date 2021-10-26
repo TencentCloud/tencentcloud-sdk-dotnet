@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.389</VersionPrefix>
+    <VersionPrefix>3.0.390</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4864,6 +4864,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeVersionStatisticsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulCountByDatesRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulCountByDatesResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulEffectHostListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulEffectHostListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulHostCountScanTimeRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulHostCountScanTimeResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulHostTopRequest.cs" />
@@ -4872,6 +4874,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeVulInfoCvssResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulLevelCountRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulLevelCountResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulListRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeVulListResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulTopRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeVulTopResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeWarningListRequest.cs" />
@@ -5046,7 +5050,9 @@
     <Compile Include="Cwp\V20180228\Models\UpdateMachineTagsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\UsualPlace.cs" />
     <Compile Include="Cwp\V20180228\Models\VulDetailInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\VulEffectHostList.cs" />
     <Compile Include="Cwp\V20180228\Models\VulHostTopInfo.cs" />
+    <Compile Include="Cwp\V20180228\Models\VulInfoList.cs" />
     <Compile Include="Cwp\V20180228\Models\VulLevelCountInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\VulLevelInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\VulTopInfo.cs" />
@@ -10872,6 +10878,8 @@
     <Compile Include="Organization\V20210331\OrganizationClient.cs" />
     <Compile Include="Organization\V20210331\Models\BindOrganizationMemberAuthAccountRequest.cs" />
     <Compile Include="Organization\V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberRequest.cs" />
+    <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberResponse.cs" />
     <Compile Include="Partners\V20180321\PartnersClient.cs" />
     <Compile Include="Partners\V20180321\Models\AgentAuditedClient.cs" />
     <Compile Include="Partners\V20180321\Models\AgentBillElem.cs" />
@@ -10967,6 +10975,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeDBErrlogsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBInstanceAttributeRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBInstanceAttributeResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeDBInstanceParametersRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeDBInstanceParametersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBSlowlogsRequest.cs" />
@@ -10977,6 +10987,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeParamsEventRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeParamsEventResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeProductConfigResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeReadOnlyGroupsRequest.cs" />
@@ -10998,6 +11010,8 @@
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DurationAnalysis.cs" />
     <Compile Include="Postgres\V20170312\Models\ErrLogDetail.cs" />
+    <Compile Include="Postgres\V20170312\Models\EventInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\EventItem.cs" />
     <Compile Include="Postgres\V20170312\Models\Filter.cs" />
     <Compile Include="Postgres\V20170312\Models\InitDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\InitDBInstancesResponse.cs" />
@@ -11013,6 +11027,8 @@
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
@@ -11026,6 +11042,8 @@
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ParamEntry.cs" />
+    <Compile Include="Postgres\V20170312\Models\ParamInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\PgDeal.cs" />
     <Compile Include="Postgres\V20170312\Models\RawSlowQuery.cs" />
     <Compile Include="Postgres\V20170312\Models\ReadOnlyGroup.cs" />
@@ -12578,7 +12596,9 @@
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunForGatewayConf.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunImageSecretInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunKVPriority.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunNfsVolumeSource.cs" />
+    <Compile Include="Tcb\V20180608\Models\CloudBaseRunServerVersionItem.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunServiceVolumeMount.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunSideSpec.cs" />
     <Compile Include="Tcb\V20180608\Models\CloudBaseRunVersionFlowItem.cs" />
@@ -12639,10 +12659,14 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunPodListRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunPodListResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunVersionRequest.cs" />
@@ -15360,6 +15384,7 @@
     <Compile Include="Vpc\V20170312\Models\AddTemplateMemberResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\Address.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressChargePrepaid.cs" />
+    <Compile Include="Vpc\V20170312\Models\AddressInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplate.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\AddressTemplateItem.cs" />
@@ -15942,6 +15967,7 @@
     <Compile Include="Vpc\V20170312\Models\ServiceTemplate.cs" />
     <Compile Include="Vpc\V20170312\Models\ServiceTemplateGroup.cs" />
     <Compile Include="Vpc\V20170312\Models\ServiceTemplateSpecification.cs" />
+    <Compile Include="Vpc\V20170312\Models\ServicesInfo.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\SourceIpTranslationNatRule.cs" />

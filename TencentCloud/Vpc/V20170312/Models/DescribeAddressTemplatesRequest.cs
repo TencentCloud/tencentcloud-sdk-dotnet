@@ -26,8 +26,9 @@ namespace TencentCloud.Vpc.V20170312.Models
         
         /// <summary>
         /// 过滤条件。
-        /// <li>address-template-name - String - （过滤条件）IP地址模板名称。</li>
-        /// <li>address-template-id - String - （过滤条件）IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+        /// <li>address-template-name - IP地址模板名称。</li>
+        /// <li>address-template-id - IP地址模板实例ID，例如：ipm-mdunqeb6。</li>
+        /// <li>address-ip - IP地址。</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

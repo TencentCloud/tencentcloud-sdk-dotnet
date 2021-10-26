@@ -47,15 +47,13 @@ namespace TencentCloud.Rce.V20201103.Models
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 诈骗账号类型：
-        /// 1：11位手机号。
-        /// 2：QQ账号。
+        /// 类型
         /// </summary>
         [JsonProperty("FraudType")]
         public long? FraudType{ get; set; }
 
         /// <summary>
-        /// 诈骗账号，手机号或QQ账号。
+        /// 账号
         /// </summary>
         [JsonProperty("FraudAccount")]
         public string FraudAccount{ get; set; }
