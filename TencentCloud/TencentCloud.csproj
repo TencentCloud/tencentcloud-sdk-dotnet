@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.390</VersionPrefix>
+    <VersionPrefix>3.0.391</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5163,6 +5163,7 @@
     <Compile Include="Cynosdb\V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\NetAddr.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ObjectTask.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\OfflineClusterResponse.cs" />
