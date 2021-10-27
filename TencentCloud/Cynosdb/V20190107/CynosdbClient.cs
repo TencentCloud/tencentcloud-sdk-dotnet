@@ -853,6 +853,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 修改集群参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
+        /// <returns><see cref="ModifyClusterParamResponse"/></returns>
+        public async Task<ModifyClusterParamResponse> ModifyClusterParam(ModifyClusterParamRequest req)
+        {
+             JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群参数
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
+        /// <returns><see cref="ModifyClusterParamResponse"/></returns>
+        public ModifyClusterParamResponse ModifyClusterParamSync(ModifyClusterParamRequest req)
+        {
+             JsonResponseModel<ModifyClusterParamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterParam");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterParamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>

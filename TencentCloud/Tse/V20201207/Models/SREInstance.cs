@@ -156,6 +156,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ServiceGovernanceInfos")]
         public ServiceGovernanceInfo[] ServiceGovernanceInfos{ get; set; }
 
+        /// <summary>
+        /// 实例的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public KVPair[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -182,6 +189,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnableInternet", this.EnableInternet);
             this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
             this.SetParamArrayObj(map, prefix + "ServiceGovernanceInfos.", this.ServiceGovernanceInfos);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -8053,50 +8053,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本接口 (RescanImpactedHost) 用于漏洞重新检测。
-        /// </summary>
-        /// <param name="req"><see cref="RescanImpactedHostRequest"/></param>
-        /// <returns><see cref="RescanImpactedHostResponse"/></returns>
-        public async Task<RescanImpactedHostResponse> RescanImpactedHost(RescanImpactedHostRequest req)
-        {
-             JsonResponseModel<RescanImpactedHostResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RescanImpactedHost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RescanImpactedHostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该接口已废弃
-        /// 
-        /// 本接口 (RescanImpactedHost) 用于漏洞重新检测。
-        /// </summary>
-        /// <param name="req"><see cref="RescanImpactedHostRequest"/></param>
-        /// <returns><see cref="RescanImpactedHostResponse"/></returns>
-        public RescanImpactedHostResponse RescanImpactedHostSync(RescanImpactedHostRequest req)
-        {
-             JsonResponseModel<RescanImpactedHostResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RescanImpactedHost");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RescanImpactedHostResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 资产指纹启动扫描
         /// </summary>
         /// <param name="req"><see cref="ScanAssetRequest"/></param>

@@ -593,6 +593,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 用于创建一个 OpenSSH RSA 密钥对，可以用于登录 Linux 实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
+        /// <returns><see cref="CreateKeyPairResponse"/></returns>
+        public async Task<CreateKeyPairResponse> CreateKeyPair(CreateKeyPairRequest req)
+        {
+             JsonResponseModel<CreateKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建一个 OpenSSH RSA 密钥对，可以用于登录 Linux 实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKeyPairRequest"/></param>
+        /// <returns><see cref="CreateKeyPairResponse"/></returns>
+        public CreateKeyPairResponse CreateKeyPairSync(CreateKeyPairRequest req)
+        {
+             JsonResponseModel<CreateKeyPairResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKeyPair");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKeyPairResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建负载均衡监听器。
         /// </summary>
         /// <param name="req"><see cref="CreateListenerRequest"/></param>
@@ -3282,6 +3322,46 @@ namespace TencentCloud.Ecm.V20190719
              {
                  var strResp = this.InternalRequestSync(req, "DisassociateAddress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于解除实例的密钥绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="DisassociateInstancesKeyPairsResponse"/></returns>
+        public async Task<DisassociateInstancesKeyPairsResponse> DisassociateInstancesKeyPairs(DisassociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于解除实例的密钥绑定关系。
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateInstancesKeyPairsRequest"/></param>
+        /// <returns><see cref="DisassociateInstancesKeyPairsResponse"/></returns>
+        public DisassociateInstancesKeyPairsResponse DisassociateInstancesKeyPairsSync(DisassociateInstancesKeyPairsRequest req)
+        {
+             JsonResponseModel<DisassociateInstancesKeyPairsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateInstancesKeyPairs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateInstancesKeyPairsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

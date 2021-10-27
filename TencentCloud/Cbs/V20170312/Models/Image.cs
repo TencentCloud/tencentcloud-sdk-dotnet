@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 镜像实例ID。
-        /// </summary>
-        [JsonProperty("ImageId")]
-        public string ImageId{ get; set; }
-
-        /// <summary>
         /// 镜像名称。
         /// </summary>
         [JsonProperty("ImageName")]
         public string ImageName{ get; set; }
+
+        /// <summary>
+        /// 镜像实例ID。
+        /// </summary>
+        [JsonProperty("ImageId")]
+        public string ImageId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
             this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
+            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
         }
     }
 }

@@ -15,15 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Ecm.V20190719.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RescanImpactedHostResponse : AbstractModel
+    public class CreateKeyPairResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 密钥对信息。
+        /// </summary>
+        [JsonProperty("KeyPair")]
+        public KeyPair KeyPair{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +42,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "KeyPair.", this.KeyPair);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

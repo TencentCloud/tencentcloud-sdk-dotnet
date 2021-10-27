@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.391</VersionPrefix>
+    <VersionPrefix>3.0.392</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,8 @@
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterParamRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />

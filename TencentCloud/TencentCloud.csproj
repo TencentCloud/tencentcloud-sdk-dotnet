@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.391</VersionPrefix>
+    <VersionPrefix>3.0.392</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5006,8 +5006,6 @@
     <Compile Include="Cwp\V20180228\Models\RegionSet.cs" />
     <Compile Include="Cwp\V20180228\Models\RenewProVersionRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\RenewProVersionResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\RescanImpactedHostRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\RescanImpactedHostResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShell.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="Cwp\V20180228\Models\RiskDnsList.cs" />
@@ -5159,6 +5157,8 @@
     <Compile Include="Cynosdb\V20190107\Models\IsolateInstanceResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyClusterParamRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
@@ -6305,6 +6305,8 @@
     <Compile Include="Ecm\V20190719\Models\CreateHaVipResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateImageResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateKeyPairRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\CreateKeyPairResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateListenerRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateListenerResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\CreateLoadBalancerRequest.cs" />
@@ -6438,6 +6440,8 @@
     <Compile Include="Ecm\V20190719\Models\DisableRoutesResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateAddressResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisassociateInstancesKeyPairsRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\Disk.cs" />
@@ -6471,6 +6475,7 @@
     <Compile Include="Ecm\V20190719\Models\InstanceTypeConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\Internet.cs" />
     <Compile Include="Ecm\V20190719\Models\Ipv6Address.cs" />
+    <Compile Include="Ecm\V20190719\Models\KeyPair.cs" />
     <Compile Include="Ecm\V20190719\Models\Listener.cs" />
     <Compile Include="Ecm\V20190719\Models\ListenerBackend.cs" />
     <Compile Include="Ecm\V20190719\Models\ListenerHealth.cs" />
@@ -11122,6 +11127,7 @@
     <Compile Include="Rce\V20201103\Models\AccountInfo.cs" />
     <Compile Include="Rce\V20201103\Models\DescribeRiskModelRequest.cs" />
     <Compile Include="Rce\V20201103\Models\DescribeRiskModelResponse.cs" />
+    <Compile Include="Rce\V20201103\Models\InputCryptoManageMarketingRisk.cs" />
     <Compile Include="Rce\V20201103\Models\InputDescribeRiskModelData.cs" />
     <Compile Include="Rce\V20201103\Models\InputDetails.cs" />
     <Compile Include="Rce\V20201103\Models\InputManageMarketingRisk.cs" />
@@ -14193,6 +14199,7 @@
     <Compile Include="Tse\V20201207\Models\EnvAddressInfo.cs" />
     <Compile Include="Tse\V20201207\Models\EnvInfo.cs" />
     <Compile Include="Tse\V20201207\Models\Filter.cs" />
+    <Compile Include="Tse\V20201207\Models\KVPair.cs" />
     <Compile Include="Tse\V20201207\Models\SREInstance.cs" />
     <Compile Include="Tse\V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="Tse\V20201207\Models\VpcInfo.cs" />

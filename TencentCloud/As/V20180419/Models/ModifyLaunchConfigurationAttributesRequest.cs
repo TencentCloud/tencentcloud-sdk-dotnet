@@ -145,6 +145,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("InstanceNameSettings")]
         public InstanceNameSettings InstanceNameSettings{ get; set; }
 
+        /// <summary>
+        /// 增强服务。通过该参数可以指定是否开启云安全、云监控等服务。
+        /// </summary>
+        [JsonProperty("EnhancedService")]
+        public EnhancedService EnhancedService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -167,6 +173,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
+            this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
         }
     }
 }

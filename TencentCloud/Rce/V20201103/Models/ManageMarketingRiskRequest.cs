@@ -30,6 +30,12 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("BusinessSecurityData")]
         public InputManageMarketingRisk BusinessSecurityData{ get; set; }
 
+        /// <summary>
+        /// 业务入参
+        /// </summary>
+        [JsonProperty("BusinessCryptoData")]
+        public InputCryptoManageMarketingRisk BusinessCryptoData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Rce.V20201103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+            this.SetParamObj(map, prefix + "BusinessCryptoData.", this.BusinessCryptoData);
         }
     }
 }
