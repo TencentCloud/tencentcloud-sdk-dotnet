@@ -195,6 +195,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// mainland：中国境内加速
         /// overseas：中国境外加速
         /// global：全球加速
+        /// 从mainland/overseas修改至global时，域名的配置将被同步至overseas/mainland。若域名含有后端特殊配置，此类配置的同步过程有一定延时，请耐心等待
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -224,7 +225,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public AccessControl AccessControl{ get; set; }
 
         /// <summary>
-        /// URL重定向配置
+        /// 访问URL重写配置
         /// </summary>
         [JsonProperty("UrlRedirect")]
         public UrlRedirect UrlRedirect{ get; set; }
@@ -283,6 +284,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
+        /// <summary>
+        /// 远程鉴权配置
+        /// </summary>
+        [JsonProperty("RemoteAuthentication")]
+        public RemoteAuthentication RemoteAuthentication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -331,6 +338,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
+            this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         }
     }
 }

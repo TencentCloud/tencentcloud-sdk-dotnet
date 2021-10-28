@@ -142,7 +142,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public FollowRedirect FollowRedirect{ get; set; }
 
         /// <summary>
-        /// 自定义错误页面配置（功能灰度中，敬请期待）
+        /// 自定义错误页面配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrorPage")]
@@ -397,21 +397,21 @@ namespace TencentCloud.Cdn.V20180606.Models
         public Ipv6Access Ipv6Access{ get; set; }
 
         /// <summary>
-        /// 高级配置集合。
+        /// 高级配置集合
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AdvanceSet")]
         public AdvanceConfig[] AdvanceSet{ get; set; }
 
         /// <summary>
-        /// 离线缓存
+        /// 离线缓存（功能灰度中，尚未全量，请等待后续全量发布）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// 合并回源
+        /// 合并回源（白名单功能）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginCombine")]
@@ -444,6 +444,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
+
+        /// <summary>
+        /// 远程鉴权配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteAuthentication")]
+        public RemoteAuthentication RemoteAuthentication{ get; set; }
 
 
         /// <summary>
@@ -509,6 +516,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
+            this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
         }
     }
 }

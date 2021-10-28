@@ -94,7 +94,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 流量包生效区域，目前仅支持mainland
+        /// 流量包生效区域，mainland或overseas
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
@@ -117,6 +117,22 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RefundAvailable")]
         public bool? RefundAvailable{ get; set; }
 
+        /// <summary>
+        /// 流量包生效区域
+        /// 0：中国大陆
+        /// 1：亚太一区
+        /// 2：亚太二区
+        /// 3：亚太三区
+        /// 4：中东
+        /// 5：北美
+        /// 6：欧洲
+        /// 7：南美
+        /// 8：非洲
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public long? Region{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +154,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "LifeTimeMonth", this.LifeTimeMonth);
             this.SetParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
             this.SetParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
         }
     }
 }

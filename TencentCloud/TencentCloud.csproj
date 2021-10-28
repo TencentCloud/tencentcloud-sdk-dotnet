@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.393</VersionPrefix>
+    <VersionPrefix>3.0.394</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2426,6 +2426,9 @@
     <Compile Include="Cdn\V20180606\Models\BandwidthAlert.cs" />
     <Compile Include="Cdn\V20180606\Models\BotCookie.cs" />
     <Compile Include="Cdn\V20180606\Models\BotJavaScript.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotRecord.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotSortBy.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotStatisticsCount.cs" />
     <Compile Include="Cdn\V20180606\Models\BriefDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigCache.cs" />
@@ -2520,12 +2523,16 @@
     <Compile Include="Cdn\V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnBotRecordsRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnBotRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnIpStrategyRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnIpStrategyResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnTopDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeTopDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeTopDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeUrlViolationsRequest.cs" />
@@ -2584,6 +2591,8 @@
     <Compile Include="Cdn\V20180606\Models\ListScdnDomainsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListScdnLogTasksResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnTopBotDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\ListScdnTopBotDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopBotDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopBotDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\ListTopCcDataRequest.cs" />
@@ -2634,6 +2643,8 @@
     <Compile Include="Cdn\V20180606\Models\Referer.cs" />
     <Compile Include="Cdn\V20180606\Models\RefererRule.cs" />
     <Compile Include="Cdn\V20180606\Models\RegionMapRelation.cs" />
+    <Compile Include="Cdn\V20180606\Models\RemoteAuthentication.cs" />
+    <Compile Include="Cdn\V20180606\Models\RemoteAuthenticationRule.cs" />
     <Compile Include="Cdn\V20180606\Models\ReportData.cs" />
     <Compile Include="Cdn\V20180606\Models\RequestHeader.cs" />
     <Compile Include="Cdn\V20180606\Models\ResourceBillingData.cs" />
@@ -2689,7 +2700,9 @@
     <Compile Include="Cdn\V20180606\Models\Tag.cs" />
     <Compile Include="Cdn\V20180606\Models\TimestampData.cs" />
     <Compile Include="Cdn\V20180606\Models\TopData.cs" />
+    <Compile Include="Cdn\V20180606\Models\TopDataMore.cs" />
     <Compile Include="Cdn\V20180606\Models\TopDetailData.cs" />
+    <Compile Include="Cdn\V20180606\Models\TopDetailDataMore.cs" />
     <Compile Include="Cdn\V20180606\Models\TopicInfo.cs" />
     <Compile Include="Cdn\V20180606\Models\TpgAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\TrafficPackage.cs" />

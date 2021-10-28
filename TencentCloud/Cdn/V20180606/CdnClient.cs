@@ -1509,6 +1509,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 查询BOT会话记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
+        /// <returns><see cref="DescribeScdnBotRecordsResponse"/></returns>
+        public async Task<DescribeScdnBotRecordsResponse> DescribeScdnBotRecords(DescribeScdnBotRecordsRequest req)
+        {
+             JsonResponseModel<DescribeScdnBotRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScdnBotRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnBotRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询BOT会话记录列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>
+        /// <returns><see cref="DescribeScdnBotRecordsResponse"/></returns>
+        public DescribeScdnBotRecordsResponse DescribeScdnBotRecordsSync(DescribeScdnBotRecordsRequest req)
+        {
+             JsonResponseModel<DescribeScdnBotRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScdnBotRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnBotRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// DescribeScdnConfig 用于查询指定 SCDN 加速域名的安全相关配置
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnConfigRequest"/></param>
@@ -1620,6 +1660,66 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "DescribeScdnTopData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
+        /// 
+        /// + 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
+        /// + 依据总流量、总请求数对访问 Refer 排序，从大至小返回 TOP 100 Refer
+        /// + 依据总流量、总请求数对访问 设备 排序，从大至小返回 设备类型
+        /// + 依据总流量、总请求数对访问 操作系统 排序，从大至小返回 操作系统
+        /// + 依据总流量、总请求数对访问 浏览器 排序，从大至小返回 浏览器
+        /// 
+        /// 注意：
+        /// + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
+        /// + 本接口为beta版，尚未正式全量发布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopDataRequest"/></param>
+        /// <returns><see cref="DescribeTopDataResponse"/></returns>
+        public async Task<DescribeTopDataResponse> DescribeTopData(DescribeTopDataRequest req)
+        {
+             JsonResponseModel<DescribeTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DescribeTopData 通过入参 Metric 和 Filter 组合不同，可以查询以下排序数据：
+        /// 
+        /// + 依据总流量、总请求数对访问 IP 排序，从大至小返回 TOP 100 IP
+        /// + 依据总流量、总请求数对访问 Refer 排序，从大至小返回 TOP 100 Refer
+        /// + 依据总流量、总请求数对访问 设备 排序，从大至小返回 设备类型
+        /// + 依据总流量、总请求数对访问 操作系统 排序，从大至小返回 操作系统
+        /// + 依据总流量、总请求数对访问 浏览器 排序，从大至小返回 浏览器
+        /// 
+        /// 注意：
+        /// + 仅支持 90 天内数据查询，且从2021年09月20日开始有数据
+        /// + 本接口为beta版，尚未正式全量发布
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopDataRequest"/></param>
+        /// <returns><see cref="DescribeTopDataResponse"/></returns>
+        public DescribeTopDataResponse DescribeTopDataSync(DescribeTopDataRequest req)
+        {
+             JsonResponseModel<DescribeTopDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2182,6 +2282,46 @@ namespace TencentCloud.Cdn.V20180606
              {
                  var strResp = this.InternalRequestSync(req, "ListScdnLogTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnLogTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Bot攻击的Top数据列表
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
+        /// <returns><see cref="ListScdnTopBotDataResponse"/></returns>
+        public async Task<ListScdnTopBotDataResponse> ListScdnTopBotData(ListScdnTopBotDataRequest req)
+        {
+             JsonResponseModel<ListScdnTopBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListScdnTopBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnTopBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Bot攻击的Top数据列表
+        /// </summary>
+        /// <param name="req"><see cref="ListScdnTopBotDataRequest"/></param>
+        /// <returns><see cref="ListScdnTopBotDataResponse"/></returns>
+        public ListScdnTopBotDataResponse ListScdnTopBotDataSync(ListScdnTopBotDataRequest req)
+        {
+             JsonResponseModel<ListScdnTopBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListScdnTopBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListScdnTopBotDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
