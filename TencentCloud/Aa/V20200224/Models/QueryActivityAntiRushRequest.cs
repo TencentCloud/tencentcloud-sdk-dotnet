@@ -25,18 +25,13 @@ namespace TencentCloud.Aa.V20200224.Models
     {
         
         /// <summary>
-        /// 用户账号类型（默认开通 QQ 开放账号、手机号，手机 MD5 账号类型查询。如需使用微信开放账号，则需要 提交工单 由腾讯云进行资格审核，审核通过后方可正常使用微信开放账号）：
-        /// 1：QQ 开放帐号。
-        /// 2：微信开放账号。
-        /// 4：手机号。
-        /// 0：其他。
-        /// 10004：手机号 MD5。
+        /// 账号类型
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
 
         /// <summary>
-        /// 用户 ID 不同的 accountType 对应不同的用户 ID。如果是 QQ，则填入对应的 openid，微信用户则填入对应的 openid/unionid，手机号则填入对应真实用户手机号（如13123456789）。
+        /// uid值
         /// </summary>
         [JsonProperty("Uid")]
         public string Uid{ get; set; }
@@ -66,7 +61,7 @@ namespace TencentCloud.Aa.V20200224.Models
         public string NickName{ get; set; }
 
         /// <summary>
-        /// 手机号。若 accountType 选4（手机号）、或10004（手机号 MD5），则无需重复填写。否则填入对应的手机号（如15912345687）。accountType为1或2时，该字段支持MD5值；
+        /// 手机号
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
@@ -218,8 +213,7 @@ namespace TencentCloud.Aa.V20200224.Models
         public string RandNum{ get; set; }
 
         /// <summary>
-        /// 如果 accountType为2而且wxSubType有填，该字段必选，否则不需要填写；
-        /// 如果是微信小程序（WxSubType=2），该字段为以ssesion_key为key去签名随机数radnNum得到的值（ hmac_sha256签名算法）；如果是微信公众号或第三方登录，则为授权的access_token（网页版本的access_Token,而且获取token的scope字段必需填写snsapi_userinfo；）
+        /// token
         /// </summary>
         [JsonProperty("WxToken")]
         public string WxToken{ get; set; }

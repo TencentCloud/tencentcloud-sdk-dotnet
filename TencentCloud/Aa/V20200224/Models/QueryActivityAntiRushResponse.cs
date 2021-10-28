@@ -77,8 +77,7 @@ namespace TencentCloud.Aa.V20200224.Models
         public string AssociateAccount{ get; set; }
 
         /// <summary>
-        /// 用户ID 
-        /// accountType不同对应不同的用户ID。如果是QQ或微信用户则填入对应的openId
+        /// uid值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Uid")]

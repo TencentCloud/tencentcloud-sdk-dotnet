@@ -413,6 +413,166 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 此接口用于创建一个RocketMQ集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>
+        /// <returns><see cref="CreateRocketMQClusterResponse"/></returns>
+        public async Task<CreateRocketMQClusterResponse> CreateRocketMQCluster(CreateRocketMQClusterRequest req)
+        {
+             JsonResponseModel<CreateRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于创建一个RocketMQ集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQClusterRequest"/></param>
+        /// <returns><see cref="CreateRocketMQClusterResponse"/></returns>
+        public CreateRocketMQClusterResponse CreateRocketMQClusterSync(CreateRocketMQClusterRequest req)
+        {
+             JsonResponseModel<CreateRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ消费组
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
+        /// <returns><see cref="CreateRocketMQGroupResponse"/></returns>
+        public async Task<CreateRocketMQGroupResponse> CreateRocketMQGroup(CreateRocketMQGroupRequest req)
+        {
+             JsonResponseModel<CreateRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ消费组
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQGroupRequest"/></param>
+        /// <returns><see cref="CreateRocketMQGroupResponse"/></returns>
+        public CreateRocketMQGroupResponse CreateRocketMQGroupSync(CreateRocketMQGroupRequest req)
+        {
+             JsonResponseModel<CreateRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQNamespaceResponse"/></returns>
+        public async Task<CreateRocketMQNamespaceResponse> CreateRocketMQNamespace(CreateRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<CreateRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="CreateRocketMQNamespaceResponse"/></returns>
+        public CreateRocketMQNamespaceResponse CreateRocketMQNamespaceSync(CreateRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<CreateRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQTopicRequest"/></param>
+        /// <returns><see cref="CreateRocketMQTopicResponse"/></returns>
+        public async Task<CreateRocketMQTopicResponse> CreateRocketMQTopic(CreateRocketMQTopicRequest req)
+        {
+             JsonResponseModel<CreateRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="CreateRocketMQTopicRequest"/></param>
+        /// <returns><see cref="CreateRocketMQTopicResponse"/></returns>
+        public CreateRocketMQTopicResponse CreateRocketMQTopicSync(CreateRocketMQTopicRequest req)
+        {
+             JsonResponseModel<CreateRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRocketMQTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建角色
         /// </summary>
         /// <param name="req"><see cref="CreateRoleRequest"/></param>
@@ -764,6 +924,166 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEnvironments");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQClusterRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQClusterResponse"/></returns>
+        public async Task<DeleteRocketMQClusterResponse> DeleteRocketMQCluster(DeleteRocketMQClusterRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ集群
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQClusterRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQClusterResponse"/></returns>
+        public DeleteRocketMQClusterResponse DeleteRocketMQClusterSync(DeleteRocketMQClusterRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQGroupResponse"/></returns>
+        public async Task<DeleteRocketMQGroupResponse> DeleteRocketMQGroup(DeleteRocketMQGroupRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQGroupRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQGroupResponse"/></returns>
+        public DeleteRocketMQGroupResponse DeleteRocketMQGroupSync(DeleteRocketMQGroupRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQNamespaceResponse"/></returns>
+        public async Task<DeleteRocketMQNamespaceResponse> DeleteRocketMQNamespace(DeleteRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQNamespaceResponse"/></returns>
+        public DeleteRocketMQNamespaceResponse DeleteRocketMQNamespaceSync(DeleteRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQTopicResponse"/></returns>
+        public async Task<DeleteRocketMQTopicResponse> DeleteRocketMQTopic(DeleteRocketMQTopicRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除RocketMQ主题
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRocketMQTopicRequest"/></param>
+        /// <returns><see cref="DeleteRocketMQTopicResponse"/></returns>
+        public DeleteRocketMQTopicResponse DeleteRocketMQTopicSync(DeleteRocketMQTopicRequest req)
+        {
+             JsonResponseModel<DeleteRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRocketMQTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1533,6 +1853,206 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取单个RocketMQ集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQClusterRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQClusterResponse"/></returns>
+        public async Task<DescribeRocketMQClusterResponse> DescribeRocketMQCluster(DescribeRocketMQClusterRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个RocketMQ集群信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQClusterRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQClusterResponse"/></returns>
+        public DescribeRocketMQClusterResponse DescribeRocketMQClusterSync(DescribeRocketMQClusterRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQClustersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQClustersResponse"/></returns>
+        public async Task<DescribeRocketMQClustersResponse> DescribeRocketMQClusters(DescribeRocketMQClustersRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQClustersRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQClustersResponse"/></returns>
+        public DescribeRocketMQClustersResponse DescribeRocketMQClustersSync(DescribeRocketMQClustersRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ消费组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
+        public async Task<DescribeRocketMQGroupsResponse> DescribeRocketMQGroups(DescribeRocketMQGroupsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ消费组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQGroupsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQGroupsResponse"/></returns>
+        public DescribeRocketMQGroupsResponse DescribeRocketMQGroupsSync(DescribeRocketMQGroupsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
+        public async Task<DescribeRocketMQNamespacesResponse> DescribeRocketMQNamespaces(DescribeRocketMQNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ命名空间列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQNamespacesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQNamespacesResponse"/></returns>
+        public DescribeRocketMQNamespacesResponse DescribeRocketMQNamespacesSync(DescribeRocketMQNamespacesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQNamespacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQNamespaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
+        public async Task<DescribeRocketMQTopicsResponse> DescribeRocketMQTopics(DescribeRocketMQTopicsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取RocketMQ主题列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQTopicsRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQTopicsResponse"/></returns>
+        public DescribeRocketMQTopicsResponse DescribeRocketMQTopicsSync(DescribeRocketMQTopicsRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQTopicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQTopics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQTopicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取角色列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRolesRequest"/></param>
@@ -1884,6 +2404,166 @@ namespace TencentCloud.Tdmq.V20200217
              {
                  var strResp = this.InternalRequestSync(req, "ModifyEnvironmentRole");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyEnvironmentRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ集群信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQClusterRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQClusterResponse"/></returns>
+        public async Task<ModifyRocketMQClusterResponse> ModifyRocketMQCluster(ModifyRocketMQClusterRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ集群信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQClusterRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQClusterResponse"/></returns>
+        public ModifyRocketMQClusterResponse ModifyRocketMQClusterSync(ModifyRocketMQClusterRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ消费组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQGroupResponse"/></returns>
+        public async Task<ModifyRocketMQGroupResponse> ModifyRocketMQGroup(ModifyRocketMQGroupRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ消费组信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQGroupRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQGroupResponse"/></returns>
+        public ModifyRocketMQGroupResponse ModifyRocketMQGroupSync(ModifyRocketMQGroupRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQNamespaceResponse"/></returns>
+        public async Task<ModifyRocketMQNamespaceResponse> ModifyRocketMQNamespace(ModifyRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ命名空间
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQNamespaceRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQNamespaceResponse"/></returns>
+        public ModifyRocketMQNamespaceResponse ModifyRocketMQNamespaceSync(ModifyRocketMQNamespaceRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQNamespaceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQNamespace");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQNamespaceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ主题信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQTopicRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQTopicResponse"/></returns>
+        public async Task<ModifyRocketMQTopicResponse> ModifyRocketMQTopic(ModifyRocketMQTopicRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQTopicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新RocketMQ主题信息
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRocketMQTopicRequest"/></param>
+        /// <returns><see cref="ModifyRocketMQTopicResponse"/></returns>
+        public ModifyRocketMQTopicResponse ModifyRocketMQTopicSync(ModifyRocketMQTopicRequest req)
+        {
+             JsonResponseModel<ModifyRocketMQTopicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRocketMQTopic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRocketMQTopicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

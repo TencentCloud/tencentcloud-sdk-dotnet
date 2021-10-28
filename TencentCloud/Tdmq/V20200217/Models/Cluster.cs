@@ -92,7 +92,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? MaxQps{ get; set; }
 
         /// <summary>
-        /// 最大消息保留时间，分钟为单位
+        /// 最大消息保留时间，秒为单位
         /// </summary>
         [JsonProperty("MessageRetentionTime")]
         public long? MessageRetentionTime{ get; set; }

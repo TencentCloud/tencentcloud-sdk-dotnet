@@ -55,7 +55,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? EmergencyResponseBuy{ get; set; }
 
         /// <summary>
-        /// 是否哦购买过旗舰护网
+        /// 是否购买过旗舰护网
         /// </summary>
         [JsonProperty("ProtectNetBuy")]
         public bool? ProtectNetBuy{ get; set; }

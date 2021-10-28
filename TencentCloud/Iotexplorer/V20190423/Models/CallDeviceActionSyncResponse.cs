@@ -38,7 +38,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string OutputParams{ get; set; }
 
         /// <summary>
-        /// 返回状态
+        /// 返回状态，当设备不在线等部分情况，会通过该 Status 返回。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
