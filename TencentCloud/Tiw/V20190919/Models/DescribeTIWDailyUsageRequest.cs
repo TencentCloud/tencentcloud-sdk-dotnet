@@ -15,42 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tiw.V20190919.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeQualityRequest : AbstractModel
+    public class DescribeTIWDailyUsageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始时间，24小时内。本地unix时间戳（1588031999s）
-        /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588031999s）
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// 用户sdkappid
+        /// 互动白板应用SdkAppId
         /// </summary>
         [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询的数据类型
-        /// enterTotalSuccPercent：进房成功率
-        /// fistFreamInSecRate：首帧秒开率
-        /// blockPercent：视频卡顿率
-        /// audioBlockPercent：音频卡顿率
+        /// 需要查询的子产品用量，支持传入以下值
+        /// - sp_tiw_board: 互动白板时长，单位为分钟
+        /// - sp_tiw_dt: 动态转码页数，单位页
+        /// - sp_tiw_st: 静态转码页数，单位页
+        /// - sp_tiw_ric: 实时录制时长，单位分钟
+        /// 
+        /// 注意：动态转码以1:8的比例计算文档转码页数，静态转码以1:1的比例计算文档转码页数
         /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("SubProduct")]
+        public string SubProduct{ get; set; }
+
+        /// <summary>
+        /// 开始时间，格式YYYY-MM-DD，查询结果里包括该天数据
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间，格式YYYY-MM-DD，查询结果里包括该天数据，单次查询统计区间最多不能超过31天。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
 
         /// <summary>
@@ -58,10 +60,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "SubProduct", this.SubProduct);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
         }
     }
 }

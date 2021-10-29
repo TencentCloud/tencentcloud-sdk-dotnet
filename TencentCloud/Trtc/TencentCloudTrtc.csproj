@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.394</VersionPrefix>
+    <VersionPrefix>3.0.395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,12 +63,6 @@
     <Compile Include="V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="V20190722\Models\DescribePictureRequest.cs" />
     <Compile Include="V20190722\Models\DescribePictureResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeQualityRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeQualityResponse.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeScaleRequest.cs" />
-    <Compile Include="V20190722\Models\DescribeRealtimeScaleResponse.cs" />
     <Compile Include="V20190722\Models\DescribeRecordStatisticRequest.cs" />
     <Compile Include="V20190722\Models\DescribeRecordStatisticResponse.cs" />
     <Compile Include="V20190722\Models\DescribeRoomInformationRequest.cs" />
@@ -96,7 +90,6 @@
     <Compile Include="V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
-    <Compile Include="V20190722\Models\RealtimeData.cs" />
     <Compile Include="V20190722\Models\RecordUsage.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />

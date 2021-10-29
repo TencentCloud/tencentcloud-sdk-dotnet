@@ -15,40 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tiw.V20190919.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeScaleRequest : AbstractModel
+    public class UsageDataItem : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始时间，24小时内。本地unix时间戳（1588031999s）
+        /// 日期，格式为YYYY-MM-DD
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588031999s）
-        /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
-
-        /// <summary>
-        /// 用户sdkappid
+        /// 白板应用SDKAppID
         /// </summary>
         [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询的数据类型
-        /// UserNum：通话人数；
-        /// RoomNum：房间数
+        /// 互动白板子产品，请求参数传入的一致
+        /// - sp_tiw_board: 互动白板时长
+        /// - sp_tiw_dt: 动态转码页数
+        /// - sp_tiw_st: 静态转码页数
+        /// - sp_tiw_ric: 实时录制时长
         /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("SubProduct")]
+        public string SubProduct{ get; set; }
+
+        /// <summary>
+        /// 用量值
+        /// - 静态转码、动态转码单位为页
+        /// - 白板时长、实时录制时长单位为分钟
+        /// </summary>
+        [JsonProperty("Value")]
+        public float? Value{ get; set; }
 
 
         /// <summary>
@@ -56,10 +60,10 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "SubProduct", this.SubProduct);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

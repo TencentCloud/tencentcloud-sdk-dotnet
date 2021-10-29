@@ -15,27 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RealtimeData : AbstractModel
+    public class DescribeGroupsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 返回的数据
+        /// 图库信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Content")]
-        public TimeValue[] Content{ get; set; }
+        [JsonProperty("Groups")]
+        public GroupInfo[] Groups{ get; set; }
 
         /// <summary>
-        /// 数据类型字段
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DataType")]
-        public string DataType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -43,8 +43,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
-            this.SetParamSimple(map, prefix + "DataType", this.DataType);
+            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

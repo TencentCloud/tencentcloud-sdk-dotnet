@@ -43,6 +43,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BackupDBTableList")]
         public BackupItem[] BackupDBTableList{ get; set; }
 
+        /// <summary>
+        /// 手动备份别名
+        /// </summary>
+        [JsonProperty("ManualBackupName")]
+        public string ManualBackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamArrayObj(map, prefix + "BackupDBTableList.", this.BackupDBTableList);
+            this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
         }
     }
 }

@@ -297,7 +297,7 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// SendTrafficSecuritySmsMessage
+        /// 流量安选产品，短信发送接口
         /// </summary>
         /// <param name="req"><see cref="SendTrafficSecuritySmsMessageRequest"/></param>
         /// <returns><see cref="SendTrafficSecuritySmsMessageResponse"/></returns>
@@ -317,7 +317,7 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// SendTrafficSecuritySmsMessage
+        /// 流量安选产品，短信发送接口
         /// </summary>
         /// <param name="req"><see cref="SendTrafficSecuritySmsMessageRequest"/></param>
         /// <returns><see cref="SendTrafficSecuritySmsMessageResponse"/></returns>

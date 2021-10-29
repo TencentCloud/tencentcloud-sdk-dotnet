@@ -72,6 +72,12 @@ namespace TencentCloud.Ims.V20201229.Models
         [JsonProperty("Rate")]
         public ulong? Rate{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回检测结果所对应的恶意二级标签。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ims.V20201229.Models
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamObj(map, prefix + "Location.", this.Location);
             this.SetParamSimple(map, prefix + "Rate", this.Rate);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
         }
     }
 }

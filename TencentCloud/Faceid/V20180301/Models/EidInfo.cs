@@ -31,10 +31,22 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string EidCode{ get; set; }
 
         /// <summary>
-        /// eID 中心针对商户方EidCode的电子签名
+        /// Eid中心针对商户方EidCode的电子签名
         /// </summary>
         [JsonProperty("EidSign")]
         public string EidSign{ get; set; }
+
+        /// <summary>
+        /// 商户方公钥加密的会话密钥的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+        /// </summary>
+        [JsonProperty("DesKey")]
+        public string DesKey{ get; set; }
+
+        /// <summary>
+        /// 会话密钥sm2加密后的base64字符串，[指引详见](https://cloud.tencent.com/document/product/1007/63370)
+        /// </summary>
+        [JsonProperty("UserInfo")]
+        public string UserInfo{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "EidCode", this.EidCode);
             this.SetParamSimple(map, prefix + "EidSign", this.EidSign);
+            this.SetParamSimple(map, prefix + "DesKey", this.DesKey);
+            this.SetParamSimple(map, prefix + "UserInfo", this.UserInfo);
         }
     }
 }

@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Way")]
         public string Way{ get; set; }
 
+        /// <summary>
+        /// 手动备份别名
+        /// </summary>
+        [JsonProperty("ManualBackupName")]
+        public string ManualBackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "Way", this.Way);
+            this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
         }
     }
 }

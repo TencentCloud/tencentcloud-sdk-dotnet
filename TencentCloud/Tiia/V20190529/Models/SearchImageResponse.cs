@@ -15,40 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeNetworkRequest : AbstractModel
+    public class SearchImageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始时间，24小时内，本地unix时间戳（1588031999s）
+        /// 返回结果数量。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588031999s）
+        /// 图片信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndTime")]
-        public ulong? EndTime{ get; set; }
+        [JsonProperty("ImageInfos")]
+        public ImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
-        /// 用户sdkappid
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
-
-        /// <summary>
-        /// 需查询的数据类型
-        /// sendLossRateRaw：上行丢包率
-        /// recvLossRateRaw：下行丢包率
-        /// </summary>
-        [JsonProperty("DataType")]
-        public string[] DataType{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +49,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
-            this.SetParamArraySimple(map, prefix + "DataType.", this.DataType);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

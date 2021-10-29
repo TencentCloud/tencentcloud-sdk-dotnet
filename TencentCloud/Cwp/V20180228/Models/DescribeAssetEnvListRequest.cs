@@ -37,8 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 类型：
-        /// 0
+        /// 该字段已废弃，由Filters代替
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

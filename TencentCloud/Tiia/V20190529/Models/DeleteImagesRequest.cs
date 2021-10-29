@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tiia.V20190529.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRealtimeNetworkResponse : AbstractModel
+    public class DeleteImagesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 查询返回的数据
+        /// 图库名称。
         /// </summary>
-        [JsonProperty("Data")]
-        public RealtimeData[] Data{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 物品ID。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EntityId")]
+        public string EntityId{ get; set; }
+
+        /// <summary>
+        /// 图片名称，如果不指定本参数，则删除EntityId下所有的图片；否则删除指定的图。
+        /// </summary>
+        [JsonProperty("PicName")]
+        public string PicName{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "EntityId", this.EntityId);
+            this.SetParamSimple(map, prefix + "PicName", this.PicName);
         }
     }
 }

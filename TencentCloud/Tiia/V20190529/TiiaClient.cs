@@ -97,6 +97,86 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 用于创建一个空的图片库，如果图片库已存在则返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public async Task<CreateGroupResponse> CreateGroup(CreateGroupRequest req)
+        {
+             JsonResponseModel<CreateGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建一个空的图片库，如果图片库已存在则返回错误。
+        /// </summary>
+        /// <param name="req"><see cref="CreateGroupRequest"/></param>
+        /// <returns><see cref="CreateGroupResponse"/></returns>
+        public CreateGroupResponse CreateGroupSync(CreateGroupRequest req)
+        {
+             JsonResponseModel<CreateGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建图片，并添加对应图片的自定义信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRequest"/></param>
+        /// <returns><see cref="CreateImageResponse"/></returns>
+        public async Task<CreateImageResponse> CreateImage(CreateImageRequest req)
+        {
+             JsonResponseModel<CreateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建图片，并添加对应图片的自定义信息。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageRequest"/></param>
+        /// <returns><see cref="CreateImageResponse"/></returns>
+        public CreateImageResponse CreateImageSync(CreateImageRequest req)
+        {
+             JsonResponseModel<CreateImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据输入的裁剪比例，智能判断一张图片的最佳裁剪区域，确保原图的主体区域不受影响。
         /// 
         /// 可以自动裁剪图片，适应不同平台、设备的展示要求，避免简单拉伸带来的变形。
@@ -136,6 +216,126 @@ namespace TencentCloud.Tiia.V20190529
              {
                  var strResp = this.InternalRequestSync(req, "CropImage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CropImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除图片。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImagesRequest"/></param>
+        /// <returns><see cref="DeleteImagesResponse"/></returns>
+        public async Task<DeleteImagesResponse> DeleteImages(DeleteImagesRequest req)
+        {
+             JsonResponseModel<DeleteImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除图片。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImagesRequest"/></param>
+        /// <returns><see cref="DeleteImagesResponse"/></returns>
+        public DeleteImagesResponse DeleteImagesSync(DeleteImagesRequest req)
+        {
+             JsonResponseModel<DeleteImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询所有的图库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeGroupsResponse"/></returns>
+        public async Task<DescribeGroupsResponse> DescribeGroups(DescribeGroupsRequest req)
+        {
+             JsonResponseModel<DescribeGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询所有的图库信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupsRequest"/></param>
+        /// <returns><see cref="DescribeGroupsResponse"/></returns>
+        public DescribeGroupsResponse DescribeGroupsSync(DescribeGroupsRequest req)
+        {
+             JsonResponseModel<DescribeGroupsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroups");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定图片库中的图片列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public async Task<DescribeImagesResponse> DescribeImages(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定图片库中的图片列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImagesRequest"/></param>
+        /// <returns><see cref="DescribeImagesResponse"/></returns>
+        public DescribeImagesResponse DescribeImagesSync(DescribeImagesRequest req)
+        {
+             JsonResponseModel<DescribeImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImagesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -596,6 +796,46 @@ namespace TencentCloud.Tiia.V20190529
              {
                  var strResp = this.InternalRequestSync(req, "RecognizeCar");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeCarResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
+        /// </summary>
+        /// <param name="req"><see cref="SearchImageRequest"/></param>
+        /// <returns><see cref="SearchImageResponse"/></returns>
+        public async Task<SearchImageResponse> SearchImage(SearchImageRequest req)
+        {
+             JsonResponseModel<SearchImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
+        /// </summary>
+        /// <param name="req"><see cref="SearchImageRequest"/></param>
+        /// <returns><see cref="SearchImageResponse"/></returns>
+        public SearchImageResponse SearchImageSync(SearchImageRequest req)
+        {
+             JsonResponseModel<SearchImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

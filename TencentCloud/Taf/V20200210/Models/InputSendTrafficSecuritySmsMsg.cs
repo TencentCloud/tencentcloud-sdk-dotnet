@@ -36,6 +36,36 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("Mobiles")]
         public string[] Mobiles{ get; set; }
 
+        /// <summary>
+        /// 是否授权，1：已授权
+        /// </summary>
+        [JsonProperty("IsAuthorized")]
+        public long? IsAuthorized{ get; set; }
+
+        /// <summary>
+        /// 加密方式，0：AES加密；1：DES加密
+        /// </summary>
+        [JsonProperty("EncryptMethod")]
+        public long? EncryptMethod{ get; set; }
+
+        /// <summary>
+        /// 加密算法中的块处理模式，0：ECB模式；1：CBC模式；2：CTR模式；3：CFB模式；4：OFB模式；
+        /// </summary>
+        [JsonProperty("EncryptMode")]
+        public long? EncryptMode{ get; set; }
+
+        /// <summary>
+        /// 填充模式，0：ZeroPadding；1：PKCS5Padding；2：PKCS7Padding；
+        /// </summary>
+        [JsonProperty("PaddingType")]
+        public long? PaddingType{ get; set; }
+
+        /// <summary>
+        /// 加密数据
+        /// </summary>
+        [JsonProperty("EncryptData")]
+        public string EncryptData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +74,11 @@ namespace TencentCloud.Taf.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamArraySimple(map, prefix + "Mobiles.", this.Mobiles);
+            this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+            this.SetParamSimple(map, prefix + "EncryptMethod", this.EncryptMethod);
+            this.SetParamSimple(map, prefix + "EncryptMode", this.EncryptMode);
+            this.SetParamSimple(map, prefix + "PaddingType", this.PaddingType);
+            this.SetParamSimple(map, prefix + "EncryptData", this.EncryptData);
         }
     }
 }

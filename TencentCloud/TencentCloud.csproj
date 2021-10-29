@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.394</VersionPrefix>
+    <VersionPrefix>3.0.395</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11508,6 +11508,8 @@
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
     <Compile Include="Ses\V20201002\SesClient.cs" />
     <Compile Include="Ses\V20201002\Models\Attachment.cs" />
+    <Compile Include="Ses\V20201002\Models\BatchSendEmailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\BatchSendEmailResponse.cs" />
     <Compile Include="Ses\V20201002\Models\BlackEmailAddress.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailAddressResponse.cs" />
@@ -11515,6 +11517,7 @@
     <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CycleEmailParam.cs" />
     <Compile Include="Ses\V20201002\Models\DNSAttributes.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteBlackListRequest.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteBlackListResponse.cs" />
@@ -11549,6 +11552,7 @@
     <Compile Include="Ses\V20201002\Models\Template.cs" />
     <Compile Include="Ses\V20201002\Models\TemplateContent.cs" />
     <Compile Include="Ses\V20201002\Models\TemplatesMetadata.cs" />
+    <Compile Include="Ses\V20201002\Models\TimedEmailParam.cs" />
     <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityRequest.cs" />
     <Compile Include="Ses\V20201002\Models\UpdateEmailIdentityResponse.cs" />
     <Compile Include="Ses\V20201002\Models\UpdateEmailTemplateRequest.cs" />
@@ -13669,8 +13673,18 @@
     <Compile Include="Tiia\V20190529\Models\CarPlateContent.cs" />
     <Compile Include="Tiia\V20190529\Models\CarTagItem.cs" />
     <Compile Include="Tiia\V20190529\Models\Coord.cs" />
+    <Compile Include="Tiia\V20190529\Models\CreateGroupRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\CreateGroupResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\CreateImageRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\CreateImageResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\CropImageRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\CropImageResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\DeleteImagesRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\DeleteImagesResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\DescribeGroupsRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\DescribeGroupsResponse.cs" />
+    <Compile Include="Tiia\V20190529\Models\DescribeImagesRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\DescribeImagesResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectCelebrityRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectCelebrityResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\DetectDisgustRequest.cs" />
@@ -13689,6 +13703,8 @@
     <Compile Include="Tiia\V20190529\Models\EnhanceImageRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\EnhanceImageResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\Face.cs" />
+    <Compile Include="Tiia\V20190529\Models\GroupInfo.cs" />
+    <Compile Include="Tiia\V20190529\Models\ImageInfo.cs" />
     <Compile Include="Tiia\V20190529\Models\Labels.cs" />
     <Compile Include="Tiia\V20190529\Models\Location.cs" />
     <Compile Include="Tiia\V20190529\Models\Product.cs" />
@@ -13696,6 +13712,8 @@
     <Compile Include="Tiia\V20190529\Models\RecognizeCarRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\RecognizeCarResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\RegionDetected.cs" />
+    <Compile Include="Tiia\V20190529\Models\SearchImageRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\SearchImageResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\Threshold.cs" />
     <Compile Include="Tione\V20191022\TioneClient.cs" />
     <Compile Include="Tione\V20191022\Models\AlgorithmSpecification.cs" />
@@ -13783,6 +13801,8 @@
     <Compile Include="Tiw\V20190919\Models\DescribeQualityMetricsResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeSnapshotTaskRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeSnapshotTaskResponse.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTIWDailyUsageRequest.cs" />
+    <Compile Include="Tiw\V20190919\Models\DescribeTIWDailyUsageResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackRequest.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeCallbackResponse.cs" />
     <Compile Include="Tiw\V20190919\Models\DescribeTranscodeRequest.cs" />
@@ -13834,6 +13854,7 @@
     <Compile Include="Tiw\V20190919\Models\StreamControl.cs" />
     <Compile Include="Tiw\V20190919\Models\StreamLayout.cs" />
     <Compile Include="Tiw\V20190919\Models\TimeValue.cs" />
+    <Compile Include="Tiw\V20190919\Models\UsageDataItem.cs" />
     <Compile Include="Tiw\V20190919\Models\VideoInfo.cs" />
     <Compile Include="Tiw\V20190919\Models\Whiteboard.cs" />
     <Compile Include="Tiw\V20190919\Models\WhiteboardPushBackupParam.cs" />
@@ -14188,12 +14209,6 @@
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribePictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribePictureResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeNetworkResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeQualityResponse.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleRequest.cs" />
-    <Compile Include="Trtc\V20190722\Models\DescribeRealtimeScaleResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRecordStatisticResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeRoomInformationRequest.cs" />
@@ -14221,7 +14236,6 @@
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
-    <Compile Include="Trtc\V20190722\Models\RealtimeData.cs" />
     <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />

@@ -36,6 +36,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnvironmentId")]
         public string EnvironmentId{ get; set; }
 
+        /// <summary>
+        /// 版本部署id
+        /// </summary>
+        [JsonProperty("VersionId")]
+        public string VersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "VersionId", this.VersionId);
         }
     }
 }

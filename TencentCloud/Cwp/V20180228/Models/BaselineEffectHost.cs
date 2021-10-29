@@ -53,7 +53,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string LastScanTime{ get; set; }
 
         /// <summary>
-        /// 处理状态
+        /// 风险项处理状态状态：0-未通过，1-通过
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

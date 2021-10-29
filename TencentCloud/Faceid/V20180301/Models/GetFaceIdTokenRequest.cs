@@ -61,6 +61,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
+        /// <summary>
+        /// 默认为false，设置该参数为true后，核身过程中的视频图片将会存储在人脸核身控制台授权cos的bucket中，拉取结果时会返回对应资源完整cos地址。开通地址见https://console.cloud.tencent.com/faceid/cos
+        /// 【注意】选择该参数为true后将不返回base64数据，请根据接入情况谨慎修改。
+        /// </summary>
+        [JsonProperty("UseCos")]
+        public bool? UseCos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "Meta", this.Meta);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "UseCos", this.UseCos);
         }
     }
 }

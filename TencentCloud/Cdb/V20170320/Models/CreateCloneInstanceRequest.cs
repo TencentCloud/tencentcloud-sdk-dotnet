@@ -132,6 +132,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeployGroupId")]
         public string DeployGroupId{ get; set; }
 
+        /// <summary>
+        /// 是否只预检此次请求。true：发送检查请求，不会创建实例。检查项包括是否填写了必需参数，请求格式，业务限制等。如果检查不通过，则返回对应错误码；如果检查通过，则返回RequestId.默认为false：发送正常请求，通过检查后直接创建实例。
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

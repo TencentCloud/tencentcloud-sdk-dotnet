@@ -55,14 +55,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public float? Similarity{ get; set; }
 
         /// <summary>
-        /// 用户核验的视频
+        /// 用户核验的视频base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VideoBase64")]
         public string VideoBase64{ get; set; }
 
         /// <summary>
-        /// 用户核验视频的截帧
+        /// 用户核验视频的截帧base64，如果选择了使用cos，返回完整cos地址如https://bucket.cos.ap-guangzhou.myqcloud.com/objectKey
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BestFrameBase64")]
