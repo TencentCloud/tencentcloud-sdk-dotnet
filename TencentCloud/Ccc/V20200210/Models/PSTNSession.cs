@@ -106,6 +106,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("OutBoundCallee")]
         public string OutBoundCallee{ get; set; }
 
+        /// <summary>
+        /// 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+        /// </summary>
+        [JsonProperty("ProtectedCaller")]
+        public string ProtectedCaller{ get; set; }
+
+        /// <summary>
+        /// 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+        /// </summary>
+        [JsonProperty("ProtectedCallee")]
+        public string ProtectedCallee{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -125,6 +137,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "OutBoundCaller", this.OutBoundCaller);
             this.SetParamSimple(map, prefix + "OutBoundCallee", this.OutBoundCallee);
+            this.SetParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
+            this.SetParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
         }
     }
 }

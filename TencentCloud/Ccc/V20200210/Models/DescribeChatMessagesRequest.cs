@@ -25,12 +25,6 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 服务记录ID
-        /// </summary>
-        [JsonProperty("CdrId")]
-        public string CdrId{ get; set; }
-
-        /// <summary>
         /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
+
+        /// <summary>
+        /// 服务记录ID
+        /// </summary>
+        [JsonProperty("CdrId")]
+        public string CdrId{ get; set; }
 
         /// <summary>
         /// 返回记录条数 最大为100默认20
@@ -60,18 +60,25 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Order")]
         public long? Order{ get; set; }
 
+        /// <summary>
+        /// 服务记录SessionID
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CdrId", this.CdrId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "CdrId", this.CdrId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
         }
     }
 }

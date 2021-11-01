@@ -54,6 +54,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TrackData{ get; set; }
 
         /// <summary>
+        /// 轨道数据对应的画布宽高比。
+        /// </summary>
+        [JsonProperty("AspectRatio")]
+        public string AspectRatio{ get; set; }
+
+        /// <summary>
         /// 视频封面图片文件（如 jpeg, png 等）进行 Base64 编码后的字符串，仅支持 gif、jpeg、png 三种图片格式，原图片文件不能超过2 M大 小。
         /// </summary>
         [JsonProperty("CoverData")]
@@ -87,6 +93,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "ExportDestination", this.ExportDestination);
             this.SetParamSimple(map, prefix + "TrackData", this.TrackData);
+            this.SetParamSimple(map, prefix + "AspectRatio", this.AspectRatio);
             this.SetParamSimple(map, prefix + "CoverData", this.CoverData);
             this.SetParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
             this.SetParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);

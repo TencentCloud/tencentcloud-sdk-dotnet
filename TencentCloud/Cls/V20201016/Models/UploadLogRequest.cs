@@ -24,12 +24,33 @@ namespace TencentCloud.Cls.V20201016.Models
     public class UploadLogRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 主题id
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// 根据 hashkey 写入相应范围的主题分区
+        /// </summary>
+        [JsonProperty("HashKey")]
+        public string HashKey{ get; set; }
+
+        /// <summary>
+        /// 压缩方法
+        /// </summary>
+        [JsonProperty("CompressType")]
+        public string CompressType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "HashKey", this.HashKey);
+            this.SetParamSimple(map, prefix + "CompressType", this.CompressType);
         }
     }
 }

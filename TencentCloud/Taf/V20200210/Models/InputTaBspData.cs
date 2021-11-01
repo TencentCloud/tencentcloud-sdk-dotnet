@@ -55,7 +55,7 @@ namespace TencentCloud.Taf.V20200210.Models
         public long? Gender{ get; set; }
 
         /// <summary>
-        /// 用户操作时间
+        /// 用户操作时间,uinux时间戳，精确到秒
         /// </summary>
         [JsonProperty("UserTime")]
         public long? UserTime{ get; set; }
@@ -174,6 +174,12 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
+        /// <summary>
+        /// 是否授权
+        /// </summary>
+        [JsonProperty("IsAuthorized")]
+        public ulong? IsAuthorized{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Taf.V20200210.Models
             this.SetParamSimple(map, prefix + "Latitude", this.Latitude);
             this.SetParamSimple(map, prefix + "Longitude", this.Longitude);
             this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
         }
     }
 }

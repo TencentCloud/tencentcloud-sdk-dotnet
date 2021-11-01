@@ -3989,46 +3989,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
-        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
-        public async Task<ModifyRoTypeResponse> ModifyRoType(ModifyRoTypeRequest req)
-        {
-             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyRoType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改只读实例类型，可以将普通只读实例变为延迟只读实例，或者将延迟只读实例变为普通只读实例。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyRoTypeRequest"/></param>
-        /// <returns><see cref="ModifyRoTypeResponse"/></returns>
-        public ModifyRoTypeResponse ModifyRoTypeSync(ModifyRoTypeRequest req)
-        {
-             JsonResponseModel<ModifyRoTypeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyRoType");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRoTypeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(ModifyTimeWindow)用于更新云数据库实例的维护时间窗口。
         /// </summary>
         /// <param name="req"><see cref="ModifyTimeWindowRequest"/></param>

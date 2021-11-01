@@ -225,6 +225,20 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
 
+        /// <summary>
+        /// 主叫号码保护ID，开启号码保护映射功能时有效，且Caller字段置空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectedCaller")]
+        public string ProtectedCaller{ get; set; }
+
+        /// <summary>
+        /// 被叫号码保护ID，开启号码保护映射功能时有效，且Callee字段置空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectedCallee")]
+        public string ProtectedCallee{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,6 +269,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamArrayObj(map, prefix + "PostIVRKeyPressed.", this.PostIVRKeyPressed);
             this.SetParamSimple(map, prefix + "QueuedSkillGroupId", this.QueuedSkillGroupId);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
+            this.SetParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
         }
     }
 }
