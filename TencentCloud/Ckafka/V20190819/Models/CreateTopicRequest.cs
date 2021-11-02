@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主题名称，是一个不超过 64 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
+        /// 主题名称，是一个不超过 128 个字符的字符串，必须以字母为首字符，剩余部分可以包含字母、数字和横划线(-)
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }
@@ -108,6 +108,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
+        /// <summary>
+        /// 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }

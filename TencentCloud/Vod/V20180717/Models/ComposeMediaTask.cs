@@ -53,6 +53,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
+        /// 制作媒体文件任务进度，取值范围 [0-100] 。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
+        /// <summary>
         /// 制作媒体文件任务的输入。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -74,16 +80,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
-        /// </summary>
-        [JsonProperty("SessionContext")]
-        public string SessionContext{ get; set; }
-
-        /// <summary>
         /// 用于去重的识别码，如果七天内曾有过相同的识别码的请求，则本次的请求会返回错误。最长 50 个字符，不带或者带空字符串表示不做去重。
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息，任务流状态变更回调将返回该字段值，最长 1000 个字符。
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
 
 
         /// <summary>
@@ -95,11 +101,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamObj(map, prefix + "Input.", this.Input);
             this.SetParamObj(map, prefix + "Output.", this.Output);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
-            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

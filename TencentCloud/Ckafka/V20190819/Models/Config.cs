@@ -74,6 +74,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("MaxMessageBytes")]
         public long? MaxMessageBytes{ get; set; }
 
+        /// <summary>
+        /// 消息保留文件大小
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "SegmentBytes", this.SegmentBytes);
             this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }

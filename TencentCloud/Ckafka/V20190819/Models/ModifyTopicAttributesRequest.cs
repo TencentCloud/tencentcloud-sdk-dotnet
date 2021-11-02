@@ -102,6 +102,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleName")]
         public string AclRuleName{ get; set; }
 
+        /// <summary>
+        /// 可选, 保留文件大小. 默认为-1,单位bytes, 当前最小值为1048576B
+        /// </summary>
+        [JsonProperty("RetentionBytes")]
+        public long? RetentionBytes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArraySimple(map, prefix + "IpWhiteList.", this.IpWhiteList);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
+            this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);
         }
     }
 }

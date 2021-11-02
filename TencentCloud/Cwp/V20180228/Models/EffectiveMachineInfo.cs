@@ -66,6 +66,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
 
+        /// <summary>
+        /// 内核版本号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KernelVersion")]
+        public string KernelVersion{ get; set; }
+
+        /// <summary>
+        /// 在线状态 OFFLINE，ONLINE
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MachineStatus")]
+        public string MachineStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "MachineTag.", this.MachineTag);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+            this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
         }
     }
 }

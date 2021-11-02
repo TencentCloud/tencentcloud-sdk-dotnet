@@ -166,6 +166,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
+        /// <summary>
+        /// 内核版本
+        /// </summary>
+        [JsonProperty("KernelVersion")]
+        public string KernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +200,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         }
     }
 }

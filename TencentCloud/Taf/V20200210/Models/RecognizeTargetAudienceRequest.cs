@@ -30,6 +30,12 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("BspData")]
         public InputRecognizeTargetAudience BspData{ get; set; }
 
+        /// <summary>
+        /// 业务加密数据
+        /// </summary>
+        [JsonProperty("BusinessEncryptData")]
+        public InputBusinessEncryptData BusinessEncryptData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Taf.V20200210.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "BspData.", this.BspData);
+            this.SetParamObj(map, prefix + "BusinessEncryptData.", this.BusinessEncryptData);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("SnatIps")]
         public SnatIp[] SnatIps{ get; set; }
 
+        /// <summary>
+        /// 添加SnatIp个数，与SnatIps一起使用，当指定Ip时，不能指定创建SnatIp个数。
+        /// </summary>
+        [JsonProperty("Number")]
+        public ulong? Number{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Clb.V20180317.Models
         {
             this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
+            this.SetParamSimple(map, prefix + "Number", this.Number);
         }
     }
 }

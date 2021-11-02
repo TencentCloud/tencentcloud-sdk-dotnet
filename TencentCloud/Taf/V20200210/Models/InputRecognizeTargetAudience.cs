@@ -235,13 +235,13 @@ namespace TencentCloud.Taf.V20200210.Models
         public long? AdType{ get; set; }
 
         /// <summary>
-        /// app name
+        /// app名称
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
 
         /// <summary>
-        /// appVer
+        /// app版本描述
         /// </summary>
         [JsonProperty("AppVer")]
         public string AppVer{ get; set; }
@@ -251,6 +251,12 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         [JsonProperty("ReqType")]
         public long? ReqType{ get; set; }
+
+        /// <summary>
+        /// 用户是否授权,1为授权，0为未授权
+        /// </summary>
+        [JsonProperty("IsAuthorized")]
+        public ulong? IsAuthorized{ get; set; }
 
 
         /// <summary>
@@ -296,6 +302,7 @@ namespace TencentCloud.Taf.V20200210.Models
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "AppVer", this.AppVer);
             this.SetParamSimple(map, prefix + "ReqType", this.ReqType);
+            this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
         }
     }
 }
