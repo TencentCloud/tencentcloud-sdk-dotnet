@@ -54,6 +54,12 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("AgentInfo")]
         public string AgentInfo{ get; set; }
 
+        /// <summary>
+        /// 是否授权
+        /// </summary>
+        [JsonProperty("IsAuthorized")]
+        public ulong? IsAuthorized{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Taf.V20200210.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "AgentInfo", this.AgentInfo);
+            this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
         }
     }
 }

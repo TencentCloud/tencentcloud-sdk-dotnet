@@ -37,7 +37,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public ulong? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 通道唯一标识
+        /// 通道唯一标识（接口升级字段为必填）
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }

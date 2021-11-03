@@ -53,7 +53,7 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// DetectFraudKOL
+        /// 流量反欺诈-KOL欺诈识别
         /// </summary>
         /// <param name="req"><see cref="DetectFraudKOLRequest"/></param>
         /// <returns><see cref="DetectFraudKOLResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// DetectFraudKOL
+        /// 流量反欺诈-KOL欺诈识别
         /// </summary>
         /// <param name="req"><see cref="DetectFraudKOLRequest"/></param>
         /// <returns><see cref="DetectFraudKOLResponse"/></returns>
