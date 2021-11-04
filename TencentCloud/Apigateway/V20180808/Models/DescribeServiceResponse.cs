@@ -179,6 +179,20 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string SetType{ get; set; }
 
         /// <summary>
+        /// 服务部署的集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeploymentType")]
+        public string DeploymentType{ get; set; }
+
+        /// <summary>
+        /// 特殊用途
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpecialUse")]
+        public string SpecialUse{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -214,6 +228,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "SetType", this.SetType);
+            this.SetParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
+            this.SetParamSimple(map, prefix + "SpecialUse", this.SpecialUse);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

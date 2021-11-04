@@ -25,14 +25,14 @@ namespace TencentCloud.Eiam.V20210420.Models
     {
         
         /// <summary>
-        /// 昵称，长度限制：64个字符。 DisplayName不唯一。
+        /// 用户组昵称，长度限制：64个字符。 DisplayName不唯一。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
         public string DisplayName{ get; set; }
 
         /// <summary>
-        /// 用户备注，长度限制：512个字符。
+        /// 用户组备注，长度限制：512个字符。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Description")]

@@ -31,19 +31,19 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Data{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 未分类实例数量
         /// </summary>
         [JsonProperty("UnResourceNum")]
         public long? UnResourceNum{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 接口返回消息
         /// </summary>
         [JsonProperty("ReturnMsg")]
         public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 返回码；0为请求成功
         /// </summary>
         [JsonProperty("ReturnCode")]
         public long? ReturnCode{ get; set; }

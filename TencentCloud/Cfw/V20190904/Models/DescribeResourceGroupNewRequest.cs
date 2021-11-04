@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 查询类型 网络结构 vpc，业务识别- resource ，资源标签-tag
+        /// 查询类型 网络结构-vpc，业务识别-resource ，资源标签-tag
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }

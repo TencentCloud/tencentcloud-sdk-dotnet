@@ -25,17 +25,17 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 业务系统返回码
-        /// </summary>
-        [JsonProperty("ErrCode")]
-        public string ErrCode{ get; set; }
-
-        /// <summary>
         /// 业务系统返回消息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ErrMessage")]
         public string ErrMessage{ get; set; }
+
+        /// <summary>
+        /// 业务系统返回码
+        /// </summary>
+        [JsonProperty("ErrCode")]
+        public string ErrCode{ get; set; }
 
         /// <summary>
         /// 统一下单响应对象
@@ -56,8 +56,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
             this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public InstanceInfo[] Data{ get; set; }
 
         /// <summary>
-        /// 10
+        /// 返回数据总数
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }

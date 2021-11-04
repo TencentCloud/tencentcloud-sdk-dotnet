@@ -1613,6 +1613,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
+        public async Task<ModifyDBInstanceSpecResponse> ModifyDBInstanceSpec(ModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceSpec）用于调整实例规格，包括内存、磁盘。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceSpecRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceSpecResponse"/></returns>
+        public ModifyDBInstanceSpecResponse ModifyDBInstanceSpecSync(ModifyDBInstanceSpecRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceSpecResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSpec");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSpecResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstancesProject）用于将实例转至其他项目。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstancesProjectRequest"/></param>

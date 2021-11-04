@@ -2629,6 +2629,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 商户恶意注册接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMaliciousRegistrationRequest"/></param>
+        /// <returns><see cref="QueryMaliciousRegistrationResponse"/></returns>
+        public async Task<QueryMaliciousRegistrationResponse> QueryMaliciousRegistration(QueryMaliciousRegistrationRequest req)
+        {
+             JsonResponseModel<QueryMaliciousRegistrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMaliciousRegistration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaliciousRegistrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 商户恶意注册接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryMaliciousRegistrationRequest"/></param>
+        /// <returns><see cref="QueryMaliciousRegistrationResponse"/></returns>
+        public QueryMaliciousRegistrationResponse QueryMaliciousRegistrationSync(QueryMaliciousRegistrationRequest req)
+        {
+             JsonResponseModel<QueryMaliciousRegistrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMaliciousRegistration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaliciousRegistrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员绑定信息查询。查询标志为“单个会员”的情况下，返回该会员的有效的绑定账户信息。
         /// 查询标志为“全部会员”的情况下，返回市场下的全部的有效的绑定账户信息。查询标志为“单个会员的证件信息”的情况下，返回市场下的指定的会员的留存在电商见证宝系统的证件信息。
         /// </summary>
@@ -4231,7 +4271,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付Tlinx统一下单接口
+        /// 云支付-统一下单接口
         /// </summary>
         /// <param name="req"><see cref="UnifiedTlinxOrderRequest"/></param>
         /// <returns><see cref="UnifiedTlinxOrderResponse"/></returns>
@@ -4251,7 +4291,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付Tlinx统一下单接口
+        /// 云支付-统一下单接口
         /// </summary>
         /// <param name="req"><see cref="UnifiedTlinxOrderRequest"/></param>
         /// <returns><see cref="UnifiedTlinxOrderResponse"/></returns>

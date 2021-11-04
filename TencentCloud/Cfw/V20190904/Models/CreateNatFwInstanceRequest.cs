@@ -67,7 +67,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string ZoneBak{ get; set; }
 
         /// <summary>
-        /// 异地灾备 1：使用异地灾备；0：不使用异地灾备
+        /// 异地灾备 1：使用异地灾备；0：不使用异地灾备；为空则默认不使用异地灾备
         /// </summary>
         [JsonProperty("CrossAZone")]
         public long? CrossAZone{ get; set; }

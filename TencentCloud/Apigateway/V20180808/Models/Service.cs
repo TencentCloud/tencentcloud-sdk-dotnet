@@ -150,6 +150,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("SetType")]
         public string SetType{ get; set; }
 
+        /// <summary>
+        /// 服务部署的集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeploymentType")]
+        public string DeploymentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SetType", this.SetType);
+            this.SetParamSimple(map, prefix + "DeploymentType", this.DeploymentType);
         }
     }
 }

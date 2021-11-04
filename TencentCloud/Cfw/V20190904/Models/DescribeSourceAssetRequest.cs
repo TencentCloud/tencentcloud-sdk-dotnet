@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string InsType{ get; set; }
 
         /// <summary>
-        /// 是否未分组 1是
+        /// ChooseType为1，查询已经分组的资产；ChooseType不为1查询没有分组的资产
         /// </summary>
         [JsonProperty("ChooseType")]
         public string ChooseType{ get; set; }
@@ -49,13 +49,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 页大小
+        /// 查询单页的最大值；eg：10；则最多返回10条结果
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 查询结果的偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

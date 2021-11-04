@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.398</VersionPrefix>
+    <VersionPrefix>3.0.399</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4074,6 +4074,7 @@
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantPayWayData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\MerchantRiskInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundQueryResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MigrateOrderRefundRequest.cs" />
@@ -4141,6 +4142,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceV2Request.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryInvoiceV2Response.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMaliciousRegistrationRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryMaliciousRegistrationResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMemberBindRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMemberBindResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMemberTransactionRequest.cs" />
@@ -11048,6 +11051,8 @@
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceReadOnlyGroupResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceSpecRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigRequest.cs" />
