@@ -43,6 +43,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Date")]
         public string Date{ get; set; }
 
+        /// <summary>
+        /// 渠道侧合作企业名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyOrganizationName")]
+        public string ProxyOrganizationName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
             this.SetParamSimple(map, prefix + "Usage", this.Usage);
             this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
         }
     }
 }

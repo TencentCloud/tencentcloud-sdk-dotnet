@@ -132,6 +132,12 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("InitTimeout")]
         public long? InitTimeout{ get; set; }
 
+        /// <summary>
+        /// HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamObj(map, prefix + "PublicNetConfig.", this.PublicNetConfig);
             this.SetParamObj(map, prefix + "CfsConfig.", this.CfsConfig);
             this.SetParamSimple(map, prefix + "InitTimeout", this.InitTimeout);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         }
     }
 }

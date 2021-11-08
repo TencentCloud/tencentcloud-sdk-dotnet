@@ -45,7 +45,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string Subject{ get; set; }
 
         /// <summary>
-        /// 任务类型 1即时 2 定时 3 周期
+        /// 任务类型 1: 立即发送 2: 定时发送 3: 周期（频率）发送
         /// </summary>
         [JsonProperty("TaskType")]
         public ulong? TaskType{ get; set; }

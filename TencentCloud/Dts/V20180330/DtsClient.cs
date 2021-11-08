@@ -265,90 +265,6 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
-        /// 在调用 StartSyncJob 接口启动灾备同步前, 必须调用本接口创建校验, 且校验成功后才能开始同步数据. 校验的结果可以通过 DescribeSyncCheckJob 查看.
-        /// 校验成功后才能启动同步.
-        /// </summary>
-        /// <param name="req"><see cref="CreateSyncCheckJobRequest"/></param>
-        /// <returns><see cref="CreateSyncCheckJobResponse"/></returns>
-        public async Task<CreateSyncCheckJobResponse> CreateSyncCheckJob(CreateSyncCheckJobRequest req)
-        {
-             JsonResponseModel<CreateSyncCheckJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSyncCheckJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSyncCheckJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 在调用 StartSyncJob 接口启动灾备同步前, 必须调用本接口创建校验, 且校验成功后才能开始同步数据. 校验的结果可以通过 DescribeSyncCheckJob 查看.
-        /// 校验成功后才能启动同步.
-        /// </summary>
-        /// <param name="req"><see cref="CreateSyncCheckJobRequest"/></param>
-        /// <returns><see cref="CreateSyncCheckJobResponse"/></returns>
-        public CreateSyncCheckJobResponse CreateSyncCheckJobSync(CreateSyncCheckJobRequest req)
-        {
-             JsonResponseModel<CreateSyncCheckJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSyncCheckJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSyncCheckJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(CreateSyncJob)用于创建灾备同步任务。
-        /// 创建同步任务后，可以通过 CreateSyncCheckJob 接口发起校验任务。校验成功后才可以通过 StartSyncJob 接口启动同步任务。
-        /// </summary>
-        /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
-        /// <returns><see cref="CreateSyncJobResponse"/></returns>
-        public async Task<CreateSyncJobResponse> CreateSyncJob(CreateSyncJobRequest req)
-        {
-             JsonResponseModel<CreateSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(CreateSyncJob)用于创建灾备同步任务。
-        /// 创建同步任务后，可以通过 CreateSyncCheckJob 接口发起校验任务。校验成功后才可以通过 StartSyncJob 接口启动同步任务。
-        /// </summary>
-        /// <param name="req"><see cref="CreateSyncJobRequest"/></param>
-        /// <returns><see cref="CreateSyncJobResponse"/></returns>
-        public CreateSyncJobResponse CreateSyncJobSync(CreateSyncJobRequest req)
-        {
-             JsonResponseModel<CreateSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DeleteMigrationJob）用于删除数据迁移任务。当通过DescribeMigrateJobs接口查询到任务的状态为：检验中（status=3）、运行中（status=7）、准备完成（status=8）、撤销中（status=11）或者完成中（status=12）时，不允许删除任务。
         /// </summary>
         /// <param name="req"><see cref="DeleteMigrateJobRequest"/></param>
@@ -380,46 +296,6 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMigrateJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMigrateJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除灾备同步任务 （运行中的同步任务不能删除）。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSyncJobRequest"/></param>
-        /// <returns><see cref="DeleteSyncJobResponse"/></returns>
-        public async Task<DeleteSyncJobResponse> DeleteSyncJob(DeleteSyncJobRequest req)
-        {
-             JsonResponseModel<DeleteSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除灾备同步任务 （运行中的同步任务不能删除）。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSyncJobRequest"/></param>
-        /// <returns><see cref="DeleteSyncJobResponse"/></returns>
-        public DeleteSyncJobResponse DeleteSyncJobSync(DeleteSyncJobRequest req)
-        {
-             JsonResponseModel<DeleteSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSyncJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -716,46 +592,6 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSyncCheckJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSyncCheckJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询在迁移平台发起的灾备同步任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSyncJobsRequest"/></param>
-        /// <returns><see cref="DescribeSyncJobsResponse"/></returns>
-        public async Task<DescribeSyncJobsResponse> DescribeSyncJobs(DescribeSyncJobsRequest req)
-        {
-             JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSyncJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSyncJobsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询在迁移平台发起的灾备同步任务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSyncJobsRequest"/></param>
-        /// <returns><see cref="DescribeSyncJobsResponse"/></returns>
-        public DescribeSyncJobsResponse DescribeSyncJobsSync(DescribeSyncJobsRequest req)
-        {
-             JsonResponseModel<DescribeSyncJobsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSyncJobs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSyncJobsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1217,46 +1053,6 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
-        /// 创建的灾备同步任务在通过 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校验成功后，可以调用该接口启动同步
-        /// </summary>
-        /// <param name="req"><see cref="StartSyncJobRequest"/></param>
-        /// <returns><see cref="StartSyncJobResponse"/></returns>
-        public async Task<StartSyncJobResponse> StartSyncJob(StartSyncJobRequest req)
-        {
-             JsonResponseModel<StartSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "StartSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartSyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建的灾备同步任务在通过 CreateSyncCheckJob 和 DescribeSyncCheckJob 确定校验成功后，可以调用该接口启动同步
-        /// </summary>
-        /// <param name="req"><see cref="StartSyncJobRequest"/></param>
-        /// <returns><see cref="StartSyncJobResponse"/></returns>
-        public StartSyncJobResponse StartSyncJobSync(StartSyncJobRequest req)
-        {
-             JsonResponseModel<StartSyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "StartSyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartSyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（StopMigrateJob）用于撤销数据迁移任务。
         /// 在迁移过程中允许调用该接口撤销迁移, 撤销迁移的任务会失败。通过DescribeMigrateJobs接口查询到任务状态为运行中（status=7）或准备完成（status=8）时，才能撤销数据迁移任务。
         /// </summary>
@@ -1290,46 +1086,6 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "StopMigrateJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopMigrateJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 将灾备升级为主实例，停止从原来所属主实例的同步，断开主备关系。
-        /// </summary>
-        /// <param name="req"><see cref="SwitchDrToMasterRequest"/></param>
-        /// <returns><see cref="SwitchDrToMasterResponse"/></returns>
-        public async Task<SwitchDrToMasterResponse> SwitchDrToMaster(SwitchDrToMasterRequest req)
-        {
-             JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SwitchDrToMaster");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrToMasterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 将灾备升级为主实例，停止从原来所属主实例的同步，断开主备关系。
-        /// </summary>
-        /// <param name="req"><see cref="SwitchDrToMasterRequest"/></param>
-        /// <returns><see cref="SwitchDrToMasterResponse"/></returns>
-        public SwitchDrToMasterResponse SwitchDrToMasterSync(SwitchDrToMasterRequest req)
-        {
-             JsonResponseModel<SwitchDrToMasterResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SwitchDrToMaster");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDrToMasterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

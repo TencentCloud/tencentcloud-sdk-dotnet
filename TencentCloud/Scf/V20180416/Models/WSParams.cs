@@ -15,20 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Scf.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSyncJobResponse : AbstractModel
+    public class WSParams : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 空闲超时时间, 单位秒，默认15s。可配置范围1~1800s。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("IdleTimeOut")]
+        public ulong? IdleTimeOut{ get; set; }
 
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "IdleTimeOut", this.IdleTimeOut);
         }
     }
 }

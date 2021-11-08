@@ -37,7 +37,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string[] ExpectedFields{ get; set; }
 
         /// <summary>
-        /// 排序条件集合。可排序的属性支持：用户名字（UserName）、手机号（Phone）、邮箱（Email）、用户状态（Status）、创建时间 （CreationTime）、上次修改时间（LastUpdateTime）、上次登录时间（LastLoginTime）。如果不指定，则默认按照用户昵称（DisplayName）正向排序。
+        /// 排序条件集合。可排序的属性支持：用户名字（UserName）、用户昵称（DisplayName）、手机号（Phone）、邮箱（Email）、用户状态（Status）、创建时间 （CreationTime）、上次修改时间（LastUpdateTime）、上次登录时间（LastLoginTime）。如果不指定，则默认按照用户昵称（DisplayName）正向排序。
         /// </summary>
         [JsonProperty("Sort")]
         public SortCondition Sort{ get; set; }

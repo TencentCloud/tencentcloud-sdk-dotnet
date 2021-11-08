@@ -74,7 +74,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))]
+        /// 指标，取值[inqps(总请求峰值，dropqps(攻击请求峰值))，incount(请求次数), dropcount(攻击次数)]
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }

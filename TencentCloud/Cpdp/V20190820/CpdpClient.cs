@@ -3711,7 +3711,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付Tlinx退款接口
+        /// 云支付订单退款接口
         /// </summary>
         /// <param name="req"><see cref="RefundTlinxOrderRequest"/></param>
         /// <returns><see cref="RefundTlinxOrderResponse"/></returns>
@@ -3731,7 +3731,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付Tlinx退款接口
+        /// 云支付订单退款接口
         /// </summary>
         /// <param name="req"><see cref="RefundTlinxOrderRequest"/></param>
         /// <returns><see cref="RefundTlinxOrderResponse"/></returns>

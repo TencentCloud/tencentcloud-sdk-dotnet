@@ -1013,7 +1013,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
+        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
         /// <returns><see cref="DescribeCCTrendResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)
+        /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
         /// <returns><see cref="DescribeCCTrendResponse"/></returns>

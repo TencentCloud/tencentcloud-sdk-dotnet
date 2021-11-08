@@ -285,6 +285,20 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TraceEnable{ get; set; }
 
         /// <summary>
+        /// HTTP函数支持的访问协议。当前支持WebSockets协议。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public string ProtocolType{ get; set; }
+
+        /// <summary>
+        /// HTTP函数配置ProtocolType访问协议，当前协议配置的参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -338,6 +352,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "StatusReasons.", this.StatusReasons);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

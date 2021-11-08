@@ -206,6 +206,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("WebNodeTypeInfo")]
         public WebNodeTypeInfo WebNodeTypeInfo{ get; set; }
 
+        /// <summary>
+        /// 创建https集群，默认是http
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -241,6 +247,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "SceneType", this.SceneType);
             this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.399</VersionPrefix>
+    <VersionPrefix>3.0.400</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6135,14 +6135,8 @@
     <Compile Include="Dts\V20180330\Models\CreateMigrateJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\CreateSubscribeRequest.cs" />
     <Compile Include="Dts\V20180330\Models\CreateSubscribeResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\CreateSyncCheckJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\CreateSyncCheckJobResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\CreateSyncJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\CreateSyncJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DeleteMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\DeleteMigrateJobResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\DeleteSyncJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\DeleteSyncJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeAsyncRequestInfoRequest.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeAsyncRequestInfoResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeMigrateCheckJobRequest.cs" />
@@ -6157,8 +6151,6 @@
     <Compile Include="Dts\V20180330\Models\DescribeSubscribesResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeSyncCheckJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeSyncCheckJobResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\DescribeSyncJobsRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\DescribeSyncJobsResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DstInfo.cs" />
     <Compile Include="Dts\V20180330\Models\ErrorInfo.cs" />
     <Compile Include="Dts\V20180330\Models\IsolateSubscribeRequest.cs" />
@@ -6188,21 +6180,13 @@
     <Compile Include="Dts\V20180330\Models\SrcInfo.cs" />
     <Compile Include="Dts\V20180330\Models\StartMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\StartMigrateJobResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\StartSyncJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\StartSyncJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeObject.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
-    <Compile Include="Dts\V20180330\Models\SwitchDrToMasterRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\SwitchDrToMasterResponse.cs" />
     <Compile Include="Dts\V20180330\Models\SyncCheckStepInfo.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncDetailInfo.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncInstanceInfo.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncJobInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SyncOption.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncStepDetailInfo.cs" />
     <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
     <Compile Include="Dts\V20180330\Models\TagItem.cs" />
     <Compile Include="Ecc\V20181213\EccClient.cs" />
@@ -11468,6 +11452,7 @@
     <Compile Include="Scf\V20180416\Models\Namespace.cs" />
     <Compile Include="Scf\V20180416\Models\NamespaceLimit.cs" />
     <Compile Include="Scf\V20180416\Models\NamespaceUsage.cs" />
+    <Compile Include="Scf\V20180416\Models\ProtocolParams.cs" />
     <Compile Include="Scf\V20180416\Models\PublicNetConfigIn.cs" />
     <Compile Include="Scf\V20180416\Models\PublicNetConfigOut.cs" />
     <Compile Include="Scf\V20180416\Models\PublishLayerVersionRequest.cs" />
@@ -11509,6 +11494,7 @@
     <Compile Include="Scf\V20180416\Models\VersionProvisionedConcurrencyInfo.cs" />
     <Compile Include="Scf\V20180416\Models\VersionWeight.cs" />
     <Compile Include="Scf\V20180416\Models\VpcConfig.cs" />
+    <Compile Include="Scf\V20180416\Models\WSParams.cs" />
     <Compile Include="Ses\V20201002\SesClient.cs" />
     <Compile Include="Ses\V20201002\Models\Attachment.cs" />
     <Compile Include="Ses\V20201002\Models\BatchSendEmailRequest.cs" />

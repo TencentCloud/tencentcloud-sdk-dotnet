@@ -162,6 +162,18 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TraceEnable")]
         public string TraceEnable{ get; set; }
 
+        /// <summary>
+        /// HTTP函数支持的访问协议。当前支持WebSockets协议，值为WS
+        /// </summary>
+        [JsonProperty("ProtocolType")]
+        public string ProtocolType{ get; set; }
+
+        /// <summary>
+        /// HTTP函数配置ProtocolType访问协议，当前协议可配置的参数
+        /// </summary>
+        [JsonProperty("ProtocolParams")]
+        public ProtocolParams ProtocolParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AsyncRunEnable", this.AsyncRunEnable);
             this.SetParamSimple(map, prefix + "TraceEnable", this.TraceEnable);
+            this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
+            this.SetParamObj(map, prefix + "ProtocolParams.", this.ProtocolParams);
         }
     }
 }

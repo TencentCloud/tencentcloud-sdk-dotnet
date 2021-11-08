@@ -387,6 +387,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Jdk")]
         public string Jdk{ get; set; }
 
+        /// <summary>
+        /// 集群网络通讯协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// 安全组id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroups")]
+        public string[] SecurityGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -450,6 +464,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "KibanaNodeInfo.", this.KibanaNodeInfo);
             this.SetParamObj(map, prefix + "WebNodeTypeInfo.", this.WebNodeTypeInfo);
             this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
         }
     }
 }
