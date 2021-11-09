@@ -1053,6 +1053,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 查询一键部署任务 （特定接口：外部查询使用）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunOneClickTaskExternalRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunOneClickTaskExternalResponse"/></returns>
+        public async Task<DescribeCloudBaseRunOneClickTaskExternalResponse> DescribeCloudBaseRunOneClickTaskExternal(DescribeCloudBaseRunOneClickTaskExternalRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunOneClickTaskExternal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询一键部署任务 （特定接口：外部查询使用）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunOneClickTaskExternalRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunOneClickTaskExternalResponse"/></returns>
+        public DescribeCloudBaseRunOneClickTaskExternalResponse DescribeCloudBaseRunOneClickTaskExternalSync(DescribeCloudBaseRunOneClickTaskExternalRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunOneClickTaskExternal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunOneClickTaskExternalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询服务、版本和操作类型
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseRunOperationTypesRequest"/></param>
@@ -1244,6 +1284,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunServer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管服务域名
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerDomainNameRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerDomainNameResponse"/></returns>
+        public async Task<DescribeCloudBaseRunServerDomainNameResponse> DescribeCloudBaseRunServerDomainName(DescribeCloudBaseRunServerDomainNameRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudBaseRunServerDomainName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信云托管服务域名
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudBaseRunServerDomainNameRequest"/></param>
+        /// <returns><see cref="DescribeCloudBaseRunServerDomainNameResponse"/></returns>
+        public DescribeCloudBaseRunServerDomainNameResponse DescribeCloudBaseRunServerDomainNameSync(DescribeCloudBaseRunServerDomainNameRequest req)
+        {
+             JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudBaseRunServerDomainName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudBaseRunServerDomainNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

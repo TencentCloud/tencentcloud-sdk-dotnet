@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 添加的子用户 UID 和用户组 ID 关联关系
+        /// 添加的子用户 UIN/UID 和用户组 ID 关联关系
         /// </summary>
         [JsonProperty("Info")]
         public GroupIdOfUidInfo[] Info{ get; set; }

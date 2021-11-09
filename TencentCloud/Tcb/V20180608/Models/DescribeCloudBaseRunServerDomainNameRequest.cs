@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSyncCheckJobRequest : AbstractModel
+    public class DescribeCloudBaseRunServerDomainNameRequest : AbstractModel
     {
         
         /// <summary>
-        /// 要查询的灾备同步任务ID
+        /// 服务名
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("ServerName")]
+        public string ServerName{ get; set; }
+
+        /// <summary>
+        /// 环境Id
+        /// </summary>
+        [JsonProperty("UserEnvId")]
+        public string UserEnvId{ get; set; }
+
+        /// <summary>
+        /// 用户Uin
+        /// </summary>
+        [JsonProperty("UserUin")]
+        public string UserUin{ get; set; }
+
+        /// <summary>
+        /// 外部Id
+        /// </summary>
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "ServerName", this.ServerName);
+            this.SetParamSimple(map, prefix + "UserEnvId", this.UserEnvId);
+            this.SetParamSimple(map, prefix + "UserUin", this.UserUin);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
         }
     }
 }

@@ -15,15 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifySyncJobResponse : AbstractModel
+    public class DescribeScdnBotDataResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 统计信息详细数据
+        /// </summary>
+        [JsonProperty("Data")]
+        public BotStats[] Data{ get; set; }
+
+        /// <summary>
+        /// 当前返回数据的粒度，取值："2min"或者"hour"，分别表示2分钟或者1小时粒度
+        /// </summary>
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +48,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -1509,6 +1509,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// 获取BOT统计数据列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
+        /// <returns><see cref="DescribeScdnBotDataResponse"/></returns>
+        public async Task<DescribeScdnBotDataResponse> DescribeScdnBotData(DescribeScdnBotDataRequest req)
+        {
+             JsonResponseModel<DescribeScdnBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScdnBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取BOT统计数据列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScdnBotDataRequest"/></param>
+        /// <returns><see cref="DescribeScdnBotDataResponse"/></returns>
+        public DescribeScdnBotDataResponse DescribeScdnBotDataSync(DescribeScdnBotDataRequest req)
+        {
+             JsonResponseModel<DescribeScdnBotDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScdnBotData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScdnBotDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询BOT会话记录列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScdnBotRecordsRequest"/></param>

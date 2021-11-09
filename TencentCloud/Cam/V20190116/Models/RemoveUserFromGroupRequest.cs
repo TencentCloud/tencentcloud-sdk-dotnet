@@ -25,7 +25,7 @@ namespace TencentCloud.Cam.V20190116.Models
     {
         
         /// <summary>
-        /// 要删除的用户 UID和用户组 ID对应数组
+        /// 要删除的用户 UIN/UID和用户组 ID对应数组
         /// </summary>
         [JsonProperty("Info")]
         public GroupIdOfUidInfo[] Info{ get; set; }

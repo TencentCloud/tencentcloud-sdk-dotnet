@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeMaliciousRequestWhiteListRequest : AbstractModel
+    public class BotStats : AbstractModel
     {
         
         /// <summary>
-        /// 返回数量，默认为10，最大值为100。
+        /// 指标名称
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Metric")]
+        public string Metric{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 指标详细数据
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 过滤条件。
-        /// 
-        /// <li>Domain  - String - 基线名称</li>
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filters[] Filters{ get; set; }
+        [JsonProperty("DetailData")]
+        public BotStatsDetailData[] DetailData{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamArrayObj(map, prefix + "DetailData.", this.DetailData);
         }
     }
 }

@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncCheckStepInfo : AbstractModel
+    public class DescribeCloudBaseRunOneClickTaskExternalRequest : AbstractModel
     {
         
         /// <summary>
-        /// 步骤序列
+        /// 外部任务Id 最长64字节
         /// </summary>
-        [JsonProperty("StepNo")]
-        public ulong? StepNo{ get; set; }
-
-        /// <summary>
-        /// 步骤展现名称
-        /// </summary>
-        [JsonProperty("StepName")]
-        public string StepName{ get; set; }
-
-        /// <summary>
-        /// 步骤执行结果代码
-        /// </summary>
-        [JsonProperty("StepCode")]
-        public long? StepCode{ get; set; }
-
-        /// <summary>
-        /// 步骤执行结果提示
-        /// </summary>
-        [JsonProperty("StepMessage")]
-        public string StepMessage{ get; set; }
+        [JsonProperty("ExternalId")]
+        public string ExternalId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StepNo", this.StepNo);
-            this.SetParamSimple(map, prefix + "StepName", this.StepName);
-            this.SetParamSimple(map, prefix + "StepCode", this.StepCode);
-            this.SetParamSimple(map, prefix + "StepMessage", this.StepMessage);
+            this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
         }
     }
 }

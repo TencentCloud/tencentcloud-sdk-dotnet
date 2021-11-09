@@ -551,56 +551,6 @@ namespace TencentCloud.Dts.V20180330
         }
 
         /// <summary>
-        /// 本接口用于在通过 CreateSyncCheckJob 接口创建灾备同步校验任务后，获取校验的结果。能查询到当前校验的状态和进度。
-        /// 若通过校验, 则可调用 StartSyncJob 启动同步任务。
-        /// 若未通过校验, 则会返回校验失败的原因。 可通过 ModifySyncJob 修改配置，然后再次发起校验。
-        /// 校验任务需要大概约30秒，当返回的 Status 不为 finished 时表示尚未校验完成，需要轮询该接口。
-        /// 如果 Status=finished 且 CheckFlag=1 时表示校验成功。
-        /// 如果 Status=finished 且 CheckFlag !=1 时表示校验失败。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSyncCheckJobRequest"/></param>
-        /// <returns><see cref="DescribeSyncCheckJobResponse"/></returns>
-        public async Task<DescribeSyncCheckJobResponse> DescribeSyncCheckJob(DescribeSyncCheckJobRequest req)
-        {
-             JsonResponseModel<DescribeSyncCheckJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSyncCheckJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSyncCheckJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于在通过 CreateSyncCheckJob 接口创建灾备同步校验任务后，获取校验的结果。能查询到当前校验的状态和进度。
-        /// 若通过校验, 则可调用 StartSyncJob 启动同步任务。
-        /// 若未通过校验, 则会返回校验失败的原因。 可通过 ModifySyncJob 修改配置，然后再次发起校验。
-        /// 校验任务需要大概约30秒，当返回的 Status 不为 finished 时表示尚未校验完成，需要轮询该接口。
-        /// 如果 Status=finished 且 CheckFlag=1 时表示校验成功。
-        /// 如果 Status=finished 且 CheckFlag !=1 时表示校验失败。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSyncCheckJobRequest"/></param>
-        /// <returns><see cref="DescribeSyncCheckJobResponse"/></returns>
-        public DescribeSyncCheckJobResponse DescribeSyncCheckJobSync(DescribeSyncCheckJobRequest req)
-        {
-             JsonResponseModel<DescribeSyncCheckJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSyncCheckJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSyncCheckJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（IsolateSubscribe）用于隔离小时计费的订阅实例。调用后，订阅实例将不能使用，同时停止计费。
         /// </summary>
         /// <param name="req"><see cref="IsolateSubscribeRequest"/></param>
@@ -878,50 +828,6 @@ namespace TencentCloud.Dts.V20180330
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubscribeVipVport");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscribeVipVportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改灾备同步任务. 
-        /// 当同步任务处于下述状态时, 允许调用本接口: 同步任务创建中, 创建完成, 校验成功, 校验失败. 
-        /// 源实例和目标实例信息不允许修改，可以修改任务名、需要同步的库表。
-        /// </summary>
-        /// <param name="req"><see cref="ModifySyncJobRequest"/></param>
-        /// <returns><see cref="ModifySyncJobResponse"/></returns>
-        public async Task<ModifySyncJobResponse> ModifySyncJob(ModifySyncJobRequest req)
-        {
-             JsonResponseModel<ModifySyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifySyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改灾备同步任务. 
-        /// 当同步任务处于下述状态时, 允许调用本接口: 同步任务创建中, 创建完成, 校验成功, 校验失败. 
-        /// 源实例和目标实例信息不允许修改，可以修改任务名、需要同步的库表。
-        /// </summary>
-        /// <param name="req"><see cref="ModifySyncJobRequest"/></param>
-        /// <returns><see cref="ModifySyncJobResponse"/></returns>
-        public ModifySyncJobResponse ModifySyncJobSync(ModifySyncJobRequest req)
-        {
-             JsonResponseModel<ModifySyncJobResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifySyncJob");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncJobResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

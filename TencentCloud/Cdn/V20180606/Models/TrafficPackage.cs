@@ -133,6 +133,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Region")]
         public long? Region{ get; set; }
 
+        /// <summary>
+        /// 流量包类型id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigId")]
+        public long? ConfigId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +162,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExtensionAvailable", this.ExtensionAvailable);
             this.SetParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
         }
     }
 }

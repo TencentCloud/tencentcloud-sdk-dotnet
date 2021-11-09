@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.400</VersionPrefix>
+    <VersionPrefix>3.0.401</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -87,6 +87,7 @@
     <Compile Include="Advisor\V20200721\Models\DescribeStrategiesResponse.cs" />
     <Compile Include="Advisor\V20200721\Models\DescribeTaskStrategyRisksRequest.cs" />
     <Compile Include="Advisor\V20200721\Models\DescribeTaskStrategyRisksResponse.cs" />
+    <Compile Include="Advisor\V20200721\Models\KeyValue.cs" />
     <Compile Include="Advisor\V20200721\Models\RiskFieldsDesc.cs" />
     <Compile Include="Af\V20200226\AfClient.cs" />
     <Compile Include="Af\V20200226\Models\DescribeAntiFraudRequest.cs" />
@@ -2427,6 +2428,8 @@
     <Compile Include="Cdn\V20180606\Models\BotRecord.cs" />
     <Compile Include="Cdn\V20180606\Models\BotSortBy.cs" />
     <Compile Include="Cdn\V20180606\Models\BotStatisticsCount.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotStats.cs" />
+    <Compile Include="Cdn\V20180606\Models\BotStatsDetailData.cs" />
     <Compile Include="Cdn\V20180606\Models\BriefDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigCache.cs" />
@@ -2521,6 +2524,8 @@
     <Compile Include="Cdn\V20180606\Models\DescribePushTasksResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeReportDataResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnBotDataRequest.cs" />
+    <Compile Include="Cdn\V20180606\Models\DescribeScdnBotDataResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnBotRecordsRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnBotRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\DescribeScdnConfigRequest.cs" />
@@ -6149,8 +6154,6 @@
     <Compile Include="Dts\V20180330\Models\DescribeSubscribeConfResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeSubscribesRequest.cs" />
     <Compile Include="Dts\V20180330\Models\DescribeSubscribesResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\DescribeSyncCheckJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\DescribeSyncCheckJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\DstInfo.cs" />
     <Compile Include="Dts\V20180330\Models\ErrorInfo.cs" />
     <Compile Include="Dts\V20180330\Models\IsolateSubscribeRequest.cs" />
@@ -6171,8 +6174,6 @@
     <Compile Include="Dts\V20180330\Models\ModifySubscribeObjectsResponse.cs" />
     <Compile Include="Dts\V20180330\Models\ModifySubscribeVipVportRequest.cs" />
     <Compile Include="Dts\V20180330\Models\ModifySubscribeVipVportResponse.cs" />
-    <Compile Include="Dts\V20180330\Models\ModifySyncJobRequest.cs" />
-    <Compile Include="Dts\V20180330\Models\ModifySyncJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\OfflineIsolatedSubscribeRequest.cs" />
     <Compile Include="Dts\V20180330\Models\OfflineIsolatedSubscribeResponse.cs" />
     <Compile Include="Dts\V20180330\Models\ResetSubscribeRequest.cs" />
@@ -6185,8 +6186,6 @@
     <Compile Include="Dts\V20180330\Models\SubscribeInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeObject.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncCheckStepInfo.cs" />
-    <Compile Include="Dts\V20180330\Models\SyncOption.cs" />
     <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
     <Compile Include="Dts\V20180330\Models\TagItem.cs" />
     <Compile Include="Ecc\V20181213\EccClient.cs" />
@@ -12671,6 +12670,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunAllVpcsResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunConfForGateWayResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOneClickTaskExternalRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOneClickTaskExternalResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunOperationTypesResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunPodListRequest.cs" />
@@ -12679,6 +12680,8 @@
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceForExtendResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunResourceResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerDomainNameRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerDomainNameResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\DescribeCloudBaseRunServerVersionRequest.cs" />

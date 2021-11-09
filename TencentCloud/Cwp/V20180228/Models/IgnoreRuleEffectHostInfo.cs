@@ -32,7 +32,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string HostName{ get; set; }
 
         /// <summary>
-        /// 危害等级
+        /// 危害等级：1-低位，2-中危，3-高危，4-严重
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Level")]
@@ -46,14 +46,14 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string[] TagList{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 状态：0-未通过，1-忽略，3-已通过，5-检测中
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 最后检测事件
+        /// 最后检测时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LastScanTime")]

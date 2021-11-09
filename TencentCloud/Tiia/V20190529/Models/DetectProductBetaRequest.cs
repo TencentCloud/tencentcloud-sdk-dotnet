@@ -38,6 +38,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
+        /// <summary>
+        /// 是否需要百科信息 1：是，0: 否，默认是0
+        /// </summary>
+        [JsonProperty("NeedLemma")]
+        public long? NeedLemma{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +52,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
+            this.SetParamSimple(map, prefix + "NeedLemma", this.NeedLemma);
         }
     }
 }

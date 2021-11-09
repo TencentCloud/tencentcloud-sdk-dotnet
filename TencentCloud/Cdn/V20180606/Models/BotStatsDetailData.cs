@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SyncOption : AbstractModel
+    public class BotStatsDetailData : AbstractModel
     {
         
         /// <summary>
-        /// 同步对象，1-整个实例，2-指定库表
+        /// 时间
         /// </summary>
-        [JsonProperty("SyncObject")]
-        public ulong? SyncObject{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
 
         /// <summary>
-        /// 同步开始设置，1-立即开始
+        /// 数据值
         /// </summary>
-        [JsonProperty("RunMode")]
-        public ulong? RunMode{ get; set; }
-
-        /// <summary>
-        /// 同步模式， 3-全量且增量同步
-        /// </summary>
-        [JsonProperty("SyncType")]
-        public ulong? SyncType{ get; set; }
-
-        /// <summary>
-        /// 数据一致性检测， 1-无需配置
-        /// </summary>
-        [JsonProperty("ConsistencyType")]
-        public ulong? ConsistencyType{ get; set; }
+        [JsonProperty("Value")]
+        public long? Value{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SyncObject", this.SyncObject);
-            this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
-            this.SetParamSimple(map, prefix + "SyncType", this.SyncType);
-            this.SetParamSimple(map, prefix + "ConsistencyType", this.ConsistencyType);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

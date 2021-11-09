@@ -32,7 +32,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string LatestScanTime{ get; set; }
 
         /// <summary>
-        /// 是否全部服务器
+        /// 是否全部服务器：1-是 0-否
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsGlobal")]

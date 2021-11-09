@@ -15,44 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dts.V20180330.Models
+namespace TencentCloud.Tcb.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSyncCheckJobResponse : AbstractModel
+    public class DescribeCloudBaseRunServerDomainNameResponse : AbstractModel
     {
         
         /// <summary>
-        /// 任务校验状态： starting(开始中)，running(校验中)，finished(校验完成)
+        /// 公网服务域名
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("PublicDomain")]
+        public string PublicDomain{ get; set; }
 
         /// <summary>
-        /// 任务校验结果代码
+        /// 内部服务域名
         /// </summary>
-        [JsonProperty("ErrorCode")]
-        public long? ErrorCode{ get; set; }
+        [JsonProperty("InternalDomain")]
+        public string InternalDomain{ get; set; }
 
         /// <summary>
-        /// 提示信息
+        /// 弃用
         /// </summary>
-        [JsonProperty("ErrorMessage")]
-        public string ErrorMessage{ get; set; }
-
-        /// <summary>
-        /// 任务执行步骤描述
-        /// </summary>
-        [JsonProperty("StepInfo")]
-        public SyncCheckStepInfo[] StepInfo{ get; set; }
-
-        /// <summary>
-        /// 校验标志：0（尚未校验成功） ， 1（校验成功）
-        /// </summary>
-        [JsonProperty("CheckFlag")]
-        public long? CheckFlag{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -66,11 +54,9 @@ namespace TencentCloud.Dts.V20180330.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
-            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
-            this.SetParamArrayObj(map, prefix + "StepInfo.", this.StepInfo);
-            this.SetParamSimple(map, prefix + "CheckFlag", this.CheckFlag);
+            this.SetParamSimple(map, prefix + "PublicDomain", this.PublicDomain);
+            this.SetParamSimple(map, prefix + "InternalDomain", this.InternalDomain);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

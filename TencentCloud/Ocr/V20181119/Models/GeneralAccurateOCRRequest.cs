@@ -52,6 +52,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableDetectSplit")]
         public bool? EnableDetectSplit{ get; set; }
 
+        /// <summary>
+        /// 是否开启PDF识别，默认值为false，开启后可同时支持图片和PDF的识别。
+        /// </summary>
+        [JsonProperty("IsPdf")]
+        public bool? IsPdf{ get; set; }
+
+        /// <summary>
+        /// 需要识别的PDF页面的对应页码，仅支持PDF单页识别，当上传文件为PDF且IsPdf参数值为true时有效，默认值为1。
+        /// </summary>
+        [JsonProperty("PdfPageNumber")]
+        public ulong? PdfPageNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +74,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "IsWords", this.IsWords);
             this.SetParamSimple(map, prefix + "EnableDetectSplit", this.EnableDetectSplit);
+            this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
+            this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
         }
     }
 }

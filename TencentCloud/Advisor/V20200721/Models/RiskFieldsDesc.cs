@@ -46,6 +46,13 @@ namespace TencentCloud.Advisor.V20200721.Models
         [JsonProperty("FieldType")]
         public string FieldType{ get; set; }
 
+        /// <summary>
+        /// 字段值对应字典
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FieldDict")]
+        public KeyValue[] FieldDict{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,6 +62,7 @@ namespace TencentCloud.Advisor.V20200721.Models
             this.SetParamSimple(map, prefix + "Field", this.Field);
             this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
             this.SetParamSimple(map, prefix + "FieldType", this.FieldType);
+            this.SetParamArrayObj(map, prefix + "FieldDict.", this.FieldDict);
         }
     }
 }
