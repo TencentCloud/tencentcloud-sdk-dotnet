@@ -76,6 +76,13 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Image")]
         public string Image{ get; set; }
 
+        /// <summary>
+        /// 百科词条列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LemmaInfoList")]
+        public LemmaInfo[] LemmaInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +97,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "ProductCategory", this.ProductCategory);
             this.SetParamSimple(map, prefix + "Score", this.Score);
             this.SetParamSimple(map, prefix + "Image", this.Image);
+            this.SetParamArrayObj(map, prefix + "LemmaInfoList.", this.LemmaInfoList);
         }
     }
 }

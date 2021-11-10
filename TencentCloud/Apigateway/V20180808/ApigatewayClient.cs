@@ -1637,6 +1637,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstanceDetailResponse"/></returns>
+        public async Task<DescribeExclusiveInstanceDetailResponse> DescribeExclusiveInstanceDetail(DescribeExclusiveInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExclusiveInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeExclusiveInstanceDetail）用于查询独享实例详情信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstanceDetailRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstanceDetailResponse"/></returns>
+        public DescribeExclusiveInstanceDetailResponse DescribeExclusiveInstanceDetailSync(DescribeExclusiveInstanceDetailRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstanceDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExclusiveInstanceDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstancesRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstancesResponse"/></returns>
+        public async Task<DescribeExclusiveInstancesResponse> DescribeExclusiveInstances(DescribeExclusiveInstancesRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExclusiveInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeExclusiveInstances）用于查询独享实例列表信息。​
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstancesRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstancesResponse"/></returns>
+        public DescribeExclusiveInstancesResponse DescribeExclusiveInstancesSync(DescribeExclusiveInstancesRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExclusiveInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeIPStrategy）用于查询IP策略详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeIPStrategyRequest"/></param>
@@ -2842,6 +2922,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApiIncrement");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApiIncrementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyExclusiveInstance）用于修改独享实例信息。​
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExclusiveInstanceRequest"/></param>
+        /// <returns><see cref="ModifyExclusiveInstanceResponse"/></returns>
+        public async Task<ModifyExclusiveInstanceResponse> ModifyExclusiveInstance(ModifyExclusiveInstanceRequest req)
+        {
+             JsonResponseModel<ModifyExclusiveInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyExclusiveInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExclusiveInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyExclusiveInstance）用于修改独享实例信息。​
+        /// </summary>
+        /// <param name="req"><see cref="ModifyExclusiveInstanceRequest"/></param>
+        /// <returns><see cref="ModifyExclusiveInstanceResponse"/></returns>
+        public ModifyExclusiveInstanceResponse ModifyExclusiveInstanceSync(ModifyExclusiveInstanceRequest req)
+        {
+             JsonResponseModel<ModifyExclusiveInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyExclusiveInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyExclusiveInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

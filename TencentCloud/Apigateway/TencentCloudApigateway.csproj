@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E0BB529-7C6E-3A1A-A84E-7231EAFCBAB2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.401</VersionPrefix>
+    <VersionPrefix>3.0.402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,6 +148,10 @@
     <Compile Include="V20180808\Models\DescribeApiUsagePlanResponse.cs" />
     <Compile Include="V20180808\Models\DescribeApisStatusRequest.cs" />
     <Compile Include="V20180808\Models\DescribeApisStatusResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeExclusiveInstanceDetailRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeExclusiveInstanceDetailResponse.cs" />
+    <Compile Include="V20180808\Models\DescribeExclusiveInstancesRequest.cs" />
+    <Compile Include="V20180808\Models\DescribeExclusiveInstancesResponse.cs" />
     <Compile Include="V20180808\Models\DescribeIPStrategyApisStatusRequest.cs" />
     <Compile Include="V20180808\Models\DescribeIPStrategyApisStatusResponse.cs" />
     <Compile Include="V20180808\Models\DescribeIPStrategyRequest.cs" />
@@ -210,6 +214,10 @@
     <Compile Include="V20180808\Models\IPStrategyApi.cs" />
     <Compile Include="V20180808\Models\IPStrategyApiStatus.cs" />
     <Compile Include="V20180808\Models\IPStrategysStatus.cs" />
+    <Compile Include="V20180808\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20180808\Models\InstanceDetail.cs" />
+    <Compile Include="V20180808\Models\InstanceInfo.cs" />
+    <Compile Include="V20180808\Models\InstanceParameterInput.cs" />
     <Compile Include="V20180808\Models\LogQuery.cs" />
     <Compile Include="V20180808\Models\MicroService.cs" />
     <Compile Include="V20180808\Models\MicroServiceReq.cs" />
@@ -223,6 +231,8 @@
     <Compile Include="V20180808\Models\ModifyApiIncrementResponse.cs" />
     <Compile Include="V20180808\Models\ModifyApiRequest.cs" />
     <Compile Include="V20180808\Models\ModifyApiResponse.cs" />
+    <Compile Include="V20180808\Models\ModifyExclusiveInstanceRequest.cs" />
+    <Compile Include="V20180808\Models\ModifyExclusiveInstanceResponse.cs" />
     <Compile Include="V20180808\Models\ModifyIPStrategyRequest.cs" />
     <Compile Include="V20180808\Models\ModifyIPStrategyResponse.cs" />
     <Compile Include="V20180808\Models\ModifyPluginRequest.cs" />
@@ -235,7 +245,9 @@
     <Compile Include="V20180808\Models\ModifySubDomainResponse.cs" />
     <Compile Include="V20180808\Models\ModifyUsagePlanRequest.cs" />
     <Compile Include="V20180808\Models\ModifyUsagePlanResponse.cs" />
+    <Compile Include="V20180808\Models\NetworkConfig.cs" />
     <Compile Include="V20180808\Models\OauthConfig.cs" />
+    <Compile Include="V20180808\Models\ParameterInfo.cs" />
     <Compile Include="V20180808\Models\PathMapping.cs" />
     <Compile Include="V20180808\Models\Plugin.cs" />
     <Compile Include="V20180808\Models\PluginSummary.cs" />
@@ -290,5 +302,6 @@
     <Compile Include="V20180808\Models\UsagePlanInfo.cs" />
     <Compile Include="V20180808\Models\UsagePlanStatusInfo.cs" />
     <Compile Include="V20180808\Models\UsagePlansStatus.cs" />
+    <Compile Include="V20180808\Models\VpcConfig.cs" />
   </ItemGroup>
 </Project>

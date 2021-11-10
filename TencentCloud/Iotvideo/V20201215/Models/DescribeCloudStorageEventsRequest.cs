@@ -72,6 +72,12 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public ulong? ChannelId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
 }

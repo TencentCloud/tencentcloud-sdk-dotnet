@@ -38,6 +38,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
+        /// 注：本数据结构中的Zone为必填参数。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
@@ -140,7 +141,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费则该参数必传。
+        /// 实例的市场相关选项，如竞价实例相关参数，若指定实例的付费模式为竞价付费但没有传递该参数时，默认按当前固定折扣价格出价。
         /// </summary>
         [JsonProperty("InstanceMarketOptions")]
         public InstanceMarketOptionsRequest InstanceMarketOptions{ get; set; }

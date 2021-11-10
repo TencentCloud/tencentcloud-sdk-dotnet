@@ -43,7 +43,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public bool? Listover{ get; set; }
 
         /// <summary>
-        /// 拉取结果数量
+        /// 内部结果数量，并不等同于事件总数。
         /// </summary>
         [JsonProperty("Total")]
         public ulong? Total{ get; set; }

@@ -31,13 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 升级后的实例内存大小，单位GiB。
+        /// 修改后的实例内存大小，单位GiB。
         /// </summary>
         [JsonProperty("Memory")]
         public ulong? Memory{ get; set; }
 
         /// <summary>
-        /// 升级后的实例磁盘大小，单位GiB。
+        /// 修改后的实例磁盘大小，单位GiB。
         /// </summary>
         [JsonProperty("Storage")]
         public ulong? Storage{ get; set; }

@@ -2283,6 +2283,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeContainerOCRRequest"/></param>
+        /// <returns><see cref="RecognizeContainerOCRResponse"/></returns>
+        public async Task<RecognizeContainerOCRResponse> RecognizeContainerOCR(RecognizeContainerOCRRequest req)
+        {
+             JsonResponseModel<RecognizeContainerOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeContainerOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeContainerOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持集装箱箱门信息识别，识别字段包括集装箱箱号、类型、总重量、有效承重、容量、自身重量，具备集装箱箱号、类型不完整或者不清晰的告警功能。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeContainerOCRRequest"/></param>
+        /// <returns><see cref="RecognizeContainerOCRResponse"/></returns>
+        public RecognizeContainerOCRResponse RecognizeContainerOCRSync(RecognizeContainerOCRRequest req)
+        {
+             JsonResponseModel<RecognizeContainerOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeContainerOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeContainerOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
         /// </summary>
         /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.401</VersionPrefix>
+    <VersionPrefix>3.0.402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -535,6 +535,10 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeApiUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApisStatusRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeApisStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeExclusiveInstanceDetailRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeExclusiveInstanceDetailResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeExclusiveInstancesRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeExclusiveInstancesResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategyApisStatusRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategyApisStatusResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeIPStrategyRequest.cs" />
@@ -597,6 +601,10 @@
     <Compile Include="Apigateway\V20180808\Models\IPStrategyApi.cs" />
     <Compile Include="Apigateway\V20180808\Models\IPStrategyApiStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\IPStrategysStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="Apigateway\V20180808\Models\InstanceDetail.cs" />
+    <Compile Include="Apigateway\V20180808\Models\InstanceInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\InstanceParameterInput.cs" />
     <Compile Include="Apigateway\V20180808\Models\LogQuery.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroService.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
@@ -610,6 +618,8 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyApiIncrementResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyApiResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyExclusiveInstanceRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyExclusiveInstanceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyIPStrategyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyPluginRequest.cs" />
@@ -622,7 +632,9 @@
     <Compile Include="Apigateway\V20180808\Models\ModifySubDomainResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\NetworkConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\OauthConfig.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ParameterInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\PathMapping.cs" />
     <Compile Include="Apigateway\V20180808\Models\Plugin.cs" />
     <Compile Include="Apigateway\V20180808\Models\PluginSummary.cs" />
@@ -677,6 +689,7 @@
     <Compile Include="Apigateway\V20180808\Models\UsagePlanInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlanStatusInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlansStatus.cs" />
+    <Compile Include="Apigateway\V20180808\Models\VpcConfig.cs" />
     <Compile Include="As\V20180419\AsClient.cs" />
     <Compile Include="As\V20180419\Models\Activity.cs" />
     <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
@@ -8375,12 +8388,15 @@
     <Compile Include="Iotcloud\V20180614\Models\UploadFirmwareResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\IotexplorerClient.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\AppDeviceInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BatchProductionInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionSyncResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ControlDeviceDataResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\CreateBatchProductionRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\CreateBatchProductionResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateDeviceRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateDeviceResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CreateFenceBindRequest.cs" />
@@ -8423,6 +8439,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicRuleResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeBatchProductionRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeBatchProductionResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataHistoryResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataRequest.cs" />
@@ -8470,6 +8488,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\FenceBindProductItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FenceEventItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FirmwareInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetBatchProductionsListRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetBatchProductionsListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetCOSURLRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetCOSURLResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceListRequest.cs" />
@@ -10754,6 +10774,8 @@
     <Compile Include="Ocr\V20181119\Models\QuestionObj.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeContainerOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeContainerOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRRequest.cs" />
@@ -13699,6 +13721,7 @@
     <Compile Include="Tiia\V20190529\Models\GroupInfo.cs" />
     <Compile Include="Tiia\V20190529\Models\ImageInfo.cs" />
     <Compile Include="Tiia\V20190529\Models\Labels.cs" />
+    <Compile Include="Tiia\V20190529\Models\LemmaInfo.cs" />
     <Compile Include="Tiia\V20190529\Models\Location.cs" />
     <Compile Include="Tiia\V20190529\Models\Product.cs" />
     <Compile Include="Tiia\V20190529\Models\ProductInfo.cs" />

@@ -87,6 +87,13 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("SessionType")]
         public string SessionType{ get; set; }
 
+        /// <summary>
+        /// 端口段结束端口
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndPort")]
+        public long? EndPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "ListenerName", this.ListenerName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);
+            this.SetParamSimple(map, prefix + "EndPort", this.EndPort);
         }
     }
 }

@@ -173,6 +173,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 用于新建批量生产设备
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchProductionRequest"/></param>
+        /// <returns><see cref="CreateBatchProductionResponse"/></returns>
+        public async Task<CreateBatchProductionResponse> CreateBatchProduction(CreateBatchProductionRequest req)
+        {
+             JsonResponseModel<CreateBatchProductionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBatchProduction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchProductionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于新建批量生产设备
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchProductionRequest"/></param>
+        /// <returns><see cref="CreateBatchProductionResponse"/></returns>
+        public CreateBatchProductionResponse CreateBatchProductionSync(CreateBatchProductionRequest req)
+        {
+             JsonResponseModel<CreateBatchProductionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBatchProduction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchProductionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建设备
         /// </summary>
         /// <param name="req"><see cref="CreateDeviceRequest"/></param>
@@ -1013,6 +1053,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取量产详情信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchProductionRequest"/></param>
+        /// <returns><see cref="DescribeBatchProductionResponse"/></returns>
+        public async Task<DescribeBatchProductionResponse> DescribeBatchProduction(DescribeBatchProductionRequest req)
+        {
+             JsonResponseModel<DescribeBatchProductionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBatchProduction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchProductionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取量产详情信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBatchProductionRequest"/></param>
+        /// <returns><see cref="DescribeBatchProductionResponse"/></returns>
+        public DescribeBatchProductionResponse DescribeBatchProductionSync(DescribeBatchProductionRequest req)
+        {
+             JsonResponseModel<DescribeBatchProductionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBatchProduction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBatchProductionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查看某个设备的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
@@ -1724,6 +1804,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "EnableTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出量产数据列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetBatchProductionsListRequest"/></param>
+        /// <returns><see cref="GetBatchProductionsListResponse"/></returns>
+        public async Task<GetBatchProductionsListResponse> GetBatchProductionsList(GetBatchProductionsListRequest req)
+        {
+             JsonResponseModel<GetBatchProductionsListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetBatchProductionsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBatchProductionsListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出量产数据列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="GetBatchProductionsListRequest"/></param>
+        /// <returns><see cref="GetBatchProductionsListResponse"/></returns>
+        public GetBatchProductionsListResponse GetBatchProductionsListSync(GetBatchProductionsListRequest req)
+        {
+             JsonResponseModel<GetBatchProductionsListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetBatchProductionsList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBatchProductionsListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

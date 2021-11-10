@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.401</VersionPrefix>
+    <VersionPrefix>3.0.402</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,12 +46,15 @@
   <ItemGroup>
     <Compile Include="V20190423\IotexplorerClient.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
+    <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncResponse.cs" />
     <Compile Include="V20190423\Models\ControlDeviceDataRequest.cs" />
     <Compile Include="V20190423\Models\ControlDeviceDataResponse.cs" />
+    <Compile Include="V20190423\Models\CreateBatchProductionRequest.cs" />
+    <Compile Include="V20190423\Models\CreateBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20190423\Models\CreateDeviceResponse.cs" />
     <Compile Include="V20190423\Models\CreateFenceBindRequest.cs" />
@@ -94,6 +97,8 @@
     <Compile Include="V20190423\Models\DeleteTopicPolicyResponse.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\DeleteTopicRuleResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeBatchProductionRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeBatchProductionResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataRequest.cs" />
@@ -141,6 +146,8 @@
     <Compile Include="V20190423\Models\FenceBindProductItem.cs" />
     <Compile Include="V20190423\Models\FenceEventItem.cs" />
     <Compile Include="V20190423\Models\FirmwareInfo.cs" />
+    <Compile Include="V20190423\Models\GetBatchProductionsListRequest.cs" />
+    <Compile Include="V20190423\Models\GetBatchProductionsListResponse.cs" />
     <Compile Include="V20190423\Models\GetCOSURLRequest.cs" />
     <Compile Include="V20190423\Models\GetCOSURLResponse.cs" />
     <Compile Include="V20190423\Models\GetDeviceListRequest.cs" />

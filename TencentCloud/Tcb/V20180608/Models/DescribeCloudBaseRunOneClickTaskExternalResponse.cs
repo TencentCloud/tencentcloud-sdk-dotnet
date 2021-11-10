@@ -31,7 +31,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string ExternalId{ get; set; }
 
         /// <summary>
-        /// 环境Id
+        /// 弃用
         /// </summary>
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
@@ -86,6 +86,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string FailReason{ get; set; }
 
         /// <summary>
+        /// 用户envId
+        /// </summary>
+        [JsonProperty("UserEnvId")]
+        public string UserEnvId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +112,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Stage", this.Stage);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
+            this.SetParamSimple(map, prefix + "UserEnvId", this.UserEnvId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

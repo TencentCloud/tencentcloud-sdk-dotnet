@@ -97,6 +97,102 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Address{ get; set; }
 
         /// <summary>
+        /// 承办人签章文字
+        /// </summary>
+        [JsonProperty("Signature")]
+        public string Signature{ get; set; }
+
+        /// <summary>
+        /// 签发日期
+        /// </summary>
+        [JsonProperty("IssueDate")]
+        public string IssueDate{ get; set; }
+
+        /// <summary>
+        /// 户主页编号
+        /// </summary>
+        [JsonProperty("HomePageNumber")]
+        public string HomePageNumber{ get; set; }
+
+        /// <summary>
+        /// 户主姓名
+        /// </summary>
+        [JsonProperty("HouseholderName")]
+        public string HouseholderName{ get; set; }
+
+        /// <summary>
+        /// 户主或与户主关系
+        /// </summary>
+        [JsonProperty("Relationship")]
+        public string Relationship{ get; set; }
+
+        /// <summary>
+        /// 本市（县）其他住址
+        /// </summary>
+        [JsonProperty("OtherAddresses")]
+        public string OtherAddresses{ get; set; }
+
+        /// <summary>
+        /// 宗教信仰
+        /// </summary>
+        [JsonProperty("ReligiousBelief")]
+        public string ReligiousBelief{ get; set; }
+
+        /// <summary>
+        /// 身高
+        /// </summary>
+        [JsonProperty("Height")]
+        public string Height{ get; set; }
+
+        /// <summary>
+        /// 血型
+        /// </summary>
+        [JsonProperty("BloodType")]
+        public string BloodType{ get; set; }
+
+        /// <summary>
+        /// 婚姻状况
+        /// </summary>
+        [JsonProperty("MaritalStatus")]
+        public string MaritalStatus{ get; set; }
+
+        /// <summary>
+        /// 兵役状况
+        /// </summary>
+        [JsonProperty("VeteranStatus")]
+        public string VeteranStatus{ get; set; }
+
+        /// <summary>
+        /// 职业
+        /// </summary>
+        [JsonProperty("Profession")]
+        public string Profession{ get; set; }
+
+        /// <summary>
+        /// 何时由何地迁来本市(县)
+        /// </summary>
+        [JsonProperty("MoveToCityInformation")]
+        public string MoveToCityInformation{ get; set; }
+
+        /// <summary>
+        /// 何时由何地迁来本址
+        /// </summary>
+        [JsonProperty("MoveToSiteInformation")]
+        public string MoveToSiteInformation{ get; set; }
+
+        /// <summary>
+        /// 登记日期
+        /// </summary>
+        [JsonProperty("RegistrationDate")]
+        public string RegistrationDate{ get; set; }
+
+        /// <summary>
+        /// 曾用名
+        /// </summary>
+        [JsonProperty("FormerName")]
+        public string FormerName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +216,22 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ServicePlace", this.ServicePlace);
             this.SetParamSimple(map, prefix + "Household", this.Household);
             this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "Signature", this.Signature);
+            this.SetParamSimple(map, prefix + "IssueDate", this.IssueDate);
+            this.SetParamSimple(map, prefix + "HomePageNumber", this.HomePageNumber);
+            this.SetParamSimple(map, prefix + "HouseholderName", this.HouseholderName);
+            this.SetParamSimple(map, prefix + "Relationship", this.Relationship);
+            this.SetParamSimple(map, prefix + "OtherAddresses", this.OtherAddresses);
+            this.SetParamSimple(map, prefix + "ReligiousBelief", this.ReligiousBelief);
+            this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "BloodType", this.BloodType);
+            this.SetParamSimple(map, prefix + "MaritalStatus", this.MaritalStatus);
+            this.SetParamSimple(map, prefix + "VeteranStatus", this.VeteranStatus);
+            this.SetParamSimple(map, prefix + "Profession", this.Profession);
+            this.SetParamSimple(map, prefix + "MoveToCityInformation", this.MoveToCityInformation);
+            this.SetParamSimple(map, prefix + "MoveToSiteInformation", this.MoveToSiteInformation);
+            this.SetParamSimple(map, prefix + "RegistrationDate", this.RegistrationDate);
+            this.SetParamSimple(map, prefix + "FormerName", this.FormerName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

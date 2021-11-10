@@ -32,12 +32,13 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例名称。可任意命名，但不得超过60个字符。
+        /// <dx-alert infotype="explain" title="">必须指定InstanceName与SecurityGroups的其中一个，但不能同时设置</dx-alert>
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。
+        /// 指定实例的安全组Id列表，子机将重新关联指定列表的安全组，原本关联的安全组会被解绑。<dx-alert infotype="explain" title="">必须指定SecurityGroups与InstanceName的其中一个，但不能同时设置</dx-alert>
         /// </summary>
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }

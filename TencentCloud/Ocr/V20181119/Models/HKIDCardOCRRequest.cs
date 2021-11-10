@@ -39,7 +39,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 图片的 Base64 值。
         /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
-        /// 支持的图片大小：所下载图片经Base64编码后不超过 3M。图片下载时间不超过 3 秒。
+        /// 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }

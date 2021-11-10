@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称。
+        /// 平台标识。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
