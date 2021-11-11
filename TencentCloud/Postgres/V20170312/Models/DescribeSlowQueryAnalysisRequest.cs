@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+        /// 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -49,25 +49,25 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。
+        /// 排序维度。 可选参数，取值范围[CallNum,CostTime,AvgCostTime]。默认CallNum。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 排序类型。升序asc、降序desc。
+        /// 排序类型。升序asc、降序desc。默认desc。
         /// </summary>
         [JsonProperty("OrderByType")]
         public string OrderByType{ get; set; }
 
         /// <summary>
-        /// 分页大小。取值范围[1,100]。
+        /// 分页大小。取值范围[1,100]。默认50。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移。取值范围[0,INF)。
+        /// 分页偏移。取值范围[0,INF)。默认0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

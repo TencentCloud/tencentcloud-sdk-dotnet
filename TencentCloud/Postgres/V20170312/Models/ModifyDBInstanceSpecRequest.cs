@@ -67,13 +67,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? SwitchTag{ get; set; }
 
         /// <summary>
-        /// 切换开始时间。
+        /// 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }
 
         /// <summary>
-        /// 切换截止时间。
+        /// 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
         /// </summary>
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }

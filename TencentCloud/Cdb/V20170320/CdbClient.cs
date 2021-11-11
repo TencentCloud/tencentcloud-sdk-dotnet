@@ -1415,6 +1415,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口用户查询当前地域用户设置的默认备份下载来源限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public async Task<DescribeBackupDownloadRestrictionResponse> DescribeBackupDownloadRestriction(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用户查询当前地域用户设置的默认备份下载来源限制。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadRestrictionResponse"/></returns>
+        public DescribeBackupDownloadRestrictionResponse DescribeBackupDownloadRestrictionSync(DescribeBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeBackupOverview)用于查询用户的备份概览。返回用户当前备份总个数、备份总的占用容量、赠送的免费容量、计费容量（容量单位为字节）。
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupOverviewRequest"/></param>
@@ -3580,6 +3620,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBackupConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public async Task<ModifyBackupDownloadRestrictionResponse> ModifyBackupDownloadRestriction(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改用户当前地域的备份文件限制下载来源，可以设置内外网均可下载、仅内网可下载，或内网指定的vpc、ip可以下载。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupDownloadRestrictionRequest"/></param>
+        /// <returns><see cref="ModifyBackupDownloadRestrictionResponse"/></returns>
+        public ModifyBackupDownloadRestrictionResponse ModifyBackupDownloadRestrictionSync(ModifyBackupDownloadRestrictionRequest req)
+        {
+             JsonResponseModel<ModifyBackupDownloadRestrictionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupDownloadRestriction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupDownloadRestrictionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

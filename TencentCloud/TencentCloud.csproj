@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.402</VersionPrefix>
+    <VersionPrefix>3.0.403</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2124,6 +2124,7 @@
     <Compile Include="Cdb\V20170320\Models\BackupConfig.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupItem.cs" />
+    <Compile Include="Cdb\V20170320\Models\BackupLimitVpcItem.cs" />
     <Compile Include="Cdb\V20170320\Models\BackupSummaryItem.cs" />
     <Compile Include="Cdb\V20170320\Models\BalanceRoGroupLoadRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\BalanceRoGroupLoadResponse.cs" />
@@ -2196,6 +2197,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupDatabasesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupDatabasesResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeBackupDownloadRestrictionResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupOverviewRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupOverviewResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBackupSummariesRequest.cs" />
@@ -2317,6 +2320,8 @@
     <Compile Include="Cdb\V20170320\Models\ModifyAutoRenewFlagResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyBackupDownloadRestrictionRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyBackupDownloadRestrictionResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceProjectRequest.cs" />
@@ -3440,6 +3445,8 @@
     <Compile Include="Clb\V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyRuleRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyRuleResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyTargetGroupAttributeRequest.cs" />
@@ -3477,6 +3484,7 @@
     <Compile Include="Clb\V20180317\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\SlaUpdateParam.cs" />
     <Compile Include="Clb\V20180317\Models\SnatIp.cs" />
     <Compile Include="Clb\V20180317\Models\TagInfo.cs" />
     <Compile Include="Clb\V20180317\Models\Target.cs" />
@@ -12960,6 +12968,44 @@
     <Compile Include="Tci\V20190318\Models\WholeTextItem.cs" />
     <Compile Include="Tci\V20190318\Models\Word.cs" />
     <Compile Include="Tci\V20190318\Models\WordTimePair.cs" />
+    <Compile Include="Tcm\V20210413\TcmClient.cs" />
+    <Compile Include="Tcm\V20210413\Models\AccessLogConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\ActiveOperation.cs" />
+    <Compile Include="Tcm\V20210413\Models\AutoInjectionNamespaceState.cs" />
+    <Compile Include="Tcm\V20210413\Models\CLS.cs" />
+    <Compile Include="Tcm\V20210413\Models\Cluster.cs" />
+    <Compile Include="Tcm\V20210413\Models\ClusterConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\ClusterStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\DeployConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\DescribeMeshListRequest.cs" />
+    <Compile Include="Tcm\V20210413\Models\DescribeMeshListResponse.cs" />
+    <Compile Include="Tcm\V20210413\Models\DescribeMeshRequest.cs" />
+    <Compile Include="Tcm\V20210413\Models\DescribeMeshResponse.cs" />
+    <Compile Include="Tcm\V20210413\Models\EgressGateway.cs" />
+    <Compile Include="Tcm\V20210413\Models\Filter.cs" />
+    <Compile Include="Tcm\V20210413\Models\GrafanaInfo.cs" />
+    <Compile Include="Tcm\V20210413\Models\HorizontalPodAutoscalerSpec.cs" />
+    <Compile Include="Tcm\V20210413\Models\IngressGateway.cs" />
+    <Compile Include="Tcm\V20210413\Models\IngressGatewayStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\IstioConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\IstiodConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\LoadBalancer.cs" />
+    <Compile Include="Tcm\V20210413\Models\LoadBalancerStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\Mesh.cs" />
+    <Compile Include="Tcm\V20210413\Models\MeshConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\MeshStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\MetricSpec.cs" />
+    <Compile Include="Tcm\V20210413\Models\PodsMetricSource.cs" />
+    <Compile Include="Tcm\V20210413\Models\PrometheusConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\PrometheusStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\Resource.cs" />
+    <Compile Include="Tcm\V20210413\Models\ResourceMetricSource.cs" />
+    <Compile Include="Tcm\V20210413\Models\ResourceRequirements.cs" />
+    <Compile Include="Tcm\V20210413\Models\SelectedItems.cs" />
+    <Compile Include="Tcm\V20210413\Models\SelectedRange.cs" />
+    <Compile Include="Tcm\V20210413\Models\Service.cs" />
+    <Compile Include="Tcm\V20210413\Models\TracingConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\WorkloadConfig.cs" />
     <Compile Include="Tcr\V20190924\TcrClient.cs" />
     <Compile Include="Tcr\V20190924\Models\AccessVpc.cs" />
     <Compile Include="Tcr\V20190924\Models\AutoDelStrategyInfo.cs" />

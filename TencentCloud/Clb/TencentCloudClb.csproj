@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.402</VersionPrefix>
+    <VersionPrefix>3.0.403</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -189,6 +189,8 @@
     <Compile Include="V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />
     <Compile Include="V20180317\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="V20180317\Models\ModifyLoadBalancerSlaRequest.cs" />
+    <Compile Include="V20180317\Models\ModifyLoadBalancerSlaResponse.cs" />
     <Compile Include="V20180317\Models\ModifyRuleRequest.cs" />
     <Compile Include="V20180317\Models\ModifyRuleResponse.cs" />
     <Compile Include="V20180317\Models\ModifyTargetGroupAttributeRequest.cs" />
@@ -226,6 +228,7 @@
     <Compile Include="V20180317\Models\SetLoadBalancerSecurityGroupsResponse.cs" />
     <Compile Include="V20180317\Models\SetSecurityGroupForLoadbalancersRequest.cs" />
     <Compile Include="V20180317\Models\SetSecurityGroupForLoadbalancersResponse.cs" />
+    <Compile Include="V20180317\Models\SlaUpdateParam.cs" />
     <Compile Include="V20180317\Models\SnatIp.cs" />
     <Compile Include="V20180317\Models\TagInfo.cs" />
     <Compile Include="V20180317\Models\Target.cs" />

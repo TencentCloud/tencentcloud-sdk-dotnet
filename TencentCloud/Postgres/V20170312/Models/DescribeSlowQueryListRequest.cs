@@ -37,7 +37,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询j结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
+        /// 查询结束时间戳，格式 “YYYY-MM-DD HH:mm:ss”。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

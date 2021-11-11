@@ -38,7 +38,7 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目，所属宿主机（在专用宿主机上创建子机时指定）等属性。
-        /// 注：本数据结构中的Zone为必填参数。
+        ///  <b>注：本数据结构中的Zone为必填参数。</b>
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
