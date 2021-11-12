@@ -84,6 +84,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("IsDefault")]
         public string IsDefault{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("DisableProgramAuthCheck")]
+        public bool? DisableProgramAuthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArraySimple(map, prefix + "NamespaceTypeList.", this.NamespaceTypeList);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
+            this.SetParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
         }
     }
 }

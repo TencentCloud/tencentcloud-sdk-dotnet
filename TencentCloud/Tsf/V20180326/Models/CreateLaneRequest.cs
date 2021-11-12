@@ -42,6 +42,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("LaneGroupList")]
         public LaneGroup[] LaneGroupList{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "LaneName", this.LaneName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArrayObj(map, prefix + "LaneGroupList.", this.LaneGroupList);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }

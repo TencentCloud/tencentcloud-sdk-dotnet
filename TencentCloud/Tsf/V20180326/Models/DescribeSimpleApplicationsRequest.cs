@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("SearchWord")]
         public string SearchWord{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("DisableProgramAuthCheck")]
+        public bool? DisableProgramAuthCheck{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MicroserviceType", this.MicroserviceType);
             this.SetParamArraySimple(map, prefix + "ApplicationResourceTypeList.", this.ApplicationResourceTypeList);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
+            this.SetParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
         }
     }
 }

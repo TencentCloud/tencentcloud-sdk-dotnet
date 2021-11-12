@@ -66,6 +66,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("EncodeWithBase64")]
         public bool? EncodeWithBase64{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "ConfigVersionDesc", this.ConfigVersionDesc);
             this.SetParamSimple(map, prefix + "ConfigType", this.ConfigType);
             this.SetParamSimple(map, prefix + "EncodeWithBase64", this.EncodeWithBase64);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }

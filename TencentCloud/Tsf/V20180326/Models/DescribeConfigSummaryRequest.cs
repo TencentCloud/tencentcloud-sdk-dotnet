@@ -60,6 +60,24 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("OrderType")]
         public long? OrderType{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ConfigTagList")]
+        public string[] ConfigTagList{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("DisableProgramAuthCheck")]
+        public bool? DisableProgramAuthCheck{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ConfigIdList")]
+        public string[] ConfigIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderType", this.OrderType);
+            this.SetParamArraySimple(map, prefix + "ConfigTagList.", this.ConfigTagList);
+            this.SetParamSimple(map, prefix + "DisableProgramAuthCheck", this.DisableProgramAuthCheck);
+            this.SetParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
         }
     }
 }

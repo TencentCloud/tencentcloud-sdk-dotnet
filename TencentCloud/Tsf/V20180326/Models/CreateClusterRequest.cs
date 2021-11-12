@@ -96,6 +96,30 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ProgramId")]
         public string ProgramId{ get; set; }
 
+        /// <summary>
+        /// api地址
+        /// </summary>
+        [JsonProperty("KuberneteApiServer")]
+        public string KuberneteApiServer{ get; set; }
+
+        /// <summary>
+        /// K : kubeconfig, S : service account
+        /// </summary>
+        [JsonProperty("KuberneteNativeType")]
+        public string KuberneteNativeType{ get; set; }
+
+        /// <summary>
+        /// native secret
+        /// </summary>
+        [JsonProperty("KuberneteNativeSecret")]
+        public string KuberneteNativeSecret{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +138,10 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamSimple(map, prefix + "MaxClusterServiceNum", this.MaxClusterServiceNum);
             this.SetParamSimple(map, prefix + "ProgramId", this.ProgramId);
+            this.SetParamSimple(map, prefix + "KuberneteApiServer", this.KuberneteApiServer);
+            this.SetParamSimple(map, prefix + "KuberneteNativeType", this.KuberneteNativeType);
+            this.SetParamSimple(map, prefix + "KuberneteNativeSecret", this.KuberneteNativeSecret);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }

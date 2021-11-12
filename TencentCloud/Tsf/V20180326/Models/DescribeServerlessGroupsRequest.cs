@@ -72,6 +72,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("GroupIdList")]
+        public string[] GroupIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArraySimple(map, prefix + "GroupIdList.", this.GroupIdList);
         }
     }
 }

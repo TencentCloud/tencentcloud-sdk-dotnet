@@ -48,6 +48,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("RuleIdList")]
+        public string[] RuleIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamArraySimple(map, prefix + "RuleIdList.", this.RuleIdList);
         }
     }
 }

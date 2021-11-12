@@ -54,6 +54,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("LaneId")]
         public string LaneId{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "RuleTagList.", this.RuleTagList);
             this.SetParamSimple(map, prefix + "RuleTagRelationship", this.RuleTagRelationship);
             this.SetParamSimple(map, prefix + "LaneId", this.LaneId);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }

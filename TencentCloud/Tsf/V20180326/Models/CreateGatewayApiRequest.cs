@@ -36,6 +36,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("ApiList")]
         public ApiInfo[] ApiList{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         {
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamArrayObj(map, prefix + "ApiList.", this.ApiList);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }
