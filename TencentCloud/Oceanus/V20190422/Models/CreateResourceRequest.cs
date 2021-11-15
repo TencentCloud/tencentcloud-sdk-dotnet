@@ -31,12 +31,6 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public ResourceLoc ResourceLoc{ get; set; }
 
         /// <summary>
-        /// 资源名称
-        /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
         /// 资源类型。目前只支持 JAR，取值为 1
         /// </summary>
         [JsonProperty("ResourceType")]
@@ -49,10 +43,22 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public string Remark{ get; set; }
 
         /// <summary>
+        /// 资源名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
         /// 资源版本描述
         /// </summary>
         [JsonProperty("ResourceConfigRemark")]
         public string ResourceConfigRemark{ get; set; }
+
+        /// <summary>
+        /// 目录ID
+        /// </summary>
+        [JsonProperty("FolderId")]
+        public string FolderId{ get; set; }
 
 
         /// <summary>
@@ -61,10 +67,11 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "ResourceLoc.", this.ResourceLoc);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ResourceConfigRemark", this.ResourceConfigRemark);
+            this.SetParamSimple(map, prefix + "FolderId", this.FolderId);
         }
     }
 }

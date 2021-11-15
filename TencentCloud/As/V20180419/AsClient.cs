@@ -479,46 +479,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
-        /// </summary>
-        /// <param name="req"><see cref="CreatePaiInstanceRequest"/></param>
-        /// <returns><see cref="CreatePaiInstanceResponse"/></returns>
-        public async Task<CreatePaiInstanceResponse> CreatePaiInstance(CreatePaiInstanceRequest req)
-        {
-             JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreatePaiInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePaiInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (CreatePaiInstance) 用于创建一个指定配置的PAI实例。
-        /// </summary>
-        /// <param name="req"><see cref="CreatePaiInstanceRequest"/></param>
-        /// <returns><see cref="CreatePaiInstanceResponse"/></returns>
-        public CreatePaiInstanceResponse CreatePaiInstanceSync(CreatePaiInstanceRequest req)
-        {
-             JsonResponseModel<CreatePaiInstanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreatePaiInstance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePaiInstanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（CreateScalingPolicy）用于创建告警触发策略。
         /// </summary>
         /// <param name="req"><see cref="CreateScalingPolicyRequest"/></param>

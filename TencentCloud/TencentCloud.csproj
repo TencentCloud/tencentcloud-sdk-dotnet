@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.404</VersionPrefix>
+    <VersionPrefix>3.0.405</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -712,8 +712,6 @@
     <Compile Include="As\V20180419\Models\CreateLifecycleHookResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateNotificationConfigurationRequest.cs" />
     <Compile Include="As\V20180419\Models\CreateNotificationConfigurationResponse.cs" />
-    <Compile Include="As\V20180419\Models\CreatePaiInstanceRequest.cs" />
-    <Compile Include="As\V20180419\Models\CreatePaiInstanceResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateScalingPolicyRequest.cs" />
     <Compile Include="As\V20180419\Models\CreateScalingPolicyResponse.cs" />
     <Compile Include="As\V20180419\Models\CreateScheduledActionRequest.cs" />
@@ -3986,6 +3984,7 @@
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPayment.cs" />
     <Compile Include="Cpdp\V20190820\Models\AgentTaxPaymentBatch.cs" />
     <Compile Include="Cpdp\V20190820\Models\AnchorContractInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AnchorExtendInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyDeclareData.cs" />
@@ -4038,6 +4037,8 @@
     <Compile Include="Cpdp\V20190820\Models\CreateAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateAnchorRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateAnchorResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentBatchData.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentData.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateBatchPaymentRecipient.cs" />
@@ -4283,6 +4284,8 @@
     <Compile Include="Cpdp\V20190820\Models\UnifiedTlinxOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadFileRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UploadFileResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxListRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxListResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UploadTaxPaymentRequest.cs" />
@@ -12793,6 +12796,8 @@
     <Compile Include="Tcb\V20180608\Models\LoginStatistic.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerFlowConfRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerFlowConfResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerVersionRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\ModifyCloudBaseRunServerVersionResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyDatabaseACLResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\ModifyEndUserRequest.cs" />

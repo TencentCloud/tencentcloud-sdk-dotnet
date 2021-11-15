@@ -48,6 +48,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 资源版本号
+        /// </summary>
+        [JsonProperty("ResourceConfigVersion")]
+        public long? ResourceConfigVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "DESCByJobConfigCreateTime", this.DESCByJobConfigCreateTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ResourceConfigVersion", this.ResourceConfigVersion);
         }
     }
 }

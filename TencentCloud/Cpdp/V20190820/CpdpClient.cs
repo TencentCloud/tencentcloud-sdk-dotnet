@@ -787,6 +787,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 直播平台-主播入驻
+        /// </summary>
+        /// <param name="req"><see cref="CreateAnchorRequest"/></param>
+        /// <returns><see cref="CreateAnchorResponse"/></returns>
+        public async Task<CreateAnchorResponse> CreateAnchor(CreateAnchorRequest req)
+        {
+             JsonResponseModel<CreateAnchorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAnchor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnchorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-主播入驻
+        /// </summary>
+        /// <param name="req"><see cref="CreateAnchorRequest"/></param>
+        /// <returns><see cref="CreateAnchorResponse"/></returns>
+        public CreateAnchorResponse CreateAnchorSync(CreateAnchorRequest req)
+        {
+             JsonResponseModel<CreateAnchorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAnchor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAnchorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云-批量主播转账接口
         /// </summary>
         /// <param name="req"><see cref="CreateBatchPaymentRequest"/></param>
@@ -4342,6 +4382,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "UploadExternalAnchorInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadExternalAnchorInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-文件上传
+        /// </summary>
+        /// <param name="req"><see cref="UploadFileRequest"/></param>
+        /// <returns><see cref="UploadFileResponse"/></returns>
+        public async Task<UploadFileResponse> UploadFile(UploadFileRequest req)
+        {
+             JsonResponseModel<UploadFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播平台-文件上传
+        /// </summary>
+        /// <param name="req"><see cref="UploadFileRequest"/></param>
+        /// <returns><see cref="UploadFileResponse"/></returns>
+        public UploadFileResponse UploadFileSync(UploadFileRequest req)
+        {
+             JsonResponseModel<UploadFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

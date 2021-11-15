@@ -2699,6 +2699,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 修改服务版本的副本数，环境变量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseRunServerVersionResponse"/></returns>
+        public async Task<ModifyCloudBaseRunServerVersionResponse> ModifyCloudBaseRunServerVersion(ModifyCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<ModifyCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改服务版本的副本数，环境变量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCloudBaseRunServerVersionRequest"/></param>
+        /// <returns><see cref="ModifyCloudBaseRunServerVersionResponse"/></returns>
+        public ModifyCloudBaseRunServerVersionResponse ModifyCloudBaseRunServerVersionSync(ModifyCloudBaseRunServerVersionRequest req)
+        {
+             JsonResponseModel<ModifyCloudBaseRunServerVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCloudBaseRunServerVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudBaseRunServerVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改数据库权限
         /// </summary>
         /// <param name="req"><see cref="ModifyDatabaseACLRequest"/></param>

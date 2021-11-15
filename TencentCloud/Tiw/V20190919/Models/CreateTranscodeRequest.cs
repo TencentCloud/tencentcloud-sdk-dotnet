@@ -85,9 +85,10 @@ namespace TencentCloud.Tiw.V20190919.Models
         public string Priority{ get; set; }
 
         /// <summary>
-        /// 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率
+        /// 转码后文档的最小分辨率，不传、传空字符串或分辨率格式错误则使用文档原分辨率。
+        /// 分辨率越高，效果越清晰，转出来的图片资源体积会越大，课件加载耗时会变长，请根据实际使用场景配置此参数。
         /// 
-        /// 注意分辨率宽高中间为英文字母"xyz"的"x"
+        /// 示例：1280x720，注意分辨率宽高中间为英文字母"xyz"的"x"
         /// </summary>
         [JsonProperty("MinScaleResolution")]
         public string MinScaleResolution{ get; set; }

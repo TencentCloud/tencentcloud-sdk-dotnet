@@ -57,7 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RegionId")]
-        public string RegionId{ get; set; }
+        public long? RegionId{ get; set; }
 
         /// <summary>
         /// 绑定状态，2：绑定成功，1：绑定中

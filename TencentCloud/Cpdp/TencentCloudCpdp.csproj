@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.404</VersionPrefix>
+    <VersionPrefix>3.0.405</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20190820\Models\AgentTaxPayment.cs" />
     <Compile Include="V20190820\Models\AgentTaxPaymentBatch.cs" />
     <Compile Include="V20190820\Models\AnchorContractInfo.cs" />
+    <Compile Include="V20190820\Models\AnchorExtendInfo.cs" />
     <Compile Include="V20190820\Models\ApplyApplicationMaterialRequest.cs" />
     <Compile Include="V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="V20190820\Models\ApplyDeclareData.cs" />
@@ -102,6 +103,8 @@
     <Compile Include="V20190820\Models\CreateAcctResponse.cs" />
     <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosRequest.cs" />
     <Compile Include="V20190820\Models\CreateAgentTaxPaymentInfosResponse.cs" />
+    <Compile Include="V20190820\Models\CreateAnchorRequest.cs" />
+    <Compile Include="V20190820\Models\CreateAnchorResponse.cs" />
     <Compile Include="V20190820\Models\CreateBatchPaymentBatchData.cs" />
     <Compile Include="V20190820\Models\CreateBatchPaymentData.cs" />
     <Compile Include="V20190820\Models\CreateBatchPaymentRecipient.cs" />
@@ -347,6 +350,8 @@
     <Compile Include="V20190820\Models\UnifiedTlinxOrderResponse.cs" />
     <Compile Include="V20190820\Models\UploadExternalAnchorInfoRequest.cs" />
     <Compile Include="V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
+    <Compile Include="V20190820\Models\UploadFileRequest.cs" />
+    <Compile Include="V20190820\Models\UploadFileResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxListRequest.cs" />
     <Compile Include="V20190820\Models\UploadTaxListResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxPaymentRequest.cs" />

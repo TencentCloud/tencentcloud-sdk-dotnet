@@ -141,6 +141,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("CurrentReplicas")]
         public long? CurrentReplicas{ get; set; }
 
+        /// <summary>
+        /// Monolithic，Microservice
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Architecture")]
+        public string Architecture{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +171,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "RunId", this.RunId);
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "CurrentReplicas", this.CurrentReplicas);
+            this.SetParamSimple(map, prefix + "Architecture", this.Architecture);
         }
     }
 }
