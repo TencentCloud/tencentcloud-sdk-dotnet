@@ -239,6 +239,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ProtectedCallee")]
         public string ProtectedCallee{ get; set; }
 
+        /// <summary>
+        /// 客户自定义数据（User-to-User Interface）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uui")]
+        public string Uui{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -271,6 +278,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
             this.SetParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
+            this.SetParamSimple(map, prefix + "Uui", this.Uui);
         }
     }
 }

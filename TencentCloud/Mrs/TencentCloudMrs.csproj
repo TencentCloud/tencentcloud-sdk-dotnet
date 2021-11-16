@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.405</VersionPrefix>
+    <VersionPrefix>3.0.406</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,7 @@
     <Compile Include="V20200910\MrsClient.cs" />
     <Compile Include="V20200910\Models\Advice.cs" />
     <Compile Include="V20200910\Models\AspectRatio.cs" />
+    <Compile Include="V20200910\Models\BiopsyPart.cs" />
     <Compile Include="V20200910\Models\BlockInfo.cs" />
     <Compile Include="V20200910\Models\Check.cs" />
     <Compile Include="V20200910\Models\Desc.cs" />
@@ -59,6 +60,9 @@
     <Compile Include="V20200910\Models\EcgItem.cs" />
     <Compile Include="V20200910\Models\Elastic.cs" />
     <Compile Include="V20200910\Models\Electrocardiogram.cs" />
+    <Compile Include="V20200910\Models\Endoscopy.cs" />
+    <Compile Include="V20200910\Models\EndoscopyDesc.cs" />
+    <Compile Include="V20200910\Models\EndoscopyOrgan.cs" />
     <Compile Include="V20200910\Models\FamilyMedicalHistory.cs" />
     <Compile Include="V20200910\Models\FirstPage.cs" />
     <Compile Include="V20200910\Models\HandleParam.cs" />
@@ -77,6 +81,7 @@
     <Compile Include="V20200910\Models\Lymph.cs" />
     <Compile Include="V20200910\Models\MedDoc.cs" />
     <Compile Include="V20200910\Models\MedicalRecordInfo.cs" />
+    <Compile Include="V20200910\Models\Medicine.cs" />
     <Compile Include="V20200910\Models\MenstrualMedicalHistory.cs" />
     <Compile Include="V20200910\Models\Multiple.cs" />
     <Compile Include="V20200910\Models\NormPart.cs" />
@@ -87,6 +92,7 @@
     <Compile Include="V20200910\Models\PathologyReport.cs" />
     <Compile Include="V20200910\Models\PatientInfo.cs" />
     <Compile Include="V20200910\Models\PersonalMedicalHistory.cs" />
+    <Compile Include="V20200910\Models\Prescription.cs" />
     <Compile Include="V20200910\Models\ReportInfo.cs" />
     <Compile Include="V20200910\Models\Size.cs" />
     <Compile Include="V20200910\Models\Summary.cs" />

@@ -44,6 +44,13 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
         public Event[] Events{ get; set; }
 
         /// <summary>
+        /// 总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +65,7 @@ namespace TencentCloud.Cloudaudit.V20190319.Models
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
             this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
             this.SetParamArrayObj(map, prefix + "Events.", this.Events);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

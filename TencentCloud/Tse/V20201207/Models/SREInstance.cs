@@ -163,6 +163,20 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Tags")]
         public KVPair[] Tags{ get; set; }
 
+        /// <summary>
+        /// 引擎实例是否开启控制台公网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableConsoleInternet")]
+        public bool? EnableConsoleInternet{ get; set; }
+
+        /// <summary>
+        /// 引擎实例是否开启控制台内网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableConsoleIntranet")]
+        public bool? EnableConsoleIntranet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -190,6 +204,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
             this.SetParamArrayObj(map, prefix + "ServiceGovernanceInfos.", this.ServiceGovernanceInfos);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
+            this.SetParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
         }
     }
 }

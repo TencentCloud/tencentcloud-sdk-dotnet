@@ -43,6 +43,20 @@ namespace TencentCloud.Tse.V20201207.Models
         public EnvAddressInfo[] EnvAddressInfos{ get; set; }
 
         /// <summary>
+        /// 控制台公网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsoleInternetAddress")]
+        public string ConsoleInternetAddress{ get; set; }
+
+        /// <summary>
+        /// 控制台内网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsoleIntranetAddress")]
+        public string ConsoleIntranetAddress{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +71,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "IntranetAddress", this.IntranetAddress);
             this.SetParamSimple(map, prefix + "InternetAddress", this.InternetAddress);
             this.SetParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
+            this.SetParamSimple(map, prefix + "ConsoleInternetAddress", this.ConsoleInternetAddress);
+            this.SetParamSimple(map, prefix + "ConsoleIntranetAddress", this.ConsoleIntranetAddress);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
