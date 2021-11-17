@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+        /// 导出视频编码配置 Id，推荐优先使用下面的预置模板 Id，有其他需求可通过接口定制视频编码配置。
         /// <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
         /// <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
         /// <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -54,7 +54,9 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TrackData{ get; set; }
 
         /// <summary>
-        /// 轨道数据对应的画布宽高比。
+        /// 轨道数据对应的画布宽高比，配合视频编码配置中的视频短边尺寸，可决定导出画面的尺寸。例：
+        /// <li>如果 AspectRatio 取值 16:9，视频编码配置选为12（短边1080），则导出尺寸为 1920 * 1080；</li>
+        /// <li>如果 AspectRatio 取值 9:16，视频编码配置选为11（短边720），则导出尺寸为 720 *1280。</li>
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }

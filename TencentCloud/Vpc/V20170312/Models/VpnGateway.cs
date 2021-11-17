@@ -132,6 +132,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetworkInstanceId")]
         public string NetworkInstanceId{ get; set; }
 
+        /// <summary>
+        /// CDC 实例ID
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
+        /// <summary>
+        /// SSL-VPN 客户端连接数。
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong? MaxConnection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +168,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "VpnGatewayQuotaSet.", this.VpnGatewayQuotaSet);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "NetworkInstanceId", this.NetworkInstanceId);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
+            this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
         }
     }
 }

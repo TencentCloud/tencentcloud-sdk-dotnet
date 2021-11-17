@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? BackupTimeBeg{ get; set; }
 
         /// <summary>
-        /// 表示全备开始时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
+        /// 表示全备结束时间，[0-24*3600]， 如0:00, 1:00, 2:00 分别为 0，3600， 7200
         /// </summary>
         [JsonProperty("BackupTimeEnd")]
         public ulong? BackupTimeEnd{ get; set; }

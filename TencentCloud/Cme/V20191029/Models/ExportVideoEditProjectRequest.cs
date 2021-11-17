@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ProjectId{ get; set; }
 
         /// <summary>
-        /// 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+        /// 视频编码配置 ID，支持自定义创建，推荐优先使用系统预置的导出配置。
         /// <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
         /// <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
         /// <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -72,6 +72,12 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
+        /// 视频导出扩展参数。可以覆盖导出模板中的参数，灵活的指定导出规格及参数。
+        /// </summary>
+        [JsonProperty("ExportExtensionArgs")]
+        public VideoExportExtensionArgs ExportExtensionArgs{ get; set; }
+
+        /// <summary>
         /// 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
         /// </summary>
         [JsonProperty("Operator")]
@@ -90,6 +96,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "CoverData", this.CoverData);
             this.SetParamObj(map, prefix + "CMEExportInfo.", this.CMEExportInfo);
             this.SetParamObj(map, prefix + "VODExportInfo.", this.VODExportInfo);
+            this.SetParamObj(map, prefix + "ExportExtensionArgs.", this.ExportExtensionArgs);
             this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }

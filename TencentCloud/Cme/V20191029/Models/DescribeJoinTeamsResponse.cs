@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 团队列表
+        /// 团队列表。
         /// </summary>
         [JsonProperty("TeamSet")]
         public JoinTeamInfo[] TeamSet{ get; set; }

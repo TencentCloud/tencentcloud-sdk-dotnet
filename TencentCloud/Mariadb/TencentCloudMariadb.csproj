@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.406</VersionPrefix>
+    <VersionPrefix>3.0.407</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -155,10 +155,14 @@
     <Compile Include="V20170312\Models\ModifyDBInstancesProjectResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDBParametersResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDBSyncModeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDBSyncModeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodRequest.cs" />
     <Compile Include="V20170312\Models\ModifyLogFileRetentionPeriodResponse.cs" />
     <Compile Include="V20170312\Models\ModifyRealServerAccessStrategyRequest.cs" />
     <Compile Include="V20170312\Models\ModifyRealServerAccessStrategyResponse.cs" />
+    <Compile Include="V20170312\Models\ModifySyncTaskAttributeRequest.cs" />
+    <Compile Include="V20170312\Models\ModifySyncTaskAttributeResponse.cs" />
     <Compile Include="V20170312\Models\MonitorData.cs" />
     <Compile Include="V20170312\Models\NodeInfo.cs" />
     <Compile Include="V20170312\Models\OpenDBExtranetAccessRequest.cs" />

@@ -133,6 +133,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("ExampleSql")]
         public string ExampleSql{ get; set; }
 
+        /// <summary>
+        /// 账户的域名
+        /// </summary>
+        [JsonProperty("Host")]
+        public string Host{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +163,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "TsMin", this.TsMin);
             this.SetParamSimple(map, prefix + "User", this.User);
             this.SetParamSimple(map, prefix + "ExampleSql", this.ExampleSql);
+            this.SetParamSimple(map, prefix + "Host", this.Host);
         }
     }
 }

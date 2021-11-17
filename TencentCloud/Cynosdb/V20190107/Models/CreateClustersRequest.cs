@@ -63,19 +63,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
+        /// 当DbMode为NORMAL或不填时必选
         /// 普通实例Cpu核数
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }
 
         /// <summary>
+        /// 当DbMode为NORMAL或不填时必选
         /// 普通实例内存,单位G
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 存储大小，单位G
+        /// 该参数无实际意义，已废弃。
+        /// 存储大小，单位G。
         /// </summary>
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
@@ -138,6 +141,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ExpectTime{ get; set; }
 
         /// <summary>
+        /// 该参数无实际意义，已废弃。
         /// 时间点回档，指定时间允许范围
         /// </summary>
         [JsonProperty("ExpectTimeThresh")]

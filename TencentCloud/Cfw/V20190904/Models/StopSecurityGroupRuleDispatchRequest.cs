@@ -24,12 +24,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     public class StopSecurityGroupRuleDispatchRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 值为1，中止全部
+        /// </summary>
+        [JsonProperty("StopType")]
+        public long? StopType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "StopType", this.StopType);
         }
     }
 }

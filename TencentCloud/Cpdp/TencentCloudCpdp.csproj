@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.406</VersionPrefix>
+    <VersionPrefix>3.0.407</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,15 @@
   <ItemGroup>
     <Compile Include="V20190820\CpdpClient.cs" />
     <Compile Include="V20190820\Models\Acct.cs" />
+    <Compile Include="V20190820\Models\AddContractRequest.cs" />
+    <Compile Include="V20190820\Models\AddContractResponse.cs" />
+    <Compile Include="V20190820\Models\AddContractResult.cs" />
+    <Compile Include="V20190820\Models\AddMerchantRequest.cs" />
+    <Compile Include="V20190820\Models\AddMerchantResponse.cs" />
+    <Compile Include="V20190820\Models\AddMerchantResult.cs" />
+    <Compile Include="V20190820\Models\AddShopRequest.cs" />
+    <Compile Include="V20190820\Models\AddShopResponse.cs" />
+    <Compile Include="V20190820\Models\AddShopResult.cs" />
     <Compile Include="V20190820\Models\AgencyClientInfo.cs" />
     <Compile Include="V20190820\Models\AgentTaxPayment.cs" />
     <Compile Include="V20190820\Models\AgentTaxPaymentBatch.cs" />
@@ -88,6 +97,7 @@
     <Compile Include="V20190820\Models\CheckAcctResponse.cs" />
     <Compile Include="V20190820\Models\CheckAmountRequest.cs" />
     <Compile Include="V20190820\Models\CheckAmountResponse.cs" />
+    <Compile Include="V20190820\Models\CityCodeResult.cs" />
     <Compile Include="V20190820\Models\ClearItem.cs" />
     <Compile Include="V20190820\Models\CloseOrderRequest.cs" />
     <Compile Include="V20190820\Models\CloseOrderResponse.cs" />
@@ -97,6 +107,7 @@
     <Compile Include="V20190820\Models\ContractOrderInSubOrder.cs" />
     <Compile Include="V20190820\Models\ContractOrderRequest.cs" />
     <Compile Include="V20190820\Models\ContractOrderResponse.cs" />
+    <Compile Include="V20190820\Models\ContractPayListResult.cs" />
     <Compile Include="V20190820\Models\ContractSyncInfo.cs" />
     <Compile Include="V20190820\Models\ContractUserInfo.cs" />
     <Compile Include="V20190820\Models\CreateAcctRequest.cs" />
@@ -155,8 +166,33 @@
     <Compile Include="V20190820\Models\DescribeChargeDetailResponse.cs" />
     <Compile Include="V20190820\Models\DescribeOrderStatusRequest.cs" />
     <Compile Include="V20190820\Models\DescribeOrderStatusResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditQueryRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditQueryResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditQueryResult.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditResult.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditTlinxRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeAccreditTlinxResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeAddReceiverRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeAddReceiverResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeApplyRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeApplyResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeCancelRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeCancelResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeCancelResult.cs" />
+    <Compile Include="V20190820\Models\DistributeMultiApplyResult.cs" />
+    <Compile Include="V20190820\Models\DistributeQueryReceiverRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeQueryReceiverResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeQueryRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeQueryResponse.cs" />
+    <Compile Include="V20190820\Models\DistributeQueryResult.cs" />
+    <Compile Include="V20190820\Models\DistributeReceiverResult.cs" />
+    <Compile Include="V20190820\Models\DistributeRemoveReceiverRequest.cs" />
+    <Compile Include="V20190820\Models\DistributeRemoveReceiverResponse.cs" />
     <Compile Include="V20190820\Models\DownloadBillRequest.cs" />
     <Compile Include="V20190820\Models\DownloadBillResponse.cs" />
+    <Compile Include="V20190820\Models\DownloadFileResult.cs" />
+    <Compile Include="V20190820\Models\DownloadOrgFileRequest.cs" />
+    <Compile Include="V20190820\Models\DownloadOrgFileResponse.cs" />
     <Compile Include="V20190820\Models\DownloadReconciliationUrlRequest.cs" />
     <Compile Include="V20190820\Models\DownloadReconciliationUrlResponse.cs" />
     <Compile Include="V20190820\Models\ExecuteMemberTransactionRequest.cs" />
@@ -164,6 +200,7 @@
     <Compile Include="V20190820\Models\ExternalContractUserInfo.cs" />
     <Compile Include="V20190820\Models\ExternalReturnContractInfo.cs" />
     <Compile Include="V20190820\Models\FileItem.cs" />
+    <Compile Include="V20190820\Models\MerchantClassificationId.cs" />
     <Compile Include="V20190820\Models\MerchantManagementList.cs" />
     <Compile Include="V20190820\Models\MerchantManagementResult.cs" />
     <Compile Include="V20190820\Models\MerchantPayWayData.cs" />
@@ -180,9 +217,13 @@
     <Compile Include="V20190820\Models\ModifyMerchantResponse.cs" />
     <Compile Include="V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeRequest.cs" />
     <Compile Include="V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
+    <Compile Include="V20190820\Models\MultiApplyDetail.cs" />
+    <Compile Include="V20190820\Models\MultiApplyOrder.cs" />
     <Compile Include="V20190820\Models\Order.cs" />
     <Compile Include="V20190820\Models\OrderItem.cs" />
     <Compile Include="V20190820\Models\OrganizationInfo.cs" />
+    <Compile Include="V20190820\Models\PayDataResult.cs" />
+    <Compile Include="V20190820\Models\PayFeeDataResult.cs" />
     <Compile Include="V20190820\Models\PayOrderResult.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="V20190820\Models\QueryAcctBindingResponse.cs" />
@@ -214,8 +255,18 @@
     <Compile Include="V20190820\Models\QueryBillDownloadURLData.cs" />
     <Compile Include="V20190820\Models\QueryBillDownloadURLRequest.cs" />
     <Compile Include="V20190820\Models\QueryBillDownloadURLResponse.cs" />
+    <Compile Include="V20190820\Models\QueryCityCodeRequest.cs" />
+    <Compile Include="V20190820\Models\QueryCityCodeResponse.cs" />
     <Compile Include="V20190820\Models\QueryCommonTransferRechargeRequest.cs" />
     <Compile Include="V20190820\Models\QueryCommonTransferRechargeResponse.cs" />
+    <Compile Include="V20190820\Models\QueryContractPayFeeRequest.cs" />
+    <Compile Include="V20190820\Models\QueryContractPayFeeResponse.cs" />
+    <Compile Include="V20190820\Models\QueryContractPayFeeResult.cs" />
+    <Compile Include="V20190820\Models\QueryContractPayWayListRequest.cs" />
+    <Compile Include="V20190820\Models\QueryContractPayWayListResponse.cs" />
+    <Compile Include="V20190820\Models\QueryContractRelateShopRequest.cs" />
+    <Compile Include="V20190820\Models\QueryContractRelateShopResponse.cs" />
+    <Compile Include="V20190820\Models\QueryContractRelateShopResult.cs" />
     <Compile Include="V20190820\Models\QueryContractRequest.cs" />
     <Compile Include="V20190820\Models\QueryContractResponse.cs" />
     <Compile Include="V20190820\Models\QueryCustAcctIdBalanceRequest.cs" />
@@ -245,6 +296,8 @@
     <Compile Include="V20190820\Models\QueryMerchantBalanceRequest.cs" />
     <Compile Include="V20190820\Models\QueryMerchantBalanceResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantBalanceResult.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantClassificationRequest.cs" />
+    <Compile Include="V20190820\Models\QueryMerchantClassificationResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantInfoForManagementRequest.cs" />
     <Compile Include="V20190820\Models\QueryMerchantInfoForManagementResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantOrderRequest.cs" />
@@ -272,6 +325,9 @@
     <Compile Include="V20190820\Models\QueryReconciliationDocumentResponse.cs" />
     <Compile Include="V20190820\Models\QueryRefundRequest.cs" />
     <Compile Include="V20190820\Models\QueryRefundResponse.cs" />
+    <Compile Include="V20190820\Models\QueryShopOpenIdRequest.cs" />
+    <Compile Include="V20190820\Models\QueryShopOpenIdResponse.cs" />
+    <Compile Include="V20190820\Models\QueryShopOpenIdResult.cs" />
     <Compile Include="V20190820\Models\QuerySinglePayItem.cs" />
     <Compile Include="V20190820\Models\QuerySinglePayRequest.cs" />
     <Compile Include="V20190820\Models\QuerySinglePayResponse.cs" />
@@ -352,10 +408,22 @@
     <Compile Include="V20190820\Models\UploadExternalAnchorInfoResponse.cs" />
     <Compile Include="V20190820\Models\UploadFileRequest.cs" />
     <Compile Include="V20190820\Models\UploadFileResponse.cs" />
+    <Compile Include="V20190820\Models\UploadFileResult.cs" />
+    <Compile Include="V20190820\Models\UploadOrgFileRequest.cs" />
+    <Compile Include="V20190820\Models\UploadOrgFileResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxListRequest.cs" />
     <Compile Include="V20190820\Models\UploadTaxListResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxPaymentRequest.cs" />
     <Compile Include="V20190820\Models\UploadTaxPaymentResponse.cs" />
+    <Compile Include="V20190820\Models\ViewContractRequest.cs" />
+    <Compile Include="V20190820\Models\ViewContractResponse.cs" />
+    <Compile Include="V20190820\Models\ViewContractResult.cs" />
+    <Compile Include="V20190820\Models\ViewMerchantRequest.cs" />
+    <Compile Include="V20190820\Models\ViewMerchantResponse.cs" />
+    <Compile Include="V20190820\Models\ViewMerchantResult.cs" />
+    <Compile Include="V20190820\Models\ViewShopRequest.cs" />
+    <Compile Include="V20190820\Models\ViewShopResponse.cs" />
+    <Compile Include="V20190820\Models\ViewShopResult.cs" />
     <Compile Include="V20190820\Models\WithdrawBill.cs" />
     <Compile Include="V20190820\Models\WithdrawCashMembershipRequest.cs" />
     <Compile Include="V20190820\Models\WithdrawCashMembershipResponse.cs" />

@@ -1993,6 +1993,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBSyncModeRequest"/></param>
+        /// <returns><see cref="ModifyDBSyncModeResponse"/></returns>
+        public async Task<ModifyDBSyncModeResponse> ModifyDBSyncMode(ModifyDBSyncModeRequest req)
+        {
+             JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBSyncMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBSyncMode）用于修改云数据库实例的同步模式。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBSyncModeRequest"/></param>
+        /// <returns><see cref="ModifyDBSyncModeResponse"/></returns>
+        public ModifyDBSyncModeResponse ModifyDBSyncModeSync(ModifyDBSyncModeRequest req)
+        {
+             JsonResponseModel<ModifyDBSyncModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBSyncMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBSyncModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyLogFileRetentionPeriod)用于修改数据库备份日志保存天数。
         /// </summary>
         /// <param name="req"><see cref="ModifyLogFileRetentionPeriodRequest"/></param>
@@ -2074,6 +2114,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyRealServerAccessStrategy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRealServerAccessStrategyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifySyncTaskAttribute) 用于修改同步任务的属性（目前只支持修改任务名称）
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncTaskAttributeRequest"/></param>
+        /// <returns><see cref="ModifySyncTaskAttributeResponse"/></returns>
+        public async Task<ModifySyncTaskAttributeResponse> ModifySyncTaskAttribute(ModifySyncTaskAttributeRequest req)
+        {
+             JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySyncTaskAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncTaskAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifySyncTaskAttribute) 用于修改同步任务的属性（目前只支持修改任务名称）
+        /// </summary>
+        /// <param name="req"><see cref="ModifySyncTaskAttributeRequest"/></param>
+        /// <returns><see cref="ModifySyncTaskAttributeResponse"/></returns>
+        public ModifySyncTaskAttributeResponse ModifySyncTaskAttributeSync(ModifySyncTaskAttributeRequest req)
+        {
+             JsonResponseModel<ModifySyncTaskAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySyncTaskAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySyncTaskAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

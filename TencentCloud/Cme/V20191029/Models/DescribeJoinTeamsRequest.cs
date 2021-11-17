@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// 分页偏移量，默认值：0
+        /// 分页偏移量，默认值：0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

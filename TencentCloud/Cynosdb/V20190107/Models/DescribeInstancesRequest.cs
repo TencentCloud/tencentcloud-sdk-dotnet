@@ -65,7 +65,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 实例状态
+        /// 实例状态, 可选值:
+        /// creating 创建中
+        /// running 运行中
+        /// isolating 隔离中
+        /// isolated 已隔离
+        /// activating 恢复中
+        /// offlining 下线中
+        /// offlined 已下线
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

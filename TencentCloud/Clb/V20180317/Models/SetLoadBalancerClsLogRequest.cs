@@ -31,19 +31,26 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 日志服务(CLS)的日志集ID。
+        /// 日志服务(CLS)的日志集 ID。
+        /// <li>增加和更新日志主题时可调用 [DescribeLogsets](https://cloud.tencent.com/document/product/614/56454) 接口获取日志集 ID。</li>
+        /// <li>删除日志主题时，此参数填写为null即可。</li>
         /// </summary>
         [JsonProperty("LogSetId")]
         public string LogSetId{ get; set; }
 
         /// <summary>
-        /// 日志服务(CLS)的日志主题ID。
+        /// 日志服务(CLS)的日志主题 ID。
+        /// <li>增加和更新日志主题时可调用 [DescribeTopics](https://cloud.tencent.com/document/product/614/58624) 接口获取日志主题 ID。</li>
+        /// <li>删除日志主题时，此参数填写为null即可。</li>
         /// </summary>
         [JsonProperty("LogTopicId")]
         public string LogTopicId{ get; set; }
 
         /// <summary>
-        /// 日志类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
+        /// 日志类型：
+        /// <li>ACCESS：访问日志</li>
+        /// <li>HEALTH：健康检查日志</li>
+        /// 默认为ACCESS。
         /// </summary>
         [JsonProperty("LogType")]
         public string LogType{ get; set; }

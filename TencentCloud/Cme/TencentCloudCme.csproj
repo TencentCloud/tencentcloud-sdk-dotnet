@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.406</VersionPrefix>
+    <VersionPrefix>3.0.407</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20191029\Models\CreateProjectResponse.cs" />
     <Compile Include="V20191029\Models\CreateTeamRequest.cs" />
     <Compile Include="V20191029\Models\CreateTeamResponse.cs" />
+    <Compile Include="V20191029\Models\CreateVideoEncodingPresetRequest.cs" />
+    <Compile Include="V20191029\Models\CreateVideoEncodingPresetResponse.cs" />
     <Compile Include="V20191029\Models\DeleteClassRequest.cs" />
     <Compile Include="V20191029\Models\DeleteClassResponse.cs" />
     <Compile Include="V20191029\Models\DeleteLoginStatusRequest.cs" />
@@ -79,6 +81,8 @@
     <Compile Include="V20191029\Models\DeleteTeamMembersResponse.cs" />
     <Compile Include="V20191029\Models\DeleteTeamRequest.cs" />
     <Compile Include="V20191029\Models\DeleteTeamResponse.cs" />
+    <Compile Include="V20191029\Models\DeleteVideoEncodingPresetRequest.cs" />
+    <Compile Include="V20191029\Models\DeleteVideoEncodingPresetResponse.cs" />
     <Compile Include="V20191029\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20191029\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20191029\Models\DescribeClassRequest.cs" />
@@ -105,6 +109,8 @@
     <Compile Include="V20191029\Models\DescribeTeamMembersResponse.cs" />
     <Compile Include="V20191029\Models\DescribeTeamsRequest.cs" />
     <Compile Include="V20191029\Models\DescribeTeamsResponse.cs" />
+    <Compile Include="V20191029\Models\DescribeVideoEncodingPresetsRequest.cs" />
+    <Compile Include="V20191029\Models\DescribeVideoEncodingPresetsResponse.cs" />
     <Compile Include="V20191029\Models\EmptyTrackItem.cs" />
     <Compile Include="V20191029\Models\Entity.cs" />
     <Compile Include="V20191029\Models\EventContent.cs" />
@@ -159,6 +165,8 @@
     <Compile Include="V20191029\Models\ModifyTeamMemberResponse.cs" />
     <Compile Include="V20191029\Models\ModifyTeamRequest.cs" />
     <Compile Include="V20191029\Models\ModifyTeamResponse.cs" />
+    <Compile Include="V20191029\Models\ModifyVideoEncodingPresetRequest.cs" />
+    <Compile Include="V20191029\Models\ModifyVideoEncodingPresetResponse.cs" />
     <Compile Include="V20191029\Models\MoveClassRequest.cs" />
     <Compile Include="V20191029\Models\MoveClassResponse.cs" />
     <Compile Include="V20191029\Models\MoveResourceRequest.cs" />
@@ -201,6 +209,12 @@
     <Compile Include="V20191029\Models\VideoEditProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoEditProjectOutput.cs" />
     <Compile Include="V20191029\Models\VideoEditTemplateMaterial.cs" />
+    <Compile Include="V20191029\Models\VideoEncodingPreset.cs" />
+    <Compile Include="V20191029\Models\VideoEncodingPresetAudioSetting.cs" />
+    <Compile Include="V20191029\Models\VideoEncodingPresetAudioSettingForUpdate.cs" />
+    <Compile Include="V20191029\Models\VideoEncodingPresetVideoSetting.cs" />
+    <Compile Include="V20191029\Models\VideoEncodingPresetVideoSettingForUpdate.cs" />
+    <Compile Include="V20191029\Models\VideoExportExtensionArgs.cs" />
     <Compile Include="V20191029\Models\VideoMaterial.cs" />
     <Compile Include="V20191029\Models\VideoSegmentationProjectInput.cs" />
     <Compile Include="V20191029\Models\VideoStreamInfo.cs" />

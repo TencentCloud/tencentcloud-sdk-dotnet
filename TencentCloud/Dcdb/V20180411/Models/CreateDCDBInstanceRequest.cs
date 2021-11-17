@@ -152,6 +152,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DcnInstanceId")]
         public string DcnInstanceId{ get; set; }
 
+        /// <summary>
+        /// 自动续费标记，0表示默认状态(用户未设置，即初始状态即手动续费，用户开通了预付费不停服特权也会进行自动续费)， 1表示自动续费，2表示明确不自动续费(用户设置)，若业务无续费概念或无需自动续费，需要设置为0
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +184,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamArrayObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
         }
     }
 }

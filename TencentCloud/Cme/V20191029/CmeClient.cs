@@ -297,6 +297,46 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
+        /// 指定导出的参数，创建一个视频编码配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="CreateVideoEncodingPresetResponse"/></returns>
+        public async Task<CreateVideoEncodingPresetResponse> CreateVideoEncodingPreset(CreateVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<CreateVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVideoEncodingPresetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 指定导出的参数，创建一个视频编码配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="CreateVideoEncodingPresetResponse"/></returns>
+        public CreateVideoEncodingPresetResponse CreateVideoEncodingPresetSync(CreateVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<CreateVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVideoEncodingPresetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除分类信息，删除时检验下述限制：
         /// <li>分类路径必须存在；</li>
         /// <li>分类下没有绑定素材。</li>
@@ -536,6 +576,46 @@ namespace TencentCloud.Cme.V20191029
              {
                  var strResp = this.InternalRequestSync(req, "DeleteTeamMembers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteTeamMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定 ID 的视频编码配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="DeleteVideoEncodingPresetResponse"/></returns>
+        public async Task<DeleteVideoEncodingPresetResponse> DeleteVideoEncodingPreset(DeleteVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<DeleteVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVideoEncodingPresetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除指定 ID 的视频编码配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="DeleteVideoEncodingPresetResponse"/></returns>
+        public DeleteVideoEncodingPresetResponse DeleteVideoEncodingPresetSync(DeleteVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<DeleteVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVideoEncodingPresetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1064,6 +1144,46 @@ namespace TencentCloud.Cme.V20191029
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTeams");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTeamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询视频编码配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEncodingPresetsRequest"/></param>
+        /// <returns><see cref="DescribeVideoEncodingPresetsResponse"/></returns>
+        public async Task<DescribeVideoEncodingPresetsResponse> DescribeVideoEncodingPresets(DescribeVideoEncodingPresetsRequest req)
+        {
+             JsonResponseModel<DescribeVideoEncodingPresetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVideoEncodingPresets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoEncodingPresetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询视频编码配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVideoEncodingPresetsRequest"/></param>
+        /// <returns><see cref="DescribeVideoEncodingPresetsResponse"/></returns>
+        public DescribeVideoEncodingPresetsResponse DescribeVideoEncodingPresetsSync(DescribeVideoEncodingPresetsRequest req)
+        {
+             JsonResponseModel<DescribeVideoEncodingPresetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVideoEncodingPresets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVideoEncodingPresetsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1698,6 +1818,46 @@ namespace TencentCloud.Cme.V20191029
              {
                  var strResp = this.InternalRequestSync(req, "ModifyTeamMember");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyTeamMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改视频编码配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="ModifyVideoEncodingPresetResponse"/></returns>
+        public async Task<ModifyVideoEncodingPresetResponse> ModifyVideoEncodingPreset(ModifyVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<ModifyVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVideoEncodingPresetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改视频编码配置信息。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoEncodingPresetRequest"/></param>
+        /// <returns><see cref="ModifyVideoEncodingPresetResponse"/></returns>
+        public ModifyVideoEncodingPresetResponse ModifyVideoEncodingPresetSync(ModifyVideoEncodingPresetRequest req)
+        {
+             JsonResponseModel<ModifyVideoEncodingPresetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVideoEncodingPreset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVideoEncodingPresetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
