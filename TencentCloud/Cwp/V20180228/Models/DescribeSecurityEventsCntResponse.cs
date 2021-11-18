@@ -67,7 +67,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public SecurityEventInfo ReverseShell{ get; set; }
 
         /// <summary>
-        /// 系统组件相关风险事件
+        /// 应用漏洞风险事件
         /// </summary>
         [JsonProperty("SysVul")]
         public SecurityEventInfo SysVul{ get; set; }
@@ -109,6 +109,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EventsCount{ get; set; }
 
         /// <summary>
+        /// window 系统漏洞事件总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WindowVul")]
+        public SecurityEventInfo WindowVul{ get; set; }
+
+        /// <summary>
+        /// linux系统漏洞事件总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LinuxVul")]
+        public SecurityEventInfo LinuxVul{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -134,6 +148,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamObj(map, prefix + "AttackLogs.", this.AttackLogs);
             this.SetParamSimple(map, prefix + "EffectMachineCount", this.EffectMachineCount);
             this.SetParamSimple(map, prefix + "EventsCount", this.EventsCount);
+            this.SetParamObj(map, prefix + "WindowVul.", this.WindowVul);
+            this.SetParamObj(map, prefix + "LinuxVul.", this.LinuxVul);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

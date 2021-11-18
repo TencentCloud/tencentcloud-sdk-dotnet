@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.407</VersionPrefix>
+    <VersionPrefix>3.0.408</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
     <Compile Include="V20190904\Models\AcListsData.cs" />
     <Compile Include="V20190904\Models\AddAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\AddAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesRequest.cs" />
+    <Compile Include="V20190904\Models\AddEnterpriseSecurityGroupRulesResponse.cs" />
     <Compile Include="V20190904\Models\AssetZone.cs" />
     <Compile Include="V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="V20190904\Models\CfwNatDnatRule.cs" />
@@ -90,6 +92,8 @@
     <Compile Include="V20190904\Models\DescribeBlockStaticListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeCfwEipsResponse.cs" />
+    <Compile Include="V20190904\Models\DescribeEnterpriseSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20190904\Models\DescribeEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeGuideScanInfoResponse.cs" />
     <Compile Include="V20190904\Models\DescribeNatFwInfoCountRequest.cs" />
@@ -183,6 +187,8 @@
     <Compile Include="V20190904\Models\NewModeItems.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveAcRuleResponse.cs" />
+    <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleRequest.cs" />
+    <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
@@ -192,6 +198,7 @@
     <Compile Include="V20190904\Models\SecurityGroupBothWayInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupOrderIndexData.cs" />
+    <Compile Include="V20190904\Models\SecurityGroupRule.cs" />
     <Compile Include="V20190904\Models\SequenceData.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="V20190904\Models\SetNatFwDnatRuleResponse.cs" />

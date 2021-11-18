@@ -25,7 +25,7 @@ namespace TencentCloud.Soe.V20180724.Models
     {
         
         /// <summary>
-        /// 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式该值无效。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
+        /// 被评估语音对应的文本，句子模式下不超过个 20 单词或者中文文字，段落模式不超过 120 单词或者中文文字，中文评估使用 utf-8 编码，自由说模式RefText可以不填。如需要在单词模式和句子模式下使用自定义音素，可以通过设置 TextMode 使用[音素标注](https://cloud.tencent.com/document/product/884/33698)。
         /// </summary>
         [JsonProperty("RefText")]
         public string RefText{ get; set; }
@@ -44,6 +44,7 @@ namespace TencentCloud.Soe.V20180724.Models
 
         /// <summary>
         /// 评估语言，0：英文，1：中文。
+        /// ServerType不填默认传0
         /// </summary>
         [JsonProperty("ServerType")]
         public ulong? ServerType{ get; set; }

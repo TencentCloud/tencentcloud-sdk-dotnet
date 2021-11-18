@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{27664084-899E-3873-B6E4-FE25D3A68B6F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.407</VersionPrefix>
+    <VersionPrefix>3.0.408</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,7 @@
     <Compile Include="V20210413\Models\HorizontalPodAutoscalerSpec.cs" />
     <Compile Include="V20210413\Models\IngressGateway.cs" />
     <Compile Include="V20210413\Models\IngressGatewayStatus.cs" />
+    <Compile Include="V20210413\Models\InjectConfig.cs" />
     <Compile Include="V20210413\Models\IstioConfig.cs" />
     <Compile Include="V20210413\Models\IstiodConfig.cs" />
     <Compile Include="V20210413\Models\LoadBalancer.cs" />

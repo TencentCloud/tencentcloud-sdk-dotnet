@@ -42,6 +42,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Prometheus")]
         public PrometheusConfig Prometheus{ get; set; }
 
+        /// <summary>
+        /// 自动注入配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Inject")]
+        public InjectConfig Inject{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamObj(map, prefix + "Istio.", this.Istio);
             this.SetParamObj(map, prefix + "AccessLog.", this.AccessLog);
             this.SetParamObj(map, prefix + "Prometheus.", this.Prometheus);
+            this.SetParamObj(map, prefix + "Inject.", this.Inject);
         }
     }
 }

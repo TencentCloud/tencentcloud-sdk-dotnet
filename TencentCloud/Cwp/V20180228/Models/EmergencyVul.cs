@@ -72,6 +72,34 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Progress")]
         public ulong? Progress{ get; set; }
 
+        /// <summary>
+        /// cve编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CveId")]
+        public string CveId{ get; set; }
+
+        /// <summary>
+        /// CVSS评分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvssScore")]
+        public float? CvssScore{ get; set; }
+
+        /// <summary>
+        /// 漏洞标签 多个逗号分割
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string Labels{ get; set; }
+
+        /// <summary>
+        /// 影响机器数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostCount")]
+        public ulong? HostCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +114,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "LastScanTime", this.LastScanTime);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "CveId", this.CveId);
+            this.SetParamSimple(map, prefix + "CvssScore", this.CvssScore);
+            this.SetParamSimple(map, prefix + "Labels", this.Labels);
+            this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
         }
     }
 }

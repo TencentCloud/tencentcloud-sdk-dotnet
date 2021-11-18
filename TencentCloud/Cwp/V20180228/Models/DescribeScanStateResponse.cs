@@ -55,6 +55,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Type{ get; set; }
 
         /// <summary>
+        /// 开始扫描时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScanBeginTime")]
+        public string ScanBeginTime{ get; set; }
+
+        /// <summary>
+        /// 扫描漏洞数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskEventCount")]
+        public ulong? RiskEventCount{ get; set; }
+
+        /// <summary>
+        /// 扫描结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScanEndTime")]
+        public string ScanEndTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +92,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamArraySimple(map, prefix + "VulId.", this.VulId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "ScanBeginTime", this.ScanBeginTime);
+            this.SetParamSimple(map, prefix + "RiskEventCount", this.RiskEventCount);
+            this.SetParamSimple(map, prefix + "ScanEndTime", this.ScanEndTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

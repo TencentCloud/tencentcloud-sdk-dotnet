@@ -32,7 +32,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? EventId{ get; set; }
 
         /// <summary>
-        /// 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中
+        /// 状态：0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 7: 回滚中 8:修复失败
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -94,6 +94,27 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Description")]
         public string Description{ get; set; }
 
+        /// <summary>
+        /// 版本信息 0=普通版本 1=专业版 2=旗舰版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostVersion")]
+        public ulong? HostVersion{ get; set; }
+
+        /// <summary>
+        /// 是否能自动修复 0 :漏洞不可自动修复，  1：可自动修复， 2：客户端已离线， 3：主机不是旗舰版只能手动修复， 4：机型不允许 ，5：修复中 ，6：已修复， 7：检测中  9:修复失败，10:已忽略 11:漏洞只支持linux不支持Windows 12：漏洞只支持Windows不支持linux，13:修复失败但此时主机已离线，14:修复失败但此时主机不是旗舰版， 15:已手动修复
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportAutoFix")]
+        public ulong? IsSupportAutoFix{ get; set; }
+
+        /// <summary>
+        /// 失败原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixStatusMsg")]
+        public string FixStatusMsg{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
             this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "HostVersion", this.HostVersion);
+            this.SetParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
+            this.SetParamSimple(map, prefix + "FixStatusMsg", this.FixStatusMsg);
         }
     }
 }

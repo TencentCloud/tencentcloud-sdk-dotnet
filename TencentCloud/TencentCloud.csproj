@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.407</VersionPrefix>
+    <VersionPrefix>3.0.408</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,20 +90,34 @@
     <Compile Include="Advisor\V20200721\Models\KeyValue.cs" />
     <Compile Include="Advisor\V20200721\Models\RiskFieldsDesc.cs" />
     <Compile Include="Af\V20200226\AfClient.cs" />
+    <Compile Include="Af\V20200226\Models\AntiFraudCryptoFilter.cs" />
+    <Compile Include="Af\V20200226\Models\AntiFraudFilter.cs" />
+    <Compile Include="Af\V20200226\Models\AntiFraudRecord.cs" />
     <Compile Include="Af\V20200226\Models\DescribeAntiFraudRequest.cs" />
     <Compile Include="Af\V20200226\Models\DescribeAntiFraudResponse.cs" />
     <Compile Include="Af\V20200226\Models\FinanceAntiFraudCryptoFilter.cs" />
     <Compile Include="Af\V20200226\Models\FinanceAntiFraudFilter.cs" />
     <Compile Include="Af\V20200226\Models\FinanceAntiFraudRecord.cs" />
     <Compile Include="Af\V20200226\Models\FinanceOtherModelScores.cs" />
+    <Compile Include="Af\V20200226\Models\GetAntiFraudRequest.cs" />
+    <Compile Include="Af\V20200226\Models\GetAntiFraudResponse.cs" />
+    <Compile Include="Af\V20200226\Models\OtherModelScoresDetail.cs" />
     <Compile Include="Af\V20200226\Models\QueryAntiFraudRequest.cs" />
     <Compile Include="Af\V20200226\Models\QueryAntiFraudResponse.cs" />
     <Compile Include="Af\V20200226\Models\RiskDetail.cs" />
     <Compile Include="Af\V20200226\Models\RiskDetailInfo.cs" />
+    <Compile Include="Af\V20200226\Models\SimpleKindRiskDetail.cs" />
     <Compile Include="Afc\V20200226\AfcClient.cs" />
+    <Compile Include="Afc\V20200226\Models\AntiFraudVipCryptoFilter.cs" />
+    <Compile Include="Afc\V20200226\Models\AntiFraudVipFilter.cs" />
+    <Compile Include="Afc\V20200226\Models\AntiFraudVipRecord.cs" />
+    <Compile Include="Afc\V20200226\Models\GetAntiFraudVipRequest.cs" />
+    <Compile Include="Afc\V20200226\Models\GetAntiFraudVipResponse.cs" />
+    <Compile Include="Afc\V20200226\Models\OtherModelScores.cs" />
     <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipRequest.cs" />
     <Compile Include="Afc\V20200226\Models\QueryAntiFraudVipResponse.cs" />
     <Compile Include="Afc\V20200226\Models\RiskDetail.cs" />
+    <Compile Include="Afc\V20200226\Models\SimpleKindRiskDetail.cs" />
     <Compile Include="Ame\V20190916\AmeClient.cs" />
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
@@ -2817,6 +2831,8 @@
     <Compile Include="Cfw\V20190904\Models\AcListsData.cs" />
     <Compile Include="Cfw\V20190904\Models\AddAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\AddAcRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\AddEnterpriseSecurityGroupRulesRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\AddEnterpriseSecurityGroupRulesResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\AssetZone.cs" />
     <Compile Include="Cfw\V20190904\Models\AssociatedInstanceInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\CfwNatDnatRule.cs" />
@@ -2859,6 +2875,8 @@
     <Compile Include="Cfw\V20190904\Models\DescribeBlockStaticListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeCfwEipsResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeEnterpriseSecurityGroupRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeGuideScanInfoRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeGuideScanInfoResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatFwInfoCountRequest.cs" />
@@ -2952,6 +2970,8 @@
     <Compile Include="Cfw\V20190904\Models\NewModeItems.cs" />
     <Compile Include="Cfw\V20190904\Models\RemoveAcRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\RemoveAcRuleResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\RemoveEnterpriseSecurityGroupRuleRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\RemoveEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\RuleInfoData.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\RunSyncAssetResponse.cs" />
@@ -2961,6 +2981,7 @@
     <Compile Include="Cfw\V20190904\Models\SecurityGroupBothWayInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="Cfw\V20190904\Models\SecurityGroupOrderIndexData.cs" />
+    <Compile Include="Cfw\V20190904\Models\SecurityGroupRule.cs" />
     <Compile Include="Cfw\V20190904\Models\SequenceData.cs" />
     <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\SetNatFwDnatRuleResponse.cs" />
@@ -13084,6 +13105,7 @@
     <Compile Include="Tcm\V20210413\Models\HorizontalPodAutoscalerSpec.cs" />
     <Compile Include="Tcm\V20210413\Models\IngressGateway.cs" />
     <Compile Include="Tcm\V20210413\Models\IngressGatewayStatus.cs" />
+    <Compile Include="Tcm\V20210413\Models\InjectConfig.cs" />
     <Compile Include="Tcm\V20210413\Models\IstioConfig.cs" />
     <Compile Include="Tcm\V20210413\Models\IstiodConfig.cs" />
     <Compile Include="Tcm\V20210413\Models\LoadBalancer.cs" />

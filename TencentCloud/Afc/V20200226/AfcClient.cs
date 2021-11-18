@@ -53,6 +53,46 @@ namespace TencentCloud.Afc.V20200226
         }
 
         /// <summary>
+        /// 反欺诈VIP评分接口
+        /// </summary>
+        /// <param name="req"><see cref="GetAntiFraudVipRequest"/></param>
+        /// <returns><see cref="GetAntiFraudVipResponse"/></returns>
+        public async Task<GetAntiFraudVipResponse> GetAntiFraudVip(GetAntiFraudVipRequest req)
+        {
+             JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAntiFraudVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 反欺诈VIP评分接口
+        /// </summary>
+        /// <param name="req"><see cref="GetAntiFraudVipRequest"/></param>
+        /// <returns><see cref="GetAntiFraudVipResponse"/></returns>
+        public GetAntiFraudVipResponse GetAntiFraudVipSync(GetAntiFraudVipRequest req)
+        {
+             JsonResponseModel<GetAntiFraudVipResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAntiFraudVip");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAntiFraudVipResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 天御反欺诈服务，主要应用于银行、证券、保险、P2P等金融行业客户，通过腾讯的大数据风控能力，
         /// 可以准确识别恶意用户信息，解决客户在支付、活动、理财，风控等业务环节遇到的欺诈威胁，降低企业
         /// 的损失。

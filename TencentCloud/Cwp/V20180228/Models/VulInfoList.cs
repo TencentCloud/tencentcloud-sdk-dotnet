@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中 控制台仅处理0,1,3,5,6四种状态
+        /// 0: 待处理 1:忽略  3:已修复  5:检测中 6:修复中  8:修复失败
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -114,6 +114,41 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("StatusStr")]
         public string StatusStr{ get; set; }
 
+        /// <summary>
+        /// cve编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CveId")]
+        public string CveId{ get; set; }
+
+        /// <summary>
+        /// CVSS评分
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CvssScore")]
+        public float? CvssScore{ get; set; }
+
+        /// <summary>
+        /// 漏洞标签 多个逗号分割
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string Labels{ get; set; }
+
+        /// <summary>
+        /// 是否能自动修复且包含能自动修复的主机， 0=否  1=是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FixSwitch")]
+        public ulong? FixSwitch{ get; set; }
+
+        /// <summary>
+        /// 最后扫描任务的id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +169,11 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "NameWisteria", this.NameWisteria);
             this.SetParamSimple(map, prefix + "DescriptWisteria", this.DescriptWisteria);
             this.SetParamSimple(map, prefix + "StatusStr", this.StatusStr);
+            this.SetParamSimple(map, prefix + "CveId", this.CveId);
+            this.SetParamSimple(map, prefix + "CvssScore", this.CvssScore);
+            this.SetParamSimple(map, prefix + "Labels", this.Labels);
+            this.SetParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

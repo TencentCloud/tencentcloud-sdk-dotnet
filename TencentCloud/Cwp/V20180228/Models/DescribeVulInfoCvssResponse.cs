@@ -46,7 +46,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? VulLevel{ get; set; }
 
         /// <summary>
-        /// 漏洞分类 1: web应用漏洞 2:系统组件漏洞
+        /// 漏洞分类 1: web应用漏洞 2:应用漏洞3:安全基线 4: Linux系统漏洞 5: Windows系统漏洞
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VulType")]
@@ -116,6 +116,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public float? CvssScoreFloat{ get; set; }
 
         /// <summary>
+        /// 漏洞标签 多个逗号分割
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Labels")]
+        public string Labels{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -140,6 +147,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CvssScore", this.CvssScore);
             this.SetParamSimple(map, prefix + "CveInfo", this.CveInfo);
             this.SetParamSimple(map, prefix + "CvssScoreFloat", this.CvssScoreFloat);
+            this.SetParamSimple(map, prefix + "Labels", this.Labels);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

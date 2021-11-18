@@ -93,6 +93,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 创建新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="AddEnterpriseSecurityGroupRulesRequest"/></param>
+        /// <returns><see cref="AddEnterpriseSecurityGroupRulesResponse"/></returns>
+        public async Task<AddEnterpriseSecurityGroupRulesResponse> AddEnterpriseSecurityGroupRules(AddEnterpriseSecurityGroupRulesRequest req)
+        {
+             JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddEnterpriseSecurityGroupRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="AddEnterpriseSecurityGroupRulesRequest"/></param>
+        /// <returns><see cref="AddEnterpriseSecurityGroupRulesResponse"/></returns>
+        public AddEnterpriseSecurityGroupRulesResponse AddEnterpriseSecurityGroupRulesSync(AddEnterpriseSecurityGroupRulesRequest req)
+        {
+             JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddEnterpriseSecurityGroupRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddEnterpriseSecurityGroupRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建规则
         /// </summary>
         /// <param name="req"><see cref="CreateAcRulesRequest"/></param>
@@ -844,6 +884,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCfwEips");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCfwEipsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSecurityGroupRuleResponse"/></returns>
+        public async Task<DescribeEnterpriseSecurityGroupRuleResponse> DescribeEnterpriseSecurityGroupRule(DescribeEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="DescribeEnterpriseSecurityGroupRuleResponse"/></returns>
+        public DescribeEnterpriseSecurityGroupRuleResponse DescribeEnterpriseSecurityGroupRuleSync(DescribeEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnterpriseSecurityGroupRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2532,6 +2612,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "RemoveAcRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveAcRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="RemoveEnterpriseSecurityGroupRuleResponse"/></returns>
+        public async Task<RemoveEnterpriseSecurityGroupRuleResponse> RemoveEnterpriseSecurityGroupRule(RemoveEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除新企业安全组规则
+        /// </summary>
+        /// <param name="req"><see cref="RemoveEnterpriseSecurityGroupRuleRequest"/></param>
+        /// <returns><see cref="RemoveEnterpriseSecurityGroupRuleResponse"/></returns>
+        public RemoveEnterpriseSecurityGroupRuleResponse RemoveEnterpriseSecurityGroupRuleSync(RemoveEnterpriseSecurityGroupRuleRequest req)
+        {
+             JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveEnterpriseSecurityGroupRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveEnterpriseSecurityGroupRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

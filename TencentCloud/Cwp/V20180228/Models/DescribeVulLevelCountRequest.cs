@@ -24,12 +24,19 @@ namespace TencentCloud.Cwp.V20180228.Models
     public class DescribeVulLevelCountRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 1: web应用漏洞 2=系统组件漏洞3:安全基线 4: Linux系统漏洞 5: windows补丁 6:应急漏洞
+        /// </summary>
+        [JsonProperty("VulCategory")]
+        public ulong? VulCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "VulCategory", this.VulCategory);
         }
     }
 }

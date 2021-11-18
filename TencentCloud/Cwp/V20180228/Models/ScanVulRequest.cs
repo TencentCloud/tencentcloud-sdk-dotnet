@@ -25,12 +25,6 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 漏洞类型：1: web应用漏洞 2:系统组件漏洞 (多选英文;分隔)
-        /// </summary>
-        [JsonProperty("VulCategories")]
-        public string VulCategories{ get; set; }
-
-        /// <summary>
         /// 危害等级：1-低危；2-中危；3-高危；4-严重 (多选英文;分隔)
         /// </summary>
         [JsonProperty("VulLevels")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("HostType")]
         public ulong? HostType{ get; set; }
+
+        /// <summary>
+        /// 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+        /// </summary>
+        [JsonProperty("VulCategories")]
+        public string VulCategories{ get; set; }
 
         /// <summary>
         /// 自选服务器时生效，主机quuid的string数组
@@ -72,9 +72,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "VulCategories", this.VulCategories);
             this.SetParamSimple(map, prefix + "VulLevels", this.VulLevels);
             this.SetParamSimple(map, prefix + "HostType", this.HostType);
+            this.SetParamSimple(map, prefix + "VulCategories", this.VulCategories);
             this.SetParamArraySimple(map, prefix + "QuuidList.", this.QuuidList);
             this.SetParamSimple(map, prefix + "VulEmergency", this.VulEmergency);
             this.SetParamSimple(map, prefix + "TimeoutPeriod", this.TimeoutPeriod);
