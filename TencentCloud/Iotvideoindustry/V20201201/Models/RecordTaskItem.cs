@@ -73,6 +73,27 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("RecordStatus")]
         public long? RecordStatus{ get; set; }
 
+        /// <summary>
+        /// 场景ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneId")]
+        public long? SceneId{ get; set; }
+
+        /// <summary>
+        /// 告警ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarnId")]
+        public long? WarnId{ get; set; }
+
+        /// <summary>
+        /// 录制id，NVR下属设备有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordId")]
+        public string RecordId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +107,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
             this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
             this.SetParamSimple(map, prefix + "RecordStatus", this.RecordStatus);
+            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
+            this.SetParamSimple(map, prefix + "WarnId", this.WarnId);
+            this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
         }
     }
 }

@@ -2133,6 +2133,46 @@ namespace TencentCloud.Iotvideo.V20201215
         }
 
         /// <summary>
+        /// 获取产品动态注册详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="DescribeProductDynamicRegisterResponse"/></returns>
+        public async Task<DescribeProductDynamicRegisterResponse> DescribeProductDynamicRegister(DescribeProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<DescribeProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取产品动态注册详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="DescribeProductDynamicRegisterResponse"/></returns>
+        public DescribeProductDynamicRegisterResponse DescribeProductDynamicRegisterSync(DescribeProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<DescribeProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取产品列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProductsRequest"/></param>
@@ -2764,6 +2804,46 @@ namespace TencentCloud.Iotvideo.V20201215
              {
                  var strResp = this.InternalRequestSync(req, "ModifyProduct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改产品动态注册
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="ModifyProductDynamicRegisterResponse"/></returns>
+        public async Task<ModifyProductDynamicRegisterResponse> ModifyProductDynamicRegister(ModifyProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<ModifyProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改产品动态注册
+        /// </summary>
+        /// <param name="req"><see cref="ModifyProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="ModifyProductDynamicRegisterResponse"/></returns>
+        public ModifyProductDynamicRegisterResponse ModifyProductDynamicRegisterSync(ModifyProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<ModifyProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProductDynamicRegisterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -31,7 +31,9 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 需要推流白板的房间号，取值范围: (1, 4294967295)
+        /// 需要推流的白板房间号，取值范围: (1, 4294967295)。
+        /// 
+        /// 在没有指定TRTCRoomId和TRTCRoomIdStr的情况下，默认会以RoomId作为白板流进行推流的TRTC房间号。
         /// </summary>
         [JsonProperty("RoomId")]
         public long? RoomId{ get; set; }
@@ -156,6 +158,28 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("ExtraData")]
         public string ExtraData{ get; set; }
 
+        /// <summary>
+        /// **内部体验字段，若需要体验可以提工单申请开通体验**
+        /// 
+        /// TRTC数字类型房间号，取值范围: (1, 4294967295)。
+        /// 
+        /// 在同时指定了RoomId与TRTCRoomId的情况下，优先使用TRTCRoomId作为白板流进行推流的TRTC房间号。
+        /// 
+        /// 当指定了TRTCRoomIdStr的情况下，此字段将被忽略。
+        /// </summary>
+        [JsonProperty("TRTCRoomId")]
+        public long? TRTCRoomId{ get; set; }
+
+        /// <summary>
+        /// **内部体验字段，若需要体验可以提工单申请开通体验**
+        /// 
+        /// TRTC字符串类型房间号。
+        /// 
+        /// 在指定了TRTCRoomIdStr的情况下，会优先使用TRTCRoomIdStr作为白板流进行推流的TRTC房间号。
+        /// </summary>
+        [JsonProperty("TRTCRoomIdStr")]
+        public string TRTCRoomIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -178,6 +202,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "AutoPublish", this.AutoPublish);
             this.SetParamSimple(map, prefix + "UserDefinedStreamId", this.UserDefinedStreamId);
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
+            this.SetParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
+            this.SetParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
         }
     }
 }

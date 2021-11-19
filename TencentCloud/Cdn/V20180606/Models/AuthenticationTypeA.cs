@@ -60,6 +60,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterType")]
         public string FilterType{ get; set; }
 
+        /// <summary>
+        /// 计算签名的备用密钥
+        /// 仅允许大小写字母与数字，长度 6~32 位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSecretKey")]
+        public string BackupSecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +79,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamArraySimple(map, prefix + "FileExtensions.", this.FileExtensions);
             this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.408</VersionPrefix>
+    <VersionPrefix>3.0.409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -312,6 +312,8 @@
     <Compile Include="V20201215\Models\DescribeForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\DescribeModelDefinitionRequest.cs" />
     <Compile Include="V20201215\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\DescribeProductDynamicRegisterRequest.cs" />
+    <Compile Include="V20201215\Models\DescribeProductDynamicRegisterResponse.cs" />
     <Compile Include="V20201215\Models\DescribeProductRequest.cs" />
     <Compile Include="V20201215\Models\DescribeProductResponse.cs" />
     <Compile Include="V20201215\Models\DescribeProductsRequest.cs" />
@@ -352,6 +354,8 @@
     <Compile Include="V20201215\Models\ModifyForwardRuleResponse.cs" />
     <Compile Include="V20201215\Models\ModifyModelDefinitionRequest.cs" />
     <Compile Include="V20201215\Models\ModifyModelDefinitionResponse.cs" />
+    <Compile Include="V20201215\Models\ModifyProductDynamicRegisterRequest.cs" />
+    <Compile Include="V20201215\Models\ModifyProductDynamicRegisterResponse.cs" />
     <Compile Include="V20201215\Models\ModifyProductRequest.cs" />
     <Compile Include="V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="V20201215\Models\ProductModelDefinition.cs" />

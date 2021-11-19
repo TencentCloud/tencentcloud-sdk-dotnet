@@ -2635,6 +2635,46 @@ namespace TencentCloud.Ecm.V20190719
         }
 
         /// <summary>
+        /// 查询实例价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRunInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceRunInstanceResponse"/></returns>
+        public async Task<DescribePriceRunInstanceResponse> DescribePriceRunInstance(DescribePriceRunInstanceRequest req)
+        {
+             JsonResponseModel<DescribePriceRunInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePriceRunInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePriceRunInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例价格
+        /// </summary>
+        /// <param name="req"><see cref="DescribePriceRunInstanceRequest"/></param>
+        /// <returns><see cref="DescribePriceRunInstanceResponse"/></returns>
+        public DescribePriceRunInstanceResponse DescribePriceRunInstanceSync(DescribePriceRunInstanceRequest req)
+        {
+             JsonResponseModel<DescribePriceRunInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePriceRunInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePriceRunInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询自定义路由策略与云联网路由策略冲突列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRouteConflictsRequest"/></param>

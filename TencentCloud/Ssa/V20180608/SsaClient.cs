@@ -533,6 +533,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 拉取告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSocAlertListResponse"/></returns>
+        public async Task<DescribeSocAlertListResponse> DescribeSocAlertList(DescribeSocAlertListRequest req)
+        {
+             JsonResponseModel<DescribeSocAlertListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSocAlertList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocAlertListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取告警列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocAlertListRequest"/></param>
+        /// <returns><see cref="DescribeSocAlertListResponse"/></returns>
+        public DescribeSocAlertListResponse DescribeSocAlertListSync(DescribeSocAlertListRequest req)
+        {
+             JsonResponseModel<DescribeSocAlertListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSocAlertList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocAlertListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 合规详情项
         /// </summary>
         /// <param name="req"><see cref="DescribeSocCspmComplianceRequest"/></param>

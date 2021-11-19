@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.408</VersionPrefix>
+    <VersionPrefix>3.0.409</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2715,6 +2715,7 @@
     <Compile Include="Cdn\V20180606\Models\SecurityConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\Seo.cs" />
     <Compile Include="Cdn\V20180606\Models\ServerCert.cs" />
+    <Compile Include="Cdn\V20180606\Models\ShareCname.cs" />
     <Compile Include="Cdn\V20180606\Models\SimpleCache.cs" />
     <Compile Include="Cdn\V20180606\Models\SimpleCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Sort.cs" />
@@ -6530,6 +6531,8 @@
     <Compile Include="Ecm\V20190719\Models\DescribePeakBaseOverviewResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribePeakNetworkOverviewResponse.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribePriceRunInstanceRequest.cs" />
+    <Compile Include="Ecm\V20190719\Models\DescribePriceRunInstanceResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeRouteConflictsRequest.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeRouteConflictsResponse.cs" />
     <Compile Include="Ecm\V20190719\Models\DescribeRouteTablesRequest.cs" />
@@ -6595,8 +6598,10 @@
     <Compile Include="Ecm\V20190719\Models\InstanceNetworkInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceNetworkLimitConfig.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceOperator.cs" />
+    <Compile Include="Ecm\V20190719\Models\InstancePricesPartDetail.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceStatistic.cs" />
     <Compile Include="Ecm\V20190719\Models\InstanceTypeConfig.cs" />
+    <Compile Include="Ecm\V20190719\Models\InstancesPrice.cs" />
     <Compile Include="Ecm\V20190719\Models\Internet.cs" />
     <Compile Include="Ecm\V20190719\Models\Ipv6Address.cs" />
     <Compile Include="Ecm\V20190719\Models\KeyPair.cs" />
@@ -6678,6 +6683,7 @@
     <Compile Include="Ecm\V20190719\Models\PhysicalPosition.cs" />
     <Compile Include="Ecm\V20190719\Models\Placement.cs" />
     <Compile Include="Ecm\V20190719\Models\Position.cs" />
+    <Compile Include="Ecm\V20190719\Models\PriceDetail.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIPAddressInfo.cs" />
     <Compile Include="Ecm\V20190719\Models\PrivateIpAddressSpecification.cs" />
     <Compile Include="Ecm\V20190719\Models\Province.cs" />
@@ -8969,6 +8975,8 @@
     <Compile Include="Iotvideo\V20201215\Models\DescribeForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeModelDefinitionRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductDynamicRegisterRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\DescribeProductDynamicRegisterResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\DescribeProductsRequest.cs" />
@@ -9009,6 +9017,8 @@
     <Compile Include="Iotvideo\V20201215\Models\ModifyForwardRuleResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyModelDefinitionRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyModelDefinitionResponse.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyProductDynamicRegisterRequest.cs" />
+    <Compile Include="Iotvideo\V20201215\Models\ModifyProductDynamicRegisterResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyProductRequest.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ModifyProductResponse.cs" />
     <Compile Include="Iotvideo\V20201215\Models\ProductModelDefinition.cs" />
@@ -12111,6 +12121,8 @@
     <Compile Include="Sqlserver\V20180328\Models\ZoneInfo.cs" />
     <Compile Include="Ssa\V20180608\SsaClient.cs" />
     <Compile Include="Ssa\V20180608\Models\AggregationObj.cs" />
+    <Compile Include="Ssa\V20180608\Models\AlertListData.cs" />
+    <Compile Include="Ssa\V20180608\Models\AlertType.cs" />
     <Compile Include="Ssa\V20180608\Models\Asset.cs" />
     <Compile Include="Ssa\V20180608\Models\AssetDetail.cs" />
     <Compile Include="Ssa\V20180608\Models\AssetList.cs" />
@@ -12118,6 +12130,7 @@
     <Compile Include="Ssa\V20180608\Models\CheckAssetItem.cs" />
     <Compile Include="Ssa\V20180608\Models\CheckConfigDetail.cs" />
     <Compile Include="Ssa\V20180608\Models\ComplianceCheckDetail.cs" />
+    <Compile Include="Ssa\V20180608\Models\ConcernInfo.cs" />
     <Compile Include="Ssa\V20180608\Models\DataAssetMapping.cs" />
     <Compile Include="Ssa\V20180608\Models\DataCheck.cs" />
     <Compile Include="Ssa\V20180608\Models\DataCompliance.cs" />
@@ -12146,6 +12159,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocAlertListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocAlertListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulDetailRequest.cs" />
@@ -12153,6 +12168,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\Filter.cs" />
+    <Compile Include="Ssa\V20180608\Models\QueryFilter.cs" />
+    <Compile Include="Ssa\V20180608\Models\QuerySort.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPub.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubList.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />

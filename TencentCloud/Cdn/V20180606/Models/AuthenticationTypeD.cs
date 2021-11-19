@@ -75,6 +75,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("TimeFormat")]
         public string TimeFormat{ get; set; }
 
+        /// <summary>
+        /// 计算签名的备用密钥
+        /// 仅允许大小写字母与数字，长度 6~32 位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSecretKey")]
+        public string BackupSecretKey{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +96,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "SignParam", this.SignParam);
             this.SetParamSimple(map, prefix + "TimeParam", this.TimeParam);
             this.SetParamSimple(map, prefix + "TimeFormat", this.TimeFormat);
+            this.SetParamSimple(map, prefix + "BackupSecretKey", this.BackupSecretKey);
         }
     }
 }

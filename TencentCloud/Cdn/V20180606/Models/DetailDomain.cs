@@ -452,6 +452,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RemoteAuthentication")]
         public RemoteAuthentication RemoteAuthentication{ get; set; }
 
+        /// <summary>
+        /// 共享CNAME配置（白名单功能）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ShareCname")]
+        public ShareCname ShareCname{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -517,6 +524,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
+            this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
         }
     }
 }
