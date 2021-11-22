@@ -25,7 +25,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
     {
         
         /// <summary>
-        /// 一个或多个待操作的任务ID。可通过[DescribeSyncTasks](https://tcloud-dev.oa.com/document/product/237/32979?!preview&!document=1) API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
+        /// 一个或多个待操作的任务ID。可通过DescribeSyncTasks API返回值中的TaskId获取。每次请求允许操作的实例数量上限是100。
         /// </summary>
         [JsonProperty("TaskIds")]
         public string[] TaskIds{ get; set; }

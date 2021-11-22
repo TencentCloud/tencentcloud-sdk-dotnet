@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.409</VersionPrefix>
+    <VersionPrefix>3.0.410</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -12121,6 +12121,7 @@
     <Compile Include="Sqlserver\V20180328\Models\ZoneInfo.cs" />
     <Compile Include="Ssa\V20180608\SsaClient.cs" />
     <Compile Include="Ssa\V20180608\Models\AggregationObj.cs" />
+    <Compile Include="Ssa\V20180608\Models\AlertDetail.cs" />
     <Compile Include="Ssa\V20180608\Models\AlertListData.cs" />
     <Compile Include="Ssa\V20180608\Models\AlertType.cs" />
     <Compile Include="Ssa\V20180608\Models\Asset.cs" />
@@ -12159,6 +12160,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocAlertDetailsRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocAlertDetailsResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocAlertListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocAlertListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceRequest.cs" />

@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Apigateway.V20180808.Models
+namespace TencentCloud.Ssa.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeServicesStatusRequest : AbstractModel
+    public class DescribeSocAlertDetailsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100。
+        /// 告警id
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("AlertId")]
+        public string AlertId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为 0。
+        /// 告警时间，取Timestamp字段
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 过滤条件。支持ServiceId、ServiceName、NotUsagePlanId、Environment、IpVersion、InstanceId、NetType、EIAMAppId。
-        /// </summary>
-        [JsonProperty("Filters")]
-        public Filter[] Filters{ get; set; }
+        [JsonProperty("AlertTimestamp")]
+        public string AlertTimestamp{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Apigateway.V20180808.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "AlertId", this.AlertId);
+            this.SetParamSimple(map, prefix + "AlertTimestamp", this.AlertTimestamp);
         }
     }
 }

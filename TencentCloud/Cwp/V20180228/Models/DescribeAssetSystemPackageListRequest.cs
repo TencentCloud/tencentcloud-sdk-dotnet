@@ -63,7 +63,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序方式，asc-升序 或 desc-降序
+        /// 排序方式，asc-升序 或 desc-降序。默认：desc-降序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

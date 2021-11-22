@@ -145,6 +145,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 是否开启安全加速，是为1，否为0。
+        /// </summary>
+        [JsonProperty("DamDDoSStatus")]
+        public ulong? DamDDoSStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +174,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamObj(map, prefix + "EipAddressPackRelation.", this.EipAddressPackRelation);
             this.SetParamObj(map, prefix + "EipAddressInfo.", this.EipAddressInfo);
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
         }
     }
 }

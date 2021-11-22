@@ -133,49 +133,49 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string ApprDate{ get; set; }
 
         /// <summary>
-        /// 省
+        /// 省（返回空值）
         /// </summary>
         [JsonProperty("Province")]
         public string Province{ get; set; }
 
         /// <summary>
-        /// 地级市
+        /// 地级市（返回空值）
         /// </summary>
         [JsonProperty("City")]
         public string City{ get; set; }
 
         /// <summary>
-        /// 区\县
+        /// 区\县（返回空值）
         /// </summary>
         [JsonProperty("County")]
         public string County{ get; set; }
 
         /// <summary>
-        /// 住所所在行政区划代码
+        /// 住所所在行政区划代码（返回空值）
         /// </summary>
         [JsonProperty("AreaCode")]
         public string AreaCode{ get; set; }
 
         /// <summary>
-        /// 行业门类代码
+        /// 行业门类代码（返回空值）
         /// </summary>
         [JsonProperty("IndustryPhyCode")]
         public string IndustryPhyCode{ get; set; }
 
         /// <summary>
-        /// 行业门类名称
+        /// 行业门类名称（返回空值）
         /// </summary>
         [JsonProperty("IndustryPhyName")]
         public string IndustryPhyName{ get; set; }
 
         /// <summary>
-        /// 国民经济行业代码
+        /// 国民经济行业代码（返回空值）
         /// </summary>
         [JsonProperty("IndustryCode")]
         public string IndustryCode{ get; set; }
 
         /// <summary>
-        /// 国民经济行业名称
+        /// 国民经济行业名称（返回空值）
         /// </summary>
         [JsonProperty("IndustryName")]
         public string IndustryName{ get; set; }
