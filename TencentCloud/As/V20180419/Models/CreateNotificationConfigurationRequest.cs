@@ -49,19 +49,26 @@ namespace TencentCloud.As.V20180419.Models
         public string[] NotificationUserGroupIds{ get; set; }
 
         /// <summary>
-        /// 通知接收端类型，取值：`USER_GROUP`，`CMQ_QUEUE`，`CMQ_TOPIC`。默认值为：`USER_GROUP`。
+        /// 通知接收端类型，取值如下
+        /// <br><li>USER_GROUP：用户组
+        /// <br><li>CMQ_QUEUE：CMQ 队列
+        /// <br><li>CMQ_TOPIC：CMQ 主题
+        /// <br><li>TDMQ_CMQ_TOPIC：TDMQ CMQ 主题
+        /// <br><li>TDMQ_CMQ_QUEUE：TDMQ CMQ 队列
+        /// 
+        /// 默认值为：`USER_GROUP`。
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE`，该字段必填。
+        /// CMQ 队列名称，如 TargetType 取值为 `CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE` 时，该字段必填。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC`，该字段必填。
+        /// CMQ 主题名称，如 TargetType 取值为 `CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC` 时，该字段必填。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

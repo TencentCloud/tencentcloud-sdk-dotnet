@@ -332,5 +332,45 @@ namespace TencentCloud.Cii.V20210408
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 上传医疗影像文件，可以用来做结构化。
+        /// </summary>
+        /// <param name="req"><see cref="UploadMedicalFileRequest"/></param>
+        /// <returns><see cref="UploadMedicalFileResponse"/></returns>
+        public async Task<UploadMedicalFileResponse> UploadMedicalFile(UploadMedicalFileRequest req)
+        {
+             JsonResponseModel<UploadMedicalFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadMedicalFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadMedicalFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上传医疗影像文件，可以用来做结构化。
+        /// </summary>
+        /// <param name="req"><see cref="UploadMedicalFileRequest"/></param>
+        /// <returns><see cref="UploadMedicalFileResponse"/></returns>
+        public UploadMedicalFileResponse UploadMedicalFileSync(UploadMedicalFileRequest req)
+        {
+             JsonResponseModel<UploadMedicalFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadMedicalFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadMedicalFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20201215.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResetCloudStorageRequest : AbstractModel
+    public class ModifyNewDomainRulesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 成功码
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Success")]
+        public SuccessCode Success{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("DeviceName")]
-        public string DeviceName{ get; set; }
-
-        /// <summary>
-        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
-        /// </summary>
-        [JsonProperty("ChannelId")]
-        public ulong? ChannelId{ get; set; }
-
-        /// <summary>
-        /// 云存用户Id，为空则为默认云存空间。
-        /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamObj(map, prefix + "Success.", this.Success);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

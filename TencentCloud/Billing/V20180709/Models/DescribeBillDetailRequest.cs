@@ -68,7 +68,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public long? NeedRecordNum{ get; set; }
 
         /// <summary>
-        /// 查询指定产品信息（暂时未开放获取）
+        /// 已废弃参数，未开放
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
@@ -97,6 +97,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 商品名称代码
+        /// 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
+        /// </summary>
+        [JsonProperty("BusinessCode")]
+        public string BusinessCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +122,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
         }
     }
 }

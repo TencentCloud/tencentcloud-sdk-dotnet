@@ -37,6 +37,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Name{ get; set; }
 
         /// <summary>
+        /// 活体检测类型，取值：LIP/ACTION/SILENT。
+        /// LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+        /// </summary>
+        [JsonProperty("LivenessType")]
+        public string LivenessType{ get; set; }
+
+        /// <summary>
         /// 用于活体检测的视频，视频的BASE64值；
         /// BASE64编码后的大小不超过8M，支持mp4、avi、flv格式。
         /// </summary>
@@ -44,11 +51,14 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string VideoBase64{ get; set; }
 
         /// <summary>
-        /// 活体检测类型，取值：LIP/ACTION/SILENT。
-        /// LIP为数字模式，ACTION为动作模式，SILENT为静默模式，三种模式选择一种传入。
+        /// 用于活体检测的视频Url 地址。视频下载后经Base64编码不超过 8M，视频下载耗时不超过4S，支持mp4、avi、flv格式。
+        /// 
+        /// 视频的 VideoUrl、VideoBase64 必须提供一个，如果都提供，只使用 VideoBase64。
+        /// 
+        /// 建议视频存储于腾讯云的 Url 可保障更高的下载速度和稳定性，建议视频存储于腾讯云。非腾讯云存储的 Url 速度和稳定性可能受一定影响。
         /// </summary>
-        [JsonProperty("LivenessType")]
-        public string LivenessType{ get; set; }
+        [JsonProperty("VideoUrl")]
+        public string VideoUrl{ get; set; }
 
         /// <summary>
         /// 数字模式传参：传数字验证码，验证码需先调用<a href="https://cloud.tencent.com/document/product/1007/31821">获取数字验证码接口</a>得到；
@@ -81,8 +91,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "IdCard", this.IdCard);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
             this.SetParamSimple(map, prefix + "LivenessType", this.LivenessType);
+            this.SetParamSimple(map, prefix + "VideoBase64", this.VideoBase64);
+            this.SetParamSimple(map, prefix + "VideoUrl", this.VideoUrl);
             this.SetParamSimple(map, prefix + "ValidateData", this.ValidateData);
             this.SetParamSimple(map, prefix + "Optional", this.Optional);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);

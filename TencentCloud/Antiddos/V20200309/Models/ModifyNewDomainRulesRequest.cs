@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iotvideo.V20201215.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ResetCloudStorageRequest : AbstractModel
+    public class ModifyNewDomainRulesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 产品ID
+        /// 大禹子产品代号（bgpip表示高防IP）
         /// </summary>
-        [JsonProperty("ProductId")]
-        public string ProductId{ get; set; }
+        [JsonProperty("Business")]
+        public string Business{ get; set; }
 
         /// <summary>
-        /// 设备名称
+        /// 资源ID
         /// </summary>
-        [JsonProperty("DeviceName")]
-        public string DeviceName{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 通道ID 非NVR设备则不填 NVR设备则必填 默认为无
+        /// 域名转发规则
         /// </summary>
-        [JsonProperty("ChannelId")]
-        public ulong? ChannelId{ get; set; }
-
-        /// <summary>
-        /// 云存用户Id，为空则为默认云存空间。
-        /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("Rule")]
+        public NewL7RuleEntry Rule{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "Rule.", this.Rule);
         }
     }
 }

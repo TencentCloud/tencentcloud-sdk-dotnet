@@ -25,21 +25,23 @@ namespace TencentCloud.As.V20180419.Models
     {
         
         /// <summary>
-        /// 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`。
+        /// 目标类型，取值范围包括`CMQ_QUEUE`、`CMQ_TOPIC`、`TDMQ_CMQ_QUEUE`、`TDMQ_CMQ_TOPIC`。
         /// <li> CMQ_QUEUE，指腾讯云消息队列-队列模型。</li>
         /// <li> CMQ_TOPIC，指腾讯云消息队列-主题模型。</li>
+        /// <li> TDMQ_CMQ_QUEUE，指腾讯云 TDMQ 消息队列-队列模型。</li>
+        /// <li> TDMQ_CMQ_TOPIC，指腾讯云 TDMQ 消息队列-主题模型。</li>
         /// </summary>
         [JsonProperty("TargetType")]
         public string TargetType{ get; set; }
 
         /// <summary>
-        /// 队列名称，如果`TargetType`取值为`CMQ_QUEUE`，则本字段必填。
+        /// 队列名称，如果`TargetType`取值为`CMQ_QUEUE` 或 `TDMQ_CMQ_QUEUE`，则本字段必填。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 主题名称，如果`TargetType`取值为`CMQ_TOPIC`，则本字段必填。
+        /// 主题名称，如果`TargetType`取值为`CMQ_TOPIC` 或 `TDMQ_CMQ_TOPIC`，则本字段必填。
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

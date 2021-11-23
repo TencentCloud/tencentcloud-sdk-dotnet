@@ -1893,6 +1893,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 修改7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public async Task<ModifyNewDomainRulesResponse> ModifyNewDomainRules(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改7层转发规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNewDomainRulesRequest"/></param>
+        /// <returns><see cref="ModifyNewDomainRulesResponse"/></returns>
+        public ModifyNewDomainRulesResponse ModifyNewDomainRulesSync(ModifyNewDomainRulesRequest req)
+        {
+             JsonResponseModel<ModifyNewDomainRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNewDomainRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNewDomainRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改DDoS防护的特征过滤规则
         /// </summary>
         /// <param name="req"><see cref="ModifyPacketFilterConfigRequest"/></param>
