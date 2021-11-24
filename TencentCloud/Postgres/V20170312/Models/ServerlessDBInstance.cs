@@ -129,6 +129,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("TagList")]
         public Tag[] TagList{ get; set; }
 
+        /// <summary>
+        /// 数据库内核版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "DBAccountSet.", this.DBAccountSet);
             this.SetParamArraySimple(map, prefix + "DBDatabaseList.", this.DBDatabaseList);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         }
     }
 }

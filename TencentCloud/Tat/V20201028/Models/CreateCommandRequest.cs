@@ -91,6 +91,21 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Username")]
         public string Username{ get; set; }
 
+        /// <summary>
+        /// 指定日志上传的cos bucket 地址，必须以https开头，如 https://BucketName-123454321.cos.ap-beijing.myqcloud.com。
+        /// </summary>
+        [JsonProperty("OutputCOSBucketUrl")]
+        public string OutputCOSBucketUrl{ get; set; }
+
+        /// <summary>
+        /// 指定日志在cos bucket中的目录，目录命名有如下规则：
+        /// 1. 可用数字、中英文和可见字符的组合，长度最多为60。
+        /// 2. 用 / 分割路径，可快速创建子目录。
+        /// 3. 不允许连续 / ；不允许以 / 开头；不允许以..作为文件夹名称
+        /// </summary>
+        [JsonProperty("OutputCOSKeyPrefix")]
+        public string OutputCOSKeyPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +122,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "DefaultParameters", this.DefaultParameters);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "Username", this.Username);
+            this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+            this.SetParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
         }
     }
 }

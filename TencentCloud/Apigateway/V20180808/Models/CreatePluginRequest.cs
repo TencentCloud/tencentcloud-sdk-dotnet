@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string PluginName{ get; set; }
 
         /// <summary>
-        /// 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth。
+        /// 插件类型。目前支持IPControl, TrafficControl, Cors, CustomReq, CustomAuth，Routing，TrafficControlByParameter。
         /// </summary>
         [JsonProperty("PluginType")]
         public string PluginType{ get; set; }

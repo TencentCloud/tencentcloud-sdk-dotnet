@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.411</VersionPrefix>
+    <VersionPrefix>3.0.412</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11203,6 +11203,7 @@
     <Compile Include="Postgres\V20170312\Models\ModifyReadOnlyGroupConfigResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifySwitchTimePeriodResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\NetworkAccess.cs" />
     <Compile Include="Postgres\V20170312\Models\NormalQueryItem.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\OpenDBExtranetAccessResponse.cs" />
@@ -13404,6 +13405,14 @@
     <Compile Include="Tdid\V20210519\Models\VerifyCredentialResponse.cs" />
     <Compile Include="Tdid\V20210519\Models\VerifyFunctionArg.cs" />
     <Compile Include="Tdmq\V20200217\TdmqClient.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPClusterConfig.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPClusterDetail.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPClusterInfo.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPClusterRecentStats.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPExchange.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPQueueDetail.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPRouteRelation.cs" />
+    <Compile Include="Tdmq\V20200217\Models\AMQPVHost.cs" />
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\AcknowledgeMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\BindCluster.cs" />
@@ -13422,6 +13431,16 @@
     <Compile Include="Tdmq\V20200217\Models\Connection.cs" />
     <Compile Include="Tdmq\V20200217\Models\Consumer.cs" />
     <Compile Include="Tdmq\V20200217\Models\ConsumersSchedule.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPExchangeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPExchangeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPRouteRelationRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPRouteRelationResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPVHostRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\CreateAMQPVHostResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateCmqQueueRequest.cs" />
@@ -13448,6 +13467,16 @@
     <Compile Include="Tdmq\V20200217\Models\CreateSubscriptionResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateTopicRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\CreateTopicResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPExchangeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPExchangeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPRouteRelationRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPRouteRelationResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPVHostRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DeleteAMQPVHostResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteCmqQueueRequest.cs" />
@@ -13474,6 +13503,20 @@
     <Compile Include="Tdmq\V20200217\Models\DeleteSubscriptionsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DeleteTopicsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPClustersRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPClustersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPCreateQuotaRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPCreateQuotaResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPExchangesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPExchangesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPQueuesRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPQueuesResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPRouteRelationsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPRouteRelationsResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPVHostsRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribeAMQPVHostsResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeBindClustersRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeBindClustersResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeBindVpcsRequest.cs" />
@@ -13526,6 +13569,14 @@
     <Compile Include="Tdmq\V20200217\Models\EnvironmentRole.cs" />
     <Compile Include="Tdmq\V20200217\Models\Filter.cs" />
     <Compile Include="Tdmq\V20200217\Models\FilterSubscription.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPClusterRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPClusterResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPExchangeRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPExchangeResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPQueueRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPQueueResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPVHostRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ModifyAMQPVHostResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ModifyCmqQueueAttributeRequest.cs" />

@@ -132,6 +132,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBInstanceNetInfo")]
         public DBInstanceNetInfo[] DBInstanceNetInfo{ get; set; }
 
+        /// <summary>
+        /// 只读组网络信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NetworkAccessList")]
+        public NetworkAccess[] NetworkAccessList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +162,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArrayObj(map, prefix + "ReadOnlyDBInstanceList.", this.ReadOnlyDBInstanceList);
             this.SetParamSimple(map, prefix + "Rebalance", this.Rebalance);
             this.SetParamArrayObj(map, prefix + "DBInstanceNetInfo.", this.DBInstanceNetInfo);
+            this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
         }
     }
 }
