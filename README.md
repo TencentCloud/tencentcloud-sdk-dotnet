@@ -23,7 +23,7 @@
 
 ## 通过源码安装
 
-前往 [Github 代码托管地址](https://github.com/tencentcloud/tencentcloud-sdk-dotnet) 下载最新代码，解压后安装到 你的工作目录下，使用 Visual Studio 2017 打开编译。
+前往 [Github 仓库](https://github.com/tencentcloud/tencentcloud-sdk-dotnet) 或者 [Gitee 仓库](https://gitee.com/tencentcloud/tencentcloud-sdk-dotnet) 下载最新代码，解压后安装到 你的工作目录下，使用 Visual Studio 2017 打开编译。
 
 # 示例
 
