@@ -38,6 +38,7 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 项目归属者。
+        /// 注：云转推项目，仅支持个人归属。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }

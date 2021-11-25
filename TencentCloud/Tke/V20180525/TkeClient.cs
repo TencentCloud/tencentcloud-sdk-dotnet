@@ -3533,6 +3533,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 缩容独立集群master节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleInClusterMasterRequest"/></param>
+        /// <returns><see cref="ScaleInClusterMasterResponse"/></returns>
+        public async Task<ScaleInClusterMasterResponse> ScaleInClusterMaster(ScaleInClusterMasterRequest req)
+        {
+             JsonResponseModel<ScaleInClusterMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleInClusterMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInClusterMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 缩容独立集群master节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleInClusterMasterRequest"/></param>
+        /// <returns><see cref="ScaleInClusterMasterResponse"/></returns>
+        public ScaleInClusterMasterResponse ScaleInClusterMasterSync(ScaleInClusterMasterRequest req)
+        {
+             JsonResponseModel<ScaleInClusterMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleInClusterMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleInClusterMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容独立集群master节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterMasterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterMasterResponse"/></returns>
+        public async Task<ScaleOutClusterMasterResponse> ScaleOutClusterMaster(ScaleOutClusterMasterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ScaleOutClusterMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 扩容独立集群master节点
+        /// </summary>
+        /// <param name="req"><see cref="ScaleOutClusterMasterRequest"/></param>
+        /// <returns><see cref="ScaleOutClusterMasterResponse"/></returns>
+        public ScaleOutClusterMasterResponse ScaleOutClusterMasterSync(ScaleOutClusterMasterRequest req)
+        {
+             JsonResponseModel<ScaleOutClusterMasterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ScaleOutClusterMaster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScaleOutClusterMasterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 仅能设置节点池中处于伸缩组的节点
         /// </summary>
         /// <param name="req"><see cref="SetNodePoolNodeProtectionRequest"/></param>
