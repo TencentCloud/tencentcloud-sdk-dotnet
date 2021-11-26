@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -58,9 +58,9 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? Definition{ get; set; }
 
         /// <summary>
-        /// 导出目标。
-        /// <li>CME：云剪，即导出为云剪素材；</li>
-        /// <li>VOD：云点播，即导出为云点播媒资。</li>
+        /// 导出目标，指定导出视频的目标媒资库，可取值有：
+        /// <li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+        /// <li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
         /// </summary>
         [JsonProperty("ExportDestination")]
         public string ExportDestination{ get; set; }
@@ -78,7 +78,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作任意智能拆条项目。如果指定操作者，则操作者必须为项目所有。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

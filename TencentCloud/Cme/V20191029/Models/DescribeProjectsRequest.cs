@@ -25,53 +25,59 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 项目 Id 列表，N 从 0 开始取值，最大 19。
+        /// 项目 Id 过滤参数列表，最大支持20个项目 Id 过滤。如果不填不需要项目 Id 进行过滤。
         /// </summary>
         [JsonProperty("ProjectIds")]
         public string[] ProjectIds{ get; set; }
 
         /// <summary>
-        /// 画布宽高比集合。
+        /// 画布宽高比过滤参数列表。如果不填则不用画布宽高比进行过滤。
         /// </summary>
         [JsonProperty("AspectRatioSet")]
         public string[] AspectRatioSet{ get; set; }
 
         /// <summary>
-        /// 项目类别，取值有：
+        /// 项目类型过滤参数列表，取值有：
         /// <li>VIDEO_EDIT：视频编辑。</li>
         /// <li>SWITCHER：导播台。</li>
         /// <li>VIDEO_SEGMENTATION：视频拆条。</li>
         /// <li>STREAM_CONNECT：云转推。</li>
         /// <li>RECORD_REPLAY：录制回放。</li>
+        /// 
+        /// 注：如果不填则不使用项目类型进行过滤。
         /// </summary>
         [JsonProperty("CategorySet")]
         public string[] CategorySet{ get; set; }
 
         /// <summary>
-        /// 项目模式，一个项目可以有多种模式并相互切换。
+        /// 项目模式过滤参数列表，一个项目可以有多种模式并相互切换。
         /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
         /// <li>Default：默认模式。</li>
         /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// 
+        /// 注：不填不使用项目模式进行过滤。
         /// </summary>
         [JsonProperty("Modes")]
         public string[] Modes{ get; set; }
 
         /// <summary>
-        /// 列表排序，支持下列排序字段：
+        /// 结果排序方式，支持下列排序字段：
         /// <li>CreateTime：创建时间；</li>
         /// <li>UpdateTime：更新时间。</li>
+        /// 
+        /// 注：如不填，则使用项目创建时间倒序排列。
         /// </summary>
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
         /// <summary>
-        /// 项目归属者。
+        /// 项目所有者，目前仅支持个人项目过滤。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -89,7 +95,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验项目访问权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询一切用户项目信息。如果指定操作者，则操作者必须为项目所有者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

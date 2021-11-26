@@ -56,6 +56,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("VoucherIds")]
         public string[] VoucherIds{ get; set; }
 
+        /// <summary>
+        /// 变更部署时指定的新可用区列表，第1个为主可用区，其余为从可用区
+        /// </summary>
+        [JsonProperty("Zones")]
+        public string[] Zones{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
+            this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
         }
     }
 }

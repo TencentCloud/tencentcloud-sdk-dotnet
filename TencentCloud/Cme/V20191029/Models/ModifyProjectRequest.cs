@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -43,15 +43,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 画布宽高比，取值有：
-        /// <li>16:9；</li>
-        /// <li>9:16。</li>
+        /// 画布宽高比，值为视频编辑项目画布宽与高的像素值的比值，如 16:9、9:16 等。
         /// </summary>
         [JsonProperty("AspectRatio")]
         public string AspectRatio{ get; set; }
 
         /// <summary>
-        /// 项目归属者。
+        /// 项目所有者。目前仅支持个人项目，不支持团队项目。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -59,8 +57,8 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 项目模式，一个项目可以有多种模式并相互切换。
         /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
-        /// <li>Defualt：默认模式。</li>
-        /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// <li>Default：默认模式，即普通视频编辑项目。</li>
+        /// <li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }

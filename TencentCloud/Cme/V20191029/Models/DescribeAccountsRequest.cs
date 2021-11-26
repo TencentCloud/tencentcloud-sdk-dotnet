@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台唯一标识。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 手机号码。
+        /// 手机号码。指定手机号获取账号信息，目前仅支持国内手机号，且号码不加地区码 `+86` 等。
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }

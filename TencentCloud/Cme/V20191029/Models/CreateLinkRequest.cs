@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 链接类型，取值有:
+        /// 链接类型，可取值有:
         /// <li>CLASS: 分类链接；</li>
         /// <li> MATERIAL：媒体文件链接。</li>
         /// </summary>
@@ -51,7 +51,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 目标资源Id。取值：
+        /// 目标资源Id。可取值有：
         /// <li>当 Type 为 MATERIAL 时填媒体 ID；</li>
         /// <li>当 Type 为 CLASS 时填写分类路径。</li>
         /// </summary>
@@ -71,7 +71,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以创建任意源及目标资源的链接。如果指定操作者，则操作者必须对源资源有读权限，对目标媒体有写权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

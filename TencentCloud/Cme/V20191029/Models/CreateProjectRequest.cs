@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -37,8 +37,9 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 项目归属者。
-        /// 注：云转推项目，仅支持个人归属。
+        /// 项目归属者，即项目的所有者，后续操作只有该所有者有权限操作。
+        /// 
+        /// 注：目前所有项目只能设置归属个人，暂不支持团队项目。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -57,8 +58,10 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 项目模式，一个项目可以有多种模式并相互切换。
         /// 当 Category 为 VIDEO_EDIT 时，可选模式有：
-        /// <li>Default：默认模式。</li>
-        /// <li>VideoEditTemplate：视频编辑模板制作模式。</li>
+        /// <li>Default：默认模式，即普通视频编辑项目。</li>
+        /// <li>VideoEditTemplate：剪辑模板制作模式，用于制作剪辑模板。</li>
+        /// 
+        /// 注：不填则为默认模式。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
@@ -77,37 +80,37 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 导播台信息，仅当项目类型为 SWITCHER 时必填。
+        /// 导播台项目输入信息，仅当项目类型为 SWITCHER 时必填。
         /// </summary>
         [JsonProperty("SwitcherProjectInput")]
         public SwitcherProjectInput SwitcherProjectInput{ get; set; }
 
         /// <summary>
-        /// 直播剪辑信息，暂未开放，请勿使用。
+        /// 直播剪辑项目输入信息，暂未开放，请勿使用。
         /// </summary>
         [JsonProperty("LiveStreamClipProjectInput")]
         public LiveStreamClipProjectInput LiveStreamClipProjectInput{ get; set; }
 
         /// <summary>
-        /// 视频编辑信息，仅当项目类型为 VIDEO_EDIT 时必填。
+        /// 视频编辑项目输入信息，仅当项目类型为 VIDEO_EDIT 时必填。
         /// </summary>
         [JsonProperty("VideoEditProjectInput")]
         public VideoEditProjectInput VideoEditProjectInput{ get; set; }
 
         /// <summary>
-        /// 视频拆条信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
+        /// 视频拆条项目输入信息，仅当项目类型为 VIDEO_SEGMENTATION  时必填。
         /// </summary>
         [JsonProperty("VideoSegmentationProjectInput")]
         public VideoSegmentationProjectInput VideoSegmentationProjectInput{ get; set; }
 
         /// <summary>
-        /// 云转推项目信息，仅当项目类型为 STREAM_CONNECT 时必填。
+        /// 云转推项目输入信息，仅当项目类型为 STREAM_CONNECT 时必填。
         /// </summary>
         [JsonProperty("StreamConnectProjectInput")]
         public StreamConnectProjectInput StreamConnectProjectInput{ get; set; }
 
         /// <summary>
-        /// 录制回放项目信息，仅当项目类型为 RECORD_REPLAY 时必填。
+        /// 录制回放项目输入信息，仅当项目类型为 RECORD_REPLAY 时必填。
         /// </summary>
         [JsonProperty("RecordReplayProjectInput")]
         public RecordReplayProjectInput RecordReplayProjectInput{ get; set; }

@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 用户 Id 列表，N 从 0 开始取值，最大 19。
+        /// 用户 Id 列表，N 从0开始取值，最大19。
         /// </summary>
         [JsonProperty("UserIds")]
         public string[] UserIds{ get; set; }

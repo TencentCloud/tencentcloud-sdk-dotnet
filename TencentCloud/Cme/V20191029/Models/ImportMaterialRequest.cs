@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 媒体归属者，团队或个人。
+        /// 媒体归属者，可支持归属团队或个人。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
@@ -47,7 +47,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>VOD：云点播文件；</li>
         /// <li>EXTERNAL：媒资绑定。</li>
         /// 
-        /// 注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。
+        /// 注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。另外，导入云点播的文件，使用云点播的子应用 Id 必须与创建云剪平台时使用的云点播子应用一致。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }
@@ -71,14 +71,14 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 媒体预处理任务模板 ID。取值：
+        /// 媒体预处理任务参数 ID。可取值有：
         /// <li>10：进行编辑预处理。</li>
         /// </summary>
         [JsonProperty("PreProcessDefinition")]
         public long? PreProcessDefinition{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以向任意团队或者个人导入媒体。如果指定操作者，如果媒体归属为个人，则操作者必须与归属者一致；如果媒体归属为团队，则必须为团队可导入媒体的团队成员(如果没有特殊设置，所有团队成员可导入媒体)。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

@@ -733,6 +733,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 获取地址模版列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddrTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeAddrTemplateListResponse"/></returns>
+        public async Task<DescribeAddrTemplateListResponse> DescribeAddrTemplateList(DescribeAddrTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeAddrTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAddrTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddrTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取地址模版列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAddrTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeAddrTemplateListResponse"/></returns>
+        public DescribeAddrTemplateListResponse DescribeAddrTemplateListSync(DescribeAddrTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeAddrTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAddrTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddrTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全组关联实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAssociatedInstanceListRequest"/></param>

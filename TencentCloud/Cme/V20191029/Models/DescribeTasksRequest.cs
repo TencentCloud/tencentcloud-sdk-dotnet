@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 项目 Id。
+        /// 项目 Id，使用项目 Id 进行过滤。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -39,6 +39,8 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 任务类型集合，取值有：
         /// <li>VIDEO_EDIT_PROJECT_EXPORT：视频编辑项目导出。</li>
+        /// 
+        /// 注：不填不使用任务类型进行过滤。
         /// </summary>
         [JsonProperty("TaskTypeSet")]
         public string[] TaskTypeSet{ get; set; }
@@ -48,6 +50,8 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>PROCESSING：处理中；</li>
         /// <li>SUCCESS：成功；</li>
         /// <li>FAIL：失败。</li>
+        /// 
+        /// 注：不填则不使用任务状态进行过滤。
         /// </summary>
         [JsonProperty("StatusSet")]
         public string[] StatusSet{ get; set; }
@@ -65,7 +69,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验对任务的访问权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以获取所有任务信息。如果指定操作者，则操作者需要是任务发起者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

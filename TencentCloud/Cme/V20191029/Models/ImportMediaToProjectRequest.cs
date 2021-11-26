@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -59,21 +59,22 @@ namespace TencentCloud.Cme.V20191029.Models
         public ExternalMediaInfo ExternalMediaInfo{ get; set; }
 
         /// <summary>
-        /// 媒体名称，不能超过30个字符。
+        /// 媒体名称，不能超过30个字符。如果不填，则媒体名称为点播媒资文件名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 媒体预处理任务模板 ID，取值：
-        /// <li>10：进行编辑预处理。</li>
-        /// 注意：如果填0则不进行处理。
+        /// 媒体预处理配置 ID，取值：
+        /// <li>10：进行视频编辑预处理。</li>
+        /// 
+        /// 注意：如果填0或者不填则不进行处理，如果原始视频不可在浏览器直接播放将无法在编辑页面编辑。
         /// </summary>
         [JsonProperty("PreProcessDefinition")]
         public long? PreProcessDefinition{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验项目和媒体文件访问权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以向所有视频编辑项目导入媒体；如果指定操作者，则操作者必须为项目所有者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

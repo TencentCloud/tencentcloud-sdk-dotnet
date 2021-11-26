@@ -43,19 +43,19 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，接入传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
+        /// 有加密需求的用户，传入kms的CiphertextBlob，关于数据加密可查阅 <a href="https://cloud.tencent.com/document/product/1007/47180">数据加密</a> 文档。
         /// </summary>
         [JsonProperty("CiphertextBlob")]
         public string CiphertextBlob{ get; set; }
 
         /// <summary>
-        /// 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个
+        /// 在使用加密服务时，填入要被加密的字段。本接口中可填入加密后的IdCard，Name，Phone中的一个或多个。
         /// </summary>
         [JsonProperty("EncryptList")]
         public string[] EncryptList{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，传入CBC加密的初试向量
+        /// 有加密需求的用户，传入CBC加密的初始向量。
         /// </summary>
         [JsonProperty("Iv")]
         public string Iv{ get; set; }

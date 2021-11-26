@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cme.V20191029.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeResourceAuthorizationRequest : AbstractModel
+    public class DescribeAddrTemplateListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+        /// 模版总数
         /// </summary>
-        [JsonProperty("Platform")]
-        public string Platform{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// 归属者。
+        /// 模版列表数据
         /// </summary>
-        [JsonProperty("Owner")]
-        public Entity Owner{ get; set; }
+        [JsonProperty("Data")]
+        public TemplateListInfo[] Data{ get; set; }
 
         /// <summary>
-        /// 资源。
+        /// 模版名称列表
         /// </summary>
-        [JsonProperty("Resource")]
-        public Resource Resource{ get; set; }
+        [JsonProperty("NameList")]
+        public string[] NameList{ get; set; }
 
         /// <summary>
-        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意资源的被授权情况。如果指定操作者，则操作者必须对被授权资源有读权限。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Platform", this.Platform);
-            this.SetParamObj(map, prefix + "Owner.", this.Owner);
-            this.SetParamObj(map, prefix + "Resource.", this.Resource);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamArraySimple(map, prefix + "NameList.", this.NameList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

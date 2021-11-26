@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 云转推项目Id 。
+        /// 云转推项目 Id 。
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }
@@ -68,6 +68,12 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("CurrentStopTime")]
         public string CurrentStopTime{ get; set; }
 
+        /// <summary>
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以操作所有云转推项目。如果指定操作者，则操作者必须为项目所有者。
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +87,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "InputEndpoint", this.InputEndpoint);
             this.SetParamObj(map, prefix + "OutputInfo.", this.OutputInfo);
             this.SetParamSimple(map, prefix + "CurrentStopTime", this.CurrentStopTime);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

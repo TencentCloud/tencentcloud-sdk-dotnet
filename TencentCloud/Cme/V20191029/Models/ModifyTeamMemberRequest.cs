@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string MemberId{ get; set; }
 
         /// <summary>
-        /// 成员备注，允许设置备注为空，不为空时长度不能超过15个字符。
+        /// 成员备注，长度不能超过15个字符。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 成员角色，取值：
+        /// 成员角色，可取值有：
         /// <li>Admin：团队管理员；</li>
         /// <li>Member：普通成员。</li>
         /// </summary>
@@ -57,7 +57,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string Role{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以个改任意团队成员的信息。如果指定操作者，则操作者必须为团队的管理员或者所有者。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

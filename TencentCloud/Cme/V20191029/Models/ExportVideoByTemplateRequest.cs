@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 导出模板 Id，目前不支持自定义创建，只支持下面的预置模板 Id。
+        /// 导出视频预设配置 Id，推荐优先使用下面的默认预设配置 Id，有其他需求可通过接口定制预设配置。
         /// <li>10：分辨率为 480P，输出视频格式为 MP4；</li>
         /// <li>11：分辨率为 720P，输出视频格式为 MP4；</li>
         /// <li>12：分辨率为 1080P，输出视频格式为 MP4。</li>
@@ -46,9 +46,9 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 导出目标，可取值为：
-        /// <li>CME：云剪，即导出为云剪媒体；</li>
-        /// <li>VOD：云点播，即导出为云点播媒资。</li>
+        /// 导出目标，指定导出视频的目标媒资库，可取值有：
+        /// <li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
+        /// <li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
         /// </summary>
         [JsonProperty("ExportDestination")]
         public string ExportDestination{ get; set; }
@@ -60,7 +60,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public SlotReplacementInfo[] SlotReplacements{ get; set; }
 
         /// <summary>
-        /// 导出的云剪媒体信息。当导出目标为 CME 时必填。
+        /// 导出的云剪媒资信息。当导出目标为 CME 时必填。
         /// </summary>
         [JsonProperty("CMEExportInfo")]
         public CMEExportInfo CMEExportInfo{ get; set; }
@@ -72,7 +72,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public VODExportInfo VODExportInfo{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验项目导出权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，无权限限制。如果指定操作者，则操作者需要有替换媒体及剪辑模板的权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

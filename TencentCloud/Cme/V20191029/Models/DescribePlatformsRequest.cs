@@ -25,13 +25,13 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台集合。
+        /// 平台 Id 列表。如果不填，则不按平台 Id 进行过滤。
         /// </summary>
         [JsonProperty("Platforms")]
         public string[] Platforms{ get; set; }
 
         /// <summary>
-        /// 平台绑定的 license Id 集合。
+        /// 平台绑定的 License Id 列表。如果不填，则不按平台绑定的 License Id 进行过滤。
         /// </summary>
         [JsonProperty("LicenseIds")]
         public string[] LicenseIds{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 分页返回的记录条数，默认值：10。
+        /// 分页返回的记录条数，默认值：10，最大值：20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

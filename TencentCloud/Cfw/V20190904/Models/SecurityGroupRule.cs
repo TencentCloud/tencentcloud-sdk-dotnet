@@ -103,6 +103,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ServiceTemplateId")]
         public string ServiceTemplateId{ get; set; }
 
+        /// <summary>
+        /// 规则对应的唯一id
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
+        /// 规则状态，true表示启用，false表示禁用
+        /// </summary>
+        [JsonProperty("Enable")]
+        public string Enable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +131,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "ServiceTemplateId", this.ServiceTemplateId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

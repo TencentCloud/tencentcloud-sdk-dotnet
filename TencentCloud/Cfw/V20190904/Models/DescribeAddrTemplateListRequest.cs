@@ -15,38 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cme.V20191029.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeResourceAuthorizationRequest : AbstractModel
+    public class DescribeAddrTemplateListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
+        /// 偏移量，分页用
         /// </summary>
-        [JsonProperty("Platform")]
-        public string Platform{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 归属者。
+        /// 条数，分页用
         /// </summary>
-        [JsonProperty("Owner")]
-        public Entity Owner{ get; set; }
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
 
         /// <summary>
-        /// 资源。
+        /// 排序字段，取值 'UpdateTime' | 'RulesNum'
         /// </summary>
-        [JsonProperty("Resource")]
-        public Resource Resource{ get; set; }
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
         /// <summary>
-        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以查询任意资源的被授权情况。如果指定操作者，则操作者必须对被授权资源有读权限。
+        /// 排序，取值 'asc'|'desc'
         /// </summary>
-        [JsonProperty("Operator")]
-        public string Operator{ get; set; }
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 搜索值
+        /// </summary>
+        [JsonProperty("SearchValue")]
+        public string SearchValue{ get; set; }
 
 
         /// <summary>
@@ -54,10 +60,11 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Platform", this.Platform);
-            this.SetParamObj(map, prefix + "Owner.", this.Owner);
-            this.SetParamObj(map, prefix + "Resource.", this.Resource);
-            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
         }
     }
 }

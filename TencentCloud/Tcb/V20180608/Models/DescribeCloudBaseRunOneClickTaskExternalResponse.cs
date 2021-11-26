@@ -92,6 +92,18 @@ namespace TencentCloud.Tcb.V20180608.Models
         public string UserEnvId{ get; set; }
 
         /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 步骤信息
+        /// </summary>
+        [JsonProperty("Steps")]
+        public OneClickTaskStepInfo[] Steps{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +125,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FailReason", this.FailReason);
             this.SetParamSimple(map, prefix + "UserEnvId", this.UserEnvId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamArrayObj(map, prefix + "Steps.", this.Steps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

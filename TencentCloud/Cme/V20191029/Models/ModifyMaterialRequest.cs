@@ -25,25 +25,25 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 平台名称，指定访问的平台。
+        /// 平台 Id，指定访问的平台。关于平台概念，请参见文档 [平台](https://cloud.tencent.com/document/product/1156/43767)。
         /// </summary>
         [JsonProperty("Platform")]
         public string Platform{ get; set; }
 
         /// <summary>
-        /// 媒体 Id。
+        /// 要修改的媒体 Id。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 媒体或分类路径归属。
+        /// 媒体归属者。
         /// </summary>
         [JsonProperty("Owner")]
         public Entity Owner{ get; set; }
 
         /// <summary>
-        /// 媒体名称，不能超过30个字符。
+        /// 媒体名称，不能超过30个字符，不填则不修改。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public string ClassPath{ get; set; }
 
         /// <summary>
-        /// 操作者。填写用户的 Id，用于标识调用者及校验操作权限。
+        /// 操作者。如不填，默认为 `cmeid_system`，表示平台管理员操作，可以修改任意媒体的信息。如果指定操作者，则操作者必须对媒体有写权限。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

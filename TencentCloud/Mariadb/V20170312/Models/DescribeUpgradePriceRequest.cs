@@ -44,6 +44,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("Storage")]
         public long? Storage{ get; set; }
 
+        /// <summary>
+        /// 新节点数，传0表示节点数不变
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public long? NodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
         }
     }
 }

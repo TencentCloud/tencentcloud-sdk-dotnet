@@ -32,7 +32,6 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 各个共享空间对应的授权者信息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizerSet")]
         public Authorizer[] AuthorizerSet{ get; set; }
