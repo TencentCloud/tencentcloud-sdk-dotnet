@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.414</VersionPrefix>
+    <VersionPrefix>3.0.415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,8 @@
     <Compile Include="V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
+    <Compile Include="V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
@@ -221,6 +223,8 @@
     <Compile Include="V20180525\Models\EksCiRegionInfo.cs" />
     <Compile Include="V20180525\Models\EksCiVolume.cs" />
     <Compile Include="V20180525\Models\EksCluster.cs" />
+    <Compile Include="V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\EnhancedService.cs" />

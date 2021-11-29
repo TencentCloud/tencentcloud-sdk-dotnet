@@ -2933,6 +2933,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 关闭集群删除保护
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="DisableClusterDeletionProtectionResponse"/></returns>
+        public async Task<DisableClusterDeletionProtectionResponse> DisableClusterDeletionProtection(DisableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭集群删除保护
+        /// </summary>
+        /// <param name="req"><see cref="DisableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="DisableClusterDeletionProtectionResponse"/></returns>
+        public DisableClusterDeletionProtectionResponse DisableClusterDeletionProtectionSync(DisableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<DisableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供给附加了VPC-CNI能力的Global-Route集群关闭VPC-CNI
         /// </summary>
         /// <param name="req"><see cref="DisableVpcCniNetworkTypeRequest"/></param>
@@ -2964,6 +3004,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DisableVpcCniNetworkType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableVpcCniNetworkTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用集群删除保护
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="EnableClusterDeletionProtectionResponse"/></returns>
+        public async Task<EnableClusterDeletionProtectionResponse> EnableClusterDeletionProtection(EnableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用集群删除保护
+        /// </summary>
+        /// <param name="req"><see cref="EnableClusterDeletionProtectionRequest"/></param>
+        /// <returns><see cref="EnableClusterDeletionProtectionResponse"/></returns>
+        public EnableClusterDeletionProtectionResponse EnableClusterDeletionProtectionSync(EnableClusterDeletionProtectionRequest req)
+        {
+             JsonResponseModel<EnableClusterDeletionProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableClusterDeletionProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableClusterDeletionProtectionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

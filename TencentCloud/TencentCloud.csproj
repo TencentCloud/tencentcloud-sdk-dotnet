@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.414</VersionPrefix>
+    <VersionPrefix>3.0.415</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3353,6 +3353,8 @@
     <Compile Include="Clb\V20180317\Models\ClassicalLoadBalancerInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTarget.cs" />
     <Compile Include="Clb\V20180317\Models\ClassicalTargetInfo.cs" />
+    <Compile Include="Clb\V20180317\Models\CloneLoadBalancerRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\CloneLoadBalancerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\Cluster.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterItem.cs" />
     <Compile Include="Clb\V20180317\Models\ClusterResource.cs" />
@@ -14288,6 +14290,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DnsServerConf.cs" />
@@ -14296,6 +14300,8 @@
     <Compile Include="Tke\V20180525\Models\EksCiRegionInfo.cs" />
     <Compile Include="Tke\V20180525\Models\EksCiVolume.cs" />
     <Compile Include="Tke\V20180525\Models\EksCluster.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnhancedService.cs" />

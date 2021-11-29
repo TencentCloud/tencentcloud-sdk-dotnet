@@ -257,6 +257,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
+        /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
+        public async Task<CloneLoadBalancerResponse> CloneLoadBalancer(CloneLoadBalancerRequest req)
+        {
+             JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloneLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 克隆负载均衡实例，根据指定的负载均衡实例，复制出相同规则和绑定关系的负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="CloneLoadBalancerRequest"/></param>
+        /// <returns><see cref="CloneLoadBalancerResponse"/></returns>
+        public CloneLoadBalancerResponse CloneLoadBalancerSync(CloneLoadBalancerRequest req)
+        {
+             JsonResponseModel<CloneLoadBalancerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloneLoadBalancer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloneLoadBalancerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建CLB专有日志集，此日志集用于存储CLB的日志。
         /// </summary>
         /// <param name="req"><see cref="CreateClsLogSetRequest"/></param>

@@ -32,7 +32,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong? Timestamp{ get; set; }
 
         /// <summary>
-        /// Sql的执行时长。
+        /// Sql的执行时长（秒）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("QueryTime")]
@@ -67,7 +67,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Database{ get; set; }
 
         /// <summary>
-        /// 锁时长。
+        /// 锁时长（秒）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LockTime")]

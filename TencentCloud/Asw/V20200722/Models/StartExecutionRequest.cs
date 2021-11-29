@@ -31,7 +31,7 @@ namespace TencentCloud.Asw.V20200722.Models
         public string StateMachineResourceName{ get; set; }
 
         /// <summary>
-        /// 输入参数
+        /// 输入参数，内容为JsonObject，长度不大于524288字符。
         /// </summary>
         [JsonProperty("Input")]
         public string Input{ get; set; }
