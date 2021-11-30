@@ -25,14 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 网络资源id，实例id或RO组id
+        /// 网络资源id，实例id或RO组id(此字段已废弃)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，1-实例 2-RO组
+        /// 资源类型，1-实例 2-RO组(此字段已废弃)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]
@@ -46,21 +46,21 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// IP地址
+        /// IPV4地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip")]
         public string Vip{ get; set; }
 
         /// <summary>
-        /// ipv6的IP地址
+        /// IPV6地址
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vip6")]
         public string Vip6{ get; set; }
 
         /// <summary>
-        /// 连接Port地址
+        /// 访问端口
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Vport")]

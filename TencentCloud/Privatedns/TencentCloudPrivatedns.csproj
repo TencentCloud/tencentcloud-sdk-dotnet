@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F711E1FC-542C-3536-9601-50E098B1102E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.415</VersionPrefix>
+    <VersionPrefix>3.0.416</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,18 +46,25 @@
   <ItemGroup>
     <Compile Include="V20201028\PrivatednsClient.cs" />
     <Compile Include="V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="V20201028\Models\AccountVpcInfoOut.cs" />
     <Compile Include="V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="V20201028\Models\AuditLog.cs" />
     <Compile Include="V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
+    <Compile Include="V20201028\Models\CreatePrivateDNSAccountResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="V20201028\Models\DatePoint.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateDNSAccountRequest.cs" />
+    <Compile Include="V20201028\Models\DeletePrivateDNSAccountResponse.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneRequest.cs" />
     <Compile Include="V20201028\Models\DeletePrivateZoneResponse.cs" />
+    <Compile Include="V20201028\Models\DescribeAccountVpcListRequest.cs" />
+    <Compile Include="V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogRequest.cs" />
     <Compile Include="V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="V20201028\Models\DescribeDashboardRequest.cs" />

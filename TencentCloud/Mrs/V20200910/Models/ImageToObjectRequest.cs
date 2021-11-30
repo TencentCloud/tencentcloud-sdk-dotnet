@@ -25,7 +25,7 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 图片列表，允许传入多张图片，支持传入图片的url或base64编码
+        /// 图片列表，允许传入多张图片，目前只支持传入图片base64编码，图片url暂不支持
         /// </summary>
         [JsonProperty("ImageInfoList")]
         public ImageInfo[] ImageInfoList{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public HandleParam HandleParam{ get; set; }
 
         /// <summary>
-        /// 报告类型，目前支持11（检验报告），12（检查报告），15（病理报告），28（出院报告），29（入院报告），210（门诊病历），212（手术记录），218（诊断证明），363（心电图），27（内窥镜检查），215（处方单）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
+        /// 报告类型，目前支持11（检验报告），12（检查报告），15（病理报告），28（出院报告），29（入院报告），210（门诊病历），212（手术记录），218（诊断证明），363（心电图），27（内窥镜检查），215（处方单），219（免疫接种证明），301（C14呼气试验）。如果不清楚报告类型，可以使用分类引擎，该字段传0（同时IsUsedClassify字段必须为True，否则无法输出结果）
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

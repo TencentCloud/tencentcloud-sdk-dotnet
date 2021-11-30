@@ -37,7 +37,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HostType{ get; set; }
 
         /// <summary>
-        /// 漏洞类型：1: web应用漏洞（webCMS） 2:系统组件（应用漏洞）漏洞  3:安全基线 4:Linux软件漏洞 5:Windows系统漏洞(多选英文;分隔)
+        /// 漏洞类型：1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 (多选英文;分隔)
         /// </summary>
         [JsonProperty("VulCategories")]
         public string VulCategories{ get; set; }

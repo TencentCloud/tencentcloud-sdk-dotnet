@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong?[] LastDays{ get; set; }
 
         /// <summary>
-        /// 漏洞的分类，最小值为1最大值为5
+        /// 漏洞的分类: 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }

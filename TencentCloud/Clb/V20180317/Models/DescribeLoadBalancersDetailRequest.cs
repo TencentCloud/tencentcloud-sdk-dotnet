@@ -37,7 +37,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 选择返回的Fields列表，默认添加LoadBalancerId和LoadBalancerName。
+        /// 选择返回的Fields列表，系统仅会返回Fileds中填写的字段，可填写的字段详情请参见<a href="https://cloud.tencent.com/document/api/214/30694#LoadBalancerDetail">LoadBalancerDetail</a>。若未在Fileds填写相关字段，则此字段返回null。Fileds中默认添加LoadBalancerId和LoadBalancerName字段。
         /// </summary>
         [JsonProperty("Fields")]
         public string[] Fields{ get; set; }

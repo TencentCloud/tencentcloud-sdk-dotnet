@@ -43,6 +43,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>Uuid- String - 是否必填：否 - 主机uuid查询</li>
         /// <li>VulName- string -</li>
         /// <li>HostIp- string - 是否必填：否 - 主机ip</li>
+        /// <li>VulCategory- string - 是否必填：否 - 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }

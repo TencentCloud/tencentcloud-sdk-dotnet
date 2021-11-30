@@ -49,7 +49,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string CveId{ get; set; }
 
         /// <summary>
-        /// 漏洞分类
+        /// 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞 0= 应急漏洞
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }

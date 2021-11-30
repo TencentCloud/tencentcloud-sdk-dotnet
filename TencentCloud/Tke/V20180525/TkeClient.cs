@@ -3093,6 +3093,86 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 操作TKE集群的addon
+        /// </summary>
+        /// <param name="req"><see cref="ForwardApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardApplicationRequestV3Response"/></returns>
+        public async Task<ForwardApplicationRequestV3Response> ForwardApplicationRequestV3(ForwardApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForwardApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 操作TKE集群的addon
+        /// </summary>
+        /// <param name="req"><see cref="ForwardApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardApplicationRequestV3Response"/></returns>
+        public ForwardApplicationRequestV3Response ForwardApplicationRequestV3Sync(ForwardApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ForwardApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TKE支持的App列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTkeAppChartListRequest"/></param>
+        /// <returns><see cref="GetTkeAppChartListResponse"/></returns>
+        public async Task<GetTkeAppChartListResponse> GetTkeAppChartList(GetTkeAppChartListRequest req)
+        {
+             JsonResponseModel<GetTkeAppChartListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTkeAppChartList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTkeAppChartListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TKE支持的App列表
+        /// </summary>
+        /// <param name="req"><see cref="GetTkeAppChartListRequest"/></param>
+        /// <returns><see cref="GetTkeAppChartListResponse"/></returns>
+        public GetTkeAppChartListResponse GetTkeAppChartListSync(GetTkeAppChartListRequest req)
+        {
+             JsonResponseModel<GetTkeAppChartListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTkeAppChartList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTkeAppChartListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获得节点升级当前的进度 
         /// </summary>
         /// <param name="req"><see cref="GetUpgradeInstanceProgressRequest"/></param>

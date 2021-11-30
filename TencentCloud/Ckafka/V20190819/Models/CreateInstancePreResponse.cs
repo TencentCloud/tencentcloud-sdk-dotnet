@@ -43,6 +43,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Data")]
         public CreateInstancePreData Data{ get; set; }
 
+        /// <summary>
+        /// 删除是时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteRouteTimestamp")]
+        public string DeleteRouteTimestamp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
             this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
             this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
         }
     }
 }

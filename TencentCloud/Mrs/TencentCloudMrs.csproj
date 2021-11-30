@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{32B04F9C-1523-3169-96D4-5FA22888E8B1}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.415</VersionPrefix>
+    <VersionPrefix>3.0.416</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,8 @@
     <Compile Include="V20200910\Models\TextType.cs" />
     <Compile Include="V20200910\Models\TreatmentRecord.cs" />
     <Compile Include="V20200910\Models\TuberInfo.cs" />
+    <Compile Include="V20200910\Models\Vaccination.cs" />
+    <Compile Include="V20200910\Models\VaccineCertificate.cs" />
     <Compile Include="V20200910\Models\Value.cs" />
   </ItemGroup>
 </Project>

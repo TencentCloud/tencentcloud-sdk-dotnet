@@ -53,6 +53,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 创建私有域解析账号
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
+        /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>
+        public async Task<CreatePrivateDNSAccountResponse> CreatePrivateDNSAccount(CreatePrivateDNSAccountRequest req)
+        {
+             JsonResponseModel<CreatePrivateDNSAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrivateDNSAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrivateDNSAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建私有域解析账号
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrivateDNSAccountRequest"/></param>
+        /// <returns><see cref="CreatePrivateDNSAccountResponse"/></returns>
+        public CreatePrivateDNSAccountResponse CreatePrivateDNSAccountSync(CreatePrivateDNSAccountRequest req)
+        {
+             JsonResponseModel<CreatePrivateDNSAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrivateDNSAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrivateDNSAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建私有域
         /// </summary>
         /// <param name="req"><see cref="CreatePrivateZoneRequest"/></param>
@@ -133,6 +173,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 删除私有域解析账号
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
+        /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
+        public async Task<DeletePrivateDNSAccountResponse> DeletePrivateDNSAccount(DeletePrivateDNSAccountRequest req)
+        {
+             JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePrivateDNSAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateDNSAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除私有域解析账号
+        /// </summary>
+        /// <param name="req"><see cref="DeletePrivateDNSAccountRequest"/></param>
+        /// <returns><see cref="DeletePrivateDNSAccountResponse"/></returns>
+        public DeletePrivateDNSAccountResponse DeletePrivateDNSAccountSync(DeletePrivateDNSAccountRequest req)
+        {
+             JsonResponseModel<DeletePrivateDNSAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePrivateDNSAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateDNSAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除私有域并停止解析
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateZoneRequest"/></param>
@@ -204,6 +284,46 @@ namespace TencentCloud.Privatedns.V20201028
              {
                  var strResp = this.InternalRequestSync(req, "DeletePrivateZoneRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrivateZoneRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取私有域解析账号的VPC列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
+        /// <returns><see cref="DescribeAccountVpcListResponse"/></returns>
+        public async Task<DescribeAccountVpcListResponse> DescribeAccountVpcList(DescribeAccountVpcListRequest req)
+        {
+             JsonResponseModel<DescribeAccountVpcListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountVpcList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountVpcListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取私有域解析账号的VPC列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountVpcListRequest"/></param>
+        /// <returns><see cref="DescribeAccountVpcListResponse"/></returns>
+        public DescribeAccountVpcListResponse DescribeAccountVpcListSync(DescribeAccountVpcListRequest req)
+        {
+             JsonResponseModel<DescribeAccountVpcListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountVpcList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountVpcListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

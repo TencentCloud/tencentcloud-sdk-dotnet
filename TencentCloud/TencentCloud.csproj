@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.415</VersionPrefix>
+    <VersionPrefix>3.0.416</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -707,6 +707,10 @@
     <Compile Include="Apigateway\V20180808\Models\UsagePlanStatusInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlansStatus.cs" />
     <Compile Include="Apigateway\V20180808\Models\VpcConfig.cs" />
+    <Compile Include="Apm\V20210622\ApmClient.cs" />
+    <Compile Include="Apm\V20210622\Models\ApmAgentInfo.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeApmAgentRequest.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeApmAgentResponse.cs" />
     <Compile Include="As\V20180419\AsClient.cs" />
     <Compile Include="As\V20180419\Models\Activity.cs" />
     <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
@@ -3422,6 +3426,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeListenersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerListByCertIdResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerOverviewRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerOverviewResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerTrafficRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancerTrafficResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersDetailRequest.cs" />
@@ -10586,6 +10592,8 @@
     <Compile Include="Mrs\V20200910\Models\TextType.cs" />
     <Compile Include="Mrs\V20200910\Models\TreatmentRecord.cs" />
     <Compile Include="Mrs\V20200910\Models\TuberInfo.cs" />
+    <Compile Include="Mrs\V20200910\Models\Vaccination.cs" />
+    <Compile Include="Mrs\V20200910\Models\VaccineCertificate.cs" />
     <Compile Include="Mrs\V20200910\Models\Value.cs" />
     <Compile Include="Ms\V20180408\MsClient.cs" />
     <Compile Include="Ms\V20180408\Models\AdInfo.cs" />
@@ -11245,18 +11253,25 @@
     <Compile Include="Postgres\V20170312\Models\ZoneInfo.cs" />
     <Compile Include="Privatedns\V20201028\PrivatednsClient.cs" />
     <Compile Include="Privatedns\V20201028\Models\AccountVpcInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOut.cs" />
     <Compile Include="Privatedns\V20201028\Models\AccountVpcInfoOutput.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLog.cs" />
     <Compile Include="Privatedns\V20201028\Models\AuditLogInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateDNSAccountRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\CreatePrivateDNSAccountResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRecordResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\CreatePrivateZoneResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DatePoint.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateDNSAccountRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DeletePrivateDNSAccountResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRecordResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DeletePrivateZoneResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAccountVpcListRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeAccountVpcListResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeAuditLogResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeDashboardRequest.cs" />
@@ -13764,6 +13779,20 @@
     <Compile Include="Tem\V20201221\Models\StorageConf.cs" />
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
+    <Compile Include="Thpc\V20211109\ThpcClient.cs" />
+    <Compile Include="Thpc\V20211109\Models\ComputeNode.cs" />
+    <Compile Include="Thpc\V20211109\Models\CreateClusterRequest.cs" />
+    <Compile Include="Thpc\V20211109\Models\CreateClusterResponse.cs" />
+    <Compile Include="Thpc\V20211109\Models\DataDisk.cs" />
+    <Compile Include="Thpc\V20211109\Models\DeleteClusterRequest.cs" />
+    <Compile Include="Thpc\V20211109\Models\DeleteClusterResponse.cs" />
+    <Compile Include="Thpc\V20211109\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="Thpc\V20211109\Models\InternetAccessible.cs" />
+    <Compile Include="Thpc\V20211109\Models\LoginSettings.cs" />
+    <Compile Include="Thpc\V20211109\Models\ManagerNode.cs" />
+    <Compile Include="Thpc\V20211109\Models\Placement.cs" />
+    <Compile Include="Thpc\V20211109\Models\SystemDisk.cs" />
+    <Compile Include="Thpc\V20211109\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Tia\V20180226\TiaClient.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobRequest.cs" />
     <Compile Include="Tia\V20180226\Models\CreateJobResponse.cs" />
@@ -14132,6 +14161,7 @@
     <Compile Include="Tke\V20180525\Models\AddNodeToNodePoolResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\AppChart.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
     <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\Capabilities.cs" />
@@ -14313,6 +14343,10 @@
     <Compile Include="Tke\V20180525\Models\ExistedInstancesPara.cs" />
     <Compile Include="Tke\V20180525\Models\ExtensionAddon.cs" />
     <Compile Include="Tke\V20180525\Models\Filter.cs" />
+    <Compile Include="Tke\V20180525\Models\ForwardApplicationRequestV3Request.cs" />
+    <Compile Include="Tke\V20180525\Models\ForwardApplicationRequestV3Response.cs" />
+    <Compile Include="Tke\V20180525\Models\GetTkeAppChartListRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\GetTkeAppChartListResponse.cs" />
     <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressRequest.cs" />
     <Compile Include="Tke\V20180525\Models\GetUpgradeInstanceProgressResponse.cs" />
     <Compile Include="Tke\V20180525\Models\HttpGet.cs" />
@@ -14721,6 +14755,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayApisResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayMonitorOverviewRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGatewayMonitorOverviewResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupAttributeRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeGroupAttributeResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupBindedGatewaysResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeGroupGatewaysRequest.cs" />
@@ -15017,6 +15053,7 @@
     <Compile Include="Tsf\V20180326\Models\UpdateUnitRuleResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\ValueFrom.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroup.cs" />
+    <Compile Include="Tsf\V20180326\Models\VmGroupOther.cs" />
     <Compile Include="Tsf\V20180326\Models\VmGroupSimple.cs" />
     <Compile Include="Tsw\V20200924\TswClient.cs" />
     <Compile Include="Tsw\V20200924\Models\AgentShell.cs" />

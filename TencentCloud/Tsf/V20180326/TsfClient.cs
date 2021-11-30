@@ -3097,6 +3097,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 获取部署组其他属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupAttributeRequest"/></param>
+        /// <returns><see cref="DescribeGroupAttributeResponse"/></returns>
+        public async Task<DescribeGroupAttributeResponse> DescribeGroupAttribute(DescribeGroupAttributeRequest req)
+        {
+             JsonResponseModel<DescribeGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取部署组其他属性
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupAttributeRequest"/></param>
+        /// <returns><see cref="DescribeGroupAttributeResponse"/></returns>
+        public DescribeGroupAttributeResponse DescribeGroupAttributeSync(DescribeGroupAttributeRequest req)
+        {
+             JsonResponseModel<DescribeGroupAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询某个API分组已绑定的网关部署组信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeGroupBindedGatewaysRequest"/></param>

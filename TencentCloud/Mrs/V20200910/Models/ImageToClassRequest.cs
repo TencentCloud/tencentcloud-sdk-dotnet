@@ -25,7 +25,7 @@ namespace TencentCloud.Mrs.V20200910.Models
     {
         
         /// <summary>
-        /// 图片列表，允许传入多张图片，支持传入图片的url或base64编码
+        /// 图片列表，允许传入多张图片，支持传入图片的base64编码，暂不支持图片url
         /// </summary>
         [JsonProperty("ImageInfoList")]
         public ImageInfo[] ImageInfoList{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public HandleParam HandleParam{ get; set; }
 
         /// <summary>
-        /// 图片类型，目前支持11（检验报告），12（检查报告），15（病理报告），218（诊断证明）。
+        /// 不填，默认为0
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

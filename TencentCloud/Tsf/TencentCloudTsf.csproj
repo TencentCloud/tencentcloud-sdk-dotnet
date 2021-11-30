@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.415</VersionPrefix>
+    <VersionPrefix>3.0.416</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -222,6 +222,8 @@
     <Compile Include="V20180326\Models\DescribeGatewayApisResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGatewayMonitorOverviewResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupAttributeRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupAttributeResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupGatewaysRequest.cs" />
@@ -518,6 +520,7 @@
     <Compile Include="V20180326\Models\UpdateUnitRuleResponse.cs" />
     <Compile Include="V20180326\Models\ValueFrom.cs" />
     <Compile Include="V20180326\Models\VmGroup.cs" />
+    <Compile Include="V20180326\Models\VmGroupOther.cs" />
     <Compile Include="V20180326\Models\VmGroupSimple.cs" />
   </ItemGroup>
 </Project>
