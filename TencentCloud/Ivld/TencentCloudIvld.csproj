@@ -1,0 +1,84 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{C0E79229-9B9B-3209-810B-66290F3BDD46}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.417</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Ivld</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210903\IvldClient.cs" />
+    <Compile Include="V20210903\Models\AppearIndexPair.cs" />
+    <Compile Include="V20210903\Models\AppearInfo.cs" />
+    <Compile Include="V20210903\Models\AudioInfo.cs" />
+    <Compile Include="V20210903\Models\CreateTaskRequest.cs" />
+    <Compile Include="V20210903\Models\CreateTaskResponse.cs" />
+    <Compile Include="V20210903\Models\Data.cs" />
+    <Compile Include="V20210903\Models\DeleteMediaRequest.cs" />
+    <Compile Include="V20210903\Models\DeleteMediaResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeMediaRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeMediaResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeMediasRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeMediasResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeTaskRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeTaskResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeTasksRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeTasksResponse.cs" />
+    <Compile Include="V20210903\Models\ImportMediaRequest.cs" />
+    <Compile Include="V20210903\Models\ImportMediaResponse.cs" />
+    <Compile Include="V20210903\Models\L1Tag.cs" />
+    <Compile Include="V20210903\Models\L2Tag.cs" />
+    <Compile Include="V20210903\Models\L3Tag.cs" />
+    <Compile Include="V20210903\Models\MediaFilter.cs" />
+    <Compile Include="V20210903\Models\MediaInfo.cs" />
+    <Compile Include="V20210903\Models\MediaMetadata.cs" />
+    <Compile Include="V20210903\Models\MediaPreknownInfo.cs" />
+    <Compile Include="V20210903\Models\MultiLevelTag.cs" />
+    <Compile Include="V20210903\Models\ShowInfo.cs" />
+    <Compile Include="V20210903\Models\SortBy.cs" />
+    <Compile Include="V20210903\Models\TaskFilter.cs" />
+    <Compile Include="V20210903\Models\TaskInfo.cs" />
+    <Compile Include="V20210903\Models\TextAppearInfo.cs" />
+    <Compile Include="V20210903\Models\TextInfo.cs" />
+    <Compile Include="V20210903\Models\VideoAppearInfo.cs" />
+  </ItemGroup>
+</Project>

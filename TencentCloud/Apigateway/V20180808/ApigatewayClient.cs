@@ -3537,7 +3537,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（UpdateApiAppKey）用于更新应用秘钥。
+        /// 本接口（UpdateApiAppKey）用于更新应用密钥。
         /// </summary>
         /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
         /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>
@@ -3557,7 +3557,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 本接口（UpdateApiAppKey）用于更新应用秘钥。
+        /// 本接口（UpdateApiAppKey）用于更新应用密钥。
         /// </summary>
         /// <param name="req"><see cref="UpdateApiAppKeyRequest"/></param>
         /// <returns><see cref="UpdateApiAppKeyResponse"/></returns>

@@ -15,44 +15,41 @@
  * under the License.
  */
 
-namespace TencentCloud.Lighthouse.V20200324.Models
+namespace TencentCloud.Ivld.V20210903.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DataDiskPrice : AbstractModel
+    public class L1Tag : AbstractModel
     {
         
         /// <summary>
-        /// 磁盘ID
+        /// 一级标签名
         /// </summary>
-        [JsonProperty("DiskId")]
-        public string DiskId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 磁盘单价
+        /// 二级标签数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("OriginalDiskPrice")]
-        public float? OriginalDiskPrice{ get; set; }
+        [JsonProperty("L2TagSet")]
+        public L2Tag[] L2TagSet{ get; set; }
 
         /// <summary>
-        /// 磁盘总价
+        /// 一级标签出现信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public float? OriginalPrice{ get; set; }
+        [JsonProperty("AppearIndexPairSet")]
+        public AppearIndexPair[] AppearIndexPairSet{ get; set; }
 
         /// <summary>
-        /// 折扣
+        /// 一级标签首次出现信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Discount")]
-        public float? Discount{ get; set; }
-
-        /// <summary>
-        /// 折后总价
-        /// </summary>
-        [JsonProperty("DiscountPrice")]
-        public float? DiscountPrice{ get; set; }
+        [JsonProperty("FirstAppear")]
+        public long? FirstAppear{ get; set; }
 
 
         /// <summary>
@@ -60,11 +57,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
-            this.SetParamSimple(map, prefix + "OriginalDiskPrice", this.OriginalDiskPrice);
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
-            this.SetParamSimple(map, prefix + "Discount", this.Discount);
-            this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "L2TagSet.", this.L2TagSet);
+            this.SetParamArrayObj(map, prefix + "AppearIndexPairSet.", this.AppearIndexPairSet);
+            this.SetParamSimple(map, prefix + "FirstAppear", this.FirstAppear);
         }
     }
 }

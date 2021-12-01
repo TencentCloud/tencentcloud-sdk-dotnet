@@ -92,5 +92,45 @@ namespace TencentCloud.Apm.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// APM实例列表拉取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
+        /// <returns><see cref="DescribeApmInstancesResponse"/></returns>
+        public async Task<DescribeApmInstancesResponse> DescribeApmInstances(DescribeApmInstancesRequest req)
+        {
+             JsonResponseModel<DescribeApmInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApmInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApmInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// APM实例列表拉取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApmInstancesRequest"/></param>
+        /// <returns><see cref="DescribeApmInstancesResponse"/></returns>
+        public DescribeApmInstancesResponse DescribeApmInstancesSync(DescribeApmInstancesRequest req)
+        {
+             JsonResponseModel<DescribeApmInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApmInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApmInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

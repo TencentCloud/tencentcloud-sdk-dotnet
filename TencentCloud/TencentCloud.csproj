@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.416</VersionPrefix>
+    <VersionPrefix>3.0.417</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -709,8 +709,12 @@
     <Compile Include="Apigateway\V20180808\Models\VpcConfig.cs" />
     <Compile Include="Apm\V20210622\ApmClient.cs" />
     <Compile Include="Apm\V20210622\Models\ApmAgentInfo.cs" />
+    <Compile Include="Apm\V20210622\Models\ApmInstanceDetail.cs" />
+    <Compile Include="Apm\V20210622\Models\ApmTag.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmAgentRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmAgentResponse.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeApmInstancesRequest.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeApmInstancesResponse.cs" />
     <Compile Include="As\V20180419\AsClient.cs" />
     <Compile Include="As\V20180419\Models\Activity.cs" />
     <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
@@ -9153,6 +9157,42 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\UpdateRecordPlanResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\UpdateTimeTemplateRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\UpdateTimeTemplateResponse.cs" />
+    <Compile Include="Ivld\V20210903\IvldClient.cs" />
+    <Compile Include="Ivld\V20210903\Models\AppearIndexPair.cs" />
+    <Compile Include="Ivld\V20210903\Models\AppearInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\AudioInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\CreateTaskRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\CreateTaskResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\Data.cs" />
+    <Compile Include="Ivld\V20210903\Models\DeleteMediaRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DeleteMediaResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeMediaRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeMediaResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeMediasRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeMediasResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTaskDetailResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTaskRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTaskResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTasksRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DescribeTasksResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\ImportMediaRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\ImportMediaResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\L1Tag.cs" />
+    <Compile Include="Ivld\V20210903\Models\L2Tag.cs" />
+    <Compile Include="Ivld\V20210903\Models\L3Tag.cs" />
+    <Compile Include="Ivld\V20210903\Models\MediaFilter.cs" />
+    <Compile Include="Ivld\V20210903\Models\MediaInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\MediaMetadata.cs" />
+    <Compile Include="Ivld\V20210903\Models\MediaPreknownInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\MultiLevelTag.cs" />
+    <Compile Include="Ivld\V20210903\Models\ShowInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\SortBy.cs" />
+    <Compile Include="Ivld\V20210903\Models\TaskFilter.cs" />
+    <Compile Include="Ivld\V20210903\Models\TaskInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\TextAppearInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\TextInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\VideoAppearInfo.cs" />
     <Compile Include="Kms\V20190118\KmsClient.cs" />
     <Compile Include="Kms\V20190118\Models\AlgorithmInfo.cs" />
     <Compile Include="Kms\V20190118\Models\ArchiveKeyRequest.cs" />
@@ -9279,7 +9319,6 @@
     <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairResponse.cs" />
-    <Compile Include="Lighthouse\V20200324\Models\DataDiskPrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesRequest.cs" />

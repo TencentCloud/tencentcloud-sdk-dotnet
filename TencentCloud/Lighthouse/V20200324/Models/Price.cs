@@ -30,12 +30,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("InstancePrice")]
         public InstancePrice InstancePrice{ get; set; }
 
-        /// <summary>
-        /// 数据盘价格。
-        /// </summary>
-        [JsonProperty("DataDiskPrices")]
-        public DataDiskPrice[] DataDiskPrices{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -43,7 +37,6 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "InstancePrice.", this.InstancePrice);
-            this.SetParamArrayObj(map, prefix + "DataDiskPrices.", this.DataDiskPrices);
         }
     }
 }

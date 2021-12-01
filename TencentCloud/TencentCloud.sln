@@ -203,6 +203,8 @@ Project("{59D16650-F6B2-3107-8C2B-90A5E4FD868E}") = "TencentCloudIotvideo", "Ten
 EndProject
 Project("{18E4740C-9C8B-37F5-AF27-B5C1E6829210}") = "TencentCloudIotvideoindustry", "TencentCloud\Iotvideoindustry\TencentCloudIotvideoindustry.csproj", "{18E4740C-9C8B-37F5-AF27-B5C1E6829210}"
 EndProject
+Project("{C0E79229-9B9B-3209-810B-66290F3BDD46}") = "TencentCloudIvld", "TencentCloud\Ivld\TencentCloudIvld.csproj", "{C0E79229-9B9B-3209-810B-66290F3BDD46}"
+EndProject
 Project("{89853174-2531-351C-A46F-51E64C5ADD8C}") = "TencentCloudKms", "TencentCloud\Kms\TencentCloudKms.csproj", "{89853174-2531-351C-A46F-51E64C5ADD8C}"
 EndProject
 Project("{7652443B-815B-37FE-B0E4-42C34070E9BC}") = "TencentCloudLighthouse", "TencentCloud\Lighthouse\TencentCloudLighthouse.csproj", "{7652443B-815B-37FE-B0E4-42C34070E9BC}"
@@ -785,6 +787,10 @@ Global
 		{18E4740C-9C8B-37F5-AF27-B5C1E6829210}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18E4740C-9C8B-37F5-AF27-B5C1E6829210}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18E4740C-9C8B-37F5-AF27-B5C1E6829210}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0E79229-9B9B-3209-810B-66290F3BDD46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0E79229-9B9B-3209-810B-66290F3BDD46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0E79229-9B9B-3209-810B-66290F3BDD46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0E79229-9B9B-3209-810B-66290F3BDD46}.Release|Any CPU.Build.0 = Release|Any CPU
 		{89853174-2531-351C-A46F-51E64C5ADD8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{89853174-2531-351C-A46F-51E64C5ADD8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89853174-2531-351C-A46F-51E64C5ADD8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
