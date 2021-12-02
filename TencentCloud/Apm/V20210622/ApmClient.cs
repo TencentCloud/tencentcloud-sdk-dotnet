@@ -53,6 +53,46 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 业务购买APM实例，调用该接口创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmInstanceRequest"/></param>
+        /// <returns><see cref="CreateApmInstanceResponse"/></returns>
+        public async Task<CreateApmInstanceResponse> CreateApmInstance(CreateApmInstanceRequest req)
+        {
+             JsonResponseModel<CreateApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 业务购买APM实例，调用该接口创建
+        /// </summary>
+        /// <param name="req"><see cref="CreateApmInstanceRequest"/></param>
+        /// <returns><see cref="CreateApmInstanceResponse"/></returns>
+        public CreateApmInstanceResponse CreateApmInstanceSync(CreateApmInstanceRequest req)
+        {
+             JsonResponseModel<CreateApmInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApmInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApmInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取Apm Agent信息
         /// </summary>
         /// <param name="req"><see cref="DescribeApmAgentRequest"/></param>

@@ -31,7 +31,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public ulong? ExpiredSecond{ get; set; }
 
         /// <summary>
-        /// 直播推流地址，入参不填默认由云剪生成。
+        /// 直播推流地址，入参不填默认由多媒体创作引擎生成。
         /// </summary>
         [JsonProperty("PushUrl")]
         public string PushUrl{ get; set; }

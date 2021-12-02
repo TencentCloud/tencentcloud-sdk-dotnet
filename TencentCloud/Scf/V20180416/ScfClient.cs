@@ -867,6 +867,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 该接口根据指定的查询条件返回函数单个请求运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatusRequest"/></param>
+        /// <returns><see cref="GetRequestStatusResponse"/></returns>
+        public async Task<GetRequestStatusResponse> GetRequestStatus(GetRequestStatusRequest req)
+        {
+             JsonResponseModel<GetRequestStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRequestStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口根据指定的查询条件返回函数单个请求运行状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetRequestStatusRequest"/></param>
+        /// <returns><see cref="GetRequestStatusResponse"/></returns>
+        public GetRequestStatusResponse GetRequestStatusSync(GetRequestStatusRequest req)
+        {
+             JsonResponseModel<GetRequestStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRequestStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRequestStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取函数的最大独占配额详情。
         /// </summary>
         /// <param name="req"><see cref="GetReservedConcurrencyConfigRequest"/></param>

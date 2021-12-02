@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public DBInstanceNetInfo[] DBInstanceNetInfo{ get; set; }
 
         /// <summary>
-        /// 只读组网络信息列表
+        /// 只读组网络信息列表（此字段已废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkAccessList")]

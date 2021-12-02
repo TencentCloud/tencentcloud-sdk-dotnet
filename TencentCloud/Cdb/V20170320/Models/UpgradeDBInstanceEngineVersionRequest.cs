@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("UpgradeSubversion")]
         public long? UpgradeSubversion{ get; set; }
 
+        /// <summary>
+        /// 延迟阈值。取值范围1~10
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public long? MaxDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
             this.SetParamSimple(map, prefix + "UpgradeSubversion", this.UpgradeSubversion);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         }
     }
 }

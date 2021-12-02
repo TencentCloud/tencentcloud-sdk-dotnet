@@ -43,7 +43,7 @@ namespace TencentCloud.Domain.V20180808.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 认证状态：未实名认证:NotUpload, 实名审核中:InAudit，已实名认证:Approved，实名审核失败:Reject
+        /// 认证状态：未实名审核:NotUpload, 实名审核中:InAudit，已实名审核:Approved，实名审核失败:Reject，更新手机邮箱:NotVerified。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

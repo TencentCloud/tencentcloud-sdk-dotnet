@@ -47,8 +47,8 @@ namespace TencentCloud.Cme.V20191029.Models
 
         /// <summary>
         /// 导出目标，指定导出视频的目标媒资库，可取值有：
-        /// <li>CME：云剪，即导出为云剪媒资库，此导出目标在云点播媒资库依然可见；</li>
-        /// <li>VOD：云点播，即导出为云点播媒资库，此导出目标在云剪媒资库将不可见。</li>
+        /// <li>CME：多媒体创作引擎，即导出为多媒体创作引擎媒资库，此导出目标在云点播媒资库依然可见；</li>
+        /// <li>VOD：云点播，即导出为云点播媒资库，此导出目标在多媒体创作引擎媒资库将不可见。</li>
         /// </summary>
         [JsonProperty("ExportDestination")]
         public string ExportDestination{ get; set; }
@@ -60,7 +60,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public SlotReplacementInfo[] SlotReplacements{ get; set; }
 
         /// <summary>
-        /// 导出的云剪媒资信息。当导出目标为 CME 时必填。
+        /// 导出的多媒体创作引擎媒资信息。当导出目标为 CME 时必填。
         /// </summary>
         [JsonProperty("CMEExportInfo")]
         public CMEExportInfo CMEExportInfo{ get; set; }

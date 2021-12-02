@@ -28,7 +28,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 封装格式，可选值：
         /// <li>mp4 </li>
         /// <li>mov </li>
-        /// 不填则默认使用导出模板中的值。
+        /// 不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("Container")]
         public string Container{ get; set; }
@@ -39,23 +39,29 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 例如：项目的宽高比是 16：9 ：
         /// <li>短边尺寸为 1080，则导出视频的分辨率为 1920 * 1080。</li>
         /// <li>短边尺寸为 720，则导出视频的分辨率为 1280 * 720</li>
-        /// 不填则默认使用导出模板中对的值。
+        /// 不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("ShortEdge")]
         public ulong? ShortEdge{ get; set; }
 
         /// <summary>
         /// 指定码率，单位 bps。当该参数为 0 时则不强制限定码率。
-        /// 不填则默认使用导出模板中的值。
+        /// 不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("VideoBitrate")]
         public ulong? VideoBitrate{ get; set; }
 
         /// <summary>
+        /// 帧率。取值范围：[15, 60]，不填默认值为 25。
+        /// </summary>
+        [JsonProperty("FrameRate")]
+        public float? FrameRate{ get; set; }
+
+        /// <summary>
         /// 是否去除视频数据，可选值：
         /// <li>0：保留；</li>
         /// <li>1：去除。</li>
-        /// 不填则默认使用导出模板中对的值。
+        /// 不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("RemoveVideo")]
         public long? RemoveVideo{ get; set; }
@@ -64,7 +70,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// 是否去除音频数据，可选值：
         /// <li>0：保留；</li>
         /// <li>1：去除。</li>
-        /// 不填则默认使用导出模板中对的值。
+        /// 不填则使用视频导出编码配置。
         /// </summary>
         [JsonProperty("RemoveAudio")]
         public long? RemoveAudio{ get; set; }
@@ -90,6 +96,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamSimple(map, prefix + "ShortEdge", this.ShortEdge);
             this.SetParamSimple(map, prefix + "VideoBitrate", this.VideoBitrate);
+            this.SetParamSimple(map, prefix + "FrameRate", this.FrameRate);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);

@@ -25,7 +25,7 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 导出的云剪素材 MaterialId，仅当导出为云剪素材时有效。
+        /// 导出的多媒体创作引擎媒体 Id，仅当导出目标为多媒体创作引擎媒体时有效。
         /// </summary>
         [JsonProperty("MaterialId")]
         public string MaterialId{ get; set; }

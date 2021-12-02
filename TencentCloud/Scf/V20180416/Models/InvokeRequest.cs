@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string InvocationType{ get; set; }
 
         /// <summary>
-        /// 触发函数的版本号或别名
+        /// 触发函数的版本号或别名，默认值为 $LATEST
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

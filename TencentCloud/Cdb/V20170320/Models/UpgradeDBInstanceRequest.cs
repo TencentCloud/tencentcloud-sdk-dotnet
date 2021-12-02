@@ -102,6 +102,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("FastUpgrade")]
         public long? FastUpgrade{ get; set; }
 
+        /// <summary>
+        /// 延迟阈值。取值范围1~10，默认值为10。
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public long? MaxDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         }
     }
 }

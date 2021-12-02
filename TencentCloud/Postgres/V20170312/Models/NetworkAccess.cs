@@ -25,14 +25,14 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 网络资源id，实例id或RO组id(此字段已废弃)
+        /// 网络资源id，实例id或RO组id
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 资源类型，1-实例 2-RO组(此字段已废弃)
+        /// 资源类型，1-实例 2-RO组
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ResourceType")]

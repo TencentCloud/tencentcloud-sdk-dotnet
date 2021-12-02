@@ -24,12 +24,47 @@ namespace TencentCloud.Waf.V20180125.Models
     public class DescribeAccessFastAnalysisRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 客户要查询的日志主题ID，每个客户都有对应的一个主题
+        /// </summary>
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// 要查询的日志的起始时间，Unix时间戳，单位ms
+        /// </summary>
+        [JsonProperty("From")]
+        public long? From{ get; set; }
+
+        /// <summary>
+        /// 要查询的日志的结束时间，Unix时间戳，单位ms
+        /// </summary>
+        [JsonProperty("To")]
+        public long? To{ get; set; }
+
+        /// <summary>
+        /// 查询语句，语句长度最大为4096，由于本接口是分析接口，如果无过滤条件，必须传 * 表示匹配所有，参考CLS的分析统计语句的文档
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
+
+        /// <summary>
+        /// 需要分析统计的字段名
+        /// </summary>
+        [JsonProperty("FieldName")]
+        public string FieldName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "To", this.To);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
+            this.SetParamSimple(map, prefix + "FieldName", this.FieldName);
         }
     }
 }

@@ -47,7 +47,7 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>VOD：云点播文件；</li>
         /// <li>EXTERNAL：媒资绑定。</li>
         /// 
-        /// 注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。另外，导入云点播的文件，使用云点播的子应用 Id 必须与创建云剪平台时使用的云点播子应用一致。
+        /// 注意：如果不填默认为云点播文件，如果媒体存储在非腾讯云点播中，都需要使用媒资绑定。另外，导入云点播的文件，使用云点播的子应用 Id 必须与创建多媒体创作引擎平台时使用的云点播子应用一致。
         /// </summary>
         [JsonProperty("SourceType")]
         public string SourceType{ get; set; }

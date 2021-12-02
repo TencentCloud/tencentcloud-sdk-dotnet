@@ -229,7 +229,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBKernelVersion{ get; set; }
 
         /// <summary>
-        /// 实例网络信息列表
+        /// 实例网络信息列表（此字段已废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkAccessList")]

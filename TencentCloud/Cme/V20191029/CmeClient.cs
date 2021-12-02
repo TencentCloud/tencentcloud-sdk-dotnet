@@ -213,7 +213,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建云剪项目，目前支持的项目类型有：
+        /// 创建多媒体创作引擎项目，目前支持的项目类型有：
         /// <li>视频剪辑项目：用于普通视频剪辑；</li>
         /// <li>直播剪辑项目：用于直播流剪辑；</li>
         /// <li>导播台项目：用于云导播台；</li>
@@ -239,7 +239,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 创建云剪项目，目前支持的项目类型有：
+        /// 创建多媒体创作引擎项目，目前支持的项目类型有：
         /// <li>视频剪辑项目：用于普通视频剪辑；</li>
         /// <li>直播剪辑项目：用于直播流剪辑；</li>
         /// <li>导播台项目：用于云导播台；</li>
@@ -389,7 +389,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 删除用户登录态，使用户登出云剪平台。
+        /// 删除用户登录态，使用户登出多媒体创作引擎平台。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginStatusRequest"/></param>
         /// <returns><see cref="DeleteLoginStatusResponse"/></returns>
@@ -409,7 +409,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 删除用户登录态，使用户登出云剪平台。
+        /// 删除用户登录态，使用户登出多媒体创作引擎平台。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoginStatusRequest"/></param>
         /// <returns><see cref="DeleteLoginStatusResponse"/></returns>
@@ -1557,7 +1557,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播媒资文件导入到云剪媒体资源库。支持导入媒体归属团队或者个人。
+        /// 将云点播媒资文件导入到多媒体创作引擎媒体资源库。支持导入媒体归属团队或者个人。
         /// </summary>
         /// <param name="req"><see cref="ImportMaterialRequest"/></param>
         /// <returns><see cref="ImportMaterialResponse"/></returns>
@@ -1577,7 +1577,7 @@ namespace TencentCloud.Cme.V20191029
         }
 
         /// <summary>
-        /// 将云点播媒资文件导入到云剪媒体资源库。支持导入媒体归属团队或者个人。
+        /// 将云点播媒资文件导入到多媒体创作引擎媒体资源库。支持导入媒体归属团队或者个人。
         /// </summary>
         /// <param name="req"><see cref="ImportMaterialRequest"/></param>
         /// <returns><see cref="ImportMaterialResponse"/></returns>

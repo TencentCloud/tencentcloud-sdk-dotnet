@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.417</VersionPrefix>
+    <VersionPrefix>3.0.418</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -711,6 +711,8 @@
     <Compile Include="Apm\V20210622\Models\ApmAgentInfo.cs" />
     <Compile Include="Apm\V20210622\Models\ApmInstanceDetail.cs" />
     <Compile Include="Apm\V20210622\Models\ApmTag.cs" />
+    <Compile Include="Apm\V20210622\Models\CreateApmInstanceRequest.cs" />
+    <Compile Include="Apm\V20210622\Models\CreateApmInstanceResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmAgentRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmAgentResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmInstancesRequest.cs" />
@@ -11641,6 +11643,8 @@
     <Compile Include="Scf\V20180416\Models\GetLayerVersionResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetProvisionedConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\GetRequestStatusRequest.cs" />
+    <Compile Include="Scf\V20180416\Models\GetRequestStatusResponse.cs" />
     <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\GetReservedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\ImageConfig.cs" />
@@ -11685,6 +11689,7 @@
     <Compile Include="Scf\V20180416\Models\PutReservedConcurrencyConfigResponse.cs" />
     <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigRequest.cs" />
     <Compile Include="Scf\V20180416\Models\PutTotalConcurrencyConfigResponse.cs" />
+    <Compile Include="Scf\V20180416\Models\RequestStatus.cs" />
     <Compile Include="Scf\V20180416\Models\Result.cs" />
     <Compile Include="Scf\V20180416\Models\RetryConfig.cs" />
     <Compile Include="Scf\V20180416\Models\RoutingConfig.cs" />
