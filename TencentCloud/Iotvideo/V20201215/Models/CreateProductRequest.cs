@@ -78,6 +78,12 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         [JsonProperty("EncryptionType")]
         public ulong? EncryptionType{ get; set; }
 
+        /// <summary>
+        /// 连接类型，wifi表示WIFI连接，cellular表示4G连接
+        /// </summary>
+        [JsonProperty("NetType")]
+        public string NetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
             this.SetParamSimple(map, prefix + "ChipId", this.ChipId);
             this.SetParamSimple(map, prefix + "ProductDescription", this.ProductDescription);
             this.SetParamSimple(map, prefix + "EncryptionType", this.EncryptionType);
+            this.SetParamSimple(map, prefix + "NetType", this.NetType);
         }
     }
 }

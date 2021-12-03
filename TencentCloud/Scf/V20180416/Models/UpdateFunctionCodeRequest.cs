@@ -67,6 +67,12 @@ namespace TencentCloud.Scf.V20180416.Models
         public string CosBucketRegion{ get; set; }
 
         /// <summary>
+        /// 是否自动安装依赖
+        /// </summary>
+        [JsonProperty("InstallDependency")]
+        public string InstallDependency{ get; set; }
+
+        /// <summary>
         /// 函数所属环境
         /// </summary>
         [JsonProperty("EnvId")]
@@ -103,6 +109,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "ZipFile", this.ZipFile);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "CosBucketRegion", this.CosBucketRegion);
+            this.SetParamSimple(map, prefix + "InstallDependency", this.InstallDependency);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "Publish", this.Publish);
             this.SetParamObj(map, prefix + "Code.", this.Code);

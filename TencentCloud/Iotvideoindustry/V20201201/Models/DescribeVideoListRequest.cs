@@ -102,6 +102,30 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
 
+        /// <summary>
+        /// 录制计划ID
+        /// </summary>
+        [JsonProperty("PlanId")]
+        public string PlanId{ get; set; }
+
+        /// <summary>
+        /// 场景ID
+        /// </summary>
+        [JsonProperty("SceneId")]
+        public long? SceneId{ get; set; }
+
+        /// <summary>
+        /// 告警ID
+        /// </summary>
+        [JsonProperty("WarnId")]
+        public long? WarnId{ get; set; }
+
+        /// <summary>
+        /// 录制类型 1: 联动计划录制 2: 告警录制
+        /// </summary>
+        [JsonProperty("RecordType")]
+        public long?[] RecordType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +145,10 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "EndFileSize", this.EndFileSize);
             this.SetParamSimple(map, prefix + "IsRecording", this.IsRecording);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
+            this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "SceneId", this.SceneId);
+            this.SetParamSimple(map, prefix + "WarnId", this.WarnId);
+            this.SetParamArraySimple(map, prefix + "RecordType.", this.RecordType);
         }
     }
 }

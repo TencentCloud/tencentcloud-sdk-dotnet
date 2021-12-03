@@ -57,6 +57,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("Granularity")]
         public ulong? Granularity{ get; set; }
 
+        /// <summary>
+        /// 运营商（通道为三网通道时有效），支持CMCC，CUCC，CTCC，传空值或不传则合并三个运营商数据
+        /// </summary>
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "MetricNames.", this.MetricNames);
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
         }
     }
 }

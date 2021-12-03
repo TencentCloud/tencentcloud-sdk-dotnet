@@ -21,33 +21,26 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RocketMQNamespace : AbstractModel
+    public class DescribeAllTenantsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 命名空间名称，3-64个字符，只能包含字母、数字、“-”及“_”
+        /// 总条数
         /// </summary>
-        [JsonProperty("NamespaceId")]
-        public string NamespaceId{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 未消费消息的保留时间，以毫秒单位，范围60秒到15天
+        /// 虚拟集群列表
         /// </summary>
-        [JsonProperty("Ttl")]
-        public ulong? Ttl{ get; set; }
+        [JsonProperty("Tenants")]
+        public InternalTenant[] Tenants{ get; set; }
 
         /// <summary>
-        /// 消息持久化后保留的时间，以毫秒单位
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RetentionTime")]
-        public ulong? RetentionTime{ get; set; }
-
-        /// <summary>
-        /// 说明
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -55,10 +48,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-            this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
-            this.SetParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Tenants.", this.Tenants);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -24,12 +24,48 @@ namespace TencentCloud.Tdmq.V20200217.Models
     public class RocketMQTopic : AbstractModel
     {
         
+        /// <summary>
+        /// 主题名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 说明
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 读写分区数
+        /// </summary>
+        [JsonProperty("PartitionNum")]
+        public ulong? PartitionNum{ get; set; }
+
+        /// <summary>
+        /// 创建时间，以毫秒为单位
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 创建时间，以毫秒为单位
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public ulong? UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

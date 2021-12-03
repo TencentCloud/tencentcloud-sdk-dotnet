@@ -66,6 +66,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("AuthorizedArea")]
         public string AuthorizedArea{ get; set; }
 
+        /// <summary>
+        /// 标签数组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public string[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "ArtistName", this.ArtistName);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "AuthorizedArea", this.AuthorizedArea);
+            this.SetParamArraySimple(map, prefix + "Tags.", this.Tags);
         }
     }
 }

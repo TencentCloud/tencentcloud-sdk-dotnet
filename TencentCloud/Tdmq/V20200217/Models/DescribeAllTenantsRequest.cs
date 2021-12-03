@@ -21,51 +21,56 @@ namespace TencentCloud.Tdmq.V20200217.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RocketMQClusterInfo : AbstractModel
+    public class DescribeAllTenantsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 集群ID
+        /// 查询偏移量
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 查询限制条数
+        /// </summary>
+        [JsonProperty("Limit")]
+        public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 物理集群名称
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
         /// <summary>
-        /// 地域信息
+        /// 虚拟集群ID
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("TenantId")]
+        public string TenantId{ get; set; }
 
         /// <summary>
-        /// 创建时间，毫秒为单位
+        /// 虚拟集群名称
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
+        [JsonProperty("TenantName")]
+        public string TenantName{ get; set; }
 
         /// <summary>
-        /// 集群说明信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 协议类型数组
         /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
+        [JsonProperty("Types")]
+        public string[] Types{ get; set; }
 
         /// <summary>
-        /// 公网接入地址
+        /// 排序字段名，支持createTime，updateTime
         /// </summary>
-        [JsonProperty("PublicEndPoint")]
-        public string PublicEndPoint{ get; set; }
+        [JsonProperty("SortBy")]
+        public string SortBy{ get; set; }
 
         /// <summary>
-        /// VPC接入地址
+        /// 升序排列ASC，降序排列DESC
         /// </summary>
-        [JsonProperty("VpcEndPoint")]
-        public string VpcEndPoint{ get; set; }
+        [JsonProperty("SortOrder")]
+        public string SortOrder{ get; set; }
 
 
         /// <summary>
@@ -73,13 +78,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
-            this.SetParamSimple(map, prefix + "PublicEndPoint", this.PublicEndPoint);
-            this.SetParamSimple(map, prefix + "VpcEndPoint", this.VpcEndPoint);
+            this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
+            this.SetParamSimple(map, prefix + "TenantName", this.TenantName);
+            this.SetParamArraySimple(map, prefix + "Types.", this.Types);
+            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
+            this.SetParamSimple(map, prefix + "SortOrder", this.SortOrder);
         }
     }
 }

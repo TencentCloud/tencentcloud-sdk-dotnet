@@ -1893,6 +1893,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取某个租户的虚拟集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllTenantsRequest"/></param>
+        /// <returns><see cref="DescribeAllTenantsResponse"/></returns>
+        public async Task<DescribeAllTenantsResponse> DescribeAllTenants(DescribeAllTenantsRequest req)
+        {
+             JsonResponseModel<DescribeAllTenantsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAllTenants");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllTenantsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取某个租户的虚拟集群列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAllTenantsRequest"/></param>
+        /// <returns><see cref="DescribeAllTenantsResponse"/></returns>
+        public DescribeAllTenantsResponse DescribeAllTenantsSync(DescribeAllTenantsRequest req)
+        {
+             JsonResponseModel<DescribeAllTenantsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAllTenants");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllTenantsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取用户绑定的专享集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBindClustersRequest"/></param>

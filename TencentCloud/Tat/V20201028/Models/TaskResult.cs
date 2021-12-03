@@ -54,6 +54,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("Dropped")]
         public ulong? Dropped{ get; set; }
 
+        /// <summary>
+        /// 日志在cos中的地址
+        /// </summary>
+        [JsonProperty("OutputUrl")]
+        public string OutputUrl{ get; set; }
+
+        /// <summary>
+        /// 日志上传cos的错误信息。
+        /// </summary>
+        [JsonProperty("OutputUploadCOSErrorInfo")]
+        public string OutputUploadCOSErrorInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "ExecStartTime", this.ExecStartTime);
             this.SetParamSimple(map, prefix + "ExecEndTime", this.ExecEndTime);
             this.SetParamSimple(map, prefix + "Dropped", this.Dropped);
+            this.SetParamSimple(map, prefix + "OutputUrl", this.OutputUrl);
+            this.SetParamSimple(map, prefix + "OutputUploadCOSErrorInfo", this.OutputUploadCOSErrorInfo);
         }
     }
 }

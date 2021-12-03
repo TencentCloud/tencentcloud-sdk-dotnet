@@ -67,6 +67,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public float? P2PPeakValue{ get; set; }
 
         /// <summary>
+        /// RTMP推流路数 ( 直播推流)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LivePushTotal")]
+        public long? LivePushTotal{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +91,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "StorageUsage", this.StorageUsage);
             this.SetParamSimple(map, prefix + "P2PFluxTotal", this.P2PFluxTotal);
             this.SetParamSimple(map, prefix + "P2PPeakValue", this.P2PPeakValue);
+            this.SetParamSimple(map, prefix + "LivePushTotal", this.LivePushTotal);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

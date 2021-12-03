@@ -42,6 +42,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("CreatedOn")]
         public string CreatedOn{ get; set; }
 
+        /// <summary>
+        /// 1=控制台校验，2=第三方校验
+        /// </summary>
+        [JsonProperty("CheckStatus")]
+        public long? CheckStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "Code", this.Code);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
         }
     }
 }

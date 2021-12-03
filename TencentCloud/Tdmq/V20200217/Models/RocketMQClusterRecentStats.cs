@@ -24,12 +24,40 @@ namespace TencentCloud.Tdmq.V20200217.Models
     public class RocketMQClusterRecentStats : AbstractModel
     {
         
+        /// <summary>
+        /// Topic数量
+        /// </summary>
+        [JsonProperty("TopicNum")]
+        public ulong? TopicNum{ get; set; }
+
+        /// <summary>
+        /// 消息生产数
+        /// </summary>
+        [JsonProperty("ProducedMsgNum")]
+        public ulong? ProducedMsgNum{ get; set; }
+
+        /// <summary>
+        /// 消息消费数
+        /// </summary>
+        [JsonProperty("ConsumedMsgNum")]
+        public ulong? ConsumedMsgNum{ get; set; }
+
+        /// <summary>
+        /// 消息堆积数
+        /// </summary>
+        [JsonProperty("AccumulativeMsgNum")]
+        public ulong? AccumulativeMsgNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TopicNum", this.TopicNum);
+            this.SetParamSimple(map, prefix + "ProducedMsgNum", this.ProducedMsgNum);
+            this.SetParamSimple(map, prefix + "ConsumedMsgNum", this.ConsumedMsgNum);
+            this.SetParamSimple(map, prefix + "AccumulativeMsgNum", this.AccumulativeMsgNum);
         }
     }
 }

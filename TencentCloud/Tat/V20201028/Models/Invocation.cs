@@ -138,6 +138,18 @@ namespace TencentCloud.Tat.V20201028.Models
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
+        /// <summary>
+        /// 日志上传的cos bucket 地址。
+        /// </summary>
+        [JsonProperty("OutputCOSBucketUrl")]
+        public string OutputCOSBucketUrl{ get; set; }
+
+        /// <summary>
+        /// 日志在cos bucket中的目录。
+        /// </summary>
+        [JsonProperty("OutputCOSKeyPrefix")]
+        public string OutputCOSKeyPrefix{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +174,8 @@ namespace TencentCloud.Tat.V20201028.Models
             this.SetParamSimple(map, prefix + "CommandType", this.CommandType);
             this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
             this.SetParamSimple(map, prefix + "WorkingDirectory", this.WorkingDirectory);
+            this.SetParamSimple(map, prefix + "OutputCOSBucketUrl", this.OutputCOSBucketUrl);
+            this.SetParamSimple(map, prefix + "OutputCOSKeyPrefix", this.OutputCOSKeyPrefix);
         }
     }
 }

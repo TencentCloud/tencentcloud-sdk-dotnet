@@ -49,19 +49,19 @@ namespace TencentCloud.Tat.V20201028.Models
         public string Content{ get; set; }
 
         /// <summary>
-        /// 命令类型，目前仅支持取值：SHELL。
+        /// 命令类型，目前支持取值：SHELL、POWERSHELL。
         /// </summary>
         [JsonProperty("CommandType")]
         public string CommandType{ get; set; }
 
         /// <summary>
-        /// 命令执行路径，默认：`/root`。
+        /// 命令执行路径。
         /// </summary>
         [JsonProperty("WorkingDirectory")]
         public string WorkingDirectory{ get; set; }
 
         /// <summary>
-        /// 命令超时时间，默认60秒。取值范围[1, 86400]。
+        /// 命令超时时间。取值范围[1, 86400]。
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }
@@ -79,7 +79,7 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。默认情况下，在Linux实例中以root用户执行命令。
+        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }

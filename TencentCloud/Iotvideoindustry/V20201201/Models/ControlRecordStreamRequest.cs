@@ -39,6 +39,10 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         /// <summary>
         /// |控制参数，CmdJson结构转义的json字符串。| Action  | string  |是|控制动作，play(用于暂停后恢复播放)、pause（暂停）、teardown(停止)、jump(拖动播放)
         /// | Offset  | uint  |否|拖动播放时的时间偏移量（相对于起始时间）,单位：秒
+        /// 目前支持的command：
+        /// "Command": "{"Action":"PAUSE"}" 暂停
+        /// "Command": "{"Action":"PLAY"}" 暂停恢复
+        /// "Command": "{"Action":"PLAY","Offset":"15"}" 位置偏移，可以替代jump操作
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
