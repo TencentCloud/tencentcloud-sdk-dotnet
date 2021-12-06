@@ -64,6 +64,18 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("LockTransfer")]
         public bool? LockTransfer{ get; set; }
 
+        /// <summary>
+        /// 是否开启更新锁：0=默认不开启，1=开启
+        /// </summary>
+        [JsonProperty("UpdateProhibition")]
+        public long? UpdateProhibition{ get; set; }
+
+        /// <summary>
+        /// 是否开启转移锁：0=默认不开启，1=开启
+        /// </summary>
+        [JsonProperty("TransferProhibition")]
+        public long? TransferProhibition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +88,8 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "LockTransfer", this.LockTransfer);
+            this.SetParamSimple(map, prefix + "UpdateProhibition", this.UpdateProhibition);
+            this.SetParamSimple(map, prefix + "TransferProhibition", this.TransferProhibition);
         }
     }
 }

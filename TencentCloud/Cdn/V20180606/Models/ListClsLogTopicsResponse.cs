@@ -25,17 +25,24 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 日志集信息
+        /// 上海区域日志集信息
         /// </summary>
         [JsonProperty("Logset")]
         public LogSetInfo Logset{ get; set; }
 
         /// <summary>
-        /// 日志主题信息列表
+        /// 上海区域日志主题信息列表
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Topics")]
         public TopicInfo[] Topics{ get; set; }
+
+        /// <summary>
+        /// 其他区域日志集信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtraLogset")]
+        public ExtraLogset[] ExtraLogset{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +58,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamObj(map, prefix + "Logset.", this.Logset);
             this.SetParamArrayObj(map, prefix + "Topics.", this.Topics);
+            this.SetParamArrayObj(map, prefix + "ExtraLogset.", this.ExtraLogset);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

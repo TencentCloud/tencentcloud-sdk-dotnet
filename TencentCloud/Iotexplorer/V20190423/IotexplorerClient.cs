@@ -1813,6 +1813,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="GenSingleDeviceSignatureOfPublicRequest"/></param>
+        /// <returns><see cref="GenSingleDeviceSignatureOfPublicResponse"/></returns>
+        public async Task<GenSingleDeviceSignatureOfPublicResponse> GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req)
+        {
+             JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenSingleDeviceSignatureOfPublic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        /// <param name="req"><see cref="GenSingleDeviceSignatureOfPublicRequest"/></param>
+        /// <returns><see cref="GenSingleDeviceSignatureOfPublicResponse"/></returns>
+        public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublicSync(GenSingleDeviceSignatureOfPublicRequest req)
+        {
+             JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenSingleDeviceSignatureOfPublic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列出量产数据列表信息。
         /// </summary>
         /// <param name="req"><see cref="GetBatchProductionsListRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.419</VersionPrefix>
+    <VersionPrefix>3.0.420</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2095,6 +2095,8 @@
     <Compile Include="Ccc\V20200210\Models\CreateUserSigResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeCCCBuyInfoListRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeCCCBuyInfoListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeCallInMetricsRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeCallInMetricsResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeChatMessagesRequest.cs" />
@@ -2124,10 +2126,14 @@
     <Compile Include="Ccc\V20200210\Models\MessageBody.cs" />
     <Compile Include="Ccc\V20200210\Models\PSTNSession.cs" />
     <Compile Include="Ccc\V20200210\Models\PSTNSessionInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\PackageBuyInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\PhoneNumBuyInfo.cs" />
+    <Compile Include="Ccc\V20200210\Models\SdkAppIdBuyInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\SeatUserInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\ServeParticipant.cs" />
     <Compile Include="Ccc\V20200210\Models\SkillGroupInfoItem.cs" />
     <Compile Include="Ccc\V20200210\Models\SkillGroupItem.cs" />
+    <Compile Include="Ccc\V20200210\Models\StaffBuyInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\StaffInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\StaffStatusExtra.cs" />
     <Compile Include="Ccc\V20200210\Models\StaffStatusMetrics.cs" />
@@ -2609,6 +2615,7 @@
     <Compile Include="Cdn\V20180606\Models\ErrorPage.cs" />
     <Compile Include="Cdn\V20180606\Models\ErrorPageRule.cs" />
     <Compile Include="Cdn\V20180606\Models\EventLogStatsData.cs" />
+    <Compile Include="Cdn\V20180606\Models\ExtraLogset.cs" />
     <Compile Include="Cdn\V20180606\Models\FollowRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\ForceRedirect.cs" />
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsRequest.cs" />
@@ -4072,6 +4079,7 @@
     <Compile Include="Cpdp\V20190820\Models\ApplyTradeResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\AssignmentData.cs" />
     <Compile Include="Cpdp\V20190820\Models\BankCardItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountResponse.cs" />
@@ -4150,6 +4158,8 @@
     <Compile Include="Cpdp\V20190820\Models\CreateSinglePaymentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateTransferBatchRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateTransferBatchResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeduceQuotaRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\DeduceQuotaResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
@@ -4232,6 +4242,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryAnchorContractInfoResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryApplicationMaterialResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAssignmentRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryAssignmentResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBalanceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryBankClearRequest.cs" />
@@ -8617,6 +8629,7 @@
     <Compile Include="Iotexplorer\V20190423\Models\DeviceDataHistoryItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DeviceInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DevicePositionItem.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DeviceSignatureInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DevicesItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DirectBindDeviceInFamilyRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DirectBindDeviceInFamilyResponse.cs" />
@@ -8630,6 +8643,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\FenceBindProductItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FenceEventItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FirmwareInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GenSingleDeviceSignatureOfPublicRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GenSingleDeviceSignatureOfPublicResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetBatchProductionsListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetBatchProductionsListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetCOSURLRequest.cs" />

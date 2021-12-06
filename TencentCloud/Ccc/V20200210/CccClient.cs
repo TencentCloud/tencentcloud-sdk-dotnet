@@ -253,6 +253,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取用户购买信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCCBuyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeCCCBuyInfoListResponse"/></returns>
+        public async Task<DescribeCCCBuyInfoListResponse> DescribeCCCBuyInfoList(DescribeCCCBuyInfoListRequest req)
+        {
+             JsonResponseModel<DescribeCCCBuyInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCCBuyInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCCBuyInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户购买信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCCBuyInfoListRequest"/></param>
+        /// <returns><see cref="DescribeCCCBuyInfoListResponse"/></returns>
+        public DescribeCCCBuyInfoListResponse DescribeCCCBuyInfoListSync(DescribeCCCBuyInfoListRequest req)
+        {
+             JsonResponseModel<DescribeCCCBuyInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCCBuyInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCCBuyInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取呼入实时数据统计指标
         /// </summary>
         /// <param name="req"><see cref="DescribeCallInMetricsRequest"/></param>

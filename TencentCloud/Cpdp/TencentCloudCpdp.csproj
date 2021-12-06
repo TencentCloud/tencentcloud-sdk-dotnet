@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.419</VersionPrefix>
+    <VersionPrefix>3.0.420</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,7 @@
     <Compile Include="V20190820\Models\ApplyTradeResult.cs" />
     <Compile Include="V20190820\Models\ApplyWithdrawalRequest.cs" />
     <Compile Include="V20190820\Models\ApplyWithdrawalResponse.cs" />
+    <Compile Include="V20190820\Models\AssignmentData.cs" />
     <Compile Include="V20190820\Models\BankCardItem.cs" />
     <Compile Include="V20190820\Models\BindAccountRequest.cs" />
     <Compile Include="V20190820\Models\BindAccountResponse.cs" />
@@ -158,6 +159,8 @@
     <Compile Include="V20190820\Models\CreateSinglePaymentResponse.cs" />
     <Compile Include="V20190820\Models\CreateTransferBatchRequest.cs" />
     <Compile Include="V20190820\Models\CreateTransferBatchResponse.cs" />
+    <Compile Include="V20190820\Models\DeduceQuotaRequest.cs" />
+    <Compile Include="V20190820\Models\DeduceQuotaResponse.cs" />
     <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfoRequest.cs" />
     <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfoResponse.cs" />
     <Compile Include="V20190820\Models\DeleteAgentTaxPaymentInfosRequest.cs" />
@@ -240,6 +243,8 @@
     <Compile Include="V20190820\Models\QueryAnchorContractInfoResponse.cs" />
     <Compile Include="V20190820\Models\QueryApplicationMaterialRequest.cs" />
     <Compile Include="V20190820\Models\QueryApplicationMaterialResponse.cs" />
+    <Compile Include="V20190820\Models\QueryAssignmentRequest.cs" />
+    <Compile Include="V20190820\Models\QueryAssignmentResponse.cs" />
     <Compile Include="V20190820\Models\QueryBalanceRequest.cs" />
     <Compile Include="V20190820\Models\QueryBalanceResponse.cs" />
     <Compile Include="V20190820\Models\QueryBankClearRequest.cs" />
