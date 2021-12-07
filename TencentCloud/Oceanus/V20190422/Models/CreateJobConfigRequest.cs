@@ -96,6 +96,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("TaskManagerSpec")]
         public float? TaskManagerSpec{ get; set; }
 
+        /// <summary>
+        /// CLS日志集ID
+        /// </summary>
+        [JsonProperty("ClsLogsetId")]
+        public string ClsLogsetId{ get; set; }
+
+        /// <summary>
+        /// CLS日志主题ID
+        /// </summary>
+        [JsonProperty("ClsTopicId")]
+        public string ClsTopicId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "LogCollect", this.LogCollect);
             this.SetParamSimple(map, prefix + "JobManagerSpec", this.JobManagerSpec);
             this.SetParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
+            this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
+            this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
         }
     }
 }

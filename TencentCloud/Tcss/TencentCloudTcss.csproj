@@ -1,0 +1,464 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{A2754E8E-D3F5-3C64-B47D-D71D9942EFB6}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.421</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Tcss</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201101\TcssClient.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessChildRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessEventDescription.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessEventInfo.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AbnormalProcessSystemChildRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AccessControlChildRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AccessControlEventDescription.cs" />
+    <Compile Include="V20201101\Models\AccessControlEventInfo.cs" />
+    <Compile Include="V20201101\Models\AccessControlRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AccessControlSystemChildRuleInfo.cs" />
+    <Compile Include="V20201101\Models\AddAssetImageRegistryRegistryDetailRequest.cs" />
+    <Compile Include="V20201101\Models\AddAssetImageRegistryRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\AddCompliancePolicyItemToWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\AddCompliancePolicyItemToWhitelistResponse.cs" />
+    <Compile Include="V20201101\Models\AddEditAbnormalProcessRuleRequest.cs" />
+    <Compile Include="V20201101\Models\AddEditAbnormalProcessRuleResponse.cs" />
+    <Compile Include="V20201101\Models\AddEditAccessControlRuleRequest.cs" />
+    <Compile Include="V20201101\Models\AddEditAccessControlRuleResponse.cs" />
+    <Compile Include="V20201101\Models\AddEditReverseShellWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\AddEditReverseShellWhiteListResponse.cs" />
+    <Compile Include="V20201101\Models\AddEditRiskSyscallWhiteListRequest.cs" />
+    <Compile Include="V20201101\Models\AddEditRiskSyscallWhiteListResponse.cs" />
+    <Compile Include="V20201101\Models\AddEditWarningRulesRequest.cs" />
+    <Compile Include="V20201101\Models\AddEditWarningRulesResponse.cs" />
+    <Compile Include="V20201101\Models\AffectedNodeItem.cs" />
+    <Compile Include="V20201101\Models\AffectedWorkloadItem.cs" />
+    <Compile Include="V20201101\Models\AssetFilters.cs" />
+    <Compile Include="V20201101\Models\AssetSimpleImageInfo.cs" />
+    <Compile Include="V20201101\Models\CheckRepeatAssetImageRegistryRequest.cs" />
+    <Compile Include="V20201101\Models\CheckRepeatAssetImageRegistryResponse.cs" />
+    <Compile Include="V20201101\Models\ClusterCheckItem.cs" />
+    <Compile Include="V20201101\Models\ClusterCheckTaskItem.cs" />
+    <Compile Include="V20201101\Models\ClusterCreateComponentItem.cs" />
+    <Compile Include="V20201101\Models\ClusterInfoItem.cs" />
+    <Compile Include="V20201101\Models\ClusterRiskItem.cs" />
+    <Compile Include="V20201101\Models\ComplianceAffectedAsset.cs" />
+    <Compile Include="V20201101\Models\ComplianceAssetDetailInfo.cs" />
+    <Compile Include="V20201101\Models\ComplianceAssetInfo.cs" />
+    <Compile Include="V20201101\Models\ComplianceAssetPolicyItem.cs" />
+    <Compile Include="V20201101\Models\ComplianceAssetSummary.cs" />
+    <Compile Include="V20201101\Models\ComplianceBenchmarkStandard.cs" />
+    <Compile Include="V20201101\Models\ComplianceBenchmarkStandardEnable.cs" />
+    <Compile Include="V20201101\Models\ComplianceContainerDetailInfo.cs" />
+    <Compile Include="V20201101\Models\ComplianceFilters.cs" />
+    <Compile Include="V20201101\Models\ComplianceHostDetailInfo.cs" />
+    <Compile Include="V20201101\Models\ComplianceImageDetailInfo.cs" />
+    <Compile Include="V20201101\Models\ComplianceK8SDetailInfo.cs" />
+    <Compile Include="V20201101\Models\CompliancePeriodTask.cs" />
+    <Compile Include="V20201101\Models\CompliancePeriodTaskRule.cs" />
+    <Compile Include="V20201101\Models\CompliancePolicyItemSummary.cs" />
+    <Compile Include="V20201101\Models\ComplianceScanFailedAsset.cs" />
+    <Compile Include="V20201101\Models\ComplianceWhitelistItem.cs" />
+    <Compile Include="V20201101\Models\ComponentInfo.cs" />
+    <Compile Include="V20201101\Models\ComponentsInfo.cs" />
+    <Compile Include="V20201101\Models\ContainerInfo.cs" />
+    <Compile Include="V20201101\Models\ContainerMount.cs" />
+    <Compile Include="V20201101\Models\ContainerNetwork.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskOneKeyResponse.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageRegistryScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageScanSettingRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageScanSettingResponse.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateAssetImageScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\CreateCheckComponentRequest.cs" />
+    <Compile Include="V20201101\Models\CreateCheckComponentResponse.cs" />
+    <Compile Include="V20201101\Models\CreateClusterCheckTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateClusterCheckTaskResponse.cs" />
+    <Compile Include="V20201101\Models\CreateComplianceTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateComplianceTaskResponse.cs" />
+    <Compile Include="V20201101\Models\CreateExportComplianceStatusListJobRequest.cs" />
+    <Compile Include="V20201101\Models\CreateExportComplianceStatusListJobResponse.cs" />
+    <Compile Include="V20201101\Models\CreateOrModifyPostPayCoresRequest.cs" />
+    <Compile Include="V20201101\Models\CreateOrModifyPostPayCoresResponse.cs" />
+    <Compile Include="V20201101\Models\CreateRefreshTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateRefreshTaskResponse.cs" />
+    <Compile Include="V20201101\Models\CreateVirusScanAgainRequest.cs" />
+    <Compile Include="V20201101\Models\CreateVirusScanAgainResponse.cs" />
+    <Compile Include="V20201101\Models\CreateVirusScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\CreateVirusScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteAbnormalProcessRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteAbnormalProcessRulesResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteAccessControlRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteAccessControlRulesResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteCompliancePolicyItemFromWhitelistRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteCompliancePolicyItemFromWhitelistResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteReverseShellWhiteListsRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteReverseShellWhiteListsResponse.cs" />
+    <Compile Include="V20201101\Models\DeleteRiskSyscallWhiteListsRequest.cs" />
+    <Compile Include="V20201101\Models\DeleteRiskSyscallWhiteListsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRuleDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRuleDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAbnormalProcessRulesResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlEventsExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlEventsExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlEventsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRuleDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRuleDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRulesExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRulesExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAccessControlRulesResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedClusterCountRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedClusterCountResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedNodeListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedNodeListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedWorkloadListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAffectedWorkloadListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetAppServiceListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetAppServiceListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetComponentListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetComponentListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetContainerDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetContainerDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetContainerListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetContainerListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetDBServiceListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetDBServiceListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetHostDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetHostDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetHostListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetHostListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageBindRuleInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageBindRuleInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageHostListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageHostListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryAssetStatusRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryAssetStatusResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRegistryDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRegistryListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRegistryListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRiskInfoListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRiskInfoListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRiskListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryRiskListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryScanStatusOneKeyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryScanStatusOneKeyResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistrySummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistrySummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVirusListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVirusListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVirusListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVirusListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVulListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVulListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVulListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRegistryVulListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRiskListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRiskListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRiskListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageRiskListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanSettingRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanSettingResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanStatusRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanStatusResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageSimpleListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageSimpleListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVirusListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVirusListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVirusListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVirusListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVulListExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVulListExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVulListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetImageVulListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetPortListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetPortListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetProcessListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetProcessListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetWebServiceListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeAssetWebServiceListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeCheckItemListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeCheckItemListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeClusterSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetDetailInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetDetailInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetPolicyItemListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceAssetPolicyItemListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePeriodTaskListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePeriodTaskListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePolicyItemAffectedAssetListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePolicyItemAffectedAssetListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePolicyItemAffectedSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeCompliancePolicyItemAffectedSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceScanFailedAssetListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceScanFailedAssetListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceTaskAssetSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceTaskAssetSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceTaskPolicyItemSummaryListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceTaskPolicyItemSummaryListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceWhitelistItemListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeComplianceWhitelistItemListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeContainerAssetSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeContainerAssetSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeContainerSecEventSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeContainerSecEventSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventsExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeEventsExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeRuleInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeRuleInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeSafeStateRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeEscapeSafeStateResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobResultRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeExportJobResultResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageAuthorizedInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageAuthorizedInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRegistryTimingScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRiskSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRiskSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRiskTendencyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageRiskTendencyResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeImageSimpleListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeImageSimpleListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribePostPayDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribePostPayDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeProVersionInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeProVersionInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribePurchaseStateInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribePurchaseStateInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRefreshTaskRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRefreshTaskResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellEventsExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellEventsExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellEventsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellWhiteListDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeReverseShellWhiteListsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallEventsExportRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallEventsExportResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallEventsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallEventsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallNamesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallNamesResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallWhiteListDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallWhiteListDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallWhiteListsRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeRiskSyscallWhiteListsResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeSecEventsTendencyRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeSecEventsTendencyResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeTaskResultSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeTaskResultSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeUnfinishRefreshTaskRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeUnfinishRefreshTaskResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeUserClusterRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeUserClusterResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeValueAddedSrvInfoRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeValueAddedSrvInfoResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusDetailRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusDetailResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusMonitorSettingRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusMonitorSettingResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanSettingRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanSettingResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanTaskStatusRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanTaskStatusResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanTimeoutSettingRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusScanTimeoutSettingResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusSummaryRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusSummaryResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusTaskListRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeVirusTaskListResponse.cs" />
+    <Compile Include="V20201101\Models\DescribeWarningRulesRequest.cs" />
+    <Compile Include="V20201101\Models\DescribeWarningRulesResponse.cs" />
+    <Compile Include="V20201101\Models\EscapeEventDescription.cs" />
+    <Compile Include="V20201101\Models\EscapeEventInfo.cs" />
+    <Compile Include="V20201101\Models\EscapeRule.cs" />
+    <Compile Include="V20201101\Models\EscapeRuleEnabled.cs" />
+    <Compile Include="V20201101\Models\ExportVirusListRequest.cs" />
+    <Compile Include="V20201101\Models\ExportVirusListResponse.cs" />
+    <Compile Include="V20201101\Models\FileAttributeInfo.cs" />
+    <Compile Include="V20201101\Models\HostInfo.cs" />
+    <Compile Include="V20201101\Models\ImageHost.cs" />
+    <Compile Include="V20201101\Models\ImageInfo.cs" />
+    <Compile Include="V20201101\Models\ImageProgress.cs" />
+    <Compile Include="V20201101\Models\ImageRisk.cs" />
+    <Compile Include="V20201101\Models\ImageRiskInfo.cs" />
+    <Compile Include="V20201101\Models\ImageRiskTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\ImageSimpleInfo.cs" />
+    <Compile Include="V20201101\Models\ImageVirus.cs" />
+    <Compile Include="V20201101\Models\ImageVirusInfo.cs" />
+    <Compile Include="V20201101\Models\ImageVul.cs" />
+    <Compile Include="V20201101\Models\ImagesBindRuleInfo.cs" />
+    <Compile Include="V20201101\Models\ImagesInfo.cs" />
+    <Compile Include="V20201101\Models\ImagesVul.cs" />
+    <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentRequest.cs" />
+    <Compile Include="V20201101\Models\InitializeUserComplianceEnvironmentResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAbnormalProcessRuleStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAbnormalProcessStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAbnormalProcessStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAccessControlRuleStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAccessControlRuleStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAccessControlStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAccessControlStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageRegistryScanStopOneKeyRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageRegistryScanStopOneKeyResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageRegistryScanStopRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageRegistryScanStopResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageScanStopRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetImageScanStopResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyAssetResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyCompliancePeriodTaskRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyCompliancePeriodTaskResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyEscapeEventStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyEscapeEventStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyEscapeRuleRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyEscapeRuleResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyReverseShellStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyReverseShellStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyRiskSyscallStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyRiskSyscallStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusFileStatusRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusFileStatusResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusMonitorSettingRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusMonitorSettingResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusScanSettingRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusScanSettingResponse.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusScanTimeoutSettingRequest.cs" />
+    <Compile Include="V20201101\Models\ModifyVirusScanTimeoutSettingResponse.cs" />
+    <Compile Include="V20201101\Models\PortInfo.cs" />
+    <Compile Include="V20201101\Models\ProcessDetailBaseInfo.cs" />
+    <Compile Include="V20201101\Models\ProcessDetailInfo.cs" />
+    <Compile Include="V20201101\Models\ProcessInfo.cs" />
+    <Compile Include="V20201101\Models\RemoveAssetImageRegistryRegistryDetailRequest.cs" />
+    <Compile Include="V20201101\Models\RemoveAssetImageRegistryRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\RenewImageAuthorizeStateRequest.cs" />
+    <Compile Include="V20201101\Models\RenewImageAuthorizeStateResponse.cs" />
+    <Compile Include="V20201101\Models\ReverseShellEventDescription.cs" />
+    <Compile Include="V20201101\Models\ReverseShellEventInfo.cs" />
+    <Compile Include="V20201101\Models\ReverseShellWhiteListBaseInfo.cs" />
+    <Compile Include="V20201101\Models\ReverseShellWhiteListInfo.cs" />
+    <Compile Include="V20201101\Models\RiskSyscallEventDescription.cs" />
+    <Compile Include="V20201101\Models\RiskSyscallEventInfo.cs" />
+    <Compile Include="V20201101\Models\RiskSyscallWhiteListBaseInfo.cs" />
+    <Compile Include="V20201101\Models\RiskSyscallWhiteListInfo.cs" />
+    <Compile Include="V20201101\Models\RuleBaseInfo.cs" />
+    <Compile Include="V20201101\Models\RunTimeEventBaseInfo.cs" />
+    <Compile Include="V20201101\Models\RunTimeFilters.cs" />
+    <Compile Include="V20201101\Models\RunTimeRiskInfo.cs" />
+    <Compile Include="V20201101\Models\RunTimeTendencyInfo.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceAssetsByPolicyItemRequest.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceAssetsByPolicyItemResponse.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceAssetsRequest.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceAssetsResponse.cs" />
+    <Compile Include="V20201101\Models\ScanCompliancePolicyItemsRequest.cs" />
+    <Compile Include="V20201101\Models\ScanCompliancePolicyItemsResponse.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceScanFailedAssetsRequest.cs" />
+    <Compile Include="V20201101\Models\ScanComplianceScanFailedAssetsResponse.cs" />
+    <Compile Include="V20201101\Models\SecTendencyEventInfo.cs" />
+    <Compile Include="V20201101\Models\ServiceInfo.cs" />
+    <Compile Include="V20201101\Models\SetCheckModeRequest.cs" />
+    <Compile Include="V20201101\Models\SetCheckModeResponse.cs" />
+    <Compile Include="V20201101\Models\SoftQuotaDayInfo.cs" />
+    <Compile Include="V20201101\Models\StopVirusScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\StopVirusScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetRequest.cs" />
+    <Compile Include="V20201101\Models\SyncAssetImageRegistryAssetResponse.cs" />
+    <Compile Include="V20201101\Models\UpdateAssetImageRegistryRegistryDetailRequest.cs" />
+    <Compile Include="V20201101\Models\UpdateAssetImageRegistryRegistryDetailResponse.cs" />
+    <Compile Include="V20201101\Models\UpdateImageRegistryTimingScanTaskRequest.cs" />
+    <Compile Include="V20201101\Models\UpdateImageRegistryTimingScanTaskResponse.cs" />
+    <Compile Include="V20201101\Models\VirusInfo.cs" />
+    <Compile Include="V20201101\Models\VirusTaskInfo.cs" />
+    <Compile Include="V20201101\Models\WarningRule.cs" />
+  </ItemGroup>
+</Project>

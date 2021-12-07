@@ -36,6 +36,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("JSONData")]
         public string JSONData{ get; set; }
 
+        /// <summary>
+        /// 指定角色
+        /// </summary>
+        [JsonProperty("ApiRole")]
+        public string ApiRole{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         {
             this.SetParamSimple(map, prefix + "Service", this.Service);
             this.SetParamSimple(map, prefix + "JSONData", this.JSONData);
+            this.SetParamSimple(map, prefix + "ApiRole", this.ApiRole);
         }
     }
 }

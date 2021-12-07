@@ -1,0 +1,61 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Tcss.V20201101.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class CreateComplianceTaskRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+        /// ASSET_CONTAINER, 容器
+        /// ASSET_IMAGE, 镜像
+        /// ASSET_HOST, 主机
+        /// ASSET_K8S, K8S资产
+        /// </summary>
+        [JsonProperty("AssetTypeSet")]
+        public string[] AssetTypeSet{ get; set; }
+
+        /// <summary>
+        /// 按照策略集ID指定的策略执行合规检查。
+        /// </summary>
+        [JsonProperty("PolicySetId")]
+        public ulong? PolicySetId{ get; set; }
+
+        /// <summary>
+        /// 按照定时任务ID指定的策略执行合规检查。
+        /// </summary>
+        [JsonProperty("PeriodTaskId")]
+        public ulong? PeriodTaskId{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "AssetTypeSet.", this.AssetTypeSet);
+            this.SetParamSimple(map, prefix + "PolicySetId", this.PolicySetId);
+            this.SetParamSimple(map, prefix + "PeriodTaskId", this.PeriodTaskId);
+        }
+    }
+}
+
