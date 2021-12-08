@@ -25,30 +25,16 @@ namespace TencentCloud.Ckafka.V20190819.Models
     {
         
         /// <summary>
-        /// 返回的code，0为正常，非0为错误
+        /// 返回结果
         /// </summary>
-        [JsonProperty("ReturnCode")]
-        public string ReturnCode{ get; set; }
+        [JsonProperty("Result")]
+        public CreateInstancePreResp Result{ get; set; }
 
         /// <summary>
-        /// 成功消息
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ReturnMessage")]
-        public string ReturnMessage{ get; set; }
-
-        /// <summary>
-        /// 操作型返回的Data数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Data")]
-        public CreateInstancePreData Data{ get; set; }
-
-        /// <summary>
-        /// 删除是时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("DeleteRouteTimestamp")]
-        public string DeleteRouteTimestamp{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +42,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
-            this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

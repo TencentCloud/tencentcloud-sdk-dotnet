@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// “Succ"表示设置成功，"Failed"表示设置失败
+        /// "Succ"表示设置成功，"Failed"表示设置失败
         /// </summary>
         [JsonProperty("SetCheckResult")]
         public string SetCheckResult{ get; set; }

@@ -21,23 +21,20 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class GetAsyncEventStatusResponse : AbstractModel
     {
         
         /// <summary>
-        /// 需要过滤的字段。过滤条件数量限制为10。
-        /// Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
-        /// Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
-        /// 当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
+        /// 异步事件状态
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Result")]
+        public AsyncEventStatus Result{ get; set; }
 
         /// <summary>
-        /// 字段的过滤值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +42,8 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

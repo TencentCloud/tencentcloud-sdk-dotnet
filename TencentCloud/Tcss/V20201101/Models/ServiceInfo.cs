@@ -138,6 +138,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerId")]
         public string ContainerId{ get; set; }
 
+        /// <summary>
+        /// 主机名称
+        /// </summary>
+        [JsonProperty("HostName")]
+        public string HostName{ get; set; }
+
+        /// <summary>
+        /// 外网ip
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +175,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Exe", this.Exe);
             this.SetParamSimple(map, prefix + "Parameter", this.Parameter);
             this.SetParamSimple(map, prefix + "ContainerId", this.ContainerId);
+            this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
         }
     }
 }

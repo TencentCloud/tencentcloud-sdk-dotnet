@@ -261,6 +261,48 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 场景名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneName")]
+        public string SceneName{ get; set; }
+
+        /// <summary>
+        /// 场景化集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneServiceClass")]
+        public string SceneServiceClass{ get; set; }
+
+        /// <summary>
+        /// 场景化EMR版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SceneEmrVersion")]
+        public string SceneEmrVersion{ get; set; }
+
+        /// <summary>
+        /// 场景化集群类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisplayName")]
+        public string DisplayName{ get; set; }
+
+        /// <summary>
+        /// vpc name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcName")]
+        public string VpcName{ get; set; }
+
+        /// <summary>
+        /// subnet name
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetName")]
+        public string SubnetName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -297,6 +339,12 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "AliasInfo", this.AliasInfo);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
+            this.SetParamSimple(map, prefix + "SceneServiceClass", this.SceneServiceClass);
+            this.SetParamSimple(map, prefix + "SceneEmrVersion", this.SceneEmrVersion);
+            this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
+            this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
+            this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
         }
     }
 }

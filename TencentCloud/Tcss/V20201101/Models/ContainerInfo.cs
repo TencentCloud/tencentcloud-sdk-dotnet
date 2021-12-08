@@ -114,6 +114,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
+        /// <summary>
+        /// 外网ip
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
         }
     }
 }

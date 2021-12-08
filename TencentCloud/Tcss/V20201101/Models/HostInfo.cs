@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string HostID{ get; set; }
 
         /// <summary>
-        /// 主机ip
+        /// 主机ip即内网ip
         /// </summary>
         [JsonProperty("HostIP")]
         public string HostIP{ get; set; }
@@ -73,10 +73,34 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// 主机运行状态
+        /// agent运行状态
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 是否是Containerd
+        /// </summary>
+        [JsonProperty("IsContainerd")]
+        public bool? IsContainerd{ get; set; }
+
+        /// <summary>
+        /// 主机来源
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// 外网ip
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
+
+        /// <summary>
+        /// 主机uuid
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
 
 
         /// <summary>
@@ -93,6 +117,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ImageCnt", this.ImageCnt);
             this.SetParamSimple(map, prefix + "ContainerCnt", this.ContainerCnt);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
         }
     }
 }

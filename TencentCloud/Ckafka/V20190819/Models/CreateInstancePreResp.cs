@@ -15,40 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Ft.V20200304.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryFaceMorphJobResponse : AbstractModel
+    public class CreateInstancePreResp : AbstractModel
     {
         
         /// <summary>
-        /// 当前任务状态：排队中、处理中、处理失败或者处理完成
+        /// 返回的code，0为正常，非0为错误
         /// </summary>
-        [JsonProperty("JobStatus")]
-        public string JobStatus{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public string ReturnCode{ get; set; }
 
         /// <summary>
-        /// 人像渐变输出的结果信息
+        /// 成功消息
+        /// </summary>
+        [JsonProperty("ReturnMessage")]
+        public string ReturnMessage{ get; set; }
+
+        /// <summary>
+        /// 操作型返回的Data数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FaceMorphOutput")]
-        public FaceMorphOutput FaceMorphOutput{ get; set; }
+        [JsonProperty("Data")]
+        public CreateInstancePreData Data{ get; set; }
 
         /// <summary>
-        /// 当前任务状态码：1：排队中、3: 处理中、5: 处理失败、7:处理完成
+        /// 删除是时间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("JobStatusCode")]
-        public long? JobStatusCode{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("DeleteRouteTimestamp")]
+        public string DeleteRouteTimestamp{ get; set; }
 
 
         /// <summary>
@@ -56,10 +56,10 @@ namespace TencentCloud.Ft.V20200304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
-            this.SetParamObj(map, prefix + "FaceMorphOutput.", this.FaceMorphOutput);
-            this.SetParamSimple(map, prefix + "JobStatusCode", this.JobStatusCode);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMessage", this.ReturnMessage);
+            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
         }
     }
 }

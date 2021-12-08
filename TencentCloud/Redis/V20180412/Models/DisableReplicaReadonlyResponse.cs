@@ -25,10 +25,11 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 失败:ERROR，成功:OK
+        /// 任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public string Status{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

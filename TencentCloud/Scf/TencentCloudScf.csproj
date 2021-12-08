@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6F5BC504-40E8-3B8D-99B3-88CDC3921202}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.421</VersionPrefix>
+    <VersionPrefix>3.0.422</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
     <Compile Include="V20180416\Models\AccessInfo.cs" />
     <Compile Include="V20180416\Models\Alias.cs" />
     <Compile Include="V20180416\Models\AsyncEvent.cs" />
+    <Compile Include="V20180416\Models\AsyncEventStatus.cs" />
     <Compile Include="V20180416\Models\AsyncTriggerConfig.cs" />
     <Compile Include="V20180416\Models\CfsConfig.cs" />
     <Compile Include="V20180416\Models\CfsInsInfo.cs" />
@@ -89,6 +90,8 @@
     <Compile Include="V20180416\Models\GetAccountResponse.cs" />
     <Compile Include="V20180416\Models\GetAliasRequest.cs" />
     <Compile Include="V20180416\Models\GetAliasResponse.cs" />
+    <Compile Include="V20180416\Models\GetAsyncEventStatusRequest.cs" />
+    <Compile Include="V20180416\Models\GetAsyncEventStatusResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressRequest.cs" />
     <Compile Include="V20180416\Models\GetFunctionAddressResponse.cs" />
     <Compile Include="V20180416\Models\GetFunctionEventInvokeConfigRequest.cs" />

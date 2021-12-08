@@ -21,23 +21,14 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class GetAsyncEventStatusRequest : AbstractModel
     {
         
         /// <summary>
-        /// 需要过滤的字段。过滤条件数量限制为10。
-        /// Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
-        /// Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
-        /// 当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
+        /// 异步执行请求 id
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
-
-        /// <summary>
-        /// 字段的过滤值。
-        /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("InvokeRequestId")]
+        public string InvokeRequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +36,7 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
         }
     }
 }

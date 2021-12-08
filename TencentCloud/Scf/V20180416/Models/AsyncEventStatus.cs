@@ -21,23 +21,26 @@ namespace TencentCloud.Scf.V20180416.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Filter : AbstractModel
+    public class AsyncEventStatus : AbstractModel
     {
         
         /// <summary>
-        /// 需要过滤的字段。过滤条件数量限制为10。
-        /// Name可选值：VpcId, SubnetId, ClsTopicId, ClsLogsetId, Role, CfsId, CfsMountInsId, Eip；Values 长度限制为1。
-        /// Name可选值：Status, Runtime, FunctionType, PublicNetStatus, AsyncRunEnable, TraceEnable；Values 长度限制为20。
-        /// 当 Name = Runtime 时，CustomImage 表示过滤镜像类型函数。
+        /// 异步事件状态，RUNNING 表示运行中, FINISHED 表示调用成功, ABORTED 表示调用终止, FAILED 表示调用失败。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
         /// <summary>
-        /// 字段的过滤值。
+        /// 请求状态码
         /// </summary>
-        [JsonProperty("Values")]
-        public string[] Values{ get; set; }
+        [JsonProperty("StatusCode")]
+        public long? StatusCode{ get; set; }
+
+        /// <summary>
+        /// 异步执行请求 Id
+        /// </summary>
+        [JsonProperty("InvokeRequestId")]
+        public string InvokeRequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +48,9 @@ namespace TencentCloud.Scf.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "InvokeRequestId", this.InvokeRequestId);
         }
     }
 }

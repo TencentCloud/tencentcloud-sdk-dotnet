@@ -38,12 +38,13 @@ namespace TencentCloud.Tcss.V20201101.Models
 
         /// <summary>
         /// 过滤条件。
-        /// <li>Status - String - 是否必填：否 - 主机运行状态筛选，0："offline",1："online", 2："paused"</li>
+        /// <li>Status - String - 是否必填：否 - agent状态筛选，"ALL":"全部"(或不传该字段),"UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中"</li>
         /// <li>HostName - String - 是否必填：否 - 主机名筛选</li>
         /// <li>Group- String - 是否必填：否 - 主机群组搜索</li>
         /// <li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
         /// <li>HostID- string - 是否必填：否 - 主机id搜索</li>
         /// <li>DockerVersion- string - 是否必填：否 - docker版本搜索</li>
+        /// <li>MachineType- string - 是否必填：否 - 主机来源MachineType搜索，"ALL":"全部"(或不传该字段),"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

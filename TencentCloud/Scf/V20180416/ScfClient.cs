@@ -627,6 +627,46 @@ namespace TencentCloud.Scf.V20180416
         }
 
         /// <summary>
+        /// 获取函数异步执行事件状态，事件状态保留 3 * 24 小时（从事件完成开始计时）。
+        /// </summary>
+        /// <param name="req"><see cref="GetAsyncEventStatusRequest"/></param>
+        /// <returns><see cref="GetAsyncEventStatusResponse"/></returns>
+        public async Task<GetAsyncEventStatusResponse> GetAsyncEventStatus(GetAsyncEventStatusRequest req)
+        {
+             JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAsyncEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAsyncEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取函数异步执行事件状态，事件状态保留 3 * 24 小时（从事件完成开始计时）。
+        /// </summary>
+        /// <param name="req"><see cref="GetAsyncEventStatusRequest"/></param>
+        /// <returns><see cref="GetAsyncEventStatusResponse"/></returns>
+        public GetAsyncEventStatusResponse GetAsyncEventStatusSync(GetAsyncEventStatusRequest req)
+        {
+             JsonResponseModel<GetAsyncEventStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAsyncEventStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAsyncEventStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口获取某个函数的详细信息，包括名称、代码、处理方法、关联触发器和超时时间等字段。
         /// </summary>
         /// <param name="req"><see cref="GetFunctionRequest"/></param>

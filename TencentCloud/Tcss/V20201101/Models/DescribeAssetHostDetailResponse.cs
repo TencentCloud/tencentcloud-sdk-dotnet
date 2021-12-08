@@ -115,7 +115,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ContainerCnt{ get; set; }
 
         /// <summary>
-        /// k8s ip
+        /// k8s IP
         /// </summary>
         [JsonProperty("K8sMasterIP")]
         public string K8sMasterIP{ get; set; }
@@ -133,10 +133,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string KubeProxyVersion{ get; set; }
 
         /// <summary>
-        /// 主机运行状态 offline,online,pause
+        /// "UNINSTALL"："未安装","OFFLINE"："离线", "ONLINE"："防护中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 是否Containerd
+        /// </summary>
+        [JsonProperty("IsContainerd")]
+        public bool? IsContainerd{ get; set; }
+
+        /// <summary>
+        /// 主机来源;"TENCENTCLOUD":"腾讯云服务器","OTHERCLOUD":"非腾讯云服务器"
+        /// </summary>
+        [JsonProperty("MachineType")]
+        public string MachineType{ get; set; }
+
+        /// <summary>
+        /// 外网ip
+        /// </summary>
+        [JsonProperty("PublicIp")]
+        public string PublicIp{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -169,6 +187,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "K8sVersion", this.K8sVersion);
             this.SetParamSimple(map, prefix + "KubeProxyVersion", this.KubeProxyVersion);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
+            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
+            this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

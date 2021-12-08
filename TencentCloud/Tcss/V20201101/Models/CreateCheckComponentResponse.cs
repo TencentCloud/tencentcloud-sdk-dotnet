@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// “InstallSucc"表示安装成功，"InstallFailed"表示安装失败
+        /// "InstallSucc"表示安装成功，"InstallFailed"表示安装失败
         /// </summary>
         [JsonProperty("InstallResult")]
         public string InstallResult{ get; set; }

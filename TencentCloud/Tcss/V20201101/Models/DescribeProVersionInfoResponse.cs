@@ -39,7 +39,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 需购买的虚拟机核数
+        /// 需购买的机器核数
         /// </summary>
         [JsonProperty("CoresCnt")]
         public ulong? CoresCnt{ get; set; }
