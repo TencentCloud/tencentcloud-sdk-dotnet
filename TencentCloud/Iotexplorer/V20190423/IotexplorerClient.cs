@@ -2813,6 +2813,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 下发RRPC消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>
+        /// <returns><see cref="PublishRRPCMessageResponse"/></returns>
+        public async Task<PublishRRPCMessageResponse> PublishRRPCMessage(PublishRRPCMessageRequest req)
+        {
+             JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishRRPCMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishRRPCMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下发RRPC消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishRRPCMessageRequest"/></param>
+        /// <returns><see cref="PublishRRPCMessageResponse"/></returns>
+        public PublishRRPCMessageResponse PublishRRPCMessageSync(PublishRRPCMessageRequest req)
+        {
+             JsonResponseModel<PublishRRPCMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishRRPCMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishRRPCMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 产品开发完成并测试通过后，通过发布产品将产品设置为发布状态
         /// </summary>
         /// <param name="req"><see cref="ReleaseStudioProductRequest"/></param>

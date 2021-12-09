@@ -140,21 +140,21 @@ namespace TencentCloud.Billing.V20180709.Models
         public BillTagInfo[] Tags{ get; set; }
 
         /// <summary>
-        /// 商品名称代码
+        /// 产品名称代码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 子商品名称代码
+        /// 子产品名称代码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }
 
         /// <summary>
-        /// 交易类型代码（未开放的字段）
+        /// 交易类型代码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ActionType")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.422</VersionPrefix>
+    <VersionPrefix>3.0.423</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2454,6 +2454,7 @@
     <Compile Include="Cdn\V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvanceConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\AdvanceHttps.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthentication.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeA.cs" />
     <Compile Include="Cdn\V20180606\Models\AdvancedAuthenticationTypeB.cs" />
@@ -6115,6 +6116,8 @@
     <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskDetail.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskRequest.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeBatchTaskResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainAliasListRequest.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DescribeDomainAliasListResponse.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeDomainListRequest.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeDomainListResponse.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeDomainLogListRequest.cs" />
@@ -6135,6 +6138,7 @@
     <Compile Include="Dnspod\V20210323\Models\DescribeRecordTypeResponse.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeUserDetailRequest.cs" />
     <Compile Include="Dnspod\V20210323\Models\DescribeUserDetailResponse.cs" />
+    <Compile Include="Dnspod\V20210323\Models\DomainAliasInfo.cs" />
     <Compile Include="Dnspod\V20210323\Models\DomainCountInfo.cs" />
     <Compile Include="Dnspod\V20210323\Models\DomainCreateInfo.cs" />
     <Compile Include="Dnspod\V20210323\Models\DomainInfo.cs" />
@@ -8706,6 +8710,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ProjectEntryEx.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PublishMessageRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PublishMessageResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\PublishRRPCMessageRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\PublishRRPCMessageResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ReleaseStudioProductRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ReleaseStudioProductResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\SearchKeyword.cs" />
@@ -11587,10 +11593,14 @@
     <Compile Include="Rum\V20210622\RumClient.cs" />
     <Compile Include="Rum\V20210622\Models\CreateProjectRequest.cs" />
     <Compile Include="Rum\V20210622\Models\CreateProjectResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataEventUrlRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataEventUrlResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataLogUrlStatisticsRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataLogUrlStatisticsResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataPvUrlStatisticsRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataPvUrlStatisticsResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeErrorResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeLogListRequest.cs" />
@@ -12514,6 +12524,8 @@
     <Compile Include="Tag\V20180813\Models\UpdateResourceTagValueResponse.cs" />
     <Compile Include="Tat\V20201028\TatClient.cs" />
     <Compile Include="Tat\V20201028\Models\AutomationAgentInfo.cs" />
+    <Compile Include="Tat\V20201028\Models\CancelInvocationRequest.cs" />
+    <Compile Include="Tat\V20201028\Models\CancelInvocationResponse.cs" />
     <Compile Include="Tat\V20201028\Models\Command.cs" />
     <Compile Include="Tat\V20201028\Models\CommandDocument.cs" />
     <Compile Include="Tat\V20201028\Models\CreateCommandRequest.cs" />
@@ -14186,6 +14198,8 @@
     <Compile Include="Tem\V20210701\Models\LogOutputConf.cs" />
     <Compile Include="Tem\V20210701\Models\ModifyApplicationInfoRequest.cs" />
     <Compile Include="Tem\V20210701\Models\ModifyApplicationInfoResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyApplicationReplicasRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\ModifyApplicationReplicasResponse.cs" />
     <Compile Include="Tem\V20210701\Models\ModifyEnvironmentRequest.cs" />
     <Compile Include="Tem\V20210701\Models\ModifyEnvironmentResponse.cs" />
     <Compile Include="Tem\V20210701\Models\ModifyIngressRequest.cs" />
@@ -16168,6 +16182,7 @@
     <Compile Include="Vod\V20180717\Models\ResetProcedureTemplateResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ResourceTag.cs" />
+    <Compile Include="Vod\V20180717\Models\RestoreMediaTask.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />

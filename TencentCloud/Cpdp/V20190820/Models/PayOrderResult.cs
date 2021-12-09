@@ -122,6 +122,48 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("TradeQrcode")]
         public string TradeQrcode{ get; set; }
 
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的appid参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatAppId")]
+        public string WechatAppId{ get; set; }
+
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的timeStamp参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatTimeStamp")]
+        public string WechatTimeStamp{ get; set; }
+
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的nonceStr参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatNonceStr")]
+        public string WechatNonceStr{ get; set; }
+
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的signType参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatSignType")]
+        public string WechatSignType{ get; set; }
+
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的package参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatPackage")]
+        public string WechatPackage{ get; set; }
+
+        /// <summary>
+        /// 微信返回调起小程序/原生JS支付的paySign参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WechatPaySign")]
+        public string WechatPaySign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +184,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "OrderCurrency", this.OrderCurrency);
             this.SetParamSimple(map, prefix + "TradeQrcode", this.TradeQrcode);
+            this.SetParamSimple(map, prefix + "WechatAppId", this.WechatAppId);
+            this.SetParamSimple(map, prefix + "WechatTimeStamp", this.WechatTimeStamp);
+            this.SetParamSimple(map, prefix + "WechatNonceStr", this.WechatNonceStr);
+            this.SetParamSimple(map, prefix + "WechatSignType", this.WechatSignType);
+            this.SetParamSimple(map, prefix + "WechatPackage", this.WechatPackage);
+            this.SetParamSimple(map, prefix + "WechatPaySign", this.WechatPaySign);
         }
     }
 }

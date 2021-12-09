@@ -36,6 +36,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
+        /// <summary>
+        /// 是否为内部ip
+        /// </summary>
+        [JsonProperty("InternalService")]
+        public bool? InternalService{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         {
             this.SetParamSimple(map, prefix + "IP", this.IP);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "InternalService", this.InternalService);
         }
     }
 }

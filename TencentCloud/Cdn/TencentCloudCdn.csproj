@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.422</VersionPrefix>
+    <VersionPrefix>3.0.423</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20180606\Models\AddCdnDomainResponse.cs" />
     <Compile Include="V20180606\Models\AdvanceCacheRule.cs" />
     <Compile Include="V20180606\Models\AdvanceConfig.cs" />
+    <Compile Include="V20180606\Models\AdvanceHttps.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthentication.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeA.cs" />
     <Compile Include="V20180606\Models\AdvancedAuthenticationTypeB.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 优雅关停
+        /// 该参数已下线
         /// </summary>
         [JsonProperty("GraceShutdown")]
         public bool? GraceShutdown{ get; set; }

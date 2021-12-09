@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.422</VersionPrefix>
+    <VersionPrefix>3.0.423</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -91,6 +91,8 @@
     <Compile Include="V20210701\Models\LogOutputConf.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationInfoRequest.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationInfoResponse.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationReplicasRequest.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationReplicasResponse.cs" />
     <Compile Include="V20210701\Models\ModifyEnvironmentRequest.cs" />
     <Compile Include="V20210701\Models\ModifyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\ModifyIngressRequest.cs" />

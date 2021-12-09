@@ -31,13 +31,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayerUin{ get; set; }
 
         /// <summary>
-        /// 业务名称
+        /// 产品名称
         /// </summary>
         [JsonProperty("BusinessCodeName")]
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 产品名称
+        /// 子产品名称
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -116,7 +116,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public CostComponentSet[] ComponentSet{ get; set; }
 
         /// <summary>
-        /// 产品代码
+        /// 子产品名称代码
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

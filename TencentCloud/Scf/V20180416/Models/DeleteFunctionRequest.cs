@@ -37,7 +37,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 函数版本
+        /// 函数版本，如果删除版本的话传入版本号，不传入改字段删除函数下的所有版本
         /// </summary>
         [JsonProperty("Qualifier")]
         public string Qualifier{ get; set; }

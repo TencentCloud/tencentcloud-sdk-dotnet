@@ -613,6 +613,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 修改应用实例数量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationReplicasRequest"/></param>
+        /// <returns><see cref="ModifyApplicationReplicasResponse"/></returns>
+        public async Task<ModifyApplicationReplicasResponse> ModifyApplicationReplicas(ModifyApplicationReplicasRequest req)
+        {
+             JsonResponseModel<ModifyApplicationReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApplicationReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改应用实例数量
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationReplicasRequest"/></param>
+        /// <returns><see cref="ModifyApplicationReplicasResponse"/></returns>
+        public ModifyApplicationReplicasResponse ModifyApplicationReplicasSync(ModifyApplicationReplicasRequest req)
+        {
+             JsonResponseModel<ModifyApplicationReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApplicationReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 编辑环境
         /// </summary>
         /// <param name="req"><see cref="ModifyEnvironmentRequest"/></param>

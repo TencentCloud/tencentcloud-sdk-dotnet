@@ -53,6 +53,52 @@ namespace TencentCloud.Tat.V20201028
         }
 
         /// <summary>
+        /// 取消一台或多台CVM实例执行的命令
+        /// 
+        /// * 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+        /// * 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
+        /// </summary>
+        /// <param name="req"><see cref="CancelInvocationRequest"/></param>
+        /// <returns><see cref="CancelInvocationResponse"/></returns>
+        public async Task<CancelInvocationResponse> CancelInvocation(CancelInvocationRequest req)
+        {
+             JsonResponseModel<CancelInvocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelInvocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelInvocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消一台或多台CVM实例执行的命令
+        /// 
+        /// * 如果命令还未下发到agent，任务状态处于处于PENDING、DELIVERING、DELIVER_DELAYED，取消后任务状态是CANCELLED
+        /// * 如果命令已下发到agent，任务状态处于RUNNING， 取消后任务状态是TERMINATED
+        /// </summary>
+        /// <param name="req"><see cref="CancelInvocationRequest"/></param>
+        /// <returns><see cref="CancelInvocationResponse"/></returns>
+        public CancelInvocationResponse CancelInvocationSync(CancelInvocationRequest req)
+        {
+             JsonResponseModel<CancelInvocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelInvocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelInvocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口用于创建命令。
         /// </summary>
         /// <param name="req"><see cref="CreateCommandRequest"/></param>

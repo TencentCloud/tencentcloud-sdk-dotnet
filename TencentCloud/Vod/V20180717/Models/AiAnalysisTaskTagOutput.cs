@@ -26,9 +26,22 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 视频智能标签列表。
+        /// <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 TagSetFileUrl 对应的文件中获取。
         /// </summary>
         [JsonProperty("TagSet")]
         public MediaAiAnalysisTagItem[] TagSet{ get; set; }
+
+        /// <summary>
+        /// 视频智能标签列表文件 URL。文件的内容为 JSON，数据结构与 TagSet 字段一致。 （文件不会永久存储，到达 TagSetFileUrlExpireTime 时间点后文件将被删除）。
+        /// </summary>
+        [JsonProperty("TagSetFileUrl")]
+        public string TagSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// 视频智能标签列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("TagSetFileUrlExpireTime")]
+        public string TagSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
+            this.SetParamSimple(map, prefix + "TagSetFileUrl", this.TagSetFileUrl);
+            this.SetParamSimple(map, prefix + "TagSetFileUrlExpireTime", this.TagSetFileUrlExpireTime);
         }
     }
 }

@@ -144,6 +144,26 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Royalty")]
         public string Royalty{ get; set; }
 
+        /// <summary>
+        /// 小程序支付参数：填默认值 1
+        /// </summary>
+        [JsonProperty("Jsapi")]
+        public string Jsapi{ get; set; }
+
+        /// <summary>
+        /// 小程序支付参数：
+        /// 当前调起支付的小程序APPID
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public string SubAppId{ get; set; }
+
+        /// <summary>
+        /// 小程序支付参数:
+        /// 用户在子商户appid下的唯一标识。
+        /// </summary>
+        [JsonProperty("SubOpenId")]
+        public string SubOpenId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +190,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "DiscountAmount", this.DiscountAmount);
             this.SetParamSimple(map, prefix + "PayName", this.PayName);
             this.SetParamSimple(map, prefix + "Royalty", this.Royalty);
+            this.SetParamSimple(map, prefix + "Jsapi", this.Jsapi);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "SubOpenId", this.SubOpenId);
         }
     }
 }

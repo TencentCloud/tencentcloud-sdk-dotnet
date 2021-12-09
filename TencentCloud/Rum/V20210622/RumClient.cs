@@ -93,6 +93,46 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataEventUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlRequest"/></param>
+        /// <returns><see cref="DescribeDataEventUrlResponse"/></returns>
+        public async Task<DescribeDataEventUrlResponse> DescribeDataEventUrl(DescribeDataEventUrlRequest req)
+        {
+             JsonResponseModel<DescribeDataEventUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataEventUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEventUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataEventUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataEventUrlRequest"/></param>
+        /// <returns><see cref="DescribeDataEventUrlResponse"/></returns>
+        public DescribeDataEventUrlResponse DescribeDataEventUrlSync(DescribeDataEventUrlRequest req)
+        {
+             JsonResponseModel<DescribeDataEventUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataEventUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataEventUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取LogUrlStatistics信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataLogUrlStatisticsRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Rum.V20210622
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDataPerformancePage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataPerformancePageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataPvUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsResponse"/></returns>
+        public async Task<DescribeDataPvUrlStatisticsResponse> DescribeDataPvUrlStatistics(DescribeDataPvUrlStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeDataPvUrlStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataPvUrlStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataPvUrlStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataPvUrlStatistics信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataPvUrlStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeDataPvUrlStatisticsResponse"/></returns>
+        public DescribeDataPvUrlStatisticsResponse DescribeDataPvUrlStatisticsSync(DescribeDataPvUrlStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeDataPvUrlStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataPvUrlStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataPvUrlStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

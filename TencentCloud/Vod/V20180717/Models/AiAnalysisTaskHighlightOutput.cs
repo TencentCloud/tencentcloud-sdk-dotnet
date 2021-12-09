@@ -26,9 +26,22 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 视频智能精彩片段列表。
+        /// <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 HighlightSetFileUrl 对应的文件中获取。
         /// </summary>
         [JsonProperty("HighlightSet")]
         public MediaAiAnalysisHighlightItem[] HighlightSet{ get; set; }
+
+        /// <summary>
+        /// 视频智能精彩片段列表文件 URL。文件的内容为 JSON，数据结构与 HighlightSet 字段一致。 （文件不会永久存储，到达 HighlightSetFileUrlExpireTime 时间点后文件将被删除）。
+        /// </summary>
+        [JsonProperty("HighlightSetFileUrl")]
+        public string HighlightSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// 视频智能精彩片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("HighlightSetFileUrlExpireTime")]
+        public string HighlightSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -37,6 +50,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "HighlightSet.", this.HighlightSet);
+            this.SetParamSimple(map, prefix + "HighlightSetFileUrl", this.HighlightSetFileUrl);
+            this.SetParamSimple(map, prefix + "HighlightSetFileUrlExpireTime", this.HighlightSetFileUrlExpireTime);
         }
     }
 }

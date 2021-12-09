@@ -61,6 +61,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("ResultDetail")]
         public SentenceDetail[] ResultDetail{ get; set; }
 
+        /// <summary>
+        /// 音频时长(秒)。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioDuration")]
+        public float? AudioDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamArrayObj(map, prefix + "ResultDetail.", this.ResultDetail);
+            this.SetParamSimple(map, prefix + "AudioDuration", this.AudioDuration);
         }
     }
 }

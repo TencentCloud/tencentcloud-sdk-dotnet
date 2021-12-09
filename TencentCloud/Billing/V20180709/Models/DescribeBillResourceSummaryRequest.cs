@@ -86,6 +86,7 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 按量计费冲正
         /// 按量计费冲正
         /// 按量计费冲正
+        /// 包年包月转按量
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -103,7 +104,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayMode{ get; set; }
 
         /// <summary>
-        /// 商品名称代码
+        /// 产品名称代码
         /// 备注：如需获取当月使用过的BusinessCode，请调用API：<a href="https://cloud.tencent.com/document/product/555/35761">获取产品汇总费用分布</a>
         /// </summary>
         [JsonProperty("BusinessCode")]

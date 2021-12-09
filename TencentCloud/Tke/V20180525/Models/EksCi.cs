@@ -177,6 +177,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("AutoCreatedEipId")]
         public string AutoCreatedEipId{ get; set; }
 
+        /// <summary>
+        /// 容器状态是否持久化
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PersistStatus")]
+        public bool? PersistStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +212,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "InitContainers.", this.InitContainers);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "AutoCreatedEipId", this.AutoCreatedEipId);
+            this.SetParamSimple(map, prefix + "PersistStatus", this.PersistStatus);
         }
     }
 }

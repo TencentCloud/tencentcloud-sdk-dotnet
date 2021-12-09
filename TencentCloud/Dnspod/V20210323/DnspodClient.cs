@@ -533,6 +533,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 获取域名别名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAliasListRequest"/></param>
+        /// <returns><see cref="DescribeDomainAliasListResponse"/></returns>
+        public async Task<DescribeDomainAliasListResponse> DescribeDomainAliasList(DescribeDomainAliasListRequest req)
+        {
+             JsonResponseModel<DescribeDomainAliasListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainAliasList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAliasListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名别名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAliasListRequest"/></param>
+        /// <returns><see cref="DescribeDomainAliasListResponse"/></returns>
+        public DescribeDomainAliasListResponse DescribeDomainAliasListSync(DescribeDomainAliasListRequest req)
+        {
+             JsonResponseModel<DescribeDomainAliasListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainAliasList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAliasListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>

@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string BusinessCodeName{ get; set; }
 
         /// <summary>
-        /// 子产品：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
+        /// 子产品名称：云产品子类，如云服务器CVM-标准型S1， 当没有获取到子产品名称时，返回"-"
         /// </summary>
         [JsonProperty("ProductCodeName")]
         public string ProductCodeName{ get; set; }
@@ -207,13 +207,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string OperateUin{ get; set; }
 
         /// <summary>
-        /// 商品名称代码
+        /// 产品名称代码
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
 
         /// <summary>
-        /// 子商品名称代码
+        /// 子产品名称代码
         /// </summary>
         [JsonProperty("ProductCode")]
         public string ProductCode{ get; set; }

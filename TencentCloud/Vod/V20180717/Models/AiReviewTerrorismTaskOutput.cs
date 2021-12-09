@@ -56,9 +56,22 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 有暴恐嫌疑的视频片段列表。
+        /// <font color=red>注意</font> ：该列表最多仅展示前 100 个元素。如希望获得完整结果，请从 SegmentSetFileUrl 对应的文件中获取。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewSegmentItem[] SegmentSet{ get; set; }
+
+        /// <summary>
+        /// 暴恐嫌疑的视频片段列表文件 URL。文件的内容为 JSON，数据结构与 SegmentSet 字段一致。 （文件不会永久存储，到达SegmentSetFileUrlExpireTime 时间点后文件将被删除）。
+        /// </summary>
+        [JsonProperty("SegmentSetFileUrl")]
+        public string SegmentSetFileUrl{ get; set; }
+
+        /// <summary>
+        /// 暴恐嫌疑的视频片段列表文件 URL 失效时间，使用  [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
+        /// </summary>
+        [JsonProperty("SegmentSetFileUrlExpireTime")]
+        public string SegmentSetFileUrlExpireTime{ get; set; }
 
 
         /// <summary>
@@ -70,6 +83,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
+            this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
+            this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
         }
     }
 }

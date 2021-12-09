@@ -85,7 +85,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public string PayModeName{ get; set; }
 
         /// <summary>
-        /// 产品码
+        /// 产品名称代码
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }

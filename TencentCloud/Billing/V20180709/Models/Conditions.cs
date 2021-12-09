@@ -31,7 +31,7 @@ namespace TencentCloud.Billing.V20180709.Models
         public ulong? TimeRange{ get; set; }
 
         /// <summary>
-        /// 产品编码
+        /// 产品名称代码
         /// </summary>
         [JsonProperty("BusinessCode")]
         public string BusinessCode{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Billing.V20180709.Models
         public string ResourceKeyword{ get; set; }
 
         /// <summary>
-        /// 产品编码
+        /// 产品名称代码
         /// </summary>
         [JsonProperty("BusinessCodes")]
         public string[] BusinessCodes{ get; set; }
 
         /// <summary>
-        /// 子产品编码
+        /// 子产品名称代码
         /// </summary>
         [JsonProperty("ProductCodes")]
         public string[] ProductCodes{ get; set; }
