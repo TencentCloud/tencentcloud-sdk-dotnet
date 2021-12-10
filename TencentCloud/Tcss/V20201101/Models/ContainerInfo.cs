@@ -61,7 +61,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string Cmd{ get; set; }
 
         /// <summary>
-        /// cpu 使用率 *1000
+        /// CPU使用率 *1000
         /// </summary>
         [JsonProperty("CPUUsage")]
         public ulong? CPUUsage{ get; set; }

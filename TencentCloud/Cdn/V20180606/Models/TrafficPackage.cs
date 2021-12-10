@@ -140,6 +140,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ConfigId")]
         public long? ConfigId{ get; set; }
 
+        /// <summary>
+        /// 流量包当前续订模式，0 未续订、1到期续订、2用完续订、3到期或用完续订
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtensionMode")]
+        public ulong? ExtensionMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "RefundAvailable", this.RefundAvailable);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
+            this.SetParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
         }
     }
 }

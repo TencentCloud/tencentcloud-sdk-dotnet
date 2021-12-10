@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.423</VersionPrefix>
+    <VersionPrefix>3.0.424</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -134,6 +134,7 @@
     <Compile Include="V20190423\Models\DeviceInfo.cs" />
     <Compile Include="V20190423\Models\DevicePositionItem.cs" />
     <Compile Include="V20190423\Models\DeviceSignatureInfo.cs" />
+    <Compile Include="V20190423\Models\DeviceUser.cs" />
     <Compile Include="V20190423\Models\DevicesItem.cs" />
     <Compile Include="V20190423\Models\DirectBindDeviceInFamilyRequest.cs" />
     <Compile Include="V20190423\Models\DirectBindDeviceInFamilyResponse.cs" />
@@ -157,6 +158,8 @@
     <Compile Include="V20190423\Models\GetDeviceListResponse.cs" />
     <Compile Include="V20190423\Models\GetDeviceLocationHistoryRequest.cs" />
     <Compile Include="V20190423\Models\GetDeviceLocationHistoryResponse.cs" />
+    <Compile Include="V20190423\Models\GetFamilyDeviceUserListRequest.cs" />
+    <Compile Include="V20190423\Models\GetFamilyDeviceUserListResponse.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListRequest.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListResponse.cs" />
     <Compile Include="V20190423\Models\GetPositionSpaceListRequest.cs" />

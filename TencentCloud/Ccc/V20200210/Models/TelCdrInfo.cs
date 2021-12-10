@@ -246,6 +246,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Uui")]
         public string Uui{ get; set; }
 
+        /// <summary>
+        /// IVR按键信息（e.g. [{"Key":"1","Label":"非常满意"}]）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IVRKeyPressedEx")]
+        public IVRKeyPressedElement[] IVRKeyPressedEx{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -279,6 +286,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "ProtectedCaller", this.ProtectedCaller);
             this.SetParamSimple(map, prefix + "ProtectedCallee", this.ProtectedCallee);
             this.SetParamSimple(map, prefix + "Uui", this.Uui);
+            this.SetParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
         }
     }
 }

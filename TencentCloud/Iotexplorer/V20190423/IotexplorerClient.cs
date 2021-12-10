@@ -2013,6 +2013,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 用于获取设备绑定的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="GetFamilyDeviceUserListRequest"/></param>
+        /// <returns><see cref="GetFamilyDeviceUserListResponse"/></returns>
+        public async Task<GetFamilyDeviceUserListResponse> GetFamilyDeviceUserList(GetFamilyDeviceUserListRequest req)
+        {
+             JsonResponseModel<GetFamilyDeviceUserListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFamilyDeviceUserList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFamilyDeviceUserListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取设备绑定的用户列表
+        /// </summary>
+        /// <param name="req"><see cref="GetFamilyDeviceUserListRequest"/></param>
+        /// <returns><see cref="GetFamilyDeviceUserListResponse"/></returns>
+        public GetFamilyDeviceUserListResponse GetFamilyDeviceUserListSync(GetFamilyDeviceUserListRequest req)
+        {
+             JsonResponseModel<GetFamilyDeviceUserListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFamilyDeviceUserList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFamilyDeviceUserListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取 LoRa 网关列表接口
         /// </summary>
         /// <param name="req"><see cref="GetLoRaGatewayListRequest"/></param>

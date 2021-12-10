@@ -136,6 +136,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("VaccineCertificate")]
         public VaccineCertificate VaccineCertificate{ get; set; }
 
+        /// <summary>
+        /// OCR文本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrText")]
+        public string OcrText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "Endoscopy.", this.Endoscopy);
             this.SetParamObj(map, prefix + "Prescription.", this.Prescription);
             this.SetParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
+            this.SetParamSimple(map, prefix + "OcrText", this.OcrText);
         }
     }
 }

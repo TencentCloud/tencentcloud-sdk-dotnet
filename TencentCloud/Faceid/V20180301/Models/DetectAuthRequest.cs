@@ -74,6 +74,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Encryption")]
         public Encryption Encryption{ get; set; }
 
+        /// <summary>
+        /// 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+        /// </summary>
+        [JsonProperty("IntentionVerifyText")]
+        public string IntentionVerifyText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
+            this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         }
     }
 }

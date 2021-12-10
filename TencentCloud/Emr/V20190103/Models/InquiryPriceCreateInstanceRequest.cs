@@ -122,6 +122,16 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ProductId")]
         public ulong? ProductId{ get; set; }
 
+        /// <summary>
+        /// 场景化取值：
+        /// Hadoop-Kudu
+        /// Hadoop-Zookeeper
+        /// Hadoop-Presto
+        /// Hadoop-Hbase
+        /// </summary>
+        [JsonProperty("SceneName")]
+        public string SceneName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +151,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "UnifyMetaInstanceId", this.UnifyMetaInstanceId);
             this.SetParamObj(map, prefix + "MetaDBInfo.", this.MetaDBInfo);
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
         }
     }
 }
