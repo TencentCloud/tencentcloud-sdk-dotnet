@@ -2123,6 +2123,48 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 本接口将传统型负载均衡迁移成(原应用型)负载均衡
+        /// 本接口为异步接口，接口成功返回后，可使用 DescribeLoadBalancers 接口查询负载均衡实例的状态（如创建中、正常），以确定是否创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateClassicalLoadBalancersRequest"/></param>
+        /// <returns><see cref="MigrateClassicalLoadBalancersResponse"/></returns>
+        public async Task<MigrateClassicalLoadBalancersResponse> MigrateClassicalLoadBalancers(MigrateClassicalLoadBalancersRequest req)
+        {
+             JsonResponseModel<MigrateClassicalLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MigrateClassicalLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateClassicalLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口将传统型负载均衡迁移成(原应用型)负载均衡
+        /// 本接口为异步接口，接口成功返回后，可使用 DescribeLoadBalancers 接口查询负载均衡实例的状态（如创建中、正常），以确定是否创建成功。
+        /// </summary>
+        /// <param name="req"><see cref="MigrateClassicalLoadBalancersRequest"/></param>
+        /// <returns><see cref="MigrateClassicalLoadBalancersResponse"/></returns>
+        public MigrateClassicalLoadBalancersResponse MigrateClassicalLoadBalancersSync(MigrateClassicalLoadBalancersRequest req)
+        {
+             JsonResponseModel<MigrateClassicalLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MigrateClassicalLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MigrateClassicalLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改负载均衡的IP（client IP）封禁黑名单列表，一个转发规则最多支持封禁 2000000 个IP，及黑名单容量为 2000000。
         /// （接口灰度中，如需使用请提工单）
         /// </summary>

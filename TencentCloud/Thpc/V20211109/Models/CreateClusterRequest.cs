@@ -112,6 +112,12 @@ namespace TencentCloud.Thpc.V20211109.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 集群存储选项
+        /// </summary>
+        [JsonProperty("StorageOption")]
+        public StorageOption StorageOption{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -132,6 +138,7 @@ namespace TencentCloud.Thpc.V20211109.Models
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamObj(map, prefix + "StorageOption.", this.StorageOption);
         }
     }
 }

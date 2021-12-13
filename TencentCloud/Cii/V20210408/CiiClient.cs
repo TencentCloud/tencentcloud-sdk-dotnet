@@ -53,6 +53,46 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
+        /// 本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoClassifyStructureTaskRequest"/></param>
+        /// <returns><see cref="CreateAutoClassifyStructureTaskResponse"/></returns>
+        public async Task<CreateAutoClassifyStructureTaskResponse> CreateAutoClassifyStructureTask(CreateAutoClassifyStructureTaskRequest req)
+        {
+             JsonResponseModel<CreateAutoClassifyStructureTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAutoClassifyStructureTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoClassifyStructureTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoClassifyStructureTaskRequest"/></param>
+        /// <returns><see cref="CreateAutoClassifyStructureTaskResponse"/></returns>
+        public CreateAutoClassifyStructureTaskResponse CreateAutoClassifyStructureTaskSync(CreateAutoClassifyStructureTaskRequest req)
+        {
+             JsonResponseModel<CreateAutoClassifyStructureTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAutoClassifyStructureTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoClassifyStructureTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
         /// </summary>
         /// <param name="req"><see cref="CreateStructureTaskRequest"/></param>

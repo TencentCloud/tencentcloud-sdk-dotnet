@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.424</VersionPrefix>
+    <VersionPrefix>3.0.425</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3153,6 +3153,9 @@
     <Compile Include="Cii\V20210408\CiiClient.cs" />
     <Compile Include="Cii\V20210408\Models\ClassifyInfo.cs" />
     <Compile Include="Cii\V20210408\Models\CompareMetricsData.cs" />
+    <Compile Include="Cii\V20210408\Models\CreateAutoClassifyStructureTaskInfo.cs" />
+    <Compile Include="Cii\V20210408\Models\CreateAutoClassifyStructureTaskRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\CreateAutoClassifyStructureTaskResponse.cs" />
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskInfo.cs" />
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskRequest.cs" />
     <Compile Include="Cii\V20210408\Models\CreateStructureTaskResponse.cs" />
@@ -3488,6 +3491,8 @@
     <Compile Include="Clb\V20180317\Models\LoadBalancerTraffic.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ManualRewriteResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\MigrateClassicalLoadBalancersRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\MigrateClassicalLoadBalancersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyBlockIPListRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyBlockIPListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyDomainAttributesRequest.cs" />
@@ -4639,6 +4644,8 @@
     <Compile Include="Cvm\V20170312\Models\ModifyImageAttributeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyImageSharePermissionRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyImageSharePermissionResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyInstanceDiskTypeRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyInstanceDiskTypeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesAttributeRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesAttributeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesChargeTypeRequest.cs" />
@@ -14282,6 +14289,7 @@
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="Thpc\V20211109\ThpcClient.cs" />
+    <Compile Include="Thpc\V20211109\Models\CFSOption.cs" />
     <Compile Include="Thpc\V20211109\Models\ComputeNode.cs" />
     <Compile Include="Thpc\V20211109\Models\CreateClusterRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\CreateClusterResponse.cs" />
@@ -14293,6 +14301,7 @@
     <Compile Include="Thpc\V20211109\Models\LoginSettings.cs" />
     <Compile Include="Thpc\V20211109\Models\ManagerNode.cs" />
     <Compile Include="Thpc\V20211109\Models\Placement.cs" />
+    <Compile Include="Thpc\V20211109\Models\StorageOption.cs" />
     <Compile Include="Thpc\V20211109\Models\SystemDisk.cs" />
     <Compile Include="Thpc\V20211109\Models\VirtualPrivateCloud.cs" />
     <Compile Include="Tia\V20180226\TiaClient.cs" />

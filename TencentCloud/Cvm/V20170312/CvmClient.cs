@@ -2245,6 +2245,56 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (ModifyInstanceDiskType) 用于修改实例硬盘介质类型。
+        /// 
+        /// * 只支持实例的本地系统盘、本地数据盘转化成指定云硬盘介质。
+        /// * 只支持实例在关机状态下转换成指定云硬盘介质。
+        /// * 不支持竞价实例类型。
+        /// * 修改前请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)接口查询账户余额。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDiskTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDiskTypeResponse"/></returns>
+        public async Task<ModifyInstanceDiskTypeResponse> ModifyInstanceDiskType(ModifyInstanceDiskTypeRequest req)
+        {
+             JsonResponseModel<ModifyInstanceDiskTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceDiskType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceDiskTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (ModifyInstanceDiskType) 用于修改实例硬盘介质类型。
+        /// 
+        /// * 只支持实例的本地系统盘、本地数据盘转化成指定云硬盘介质。
+        /// * 只支持实例在关机状态下转换成指定云硬盘介质。
+        /// * 不支持竞价实例类型。
+        /// * 修改前请确保账户余额充足。可通过[`DescribeAccountBalance`](https://cloud.tencent.com/document/product/378/4397)接口查询账户余额。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceDiskTypeRequest"/></param>
+        /// <returns><see cref="ModifyInstanceDiskTypeResponse"/></returns>
+        public ModifyInstanceDiskTypeResponse ModifyInstanceDiskTypeSync(ModifyInstanceDiskTypeRequest req)
+        {
+             JsonResponseModel<ModifyInstanceDiskTypeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceDiskType");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceDiskTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyInstancesAttribute) 用于修改实例的属性（目前只支持修改实例的名称和关联的安全组）。
         /// 
         /// * 每次请求必须指定实例的一种属性用于修改。

@@ -25,18 +25,6 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 取回任务状态，0表示取回完成，其他值表示取回还未完成。
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
-
-        /// <summary>
-        /// 提示信息。
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
         /// 文件ID。
         /// </summary>
         [JsonProperty("FileId")]
@@ -65,10 +53,21 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 临时取回副本有效期，单位：天。对于永久取回，取值为0。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RestoreDay")]
         public long? RestoreDay{ get; set; }
+
+        /// <summary>
+        /// 该字段已废弃。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 该字段已废弃。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -76,13 +75,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
             this.SetParamSimple(map, prefix + "OriginalStorageClass", this.OriginalStorageClass);
             this.SetParamSimple(map, prefix + "TargetStorageClass", this.TargetStorageClass);
             this.SetParamSimple(map, prefix + "RestoreTier", this.RestoreTier);
             this.SetParamSimple(map, prefix + "RestoreDay", this.RestoreDay);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

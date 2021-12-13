@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.424</VersionPrefix>
+    <VersionPrefix>3.0.425</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20211109\ThpcClient.cs" />
+    <Compile Include="V20211109\Models\CFSOption.cs" />
     <Compile Include="V20211109\Models\ComputeNode.cs" />
     <Compile Include="V20211109\Models\CreateClusterRequest.cs" />
     <Compile Include="V20211109\Models\CreateClusterResponse.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="V20211109\Models\LoginSettings.cs" />
     <Compile Include="V20211109\Models\ManagerNode.cs" />
     <Compile Include="V20211109\Models\Placement.cs" />
+    <Compile Include="V20211109\Models\StorageOption.cs" />
     <Compile Include="V20211109\Models\SystemDisk.cs" />
     <Compile Include="V20211109\Models\VirtualPrivateCloud.cs" />
   </ItemGroup>
