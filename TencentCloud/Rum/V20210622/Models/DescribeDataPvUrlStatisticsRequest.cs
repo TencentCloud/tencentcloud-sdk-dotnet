@@ -144,6 +144,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Browser")]
         public string Browser{ get; set; }
 
+        /// <summary>
+        /// 环境
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "IsAbroad", this.IsAbroad);
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "Browser", this.Browser);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
         }
     }
 }

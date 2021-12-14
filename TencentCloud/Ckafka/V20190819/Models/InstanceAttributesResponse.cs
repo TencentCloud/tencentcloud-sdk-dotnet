@@ -228,6 +228,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DeleteRouteTimestamp")]
         public string DeleteRouteTimestamp{ get; set; }
 
+        /// <summary>
+        /// 剩余创建分区数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainingPartitions")]
+        public long? RemainingPartitions{ get; set; }
+
+        /// <summary>
+        /// 剩余创建主题数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemainingTopics")]
+        public long? RemainingTopics{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -266,6 +280,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
+            this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
+            this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
         }
     }
 }

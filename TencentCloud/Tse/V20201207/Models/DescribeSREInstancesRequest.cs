@@ -48,6 +48,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }
 
+        /// <summary>
+        /// 调用方来源
+        /// </summary>
+        [JsonProperty("QuerySource")]
+        public string QuerySource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "QueryType", this.QueryType);
+            this.SetParamSimple(map, prefix + "QuerySource", this.QuerySource);
         }
     }
 }

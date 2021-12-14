@@ -25,21 +25,22 @@ namespace TencentCloud.Cme.V20191029.Models
     {
         
         /// <summary>
-        /// 媒资绑定模板 ID，可取值为：
-        /// <li>1000000：媒体文件为 URL，且 URL Scheme 为 https；</li>
-        /// <li>1000001：媒体文件为 URL，且 URL Scheme 为 http。</li>
-        /// 
-        /// 注：如果要支持其它存储平台或者类型的媒体绑定，请联系 [客服](https://cloud.tencent.com/online-service?from=doc_1156)。
+        /// 目前仅支持绑定 COS 桶的媒体，请填写存储对象 Key 值，例如：`example-folder/example.mp4`。
+        /// </summary>
+        [JsonProperty("MediaKey")]
+        public string MediaKey{ get; set; }
+
+        /// <summary>
+        /// 该字段废弃，请勿使用。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 媒资绑定媒体路径或文件 ID。如果要绑定 URL 类型的媒体，请将 URL 的 <code>'https://'</code> 或者 <code>'http://'</code> 去掉，例如：
-        /// 原始媒体 URL 为 `https://www.example.com/a.mp4`，则 MediaKey 为 `www.example.com/a.mp4`。
+        /// 媒资挂载的存储 Id。
         /// </summary>
-        [JsonProperty("MediaKey")]
-        public string MediaKey{ get; set; }
+        [JsonProperty("StorageId")]
+        public string StorageId{ get; set; }
 
 
         /// <summary>
@@ -47,8 +48,9 @@ namespace TencentCloud.Cme.V20191029.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamSimple(map, prefix + "MediaKey", this.MediaKey);
+            this.SetParamSimple(map, prefix + "Definition", this.Definition);
+            this.SetParamSimple(map, prefix + "StorageId", this.StorageId);
         }
     }
 }

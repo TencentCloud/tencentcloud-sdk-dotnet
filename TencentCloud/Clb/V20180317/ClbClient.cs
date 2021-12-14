@@ -1319,6 +1319,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 查询跨域2.0版本云联网后端子机和网卡信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCrossTargetsResponse"/></returns>
+        public async Task<DescribeCrossTargetsResponse> DescribeCrossTargets(DescribeCrossTargetsRequest req)
+        {
+             JsonResponseModel<DescribeCrossTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询跨域2.0版本云联网后端子机和网卡信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossTargetsRequest"/></param>
+        /// <returns><see cref="DescribeCrossTargetsResponse"/></returns>
+        public DescribeCrossTargetsResponse DescribeCrossTargetsSync(DescribeCrossTargetsRequest req)
+        {
+             JsonResponseModel<DescribeCrossTargetsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossTargets");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossTargetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取配置绑定的 server 或 location，如果 domain 存在，结果将根据 domain 过滤。或拉取配置绑定的 loadbalancer。
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomizedConfigAssociateListRequest"/></param>
@@ -2373,7 +2413,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 升、降配接口。支持共享型clb升级到性能保障型clb。支持性能保障型提升等级。支持性能保障降低规格。（不支持性能保障降级到共享型）。
+        /// 支持共享型clb升级到性能容量型clb（不支持性能保障降级到共享型）。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>
@@ -2393,7 +2433,7 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
-        /// 升、降配接口。支持共享型clb升级到性能保障型clb。支持性能保障型提升等级。支持性能保障降低规格。（不支持性能保障降级到共享型）。
+        /// 支持共享型clb升级到性能容量型clb（不支持性能保障降级到共享型）。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerSlaResponse"/></returns>

@@ -577,6 +577,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public async Task<DescribeInstanceParamsResponse> DescribeInstanceParams(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstanceParams)用于查询当前实例可修改的参数列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceParamsRequest"/></param>
+        /// <returns><see cref="DescribeInstanceParamsResponse"/></returns>
+        public DescribeInstanceParamsResponse DescribeInstanceParamsSync(DescribeInstanceParamsRequest req)
+        {
+             JsonResponseModel<DescribeInstanceParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例绑定的安全组
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityGroupRequest"/></param>

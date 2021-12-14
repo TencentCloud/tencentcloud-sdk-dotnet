@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.425</VersionPrefix>
+    <VersionPrefix>3.0.426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -720,8 +720,10 @@
     <Compile Include="As\V20180419\AsClient.cs" />
     <Compile Include="As\V20180419\Models\Activity.cs" />
     <Compile Include="As\V20180419\Models\ActivtyRelatedInstance.cs" />
+    <Compile Include="As\V20180419\Models\Advice.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesRequest.cs" />
     <Compile Include="As\V20180419\Models\AttachInstancesResponse.cs" />
+    <Compile Include="As\V20180419\Models\AutoScalingAdvice.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingGroupAbstract.cs" />
     <Compile Include="As\V20180419\Models\AutoScalingNotification.cs" />
@@ -760,6 +762,8 @@
     <Compile Include="As\V20180419\Models\DescribeAccountLimitsResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingActivitiesResponse.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingAdvicesRequest.cs" />
+    <Compile Include="As\V20180419\Models\DescribeAutoScalingAdvicesResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupLastActivitiesRequest.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupLastActivitiesResponse.cs" />
     <Compile Include="As\V20180419\Models\DescribeAutoScalingGroupsRequest.cs" />
@@ -3398,6 +3402,7 @@
     <Compile Include="Clb\V20180317\Models\CreateTargetGroupResponse.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTopicRequest.cs" />
     <Compile Include="Clb\V20180317\Models\CreateTopicResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\CrossTargets.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -3434,6 +3439,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeClusterResourcesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCrossTargetsRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeCrossTargetsResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
@@ -10030,6 +10037,8 @@
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstanceDealResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeInstanceParamsRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\DescribeInstanceParamsResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSecurityGroupResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\DescribeSlowLogPatternsRequest.cs" />
@@ -10048,6 +10057,10 @@
     <Compile Include="Mongodb\V20190725\Models\InquirePriceRenewDBInstancesResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\InstanceChargePrepaid.cs" />
     <Compile Include="Mongodb\V20190725\Models\InstanceDetail.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InstanceEnumParam.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InstanceIntegerParam.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InstanceMultiParam.cs" />
+    <Compile Include="Mongodb\V20190725\Models\InstanceTextParam.cs" />
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\KillOpsRequest.cs" />

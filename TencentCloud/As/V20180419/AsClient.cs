@@ -883,6 +883,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 此接口用于查询伸缩组配置建议。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingAdvicesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingAdvicesResponse"/></returns>
+        public async Task<DescribeAutoScalingAdvicesResponse> DescribeAutoScalingAdvices(DescribeAutoScalingAdvicesRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoScalingAdvices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于查询伸缩组配置建议。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoScalingAdvicesRequest"/></param>
+        /// <returns><see cref="DescribeAutoScalingAdvicesResponse"/></returns>
+        public DescribeAutoScalingAdvicesResponse DescribeAutoScalingAdvicesSync(DescribeAutoScalingAdvicesRequest req)
+        {
+             JsonResponseModel<DescribeAutoScalingAdvicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoScalingAdvices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoScalingAdvicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeAutoScalingGroupLastActivities）用于查询伸缩组的最新一次伸缩活动记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeAutoScalingGroupLastActivitiesRequest"/></param>

@@ -150,6 +150,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("CostType")]
         public string CostType{ get; set; }
 
+        /// <summary>
+        /// 环境变量
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +183,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "Brand", this.Brand);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "CostType", this.CostType);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
         }
     }
 }

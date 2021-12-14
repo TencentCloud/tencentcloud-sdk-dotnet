@@ -25,7 +25,7 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 负载均衡性能保障实例ID和变配的目标规格
+        /// 负载均衡实例信息
         /// </summary>
         [JsonProperty("LoadBalancerSla")]
         public SlaUpdateParam[] LoadBalancerSla{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string LoadBalancerId{ get; set; }
 
         /// <summary>
-        /// 需要变更的性能保障级别
+        /// 变更为性能容量型，固定为SLA
         /// </summary>
         [JsonProperty("SlaType")]
         public string SlaType{ get; set; }

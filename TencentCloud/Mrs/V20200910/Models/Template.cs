@@ -143,6 +143,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("OcrText")]
         public string OcrText{ get; set; }
 
+        /// <summary>
+        /// OCR拼接后文本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrResult")]
+        public string OcrResult{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +173,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamObj(map, prefix + "Prescription.", this.Prescription);
             this.SetParamObj(map, prefix + "VaccineCertificate.", this.VaccineCertificate);
             this.SetParamSimple(map, prefix + "OcrText", this.OcrText);
+            this.SetParamSimple(map, prefix + "OcrResult", this.OcrResult);
         }
     }
 }

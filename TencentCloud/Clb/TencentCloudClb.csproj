@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.425</VersionPrefix>
+    <VersionPrefix>3.0.426</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,7 @@
     <Compile Include="V20180317\Models\CreateTargetGroupResponse.cs" />
     <Compile Include="V20180317\Models\CreateTopicRequest.cs" />
     <Compile Include="V20180317\Models\CreateTopicResponse.cs" />
+    <Compile Include="V20180317\Models\CrossTargets.cs" />
     <Compile Include="V20180317\Models\DeleteListenerRequest.cs" />
     <Compile Include="V20180317\Models\DeleteListenerResponse.cs" />
     <Compile Include="V20180317\Models\DeleteLoadBalancerListenersRequest.cs" />
@@ -126,6 +127,8 @@
     <Compile Include="V20180317\Models\DescribeClsLogSetResponse.cs" />
     <Compile Include="V20180317\Models\DescribeClusterResourcesRequest.cs" />
     <Compile Include="V20180317\Models\DescribeClusterResourcesResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeCrossTargetsRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeCrossTargetsResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListRequest.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigAssociateListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListRequest.cs" />
