@@ -39,6 +39,20 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string UserId{ get; set; }
 
         /// <summary>
+        /// 用户所属的用户组信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserGroupInfoList")]
+        public UserGroupInfo[] UserGroupInfoList{ get; set; }
+
+        /// <summary>
+        /// 返回的用户组信息总数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +66,8 @@ namespace TencentCloud.Eiam.V20210420.Models
         {
             this.SetParamArraySimple(map, prefix + "UserGroupIds.", this.UserGroupIds);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamArrayObj(map, prefix + "UserGroupInfoList.", this.UserGroupInfoList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

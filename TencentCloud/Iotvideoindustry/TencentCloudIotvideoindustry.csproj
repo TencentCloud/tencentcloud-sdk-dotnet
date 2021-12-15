@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18E4740C-9C8B-37F5-AF27-B5C1E6829210}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.426</VersionPrefix>
+    <VersionPrefix>3.0.427</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,20 +56,42 @@
     <Compile Include="V20201201\Models\CreateDeviceGroupResponse.cs" />
     <Compile Include="V20201201\Models\CreateDeviceRequest.cs" />
     <Compile Include="V20201201\Models\CreateDeviceResponse.cs" />
+    <Compile Include="V20201201\Models\CreateLiveChannelRequest.cs" />
+    <Compile Include="V20201201\Models\CreateLiveChannelResponse.cs" />
+    <Compile Include="V20201201\Models\CreateLiveRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\CreateLiveRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\CreateRecordPlanRequest.cs" />
     <Compile Include="V20201201\Models\CreateRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\CreateSceneRequest.cs" />
+    <Compile Include="V20201201\Models\CreateSceneResponse.cs" />
     <Compile Include="V20201201\Models\CreateTimeTemplateRequest.cs" />
     <Compile Include="V20201201\Models\CreateTimeTemplateResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteChannelRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteChannelResponse.cs" />
     <Compile Include="V20201201\Models\DeleteDeviceGroupRequest.cs" />
     <Compile Include="V20201201\Models\DeleteDeviceGroupResponse.cs" />
     <Compile Include="V20201201\Models\DeleteDeviceRequest.cs" />
     <Compile Include="V20201201\Models\DeleteDeviceResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveChannelRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveChannelResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveVideoListRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteLiveVideoListResponse.cs" />
     <Compile Include="V20201201\Models\DeleteRecordPlanRequest.cs" />
     <Compile Include="V20201201\Models\DeleteRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteSceneRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteSceneResponse.cs" />
     <Compile Include="V20201201\Models\DeleteTimeTemplateRequest.cs" />
     <Compile Include="V20201201\Models\DeleteTimeTemplateResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteVideoListRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteVideoListResponse.cs" />
     <Compile Include="V20201201\Models\DescribeAllDeviceListRequest.cs" />
     <Compile Include="V20201201\Models\DescribeAllDeviceListResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeBindSceneDevicesRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeBindSceneDevicesResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeChannelsByLiveRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeChannelsByLiveRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\DescribeDeviceGroupRequest.cs" />
     <Compile Include="V20201201\Models\DescribeDeviceGroupResponse.cs" />
     <Compile Include="V20201201\Models\DescribeDevicePassWordRequest.cs" />
@@ -87,17 +109,35 @@
     <Compile Include="V20201201\Models\DescribeGroupsResponse.cs" />
     <Compile Include="V20201201\Models\DescribeIPCChannelsRequest.cs" />
     <Compile Include="V20201201\Models\DescribeIPCChannelsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveChannelListRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveChannelListResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveChannelRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveChannelResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveRecordPlanByIdRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveRecordPlanByIdResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveRecordPlanIdsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveRecordPlanIdsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveStreamRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveStreamResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveVideoListRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeLiveVideoListResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeRecordDatesByLiveRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeRecordDatesByLiveResponse.cs" />
     <Compile Include="V20201201\Models\DescribeRecordStreamData.cs" />
     <Compile Include="V20201201\Models\DescribeRecordStreamRequest.cs" />
     <Compile Include="V20201201\Models\DescribeRecordStreamResponse.cs" />
     <Compile Include="V20201201\Models\DescribeSIPServerRequest.cs" />
     <Compile Include="V20201201\Models\DescribeSIPServerResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeScenesRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeScenesResponse.cs" />
     <Compile Include="V20201201\Models\DescribeStatisticDetailsRequest.cs" />
     <Compile Include="V20201201\Models\DescribeStatisticDetailsResponse.cs" />
     <Compile Include="V20201201\Models\DescribeStatisticSummaryRequest.cs" />
     <Compile Include="V20201201\Models\DescribeStatisticSummaryResponse.cs" />
     <Compile Include="V20201201\Models\DescribeSubGroupsRequest.cs" />
     <Compile Include="V20201201\Models\DescribeSubGroupsResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeSubscriptionStatusRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeSubscriptionStatusResponse.cs" />
     <Compile Include="V20201201\Models\DescribeVideoListRequest.cs" />
     <Compile Include="V20201201\Models\DescribeVideoListResponse.cs" />
     <Compile Include="V20201201\Models\DevGroupInfo.cs" />
@@ -119,12 +159,30 @@
     <Compile Include="V20201201\Models\GroupDeviceItem.cs" />
     <Compile Include="V20201201\Models\GroupInfo.cs" />
     <Compile Include="V20201201\Models\GroupItem.cs" />
+    <Compile Include="V20201201\Models\LiveChannelInfo.cs" />
+    <Compile Include="V20201201\Models\LiveChannelItem.cs" />
+    <Compile Include="V20201201\Models\LiveRecordItem.cs" />
+    <Compile Include="V20201201\Models\LiveRecordPlanItem.cs" />
+    <Compile Include="V20201201\Models\ModifyBindPlanLiveChannelRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyBindPlanLiveChannelResponse.cs" />
     <Compile Include="V20201201\Models\ModifyDeviceDataRequest.cs" />
     <Compile Include="V20201201\Models\ModifyDeviceDataResponse.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveChannelRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveChannelResponse.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveRecordPlanRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveVideoRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyLiveVideoResponse.cs" />
+    <Compile Include="V20201201\Models\ModifySubscriptionStatusRequest.cs" />
+    <Compile Include="V20201201\Models\ModifySubscriptionStatusResponse.cs" />
+    <Compile Include="V20201201\Models\ModifyVideoInfoRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyVideoInfoResponse.cs" />
     <Compile Include="V20201201\Models\RecordPlanItem.cs" />
     <Compile Include="V20201201\Models\RecordTaskItem.cs" />
+    <Compile Include="V20201201\Models\SceneItem.cs" />
     <Compile Include="V20201201\Models\ServerConfiguration.cs" />
     <Compile Include="V20201201\Models\StatisticItem.cs" />
+    <Compile Include="V20201201\Models\StreamAddress.cs" />
     <Compile Include="V20201201\Models\TimeTemplateItem.cs" />
     <Compile Include="V20201201\Models\TimeTemplateSpec.cs" />
     <Compile Include="V20201201\Models\UpdateDeviceGroupRequest.cs" />

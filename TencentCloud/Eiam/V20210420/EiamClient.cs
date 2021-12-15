@@ -53,6 +53,46 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 账号组添加账号
+        /// </summary>
+        /// <param name="req"><see cref="AddAccountToAccountGroupRequest"/></param>
+        /// <returns><see cref="AddAccountToAccountGroupResponse"/></returns>
+        public async Task<AddAccountToAccountGroupResponse> AddAccountToAccountGroup(AddAccountToAccountGroupRequest req)
+        {
+             JsonResponseModel<AddAccountToAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddAccountToAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAccountToAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 账号组添加账号
+        /// </summary>
+        /// <param name="req"><see cref="AddAccountToAccountGroupRequest"/></param>
+        /// <returns><see cref="AddAccountToAccountGroupResponse"/></returns>
+        public AddAccountToAccountGroupResponse AddAccountToAccountGroupSync(AddAccountToAccountGroupRequest req)
+        {
+             JsonResponseModel<AddAccountToAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddAccountToAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddAccountToAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 加入用户到用户组
         /// </summary>
         /// <param name="req"><see cref="AddUserToUserGroupRequest"/></param>
@@ -84,6 +124,86 @@ namespace TencentCloud.Eiam.V20210420
              {
                  var strResp = this.InternalRequestSync(req, "AddUserToUserGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUserToUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建账号组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountGroupRequest"/></param>
+        /// <returns><see cref="CreateAccountGroupResponse"/></returns>
+        public async Task<CreateAccountGroupResponse> CreateAccountGroup(CreateAccountGroupRequest req)
+        {
+             JsonResponseModel<CreateAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建账号组
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountGroupRequest"/></param>
+        /// <returns><see cref="CreateAccountGroupResponse"/></returns>
+        public CreateAccountGroupResponse CreateAccountGroupSync(CreateAccountGroupRequest req)
+        {
+             JsonResponseModel<CreateAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建应用账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppAccountRequest"/></param>
+        /// <returns><see cref="CreateAppAccountResponse"/></returns>
+        public async Task<CreateAppAccountResponse> CreateAppAccount(CreateAppAccountRequest req)
+        {
+             JsonResponseModel<CreateAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建应用账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateAppAccountRequest"/></param>
+        /// <returns><see cref="CreateAppAccountResponse"/></returns>
+        public CreateAppAccountResponse CreateAppAccountSync(CreateAppAccountRequest req)
+        {
+             JsonResponseModel<CreateAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAppAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -213,6 +333,86 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 删除账号组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public async Task<DeleteAccountGroupResponse> DeleteAccountGroup(DeleteAccountGroupRequest req)
+        {
+             JsonResponseModel<DeleteAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除账号组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAccountGroupRequest"/></param>
+        /// <returns><see cref="DeleteAccountGroupResponse"/></returns>
+        public DeleteAccountGroupResponse DeleteAccountGroupSync(DeleteAccountGroupRequest req)
+        {
+             JsonResponseModel<DeleteAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除应用账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppAccountRequest"/></param>
+        /// <returns><see cref="DeleteAppAccountResponse"/></returns>
+        public async Task<DeleteAppAccountResponse> DeleteAppAccount(DeleteAppAccountRequest req)
+        {
+             JsonResponseModel<DeleteAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除应用账号
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAppAccountRequest"/></param>
+        /// <returns><see cref="DeleteAppAccountResponse"/></returns>
+        public DeleteAppAccountResponse DeleteAppAccountSync(DeleteAppAccountRequest req)
+        {
+             JsonResponseModel<DeleteAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除一个机构节点
         /// </summary>
         /// <param name="req"><see cref="DeleteOrgNodeRequest"/></param>
@@ -324,6 +524,126 @@ namespace TencentCloud.Eiam.V20210420
              {
                  var strResp = this.InternalRequestSync(req, "DeleteUserGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUserGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除当前节点下的用户。如果出现个别用户删除错误，将不影响其余被勾选用户被删除的操作，同时提示未被删除的用户名称/用户ID。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public async Task<DeleteUsersResponse> DeleteUsers(DeleteUsersRequest req)
+        {
+             JsonResponseModel<DeleteUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除当前节点下的用户。如果出现个别用户删除错误，将不影响其余被勾选用户被删除的操作，同时提示未被删除的用户名称/用户ID。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUsersRequest"/></param>
+        /// <returns><see cref="DeleteUsersResponse"/></returns>
+        public DeleteUsersResponse DeleteUsersSync(DeleteUsersRequest req)
+        {
+             JsonResponseModel<DeleteUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupResponse"/></returns>
+        public async Task<DescribeAccountGroupResponse> DescribeAccountGroup(DescribeAccountGroupRequest req)
+        {
+             JsonResponseModel<DescribeAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询账号组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountGroupRequest"/></param>
+        /// <returns><see cref="DescribeAccountGroupResponse"/></returns>
+        public DescribeAccountGroupResponse DescribeAccountGroupSync(DescribeAccountGroupRequest req)
+        {
+             JsonResponseModel<DescribeAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppAccountRequest"/></param>
+        /// <returns><see cref="DescribeAppAccountResponse"/></returns>
+        public async Task<DescribeAppAccountResponse> DescribeAppAccount(DescribeAppAccountRequest req)
+        {
+             JsonResponseModel<DescribeAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用账号列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAppAccountRequest"/></param>
+        /// <returns><see cref="DescribeAppAccountResponse"/></returns>
+        public DescribeAppAccountResponse DescribeAppAccountSync(DescribeAppAccountRequest req)
+        {
+             JsonResponseModel<DescribeAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAppAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -644,6 +964,86 @@ namespace TencentCloud.Eiam.V20210420
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserResourcesAuthorization");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResourcesAuthorizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过用户名或用户 id 获取用户的第三方账号绑定信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserThirdPartyAccountInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserThirdPartyAccountInfoResponse"/></returns>
+        public async Task<DescribeUserThirdPartyAccountInfoResponse> DescribeUserThirdPartyAccountInfo(DescribeUserThirdPartyAccountInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserThirdPartyAccountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过用户名或用户 id 获取用户的第三方账号绑定信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserThirdPartyAccountInfoRequest"/></param>
+        /// <returns><see cref="DescribeUserThirdPartyAccountInfoResponse"/></returns>
+        public DescribeUserThirdPartyAccountInfoResponse DescribeUserThirdPartyAccountInfoSync(DescribeUserThirdPartyAccountInfoRequest req)
+        {
+             JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserThirdPartyAccountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserThirdPartyAccountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  获取账号组中的账号列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountInAccountGroupRequest"/></param>
+        /// <returns><see cref="ListAccountInAccountGroupResponse"/></returns>
+        public async Task<ListAccountInAccountGroupResponse> ListAccountInAccountGroup(ListAccountInAccountGroupRequest req)
+        {
+             JsonResponseModel<ListAccountInAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAccountInAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccountInAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  获取账号组中的账号列表
+        /// </summary>
+        /// <param name="req"><see cref="ListAccountInAccountGroupRequest"/></param>
+        /// <returns><see cref="ListAccountInAccountGroupResponse"/></returns>
+        public ListAccountInAccountGroupResponse ListAccountInAccountGroupSync(ListAccountInAccountGroupRequest req)
+        {
+             JsonResponseModel<ListAccountInAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAccountInAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAccountInAccountGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1053,6 +1453,86 @@ namespace TencentCloud.Eiam.V20210420
         }
 
         /// <summary>
+        /// 修改账号组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountGroupRequest"/></param>
+        /// <returns><see cref="ModifyAccountGroupResponse"/></returns>
+        public async Task<ModifyAccountGroupResponse> ModifyAccountGroup(ModifyAccountGroupRequest req)
+        {
+             JsonResponseModel<ModifyAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改账号组
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAccountGroupRequest"/></param>
+        /// <returns><see cref="ModifyAccountGroupResponse"/></returns>
+        public ModifyAccountGroupResponse ModifyAccountGroupSync(ModifyAccountGroupRequest req)
+        {
+             JsonResponseModel<ModifyAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改应用账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAppAccountRequest"/></param>
+        /// <returns><see cref="ModifyAppAccountResponse"/></returns>
+        public async Task<ModifyAppAccountResponse> ModifyAppAccount(ModifyAppAccountRequest req)
+        {
+             JsonResponseModel<ModifyAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改应用账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAppAccountRequest"/></param>
+        /// <returns><see cref="ModifyAppAccountResponse"/></returns>
+        public ModifyAppAccountResponse ModifyAppAccountSync(ModifyAppAccountRequest req)
+        {
+             JsonResponseModel<ModifyAppAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAppAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新一个应用的信息
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationRequest"/></param>
@@ -1124,6 +1604,46 @@ namespace TencentCloud.Eiam.V20210420
              {
                  var strResp = this.InternalRequestSync(req, "ModifyUserInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从账号组中移除账号
+        /// </summary>
+        /// <param name="req"><see cref="RemoveAccountFromAccountGroupRequest"/></param>
+        /// <returns><see cref="RemoveAccountFromAccountGroupResponse"/></returns>
+        public async Task<RemoveAccountFromAccountGroupResponse> RemoveAccountFromAccountGroup(RemoveAccountFromAccountGroupRequest req)
+        {
+             JsonResponseModel<RemoveAccountFromAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveAccountFromAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveAccountFromAccountGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 从账号组中移除账号
+        /// </summary>
+        /// <param name="req"><see cref="RemoveAccountFromAccountGroupRequest"/></param>
+        /// <returns><see cref="RemoveAccountFromAccountGroupResponse"/></returns>
+        public RemoveAccountFromAccountGroupResponse RemoveAccountFromAccountGroupSync(RemoveAccountFromAccountGroupRequest req)
+        {
+             JsonResponseModel<RemoveAccountFromAccountGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveAccountFromAccountGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveAccountFromAccountGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

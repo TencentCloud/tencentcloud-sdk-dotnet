@@ -133,7 +133,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用户创建告警通知模板。
+        /// 该接口用户创建通知渠道组。
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用户创建告警通知模板。
+        /// 该接口用户创建通知渠道组。
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -573,7 +573,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于删除告警通知模板
+        /// 该接口用于删除通知渠道组
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticeRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticeResponse"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于删除告警通知模板
+        /// 该接口用于删除通知渠道组
         /// </summary>
         /// <param name="req"><see cref="DeleteAlarmNoticeRequest"/></param>
         /// <returns><see cref="DeleteAlarmNoticeResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于获取告警通知模板列表
+        /// 该接口用于获取通知渠道组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于获取告警通知模板列表
+        /// 该接口用于获取通知渠道组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmNoticesRequest"/></param>
         /// <returns><see cref="DescribeAlarmNoticesResponse"/></returns>
@@ -1053,7 +1053,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取告警策略。
+        /// 本接口用于获取告警策略列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
         /// <returns><see cref="DescribeAlarmsResponse"/></returns>
@@ -1073,7 +1073,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于获取告警策略。
+        /// 本接口用于获取告警策略列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAlarmsRequest"/></param>
         /// <returns><see cref="DescribeAlarmsResponse"/></returns>
@@ -1893,7 +1893,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于修改告警通知模板。
+        /// 该接口用于修改通知渠道组
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
@@ -1913,7 +1913,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用于修改告警通知模板。
+        /// 该接口用于修改通知渠道组
         /// </summary>
         /// <param name="req"><see cref="ModifyAlarmNoticeRequest"/></param>
         /// <returns><see cref="ModifyAlarmNoticeResponse"/></returns>
@@ -2213,7 +2213,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志
+        /// 本接口用于搜索日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过15
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -2233,7 +2233,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志
+        /// 本接口用于搜索日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过15
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

@@ -25,7 +25,7 @@ namespace TencentCloud.Cii.V20210408.Models
     {
         
         /// <summary>
-        /// 险种
+        /// 险种:CriticalDiseaseInsurance(重疾险);LifeInsurance(寿险);AccidentInsurance(意外险);MedicalInsurance(医疗险)
         /// </summary>
         [JsonProperty("InsuranceType")]
         public string InsuranceType{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{140B79ED-37B5-377F-AF01-141CBF107CFF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.426</VersionPrefix>
+    <VersionPrefix>3.0.427</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,8 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20210420\EiamClient.cs" />
+    <Compile Include="V20210420\Models\AccountGroupInfo.cs" />
+    <Compile Include="V20210420\Models\AccountGroupSearchCriteria.cs" />
+    <Compile Include="V20210420\Models\AddAccountToAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\AddAccountToAccountGroupResponse.cs" />
     <Compile Include="V20210420\Models\AddUserToUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\AddUserToUserGroupResponse.cs" />
+    <Compile Include="V20210420\Models\AppAccountInfo.cs" />
+    <Compile Include="V20210420\Models\AppAccountSearchCriteria.cs" />
     <Compile Include="V20210420\Models\ApplicationAuthorizationInfo.cs" />
     <Compile Include="V20210420\Models\ApplicationInfoSearchCriteria.cs" />
     <Compile Include="V20210420\Models\ApplicationInformation.cs" />
@@ -54,18 +60,32 @@
     <Compile Include="V20210420\Models\AuthorizationInfoSearchCriteria.cs" />
     <Compile Include="V20210420\Models\AuthorizationResouceEntityInfo.cs" />
     <Compile Include="V20210420\Models\AuthorizationUserResouceInfo.cs" />
+    <Compile Include="V20210420\Models\CreateAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\CreateAccountGroupResponse.cs" />
+    <Compile Include="V20210420\Models\CreateAppAccountRequest.cs" />
+    <Compile Include="V20210420\Models\CreateAppAccountResponse.cs" />
     <Compile Include="V20210420\Models\CreateOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\CreateOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\CreateUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\CreateUserRequest.cs" />
     <Compile Include="V20210420\Models\CreateUserResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteAccountGroupResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteAppAccountRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteAppAccountResponse.cs" />
     <Compile Include="V20210420\Models\DeleteOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\DeleteOrgNodeResponse.cs" />
     <Compile Include="V20210420\Models\DeleteUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\DeleteUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\DeleteUserRequest.cs" />
     <Compile Include="V20210420\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20210420\Models\DeleteUsersRequest.cs" />
+    <Compile Include="V20210420\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeAccountGroupResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeAppAccountRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeAppAccountResponse.cs" />
     <Compile Include="V20210420\Models\DescribeApplicationRequest.cs" />
     <Compile Include="V20210420\Models\DescribeApplicationResponse.cs" />
     <Compile Include="V20210420\Models\DescribeOrgNodeRequest.cs" />
@@ -82,7 +102,12 @@
     <Compile Include="V20210420\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20210420\Models\DescribeUserResourcesAuthorizationRequest.cs" />
     <Compile Include="V20210420\Models\DescribeUserResourcesAuthorizationResponse.cs" />
+    <Compile Include="V20210420\Models\DescribeUserThirdPartyAccountInfoRequest.cs" />
+    <Compile Include="V20210420\Models\DescribeUserThirdPartyAccountInfoResponse.cs" />
     <Compile Include="V20210420\Models\InheritedForm.cs" />
+    <Compile Include="V20210420\Models\LinkUserInfo.cs" />
+    <Compile Include="V20210420\Models\ListAccountInAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\ListAccountInAccountGroupResponse.cs" />
     <Compile Include="V20210420\Models\ListApplicationAuthorizationsRequest.cs" />
     <Compile Include="V20210420\Models\ListApplicationAuthorizationsResponse.cs" />
     <Compile Include="V20210420\Models\ListApplicationsRequest.cs" />
@@ -99,23 +124,33 @@
     <Compile Include="V20210420\Models\ListUserGroupsResponse.cs" />
     <Compile Include="V20210420\Models\ListUsersInOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersInOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\ListUsersInOrgNodeSearchCriteria.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersInUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\ListUsersRequest.cs" />
     <Compile Include="V20210420\Models\ListUsersResponse.cs" />
+    <Compile Include="V20210420\Models\ModifyAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\ModifyAccountGroupResponse.cs" />
+    <Compile Include="V20210420\Models\ModifyAppAccountRequest.cs" />
+    <Compile Include="V20210420\Models\ModifyAppAccountResponse.cs" />
     <Compile Include="V20210420\Models\ModifyApplicationRequest.cs" />
     <Compile Include="V20210420\Models\ModifyApplicationResponse.cs" />
     <Compile Include="V20210420\Models\ModifyUserInfoRequest.cs" />
     <Compile Include="V20210420\Models\ModifyUserInfoResponse.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildInfo.cs" />
     <Compile Include="V20210420\Models\OrgNodeChildUserInfo.cs" />
+    <Compile Include="V20210420\Models\RemoveAccountFromAccountGroupRequest.cs" />
+    <Compile Include="V20210420\Models\RemoveAccountFromAccountGroupResponse.cs" />
     <Compile Include="V20210420\Models\RemoveUserFromUserGroupRequest.cs" />
     <Compile Include="V20210420\Models\RemoveUserFromUserGroupResponse.cs" />
     <Compile Include="V20210420\Models\SortCondition.cs" />
+    <Compile Include="V20210420\Models\ThirdPartyAccountInfo.cs" />
     <Compile Include="V20210420\Models\UpdateOrgNodeRequest.cs" />
     <Compile Include="V20210420\Models\UpdateOrgNodeResponse.cs" />
+    <Compile Include="V20210420\Models\UserGroupInfo.cs" />
     <Compile Include="V20210420\Models\UserGroupInfoSearchCriteria.cs" />
     <Compile Include="V20210420\Models\UserGroupInformation.cs" />
+    <Compile Include="V20210420\Models\UserGroupInformationSearchCriteria.cs" />
     <Compile Include="V20210420\Models\UserInfo.cs" />
     <Compile Include="V20210420\Models\UserInformation.cs" />
     <Compile Include="V20210420\Models\UserSearchCriteria.cs" />

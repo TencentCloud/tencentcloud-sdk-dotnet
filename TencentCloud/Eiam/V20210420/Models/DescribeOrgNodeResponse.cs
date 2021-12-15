@@ -81,6 +81,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         public OrgNodeChildInfo[] OrgNodeChildInfo{ get; set; }
 
         /// <summary>
+        /// 机构节点描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -100,6 +107,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
             this.SetParamArrayObj(map, prefix + "OrgNodeChildInfo.", this.OrgNodeChildInfo);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

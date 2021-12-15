@@ -25,13 +25,13 @@ namespace TencentCloud.Cii.V20210408.Models
     {
         
         /// <summary>
-        /// 0表示正常返回
+        /// 0表示正常返回；1代表结果未生成；2代表任务执行失败
         /// </summary>
         [JsonProperty("Code")]
         public ulong? Code{ get; set; }
 
         /// <summary>
-        /// 报告类型
+        /// 报告类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

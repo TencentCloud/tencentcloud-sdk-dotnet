@@ -45,6 +45,20 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("InheritedForm")]
         public InheritedForm InheritedForm{ get; set; }
 
+        /// <summary>
+        /// 应用名称。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationName")]
+        public string ApplicationName{ get; set; }
+
+        /// <summary>
+        /// 应用创建时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedDate")]
+        public string CreatedDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamArraySimple(map, prefix + "ApplicationAccounts.", this.ApplicationAccounts);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamObj(map, prefix + "InheritedForm.", this.InheritedForm);
+            this.SetParamSimple(map, prefix + "ApplicationName", this.ApplicationName);
+            this.SetParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
         }
     }
 }

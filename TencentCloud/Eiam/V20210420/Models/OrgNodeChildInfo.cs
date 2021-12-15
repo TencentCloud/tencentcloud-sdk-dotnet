@@ -73,6 +73,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("CreatedDate")]
         public string CreatedDate{ get; set; }
 
+        /// <summary>
+        /// 机构节点描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "CreatedDate", this.CreatedDate);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
         }
     }
 }

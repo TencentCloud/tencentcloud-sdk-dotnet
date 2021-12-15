@@ -253,6 +253,86 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 创建直播频道
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveChannelRequest"/></param>
+        /// <returns><see cref="CreateLiveChannelResponse"/></returns>
+        public async Task<CreateLiveChannelResponse> CreateLiveChannel(CreateLiveChannelRequest req)
+        {
+             JsonResponseModel<CreateLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播频道
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveChannelRequest"/></param>
+        /// <returns><see cref="CreateLiveChannelResponse"/></returns>
+        public CreateLiveChannelResponse CreateLiveChannelSync(CreateLiveChannelRequest req)
+        {
+             JsonResponseModel<CreateLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="CreateLiveRecordPlanResponse"/></returns>
+        public async Task<CreateLiveRecordPlanResponse> CreateLiveRecordPlan(CreateLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<CreateLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="CreateLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="CreateLiveRecordPlanResponse"/></returns>
+        public CreateLiveRecordPlanResponse CreateLiveRecordPlanSync(CreateLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<CreateLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
         /// </summary>
         /// <param name="req"><see cref="CreateRecordPlanRequest"/></param>
@@ -293,6 +373,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 创建场景
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneRequest"/></param>
+        /// <returns><see cref="CreateSceneResponse"/></returns>
+        public async Task<CreateSceneResponse> CreateScene(CreateSceneRequest req)
+        {
+             JsonResponseModel<CreateSceneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScene");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSceneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建场景
+        /// </summary>
+        /// <param name="req"><see cref="CreateSceneRequest"/></param>
+        /// <returns><see cref="CreateSceneResponse"/></returns>
+        public CreateSceneResponse CreateSceneSync(CreateSceneRequest req)
+        {
+             JsonResponseModel<CreateSceneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScene");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSceneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateTimeTemplate) 用于根据模板描述的具体录制时间片段，创建定制化的时间模板。
         /// </summary>
         /// <param name="req"><see cref="CreateTimeTemplateRequest"/></param>
@@ -324,6 +444,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "CreateTimeTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTimeTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除通道接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChannelRequest"/></param>
+        /// <returns><see cref="DeleteChannelResponse"/></returns>
+        public async Task<DeleteChannelResponse> DeleteChannel(DeleteChannelRequest req)
+        {
+             JsonResponseModel<DeleteChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除通道接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteChannelRequest"/></param>
+        /// <returns><see cref="DeleteChannelResponse"/></returns>
+        public DeleteChannelResponse DeleteChannelSync(DeleteChannelRequest req)
+        {
+             JsonResponseModel<DeleteChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -413,6 +573,126 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 删除直播接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveChannelRequest"/></param>
+        /// <returns><see cref="DeleteLiveChannelResponse"/></returns>
+        public async Task<DeleteLiveChannelResponse> DeleteLiveChannel(DeleteLiveChannelRequest req)
+        {
+             JsonResponseModel<DeleteLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveChannelRequest"/></param>
+        /// <returns><see cref="DeleteLiveChannelResponse"/></returns>
+        public DeleteLiveChannelResponse DeleteLiveChannelSync(DeleteLiveChannelRequest req)
+        {
+             JsonResponseModel<DeleteLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="DeleteLiveRecordPlanResponse"/></returns>
+        public async Task<DeleteLiveRecordPlanResponse> DeleteLiveRecordPlan(DeleteLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<DeleteLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="DeleteLiveRecordPlanResponse"/></returns>
+        public DeleteLiveRecordPlanResponse DeleteLiveRecordPlanSync(DeleteLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<DeleteLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveVideoListRequest"/></param>
+        /// <returns><see cref="DeleteLiveVideoListResponse"/></returns>
+        public async Task<DeleteLiveVideoListResponse> DeleteLiveVideoList(DeleteLiveVideoListRequest req)
+        {
+             JsonResponseModel<DeleteLiveVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLiveVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLiveVideoListRequest"/></param>
+        /// <returns><see cref="DeleteLiveVideoListResponse"/></returns>
+        public DeleteLiveVideoListResponse DeleteLiveVideoListSync(DeleteLiveVideoListRequest req)
+        {
+             JsonResponseModel<DeleteLiveVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLiveVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteRecordPlan)用于删除录制计划
         /// 录制计划删除的同时，会停止该录制计划下的全部录制任务。
         /// </summary>
@@ -446,6 +726,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRecordPlan");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除场景
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSceneRequest"/></param>
+        /// <returns><see cref="DeleteSceneResponse"/></returns>
+        public async Task<DeleteSceneResponse> DeleteScene(DeleteSceneRequest req)
+        {
+             JsonResponseModel<DeleteSceneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScene");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSceneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除场景
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSceneRequest"/></param>
+        /// <returns><see cref="DeleteSceneResponse"/></returns>
+        public DeleteSceneResponse DeleteSceneSync(DeleteSceneRequest req)
+        {
+             JsonResponseModel<DeleteSceneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteScene");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSceneResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -495,6 +815,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 删除录像存储列表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoListRequest"/></param>
+        /// <returns><see cref="DeleteVideoListResponse"/></returns>
+        public async Task<DeleteVideoListResponse> DeleteVideoList(DeleteVideoListRequest req)
+        {
+             JsonResponseModel<DeleteVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除录像存储列表
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVideoListRequest"/></param>
+        /// <returns><see cref="DeleteVideoListResponse"/></returns>
+        public DeleteVideoListResponse DeleteVideoListSync(DeleteVideoListRequest req)
+        {
+             JsonResponseModel<DeleteVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeAllDeviceList) 用于获取设备列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAllDeviceListRequest"/></param>
@@ -526,6 +886,86 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAllDeviceList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAllDeviceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取场景绑定设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindSceneDevicesRequest"/></param>
+        /// <returns><see cref="DescribeBindSceneDevicesResponse"/></returns>
+        public async Task<DescribeBindSceneDevicesResponse> DescribeBindSceneDevices(DescribeBindSceneDevicesRequest req)
+        {
+             JsonResponseModel<DescribeBindSceneDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBindSceneDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindSceneDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取场景绑定设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindSceneDevicesRequest"/></param>
+        /// <returns><see cref="DescribeBindSceneDevicesResponse"/></returns>
+        public DescribeBindSceneDevicesResponse DescribeBindSceneDevicesSync(DescribeBindSceneDevicesRequest req)
+        {
+             JsonResponseModel<DescribeBindSceneDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBindSceneDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindSceneDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据直播录制计划获取频道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelsByLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="DescribeChannelsByLiveRecordPlanResponse"/></returns>
+        public async Task<DescribeChannelsByLiveRecordPlanResponse> DescribeChannelsByLiveRecordPlan(DescribeChannelsByLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChannelsByLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据直播录制计划获取频道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChannelsByLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="DescribeChannelsByLiveRecordPlanResponse"/></returns>
+        public DescribeChannelsByLiveRecordPlanResponse DescribeChannelsByLiveRecordPlanSync(DescribeChannelsByLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChannelsByLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChannelsByLiveRecordPlanResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -855,6 +1295,286 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 直播详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveChannelRequest"/></param>
+        /// <returns><see cref="DescribeLiveChannelResponse"/></returns>
+        public async Task<DescribeLiveChannelResponse> DescribeLiveChannel(DescribeLiveChannelRequest req)
+        {
+             JsonResponseModel<DescribeLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveChannelRequest"/></param>
+        /// <returns><see cref="DescribeLiveChannelResponse"/></returns>
+        public DescribeLiveChannelResponse DescribeLiveChannelSync(DescribeLiveChannelRequest req)
+        {
+             JsonResponseModel<DescribeLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveChannelListRequest"/></param>
+        /// <returns><see cref="DescribeLiveChannelListResponse"/></returns>
+        public async Task<DescribeLiveChannelListResponse> DescribeLiveChannelList(DescribeLiveChannelListRequest req)
+        {
+             JsonResponseModel<DescribeLiveChannelListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveChannelList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveChannelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveChannelListRequest"/></param>
+        /// <returns><see cref="DescribeLiveChannelListResponse"/></returns>
+        public DescribeLiveChannelListResponse DescribeLiveChannelListSync(DescribeLiveChannelListRequest req)
+        {
+             JsonResponseModel<DescribeLiveChannelListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveChannelList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveChannelListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播录制计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordPlanByIdRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordPlanByIdResponse"/></returns>
+        public async Task<DescribeLiveRecordPlanByIdResponse> DescribeLiveRecordPlanById(DescribeLiveRecordPlanByIdRequest req)
+        {
+             JsonResponseModel<DescribeLiveRecordPlanByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveRecordPlanById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveRecordPlanByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播录制计划详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordPlanByIdRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordPlanByIdResponse"/></returns>
+        public DescribeLiveRecordPlanByIdResponse DescribeLiveRecordPlanByIdSync(DescribeLiveRecordPlanByIdRequest req)
+        {
+             JsonResponseModel<DescribeLiveRecordPlanByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveRecordPlanById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveRecordPlanByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播录制计划列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordPlanIdsRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordPlanIdsResponse"/></returns>
+        public async Task<DescribeLiveRecordPlanIdsResponse> DescribeLiveRecordPlanIds(DescribeLiveRecordPlanIdsRequest req)
+        {
+             JsonResponseModel<DescribeLiveRecordPlanIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveRecordPlanIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveRecordPlanIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播录制计划列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveRecordPlanIdsRequest"/></param>
+        /// <returns><see cref="DescribeLiveRecordPlanIdsResponse"/></returns>
+        public DescribeLiveRecordPlanIdsResponse DescribeLiveRecordPlanIdsSync(DescribeLiveRecordPlanIdsRequest req)
+        {
+             JsonResponseModel<DescribeLiveRecordPlanIdsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveRecordPlanIds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveRecordPlanIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播拉流接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamResponse"/></returns>
+        public async Task<DescribeLiveStreamResponse> DescribeLiveStream(DescribeLiveStreamRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播拉流接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveStreamRequest"/></param>
+        /// <returns><see cref="DescribeLiveStreamResponse"/></returns>
+        public DescribeLiveStreamResponse DescribeLiveStreamSync(DescribeLiveStreamRequest req)
+        {
+             JsonResponseModel<DescribeLiveStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像回放列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveVideoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveVideoListResponse"/></returns>
+        public async Task<DescribeLiveVideoListResponse> DescribeLiveVideoList(DescribeLiveVideoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像回放列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveVideoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveVideoListResponse"/></returns>
+        public DescribeLiveVideoListResponse DescribeLiveVideoListSync(DescribeLiveVideoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveVideoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveVideoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像存储日期列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordDatesByLiveRequest"/></param>
+        /// <returns><see cref="DescribeRecordDatesByLiveResponse"/></returns>
+        public async Task<DescribeRecordDatesByLiveResponse> DescribeRecordDatesByLive(DescribeRecordDatesByLiveRequest req)
+        {
+             JsonResponseModel<DescribeRecordDatesByLiveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordDatesByLive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordDatesByLiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像存储日期列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordDatesByLiveRequest"/></param>
+        /// <returns><see cref="DescribeRecordDatesByLiveResponse"/></returns>
+        public DescribeRecordDatesByLiveResponse DescribeRecordDatesByLiveSync(DescribeRecordDatesByLiveRequest req)
+        {
+             JsonResponseModel<DescribeRecordDatesByLiveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordDatesByLive");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordDatesByLiveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取回放视频流(NVR录制用)
         /// RecordId和StartTime/EndTime互斥
         /// 当存在RecordId时，StartTime和EndTime无效
@@ -932,6 +1652,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSIPServer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSIPServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取场景列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public async Task<DescribeScenesResponse> DescribeScenes(DescribeScenesRequest req)
+        {
+             JsonResponseModel<DescribeScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScenesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取场景列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeScenesRequest"/></param>
+        /// <returns><see cref="DescribeScenesResponse"/></returns>
+        public DescribeScenesResponse DescribeScenesSync(DescribeScenesRequest req)
+        {
+             JsonResponseModel<DescribeScenesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeScenes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScenesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1052,6 +1812,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSubGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询主设备订阅状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscriptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeSubscriptionStatusResponse"/></returns>
+        public async Task<DescribeSubscriptionStatusResponse> DescribeSubscriptionStatus(DescribeSubscriptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeSubscriptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubscriptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询主设备订阅状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubscriptionStatusRequest"/></param>
+        /// <returns><see cref="DescribeSubscriptionStatusResponse"/></returns>
+        public DescribeSubscriptionStatusResponse DescribeSubscriptionStatusSync(DescribeSubscriptionStatusRequest req)
+        {
+             JsonResponseModel<DescribeSubscriptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubscriptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubscriptionStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1381,6 +2181,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 直播录制计划绑定解绑直播频道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBindPlanLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyBindPlanLiveChannelResponse"/></returns>
+        public async Task<ModifyBindPlanLiveChannelResponse> ModifyBindPlanLiveChannel(ModifyBindPlanLiveChannelRequest req)
+        {
+             JsonResponseModel<ModifyBindPlanLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBindPlanLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBindPlanLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录制计划绑定解绑直播频道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBindPlanLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyBindPlanLiveChannelResponse"/></returns>
+        public ModifyBindPlanLiveChannelResponse ModifyBindPlanLiveChannelSync(ModifyBindPlanLiveChannelRequest req)
+        {
+             JsonResponseModel<ModifyBindPlanLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBindPlanLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBindPlanLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDeviceData)用于编辑设备信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyDeviceDataRequest"/></param>
@@ -1412,6 +2252,206 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDeviceData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDeviceDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑直播接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyLiveChannelResponse"/></returns>
+        public async Task<ModifyLiveChannelResponse> ModifyLiveChannel(ModifyLiveChannelRequest req)
+        {
+             JsonResponseModel<ModifyLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑直播接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveChannelRequest"/></param>
+        /// <returns><see cref="ModifyLiveChannelResponse"/></returns>
+        public ModifyLiveChannelResponse ModifyLiveChannelSync(ModifyLiveChannelRequest req)
+        {
+             JsonResponseModel<ModifyLiveChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="ModifyLiveRecordPlanResponse"/></returns>
+        public async Task<ModifyLiveRecordPlanResponse> ModifyLiveRecordPlan(ModifyLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<ModifyLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑直播录制计划
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveRecordPlanRequest"/></param>
+        /// <returns><see cref="ModifyLiveRecordPlanResponse"/></returns>
+        public ModifyLiveRecordPlanResponse ModifyLiveRecordPlanSync(ModifyLiveRecordPlanRequest req)
+        {
+             JsonResponseModel<ModifyLiveRecordPlanResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveRecordPlan");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveRecordPlanResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像编辑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveVideoRequest"/></param>
+        /// <returns><see cref="ModifyLiveVideoResponse"/></returns>
+        public async Task<ModifyLiveVideoResponse> ModifyLiveVideo(ModifyLiveVideoRequest req)
+        {
+             JsonResponseModel<ModifyLiveVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 直播录像编辑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveVideoRequest"/></param>
+        /// <returns><see cref="ModifyLiveVideoResponse"/></returns>
+        public ModifyLiveVideoResponse ModifyLiveVideoSync(ModifyLiveVideoRequest req)
+        {
+             JsonResponseModel<ModifyLiveVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑设备订阅状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscriptionStatusRequest"/></param>
+        /// <returns><see cref="ModifySubscriptionStatusResponse"/></returns>
+        public async Task<ModifySubscriptionStatusResponse> ModifySubscriptionStatus(ModifySubscriptionStatusRequest req)
+        {
+             JsonResponseModel<ModifySubscriptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySubscriptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscriptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑设备订阅状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifySubscriptionStatusRequest"/></param>
+        /// <returns><see cref="ModifySubscriptionStatusResponse"/></returns>
+        public ModifySubscriptionStatusResponse ModifySubscriptionStatusSync(ModifySubscriptionStatusRequest req)
+        {
+             JsonResponseModel<ModifySubscriptionStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySubscriptionStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubscriptionStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改录像存储列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoInfoRequest"/></param>
+        /// <returns><see cref="ModifyVideoInfoResponse"/></returns>
+        public async Task<ModifyVideoInfoResponse> ModifyVideoInfo(ModifyVideoInfoRequest req)
+        {
+             JsonResponseModel<ModifyVideoInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVideoInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVideoInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改录像存储列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVideoInfoRequest"/></param>
+        /// <returns><see cref="ModifyVideoInfoResponse"/></returns>
+        public ModifyVideoInfoResponse ModifyVideoInfoSync(ModifyVideoInfoRequest req)
+        {
+             JsonResponseModel<ModifyVideoInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVideoInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVideoInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

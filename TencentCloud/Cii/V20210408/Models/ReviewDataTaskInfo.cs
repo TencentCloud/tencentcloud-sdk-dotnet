@@ -43,7 +43,7 @@ namespace TencentCloud.Cii.V20210408.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 任务类型
+        /// 任务类型:HealthReport(体检报告); BUltraReport(B超报告);MedCheckReport(检查报告);LaboratoryReport(检验报告); PathologyReport(病理报告);AdmissionReport(入院记录);DischargeReport(出院记录); DischargeSummary(出院小结);DiagnosisReport(诊断证明); MedicalRecordFront(病案首页);OperationReport(手术记录);OutpatientMedicalRecord(门诊病历)
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }

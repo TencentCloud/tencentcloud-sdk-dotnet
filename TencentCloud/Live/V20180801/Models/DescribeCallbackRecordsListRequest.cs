@@ -58,7 +58,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// 事件类型。
         /// 0: "断流",
         /// 1: "推流",
-        /// 100: "录制"。
+        /// 100: "录制"
+        /// 200: "截图回调"。
         /// </summary>
         [JsonProperty("EventType")]
         public ulong? EventType{ get; set; }

@@ -84,6 +84,12 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("PwdNeedReset")]
         public bool? PwdNeedReset{ get; set; }
 
+        /// <summary>
+        /// 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+        /// </summary>
+        [JsonProperty("OrgNodeId")]
+        public string OrgNodeId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+            this.SetParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
         }
     }
 }

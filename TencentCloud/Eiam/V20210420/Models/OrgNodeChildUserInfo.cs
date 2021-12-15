@@ -45,6 +45,20 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("TotalUserNum")]
         public long? TotalUserNum{ get; set; }
 
+        /// <summary>
+        /// 组织机构ID路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrgNodeIdPath")]
+        public string OrgNodeIdPath{ get; set; }
+
+        /// <summary>
+        /// 组织机构名称路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrgNodeNamePath")]
+        public string OrgNodeNamePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
             this.SetParamArrayObj(map, prefix + "UserInfo.", this.UserInfo);
             this.SetParamSimple(map, prefix + "TotalUserNum", this.TotalUserNum);
+            this.SetParamSimple(map, prefix + "OrgNodeIdPath", this.OrgNodeIdPath);
+            this.SetParamSimple(map, prefix + "OrgNodeNamePath", this.OrgNodeNamePath);
         }
     }
 }

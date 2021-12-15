@@ -30,6 +30,12 @@ namespace TencentCloud.Thpc.V20211109.Models
         [JsonProperty("CFSOptions")]
         public CFSOption[] CFSOptions{ get; set; }
 
+        /// <summary>
+        /// 集群挂在GooseFS文件系统选项
+        /// </summary>
+        [JsonProperty("GooseFSOptions")]
+        public GooseFSOption[] GooseFSOptions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Thpc.V20211109.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "CFSOptions.", this.CFSOptions);
+            this.SetParamArrayObj(map, prefix + "GooseFSOptions.", this.GooseFSOptions);
         }
     }
 }

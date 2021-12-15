@@ -453,6 +453,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 获取指定时间段内的诊断事件列表，支持依据风险等级、实例ID等条件过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagEventsResponse"/></returns>
+        public async Task<DescribeDBDiagEventsResponse> DescribeDBDiagEvents(DescribeDBDiagEventsRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBDiagEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定时间段内的诊断事件列表，支持依据风险等级、实例ID等条件过滤。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBDiagEventsRequest"/></param>
+        /// <returns><see cref="DescribeDBDiagEventsResponse"/></returns>
+        public DescribeDBDiagEventsResponse DescribeDBDiagEventsSync(DescribeDBDiagEventsRequest req)
+        {
+             JsonResponseModel<DescribeDBDiagEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBDiagEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBDiagEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例诊断事件的列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBDiagHistoryRequest"/></param>

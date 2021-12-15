@@ -90,6 +90,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterDamDDoSStatus")]
         public long? FilterDamDDoSStatus{ get; set; }
 
+        /// <summary>
+        /// 获取特定状态的资源，运行中填idle，攻击中填attacking，封堵中填blocking
+        /// </summary>
+        [JsonProperty("FilterStatus")]
+        public string FilterStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +112,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterEipType", this.FilterEipType);
             this.SetParamArraySimple(map, prefix + "FilterEipEipAddressStatus.", this.FilterEipEipAddressStatus);
             this.SetParamSimple(map, prefix + "FilterDamDDoSStatus", this.FilterDamDDoSStatus);
+            this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
         }
     }
 }

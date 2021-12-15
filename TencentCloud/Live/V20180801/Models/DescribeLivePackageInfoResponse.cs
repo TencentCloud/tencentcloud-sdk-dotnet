@@ -76,6 +76,17 @@ namespace TencentCloud.Live.V20180801.Models
         public long? PageSize{ get; set; }
 
         /// <summary>
+        /// 当请求参数 PackageType = 0 时生效，逗号分隔，从第一个到最后一个分别表示：
+        /// 标准直播，中国大陆（境内全地区）计费方式。
+        /// 标准直播，国际/港澳台（境外多地区）计费方式。
+        /// 快直播，中国大陆（境内全地区）计费方式。
+        /// 快直播，国际/港澳台（境外多地区）计费方式。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FluxPackageBillMode")]
+        public string FluxPackageBillMode{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -93,6 +104,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
             this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "FluxPackageBillMode", this.FluxPackageBillMode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

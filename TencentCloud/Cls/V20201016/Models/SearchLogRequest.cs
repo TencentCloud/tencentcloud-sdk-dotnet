@@ -55,7 +55,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容。过期时间1小时
+        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }

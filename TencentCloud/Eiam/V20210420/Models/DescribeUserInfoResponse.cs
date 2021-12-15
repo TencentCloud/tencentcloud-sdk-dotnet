@@ -109,6 +109,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string ActivationTime{ get; set; }
 
         /// <summary>
+        /// 当前用户的密码是否需要重置，该字段为false表示不需要重置密码。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PwdNeedReset")]
+        public bool? PwdNeedReset{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -132,6 +139,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
             this.SetParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
+            this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
