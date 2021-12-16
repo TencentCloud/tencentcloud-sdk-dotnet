@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18E4740C-9C8B-37F5-AF27-B5C1E6829210}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.427</VersionPrefix>
+    <VersionPrefix>3.0.428</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,6 +60,8 @@
     <Compile Include="V20201201\Models\CreateLiveChannelResponse.cs" />
     <Compile Include="V20201201\Models\CreateLiveRecordPlanRequest.cs" />
     <Compile Include="V20201201\Models\CreateLiveRecordPlanResponse.cs" />
+    <Compile Include="V20201201\Models\CreateMessageForwardRequest.cs" />
+    <Compile Include="V20201201\Models\CreateMessageForwardResponse.cs" />
     <Compile Include="V20201201\Models\CreateRecordPlanRequest.cs" />
     <Compile Include="V20201201\Models\CreateRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\CreateSceneRequest.cs" />
@@ -78,6 +80,8 @@
     <Compile Include="V20201201\Models\DeleteLiveRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\DeleteLiveVideoListRequest.cs" />
     <Compile Include="V20201201\Models\DeleteLiveVideoListResponse.cs" />
+    <Compile Include="V20201201\Models\DeleteMessageForwardRequest.cs" />
+    <Compile Include="V20201201\Models\DeleteMessageForwardResponse.cs" />
     <Compile Include="V20201201\Models\DeleteRecordPlanRequest.cs" />
     <Compile Include="V20201201\Models\DeleteRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\DeleteSceneRequest.cs" />
@@ -121,6 +125,10 @@
     <Compile Include="V20201201\Models\DescribeLiveStreamResponse.cs" />
     <Compile Include="V20201201\Models\DescribeLiveVideoListRequest.cs" />
     <Compile Include="V20201201\Models\DescribeLiveVideoListResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeMessageForwardRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeMessageForwardResponse.cs" />
+    <Compile Include="V20201201\Models\DescribeMessageForwardsRequest.cs" />
+    <Compile Include="V20201201\Models\DescribeMessageForwardsResponse.cs" />
     <Compile Include="V20201201\Models\DescribeRecordDatesByLiveRequest.cs" />
     <Compile Include="V20201201\Models\DescribeRecordDatesByLiveResponse.cs" />
     <Compile Include="V20201201\Models\DescribeRecordStreamData.cs" />
@@ -163,6 +171,7 @@
     <Compile Include="V20201201\Models\LiveChannelItem.cs" />
     <Compile Include="V20201201\Models\LiveRecordItem.cs" />
     <Compile Include="V20201201\Models\LiveRecordPlanItem.cs" />
+    <Compile Include="V20201201\Models\MessageForward.cs" />
     <Compile Include="V20201201\Models\ModifyBindPlanLiveChannelRequest.cs" />
     <Compile Include="V20201201\Models\ModifyBindPlanLiveChannelResponse.cs" />
     <Compile Include="V20201201\Models\ModifyDeviceDataRequest.cs" />
@@ -173,6 +182,8 @@
     <Compile Include="V20201201\Models\ModifyLiveRecordPlanResponse.cs" />
     <Compile Include="V20201201\Models\ModifyLiveVideoRequest.cs" />
     <Compile Include="V20201201\Models\ModifyLiveVideoResponse.cs" />
+    <Compile Include="V20201201\Models\ModifyMessageForwardRequest.cs" />
+    <Compile Include="V20201201\Models\ModifyMessageForwardResponse.cs" />
     <Compile Include="V20201201\Models\ModifySubscriptionStatusRequest.cs" />
     <Compile Include="V20201201\Models\ModifySubscriptionStatusResponse.cs" />
     <Compile Include="V20201201\Models\ModifyVideoInfoRequest.cs" />

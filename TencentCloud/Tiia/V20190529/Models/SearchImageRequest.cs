@@ -73,6 +73,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
 
+        /// <summary>
+        /// 图像主体区域。
+        /// </summary>
+        [JsonProperty("ImageRect")]
+        public ImageRect ImageRect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Filter", this.Filter);
+            this.SetParamObj(map, prefix + "ImageRect.", this.ImageRect);
         }
     }
 }

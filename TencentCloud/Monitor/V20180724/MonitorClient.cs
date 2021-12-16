@@ -1309,6 +1309,54 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 本接口 (DescribePrometheusInstances) 用于查询一个或多个实例的详细信息。
+        /// <ul>
+        /// <li>可以根据实例ID、实例名称或者实例状态等信息来查询实例的详细信息</li>
+        /// <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstancesResponse"/></returns>
+        public async Task<DescribePrometheusInstancesResponse> DescribePrometheusInstances(DescribePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribePrometheusInstances) 用于查询一个或多个实例的详细信息。
+        /// <ul>
+        /// <li>可以根据实例ID、实例名称或者实例状态等信息来查询实例的详细信息</li>
+        /// <li>如果参数为空，返回当前用户一定数量（Limit所指定的数量，默认为20）的实例。</li>
+        /// </ul>
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusInstancesRequest"/></param>
+        /// <returns><see cref="DescribePrometheusInstancesResponse"/></returns>
+        public DescribePrometheusInstancesResponse DescribePrometheusInstancesSync(DescribePrometheusInstancesRequest req)
+        {
+             JsonResponseModel<DescribePrometheusInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
         /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
         /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>

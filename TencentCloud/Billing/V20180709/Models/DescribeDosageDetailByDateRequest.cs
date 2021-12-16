@@ -63,7 +63,7 @@ namespace TencentCloud.Billing.V20180709.Models
 
         /// <summary>
         /// 查询域名 例如 www.qq.com
-        /// 非CDN业务查询时值为空
+        /// 非CDN业务查询时传入空字符串，返回的值为空
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }

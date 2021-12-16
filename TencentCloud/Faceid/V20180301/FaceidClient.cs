@@ -413,6 +413,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 使用一闪SDK生成的数据包检测活体，并和用户传入的图片进行比对。
+        /// </summary>
+        /// <param name="req"><see cref="DetectReflectLivenessAndCompareRequest"/></param>
+        /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
+        public async Task<DetectReflectLivenessAndCompareResponse> DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req)
+        {
+             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectReflectLivenessAndCompare");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 使用一闪SDK生成的数据包检测活体，并和用户传入的图片进行比对。
+        /// </summary>
+        /// <param name="req"><see cref="DetectReflectLivenessAndCompareRequest"/></param>
+        /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
+        public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompareSync(DetectReflectLivenessAndCompareRequest req)
+        {
+             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectReflectLivenessAndCompare");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
         /// </summary>
         /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>

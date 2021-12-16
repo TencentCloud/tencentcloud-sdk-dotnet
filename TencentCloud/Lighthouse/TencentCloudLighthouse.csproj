@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.427</VersionPrefix>
+    <VersionPrefix>3.0.428</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,9 @@
     <Compile Include="V20200324\Models\AssociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\AttachCcnRequest.cs" />
     <Compile Include="V20200324\Models\AttachCcnResponse.cs" />
+    <Compile Include="V20200324\Models\AttachDetail.cs" />
+    <Compile Include="V20200324\Models\AttachDisksRequest.cs" />
+    <Compile Include="V20200324\Models\AttachDisksResponse.cs" />
     <Compile Include="V20200324\Models\Blueprint.cs" />
     <Compile Include="V20200324\Models\BlueprintInstance.cs" />
     <Compile Include="V20200324\Models\BlueprintPrice.cs" />
@@ -83,6 +86,16 @@
     <Compile Include="V20200324\Models\DescribeBundlesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeCcnAttachedInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskConfigsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskConfigsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskDiscountRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDiskDiscountResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksDeniedActionsRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksDeniedActionsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksReturnableRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeDisksReturnableResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeFirewallRulesTemplateRequest.cs" />
@@ -95,6 +108,8 @@
     <Compile Include="V20200324\Models\DescribeInstanceVncUrlResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesDeniedActionsRequest.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesDeniedActionsResponse.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesDiskNumRequest.cs" />
+    <Compile Include="V20200324\Models\DescribeInstancesDiskNumResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20200324\Models\DescribeInstancesReturnableRequest.cs" />
@@ -117,9 +132,17 @@
     <Compile Include="V20200324\Models\DescribeZonesResponse.cs" />
     <Compile Include="V20200324\Models\DetachCcnRequest.cs" />
     <Compile Include="V20200324\Models\DetachCcnResponse.cs" />
+    <Compile Include="V20200324\Models\DetachDisksRequest.cs" />
+    <Compile Include="V20200324\Models\DetachDisksResponse.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsRequest.cs" />
     <Compile Include="V20200324\Models\DisassociateInstancesKeyPairsResponse.cs" />
     <Compile Include="V20200324\Models\DiscountDetail.cs" />
+    <Compile Include="V20200324\Models\Disk.cs" />
+    <Compile Include="V20200324\Models\DiskChargePrepaid.cs" />
+    <Compile Include="V20200324\Models\DiskConfig.cs" />
+    <Compile Include="V20200324\Models\DiskDeniedActions.cs" />
+    <Compile Include="V20200324\Models\DiskPrice.cs" />
+    <Compile Include="V20200324\Models\DiskReturnable.cs" />
     <Compile Include="V20200324\Models\Filter.cs" />
     <Compile Include="V20200324\Models\FirewallRule.cs" />
     <Compile Include="V20200324\Models\FirewallRuleInfo.cs" />
@@ -128,8 +151,12 @@
     <Compile Include="V20200324\Models\ImportKeyPairResponse.cs" />
     <Compile Include="V20200324\Models\InquirePriceCreateBlueprintRequest.cs" />
     <Compile Include="V20200324\Models\InquirePriceCreateBlueprintResponse.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateDisksRequest.cs" />
+    <Compile Include="V20200324\Models\InquirePriceCreateDisksResponse.cs" />
     <Compile Include="V20200324\Models\InquirePriceCreateInstancesRequest.cs" />
     <Compile Include="V20200324\Models\InquirePriceCreateInstancesResponse.cs" />
+    <Compile Include="V20200324\Models\InquirePriceRenewDisksRequest.cs" />
+    <Compile Include="V20200324\Models\InquirePriceRenewDisksResponse.cs" />
     <Compile Include="V20200324\Models\InquirePriceRenewInstancesRequest.cs" />
     <Compile Include="V20200324\Models\InquirePriceRenewInstancesResponse.cs" />
     <Compile Include="V20200324\Models\Instance.cs" />
@@ -144,6 +171,10 @@
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeRequest.cs" />
     <Compile Include="V20200324\Models\ModifyBlueprintAttributeResponse.cs" />
     <Compile Include="V20200324\Models\ModifyBundle.cs" />
+    <Compile Include="V20200324\Models\ModifyDisksAttributeRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyDisksAttributeResponse.cs" />
+    <Compile Include="V20200324\Models\ModifyDisksRenewFlagRequest.cs" />
+    <Compile Include="V20200324\Models\ModifyDisksRenewFlagResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionRequest.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRuleDescriptionResponse.cs" />
     <Compile Include="V20200324\Models\ModifyFirewallRulesRequest.cs" />
@@ -161,6 +192,7 @@
     <Compile Include="V20200324\Models\RebootInstancesRequest.cs" />
     <Compile Include="V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="V20200324\Models\RegionInfo.cs" />
+    <Compile Include="V20200324\Models\RenewDiskChargePrepaid.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnRequest.cs" />
     <Compile Include="V20200324\Models\ResetAttachCcnResponse.cs" />
     <Compile Include="V20200324\Models\ResetInstanceBlueprint.cs" />
@@ -177,6 +209,8 @@
     <Compile Include="V20200324\Models\StopInstancesRequest.cs" />
     <Compile Include="V20200324\Models\StopInstancesResponse.cs" />
     <Compile Include="V20200324\Models\SystemDisk.cs" />
+    <Compile Include="V20200324\Models\TerminateDisksRequest.cs" />
+    <Compile Include="V20200324\Models\TerminateDisksResponse.cs" />
     <Compile Include="V20200324\Models\TerminateInstancesRequest.cs" />
     <Compile Include="V20200324\Models\TerminateInstancesResponse.cs" />
     <Compile Include="V20200324\Models\TrafficPackage.cs" />

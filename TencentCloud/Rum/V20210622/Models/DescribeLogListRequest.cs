@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// searchlog   histogram
+        /// searchlog  histogram
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Rum.V20210622.Models
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 限制
+        /// 单次查询返回的原始日志条数，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 上下文
+        /// 上下文，加载更多日志时使用，透传上次返回的 Context 值，获取后续的日志内容，总计最多可获取1万条原始日志。过期时间1小时
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 查询语句
+        /// 查询语句，语句长度最大为4096
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }

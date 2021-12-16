@@ -53,6 +53,46 @@ namespace TencentCloud.Thpc.V20211109
         }
 
         /// <summary>
+        /// 本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoScalingGroupRequest"/></param>
+        /// <returns><see cref="BindAutoScalingGroupResponse"/></returns>
+        public async Task<BindAutoScalingGroupResponse> BindAutoScalingGroup(BindAutoScalingGroupRequest req)
+        {
+             JsonResponseModel<BindAutoScalingGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindAutoScalingGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindAutoScalingGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(BindAutoScalingGroup)用于为集群队列绑定弹性伸缩组
+        /// </summary>
+        /// <param name="req"><see cref="BindAutoScalingGroupRequest"/></param>
+        /// <returns><see cref="BindAutoScalingGroupResponse"/></returns>
+        public BindAutoScalingGroupResponse BindAutoScalingGroupSync(BindAutoScalingGroupRequest req)
+        {
+             JsonResponseModel<BindAutoScalingGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindAutoScalingGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindAutoScalingGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateCluster) 用于创建并启动集群。
         /// </summary>
         /// <param name="req"><see cref="CreateClusterRequest"/></param>

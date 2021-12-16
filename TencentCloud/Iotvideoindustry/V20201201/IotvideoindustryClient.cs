@@ -333,6 +333,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 创建消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageForwardRequest"/></param>
+        /// <returns><see cref="CreateMessageForwardResponse"/></returns>
+        public async Task<CreateMessageForwardResponse> CreateMessageForward(CreateMessageForwardRequest req)
+        {
+             JsonResponseModel<CreateMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateMessageForwardRequest"/></param>
+        /// <returns><see cref="CreateMessageForwardResponse"/></returns>
+        public CreateMessageForwardResponse CreateMessageForwardSync(CreateMessageForwardRequest req)
+        {
+             JsonResponseModel<CreateMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateRecordPlan) 用于创建录制计划，使设备与时间模板绑定，以便及时启动录制
         /// </summary>
         /// <param name="req"><see cref="CreateRecordPlanRequest"/></param>
@@ -684,6 +724,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveVideoList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveVideoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageForwardRequest"/></param>
+        /// <returns><see cref="DeleteMessageForwardResponse"/></returns>
+        public async Task<DeleteMessageForwardResponse> DeleteMessageForward(DeleteMessageForwardRequest req)
+        {
+             JsonResponseModel<DeleteMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMessageForwardRequest"/></param>
+        /// <returns><see cref="DeleteMessageForwardResponse"/></returns>
+        public DeleteMessageForwardResponse DeleteMessageForwardSync(DeleteMessageForwardRequest req)
+        {
+             JsonResponseModel<DeleteMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMessageForwardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1535,6 +1615,86 @@ namespace TencentCloud.Iotvideoindustry.V20201201
         }
 
         /// <summary>
+        /// 查看消息转发配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageForwardRequest"/></param>
+        /// <returns><see cref="DescribeMessageForwardResponse"/></returns>
+        public async Task<DescribeMessageForwardResponse> DescribeMessageForward(DescribeMessageForwardRequest req)
+        {
+             JsonResponseModel<DescribeMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看消息转发配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageForwardRequest"/></param>
+        /// <returns><see cref="DescribeMessageForwardResponse"/></returns>
+        public DescribeMessageForwardResponse DescribeMessageForwardSync(DescribeMessageForwardRequest req)
+        {
+             JsonResponseModel<DescribeMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看消息转发配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageForwardsRequest"/></param>
+        /// <returns><see cref="DescribeMessageForwardsResponse"/></returns>
+        public async Task<DescribeMessageForwardsResponse> DescribeMessageForwards(DescribeMessageForwardsRequest req)
+        {
+             JsonResponseModel<DescribeMessageForwardsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMessageForwards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMessageForwardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看消息转发配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMessageForwardsRequest"/></param>
+        /// <returns><see cref="DescribeMessageForwardsResponse"/></returns>
+        public DescribeMessageForwardsResponse DescribeMessageForwardsSync(DescribeMessageForwardsRequest req)
+        {
+             JsonResponseModel<DescribeMessageForwardsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMessageForwards");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMessageForwardsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播录像存储日期列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRecordDatesByLiveRequest"/></param>
@@ -2372,6 +2532,46 @@ namespace TencentCloud.Iotvideoindustry.V20201201
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveVideo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageForwardRequest"/></param>
+        /// <returns><see cref="ModifyMessageForwardResponse"/></returns>
+        public async Task<ModifyMessageForwardResponse> ModifyMessageForward(ModifyMessageForwardRequest req)
+        {
+             JsonResponseModel<ModifyMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMessageForwardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改消息转发配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMessageForwardRequest"/></param>
+        /// <returns><see cref="ModifyMessageForwardResponse"/></returns>
+        public ModifyMessageForwardResponse ModifyMessageForwardSync(ModifyMessageForwardRequest req)
+        {
+             JsonResponseModel<ModifyMessageForwardResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMessageForward");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMessageForwardResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

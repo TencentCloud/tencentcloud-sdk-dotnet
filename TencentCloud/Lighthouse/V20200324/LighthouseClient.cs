@@ -191,6 +191,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（AttachDisks）用于挂载一个或多个弹性云盘。
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public async Task<AttachDisksResponse> AttachDisks(AttachDisksRequest req)
+        {
+             JsonResponseModel<AttachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（AttachDisks）用于挂载一个或多个弹性云盘。
+        /// </summary>
+        /// <param name="req"><see cref="AttachDisksRequest"/></param>
+        /// <returns><see cref="AttachDisksResponse"/></returns>
+        public AttachDisksResponse AttachDisksSync(AttachDisksRequest req)
+        {
+             JsonResponseModel<AttachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateBlueprint) 用于创建镜像。
         /// </summary>
         /// <param name="req"><see cref="CreateBlueprintRequest"/></param>
@@ -751,6 +791,206 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DescribeDiskConfigs）用于查询磁盘配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
+        public async Task<DescribeDiskConfigsResponse> DescribeDiskConfigs(DescribeDiskConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDiskConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDiskConfigs）用于查询磁盘配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
+        public DescribeDiskConfigsResponse DescribeDiskConfigsSync(DescribeDiskConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDiskConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
+        /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
+        public async Task<DescribeDiskDiscountResponse> DescribeDiskDiscount(DescribeDiskDiscountRequest req)
+        {
+             JsonResponseModel<DescribeDiskDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDiskDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
+        /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
+        public DescribeDiskDiscountResponse DescribeDiskDiscountSync(DescribeDiskDiscountRequest req)
+        {
+             JsonResponseModel<DescribeDiskDiscountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDiskDiscount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDiskDiscountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisks）用于查询磁盘信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
+        /// <returns><see cref="DescribeDisksResponse"/></returns>
+        public async Task<DescribeDisksResponse> DescribeDisks(DescribeDisksRequest req)
+        {
+             JsonResponseModel<DescribeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisks）用于查询磁盘信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksRequest"/></param>
+        /// <returns><see cref="DescribeDisksResponse"/></returns>
+        public DescribeDisksResponse DescribeDisksSync(DescribeDisksRequest req)
+        {
+             JsonResponseModel<DescribeDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个磁盘的操作限制列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
+        public async Task<DescribeDisksDeniedActionsResponse> DescribeDisksDeniedActions(DescribeDisksDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDisksDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisksDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个磁盘的操作限制列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
+        public DescribeDisksDeniedActionsResponse DescribeDisksDeniedActionsSync(DescribeDisksDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeDisksDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisksDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisksReturnable）用于查询磁盘是否可退还。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
+        /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
+        public async Task<DescribeDisksReturnableResponse> DescribeDisksReturnable(DescribeDisksReturnableRequest req)
+        {
+             JsonResponseModel<DescribeDisksReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDisksReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksReturnableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDisksReturnable）用于查询磁盘是否可退还。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
+        /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
+        public DescribeDisksReturnableResponse DescribeDisksReturnableSync(DescribeDisksReturnableRequest req)
+        {
+             JsonResponseModel<DescribeDisksReturnableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDisksReturnable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDisksReturnableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFirewallRules）用于查询实例的防火墙规则。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirewallRulesRequest"/></param>
@@ -1042,6 +1282,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstancesDeniedActions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云盘数量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
+        public async Task<DescribeInstancesDiskNumResponse> DescribeInstancesDiskNum(DescribeInstancesDiskNumRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesDiskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDiskNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云盘数量。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
+        /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
+        public DescribeInstancesDiskNumResponse DescribeInstancesDiskNumSync(DescribeInstancesDiskNumRequest req)
+        {
+             JsonResponseModel<DescribeInstancesDiskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesDiskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesDiskNumResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1451,6 +1731,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（DetachDisks）用于卸载一个或多个弹性云盘。
+        /// </summary>
+        /// <param name="req"><see cref="DetachDisksRequest"/></param>
+        /// <returns><see cref="DetachDisksResponse"/></returns>
+        public async Task<DetachDisksResponse> DetachDisks(DetachDisksRequest req)
+        {
+             JsonResponseModel<DetachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DetachDisks）用于卸载一个或多个弹性云盘。
+        /// </summary>
+        /// <param name="req"><see cref="DetachDisksRequest"/></param>
+        /// <returns><see cref="DetachDisksResponse"/></returns>
+        public DetachDisksResponse DetachDisksSync(DetachDisksRequest req)
+        {
+             JsonResponseModel<DetachDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisassociateInstancesKeyPairs）用于解除实例与指定密钥对的绑定关系。
         /// 
         /// * 只支持 [RUNNING, STOPPED] 状态的 LINUX_UNIX 操作系统的实例。处于 RUNNING 状态的实例会强制关机，然后解绑。
@@ -1583,6 +1903,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口（InquirePriceCreateDisks）用于新购磁盘询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>
+        public async Task<InquirePriceCreateDisksResponse> InquirePriceCreateDisks(InquirePriceCreateDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceCreateDisks）用于新购磁盘询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>
+        public InquirePriceCreateDisksResponse InquirePriceCreateDisksSync(InquirePriceCreateDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateInstances）用于创建实例询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateInstancesRequest"/></param>
@@ -1614,6 +1974,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "InquirePriceCreateInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceRenewDisks）用于续费磁盘询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
+        public async Task<InquirePriceRenewDisksResponse> InquirePriceRenewDisks(InquirePriceRenewDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（InquirePriceRenewDisks）用于续费磁盘询价。
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
+        public InquirePriceRenewDisksResponse InquirePriceRenewDisksSync(InquirePriceRenewDisksRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenewDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1694,6 +2094,86 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBlueprintAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBlueprintAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDisksAttribute)用于修改磁盘属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
+        public async Task<ModifyDisksAttributeResponse> ModifyDisksAttribute(ModifyDisksAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDisksAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDisksAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDisksAttribute)用于修改磁盘属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
+        /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
+        public ModifyDisksAttributeResponse ModifyDisksAttributeSync(ModifyDisksAttributeRequest req)
+        {
+             JsonResponseModel<ModifyDisksAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDisksAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDisksRenewFlag）用于修改磁盘续费标识。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
+        public async Task<ModifyDisksRenewFlagResponse> ModifyDisksRenewFlag(ModifyDisksRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDisksRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDisksRenewFlag）用于修改磁盘续费标识。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
+        /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
+        public ModifyDisksRenewFlagResponse ModifyDisksRenewFlagSync(ModifyDisksRenewFlagRequest req)
+        {
+             JsonResponseModel<ModifyDisksRenewFlagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDisksRenewFlag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDisksRenewFlagResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2280,6 +2760,46 @@ namespace TencentCloud.Lighthouse.V20200324
              {
                  var strResp = this.InternalRequestSync(req, "StopInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TerminateDisks）用于销毁一个或多个磁盘。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
+        /// <returns><see cref="TerminateDisksResponse"/></returns>
+        public async Task<TerminateDisksResponse> TerminateDisks(TerminateDisksRequest req)
+        {
+             JsonResponseModel<TerminateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDisksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（TerminateDisks）用于销毁一个或多个磁盘。
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDisksRequest"/></param>
+        /// <returns><see cref="TerminateDisksResponse"/></returns>
+        public TerminateDisksResponse TerminateDisksSync(TerminateDisksRequest req)
+        {
+             JsonResponseModel<TerminateDisksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDisks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDisksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -59,6 +59,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// 类型： 
         /// 1: 通用图库，以用户输入图提取特征。
         /// 2: 灰度图库，输入图和搜索图均转为灰度图提取特征。
+        /// 3: 针对电商（通用品类）和logo优化。
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }

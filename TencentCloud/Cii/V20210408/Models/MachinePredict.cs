@@ -31,7 +31,7 @@ namespace TencentCloud.Cii.V20210408.Models
         public string Title{ get; set; }
 
         /// <summary>
-        /// 核保结论
+        /// 核保结论：加费、承保、拒保、延期、除外、加费+除外
         /// </summary>
         [JsonProperty("Conclusion")]
         public string Conclusion{ get; set; }
