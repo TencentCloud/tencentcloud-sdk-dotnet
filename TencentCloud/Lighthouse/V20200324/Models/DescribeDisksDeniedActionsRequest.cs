@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID列表
+        /// 云硬盘ID列表。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }

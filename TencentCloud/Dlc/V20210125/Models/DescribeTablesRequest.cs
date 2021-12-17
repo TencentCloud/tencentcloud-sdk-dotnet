@@ -51,10 +51,40 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 指定查询的数据源名称，默认为CosDataCatalog
+        /// 指定查询的数据源名称，默认为DataLakeCatalog
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
+
+        /// <summary>
+        /// 起始时间：用于对更新时间的筛选
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 终止时间：用于对更新时间的筛选
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 排序字段，支持：ModifiedTime（默认）；CreateTime
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
+        /// <summary>
+        /// 排序字段，false：降序（默认）；true
+        /// </summary>
+        [JsonProperty("Asc")]
+        public bool? Asc{ get; set; }
+
+        /// <summary>
+        /// table type，表类型查询,可用值:EXTERNAL_TABLE,INDEX_TABLE,MANAGED_TABLE,MATERIALIZED_VIEW,TABLE,VIEW,VIRTUAL_VIEW
+        /// </summary>
+        [JsonProperty("TableType")]
+        public string TableType{ get; set; }
 
 
         /// <summary>
@@ -67,6 +97,11 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
+            this.SetParamSimple(map, prefix + "TableType", this.TableType);
         }
     }
 }

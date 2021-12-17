@@ -140,6 +140,48 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 网关流控明细启用状态：
+        /// 0：关闭
+        /// 1：开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableFlowDetails")]
+        public ulong? EnableFlowDetails{ get; set; }
+
+        /// <summary>
+        /// 开启、关闭网关流控明细时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowDetailsUpdateTime")]
+        public string FlowDetailsUpdateTime{ get; set; }
+
+        /// <summary>
+        /// 是否支持开启网关流控明细
+        /// 0：不支持
+        /// 1：支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NewAfc")]
+        public ulong? NewAfc{ get; set; }
+
+        /// <summary>
+        /// 专线网关接入网络类型：
+        /// <li>`VXLAN` - VXLAN类型。</li>
+        /// <li>`MPLS` - MPLS类型。</li>
+        /// <li>`Hybrid` - Hybrid类型。</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AccessNetworkType")]
+        public string AccessNetworkType{ get; set; }
+
+        /// <summary>
+        /// 跨可用区容灾专线网关的可用区列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HaZoneList")]
+        public string[] HaZoneList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +205,11 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
             this.SetParamSimple(map, prefix + "LocalZone", this.LocalZone);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "EnableFlowDetails", this.EnableFlowDetails);
+            this.SetParamSimple(map, prefix + "FlowDetailsUpdateTime", this.FlowDetailsUpdateTime);
+            this.SetParamSimple(map, prefix + "NewAfc", this.NewAfc);
+            this.SetParamSimple(map, prefix + "AccessNetworkType", this.AccessNetworkType);
+            this.SetParamArraySimple(map, prefix + "HaZoneList.", this.HaZoneList);
         }
     }
 }

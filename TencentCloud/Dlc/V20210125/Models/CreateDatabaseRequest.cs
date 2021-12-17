@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public DatabaseInfo DatabaseInfo{ get; set; }
 
         /// <summary>
-        /// 数据源名称，默认为CosDataCatalog
+        /// 数据源名称，默认为DataLakeCatalog
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }

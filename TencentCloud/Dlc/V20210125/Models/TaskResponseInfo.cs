@@ -128,6 +128,62 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ProgressDetail")]
         public string ProgressDetail{ get; set; }
 
+        /// <summary>
+        /// 任务结束时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 计算资源id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataEngineId")]
+        public string DataEngineId{ get; set; }
+
+        /// <summary>
+        /// 执行sql的子uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string OperateUin{ get; set; }
+
+        /// <summary>
+        /// 计算资源名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataEngineName")]
+        public string DataEngineName{ get; set; }
+
+        /// <summary>
+        /// 导入类型是本地导入还是cos
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputType")]
+        public string InputType{ get; set; }
+
+        /// <summary>
+        /// 导入配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputConf")]
+        public string InputConf{ get; set; }
+
+        /// <summary>
+        /// 数据条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataNumber")]
+        public long? DataNumber{ get; set; }
+
+        /// <summary>
+        /// 查询数据能不能下载
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CanDownload")]
+        public bool? CanDownload{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +207,14 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "OutputMessage", this.OutputMessage);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "ProgressDetail", this.ProgressDetail);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "DataEngineId", this.DataEngineId);
+            this.SetParamSimple(map, prefix + "OperateUin", this.OperateUin);
+            this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
+            this.SetParamSimple(map, prefix + "InputType", this.InputType);
+            this.SetParamSimple(map, prefix + "InputConf", this.InputConf);
+            this.SetParamSimple(map, prefix + "DataNumber", this.DataNumber);
+            this.SetParamSimple(map, prefix + "CanDownload", this.CanDownload);
         }
     }
 }

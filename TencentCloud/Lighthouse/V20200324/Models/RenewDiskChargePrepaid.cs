@@ -25,25 +25,25 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 新购周期
+        /// 新购周期。
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
         /// <summary>
-        /// 续费标识
+        /// 续费标识。
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 周期单位. 默认值: "m"
+        /// 周期单位. 默认值: "m"。
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 当前实例到期时间
+        /// 当前实例到期时间。
         /// </summary>
         [JsonProperty("CurInstanceDeadline")]
         public string CurInstanceDeadline{ get; set; }

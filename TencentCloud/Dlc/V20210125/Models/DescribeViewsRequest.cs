@@ -56,6 +56,30 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
+        /// <summary>
+        /// 排序规则
+        /// </summary>
+        [JsonProperty("Asc")]
+        public bool? Asc{ get; set; }
+
+        /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +91,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

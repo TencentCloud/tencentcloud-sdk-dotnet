@@ -213,7 +213,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 取消任务执行
+        /// 本接口（CancelTask），用于取消任务执行
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
         /// <returns><see cref="CancelTaskResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 取消任务执行
+        /// 本接口（CancelTask），用于取消任务执行
         /// </summary>
         /// <param name="req"><see cref="CancelTaskRequest"/></param>
         /// <returns><see cref="CancelTaskResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 批量创建任务
+        /// 本接口（CreateTasks），用于批量创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 批量创建任务
+        /// 本接口（CreateTasks），用于批量创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTasksRequest"/></param>
         /// <returns><see cref="CreateTasksResponse"/></returns>
@@ -893,7 +893,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询单个表的详细信息。
+        /// 本接口（DescribeTable），用于查询单个表的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
         /// <returns><see cref="DescribeTableResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 查询单个表的详细信息。
+        /// 本接口（DescribeTable），用于查询单个表的详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeTableRequest"/></param>
         /// <returns><see cref="DescribeTableResponse"/></returns>
@@ -933,7 +933,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribleTables）用于查询数据表列表。
+        /// 本接口（DescribeTables）用于查询数据表列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
-        /// 本接口（DescribleTables）用于查询数据表列表。
+        /// 本接口（DescribeTables）用于查询数据表列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeTablesRequest"/></param>
         /// <returns><see cref="DescribeTablesResponse"/></returns>

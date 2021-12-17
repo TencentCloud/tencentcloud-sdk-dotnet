@@ -65,6 +65,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 专线网关高可用区容灾组ID
+        /// </summary>
+        [JsonProperty("HaZoneGroupId")]
+        public string HaZoneGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +83,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "GatewayType", this.GatewayType);
             this.SetParamSimple(map, prefix + "ModeType", this.ModeType);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "HaZoneGroupId", this.HaZoneGroupId);
         }
     }
 }

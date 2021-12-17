@@ -43,10 +43,22 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string KeyWord{ get; set; }
 
         /// <summary>
-        /// 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为CosDataCatalog
+        /// 数据源唯名称，该名称可以通过DescribeDatasourceConnection接口查询到。默认为DataLakeCatalog
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
+
+        /// <summary>
+        /// 排序字段，当前版本仅支持按库名排序
+        /// </summary>
+        [JsonProperty("Sort")]
+        public string Sort{ get; set; }
+
+        /// <summary>
+        /// 排序类型：false：降序（默认）、true：升序
+        /// </summary>
+        [JsonProperty("Asc")]
+        public bool? Asc{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "KeyWord", this.KeyWord);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "Sort", this.Sort);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

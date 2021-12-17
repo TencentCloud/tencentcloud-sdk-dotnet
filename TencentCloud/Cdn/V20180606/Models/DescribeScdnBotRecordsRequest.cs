@@ -153,6 +153,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("FilterIp")]
         public string FilterIp{ get; set; }
 
+        /// <summary>
+        /// 域名列表，为空表示查询AppID维度数据
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "FilterName", this.FilterName);
             this.SetParamSimple(map, prefix + "FilterAction", this.FilterAction);
             this.SetParamSimple(map, prefix + "FilterIp", this.FilterIp);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
         }
     }
 }

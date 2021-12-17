@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID列表
+        /// 云硬盘ID列表。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
@@ -33,7 +33,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <summary>
         /// 过滤器列表。
         /// disk-id
-        /// 按照【磁盘 ID】进行过滤。
+        /// 按照【云硬盘 ID】进行过滤。
         /// 类型：String
         /// 必选：否
         /// instance-id
@@ -41,7 +41,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 类型：String
         /// 必选：否
         /// disk-name
-        /// 按照【磁盘名称】进行过滤。
+        /// 按照【云硬盘名称】进行过滤。
         /// 类型：String
         /// 必选：否
         /// zone
@@ -49,11 +49,11 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// 类型：String
         /// 必选：否
         /// disk-usage
-        /// 按照【磁盘类型】进行过滤。
+        /// 按照【云硬盘类型】进行过滤。
         /// 类型：String
         /// 必选：否
         /// disk-state
-        /// 按照【磁盘状态】进行过滤。
+        /// 按照【云硬盘状态】进行过滤。
         /// 类型：String
         /// 必选：否
         /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 DiskIds 和 Filters。
@@ -68,19 +68,19 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0
+        /// 偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 云盘列表排序的依据字段。取值范围："CREATED_TIME"：依据云盘的创建时间排序。 "EXPIRED_TIME"：依据云盘的到期时间排序。"DISK_SIZE"：依据云盘的大小排序。默认按云盘创建时间排序。
+        /// 云硬盘列表排序的依据字段。取值范围："CREATED_TIME"：依据云硬盘的创建时间排序。 "EXPIRED_TIME"：依据云硬盘的到期时间排序。"DISK_SIZE"：依据云硬盘的大小排序。默认按云硬盘创建时间排序。
         /// </summary>
         [JsonProperty("OrderField")]
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 输出云盘列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列
+        /// 输出云硬盘列表的排列顺序。取值范围："ASC"：升序排列。 "DESC"：降序排列。默认按降序排列。
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }

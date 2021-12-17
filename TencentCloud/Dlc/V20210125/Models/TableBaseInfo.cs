@@ -43,6 +43,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
 
+        /// <summary>
+        /// 该数据表备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableComment")]
+        public string TableComment{ get; set; }
+
+        /// <summary>
+        /// 具体类型，表or视图
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 数据格式类型，hive，iceberg等
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableFormat")]
+        public string TableFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +73,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "TableComment", this.TableComment);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TableFormat", this.TableFormat);
         }
     }
 }

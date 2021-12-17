@@ -25,25 +25,25 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID
+        /// 云硬盘ID。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 磁盘是否可退还。
+        /// 云硬盘是否可退还。
         /// </summary>
         [JsonProperty("IsReturnable")]
         public bool? IsReturnable{ get; set; }
 
         /// <summary>
-        /// 实例退还失败错误码。
+        /// 云硬盘退还失败错误码。
         /// </summary>
         [JsonProperty("ReturnFailCode")]
         public long? ReturnFailCode{ get; set; }
 
         /// <summary>
-        /// 实例退还失败错误信息。
+        /// 云硬盘退还失败错误信息。
         /// </summary>
         [JsonProperty("ReturnFailMessage")]
         public string ReturnFailMessage{ get; set; }

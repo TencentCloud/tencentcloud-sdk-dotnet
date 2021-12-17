@@ -65,6 +65,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Nullable")]
         public string Nullable{ get; set; }
 
+        /// <summary>
+        /// 字段位置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Position")]
+        public long? Position{ get; set; }
+
+        /// <summary>
+        /// 字段创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
+        /// <summary>
+        /// 字段修改时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModifiedTime")]
+        public string ModifiedTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +98,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Precision", this.Precision);
             this.SetParamSimple(map, prefix + "Scale", this.Scale);
             this.SetParamSimple(map, prefix + "Nullable", this.Nullable);
+            this.SetParamSimple(map, prefix + "Position", this.Position);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
         }
     }
 }

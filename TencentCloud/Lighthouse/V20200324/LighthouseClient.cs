@@ -191,7 +191,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（AttachDisks）用于挂载一个或多个弹性云盘。
+        /// 本接口（AttachDisks）用于挂载一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -211,7 +211,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（AttachDisks）用于挂载一个或多个弹性云盘。
+        /// 本接口（AttachDisks）用于挂载一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="AttachDisksRequest"/></param>
         /// <returns><see cref="AttachDisksResponse"/></returns>
@@ -831,7 +831,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息
+        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
         /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
@@ -851,7 +851,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息
+        /// 本接口(DescribeDiskDiscount)用于查询云硬盘折扣信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiskDiscountRequest"/></param>
         /// <returns><see cref="DescribeDiskDiscountResponse"/></returns>
@@ -871,7 +871,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisks）用于查询磁盘信息。
+        /// 本接口（DescribeDisks）用于查询云硬盘信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksRequest"/></param>
         /// <returns><see cref="DescribeDisksResponse"/></returns>
@@ -891,7 +891,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisks）用于查询磁盘信息。
+        /// 本接口（DescribeDisks）用于查询云硬盘信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksRequest"/></param>
         /// <returns><see cref="DescribeDisksResponse"/></returns>
@@ -911,7 +911,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个磁盘的操作限制列表信息
+        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个云硬盘的操作限制列表信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
         /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
@@ -931,7 +931,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个磁盘的操作限制列表信息
+        /// 本接口（DescribeDisksDeniedActions）用于查询一个或多个云硬盘的操作限制列表信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksDeniedActionsRequest"/></param>
         /// <returns><see cref="DescribeDisksDeniedActionsResponse"/></returns>
@@ -951,7 +951,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisksReturnable）用于查询磁盘是否可退还。
+        /// 本接口（DescribeDisksReturnable）用于查询云硬盘是否可退还。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
         /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
@@ -971,7 +971,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDisksReturnable）用于查询磁盘是否可退还。
+        /// 本接口（DescribeDisksReturnable）用于查询云硬盘是否可退还。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisksReturnableRequest"/></param>
         /// <returns><see cref="DescribeDisksReturnableResponse"/></returns>
@@ -1291,7 +1291,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云盘数量。
+        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云硬盘数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
         /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
@@ -1311,7 +1311,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云盘数量。
+        /// 本接口(DescribeInstancesDiskNum)用于查询实例挂载云硬盘数量。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesDiskNumRequest"/></param>
         /// <returns><see cref="DescribeInstancesDiskNumResponse"/></returns>
@@ -1731,7 +1731,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DetachDisks）用于卸载一个或多个弹性云盘。
+        /// 本接口（DetachDisks）用于卸载一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="DetachDisksRequest"/></param>
         /// <returns><see cref="DetachDisksResponse"/></returns>
@@ -1751,7 +1751,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DetachDisks）用于卸载一个或多个弹性云盘。
+        /// 本接口（DetachDisks）用于卸载一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="DetachDisksRequest"/></param>
         /// <returns><see cref="DetachDisksResponse"/></returns>
@@ -1983,7 +1983,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceRenewDisks）用于续费磁盘询价。
+        /// 本接口（InquirePriceRenewDisks）用于续费云硬盘询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
         /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
@@ -2003,7 +2003,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceRenewDisks）用于续费磁盘询价。
+        /// 本接口（InquirePriceRenewDisks）用于续费云硬盘询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewDisksRequest"/></param>
         /// <returns><see cref="InquirePriceRenewDisksResponse"/></returns>
@@ -2103,7 +2103,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(ModifyDisksAttribute)用于修改磁盘属性
+        /// 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
         /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
@@ -2123,7 +2123,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口(ModifyDisksAttribute)用于修改磁盘属性
+        /// 本接口(ModifyDisksAttribute)用于修改云硬盘属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksAttributeRequest"/></param>
         /// <returns><see cref="ModifyDisksAttributeResponse"/></returns>
@@ -2143,7 +2143,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（ModifyDisksRenewFlag）用于修改磁盘续费标识。
+        /// 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
@@ -2163,7 +2163,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（ModifyDisksRenewFlag）用于修改磁盘续费标识。
+        /// 本接口（ModifyDisksRenewFlag）用于修改云硬盘续费标识。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisksRenewFlagRequest"/></param>
         /// <returns><see cref="ModifyDisksRenewFlagResponse"/></returns>
@@ -2769,7 +2769,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（TerminateDisks）用于销毁一个或多个磁盘。
+        /// 本接口（TerminateDisks）用于销毁一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="TerminateDisksRequest"/></param>
         /// <returns><see cref="TerminateDisksResponse"/></returns>
@@ -2789,7 +2789,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（TerminateDisks）用于销毁一个或多个磁盘。
+        /// 本接口（TerminateDisks）用于销毁一个或多个云硬盘。
         /// </summary>
         /// <param name="req"><see cref="TerminateDisksRequest"/></param>
         /// <returns><see cref="TerminateDisksResponse"/></returns>

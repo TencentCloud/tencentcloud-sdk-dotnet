@@ -117,6 +117,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +141,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "AvgSpeed", this.AvgSpeed);
             this.SetParamSimple(map, prefix + "TcbDetail", this.TcbDetail);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

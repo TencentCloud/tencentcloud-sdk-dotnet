@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.428</VersionPrefix>
+    <VersionPrefix>3.0.429</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1939,12 +1939,16 @@
     <Compile Include="Cat\V20180409\Models\CatTaskDetail.cs" />
     <Compile Include="Cat\V20180409\Models\CreateAgentGroupRequest.cs" />
     <Compile Include="Cat\V20180409\Models\CreateAgentGroupResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\CreateProbeTasksRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\CreateProbeTasksResponse.cs" />
     <Compile Include="Cat\V20180409\Models\CreateTaskExRequest.cs" />
     <Compile Include="Cat\V20180409\Models\CreateTaskExResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DataPoint.cs" />
     <Compile Include="Cat\V20180409\Models\DataPointMetric.cs" />
     <Compile Include="Cat\V20180409\Models\DeleteAgentGroupRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DeleteAgentGroupResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DeleteProbeTaskRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\DeleteProbeTaskResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DeleteTasksRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DeleteTasksResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeAgentGroupsRequest.cs" />
@@ -1959,13 +1963,21 @@
     <Compile Include="Cat\V20180409\Models\DescribeAlarmsResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeCatLogsRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeCatLogsResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeDetailedSingleProbeDataRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeDetailedSingleProbeDataResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeNodesRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeNodesResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeTasksRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeTasksResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeTasksByTypeRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeTasksByTypeResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeUserLimitRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeUserLimitResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DetailedSingleDataDefine.cs" />
     <Compile Include="Cat\V20180409\Models\DimensionsDetail.cs" />
+    <Compile Include="Cat\V20180409\Models\Field.cs" />
     <Compile Include="Cat\V20180409\Models\GetAvailRatioHistoryRequest.cs" />
     <Compile Include="Cat\V20180409\Models\GetAvailRatioHistoryResponse.cs" />
     <Compile Include="Cat\V20180409\Models\GetDailyAvailRatioRequest.cs" />
@@ -1983,17 +1995,28 @@
     <Compile Include="Cat\V20180409\Models\GetTaskTotalNumberRequest.cs" />
     <Compile Include="Cat\V20180409\Models\GetTaskTotalNumberResponse.cs" />
     <Compile Include="Cat\V20180409\Models\IspDetail.cs" />
+    <Compile Include="Cat\V20180409\Models\Label.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyAgentGroupRequest.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyAgentGroupResponse.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyTaskExRequest.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyTaskExResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\NodeDefine.cs" />
     <Compile Include="Cat\V20180409\Models\PauseTaskRequest.cs" />
     <Compile Include="Cat\V20180409\Models\PauseTaskResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\ProbeTask.cs" />
+    <Compile Include="Cat\V20180409\Models\ProbeTaskBasicConfiguration.cs" />
     <Compile Include="Cat\V20180409\Models\ProvinceDetail.cs" />
     <Compile Include="Cat\V20180409\Models\ResultSummary.cs" />
+    <Compile Include="Cat\V20180409\Models\ResumeProbeTaskRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\ResumeProbeTaskResponse.cs" />
     <Compile Include="Cat\V20180409\Models\RunTaskRequest.cs" />
     <Compile Include="Cat\V20180409\Models\RunTaskResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\SuspendProbeTaskRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\SuspendProbeTaskResponse.cs" />
     <Compile Include="Cat\V20180409\Models\TaskAlarm.cs" />
+    <Compile Include="Cat\V20180409\Models\TaskResult.cs" />
+    <Compile Include="Cat\V20180409\Models\UpdateProbeTaskConfigurationListRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\UpdateProbeTaskConfigurationListResponse.cs" />
     <Compile Include="Cat\V20180409\Models\VerifyResultRequest.cs" />
     <Compile Include="Cat\V20180409\Models\VerifyResultResponse.cs" />
     <Compile Include="Cbs\V20170312\CbsClient.cs" />
@@ -2002,6 +2025,7 @@
     <Compile Include="Cbs\V20170312\Models\AttachDetail.cs" />
     <Compile Include="Cbs\V20170312\Models\AttachDisksRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\AttachDisksResponse.cs" />
+    <Compile Include="Cbs\V20170312\Models\AutoMountConfiguration.cs" />
     <Compile Include="Cbs\V20170312\Models\AutoSnapshotPolicy.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
@@ -3642,9 +3666,11 @@
     <Compile Include="Cls\V20201016\Models\AsyncContextTask.cs" />
     <Compile Include="Cls\V20201016\Models\AsyncSearchTask.cs" />
     <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\Ckafka.cs" />
     <Compile Include="Cls\V20201016\Models\Column.cs" />
     <Compile Include="Cls\V20201016\Models\CompressInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConfigInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ConsumerContent.cs" />
     <Compile Include="Cls\V20201016\Models\ContentInfo.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeResponse.cs" />
@@ -3656,6 +3682,8 @@
     <Compile Include="Cls\V20201016\Models\CreateAsyncSearchTaskResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateConfigRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateConfigResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateExportRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateIndexRequest.cs" />
@@ -3681,6 +3709,8 @@
     <Compile Include="Cls\V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteConfigRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteConfigResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteExportRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteIndexRequest.cs" />
@@ -3709,6 +3739,8 @@
     <Compile Include="Cls\V20201016\Models\DescribeConfigMachineGroupsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeConfigsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeConfigsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeExportsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeIndexRequest.cs" />
@@ -3758,6 +3790,8 @@
     <Compile Include="Cls\V20201016\Models\ModifyAlarmResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyConfigRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyConfigResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyIndexResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyLogsetRequest.cs" />
@@ -5942,6 +5976,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFileDownloadUrlRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeOrdersRequest.cs" />
@@ -9982,6 +10018,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDcnDetailRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDcnDetailResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeFileDownloadUrlRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeFlowResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoRequest.cs" />

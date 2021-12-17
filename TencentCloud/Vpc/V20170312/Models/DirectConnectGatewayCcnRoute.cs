@@ -42,6 +42,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("ASPath")]
         public string[] ASPath{ get; set; }
 
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
+
+        /// <summary>
+        /// 最后更新时间
+        /// </summary>
+        [JsonProperty("UpdateTime")]
+        public string UpdateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "RouteId", this.RouteId);
             this.SetParamSimple(map, prefix + "DestinationCidrBlock", this.DestinationCidrBlock);
             this.SetParamArraySimple(map, prefix + "ASPath.", this.ASPath);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }
 }

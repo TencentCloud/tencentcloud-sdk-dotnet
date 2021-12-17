@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘信息列表
+        /// 云硬盘信息列表。
         /// </summary>
         [JsonProperty("DiskSet")]
         public Disk[] DiskSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的磁盘信息数量
+        /// 符合条件的云硬盘信息数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

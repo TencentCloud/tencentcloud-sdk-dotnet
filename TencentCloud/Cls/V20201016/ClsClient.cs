@@ -293,6 +293,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于创建投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public async Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于创建投递任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public CreateConsumerResponse CreateConsumerSync(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建日志下载任务
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -764,6 +804,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DeleteConfigFromMachineGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConfigFromMachineGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于删除投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
+        /// <returns><see cref="DeleteConsumerResponse"/></returns>
+        public async Task<DeleteConsumerResponse> DeleteConsumer(DeleteConsumerRequest req)
+        {
+             JsonResponseModel<DeleteConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于删除投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteConsumerRequest"/></param>
+        /// <returns><see cref="DeleteConsumerResponse"/></returns>
+        public DeleteConsumerResponse DeleteConsumerSync(DeleteConsumerRequest req)
+        {
+             JsonResponseModel<DeleteConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1324,6 +1404,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConfigs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRequest"/></param>
+        /// <returns><see cref="DescribeConsumerResponse"/></returns>
+        public async Task<DescribeConsumerResponse> DescribeConsumer(DescribeConsumerRequest req)
+        {
+             JsonResponseModel<DescribeConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于获取投递配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConsumerRequest"/></param>
+        /// <returns><see cref="DescribeConsumerResponse"/></returns>
+        public DescribeConsumerResponse DescribeConsumerSync(DescribeConsumerRequest req)
+        {
+             JsonResponseModel<DescribeConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1964,6 +2084,46 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改投递任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
+        /// <returns><see cref="ModifyConsumerResponse"/></returns>
+        public async Task<ModifyConsumerResponse> ModifyConsumer(ModifyConsumerRequest req)
+        {
+             JsonResponseModel<ModifyConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于修改投递任务
+        /// </summary>
+        /// <param name="req"><see cref="ModifyConsumerRequest"/></param>
+        /// <returns><see cref="ModifyConsumerResponse"/></returns>
+        public ModifyConsumerResponse ModifyConsumerSync(ModifyConsumerRequest req)
+        {
+             JsonResponseModel<ModifyConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

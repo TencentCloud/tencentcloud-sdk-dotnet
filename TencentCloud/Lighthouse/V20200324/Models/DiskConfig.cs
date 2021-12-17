@@ -25,37 +25,37 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 可用区
+        /// 可用区。
         /// </summary>
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 磁盘类型
+        /// 云硬盘类型。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 磁盘可售卖状态
+        /// 云硬盘可售卖状态。
         /// </summary>
         [JsonProperty("DiskSalesState")]
         public string DiskSalesState{ get; set; }
 
         /// <summary>
-        /// 最大磁盘大小
+        /// 最大云硬盘大小。
         /// </summary>
         [JsonProperty("MaxDiskSize")]
         public long? MaxDiskSize{ get; set; }
 
         /// <summary>
-        /// 最小磁盘大小
+        /// 最小云硬盘大小。
         /// </summary>
         [JsonProperty("MinDiskSize")]
         public long? MinDiskSize{ get; set; }
 
         /// <summary>
-        /// 磁盘步长
+        /// 云硬盘步长。
         /// </summary>
         [JsonProperty("DiskStepSize")]
         public long? DiskStepSize{ get; set; }

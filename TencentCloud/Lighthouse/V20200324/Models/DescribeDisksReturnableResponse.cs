@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 可退还磁盘详细信息列表。
+        /// 可退还云硬盘详细信息列表。
         /// </summary>
         [JsonProperty("DiskReturnableSet")]
         public DiskReturnable[] DiskReturnableSet{ get; set; }
 
         /// <summary>
-        /// 符合条件的磁盘数量。
+        /// 符合条件的云硬盘数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

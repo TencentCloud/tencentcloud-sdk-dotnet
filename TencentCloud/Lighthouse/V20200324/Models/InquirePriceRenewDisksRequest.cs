@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID列表
+        /// 云硬盘ID列表。
         /// </summary>
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// 续费磁盘包年包月相关参数设置
+        /// 续费云硬盘包年包月相关参数设置。
         /// </summary>
         [JsonProperty("RenewDiskChargePrepaid")]
         public RenewDiskChargePrepaid RenewDiskChargePrepaid{ get; set; }

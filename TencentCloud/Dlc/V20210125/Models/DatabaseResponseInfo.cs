@@ -38,7 +38,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Comment{ get; set; }
 
         /// <summary>
-        /// 数据库属性列表。
+        /// 允许针对数据库的属性元数据信息进行指定。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Properties")]

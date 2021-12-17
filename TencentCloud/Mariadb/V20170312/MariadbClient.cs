@@ -1059,6 +1059,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口(DescribeFileDownloadUrl)用于获取数据库指定备份或日志文件的下载连接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeFileDownloadUrlResponse"/></returns>
+        public async Task<DescribeFileDownloadUrlResponse> DescribeFileDownloadUrl(DescribeFileDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFileDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeFileDownloadUrl)用于获取数据库指定备份或日志文件的下载连接。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFileDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeFileDownloadUrlResponse"/></returns>
+        public DescribeFileDownloadUrlResponse DescribeFileDownloadUrlSync(DescribeFileDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeFileDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFileDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFileDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeFlow）用于查询流程状态。
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowRequest"/></param>

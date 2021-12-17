@@ -37,10 +37,16 @@ namespace TencentCloud.Dlc.V20210125.Models
         public TasksInfo Tasks{ get; set; }
 
         /// <summary>
-        /// 数据源名称，默认为COSDataCatalog
+        /// 数据源名称，默认为DataLakeCatalog
         /// </summary>
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
+
+        /// <summary>
+        /// 计算引擎名称，不填任务提交到默认集群
+        /// </summary>
+        [JsonProperty("DataEngineName")]
+        public string DataEngineName{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         }
     }
 }

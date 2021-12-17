@@ -41,12 +41,14 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// task-id - String - （任务ID准确过滤）task-id取值形如：e386471f-139a-4e59-877f-50ece8135b99。
         /// task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
         /// task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
+        /// task-operator- string （子uin过滤）
+        /// task-type -string （任务类型过滤）分导入任务和sql任务
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持如下字段类型，create-time
+        /// 排序字段，支持如下字段类型，create-time（创建时间，默认）、update-time（更新时间）
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
@@ -69,6 +71,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
+        /// <summary>
+        /// 支持计算资源名字筛选
+        /// </summary>
+        [JsonProperty("DataEngineName")]
+        public string DataEngineName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +90,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Sorting", this.Sorting);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         }
     }
 }

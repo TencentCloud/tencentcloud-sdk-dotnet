@@ -108,6 +108,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
+        /// <summary>
+        /// 创建云盘时指定自动挂载并初始化该数据盘。
+        /// </summary>
+        [JsonProperty("AutoMountConfiguration")]
+        public AutoMountConfiguration AutoMountConfiguration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
         }
     }
 }

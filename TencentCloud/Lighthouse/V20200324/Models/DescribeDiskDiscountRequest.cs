@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘类型, 取值: "CLOUD_PREMIUM"
+        /// 云硬盘类型, 取值: "CLOUD_PREMIUM"。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 磁盘大小
+        /// 云硬盘大小。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }

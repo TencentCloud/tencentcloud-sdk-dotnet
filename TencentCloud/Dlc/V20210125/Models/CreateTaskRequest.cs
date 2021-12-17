@@ -42,6 +42,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("DatasourceConnectionName")]
         public string DatasourceConnectionName{ get; set; }
 
+        /// <summary>
+        /// 数据引擎名称，不填提交到默认集群
+        /// </summary>
+        [JsonProperty("DataEngineName")]
+        public string DataEngineName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamObj(map, prefix + "Task.", this.Task);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "DatasourceConnectionName", this.DatasourceConnectionName);
+            this.SetParamSimple(map, prefix + "DataEngineName", this.DataEngineName);
         }
     }
 }

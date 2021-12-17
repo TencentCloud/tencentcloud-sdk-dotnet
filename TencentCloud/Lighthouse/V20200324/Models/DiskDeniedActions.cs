@@ -25,13 +25,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘ID
+        /// 云硬盘ID。
         /// </summary>
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
         /// <summary>
-        /// 操作限制列表
+        /// 操作限制列表。
         /// </summary>
         [JsonProperty("DeniedActions")]
         public DeniedAction[] DeniedActions{ get; set; }

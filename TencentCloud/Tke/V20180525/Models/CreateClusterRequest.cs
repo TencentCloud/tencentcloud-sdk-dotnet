@@ -61,7 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public InstanceAdvancedSettings InstanceAdvancedSettings{ get; set; }
 
         /// <summary>
-        /// 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100。
+        /// 已存在实例的配置信息。所有实例必须在同一个VPC中，最大数量不超过100，不支持添加竞价实例。
         /// </summary>
         [JsonProperty("ExistedInstancesForNode")]
         public ExistedInstancesForNode[] ExistedInstancesForNode{ get; set; }

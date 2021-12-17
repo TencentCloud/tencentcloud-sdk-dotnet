@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘操作限制列表详细信息。
+        /// 云硬盘操作限制列表详细信息。
         /// </summary>
         [JsonProperty("DiskDeniedActionSet")]
         public DiskDeniedActions[] DiskDeniedActionSet{ get; set; }

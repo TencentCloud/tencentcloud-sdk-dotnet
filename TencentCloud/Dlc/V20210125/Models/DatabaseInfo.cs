@@ -25,13 +25,13 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 数据库名称。
+        /// 数据库名称，长度0~128，支持数字、字母下划线，不允许数字大头，统一转换为小写。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
         /// <summary>
-        /// 数据库描述信息，长度 0~256。
+        /// 数据库描述信息，长度 0~500。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Comment")]
@@ -44,6 +44,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Properties")]
         public Property[] Properties{ get; set; }
 
+        /// <summary>
+        /// 数据库cos路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
         }
     }
 }

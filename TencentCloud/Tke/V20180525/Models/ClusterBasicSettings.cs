@@ -78,6 +78,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NeedWorkSecurityGroup")]
         public bool? NeedWorkSecurityGroup{ get; set; }
 
+        /// <summary>
+        /// 当选择Cilium Overlay网络插件时，TKE会从该子网获取2个IP用来创建内网负载均衡
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

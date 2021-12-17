@@ -25,25 +25,25 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘单价
+        /// 云硬盘单价。
         /// </summary>
         [JsonProperty("OriginalDiskPrice")]
         public float? OriginalDiskPrice{ get; set; }
 
         /// <summary>
-        /// 磁盘总价
+        /// 云硬盘总价。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public float? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 折扣
+        /// 折扣。
         /// </summary>
         [JsonProperty("Discount")]
         public float? Discount{ get; set; }
 
         /// <summary>
-        /// 折后总价
+        /// 折后总价。
         /// </summary>
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
