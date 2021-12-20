@@ -55,6 +55,14 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("SubLabelCode")]
         public string SubLabelCode{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回当前标签（Lable）下的二级标签。
+        /// 注意：此字段可能返回null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +74,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
         }
     }
 }

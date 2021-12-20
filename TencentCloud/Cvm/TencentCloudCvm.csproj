@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.429</VersionPrefix>
+    <VersionPrefix>3.0.430</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,10 @@
     <Compile Include="V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairRequest.cs" />
     <Compile Include="V20170312\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateVersionRequest.cs" />
+    <Compile Include="V20170312\Models\CreateLaunchTemplateVersionResponse.cs" />
     <Compile Include="V20170312\Models\DataDisk.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
@@ -68,6 +72,10 @@
     <Compile Include="V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
@@ -104,6 +112,10 @@
     <Compile Include="V20170312\Models\DescribeInternetChargeTypeConfigsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeKeyPairsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplatesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeLaunchTemplatesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
@@ -166,6 +178,9 @@
     <Compile Include="V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="V20170312\Models\ItemPrice.cs" />
     <Compile Include="V20170312\Models\KeyPair.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplate.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplateInfo.cs" />
+    <Compile Include="V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="V20170312\Models\LocalDiskType.cs" />
     <Compile Include="V20170312\Models\LoginSettings.cs" />
     <Compile Include="V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
@@ -190,6 +205,8 @@
     <Compile Include="V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
     <Compile Include="V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyLaunchTemplateDefaultVersionRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyLaunchTemplateDefaultVersionResponse.cs" />
     <Compile Include="V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="V20170312\Models\OsVersion.cs" />
     <Compile Include="V20170312\Models\Placement.cs" />

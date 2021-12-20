@@ -84,6 +84,13 @@ namespace TencentCloud.Tms.V20201229.Models
         public string DataId{ get; set; }
 
         /// <summary>
+        /// 该字段用于返回当前标签（Label）下的二级标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -104,6 +111,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamArrayObj(map, prefix + "RiskDetails.", this.RiskDetails);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "DataId", this.DataId);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

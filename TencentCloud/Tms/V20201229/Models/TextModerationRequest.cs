@@ -25,7 +25,7 @@ namespace TencentCloud.Tms.V20201229.Models
     {
         
         /// <summary>
-        /// 文本内容Base64编码，限制原文长度不能超过10000个unicode字符
+        /// 该字段表示待检测对象的文本内容，长度不能超过10000（按unicode编码计算）
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

@@ -791,7 +791,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDiskConfigs）用于查询磁盘配置。
+        /// 本接口（DescribeDiskConfigs）用于查询云硬盘配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
         /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
@@ -811,7 +811,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeDiskConfigs）用于查询磁盘配置。
+        /// 本接口（DescribeDiskConfigs）用于查询云硬盘配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeDiskConfigsRequest"/></param>
         /// <returns><see cref="DescribeDiskConfigsResponse"/></returns>
@@ -1903,7 +1903,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceCreateDisks）用于新购磁盘询价。
+        /// 本接口（InquirePriceCreateDisks）用于新购云硬盘询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
         /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>
@@ -1923,7 +1923,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceCreateDisks）用于新购磁盘询价。
+        /// 本接口（InquirePriceCreateDisks）用于新购云硬盘询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceCreateDisksRequest"/></param>
         /// <returns><see cref="InquirePriceCreateDisksResponse"/></returns>

@@ -72,6 +72,13 @@ namespace TencentCloud.Tms.V20201229.Models
         [JsonProperty("LibName")]
         public string LibName{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回当前标签（Label）下的二级标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Tms.V20201229.Models
             this.SetParamSimple(map, prefix + "LibType", this.LibType);
             this.SetParamSimple(map, prefix + "LibId", this.LibId);
             this.SetParamSimple(map, prefix + "LibName", this.LibName);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
         }
     }
 }

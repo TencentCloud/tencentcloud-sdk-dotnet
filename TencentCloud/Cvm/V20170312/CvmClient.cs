@@ -317,6 +317,94 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateLaunchTemplate）用于创建实例启动模板。
+        /// 
+        /// 实例启动模板是一种配置数据并可用于创建实例，其内容包含创建实例所需的配置，比如实例类型，数据盘和系统盘的类型和大小，以及安全组等信息。
+        /// 
+        /// 初次创建实例模板后，其模板版本为默认版本1，新版本的创建可使用CreateLaunchTemplateVersion创建，版本号递增。默认情况下，在RunInstances中指定实例启动模板，若不指定模板版本号，则使用默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public async Task<CreateLaunchTemplateResponse> CreateLaunchTemplate(CreateLaunchTemplateRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateLaunchTemplate）用于创建实例启动模板。
+        /// 
+        /// 实例启动模板是一种配置数据并可用于创建实例，其内容包含创建实例所需的配置，比如实例类型，数据盘和系统盘的类型和大小，以及安全组等信息。
+        /// 
+        /// 初次创建实例模板后，其模板版本为默认版本1，新版本的创建可使用CreateLaunchTemplateVersion创建，版本号递增。默认情况下，在RunInstances中指定实例启动模板，若不指定模板版本号，则使用默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateResponse"/></returns>
+        public CreateLaunchTemplateResponse CreateLaunchTemplateSync(CreateLaunchTemplateRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>
+        public async Task<CreateLaunchTemplateVersionResponse> CreateLaunchTemplateVersion(CreateLaunchTemplateVersionRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLaunchTemplateVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateLaunchTemplateVersion）根据指定的实例模板ID以及对应的模板版本号创建新的实例启动模板，若未指定模板版本号则使用默认版本号。每个实例启动模板最多创建30个版本。
+        /// </summary>
+        /// <param name="req"><see cref="CreateLaunchTemplateVersionRequest"/></param>
+        /// <returns><see cref="CreateLaunchTemplateVersionResponse"/></returns>
+        public CreateLaunchTemplateVersionResponse CreateLaunchTemplateVersionSync(CreateLaunchTemplateVersionRequest req)
+        {
+             JsonResponseModel<CreateLaunchTemplateVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLaunchTemplateVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLaunchTemplateVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DeleteDisasterRecoverGroups)用于删除[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。只有空的置放群组才能被删除，非空的群组需要先销毁组内所有云服务器，才能执行删除操作，不然会产生删除置放群组失败的错误。
         /// </summary>
         /// <param name="req"><see cref="DeleteDisasterRecoverGroupsRequest"/></param>
@@ -442,6 +530,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteKeyPairs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLaunchTemplate）用于删除一个实例启动模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateResponse"/></returns>
+        public async Task<DeleteLaunchTemplateResponse> DeleteLaunchTemplate(DeleteLaunchTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLaunchTemplate）用于删除一个实例启动模板。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateResponse"/></returns>
+        public DeleteLaunchTemplateResponse DeleteLaunchTemplateSync(DeleteLaunchTemplateRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLaunchTemplate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLaunchTemplateVersions）用于删除一个或者多个实例启动模板版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateVersionsResponse"/></returns>
+        public async Task<DeleteLaunchTemplateVersionsResponse> DeleteLaunchTemplateVersions(DeleteLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteLaunchTemplateVersions）用于删除一个或者多个实例启动模板版本。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DeleteLaunchTemplateVersionsResponse"/></returns>
+        public DeleteLaunchTemplateVersionsResponse DeleteLaunchTemplateVersionsSync(DeleteLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DeleteLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLaunchTemplateVersionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1230,6 +1398,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKeyPairs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKeyPairsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLaunchTemplateVersions）用于查询实例模板版本信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplateVersionsResponse"/></returns>
+        public async Task<DescribeLaunchTemplateVersionsResponse> DescribeLaunchTemplateVersions(DescribeLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLaunchTemplateVersions）用于查询实例模板版本信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplateVersionsRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplateVersionsResponse"/></returns>
+        public DescribeLaunchTemplateVersionsResponse DescribeLaunchTemplateVersionsSync(DescribeLaunchTemplateVersionsRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplateVersionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLaunchTemplateVersions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplateVersionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplatesResponse"/></returns>
+        public async Task<DescribeLaunchTemplatesResponse> DescribeLaunchTemplates(DescribeLaunchTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLaunchTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeLaunchTemplates）用于查询一个或者多个实例启动模板。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLaunchTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeLaunchTemplatesResponse"/></returns>
+        public DescribeLaunchTemplatesResponse DescribeLaunchTemplatesSync(DescribeLaunchTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeLaunchTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLaunchTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLaunchTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2580,6 +2828,46 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyKeyPairAttribute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyKeyPairAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLaunchTemplateDefaultVersion）用于修改实例启动模板默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaunchTemplateDefaultVersionRequest"/></param>
+        /// <returns><see cref="ModifyLaunchTemplateDefaultVersionResponse"/></returns>
+        public async Task<ModifyLaunchTemplateDefaultVersionResponse> ModifyLaunchTemplateDefaultVersion(ModifyLaunchTemplateDefaultVersionRequest req)
+        {
+             JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLaunchTemplateDefaultVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLaunchTemplateDefaultVersion）用于修改实例启动模板默认版本。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLaunchTemplateDefaultVersionRequest"/></param>
+        /// <returns><see cref="ModifyLaunchTemplateDefaultVersionResponse"/></returns>
+        public ModifyLaunchTemplateDefaultVersionResponse ModifyLaunchTemplateDefaultVersionSync(ModifyLaunchTemplateDefaultVersionRequest req)
+        {
+             JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLaunchTemplateDefaultVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchTemplateDefaultVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

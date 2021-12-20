@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 资产的ID。
+        /// 客户资产的ID。
         /// </summary>
         [JsonProperty("CustomerAssetId")]
         public ulong? CustomerAssetId{ get; set; }

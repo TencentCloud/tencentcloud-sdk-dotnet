@@ -103,6 +103,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("RouteType")]
         public string RouteType{ get; set; }
 
+        /// <summary>
+        /// 协商类型，默认为active（主动协商）。可选值：active（主动协商），passive（被动协商），flowTrigger（流量协商）
+        /// </summary>
+        [JsonProperty("NegotiationType")]
+        public string NegotiationType{ get; set; }
+
+        /// <summary>
+        /// DPD探测开关。默认为0，表示关闭DPD探测。可选值：0（关闭），1（开启）
+        /// </summary>
+        [JsonProperty("DpdEnable")]
+        public long? DpdEnable{ get; set; }
+
+        /// <summary>
+        /// DPD超时时间。即探测确认对端不存在需要的时间。dpdEnable为1（开启）时有效。默认30，单位为秒
+        /// </summary>
+        [JsonProperty("DpdTimeout")]
+        public string DpdTimeout{ get; set; }
+
+        /// <summary>
+        /// DPD超时后的动作。默认为clear。dpdEnable为1（开启）时有效。可取值为clear（断开）和restart（重试）
+        /// </summary>
+        [JsonProperty("DpdAction")]
+        public string DpdAction{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +146,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "HealthCheckLocalIp", this.HealthCheckLocalIp);
             this.SetParamSimple(map, prefix + "HealthCheckRemoteIp", this.HealthCheckRemoteIp);
             this.SetParamSimple(map, prefix + "RouteType", this.RouteType);
+            this.SetParamSimple(map, prefix + "NegotiationType", this.NegotiationType);
+            this.SetParamSimple(map, prefix + "DpdEnable", this.DpdEnable);
+            this.SetParamSimple(map, prefix + "DpdTimeout", this.DpdTimeout);
+            this.SetParamSimple(map, prefix + "DpdAction", this.DpdAction);
         }
     }
 }

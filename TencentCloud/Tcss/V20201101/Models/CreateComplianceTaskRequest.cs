@@ -25,7 +25,7 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 指定要扫描的资产类型列表。若不填，对所有资产触发扫描。
+        /// 指定要扫描的资产类型列表。
         /// ASSET_CONTAINER, 容器
         /// ASSET_IMAGE, 镜像
         /// ASSET_HOST, 主机

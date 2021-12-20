@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘价格
+        /// 云硬盘价格。
         /// </summary>
         [JsonProperty("DiskPrice")]
         public DiskPrice DiskPrice{ get; set; }

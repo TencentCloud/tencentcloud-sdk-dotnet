@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.429</VersionPrefix>
+    <VersionPrefix>3.0.430</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3255,6 +3255,12 @@
     <Compile Include="Ckafka\V20190819\Models\Assignment.cs" />
     <Compile Include="Ckafka\V20190819\Models\BatchCreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\BatchCreateAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyGroupOffsetsRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyGroupOffsetsResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyTopicAttributesRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyTopicAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyTopicInfo.cs" />
+    <Compile Include="Ckafka\V20190819\Models\BatchModifyTopicResultDTO.cs" />
     <Compile Include="Ckafka\V20190819\Models\ClusterInfo.cs" />
     <Compile Include="Ckafka\V20190819\Models\Config.cs" />
     <Compile Include="Ckafka\V20190819\Models\ConsumerGroup.cs" />
@@ -3358,6 +3364,7 @@
     <Compile Include="Ckafka\V20190819\Models\OperateResponseData.cs" />
     <Compile Include="Ckafka\V20190819\Models\Partition.cs" />
     <Compile Include="Ckafka\V20190819\Models\PartitionOffset.cs" />
+    <Compile Include="Ckafka\V20190819\Models\Partitions.cs" />
     <Compile Include="Ckafka\V20190819\Models\Price.cs" />
     <Compile Include="Ckafka\V20190819\Models\Region.cs" />
     <Compile Include="Ckafka\V20190819\Models\Route.cs" />
@@ -4570,6 +4577,10 @@
     <Compile Include="Cvm\V20170312\Models\CreateImageResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateVersionRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\CreateLaunchTemplateVersionResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DataDisk.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteDisasterRecoverGroupsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteDisasterRecoverGroupsResponse.cs" />
@@ -4577,6 +4588,10 @@
     <Compile Include="Cvm\V20170312\Models\DeleteImagesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DeleteKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeAccountQuotaRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeAccountQuotaResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />
@@ -4613,6 +4628,10 @@
     <Compile Include="Cvm\V20170312\Models\DescribeInternetChargeTypeConfigsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeKeyPairsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplateVersionsRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplateVersionsResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplatesRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\DescribeLaunchTemplatesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\DescribeReservedInstancesConfigInfosRequest.cs" />
@@ -4675,6 +4694,9 @@
     <Compile Include="Cvm\V20170312\Models\InternetChargeTypeConfig.cs" />
     <Compile Include="Cvm\V20170312\Models\ItemPrice.cs" />
     <Compile Include="Cvm\V20170312\Models\KeyPair.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplate.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateInfo.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="Cvm\V20170312\Models\LocalDiskType.cs" />
     <Compile Include="Cvm\V20170312\Models\LoginSettings.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyDisasterRecoverGroupAttributeRequest.cs" />
@@ -4699,6 +4721,8 @@
     <Compile Include="Cvm\V20170312\Models\ModifyInstancesVpcAttributeResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\ModifyKeyPairAttributeResponse.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyLaunchTemplateDefaultVersionRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\ModifyLaunchTemplateDefaultVersionResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\OperationCountLimit.cs" />
     <Compile Include="Cvm\V20170312\Models\OsVersion.cs" />
     <Compile Include="Cvm\V20170312\Models\Placement.cs" />
@@ -9510,6 +9534,7 @@
     <Compile Include="Lighthouse\V20200324\Models\CreateInstanceSnapshotResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\CreateKeyPairResponse.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\DataDiskPrice.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteBlueprintsResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\DeleteFirewallRulesRequest.cs" />

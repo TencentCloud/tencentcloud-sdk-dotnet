@@ -97,6 +97,14 @@ namespace TencentCloud.Ams.V20201229.Models
         [JsonProperty("LanguageResults")]
         public AudioResultDetailLanguageResult[] LanguageResults{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回当前标签（Lable）下的二级标签。
+        /// 注意：此字段可能返回null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +122,7 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamArrayObj(map, prefix + "TextResults.", this.TextResults);
             this.SetParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
             this.SetParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
         }
     }
 }

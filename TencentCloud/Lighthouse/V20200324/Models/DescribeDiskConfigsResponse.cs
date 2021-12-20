@@ -25,7 +25,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘配置列表
+        /// 云硬盘配置列表。
         /// </summary>
         [JsonProperty("DiskConfigSet")]
         public DiskConfig[] DiskConfigSet{ get; set; }

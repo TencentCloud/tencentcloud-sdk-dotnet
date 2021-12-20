@@ -25,8 +25,10 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// - zone:
-        /// 可用区
+        /// 过滤器列表。
+        /// <li>zone</li>按照【可用区】进行过滤。
+        /// 类型：String
+        /// 必选：否
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

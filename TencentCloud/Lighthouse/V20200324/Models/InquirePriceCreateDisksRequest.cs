@@ -25,25 +25,25 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     {
         
         /// <summary>
-        /// 磁盘大小
+        /// 云硬盘大小, 单位: GB。
         /// </summary>
         [JsonProperty("DiskSize")]
         public long? DiskSize{ get; set; }
 
         /// <summary>
-        /// 硬盘介质类型
+        /// 云硬盘介质类型。取值: "CLOUD_PREMIUM"(高性能云盘), "CLOUD_SSD"(SSD云硬盘)。
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 新购磁盘包年包月相关参数设置
+        /// 新购云硬盘包年包月相关参数设置。
         /// </summary>
         [JsonProperty("DiskChargePrepaid")]
         public DiskChargePrepaid DiskChargePrepaid{ get; set; }
 
         /// <summary>
-        /// 磁盘个数, 默认值: 1
+        /// 云硬盘个数, 默认值: 1。
         /// </summary>
         [JsonProperty("DiskCount")]
         public long? DiskCount{ get; set; }
