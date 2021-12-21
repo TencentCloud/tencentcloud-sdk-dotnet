@@ -30,7 +30,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Traffic：流量资源包。</li>
         /// <li>Transcode：普通转码资源包。</li>
         /// <li>TESHD：极速高清转码资源包。</li>
-        /// <li>Review：视频审核转码资源包。</li>
+        /// <li>Review：视频智能识别转码资源包。</li>
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
@@ -39,7 +39,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 资源包额度。
         /// <li>视频存储资源包，单位为字节。</li>
         /// <li>视频转码资源包，单位为秒。</li>
-        /// <li>视频审核资源包，单位为秒。</li>
+        /// <li>视频智能识别资源包，单位为秒。</li>
         /// <li>视频极速高清资源包，单位为秒。</li>
         /// <li>视频加速资源包，单位为字节。</li>
         /// </summary>
@@ -50,7 +50,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// 资源包余量。
         /// <li>视频存储资源包，单位为字节。</li>
         /// <li>视频转码资源包，单位为秒。</li>
-        /// <li>视频审核资源包，单位为秒。</li>
+        /// <li>视频智能识别资源包，单位为秒。</li>
         /// <li>视频极速高清资源包，单位为秒。</li>
         /// <li>视频加速资源包，单位为字节。</li>
         /// </summary>

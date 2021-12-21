@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 用户自定义人物审核控制参数。
+        /// 用户自定义人物智能识别控制参数。
         /// </summary>
         [JsonProperty("FaceReviewInfo")]
         public UserDefineFaceReviewTemplateInfoForUpdate FaceReviewInfo{ get; set; }
 
         /// <summary>
-        /// 用户自定义语音审核控制参数。
+        /// 用户自定义语音智能识别控制参数。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public UserDefineAsrTextReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// 用户自定义文本审核控制参数。
+        /// 用户自定义文本智能识别控制参数。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public UserDefineOcrTextReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

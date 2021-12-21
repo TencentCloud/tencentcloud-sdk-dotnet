@@ -852,5 +852,45 @@ namespace TencentCloud.Tem.V20210701
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 更新应用部署版本
+        /// </summary>
+        /// <param name="req"><see cref="RollingUpdateApplicationByVersionRequest"/></param>
+        /// <returns><see cref="RollingUpdateApplicationByVersionResponse"/></returns>
+        public async Task<RollingUpdateApplicationByVersionResponse> RollingUpdateApplicationByVersion(RollingUpdateApplicationByVersionRequest req)
+        {
+             JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RollingUpdateApplicationByVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新应用部署版本
+        /// </summary>
+        /// <param name="req"><see cref="RollingUpdateApplicationByVersionRequest"/></param>
+        /// <returns><see cref="RollingUpdateApplicationByVersionResponse"/></returns>
+        public RollingUpdateApplicationByVersionResponse RollingUpdateApplicationByVersionSync(RollingUpdateApplicationByVersionRequest req)
+        {
+             JsonResponseModel<RollingUpdateApplicationByVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RollingUpdateApplicationByVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

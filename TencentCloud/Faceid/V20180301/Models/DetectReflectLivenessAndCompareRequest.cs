@@ -25,13 +25,13 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// SDK生成的数据包活体数据包的资源地址。
+        /// SDK生成的活体检测数据包的资源地址。
         /// </summary>
         [JsonProperty("LiveDataUrl")]
         public string LiveDataUrl{ get; set; }
 
         /// <summary>
-        /// SDK生成的数据包活体数据包的资源Md5。
+        /// SDK生成的活体检测数据包的资源内容MD5（32位，用于校验LiveData的一致性）。
         /// </summary>
         [JsonProperty("LiveDataMd5")]
         public string LiveDataMd5{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 用于比对的目标图片的资源Md5。
+        /// 用于比对的目标图片的资源MD5（32位，用于校验Image的一致性）。
         /// </summary>
         [JsonProperty("ImageMd5")]
         public string ImageMd5{ get; set; }

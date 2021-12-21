@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 鉴黄模板 ID。
+        /// 鉴别涉及令人反感的信息的模板 ID。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

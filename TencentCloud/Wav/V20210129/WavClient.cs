@@ -133,6 +133,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 线索回收接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateLeadRequest"/></param>
+        /// <returns><see cref="CreateLeadResponse"/></returns>
+        public async Task<CreateLeadResponse> CreateLead(CreateLeadRequest req)
+        {
+             JsonResponseModel<CreateLeadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLead");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLeadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 线索回收接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateLeadRequest"/></param>
+        /// <returns><see cref="CreateLeadResponse"/></returns>
+        public CreateLeadResponse CreateLeadSync(CreateLeadRequest req)
+        {
+             JsonResponseModel<CreateLeadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLead");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLeadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据游标拉取活动参与列表信息
         /// </summary>
         /// <param name="req"><see cref="QueryActivityJoinListRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
+        /// </summary>
+        /// <param name="req"><see cref="QueryDealerInfoListRequest"/></param>
+        /// <returns><see cref="QueryDealerInfoListResponse"/></returns>
+        public async Task<QueryDealerInfoListResponse> QueryDealerInfoList(QueryDealerInfoListRequest req)
+        {
+             JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryDealerInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDealerInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
+        /// </summary>
+        /// <param name="req"><see cref="QueryDealerInfoListRequest"/></param>
+        /// <returns><see cref="QueryDealerInfoListResponse"/></returns>
+        public QueryDealerInfoListResponse QueryDealerInfoListSync(QueryDealerInfoListRequest req)
+        {
+             JsonResponseModel<QueryDealerInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryDealerInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryDealerInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 企业可通过此接口，根据外部联系人的userid，拉取客户详情
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailRequest"/></param>
@@ -564,6 +644,46 @@ namespace TencentCloud.Wav.V20210129
              {
                  var strResp = this.InternalRequestSync(req, "QueryMiniAppCodeList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMiniAppCodeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过此接口获取企微SaaS平台上的车系车型信息。
+        /// </summary>
+        /// <param name="req"><see cref="QueryVehicleInfoListRequest"/></param>
+        /// <returns><see cref="QueryVehicleInfoListResponse"/></returns>
+        public async Task<QueryVehicleInfoListResponse> QueryVehicleInfoList(QueryVehicleInfoListRequest req)
+        {
+             JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryVehicleInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVehicleInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 企业可通过此接口获取企微SaaS平台上的车系车型信息。
+        /// </summary>
+        /// <param name="req"><see cref="QueryVehicleInfoListRequest"/></param>
+        /// <returns><see cref="QueryVehicleInfoListResponse"/></returns>
+        public QueryVehicleInfoListResponse QueryVehicleInfoListSync(QueryVehicleInfoListRequest req)
+        {
+             JsonResponseModel<QueryVehicleInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryVehicleInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryVehicleInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

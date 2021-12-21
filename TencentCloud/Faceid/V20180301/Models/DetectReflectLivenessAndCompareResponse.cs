@@ -25,19 +25,19 @@ namespace TencentCloud.Faceid.V20180301.Models
     {
         
         /// <summary>
-        /// 验证通过后的视频最佳截图照片资源地址，jpg格式。
+        /// 验证通过后的视频最佳截图资源临时地址，jpg格式，资源和链接有效期2小时，务必在有效期内下载。
         /// </summary>
         [JsonProperty("BestFrameUrl")]
         public string BestFrameUrl{ get; set; }
 
         /// <summary>
-        /// 验证通过后的视频最佳截图照片资源Md5。
+        /// 验证通过后的视频最佳截图资源MD5（32位，用于校验BestFrame的一致性）。
         /// </summary>
         [JsonProperty("BestFrameMd5")]
         public string BestFrameMd5{ get; set; }
 
         /// <summary>
-        /// 业务错误码，成功情况返回Success, 错误情况请参考下方错误码 列表中FailedOperation部分
+        /// 业务错误码，成功情况返回Success，错误情况请参考下方错误码 列表中FailedOperation部分。
         /// </summary>
         [JsonProperty("Result")]
         public string Result{ get; set; }

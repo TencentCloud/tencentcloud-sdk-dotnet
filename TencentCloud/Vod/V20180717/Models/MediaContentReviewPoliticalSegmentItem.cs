@@ -37,13 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段涉政分数。
+        /// 嫌疑片段分数。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段鉴政结果建议，取值范围：
+        /// 嫌疑片段涉及令人不适宜的信息的结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
@@ -52,13 +52,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 涉政人物、违规图标名字。
+        /// 涉及令人不适宜的信息、违规图标名字。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
+        /// 嫌疑片段涉及令人不适宜的信息的结果标签。智能识别模板[画面涉及令人不适宜的信息的任务控制参数](https://cloud.tencent.com/document/api/266/31773#PoliticalImgReviewTemplateInfo)里 LabelSet 参数与此参数取值范围的对应关系：
         /// violation_photo：
         /// <li>violation_photo：违规图标。</li>
         /// politician：
@@ -67,21 +67,21 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>bureau_politician：厅局级领导人；</li>
         /// <li>county_politician：县处级领导人；</li>
         /// <li>rural_politician：乡科级领导人；</li>
-        /// <li>sensitive_politician：敏感政治人物；</li>
+        /// <li>sensitive_politician：违规相关人物；</li>
         /// <li>foreign_politician：国外领导人。</li>
         /// entertainment：
-        /// <li>sensitive_entertainment：敏感娱乐人物。</li>
+        /// <li>sensitive_entertainment：违规娱乐人物。</li>
         /// sport：
-        /// <li>sensitive_sport：敏感体育人物。</li>
+        /// <li>sensitive_sport：违规体育人物。</li>
         /// entrepreneur：
-        /// <li>sensitive_entrepreneur：敏感商业人物。</li>
+        /// <li>sensitive_entrepreneur：违规商业人物。</li>
         /// scholar：
-        /// <li>sensitive_scholar：敏感教育学者。</li>
+        /// <li>sensitive_scholar：违规教育学者。</li>
         /// celebrity：
-        /// <li>sensitive_celebrity：敏感知名人物；</li>
+        /// <li>sensitive_celebrity：违规知名人物；</li>
         /// <li>historical_celebrity：历史知名人物。</li>
         /// military：
-        /// <li>sensitive_military：敏感军事人物。</li>
+        /// <li>sensitive_military：违规相关人物。</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
@@ -94,7 +94,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 涉政人物、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
+        /// 涉及令人不适宜的信息、违规图标出现的区域坐标 (像素级)，[x1, y1, x2, y2]，即左上角坐标、右下角坐标。
         /// </summary>
         [JsonProperty("AreaCoordSet")]
         public long?[] AreaCoordSet{ get; set; }

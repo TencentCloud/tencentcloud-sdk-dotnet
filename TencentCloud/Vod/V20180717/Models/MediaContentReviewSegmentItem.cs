@@ -37,19 +37,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? EndTimeOffset{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段涉黄分数。
+        /// 嫌疑片段涉及令人反感的信息的分数。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段鉴黄结果标签。
+        /// 嫌疑片段涉及令人反感的信息的结果标签。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段鉴黄结果建议，取值范围：
+        /// 嫌疑片段鉴别涉及令人反感的信息的结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>

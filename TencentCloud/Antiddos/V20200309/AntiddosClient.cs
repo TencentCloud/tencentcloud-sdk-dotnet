@@ -253,6 +253,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 添加DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="CreateDDoSBlackWhiteIpListResponse"/></returns>
+        public async Task<CreateDDoSBlackWhiteIpListResponse> CreateDDoSBlackWhiteIpList(CreateDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<CreateDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="CreateDDoSBlackWhiteIpListResponse"/></returns>
+        public CreateDDoSBlackWhiteIpListResponse CreateDDoSBlackWhiteIpListSync(CreateDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<CreateDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加DDoS防护的区域封禁配置
         /// </summary>
         /// <param name="req"><see cref="CreateDDoSGeoIPBlockConfigRequest"/></param>
@@ -693,6 +733,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 删除DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteDDoSBlackWhiteIpListResponse"/></returns>
+        public async Task<DeleteDDoSBlackWhiteIpListResponse> DeleteDDoSBlackWhiteIpList(DeleteDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteDDoSBlackWhiteIpListResponse"/></returns>
+        public DeleteDDoSBlackWhiteIpListResponse DeleteDDoSBlackWhiteIpListSync(DeleteDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除DDoS防护的区域封禁配置
         /// </summary>
         /// <param name="req"><see cref="DeleteDDoSGeoIPBlockConfigRequest"/></param>
@@ -1044,6 +1124,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCCTrend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSBlackWhiteIpListResponse"/></returns>
+        public async Task<DescribeDDoSBlackWhiteIpListResponse> DescribeDDoSBlackWhiteIpList(DescribeDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS防护的IP网段黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSBlackWhiteIpListResponse"/></returns>
+        public DescribeDDoSBlackWhiteIpListResponse DescribeDDoSBlackWhiteIpListSync(DescribeDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSBlackWhiteIpListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

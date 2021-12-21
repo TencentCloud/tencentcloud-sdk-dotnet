@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 画面鉴政控制参数。
+        /// 画面鉴别涉及令人不适宜的信息的控制参数。
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public PoliticalImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// 语音鉴政控制参数。
+        /// 语音鉴别涉及令人不适宜的信息的控制参数。
         /// </summary>
         [JsonProperty("AsrReviewInfo")]
         public PoliticalAsrReviewTemplateInfoForUpdate AsrReviewInfo{ get; set; }
 
         /// <summary>
-        /// 文本鉴政控制参数。
+        /// 文本鉴别涉及令人不适宜的信息的控制参数。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public PoliticalOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

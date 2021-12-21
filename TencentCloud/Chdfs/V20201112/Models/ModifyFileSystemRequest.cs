@@ -43,7 +43,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+        /// 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
         /// 注意：修改的文件系统容量不能小于当前使用量
         /// </summary>
         [JsonProperty("CapacityQuota")]
@@ -61,6 +61,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("PosixAcl")]
         public bool? PosixAcl{ get; set; }
 
+        /// <summary>
+        /// 是否打开Ranger地址校验
+        /// </summary>
+        [JsonProperty("EnableRanger")]
+        public bool? EnableRanger{ get; set; }
+
+        /// <summary>
+        /// Ranger地址列表，可以为空数组
+        /// </summary>
+        [JsonProperty("RangerServiceAddresses")]
+        public string[] RangerServiceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +85,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamSimple(map, prefix + "CapacityQuota", this.CapacityQuota);
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "PosixAcl", this.PosixAcl);
+            this.SetParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+            this.SetParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
         }
     }
 }

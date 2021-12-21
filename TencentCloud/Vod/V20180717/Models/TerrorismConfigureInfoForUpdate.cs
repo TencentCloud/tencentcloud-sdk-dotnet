@@ -25,13 +25,13 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 画面鉴恐任务控制参数。
+        /// 画面鉴别涉及令人不安全的信息的任务控制参数。
         /// </summary>
         [JsonProperty("ImgReviewInfo")]
         public TerrorismImgReviewTemplateInfoForUpdate ImgReviewInfo{ get; set; }
 
         /// <summary>
-        /// 文本鉴恐任务控制参数。
+        /// 文本鉴别涉及令人不安全的信息的任务控制参数。
         /// </summary>
         [JsonProperty("OcrReviewInfo")]
         public TerrorismOcrReviewTemplateInfoForUpdate OcrReviewInfo{ get; set; }

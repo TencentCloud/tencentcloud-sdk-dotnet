@@ -37,7 +37,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string FilePath{ get; set; }
 
         /// <summary>
-        /// 回热任务类型（1：标准；2：极速；3：批量）
+        /// 回热任务类型（1：标准；2：极速；3：批量，暂时仅支持极速）
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

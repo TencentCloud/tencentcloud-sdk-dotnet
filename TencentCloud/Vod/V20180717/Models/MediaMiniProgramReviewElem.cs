@@ -25,20 +25,20 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 审核类型。 
-        /// <li>Porn：画面涉黄，</li>
-        /// <li>Porn.Ocr：文字涉黄，</li>
-        /// <li>Porn.Asr：声音涉黄，</li>
-        /// <li>Terrorism：画面涉暴恐，</li>
-        /// <li>Political：画面涉政，</li>
-        /// <li>Political.Ocr：文字涉政，</li>
-        /// <li>Political.Asr：声音涉政。</li>
+        /// 智能识别类型。 
+        /// <li>Porn：画面涉及令人反感的信息，</li>
+        /// <li>Porn.Ocr：文字涉及令人反感的信息，</li>
+        /// <li>Porn.Asr：声音涉及令人反感的信息，</li>
+        /// <li>Terrorism：画面涉及令人不安全的信息，</li>
+        /// <li>Political：画面涉及令人不适宜的信息，</li>
+        /// <li>Political.Ocr：文字涉及令人不适宜的信息，</li>
+        /// <li>Political.Asr：声音涉及令人不适宜的信息。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 审核意见。
+        /// 智能识别意见。
         /// <li>pass：确认正常，</li>
         /// <li>block：确认违规，</li>
         /// <li>review：疑似违规。</li>
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 审核结果置信度。取值 0~100。
+        /// 智能识别结果置信度。取值 0~100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

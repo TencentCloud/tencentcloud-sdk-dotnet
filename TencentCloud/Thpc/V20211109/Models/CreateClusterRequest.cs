@@ -55,7 +55,7 @@ namespace TencentCloud.Thpc.V20211109.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。目前仅支持SGE调度器。
+        /// 调度器类型。<br><li>SGE：SGE调度器。
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
@@ -101,7 +101,7 @@ namespace TencentCloud.Thpc.V20211109.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 域名字服务类型。目前仅支持NIS域名字服务。
+        /// 域名字服务类型。<br><li>NIS：NIS域名字服务。
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }

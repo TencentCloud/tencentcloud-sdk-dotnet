@@ -31,7 +31,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public string FileSystemName{ get; set; }
 
         /// <summary>
-        /// 文件系统容量（byte），下限为1G，上限为1P，且必须是1G的整数倍
+        /// 文件系统容量（byte），下限为1GB，上限为1PB，且必须是1GB的整数倍
         /// </summary>
         [JsonProperty("CapacityQuota")]
         public ulong? CapacityQuota{ get; set; }
@@ -66,6 +66,18 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("RootInodeGroup")]
         public string RootInodeGroup{ get; set; }
 
+        /// <summary>
+        /// 是否打开Ranger地址校验
+        /// </summary>
+        [JsonProperty("EnableRanger")]
+        public bool? EnableRanger{ get; set; }
+
+        /// <summary>
+        /// Ranger地址列表，默认为空数组
+        /// </summary>
+        [JsonProperty("RangerServiceAddresses")]
+        public string[] RangerServiceAddresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamArraySimple(map, prefix + "SuperUsers.", this.SuperUsers);
             this.SetParamSimple(map, prefix + "RootInodeUser", this.RootInodeUser);
             this.SetParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
+            this.SetParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
+            this.SetParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
         }
     }
 }

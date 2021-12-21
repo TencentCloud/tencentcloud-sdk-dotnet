@@ -25,35 +25,35 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 画面鉴政任务开关，可选值：
-        /// <li>ON：开启画面鉴政任务；</li>
-        /// <li>OFF：关闭画面鉴政任务。</li>
+        /// 画面鉴别涉及令人不适宜的信息的任务开关，可选值：
+        /// <li>ON：开启画面鉴别涉及令人不适宜的信息的任务；</li>
+        /// <li>OFF：关闭画面鉴别涉及令人不适宜的信息的任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+        /// 画面鉴别涉及令人不适宜的信息的过滤标签，智能识别结果包含选择的标签则返回结果，如果过滤标签为空，则智能识别结果全部返回，可选值为：
         /// <li>violation_photo：违规图标；</li>
-        /// <li>politician：政治人物；</li>
+        /// <li>politician：相关人物；</li>
         /// <li>entertainment：娱乐人物；</li>
         /// <li>sport：体育人物；</li>
         /// <li>entrepreneur：商业人物；</li>
         /// <li>scholar：教育学者；</li>
         /// <li>celebrity：知名人物；</li>
-        /// <li>military：军事人物。</li>
+        /// <li>military：相关人物。</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
         /// <summary>
-        /// 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
+        /// 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规，不填默认为 97 分。取值范围：0~100。
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
+        /// 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核，不填默认为 95 分。取值范围：0~100。
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

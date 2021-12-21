@@ -43,7 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段审核结果建议，取值范围：
+        /// 嫌疑片段智能识别的结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>

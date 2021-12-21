@@ -31,18 +31,32 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public FileSystem FileSystem{ get; set; }
 
         /// <summary>
-        /// 已使用容量（byte），包括标准和归档存储
+        /// 文件系统已使用容量（byte）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CapacityUsed")]
         public ulong? CapacityUsed{ get; set; }
 
         /// <summary>
-        /// 已使用归档存储容量（byte）
+        /// 已使用COS归档存储容量（byte）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ArchiveCapacityUsed")]
         public ulong? ArchiveCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// 已使用COS标准存储容量（byte）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandardCapacityUsed")]
+        public ulong? StandardCapacityUsed{ get; set; }
+
+        /// <summary>
+        /// 已使用COS低频存储容量（byte）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DegradeCapacityUsed")]
+        public ulong? DegradeCapacityUsed{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -59,6 +73,8 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamObj(map, prefix + "FileSystem.", this.FileSystem);
             this.SetParamSimple(map, prefix + "CapacityUsed", this.CapacityUsed);
             this.SetParamSimple(map, prefix + "ArchiveCapacityUsed", this.ArchiveCapacityUsed);
+            this.SetParamSimple(map, prefix + "StandardCapacityUsed", this.StandardCapacityUsed);
+            this.SetParamSimple(map, prefix + "DegradeCapacityUsed", this.DegradeCapacityUsed);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

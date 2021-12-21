@@ -75,7 +75,6 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 该字段用于返回当前标签（Lable）下的二级标签。
-        /// 注意：此字段可能返回null，表示取不到有效值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SubLabel")]

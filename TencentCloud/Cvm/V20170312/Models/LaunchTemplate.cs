@@ -24,12 +24,26 @@ namespace TencentCloud.Cvm.V20170312.Models
     public class LaunchTemplate : AbstractModel
     {
         
+        /// <summary>
+        /// 实例启动模板ID，通过该参数可使用实例模板中的预设参数创建实例。
+        /// </summary>
+        [JsonProperty("LaunchTemplateId")]
+        public string LaunchTemplateId{ get; set; }
+
+        /// <summary>
+        /// 实例启动模板版本号，若给定，新实例启动模板将基于给定的版本号创建
+        /// </summary>
+        [JsonProperty("LaunchTemplateVersion")]
+        public ulong? LaunchTemplateVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LaunchTemplateId", this.LaunchTemplateId);
+            this.SetParamSimple(map, prefix + "LaunchTemplateVersion", this.LaunchTemplateVersion);
         }
     }
 }

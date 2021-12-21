@@ -88,7 +88,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容审核任务的执行状态与结果。
+        /// 视频智能识别任务的执行状态与结果。
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }

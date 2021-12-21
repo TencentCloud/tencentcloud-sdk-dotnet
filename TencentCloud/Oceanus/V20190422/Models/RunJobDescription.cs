@@ -48,6 +48,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("JobConfigVersion")]
         public ulong? JobConfigVersion{ get; set; }
 
+        /// <summary>
+        /// Savepoint路径
+        /// </summary>
+        [JsonProperty("SavepointPath")]
+        public string SavepointPath{ get; set; }
+
+        /// <summary>
+        /// Savepoint的Id
+        /// </summary>
+        [JsonProperty("SavepointId")]
+        public string SavepointId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "RunType", this.RunType);
             this.SetParamSimple(map, prefix + "StartMode", this.StartMode);
             this.SetParamSimple(map, prefix + "JobConfigVersion", this.JobConfigVersion);
+            this.SetParamSimple(map, prefix + "SavepointPath", this.SavepointPath);
+            this.SetParamSimple(map, prefix + "SavepointId", this.SavepointId);
         }
     }
 }

@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 内容审核 Ocr 文字鉴违禁任务输入。
+        /// 智能识别 Ocr 文字鉴违禁任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewProhibitedOcrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 内容审核 Ocr 文字鉴违禁任务输出。
+        /// 智能识别 Ocr 文字鉴违禁任务输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]

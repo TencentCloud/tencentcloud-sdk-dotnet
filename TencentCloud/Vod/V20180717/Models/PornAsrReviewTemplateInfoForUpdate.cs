@@ -25,21 +25,21 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 语音鉴黄任务开关，可选值：
-        /// <li>ON：开启语音鉴黄任务；</li>
-        /// <li>OFF：关闭语音鉴黄任务。</li>
+        /// 语音鉴别涉及令人反感的信息的任务开关，可选值：
+        /// <li>ON：开启语音鉴别涉及令人反感的信息的任务；</li>
+        /// <li>OFF：关闭语音鉴别涉及令人反感的信息的任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 判定涉嫌违规的分数阈值，当智能审核达到该分数以上，认为涉嫌违规。取值范围：0~100。
+        /// 判定涉嫌违规的分数阈值，当智能识别达到该分数以上，认为涉嫌违规。取值范围：0~100。
         /// </summary>
         [JsonProperty("BlockConfidence")]
         public long? BlockConfidence{ get; set; }
 
         /// <summary>
-        /// 判定需人工复核是否违规的分数阈值，当智能审核达到该分数以上，认为需人工复核。取值范围：0~100。
+        /// 判定需人工复核是否违规的分数阈值，当智能识别达到该分数以上，认为需人工复核。取值范围：0~100。
         /// </summary>
         [JsonProperty("ReviewConfidence")]
         public long? ReviewConfidence{ get; set; }

@@ -24,12 +24,63 @@ namespace TencentCloud.Cvm.V20170312.Models
     public class LaunchTemplateVersionInfo : AbstractModel
     {
         
+        /// <summary>
+        /// 实例启动模板版本号。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaunchTemplateVersion")]
+        public ulong? LaunchTemplateVersion{ get; set; }
+
+        /// <summary>
+        /// 实例启动模板版本数据详情。
+        /// </summary>
+        [JsonProperty("LaunchTemplateVersionData")]
+        public LaunchTemplateVersionData LaunchTemplateVersionData{ get; set; }
+
+        /// <summary>
+        /// 实例启动模板版本创建时间。
+        /// </summary>
+        [JsonProperty("CreationTime")]
+        public string CreationTime{ get; set; }
+
+        /// <summary>
+        /// 实例启动模板ID。
+        /// </summary>
+        [JsonProperty("LaunchTemplateId")]
+        public string LaunchTemplateId{ get; set; }
+
+        /// <summary>
+        /// 是否为默认启动模板版本。
+        /// </summary>
+        [JsonProperty("IsDefaultVersion")]
+        public bool? IsDefaultVersion{ get; set; }
+
+        /// <summary>
+        /// 实例启动模板版本描述信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LaunchTemplateVersionDescription")]
+        public string LaunchTemplateVersionDescription{ get; set; }
+
+        /// <summary>
+        /// 创建者。
+        /// </summary>
+        [JsonProperty("CreatedBy")]
+        public string CreatedBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "LaunchTemplateVersion", this.LaunchTemplateVersion);
+            this.SetParamObj(map, prefix + "LaunchTemplateVersionData.", this.LaunchTemplateVersionData);
+            this.SetParamSimple(map, prefix + "CreationTime", this.CreationTime);
+            this.SetParamSimple(map, prefix + "LaunchTemplateId", this.LaunchTemplateId);
+            this.SetParamSimple(map, prefix + "IsDefaultVersion", this.IsDefaultVersion);
+            this.SetParamSimple(map, prefix + "LaunchTemplateVersionDescription", this.LaunchTemplateVersionDescription);
+            this.SetParamSimple(map, prefix + "CreatedBy", this.CreatedBy);
         }
     }
 }

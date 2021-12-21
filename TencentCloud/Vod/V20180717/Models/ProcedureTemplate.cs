@@ -52,7 +52,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaProcessTaskInput MediaProcessTask{ get; set; }
 
         /// <summary>
-        /// AI 智能内容审核类型任务参数。
+        /// AI 智能识别类型任务参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiContentReviewTask")]

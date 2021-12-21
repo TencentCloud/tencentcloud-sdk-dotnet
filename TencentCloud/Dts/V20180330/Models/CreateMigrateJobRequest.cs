@@ -37,7 +37,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public MigrateOption MigrateOption{ get; set; }
 
         /// <summary>
-        /// 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+        /// 源实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona，sqlserver 不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
         /// </summary>
         [JsonProperty("SrcDatabaseType")]
         public string SrcDatabaseType{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public SrcInfo SrcInfo{ get; set; }
 
         /// <summary>
-        /// 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
+        /// 目标实例数据库类型，目前支持：mysql，redis，mongodb，postgresql，mariadb，percona，sqlserver，cynosdbmysql。不同地域数据库类型的具体支持情况，请参考控制台创建迁移页面。
         /// </summary>
         [JsonProperty("DstDatabaseType")]
         public string DstDatabaseType{ get; set; }
@@ -75,16 +75,18 @@ namespace TencentCloud.Dts.V20180330.Models
         /// <summary>
         /// 需要迁移的源数据库表信息，用json格式的字符串描述。当MigrateOption.MigrateObject配置为2（指定库表迁移）时必填。
         /// 对于database-table两级结构的数据库：
-        /// [{Database:db1,Table:[table1,table2]},{Database:db2}]
+        /// [{"Database":"db1","Table":["table1","table2"]},{"Database":"db2"}]
         /// 对于database-schema-table三级结构：
-        /// [{Database:db1,Schema:s1
-        /// Table:[table1,table2]},{Database:db1,Schema:s2
-        /// Table:[table1,table2]},{Database:db2,Schema:s1
-        /// Table:[table1,table2]},{Database:db3},{Database:db4
-        /// Schema:s1}]
+        /// [{"Database":"db1","Schema":"s1","Table":["table1","table2"]},{"Database":"db1","Schema":"s2","Table":["table1","table2"]},{"Database":"db2","Schema":"s1","Table":["table1","table2"]},{"Database":"db3"},{"Database":"db4","Schema":"s1"}]
         /// </summary>
         [JsonProperty("DatabaseInfo")]
         public string DatabaseInfo{ get; set; }
+
+        /// <summary>
+        /// 迁移实例的tag
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagItem[] Tags{ get; set; }
 
 
         /// <summary>
@@ -101,6 +103,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "DstAccessType", this.DstAccessType);
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

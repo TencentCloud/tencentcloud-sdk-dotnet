@@ -31,7 +31,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
         public ulong? Days{ get; set; }
 
         /// <summary>
-        /// 转换类型（1：归档；2：删除）
+        /// 转换类型（1：归档；2：删除；3：低频）
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }

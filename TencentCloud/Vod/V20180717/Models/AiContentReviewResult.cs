@@ -26,14 +26,14 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 任务的类型，可以取的值有：
-        /// <li>Porn：图片鉴黄</li>
-        /// <li>Terrorism：图片鉴恐</li>
-        /// <li>Political：图片鉴政</li>
-        /// <li>Porn.Asr：Asr 文字（ 音频中的文字）鉴黄</li>
-        /// <li>Porn.Ocr：Ocr 文字鉴黄</li>
-        /// <li>Political.Asr：Asr 文字（ 音频中的文字）鉴政</li>
-        /// <li>Political.Ocr：Ocr 文字鉴政</li>
-        /// <li>Terrorism.Ocr：Ocr 文字鉴恐</li>
+        /// <li>Porn：图片鉴别是否涉及令人反感的信息</li>
+        /// <li>Terrorism：图片鉴别是否涉及令人不安全的信息</li>
+        /// <li>Political：图片鉴别是否涉及令人不适宜的信息</li>
+        /// <li>Porn.Asr：Asr 文字（ 音频中的文字）鉴别是否涉及令人反感的信息</li>
+        /// <li>Porn.Ocr：Ocr 文字鉴别是否涉及令人反感的信息</li>
+        /// <li>Political.Asr：Asr 文字（ 音频中的文字）鉴别是否涉及令人不适宜的信息</li>
+        /// <li>Political.Ocr：Ocr 文字鉴别是否涉及令人不适宜的信息</li>
+        /// <li>Terrorism.Ocr：Ocr 文字鉴别是否涉及令人不安全的信息</li>
         /// <li>Prohibited.Asr：Asr 文字（ 音频中的文字）鉴违禁</li>
         /// <li>Prohibited.Ocr：Ocr 文字鉴违禁</li>
         /// </summary>
@@ -41,74 +41,74 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 视频内容审核智能画面鉴黄任务的查询结果，当任务类型为 Porn 时有效。
+        /// 视频智能识别任务（画面涉及令人反感的信息）的查询结果，当任务类型为 Porn 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PornTask")]
         public AiReviewTaskPornResult PornTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核智能画面鉴恐任务的查询结果，当任务类型为 Terrorism 时有效。
+        /// 视频智能识别任务（画面涉及令人不安全的信息）的查询结果，当任务类型为 Terrorism 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TerrorismTask")]
         public AiReviewTaskTerrorismResult TerrorismTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核智能画面鉴政任务的查询结果，当任务类型为 Political 时有效。
+        /// 视频智能识别任务（画面涉及令人不适宜的信息）的查询结果，当任务类型为 Political 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoliticalTask")]
         public AiReviewTaskPoliticalResult PoliticalTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Asr 文字鉴黄任务的查询结果，当任务类型为 Porn.Asr 时有效。
+        /// 视频智能识别任务（Asr 文字涉及令人反感的信息）的查询结果，当任务类型为 Porn.Asr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PornAsrTask")]
         public AiReviewTaskPornAsrResult PornAsrTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Ocr 文字鉴黄任务的查询结果，当任务类型为 Porn.Ocr 时有效。
+        /// 视频智能识别任务（Ocr 文字涉及令人反感的信息）的查询结果，当任务类型为 Porn.Ocr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PornOcrTask")]
         public AiReviewTaskPornOcrResult PornOcrTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Asr 文字鉴政任务的查询结果，当任务类型为 Political.Asr 时有效。
+        /// 视频智能识别任务（Asr 文字涉及令人不适宜的信息）的查询结果，当任务类型为 Political.Asr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoliticalAsrTask")]
         public AiReviewTaskPoliticalAsrResult PoliticalAsrTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Ocr 文字鉴政任务的查询结果，当任务类型为 Political.Ocr 时有效。
+        /// 视频智能识别任务（Ocr 文字涉及令人不适宜的信息）的查询结果，当任务类型为 Political.Ocr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PoliticalOcrTask")]
         public AiReviewTaskPoliticalOcrResult PoliticalOcrTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Ocr 文字鉴恐任务的查询结果，当任务类型为 Terrorism.Ocr 时有效。
+        /// 视频智能识别任务（ Ocr 文字涉及令人不安全的信息）的查询结果，当任务类型为 Terrorism.Ocr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TerrorismOcrTask")]
         public AiReviewTaskTerrorismOcrResult TerrorismOcrTask{ get; set; }
 
         /// <summary>
-        /// 视频内容审核 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ProhibitedAsrTask")]
-        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
-
-        /// <summary>
-        /// 视频内容审核 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
+        /// 视频智能识别 Ocr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Ocr 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProhibitedOcrTask")]
         public AiReviewTaskProhibitedOcrResult ProhibitedOcrTask{ get; set; }
+
+        /// <summary>
+        /// 视频智能识别 Asr 文字鉴违禁任务的查询结果，当任务类型为 Prohibited.Asr 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProhibitedAsrTask")]
+        public AiReviewTaskProhibitedAsrResult ProhibitedAsrTask{ get; set; }
 
 
         /// <summary>
@@ -125,8 +125,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "PoliticalAsrTask.", this.PoliticalAsrTask);
             this.SetParamObj(map, prefix + "PoliticalOcrTask.", this.PoliticalOcrTask);
             this.SetParamObj(map, prefix + "TerrorismOcrTask.", this.TerrorismOcrTask);
-            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
             this.SetParamObj(map, prefix + "ProhibitedOcrTask.", this.ProhibitedOcrTask);
+            this.SetParamObj(map, prefix + "ProhibitedAsrTask.", this.ProhibitedAsrTask);
         }
     }
 }

@@ -2573,6 +2573,86 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 获取消息生产概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
+        /// <returns><see cref="DescribePublisherSummaryResponse"/></returns>
+        public async Task<DescribePublisherSummaryResponse> DescribePublisherSummary(DescribePublisherSummaryRequest req)
+        {
+             JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublisherSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublisherSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取消息生产概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
+        /// <returns><see cref="DescribePublisherSummaryResponse"/></returns>
+        public DescribePublisherSummaryResponse DescribePublisherSummarySync(DescribePublisherSummaryRequest req)
+        {
+             JsonResponseModel<DescribePublisherSummaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublisherSummary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublisherSummaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取生产者信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishersRequest"/></param>
+        /// <returns><see cref="DescribePublishersResponse"/></returns>
+        public async Task<DescribePublishersResponse> DescribePublishers(DescribePublishersRequest req)
+        {
+             JsonResponseModel<DescribePublishersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePublishers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取生产者信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePublishersRequest"/></param>
+        /// <returns><see cref="DescribePublishersResponse"/></returns>
+        public DescribePublishersResponse DescribePublishersSync(DescribePublishersRequest req)
+        {
+             JsonResponseModel<DescribePublishersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePublishers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePublishersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取单个RocketMQ集群信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRocketMQClusterRequest"/></param>

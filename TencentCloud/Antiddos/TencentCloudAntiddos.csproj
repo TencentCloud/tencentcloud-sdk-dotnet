@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.430</VersionPrefix>
+    <VersionPrefix>3.0.431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,8 @@
     <Compile Include="V20200309\Models\CreateBoundIPResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIRequest.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSSpeedLimitConfigRequest.cs" />
@@ -92,6 +94,8 @@
     <Compile Include="V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSSpeedLimitConfigRequest.cs" />
@@ -110,6 +114,8 @@
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -152,6 +158,7 @@
     <Compile Include="V20200309\Models\IPLineInfo.cs" />
     <Compile Include="V20200309\Models\InsL7Rules.cs" />
     <Compile Include="V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="V20200309\Models\IpSegment.cs" />
     <Compile Include="V20200309\Models\KeyValue.cs" />
     <Compile Include="V20200309\Models\L4RuleSource.cs" />
     <Compile Include="V20200309\Models\L7RuleEntry.cs" />

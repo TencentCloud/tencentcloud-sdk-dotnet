@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.430</VersionPrefix>
+    <VersionPrefix>3.0.431</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -266,6 +266,8 @@
     <Compile Include="Antiddos\V20200309\Models\CreateBoundIPResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSSpeedLimitConfigRequest.cs" />
@@ -294,6 +296,8 @@
     <Compile Include="Antiddos\V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteDDoSSpeedLimitConfigRequest.cs" />
@@ -312,6 +316,8 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -354,6 +360,7 @@
     <Compile Include="Antiddos\V20200309\Models\IPLineInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\InsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\InstanceRelation.cs" />
+    <Compile Include="Antiddos\V20200309\Models\IpSegment.cs" />
     <Compile Include="Antiddos\V20200309\Models\KeyValue.cs" />
     <Compile Include="Antiddos\V20200309\Models\L4RuleSource.cs" />
     <Compile Include="Antiddos\V20200309\Models\L7RuleEntry.cs" />
@@ -4696,6 +4703,7 @@
     <Compile Include="Cvm\V20170312\Models\KeyPair.cs" />
     <Compile Include="Cvm\V20170312\Models\LaunchTemplate.cs" />
     <Compile Include="Cvm\V20170312\Models\LaunchTemplateInfo.cs" />
+    <Compile Include="Cvm\V20170312\Models\LaunchTemplateVersionData.cs" />
     <Compile Include="Cvm\V20170312\Models\LaunchTemplateVersionInfo.cs" />
     <Compile Include="Cvm\V20170312\Models\LocalDiskType.cs" />
     <Compile Include="Cvm\V20170312\Models\LoginSettings.cs" />
@@ -7138,6 +7146,7 @@
     <Compile Include="Es\V20180416\Models\ZoneDetail.cs" />
     <Compile Include="Essbasic\V20210526\EssbasicClient.cs" />
     <Compile Include="Essbasic\V20210526\Models\Agent.cs" />
+    <Compile Include="Essbasic\V20210526\Models\AuthFailMessage.cs" />
     <Compile Include="Essbasic\V20210526\Models\Component.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
@@ -7151,10 +7160,15 @@
     <Compile Include="Essbasic\V20210526\Models\DescribeTemplatesResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeUsageRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeUsageResponse.cs" />
+    <Compile Include="Essbasic\V20210526\Models\DownloadFlowInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FlowApproverInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FlowInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FlowResourceUrlInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\FormField.cs" />
+    <Compile Include="Essbasic\V20210526\Models\GetDownloadFlowUrlRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\GetDownloadFlowUrlResponse.cs" />
+    <Compile Include="Essbasic\V20210526\Models\OperateChannelTemplateRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\OperateChannelTemplateResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\PrepareFlowsRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\PrepareFlowsResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\ProxyOrganizationOperator.cs" />
@@ -14301,6 +14315,10 @@
     <Compile Include="Tdmq\V20200217\Models\DescribeNodeHealthOptResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeProducersResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribePublisherSummaryRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribePublisherSummaryResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribePublishersRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\DescribePublishersResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeRocketMQClusterRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeRocketMQClusterResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\DescribeRocketMQClustersRequest.cs" />
@@ -14358,6 +14376,7 @@
     <Compile Include="Tdmq\V20200217\Models\Producer.cs" />
     <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\PublishCmqMsgResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Publisher.cs" />
     <Compile Include="Tdmq\V20200217\Models\ReceiveMessageRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
@@ -14381,6 +14400,7 @@
     <Compile Include="Tdmq\V20200217\Models\SendMessagesResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMsgRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\SendMsgResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\Sort.cs" />
     <Compile Include="Tdmq\V20200217\Models\Subscription.cs" />
     <Compile Include="Tdmq\V20200217\Models\SubscriptionTopic.cs" />
     <Compile Include="Tdmq\V20200217\Models\Tag.cs" />
@@ -14452,6 +14472,8 @@
     <Compile Include="Tem\V20210701\Models\ResumeDeployApplicationResponse.cs" />
     <Compile Include="Tem\V20210701\Models\RevertDeployApplicationRequest.cs" />
     <Compile Include="Tem\V20210701\Models\RevertDeployApplicationResponse.cs" />
+    <Compile Include="Tem\V20210701\Models\RollingUpdateApplicationByVersionRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\RollingUpdateApplicationByVersionResponse.cs" />
     <Compile Include="Tem\V20210701\Models\RunVersionPod.cs" />
     <Compile Include="Tem\V20210701\Models\StorageConf.cs" />
     <Compile Include="Tem\V20210701\Models\StorageMountConf.cs" />
@@ -17183,6 +17205,9 @@
     <Compile Include="Wav\V20210129\Models\CreateChannelCodeResponse.cs" />
     <Compile Include="Wav\V20210129\Models\CreateCorpTagRequest.cs" />
     <Compile Include="Wav\V20210129\Models\CreateCorpTagResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateLeadRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\CreateLeadResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\DealerInfo.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalContact.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalContactSimpleInfo.cs" />
     <Compile Include="Wav\V20210129\Models\ExternalContactTag.cs" />
@@ -17203,6 +17228,8 @@
     <Compile Include="Wav\V20210129\Models\QueryChatArchivingListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryClueInfoListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryClueInfoListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryDealerInfoListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryDealerInfoListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalContactDetailRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalContactDetailResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryExternalContactListRequest.cs" />
@@ -17213,9 +17240,12 @@
     <Compile Include="Wav\V20210129\Models\QueryLicenseInfoResponse.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListRequest.cs" />
     <Compile Include="Wav\V20210129\Models\QueryMiniAppCodeListResponse.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryVehicleInfoListRequest.cs" />
+    <Compile Include="Wav\V20210129\Models\QueryVehicleInfoListResponse.cs" />
     <Compile Include="Wav\V20210129\Models\TagDetailInfo.cs" />
     <Compile Include="Wav\V20210129\Models\TagGroup.cs" />
     <Compile Include="Wav\V20210129\Models\TagInfo.cs" />
+    <Compile Include="Wav\V20210129\Models\VehicleInfo.cs" />
     <Compile Include="Wav\V20210129\Models\WeComTagDetail.cs" />
     <Compile Include="Wss\V20180426\WssClient.cs" />
     <Compile Include="Wss\V20180426\Models\DeleteCertRequest.cs" />

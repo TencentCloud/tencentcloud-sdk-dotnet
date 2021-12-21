@@ -36,6 +36,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskId")]
         public string DiskId{ get; set; }
 
+        /// <summary>
+        /// 回滚前是否执行自动关机
+        /// </summary>
+        [JsonProperty("AutoStopInstance")]
+        public bool? AutoStopInstance{ get; set; }
+
+        /// <summary>
+        /// 回滚完成后是否自动开机
+        /// </summary>
+        [JsonProperty("AutoStartInstance")]
+        public bool? AutoStartInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
+            this.SetParamSimple(map, prefix + "AutoStopInstance", this.AutoStopInstance);
+            this.SetParamSimple(map, prefix + "AutoStartInstance", this.AutoStartInstance);
         }
     }
 }

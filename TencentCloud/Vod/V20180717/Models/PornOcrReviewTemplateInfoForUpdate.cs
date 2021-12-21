@@ -25,9 +25,9 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 文本鉴黄任务开关，可选值：
-        /// <li>ON：开启文本鉴黄任务；</li>
-        /// <li>OFF：关闭文本鉴黄任务。</li>
+        /// 文本鉴别涉及令人反感的信息的任务开关，可选值：
+        /// <li>ON：开启文本鉴别涉及令人反感的信息的任务；</li>
+        /// <li>OFF：关闭文本鉴别涉及令人反感的信息的任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

@@ -72,6 +72,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
+        /// <summary>
+        /// 合同的强制预览时间：3~300s，未指定则按合同页数计算
+        /// </summary>
+        [JsonProperty("PreReadTime")]
+        public long? PreReadTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
         }
     }
 }

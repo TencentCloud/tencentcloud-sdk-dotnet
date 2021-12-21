@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 审核信息列表。
+        /// 智能识别信息列表。
         /// </summary>
         [JsonProperty("MiniProgramReviewList")]
         public MediaMiniProgramReviewInfoItem[] MiniProgramReviewList{ get; set; }
