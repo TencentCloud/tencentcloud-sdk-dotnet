@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.431</VersionPrefix>
+    <VersionPrefix>3.0.432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2002,6 +2002,7 @@
     <Compile Include="Cat\V20180409\Models\GetTaskTotalNumberRequest.cs" />
     <Compile Include="Cat\V20180409\Models\GetTaskTotalNumberResponse.cs" />
     <Compile Include="Cat\V20180409\Models\IspDetail.cs" />
+    <Compile Include="Cat\V20180409\Models\KeyValuePair.cs" />
     <Compile Include="Cat\V20180409\Models\Label.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyAgentGroupRequest.cs" />
     <Compile Include="Cat\V20180409\Models\ModifyAgentGroupResponse.cs" />
@@ -2020,6 +2021,7 @@
     <Compile Include="Cat\V20180409\Models\RunTaskResponse.cs" />
     <Compile Include="Cat\V20180409\Models\SuspendProbeTaskRequest.cs" />
     <Compile Include="Cat\V20180409\Models\SuspendProbeTaskResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\Tag.cs" />
     <Compile Include="Cat\V20180409\Models\TaskAlarm.cs" />
     <Compile Include="Cat\V20180409\Models\TaskResult.cs" />
     <Compile Include="Cat\V20180409\Models\UpdateProbeTaskConfigurationListRequest.cs" />
@@ -2406,8 +2408,6 @@
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyRoGroupInfoResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\ModifyRoReplicationDelayResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyTimeWindowResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\OfflineIsolatedInstancesRequest.cs" />
@@ -2452,12 +2452,8 @@
     <Compile Include="Cdb\V20170320\Models\SqlFileInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StartBatchRollbackResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\StartDelayReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopDBImportJobResponse.cs" />
-    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationRequest.cs" />
-    <Compile Include="Cdb\V20170320\Models\StopDelayReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
@@ -3340,6 +3336,7 @@
     <Compile Include="Ckafka\V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DynamicDiskConfig.cs" />
     <Compile Include="Ckafka\V20190819\Models\DynamicRetentionTime.cs" />
     <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\FetchMessageByOffsetResponse.cs" />
@@ -6130,6 +6127,8 @@
     <Compile Include="Dlc\V20210125\Models\DescribeTableResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTablesRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTablesResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTasksRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTasksResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeUsersRequest.cs" />
@@ -6160,6 +6159,7 @@
     <Compile Include="Dlc\V20210125\Models\TableResponseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\Task.cs" />
     <Compile Include="Dlc\V20210125\Models\TaskResponseInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\TaskResultInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TasksInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TextFile.cs" />
     <Compile Include="Dlc\V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />
@@ -6461,6 +6461,7 @@
     <Compile Include="Ecdn\V20191012\EcdnClient.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainRequest.cs" />
     <Compile Include="Ecdn\V20191012\Models\AddEcdnDomainResponse.cs" />
+    <Compile Include="Ecdn\V20191012\Models\AdvanceHttps.cs" />
     <Compile Include="Ecdn\V20191012\Models\Cache.cs" />
     <Compile Include="Ecdn\V20191012\Models\CacheKey.cs" />
     <Compile Include="Ecdn\V20191012\Models\CacheRule.cs" />
@@ -7147,6 +7148,7 @@
     <Compile Include="Essbasic\V20210526\EssbasicClient.cs" />
     <Compile Include="Essbasic\V20210526\Models\Agent.cs" />
     <Compile Include="Essbasic\V20210526\Models\AuthFailMessage.cs" />
+    <Compile Include="Essbasic\V20210526\Models\CcInfo.cs" />
     <Compile Include="Essbasic\V20210526\Models\Component.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
@@ -14421,6 +14423,8 @@
     <Compile Include="Tem\V20210701\Models\CreateResourceResponse.cs" />
     <Compile Include="Tem\V20210701\Models\CronHorizontalAutoscaler.cs" />
     <Compile Include="Tem\V20210701\Models\CronHorizontalAutoscalerSchedule.cs" />
+    <Compile Include="Tem\V20210701\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="Tem\V20210701\Models\DeleteApplicationResponse.cs" />
     <Compile Include="Tem\V20210701\Models\DeleteIngressRequest.cs" />
     <Compile Include="Tem\V20210701\Models\DeleteIngressResponse.cs" />
     <Compile Include="Tem\V20210701\Models\DeployApplicationRequest.cs" />
@@ -14539,17 +14543,22 @@
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupResponse.cs" />
     <Compile Include="Thpc\V20211109\Models\CFSOption.cs" />
+    <Compile Include="Thpc\V20211109\Models\ClusterOverview.cs" />
     <Compile Include="Thpc\V20211109\Models\ComputeNode.cs" />
+    <Compile Include="Thpc\V20211109\Models\ComputeNodeOverview.cs" />
     <Compile Include="Thpc\V20211109\Models\CreateClusterRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\CreateClusterResponse.cs" />
     <Compile Include="Thpc\V20211109\Models\DataDisk.cs" />
     <Compile Include="Thpc\V20211109\Models\DeleteClusterRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\DeleteClusterResponse.cs" />
+    <Compile Include="Thpc\V20211109\Models\DescribeClustersRequest.cs" />
+    <Compile Include="Thpc\V20211109\Models\DescribeClustersResponse.cs" />
     <Compile Include="Thpc\V20211109\Models\GooseFSOption.cs" />
     <Compile Include="Thpc\V20211109\Models\InstanceChargePrepaid.cs" />
     <Compile Include="Thpc\V20211109\Models\InternetAccessible.cs" />
     <Compile Include="Thpc\V20211109\Models\LoginSettings.cs" />
     <Compile Include="Thpc\V20211109\Models\ManagerNode.cs" />
+    <Compile Include="Thpc\V20211109\Models\ManagerNodeOverview.cs" />
     <Compile Include="Thpc\V20211109\Models\Placement.cs" />
     <Compile Include="Thpc\V20211109\Models\StorageOption.cs" />
     <Compile Include="Thpc\V20211109\Models\SystemDisk.cs" />

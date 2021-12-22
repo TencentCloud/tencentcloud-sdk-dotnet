@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A44B3693-EAD3-3DA3-B2F2-99E6A5D7E283}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.431</VersionPrefix>
+    <VersionPrefix>3.0.432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -97,6 +97,8 @@
     <Compile Include="V20210125\Models\DescribeTableResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTablesRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTablesResponse.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskResultRequest.cs" />
+    <Compile Include="V20210125\Models\DescribeTaskResultResponse.cs" />
     <Compile Include="V20210125\Models\DescribeTasksRequest.cs" />
     <Compile Include="V20210125\Models\DescribeTasksResponse.cs" />
     <Compile Include="V20210125\Models\DescribeUsersRequest.cs" />
@@ -127,6 +129,7 @@
     <Compile Include="V20210125\Models\TableResponseInfo.cs" />
     <Compile Include="V20210125\Models\Task.cs" />
     <Compile Include="V20210125\Models\TaskResponseInfo.cs" />
+    <Compile Include="V20210125\Models\TaskResultInfo.cs" />
     <Compile Include="V20210125\Models\TasksInfo.cs" />
     <Compile Include="V20210125\Models\TextFile.cs" />
     <Compile Include="V20210125\Models\UnbindWorkGroupsFromUserRequest.cs" />

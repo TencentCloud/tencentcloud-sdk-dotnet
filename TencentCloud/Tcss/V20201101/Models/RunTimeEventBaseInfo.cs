@@ -118,6 +118,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
 
+        /// <summary>
+        /// 内网ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
+
+        /// <summary>
+        /// 外网ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIP")]
+        public string ClientIP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +151,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "EventCount", this.EventCount);
             this.SetParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
+            this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
         }
     }
 }

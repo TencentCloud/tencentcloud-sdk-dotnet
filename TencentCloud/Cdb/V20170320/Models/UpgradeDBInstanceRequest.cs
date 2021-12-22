@@ -108,6 +108,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("MaxDelayTime")]
         public long? MaxDelayTime{ get; set; }
 
+        /// <summary>
+        /// 是否跨区迁移。0-普通迁移，1-跨区迁移，默认值为0。该值为1时支持变更实例主节点可用区。
+        /// </summary>
+        [JsonProperty("CrossCluster")]
+        public long? CrossCluster{ get; set; }
+
+        /// <summary>
+        /// 主节点可用区，该值仅在跨区迁移时生效。仅支持同地域下的可用区进行迁移。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "FastUpgrade", this.FastUpgrade);
             this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
+            this.SetParamSimple(map, prefix + "CrossCluster", this.CrossCluster);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

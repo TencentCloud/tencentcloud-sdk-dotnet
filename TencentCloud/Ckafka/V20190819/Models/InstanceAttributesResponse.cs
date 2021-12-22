@@ -242,6 +242,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RemainingTopics")]
         public long? RemainingTopics{ get; set; }
 
+        /// <summary>
+        /// 动态硬盘扩容策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DynamicDiskConfig")]
+        public DynamicDiskConfig DynamicDiskConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +289,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DeleteRouteTimestamp", this.DeleteRouteTimestamp);
             this.SetParamSimple(map, prefix + "RemainingPartitions", this.RemainingPartitions);
             this.SetParamSimple(map, prefix + "RemainingTopics", this.RemainingTopics);
+            this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         }
     }
 }

@@ -213,6 +213,52 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 服务删除
+        ///   - 停止当前运行服务
+        ///   - 删除服务相关资源
+        ///   - 删除服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public async Task<DeleteApplicationResponse> DeleteApplication(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务删除
+        ///   - 停止当前运行服务
+        ///   - 删除服务相关资源
+        ///   - 删除服务
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationRequest"/></param>
+        /// <returns><see cref="DeleteApplicationResponse"/></returns>
+        public DeleteApplicationResponse DeleteApplicationSync(DeleteApplicationRequest req)
+        {
+             JsonResponseModel<DeleteApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除 Ingress 规则
         /// </summary>
         /// <param name="req"><see cref="DeleteIngressRequest"/></param>

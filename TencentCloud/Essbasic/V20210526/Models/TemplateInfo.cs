@@ -78,6 +78,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Recipients")]
         public Recipient[] Recipients{ get; set; }
 
+        /// <summary>
+        /// 是否是发起人
+        /// </summary>
+        [JsonProperty("IsPromoter")]
+        public bool? IsPromoter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
             this.SetParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+            this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         }
     }
 }

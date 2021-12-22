@@ -25,7 +25,7 @@ namespace TencentCloud.Tiia.V20190529.Models
     {
         
         /// <summary>
-        /// 公众人物身份标签的一级分类，例如体育明星、娱乐明星、政治人物等；
+        /// 公众人物身份标签的一级分类，例如体育明星、娱乐明星等；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FirstLabel")]

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.431</VersionPrefix>
+    <VersionPrefix>3.0.432</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20210701\Models\CreateResourceResponse.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscaler.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscalerSchedule.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationRequest.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationResponse.cs" />
     <Compile Include="V20210701\Models\DeleteIngressRequest.cs" />
     <Compile Include="V20210701\Models\DeleteIngressResponse.cs" />
     <Compile Include="V20210701\Models\DeployApplicationRequest.cs" />

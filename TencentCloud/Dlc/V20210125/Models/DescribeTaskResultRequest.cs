@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoReplicationDelayResponse : AbstractModel
+    public class DescribeTaskResultRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 任务唯一ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+        /// </summary>
+        [JsonProperty("NextToken")]
+        public string NextToken{ get; set; }
+
+        /// <summary>
+        /// 返回结果的最大行数，范围0~1000，默认为1000.
+        /// </summary>
+        [JsonProperty("MaxResults")]
+        public long? MaxResults{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "NextToken", this.NextToken);
+            this.SetParamSimple(map, prefix + "MaxResults", this.MaxResults);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("IsBalanceRoLoad")]
         public long? IsBalanceRoLoad{ get; set; }
 
+        /// <summary>
+        /// 废弃参数，无意义。
+        /// </summary>
+        [JsonProperty("ReplicationDelayTime")]
+        public long? ReplicationDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "RoGroupInfo.", this.RoGroupInfo);
             this.SetParamArrayObj(map, prefix + "RoWeightValues.", this.RoWeightValues);
             this.SetParamSimple(map, prefix + "IsBalanceRoLoad", this.IsBalanceRoLoad);
+            this.SetParamSimple(map, prefix + "ReplicationDelayTime", this.ReplicationDelayTime);
         }
     }
 }

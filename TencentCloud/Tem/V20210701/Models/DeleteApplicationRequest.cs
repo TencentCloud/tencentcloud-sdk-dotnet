@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StartDelayReplicationRequest : AbstractModel
+    public class DeleteApplicationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 服务Id
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 延迟复制类型。可选值 DEFAULT（按照延迟复制时间进行复制）、GTID（回放到指定GTID）、DUE_TIME（回放到指定时间点）。
+        /// 环境ID
         /// </summary>
-        [JsonProperty("DelayReplicationType")]
-        public string DelayReplicationType{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 指定时间点，默认为0，最大值不能超过当前时间。
+        /// 来源渠道
         /// </summary>
-        [JsonProperty("DueTime")]
-        public long? DueTime{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
 
         /// <summary>
-        /// 指定GITD。回放到指定GTID时必传。
+        /// 当服务没有任何运行版本时，是否删除此服务
         /// </summary>
-        [JsonProperty("Gtid")]
-        public string Gtid{ get; set; }
+        [JsonProperty("DeleteApplicationIfNoRunningVersion")]
+        public bool? DeleteApplicationIfNoRunningVersion{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DelayReplicationType", this.DelayReplicationType);
-            this.SetParamSimple(map, prefix + "DueTime", this.DueTime);
-            this.SetParamSimple(map, prefix + "Gtid", this.Gtid);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "DeleteApplicationIfNoRunningVersion", this.DeleteApplicationIfNoRunningVersion);
         }
     }
 }

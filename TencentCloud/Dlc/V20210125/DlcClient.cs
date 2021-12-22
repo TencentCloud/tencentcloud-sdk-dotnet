@@ -973,6 +973,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 查询任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public async Task<DescribeTaskResultResponse> DescribeTaskResult(DescribeTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTaskResultRequest"/></param>
+        /// <returns><see cref="DescribeTaskResultResponse"/></returns>
+        public DescribeTaskResultResponse DescribeTaskResultSync(DescribeTaskResultRequest req)
+        {
+             JsonResponseModel<DescribeTaskResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTaskResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribleTasks）用于查询任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksRequest"/></param>

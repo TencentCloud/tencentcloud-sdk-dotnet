@@ -1,3 +1,296 @@
+# Release 3.0.432
+
+## 语音识别(asr) 版本：2019-06-14
+
+### 第 17 次发布
+
+发布时间：2021-12-22 08:06:39
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateAsyncRecognitionTask](https://cloud.tencent.com/document/api/1093/52061)
+
+	* 新增入参：AudioData
+
+
+
+
+## 云拨测(cat) 版本：2018-04-09
+
+### 第 5 次发布
+
+发布时间：2021-12-22 08:07:25
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateProbeTasks](https://cloud.tencent.com/document/api/280/66213)
+
+	* 新增入参：Tag
+
+* [DescribeProbeTasks](https://cloud.tencent.com/document/api/280/66212)
+
+	* 新增入参：TagFilters
+
+
+新增数据结构：
+
+* [KeyValuePair](https://cloud.tencent.com/document/api/280/40931#KeyValuePair)
+* [Tag](https://cloud.tencent.com/document/api/280/40931#Tag)
+
+修改数据结构：
+
+* [ProbeTask](https://cloud.tencent.com/document/api/280/40931#ProbeTask)
+
+	* 新增成员：TagInfoList
+
+
+
+
+## 云数据库 MySQL(cdb) 版本：2017-03-20
+
+### 第 74 次发布
+
+发布时间：2021-12-22 08:07:40
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**删除接口**：</font>
+
+* ModifyRoReplicationDelay
+* StartDelayReplication
+* StopDelayReplication
+
+修改接口：
+
+* [ModifyRoGroupInfo](https://cloud.tencent.com/document/api/236/40938)
+
+	* 新增入参：ReplicationDelayTime
+
+	* 新增出参：AsyncRequestId
+
+* [UpgradeDBInstance](https://cloud.tencent.com/document/api/236/15876)
+
+	* 新增入参：CrossCluster, ZoneId
+
+
+修改数据结构：
+
+* [RoGroup](https://cloud.tencent.com/document/api/236/15878#RoGroup)
+
+	* 新增成员：DelayReplicationTime
+
+* [RoGroupAttr](https://cloud.tencent.com/document/api/236/15878#RoGroupAttr)
+
+	* 新增成员：ReplicationDelayTime
+
+
+
+
+## 消息队列 Ckafka(ckafka) 版本：2019-08-19
+
+### 第 31 次发布
+
+发布时间：2021-12-22 08:08:33
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [ModifyInstanceAttributes](https://cloud.tencent.com/document/api/597/40832)
+
+	* 新增入参：DynamicDiskConfig
+
+* [ModifyTopicAttributes](https://cloud.tencent.com/document/api/597/40844)
+
+	* 新增入参：Tags
+
+
+新增数据结构：
+
+* [DynamicDiskConfig](https://cloud.tencent.com/document/api/597/40861#DynamicDiskConfig)
+
+修改数据结构：
+
+* [InstanceAttributesResponse](https://cloud.tencent.com/document/api/597/40861#InstanceAttributesResponse)
+
+	* 新增成员：DynamicDiskConfig
+
+
+
+
+## 云服务器(cvm) 版本：2017-03-12
+
+### 第 68 次发布
+
+发布时间：2021-12-22 08:09:40
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改数据结构：
+
+* [LaunchTemplateVersionData](https://cloud.tencent.com/document/api/213/15753#LaunchTemplateVersionData)
+
+	* 新增成员：Placement, InstanceType, InstanceName, InstanceChargeType, SystemDisk, DataDisks, InternetAccessible, VirtualPrivateCloud, ImageId, SecurityGroupIds, LoginSettings, CamRoleName, HpcClusterId, InstanceCount, EnhancedService, UserData, DisasterRecoverGroupIds, ActionTimer, InstanceMarketOptions, HostName, ClientToken, InstanceChargePrepaid, TagSpecification
+
+
+
+
+## 数据湖计算(dlc) 版本：2021-01-25
+
+### 第 9 次发布
+
+发布时间：2021-12-22 08:10:52
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeTaskResult](https://cloud.tencent.com/document/api/1342/66644)
+
+新增数据结构：
+
+* [TaskResultInfo](https://cloud.tencent.com/document/api/1342/53778#TaskResultInfo)
+
+
+
+## 全站加速网络(ecdn) 版本：2019-10-12
+
+### 第 10 次发布
+
+发布时间：2021-12-22 08:11:17
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增数据结构：
+
+* [AdvanceHttps](https://cloud.tencent.com/document/api/570/42478#AdvanceHttps)
+
+修改数据结构：
+
+* [Origin](https://cloud.tencent.com/document/api/570/42478#Origin)
+
+	* 新增成员：AdvanceHttps
+
+
+
+
+## 腾讯电子签（基础版）(essbasic) 版本：2021-05-26
+
+### 第 8 次发布
+
+发布时间：2021-12-22 08:11:49
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增数据结构：
+
+* [CcInfo](https://cloud.tencent.com/document/api/1420/61525#CcInfo)
+
+修改数据结构：
+
+* [FlowInfo](https://cloud.tencent.com/document/api/1420/61525#FlowInfo)
+
+	* 新增成员：CcInfos
+
+* [TemplateInfo](https://cloud.tencent.com/document/api/1420/61525#TemplateInfo)
+
+	* 新增成员：IsPromoter
+
+
+
+
+## 腾讯电子签（基础版）(essbasic) 版本：2020-12-22
+
+
+
+## 容器安全服务(tcss) 版本：2020-11-01
+
+### 第 3 次发布
+
+发布时间：2021-12-22 08:16:46
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [DescribeVirusDetail](https://cloud.tencent.com/document/api/1285/65583)
+
+	* 新增出参：HostIP, ClientIP
+
+
+修改数据结构：
+
+* [RunTimeEventBaseInfo](https://cloud.tencent.com/document/api/1285/65614#RunTimeEventBaseInfo)
+
+	* 新增成员：HostIP, ClientIP
+
+
+
+
+## 弹性微服务(tem) 版本：2021-07-01
+
+### 第 8 次发布
+
+发布时间：2021-12-22 08:17:21
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DeleteApplication](https://cloud.tencent.com/document/api/1371/66645)
+
+
+
+## 弹性微服务(tem) 版本：2020-12-21
+
+
+
+## 高性能计算平台(thpc) 版本：2021-11-09
+
+### 第 6 次发布
+
+发布时间：2021-12-22 08:17:26
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [DescribeClusters](https://cloud.tencent.com/document/api/1527/66646)
+
+新增数据结构：
+
+* [ClusterOverview](https://cloud.tencent.com/document/api/1527/64906#ClusterOverview)
+* [ComputeNodeOverview](https://cloud.tencent.com/document/api/1527/64906#ComputeNodeOverview)
+* [ManagerNodeOverview](https://cloud.tencent.com/document/api/1527/64906#ManagerNodeOverview)
+
+
+
 # 本版本更新包含以下内容：
 
 ## DDoS 防护(antiddos) 版本：2020-03-09

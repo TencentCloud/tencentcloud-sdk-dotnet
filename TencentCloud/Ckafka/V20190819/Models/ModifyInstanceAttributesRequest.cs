@@ -66,6 +66,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
+        /// <summary>
+        /// 动态硬盘扩容策略配置
+        /// </summary>
+        [JsonProperty("DynamicDiskConfig")]
+        public DynamicDiskConfig DynamicDiskConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "DynamicRetentionConfig.", this.DynamicRetentionConfig);
             this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+            this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
         }
     }
 }

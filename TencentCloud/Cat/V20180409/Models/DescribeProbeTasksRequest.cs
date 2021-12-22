@@ -37,7 +37,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string TaskName{ get; set; }
 
         /// <summary>
-        /// 探测目标
+        /// 拨测目标
         /// </summary>
         [JsonProperty("TargetAddress")]
         public string TargetAddress{ get; set; }
@@ -100,6 +100,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("Ascend")]
         public bool? Ascend{ get; set; }
 
+        /// <summary>
+        /// 资源标签值
+        /// </summary>
+        [JsonProperty("TagFilters")]
+        public KeyValuePair[] TagFilters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamArraySimple(map, prefix + "TaskCategory.", this.TaskCategory);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Ascend", this.Ascend);
+            this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
         }
     }
 }

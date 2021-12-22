@@ -973,7 +973,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 获取实例属性
+        /// 获取实例属性 
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 获取实例属性
+        /// 获取实例属性 
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceAttributesRequest"/></param>
         /// <returns><see cref="DescribeInstanceAttributesResponse"/></returns>

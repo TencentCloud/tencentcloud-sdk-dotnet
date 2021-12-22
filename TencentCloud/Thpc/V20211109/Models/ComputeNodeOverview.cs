@@ -15,26 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Thpc.V20211109.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyRoReplicationDelayRequest : AbstractModel
+    public class ComputeNodeOverview : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID。
+        /// 计算节点ID。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 延迟时间（s）。最小值1，最大值259200。
-        /// </summary>
-        [JsonProperty("ReplicationDelay")]
-        public long? ReplicationDelay{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "ReplicationDelay", this.ReplicationDelay);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }

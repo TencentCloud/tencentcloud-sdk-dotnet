@@ -51,14 +51,14 @@ namespace TencentCloud.Scf.V20180416.Models
         public string EntryPoint{ get; set; }
 
         /// <summary>
-        /// entrypoint执行命令
+        /// 容器的启动命令。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 Entrypoint。传入规范，填写可运行的指令，例如 python
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
 
         /// <summary>
-        /// 命令参数
+        /// 容器的启动参数。该参数为可选参数，如果不填写，则默认使用 Dockerfile 中的 CMD。传入规范，以“空格”作为参数的分割标识，例如 -u app.py
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Args")]

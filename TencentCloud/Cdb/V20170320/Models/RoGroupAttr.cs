@@ -54,6 +54,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WeightMode")]
         public string WeightMode{ get; set; }
 
+        /// <summary>
+        /// 延迟复制时间。
+        /// </summary>
+        [JsonProperty("ReplicationDelayTime")]
+        public long? ReplicationDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "RoOfflineDelay", this.RoOfflineDelay);
             this.SetParamSimple(map, prefix + "MinRoInGroup", this.MinRoInGroup);
             this.SetParamSimple(map, prefix + "WeightMode", this.WeightMode);
+            this.SetParamSimple(map, prefix + "ReplicationDelayTime", this.ReplicationDelayTime);
         }
     }
 }

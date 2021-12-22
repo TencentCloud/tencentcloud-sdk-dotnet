@@ -263,6 +263,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string SubStatus{ get; set; }
 
         /// <summary>
+        /// 内网ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostIP")]
+        public string HostIP{ get; set; }
+
+        /// <summary>
+        /// 外网ip
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIP")]
+        public string ClientIP{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -306,6 +320,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EventType", this.EventType);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
+            this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
+            this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -133,7 +133,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 批量创建探测任务
+        /// 批量创建拨测任务
         /// </summary>
         /// <param name="req"><see cref="CreateProbeTasksRequest"/></param>
         /// <returns><see cref="CreateProbeTasksResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 批量创建探测任务
+        /// 批量创建拨测任务
         /// </summary>
         /// <param name="req"><see cref="CreateProbeTasksRequest"/></param>
         /// <returns><see cref="CreateProbeTasksResponse"/></returns>
@@ -653,7 +653,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 查询探测任务列表
+        /// 查询拨测任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeTasksRequest"/></param>
         /// <returns><see cref="DescribeProbeTasksResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 查询探测任务列表
+        /// 查询拨测任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeTasksRequest"/></param>
         /// <returns><see cref="DescribeProbeTasksResponse"/></returns>

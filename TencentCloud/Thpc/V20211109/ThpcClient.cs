@@ -172,5 +172,45 @@ namespace TencentCloud.Thpc.V20211109
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口（DescribeClusters）用于查询集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
+        /// <returns><see cref="DescribeClustersResponse"/></returns>
+        public async Task<DescribeClustersResponse> DescribeClusters(DescribeClustersRequest req)
+        {
+             JsonResponseModel<DescribeClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusters）用于查询集群列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClustersRequest"/></param>
+        /// <returns><see cref="DescribeClustersResponse"/></returns>
+        public DescribeClustersResponse DescribeClustersSync(DescribeClustersRequest req)
+        {
+             JsonResponseModel<DescribeClustersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusters");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClustersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

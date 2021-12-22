@@ -44,19 +44,19 @@ namespace TencentCloud.Cat.V20180409.Models
         public long? TaskType{ get; set; }
 
         /// <summary>
-        /// 探测节点列表
+        /// 拨测节点列表
         /// </summary>
         [JsonProperty("Nodes")]
         public string[] Nodes{ get; set; }
 
         /// <summary>
-        /// 探测间隔
+        /// 拨测间隔
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }
 
         /// <summary>
-        /// 探测参数
+        /// 拨测参数
         /// </summary>
         [JsonProperty("Parameters")]
         public string Parameters{ get; set; }
@@ -117,6 +117,13 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("CronState")]
         public long? CronState{ get; set; }
 
+        /// <summary>
+        /// 任务当前绑定的标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public KeyValuePair[] TagInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -137,6 +144,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
             this.SetParamSimple(map, prefix + "CronState", this.CronState);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         }
     }
 }

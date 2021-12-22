@@ -88,6 +88,12 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("HotwordId")]
         public string HotwordId{ get; set; }
 
+        /// <summary>
+        /// 回调数据中，是否需要对应音频数据。
+        /// </summary>
+        [JsonProperty("AudioData")]
+        public bool? AudioData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +110,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
             this.SetParamSimple(map, prefix + "WordInfo", this.WordInfo);
             this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+            this.SetParamSimple(map, prefix + "AudioData", this.AudioData);
         }
     }
 }

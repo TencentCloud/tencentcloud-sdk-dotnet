@@ -61,49 +61,49 @@ namespace TencentCloud.Scf.V20180416.Models
         public string TempCosObjectName{ get; set; }
 
         /// <summary>
-        /// Git地址
+        /// Git地址。该功能已下线。
         /// </summary>
         [JsonProperty("GitUrl")]
         public string GitUrl{ get; set; }
 
         /// <summary>
-        /// Git用户名
+        /// Git用户名。该功能已下线。
         /// </summary>
         [JsonProperty("GitUserName")]
         public string GitUserName{ get; set; }
 
         /// <summary>
-        /// Git密码
+        /// Git密码。该功能已下线。
         /// </summary>
         [JsonProperty("GitPassword")]
         public string GitPassword{ get; set; }
 
         /// <summary>
-        /// 加密后的Git密码，一般无需指定
+        /// 加密后的Git密码，一般无需指定。该功能已下线。
         /// </summary>
         [JsonProperty("GitPasswordSecret")]
         public string GitPasswordSecret{ get; set; }
 
         /// <summary>
-        /// Git分支
+        /// Git分支。该功能已下线。
         /// </summary>
         [JsonProperty("GitBranch")]
         public string GitBranch{ get; set; }
 
         /// <summary>
-        /// 代码在Git仓库中的路径
+        /// 代码在Git仓库中的路径。该功能已下线。
         /// </summary>
         [JsonProperty("GitDirectory")]
         public string GitDirectory{ get; set; }
 
         /// <summary>
-        /// 指定要拉取的版本
+        /// 指定要拉取的版本。该功能已下线。
         /// </summary>
         [JsonProperty("GitCommitId")]
         public string GitCommitId{ get; set; }
 
         /// <summary>
-        /// 加密后的Git用户名，一般无需指定
+        /// 加密后的Git用户名，一般无需指定。该功能已下线。
         /// </summary>
         [JsonProperty("GitUserNameSecret")]
         public string GitUserNameSecret{ get; set; }
