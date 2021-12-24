@@ -31,7 +31,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL的内核版本编号
+        /// PostgreSQL的版本编号
         /// </summary>
         [JsonProperty("Version")]
         public string Version{ get; set; }
@@ -84,6 +84,20 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// PostgreSQL的主要版本编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MajorVersion")]
+        public string MajorVersion{ get; set; }
+
+        /// <summary>
+        /// PostgreSQL的内核版本编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KernelVersion")]
+        public string KernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +114,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Qps", this.Qps);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
+            this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
         }
     }
 }

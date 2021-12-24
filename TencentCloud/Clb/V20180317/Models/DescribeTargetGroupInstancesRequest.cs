@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤
+        /// 过滤条件，当前仅支持TargetGroupId，BindIP，InstanceId过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 显示数量限制，默认20
+        /// 显示数量限制，默认20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 显示的偏移量，默认为0
+        /// 显示的偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

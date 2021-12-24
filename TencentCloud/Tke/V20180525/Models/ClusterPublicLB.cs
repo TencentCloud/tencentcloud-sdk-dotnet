@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraParam")]
         public string ExtraParam{ get; set; }
 
+        /// <summary>
+        /// 新内外网功能，需要传递安全组
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArraySimple(map, prefix + "AllowFromCidrs.", this.AllowFromCidrs);
             this.SetParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         }
     }
 }

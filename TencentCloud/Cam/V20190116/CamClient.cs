@@ -1533,6 +1533,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 获取角色权限边界
+        /// </summary>
+        /// <param name="req"><see cref="GetRolePermissionBoundaryRequest"/></param>
+        /// <returns><see cref="GetRolePermissionBoundaryResponse"/></returns>
+        public async Task<GetRolePermissionBoundaryResponse> GetRolePermissionBoundary(GetRolePermissionBoundaryRequest req)
+        {
+             JsonResponseModel<GetRolePermissionBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetRolePermissionBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRolePermissionBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取角色权限边界
+        /// </summary>
+        /// <param name="req"><see cref="GetRolePermissionBoundaryRequest"/></param>
+        /// <returns><see cref="GetRolePermissionBoundaryResponse"/></returns>
+        public GetRolePermissionBoundaryResponse GetRolePermissionBoundarySync(GetRolePermissionBoundaryRequest req)
+        {
+             JsonResponseModel<GetRolePermissionBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetRolePermissionBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetRolePermissionBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询SAML身份提供商详情
         /// </summary>
         /// <param name="req"><see cref="GetSAMLProviderRequest"/></param>
@@ -1684,6 +1724,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "GetUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户权限边界
+        /// </summary>
+        /// <param name="req"><see cref="GetUserPermissionBoundaryRequest"/></param>
+        /// <returns><see cref="GetUserPermissionBoundaryResponse"/></returns>
+        public async Task<GetUserPermissionBoundaryResponse> GetUserPermissionBoundary(GetUserPermissionBoundaryRequest req)
+        {
+             JsonResponseModel<GetUserPermissionBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetUserPermissionBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserPermissionBoundaryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户权限边界
+        /// </summary>
+        /// <param name="req"><see cref="GetUserPermissionBoundaryRequest"/></param>
+        /// <returns><see cref="GetUserPermissionBoundaryResponse"/></returns>
+        public GetUserPermissionBoundaryResponse GetUserPermissionBoundarySync(GetUserPermissionBoundaryRequest req)
+        {
+             JsonResponseModel<GetUserPermissionBoundaryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetUserPermissionBoundary");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserPermissionBoundaryResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

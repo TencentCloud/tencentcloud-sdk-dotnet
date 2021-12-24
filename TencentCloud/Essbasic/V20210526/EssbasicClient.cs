@@ -173,6 +173,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 此接口（DescribeFlowDetailInfo）用于查询合同(流程)的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowDetailInfoRequest"/></param>
+        /// <returns><see cref="DescribeFlowDetailInfoResponse"/></returns>
+        public async Task<DescribeFlowDetailInfoResponse> DescribeFlowDetailInfo(DescribeFlowDetailInfoRequest req)
+        {
+             JsonResponseModel<DescribeFlowDetailInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowDetailInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowDetailInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeFlowDetailInfo）用于查询合同(流程)的详细信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowDetailInfoRequest"/></param>
+        /// <returns><see cref="DescribeFlowDetailInfoResponse"/></returns>
+        public DescribeFlowDetailInfoResponse DescribeFlowDetailInfoSync(DescribeFlowDetailInfoRequest req)
+        {
+             JsonResponseModel<DescribeFlowDetailInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowDetailInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowDetailInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据流程信息批量获取资源下载链接
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceUrlsByFlowsRequest"/></param>

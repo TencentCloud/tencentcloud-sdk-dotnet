@@ -779,6 +779,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 服务重启
+        /// </summary>
+        /// <param name="req"><see cref="RestartApplicationRequest"/></param>
+        /// <returns><see cref="RestartApplicationResponse"/></returns>
+        public async Task<RestartApplicationResponse> RestartApplication(RestartApplicationRequest req)
+        {
+             JsonResponseModel<RestartApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务重启
+        /// </summary>
+        /// <param name="req"><see cref="RestartApplicationRequest"/></param>
+        /// <returns><see cref="RestartApplicationResponse"/></returns>
+        public RestartApplicationResponse RestartApplicationSync(RestartApplicationRequest req)
+        {
+             JsonResponseModel<RestartApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重启应用实例
         /// </summary>
         /// <param name="req"><see cref="RestartApplicationPodRequest"/></param>
@@ -930,6 +970,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "RollingUpdateApplicationByVersion");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RollingUpdateApplicationByVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务停止
+        /// </summary>
+        /// <param name="req"><see cref="StopApplicationRequest"/></param>
+        /// <returns><see cref="StopApplicationResponse"/></returns>
+        public async Task<StopApplicationResponse> StopApplication(StopApplicationRequest req)
+        {
+             JsonResponseModel<StopApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopApplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务停止
+        /// </summary>
+        /// <param name="req"><see cref="StopApplicationRequest"/></param>
+        /// <returns><see cref="StopApplicationResponse"/></returns>
+        public StopApplicationResponse StopApplicationSync(StopApplicationRequest req)
+        {
+             JsonResponseModel<StopApplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopApplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopApplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

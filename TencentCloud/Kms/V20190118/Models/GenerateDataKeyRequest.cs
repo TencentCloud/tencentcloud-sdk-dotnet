@@ -48,6 +48,18 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("EncryptionContext")]
         public string EncryptionContext{ get; set; }
 
+        /// <summary>
+        /// PEM 格式公钥字符串，支持 RSA2048 和 SM2 公钥，用于对返回数据中的 Plaintext 值进行加密。若为空，则不对 Plaintext 值加密。
+        /// </summary>
+        [JsonProperty("EncryptionPublicKey")]
+        public string EncryptionPublicKey{ get; set; }
+
+        /// <summary>
+        /// 非对称加密算法，配合 EncryptionPublicKey 对返回数据进行加密。目前支持：SM2（C1C3C2），RSAES_PKCS1_V1_5，RSAES_OAEP_SHA_1，RSAES_OAEP_SHA_256。若为空，则默认为 SM2。
+        /// </summary>
+        [JsonProperty("EncryptionAlgorithm")]
+        public string EncryptionAlgorithm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeySpec", this.KeySpec);
             this.SetParamSimple(map, prefix + "NumberOfBytes", this.NumberOfBytes);
             this.SetParamSimple(map, prefix + "EncryptionContext", this.EncryptionContext);
+            this.SetParamSimple(map, prefix + "EncryptionPublicKey", this.EncryptionPublicKey);
+            this.SetParamSimple(map, prefix + "EncryptionAlgorithm", this.EncryptionAlgorithm);
         }
     }
 }

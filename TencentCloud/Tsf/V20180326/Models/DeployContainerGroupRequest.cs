@@ -210,6 +210,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("RepoType")]
         public string RepoType{ get; set; }
 
+        /// <summary>
+        /// 数据卷信息
+        /// </summary>
+        [JsonProperty("VolumeInfos")]
+        public VolumeInfo VolumeInfos{ get; set; }
+
+        /// <summary>
+        /// 数据卷挂载点信息
+        /// </summary>
+        [JsonProperty("VolumeMountInfos")]
+        public VolumeMountInfo VolumeMountInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +259,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "SchedulingStrategy.", this.SchedulingStrategy);
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
             this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
+            this.SetParamObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
+            this.SetParamObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
         }
     }
 }

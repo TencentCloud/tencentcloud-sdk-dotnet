@@ -115,7 +115,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBCharset{ get; set; }
 
         /// <summary>
-        /// PostgreSQL主版本
+        /// PostgreSQL版本
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -235,6 +235,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("NetworkAccessList")]
         public NetworkAccess[] NetworkAccessList{ get; set; }
 
+        /// <summary>
+        /// PostgreSQL主要版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +282,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "OfflineTime", this.OfflineTime);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
         }
     }
 }

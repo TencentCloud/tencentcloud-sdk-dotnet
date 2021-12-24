@@ -25,19 +25,19 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 本次查询的结果数量
+        /// 本次查询的结果数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 绑定的服务器信息
+        /// 绑定的服务器信息。
         /// </summary>
         [JsonProperty("TargetGroupInstanceSet")]
         public TargetGroupBackend[] TargetGroupInstanceSet{ get; set; }
 
         /// <summary>
-        /// 实际统计数量，不受Limit，Offset，CAM的影响
+        /// 实际统计数量，不受Limit、Offset、CAM的影响。
         /// </summary>
         [JsonProperty("RealCount")]
         public ulong? RealCount{ get; set; }

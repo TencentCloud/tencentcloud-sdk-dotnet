@@ -1453,7 +1453,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 获取支持的地域列表
+        /// 获取可以提供KMS服务的地域列表
         /// </summary>
         /// <param name="req"><see cref="GetRegionsRequest"/></param>
         /// <returns><see cref="GetRegionsResponse"/></returns>
@@ -1473,7 +1473,7 @@ namespace TencentCloud.Kms.V20190118
         }
 
         /// <summary>
-        /// 获取支持的地域列表
+        /// 获取可以提供KMS服务的地域列表
         /// </summary>
         /// <param name="req"><see cref="GetRegionsRequest"/></param>
         /// <returns><see cref="GetRegionsResponse"/></returns>

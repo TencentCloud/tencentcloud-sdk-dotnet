@@ -31,7 +31,7 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、涉政、广告、暴恐、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
+        /// 语音检测场景，参数值目前要求为 default。 预留场景设置： 谩骂、色情、广告、违禁等场景，<a href="#Label_Value">具体取值见上述 Label 说明。</a>
         /// </summary>
         [JsonProperty("Scenes")]
         public string[] Scenes{ get; set; }
@@ -56,6 +56,12 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("Callback")]
         public string Callback{ get; set; }
 
+        /// <summary>
+        /// 语言，目前jp代表日语
+        /// </summary>
+        [JsonProperty("Lang")]
+        public string Lang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +73,7 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "Live", this.Live);
             this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "Callback", this.Callback);
+            this.SetParamSimple(map, prefix + "Lang", this.Lang);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("NeedDeleteCbs")]
         public bool? NeedDeleteCbs{ get; set; }
 
+        /// <summary>
+        /// 标记是否是新的内外网。默认为false
+        /// </summary>
+        [JsonProperty("ProxyLB")]
+        public bool? ProxyLB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "DnsServers.", this.DnsServers);
             this.SetParamSimple(map, prefix + "ClearDnsServer", this.ClearDnsServer);
             this.SetParamSimple(map, prefix + "NeedDeleteCbs", this.NeedDeleteCbs);
+            this.SetParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
         }
     }
 }

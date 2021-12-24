@@ -31,7 +31,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 过滤参数
+        /// 过滤参数（支持使用Value、RecordType过滤）
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

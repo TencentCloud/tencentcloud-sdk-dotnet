@@ -43,7 +43,7 @@ namespace TencentCloud.Scf.V20180416.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 该参数已下线
+        /// true，向指定请求[发送 SIGTERM 终止信号](https://cloud.tencent.com/document/product/583/63969#.E5.8F.91.E9.80.81.E7.BB.88.E6.AD.A2.E4.BF.A1.E5.8F.B7]， ，默认值为 false。
         /// </summary>
         [JsonProperty("GraceShutdown")]
         public bool? GraceShutdown{ get; set; }

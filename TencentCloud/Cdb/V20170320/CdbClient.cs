@@ -4373,6 +4373,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 开启 RO 复制，从主实例同步数据。
+        /// </summary>
+        /// <param name="req"><see cref="StartReplicationRequest"/></param>
+        /// <returns><see cref="StartReplicationResponse"/></returns>
+        public async Task<StartReplicationResponse> StartReplication(StartReplicationRequest req)
+        {
+             JsonResponseModel<StartReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启 RO 复制，从主实例同步数据。
+        /// </summary>
+        /// <param name="req"><see cref="StartReplicationRequest"/></param>
+        /// <returns><see cref="StartReplicationResponse"/></returns>
+        public StartReplicationResponse StartReplicationSync(StartReplicationRequest req)
+        {
+             JsonResponseModel<StartReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(StopDBImportJob)用于终止数据导入任务。
         /// </summary>
         /// <param name="req"><see cref="StopDBImportJobRequest"/></param>
@@ -4404,6 +4444,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "StopDBImportJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopDBImportJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止 RO 复制，中断从主实例同步数据。
+        /// </summary>
+        /// <param name="req"><see cref="StopReplicationRequest"/></param>
+        /// <returns><see cref="StopReplicationResponse"/></returns>
+        public async Task<StopReplicationResponse> StopReplication(StopReplicationRequest req)
+        {
+             JsonResponseModel<StopReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopReplicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止 RO 复制，中断从主实例同步数据。
+        /// </summary>
+        /// <param name="req"><see cref="StopReplicationRequest"/></param>
+        /// <returns><see cref="StopReplicationResponse"/></returns>
+        public StopReplicationResponse StopReplicationSync(StopReplicationRequest req)
+        {
+             JsonResponseModel<StopReplicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopReplication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopReplicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

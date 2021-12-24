@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.432</VersionPrefix>
+    <VersionPrefix>3.0.433</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -121,6 +121,8 @@
     <Compile Include="V20190116\Models\GetPolicyResponse.cs" />
     <Compile Include="V20190116\Models\GetPolicyVersionRequest.cs" />
     <Compile Include="V20190116\Models\GetPolicyVersionResponse.cs" />
+    <Compile Include="V20190116\Models\GetRolePermissionBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\GetRolePermissionBoundaryResponse.cs" />
     <Compile Include="V20190116\Models\GetRoleRequest.cs" />
     <Compile Include="V20190116\Models\GetRoleResponse.cs" />
     <Compile Include="V20190116\Models\GetSAMLProviderRequest.cs" />
@@ -129,6 +131,8 @@
     <Compile Include="V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="V20190116\Models\GetUserPermissionBoundaryRequest.cs" />
+    <Compile Include="V20190116\Models\GetUserPermissionBoundaryResponse.cs" />
     <Compile Include="V20190116\Models\GetUserRequest.cs" />
     <Compile Include="V20190116\Models\GetUserResponse.cs" />
     <Compile Include="V20190116\Models\GroupIdOfUidInfo.cs" />

@@ -258,6 +258,12 @@ namespace TencentCloud.Taf.V20200210.Models
         [JsonProperty("IsAuthorized")]
         public ulong? IsAuthorized{ get; set; }
 
+        /// <summary>
+        /// 设备信息
+        /// </summary>
+        [JsonProperty("DeviceList")]
+        public Device[] DeviceList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +309,7 @@ namespace TencentCloud.Taf.V20200210.Models
             this.SetParamSimple(map, prefix + "AppVer", this.AppVer);
             this.SetParamSimple(map, prefix + "ReqType", this.ReqType);
             this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+            this.SetParamArrayObj(map, prefix + "DeviceList.", this.DeviceList);
         }
     }
 }

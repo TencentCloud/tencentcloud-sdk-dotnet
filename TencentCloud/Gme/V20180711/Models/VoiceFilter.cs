@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 过滤类型，1：政治，2：色情，3：涉毒，4：谩骂
+        /// 过滤类型，1：色情，2：涉毒，3：谩骂
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]

@@ -31,12 +31,6 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string SpecCode{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本，目前支持以下版本：9.3.5、9.5.4、10.4、11.8、12.4 。
-        /// </summary>
-        [JsonProperty("DBVersion")]
-        public string DBVersion{ get; set; }
-
-        /// <summary>
         /// 实例容量大小，单位：GB。
         /// </summary>
         [JsonProperty("Storage")]
@@ -65,6 +59,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
 
         /// <summary>
         /// 实例计费类型。目前支持：PREPAID（预付费，即包年包月），POSTPAID_BY_HOUR（后付费，即按量计费）。
@@ -132,6 +132,18 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,12 +151,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SpecCode", this.SpecCode);
-            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
             this.SetParamArraySimple(map, prefix + "VoucherIds.", this.VoucherIds);
@@ -156,6 +168,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "NeedSupportIpv6", this.NeedSupportIpv6);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         }
     }
 }

@@ -31,19 +31,27 @@ namespace TencentCloud.Cme.V20191029.Models
         public long? Id{ get; set; }
 
         /// <summary>
-        /// 素材类型，同素材素材，可取值有：
-        /// <li> AUDIO :音频;</li>
-        /// <li> VIDEO :视频;</li>
-        /// <li> IMAGE :图片。</li>
+        /// 卡槽类型，可取值有：
+        /// <li> AUDIO：音频卡槽，可替换素材类型为 AUDIO 的音频素材;</li>
+        /// <li> VIDEO：视频卡槽，可替换素材类型为 VIDEO 的视频素材;</li>
+        /// <li> IMAGE：图片卡槽，可替换素材类型为 IMAGE 的图片素材;</li>
+        /// <li> TEXT：文本卡槽，可替换文本内容。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 默认素材 Id。
+        /// 默认素材ID。当卡槽类型为 AUDIO，VIDEO，或 IMAGE 中的一种时有效。
         /// </summary>
         [JsonProperty("DefaultMaterialId")]
         public string DefaultMaterialId{ get; set; }
+
+        /// <summary>
+        /// 默认文本卡槽信息。当卡槽类型为 TEXT 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultTextSlotInfo")]
+        public TextSlotInfo DefaultTextSlotInfo{ get; set; }
 
         /// <summary>
         /// 素材时长，单位秒。
@@ -60,6 +68,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "DefaultMaterialId", this.DefaultMaterialId);
+            this.SetParamObj(map, prefix + "DefaultTextSlotInfo.", this.DefaultTextSlotInfo);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
         }
     }
