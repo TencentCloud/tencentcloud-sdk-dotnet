@@ -56,6 +56,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("EnableWordPolygon")]
         public bool? EnableWordPolygon{ get; set; }
 
+        /// <summary>
+        /// 文本检测开关，默认值为true。
+        /// 设置为false表示直接进行单行识别，可适用于识别单行手写体签名场景。
+        /// </summary>
+        [JsonProperty("EnableDetectText")]
+        public bool? EnableDetectText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
             this.SetParamSimple(map, prefix + "EnableWordPolygon", this.EnableWordPolygon);
+            this.SetParamSimple(map, prefix + "EnableDetectText", this.EnableDetectText);
         }
     }
 }
