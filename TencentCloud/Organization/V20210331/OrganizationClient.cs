@@ -132,5 +132,45 @@ namespace TencentCloud.Organization.V20210331
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取企业组织信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationResponse"/></returns>
+        public async Task<DescribeOrganizationResponse> DescribeOrganization(DescribeOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取企业组织信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationResponse"/></returns>
+        public DescribeOrganizationResponse DescribeOrganizationSync(DescribeOrganizationRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

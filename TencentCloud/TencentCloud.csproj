@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.434</VersionPrefix>
+    <VersionPrefix>3.0.435</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11617,6 +11617,9 @@
     <Compile Include="Organization\V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
     <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberRequest.cs" />
     <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\DescribeOrganizationRequest.cs" />
+    <Compile Include="Organization\V20210331\Models\DescribeOrganizationResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\OrgPermission.cs" />
     <Compile Include="Partners\V20180321\PartnersClient.cs" />
     <Compile Include="Partners\V20180321\Models\AgentAuditedClient.cs" />
     <Compile Include="Partners\V20180321\Models\AgentBillElem.cs" />
