@@ -238,6 +238,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Grant")]
         public PrometheusInstanceGrantInfo Grant{ get; set; }
 
+        /// <summary>
+        /// 绑定的 Grafana 实例 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GrafanaInstanceId")]
+        public string GrafanaInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "GrafanaStatus", this.GrafanaStatus);
             this.SetParamSimple(map, prefix + "GrafanaIpWhiteList", this.GrafanaIpWhiteList);
             this.SetParamObj(map, prefix + "Grant.", this.Grant);
+            this.SetParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
         }
     }
 }

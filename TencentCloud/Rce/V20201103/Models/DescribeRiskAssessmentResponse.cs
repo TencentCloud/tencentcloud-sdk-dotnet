@@ -15,27 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Rce.V20201103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProducersResponse : AbstractModel
+    public class DescribeRiskAssessmentResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 生产者集合数组。
-        /// </summary>
-        [JsonProperty("ProducerSets")]
-        public Producer[] ProducerSets{ get; set; }
-
-        /// <summary>
-        /// 记录总数。
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -48,8 +36,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "ProducerSets.", this.ProducerSets);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

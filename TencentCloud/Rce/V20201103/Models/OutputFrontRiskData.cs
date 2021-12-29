@@ -15,40 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tdmq.V20200217.Models
+namespace TencentCloud.Rce.V20201103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Producer : AbstractModel
+    public class OutputFrontRiskData : AbstractModel
     {
         
         /// <summary>
-        /// 环境（命名空间）名称。
-        /// </summary>
-        [JsonProperty("EnvironmentId")]
-        public string EnvironmentId{ get; set; }
-
-        /// <summary>
-        /// 主题名称。
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// 连接数。
+        /// 返回码[0：成功；非0：标识失败错误码]。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CountConnect")]
-        public long? CountConnect{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
 
         /// <summary>
-        /// 连接集合。
+        /// 出错消息[UTF-8编码]。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ConnectionSets")]
-        public Connection[] ConnectionSets{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
+        /// <summary>
+        /// 返回结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Value")]
+        public OutputFrontRisk[] Value{ get; set; }
 
 
         /// <summary>
@@ -56,10 +51,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "CountConnect", this.CountConnect);
-            this.SetParamArrayObj(map, prefix + "ConnectionSets.", this.ConnectionSets);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamArrayObj(map, prefix + "Value.", this.Value);
         }
     }
 }

@@ -2533,46 +2533,6 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
-        /// 获取生产者列表，仅显示在线的生产者
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProducersRequest"/></param>
-        /// <returns><see cref="DescribeProducersResponse"/></returns>
-        public async Task<DescribeProducersResponse> DescribeProducers(DescribeProducersRequest req)
-        {
-             JsonResponseModel<DescribeProducersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeProducers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProducersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取生产者列表，仅显示在线的生产者
-        /// </summary>
-        /// <param name="req"><see cref="DescribeProducersRequest"/></param>
-        /// <returns><see cref="DescribeProducersResponse"/></returns>
-        public DescribeProducersResponse DescribeProducersSync(DescribeProducersRequest req)
-        {
-             JsonResponseModel<DescribeProducersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeProducers");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProducersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取消息生产概览信息
         /// </summary>
         /// <param name="req"><see cref="DescribePublisherSummaryRequest"/></param>
