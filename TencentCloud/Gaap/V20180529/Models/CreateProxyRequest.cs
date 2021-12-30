@@ -99,10 +99,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型，可取值：normal、cn2，默认值normal
+        /// 网络类型，normal表示常规BGP，cn2表示精品BGP，triple表示三网
         /// </summary>
         [JsonProperty("NetworkType")]
         public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
 
 
         /// <summary>
@@ -123,6 +129,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BillingType", this.BillingType);
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

@@ -78,6 +78,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("IpList")]
         public string[] IpList{ get; set; }
 
+        /// <summary>
+        /// 可用区列表
+        /// </summary>
+        [JsonProperty("ZoneList")]
+        public string[] ZoneList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
+            this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
         }
     }
 }

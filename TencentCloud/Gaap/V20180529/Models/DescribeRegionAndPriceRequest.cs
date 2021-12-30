@@ -31,7 +31,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 通道组类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道。
+        /// 通道套餐类型，Thunder表示标准通道组，Accelerator表示游戏加速器通道，CrossBorder表示跨境通道。
         /// </summary>
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }

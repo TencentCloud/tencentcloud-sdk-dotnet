@@ -138,6 +138,26 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("UnassignedShardNum")]
         public long? UnassignedShardNum{ get; set; }
 
+        /// <summary>
+        /// 企业版COS存储容量大小，单位GB
+        /// </summary>
+        [JsonProperty("TotalCosStorage")]
+        public long? TotalCosStorage{ get; set; }
+
+        /// <summary>
+        /// 企业版集群可搜索快照cos存放的bucket名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchableSnapshotCosBucket")]
+        public string SearchableSnapshotCosBucket{ get; set; }
+
+        /// <summary>
+        /// 企业版集群可搜索快照cos所属appid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchableSnapshotCosAppId")]
+        public string SearchableSnapshotCosAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +183,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "RelocatingShardNum", this.RelocatingShardNum);
             this.SetParamSimple(map, prefix + "InitializingShardNum", this.InitializingShardNum);
             this.SetParamSimple(map, prefix + "UnassignedShardNum", this.UnassignedShardNum);
+            this.SetParamSimple(map, prefix + "TotalCosStorage", this.TotalCosStorage);
+            this.SetParamSimple(map, prefix + "SearchableSnapshotCosBucket", this.SearchableSnapshotCosBucket);
+            this.SetParamSimple(map, prefix + "SearchableSnapshotCosAppId", this.SearchableSnapshotCosAppId);
         }
     }
 }

@@ -93,6 +93,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 策略绑定标签
+        /// </summary>
+        /// <param name="req"><see cref="BindingPolicyTagRequest"/></param>
+        /// <returns><see cref="BindingPolicyTagResponse"/></returns>
+        public async Task<BindingPolicyTagResponse> BindingPolicyTag(BindingPolicyTagRequest req)
+        {
+             JsonResponseModel<BindingPolicyTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindingPolicyTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindingPolicyTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 策略绑定标签
+        /// </summary>
+        /// <param name="req"><see cref="BindingPolicyTagRequest"/></param>
+        /// <returns><see cref="BindingPolicyTagResponse"/></returns>
+        public BindingPolicyTagResponse BindingPolicyTagSync(BindingPolicyTagRequest req)
+        {
+             JsonResponseModel<BindingPolicyTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindingPolicyTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindingPolicyTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建通知模板
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>

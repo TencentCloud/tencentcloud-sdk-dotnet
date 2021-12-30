@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.436</VersionPrefix>
+    <VersionPrefix>3.0.437</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,8 @@
     <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectResponse.cs" />
+    <Compile Include="V20180724\Models\BindingPolicyTagRequest.cs" />
+    <Compile Include="V20180724\Models\BindingPolicyTagResponse.cs" />
     <Compile Include="V20180724\Models\CommonNamespace.cs" />
     <Compile Include="V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeRequest.cs" />
@@ -192,6 +194,7 @@
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
     <Compile Include="V20180724\Models\Point.cs" />
+    <Compile Include="V20180724\Models\PolicyTag.cs" />
     <Compile Include="V20180724\Models\ProductSimple.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceGrantInfo.cs" />
     <Compile Include="V20180724\Models\PrometheusInstancesItem.cs" />

@@ -224,7 +224,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道。
+        /// 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+        /// CrossBorder表示跨境通道。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]

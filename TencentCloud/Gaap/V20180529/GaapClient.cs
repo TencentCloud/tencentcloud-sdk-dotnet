@@ -1257,7 +1257,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表
+        /// 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRegionsByDestRegionRequest"/></param>
         /// <returns><see cref="DescribeAccessRegionsByDestRegionResponse"/></returns>
@@ -1277,7 +1277,7 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
-        /// 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表
+        /// 本接口（DescribeAccessRegionsByDestRegion）根据源站区域查询可用的加速区域列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAccessRegionsByDestRegionRequest"/></param>
         /// <returns><see cref="DescribeAccessRegionsByDestRegionResponse"/></returns>

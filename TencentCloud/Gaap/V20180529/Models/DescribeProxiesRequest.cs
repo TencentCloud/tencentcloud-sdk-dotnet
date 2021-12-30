@@ -50,6 +50,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// RealServerRegion - String - 是否必填：否 - （过滤条件）按照源站地域过滤。
         /// GroupId - String - 是否必填：否 - （过滤条件）按照通道组ID过滤。
         /// IPAddressVersion - String - 是否必填：否 - （过滤条件）按照IP版本过滤。
+        /// PackageType - String - 是否必填：否 - （过滤条件）按照通道套餐类型过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

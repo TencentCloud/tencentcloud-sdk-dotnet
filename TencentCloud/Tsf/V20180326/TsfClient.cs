@@ -2655,6 +2655,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        ///  获取部署组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContainerGroupDeployInfoRequest"/></param>
+        /// <returns><see cref="DescribeContainerGroupDeployInfoResponse"/></returns>
+        public async Task<DescribeContainerGroupDeployInfoResponse> DescribeContainerGroupDeployInfo(DescribeContainerGroupDeployInfoRequest req)
+        {
+             JsonResponseModel<DescribeContainerGroupDeployInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeContainerGroupDeployInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContainerGroupDeployInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  获取部署组详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeContainerGroupDeployInfoRequest"/></param>
+        /// <returns><see cref="DescribeContainerGroupDeployInfoResponse"/></returns>
+        public DescribeContainerGroupDeployInfoResponse DescribeContainerGroupDeployInfoSync(DescribeContainerGroupDeployInfoRequest req)
+        {
+             JsonResponseModel<DescribeContainerGroupDeployInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeContainerGroupDeployInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeContainerGroupDeployInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         ///  容器部署组详情（已废弃，请使用  DescribeContainerGroupDeployInfo）
         /// </summary>
         /// <param name="req"><see cref="DescribeContainerGroupDetailRequest"/></param>

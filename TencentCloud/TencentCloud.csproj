@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.436</VersionPrefix>
+    <VersionPrefix>3.0.437</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -10564,6 +10564,8 @@
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectDimension.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\BindingPolicyTagRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\BindingPolicyTagResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CommonNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeRequest.cs" />
@@ -10698,6 +10700,7 @@
     <Compile Include="Monitor\V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Monitor\V20180724\Models\Point.cs" />
+    <Compile Include="Monitor\V20180724\Models\PolicyTag.cs" />
     <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
     <Compile Include="Monitor\V20180724\Models\PrometheusInstanceGrantInfo.cs" />
     <Compile Include="Monitor\V20180724\Models\PrometheusInstancesItem.cs" />
@@ -11617,8 +11620,11 @@
     <Compile Include="Organization\V20210331\Models\BindOrganizationMemberAuthAccountResponse.cs" />
     <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberRequest.cs" />
     <Compile Include="Organization\V20210331\Models\CreateOrganizationMemberResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\DescribeOrganizationMembersRequest.cs" />
+    <Compile Include="Organization\V20210331\Models\DescribeOrganizationMembersResponse.cs" />
     <Compile Include="Organization\V20210331\Models\DescribeOrganizationRequest.cs" />
     <Compile Include="Organization\V20210331\Models\DescribeOrganizationResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\OrgMember.cs" />
     <Compile Include="Organization\V20210331\Models\OrgPermission.cs" />
     <Compile Include="Partners\V20180321\PartnersClient.cs" />
     <Compile Include="Partners\V20180321\Models\AgentAuditedClient.cs" />
@@ -15638,6 +15644,7 @@
     <Compile Include="Tsf\V20180326\Models\ContainGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainGroupResult.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainerEvent.cs" />
+    <Compile Include="Tsf\V20180326\Models\ContainerGroupDeploy.cs" />
     <Compile Include="Tsf\V20180326\Models\ContainerGroupDetail.cs" />
     <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ContinueRunFailedTaskBatchResponse.cs" />
@@ -15763,6 +15770,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeConfigsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerEventsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerEventsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDeployInfoRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDeployInfoResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDetailRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeContainerGroupsRequest.cs" />

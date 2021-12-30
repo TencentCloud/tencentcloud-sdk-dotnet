@@ -54,6 +54,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ForceUpdate")]
         public bool? ForceUpdate{ get; set; }
 
+        /// <summary>
+        /// 0：系统插件
+        /// </summary>
+        [JsonProperty("PluginType")]
+        public ulong? PluginType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "RemovePluginList.", this.RemovePluginList);
             this.SetParamSimple(map, prefix + "ForceRestart", this.ForceRestart);
             this.SetParamSimple(map, prefix + "ForceUpdate", this.ForceUpdate);
+            this.SetParamSimple(map, prefix + "PluginType", this.PluginType);
         }
     }
 }

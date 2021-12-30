@@ -172,5 +172,45 @@ namespace TencentCloud.Organization.V20210331
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 获取企业组织成员列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersResponse"/></returns>
+        public async Task<DescribeOrganizationMembersResponse> DescribeOrganizationMembers(DescribeOrganizationMembersRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取企业组织成员列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationMembersRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationMembersResponse"/></returns>
+        public DescribeOrganizationMembersResponse DescribeOrganizationMembersSync(DescribeOrganizationMembersRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationMembersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationMembers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationMembersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

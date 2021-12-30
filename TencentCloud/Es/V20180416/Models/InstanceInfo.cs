@@ -242,42 +242,42 @@ namespace TencentCloud.Es.V20180416.Models
         public bool? EnableHotWarmMode{ get; set; }
 
         /// <summary>
-        /// 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// 温节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmNodeType")]
         public string WarmNodeType{ get; set; }
 
         /// <summary>
-        /// 冷节点个数
+        /// 温节点个数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmNodeNum")]
         public ulong? WarmNodeNum{ get; set; }
 
         /// <summary>
-        /// 冷节点CPU核数
+        /// 温节点CPU核数
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmCpuNum")]
         public ulong? WarmCpuNum{ get; set; }
 
         /// <summary>
-        /// 冷节点内存内存大小，单位GB
+        /// 温节点内存内存大小，单位GB
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmMemSize")]
         public ulong? WarmMemSize{ get; set; }
 
         /// <summary>
-        /// 冷节点磁盘类型
+        /// 温节点磁盘类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmDiskType")]
         public string WarmDiskType{ get; set; }
 
         /// <summary>
-        /// 冷节点磁盘大小，单位GB
+        /// 温节点磁盘大小，单位GB
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarmDiskSize")]
@@ -401,6 +401,90 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// 冷节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdNodeType")]
+        public string ColdNodeType{ get; set; }
+
+        /// <summary>
+        /// 冷节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdNodeNum")]
+        public ulong? ColdNodeNum{ get; set; }
+
+        /// <summary>
+        /// 冷节点CPU核数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdCpuNum")]
+        public ulong? ColdCpuNum{ get; set; }
+
+        /// <summary>
+        /// 冷节点内存大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdMemSize")]
+        public ulong? ColdMemSize{ get; set; }
+
+        /// <summary>
+        /// 冷节点磁盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdDiskType")]
+        public string ColdDiskType{ get; set; }
+
+        /// <summary>
+        /// 冷节点磁盘大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColdDiskSize")]
+        public ulong? ColdDiskSize{ get; set; }
+
+        /// <summary>
+        /// 冻节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenNodeType")]
+        public string FrozenNodeType{ get; set; }
+
+        /// <summary>
+        /// 冻节点个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenNodeNum")]
+        public ulong? FrozenNodeNum{ get; set; }
+
+        /// <summary>
+        /// 冻节点CPU核数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenCpuNum")]
+        public ulong? FrozenCpuNum{ get; set; }
+
+        /// <summary>
+        /// 冻节点内存大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenMemSize")]
+        public ulong? FrozenMemSize{ get; set; }
+
+        /// <summary>
+        /// 冻节点磁盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenDiskType")]
+        public string FrozenDiskType{ get; set; }
+
+        /// <summary>
+        /// 冻节点磁盘大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FrozenDiskSize")]
+        public ulong? FrozenDiskSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -466,6 +550,18 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Jdk", this.Jdk);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "ColdNodeType", this.ColdNodeType);
+            this.SetParamSimple(map, prefix + "ColdNodeNum", this.ColdNodeNum);
+            this.SetParamSimple(map, prefix + "ColdCpuNum", this.ColdCpuNum);
+            this.SetParamSimple(map, prefix + "ColdMemSize", this.ColdMemSize);
+            this.SetParamSimple(map, prefix + "ColdDiskType", this.ColdDiskType);
+            this.SetParamSimple(map, prefix + "ColdDiskSize", this.ColdDiskSize);
+            this.SetParamSimple(map, prefix + "FrozenNodeType", this.FrozenNodeType);
+            this.SetParamSimple(map, prefix + "FrozenNodeNum", this.FrozenNodeNum);
+            this.SetParamSimple(map, prefix + "FrozenCpuNum", this.FrozenCpuNum);
+            this.SetParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
+            this.SetParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
+            this.SetParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
         }
     }
 }
