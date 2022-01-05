@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DF6825D5-FAEE-38FB-A622-37599AD65B25}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.437</VersionPrefix>
+    <VersionPrefix>3.0.438</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20180419\Models\Advice.cs" />
     <Compile Include="V20180419\Models\AttachInstancesRequest.cs" />
     <Compile Include="V20180419\Models\AttachInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\AttachLoadBalancersRequest.cs" />
+    <Compile Include="V20180419\Models\AttachLoadBalancersResponse.cs" />
     <Compile Include="V20180419\Models\AutoScalingAdvice.cs" />
     <Compile Include="V20180419\Models\AutoScalingGroup.cs" />
     <Compile Include="V20180419\Models\AutoScalingGroupAbstract.cs" />
@@ -111,6 +113,8 @@
     <Compile Include="V20180419\Models\DescribeScheduledActionsResponse.cs" />
     <Compile Include="V20180419\Models\DetachInstancesRequest.cs" />
     <Compile Include="V20180419\Models\DetachInstancesResponse.cs" />
+    <Compile Include="V20180419\Models\DetachLoadBalancersRequest.cs" />
+    <Compile Include="V20180419\Models\DetachLoadBalancersResponse.cs" />
     <Compile Include="V20180419\Models\DetailedStatusMessage.cs" />
     <Compile Include="V20180419\Models\DisableAutoScalingGroupRequest.cs" />
     <Compile Include="V20180419\Models\DisableAutoScalingGroupResponse.cs" />
@@ -121,6 +125,7 @@
     <Compile Include="V20180419\Models\ExecuteScalingPolicyResponse.cs" />
     <Compile Include="V20180419\Models\Filter.cs" />
     <Compile Include="V20180419\Models\ForwardLoadBalancer.cs" />
+    <Compile Include="V20180419\Models\ForwardLoadBalancerIdentification.cs" />
     <Compile Include="V20180419\Models\HostNameSettings.cs" />
     <Compile Include="V20180419\Models\Instance.cs" />
     <Compile Include="V20180419\Models\InstanceChargePrepaid.cs" />
@@ -140,6 +145,8 @@
     <Compile Include="V20180419\Models\ModifyDesiredCapacityResponse.cs" />
     <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="V20180419\Models\ModifyLoadBalancerTargetAttributesRequest.cs" />
+    <Compile Include="V20180419\Models\ModifyLoadBalancerTargetAttributesResponse.cs" />
     <Compile Include="V20180419\Models\ModifyLoadBalancersRequest.cs" />
     <Compile Include="V20180419\Models\ModifyLoadBalancersResponse.cs" />
     <Compile Include="V20180419\Models\ModifyNotificationConfigurationRequest.cs" />

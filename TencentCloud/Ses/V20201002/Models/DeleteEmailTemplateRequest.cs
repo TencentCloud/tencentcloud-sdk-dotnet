@@ -25,7 +25,7 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateID")]
         public ulong? TemplateID{ get; set; }

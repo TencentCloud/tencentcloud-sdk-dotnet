@@ -67,7 +67,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string CreationTime{ get; set; }
 
         /// <summary>
-        /// 用户所属组织机构路径。
+        /// 用户所属主组织机构的路径ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgPath")]

@@ -15,28 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncContextTasksResponse : AbstractModel
+    public class DetachLoadBalancersResponse : AbstractModel
     {
         
         /// <summary>
-        /// 异步上下文任务列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 伸缩活动ID
         /// </summary>
-        [JsonProperty("AsyncContextTasks")]
-        public AsyncContextTask[] AsyncContextTasks{ get; set; }
-
-        /// <summary>
-        /// 异步上下文任务的总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,8 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "AsyncContextTasks.", this.AsyncContextTasks);
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncContextResultResponse : AbstractModel
+    public class SetAccountUserPrivilegeRequest : AbstractModel
     {
         
         /// <summary>
-        /// 上文日志是否已经返回
+        /// 实例ID
         /// </summary>
-        [JsonProperty("PrevOver")]
-        public bool? PrevOver{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 下文日志是否已经返回
+        /// 账号名称
         /// </summary>
-        [JsonProperty("NextOver")]
-        public bool? NextOver{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// 日志内容
+        /// 权限信息
         /// </summary>
-        [JsonProperty("Results")]
-        public LogInfo[] Results{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("AuthRole")]
+        public Auth[] AuthRole{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PrevOver", this.PrevOver);
-            this.SetParamSimple(map, prefix + "NextOver", this.NextOver);
-            this.SetParamArrayObj(map, prefix + "Results.", this.Results);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamArrayObj(map, prefix + "AuthRole.", this.AuthRole);
         }
     }
 }

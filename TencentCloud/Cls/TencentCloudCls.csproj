@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.437</VersionPrefix>
+    <VersionPrefix>3.0.438</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,8 +52,6 @@
     <Compile Include="V20201016\Models\AnalysisDimensional.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
-    <Compile Include="V20201016\Models\AsyncContextTask.cs" />
-    <Compile Include="V20201016\Models\AsyncSearchTask.cs" />
     <Compile Include="V20201016\Models\CallBackInfo.cs" />
     <Compile Include="V20201016\Models\Ckafka.cs" />
     <Compile Include="V20201016\Models\Column.cs" />
@@ -65,10 +63,6 @@
     <Compile Include="V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\CreateAlarmRequest.cs" />
     <Compile Include="V20201016\Models\CreateAlarmResponse.cs" />
-    <Compile Include="V20201016\Models\CreateAsyncContextTaskRequest.cs" />
-    <Compile Include="V20201016\Models\CreateAsyncContextTaskResponse.cs" />
-    <Compile Include="V20201016\Models\CreateAsyncSearchTaskRequest.cs" />
-    <Compile Include="V20201016\Models\CreateAsyncSearchTaskResponse.cs" />
     <Compile Include="V20201016\Models\CreateConfigRequest.cs" />
     <Compile Include="V20201016\Models\CreateConfigResponse.cs" />
     <Compile Include="V20201016\Models\CreateConsumerRequest.cs" />
@@ -90,10 +84,6 @@
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmResponse.cs" />
-    <Compile Include="V20201016\Models\DeleteAsyncContextTaskRequest.cs" />
-    <Compile Include="V20201016\Models\DeleteAsyncContextTaskResponse.cs" />
-    <Compile Include="V20201016\Models\DeleteAsyncSearchTaskRequest.cs" />
-    <Compile Include="V20201016\Models\DeleteAsyncSearchTaskResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConfigRequest.cs" />
@@ -116,14 +106,6 @@
     <Compile Include="V20201016\Models\DescribeAlarmNoticesResponse.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeAlarmsResponse.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncContextResultRequest.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncContextResultResponse.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncContextTasksRequest.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncContextTasksResponse.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncSearchResultRequest.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncSearchResultResponse.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncSearchTasksRequest.cs" />
-    <Compile Include="V20201016\Models\DescribeAsyncSearchTasksResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConfigMachineGroupsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeConfigMachineGroupsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConfigsRequest.cs" />

@@ -61,7 +61,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户所属组织机构唯一ID。如果为空，默认为在根节点下创建用户。
+        /// 用户所属的主组织机构唯一ID。如果为空，默认为在根节点下创建用户。
         /// </summary>
         [JsonProperty("OrgNodeId")]
         public string OrgNodeId{ get; set; }
@@ -84,6 +84,12 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("PwdNeedReset")]
         public bool? PwdNeedReset{ get; set; }
 
+        /// <summary>
+        /// 用户所属的次要组织机构ID列表。
+        /// </summary>
+        [JsonProperty("SecondaryOrgNodeIdList")]
+        public string[] SecondaryOrgNodeIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+            this.SetParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
         }
     }
 }

@@ -15,15 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAsyncSearchTaskResponse : AbstractModel
+    public class AttachLoadBalancersResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 伸缩活动ID
+        /// </summary>
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

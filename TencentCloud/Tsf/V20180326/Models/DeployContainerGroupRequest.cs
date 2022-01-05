@@ -211,16 +211,28 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string RepoType{ get; set; }
 
         /// <summary>
-        /// 数据卷信息
+        /// 数据卷信息-废弃，请用VolumeInfoList参数
         /// </summary>
         [JsonProperty("VolumeInfos")]
         public VolumeInfo VolumeInfos{ get; set; }
 
         /// <summary>
-        /// 数据卷挂载点信息
+        /// 数据卷挂载点信息-废弃，请用VolumeMountInfoList参数
         /// </summary>
         [JsonProperty("VolumeMountInfos")]
         public VolumeMountInfo VolumeMountInfos{ get; set; }
+
+        /// <summary>
+        /// 数据卷信息，list
+        /// </summary>
+        [JsonProperty("VolumeInfoList")]
+        public VolumeInfo[] VolumeInfoList{ get; set; }
+
+        /// <summary>
+        /// 数据卷挂载点信息，list
+        /// </summary>
+        [JsonProperty("VolumeMountInfoList")]
+        public VolumeMountInfo[] VolumeMountInfoList{ get; set; }
 
 
         /// <summary>
@@ -261,6 +273,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
             this.SetParamObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
             this.SetParamObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
+            this.SetParamArrayObj(map, prefix + "VolumeInfoList.", this.VolumeInfoList);
+            this.SetParamArrayObj(map, prefix + "VolumeMountInfoList.", this.VolumeMountInfoList);
         }
     }
 }

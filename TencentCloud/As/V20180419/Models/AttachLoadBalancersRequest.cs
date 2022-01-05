@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAsyncSearchResultRequest : AbstractModel
+    public class AttachLoadBalancersRequest : AbstractModel
     {
         
         /// <summary>
-        /// 异步检索任务ID
+        /// 伸缩组ID
         /// </summary>
-        [JsonProperty("AsyncSearchTaskId")]
-        public string AsyncSearchTaskId{ get; set; }
+        [JsonProperty("AutoScalingGroupId")]
+        public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 日志集ID
+        /// 传统负载均衡器ID列表，伸缩组绑定数量上限为20，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("LoadBalancerIds")]
+        public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 加载更多日志时使用，透传上次返回的Context值，获取后续的日志内容
+        /// 应用型负载均衡器列表，伸缩组绑定数量上限为50，LoadBalancerIds 和 ForwardLoadBalancers 二者同时最多只能指定一个
         /// </summary>
-        [JsonProperty("Context")]
-        public string Context{ get; set; }
-
-        /// <summary>
-        /// 单次调用返回的日志条数，默认为20，最大为500
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("ForwardLoadBalancers")]
+        public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncSearchTaskId", this.AsyncSearchTaskId);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Context", this.Context);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamArraySimple(map, prefix + "LoadBalancerIds.", this.LoadBalancerIds);
+            this.SetParamArrayObj(map, prefix + "ForwardLoadBalancers.", this.ForwardLoadBalancers);
         }
     }
 }

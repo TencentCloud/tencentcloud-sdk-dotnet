@@ -25,8 +25,7 @@ namespace TencentCloud.Cdn.V20180606.Models
     {
         
         /// <summary>
-        /// 服务器证书 ID
-        /// 在 SSL 证书管理进行证书托管时自动生成
+        /// 服务器证书 ID 在 SSL 证书管理进行证书托管时自动生成
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CertId")]

@@ -93,6 +93,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
+        /// </summary>
+        /// <param name="req"><see cref="AttachLoadBalancersRequest"/></param>
+        /// <returns><see cref="AttachLoadBalancersResponse"/></returns>
+        public async Task<AttachLoadBalancersResponse> AttachLoadBalancers(AttachLoadBalancersRequest req)
+        {
+             JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AttachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（AttachLoadBalancers）用于将负载均衡器添加到伸缩组。
+        /// </summary>
+        /// <param name="req"><see cref="AttachLoadBalancersRequest"/></param>
+        /// <returns><see cref="AttachLoadBalancersResponse"/></returns>
+        public AttachLoadBalancersResponse AttachLoadBalancersSync(AttachLoadBalancersRequest req)
+        {
+             JsonResponseModel<AttachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AttachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AttachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ClearLaunchConfigurationAttributes）用于将启动配置内的特定属性完全清空。
         /// </summary>
         /// <param name="req"><see cref="ClearLaunchConfigurationAttributesRequest"/></param>
@@ -1371,6 +1411,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 本接口（DetachLoadBalancers）用于从伸缩组移出负载均衡器，本接口不会销毁负载均衡器。
+        /// </summary>
+        /// <param name="req"><see cref="DetachLoadBalancersRequest"/></param>
+        /// <returns><see cref="DetachLoadBalancersResponse"/></returns>
+        public async Task<DetachLoadBalancersResponse> DetachLoadBalancers(DetachLoadBalancersRequest req)
+        {
+             JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DetachLoadBalancers）用于从伸缩组移出负载均衡器，本接口不会销毁负载均衡器。
+        /// </summary>
+        /// <param name="req"><see cref="DetachLoadBalancersRequest"/></param>
+        /// <returns><see cref="DetachLoadBalancersResponse"/></returns>
+        public DetachLoadBalancersResponse DetachLoadBalancersSync(DetachLoadBalancersRequest req)
+        {
+             JsonResponseModel<DetachLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetachLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisableAutoScalingGroup）用于停用指定伸缩组。
         /// </summary>
         /// <param name="req"><see cref="DisableAutoScalingGroupRequest"/></param>
@@ -1614,6 +1694,46 @@ namespace TencentCloud.As.V20180419
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLaunchConfigurationAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLaunchConfigurationAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerTargetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerTargetAttributesResponse"/></returns>
+        public async Task<ModifyLoadBalancerTargetAttributesResponse> ModifyLoadBalancerTargetAttributes(ModifyLoadBalancerTargetAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancerTargetAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerTargetAttributesRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerTargetAttributesResponse"/></returns>
+        public ModifyLoadBalancerTargetAttributesResponse ModifyLoadBalancerTargetAttributesSync(ModifyLoadBalancerTargetAttributesRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerTargetAttributes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerTargetAttributesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

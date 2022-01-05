@@ -81,7 +81,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 用户所属组织机构 Id。
+        /// 用户所属的主组织机构唯一ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgNodeId")]
@@ -116,6 +116,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         public bool? PwdNeedReset{ get; set; }
 
         /// <summary>
+        /// 用户所属的次要组织机构ID列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecondaryOrgNodeIdList")]
+        public string[] SecondaryOrgNodeIdList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -140,6 +147,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
             this.SetParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
             this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
+            this.SetParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

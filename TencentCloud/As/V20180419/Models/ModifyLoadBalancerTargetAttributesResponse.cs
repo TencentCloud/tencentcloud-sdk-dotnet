@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateAsyncContextTaskResponse : AbstractModel
+    public class ModifyLoadBalancerTargetAttributesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 异步上下文任务ID
+        /// 伸缩活动ID
         /// </summary>
-        [JsonProperty("AsyncContextTaskId")]
-        public string AsyncContextTaskId{ get; set; }
+        [JsonProperty("ActivityId")]
+        public string ActivityId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncContextTaskId", this.AsyncContextTaskId);
+            this.SetParamSimple(map, prefix + "ActivityId", this.ActivityId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

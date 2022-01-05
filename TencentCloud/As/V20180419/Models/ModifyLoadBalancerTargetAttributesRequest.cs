@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAsyncContextTaskRequest : AbstractModel
+    public class ModifyLoadBalancerTargetAttributesRequest : AbstractModel
     {
         
         /// <summary>
-        /// 日志主题ID
+        /// 伸缩组ID
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("AutoScalingGroupId")]
+        public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 异步上下文任务ID
+        /// 需修改目标规则属性的应用型负载均衡器列表，长度上限为50
         /// </summary>
-        [JsonProperty("AsyncContextTaskId")]
-        public string AsyncContextTaskId{ get; set; }
+        [JsonProperty("ForwardLoadBalancers")]
+        public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "AsyncContextTaskId", this.AsyncContextTaskId);
+            this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamArrayObj(map, prefix + "ForwardLoadBalancers.", this.ForwardLoadBalancers);
         }
     }
 }

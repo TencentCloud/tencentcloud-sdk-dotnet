@@ -84,6 +84,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("OsCustomizeType")]
         public string OsCustomizeType{ get; set; }
 
+        /// <summary>
+        /// 资源标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

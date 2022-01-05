@@ -43,7 +43,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public FaceRect InputImageFaceRect{ get; set; }
 
         /// <summary>
-        /// 控制台上传的素材人脸ID
+        /// 控制台上传的素材人脸ID，不填默认取最大人脸
         /// </summary>
         [JsonProperty("TemplateFaceID")]
         public string TemplateFaceID{ get; set; }

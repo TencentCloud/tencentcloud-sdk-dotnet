@@ -1216,5 +1216,45 @@ namespace TencentCloud.Mongodb.V20190725
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 账户权限设置。
+        /// </summary>
+        /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
+        /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
+        public async Task<SetAccountUserPrivilegeResponse> SetAccountUserPrivilege(SetAccountUserPrivilegeRequest req)
+        {
+             JsonResponseModel<SetAccountUserPrivilegeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetAccountUserPrivilege");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAccountUserPrivilegeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 账户权限设置。
+        /// </summary>
+        /// <param name="req"><see cref="SetAccountUserPrivilegeRequest"/></param>
+        /// <returns><see cref="SetAccountUserPrivilegeResponse"/></returns>
+        public SetAccountUserPrivilegeResponse SetAccountUserPrivilegeSync(SetAccountUserPrivilegeRequest req)
+        {
+             JsonResponseModel<SetAccountUserPrivilegeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetAccountUserPrivilege");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAccountUserPrivilegeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -90,6 +90,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ExtraArgs")]
         public InstanceExtraArgs ExtraArgs{ get; set; }
 
+        /// <summary>
+        /// 资源标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

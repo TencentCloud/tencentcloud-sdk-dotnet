@@ -148,6 +148,34 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("SlowRequestSavedThreshold")]
         public long? SlowRequestSavedThreshold{ get; set; }
 
+        /// <summary>
+        /// cls日志所在地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogRegion")]
+        public string LogRegion{ get; set; }
+
+        /// <summary>
+        /// 日志来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogSource")]
+        public string LogSource{ get; set; }
+
+        /// <summary>
+        /// 日志功能开关 0 关 | 1 开
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsRelatedLog")]
+        public long? IsRelatedLog{ get; set; }
+
+        /// <summary>
+        /// 日志主题ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LogTopicID")]
+        public string LogTopicID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +200,10 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "ErrorSample", this.ErrorSample);
             this.SetParamSimple(map, prefix + "SlowRequestSavedThreshold", this.SlowRequestSavedThreshold);
+            this.SetParamSimple(map, prefix + "LogRegion", this.LogRegion);
+            this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
+            this.SetParamSimple(map, prefix + "IsRelatedLog", this.IsRelatedLog);
+            this.SetParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
         }
     }
 }

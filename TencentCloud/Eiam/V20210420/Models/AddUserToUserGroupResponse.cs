@@ -25,6 +25,13 @@ namespace TencentCloud.Eiam.V20210420.Models
     {
         
         /// <summary>
+        /// 未成功加入用户组的用户ID列表信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedItems")]
+        public string[] FailedItems{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "FailedItems.", this.FailedItems);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

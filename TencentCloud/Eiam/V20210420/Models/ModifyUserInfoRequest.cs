@@ -90,6 +90,12 @@ namespace TencentCloud.Eiam.V20210420.Models
         [JsonProperty("OrgNodeId")]
         public string OrgNodeId{ get; set; }
 
+        /// <summary>
+        /// 用户所属的次要组织机构ID列表。
+        /// </summary>
+        [JsonProperty("SecondaryOrgNodeIdList")]
+        public string[] SecondaryOrgNodeIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "Email", this.Email);
             this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
             this.SetParamSimple(map, prefix + "OrgNodeId", this.OrgNodeId);
+            this.SetParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
         }
     }
 }

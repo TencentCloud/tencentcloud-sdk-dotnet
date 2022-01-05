@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.As.V20180419.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAsyncContextTaskResponse : AbstractModel
+    public class ForwardLoadBalancerIdentification : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 负载均衡器ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("LoadBalancerId")]
+        public string LoadBalancerId{ get; set; }
+
+        /// <summary>
+        /// 应用型负载均衡监听器 ID
+        /// </summary>
+        [JsonProperty("ListenerId")]
+        public string ListenerId{ get; set; }
+
+        /// <summary>
+        /// 转发规则ID，注意：针对七层监听器此参数必填
+        /// </summary>
+        [JsonProperty("LocationId")]
+        public string LocationId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "LoadBalancerId", this.LoadBalancerId);
+            this.SetParamSimple(map, prefix + "ListenerId", this.ListenerId);
+            this.SetParamSimple(map, prefix + "LocationId", this.LocationId);
         }
     }
 }

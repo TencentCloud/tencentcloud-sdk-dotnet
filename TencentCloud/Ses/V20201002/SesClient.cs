@@ -335,7 +335,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 删除发信模版
+        /// 删除发信模板
         /// </summary>
         /// <param name="req"><see cref="DeleteEmailTemplateRequest"/></param>
         /// <returns><see cref="DeleteEmailTemplateResponse"/></returns>
@@ -355,7 +355,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 删除发信模版
+        /// 删除发信模板
         /// </summary>
         /// <param name="req"><see cref="DeleteEmailTemplateRequest"/></param>
         /// <returns><see cref="DeleteEmailTemplateResponse"/></returns>

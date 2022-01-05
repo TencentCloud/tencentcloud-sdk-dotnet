@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cls.V20201016.Models
+namespace TencentCloud.Mongodb.V20190725.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteAsyncSearchTaskRequest : AbstractModel
+    public class Auth : AbstractModel
     {
         
         /// <summary>
-        /// 异步检索任务ID
+        /// *表示所有数据库,db.name表示特定的name数据库。
         /// </summary>
-        [JsonProperty("AsyncSearchTaskId")]
-        public string AsyncSearchTaskId{ get; set; }
+        [JsonProperty("NameSpace")]
+        public string NameSpace{ get; set; }
 
         /// <summary>
-        /// 日志主题ID
+        /// 用于控制权限,0无权限，1只读，2只写，3读写。
         /// </summary>
-        [JsonProperty("TopicId")]
-        public string TopicId{ get; set; }
+        [JsonProperty("Mask")]
+        public long? Mask{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cls.V20201016.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "AsyncSearchTaskId", this.AsyncSearchTaskId);
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
+            this.SetParamSimple(map, prefix + "Mask", this.Mask);
         }
     }
 }
