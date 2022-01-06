@@ -31,25 +31,25 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 流失效时间
+        /// 流失效时间，UNIX时间戳，30天内
         /// </summary>
         [JsonProperty("ExpireTime")]
         public long? ExpireTime{ get; set; }
 
         /// <summary>
-        /// 录像文件Id
+        /// 录像文件ID
         /// </summary>
         [JsonProperty("RecordId")]
         public string RecordId{ get; set; }
 
         /// <summary>
-        /// 录像流开始时间，当录像文件Id为空时有效
+        /// 录像流开始时间，当录像文件ID为空时有效，UNIX时间戳
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 录像流结束时间，当录像文件Id为空时有效
+        /// 录像流结束时间，当录像文件iD为空时有效，UNIX时间戳
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }

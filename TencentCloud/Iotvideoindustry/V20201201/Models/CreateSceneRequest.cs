@@ -49,10 +49,16 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? StoreDuration{ get; set; }
 
         /// <summary>
-        /// 设备列表
+        /// 设备列表(不推荐使用)
         /// </summary>
         [JsonProperty("Devices")]
         public DeviceItem[] Devices{ get; set; }
+
+        /// <summary>
+        /// 通道列表
+        /// </summary>
+        [JsonProperty("Channels")]
+        public ChannelItem[] Channels{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "RecordDuration", this.RecordDuration);
             this.SetParamSimple(map, prefix + "StoreDuration", this.StoreDuration);
             this.SetParamArrayObj(map, prefix + "Devices.", this.Devices);
+            this.SetParamArrayObj(map, prefix + "Channels.", this.Channels);
         }
     }
 }

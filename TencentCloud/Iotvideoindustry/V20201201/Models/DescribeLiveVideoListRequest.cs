@@ -37,7 +37,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 直播ID
+        /// 直播频道ID
         /// </summary>
         [JsonProperty("LiveChannelId")]
         public string LiveChannelId{ get; set; }

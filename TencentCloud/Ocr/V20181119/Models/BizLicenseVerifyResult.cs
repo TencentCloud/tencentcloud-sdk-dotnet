@@ -26,7 +26,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         
         /// <summary>
         /// “0“：一致
-        /// “-1”：此号未查询到结果
+        /// “-1”：不一致
         /// </summary>
         [JsonProperty("RegNum")]
         public string RegNum{ get; set; }

@@ -43,6 +43,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? Limit{ get; set; }
 
         /// <summary>
+        /// 通道唯一标识
+        /// </summary>
+        [JsonProperty("ChannelId")]
+        public string ChannelId{ get; set; }
+
+        /// <summary>
         /// 0：查询指定日期的录像；1：查询最近一天的录像；默认0
         /// </summary>
         [JsonProperty("LatestDay")]
@@ -50,16 +56,10 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
 
         /// <summary>
         /// 指定某天。取值【YYYY-MM-DD】
-        /// 当LatestDay为空或为0时，本参数不允许为空。
+        /// 为空时默认查询最近一天的记录
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
-
-        /// <summary>
-        /// 通道唯一标识
-        /// </summary>
-        [JsonProperty("ChannelId")]
-        public string ChannelId{ get; set; }
 
         /// <summary>
         /// 1: 云端录制 2: 本地录制
@@ -76,9 +76,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "LatestDay", this.LatestDay);
             this.SetParamSimple(map, prefix + "Date", this.Date);
-            this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }

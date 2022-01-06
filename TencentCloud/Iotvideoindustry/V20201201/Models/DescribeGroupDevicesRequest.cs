@@ -55,8 +55,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? Recordable{ get; set; }
 
         /// <summary>
-        /// 当Group是普通组的时候，支持根据deviceTypes筛选类型
-        ///  0: 普通摄像头1:  国标VMS设备 2: 国标IPC设备 3: 国标NVR设备  4: 国标NVR通道 5: 国标VMS通道 6: 国标IPC通道 9: 智能告警设备 10: 带有RTSP固定地址的设备
+        /// 当Group是普通组的时候，支持根据DeviceTypes筛选类型，
+        ///  设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
         /// </summary>
         [JsonProperty("DeviceTypes")]
         public long?[] DeviceTypes{ get; set; }

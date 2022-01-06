@@ -30,6 +30,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 订单ID。
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

@@ -48,6 +48,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 运营商名称。
+        /// 取值范围为["","移动","电信","联通"]
+        /// </summary>
+        [JsonProperty("Isp")]
+        public string Isp{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -61,6 +68,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Isp", this.Isp);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

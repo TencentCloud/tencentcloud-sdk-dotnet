@@ -37,7 +37,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string PassWord{ get; set; }
 
         /// <summary>
-        /// 设备类型 2:国标IPC设备; 3:NVR设备
+        /// 设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
         /// </summary>
         [JsonProperty("DeviceType")]
         public long? DeviceType{ get; set; }

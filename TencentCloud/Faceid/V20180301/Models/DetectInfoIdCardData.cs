@@ -59,6 +59,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("Avatar")]
         public string Avatar{ get; set; }
 
+        /// <summary>
+        /// 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
+        /// -9102 身份证复印件告警。
+        /// -9103 身份证翻拍告警。
+        /// -9106 身份证 PS 告警。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarnInfos")]
+        public long?[] WarnInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +80,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ProcessedFrontImage", this.ProcessedFrontImage);
             this.SetParamSimple(map, prefix + "ProcessedBackImage", this.ProcessedBackImage);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
+            this.SetParamArraySimple(map, prefix + "WarnInfos.", this.WarnInfos);
         }
     }
 }

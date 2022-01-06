@@ -49,7 +49,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string[] DeviceIds{ get; set; }
 
         /// <summary>
-        /// 设备类型过滤
+        /// 设备类型过滤，设备类型，1：国标VMS设备(公有云不支持此类型)，2：国标IPC设备，3：国标NVR设备，9：智能告警设备(公有云不支持此类型)
         /// </summary>
         [JsonProperty("DeviceTypes")]
         public long?[] DeviceTypes{ get; set; }

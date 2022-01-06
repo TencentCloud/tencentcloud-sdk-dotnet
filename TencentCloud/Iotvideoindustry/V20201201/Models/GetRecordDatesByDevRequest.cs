@@ -31,16 +31,16 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认0
-        /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
         /// 限制量，默认200
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public long? Offset{ get; set; }
 
         /// <summary>
         /// 通道唯一标识
@@ -61,8 +61,8 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }

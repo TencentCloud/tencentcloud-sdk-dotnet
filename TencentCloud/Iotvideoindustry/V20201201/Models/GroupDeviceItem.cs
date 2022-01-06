@@ -94,6 +94,27 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// 设备创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public long? CreateTime{ get; set; }
+
+        /// <summary>
+        /// 设备通道总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelNum")]
+        public long? ChannelNum{ get; set; }
+
+        /// <summary>
+        /// 设备视频通道总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoChannelNum")]
+        public long? VideoChannelNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +131,9 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "IsRecord", this.IsRecord);
             this.SetParamSimple(map, prefix + "Recordable", this.Recordable);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "ChannelNum", this.ChannelNum);
+            this.SetParamSimple(map, prefix + "VideoChannelNum", this.VideoChannelNum);
         }
     }
 }
