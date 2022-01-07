@@ -248,6 +248,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TcrRepoInfo")]
         public TcrRepoInfo TcrRepoInfo{ get; set; }
 
+        /// <summary>
+        /// 数据卷信息，list
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VolumeInfos")]
+        public VolumeInfo[] VolumeInfos{ get; set; }
+
+        /// <summary>
+        /// 数据卷挂载信息，list
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VolumeMountInfos")]
+        public VolumeMountInfo[] VolumeMountInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -286,6 +300,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DisableService", this.DisableService);
             this.SetParamSimple(map, prefix + "HeadlessService", this.HeadlessService);
             this.SetParamObj(map, prefix + "TcrRepoInfo.", this.TcrRepoInfo);
+            this.SetParamArrayObj(map, prefix + "VolumeInfos.", this.VolumeInfos);
+            this.SetParamArrayObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
         }
     }
 }

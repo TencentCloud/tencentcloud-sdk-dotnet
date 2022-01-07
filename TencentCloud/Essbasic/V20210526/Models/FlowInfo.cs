@@ -83,7 +83,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CustomerData{ get; set; }
 
         /// <summary>
-        /// 被抄送人的信息列表
+        /// 被抄送人的信息列表，抄送功能暂不开放
         /// </summary>
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }

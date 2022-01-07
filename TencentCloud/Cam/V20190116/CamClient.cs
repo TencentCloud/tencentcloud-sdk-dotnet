@@ -1893,6 +1893,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 列出用户关联的策略（包括随组关联）
+        /// </summary>
+        /// <param name="req"><see cref="ListAttachedUserAllPoliciesRequest"/></param>
+        /// <returns><see cref="ListAttachedUserAllPoliciesResponse"/></returns>
+        public async Task<ListAttachedUserAllPoliciesResponse> ListAttachedUserAllPolicies(ListAttachedUserAllPoliciesRequest req)
+        {
+             JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListAttachedUserAllPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出用户关联的策略（包括随组关联）
+        /// </summary>
+        /// <param name="req"><see cref="ListAttachedUserAllPoliciesRequest"/></param>
+        /// <returns><see cref="ListAttachedUserAllPoliciesResponse"/></returns>
+        public ListAttachedUserAllPoliciesResponse ListAttachedUserAllPoliciesSync(ListAttachedUserAllPoliciesRequest req)
+        {
+             JsonResponseModel<ListAttachedUserAllPoliciesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListAttachedUserAllPolicies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListAttachedUserAllPoliciesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ListAttachedUserPolicies）可用于查询子账号关联的策略列表。
         /// </summary>
         /// <param name="req"><see cref="ListAttachedUserPoliciesRequest"/></param>

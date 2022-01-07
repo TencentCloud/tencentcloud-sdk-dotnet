@@ -157,6 +157,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string PublicIp{ get; set; }
 
         /// <summary>
+        /// 主机实例ID
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// 地域ID
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public long? RegionID{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -190,6 +202,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "IsContainerd", this.IsContainerd);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

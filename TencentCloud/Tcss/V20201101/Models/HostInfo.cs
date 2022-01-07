@@ -85,7 +85,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? IsContainerd{ get; set; }
 
         /// <summary>
-        /// 主机来源
+        /// 主机来源：["CVM", "ECM", "LH", "BM"]  中的之一为腾讯云服务器；["Other"]之一非腾讯云服务器；
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
@@ -101,6 +101,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         [JsonProperty("Uuid")]
         public string Uuid{ get; set; }
+
+        /// <summary>
+        /// 主机实例ID
+        /// </summary>
+        [JsonProperty("InstanceID")]
+        public string InstanceID{ get; set; }
+
+        /// <summary>
+        /// 地域ID
+        /// </summary>
+        [JsonProperty("RegionID")]
+        public long? RegionID{ get; set; }
 
 
         /// <summary>
@@ -121,6 +133,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
+            this.SetParamSimple(map, prefix + "RegionID", this.RegionID);
         }
     }
 }

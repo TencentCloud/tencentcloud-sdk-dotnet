@@ -895,6 +895,46 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
+        /// 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetWeChatBillDetailsRequest"/></param>
+        /// <returns><see cref="GetWeChatBillDetailsResponse"/></returns>
+        public async Task<GetWeChatBillDetailsResponse> GetWeChatBillDetails(GetWeChatBillDetailsRequest req)
+        {
+             JsonResponseModel<GetWeChatBillDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetWeChatBillDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWeChatBillDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询微信渠道服务（微信小程序、微信原生H5、微信普通H5）的账单明细及计费状态。
+        /// </summary>
+        /// <param name="req"><see cref="GetWeChatBillDetailsRequest"/></param>
+        /// <returns><see cref="GetWeChatBillDetailsResponse"/></returns>
+        public GetWeChatBillDetailsResponse GetWeChatBillDetailsSync(GetWeChatBillDetailsRequest req)
+        {
+             JsonResponseModel<GetWeChatBillDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetWeChatBillDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetWeChatBillDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于校验姓名和身份证号的真实性和一致性，您可以通过输入姓名和身份证号或传入身份证人像面照片提供所需验证信息。
         /// </summary>
         /// <param name="req"><see cref="IdCardOCRVerificationRequest"/></param>

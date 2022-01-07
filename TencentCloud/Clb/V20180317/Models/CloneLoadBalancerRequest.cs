@@ -118,6 +118,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] ClusterIds{ get; set; }
 
         /// <summary>
+        /// 性能保障规格。
+        /// </summary>
+        [JsonProperty("SlaType")]
+        public string SlaType{ get; set; }
+
+        /// <summary>
         /// Stgw独占集群的标签。
         /// </summary>
         [JsonProperty("ClusterTag")]
@@ -156,6 +162,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "SnatPro", this.SnatPro);
             this.SetParamArrayObj(map, prefix + "SnatIps.", this.SnatIps);
             this.SetParamArraySimple(map, prefix + "ClusterIds.", this.ClusterIds);
+            this.SetParamSimple(map, prefix + "SlaType", this.SlaType);
             this.SetParamSimple(map, prefix + "ClusterTag", this.ClusterTag);
             this.SetParamArraySimple(map, prefix + "Zones.", this.Zones);
             this.SetParamSimple(map, prefix + "EipAddressId", this.EipAddressId);

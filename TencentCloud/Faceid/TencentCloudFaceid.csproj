@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{285E4D65-D854-3FAC-912D-5A63E6D8406B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.439</VersionPrefix>
+    <VersionPrefix>3.0.440</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,7 @@
     <Compile Include="V20180301\Models\BankCard4EVerificationResponse.cs" />
     <Compile Include="V20180301\Models\BankCardVerificationRequest.cs" />
     <Compile Include="V20180301\Models\BankCardVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\ChargeDetail.cs" />
     <Compile Include="V20180301\Models\CheckBankCardInformationRequest.cs" />
     <Compile Include="V20180301\Models\CheckBankCardInformationResponse.cs" />
     <Compile Include="V20180301\Models\CheckEidTokenStatusRequest.cs" />
@@ -95,6 +96,8 @@
     <Compile Include="V20180301\Models\GetRealNameAuthResultResponse.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthTokenRequest.cs" />
     <Compile Include="V20180301\Models\GetRealNameAuthTokenResponse.cs" />
+    <Compile Include="V20180301\Models\GetWeChatBillDetailsRequest.cs" />
+    <Compile Include="V20180301\Models\GetWeChatBillDetailsResponse.cs" />
     <Compile Include="V20180301\Models\IdCardOCRVerificationRequest.cs" />
     <Compile Include="V20180301\Models\IdCardOCRVerificationResponse.cs" />
     <Compile Include="V20180301\Models\IdCardVerificationRequest.cs" />
@@ -116,5 +119,6 @@
     <Compile Include="V20180301\Models\MobileStatusResponse.cs" />
     <Compile Include="V20180301\Models\PhoneVerificationRequest.cs" />
     <Compile Include="V20180301\Models\PhoneVerificationResponse.cs" />
+    <Compile Include="V20180301\Models\WeChatBillDetail.cs" />
   </ItemGroup>
 </Project>

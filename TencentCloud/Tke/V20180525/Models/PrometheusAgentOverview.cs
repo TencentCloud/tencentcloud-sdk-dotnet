@@ -50,6 +50,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
 
+        /// <summary>
+        /// 额外labels
+        /// 本集群的所有指标都会带上这几个label
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExternalLabels")]
+        public Label[] ExternalLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +68,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamArrayObj(map, prefix + "ExternalLabels.", this.ExternalLabels);
         }
     }
 }

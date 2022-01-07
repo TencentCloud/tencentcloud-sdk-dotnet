@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string UpdateEndTime{ get; set; }
 
         /// <summary>
-        /// 当前用户可用最新的Loglistener版本
+        /// 当前用户可用最新的Loglistener版本
         /// </summary>
         [JsonProperty("LatestAgentVersion")]
         public string LatestAgentVersion{ get; set; }

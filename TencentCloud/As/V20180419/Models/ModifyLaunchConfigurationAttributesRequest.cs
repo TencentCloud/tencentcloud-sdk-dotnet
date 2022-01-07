@@ -151,6 +151,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("EnhancedService")]
         public EnhancedService EnhancedService{ get; set; }
 
+        /// <summary>
+        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +180,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
             this.SetParamObj(map, prefix + "EnhancedService.", this.EnhancedService);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
         }
     }
 }

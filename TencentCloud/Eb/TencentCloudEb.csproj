@@ -1,0 +1,121 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{773BF0CA-2F21-3865-B1F5-ADC28ACADE8A}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.440</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Eb</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210416\EbClient.cs" />
+    <Compile Include="V20210416\Models\APIGWParams.cs" />
+    <Compile Include="V20210416\Models\CheckRuleRequest.cs" />
+    <Compile Include="V20210416\Models\CheckRuleResponse.cs" />
+    <Compile Include="V20210416\Models\CheckTransformationRequest.cs" />
+    <Compile Include="V20210416\Models\CheckTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\CkafkaDeliveryParams.cs" />
+    <Compile Include="V20210416\Models\CkafkaParams.cs" />
+    <Compile Include="V20210416\Models\CkafkaTargetParams.cs" />
+    <Compile Include="V20210416\Models\Connection.cs" />
+    <Compile Include="V20210416\Models\ConnectionDescription.cs" />
+    <Compile Include="V20210416\Models\CreateConnectionRequest.cs" />
+    <Compile Include="V20210416\Models\CreateConnectionResponse.cs" />
+    <Compile Include="V20210416\Models\CreateEventBusRequest.cs" />
+    <Compile Include="V20210416\Models\CreateEventBusResponse.cs" />
+    <Compile Include="V20210416\Models\CreateRuleRequest.cs" />
+    <Compile Include="V20210416\Models\CreateRuleResponse.cs" />
+    <Compile Include="V20210416\Models\CreateTargetRequest.cs" />
+    <Compile Include="V20210416\Models\CreateTargetResponse.cs" />
+    <Compile Include="V20210416\Models\CreateTransformationRequest.cs" />
+    <Compile Include="V20210416\Models\CreateTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\DeadLetterConfig.cs" />
+    <Compile Include="V20210416\Models\DeleteConnectionRequest.cs" />
+    <Compile Include="V20210416\Models\DeleteConnectionResponse.cs" />
+    <Compile Include="V20210416\Models\DeleteEventBusRequest.cs" />
+    <Compile Include="V20210416\Models\DeleteEventBusResponse.cs" />
+    <Compile Include="V20210416\Models\DeleteRuleRequest.cs" />
+    <Compile Include="V20210416\Models\DeleteRuleResponse.cs" />
+    <Compile Include="V20210416\Models\DeleteTargetRequest.cs" />
+    <Compile Include="V20210416\Models\DeleteTargetResponse.cs" />
+    <Compile Include="V20210416\Models\DeleteTransformationRequest.cs" />
+    <Compile Include="V20210416\Models\DeleteTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\EtlFilter.cs" />
+    <Compile Include="V20210416\Models\Event.cs" />
+    <Compile Include="V20210416\Models\EventBus.cs" />
+    <Compile Include="V20210416\Models\Extraction.cs" />
+    <Compile Include="V20210416\Models\Filter.cs" />
+    <Compile Include="V20210416\Models\GetEventBusRequest.cs" />
+    <Compile Include="V20210416\Models\GetEventBusResponse.cs" />
+    <Compile Include="V20210416\Models\GetRuleRequest.cs" />
+    <Compile Include="V20210416\Models\GetRuleResponse.cs" />
+    <Compile Include="V20210416\Models\GetTransformationRequest.cs" />
+    <Compile Include="V20210416\Models\GetTransformationResponse.cs" />
+    <Compile Include="V20210416\Models\ListConnectionsRequest.cs" />
+    <Compile Include="V20210416\Models\ListConnectionsResponse.cs" />
+    <Compile Include="V20210416\Models\ListEventBusesRequest.cs" />
+    <Compile Include="V20210416\Models\ListEventBusesResponse.cs" />
+    <Compile Include="V20210416\Models\ListRulesRequest.cs" />
+    <Compile Include="V20210416\Models\ListRulesResponse.cs" />
+    <Compile Include="V20210416\Models\ListTargetsRequest.cs" />
+    <Compile Include="V20210416\Models\ListTargetsResponse.cs" />
+    <Compile Include="V20210416\Models\OutputStructParam.cs" />
+    <Compile Include="V20210416\Models\PublishEventRequest.cs" />
+    <Compile Include="V20210416\Models\PublishEventResponse.cs" />
+    <Compile Include="V20210416\Models\RetryPolicy.cs" />
+    <Compile Include="V20210416\Models\Rule.cs" />
+    <Compile Include="V20210416\Models\SCFParams.cs" />
+    <Compile Include="V20210416\Models\Target.cs" />
+    <Compile Include="V20210416\Models\TargetBrief.cs" />
+    <Compile Include="V20210416\Models\TargetDescription.cs" />
+    <Compile Include="V20210416\Models\TextParams.cs" />
+    <Compile Include="V20210416\Models\Transform.cs" />
+    <Compile Include="V20210416\Models\Transformation.cs" />
+    <Compile Include="V20210416\Models\UpdateConnectionRequest.cs" />
+    <Compile Include="V20210416\Models\UpdateConnectionResponse.cs" />
+    <Compile Include="V20210416\Models\UpdateEventBusRequest.cs" />
+    <Compile Include="V20210416\Models\UpdateEventBusResponse.cs" />
+    <Compile Include="V20210416\Models\UpdateRuleRequest.cs" />
+    <Compile Include="V20210416\Models\UpdateRuleResponse.cs" />
+    <Compile Include="V20210416\Models\UpdateTargetRequest.cs" />
+    <Compile Include="V20210416\Models\UpdateTargetResponse.cs" />
+    <Compile Include="V20210416\Models\UpdateTransformationRequest.cs" />
+    <Compile Include="V20210416\Models\UpdateTransformationResponse.cs" />
+  </ItemGroup>
+</Project>

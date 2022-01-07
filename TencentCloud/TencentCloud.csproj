@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.439</VersionPrefix>
+    <VersionPrefix>3.0.440</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1753,6 +1753,8 @@
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\AttachUserPolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\AttachedPolicyOfRole.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachedUserPolicy.cs" />
+    <Compile Include="Cam\V20190116\Models\AttachedUserPolicyGroupInfo.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
@@ -1838,6 +1840,8 @@
     <Compile Include="Cam\V20190116\Models\ListAttachedGroupPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedRolePoliciesResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedUserAllPoliciesRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\ListAttachedUserAllPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesRequest.cs" />
     <Compile Include="Cam\V20190116\Models\ListAttachedUserPoliciesResponse.cs" />
     <Compile Include="Cam\V20190116\Models\ListCollaboratorsRequest.cs" />
@@ -6442,6 +6446,79 @@
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
     <Compile Include="Dts\V20180330\Models\TagFilter.cs" />
     <Compile Include="Dts\V20180330\Models\TagItem.cs" />
+    <Compile Include="Eb\V20210416\EbClient.cs" />
+    <Compile Include="Eb\V20210416\Models\APIGWParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CheckTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaDeliveryParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaParams.cs" />
+    <Compile Include="Eb\V20210416\Models\CkafkaTargetParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Connection.cs" />
+    <Compile Include="Eb\V20210416\Models\ConnectionDescription.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\CreateTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeadLetterConfig.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\DeleteTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\EtlFilter.cs" />
+    <Compile Include="Eb\V20210416\Models\Event.cs" />
+    <Compile Include="Eb\V20210416\Models\EventBus.cs" />
+    <Compile Include="Eb\V20210416\Models\Extraction.cs" />
+    <Compile Include="Eb\V20210416\Models\Filter.cs" />
+    <Compile Include="Eb\V20210416\Models\GetEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\GetRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\GetTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\GetTransformationResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListConnectionsRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListConnectionsResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListEventBusesRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListEventBusesResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListRulesRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListRulesResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\ListTargetsRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\ListTargetsResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\OutputStructParam.cs" />
+    <Compile Include="Eb\V20210416\Models\PublishEventRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\PublishEventResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\RetryPolicy.cs" />
+    <Compile Include="Eb\V20210416\Models\Rule.cs" />
+    <Compile Include="Eb\V20210416\Models\SCFParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Target.cs" />
+    <Compile Include="Eb\V20210416\Models\TargetBrief.cs" />
+    <Compile Include="Eb\V20210416\Models\TargetDescription.cs" />
+    <Compile Include="Eb\V20210416\Models\TextParams.cs" />
+    <Compile Include="Eb\V20210416\Models\Transform.cs" />
+    <Compile Include="Eb\V20210416\Models\Transformation.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateConnectionRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateConnectionResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateEventBusRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateEventBusResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateRuleRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateRuleResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTargetRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTargetResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTransformationRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\UpdateTransformationResponse.cs" />
     <Compile Include="Ecc\V20181213\EccClient.cs" />
     <Compile Include="Ecc\V20181213\Models\Aspect.cs" />
     <Compile Include="Ecc\V20181213\Models\CompostionContext.cs" />
@@ -7345,6 +7422,7 @@
     <Compile Include="Faceid\V20180301\Models\BankCard4EVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCardVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\BankCardVerificationResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\ChargeDetail.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckBankCardInformationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckBankCardInformationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\CheckEidTokenStatusRequest.cs" />
@@ -7389,6 +7467,8 @@
     <Compile Include="Faceid\V20180301\Models\GetRealNameAuthResultResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\GetRealNameAuthTokenRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\GetRealNameAuthTokenResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetWeChatBillDetailsRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\GetWeChatBillDetailsResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardOCRVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\IdCardVerificationRequest.cs" />
@@ -7410,6 +7490,7 @@
     <Compile Include="Faceid\V20180301\Models\MobileStatusResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\PhoneVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\PhoneVerificationResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\WeChatBillDetail.cs" />
     <Compile Include="Fmu\V20191213\FmuClient.cs" />
     <Compile Include="Fmu\V20191213\Models\BeautifyPicRequest.cs" />
     <Compile Include="Fmu\V20191213\Models\BeautifyPicResponse.cs" />

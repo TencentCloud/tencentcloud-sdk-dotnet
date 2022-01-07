@@ -42,7 +42,6 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// task-state - String - （任务状态过滤）取值范围 0(初始化)， 1(运行中)， 2(成功)， -1(失败)。
         /// task-sql-keyword - String - （SQL语句关键字模糊过滤）取值形如：DROP TABLE。
         /// task-operator- string （子uin过滤）
-        /// task-type -string （任务类型过滤）分导入任务和sql任务
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

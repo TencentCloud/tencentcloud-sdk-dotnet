@@ -25,13 +25,19 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
     {
         
         /// <summary>
-        /// 设备唯一标识
+        /// 设备唯一标识，必填参数
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 通道唯一标识（接口升级字段为必填）
+        /// 流地址失效时间，固定值填写0，其他参数无效，必填参数
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public ulong? ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 通道唯一标识（接口升级字段为必填），必填参数
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }
@@ -43,6 +49,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
         }
     }
