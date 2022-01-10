@@ -90,6 +90,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("ExternalAddr")]
         public string ExternalAddr{ get; set; }
 
+        /// <summary>
+        /// 备份集ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SetId")]
+        public string SetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +114,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamArraySimple(map, prefix + "DbList.", this.DbList);
             this.SetParamSimple(map, prefix + "InternalAddr", this.InternalAddr);
             this.SetParamSimple(map, prefix + "ExternalAddr", this.ExternalAddr);
+            this.SetParamSimple(map, prefix + "SetId", this.SetId);
         }
     }
 }

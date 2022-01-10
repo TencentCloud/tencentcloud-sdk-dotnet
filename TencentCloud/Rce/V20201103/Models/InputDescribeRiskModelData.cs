@@ -42,6 +42,12 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 是否为测试流量
+        /// </summary>
+        [JsonProperty("IsTest")]
+        public ulong? IsTest{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "ApplyDate", this.ApplyDate);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "IsTest", this.IsTest);
         }
     }
 }

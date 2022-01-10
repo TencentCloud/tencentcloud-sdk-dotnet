@@ -91,6 +91,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Offline{ get; set; }
 
         /// <summary>
+        /// 旗舰版主机数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlagshipMachineCnt")]
+        public ulong? FlagshipMachineCnt{ get; set; }
+
+        /// <summary>
+        /// 保护天数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProtectDays")]
+        public ulong? ProtectDays{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -113,6 +127,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RiskMachine", this.RiskMachine);
             this.SetParamSimple(map, prefix + "Shutdown", this.Shutdown);
             this.SetParamSimple(map, prefix + "Offline", this.Offline);
+            this.SetParamSimple(map, prefix + "FlagshipMachineCnt", this.FlagshipMachineCnt);
+            this.SetParamSimple(map, prefix + "ProtectDays", this.ProtectDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

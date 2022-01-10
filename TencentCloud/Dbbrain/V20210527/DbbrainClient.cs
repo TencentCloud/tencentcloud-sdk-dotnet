@@ -173,6 +173,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 创建中断会话的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKillTaskRequest"/></param>
+        /// <returns><see cref="CreateKillTaskResponse"/></returns>
+        public async Task<CreateKillTaskResponse> CreateKillTask(CreateKillTaskRequest req)
+        {
+             JsonResponseModel<CreateKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建中断会话的任务。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKillTaskRequest"/></param>
+        /// <returns><see cref="CreateKillTaskResponse"/></returns>
+        public CreateKillTaskResponse CreateKillTaskSync(CreateKillTaskRequest req)
+        {
+             JsonResponseModel<CreateKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建邮件配置。其中入参ProfileType表示所创建配置的类型，ProfileType 取值包括：dbScan_mail_configuration（数据库巡检邮件配置）、scheduler_mail_configuration（定期生成健康报告的邮件发送配置）。Region统一选择广州，和实例所属地域无关。
         /// </summary>
         /// <param name="req"><see cref="CreateMailProfileRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Dbbrain.V20210527
              {
                  var strResp = this.InternalRequestSync(req, "CreateMailProfile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMailProfileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建中止所有代理节点连接会话的异步任务。当前仅支持 Redis。得到的返回值为异步任务 id，可以作为参数传入接口 DescribeProxySessionKillTasks 查询kill会话任务执行状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxySessionKillTaskRequest"/></param>
+        /// <returns><see cref="CreateProxySessionKillTaskResponse"/></returns>
+        public async Task<CreateProxySessionKillTaskResponse> CreateProxySessionKillTask(CreateProxySessionKillTaskRequest req)
+        {
+             JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProxySessionKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProxySessionKillTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建中止所有代理节点连接会话的异步任务。当前仅支持 Redis。得到的返回值为异步任务 id，可以作为参数传入接口 DescribeProxySessionKillTasks 查询kill会话任务执行状态。
+        /// </summary>
+        /// <param name="req"><see cref="CreateProxySessionKillTaskRequest"/></param>
+        /// <returns><see cref="CreateProxySessionKillTaskResponse"/></returns>
+        public CreateProxySessionKillTaskResponse CreateProxySessionKillTaskSync(CreateProxySessionKillTaskRequest req)
+        {
+             JsonResponseModel<CreateProxySessionKillTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProxySessionKillTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProxySessionKillTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

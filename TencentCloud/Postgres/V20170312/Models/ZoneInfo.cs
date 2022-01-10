@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ZoneId{ get; set; }
 
         /// <summary>
-        /// 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用
+        /// 可用状态，UNAVAILABLE表示不可用，AVAILABLE表示可用，SELLOUT表示售罄
         /// </summary>
         [JsonProperty("ZoneState")]
         public string ZoneState{ get; set; }
@@ -53,6 +53,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("ZoneSupportIpv6")]
         public ulong? ZoneSupportIpv6{ get; set; }
+
+        /// <summary>
+        /// 该可用区对应的备可用区集合
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StandbyZoneSet")]
+        public string[] StandbyZoneSet{ get; set; }
 
 
         /// <summary>
@@ -65,6 +72,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneState", this.ZoneState);
             this.SetParamSimple(map, prefix + "ZoneSupportIpv6", this.ZoneSupportIpv6);
+            this.SetParamArraySimple(map, prefix + "StandbyZoneSet.", this.StandbyZoneSet);
         }
     }
 }

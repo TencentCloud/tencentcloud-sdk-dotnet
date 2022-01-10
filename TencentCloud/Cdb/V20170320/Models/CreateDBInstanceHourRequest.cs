@@ -217,6 +217,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CageId{ get; set; }
 
         /// <summary>
+        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
+        /// </summary>
+        [JsonProperty("ParamTemplateType")]
+        public string ParamTemplateType{ get; set; }
+
+        /// <summary>
         /// 告警策略名数组，例如:["policy-uyoee9wg"]，AlarmPolicyList不为空时该参数无效。
         /// </summary>
         [JsonProperty("AlarmPolicyIdList")]
@@ -266,6 +272,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Cpu", this.Cpu);
             this.SetParamSimple(map, prefix + "AutoSyncFlag", this.AutoSyncFlag);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }

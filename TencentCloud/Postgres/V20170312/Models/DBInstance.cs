@@ -242,6 +242,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
+        /// <summary>
+        /// 实例的节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBNodeSet")]
+        public DBNode[] DBNodeSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +290,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamArrayObj(map, prefix + "NetworkAccessList.", this.NetworkAccessList);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
         }
     }
 }

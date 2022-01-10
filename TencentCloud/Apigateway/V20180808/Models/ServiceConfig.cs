@@ -54,6 +54,13 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Method")]
         public string Method{ get; set; }
 
+        /// <summary>
+        /// API后端COS配置。如果 ServiceType 是 COS，则此参数必传。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CosConfig")]
+        public CosConfig CosConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "Method", this.Method);
+            this.SetParamObj(map, prefix + "CosConfig.", this.CosConfig);
         }
     }
 }

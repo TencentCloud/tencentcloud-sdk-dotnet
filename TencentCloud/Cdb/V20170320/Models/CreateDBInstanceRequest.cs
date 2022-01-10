@@ -223,7 +223,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string CageId{ get; set; }
 
         /// <summary>
-        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模板，"HIGH_PERFORMANCE" - 高性能模板。
         /// </summary>
         [JsonProperty("ParamTemplateType")]
         public string ParamTemplateType{ get; set; }

@@ -48,6 +48,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("OldIpRetainTime")]
         public long? OldIpRetainTime{ get; set; }
 
+        /// <summary>
+        /// 指定VIP地址
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "NewVpcId", this.NewVpcId);
             this.SetParamSimple(map, prefix + "NewSubnetId", this.NewSubnetId);
             this.SetParamSimple(map, prefix + "OldIpRetainTime", this.OldIpRetainTime);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
         }
     }
 }

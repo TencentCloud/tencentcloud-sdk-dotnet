@@ -150,6 +150,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HasAssetScan{ get; set; }
 
         /// <summary>
+        /// 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+        /// </summary>
+        [JsonProperty("ProtectType")]
+        public string ProtectType{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -180,6 +186,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
             this.SetParamSimple(map, prefix + "ProVersionDeadline", this.ProVersionDeadline);
             this.SetParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
+            this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

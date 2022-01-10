@@ -37,10 +37,17 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ImportType{ get; set; }
 
         /// <summary>
-        /// 是否仅支持专业版机器的查询（true：仅专业版   false：专业版+基础版）
+        /// 该参数已作废.
         /// </summary>
         [JsonProperty("IsQueryProMachine")]
         public bool? IsQueryProMachine{ get; set; }
+
+        /// <summary>
+        /// 过滤条件。
+        /// <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filters[] Filters{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArraySimple(map, prefix + "MachineList.", this.MachineList);
             this.SetParamSimple(map, prefix + "ImportType", this.ImportType);
             this.SetParamSimple(map, prefix + "IsQueryProMachine", this.IsQueryProMachine);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

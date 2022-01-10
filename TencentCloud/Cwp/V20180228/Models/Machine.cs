@@ -41,6 +41,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>OFFLINE: 离线  </li>
         /// <li>ONLINE: 在线</li>
         /// <li>SHUTDOWN: 已关机</li>
+        /// <li>UNINSTALLED: 未防护</li>
         /// </summary>
         [JsonProperty("MachineStatus")]
         public string MachineStatus{ get; set; }
@@ -172,6 +173,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
+        /// <summary>
+        /// 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+        /// </summary>
+        [JsonProperty("ProtectType")]
+        public string ProtectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -201,6 +208,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "HasAssetScan", this.HasAssetScan);
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+            this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
         }
     }
 }

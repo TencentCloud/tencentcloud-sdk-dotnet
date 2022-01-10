@@ -453,7 +453,7 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
-        /// 企业可通过此接口，根据外部联系人的userid，拉取客户详情
+        /// 企业可通过此接口，根据外部联系人的userid，拉取外部联系人详情
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailRequest"/></param>
         /// <returns><see cref="QueryExternalContactDetailResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
-        /// 企业可通过此接口，根据外部联系人的userid，拉取客户详情
+        /// 企业可通过此接口，根据外部联系人的userid，拉取外部联系人详情
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactDetailRequest"/></param>
         /// <returns><see cref="QueryExternalContactDetailResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
-        /// 企业可通过此接口获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
+        /// 企业可通过此接口基于外部联系人获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactListRequest"/></param>
         /// <returns><see cref="QueryExternalContactListResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
-        /// 企业可通过此接口获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
+        /// 企业可通过此接口基于外部联系人获取指定成员添加的客户列表。客户是指配置了客户联系功能的成员所添加的外部联系人。没有配置客户联系功能的成员，所添加的外部联系人将不会作为客户返回。
         /// </summary>
         /// <param name="req"><see cref="QueryExternalContactListRequest"/></param>
         /// <returns><see cref="QueryExternalContactListResponse"/></returns>

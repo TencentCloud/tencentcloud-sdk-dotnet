@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.440</VersionPrefix>
+    <VersionPrefix>3.0.441</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -136,8 +136,12 @@
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="V20210527\Models\CreateKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CreateKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateMailProfileRequest.cs" />
     <Compile Include="V20210527\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\CreateSchedulerMailProfileRequest.cs" />
     <Compile Include="V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />

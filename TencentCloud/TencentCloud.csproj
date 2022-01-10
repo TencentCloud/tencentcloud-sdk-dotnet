@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.440</VersionPrefix>
+    <VersionPrefix>3.0.441</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -493,6 +493,7 @@
     <Compile Include="Apigateway\V20180808\Models\BuildAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BuildAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ConstantParameter.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CosConfig.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateAPIDocResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateApiAppRequest.cs" />
@@ -5802,8 +5803,12 @@
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportUrlResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateKillTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateKillTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateMailProfileResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateProxySessionKillTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateProxySessionKillTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
@@ -11861,6 +11866,7 @@
     <Compile Include="Postgres\V20170312\Models\DBBackup.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstance.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstanceNetInfo.cs" />
+    <Compile Include="Postgres\V20170312\Models\DBNode.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />
