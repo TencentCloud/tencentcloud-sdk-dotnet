@@ -48,6 +48,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 媒体文件大小，单位：字节。
+        /// <li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和；</li>
+        /// <li>当媒体文件为 DASH 时，大小是 mpd 和分片文件大小的总和；</li>
+        /// <li><font color=red>注意</font>：在 2022-01-10T16:00:00Z 前处理生成的自适应码流文件此字段为0。</li>
+        /// </summary>
+        [JsonProperty("Size")]
+        public long? Size{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Package", this.Package);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "Size", this.Size);
         }
     }
 }

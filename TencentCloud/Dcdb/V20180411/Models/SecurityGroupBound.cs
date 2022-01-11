@@ -25,16 +25,16 @@ namespace TencentCloud.Dcdb.V20180411.Models
     {
         
         /// <summary>
-        /// 策略，ACCEPT 或者 DROP
-        /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
-
-        /// <summary>
         /// 来源 IP 或 IP 段，例如192.168.0.0/16
         /// </summary>
         [JsonProperty("CidrIp")]
         public string CidrIp{ get; set; }
+
+        /// <summary>
+        /// 策略，ACCEPT 或者 DROP
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
         /// 端口
@@ -54,8 +54,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "CidrIp", this.CidrIp);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "PortRange", this.PortRange);
             this.SetParamSimple(map, prefix + "IpProtocol", this.IpProtocol);
         }

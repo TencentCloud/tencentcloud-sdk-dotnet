@@ -53,6 +53,86 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 批量绑定子设备
+        /// </summary>
+        /// <param name="req"><see cref="BindDevicesRequest"/></param>
+        /// <returns><see cref="BindDevicesResponse"/></returns>
+        public async Task<BindDevicesResponse> BindDevices(BindDevicesRequest req)
+        {
+             JsonResponseModel<BindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定子设备
+        /// </summary>
+        /// <param name="req"><see cref="BindDevicesRequest"/></param>
+        /// <returns><see cref="BindDevicesResponse"/></returns>
+        public BindDevicesResponse BindDevicesSync(BindDevicesRequest req)
+        {
+             JsonResponseModel<BindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定子产品
+        /// </summary>
+        /// <param name="req"><see cref="BindProductsRequest"/></param>
+        /// <returns><see cref="BindProductsResponse"/></returns>
+        public async Task<BindProductsResponse> BindProducts(BindProductsRequest req)
+        {
+             JsonResponseModel<BindProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BindProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定子产品
+        /// </summary>
+        /// <param name="req"><see cref="BindProductsRequest"/></param>
+        /// <returns><see cref="BindProductsResponse"/></returns>
+        public BindProductsResponse BindProductsSync(BindProductsRequest req)
+        {
+             JsonResponseModel<BindProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BindProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提供给用户异步调用设备行为的能力
         /// </summary>
         /// <param name="req"><see cref="CallDeviceActionAsyncRequest"/></param>
@@ -1093,6 +1173,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 获取网关产品已经绑定的子产品
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindedProductsRequest"/></param>
+        /// <returns><see cref="DescribeBindedProductsResponse"/></returns>
+        public async Task<DescribeBindedProductsResponse> DescribeBindedProducts(DescribeBindedProductsRequest req)
+        {
+             JsonResponseModel<DescribeBindedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBindedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindedProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取网关产品已经绑定的子产品
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBindedProductsRequest"/></param>
+        /// <returns><see cref="DescribeBindedProductsResponse"/></returns>
+        public DescribeBindedProductsResponse DescribeBindedProductsSync(DescribeBindedProductsRequest req)
+        {
+             JsonResponseModel<DescribeBindedProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBindedProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBindedProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于查看某个设备的详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceRequest"/></param>
@@ -1124,6 +1244,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDevice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询设备绑定的网关设备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceBindGatewayRequest"/></param>
+        /// <returns><see cref="DescribeDeviceBindGatewayResponse"/></returns>
+        public async Task<DescribeDeviceBindGatewayResponse> DescribeDeviceBindGateway(DescribeDeviceBindGatewayRequest req)
+        {
+             JsonResponseModel<DescribeDeviceBindGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeviceBindGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceBindGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询设备绑定的网关设备
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeviceBindGatewayRequest"/></param>
+        /// <returns><see cref="DescribeDeviceBindGatewayResponse"/></returns>
+        public DescribeDeviceBindGatewayResponse DescribeDeviceBindGatewaySync(DescribeDeviceBindGatewayRequest req)
+        {
+             JsonResponseModel<DescribeDeviceBindGatewayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeviceBindGateway");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeviceBindGatewayResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1364,6 +1524,86 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFirmwareTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirmwareTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取网关绑定的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
+        /// <returns><see cref="DescribeGatewayBindDevicesResponse"/></returns>
+        public async Task<DescribeGatewayBindDevicesResponse> DescribeGatewayBindDevices(DescribeGatewayBindDevicesRequest req)
+        {
+             JsonResponseModel<DescribeGatewayBindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewayBindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayBindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取网关绑定的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewayBindDevicesRequest"/></param>
+        /// <returns><see cref="DescribeGatewayBindDevicesResponse"/></returns>
+        public DescribeGatewayBindDevicesResponse DescribeGatewayBindDevicesSync(DescribeGatewayBindDevicesRequest req)
+        {
+             JsonResponseModel<DescribeGatewayBindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewayBindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewayBindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取网关可绑定或解绑的子产品
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewaySubProductsRequest"/></param>
+        /// <returns><see cref="DescribeGatewaySubProductsResponse"/></returns>
+        public async Task<DescribeGatewaySubProductsResponse> DescribeGatewaySubProducts(DescribeGatewaySubProductsRequest req)
+        {
+             JsonResponseModel<DescribeGatewaySubProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewaySubProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewaySubProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取网关可绑定或解绑的子产品
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewaySubProductsRequest"/></param>
+        /// <returns><see cref="DescribeGatewaySubProductsResponse"/></returns>
+        public DescribeGatewaySubProductsResponse DescribeGatewaySubProductsSync(DescribeGatewaySubProductsRequest req)
+        {
+             JsonResponseModel<DescribeGatewaySubProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewaySubProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewaySubProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2044,6 +2284,46 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "GetFamilyDeviceUserList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFamilyDeviceUserListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定网关设备的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="GetGatewaySubDeviceListRequest"/></param>
+        /// <returns><see cref="GetGatewaySubDeviceListResponse"/></returns>
+        public async Task<GetGatewaySubDeviceListResponse> GetGatewaySubDeviceList(GetGatewaySubDeviceListRequest req)
+        {
+             JsonResponseModel<GetGatewaySubDeviceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetGatewaySubDeviceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetGatewaySubDeviceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定网关设备的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="GetGatewaySubDeviceListRequest"/></param>
+        /// <returns><see cref="GetGatewaySubDeviceListResponse"/></returns>
+        public GetGatewaySubDeviceListResponse GetGatewaySubDeviceListSync(GetGatewaySubDeviceListRequest req)
+        {
+             JsonResponseModel<GetGatewaySubDeviceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetGatewaySubDeviceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetGatewaySubDeviceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3044,6 +3324,86 @@ namespace TencentCloud.Iotexplorer.V20190423
              {
                  var strResp = this.InternalRequestSync(req, "SearchTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑子设备
+        /// </summary>
+        /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
+        /// <returns><see cref="UnbindDevicesResponse"/></returns>
+        public async Task<UnbindDevicesResponse> UnbindDevices(UnbindDevicesRequest req)
+        {
+             JsonResponseModel<UnbindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑子设备
+        /// </summary>
+        /// <param name="req"><see cref="UnbindDevicesRequest"/></param>
+        /// <returns><see cref="UnbindDevicesResponse"/></returns>
+        public UnbindDevicesResponse UnbindDevicesSync(UnbindDevicesRequest req)
+        {
+             JsonResponseModel<UnbindDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑子产品
+        /// </summary>
+        /// <param name="req"><see cref="UnbindProductsRequest"/></param>
+        /// <returns><see cref="UnbindProductsResponse"/></returns>
+        public async Task<UnbindProductsResponse> UnbindProducts(UnbindProductsRequest req)
+        {
+             JsonResponseModel<UnbindProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnbindProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解绑子产品
+        /// </summary>
+        /// <param name="req"><see cref="UnbindProductsRequest"/></param>
+        /// <returns><see cref="UnbindProductsResponse"/></returns>
+        public UnbindProductsResponse UnbindProductsSync(UnbindProductsRequest req)
+        {
+             JsonResponseModel<UnbindProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnbindProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindProductsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

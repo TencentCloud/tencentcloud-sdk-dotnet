@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 集群的标签列表
+        /// 集群的标签列表(已废弃)
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }

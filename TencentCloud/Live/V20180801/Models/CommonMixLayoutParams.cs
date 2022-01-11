@@ -28,6 +28,7 @@ namespace TencentCloud.Live.V20180801.Models
         /// 输入图层。取值范围[1，16]。
         /// 1)背景流（即大主播画面或画布）的 image_layer 填1。
         /// 2)纯音频混流，该参数也需填。
+        /// 注意：不同输入，该值不可重复
         /// </summary>
         [JsonProperty("ImageLayer")]
         public long? ImageLayer{ get; set; }

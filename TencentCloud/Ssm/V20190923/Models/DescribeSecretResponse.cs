@@ -88,7 +88,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string ResourceID{ get; set; }
 
         /// <summary>
-        /// 是否开启轮转：True -- 开启轮转；False -- 禁止轮转。
+        /// 是否开启轮转：True -- 开启轮转；False -- 关闭轮转。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RotationStatus")]
@@ -123,6 +123,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         public string[] AssociatedInstanceIDs{ get; set; }
 
         /// <summary>
+        /// 当凭据类型为云API密钥对凭据时，此字段有效，用于表示此云API密钥对所属的用户UIN。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -149,6 +156,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

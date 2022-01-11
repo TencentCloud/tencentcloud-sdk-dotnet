@@ -37,7 +37,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string SnapshotName{ get; set; }
 
         /// <summary>
-        /// 快照的到期时间，到期后该快照将会自动删除
+        /// 快照的到期时间，到期后该快照将会自动删除,需要传入UTC时间下的ISO-8601标准时间格式,例如:2022-01-08T09:47:55+00:00
         /// </summary>
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }

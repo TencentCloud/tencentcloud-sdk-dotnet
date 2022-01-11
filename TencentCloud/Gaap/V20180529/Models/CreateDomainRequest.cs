@@ -56,6 +56,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateIds")]
         public string[] PolyClientCertificateIds{ get; set; }
 
+        /// <summary>
+        /// 是否开启Http3特性的标识，其中：
+        /// 0，表示不开启Http3；
+        /// 1，表示开启Http3。
+        /// 默认不开启Http3。可以通过SetDomainHttp3开启。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +76,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "CertificateId", this.CertificateId);
             this.SetParamSimple(map, prefix + "ClientCertificateId", this.ClientCertificateId);
             this.SetParamArraySimple(map, prefix + "PolyClientCertificateIds.", this.PolyClientCertificateIds);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

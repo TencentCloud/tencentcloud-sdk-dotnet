@@ -191,6 +191,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 实例绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +228,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

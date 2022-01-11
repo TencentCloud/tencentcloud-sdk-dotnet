@@ -87,7 +87,10 @@ namespace TencentCloud.Ssm.V20190923.Models
         public ulong? NextRotationTime{ get; set; }
 
         /// <summary>
-        /// 0 -- 用户自定义凭据；1 -- 云产品凭据
+        /// 0 -- 用户自定义凭据；
+        /// 1 -- 云产品凭据；
+        /// 2 -- SSH密钥对凭据；
+        /// 3 -- 云API密钥对凭据；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SecretType")]
@@ -121,6 +124,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         [JsonProperty("AssociatedInstanceIDs")]
         public string[] AssociatedInstanceIDs{ get; set; }
 
+        /// <summary>
+        /// 当凭据类型为云API密钥对凭据时，此字段有效，用于表示云API密钥对所属的用户UIN。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TargetUin")]
+        public ulong? TargetUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +152,7 @@ namespace TencentCloud.Ssm.V20190923.Models
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
             this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamArraySimple(map, prefix + "AssociatedInstanceIDs.", this.AssociatedInstanceIDs);
+            this.SetParamSimple(map, prefix + "TargetUin", this.TargetUin);
         }
     }
 }

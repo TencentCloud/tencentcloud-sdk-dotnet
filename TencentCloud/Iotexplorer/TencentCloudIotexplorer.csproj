@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{031F9C7D-BF4C-3B27-A17E-7D84103EF8F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.441</VersionPrefix>
+    <VersionPrefix>3.0.442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,12 @@
     <Compile Include="V20190423\IotexplorerClient.cs" />
     <Compile Include="V20190423\Models\AppDeviceInfo.cs" />
     <Compile Include="V20190423\Models\BatchProductionInfo.cs" />
+    <Compile Include="V20190423\Models\BindDeviceInfo.cs" />
+    <Compile Include="V20190423\Models\BindDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\BindDevicesResponse.cs" />
+    <Compile Include="V20190423\Models\BindProductInfo.cs" />
+    <Compile Include="V20190423\Models\BindProductsRequest.cs" />
+    <Compile Include="V20190423\Models\BindProductsResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20190423\Models\CallDeviceActionSyncRequest.cs" />
@@ -99,6 +105,10 @@
     <Compile Include="V20190423\Models\DeleteTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\DescribeBatchProductionRequest.cs" />
     <Compile Include="V20190423\Models\DescribeBatchProductionResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeBindedProductsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeBindedProductsResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeDeviceBindGatewayRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeDeviceBindGatewayResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataHistoryResponse.cs" />
     <Compile Include="V20190423\Models\DescribeDeviceDataRequest.cs" />
@@ -113,6 +123,10 @@
     <Compile Include="V20190423\Models\DescribeFenceEventListResponse.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskRequest.cs" />
     <Compile Include="V20190423\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeGatewayBindDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeGatewayBindDevicesResponse.cs" />
+    <Compile Include="V20190423\Models\DescribeGatewaySubProductsRequest.cs" />
+    <Compile Include="V20190423\Models\DescribeGatewaySubProductsResponse.cs" />
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyRequest.cs" />
     <Compile Include="V20190423\Models\DescribeLoRaFrequencyResponse.cs" />
     <Compile Include="V20190423\Models\DescribeModelDefinitionRequest.cs" />
@@ -143,6 +157,7 @@
     <Compile Include="V20190423\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="V20190423\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="V20190423\Models\EventHistoryItem.cs" />
+    <Compile Include="V20190423\Models\FamilySubDevice.cs" />
     <Compile Include="V20190423\Models\FenceAlarmPoint.cs" />
     <Compile Include="V20190423\Models\FenceBindDeviceItem.cs" />
     <Compile Include="V20190423\Models\FenceBindProductItem.cs" />
@@ -160,6 +175,8 @@
     <Compile Include="V20190423\Models\GetDeviceLocationHistoryResponse.cs" />
     <Compile Include="V20190423\Models\GetFamilyDeviceUserListRequest.cs" />
     <Compile Include="V20190423\Models\GetFamilyDeviceUserListResponse.cs" />
+    <Compile Include="V20190423\Models\GetGatewaySubDeviceListRequest.cs" />
+    <Compile Include="V20190423\Models\GetGatewaySubDeviceListResponse.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListRequest.cs" />
     <Compile Include="V20190423\Models\GetLoRaGatewayListResponse.cs" />
     <Compile Include="V20190423\Models\GetPositionSpaceListRequest.cs" />
@@ -227,6 +244,10 @@
     <Compile Include="V20190423\Models\TopicRule.cs" />
     <Compile Include="V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="V20190423\Models\TopicRulePayload.cs" />
+    <Compile Include="V20190423\Models\UnbindDevicesRequest.cs" />
+    <Compile Include="V20190423\Models\UnbindDevicesResponse.cs" />
+    <Compile Include="V20190423\Models\UnbindProductsRequest.cs" />
+    <Compile Include="V20190423\Models\UnbindProductsResponse.cs" />
     <Compile Include="V20190423\Models\UpdateDevicesEnableStateRequest.cs" />
     <Compile Include="V20190423\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="V20190423\Models\UpdateFirmwareRequest.cs" />

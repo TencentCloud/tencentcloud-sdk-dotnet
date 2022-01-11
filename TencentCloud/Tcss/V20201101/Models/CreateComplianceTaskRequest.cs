@@ -30,6 +30,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// ASSET_IMAGE, 镜像
         /// ASSET_HOST, 主机
         /// ASSET_K8S, K8S资产
+        /// AssetTypeSet, PolicySetId, PeriodTaskId三个参数，必须要给其中一个参数填写有效的值。
         /// </summary>
         [JsonProperty("AssetTypeSet")]
         public string[] AssetTypeSet{ get; set; }

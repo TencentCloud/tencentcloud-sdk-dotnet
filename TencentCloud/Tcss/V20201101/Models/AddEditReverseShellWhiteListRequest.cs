@@ -25,13 +25,13 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 增加白名单信息，白名单id为空，编辑白名单id不能为空
+        /// 增加或编辑白名单信息。新增白名单时WhiteListInfo.id为空，编辑白名单WhiteListInfo.id不能为空。
         /// </summary>
         [JsonProperty("WhiteListInfo")]
         public ReverseShellWhiteListInfo WhiteListInfo{ get; set; }
 
         /// <summary>
-        /// 仅在添加白名单时候使用
+        /// 仅在添加事件白名单时候使用
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }

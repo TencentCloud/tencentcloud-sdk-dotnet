@@ -31,6 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> Editing: 视频编辑</li>
         /// <li> AdaptiveBitrateStreaming: 自适应码流</li>
         /// <li> ContentAudit: 智能识别</li>
+        /// <li> RemoveWatermark: 去水印</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
         /// </summary>
         [JsonProperty("TaskType")]
@@ -78,6 +79,13 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>Edit.H265.FHD: H.265编码方式全高清视频编辑</li>
         /// <li>Edit.H265.2K: H.265编码方式2K视频编辑</li>
         /// <li>Edit.H265.4K: H.265编码方式4K视频编辑</li>
+        /// 去水印规格：
+        /// <li>480P: 分辨率640*480及以下</li>
+        /// <li>720P: 分辨率1280*720及以下</li>
+        /// <li>1080P: 分辨率1920*1080及以下</li>
+        /// <li>2K: 分辨率2560*1440及以下</li>
+        /// <li>4K: 分辨率3840*2160及以下</li>
+        /// <li>8K: 分辨率7680*4320及以下</li>
         /// </summary>
         [JsonProperty("Details")]
         public SpecificationDataItem[] Details{ get; set; }

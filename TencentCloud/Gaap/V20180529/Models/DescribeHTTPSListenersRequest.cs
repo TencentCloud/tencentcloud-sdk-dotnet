@@ -72,6 +72,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// 支持Http3的开关，其中：
+        /// 0，表示不需要支持Http3接入；
+        /// 1，表示需要支持Http3接入。
+        /// 注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+        /// 该功能的启停无法在监听器创建完毕后再修改。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +96,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "SearchValue", this.SearchValue);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

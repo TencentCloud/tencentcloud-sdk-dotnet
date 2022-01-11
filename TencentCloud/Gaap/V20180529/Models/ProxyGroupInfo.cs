@@ -94,6 +94,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProxyType")]
         public ulong? ProxyType{ get; set; }
 
+        /// <summary>
+        /// 支持Http3特性的标识，其中：
+        /// 0，表示不支持Http3；
+        /// 1，表示支持Http3。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +119,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

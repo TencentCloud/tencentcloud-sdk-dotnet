@@ -338,6 +338,13 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("InstanceType")]
         public long? InstanceType{ get; set; }
 
+        /// <summary>
+        /// 实例标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceTags")]
+        public ResourceTag[] ResourceTags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -394,6 +401,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "DcnStatus", this.DcnStatus);
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
         }
     }
 }

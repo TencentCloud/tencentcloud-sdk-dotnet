@@ -245,6 +245,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IPList")]
         public IPDetail[] IPList{ get; set; }
 
+        /// <summary>
+        /// 支持Http3协议的标识，其中：
+        /// 0表示关闭；
+        /// 1表示启用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -283,6 +292,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
             this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8835FF7C-F4DE-351B-9959-9F9646B62441}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.441</VersionPrefix>
+    <VersionPrefix>3.0.442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,8 +51,12 @@
     <Compile Include="V20191118\Models\DescribeInstancesCountResponse.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SaveGameArchiveResponse.cs" />
+    <Compile Include="V20191118\Models\StartPublishStreamRequest.cs" />
+    <Compile Include="V20191118\Models\StartPublishStreamResponse.cs" />
     <Compile Include="V20191118\Models\StopGameRequest.cs" />
     <Compile Include="V20191118\Models\StopGameResponse.cs" />
+    <Compile Include="V20191118\Models\StopPublishStreamRequest.cs" />
+    <Compile Include="V20191118\Models\StopPublishStreamResponse.cs" />
     <Compile Include="V20191118\Models\SwitchGameArchiveRequest.cs" />
     <Compile Include="V20191118\Models\SwitchGameArchiveResponse.cs" />
     <Compile Include="V20191118\Models\TrylockWorkerRequest.cs" />

@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// layer名称
+        /// 绑定的层名称。解绑层需传递空字符串。
         /// </summary>
         [JsonProperty("LayerName")]
         public string LayerName{ get; set; }
 
         /// <summary>
-        /// 版本号
+        /// 绑定或解绑层的版本号。解绑函数版本关联的最后一个层版本时，LayerVersion 填 0。
         /// </summary>
         [JsonProperty("LayerVersion")]
         public long? LayerVersion{ get; set; }

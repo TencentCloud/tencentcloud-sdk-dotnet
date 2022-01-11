@@ -158,6 +158,12 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// 安全组ids，安全组可以传数组形式，兼容之前SecurityGroupId参数
+        /// </summary>
+        [JsonProperty("SecurityGroupIds")]
+        public string[] SecurityGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -185,6 +191,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnRegion", this.DcnRegion);
             this.SetParamSimple(map, prefix + "DcnInstanceId", this.DcnInstanceId);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
         }
     }
 }

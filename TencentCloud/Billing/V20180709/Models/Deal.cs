@@ -159,6 +159,25 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("PayMode")]
         public string PayMode{ get; set; }
 
+        /// <summary>
+        /// 交易类型
+        /// modifyNetworkMode 调整带宽模式
+        /// modifyNetworkSize 调整带宽大小
+        /// refund 退款
+        /// downgrade 降配
+        /// upgrade 升配
+        /// renew 续费
+        /// purchase 购买
+        /// preMoveOut 包年包月迁出资源
+        /// preMoveIn 包年包月迁入资源
+        /// preToPost 预付费转后付费
+        /// postMoveOut 按量计费迁出资源
+        /// postMoveIn 按量计费迁入资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +206,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Formula", this.Formula);
             this.SetParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
         }
     }
 }

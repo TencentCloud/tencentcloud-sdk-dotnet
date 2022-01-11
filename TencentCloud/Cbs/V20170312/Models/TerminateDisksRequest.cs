@@ -30,6 +30,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskIds")]
         public string[] DiskIds{ get; set; }
 
+        /// <summary>
+        /// 销毁云盘时删除关联的非永久保留快照。0 表示非永久快照不随云盘销毁而销毁，1表示非永久快照随云盘销毁而销毁，默认取0。快照是否永久保留可以通过DescribeSnapshots接口返回的快照详情的IsPermanent字段来判断，true表示永久快照，false表示非永久快照。
+        /// </summary>
+        [JsonProperty("DeleteSnapshot")]
+        public long? DeleteSnapshot{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
+            this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
         }
     }
 }

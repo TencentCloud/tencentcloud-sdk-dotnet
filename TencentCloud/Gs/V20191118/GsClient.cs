@@ -173,6 +173,46 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
+        /// 开始云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
+        /// <returns><see cref="StartPublishStreamResponse"/></returns>
+        public async Task<StartPublishStreamResponse> StartPublishStream(StartPublishStreamRequest req)
+        {
+             JsonResponseModel<StartPublishStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartPublishStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开始云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StartPublishStreamRequest"/></param>
+        /// <returns><see cref="StartPublishStreamResponse"/></returns>
+        public StartPublishStreamResponse StartPublishStreamSync(StartPublishStreamRequest req)
+        {
+             JsonResponseModel<StartPublishStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartPublishStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartPublishStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 强制退出游戏
         /// </summary>
         /// <param name="req"><see cref="StopGameRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Gs.V20191118
              {
                  var strResp = this.InternalRequestSync(req, "StopGame");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopGameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
+        /// <returns><see cref="StopPublishStreamResponse"/></returns>
+        public async Task<StopPublishStreamResponse> StopPublishStream(StopPublishStreamRequest req)
+        {
+             JsonResponseModel<StopPublishStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopPublishStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopPublishStreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止云端推流
+        /// </summary>
+        /// <param name="req"><see cref="StopPublishStreamRequest"/></param>
+        /// <returns><see cref="StopPublishStreamResponse"/></returns>
+        public StopPublishStreamResponse StopPublishStreamSync(StopPublishStreamRequest req)
+        {
+             JsonResponseModel<StopPublishStreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopPublishStream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopPublishStreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

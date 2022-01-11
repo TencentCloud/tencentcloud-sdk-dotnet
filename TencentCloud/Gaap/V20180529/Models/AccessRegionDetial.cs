@@ -66,6 +66,23 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("IDCType")]
         public string IDCType{ get; set; }
 
+        /// <summary>
+        /// 特性位图，每个bit位代表一种特性，其中：
+        /// 0，表示不支持该特性；
+        /// 1，表示支持该特性。
+        /// 特性位图含义如下（从右往左）：
+        /// 第1个bit，支持4层加速；
+        /// 第2个bit，支持7层加速；
+        /// 第3个bit，支持Http3接入；
+        /// 第4个bit，支持IPv6；
+        /// 第5个bit，支持精品BGP接入；
+        /// 第6个bit，支持三网接入；
+        /// 第7个bit，支持接入段Qos加速。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeatureBitmap")]
+        public long? FeatureBitmap{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +96,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RegionArea", this.RegionArea);
             this.SetParamSimple(map, prefix + "RegionAreaName", this.RegionAreaName);
             this.SetParamSimple(map, prefix + "IDCType", this.IDCType);
+            this.SetParamSimple(map, prefix + "FeatureBitmap", this.FeatureBitmap);
         }
     }
 }

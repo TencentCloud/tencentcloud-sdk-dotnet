@@ -31,6 +31,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
+        /// 安全组总数。
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

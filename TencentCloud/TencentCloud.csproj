@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.441</VersionPrefix>
+    <VersionPrefix>3.0.442</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7869,8 +7869,12 @@
     <Compile Include="Gs\V20191118\Models\DescribeInstancesCountResponse.cs" />
     <Compile Include="Gs\V20191118\Models\SaveGameArchiveRequest.cs" />
     <Compile Include="Gs\V20191118\Models\SaveGameArchiveResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\StartPublishStreamRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\StartPublishStreamResponse.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameRequest.cs" />
     <Compile Include="Gs\V20191118\Models\StopGameResponse.cs" />
+    <Compile Include="Gs\V20191118\Models\StopPublishStreamRequest.cs" />
+    <Compile Include="Gs\V20191118\Models\StopPublishStreamResponse.cs" />
     <Compile Include="Gs\V20191118\Models\SwitchGameArchiveRequest.cs" />
     <Compile Include="Gs\V20191118\Models\SwitchGameArchiveResponse.cs" />
     <Compile Include="Gs\V20191118\Models\TrylockWorkerRequest.cs" />
@@ -9000,6 +9004,12 @@
     <Compile Include="Iotexplorer\V20190423\IotexplorerClient.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\AppDeviceInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\BatchProductionInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindDeviceInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindDevicesRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindDevicesResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindProductInfo.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindProductsRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\BindProductsResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionAsyncRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\CallDeviceActionSyncRequest.cs" />
@@ -9052,6 +9062,10 @@
     <Compile Include="Iotexplorer\V20190423\Models\DeleteTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeBatchProductionRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeBatchProductionResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeBindedProductsRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeBindedProductsResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceBindGatewayRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceBindGatewayResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataHistoryRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataHistoryResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeDeviceDataRequest.cs" />
@@ -9066,6 +9080,10 @@
     <Compile Include="Iotexplorer\V20190423\Models\DescribeFenceEventListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeFirmwareTaskRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeFirmwareTaskResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewayBindDevicesRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewayBindDevicesResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubProductsRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubProductsResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeLoRaFrequencyRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeLoRaFrequencyResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeModelDefinitionRequest.cs" />
@@ -9096,6 +9114,7 @@
     <Compile Include="Iotexplorer\V20190423\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\EnableTopicRuleResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\EventHistoryItem.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\FamilySubDevice.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FenceAlarmPoint.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FenceBindDeviceItem.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\FenceBindProductItem.cs" />
@@ -9113,6 +9132,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\GetDeviceLocationHistoryResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetFamilyDeviceUserListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetFamilyDeviceUserListResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetGatewaySubDeviceListRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\GetGatewaySubDeviceListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetLoRaGatewayListRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetLoRaGatewayListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\GetPositionSpaceListRequest.cs" />
@@ -9180,6 +9201,10 @@
     <Compile Include="Iotexplorer\V20190423\Models\TopicRule.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRuleInfo.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\TopicRulePayload.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UnbindDevicesRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UnbindDevicesResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UnbindProductsRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\UnbindProductsResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UpdateDevicesEnableStateRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UpdateDevicesEnableStateResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\UpdateFirmwareRequest.cs" />
@@ -10092,6 +10117,7 @@
     <Compile Include="Lighthouse\V20200324\Models\StopInstancesRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\StopInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\SystemDisk.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\Tag.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateDisksRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateDisksResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\TerminateInstancesRequest.cs" />
@@ -10416,6 +10442,8 @@
     <Compile Include="Mariadb\V20170312\Models\CreateDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateDedicatedClusterDBInstanceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateDedicatedClusterDBInstanceResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateHourDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\CreateHourDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateTmpInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\CreateTmpInstancesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBAccount.cs" />

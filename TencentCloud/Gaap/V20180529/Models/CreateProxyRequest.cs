@@ -110,6 +110,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PackageType")]
         public string PackageType{ get; set; }
 
+        /// <summary>
+        /// 支持Http3的开关，其中：0，表示不需要支持Http3接入；1，表示需要支持Http3接入。注意：如果开启了Http3的功能，那么该通道就不再支持TCP/UDP接入的功能。该功能的启停无法在通道创建完毕后再修改。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +136,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "IPAddressVersion", this.IPAddressVersion);
             this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
             this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

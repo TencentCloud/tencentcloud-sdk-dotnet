@@ -375,6 +375,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 创建后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
+        public async Task<CreateHourDBInstanceResponse> CreateHourDBInstance(CreateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDBInstanceResponse"/></returns>
+        public CreateHourDBInstanceResponse CreateHourDBInstanceSync(CreateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateTmpInstances）用于创建临时实例。
         /// </summary>
         /// <param name="req"><see cref="CreateTmpInstancesRequest"/></param>

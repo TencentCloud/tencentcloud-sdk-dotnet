@@ -72,6 +72,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("RoutingOrder")]
         public long? RoutingOrder{ get; set; }
 
+        /// <summary>
+        /// 是否是发起方
+        /// </summary>
+        [JsonProperty("IsPromoter")]
+        public bool? IsPromoter{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "RequireSign", this.RequireSign);
             this.SetParamSimple(map, prefix + "SignType", this.SignType);
             this.SetParamSimple(map, prefix + "RoutingOrder", this.RoutingOrder);
+            this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         }
     }
 }

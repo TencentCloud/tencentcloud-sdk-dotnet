@@ -863,7 +863,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// 轮转云产品凭据。该接口仅适用于处于Enabled状态的云产品凭据，对于其他状态的云产品凭据或用户自定义凭据不适用。
+        /// 轮转云产品凭据或云API密钥对凭据。
+        /// 该接口仅适用于处于Enabled状态的云产品凭据或处于Enable状态的云API密钥对凭据，对于其他状态的云产品凭据或云API密钥对凭据或用户自定义凭据不适用。
         /// </summary>
         /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
         /// <returns><see cref="RotateProductSecretResponse"/></returns>
@@ -883,7 +884,8 @@ namespace TencentCloud.Ssm.V20190923
         }
 
         /// <summary>
-        /// 轮转云产品凭据。该接口仅适用于处于Enabled状态的云产品凭据，对于其他状态的云产品凭据或用户自定义凭据不适用。
+        /// 轮转云产品凭据或云API密钥对凭据。
+        /// 该接口仅适用于处于Enabled状态的云产品凭据或处于Enable状态的云API密钥对凭据，对于其他状态的云产品凭据或云API密钥对凭据或用户自定义凭据不适用。
         /// </summary>
         /// <param name="req"><see cref="RotateProductSecretRequest"/></param>
         /// <returns><see cref="RotateProductSecretResponse"/></returns>

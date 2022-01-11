@@ -37,6 +37,13 @@ namespace TencentCloud.Ssm.V20190923.Models
         public long? InvalidType{ get; set; }
 
         /// <summary>
+        /// true表示用户已经可以使用云API密钥安全托管功能，
+        /// false表示用户暂时不能使用云API密钥安全托管功能。
+        /// </summary>
+        [JsonProperty("AccessKeyEscrowEnabled")]
+        public bool? AccessKeyEscrowEnabled{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Ssm.V20190923.Models
         {
             this.SetParamSimple(map, prefix + "ServiceEnabled", this.ServiceEnabled);
             this.SetParamSimple(map, prefix + "InvalidType", this.InvalidType);
+            this.SetParamSimple(map, prefix + "AccessKeyEscrowEnabled", this.AccessKeyEscrowEnabled);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

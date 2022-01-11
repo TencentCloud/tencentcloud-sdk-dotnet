@@ -79,7 +79,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN
+        /// 个人签署方指定签署控件类型，目前仅支持：OCR_ESIGN(AI智慧手写签名)
         /// </summary>
         [JsonProperty("ComponentLimitType")]
         public string[] ComponentLimitType{ get; set; }
@@ -93,14 +93,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// <summary>
         /// 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
         /// </summary>
-        [JsonProperty("OrganizationOpenId")]
-        public string OrganizationOpenId{ get; set; }
-
-        /// <summary>
-        /// 同一渠道下其他合作企业OpenId，B2B场景下必传；
-        /// </summary>
         [JsonProperty("OrganizationName")]
         public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 同一渠道下其他合作企业OpenId，签署人为非发起方企业员工场景下必传；
+        /// </summary>
+        [JsonProperty("OrganizationOpenId")]
+        public string OrganizationOpenId{ get; set; }
 
 
         /// <summary>
@@ -119,8 +119,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
             this.SetParamArraySimple(map, prefix + "ComponentLimitType.", this.ComponentLimitType);
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
-            this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
         }
     }
 }

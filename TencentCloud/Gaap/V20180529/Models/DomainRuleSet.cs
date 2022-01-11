@@ -171,6 +171,15 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("BanStatus")]
         public string BanStatus{ get; set; }
 
+        /// <summary>
+        /// Http3特性标识，其中：
+        /// 0表示关闭；
+        /// 1表示启用。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -197,6 +206,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "PolyRealServerCertificateAliasInfo.", this.PolyRealServerCertificateAliasInfo);
             this.SetParamSimple(map, prefix + "DomainStatus", this.DomainStatus);
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

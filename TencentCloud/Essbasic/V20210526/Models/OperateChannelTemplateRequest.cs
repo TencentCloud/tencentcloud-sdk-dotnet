@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AuthTag{ get; set; }
 
         /// <summary>
-        /// 合作企业方第三方机构唯一标识数据
+        /// 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenIds")]
         public string ProxyOrganizationOpenIds{ get; set; }
