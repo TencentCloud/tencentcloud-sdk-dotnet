@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public Task Task{ get; set; }
 
         /// <summary>
-        /// 数据库名称。任务在执行前均会USE该数据库， 除了首次建库时，其他情况建议均添加上。
+        /// 数据库名称。如果SQL语句中有数据库名称，优先使用SQL语句中的数据库，否则使用该参数指定的数据库（注：当提交建库sql时，该字段传空字符串）。
         /// </summary>
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }

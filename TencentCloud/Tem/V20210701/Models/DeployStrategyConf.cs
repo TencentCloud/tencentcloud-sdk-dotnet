@@ -48,6 +48,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("BatchInterval")]
         public long? BatchInterval{ get; set; }
 
+        /// <summary>
+        /// 最小可用实例数
+        /// </summary>
+        [JsonProperty("MinAvailable")]
+        public long? MinAvailable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "BetaBatchNum", this.BetaBatchNum);
             this.SetParamSimple(map, prefix + "DeployStrategyType", this.DeployStrategyType);
             this.SetParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
+            this.SetParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
         }
     }
 }

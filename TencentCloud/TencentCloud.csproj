@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.442</VersionPrefix>
+    <VersionPrefix>3.0.443</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11877,6 +11877,9 @@
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\AddDBInstanceToReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\AnalysisItems.cs" />
+    <Compile Include="Postgres\V20170312\Models\BackupPlan.cs" />
+    <Compile Include="Postgres\V20170312\Models\CloneDBInstanceRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CloneDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
@@ -11901,6 +11904,12 @@
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeAvailableRecoveryTimeRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeAvailableRecoveryTimeResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeBackupPlansRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeBackupPlansResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeCloneDBInstanceSpecRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeCloneDBInstanceSpecResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBBackupsRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBBackupsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDBErrlogsRequest.cs" />
@@ -11957,6 +11966,10 @@
     <Compile Include="Postgres\V20170312\Models\IsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyAccountRemarkResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyBackupPlanRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyBackupPlanResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceDeploymentRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceDeploymentResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\ModifyDBInstanceParametersRequest.cs" />

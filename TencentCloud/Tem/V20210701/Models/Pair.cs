@@ -25,7 +25,7 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// 建
+        /// 键
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
@@ -36,6 +36,20 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 类型，default 为自定义，reserved 为系统变量，referenced 为引用配置项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 配置名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Config")]
+        public string Config{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +58,8 @@ namespace TencentCloud.Tem.V20210701.Models
         {
             this.SetParamSimple(map, prefix + "Key", this.Key);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Config", this.Config);
         }
     }
 }

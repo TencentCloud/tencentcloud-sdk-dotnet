@@ -3067,7 +3067,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
+        /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表，全地域公共参数Region均为ap-shanghai。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
         /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>
@@ -3087,7 +3087,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表。
+        /// 本接口(DescribeUploadedFiles)用于查询用户导入的SQL文件列表，全地域公共参数Region均为ap-shanghai。
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadedFilesRequest"/></param>
         /// <returns><see cref="DescribeUploadedFilesResponse"/></returns>

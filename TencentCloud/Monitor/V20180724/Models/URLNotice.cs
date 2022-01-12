@@ -45,6 +45,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("ValidationCode")]
         public string ValidationCode{ get; set; }
 
+        /// <summary>
+        /// 通知开始时间 一天开始的秒数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public long? StartTime{ get; set; }
+
+        /// <summary>
+        /// 通知结束时间 一天开始的秒数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +68,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "URL", this.URL);
             this.SetParamSimple(map, prefix + "IsValid", this.IsValid);
             this.SetParamSimple(map, prefix + "ValidationCode", this.ValidationCode);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }
     }
 }

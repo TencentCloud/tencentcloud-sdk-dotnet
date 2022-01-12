@@ -126,8 +126,10 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// JDK 版本。
-        /// - KONA：使用 kona jdk。
-        /// - OPEN：使用 open jdk。
+        /// - KONA:8：使用 kona jdk 8。
+        /// - OPEN:8：使用 open jdk 8。
+        /// - KONA:11：使用 kona jdk 11。
+        /// - OPEN:11：使用 open jdk 11。
         /// </summary>
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
@@ -240,6 +242,24 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("LogEnable")]
         public long? LogEnable{ get; set; }
 
+        /// <summary>
+        /// （除开镜像配置）配置是否修改
+        /// </summary>
+        [JsonProperty("ConfEdited")]
+        public bool? ConfEdited{ get; set; }
+
+        /// <summary>
+        /// 是否开启应用加速
+        /// </summary>
+        [JsonProperty("SpeedUp")]
+        public bool? SpeedUp{ get; set; }
+
+        /// <summary>
+        /// 启动探针配置
+        /// </summary>
+        [JsonProperty("StartupProbe")]
+        public HealthCheckConfig StartupProbe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -281,6 +301,9 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamArrayObj(map, prefix + "HorizontalAutoscaler.", this.HorizontalAutoscaler);
             this.SetParamArrayObj(map, prefix + "CronHorizontalAutoscaler.", this.CronHorizontalAutoscaler);
             this.SetParamSimple(map, prefix + "LogEnable", this.LogEnable);
+            this.SetParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
+            this.SetParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
+            this.SetParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
         }
     }
 }
