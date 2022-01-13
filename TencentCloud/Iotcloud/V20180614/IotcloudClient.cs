@@ -1933,6 +1933,126 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（ListLog）用于查看日志信息 
+        /// </summary>
+        /// <param name="req"><see cref="ListLogRequest"/></param>
+        /// <returns><see cref="ListLogResponse"/></returns>
+        public async Task<ListLogResponse> ListLog(ListLogRequest req)
+        {
+             JsonResponseModel<ListLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListLog）用于查看日志信息 
+        /// </summary>
+        /// <param name="req"><see cref="ListLogRequest"/></param>
+        /// <returns><see cref="ListLogResponse"/></returns>
+        public ListLogResponse ListLogSync(ListLogRequest req)
+        {
+             JsonResponseModel<ListLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取日志内容列表
+        /// </summary>
+        /// <param name="req"><see cref="ListLogPayloadRequest"/></param>
+        /// <returns><see cref="ListLogPayloadResponse"/></returns>
+        public async Task<ListLogPayloadResponse> ListLogPayload(ListLogPayloadRequest req)
+        {
+             JsonResponseModel<ListLogPayloadResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListLogPayload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogPayloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取日志内容列表
+        /// </summary>
+        /// <param name="req"><see cref="ListLogPayloadRequest"/></param>
+        /// <returns><see cref="ListLogPayloadResponse"/></returns>
+        public ListLogPayloadResponse ListLogPayloadSync(ListLogPayloadRequest req)
+        {
+             JsonResponseModel<ListLogPayloadResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListLogPayload");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogPayloadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备上报的日志
+        /// </summary>
+        /// <param name="req"><see cref="ListSDKLogRequest"/></param>
+        /// <returns><see cref="ListSDKLogResponse"/></returns>
+        public async Task<ListSDKLogResponse> ListSDKLog(ListSDKLogRequest req)
+        {
+             JsonResponseModel<ListSDKLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListSDKLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSDKLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备上报的日志
+        /// </summary>
+        /// <param name="req"><see cref="ListSDKLogRequest"/></param>
+        /// <returns><see cref="ListSDKLogResponse"/></returns>
+        public ListSDKLogResponse ListSDKLogSync(ListSDKLogRequest req)
+        {
+             JsonResponseModel<ListSDKLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListSDKLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSDKLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 模拟lora类型的设备端向服务器端发送消息
         /// </summary>
         /// <param name="req"><see cref="PublishAsDeviceRequest"/></param>

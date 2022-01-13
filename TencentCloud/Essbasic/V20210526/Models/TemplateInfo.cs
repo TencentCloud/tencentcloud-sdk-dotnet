@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? CreatedOn{ get; set; }
 
         /// <summary>
-        /// 模板类型：1-静默签；2-静默签授权；3-普通模版
+        /// 模板类型：1-静默签；2-静默签授权；3-普通模板
         /// </summary>
         [JsonProperty("TemplateType")]
         public long? TemplateType{ get; set; }

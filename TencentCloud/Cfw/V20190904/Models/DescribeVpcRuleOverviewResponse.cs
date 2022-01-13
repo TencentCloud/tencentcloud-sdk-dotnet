@@ -39,6 +39,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? StartRuleNum{ get; set; }
 
         /// <summary>
+        /// 规则总量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         {
             this.SetParamSimple(map, prefix + "StrategyNum", this.StrategyNum);
             this.SetParamSimple(map, prefix + "StartRuleNum", this.StartRuleNum);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

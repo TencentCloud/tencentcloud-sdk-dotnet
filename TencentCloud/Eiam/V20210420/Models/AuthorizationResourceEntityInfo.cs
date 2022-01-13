@@ -21,7 +21,7 @@ namespace TencentCloud.Eiam.V20210420.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AuthorizationResouceEntityInfo : AbstractModel
+    public class AuthorizationResourceEntityInfo : AbstractModel
     {
         
         /// <summary>

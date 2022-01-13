@@ -48,6 +48,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
+        /// <summary>
+        /// 参数模板类型
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public string TemplateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
         }
     }
 }

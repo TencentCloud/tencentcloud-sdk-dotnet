@@ -79,7 +79,7 @@ namespace TencentCloud.Tat.V20201028.Models
 
         /// <summary>
         /// 在 CVM 或 Lighthouse 实例中执行命令的用户名称。
-        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。Windows 实例当前仅支持以 System 用户执行命令。
+        /// 使用最小权限执行命令是权限管理的最佳实践，建议您以普通用户身份执行云助手命令。
         /// </summary>
         [JsonProperty("Username")]
         public string Username{ get; set; }

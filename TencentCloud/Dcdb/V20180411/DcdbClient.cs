@@ -2075,6 +2075,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(SwitchDBInstanceHA)用于实例主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public async Task<SwitchDBInstanceHAResponse> SwitchDBInstanceHA(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(SwitchDBInstanceHA)用于实例主备切换。
+        /// </summary>
+        /// <param name="req"><see cref="SwitchDBInstanceHARequest"/></param>
+        /// <returns><see cref="SwitchDBInstanceHAResponse"/></returns>
+        public SwitchDBInstanceHAResponse SwitchDBInstanceHASync(SwitchDBInstanceHARequest req)
+        {
+             JsonResponseModel<SwitchDBInstanceHAResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchDBInstanceHA");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchDBInstanceHAResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（UpgradeDCDBInstance）用于升级分布式数据库实例。本接口完成下单和支付两个动作，如果发生支付失败的错误，调用用户账户相关接口中的支付订单接口（PayDeals）重新支付即可。
         /// </summary>
         /// <param name="req"><see cref="UpgradeDCDBInstanceRequest"/></param>

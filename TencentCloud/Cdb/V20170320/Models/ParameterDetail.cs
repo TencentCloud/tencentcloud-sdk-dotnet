@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参数类型
+        /// 参数类型：integer，enum，float，string，func
         /// </summary>
         [JsonProperty("ParamType")]
         public string ParamType{ get; set; }
@@ -78,6 +78,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EnumValue")]
         public string[] EnumValue{ get; set; }
 
+        /// <summary>
+        /// 参数是公式类型时，该字段有效，表示公式类型最大值
+        /// </summary>
+        [JsonProperty("MaxFunc")]
+        public string MaxFunc{ get; set; }
+
+        /// <summary>
+        /// 参数是公式类型时，该字段有效，表示公式类型最小值
+        /// </summary>
+        [JsonProperty("MinFunc")]
+        public string MinFunc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Max", this.Max);
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamArraySimple(map, prefix + "EnumValue.", this.EnumValue);
+            this.SetParamSimple(map, prefix + "MaxFunc", this.MaxFunc);
+            this.SetParamSimple(map, prefix + "MinFunc", this.MinFunc);
         }
     }
 }

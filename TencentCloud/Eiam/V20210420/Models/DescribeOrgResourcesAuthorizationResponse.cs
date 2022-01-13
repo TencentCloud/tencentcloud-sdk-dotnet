@@ -56,7 +56,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AuthorizationOrgResourceList")]
-        public AuthorizationResouceEntityInfo[] AuthorizationOrgResourceList{ get; set; }
+        public AuthorizationResourceEntityInfo[] AuthorizationOrgResourceList{ get; set; }
 
         /// <summary>
         /// 资源数量

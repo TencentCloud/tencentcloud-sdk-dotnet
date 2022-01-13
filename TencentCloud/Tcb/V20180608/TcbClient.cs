@@ -2979,6 +2979,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 搜索CLS日志，TCB角色秘钥访问
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public async Task<SearchClsLogResponse> SearchClsLog(SearchClsLogRequest req)
+        {
+             JsonResponseModel<SearchClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SearchClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClsLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 搜索CLS日志，TCB角色秘钥访问
+        /// </summary>
+        /// <param name="req"><see cref="SearchClsLogRequest"/></param>
+        /// <returns><see cref="SearchClsLogResponse"/></returns>
+        public SearchClsLogResponse SearchClsLogSync(SearchClsLogRequest req)
+        {
+             JsonResponseModel<SearchClsLogResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SearchClsLog");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchClsLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（TurnOffStandaloneGateway）用于关闭小租户网关。
         /// </summary>
         /// <param name="req"><see cref="TurnOffStandaloneGatewayRequest"/></param>

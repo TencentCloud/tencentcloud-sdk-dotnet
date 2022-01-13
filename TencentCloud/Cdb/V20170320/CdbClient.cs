@@ -2545,7 +2545,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplates）查询参数模板列表。
+        /// 该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
@@ -2565,7 +2565,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 该接口（DescribeParamTemplates）查询参数模板列表。
+        /// 该接口（DescribeParamTemplates）查询参数模板列表，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
         /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
