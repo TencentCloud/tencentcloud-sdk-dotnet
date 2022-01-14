@@ -267,7 +267,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginCombine OriginCombine{ get; set; }
 
         /// <summary>
-        /// QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+        /// Quic访问（收费服务，详见计费说明和产品文档）
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }

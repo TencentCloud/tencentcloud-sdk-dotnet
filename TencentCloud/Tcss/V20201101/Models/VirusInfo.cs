@@ -125,6 +125,9 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// BACKUP_FILE_NOT_FOUND:备份文件不存在
         /// CONTAINER_NOT_FOUND_DEAL_ISOLATE:隔离时，容器不存在
         /// CONTAINER_NOT_FOUND_DEAL_RECOVER:恢复时，容器不存在
+        /// TIMEOUT: 超时
+        /// TOO_MANY: 任务过多
+        /// OFFLINE: 离线
         /// </summary>
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }

@@ -90,6 +90,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ProxyLB")]
         public bool? ProxyLB{ get; set; }
 
+        /// <summary>
+        /// 扩展参数。须是map[string]string 的json 格式。
+        /// </summary>
+        [JsonProperty("ExtraParam")]
+        public string ExtraParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClearDnsServer", this.ClearDnsServer);
             this.SetParamSimple(map, prefix + "NeedDeleteCbs", this.NeedDeleteCbs);
             this.SetParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
+            this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
         }
     }
 }

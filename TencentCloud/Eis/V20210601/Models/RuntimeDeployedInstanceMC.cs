@@ -84,6 +84,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("UpdatedAt")]
         public long? UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// 应用类型：0:NormalApp普通应用 1:TemplateApp模版应用 2:LightApp轻应用 3:MicroConnTemplate微连接模板 4:MicroConnApp微连接应用
+        /// </summary>
+        [JsonProperty("ProjectType")]
+        public long? ProjectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "ProjectType", this.ProjectType);
         }
     }
 }

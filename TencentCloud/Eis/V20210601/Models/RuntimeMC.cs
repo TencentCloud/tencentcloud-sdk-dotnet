@@ -90,6 +90,30 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("RunningInstanceCount")]
         public long? RunningInstanceCount{ get; set; }
 
+        /// <summary>
+        /// 已使用cpu核数
+        /// </summary>
+        [JsonProperty("CpuUsed")]
+        public float? CpuUsed{ get; set; }
+
+        /// <summary>
+        /// cpu核数上限
+        /// </summary>
+        [JsonProperty("CpuLimit")]
+        public float? CpuLimit{ get; set; }
+
+        /// <summary>
+        /// 已使用内存 MB
+        /// </summary>
+        [JsonProperty("MemoryUsed")]
+        public float? MemoryUsed{ get; set; }
+
+        /// <summary>
+        /// 内存上限 MB
+        /// </summary>
+        [JsonProperty("MemoryLimit")]
+        public float? MemoryLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +131,10 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "WorkerSize", this.WorkerSize);
             this.SetParamSimple(map, prefix + "WorkerReplica", this.WorkerReplica);
             this.SetParamSimple(map, prefix + "RunningInstanceCount", this.RunningInstanceCount);
+            this.SetParamSimple(map, prefix + "CpuUsed", this.CpuUsed);
+            this.SetParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
+            this.SetParamSimple(map, prefix + "MemoryUsed", this.MemoryUsed);
+            this.SetParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
         }
     }
 }

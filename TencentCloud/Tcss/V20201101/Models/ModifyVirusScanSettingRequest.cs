@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? EnableScan{ get; set; }
 
         /// <summary>
-        /// 检测周期每隔多少天
+        /// 检测周期每隔多少天(1|3|7)
         /// </summary>
         [JsonProperty("Cycle")]
         public ulong? Cycle{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string BeginScanAt{ get; set; }
 
         /// <summary>
-        /// 扫描全部路径
+        /// 扫描全部路径(true:全选,false:自选)
         /// </summary>
         [JsonProperty("ScanPathAll")]
         public bool? ScanPathAll{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ScanPathType{ get; set; }
 
         /// <summary>
-        /// 超时时长
+        /// 超时时长(5~24h)
         /// </summary>
         [JsonProperty("Timeout")]
         public ulong? Timeout{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.444</VersionPrefix>
+    <VersionPrefix>3.0.445</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2200,6 +2200,9 @@
     <Compile Include="Cdb\V20170320\Models\AccountInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\AddTimeWindowRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AddTimeWindowResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\Address.cs" />
+    <Compile Include="Cdb\V20170320\Models\ApplyCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ApplyCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\AuditFilter.cs" />
@@ -2214,12 +2217,16 @@
     <Compile Include="Cdb\V20170320\Models\BackupSummaryItem.cs" />
     <Compile Include="Cdb\V20170320\Models\BalanceRoGroupLoadRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\BalanceRoGroupLoadResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\BaseGroupInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\BinlogInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\CloneItem.cs" />
+    <Compile Include="Cdb\V20170320\Models\CloseCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\CloseCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CloseWanServiceRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CloseWanServiceResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ColumnPrivilege.cs" />
     <Compile Include="Cdb\V20170320\Models\CommonTimeWindow.cs" />
+    <Compile Include="Cdb\V20170320\Models\ConnectionPoolInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAccountsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAccountsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateAuditLogFileRequest.cs" />
@@ -2244,6 +2251,7 @@
     <Compile Include="Cdb\V20170320\Models\CreateParamTemplateResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\CreateRoInstanceIpResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\CustomConfig.cs" />
     <Compile Include="Cdb\V20170320\Models\DBSwitchInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabaseNameInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\DatabasePrivilege.cs" />
@@ -2297,6 +2305,8 @@
     <Compile Include="Cdb\V20170320\Models\DescribeBinlogBackupOverviewResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBinlogsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeBinlogsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeCloneListRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeCloneListResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeDBImportRecordsRequest.cs" />
@@ -2337,12 +2347,18 @@
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamRecordsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeInstanceParamsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeLocalBinlogConfigRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeLocalBinlogConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeParamTemplateInfoRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeParamTemplateInfoResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeParamTemplatesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeParamTemplatesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeProjectSecurityGroupsResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeProxyConnectionPoolConfRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeProxyConnectionPoolConfResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeProxyCustomConfRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\DescribeProxyCustomConfResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoGroupsResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\DescribeRoMinScaleRequest.cs" />
@@ -2387,6 +2403,8 @@
     <Compile Include="Cdb\V20170320\Models\InstanceRollbackRangeTime.cs" />
     <Compile Include="Cdb\V20170320\Models\IsolateDBInstanceRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\IsolateDBInstanceResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\LocalBinlogConfig.cs" />
+    <Compile Include="Cdb\V20170320\Models\LocalBinlogConfigDefault.cs" />
     <Compile Include="Cdb\V20170320\Models\MasterInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyAccountDescriptionResponse.cs" />
@@ -2408,6 +2426,14 @@
     <Compile Include="Cdb\V20170320\Models\ModifyBackupConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyBackupDownloadRestrictionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyBackupDownloadRestrictionResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyConnectionPoolRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyConnectionPoolResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyDescRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyDescResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyVipVPortRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyCDBProxyVipVPortResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceNameRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyDBInstanceProjectRequest.cs" />
@@ -2420,6 +2446,8 @@
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceParamResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceTagRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyInstanceTagResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyLocalBinlogConfigRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ModifyLocalBinlogConfigResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyNameOrDescByDpIdRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyNameOrDescByDpIdResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ModifyParamTemplateRequest.cs" />
@@ -2440,10 +2468,16 @@
     <Compile Include="Cdb\V20170320\Models\ParamTemplateInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\Parameter.cs" />
     <Compile Include="Cdb\V20170320\Models\ParameterDetail.cs" />
+    <Compile Include="Cdb\V20170320\Models\PoolConf.cs" />
+    <Compile Include="Cdb\V20170320\Models\ProxyNodeInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\RWInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\RWInstanceInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\RegionSellConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\ReleaseIsolatedDBInstancesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ReleaseResult.cs" />
+    <Compile Include="Cdb\V20170320\Models\ReloadBalanceProxyNodeRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\RenewDBInstanceResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesRequest.cs" />
@@ -2452,6 +2486,7 @@
     <Compile Include="Cdb\V20170320\Models\RoGroupAttr.cs" />
     <Compile Include="Cdb\V20170320\Models\RoInstanceInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\RoVipInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\RoWeight.cs" />
     <Compile Include="Cdb\V20170320\Models\RoWeightValue.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackDBName.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackInstancesInfo.cs" />
@@ -2459,6 +2494,7 @@
     <Compile Include="Cdb\V20170320\Models\RollbackTables.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackTask.cs" />
     <Compile Include="Cdb\V20170320\Models\RollbackTimeRange.cs" />
+    <Compile Include="Cdb\V20170320\Models\Rule.cs" />
     <Compile Include="Cdb\V20170320\Models\SecurityGroup.cs" />
     <Compile Include="Cdb\V20170320\Models\SellConfig.cs" />
     <Compile Include="Cdb\V20170320\Models\SellType.cs" />
@@ -2478,6 +2514,8 @@
     <Compile Include="Cdb\V20170320\Models\StopReplicationResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\StopRollbackResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\SwitchCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDBInstanceMasterSlaveResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\SwitchDrInstanceToMasterRequest.cs" />
@@ -2491,6 +2529,10 @@
     <Compile Include="Cdb\V20170320\Models\TagInfoUnit.cs" />
     <Compile Include="Cdb\V20170320\Models\TagsInfoOfInstance.cs" />
     <Compile Include="Cdb\V20170320\Models\TaskDetail.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeCDBProxyResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeCDBProxyVersionRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\UpgradeCDBProxyVersionResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceEngineVersionRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceEngineVersionResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\UpgradeDBInstanceRequest.cs" />

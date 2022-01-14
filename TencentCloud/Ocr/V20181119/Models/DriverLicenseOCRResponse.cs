@@ -123,6 +123,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IssuingAuthority{ get; set; }
 
         /// <summary>
+        /// 状态（仅电子驾驶证支持返回该字段）
+        /// </summary>
+        [JsonProperty("State")]
+        public string State{ get; set; }
+
+        /// <summary>
+        /// 累积记分（仅电子驾驶证支持返回该字段）
+        /// </summary>
+        [JsonProperty("CumulativeScore")]
+        public string CumulativeScore{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -149,6 +161,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "RecognizeWarnCode.", this.RecognizeWarnCode);
             this.SetParamArraySimple(map, prefix + "RecognizeWarnMsg.", this.RecognizeWarnMsg);
             this.SetParamSimple(map, prefix + "IssuingAuthority", this.IssuingAuthority);
+            this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "CumulativeScore", this.CumulativeScore);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

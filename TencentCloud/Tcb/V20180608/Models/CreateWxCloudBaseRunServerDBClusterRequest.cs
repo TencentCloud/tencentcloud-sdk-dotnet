@@ -42,6 +42,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("WxAppId")]
         public string WxAppId{ get; set; }
 
+        /// <summary>
+        /// mysql内核版本，支持5.7,8.0
+        /// </summary>
+        [JsonProperty("DbVersion")]
+        public string DbVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "AccountPassword", this.AccountPassword);
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
             this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
+            this.SetParamSimple(map, prefix + "DbVersion", this.DbVersion);
         }
     }
 }

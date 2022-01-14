@@ -312,6 +312,42 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("Base64EncodedTriggerRules")]
         public Base64EncodedTriggerRule[] Base64EncodedTriggerRules{ get; set; }
 
+        /// <summary>
+        /// 事件总线ID。
+        /// </summary>
+        [JsonProperty("EventBusId")]
+        public string EventBusId{ get; set; }
+
+        /// <summary>
+        /// scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
+        /// </summary>
+        [JsonProperty("ServiceScfFunctionType")]
+        public string ServiceScfFunctionType{ get; set; }
+
+        /// <summary>
+        /// EIAM应用类型。
+        /// </summary>
+        [JsonProperty("EIAMAppType")]
+        public string EIAMAppType{ get; set; }
+
+        /// <summary>
+        /// EIAM应用认证类型，支持仅认证（AuthenticationOnly）、认证和鉴权（Authorization）。
+        /// </summary>
+        [JsonProperty("EIAMAuthType")]
+        public string EIAMAuthType{ get; set; }
+
+        /// <summary>
+        /// EIAM应用Token 有效时间，单位为秒，默认为7200秒。
+        /// </summary>
+        [JsonProperty("EIAMAppId")]
+        public string EIAMAppId{ get; set; }
+
+        /// <summary>
+        /// EIAM应用ID。
+        /// </summary>
+        [JsonProperty("TokenTimeout")]
+        public long? TokenTimeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -366,6 +402,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
             this.SetParamSimple(map, prefix + "IsBase64Trigger", this.IsBase64Trigger);
             this.SetParamArrayObj(map, prefix + "Base64EncodedTriggerRules.", this.Base64EncodedTriggerRules);
+            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
+            this.SetParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
+            this.SetParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
+            this.SetParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
+            this.SetParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+            this.SetParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
         }
     }
 }

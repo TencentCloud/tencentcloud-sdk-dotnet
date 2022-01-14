@@ -55,6 +55,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? UnhandledFileCnt{ get; set; }
 
         /// <summary>
+        /// 未处理木马事件
+        /// </summary>
+        [JsonProperty("UnhandledVirusEventCnt")]
+        public ulong? UnhandledVirusEventCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "UnhandledRiskSyscallCnt", this.UnhandledRiskSyscallCnt);
             this.SetParamSimple(map, prefix + "UnhandledAbnormalProcessCnt", this.UnhandledAbnormalProcessCnt);
             this.SetParamSimple(map, prefix + "UnhandledFileCnt", this.UnhandledFileCnt);
+            this.SetParamSimple(map, prefix + "UnhandledVirusEventCnt", this.UnhandledVirusEventCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

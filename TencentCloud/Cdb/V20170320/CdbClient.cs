@@ -93,6 +93,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 针对主实例申请创建数据库代理。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
+        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
+        public async Task<ApplyCDBProxyResponse> ApplyCDBProxy(ApplyCDBProxyRequest req)
+        {
+             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 针对主实例申请创建数据库代理。
+        /// </summary>
+        /// <param name="req"><see cref="ApplyCDBProxyRequest"/></param>
+        /// <returns><see cref="ApplyCDBProxyResponse"/></returns>
+        public ApplyCDBProxyResponse ApplyCDBProxySync(ApplyCDBProxyRequest req)
+        {
+             JsonResponseModel<ApplyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(AssociateSecurityGroups)用于安全组批量绑定实例。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "BalanceRoGroupLoad");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BalanceRoGroupLoadResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
+        /// <returns><see cref="CloseCDBProxyResponse"/></returns>
+        public async Task<CloseCDBProxyResponse> CloseCDBProxy(CloseCDBProxyRequest req)
+        {
+             JsonResponseModel<CloseCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="CloseCDBProxyRequest"/></param>
+        /// <returns><see cref="CloseCDBProxyResponse"/></returns>
+        public CloseCDBProxyResponse CloseCDBProxySync(CloseCDBProxyRequest req)
+        {
+             JsonResponseModel<CloseCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCDBProxyResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1699,6 +1779,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 查询数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
+        public async Task<DescribeCDBProxyResponse> DescribeCDBProxy(DescribeCDBProxyRequest req)
+        {
+             JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
+        /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
+        public DescribeCDBProxyResponse DescribeCDBProxySync(DescribeCDBProxyRequest req)
+        {
+             JsonResponseModel<DescribeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloneListRequest"/></param>
@@ -2505,6 +2625,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 该接口用于查询实例本地binlog保留策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLocalBinlogConfigResponse"/></returns>
+        public async Task<DescribeLocalBinlogConfigResponse> DescribeLocalBinlogConfig(DescribeLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于查询实例本地binlog保留策略。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLocalBinlogConfigResponse"/></returns>
+        public DescribeLocalBinlogConfigResponse DescribeLocalBinlogConfigSync(DescribeLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（DescribeParamTemplateInfo）用于查询参数模板详情，全地域公共参数Region均为ap-guangzhou。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
@@ -2616,6 +2776,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "DescribeProjectSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据库代理连接池相关规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyConnectionPoolConfResponse"/></returns>
+        public async Task<DescribeProxyConnectionPoolConfResponse> DescribeProxyConnectionPoolConf(DescribeProxyConnectionPoolConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxyConnectionPoolConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取数据库代理连接池相关规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyConnectionPoolConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyConnectionPoolConfResponse"/></returns>
+        public DescribeProxyConnectionPoolConfResponse DescribeProxyConnectionPoolConfSync(DescribeProxyConnectionPoolConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyConnectionPoolConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxyConnectionPoolConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyConnectionPoolConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询代理规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyCustomConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyCustomConfResponse"/></returns>
+        public async Task<DescribeProxyCustomConfResponse> DescribeProxyCustomConf(DescribeProxyCustomConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProxyCustomConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyCustomConfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询代理规格配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProxyCustomConfRequest"/></param>
+        /// <returns><see cref="DescribeProxyCustomConfResponse"/></returns>
+        public DescribeProxyCustomConfResponse DescribeProxyCustomConfSync(DescribeProxyCustomConfRequest req)
+        {
+             JsonResponseModel<DescribeProxyCustomConfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProxyCustomConf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProxyCustomConfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3673,6 +3913,166 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 配置数据库代理读写分离
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
+        public async Task<ModifyCDBProxyResponse> ModifyCDBProxy(ModifyCDBProxyRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置数据库代理读写分离
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyResponse"/></returns>
+        public ModifyCDBProxyResponse ModifyCDBProxySync(ModifyCDBProxyRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyConnectionPoolResponse"/></returns>
+        public async Task<ModifyCDBProxyConnectionPoolResponse> ModifyCDBProxyConnectionPool(ModifyCDBProxyConnectionPoolRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyConnectionPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 请求该接口配置数据库连接池；支持的连接池配置请求DescribeProxyConnectionPoolConf接口获取。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyConnectionPoolRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyConnectionPoolResponse"/></returns>
+        public ModifyCDBProxyConnectionPoolResponse ModifyCDBProxyConnectionPoolSync(ModifyCDBProxyConnectionPoolRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyConnectionPoolResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyConnectionPool");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyConnectionPoolResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库代理描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyDescResponse"/></returns>
+        public async Task<ModifyCDBProxyDescResponse> ModifyCDBProxyDesc(ModifyCDBProxyDescRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyDescResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库代理描述
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyDescRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyDescResponse"/></returns>
+        public ModifyCDBProxyDescResponse ModifyCDBProxyDescSync(ModifyCDBProxyDescRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyDescResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyDescResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库代理VIP或端口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyVipVPortResponse"/></returns>
+        public async Task<ModifyCDBProxyVipVPortResponse> ModifyCDBProxyVipVPort(ModifyCDBProxyVipVPortRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCDBProxyVipVPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改数据库代理VIP或端口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCDBProxyVipVPortRequest"/></param>
+        /// <returns><see cref="ModifyCDBProxyVipVPortResponse"/></returns>
+        public ModifyCDBProxyVipVPortResponse ModifyCDBProxyVipVPortSync(ModifyCDBProxyVipVPortRequest req)
+        {
+             JsonResponseModel<ModifyCDBProxyVipVPortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCDBProxyVipVPort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCDBProxyVipVPortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDBInstanceName)用于修改云数据库实例的名称。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
@@ -3904,6 +4304,46 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "ModifyInstanceTag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改实例本地binlog保留策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>
+        public async Task<ModifyLocalBinlogConfigResponse> ModifyLocalBinlogConfig(ModifyLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalBinlogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于修改实例本地binlog保留策略。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLocalBinlogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLocalBinlogConfigResponse"/></returns>
+        public ModifyLocalBinlogConfigResponse ModifyLocalBinlogConfigSync(ModifyLocalBinlogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLocalBinlogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLocalBinlogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLocalBinlogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4245,6 +4685,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 重新负载均衡数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
+        public async Task<ReloadBalanceProxyNodeResponse> ReloadBalanceProxyNode(ReloadBalanceProxyNodeRequest req)
+        {
+             JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReloadBalanceProxyNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReloadBalanceProxyNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重新负载均衡数据库代理
+        /// </summary>
+        /// <param name="req"><see cref="ReloadBalanceProxyNodeRequest"/></param>
+        /// <returns><see cref="ReloadBalanceProxyNodeResponse"/></returns>
+        public ReloadBalanceProxyNodeResponse ReloadBalanceProxyNodeSync(ReloadBalanceProxyNodeRequest req)
+        {
+             JsonResponseModel<ReloadBalanceProxyNodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReloadBalanceProxyNode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReloadBalanceProxyNodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(RenewDBInstance)用于续费云数据库实例，支持付费模式为包年包月的实例。按量计费实例可通过该接口续费为包年包月的实例。
         /// </summary>
         /// <param name="req"><see cref="RenewDBInstanceRequest"/></param>
@@ -4533,6 +5013,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 昨晚数据库代理配置变更或则升级版本后手动发起立即切换
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
+        /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
+        public async Task<SwitchCDBProxyResponse> SwitchCDBProxy(SwitchCDBProxyRequest req)
+        {
+             JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 昨晚数据库代理配置变更或则升级版本后手动发起立即切换
+        /// </summary>
+        /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
+        /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
+        public SwitchCDBProxyResponse SwitchCDBProxySync(SwitchCDBProxyRequest req)
+        {
+             JsonResponseModel<SwitchCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口 (SwitchDBInstanceMasterSlave) 支持用户主动切换实例主从角色。
         /// </summary>
         /// <param name="req"><see cref="SwitchDBInstanceMasterSlaveRequest"/></param>
@@ -4644,6 +5164,86 @@ namespace TencentCloud.Cdb.V20170320
              {
                  var strResp = this.InternalRequestSync(req, "SwitchForUpgrade");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchForUpgradeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整数据库代理配置
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
+        public async Task<UpgradeCDBProxyResponse> UpgradeCDBProxy(UpgradeCDBProxyRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 调整数据库代理配置
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyResponse"/></returns>
+        public UpgradeCDBProxyResponse UpgradeCDBProxySync(UpgradeCDBProxyRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级数据库代理版本
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
+        public async Task<UpgradeCDBProxyVersionResponse> UpgradeCDBProxyVersion(UpgradeCDBProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeCDBProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级数据库代理版本
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeCDBProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeCDBProxyVersionResponse"/></returns>
+        public UpgradeCDBProxyVersionResponse UpgradeCDBProxyVersionSync(UpgradeCDBProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeCDBProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeCDBProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeCDBProxyVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -68,7 +68,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string HealthyInfo{ get; set; }
 
         /// <summary>
-        /// 集群状态，0:创建中，1:正常，2:删除中，3:已删除，5:创建失败，6: 删除失败
+        /// 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

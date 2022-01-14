@@ -43,6 +43,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// SCAN_FINISH：扫描完成， 
         /// SCAN_TIMEOUT：扫描超时
         /// SCAN_CANCELING: 取消中
+        /// SCAN_CANCELED:已取消
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

@@ -301,6 +301,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public bool? IsBase64Encoded{ get; set; }
 
         /// <summary>
+        /// 事件总线ID。
+        /// </summary>
+        [JsonProperty("EventBusId")]
+        public string EventBusId{ get; set; }
+
+        /// <summary>
         /// scf函数类型。当后端类型是SCF时生效。支持事件触发(EVENT)，http直通云函数(HTTP)。
         /// </summary>
         [JsonProperty("ServiceScfFunctionType")]
@@ -382,6 +388,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "TargetNamespaceId", this.TargetNamespaceId);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamSimple(map, prefix + "IsBase64Encoded", this.IsBase64Encoded);
+            this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "ServiceScfFunctionType", this.ServiceScfFunctionType);
             this.SetParamSimple(map, prefix + "EIAMAppType", this.EIAMAppType);
             this.SetParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);

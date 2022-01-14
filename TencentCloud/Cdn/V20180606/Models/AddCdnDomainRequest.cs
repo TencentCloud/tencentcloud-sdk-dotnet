@@ -32,9 +32,11 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 加速域名业务类型
-        /// web：静态加速
-        /// download：下载加速
-        /// media：流媒体点播加速
+        /// web：网页小文件
+        /// download：下载大文件
+        /// media：音视频点播
+        /// hybrid:  动静加速
+        /// dynamic:  动态加速
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -231,7 +233,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// QUIC正在内测中，请先提交内测申请，详情请前往QUIC产品文档。
+        /// Quic访问（收费服务，详见计费说明和产品文档）
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
