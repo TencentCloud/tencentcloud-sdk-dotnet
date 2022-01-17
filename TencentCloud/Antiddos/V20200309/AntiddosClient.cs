@@ -533,6 +533,86 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 添加DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortAclConfigRequest"/></param>
+        /// <returns><see cref="CreatePortAclConfigResponse"/></returns>
+        public async Task<CreatePortAclConfigResponse> CreatePortAclConfig(CreatePortAclConfigRequest req)
+        {
+             JsonResponseModel<CreatePortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePortAclConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortAclConfigRequest"/></param>
+        /// <returns><see cref="CreatePortAclConfigResponse"/></returns>
+        public CreatePortAclConfigResponse CreatePortAclConfigSync(CreatePortAclConfigRequest req)
+        {
+             JsonResponseModel<CreatePortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePortAclConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量添加DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortAclConfigListRequest"/></param>
+        /// <returns><see cref="CreatePortAclConfigListResponse"/></returns>
+        public async Task<CreatePortAclConfigListResponse> CreatePortAclConfigList(CreatePortAclConfigListRequest req)
+        {
+             JsonResponseModel<CreatePortAclConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePortAclConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePortAclConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量添加DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="CreatePortAclConfigListRequest"/></param>
+        /// <returns><see cref="CreatePortAclConfigListResponse"/></returns>
+        public CreatePortAclConfigListResponse CreatePortAclConfigListSync(CreatePortAclConfigListRequest req)
+        {
+             JsonResponseModel<CreatePortAclConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePortAclConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePortAclConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置DDoS防护的协议封禁配置
         /// </summary>
         /// <param name="req"><see cref="CreateProtocolBlockConfigRequest"/></param>

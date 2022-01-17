@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 进入合同（流程）下载确认页面链接
+        /// 合同（流程）下载地址
         /// </summary>
         [JsonProperty("DownLoadUrl")]
         public string DownLoadUrl{ get; set; }

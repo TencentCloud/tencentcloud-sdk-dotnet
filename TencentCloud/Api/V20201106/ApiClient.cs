@@ -53,7 +53,7 @@ namespace TencentCloud.Api.V20201106
         }
 
         /// <summary>
-        /// 本接口(DescribeRegions)用于查询各个产品支持地域信息，当前只支持cvm。
+        /// 本接口(DescribeRegions)用于查询各个产品支持地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Api.V20201106
         }
 
         /// <summary>
-        /// 本接口(DescribeRegions)用于查询各个产品支持地域信息，当前只支持cvm。
+        /// 本接口(DescribeRegions)用于查询各个产品支持地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>
         /// <returns><see cref="DescribeRegionsResponse"/></returns>
@@ -93,7 +93,7 @@ namespace TencentCloud.Api.V20201106
         }
 
         /// <summary>
-        /// 本接口(DescribeZones)用于查询产品可用区信息，当前只支持cvm。
+        /// 本接口(DescribeZones)用于查询产品可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Api.V20201106
         }
 
         /// <summary>
-        /// 本接口(DescribeZones)用于查询产品可用区信息，当前只支持cvm。
+        /// 本接口(DescribeZones)用于查询产品可用区信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeZonesRequest"/></param>
         /// <returns><see cref="DescribeZonesResponse"/></returns>

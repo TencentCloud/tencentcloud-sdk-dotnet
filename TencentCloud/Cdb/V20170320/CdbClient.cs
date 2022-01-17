@@ -5013,7 +5013,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 昨晚数据库代理配置变更或则升级版本后手动发起立即切换
+        /// 数据库代理配置变更或则升级版本后手动发起立即切换
         /// </summary>
         /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
         /// <returns><see cref="SwitchCDBProxyResponse"/></returns>
@@ -5033,7 +5033,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 昨晚数据库代理配置变更或则升级版本后手动发起立即切换
+        /// 数据库代理配置变更或则升级版本后手动发起立即切换
         /// </summary>
         /// <param name="req"><see cref="SwitchCDBProxyRequest"/></param>
         /// <returns><see cref="SwitchCDBProxyResponse"/></returns>

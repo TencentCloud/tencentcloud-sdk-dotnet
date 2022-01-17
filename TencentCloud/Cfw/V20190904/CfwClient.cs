@@ -733,7 +733,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 获取地址模版列表
+        /// 获取地址模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAddrTemplateListRequest"/></param>
         /// <returns><see cref="DescribeAddrTemplateListResponse"/></returns>
@@ -753,7 +753,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 获取地址模版列表
+        /// 获取地址模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAddrTemplateListRequest"/></param>
         /// <returns><see cref="DescribeAddrTemplateListResponse"/></returns>
@@ -2332,6 +2332,46 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "ModifyResourceGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步资产-互联网&VPC（新）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRunSyncAssetRequest"/></param>
+        /// <returns><see cref="ModifyRunSyncAssetResponse"/></returns>
+        public async Task<ModifyRunSyncAssetResponse> ModifyRunSyncAsset(ModifyRunSyncAssetRequest req)
+        {
+             JsonResponseModel<ModifyRunSyncAssetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRunSyncAsset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRunSyncAssetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 同步资产-互联网&VPC（新）
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRunSyncAssetRequest"/></param>
+        /// <returns><see cref="ModifyRunSyncAssetResponse"/></returns>
+        public ModifyRunSyncAssetResponse ModifyRunSyncAssetSync(ModifyRunSyncAssetRequest req)
+        {
+             JsonResponseModel<ModifyRunSyncAssetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRunSyncAsset");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRunSyncAssetResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

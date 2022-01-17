@@ -37,7 +37,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? Status{ get; set; }
 
         /// <summary>
-        /// 索引规则，Rule和Effective两个必须有一个参数存在
+        /// 索引规则
         /// </summary>
         [JsonProperty("Rule")]
         public RuleInfo Rule{ get; set; }

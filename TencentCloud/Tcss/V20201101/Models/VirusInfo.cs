@@ -128,6 +128,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// TIMEOUT: 超时
         /// TOO_MANY: 任务过多
         /// OFFLINE: 离线
+        /// INTERNAL: 服务内部错误
+        /// VALIDATION: 参数非法
         /// </summary>
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }

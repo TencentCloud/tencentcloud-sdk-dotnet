@@ -84,6 +84,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Renew")]
         public long? Renew{ get; set; }
 
+        /// <summary>
+        /// 筛选来源， upload：上传证书， buy：腾讯云证书， 不传默认全部
+        /// </summary>
+        [JsonProperty("FilterSource")]
+        public string FilterSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamSimple(map, prefix + "Upload", this.Upload);
             this.SetParamSimple(map, prefix + "Renew", this.Renew);
+            this.SetParamSimple(map, prefix + "FilterSource", this.FilterSource);
         }
     }
 }

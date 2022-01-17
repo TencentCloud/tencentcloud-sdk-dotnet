@@ -60,6 +60,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ConnectionPoolInfo ConnectionPoolInfo{ get; set; }
 
         /// <summary>
+        /// 代理数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Count")]
+        public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// 代理信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyGroup")]
+        public ProxyGroup[] ProxyGroup{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -76,6 +90,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamObj(map, prefix + "ProxyNode.", this.ProxyNode);
             this.SetParamObj(map, prefix + "RWInstInfo.", this.RWInstInfo);
             this.SetParamObj(map, prefix + "ConnectionPoolInfo.", this.ConnectionPoolInfo);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamArrayObj(map, prefix + "ProxyGroup.", this.ProxyGroup);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

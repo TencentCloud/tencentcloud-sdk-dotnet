@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// 标签索引配置中的字段信息
+        /// 元字段索引配置中的字段信息
         /// </summary>
         [JsonProperty("KeyValues")]
         public KeyValueInfo[] KeyValues{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? Deadline{ get; set; }
 
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }

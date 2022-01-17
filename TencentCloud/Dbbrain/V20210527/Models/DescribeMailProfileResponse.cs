@@ -32,7 +32,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public UserProfile[] ProfileList{ get; set; }
 
         /// <summary>
-        /// 邮件模版总数。
+        /// 邮件配置总数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCount")]

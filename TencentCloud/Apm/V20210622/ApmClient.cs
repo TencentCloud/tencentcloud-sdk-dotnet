@@ -172,5 +172,45 @@ namespace TencentCloud.Apm.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 拉取通用指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>
+        /// <returns><see cref="DescribeMetricRecordsResponse"/></returns>
+        public async Task<DescribeMetricRecordsResponse> DescribeMetricRecords(DescribeMetricRecordsRequest req)
+        {
+             JsonResponseModel<DescribeMetricRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMetricRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMetricRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取通用指标列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>
+        /// <returns><see cref="DescribeMetricRecordsResponse"/></returns>
+        public DescribeMetricRecordsResponse DescribeMetricRecordsSync(DescribeMetricRecordsRequest req)
+        {
+             JsonResponseModel<DescribeMetricRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMetricRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMetricRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
