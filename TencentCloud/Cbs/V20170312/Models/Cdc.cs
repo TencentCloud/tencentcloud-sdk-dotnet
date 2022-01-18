@@ -32,13 +32,13 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CageId{ get; set; }
 
         /// <summary>
-        /// 独享集群状态。取值范围：<br><li>NORMAL:正常<br><li>CLOSED：关闭售卖<br><li>FAULT：状态异常<br><li>ISOLATED：已隔离。
+        /// 独享集群状态。取值范围：<br><li>NORMAL：正常；<br><li>CLOSED：关闭，此时将不可使用该独享集群创建新的云硬盘；<br><li>FAULT：独享集群状态异常，此时独享集群将不可操作，腾讯云运维团队将会及时修复该集群；<br><li>ISOLATED：因未及时续费导致独享集群被隔离，此时将不可使用该独享集群创建新的云硬盘，对应的云硬盘也将不可操作。
         /// </summary>
         [JsonProperty("CdcState")]
         public string CdcState{ get; set; }
 
         /// <summary>
-        /// 独享集群所属的[可用区](/document/api/213/9452#zone)ID。
+        /// 独享集群所属的[可用区](/document/product/213/15753#ZoneInfo)ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Zone")]
@@ -51,7 +51,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string CdcName{ get; set; }
 
         /// <summary>
-        /// 独享集群的资源大小。
+        /// 独享集群的资源容量大小。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CdcResource")]
@@ -70,7 +70,7 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string DiskType{ get; set; }
 
         /// <summary>
-        /// 独享集群过期时间。
+        /// 独享集群到期时间。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }

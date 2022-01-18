@@ -454,6 +454,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -474,6 +475,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 针对SnatPro负载均衡，这个接口用于添加SnatIp，如果负载均衡没有开启SnatPro，添加SnatIp后会自动开启。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="CreateLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="CreateLoadBalancerSnatIpsResponse"/></returns>
@@ -742,6 +744,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 这个接口用于删除SnatPro的负载均衡的SnatIp。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -762,6 +765,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 这个接口用于删除SnatPro的负载均衡的SnatIp。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="DeleteLoadBalancerSnatIpsRequest"/></param>
         /// <returns><see cref="DeleteLoadBalancerSnatIpsResponse"/></returns>
@@ -2404,6 +2408,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>
@@ -2424,6 +2429,7 @@ namespace TencentCloud.Clb.V20180317
 
         /// <summary>
         /// 修改负载均衡实例的属性。支持修改负载均衡实例的名称、设置负载均衡的跨域属性。
+        /// 本接口为异步接口，接口返回成功后，需以得到的 RequestID 为入参，调用 DescribeTaskStatus 接口查询本次任务是否成功。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerAttributesRequest"/></param>
         /// <returns><see cref="ModifyLoadBalancerAttributesResponse"/></returns>

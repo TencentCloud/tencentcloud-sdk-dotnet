@@ -2877,6 +2877,50 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
+        /// * 只支持对单个实例发起在线烧录FPGA镜像的操作。
+        /// * 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
+        /// </summary>
+        /// <param name="req"><see cref="ProgramFpgaImageRequest"/></param>
+        /// <returns><see cref="ProgramFpgaImageResponse"/></returns>
+        public async Task<ProgramFpgaImageResponse> ProgramFpgaImage(ProgramFpgaImageRequest req)
+        {
+             JsonResponseModel<ProgramFpgaImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProgramFpgaImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProgramFpgaImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ProgramFpgaImage)用于在线烧录由客户提供的FPGA镜像文件到指定实例的指定FPGA卡上。
+        /// * 只支持对单个实例发起在线烧录FPGA镜像的操作。
+        /// * 支持对单个实例的多块FPGA卡同时烧录FPGA镜像，DBDFs参数为空时，默认对指定实例的所有FPGA卡进行烧录。
+        /// </summary>
+        /// <param name="req"><see cref="ProgramFpgaImageRequest"/></param>
+        /// <returns><see cref="ProgramFpgaImageResponse"/></returns>
+        public ProgramFpgaImageResponse ProgramFpgaImageSync(ProgramFpgaImageRequest req)
+        {
+             JsonResponseModel<ProgramFpgaImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ProgramFpgaImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProgramFpgaImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(PurchaseReservedInstancesOffering)用于用户购买一个或者多个指定配置的预留实例
         /// </summary>
         /// <param name="req"><see cref="PurchaseReservedInstancesOfferingRequest"/></param>

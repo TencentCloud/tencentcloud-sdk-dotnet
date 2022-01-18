@@ -69,7 +69,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Attachment[] Attachments{ get; set; }
 
         /// <summary>
-        /// 是否加入退订链接
+        /// 退订选项 1: 加入退订链接 0: 不加入退订链接
         /// </summary>
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }

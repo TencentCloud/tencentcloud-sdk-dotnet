@@ -38,7 +38,6 @@ namespace TencentCloud.Tts.V20190823.Models
 
         /// <summary>
         /// 音量大小，范围：[0，10]，分别对应11个等级的音量，默认为0，代表正常音量。没有静音选项。
-        /// 输入除以上整数之外的其他参数不生效，按默认值处理。
         /// </summary>
         [JsonProperty("Volume")]
         public float? Volume{ get; set; }

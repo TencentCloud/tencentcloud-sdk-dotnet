@@ -215,6 +215,86 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 创建收件人列表，收件人列表是发送批量邮件的目标邮件地址列表。创建列表后，需要上传收件人邮箱地址。之后创建发送任务，关联列表，便可以实现批量发送邮件的功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverRequest"/></param>
+        /// <returns><see cref="CreateReceiverResponse"/></returns>
+        public async Task<CreateReceiverResponse> CreateReceiver(CreateReceiverRequest req)
+        {
+             JsonResponseModel<CreateReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建收件人列表，收件人列表是发送批量邮件的目标邮件地址列表。创建列表后，需要上传收件人邮箱地址。之后创建发送任务，关联列表，便可以实现批量发送邮件的功能
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverRequest"/></param>
+        /// <returns><see cref="CreateReceiverResponse"/></returns>
+        public CreateReceiverResponse CreateReceiverSync(CreateReceiverRequest req)
+        {
+             JsonResponseModel<CreateReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在创建完收件人列表后，向这个收件人列表中批量增加收件人邮箱地址，一次最大支持10W，异步完成处理。收件人列表只可以上传一次，不可追加上传。数据量比较大的时候，上传可能需要一点时间，可以通过查询收件人列表了解上传状态和上传数量
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailResponse"/></returns>
+        public async Task<CreateReceiverDetailResponse> CreateReceiverDetail(CreateReceiverDetailRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReceiverDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在创建完收件人列表后，向这个收件人列表中批量增加收件人邮箱地址，一次最大支持10W，异步完成处理。收件人列表只可以上传一次，不可追加上传。数据量比较大的时候，上传可能需要一点时间，可以通过查询收件人列表了解上传状态和上传数量
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailResponse"/></returns>
+        public CreateReceiverDetailResponse CreateReceiverDetailSync(CreateReceiverDetailRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReceiverDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
         /// </summary>
         /// <param name="req"><see cref="DeleteBlackListRequest"/></param>
@@ -686,6 +766,86 @@ namespace TencentCloud.Ses.V20201002
              {
                  var strResp = this.InternalRequestSync(req, "ListEmailTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListEmailTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据条件查询收件人列表，支持分页，模糊查询，状态查询
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiversRequest"/></param>
+        /// <returns><see cref="ListReceiversResponse"/></returns>
+        public async Task<ListReceiversResponse> ListReceivers(ListReceiversRequest req)
+        {
+             JsonResponseModel<ListReceiversResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListReceivers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据条件查询收件人列表，支持分页，模糊查询，状态查询
+        /// </summary>
+        /// <param name="req"><see cref="ListReceiversRequest"/></param>
+        /// <returns><see cref="ListReceiversResponse"/></returns>
+        public ListReceiversResponse ListReceiversSync(ListReceiversRequest req)
+        {
+             JsonResponseModel<ListReceiversResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListReceivers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListReceiversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 分页查询批量发送邮件任务，包含即时发送任务，定时发送任务，周期重复发送任务，查询发送情况，包括请求数量，已发数量，缓存数量，任务状态等信息
+        /// </summary>
+        /// <param name="req"><see cref="ListSendTasksRequest"/></param>
+        /// <returns><see cref="ListSendTasksResponse"/></returns>
+        public async Task<ListSendTasksResponse> ListSendTasks(ListSendTasksRequest req)
+        {
+             JsonResponseModel<ListSendTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListSendTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSendTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 分页查询批量发送邮件任务，包含即时发送任务，定时发送任务，周期重复发送任务，查询发送情况，包括请求数量，已发数量，缓存数量，任务状态等信息
+        /// </summary>
+        /// <param name="req"><see cref="ListSendTasksRequest"/></param>
+        /// <returns><see cref="ListSendTasksResponse"/></returns>
+        public ListSendTasksResponse ListSendTasksSync(ListSendTasksRequest req)
+        {
+             JsonResponseModel<ListSendTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListSendTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListSendTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

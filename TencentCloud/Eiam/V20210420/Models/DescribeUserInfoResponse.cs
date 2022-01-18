@@ -123,6 +123,13 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string[] SecondaryOrgNodeIdList{ get; set; }
 
         /// <summary>
+        /// 是否管理员标志，0为否、1为是。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdminFlag")]
+        public long? AdminFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +155,7 @@ namespace TencentCloud.Eiam.V20210420.Models
             this.SetParamSimple(map, prefix + "ActivationTime", this.ActivationTime);
             this.SetParamSimple(map, prefix + "PwdNeedReset", this.PwdNeedReset);
             this.SetParamArraySimple(map, prefix + "SecondaryOrgNodeIdList.", this.SecondaryOrgNodeIdList);
+            this.SetParamSimple(map, prefix + "AdminFlag", this.AdminFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

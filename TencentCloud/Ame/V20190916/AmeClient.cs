@@ -53,6 +53,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 创建机器人，支持进入 RTC 房间，播放直播互动曲库歌曲。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKTVRobotRequest"/></param>
+        /// <returns><see cref="CreateKTVRobotResponse"/></returns>
+        public async Task<CreateKTVRobotResponse> CreateKTVRobot(CreateKTVRobotRequest req)
+        {
+             JsonResponseModel<CreateKTVRobotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateKTVRobot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKTVRobotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建机器人，支持进入 RTC 房间，播放直播互动曲库歌曲。
+        /// </summary>
+        /// <param name="req"><see cref="CreateKTVRobotRequest"/></param>
+        /// <returns><see cref="CreateKTVRobotResponse"/></returns>
+        public CreateKTVRobotResponse CreateKTVRobotSync(CreateKTVRobotRequest req)
+        {
+             JsonResponseModel<CreateKTVRobotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateKTVRobot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateKTVRobotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取授权项目信息列表
         /// </summary>
         /// <param name="req"><see cref="DescribeAuthInfoRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 查询机器人列表，支持 Id、状态等过滤条件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVRobotsRequest"/></param>
+        /// <returns><see cref="DescribeKTVRobotsResponse"/></returns>
+        public async Task<DescribeKTVRobotsResponse> DescribeKTVRobots(DescribeKTVRobotsRequest req)
+        {
+             JsonResponseModel<DescribeKTVRobotsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVRobots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVRobotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询机器人列表，支持 Id、状态等过滤条件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVRobotsRequest"/></param>
+        /// <returns><see cref="DescribeKTVRobotsResponse"/></returns>
+        public DescribeKTVRobotsResponse DescribeKTVRobotsSync(DescribeKTVRobotsRequest req)
+        {
+             JsonResponseModel<DescribeKTVRobotsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVRobots");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVRobotsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLyricRequest"/></param>
@@ -653,6 +733,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 销毁机器人，机器人退出 RTC 房间。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyKTVRobotRequest"/></param>
+        /// <returns><see cref="DestroyKTVRobotResponse"/></returns>
+        public async Task<DestroyKTVRobotResponse> DestroyKTVRobot(DestroyKTVRobotRequest req)
+        {
+             JsonResponseModel<DestroyKTVRobotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyKTVRobot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyKTVRobotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁机器人，机器人退出 RTC 房间。
+        /// </summary>
+        /// <param name="req"><see cref="DestroyKTVRobotRequest"/></param>
+        /// <returns><see cref="DestroyKTVRobotResponse"/></returns>
+        public DestroyKTVRobotResponse DestroyKTVRobotSync(DestroyKTVRobotRequest req)
+        {
+             JsonResponseModel<DestroyKTVRobotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyKTVRobot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyKTVRobotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据资源方，需要变更的参数，请求该接口进行变更，为空的参数默认为无变更
         /// </summary>
         /// <param name="req"><see cref="ModifyMusicOnShelvesRequest"/></param>
@@ -804,6 +924,46 @@ namespace TencentCloud.Ame.V20190916
              {
                  var strResp = this.InternalRequestSync(req, "SearchKTVMusics");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchKTVMusicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下发操作机器人指令，支持播放、暂停、恢复、歌单设置等操作指令，实现对机器人行为的控制。
+        /// </summary>
+        /// <param name="req"><see cref="SyncKTVRobotCommandRequest"/></param>
+        /// <returns><see cref="SyncKTVRobotCommandResponse"/></returns>
+        public async Task<SyncKTVRobotCommandResponse> SyncKTVRobotCommand(SyncKTVRobotCommandRequest req)
+        {
+             JsonResponseModel<SyncKTVRobotCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SyncKTVRobotCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncKTVRobotCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下发操作机器人指令，支持播放、暂停、恢复、歌单设置等操作指令，实现对机器人行为的控制。
+        /// </summary>
+        /// <param name="req"><see cref="SyncKTVRobotCommandRequest"/></param>
+        /// <returns><see cref="SyncKTVRobotCommandResponse"/></returns>
+        public SyncKTVRobotCommandResponse SyncKTVRobotCommandSync(SyncKTVRobotCommandRequest req)
+        {
+             JsonResponseModel<SyncKTVRobotCommandResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SyncKTVRobotCommand");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SyncKTVRobotCommandResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

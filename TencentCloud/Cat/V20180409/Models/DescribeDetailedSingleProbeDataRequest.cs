@@ -96,6 +96,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("ErrorTypes")]
         public string[] ErrorTypes{ get; set; }
 
+        /// <summary>
+        /// 城市
+        /// </summary>
+        [JsonProperty("City")]
+        public string[] City{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamArraySimple(map, prefix + "Operators.", this.Operators);
             this.SetParamArraySimple(map, prefix + "Districts.", this.Districts);
             this.SetParamArraySimple(map, prefix + "ErrorTypes.", this.ErrorTypes);
+            this.SetParamArraySimple(map, prefix + "City.", this.City);
         }
     }
 }

@@ -54,6 +54,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（AddEcdnDomain）用于创建加速域名。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41123"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="AddEcdnDomainRequest"/></param>
         /// <returns><see cref="AddEcdnDomainResponse"/></returns>
@@ -74,6 +76,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（AddEcdnDomain）用于创建加速域名。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41123"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="AddEcdnDomainRequest"/></param>
         /// <returns><see cref="AddEcdnDomainResponse"/></returns>
@@ -134,6 +138,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/570/42471"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteEcdnDomainRequest"/></param>
         /// <returns><see cref="DeleteEcdnDomainResponse"/></returns>
@@ -154,6 +160,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DeleteEcdnDomain）用于删除指定加速域名。待删除域名必须处于已停用状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/570/42471"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DeleteEcdnDomainRequest"/></param>
         /// <returns><see cref="DeleteEcdnDomainResponse"/></returns>
@@ -174,6 +182,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DescribeDomains）用于查询CDN域名基本信息，包括项目id，状态，业务类型，创建时间，更新时间等。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41118"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
         /// <returns><see cref="DescribeDomainsResponse"/></returns>
@@ -194,6 +204,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DescribeDomains）用于查询CDN域名基本信息，包括项目id，状态，业务类型，创建时间，更新时间等。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41118"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
         /// <returns><see cref="DescribeDomainsResponse"/></returns>
@@ -214,6 +226,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DescribeDomainsConfig）用于查询CDN加速域名详细配置信息。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41117"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainsConfigRequest"/></param>
         /// <returns><see cref="DescribeDomainsConfigResponse"/></returns>
@@ -234,6 +248,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（DescribeDomainsConfig）用于查询CDN加速域名详细配置信息。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41117"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainsConfigRequest"/></param>
         /// <returns><see cref="DescribeDomainsConfigResponse"/></returns>
@@ -434,6 +450,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 查询刷新接口的用量配额。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41956"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>
         /// <returns><see cref="DescribePurgeQuotaResponse"/></returns>
@@ -454,6 +472,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 查询刷新接口的用量配额。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/41956"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeQuotaRequest"/></param>
         /// <returns><see cref="DescribePurgeQuotaResponse"/></returns>
@@ -474,6 +494,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37873"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
@@ -494,6 +516,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// DescribePurgeTasks 用于查询刷新任务提交历史记录及执行进度。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37873"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="DescribePurgeTasksRequest"/></param>
         /// <returns><see cref="DescribePurgeTasksResponse"/></returns>
@@ -514,6 +538,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="	https://cloud.tencent.com/document/api/570/42475"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>
@@ -534,6 +560,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// PurgePathCache 用于批量刷新目录缓存，一次提交将返回一个刷新任务id。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="	https://cloud.tencent.com/document/api/570/42475"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="PurgePathCacheRequest"/></param>
         /// <returns><see cref="PurgePathCacheResponse"/></returns>
@@ -554,6 +582,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37870"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="PurgeUrlsCacheRequest"/></param>
         /// <returns><see cref="PurgeUrlsCacheResponse"/></returns>
@@ -574,6 +604,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// PurgeUrlsCache 用于批量刷新Url，一次提交将返回一个刷新任务id。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/api/228/37870"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="PurgeUrlsCacheRequest"/></param>
         /// <returns><see cref="PurgeUrlsCacheResponse"/></returns>
@@ -594,6 +626,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（StartEcdnDomain）用于启用加速域名，待启用域名必须处于已下线状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/product/228/41121"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="StartEcdnDomainRequest"/></param>
         /// <returns><see cref="StartEcdnDomainResponse"/></returns>
@@ -614,6 +648,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（StartEcdnDomain）用于启用加速域名，待启用域名必须处于已下线状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/product/228/41121"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="StartEcdnDomainRequest"/></param>
         /// <returns><see cref="StartEcdnDomainResponse"/></returns>
@@ -634,6 +670,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（StopCdnDomain）用于停止加速域名，待停用加速域名必须处于已上线或部署中状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/product/228/41120"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="StopEcdnDomainRequest"/></param>
         /// <returns><see cref="StopEcdnDomainResponse"/></returns>
@@ -654,6 +692,8 @@ namespace TencentCloud.Ecdn.V20191012
 
         /// <summary>
         /// 本接口（StopCdnDomain）用于停止加速域名，待停用加速域名必须处于已上线或部署中状态。
+        /// 
+        /// >?  若您的业务已迁移至 CDN 控制台，请参考<a href="https://cloud.tencent.com/document/product/228/41120"> CDN 接口文档</a>，使用  CDN 相关API 进行操作。
         /// </summary>
         /// <param name="req"><see cref="StopEcdnDomainRequest"/></param>
         /// <returns><see cref="StopEcdnDomainResponse"/></returns>

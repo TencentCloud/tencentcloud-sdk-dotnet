@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.446</VersionPrefix>
+    <VersionPrefix>3.0.447</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,6 +122,8 @@
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
     <Compile Include="Ame\V20190916\Models\AuthInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\CreateKTVRobotRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\CreateKTVRobotResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DataInfo.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeAuthInfoRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeAuthInfoResponse.cs" />
@@ -139,6 +141,8 @@
     <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistDetailResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeKTVPlaylistsResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVRobotsRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DescribeKTVRobotsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeLyricRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeLyricResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeMusicRequest.cs" />
@@ -153,11 +157,15 @@
     <Compile Include="Ame\V20190916\Models\DescribePkgOfflineMusicResponse.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\DescribeStationsResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\DestroyKTVRobotRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\DestroyKTVRobotResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ImagePath.cs" />
     <Compile Include="Ame\V20190916\Models\Item.cs" />
+    <Compile Include="Ame\V20190916\Models\JoinRoomInput.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicBaseInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicDefinitionInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVPlaylistBaseInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\KTVRobotInfo.cs" />
     <Compile Include="Ame\V20190916\Models\Lyric.cs" />
     <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ModifyMusicOnShelvesResponse.cs" />
@@ -168,13 +176,21 @@
     <Compile Include="Ame\V20190916\Models\OfflineMusicDetail.cs" />
     <Compile Include="Ame\V20190916\Models\Package.cs" />
     <Compile Include="Ame\V20190916\Models\PackageItem.cs" />
+    <Compile Include="Ame\V20190916\Models\PlayCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesRequest.cs" />
     <Compile Include="Ame\V20190916\Models\PutMusicOnTheShelvesResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataRequest.cs" />
     <Compile Include="Ame\V20190916\Models\ReportDataResponse.cs" />
     <Compile Include="Ame\V20190916\Models\SearchKTVMusicsRequest.cs" />
     <Compile Include="Ame\V20190916\Models\SearchKTVMusicsResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\SeekCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SendMessageCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SetAudioParamCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SetPlaylistCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
+    <Compile Include="Ame\V20190916\Models\SyncKTVRobotCommandRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\SyncKTVRobotCommandResponse.cs" />
+    <Compile Include="Ame\V20190916\Models\TRTCJoinRoomInput.cs" />
     <Compile Include="Ame\V20190916\Models\TakeMusicOffShelves.cs" />
     <Compile Include="Ame\V20190916\Models\TakeMusicOffShelvesRequest.cs" />
     <Compile Include="Ame\V20190916\Models\TakeMusicOffShelvesResponse.cs" />
@@ -261,6 +277,7 @@
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ConnectLimitConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBoundIPRequest.cs" />
@@ -269,6 +286,8 @@
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateDDoSConnectLimitRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateDDoSConnectLimitResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSSpeedLimitConfigRequest.cs" />
@@ -4800,6 +4819,8 @@
     <Compile Include="Cvm\V20170312\Models\PostPaidQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\PrePaidQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\Price.cs" />
+    <Compile Include="Cvm\V20170312\Models\ProgramFpgaImageRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\ProgramFpgaImageResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingRequest.cs" />
     <Compile Include="Cvm\V20170312\Models\PurchaseReservedInstancesOfferingResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\RebootInstancesRequest.cs" />
@@ -9715,6 +9736,8 @@
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeBindSceneChannelsResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeBindSceneDevicesRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeBindSceneDevicesResponse.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeChannelLiveStreamURLRequest.cs" />
+    <Compile Include="Iotvideoindustry\V20201201\Models\DescribeChannelLiveStreamURLResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeChannelLocalRecordURLRequest.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeChannelLocalRecordURLResponse.cs" />
     <Compile Include="Iotvideoindustry\V20201201\Models\DescribeChannelStreamURLRequest.cs" />
@@ -11884,6 +11907,7 @@
     <Compile Include="Organization\V20210331\Models\DescribeOrganizationMembersResponse.cs" />
     <Compile Include="Organization\V20210331\Models\DescribeOrganizationRequest.cs" />
     <Compile Include="Organization\V20210331\Models\DescribeOrganizationResponse.cs" />
+    <Compile Include="Organization\V20210331\Models\MemberIdentity.cs" />
     <Compile Include="Organization\V20210331\Models\OrgMember.cs" />
     <Compile Include="Organization\V20210331\Models\OrgPermission.cs" />
     <Compile Include="Partners\V20180321\PartnersClient.cs" />
@@ -12383,6 +12407,10 @@
     <Compile Include="Rum\V20210622\Models\CreateProjectResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataEventUrlRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataEventUrlResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataFetchUrlInfoRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataFetchUrlInfoResponse.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataFetchUrlRequest.cs" />
+    <Compile Include="Rum\V20210622\Models\DescribeDataFetchUrlResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataLogUrlStatisticsRequest.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataLogUrlStatisticsResponse.cs" />
     <Compile Include="Rum\V20210622\Models\DescribeDataPerformancePageRequest.cs" />
@@ -12548,6 +12576,10 @@
     <Compile Include="Ses\V20201002\Models\CreateEmailIdentityResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateRequest.cs" />
     <Compile Include="Ses\V20201002\Models\CreateEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverDetailRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverDetailResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\CreateReceiverResponse.cs" />
     <Compile Include="Ses\V20201002\Models\CycleEmailParam.cs" />
     <Compile Include="Ses\V20201002\Models\DNSAttributes.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteBlackListRequest.cs" />
@@ -12576,9 +12608,15 @@
     <Compile Include="Ses\V20201002\Models\ListEmailIdentitiesResponse.cs" />
     <Compile Include="Ses\V20201002\Models\ListEmailTemplatesRequest.cs" />
     <Compile Include="Ses\V20201002\Models\ListEmailTemplatesResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListReceiversRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListReceiversResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ListSendTasksRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\ListSendTasksResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\ReceiverData.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailRequest.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailResponse.cs" />
     <Compile Include="Ses\V20201002\Models\SendEmailStatus.cs" />
+    <Compile Include="Ses\V20201002\Models\SendTaskData.cs" />
     <Compile Include="Ses\V20201002\Models\Simple.cs" />
     <Compile Include="Ses\V20201002\Models\Template.cs" />
     <Compile Include="Ses\V20201002\Models\TemplateContent.cs" />

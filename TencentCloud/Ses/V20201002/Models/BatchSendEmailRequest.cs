@@ -86,6 +86,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("TimedParam")]
         public TimedEmailParam TimedParam{ get; set; }
 
+        /// <summary>
+        /// 退订选项 1: 加入退订链接 0: 不加入退订链接
+        /// </summary>
+        [JsonProperty("Unsubscribe")]
+        public string Unsubscribe{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
             this.SetParamObj(map, prefix + "CycleParam.", this.CycleParam);
             this.SetParamObj(map, prefix + "TimedParam.", this.TimedParam);
+            this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
         }
     }
 }

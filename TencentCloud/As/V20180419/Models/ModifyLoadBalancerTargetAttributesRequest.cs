@@ -31,7 +31,7 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
-        /// 需修改目标规则属性的应用型负载均衡器列表，长度上限为50
+        /// 需修改目标规则属性的应用型负载均衡器列表，列表长度上限为50
         /// </summary>
         [JsonProperty("ForwardLoadBalancers")]
         public ForwardLoadBalancer[] ForwardLoadBalancers{ get; set; }

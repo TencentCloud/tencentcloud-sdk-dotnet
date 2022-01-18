@@ -293,6 +293,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 配置DDoS连接抑制选项
+        /// </summary>
+        /// <param name="req"><see cref="CreateDDoSConnectLimitRequest"/></param>
+        /// <returns><see cref="CreateDDoSConnectLimitResponse"/></returns>
+        public async Task<CreateDDoSConnectLimitResponse> CreateDDoSConnectLimit(CreateDDoSConnectLimitRequest req)
+        {
+             JsonResponseModel<CreateDDoSConnectLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDDoSConnectLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDDoSConnectLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置DDoS连接抑制选项
+        /// </summary>
+        /// <param name="req"><see cref="CreateDDoSConnectLimitRequest"/></param>
+        /// <returns><see cref="CreateDDoSConnectLimitResponse"/></returns>
+        public CreateDDoSConnectLimitResponse CreateDDoSConnectLimitSync(CreateDDoSConnectLimitRequest req)
+        {
+             JsonResponseModel<CreateDDoSConnectLimitResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDDoSConnectLimit");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDDoSConnectLimitResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加DDoS防护的区域封禁配置
         /// </summary>
         /// <param name="req"><see cref="CreateDDoSGeoIPBlockConfigRequest"/></param>

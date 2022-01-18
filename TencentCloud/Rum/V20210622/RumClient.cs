@@ -133,6 +133,86 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
+        /// 获取DescribeDataFetchUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlRequest"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlResponse"/></returns>
+        public async Task<DescribeDataFetchUrlResponse> DescribeDataFetchUrl(DescribeDataFetchUrlRequest req)
+        {
+             JsonResponseModel<DescribeDataFetchUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataFetchUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataFetchUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataFetchUrl信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlRequest"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlResponse"/></returns>
+        public DescribeDataFetchUrlResponse DescribeDataFetchUrlSync(DescribeDataFetchUrlRequest req)
+        {
+             JsonResponseModel<DescribeDataFetchUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataFetchUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataFetchUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataFetchUrlInfo信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlInfoResponse"/></returns>
+        public async Task<DescribeDataFetchUrlInfoResponse> DescribeDataFetchUrlInfo(DescribeDataFetchUrlInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataFetchUrlInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataFetchUrlInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataFetchUrlInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DescribeDataFetchUrlInfo信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataFetchUrlInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataFetchUrlInfoResponse"/></returns>
+        public DescribeDataFetchUrlInfoResponse DescribeDataFetchUrlInfoSync(DescribeDataFetchUrlInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataFetchUrlInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataFetchUrlInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataFetchUrlInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取LogUrlStatistics信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDataLogUrlStatisticsRequest"/></param>

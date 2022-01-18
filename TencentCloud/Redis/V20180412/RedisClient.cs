@@ -133,7 +133,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口仅支持多AZ实例副本组提主
+        /// 该接口仅支持多AZ实例副本组提主和单AZ副本提主
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 该接口仅支持多AZ实例副本组提主
+        /// 该接口仅支持多AZ实例副本组提主和单AZ副本提主
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>
         /// <returns><see cref="ChangeReplicaToMasterResponse"/></returns>

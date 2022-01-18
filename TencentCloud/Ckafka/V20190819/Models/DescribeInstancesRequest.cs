@@ -60,6 +60,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TagKey")]
         public string TagKey{ get; set; }
 
+        /// <summary>
+        /// 私有网络Id
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public string VpcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
         }
     }
 }

@@ -108,6 +108,27 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("IsAllowQuit")]
         public string IsAllowQuit{ get; set; }
 
+        /// <summary>
+        /// 代付者Uin
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayUin")]
+        public string PayUin{ get; set; }
+
+        /// <summary>
+        /// 代付者名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayName")]
+        public string PayName{ get; set; }
+
+        /// <summary>
+        /// 管理身份
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrgIdentity")]
+        public MemberIdentity[] OrgIdentity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +147,9 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
+            this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
+            this.SetParamSimple(map, prefix + "PayName", this.PayName);
+            this.SetParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
         }
     }
 }

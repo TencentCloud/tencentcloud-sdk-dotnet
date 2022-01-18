@@ -31,7 +31,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 关系策略
+        /// 关系策略  取值：Financial
         /// </summary>
         [JsonProperty("PolicyType")]
         public string PolicyType{ get; set; }
@@ -66,6 +66,18 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("RecordId")]
         public long? RecordId{ get; set; }
 
+        /// <summary>
+        /// 代付者Uin
+        /// </summary>
+        [JsonProperty("PayUin")]
+        public string PayUin{ get; set; }
+
+        /// <summary>
+        /// 管理身份
+        /// </summary>
+        [JsonProperty("IdentityRoleID")]
+        public ulong?[] IdentityRoleID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "AccountName", this.AccountName);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
+            this.SetParamArraySimple(map, prefix + "IdentityRoleID.", this.IdentityRoleID);
         }
     }
 }

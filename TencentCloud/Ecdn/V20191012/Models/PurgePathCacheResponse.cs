@@ -25,7 +25,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
     {
         
         /// <summary>
-        /// 刷新任务Id，前十位为提交任务时的UTC时间。
+        /// 刷新任务Id。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }

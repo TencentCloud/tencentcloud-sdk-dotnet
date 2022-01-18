@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.446</VersionPrefix>
+    <VersionPrefix>3.0.447</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,7 @@
     <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="V20200309\Models\CertIdInsL7Rules.cs" />
+    <Compile Include="V20200309\Models\ConnectLimitConfig.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateBoundIPRequest.cs" />
@@ -67,6 +68,8 @@
     <Compile Include="V20200309\Models\CreateDDoSAIResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\CreateDDoSBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSConnectLimitRequest.cs" />
+    <Compile Include="V20200309\Models\CreateDDoSConnectLimitResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreateDDoSGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSSpeedLimitConfigRequest.cs" />

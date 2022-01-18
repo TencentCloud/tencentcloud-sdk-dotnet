@@ -43,6 +43,12 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string RecordId{ get; set; }
 
         /// <summary>
+        /// UNIX 时间戳，30天内，URL失效时间，如180s无人观看此流则URL提前失效
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public long? ExpireTime{ get; set; }
+
+        /// <summary>
         /// 录像文件推送的开始时间，需要在RecordId参数起始时间内，可以通过此参数控制回放流起始点
         /// </summary>
         [JsonProperty("StartTime")]
@@ -63,6 +69,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
             this.SetParamSimple(map, prefix + "ChannelId", this.ChannelId);
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
         }

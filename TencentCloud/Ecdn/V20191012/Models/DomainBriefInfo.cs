@@ -96,6 +96,13 @@ namespace TencentCloud.Ecdn.V20191012.Models
         [JsonProperty("Readonly")]
         public string Readonly{ get; set; }
 
+        /// <summary>
+        /// 域名标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tag")]
+        public Tag[] Tag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +121,7 @@ namespace TencentCloud.Ecdn.V20191012.Models
             this.SetParamSimple(map, prefix + "Disable", this.Disable);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
+            this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
         }
     }
 }
