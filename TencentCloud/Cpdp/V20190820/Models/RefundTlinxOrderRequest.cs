@@ -61,7 +61,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string RefundAmount{ get; set; }
 
         /// <summary>
-        /// 主管密码，对密码进行sha1加密，默认为123456
+        /// 主管密码，对密码进行SHA-1加密，默认为123456
         /// </summary>
         [JsonProperty("ShopPassword")]
         public string ShopPassword{ get; set; }

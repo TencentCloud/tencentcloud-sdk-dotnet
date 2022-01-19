@@ -25,7 +25,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 业务系统返回码
+        /// 业务系统返回码，0表示成功，其他表示失败。
         /// </summary>
         [JsonProperty("ErrCode")]
         public string ErrCode{ get; set; }

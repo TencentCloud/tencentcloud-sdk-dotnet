@@ -49,7 +49,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OpenKey{ get; set; }
 
         /// <summary>
-        /// 营业执照过期时间（yyyy-mm-dd）
+        /// 营业执照过期时间（yyyy-mm-dd），（小微商户不效验，随意传要有值，公司/个体户必传）
         /// </summary>
         [JsonProperty("BusinessLicenseEndDate")]
         public string BusinessLicenseEndDate{ get; set; }
@@ -367,7 +367,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string TaxRegistrationNo{ get; set; }
 
         /// <summary>
-        /// 商户类型：1-个人，2-小微，3-企事业。不传默认为2-小微商户。
+        /// 商户类型：1-个体，2-小微，3-企业。不传默认为2-小微商户。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

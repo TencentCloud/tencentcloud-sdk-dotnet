@@ -53,6 +53,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 添加复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
+        /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
+        public async Task<AddReplicationInstanceResponse> AddReplicationInstance(AddReplicationInstanceRequest req)
+        {
+             JsonResponseModel<AddReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="AddReplicationInstanceRequest"/></param>
+        /// <returns><see cref="AddReplicationInstanceResponse"/></returns>
+        public AddReplicationInstanceResponse AddReplicationInstanceSync(AddReplicationInstanceRequest req)
+        {
+             JsonResponseModel<AddReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 应用参数模板到实例
         /// </summary>
         /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 创建复制组
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
+        /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
+        public async Task<CreateReplicationGroupResponse> CreateReplicationGroup(CreateReplicationGroupRequest req)
+        {
+             JsonResponseModel<CreateReplicationGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReplicationGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建复制组
+        /// </summary>
+        /// <param name="req"><see cref="CreateReplicationGroupRequest"/></param>
+        /// <returns><see cref="CreateReplicationGroupResponse"/></returns>
+        public CreateReplicationGroupResponse CreateReplicationGroupSync(CreateReplicationGroupRequest req)
+        {
+             JsonResponseModel<CreateReplicationGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReplicationGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReplicationGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除实例子账号
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceAccountRequest"/></param>
@@ -444,6 +524,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "DeleteParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
+        /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
+        public async Task<DeleteReplicationInstanceResponse> DeleteReplicationInstance(DeleteReplicationInstanceRequest req)
+        {
+             JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReplicationInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移除复制组成员
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReplicationInstanceRequest"/></param>
+        /// <returns><see cref="DeleteReplicationInstanceResponse"/></returns>
+        public DeleteReplicationInstanceResponse DeleteReplicationInstanceSync(DeleteReplicationInstanceRequest req)
+        {
+             JsonResponseModel<DeleteReplicationInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReplicationInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReplicationInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

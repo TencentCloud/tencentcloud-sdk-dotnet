@@ -1855,7 +1855,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 部署容器应用
+        /// 部署容器应用-更新
         /// </summary>
         /// <param name="req"><see cref="DeployContainerGroupRequest"/></param>
         /// <returns><see cref="DeployContainerGroupResponse"/></returns>
@@ -1875,7 +1875,7 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 部署容器应用
+        /// 部署容器应用-更新
         /// </summary>
         /// <param name="req"><see cref="DeployContainerGroupRequest"/></param>
         /// <returns><see cref="DeployContainerGroupResponse"/></returns>

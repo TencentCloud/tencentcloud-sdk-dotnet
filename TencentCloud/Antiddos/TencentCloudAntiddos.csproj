@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.447</VersionPrefix>
+    <VersionPrefix>3.0.448</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="V20200309\AntiddosClient.cs" />
     <Compile Include="V20200309\Models\AclConfig.cs" />
+    <Compile Include="V20200309\Models\AclConfigRelation.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
     <Compile Include="V20200309\Models\AssociateDDoSEipLoadBalancerRequest.cs" />
@@ -60,6 +61,7 @@
     <Compile Include="V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="V20200309\Models\ConnectLimitConfig.cs" />
+    <Compile Include="V20200309\Models\ConnectLimitRelation.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateBoundIPRequest.cs" />
@@ -124,6 +126,8 @@
     <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSConnectLimitListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeDDoSConnectLimitListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -148,6 +152,8 @@
     <Compile Include="V20200309\Models\DescribeListListenerResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListPacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListPacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeListPortAclListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeListPortAclListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigRequest.cs" />
     <Compile Include="V20200309\Models\DescribeListProtectThresholdConfigResponse.cs" />
     <Compile Include="V20200309\Models\DescribeListProtocolBlockConfigRequest.cs" />

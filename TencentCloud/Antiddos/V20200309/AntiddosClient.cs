@@ -1293,6 +1293,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取DDoS连接抑制配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSConnectLimitListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSConnectLimitListResponse"/></returns>
+        public async Task<DescribeDDoSConnectLimitListResponse> DescribeDDoSConnectLimitList(DescribeDDoSConnectLimitListRequest req)
+        {
+             JsonResponseModel<DescribeDDoSConnectLimitListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDDoSConnectLimitList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSConnectLimitListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS连接抑制配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDDoSConnectLimitListRequest"/></param>
+        /// <returns><see cref="DescribeDDoSConnectLimitListResponse"/></returns>
+        public DescribeDDoSConnectLimitListResponse DescribeDDoSConnectLimitListSync(DescribeDDoSConnectLimitListRequest req)
+        {
+             JsonResponseModel<DescribeDDoSConnectLimitListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDDoSConnectLimitList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDDoSConnectLimitListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取DDoS攻击流量带宽和攻击包速率数据
         /// </summary>
         /// <param name="req"><see cref="DescribeDDoSTrendRequest"/></param>
@@ -1764,6 +1804,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeListPacketFilterConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListPacketFilterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS防护的端口acl策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListPortAclListRequest"/></param>
+        /// <returns><see cref="DescribeListPortAclListResponse"/></returns>
+        public async Task<DescribeListPortAclListResponse> DescribeListPortAclList(DescribeListPortAclListRequest req)
+        {
+             JsonResponseModel<DescribeListPortAclListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeListPortAclList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListPortAclListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取DDoS防护的端口acl策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeListPortAclListRequest"/></param>
+        /// <returns><see cref="DescribeListPortAclListResponse"/></returns>
+        public DescribeListPortAclListResponse DescribeListPortAclListSync(DescribeListPortAclListRequest req)
+        {
+             JsonResponseModel<DescribeListPortAclListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeListPortAclList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeListPortAclListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

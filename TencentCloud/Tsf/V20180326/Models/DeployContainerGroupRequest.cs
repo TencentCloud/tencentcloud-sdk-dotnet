@@ -234,6 +234,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("VolumeMountInfoList")]
         public VolumeMountInfo[] VolumeMountInfoList{ get; set; }
 
+        /// <summary>
+        /// 是否清除数据卷信息，默认false
+        /// </summary>
+        [JsonProperty("VolumeClean")]
+        public bool? VolumeClean{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -275,6 +281,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "VolumeMountInfos.", this.VolumeMountInfos);
             this.SetParamArrayObj(map, prefix + "VolumeInfoList.", this.VolumeInfoList);
             this.SetParamArrayObj(map, prefix + "VolumeMountInfoList.", this.VolumeMountInfoList);
+            this.SetParamSimple(map, prefix + "VolumeClean", this.VolumeClean);
         }
     }
 }

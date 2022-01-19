@@ -78,6 +78,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
+        /// <summary>
+        /// 业务名称（默认值：taw）
+        /// </summary>
+        [JsonProperty("BusinessName")]
+        public string BusinessName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
         }
     }
 }

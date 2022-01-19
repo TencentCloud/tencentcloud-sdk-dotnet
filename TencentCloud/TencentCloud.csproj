@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.447</VersionPrefix>
+    <VersionPrefix>3.0.448</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -264,6 +264,7 @@
     <Compile Include="Ams\V20200608\Models\TrendCount.cs" />
     <Compile Include="Antiddos\V20200309\AntiddosClient.cs" />
     <Compile Include="Antiddos\V20200309\Models\AclConfig.cs" />
+    <Compile Include="Antiddos\V20200309\Models\AclConfigRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipAddressResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\AssociateDDoSEipLoadBalancerRequest.cs" />
@@ -278,6 +279,7 @@
     <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
     <Compile Include="Antiddos\V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="Antiddos\V20200309\Models\ConnectLimitConfig.cs" />
+    <Compile Include="Antiddos\V20200309\Models\ConnectLimitRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateBoundIPRequest.cs" />
@@ -342,6 +344,8 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSConnectLimitListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeDDoSConnectLimitListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDDoSTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeDefaultAlarmThresholdRequest.cs" />
@@ -366,6 +370,8 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeListListenerResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListPacketFilterConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListPacketFilterConfigResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeListPortAclListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeListPortAclListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListProtectThresholdConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListProtectThresholdConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListProtocolBlockConfigRequest.cs" />
@@ -12200,6 +12206,8 @@
     <Compile Include="Rce\V20201103\Models\WeChatAccountInfo.cs" />
     <Compile Include="Redis\V20180412\RedisClient.cs" />
     <Compile Include="Redis\V20180412\Models\Account.cs" />
+    <Compile Include="Redis\V20180412\Models\AddReplicationInstanceRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\AddReplicationInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsRequest.cs" />
@@ -12220,11 +12228,15 @@
     <Compile Include="Redis\V20180412\Models\CreateInstancesResponse.cs" />
     <Compile Include="Redis\V20180412\Models\CreateParamTemplateRequest.cs" />
     <Compile Include="Redis\V20180412\Models\CreateParamTemplateResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateReplicationGroupRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\CreateReplicationGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DelayDistribution.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteInstanceAccountResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteParamTemplateRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DeleteParamTemplateResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteReplicationInstanceRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DeleteReplicationInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeAutoBackupConfigResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeBackupUrlRequest.cs" />
