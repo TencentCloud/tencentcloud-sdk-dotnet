@@ -43,7 +43,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 通道唯一标识
+        /// 通道唯一标识，对于NVR设备，多通道IPC设备，设备编码与通道编码不一致的IPC设备，此字段为必填
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }

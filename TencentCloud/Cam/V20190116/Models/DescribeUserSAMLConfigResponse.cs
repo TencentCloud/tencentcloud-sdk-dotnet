@@ -31,7 +31,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string SAMLMetadata{ get; set; }
 
         /// <summary>
-        /// 状态：0:未设置，11:已开启，2:已禁用
+        /// 状态：0:未设置，1:已开启，2:已禁用
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

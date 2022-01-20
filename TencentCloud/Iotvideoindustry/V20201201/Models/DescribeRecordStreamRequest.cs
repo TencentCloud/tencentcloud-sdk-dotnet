@@ -55,7 +55,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 通道唯一标识
+        /// 通道唯一标识（此接口升级为必填字段）
         /// </summary>
         [JsonProperty("ChannelId")]
         public string ChannelId{ get; set; }

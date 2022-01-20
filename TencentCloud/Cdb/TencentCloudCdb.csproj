@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.448</VersionPrefix>
+    <VersionPrefix>3.0.449</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -319,8 +319,12 @@
     <Compile Include="V20170320\Models\ParameterDetail.cs" />
     <Compile Include="V20170320\Models\PoolConf.cs" />
     <Compile Include="V20170320\Models\ProxyGroup.cs" />
+    <Compile Include="V20170320\Models\ProxyGroups.cs" />
     <Compile Include="V20170320\Models\ProxyNodeInfo.cs" />
+    <Compile Include="V20170320\Models\QueryCDBProxyRequest.cs" />
+    <Compile Include="V20170320\Models\QueryCDBProxyResponse.cs" />
     <Compile Include="V20170320\Models\RWInfo.cs" />
+    <Compile Include="V20170320\Models\RWInfos.cs" />
     <Compile Include="V20170320\Models\RWInstanceInfo.cs" />
     <Compile Include="V20170320\Models\RegionSellConf.cs" />
     <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />

@@ -84,6 +84,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("ZoneList")]
         public string[] ZoneList{ get; set; }
 
+        /// <summary>
+        /// 健康状态筛列表
+        /// </summary>
+        [JsonProperty("HealthStatus")]
+        public long?[] HealthStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
+            this.SetParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
         }
     }
 }

@@ -160,6 +160,13 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("QuicStatus")]
         public string QuicStatus{ get; set; }
 
+        /// <summary>
+        /// 转发规则的域名列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Domains")]
+        public string[] Domains{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +194,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TrpcCallee", this.TrpcCallee);
             this.SetParamSimple(map, prefix + "TrpcFunc", this.TrpcFunc);
             this.SetParamSimple(map, prefix + "QuicStatus", this.QuicStatus);
+            this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
         }
     }
 }

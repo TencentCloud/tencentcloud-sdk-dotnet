@@ -813,7 +813,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 用于Event事件投递
+        /// （已废弃）用于Event事件投递
         /// </summary>
         /// <param name="req"><see cref="PublishEventRequest"/></param>
         /// <returns><see cref="PublishEventResponse"/></returns>
@@ -833,7 +833,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 用于Event事件投递
+        /// （已废弃）用于Event事件投递
         /// </summary>
         /// <param name="req"><see cref="PublishEventRequest"/></param>
         /// <returns><see cref="PublishEventResponse"/></returns>
@@ -844,6 +844,46 @@ namespace TencentCloud.Eb.V20210416
              {
                  var strResp = this.InternalRequestSync(req, "PublishEvent");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishEventResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于Event事件投递
+        /// </summary>
+        /// <param name="req"><see cref="PutEventsRequest"/></param>
+        /// <returns><see cref="PutEventsResponse"/></returns>
+        public async Task<PutEventsResponse> PutEvents(PutEventsRequest req)
+        {
+             JsonResponseModel<PutEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PutEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutEventsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于Event事件投递
+        /// </summary>
+        /// <param name="req"><see cref="PutEventsRequest"/></param>
+        /// <returns><see cref="PutEventsResponse"/></returns>
+        public PutEventsResponse PutEventsSync(PutEventsRequest req)
+        {
+             JsonResponseModel<PutEventsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PutEvents");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutEventsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

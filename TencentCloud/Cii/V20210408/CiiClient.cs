@@ -53,6 +53,46 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
+        /// 中银三星需求，基于主任务批量添加结构化子任务
+        /// </summary>
+        /// <param name="req"><see cref="AddSubStructureTasksRequest"/></param>
+        /// <returns><see cref="AddSubStructureTasksResponse"/></returns>
+        public async Task<AddSubStructureTasksResponse> AddSubStructureTasks(AddSubStructureTasksRequest req)
+        {
+             JsonResponseModel<AddSubStructureTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddSubStructureTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSubStructureTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 中银三星需求，基于主任务批量添加结构化子任务
+        /// </summary>
+        /// <param name="req"><see cref="AddSubStructureTasksRequest"/></param>
+        /// <returns><see cref="AddSubStructureTasksResponse"/></returns>
+        public AddSubStructureTasksResponse AddSubStructureTasksSync(AddSubStructureTasksRequest req)
+        {
+             JsonResponseModel<AddSubStructureTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSubStructureTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSubStructureTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(CreateAutoClassifyStructureTask)基于提供的客户及保单信息，创建并启动结构化识别任务。
         /// </summary>
         /// <param name="req"><see cref="CreateAutoClassifyStructureTaskRequest"/></param>
@@ -213,6 +253,46 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
+        /// saas页面集成了自动分类功能，该接口提供自动分类结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportClassifyRequest"/></param>
+        /// <returns><see cref="DescribeReportClassifyResponse"/></returns>
+        public async Task<DescribeReportClassifyResponse> DescribeReportClassify(DescribeReportClassifyRequest req)
+        {
+             JsonResponseModel<DescribeReportClassifyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReportClassify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportClassifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// saas页面集成了自动分类功能，该接口提供自动分类结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReportClassifyRequest"/></param>
+        /// <returns><see cref="DescribeReportClassifyResponse"/></returns>
+        public DescribeReportClassifyResponse DescribeReportClassifySync(DescribeReportClassifyRequest req)
+        {
+             JsonResponseModel<DescribeReportClassifyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReportClassify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReportClassifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 结构化对比查询接口，对比结构化复核前后数据差异，查询识别正确率，召回率。
         /// </summary>
         /// <param name="req"><see cref="DescribeStructCompareDataRequest"/></param>
@@ -364,6 +444,46 @@ namespace TencentCloud.Cii.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "DescribeStructureTaskResult");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStructureTaskResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeUnderwriteTask)用于查询核保任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnderwriteTaskRequest"/></param>
+        /// <returns><see cref="DescribeUnderwriteTaskResponse"/></returns>
+        public async Task<DescribeUnderwriteTaskResponse> DescribeUnderwriteTask(DescribeUnderwriteTaskRequest req)
+        {
+             JsonResponseModel<DescribeUnderwriteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUnderwriteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnderwriteTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeUnderwriteTask)用于查询核保任务结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUnderwriteTaskRequest"/></param>
+        /// <returns><see cref="DescribeUnderwriteTaskResponse"/></returns>
+        public DescribeUnderwriteTaskResponse DescribeUnderwriteTaskSync(DescribeUnderwriteTaskRequest req)
+        {
+             JsonResponseModel<DescribeUnderwriteTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUnderwriteTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUnderwriteTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

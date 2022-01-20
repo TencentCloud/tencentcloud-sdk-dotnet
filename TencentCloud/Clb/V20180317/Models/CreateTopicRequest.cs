@@ -42,6 +42,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("TopicType")]
         public string TopicType{ get; set; }
 
+        /// <summary>
+        /// 日志集的保存周期，单位：天，默认30天。
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

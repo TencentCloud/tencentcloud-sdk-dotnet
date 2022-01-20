@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.448</VersionPrefix>
+    <VersionPrefix>3.0.449</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2508,8 +2508,12 @@
     <Compile Include="Cdb\V20170320\Models\ParameterDetail.cs" />
     <Compile Include="Cdb\V20170320\Models\PoolConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ProxyGroup.cs" />
+    <Compile Include="Cdb\V20170320\Models\ProxyGroups.cs" />
     <Compile Include="Cdb\V20170320\Models\ProxyNodeInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\QueryCDBProxyRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\QueryCDBProxyResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RWInfo.cs" />
+    <Compile Include="Cdb\V20170320\Models\RWInfos.cs" />
     <Compile Include="Cdb\V20170320\Models\RWInstanceInfo.cs" />
     <Compile Include="Cdb\V20170320\Models\RegionSellConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
@@ -3287,6 +3291,9 @@
     <Compile Include="Chdfs\V20190718\Models\Tag.cs" />
     <Compile Include="Chdfs\V20190718\Models\Transition.cs" />
     <Compile Include="Cii\V20210408\CiiClient.cs" />
+    <Compile Include="Cii\V20210408\Models\AddSubStructureTasksRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\AddSubStructureTasksResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\ClassifiedReports.cs" />
     <Compile Include="Cii\V20210408\Models\ClassifyInfo.cs" />
     <Compile Include="Cii\V20210408\Models\CompareMetricsData.cs" />
     <Compile Include="Cii\V20210408\Models\CreateAutoClassifyStructureTaskInfo.cs" />
@@ -3299,6 +3306,8 @@
     <Compile Include="Cii\V20210408\Models\CreateUnderwriteTaskByIdResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeMachineUnderwriteRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeMachineUnderwriteResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeReportClassifyRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeReportClassifyResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructCompareDataResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureDifferenceRequest.cs" />
@@ -3307,6 +3316,8 @@
     <Compile Include="Cii\V20210408\Models\DescribeStructureResultResponse.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultRequest.cs" />
     <Compile Include="Cii\V20210408\Models\DescribeStructureTaskResultResponse.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeUnderwriteTaskRequest.cs" />
+    <Compile Include="Cii\V20210408\Models\DescribeUnderwriteTaskResponse.cs" />
     <Compile Include="Cii\V20210408\Models\InsuranceResult.cs" />
     <Compile Include="Cii\V20210408\Models\MachinePredict.cs" />
     <Compile Include="Cii\V20210408\Models\MachineUnderwriteOutput.cs" />
@@ -3316,7 +3327,9 @@
     <Compile Include="Cii\V20210408\Models\StructureModifyItem.cs" />
     <Compile Include="Cii\V20210408\Models\StructureOneItem.cs" />
     <Compile Include="Cii\V20210408\Models\StructureResultObject.cs" />
+    <Compile Include="Cii\V20210408\Models\UnderwriteConclusion.cs" />
     <Compile Include="Cii\V20210408\Models\UnderwriteItem.cs" />
+    <Compile Include="Cii\V20210408\Models\UnderwriteOutput.cs" />
     <Compile Include="Cii\V20210408\Models\UploadMedicalFileRequest.cs" />
     <Compile Include="Cii\V20210408\Models\UploadMedicalFileResponse.cs" />
     <Compile Include="Cii\V20201210\CiiClient.cs" />
@@ -6594,6 +6607,8 @@
     <Compile Include="Eb\V20210416\Models\OutputStructParam.cs" />
     <Compile Include="Eb\V20210416\Models\PublishEventRequest.cs" />
     <Compile Include="Eb\V20210416\Models\PublishEventResponse.cs" />
+    <Compile Include="Eb\V20210416\Models\PutEventsRequest.cs" />
+    <Compile Include="Eb\V20210416\Models\PutEventsResponse.cs" />
     <Compile Include="Eb\V20210416\Models\RetryPolicy.cs" />
     <Compile Include="Eb\V20210416\Models\Rule.cs" />
     <Compile Include="Eb\V20210416\Models\SCFParams.cs" />

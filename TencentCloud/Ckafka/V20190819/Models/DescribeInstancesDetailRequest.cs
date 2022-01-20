@@ -67,7 +67,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 按照实例ID过滤
+        /// 已经废弃， 使用InstanceIdList
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string InstanceIds{ get; set; }

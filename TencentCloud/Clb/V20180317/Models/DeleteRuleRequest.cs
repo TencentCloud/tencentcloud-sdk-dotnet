@@ -43,7 +43,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的域名，已提供LocationIds参数时本参数不生效。
+        /// 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string Url{ get; set; }
 
         /// <summary>
-        /// 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名。
+        /// 监听器下必须配置一个默认域名，当需要删除默认域名时，可以指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
         public string NewDefaultServerDomain{ get; set; }

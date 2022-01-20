@@ -48,6 +48,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TimeOut")]
         public ulong? TimeOut{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamObj(map, prefix + "TriggerRule.", this.TriggerRule);
             this.SetParamArrayObj(map, prefix + "FlowEdges.", this.FlowEdges);
             this.SetParamSimple(map, prefix + "TimeOut", this.TimeOut);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }

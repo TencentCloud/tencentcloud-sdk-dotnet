@@ -485,6 +485,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("FrozenDiskSize")]
         public ulong? FrozenDiskSize{ get; set; }
 
+        /// <summary>
+        /// 集群健康状态 -1 未知；0 Green; 1 Yellow; 2 Red
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthStatus")]
+        public long? HealthStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -562,6 +569,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "FrozenMemSize", this.FrozenMemSize);
             this.SetParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
             this.SetParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
+            this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
         }
     }
 }

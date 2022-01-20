@@ -26,6 +26,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         
         /// <summary>
         /// 开票平台ID
+        /// 0 : 高灯
+        /// 1 : 票易通
         /// </summary>
         [JsonProperty("InvoicePlatformId")]
         public long? InvoicePlatformId{ get; set; }

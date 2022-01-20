@@ -4645,6 +4645,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 查询代理详情
+        /// </summary>
+        /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
+        /// <returns><see cref="QueryCDBProxyResponse"/></returns>
+        public async Task<QueryCDBProxyResponse> QueryCDBProxy(QueryCDBProxyRequest req)
+        {
+             JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询代理详情
+        /// </summary>
+        /// <param name="req"><see cref="QueryCDBProxyRequest"/></param>
+        /// <returns><see cref="QueryCDBProxyResponse"/></returns>
+        public QueryCDBProxyResponse QueryCDBProxySync(QueryCDBProxyRequest req)
+        {
+             JsonResponseModel<QueryCDBProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCDBProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCDBProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ReleaseIsolatedDBInstances）用于恢复已隔离云数据库实例。
         /// </summary>
         /// <param name="req"><see cref="ReleaseIsolatedDBInstancesRequest"/></param>

@@ -37,13 +37,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string ListenerId{ get; set; }
 
         /// <summary>
-        /// 域名（必须是已经创建的转发规则下的域名）。
+        /// 域名（必须是已经创建的转发规则下的域名），如果是多域名，可以指定多域名列表中的任意一个。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要修改的新域名。
+        /// 要修改的新域名。NewDomain和NewDomains只能传一个。
         /// </summary>
         [JsonProperty("NewDomain")]
         public string NewDomain{ get; set; }
@@ -67,10 +67,16 @@ namespace TencentCloud.Clb.V20180317.Models
         public bool? DefaultServer{ get; set; }
 
         /// <summary>
-        /// 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名。
+        /// 监听器下必须配置一个默认域名，若要关闭原默认域名，必须同时指定另一个域名作为新的默认域名，如果新的默认域名是多域名，可以指定多域名列表中的任意一个。
         /// </summary>
         [JsonProperty("NewDefaultServerDomain")]
         public string NewDefaultServerDomain{ get; set; }
+
+        /// <summary>
+        /// 要修改的新域名列表。NewDomain和NewDomains只能传一个。
+        /// </summary>
+        [JsonProperty("NewDomains")]
+        public string[] NewDomains{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "Http2", this.Http2);
             this.SetParamSimple(map, prefix + "DefaultServer", this.DefaultServer);
             this.SetParamSimple(map, prefix + "NewDefaultServerDomain", this.NewDefaultServerDomain);
+            this.SetParamArraySimple(map, prefix + "NewDomains.", this.NewDomains);
         }
     }
 }

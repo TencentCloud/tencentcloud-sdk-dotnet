@@ -31,13 +31,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public long? ConsoleLogin{ get; set; }
 
         /// <summary>
-        /// 角色ID
+        /// 角色ID，入参 RoleId 与 RoleName 二选一
         /// </summary>
         [JsonProperty("RoleId")]
         public long? RoleId{ get; set; }
 
         /// <summary>
-        /// 角色名
+        /// 角色名，入参 RoleId 与 RoleName 二选一
         /// </summary>
         [JsonProperty("RoleName")]
         public string RoleName{ get; set; }

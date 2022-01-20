@@ -25,16 +25,16 @@ namespace TencentCloud.Clb.V20180317.Models
     {
         
         /// <summary>
-        /// 日志集的保存周期，单位：天，最大 90。
-        /// </summary>
-        [JsonProperty("Period")]
-        public ulong? Period{ get; set; }
-
-        /// <summary>
         /// 日志集的名字，不能和cls其他日志集重名。不填默认为clb_logset。
         /// </summary>
         [JsonProperty("LogsetName")]
         public string LogsetName{ get; set; }
+
+        /// <summary>
+        /// 日志集的保存周期，单位：天。
+        /// </summary>
+        [JsonProperty("Period")]
+        public ulong? Period{ get; set; }
 
         /// <summary>
         /// 日志集类型，ACCESS：访问日志，HEALTH：健康检查日志，默认ACCESS。
@@ -48,8 +48,8 @@ namespace TencentCloud.Clb.V20180317.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "LogsetName", this.LogsetName);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "LogsetType", this.LogsetType);
         }
     }

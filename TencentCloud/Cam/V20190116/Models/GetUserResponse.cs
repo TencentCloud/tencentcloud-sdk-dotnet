@@ -44,12 +44,13 @@ namespace TencentCloud.Cam.V20190116.Models
 
         /// <summary>
         /// 子用户备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 子用户能否登录控制台
+        /// 子用户能否登录控制台 0-无法登录控制台，1-可以登录控制台
         /// </summary>
         [JsonProperty("ConsoleLogin")]
         public ulong? ConsoleLogin{ get; set; }

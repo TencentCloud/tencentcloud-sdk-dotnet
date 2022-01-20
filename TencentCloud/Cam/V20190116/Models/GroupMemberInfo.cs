@@ -55,7 +55,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string CountryCode{ get; set; }
 
         /// <summary>
-        /// 是否已验证手机。
+        /// 是否已验证手机。0-未验证  1-验证
         /// </summary>
         [JsonProperty("PhoneFlag")]
         public ulong? PhoneFlag{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 是否已验证邮箱。
+        /// 是否已验证邮箱。0-未验证  1-验证
         /// </summary>
         [JsonProperty("EmailFlag")]
         public ulong? EmailFlag{ get; set; }
 
         /// <summary>
-        /// 用户类型。
+        /// 用户类型。1-全局协作者 2-项目协作者 3-消息接收者
         /// </summary>
         [JsonProperty("UserType")]
         public ulong? UserType{ get; set; }
@@ -85,7 +85,7 @@ namespace TencentCloud.Cam.V20190116.Models
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 是否为主消息接收人。
+        /// 是否为主消息接收人。0-否 1-是
         /// </summary>
         [JsonProperty("IsReceiverOwner")]
         public ulong? IsReceiverOwner{ get; set; }

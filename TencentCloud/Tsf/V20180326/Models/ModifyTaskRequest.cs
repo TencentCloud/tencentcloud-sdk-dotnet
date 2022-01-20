@@ -120,6 +120,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("TaskArgument")]
         public string TaskArgument{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("ProgramIdList")]
+        public string[] ProgramIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +148,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "RetryCount", this.RetryCount);
             this.SetParamSimple(map, prefix + "RetryInterval", this.RetryInterval);
             this.SetParamSimple(map, prefix + "TaskArgument", this.TaskArgument);
+            this.SetParamArraySimple(map, prefix + "ProgramIdList.", this.ProgramIdList);
         }
     }
 }
