@@ -36,6 +36,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
+        /// <summary>
+        /// 可选参数，按照维度过滤
+        /// </summary>
+        [JsonProperty("Dimensions")]
+        public string[] Dimensions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         {
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
         }
     }
 }

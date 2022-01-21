@@ -121,6 +121,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnableTswTraceService")]
         public bool? EnableTswTraceService{ get; set; }
 
+        /// <summary>
+        /// 环境锁，1为上锁，0则为上锁
+        /// </summary>
+        [JsonProperty("Locked")]
+        public long? Locked{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +149,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "EnableTswTraceService", this.EnableTswTraceService);
+            this.SetParamSimple(map, prefix + "Locked", this.Locked);
         }
     }
 }

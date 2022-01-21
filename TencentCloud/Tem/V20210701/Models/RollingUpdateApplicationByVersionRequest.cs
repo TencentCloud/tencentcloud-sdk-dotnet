@@ -54,6 +54,36 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("From")]
         public string From{ get; set; }
 
+        /// <summary>
+        /// 部署策略，AUTO 为全自动；BETA 为小批量验证后自动；MANUAL 为全手动；
+        /// </summary>
+        [JsonProperty("DeployStrategyType")]
+        public string DeployStrategyType{ get; set; }
+
+        /// <summary>
+        /// 发布批次数
+        /// </summary>
+        [JsonProperty("TotalBatchCount")]
+        public long? TotalBatchCount{ get; set; }
+
+        /// <summary>
+        /// 批次间隔时间
+        /// </summary>
+        [JsonProperty("BatchInterval")]
+        public long? BatchInterval{ get; set; }
+
+        /// <summary>
+        /// 小批量验证批次的实例数
+        /// </summary>
+        [JsonProperty("BetaBatchNum")]
+        public long? BetaBatchNum{ get; set; }
+
+        /// <summary>
+        /// 发布过程中保障的最小可用实例数
+        /// </summary>
+        [JsonProperty("MinAvailable")]
+        public long? MinAvailable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "DeployVersion", this.DeployVersion);
             this.SetParamSimple(map, prefix + "PackageName", this.PackageName);
             this.SetParamSimple(map, prefix + "From", this.From);
+            this.SetParamSimple(map, prefix + "DeployStrategyType", this.DeployStrategyType);
+            this.SetParamSimple(map, prefix + "TotalBatchCount", this.TotalBatchCount);
+            this.SetParamSimple(map, prefix + "BatchInterval", this.BatchInterval);
+            this.SetParamSimple(map, prefix + "BetaBatchNum", this.BetaBatchNum);
+            this.SetParamSimple(map, prefix + "MinAvailable", this.MinAvailable);
         }
     }
 }

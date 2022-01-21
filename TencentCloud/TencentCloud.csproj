@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.449</VersionPrefix>
+    <VersionPrefix>3.0.450</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7599,6 +7599,12 @@
     <Compile Include="Faceid\V20180301\Models\MobileNetworkTimeVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\MobileStatusRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\MobileStatusResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCMCCRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCMCCResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCTCCRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCTCCResponse.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCUCCRequest.cs" />
+    <Compile Include="Faceid\V20180301\Models\PhoneVerificationCUCCResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\PhoneVerificationRequest.cs" />
     <Compile Include="Faceid\V20180301\Models\PhoneVerificationResponse.cs" />
     <Compile Include="Faceid\V20180301\Models\WeChatBillDetail.cs" />
@@ -14672,6 +14678,7 @@
     <Compile Include="Tcss\V20201101\Models\ImageHost.cs" />
     <Compile Include="Tcss\V20201101\Models\ImageInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ImageProgress.cs" />
+    <Compile Include="Tcss\V20201101\Models\ImageRepoInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ImageRisk.cs" />
     <Compile Include="Tcss\V20201101\Models\ImageRiskInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ImageRiskTendencyInfo.cs" />

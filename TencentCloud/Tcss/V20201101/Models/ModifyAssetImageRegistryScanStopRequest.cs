@@ -37,10 +37,28 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ImageInfo[] Images{ get; set; }
 
         /// <summary>
-        /// 扫描的镜像列表Id
+        /// 扫描的镜像列表
         /// </summary>
         [JsonProperty("Id")]
         public ulong?[] Id{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 不要扫描的镜像列表，与Filters配合使用
+        /// </summary>
+        [JsonProperty("ExcludeImageList")]
+        public ulong?[] ExcludeImageList{ get; set; }
+
+        /// <summary>
+        /// 是否仅扫描各repository最新版本的镜像
+        /// </summary>
+        [JsonProperty("OnlyScanLatest")]
+        public bool? OnlyScanLatest{ get; set; }
 
 
         /// <summary>
@@ -51,6 +69,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArrayObj(map, prefix + "Images.", this.Images);
             this.SetParamArraySimple(map, prefix + "Id.", this.Id);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "ExcludeImageList.", this.ExcludeImageList);
+            this.SetParamSimple(map, prefix + "OnlyScanLatest", this.OnlyScanLatest);
         }
     }
 }

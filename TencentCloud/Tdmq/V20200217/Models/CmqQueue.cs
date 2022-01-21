@@ -210,6 +210,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NamespaceName")]
         public string NamespaceName{ get; set; }
 
+        /// <summary>
+        /// 集群状态，0:创建中，1:正常，2:销毁中，3:已删除，4: 隔离中，5:创建失败，6: 删除失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 最大未确认消息数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxUnackedMsgNum")]
+        public long? MaxUnackedMsgNum{ get; set; }
+
+        /// <summary>
+        /// 最大消息堆积大小（字节）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxMsgBacklogSize")]
+        public long? MaxMsgBacklogSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -243,6 +264,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Trace", this.Trace);
             this.SetParamSimple(map, prefix + "TenantId", this.TenantId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
+            this.SetParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
         }
     }
 }

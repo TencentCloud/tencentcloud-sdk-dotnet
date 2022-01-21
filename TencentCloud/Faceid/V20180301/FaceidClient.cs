@@ -1334,5 +1334,125 @@ namespace TencentCloud.Faceid.V20180301
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCMCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCMCCResponse"/></returns>
+        public async Task<PhoneVerificationCMCCResponse> PhoneVerificationCMCC(PhoneVerificationCMCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCMCCResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PhoneVerificationCMCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCMCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验中国移动手机号、姓名和身份证号的真实性和一致性。中国移动支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCMCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCMCCResponse"/></returns>
+        public PhoneVerificationCMCCResponse PhoneVerificationCMCCSync(PhoneVerificationCMCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCMCCResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PhoneVerificationCMCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCMCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCTCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCTCCResponse"/></returns>
+        public async Task<PhoneVerificationCTCCResponse> PhoneVerificationCTCC(PhoneVerificationCTCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCTCCResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PhoneVerificationCTCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCTCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验中国电信手机号、姓名和身份证号的真实性和一致性。中国电信支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCTCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCTCCResponse"/></returns>
+        public PhoneVerificationCTCCResponse PhoneVerificationCTCCSync(PhoneVerificationCTCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCTCCResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PhoneVerificationCTCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCTCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验中国联通手机号、姓名和身份证号的真实性和一致性。中国联通支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCUCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCUCCResponse"/></returns>
+        public async Task<PhoneVerificationCUCCResponse> PhoneVerificationCUCC(PhoneVerificationCUCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCUCCResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PhoneVerificationCUCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCUCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于校验中国联通手机号、姓名和身份证号的真实性和一致性。中国联通支持的手机号段详情请查阅<a href="https://cloud.tencent.com/document/product/1007/46063">运营商类</a>文档。
+        /// </summary>
+        /// <param name="req"><see cref="PhoneVerificationCUCCRequest"/></param>
+        /// <returns><see cref="PhoneVerificationCUCCResponse"/></returns>
+        public PhoneVerificationCUCCResponse PhoneVerificationCUCCSync(PhoneVerificationCUCCRequest req)
+        {
+             JsonResponseModel<PhoneVerificationCUCCResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PhoneVerificationCUCC");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PhoneVerificationCUCCResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志时间,  格式: YYYY-mm-dd HH:MM:SS
+        /// 日志时间,  格式: YYYY-mm-dd HH:MM:SS.FFF
         /// </summary>
         [JsonProperty("BTime")]
         public string BTime{ get; set; }

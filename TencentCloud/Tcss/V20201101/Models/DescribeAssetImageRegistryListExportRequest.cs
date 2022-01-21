@@ -60,6 +60,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
+        /// <summary>
+        /// 是否仅展示repository版本最新的镜像，默认为false
+        /// </summary>
+        [JsonProperty("OnlyShowLatest")]
+        public bool? OnlyShowLatest{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "OnlyShowLatest", this.OnlyShowLatest);
         }
     }
 }
