@@ -49,6 +49,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? NotScannedImageCnt{ get; set; }
 
         /// <summary>
+        /// 本地未开启扫描镜像数
+        /// </summary>
+        [JsonProperty("NotScannedLocalImageCnt")]
+        public ulong? NotScannedLocalImageCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "UsedAuthorizedCnt", this.UsedAuthorizedCnt);
             this.SetParamSimple(map, prefix + "ScannedImageCnt", this.ScannedImageCnt);
             this.SetParamSimple(map, prefix + "NotScannedImageCnt", this.NotScannedImageCnt);
+            this.SetParamSimple(map, prefix + "NotScannedLocalImageCnt", this.NotScannedLocalImageCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

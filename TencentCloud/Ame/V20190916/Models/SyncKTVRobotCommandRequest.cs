@@ -36,6 +36,7 @@ namespace TencentCloud.Ame.V20190916.Models
         /// <li>Pause：暂停</li>
         /// <li>SwitchPrevious：上一首</li>
         /// <li>SwitchNext：下一首</li>
+        /// <li>SetPlayMode：设置播放模式</li>
         /// <li>Seek：调整播放进度</li>
         /// <li>SetPlaylist：歌单变更</li>
         /// <li>SetAudioParam：音频参数变更</li>
@@ -74,6 +75,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("SendMessageCommandInput")]
         public SendMessageCommandInput SendMessageCommandInput{ get; set; }
 
+        /// <summary>
+        /// 播放模式，当Command取SetPlayMode时，必填。
+        /// </summary>
+        [JsonProperty("SetPlayModeCommandInput")]
+        public SetPlayModeCommandInput SetPlayModeCommandInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +94,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamObj(map, prefix + "SeekCommandInput.", this.SeekCommandInput);
             this.SetParamObj(map, prefix + "SetAudioParamCommandInput.", this.SetAudioParamCommandInput);
             this.SetParamObj(map, prefix + "SendMessageCommandInput.", this.SendMessageCommandInput);
+            this.SetParamObj(map, prefix + "SetPlayModeCommandInput.", this.SetPlayModeCommandInput);
         }
     }
 }

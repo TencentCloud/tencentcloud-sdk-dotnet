@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.450</VersionPrefix>
+    <VersionPrefix>3.0.451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -186,6 +186,7 @@
     <Compile Include="Ame\V20190916\Models\SeekCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SendMessageCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetAudioParamCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SetPlayModeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetPlaylistCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
     <Compile Include="Ame\V20190916\Models\SyncKTVRobotCommandRequest.cs" />
@@ -2175,11 +2176,14 @@
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyRequest.cs" />
     <Compile Include="Cbs\V20170312\Models\UnbindAutoSnapshotPolicyResponse.cs" />
     <Compile Include="Ccc\V20200210\CccClient.cs" />
+    <Compile Include="Ccc\V20200210\Models\AutoCalloutTaskInfo.cs" />
     <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\BindStaffSkillGroupListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CallInMetrics.cs" />
     <Compile Include="Ccc\V20200210\Models\CallInNumberMetrics.cs" />
     <Compile Include="Ccc\V20200210\Models\CallInSkillGroupMetrics.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateCallOutSessionRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\CreateCallOutSessionResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\CreateStaffRequest.cs" />
@@ -2188,6 +2192,8 @@
     <Compile Include="Ccc\V20200210\Models\CreateUserSigResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeAutoCalloutTasksRequest.cs" />
+    <Compile Include="Ccc\V20200210\Models\DescribeAutoCalloutTasksResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeCCCBuyInfoListRequest.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeCCCBuyInfoListResponse.cs" />
     <Compile Include="Ccc\V20200210\Models\DescribeCallInMetricsRequest.cs" />
@@ -4761,6 +4767,7 @@
     <Compile Include="Cvm\V20170312\Models\EnhancedService.cs" />
     <Compile Include="Cvm\V20170312\Models\Externals.cs" />
     <Compile Include="Cvm\V20170312\Models\Filter.cs" />
+    <Compile Include="Cvm\V20170312\Models\GPUInfo.cs" />
     <Compile Include="Cvm\V20170312\Models\HostItem.cs" />
     <Compile Include="Cvm\V20170312\Models\HostResource.cs" />
     <Compile Include="Cvm\V20170312\Models\Image.cs" />
@@ -11801,6 +11808,8 @@
     <Compile Include="Ocr\V20181119\Models\QuotaInvoiceOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeContainerOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeContainerOCRResponse.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeHealthCodeOCRRequest.cs" />
+    <Compile Include="Ocr\V20181119\Models\RecognizeHealthCodeOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRRequest.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeOnlineTaxiItineraryOCRResponse.cs" />
     <Compile Include="Ocr\V20181119\Models\RecognizeTableOCRRequest.cs" />
@@ -15564,6 +15573,7 @@
     <Compile Include="Tke\V20180525\Models\ClusterInternalLB.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterPublicLB.cs" />
+    <Compile Include="Tke\V20180525\Models\ClusterStatus.cs" />
     <Compile Include="Tke\V20180525\Models\ClusterVersion.cs" />
     <Compile Include="Tke\V20180525\Models\CommonName.cs" />
     <Compile Include="Tke\V20180525\Models\Container.cs" />
@@ -15656,6 +15666,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeClusterRoutesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClusterSecurityResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterStatusRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeClusterStatusResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeEKSClusterCredentialRequest.cs" />
@@ -17549,6 +17561,7 @@
     <Compile Include="Vpc\V20170312\Models\Filter.cs" />
     <Compile Include="Vpc\V20170312\Models\FilterObject.cs" />
     <Compile Include="Vpc\V20170312\Models\FlowLog.cs" />
+    <Compile Include="Vpc\V20170312\Models\FlowLogStorage.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayFlowMonitorDetail.cs" />
     <Compile Include="Vpc\V20170312\Models\GatewayQos.cs" />
     <Compile Include="Vpc\V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />

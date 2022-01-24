@@ -49,12 +49,6 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string TrafficType{ get; set; }
 
         /// <summary>
-        /// 流日志存储ID
-        /// </summary>
-        [JsonProperty("CloudLogId")]
-        public string CloudLogId{ get; set; }
-
-        /// <summary>
         /// 私用网络ID或者统一ID，建议使用统一ID，当ResourceType为CCN时不填，其他类型必填。
         /// </summary>
         [JsonProperty("VpcId")]
@@ -67,10 +61,28 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string FlowLogDescription{ get; set; }
 
         /// <summary>
+        /// 流日志存储ID
+        /// </summary>
+        [JsonProperty("CloudLogId")]
+        public string CloudLogId{ get; set; }
+
+        /// <summary>
         /// 指定绑定的标签列表，例如：[{"Key": "city", "Value": "shanghai"}]
         /// </summary>
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 消费端类型：cls、ckafka
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
+        /// <summary>
+        /// 流日志消费端信息，当消费端类型为ckafka时，必填。
+        /// </summary>
+        [JsonProperty("FlowLogStorage")]
+        public FlowLogStorage FlowLogStorage{ get; set; }
 
 
         /// <summary>
@@ -82,10 +94,12 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "TrafficType", this.TrafficType);
-            this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "FlowLogDescription", this.FlowLogDescription);
+            this.SetParamSimple(map, prefix + "CloudLogId", this.CloudLogId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
+            this.SetParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
         }
     }
 }

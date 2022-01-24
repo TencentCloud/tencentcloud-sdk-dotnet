@@ -2327,6 +2327,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持粤康码识别，包括姓名、更新时间、健康码颜色，三个字段的识别结果输出。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeHealthCodeOCRRequest"/></param>
+        /// <returns><see cref="RecognizeHealthCodeOCRResponse"/></returns>
+        public async Task<RecognizeHealthCodeOCRResponse> RecognizeHealthCodeOCR(RecognizeHealthCodeOCRRequest req)
+        {
+             JsonResponseModel<RecognizeHealthCodeOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeHealthCodeOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeHealthCodeOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持粤康码识别，包括姓名、更新时间、健康码颜色，三个字段的识别结果输出。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeHealthCodeOCRRequest"/></param>
+        /// <returns><see cref="RecognizeHealthCodeOCRResponse"/></returns>
+        public RecognizeHealthCodeOCRResponse RecognizeHealthCodeOCRSync(RecognizeHealthCodeOCRRequest req)
+        {
+             JsonResponseModel<RecognizeHealthCodeOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeHealthCodeOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeHealthCodeOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
         /// </summary>
         /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>

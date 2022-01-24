@@ -38,6 +38,14 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 结束状态
+        /// 0 异常结束
+        /// 1 正常结束
+        /// 3 无坐席在线
+        /// 17 坐席放弃接听
+        /// 100 黑名单
+        /// 101 坐席手动转接
+        /// 102 IVR阶段放弃
+        /// 108 用户超时自动结束
         /// </summary>
         [JsonProperty("EndStatus")]
         public long? EndStatus{ get; set; }
@@ -66,6 +74,27 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
+        /// <summary>
+        /// 会话ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionId")]
+        public string SessionId{ get; set; }
+
+        /// <summary>
+        /// 技能组ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkillGroupId")]
+        public string SkillGroupId{ get; set; }
+
+        /// <summary>
+        /// 技能组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkillGroupName")]
+        public string SkillGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +108,9 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "StaffId", this.StaffId);
             this.SetParamSimple(map, prefix + "Timestamp", this.Timestamp);
+            this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
+            this.SetParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
         }
     }
 }

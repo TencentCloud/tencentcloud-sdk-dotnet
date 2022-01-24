@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.450</VersionPrefix>
+    <VersionPrefix>3.0.451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -446,6 +446,7 @@
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\FilterObject.cs" />
     <Compile Include="V20170312\Models\FlowLog.cs" />
+    <Compile Include="V20170312\Models\FlowLogStorage.cs" />
     <Compile Include="V20170312\Models\GatewayFlowMonitorDetail.cs" />
     <Compile Include="V20170312\Models\GatewayQos.cs" />
     <Compile Include="V20170312\Models\GetCcnRegionBandwidthLimitsRequest.cs" />

@@ -51,7 +51,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? TaskType{ get; set; }
 
         /// <summary>
-        /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云。
+        /// 邮件的“回复”电子邮件地址。可以填写您能收到邮件的邮箱地址，可以是个人邮箱。如果不填，收件人将会回复到腾讯云（暂未支持）
         /// </summary>
         [JsonProperty("ReplyToAddresses")]
         public string ReplyToAddresses{ get; set; }
@@ -63,13 +63,13 @@ namespace TencentCloud.Ses.V20201002.Models
         public Template Template{ get; set; }
 
         /// <summary>
-        /// 使用API直接发送内容时，填写的邮件内容
+        /// 使用API直接发送内容时，填写的邮件内容（暂未支持）
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// 需要发送附件时，填写附件相关参数。
+        /// 需要发送附件时，填写附件相关参数（暂未支持）
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }

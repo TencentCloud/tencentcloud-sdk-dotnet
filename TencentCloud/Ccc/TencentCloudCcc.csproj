@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5C13E957-36F0-3A36-917C-9FBB15CAE883}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.450</VersionPrefix>
+    <VersionPrefix>3.0.451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,11 +45,14 @@
 
   <ItemGroup>
     <Compile Include="V20200210\CccClient.cs" />
+    <Compile Include="V20200210\Models\AutoCalloutTaskInfo.cs" />
     <Compile Include="V20200210\Models\BindStaffSkillGroupListRequest.cs" />
     <Compile Include="V20200210\Models\BindStaffSkillGroupListResponse.cs" />
     <Compile Include="V20200210\Models\CallInMetrics.cs" />
     <Compile Include="V20200210\Models\CallInNumberMetrics.cs" />
     <Compile Include="V20200210\Models\CallInSkillGroupMetrics.cs" />
+    <Compile Include="V20200210\Models\CreateCallOutSessionRequest.cs" />
+    <Compile Include="V20200210\Models\CreateCallOutSessionResponse.cs" />
     <Compile Include="V20200210\Models\CreateSDKLoginTokenRequest.cs" />
     <Compile Include="V20200210\Models\CreateSDKLoginTokenResponse.cs" />
     <Compile Include="V20200210\Models\CreateStaffRequest.cs" />
@@ -58,6 +61,8 @@
     <Compile Include="V20200210\Models\CreateUserSigResponse.cs" />
     <Compile Include="V20200210\Models\DeleteStaffRequest.cs" />
     <Compile Include="V20200210\Models\DeleteStaffResponse.cs" />
+    <Compile Include="V20200210\Models\DescribeAutoCalloutTasksRequest.cs" />
+    <Compile Include="V20200210\Models\DescribeAutoCalloutTasksResponse.cs" />
     <Compile Include="V20200210\Models\DescribeCCCBuyInfoListRequest.cs" />
     <Compile Include="V20200210\Models\DescribeCCCBuyInfoListResponse.cs" />
     <Compile Include="V20200210\Models\DescribeCallInMetricsRequest.cs" />

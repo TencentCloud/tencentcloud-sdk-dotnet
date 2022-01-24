@@ -49,7 +49,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string Unit{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 类型, integer|string
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -72,6 +72,27 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("ModifedTime")]
         public string ModifedTime{ get; set; }
 
+        /// <summary>
+        /// 字符类型的值，当Type为string时才有意义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ValueString")]
+        public string ValueString{ get; set; }
+
+        /// <summary>
+        /// 字符类型的默认值，当Type为string时才有意义
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefaultValueString")]
+        public string DefaultValueString{ get; set; }
+
+        /// <summary>
+        /// 可调整范围
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Range")]
+        public string Range{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +107,9 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "Minimum", this.Minimum);
             this.SetParamSimple(map, prefix + "Maximum", this.Maximum);
             this.SetParamSimple(map, prefix + "ModifedTime", this.ModifedTime);
+            this.SetParamSimple(map, prefix + "ValueString", this.ValueString);
+            this.SetParamSimple(map, prefix + "DefaultValueString", this.DefaultValueString);
+            this.SetParamSimple(map, prefix + "Range", this.Range);
         }
     }
 }

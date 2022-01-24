@@ -25,34 +25,46 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 是否扫描全部镜像
+        /// 是否扫描全部镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
         /// </summary>
         [JsonProperty("All")]
         public bool? All{ get; set; }
 
         /// <summary>
-        /// 需要扫描的镜像列表
+        /// 需要扫描的镜像列表；全部镜像，镜像列表和根据过滤条件筛选三选一。
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// 扫描漏洞
+        /// 扫描漏洞；漏洞，木马和风险需选其一
         /// </summary>
         [JsonProperty("ScanVul")]
         public bool? ScanVul{ get; set; }
 
         /// <summary>
-        /// 扫描木马
+        /// 扫描木马；漏洞，木马和风险需选其一
         /// </summary>
         [JsonProperty("ScanVirus")]
         public bool? ScanVirus{ get; set; }
 
         /// <summary>
-        /// 扫描风险
+        /// 扫描风险；漏洞，木马和风险需选其一
         /// </summary>
         [JsonProperty("ScanRisk")]
         public bool? ScanRisk{ get; set; }
+
+        /// <summary>
+        /// 根据过滤条件筛选出镜像；全部镜像，镜像列表和根据过滤条件筛选三选一。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 根据过滤条件筛选出镜像，再排除个别镜像
+        /// </summary>
+        [JsonProperty("ExcludeImageIds")]
+        public string[] ExcludeImageIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanVul", this.ScanVul);
             this.SetParamSimple(map, prefix + "ScanVirus", this.ScanVirus);
             this.SetParamSimple(map, prefix + "ScanRisk", this.ScanRisk);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "ExcludeImageIds.", this.ExcludeImageIds);
         }
     }
 }

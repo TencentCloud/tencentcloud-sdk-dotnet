@@ -93,6 +93,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建外呼会话
+        /// </summary>
+        /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>
+        /// <returns><see cref="CreateCallOutSessionResponse"/></returns>
+        public async Task<CreateCallOutSessionResponse> CreateCallOutSession(CreateCallOutSessionRequest req)
+        {
+             JsonResponseModel<CreateCallOutSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCallOutSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCallOutSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建外呼会话
+        /// </summary>
+        /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>
+        /// <returns><see cref="CreateCallOutSessionResponse"/></returns>
+        public CreateCallOutSessionResponse CreateCallOutSessionSync(CreateCallOutSessionRequest req)
+        {
+             JsonResponseModel<CreateCallOutSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCallOutSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCallOutSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建 SDK 登录 Token。
         /// </summary>
         /// <param name="req"><see cref="CreateSDKLoginTokenRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DeleteStaff");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询自动任务外呼
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
+        /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
+        public async Task<DescribeAutoCalloutTasksResponse> DescribeAutoCalloutTasks(DescribeAutoCalloutTasksRequest req)
+        {
+             JsonResponseModel<DescribeAutoCalloutTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoCalloutTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoCalloutTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量查询自动任务外呼
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoCalloutTasksRequest"/></param>
+        /// <returns><see cref="DescribeAutoCalloutTasksResponse"/></returns>
+        public DescribeAutoCalloutTasksResponse DescribeAutoCalloutTasksSync(DescribeAutoCalloutTasksRequest req)
+        {
+             JsonResponseModel<DescribeAutoCalloutTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoCalloutTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoCalloutTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

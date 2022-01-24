@@ -38,7 +38,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         public string CanaryVersion{ get; set; }
 
         /// <summary>
-        /// Prometheus状态
+        /// 已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Prometheus")]
@@ -58,6 +58,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("ActiveOperationList")]
         public ActiveOperation[] ActiveOperationList{ get; set; }
 
+        /// <summary>
+        /// 获取TPS信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TPS")]
+        public PrometheusStatus TPS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamArrayObj(map, prefix + "Prometheus.", this.Prometheus);
             this.SetParamSimple(map, prefix + "StateMessage", this.StateMessage);
             this.SetParamArrayObj(map, prefix + "ActiveOperationList.", this.ActiveOperationList);
+            this.SetParamObj(map, prefix + "TPS.", this.TPS);
         }
     }
 }

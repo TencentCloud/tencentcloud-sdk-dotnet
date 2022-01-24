@@ -1973,6 +1973,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查看集群状态列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterStatusResponse"/></returns>
+        public async Task<DescribeClusterStatusResponse> DescribeClusterStatus(DescribeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看集群状态列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterStatusRequest"/></param>
+        /// <returns><see cref="DescribeClusterStatusResponse"/></returns>
+        public DescribeClusterStatusResponse DescribeClusterStatusSync(DescribeClusterStatusRequest req)
+        {
+             JsonResponseModel<DescribeClusterStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群列表
         /// </summary>
         /// <param name="req"><see cref="DescribeClustersRequest"/></param>

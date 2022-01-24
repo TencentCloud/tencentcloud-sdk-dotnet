@@ -76,6 +76,16 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("RTCSystem")]
         public string RTCSystem{ get; set; }
 
+        /// <summary>
+        /// 播放模式，PlayMode取值有：
+        /// <li>RepeatPlaylist：列表循环</li>
+        /// <li>Order：顺序播放</li>
+        /// <li>RepeatSingle：单曲循环</li>
+        /// <li>Shuffle：随机播放</li>
+        /// </summary>
+        [JsonProperty("SetPlayModeInput")]
+        public SetPlayModeCommandInput SetPlayModeInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +100,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamObj(map, prefix + "SetAudioParamInput.", this.SetAudioParamInput);
             this.SetParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
             this.SetParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
+            this.SetParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
         }
     }
 }

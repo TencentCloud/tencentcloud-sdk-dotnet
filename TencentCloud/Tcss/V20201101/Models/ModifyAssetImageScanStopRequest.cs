@@ -25,16 +25,28 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// 任务id；任务id，镜像id和根据过滤条件筛选三选一。
         /// </summary>
         [JsonProperty("TaskID")]
         public string TaskID{ get; set; }
 
         /// <summary>
-        /// 镜像id
+        /// 镜像id；任务id，镜像id和根据过滤条件筛选三选一。
         /// </summary>
         [JsonProperty("Images")]
         public string[] Images{ get; set; }
+
+        /// <summary>
+        /// 根据过滤条件筛选出镜像；任务id，镜像id和根据过滤条件筛选三选一。
+        /// </summary>
+        [JsonProperty("Filters")]
+        public AssetFilters[] Filters{ get; set; }
+
+        /// <summary>
+        /// 根据过滤条件筛选出镜像，再排除个别镜像
+        /// </summary>
+        [JsonProperty("ExcludeImageIds")]
+        public string ExcludeImageIds{ get; set; }
 
 
         /// <summary>
@@ -44,6 +56,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "TaskID", this.TaskID);
             this.SetParamArraySimple(map, prefix + "Images.", this.Images);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "ExcludeImageIds", this.ExcludeImageIds);
         }
     }
 }

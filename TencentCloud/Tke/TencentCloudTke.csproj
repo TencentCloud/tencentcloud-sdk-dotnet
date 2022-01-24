@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.450</VersionPrefix>
+    <VersionPrefix>3.0.451</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -74,6 +74,7 @@
     <Compile Include="V20180525\Models\ClusterInternalLB.cs" />
     <Compile Include="V20180525\Models\ClusterNetworkSettings.cs" />
     <Compile Include="V20180525\Models\ClusterPublicLB.cs" />
+    <Compile Include="V20180525\Models\ClusterStatus.cs" />
     <Compile Include="V20180525\Models\ClusterVersion.cs" />
     <Compile Include="V20180525\Models\CommonName.cs" />
     <Compile Include="V20180525\Models\Container.cs" />
@@ -166,6 +167,8 @@
     <Compile Include="V20180525\Models\DescribeClusterRoutesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterSecurityResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClusterCredentialRequest.cs" />
