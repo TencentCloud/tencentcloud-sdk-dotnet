@@ -25,13 +25,13 @@ namespace TencentCloud.Cii.V20210408.Models
     {
         
         /// <summary>
-        /// 文件内容的base64的值。FileBase64与FileURL有一个不为空即可，若FileURL同时存在，那么取FileBase64。
+        /// 文件的字节内容。File与FileURL有一个不为空即可，若FileURL参数也存在，会只取File的内容。
         /// </summary>
         [JsonProperty("File")]
         public string File{ get; set; }
 
         /// <summary>
-        /// 文件的URL地址。FileBase64与FileURL有一个不为空即可，若FileBase64同时存在，那么取FileBase64。
+        /// 文件的URL地址。File与FileURL不能同时为空，若File参数也存在，会只取File的内容。
         /// </summary>
         [JsonProperty("FileURL")]
         public string FileURL{ get; set; }

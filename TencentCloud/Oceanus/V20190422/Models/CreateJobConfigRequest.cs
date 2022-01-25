@@ -108,6 +108,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
+        /// <summary>
+        /// 日志采集类型 2：CLS；3：COS
+        /// </summary>
+        [JsonProperty("LogCollectType")]
+        public long? LogCollectType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+            this.SetParamSimple(map, prefix + "LogCollectType", this.LogCollectType);
         }
     }
 }
