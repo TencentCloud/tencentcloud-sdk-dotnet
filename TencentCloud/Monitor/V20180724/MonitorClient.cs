@@ -1309,7 +1309,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 查询云监控产品列表
+        /// 查询云监控产品列表，支持云服务器CVM、云数据库、云消息队列、负载均衡、容器服务、专线等云产品。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductListRequest"/></param>
         /// <returns><see cref="DescribeProductListResponse"/></returns>
@@ -1329,7 +1329,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 查询云监控产品列表
+        /// 查询云监控产品列表，支持云服务器CVM、云数据库、云消息队列、负载均衡、容器服务、专线等云产品。
         /// </summary>
         /// <param name="req"><see cref="DescribeProductListRequest"/></param>
         /// <returns><see cref="DescribeProductListResponse"/></returns>

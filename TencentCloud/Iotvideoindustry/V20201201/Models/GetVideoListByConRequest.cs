@@ -31,13 +31,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认0
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 限制量，默认200
+        /// 限制量
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

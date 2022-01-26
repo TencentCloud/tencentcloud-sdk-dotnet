@@ -40,6 +40,13 @@ namespace TencentCloud.Ame.V20190916.Models
         public string[] Statuses{ get; set; }
 
         /// <summary>
+        /// 匹配创建时间在此时间段内的机器人。
+        /// <li>包含所指定的头尾时间点。</li>
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public TimeRange CreateTime{ get; set; }
+
+        /// <summary>
         /// 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
         /// </summary>
         [JsonProperty("Offset")]
@@ -59,6 +66,7 @@ namespace TencentCloud.Ame.V20190916.Models
         {
             this.SetParamArraySimple(map, prefix + "RobotIds.", this.RobotIds);
             this.SetParamArraySimple(map, prefix + "Statuses.", this.Statuses);
+            this.SetParamObj(map, prefix + "CreateTime.", this.CreateTime);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

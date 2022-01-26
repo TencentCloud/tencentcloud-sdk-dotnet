@@ -43,7 +43,7 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
+        /// 默认为全部 事件类型 1:注册 2:心跳 4:录制异常 5:播放异常 6:流中断
         /// </summary>
         [JsonProperty("EventTypes")]
         public long?[] EventTypes{ get; set; }

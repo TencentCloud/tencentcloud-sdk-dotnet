@@ -53,6 +53,244 @@ namespace TencentCloud.Ivld.V20210903
         }
 
         /// <summary>
+        /// 增加自定义人脸图片，每个自定义人物最多可包含5张人脸图片
+        /// 
+        /// 请注意，与创建自定义人物一样，图片数据优先级优于图片URL优先级
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomPersonImageRequest"/></param>
+        /// <returns><see cref="AddCustomPersonImageResponse"/></returns>
+        public async Task<AddCustomPersonImageResponse> AddCustomPersonImage(AddCustomPersonImageRequest req)
+        {
+             JsonResponseModel<AddCustomPersonImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddCustomPersonImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCustomPersonImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增加自定义人脸图片，每个自定义人物最多可包含5张人脸图片
+        /// 
+        /// 请注意，与创建自定义人物一样，图片数据优先级优于图片URL优先级
+        /// </summary>
+        /// <param name="req"><see cref="AddCustomPersonImageRequest"/></param>
+        /// <returns><see cref="AddCustomPersonImageResponse"/></returns>
+        public AddCustomPersonImageResponse AddCustomPersonImageSync(AddCustomPersonImageRequest req)
+        {
+             JsonResponseModel<AddCustomPersonImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddCustomPersonImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCustomPersonImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物分类信息
+        /// 
+        /// 当L2Category为空时，将创建一级自定义分类。
+        /// 当L1Category与L2Category均不为空时，将创建二级自定义分类。请注意，**只有当一级自定义分类存在时，才可创建二级自定义分类**。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomCategoryRequest"/></param>
+        /// <returns><see cref="CreateCustomCategoryResponse"/></returns>
+        public async Task<CreateCustomCategoryResponse> CreateCustomCategory(CreateCustomCategoryRequest req)
+        {
+             JsonResponseModel<CreateCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物分类信息
+        /// 
+        /// 当L2Category为空时，将创建一级自定义分类。
+        /// 当L1Category与L2Category均不为空时，将创建二级自定义分类。请注意，**只有当一级自定义分类存在时，才可创建二级自定义分类**。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomCategoryRequest"/></param>
+        /// <returns><see cref="CreateCustomCategoryResponse"/></returns>
+        public CreateCustomCategoryResponse CreateCustomCategorySync(CreateCustomCategoryRequest req)
+        {
+             JsonResponseModel<CreateCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物库
+        /// 
+        /// Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
+        /// 
+        /// 在调用CreateCustomPerson和AddCustomPersonImage接口之前，请先确保本接口成功调用。当前每个用户只支持一个自定义人物库，一旦自定义人物库创建成功，后续接口调用均会返回人物库已存在错误。
+        /// 
+        /// 由于人脸图片对于自定义人物识别至关重要，因此自定义人物识别功能需要用户显式指定COS存储桶方可使用。具体来说，自定义人物识别功能接口(主要是CreateCustomPerson和AddCustomPersonImage)会在此COS桶下面新建IVLDCustomPersonImage目录，并在此目录下存储自定义人物图片数据以支持后续潜在的特征更新。
+        /// 
+        /// 请注意：本接口指定的COS桶仅用于**备份存储自定义人物图片**，CreateCustomPerson和AddCustomPersonImage接口入参URL可使用任意COS存储桶下的任意图片。
+        /// 
+        /// **重要**：请务必确保本接口指定的COS存储桶存在(不要手动删除COS桶)。COS存储桶一旦指定，将不能修改。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public async Task<CreateCustomGroupResponse> CreateCustomGroup(CreateCustomGroupRequest req)
+        {
+             JsonResponseModel<CreateCustomGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物库
+        /// 
+        /// Bucket的格式参考为 `bucketName-123456.cos.ap-shanghai.myqcloud.com`
+        /// 
+        /// 在调用CreateCustomPerson和AddCustomPersonImage接口之前，请先确保本接口成功调用。当前每个用户只支持一个自定义人物库，一旦自定义人物库创建成功，后续接口调用均会返回人物库已存在错误。
+        /// 
+        /// 由于人脸图片对于自定义人物识别至关重要，因此自定义人物识别功能需要用户显式指定COS存储桶方可使用。具体来说，自定义人物识别功能接口(主要是CreateCustomPerson和AddCustomPersonImage)会在此COS桶下面新建IVLDCustomPersonImage目录，并在此目录下存储自定义人物图片数据以支持后续潜在的特征更新。
+        /// 
+        /// 请注意：本接口指定的COS桶仅用于**备份存储自定义人物图片**，CreateCustomPerson和AddCustomPersonImage接口入参URL可使用任意COS存储桶下的任意图片。
+        /// 
+        /// **重要**：请务必确保本接口指定的COS存储桶存在(不要手动删除COS桶)。COS存储桶一旦指定，将不能修改。
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomGroupRequest"/></param>
+        /// <returns><see cref="CreateCustomGroupResponse"/></returns>
+        public CreateCustomGroupResponse CreateCustomGroupSync(CreateCustomGroupRequest req)
+        {
+             JsonResponseModel<CreateCustomGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物。
+        /// 
+        /// 输入人物名称，基本信息，分类信息与人脸图片，创建自定义人物
+        /// 
+        /// 人脸图片可使用图片数据(base64编码的图片数据)或者图片URL(推荐使用COS以减少下载时间，其他地址也支持)，原始图片优先，也即如果同时指定了图片数据和图片URL，接口将仅使用图片数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomPersonRequest"/></param>
+        /// <returns><see cref="CreateCustomPersonResponse"/></returns>
+        public async Task<CreateCustomPersonResponse> CreateCustomPerson(CreateCustomPersonRequest req)
+        {
+             JsonResponseModel<CreateCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自定义人物。
+        /// 
+        /// 输入人物名称，基本信息，分类信息与人脸图片，创建自定义人物
+        /// 
+        /// 人脸图片可使用图片数据(base64编码的图片数据)或者图片URL(推荐使用COS以减少下载时间，其他地址也支持)，原始图片优先，也即如果同时指定了图片数据和图片URL，接口将仅使用图片数据
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomPersonRequest"/></param>
+        /// <returns><see cref="CreateCustomPersonResponse"/></returns>
+        public CreateCustomPersonResponse CreateCustomPersonSync(CreateCustomPersonRequest req)
+        {
+             JsonResponseModel<CreateCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建默认自定义人物类型
+        /// </summary>
+        /// <param name="req"><see cref="CreateDefaultCategoriesRequest"/></param>
+        /// <returns><see cref="CreateDefaultCategoriesResponse"/></returns>
+        public async Task<CreateDefaultCategoriesResponse> CreateDefaultCategories(CreateDefaultCategoriesRequest req)
+        {
+             JsonResponseModel<CreateDefaultCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDefaultCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建默认自定义人物类型
+        /// </summary>
+        /// <param name="req"><see cref="CreateDefaultCategoriesRequest"/></param>
+        /// <returns><see cref="CreateDefaultCategoriesResponse"/></returns>
+        public CreateDefaultCategoriesResponse CreateDefaultCategoriesSync(CreateDefaultCategoriesRequest req)
+        {
+             JsonResponseModel<CreateDefaultCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDefaultCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDefaultCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建智能标签任务。
         /// 
         /// 请注意，本接口为异步接口，**返回TaskId只代表任务创建成功，不代表任务执行成功**。
@@ -97,6 +335,126 @@ namespace TencentCloud.Ivld.V20210903
         }
 
         /// <summary>
+        /// 删除自定义分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomCategoryRequest"/></param>
+        /// <returns><see cref="DeleteCustomCategoryResponse"/></returns>
+        public async Task<DeleteCustomCategoryResponse> DeleteCustomCategory(DeleteCustomCategoryRequest req)
+        {
+             JsonResponseModel<DeleteCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomCategoryRequest"/></param>
+        /// <returns><see cref="DeleteCustomCategoryResponse"/></returns>
+        public DeleteCustomCategoryResponse DeleteCustomCategorySync(DeleteCustomCategoryRequest req)
+        {
+             JsonResponseModel<DeleteCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义人物
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomPersonRequest"/></param>
+        /// <returns><see cref="DeleteCustomPersonResponse"/></returns>
+        public async Task<DeleteCustomPersonResponse> DeleteCustomPerson(DeleteCustomPersonRequest req)
+        {
+             JsonResponseModel<DeleteCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义人物
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomPersonRequest"/></param>
+        /// <returns><see cref="DeleteCustomPersonResponse"/></returns>
+        public DeleteCustomPersonResponse DeleteCustomPersonSync(DeleteCustomPersonRequest req)
+        {
+             JsonResponseModel<DeleteCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义人脸数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomPersonImageRequest"/></param>
+        /// <returns><see cref="DeleteCustomPersonImageResponse"/></returns>
+        public async Task<DeleteCustomPersonImageResponse> DeleteCustomPersonImage(DeleteCustomPersonImageRequest req)
+        {
+             JsonResponseModel<DeleteCustomPersonImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomPersonImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomPersonImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义人脸数据
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomPersonImageRequest"/></param>
+        /// <returns><see cref="DeleteCustomPersonImageResponse"/></returns>
+        public DeleteCustomPersonImageResponse DeleteCustomPersonImageSync(DeleteCustomPersonImageRequest req)
+        {
+             JsonResponseModel<DeleteCustomPersonImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomPersonImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomPersonImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 将MediaId对应的媒资文件从系统中删除。
         /// 
         /// **请注意，本接口仅删除媒资文件，媒资文件对应的视频分析结果不会被删除**。如您需要删除结构化分析结果，请调用DeleteTask接口。
@@ -132,6 +490,168 @@ namespace TencentCloud.Ivld.V20210903
              {
                  var strResp = this.InternalRequestSync(req, "DeleteMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量描述自定义人物分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomCategoriesRequest"/></param>
+        /// <returns><see cref="DescribeCustomCategoriesResponse"/></returns>
+        public async Task<DescribeCustomCategoriesResponse> DescribeCustomCategories(DescribeCustomCategoriesRequest req)
+        {
+             JsonResponseModel<DescribeCustomCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量描述自定义人物分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomCategoriesRequest"/></param>
+        /// <returns><see cref="DescribeCustomCategoriesResponse"/></returns>
+        public DescribeCustomCategoriesResponse DescribeCustomCategoriesSync(DescribeCustomCategoriesRequest req)
+        {
+             JsonResponseModel<DescribeCustomCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述自定义人物库信息，当前库大小(库中有多少人脸)，以及库中的存储桶
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public async Task<DescribeCustomGroupResponse> DescribeCustomGroup(DescribeCustomGroupRequest req)
+        {
+             JsonResponseModel<DescribeCustomGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述自定义人物库信息，当前库大小(库中有多少人脸)，以及库中的存储桶
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomGroupRequest"/></param>
+        /// <returns><see cref="DescribeCustomGroupResponse"/></returns>
+        public DescribeCustomGroupResponse DescribeCustomGroupSync(DescribeCustomGroupRequest req)
+        {
+             JsonResponseModel<DescribeCustomGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述自定义人物详细信息，包括人物信息与人物信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomPersonDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomPersonDetailResponse"/></returns>
+        public async Task<DescribeCustomPersonDetailResponse> DescribeCustomPersonDetail(DescribeCustomPersonDetailRequest req)
+        {
+             JsonResponseModel<DescribeCustomPersonDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomPersonDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomPersonDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述自定义人物详细信息，包括人物信息与人物信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomPersonDetailRequest"/></param>
+        /// <returns><see cref="DescribeCustomPersonDetailResponse"/></returns>
+        public DescribeCustomPersonDetailResponse DescribeCustomPersonDetailSync(DescribeCustomPersonDetailRequest req)
+        {
+             JsonResponseModel<DescribeCustomPersonDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomPersonDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomPersonDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量描述自定义人物
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomPersonsRequest"/></param>
+        /// <returns><see cref="DescribeCustomPersonsResponse"/></returns>
+        public async Task<DescribeCustomPersonsResponse> DescribeCustomPersons(DescribeCustomPersonsRequest req)
+        {
+             JsonResponseModel<DescribeCustomPersonsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomPersons");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomPersonsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量描述自定义人物
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomPersonsRequest"/></param>
+        /// <returns><see cref="DescribeCustomPersonsResponse"/></returns>
+        public DescribeCustomPersonsResponse DescribeCustomPersonsSync(DescribeCustomPersonsRequest req)
+        {
+             JsonResponseModel<DescribeCustomPersonsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomPersons");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomPersonsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -406,6 +926,92 @@ namespace TencentCloud.Ivld.V20210903
              {
                  var strResp = this.InternalRequestSync(req, "ImportMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义人物分类
+        /// 
+        /// 当L2Category为空时，代表更新CategoryId对应的一级自定义人物类型以及所有二级自定义人物类型所从属的一级自定义人物类型；
+        /// 当L2Category非空时，仅更新CategoryId对应的二级自定义人物类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomCategoryRequest"/></param>
+        /// <returns><see cref="UpdateCustomCategoryResponse"/></returns>
+        public async Task<UpdateCustomCategoryResponse> UpdateCustomCategory(UpdateCustomCategoryRequest req)
+        {
+             JsonResponseModel<UpdateCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义人物分类
+        /// 
+        /// 当L2Category为空时，代表更新CategoryId对应的一级自定义人物类型以及所有二级自定义人物类型所从属的一级自定义人物类型；
+        /// 当L2Category非空时，仅更新CategoryId对应的二级自定义人物类型
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomCategoryRequest"/></param>
+        /// <returns><see cref="UpdateCustomCategoryResponse"/></returns>
+        public UpdateCustomCategoryResponse UpdateCustomCategorySync(UpdateCustomCategoryRequest req)
+        {
+             JsonResponseModel<UpdateCustomCategoryResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCustomCategory");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCustomCategoryResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义人物信息，包括姓名，简要信息，分类信息等
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPersonRequest"/></param>
+        /// <returns><see cref="UpdateCustomPersonResponse"/></returns>
+        public async Task<UpdateCustomPersonResponse> UpdateCustomPerson(UpdateCustomPersonRequest req)
+        {
+             JsonResponseModel<UpdateCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCustomPersonResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义人物信息，包括姓名，简要信息，分类信息等
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCustomPersonRequest"/></param>
+        /// <returns><see cref="UpdateCustomPersonResponse"/></returns>
+        public UpdateCustomPersonResponse UpdateCustomPersonSync(UpdateCustomPersonRequest req)
+        {
+             JsonResponseModel<UpdateCustomPersonResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCustomPerson");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCustomPersonResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

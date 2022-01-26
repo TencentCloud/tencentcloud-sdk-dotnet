@@ -31,13 +31,13 @@ namespace TencentCloud.Iotvideoindustry.V20201201.Models
         public string P2PAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间
+        /// 查询开始时间，时间戳秒
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 查询结束时间
+        /// 查询结束时间，时间戳秒
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }

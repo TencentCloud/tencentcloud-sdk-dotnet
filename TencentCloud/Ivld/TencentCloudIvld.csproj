@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0E79229-9B9B-3209-810B-66290F3BDD46}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.452</VersionPrefix>
+    <VersionPrefix>3.0.453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,14 +45,41 @@
 
   <ItemGroup>
     <Compile Include="V20210903\IvldClient.cs" />
+    <Compile Include="V20210903\Models\AddCustomPersonImageRequest.cs" />
+    <Compile Include="V20210903\Models\AddCustomPersonImageResponse.cs" />
     <Compile Include="V20210903\Models\AppearIndexPair.cs" />
     <Compile Include="V20210903\Models\AppearInfo.cs" />
     <Compile Include="V20210903\Models\AudioInfo.cs" />
+    <Compile Include="V20210903\Models\CreateCustomCategoryRequest.cs" />
+    <Compile Include="V20210903\Models\CreateCustomCategoryResponse.cs" />
+    <Compile Include="V20210903\Models\CreateCustomGroupRequest.cs" />
+    <Compile Include="V20210903\Models\CreateCustomGroupResponse.cs" />
+    <Compile Include="V20210903\Models\CreateCustomPersonRequest.cs" />
+    <Compile Include="V20210903\Models\CreateCustomPersonResponse.cs" />
+    <Compile Include="V20210903\Models\CreateDefaultCategoriesRequest.cs" />
+    <Compile Include="V20210903\Models\CreateDefaultCategoriesResponse.cs" />
     <Compile Include="V20210903\Models\CreateTaskRequest.cs" />
     <Compile Include="V20210903\Models\CreateTaskResponse.cs" />
+    <Compile Include="V20210903\Models\CustomCategory.cs" />
+    <Compile Include="V20210903\Models\CustomPersonFilter.cs" />
+    <Compile Include="V20210903\Models\CustomPersonInfo.cs" />
     <Compile Include="V20210903\Models\Data.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomCategoryRequest.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomCategoryResponse.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomPersonImageRequest.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomPersonImageResponse.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomPersonRequest.cs" />
+    <Compile Include="V20210903\Models\DeleteCustomPersonResponse.cs" />
     <Compile Include="V20210903\Models\DeleteMediaRequest.cs" />
     <Compile Include="V20210903\Models\DeleteMediaResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomCategoriesRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomCategoriesResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomGroupRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomGroupResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomPersonDetailRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomPersonDetailResponse.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomPersonsRequest.cs" />
+    <Compile Include="V20210903\Models\DescribeCustomPersonsResponse.cs" />
     <Compile Include="V20210903\Models\DescribeMediaRequest.cs" />
     <Compile Include="V20210903\Models\DescribeMediaResponse.cs" />
     <Compile Include="V20210903\Models\DescribeMediasRequest.cs" />
@@ -73,12 +100,17 @@
     <Compile Include="V20210903\Models\MediaMetadata.cs" />
     <Compile Include="V20210903\Models\MediaPreknownInfo.cs" />
     <Compile Include="V20210903\Models\MultiLevelTag.cs" />
+    <Compile Include="V20210903\Models\PersonImageInfo.cs" />
     <Compile Include="V20210903\Models\ShowInfo.cs" />
     <Compile Include="V20210903\Models\SortBy.cs" />
     <Compile Include="V20210903\Models\TaskFilter.cs" />
     <Compile Include="V20210903\Models\TaskInfo.cs" />
     <Compile Include="V20210903\Models\TextAppearInfo.cs" />
     <Compile Include="V20210903\Models\TextInfo.cs" />
+    <Compile Include="V20210903\Models\UpdateCustomCategoryRequest.cs" />
+    <Compile Include="V20210903\Models\UpdateCustomCategoryResponse.cs" />
+    <Compile Include="V20210903\Models\UpdateCustomPersonRequest.cs" />
+    <Compile Include="V20210903\Models\UpdateCustomPersonResponse.cs" />
     <Compile Include="V20210903\Models\VideoAppearInfo.cs" />
   </ItemGroup>
 </Project>

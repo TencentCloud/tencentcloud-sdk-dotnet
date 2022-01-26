@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.452</VersionPrefix>
+    <VersionPrefix>3.0.453</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,8 @@
     <Compile Include="V20170312\Models\BindAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20170312\Models\Cdc.cs" />
     <Compile Include="V20170312\Models\CdcSize.cs" />
+    <Compile Include="V20170312\Models\CopySnapshotCrossRegionsRequest.cs" />
+    <Compile Include="V20170312\Models\CopySnapshotCrossRegionsResponse.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\CreateAutoSnapshotPolicyResponse.cs" />
     <Compile Include="V20170312\Models\CreateDisksRequest.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="V20170312\Models\ResizeDiskResponse.cs" />
     <Compile Include="V20170312\Models\SharePermission.cs" />
     <Compile Include="V20170312\Models\Snapshot.cs" />
+    <Compile Include="V20170312\Models\SnapshotCopyResult.cs" />
     <Compile Include="V20170312\Models\SnapshotOperationLog.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TerminateDisksRequest.cs" />
