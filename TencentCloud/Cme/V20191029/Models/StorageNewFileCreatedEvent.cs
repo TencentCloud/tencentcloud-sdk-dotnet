@@ -37,16 +37,18 @@ namespace TencentCloud.Cme.V20191029.Models
         public string MaterialId{ get; set; }
 
         /// <summary>
-        /// 操作者 Id。
+        /// 操作者 Id。（废弃，请勿使用）
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 操作类型，可取值为：
-        /// <li>Upload：上传；</li>
+        /// 操作类型，可取值有：
+        /// <li>Upload：本地上传；</li>
         /// <li>PullUpload：拉取上传；</li>
-        /// <li>Record：直播录制。</li>
+        /// <li>VideoEdit：视频剪辑；</li>
+        /// <li>LiveStreamClip：直播流剪辑；</li>
+        /// <li>LiveStreamRecord：直播流录制。</li>
         /// </summary>
         [JsonProperty("OperationType")]
         public string OperationType{ get; set; }
@@ -63,6 +65,18 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("ClassPath")]
         public string ClassPath{ get; set; }
 
+        /// <summary>
+        /// 生成文件的任务 Id。当生成新文件是拉取上传、视频剪辑、直播流剪辑时为任务 Id。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文信息。视频剪辑生成新文件时此字段为项目 Id；直播流剪辑或者直播流录制生成新文件则为原始流地址。
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +89,8 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "ClassPath", this.ClassPath);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
         }
     }
 }

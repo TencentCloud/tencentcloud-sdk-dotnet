@@ -453,6 +453,130 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 获取直播互动曲库歌手分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingerCategoriesRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingerCategoriesResponse"/></returns>
+        public async Task<DescribeKTVSingerCategoriesResponse> DescribeKTVSingerCategories(DescribeKTVSingerCategoriesRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingerCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVSingerCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingerCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播互动曲库歌手分类信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingerCategoriesRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingerCategoriesResponse"/></returns>
+        public DescribeKTVSingerCategoriesResponse DescribeKTVSingerCategoriesSync(DescribeKTVSingerCategoriesRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingerCategoriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVSingerCategories");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingerCategoriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据歌手id，返回该歌手下歌曲列表。
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingerMusicsRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingerMusicsResponse"/></returns>
+        public async Task<DescribeKTVSingerMusicsResponse> DescribeKTVSingerMusics(DescribeKTVSingerMusicsRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingerMusicsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVSingerMusics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingerMusicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据歌手id，返回该歌手下歌曲列表。
+        /// 
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingerMusicsRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingerMusicsResponse"/></returns>
+        public DescribeKTVSingerMusicsResponse DescribeKTVSingerMusicsSync(DescribeKTVSingerMusicsRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingerMusicsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVSingerMusics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingerMusicsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据过滤条件，返回匹配的歌手列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingersRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingersResponse"/></returns>
+        public async Task<DescribeKTVSingersResponse> DescribeKTVSingers(DescribeKTVSingersRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVSingers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据过滤条件，返回匹配的歌手列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSingersRequest"/></param>
+        /// <returns><see cref="DescribeKTVSingersResponse"/></returns>
+        public DescribeKTVSingersResponse DescribeKTVSingersSync(DescribeKTVSingersRequest req)
+        {
+             JsonResponseModel<DescribeKTVSingersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVSingers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLyricRequest"/></param>

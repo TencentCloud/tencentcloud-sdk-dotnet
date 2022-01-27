@@ -37,7 +37,13 @@ namespace TencentCloud.Ame.V20190916.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 演唱者列表
+        /// 演唱者基础信息列表
+        /// </summary>
+        [JsonProperty("SingerInfoSet")]
+        public KTVSingerBaseInfo[] SingerInfoSet{ get; set; }
+
+        /// <summary>
+        /// 已弃用，请使用SingerInfoSet
         /// </summary>
         [JsonProperty("SingerSet")]
         public string[] SingerSet{ get; set; }
@@ -74,6 +80,7 @@ namespace TencentCloud.Ame.V20190916.Models
         {
             this.SetParamSimple(map, prefix + "MusicId", this.MusicId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamArrayObj(map, prefix + "SingerInfoSet.", this.SingerInfoSet);
             this.SetParamArraySimple(map, prefix + "SingerSet.", this.SingerSet);
             this.SetParamArraySimple(map, prefix + "LyricistSet.", this.LyricistSet);
             this.SetParamArraySimple(map, prefix + "ComposerSet.", this.ComposerSet);

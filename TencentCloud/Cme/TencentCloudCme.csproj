@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.453</VersionPrefix>
+    <VersionPrefix>3.0.454</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,7 +55,10 @@
     <Compile Include="V20191029\Models\AuthorizationInfo.cs" />
     <Compile Include="V20191029\Models\Authorizer.cs" />
     <Compile Include="V20191029\Models\CMEExportInfo.cs" />
+    <Compile Include="V20191029\Models\ClassCreatedEvent.cs" />
+    <Compile Include="V20191029\Models\ClassDeletedEvent.cs" />
     <Compile Include="V20191029\Models\ClassInfo.cs" />
+    <Compile Include="V20191029\Models\ClassMovedEvent.cs" />
     <Compile Include="V20191029\Models\CopyProjectRequest.cs" />
     <Compile Include="V20191029\Models\CopyProjectResponse.cs" />
     <Compile Include="V20191029\Models\CosPublishInputInfo.cs" />
@@ -134,6 +137,7 @@
     <Compile Include="V20191029\Models\ImageMaterial.cs" />
     <Compile Include="V20191029\Models\ImportMaterialRequest.cs" />
     <Compile Include="V20191029\Models\ImportMaterialResponse.cs" />
+    <Compile Include="V20191029\Models\ImportMediaInfo.cs" />
     <Compile Include="V20191029\Models\ImportMediaToProjectRequest.cs" />
     <Compile Include="V20191029\Models\ImportMediaToProjectResponse.cs" />
     <Compile Include="V20191029\Models\IntegerRange.cs" />
@@ -146,8 +150,13 @@
     <Compile Include="V20191029\Models\LivePullInputInfo.cs" />
     <Compile Include="V20191029\Models\LiveStreamClipProjectInput.cs" />
     <Compile Include="V20191029\Models\LoginStatusInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialAddedEvent.cs" />
     <Compile Include="V20191029\Models\MaterialBasicInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialDeletedEvent.cs" />
+    <Compile Include="V20191029\Models\MaterialImportedEvent.cs" />
     <Compile Include="V20191029\Models\MaterialInfo.cs" />
+    <Compile Include="V20191029\Models\MaterialModifiedEvent.cs" />
+    <Compile Include="V20191029\Models\MaterialMovedEvent.cs" />
     <Compile Include="V20191029\Models\MaterialStatus.cs" />
     <Compile Include="V20191029\Models\MaterialTagInfo.cs" />
     <Compile Include="V20191029\Models\MediaImageSpriteInfo.cs" />
@@ -179,6 +188,7 @@
     <Compile Include="V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="V20191029\Models\ProjectInfo.cs" />
     <Compile Include="V20191029\Models\ProjectStreamConnectStatusChangedEvent.cs" />
+    <Compile Include="V20191029\Models\ProjectSwitcherStatusChangedEvent.cs" />
     <Compile Include="V20191029\Models\RecordReplayProjectInput.cs" />
     <Compile Include="V20191029\Models\Resource.cs" />
     <Compile Include="V20191029\Models\ResourceInfo.cs" />

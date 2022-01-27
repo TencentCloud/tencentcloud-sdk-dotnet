@@ -25,13 +25,13 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 订单自增 ID
+        /// 订单自增 ID【请勿依赖该字段作为唯一标识】
         /// </summary>
         [JsonProperty("DealId")]
         public string DealId{ get; set; }
 
         /// <summary>
-        /// 订单号
+        /// 订单号【订单唯一键】
         /// </summary>
         [JsonProperty("DealName")]
         public string DealName{ get; set; }
