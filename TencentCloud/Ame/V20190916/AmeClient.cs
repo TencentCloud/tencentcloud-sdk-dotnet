@@ -577,6 +577,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 获取直播互动曲库歌曲的周榜和月榜
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVTopListRequest"/></param>
+        /// <returns><see cref="DescribeKTVTopListResponse"/></returns>
+        public async Task<DescribeKTVTopListResponse> DescribeKTVTopList(DescribeKTVTopListRequest req)
+        {
+             JsonResponseModel<DescribeKTVTopListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVTopList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVTopListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播互动曲库歌曲的周榜和月榜
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVTopListRequest"/></param>
+        /// <returns><see cref="DescribeKTVTopListResponse"/></returns>
+        public DescribeKTVTopListResponse DescribeKTVTopListSync(DescribeKTVTopListRequest req)
+        {
+             JsonResponseModel<DescribeKTVTopListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVTopList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVTopListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据接口的模式及歌曲ID来取得歌词信息或者波形图信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLyricRequest"/></param>
