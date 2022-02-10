@@ -493,6 +493,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public async Task<DeleteGroupResponse> DeleteGroup(DeleteGroupRequest req)
+        {
+             JsonResponseModel<DeleteGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除消费组
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGroupRequest"/></param>
+        /// <returns><see cref="DeleteGroupResponse"/></returns>
+        public DeleteGroupResponse DeleteGroupSync(DeleteGroupRequest req)
+        {
+             JsonResponseModel<DeleteGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除预付费实例
         /// </summary>
         /// <param name="req"><see cref="DeleteInstancePreRequest"/></param>
