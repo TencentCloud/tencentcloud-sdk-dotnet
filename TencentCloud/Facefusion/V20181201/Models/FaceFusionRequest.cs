@@ -62,7 +62,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public long? CelebrityIdentify{ get; set; }
 
         /// <summary>
-        /// 图片Url地址
+        /// 图片Url地址，目前Url方式还不支持，后续会支持，可以使用FuseFace接口
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

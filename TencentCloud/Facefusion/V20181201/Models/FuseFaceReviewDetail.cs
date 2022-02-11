@@ -37,7 +37,7 @@ namespace TencentCloud.Facefusion.V20181201.Models
         public string Label{ get; set; }
 
         /// <summary>
-        /// 对应识别label的置信度，分数越高意味涉政可能性越大。 
+        /// 对应识别label的置信度，分数越高意味违法违规可能性越大。 
         /// 0到70，Suggestion建议为PASS； 
         /// 70到80，Suggestion建议为REVIEW； 
         /// 80到100，Suggestion建议为BLOCK。

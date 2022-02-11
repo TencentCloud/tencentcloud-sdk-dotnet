@@ -30,6 +30,30 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
 
+        /// <summary>
+        /// ·  NodePoolsName
+        ///     按照【节点池名】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  NodePoolsId
+        ///     按照【节点池id】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  tags
+        ///     按照【标签键值对】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// 
+        /// ·  tag:tag-key
+        ///     按照【标签键值对】进行过滤。
+        ///     类型：String
+        ///     必选：否
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +61,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

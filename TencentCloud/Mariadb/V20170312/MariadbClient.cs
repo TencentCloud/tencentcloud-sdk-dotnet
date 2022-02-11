@@ -1019,6 +1019,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
+        public async Task<DescribeDatabaseTableResponse> DescribeDatabaseTable(DescribeDatabaseTableRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseTableResponse"/></returns>
+        public DescribeDatabaseTableResponse DescribeDatabaseTableSync(DescribeDatabaseTableRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDatabases）用于查询云数据库实例的数据库列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>

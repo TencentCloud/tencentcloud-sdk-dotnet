@@ -138,6 +138,12 @@ namespace TencentCloud.Cfs.V20190719.Models
         [JsonProperty("Capacity")]
         public ulong? Capacity{ get; set; }
 
+        /// <summary>
+        /// 文件系统标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Cfs.V20190719.Models
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "BandwidthLimit", this.BandwidthLimit);
             this.SetParamSimple(map, prefix + "Capacity", this.Capacity);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }
