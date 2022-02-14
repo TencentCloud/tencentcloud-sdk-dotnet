@@ -55,7 +55,10 @@ namespace TencentCloud.Cii.V20210408.Models
         public string UnderwriteTaskId{ get; set; }
 
         /// <summary>
-        /// 状态码
+        /// 结果状态：
+        /// 0：返回成功
+        /// 1：结果未生成
+        /// 2：结果生成失败
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

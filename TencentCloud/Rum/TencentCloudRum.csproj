@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5858BBCC-C633-3051-97EE-41F59C93CB86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.457</VersionPrefix>
+    <VersionPrefix>3.0.458</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,30 +45,125 @@
 
   <ItemGroup>
     <Compile Include="V20210622\RumClient.cs" />
+    <Compile Include="V20210622\Models\CreateLogExportRequest.cs" />
+    <Compile Include="V20210622\Models\CreateLogExportResponse.cs" />
+    <Compile Include="V20210622\Models\CreateOfflineLogConfigRequest.cs" />
+    <Compile Include="V20210622\Models\CreateOfflineLogConfigResponse.cs" />
     <Compile Include="V20210622\Models\CreateProjectRequest.cs" />
     <Compile Include="V20210622\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20210622\Models\CreateReleaseFileRequest.cs" />
+    <Compile Include="V20210622\Models\CreateReleaseFileResponse.cs" />
+    <Compile Include="V20210622\Models\CreateStarProjectRequest.cs" />
+    <Compile Include="V20210622\Models\CreateStarProjectResponse.cs" />
+    <Compile Include="V20210622\Models\CreateTawInstanceRequest.cs" />
+    <Compile Include="V20210622\Models\CreateTawInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\CreateWhitelistRequest.cs" />
+    <Compile Include="V20210622\Models\CreateWhitelistResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteInstanceRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteLogExportRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteLogExportResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteOfflineLogConfigRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteOfflineLogConfigResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteOfflineLogRecordRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteOfflineLogRecordResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteProjectRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteProjectResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteReleaseFileRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteReleaseFileResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteStarProjectRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteStarProjectResponse.cs" />
+    <Compile Include="V20210622\Models\DeleteWhitelistRequest.cs" />
+    <Compile Include="V20210622\Models\DeleteWhitelistResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataCustomUrlRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataCustomUrlResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataEventUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataEventUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataFetchProjectRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataFetchProjectResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlInfoRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataFetchUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataLogUrlInfoRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataLogUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataLogUrlStatisticsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPerformancePageResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPerformanceProjectRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPerformanceProjectResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPvUrlInfoRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataPvUrlInfoResponse.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeDataPvUrlStatisticsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataReportCountRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataReportCountResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataSetUrlStatisticsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticProjectRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticProjectResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticResourceRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticResourceResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticUrlRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataStaticUrlResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeDataWebVitalsPageRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeDataWebVitalsPageResponse.cs" />
     <Compile Include="V20210622\Models\DescribeErrorRequest.cs" />
     <Compile Include="V20210622\Models\DescribeErrorResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeLogExportsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeLogExportsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeLogListRequest.cs" />
     <Compile Include="V20210622\Models\DescribeLogListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogConfigsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogRecordsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogRecordsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeOfflineLogsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeProjectLimitsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeProjectLimitsResponse.cs" />
     <Compile Include="V20210622\Models\DescribeProjectsRequest.cs" />
     <Compile Include="V20210622\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20210622\Models\DescribePvListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribePvListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeReleaseFileSignRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeReleaseFileSignResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeReleaseFilesRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeReleaseFilesResponse.cs" />
     <Compile Include="V20210622\Models\DescribeScoresRequest.cs" />
     <Compile Include="V20210622\Models\DescribeScoresResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeTawAreasRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeTawAreasResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeTawInstancesRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeTawInstancesResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeUvListRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeUvListResponse.cs" />
+    <Compile Include="V20210622\Models\DescribeWhitelistsRequest.cs" />
+    <Compile Include="V20210622\Models\DescribeWhitelistsResponse.cs" />
     <Compile Include="V20210622\Models\Filter.cs" />
+    <Compile Include="V20210622\Models\LogExport.cs" />
+    <Compile Include="V20210622\Models\ModifyInstanceRequest.cs" />
+    <Compile Include="V20210622\Models\ModifyInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\ModifyProjectLimitRequest.cs" />
+    <Compile Include="V20210622\Models\ModifyProjectLimitResponse.cs" />
+    <Compile Include="V20210622\Models\ModifyProjectRequest.cs" />
+    <Compile Include="V20210622\Models\ModifyProjectResponse.cs" />
+    <Compile Include="V20210622\Models\ProjectLimit.cs" />
+    <Compile Include="V20210622\Models\ReleaseFile.cs" />
+    <Compile Include="V20210622\Models\ResumeInstanceRequest.cs" />
+    <Compile Include="V20210622\Models\ResumeInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\RumAreaInfo.cs" />
+    <Compile Include="V20210622\Models\RumInstanceInfo.cs" />
     <Compile Include="V20210622\Models\RumProject.cs" />
+    <Compile Include="V20210622\Models\RumPvInfo.cs" />
+    <Compile Include="V20210622\Models\RumUvInfo.cs" />
     <Compile Include="V20210622\Models\ScoreInfo.cs" />
+    <Compile Include="V20210622\Models\StopInstanceRequest.cs" />
+    <Compile Include="V20210622\Models\StopInstanceResponse.cs" />
+    <Compile Include="V20210622\Models\Tag.cs" />
+    <Compile Include="V20210622\Models\Whitelist.cs" />
   </ItemGroup>
 </Project>

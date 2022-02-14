@@ -30,6 +30,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineVersion")]
         public string EngineVersion{ get; set; }
 
+        /// <summary>
+        /// 默认参数模板类型。支持值包括："HIGH_STABILITY" - 高稳定模版，"HIGH_PERFORMANCE" - 高性能模版。
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public string TemplateType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EngineVersion", this.EngineVersion);
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
         }
     }
 }

@@ -67,7 +67,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? FilterLine{ get; set; }
 
         /// <summary>
-        /// 状态搜索，idle：允许中；attacking：攻击中；blocking：封堵中
+        /// 状态搜索，idle：运行中；attacking：攻击中；blocking：封堵中
         /// </summary>
         [JsonProperty("FilterStatus")]
         public string FilterStatus{ get; set; }

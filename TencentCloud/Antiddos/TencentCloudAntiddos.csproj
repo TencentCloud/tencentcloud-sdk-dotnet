@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.457</VersionPrefix>
+    <VersionPrefix>3.0.458</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,6 +59,13 @@
     <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="V20200309\Models\BoundIpInfo.cs" />
+    <Compile Include="V20200309\Models\CCPrecisionPlyRecord.cs" />
+    <Compile Include="V20200309\Models\CCPrecisionPolicy.cs" />
+    <Compile Include="V20200309\Models\CCReqLimitPolicy.cs" />
+    <Compile Include="V20200309\Models\CCReqLimitPolicyRecord.cs" />
+    <Compile Include="V20200309\Models\CcBlackWhiteIpPolicy.cs" />
+    <Compile Include="V20200309\Models\CcGeoIPBlockConfig.cs" />
+    <Compile Include="V20200309\Models\CcGeoIpPolicyNew.cs" />
     <Compile Include="V20200309\Models\CertIdInsL7Rules.cs" />
     <Compile Include="V20200309\Models\ConnectLimitConfig.cs" />
     <Compile Include="V20200309\Models\ConnectLimitRelation.cs" />
@@ -66,6 +73,12 @@
     <Compile Include="V20200309\Models\CreateBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateBoundIPRequest.cs" />
     <Compile Include="V20200309\Models\CreateBoundIPResponse.cs" />
+    <Compile Include="V20200309\Models\CreateCCPrecisionPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\CreateCCPrecisionPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\CreateCCReqLimitPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\CreateCCReqLimitPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\CreateCcGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\CreateCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIRequest.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSBlackWhiteIpListRequest.cs" />
@@ -104,6 +117,14 @@
     <Compile Include="V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCCPrecisionPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCCPrecisionPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCCRequestLimitPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCCRequestLimitPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCcGeoIPBlockConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DeleteDDoSGeoIPBlockConfigRequest.cs" />
@@ -112,6 +133,8 @@
     <Compile Include="V20200309\Models\DeleteDDoSSpeedLimitConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeletePacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\DeletePacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\DeletePortAclConfigRequest.cs" />
+    <Compile Include="V20200309\Models\DeletePortAclConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeleteWaterPrintConfigRequest.cs" />
     <Compile Include="V20200309\Models\DeleteWaterPrintConfigResponse.cs" />
     <Compile Include="V20200309\Models\DeleteWaterPrintKeyRequest.cs" />
@@ -122,8 +145,16 @@
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCReqLimitPolicyListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCReqLimitPolicyListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCcGeoIPBlockConfigListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCcGeoIPBlockConfigListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeDDoSConnectLimitListRequest.cs" />
@@ -179,10 +210,26 @@
     <Compile Include="V20200309\Models\Layer4Rule.cs" />
     <Compile Include="V20200309\Models\Layer7Rule.cs" />
     <Compile Include="V20200309\Models\ListenerCcThreholdConfig.cs" />
+    <Compile Include="V20200309\Models\ModifyCCLevelPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyCCLevelPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyCCPrecisionPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyCCPrecisionPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyCCReqLimitPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyCCReqLimitPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyCCThresholdPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyCCThresholdPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyCcBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\ModifyDDoSGeoIPBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\ModifyDDoSGeoIPBlockConfigResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSLevelRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSLevelResponse.cs" />
     <Compile Include="V20200309\Models\ModifyDDoSSpeedLimitConfigRequest.cs" />
     <Compile Include="V20200309\Models\ModifyDDoSSpeedLimitConfigResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSThresholdRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyDDoSThresholdResponse.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameRequest.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameResponse.cs" />
     <Compile Include="V20200309\Models\ModifyL7RulesEdgeRequest.cs" />
@@ -191,6 +238,8 @@
     <Compile Include="V20200309\Models\ModifyNewDomainRulesResponse.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigRequest.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigResponse.cs" />
+    <Compile Include="V20200309\Models\ModifyPortAclConfigRequest.cs" />
+    <Compile Include="V20200309\Models\ModifyPortAclConfigResponse.cs" />
     <Compile Include="V20200309\Models\NewL7RuleEntry.cs" />
     <Compile Include="V20200309\Models\PackInfo.cs" />
     <Compile Include="V20200309\Models\PacketFilterConfig.cs" />

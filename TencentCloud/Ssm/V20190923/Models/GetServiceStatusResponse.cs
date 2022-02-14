@@ -37,8 +37,8 @@ namespace TencentCloud.Ssm.V20190923.Models
         public long? InvalidType{ get; set; }
 
         /// <summary>
-        /// true表示用户已经可以使用云API密钥安全托管功能，
-        /// false表示用户暂时不能使用云API密钥安全托管功能。
+        /// true表示用户已经可以使用密钥安全托管功能，
+        /// false表示用户暂时不能使用密钥安全托管功能。
         /// </summary>
         [JsonProperty("AccessKeyEscrowEnabled")]
         public bool? AccessKeyEscrowEnabled{ get; set; }

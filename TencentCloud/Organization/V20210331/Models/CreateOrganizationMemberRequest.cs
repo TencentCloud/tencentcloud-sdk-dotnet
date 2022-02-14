@@ -37,13 +37,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PolicyType{ get; set; }
 
         /// <summary>
-        /// 关系权限
+        /// 关系权限 取值：1-查看账单、2-查看余额、3-资金划拨、4-合并出账、5-开票 ，1、2 默认必须
         /// </summary>
         [JsonProperty("PermissionIds")]
         public ulong?[] PermissionIds{ get; set; }
 
         /// <summary>
-        /// 需要调节的节点
+        /// 成员所属部门的节点ID
         /// </summary>
         [JsonProperty("NodeId")]
         public long? NodeId{ get; set; }

@@ -25,7 +25,9 @@ namespace TencentCloud.Cii.V20210408.Models
     {
         
         /// <summary>
-        /// 服务类型（Structured/Underwrite）
+        /// 服务类型
+        /// Structured 仅结构化
+        /// Underwrite 结构化+核保
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }

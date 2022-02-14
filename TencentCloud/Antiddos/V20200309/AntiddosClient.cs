@@ -213,6 +213,126 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 新增CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCPrecisionPolicyResponse"/></returns>
+        public async Task<CreateCCPrecisionPolicyResponse> CreateCCPrecisionPolicy(CreateCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCPrecisionPolicyResponse"/></returns>
+        public CreateCCPrecisionPolicyResponse CreateCCPrecisionPolicySync(CreateCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCReqLimitPolicyResponse"/></returns>
+        public async Task<CreateCCReqLimitPolicyResponse> CreateCCReqLimitPolicy(CreateCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="CreateCCReqLimitPolicyResponse"/></returns>
+        public CreateCCReqLimitPolicyResponse CreateCCReqLimitPolicySync(CreateCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<CreateCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建cc防护的地域封禁配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
+        public async Task<CreateCcGeoIPBlockConfigResponse> CreateCcGeoIPBlockConfig(CreateCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建cc防护的地域封禁配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="CreateCcGeoIPBlockConfigResponse"/></returns>
+        public CreateCcGeoIPBlockConfigResponse CreateCcGeoIPBlockConfigSync(CreateCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<CreateCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 设置DDoS防护的AI防护开关
         /// </summary>
         /// <param name="req"><see cref="CreateDDoSAIRequest"/></param>
@@ -853,6 +973,166 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 删除CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCPrecisionPolicyResponse"/></returns>
+        public async Task<DeleteCCPrecisionPolicyResponse> DeleteCCPrecisionPolicy(DeleteCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCPrecisionPolicyResponse"/></returns>
+        public DeleteCCPrecisionPolicyResponse DeleteCCPrecisionPolicySync(DeleteCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCRequestLimitPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCRequestLimitPolicyResponse"/></returns>
+        public async Task<DeleteCCRequestLimitPolicyResponse> DeleteCCRequestLimitPolicy(DeleteCCRequestLimitPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCRequestLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCCRequestLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCRequestLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCCRequestLimitPolicyRequest"/></param>
+        /// <returns><see cref="DeleteCCRequestLimitPolicyResponse"/></returns>
+        public DeleteCCRequestLimitPolicyResponse DeleteCCRequestLimitPolicySync(DeleteCCRequestLimitPolicyRequest req)
+        {
+             JsonResponseModel<DeleteCCRequestLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCCRequestLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCCRequestLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC四层黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteCcBlackWhiteIpListResponse"/></returns>
+        public async Task<DeleteCcBlackWhiteIpListResponse> DeleteCcBlackWhiteIpList(DeleteCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC四层黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DeleteCcBlackWhiteIpListResponse"/></returns>
+        public DeleteCcBlackWhiteIpListResponse DeleteCcBlackWhiteIpListSync(DeleteCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DeleteCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC防护的区域封禁配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="DeleteCcGeoIPBlockConfigResponse"/></returns>
+        public async Task<DeleteCcGeoIPBlockConfigResponse> DeleteCcGeoIPBlockConfig(DeleteCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除CC防护的区域封禁配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCcGeoIPBlockConfigRequest"/></param>
+        /// <returns><see cref="DeleteCcGeoIPBlockConfigResponse"/></returns>
+        public DeleteCcGeoIPBlockConfigResponse DeleteCcGeoIPBlockConfigSync(DeleteCcGeoIPBlockConfigRequest req)
+        {
+             JsonResponseModel<DeleteCcGeoIPBlockConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCcGeoIPBlockConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCcGeoIPBlockConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除DDoS防护的IP网段黑白名单
         /// </summary>
         /// <param name="req"><see cref="DeleteDDoSBlackWhiteIpListRequest"/></param>
@@ -1004,6 +1284,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DeletePacketFilterConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePacketFilterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePortAclConfigRequest"/></param>
+        /// <returns><see cref="DeletePortAclConfigResponse"/></returns>
+        public async Task<DeletePortAclConfigResponse> DeletePortAclConfig(DeletePortAclConfigRequest req)
+        {
+             JsonResponseModel<DeletePortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeletePortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePortAclConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="DeletePortAclConfigRequest"/></param>
+        /// <returns><see cref="DeletePortAclConfigResponse"/></returns>
+        public DeletePortAclConfigResponse DeletePortAclConfigSync(DeletePortAclConfigRequest req)
+        {
+             JsonResponseModel<DeletePortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeletePortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePortAclConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1213,6 +1533,86 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取CC精准防护列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
+        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
+        public async Task<DescribeCCPrecisionPlyListResponse> DescribeCCPrecisionPlyList(DescribeCCPrecisionPlyListRequest req)
+        {
+             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCPrecisionPlyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC精准防护列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCPrecisionPlyListRequest"/></param>
+        /// <returns><see cref="DescribeCCPrecisionPlyListResponse"/></returns>
+        public DescribeCCPrecisionPlyListResponse DescribeCCPrecisionPlyListSync(DescribeCCPrecisionPlyListRequest req)
+        {
+             JsonResponseModel<DescribeCCPrecisionPlyListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCPrecisionPlyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCPrecisionPlyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC频率限制策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCReqLimitPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeCCReqLimitPolicyListResponse"/></returns>
+        public async Task<DescribeCCReqLimitPolicyListResponse> DescribeCCReqLimitPolicyList(DescribeCCReqLimitPolicyListRequest req)
+        {
+             JsonResponseModel<DescribeCCReqLimitPolicyListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCCReqLimitPolicyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCReqLimitPolicyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC频率限制策略列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCCReqLimitPolicyListRequest"/></param>
+        /// <returns><see cref="DescribeCCReqLimitPolicyListResponse"/></returns>
+        public DescribeCCReqLimitPolicyListResponse DescribeCCReqLimitPolicyListSync(DescribeCCReqLimitPolicyListRequest req)
+        {
+             JsonResponseModel<DescribeCCReqLimitPolicyListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCCReqLimitPolicyList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCReqLimitPolicyListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取CC攻击指标数据，包括总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
         /// </summary>
         /// <param name="req"><see cref="DescribeCCTrendRequest"/></param>
@@ -1244,6 +1644,86 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCCTrend");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC四层黑白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
+        public async Task<DescribeCcBlackWhiteIpListResponse> DescribeCcBlackWhiteIpList(DescribeCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC四层黑白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="DescribeCcBlackWhiteIpListResponse"/></returns>
+        public DescribeCcBlackWhiteIpListResponse DescribeCcBlackWhiteIpListSync(DescribeCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<DescribeCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC防护的区域封禁配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
+        public async Task<DescribeCcGeoIPBlockConfigListResponse> DescribeCcGeoIPBlockConfigList(DescribeCcGeoIPBlockConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCcGeoIPBlockConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取CC防护的区域封禁配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCcGeoIPBlockConfigListRequest"/></param>
+        /// <returns><see cref="DescribeCcGeoIPBlockConfigListResponse"/></returns>
+        public DescribeCcGeoIPBlockConfigListResponse DescribeCcGeoIPBlockConfigListSync(DescribeCcGeoIPBlockConfigListRequest req)
+        {
+             JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCcGeoIPBlockConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCcGeoIPBlockConfigListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2053,6 +2533,246 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 修改CC防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCLevelPolicyResponse"/></returns>
+        public async Task<ModifyCCLevelPolicyResponse> ModifyCCLevelPolicy(ModifyCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCLevelPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCLevelPolicyResponse"/></returns>
+        public ModifyCCLevelPolicyResponse ModifyCCLevelPolicySync(ModifyCCLevelPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCLevelPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCCLevelPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCLevelPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCPrecisionPolicyResponse"/></returns>
+        public async Task<ModifyCCPrecisionPolicyResponse> ModifyCCPrecisionPolicy(ModifyCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC精准防护策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCPrecisionPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCPrecisionPolicyResponse"/></returns>
+        public ModifyCCPrecisionPolicyResponse ModifyCCPrecisionPolicySync(ModifyCCPrecisionPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCPrecisionPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCCPrecisionPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCPrecisionPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCReqLimitPolicyResponse"/></returns>
+        public async Task<ModifyCCReqLimitPolicyResponse> ModifyCCReqLimitPolicy(ModifyCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC频率限制策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCReqLimitPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCReqLimitPolicyResponse"/></returns>
+        public ModifyCCReqLimitPolicyResponse ModifyCCReqLimitPolicySync(ModifyCCReqLimitPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCReqLimitPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCCReqLimitPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCReqLimitPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC清洗阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCThresholdPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCThresholdPolicyResponse"/></returns>
+        public async Task<ModifyCCThresholdPolicyResponse> ModifyCCThresholdPolicy(ModifyCCThresholdPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCThresholdPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCCThresholdPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCThresholdPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC清洗阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCCThresholdPolicyRequest"/></param>
+        /// <returns><see cref="ModifyCCThresholdPolicyResponse"/></returns>
+        public ModifyCCThresholdPolicyResponse ModifyCCThresholdPolicySync(ModifyCCThresholdPolicyRequest req)
+        {
+             JsonResponseModel<ModifyCCThresholdPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCCThresholdPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCCThresholdPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC四层黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyCcBlackWhiteIpListResponse"/></returns>
+        public async Task<ModifyCcBlackWhiteIpListResponse> ModifyCcBlackWhiteIpList(ModifyCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CC四层黑白名单
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCcBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyCcBlackWhiteIpListResponse"/></returns>
+        public ModifyCcBlackWhiteIpListResponse ModifyCcBlackWhiteIpListSync(ModifyCcBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyCcBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCcBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCcBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS黑白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyDDoSBlackWhiteIpListResponse"/></returns>
+        public async Task<ModifyDDoSBlackWhiteIpListResponse> ModifyDDoSBlackWhiteIpList(ModifyDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS黑白名单列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSBlackWhiteIpListRequest"/></param>
+        /// <returns><see cref="ModifyDDoSBlackWhiteIpListResponse"/></returns>
+        public ModifyDDoSBlackWhiteIpListResponse ModifyDDoSBlackWhiteIpListSync(ModifyDDoSBlackWhiteIpListRequest req)
+        {
+             JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDDoSBlackWhiteIpList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSBlackWhiteIpListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改DDoS防护的区域封禁配置
         /// </summary>
         /// <param name="req"><see cref="ModifyDDoSGeoIPBlockConfigRequest"/></param>
@@ -2093,6 +2813,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 读取或修改DDoS的防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSLevelRequest"/></param>
+        /// <returns><see cref="ModifyDDoSLevelResponse"/></returns>
+        public async Task<ModifyDDoSLevelResponse> ModifyDDoSLevel(ModifyDDoSLevelRequest req)
+        {
+             JsonResponseModel<ModifyDDoSLevelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSLevel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSLevelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 读取或修改DDoS的防护等级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSLevelRequest"/></param>
+        /// <returns><see cref="ModifyDDoSLevelResponse"/></returns>
+        public ModifyDDoSLevelResponse ModifyDDoSLevelSync(ModifyDDoSLevelRequest req)
+        {
+             JsonResponseModel<ModifyDDoSLevelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDDoSLevel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSLevelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改DDoS防护的访问限速配置
         /// </summary>
         /// <param name="req"><see cref="ModifyDDoSSpeedLimitConfigRequest"/></param>
@@ -2124,6 +2884,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDDoSSpeedLimitConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSSpeedLimitConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS清洗阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSThresholdRequest"/></param>
+        /// <returns><see cref="ModifyDDoSThresholdResponse"/></returns>
+        public async Task<ModifyDDoSThresholdResponse> ModifyDDoSThreshold(ModifyDDoSThresholdRequest req)
+        {
+             JsonResponseModel<ModifyDDoSThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDDoSThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSThresholdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS清洗阈值
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDDoSThresholdRequest"/></param>
+        /// <returns><see cref="ModifyDDoSThresholdResponse"/></returns>
+        public ModifyDDoSThresholdResponse ModifyDDoSThresholdSync(ModifyDDoSThresholdRequest req)
+        {
+             JsonResponseModel<ModifyDDoSThresholdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDDoSThreshold");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDDoSThresholdResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2284,6 +3084,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPacketFilterConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPacketFilterConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPortAclConfigRequest"/></param>
+        /// <returns><see cref="ModifyPortAclConfigResponse"/></returns>
+        public async Task<ModifyPortAclConfigResponse> ModifyPortAclConfig(ModifyPortAclConfigRequest req)
+        {
+             JsonResponseModel<ModifyPortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPortAclConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改DDoS防护的端口acl策略
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPortAclConfigRequest"/></param>
+        /// <returns><see cref="ModifyPortAclConfigResponse"/></returns>
+        public ModifyPortAclConfigResponse ModifyPortAclConfigSync(ModifyPortAclConfigRequest req)
+        {
+             JsonResponseModel<ModifyPortAclConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPortAclConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPortAclConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

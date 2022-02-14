@@ -93,6 +93,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="CreateAutoCalloutTaskResponse"/></returns>
+        public async Task<CreateAutoCalloutTaskResponse> CreateAutoCalloutTask(CreateAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<CreateAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoCalloutTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="CreateAutoCalloutTaskResponse"/></returns>
+        public CreateAutoCalloutTaskResponse CreateAutoCalloutTaskSync(CreateAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<CreateAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAutoCalloutTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建外呼会话
         /// </summary>
         /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DeleteStaff");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自动外呼任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="DescribeAutoCalloutTaskResponse"/></returns>
+        public async Task<DescribeAutoCalloutTaskResponse> DescribeAutoCalloutTask(DescribeAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<DescribeAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoCalloutTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询自动外呼任务详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="DescribeAutoCalloutTaskResponse"/></returns>
+        public DescribeAutoCalloutTaskResponse DescribeAutoCalloutTaskSync(DescribeAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<DescribeAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoCalloutTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -808,6 +888,46 @@ namespace TencentCloud.Ccc.V20200210
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTelSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTelSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="StopAutoCalloutTaskResponse"/></returns>
+        public async Task<StopAutoCalloutTaskResponse> StopAutoCalloutTask(StopAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<StopAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoCalloutTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停止自动外呼任务
+        /// </summary>
+        /// <param name="req"><see cref="StopAutoCalloutTaskRequest"/></param>
+        /// <returns><see cref="StopAutoCalloutTaskResponse"/></returns>
+        public StopAutoCalloutTaskResponse StopAutoCalloutTaskSync(StopAutoCalloutTaskRequest req)
+        {
+             JsonResponseModel<StopAutoCalloutTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopAutoCalloutTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopAutoCalloutTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

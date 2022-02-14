@@ -47,7 +47,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         /// <li>instance-state</li>按照【实例状态】进行过滤。
         /// 类型：String
         /// 必选：否
-        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 5。参数不支持同时指定 InstanceIds 和 Filters。
+        /// 每次请求的 Filters 的上限为 10，Filter.Values 的上限为 100。参数不支持同时指定 InstanceIds 和 Filters。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
