@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public bool? ScanPathAll{ get; set; }
 
         /// <summary>
-        /// 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径
+        /// 当ScanPathAll为true 生效 0扫描以下路径 1、扫描除以下路径(扫描范围只能小于等于1)
         /// </summary>
         [JsonProperty("ScanPathType")]
         public ulong? ScanPathType{ get; set; }

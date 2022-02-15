@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Iotexplorer.V20190423.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetImageRegistryDetailRequest : AbstractModel
+    public class DescribeGatewaySubDeviceListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 仓库列表id
+        /// 网关产品ID
         /// </summary>
-        [JsonProperty("Id")]
-        public ulong? Id{ get; set; }
+        [JsonProperty("GatewayProductId")]
+        public string GatewayProductId{ get; set; }
 
         /// <summary>
-        /// 镜像ID
+        /// 网关设备名称
         /// </summary>
-        [JsonProperty("ImageId")]
-        public string ImageId{ get; set; }
+        [JsonProperty("GatewayDeviceName")]
+        public string GatewayDeviceName{ get; set; }
+
+        /// <summary>
+        /// 分页偏移
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页的大小
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);
+            this.SetParamSimple(map, prefix + "GatewayDeviceName", this.GatewayDeviceName);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

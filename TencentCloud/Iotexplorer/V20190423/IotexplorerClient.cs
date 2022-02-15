@@ -1573,6 +1573,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 查询绑定到家庭的网关设备的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewaySubDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeGatewaySubDeviceListResponse"/></returns>
+        public async Task<DescribeGatewaySubDeviceListResponse> DescribeGatewaySubDeviceList(DescribeGatewaySubDeviceListRequest req)
+        {
+             JsonResponseModel<DescribeGatewaySubDeviceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGatewaySubDeviceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewaySubDeviceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询绑定到家庭的网关设备的子设备列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGatewaySubDeviceListRequest"/></param>
+        /// <returns><see cref="DescribeGatewaySubDeviceListResponse"/></returns>
+        public DescribeGatewaySubDeviceListResponse DescribeGatewaySubDeviceListSync(DescribeGatewaySubDeviceListRequest req)
+        {
+             JsonResponseModel<DescribeGatewaySubDeviceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGatewaySubDeviceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGatewaySubDeviceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于获取网关可绑定或解绑的子产品
         /// </summary>
         /// <param name="req"><see cref="DescribeGatewaySubProductsRequest"/></param>

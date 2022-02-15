@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Tcss.V20201101.Models
+namespace TencentCloud.Ame.V20190916.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeAssetImageRegistryDetailRequest : AbstractModel
+    public class SetDestroyModeCommandInput : AbstractModel
     {
         
         /// <summary>
-        /// 仓库列表id
+        /// 销毁模式，取值有：
+        /// <li>Auto：房间没人时自动销毁</li>
+        /// <li>Expire：房间没人时过期自动销毁</li>
+        /// <li>Never：不自动销毁，需手动销毁</li>默认为：Auto。
         /// </summary>
-        [JsonProperty("Id")]
-        public ulong? Id{ get; set; }
+        [JsonProperty("DestroyMode")]
+        public string DestroyMode{ get; set; }
 
         /// <summary>
-        /// 镜像ID
+        /// 过期销毁时间，单位：秒，当DestroyMode取Expire时必填。
         /// </summary>
-        [JsonProperty("ImageId")]
-        public string ImageId{ get; set; }
+        [JsonProperty("DestroyExpireTime")]
+        public long? DestroyExpireTime{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "DestroyMode", this.DestroyMode);
+            this.SetParamSimple(map, prefix + "DestroyExpireTime", this.DestroyExpireTime);
         }
     }
 }

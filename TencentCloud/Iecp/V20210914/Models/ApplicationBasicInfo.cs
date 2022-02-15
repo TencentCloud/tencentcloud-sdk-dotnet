@@ -48,6 +48,13 @@ namespace TencentCloud.Iecp.V20210914.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 是否允许可视化修改
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllowVisualModify")]
+        public bool? AllowVisualModify{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Iecp.V20210914.Models
             this.SetParamSimple(map, prefix + "ManageUrl", this.ManageUrl);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "AllowVisualModify", this.AllowVisualModify);
         }
     }
 }

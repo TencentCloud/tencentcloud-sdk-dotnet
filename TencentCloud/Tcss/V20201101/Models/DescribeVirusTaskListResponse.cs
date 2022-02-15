@@ -31,7 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public VirusTaskInfo[] List{ get; set; }
 
         /// <summary>
-        /// 总数量
+        /// 总数量(容器任务数量)
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

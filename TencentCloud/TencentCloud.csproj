@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.458</VersionPrefix>
+    <VersionPrefix>3.0.459</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -199,6 +199,7 @@
     <Compile Include="Ame\V20190916\Models\SeekCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SendMessageCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetAudioParamCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SetDestroyModeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetPlayModeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetPlaylistCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SortBy.cs" />
@@ -9301,6 +9302,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\DescribeFirmwareTaskResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewayBindDevicesRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewayBindDevicesResponse.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubDeviceListRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubDeviceListResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubProductsRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeGatewaySubProductsResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\DescribeLoRaFrequencyRequest.cs" />

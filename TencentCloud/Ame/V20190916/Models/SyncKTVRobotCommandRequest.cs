@@ -41,6 +41,7 @@ namespace TencentCloud.Ame.V20190916.Models
         /// <li>SetPlaylist：歌单变更</li>
         /// <li>SetAudioParam：音频参数变更</li>
         /// <li>SendMessage：发送自定义消息</li>
+        /// <li>SetDestroyMode：设置销毁模式</li>
         /// </summary>
         [JsonProperty("Command")]
         public string Command{ get; set; }
@@ -81,6 +82,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("SetPlayModeCommandInput")]
         public SetPlayModeCommandInput SetPlayModeCommandInput{ get; set; }
 
+        /// <summary>
+        /// 销毁模式，当Command取SetDestroyMode时，必填。
+        /// </summary>
+        [JsonProperty("SetDestroyModeCommandInput")]
+        public SetDestroyModeCommandInput SetDestroyModeCommandInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +102,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamObj(map, prefix + "SetAudioParamCommandInput.", this.SetAudioParamCommandInput);
             this.SetParamObj(map, prefix + "SendMessageCommandInput.", this.SendMessageCommandInput);
             this.SetParamObj(map, prefix + "SetPlayModeCommandInput.", this.SetPlayModeCommandInput);
+            this.SetParamObj(map, prefix + "SetDestroyModeCommandInput.", this.SetDestroyModeCommandInput);
         }
     }
 }
