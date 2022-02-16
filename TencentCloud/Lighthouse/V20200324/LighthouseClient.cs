@@ -371,6 +371,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
+        /// <returns><see cref="CreateInstancesResponse"/></returns>
+        public async Task<CreateInstancesResponse> CreateInstances(CreateInstancesRequest req)
+        {
+             JsonResponseModel<CreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(CreateInstances)用于创建一个或多个指定套餐的轻量应用服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateInstancesRequest"/></param>
+        /// <returns><see cref="CreateInstancesResponse"/></returns>
+        public CreateInstancesResponse CreateInstancesSync(CreateInstancesRequest req)
+        {
+             JsonResponseModel<CreateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateKeyPair）用于创建一个密钥对。
         /// </summary>
         /// <param name="req"><see cref="CreateKeyPairRequest"/></param>

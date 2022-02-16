@@ -54,6 +54,18 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("L2Category")]
         public string L2Category{ get; set; }
 
+        /// <summary>
+        /// 自定义人物图片信息
+        /// </summary>
+        [JsonProperty("ImageInfoSet")]
+        public PersonImageInfo[] ImageInfoSet{ get; set; }
+
+        /// <summary>
+        /// 自定义人物创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "BasicInfo", this.BasicInfo);
             this.SetParamSimple(map, prefix + "L1Category", this.L1Category);
             this.SetParamSimple(map, prefix + "L2Category", this.L2Category);
+            this.SetParamArrayObj(map, prefix + "ImageInfoSet.", this.ImageInfoSet);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

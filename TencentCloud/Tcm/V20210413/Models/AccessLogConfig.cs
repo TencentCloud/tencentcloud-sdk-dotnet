@@ -48,6 +48,18 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("CLS")]
         public CLS CLS{ get; set; }
 
+        /// <summary>
+        /// 编码格式，可选值：TEXT、JSON
+        /// </summary>
+        [JsonProperty("Encoding")]
+        public string Encoding{ get; set; }
+
+        /// <summary>
+        /// 日志格式
+        /// </summary>
+        [JsonProperty("Format")]
+        public string Format{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "Template", this.Template);
             this.SetParamObj(map, prefix + "SelectedRange.", this.SelectedRange);
             this.SetParamObj(map, prefix + "CLS.", this.CLS);
+            this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
+            this.SetParamSimple(map, prefix + "Format", this.Format);
         }
     }
 }

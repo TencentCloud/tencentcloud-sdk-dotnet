@@ -25,7 +25,7 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 可用区状态。可能的返回值为：0-未上线；1-上线；2-开放；3-停售；4-不展示
+        /// 可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
@@ -121,6 +121,26 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RemoteRoZone")]
         public string[] RemoteRoZone{ get; set; }
 
+        /// <summary>
+        /// 独享型可用区状态。可能的返回值为：1-上线；3-停售；4-不展示
+        /// </summary>
+        [JsonProperty("ExClusterStatus")]
+        public long? ExClusterStatus{ get; set; }
+
+        /// <summary>
+        /// 独享型可支持的跨可用区只读区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExClusterRemoteRoZone")]
+        public string[] ExClusterRemoteRoZone{ get; set; }
+
+        /// <summary>
+        /// 独享型多可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExClusterZoneConf")]
+        public ZoneConf ExClusterZoneConf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -143,6 +163,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "DrZone.", this.DrZone);
             this.SetParamSimple(map, prefix + "IsSupportRemoteRo", this.IsSupportRemoteRo);
             this.SetParamArraySimple(map, prefix + "RemoteRoZone.", this.RemoteRoZone);
+            this.SetParamSimple(map, prefix + "ExClusterStatus", this.ExClusterStatus);
+            this.SetParamArraySimple(map, prefix + "ExClusterRemoteRoZone.", this.ExClusterRemoteRoZone);
+            this.SetParamObj(map, prefix + "ExClusterZoneConf.", this.ExClusterZoneConf);
         }
     }
 }
