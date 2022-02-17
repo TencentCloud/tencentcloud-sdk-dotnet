@@ -114,6 +114,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Trace")]
         public bool? Trace{ get; set; }
 
+        /// <summary>
+        /// 标签数组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxReceiveCount", this.MaxReceiveCount);
             this.SetParamSimple(map, prefix + "MaxTimeToLive", this.MaxTimeToLive);
             this.SetParamSimple(map, prefix + "Trace", this.Trace);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

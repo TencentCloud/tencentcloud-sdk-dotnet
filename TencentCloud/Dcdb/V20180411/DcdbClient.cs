@@ -617,6 +617,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowLogsResponse"/></returns>
+        public async Task<DescribeDBSlowLogsResponse> DescribeDBSlowLogs(DescribeDBSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
+        /// <returns><see cref="DescribeDBSlowLogsResponse"/></returns>
+        public DescribeDBSlowLogsResponse DescribeDBSlowLogsSync(DescribeDBSlowLogsRequest req)
+        {
+             JsonResponseModel<DescribeDBSlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBSlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDBSyncMode）用于查询云数据库实例的同步模式。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSyncModeRequest"/></param>

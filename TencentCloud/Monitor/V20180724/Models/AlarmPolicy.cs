@@ -230,6 +230,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TagInstances")]
         public TagInstance[] TagInstances{ get; set; }
 
+        /// <summary>
+        /// 策略关联的过滤维度信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FilterDimensionsParam")]
+        public string FilterDimensionsParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -265,6 +272,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
             this.SetParamSimple(map, prefix + "OriginId", this.OriginId);
             this.SetParamArrayObj(map, prefix + "TagInstances.", this.TagInstances);
+            this.SetParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
         }
     }
 }

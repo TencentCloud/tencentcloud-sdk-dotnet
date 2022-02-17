@@ -73,11 +73,23 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// 加速通道转发到源站的请求中携带的host。
+        /// 回源Host。加速通道转发到源站的请求中携带的host。
         /// 当ForwardHost=default时，使用规则的域名，其他情况为该字段所设置的值。
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }
+
+        /// <summary>
+        /// 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+        /// </summary>
+        [JsonProperty("ServerNameIndicationSwitch")]
+        public string ServerNameIndicationSwitch{ get; set; }
+
+        /// <summary>
+        /// 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+        /// </summary>
+        [JsonProperty("ServerNameIndication")]
+        public string ServerNameIndication{ get; set; }
 
 
         /// <summary>
@@ -93,6 +105,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "Path", this.Path);
             this.SetParamSimple(map, prefix + "ForwardProtocol", this.ForwardProtocol);
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+            this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+            this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
         }
     }
 }

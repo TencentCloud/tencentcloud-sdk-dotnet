@@ -48,6 +48,12 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("SubTaskId")]
         public string SubTaskId{ get; set; }
 
+        /// <summary>
+        /// 任务文件列表
+        /// </summary>
+        [JsonProperty("TaskFiles")]
+        public string[] TaskFiles{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "StructureResult", this.StructureResult);
             this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
+            this.SetParamArraySimple(map, prefix + "TaskFiles.", this.TaskFiles);
         }
     }
 }

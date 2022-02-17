@@ -141,6 +141,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 订阅类型，Exclusive，Shared，Failover， Key_Shared，空或NULL表示未知，
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubType")]
+        public string SubType{ get; set; }
+
+        /// <summary>
+        /// 是否由于未 ack 数到达上限而被 block
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlockedSubscriptionOnUnackedMsgs")]
+        public bool? BlockedSubscriptionOnUnackedMsgs{ get; set; }
+
+        /// <summary>
+        /// 未 ack 消息数上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxUnackedMsgNum")]
+        public long? MaxUnackedMsgNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +185,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "SubType", this.SubType);
+            this.SetParamSimple(map, prefix + "BlockedSubscriptionOnUnackedMsgs", this.BlockedSubscriptionOnUnackedMsgs);
+            this.SetParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
         }
     }
 }

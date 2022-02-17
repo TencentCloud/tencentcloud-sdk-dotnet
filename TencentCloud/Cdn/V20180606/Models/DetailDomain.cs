@@ -66,10 +66,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// 域名业务类型
-        /// web：静态加速
-        /// download：下载加速
-        /// media：流媒体点播加速
+        /// 加速域名业务类型
+        /// web：网页小文件
+        /// download：下载大文件
+        /// media：音视频点播
+        /// hybrid:  动静加速
+        /// dynamic:  动态加速
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
@@ -459,6 +461,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ShareCname")]
         public ShareCname ShareCname{ get; set; }
 
+        /// <summary>
+        /// 规则引擎
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleEngine")]
+        public RuleEngine RuleEngine{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -525,6 +534,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
+            this.SetParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
         }
     }
 }

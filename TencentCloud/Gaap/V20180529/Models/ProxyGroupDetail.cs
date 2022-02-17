@@ -137,7 +137,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 通道组套餐类型：Thunder表示标准通道组，Accelerator表示游戏加速器通道组，CrossBorder表示跨境通道组。
+        /// 通道组套餐类型：Thunder表示标准通道组，Accelerator表示银牌加速通道组，CrossBorder表示跨境通道组。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PackageType")]

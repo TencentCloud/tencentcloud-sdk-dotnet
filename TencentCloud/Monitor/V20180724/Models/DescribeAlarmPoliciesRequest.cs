@@ -139,6 +139,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
 
+        /// <summary>
+        /// 是否需要策略与入参过滤维度参数的对应关系，1：是  0：否，默认为0
+        /// </summary>
+        [JsonProperty("NeedCorrespondence")]
+        public long? NeedCorrespondence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "Enable.", this.Enable);
             this.SetParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+            this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
         }
     }
 }

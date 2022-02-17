@@ -52,6 +52,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ClientVersion")]
         public string ClientVersion{ get; set; }
 
+        /// <summary>
+        /// 消费者连接的主题分区号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Partition")]
+        public long? Partition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ConsumerAddr", this.ConsumerAddr);
             this.SetParamSimple(map, prefix + "ConsumerName", this.ConsumerName);
             this.SetParamSimple(map, prefix + "ClientVersion", this.ClientVersion);
+            this.SetParamSimple(map, prefix + "Partition", this.Partition);
         }
     }
 }

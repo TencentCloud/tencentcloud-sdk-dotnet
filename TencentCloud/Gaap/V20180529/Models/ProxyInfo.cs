@@ -224,7 +224,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string NetworkType{ get; set; }
 
         /// <summary>
-        /// 通道套餐类型：Thunder表示标准通道，Accelerator表示游戏加速器通道，
+        /// 通道套餐类型：Thunder表示标准通道，Accelerator表示银牌加速通道，
         /// CrossBorder表示跨境通道。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -253,6 +253,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// </summary>
         [JsonProperty("Http3Supported")]
         public long? Http3Supported{ get; set; }
+
+        /// <summary>
+        /// 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InBanBlacklist")]
+        public long? InBanBlacklist{ get; set; }
 
 
         /// <summary>
@@ -293,6 +300,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
             this.SetParamArrayObj(map, prefix + "IPList.", this.IPList);
             this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
+            this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         }
     }
 }

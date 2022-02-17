@@ -43,6 +43,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Partitions{ get; set; }
 
         /// <summary>
+        /// 备注，128字符以内。
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
         /// 0： 普通消息；
         /// 1 ：全局顺序消息；
         /// 2 ：局部顺序消息；
@@ -53,16 +59,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? TopicType{ get; set; }
 
         /// <summary>
-        /// 备注，128字符以内。
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
-
-        /// <summary>
         /// Pulsar 集群的ID
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }
+
+        /// <summary>
+        /// Pulsar 主题类型
+        /// 0: 非持久非分区
+        /// 1: 非持久分区
+        /// 2: 持久非分区
+        /// 3: 持久分区
+        /// </summary>
+        [JsonProperty("PulsarTopicType")]
+        public long? PulsarTopicType{ get; set; }
 
 
         /// <summary>
@@ -73,9 +83,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "Partitions", this.Partitions);
-            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         }
     }
 }

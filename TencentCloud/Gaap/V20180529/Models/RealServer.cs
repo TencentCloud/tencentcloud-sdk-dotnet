@@ -48,6 +48,12 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 是否在封禁黑名单中，其中：0表示不在黑名单中，1表示在黑名单中。
+        /// </summary>
+        [JsonProperty("InBanBlacklist")]
+        public long? InBanBlacklist{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "RealServerId", this.RealServerId);
             this.SetParamSimple(map, prefix + "RealServerName", this.RealServerName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "InBanBlacklist", this.InBanBlacklist);
         }
     }
 }

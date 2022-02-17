@@ -46,7 +46,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信
+        /// 通知渠道列表 EMAIL=邮件 SMS=短信 CALL=电话 WECHAT=微信 RTX=企业微信
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoticeWay")]
@@ -101,6 +101,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NeedPhoneArriveNotice")]
         public long? NeedPhoneArriveNotice{ get; set; }
 
+        /// <summary>
+        /// 电话拨打类型 SYNC=同时拨打 CIRCLE=轮询拨打 不指定时默认是轮询
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhoneCallType")]
+        public string PhoneCallType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +125,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "PhoneInnerInterval", this.PhoneInnerInterval);
             this.SetParamSimple(map, prefix + "PhoneCircleInterval", this.PhoneCircleInterval);
             this.SetParamSimple(map, prefix + "NeedPhoneArriveNotice", this.NeedPhoneArriveNotice);
+            this.SetParamSimple(map, prefix + "PhoneCallType", this.PhoneCallType);
         }
     }
 }

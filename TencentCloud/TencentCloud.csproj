@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.460</VersionPrefix>
+    <VersionPrefix>3.0.461</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2928,6 +2928,7 @@
     <Compile Include="Cdn\V20180606\Models\Revalidate.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleCache.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleCacheConfig.cs" />
+    <Compile Include="Cdn\V20180606\Models\RuleEngine.cs" />
     <Compile Include="Cdn\V20180606\Models\RuleQueryString.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnAclConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\ScdnAclGroup.cs" />
@@ -6190,6 +6191,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDCDBInstanceNodeInfoRequest.cs" />
@@ -6274,6 +6277,7 @@
     <Compile Include="Dcdb\V20180411\Models\SecurityGroupBound.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ShardZoneChooseInfo.cs" />
+    <Compile Include="Dcdb\V20180411\Models\SlowLogData.cs" />
     <Compile Include="Dcdb\V20180411\Models\SpecConfig.cs" />
     <Compile Include="Dcdb\V20180411\Models\SpecConfigInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\SplitShardConfig.cs" />

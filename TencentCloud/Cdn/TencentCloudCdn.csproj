@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.460</VersionPrefix>
+    <VersionPrefix>3.0.461</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -306,6 +306,7 @@
     <Compile Include="V20180606\Models\Revalidate.cs" />
     <Compile Include="V20180606\Models\RuleCache.cs" />
     <Compile Include="V20180606\Models\RuleCacheConfig.cs" />
+    <Compile Include="V20180606\Models\RuleEngine.cs" />
     <Compile Include="V20180606\Models\RuleQueryString.cs" />
     <Compile Include="V20180606\Models\ScdnAclConfig.cs" />
     <Compile Include="V20180606\Models\ScdnAclGroup.cs" />

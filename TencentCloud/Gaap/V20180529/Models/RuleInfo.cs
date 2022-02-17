@@ -99,6 +99,22 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }
 
+        /// <summary>
+        /// 服务器名称指示（ServerNameIndication，简称SNI）开关。ON表示开启，OFF表示关闭。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerNameIndicationSwitch")]
+        public string ServerNameIndicationSwitch{ get; set; }
+
+        /// <summary>
+        /// 服务器名称指示（ServerNameIndication，简称SNI），当SNI开关打开时，该字段必填。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServerNameIndication")]
+        public string ServerNameIndication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +133,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamArrayObj(map, prefix + "RealServerSet.", this.RealServerSet);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
+            this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
+            this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
         }
     }
 }

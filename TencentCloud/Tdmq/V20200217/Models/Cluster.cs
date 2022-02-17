@@ -194,6 +194,15 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 计费模式：
+        /// 0: 按量计费
+        /// 1: 包年包月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +235,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "MaxMessageDelayInSeconds", this.MaxMessageDelayInSeconds);
             this.SetParamSimple(map, prefix + "PublicAccessEnabled", this.PublicAccessEnabled);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
         }
     }
 }

@@ -82,7 +82,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RealServerCertificateId{ get; set; }
 
         /// <summary>
-        /// 源站证书域名。
+        /// 该字段已废弃，请使用创建规则和修改规则中的SNI功能。
         /// </summary>
         [JsonProperty("RealServerCertificateDomain")]
         public string RealServerCertificateDomain{ get; set; }

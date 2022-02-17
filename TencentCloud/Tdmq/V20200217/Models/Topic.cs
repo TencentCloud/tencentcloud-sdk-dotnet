@@ -177,6 +177,16 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("ConsumerLimit")]
         public string ConsumerLimit{ get; set; }
 
+        /// <summary>
+        /// 0: 非持久非分区
+        /// 1: 非持久分区
+        /// 2: 持久非分区
+        /// 3: 持久分区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PulsarTopicType")]
+        public long? PulsarTopicType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +214,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ProducerLimit", this.ProducerLimit);
             this.SetParamSimple(map, prefix + "ConsumerLimit", this.ConsumerLimit);
+            this.SetParamSimple(map, prefix + "PulsarTopicType", this.PulsarTopicType);
         }
     }
 }
