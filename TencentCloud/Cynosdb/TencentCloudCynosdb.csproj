@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.461</VersionPrefix>
+    <VersionPrefix>3.0.462</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,12 +46,18 @@
   <ItemGroup>
     <Compile Include="V20190107\CynosdbClient.cs" />
     <Compile Include="V20190107\Models\Account.cs" />
+    <Compile Include="V20190107\Models\AccountParam.cs" />
+    <Compile Include="V20190107\Models\ActivateInstanceRequest.cs" />
+    <Compile Include="V20190107\Models\ActivateInstanceResponse.cs" />
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
+    <Compile Include="V20190107\Models\AssociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20190107\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
+    <Compile Include="V20190107\Models\ClusterParamModifyLog.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
     <Compile Include="V20190107\Models\CreateClustersResponse.cs" />
     <Compile Include="V20190107\Models\CynosdbCluster.cs" />
@@ -59,6 +65,10 @@
     <Compile Include="V20190107\Models\CynosdbInstance.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceDetail.cs" />
     <Compile Include="V20190107\Models\CynosdbInstanceGrp.cs" />
+    <Compile Include="V20190107\Models\DatabasePrivileges.cs" />
+    <Compile Include="V20190107\Models\DbTable.cs" />
+    <Compile Include="V20190107\Models\DescribeAccountAllGrantPrivilegesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAccountAllGrantPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
@@ -69,6 +79,8 @@
     <Compile Include="V20190107\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterParamLogsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterParamLogsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsRequest.cs" />
@@ -89,11 +101,18 @@
     <Compile Include="V20190107\Models\DescribeRollbackTimeRangeResponse.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityRequest.cs" />
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityResponse.cs" />
+    <Compile Include="V20190107\Models\DisassociateSecurityGroupsRequest.cs" />
+    <Compile Include="V20190107\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\GrantAccountPrivilegesRequest.cs" />
+    <Compile Include="V20190107\Models\GrantAccountPrivilegesResponse.cs" />
+    <Compile Include="V20190107\Models\InputAccount.cs" />
     <Compile Include="V20190107\Models\InstanceSpec.cs" />
     <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
     <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\IsolateInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyAccountParamsRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyAccountParamsResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterParamRequest.cs" />
@@ -109,11 +128,23 @@
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
+    <Compile Include="V20190107\Models\PauseServerlessRequest.cs" />
+    <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
+    <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
+    <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
+    <Compile Include="V20190107\Models\RevokeAccountPrivilegesRequest.cs" />
+    <Compile Include="V20190107\Models\RevokeAccountPrivilegesResponse.cs" />
+    <Compile Include="V20190107\Models\RollBackClusterRequest.cs" />
+    <Compile Include="V20190107\Models\RollBackClusterResponse.cs" />
+    <Compile Include="V20190107\Models\RollbackDatabase.cs" />
+    <Compile Include="V20190107\Models\RollbackTable.cs" />
+    <Compile Include="V20190107\Models\RollbackTableInfo.cs" />
     <Compile Include="V20190107\Models\SecurityGroup.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
+    <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />

@@ -492,6 +492,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("HealthStatus")]
         public long? HealthStatus{ get; set; }
 
+        /// <summary>
+        /// https集群内网url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsPrivateUrl")]
+        public string EsPrivateUrl{ get; set; }
+
+        /// <summary>
+        /// https集群内网域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsPrivateDomain")]
+        public string EsPrivateDomain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -570,6 +584,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "FrozenDiskType", this.FrozenDiskType);
             this.SetParamSimple(map, prefix + "FrozenDiskSize", this.FrozenDiskSize);
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
+            this.SetParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
+            this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
         }
     }
 }

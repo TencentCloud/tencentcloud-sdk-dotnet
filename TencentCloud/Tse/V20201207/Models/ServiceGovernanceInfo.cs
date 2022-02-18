@@ -42,6 +42,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("VpcInfos")]
         public VpcInfo[] VpcInfos{ get; set; }
 
+        /// <summary>
+        /// 当前实例鉴权是否开启
+        /// </summary>
+        [JsonProperty("AuthOpen")]
+        public bool? AuthOpen{ get; set; }
+
+        /// <summary>
+        /// 该实例支持的功能，鉴权就是 Auth
+        /// </summary>
+        [JsonProperty("Features")]
+        public string[] Features{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
             this.SetParamArrayObj(map, prefix + "BoundK8SInfos.", this.BoundK8SInfos);
             this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
+            this.SetParamSimple(map, prefix + "AuthOpen", this.AuthOpen);
+            this.SetParamArraySimple(map, prefix + "Features.", this.Features);
         }
     }
 }

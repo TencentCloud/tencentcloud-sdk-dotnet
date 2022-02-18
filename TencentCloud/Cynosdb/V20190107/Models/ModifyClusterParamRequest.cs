@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("ParamList")]
         public ParamItem[] ParamList{ get; set; }
 
+        /// <summary>
+        /// 维护期间执行-yes,立即执行-no
+        /// </summary>
+        [JsonProperty("IsInMaintainPeriod")]
+        public string IsInMaintainPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
+            this.SetParamSimple(map, prefix + "IsInMaintainPeriod", this.IsInMaintainPeriod);
         }
     }
 }

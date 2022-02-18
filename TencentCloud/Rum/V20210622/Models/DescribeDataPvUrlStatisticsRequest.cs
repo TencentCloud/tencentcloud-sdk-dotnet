@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 类型:"allcount", "falls", "samp", "version", "ext3","nettype", "platform","isp","region","device","browser","ext1","ext2"
+        /// allcount：性能视图，day：14天数据，vp：性能，ckuv：uv，ckpv：pv，condition：条件列表，nettype/version/platform/isp/region/device/browser/ext1/ext2/ext3/ret/status/from/url/env/：网络平台视图/Version视图/设备视图/ISP视图/地区视图/浏览器视图/ext1视图等等
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
