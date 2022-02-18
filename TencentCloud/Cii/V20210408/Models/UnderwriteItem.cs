@@ -42,6 +42,55 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("Value")]
         public string Value{ get; set; }
 
+        /// <summary>
+        /// 参考范围
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Range")]
+        public string Range{ get; set; }
+
+        /// <summary>
+        /// 报告时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReportDate")]
+        public string[] ReportDate{ get; set; }
+
+        /// <summary>
+        /// 文件类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// 检查项目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InspectProject")]
+        public string InspectProject{ get; set; }
+
+        /// <summary>
+        /// 单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Unit")]
+        public string Unit{ get; set; }
+
+        /// <summary>
+        /// 原名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginName")]
+        public string OriginName{ get; set; }
+
+        /// <summary>
+        /// 阴阳性
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("YinYang")]
+        public string YinYang{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +100,13 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "Value", this.Value);
+            this.SetParamSimple(map, prefix + "Range", this.Range);
+            this.SetParamArraySimple(map, prefix + "ReportDate.", this.ReportDate);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamSimple(map, prefix + "InspectProject", this.InspectProject);
+            this.SetParamSimple(map, prefix + "Unit", this.Unit);
+            this.SetParamSimple(map, prefix + "OriginName", this.OriginName);
+            this.SetParamSimple(map, prefix + "YinYang", this.YinYang);
         }
     }
 }

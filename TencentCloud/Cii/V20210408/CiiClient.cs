@@ -253,6 +253,46 @@ namespace TencentCloud.Cii.V20210408
         }
 
         /// <summary>
+        /// 获取图片质量分
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityScoreRequest"/></param>
+        /// <returns><see cref="DescribeQualityScoreResponse"/></returns>
+        public async Task<DescribeQualityScoreResponse> DescribeQualityScore(DescribeQualityScoreRequest req)
+        {
+             JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQualityScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取图片质量分
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQualityScoreRequest"/></param>
+        /// <returns><see cref="DescribeQualityScoreResponse"/></returns>
+        public DescribeQualityScoreResponse DescribeQualityScoreSync(DescribeQualityScoreRequest req)
+        {
+             JsonResponseModel<DescribeQualityScoreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQualityScore");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQualityScoreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 辅助用户对批量报告自动分类
         /// </summary>
         /// <param name="req"><see cref="DescribeReportClassifyRequest"/></param>
