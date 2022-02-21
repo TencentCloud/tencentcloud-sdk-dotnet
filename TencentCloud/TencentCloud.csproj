@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.463</VersionPrefix>
+    <VersionPrefix>3.0.464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3475,12 +3475,16 @@
     <Compile Include="Ckafka\V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateConsumerRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateConsumerResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreData.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreResp.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateInstancePreResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreatePartitionResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateRouteRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\CreateRouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\CreateTopicRequest.cs" />
@@ -4348,6 +4352,9 @@
     <Compile Include="Cpdp\V20190820\Models\BindAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAcctResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BindOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BindOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BindOpenBankExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAccReUnionPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAccReUnionPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindRelateAcctSmallAmountRequest.cs" />
@@ -4362,6 +4369,9 @@
     <Compile Include="Cpdp\V20190820\Models\CheckAmountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CityCodeResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\ClearItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CloseOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CloseOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CloseOpenBankPaymentOrderResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CloseOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ConfirmOrderRequest.cs" />
@@ -4401,6 +4411,15 @@
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankMerchantRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankMerchantResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankMerchantResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankOrderPaymentResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankPaymentOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantRequest.cs" />
@@ -4484,6 +4503,12 @@
     <Compile Include="Cpdp\V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MultiApplyDetail.cs" />
     <Compile Include="Cpdp\V20190820\Models\MultiApplyOrder.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankGoodsInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankPayeeInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankPayerInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankProfitShareInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankRedirectInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankSceneInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrderItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrganizationInfo.cs" />
@@ -4573,6 +4598,25 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantPayWayListResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOrderRequest.cs" />
@@ -4664,6 +4708,9 @@
     <Compile Include="Cpdp\V20190820\Models\TransferSinglePayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnBindAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnBindAcctResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnbindRelateAcctRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnbindRelateAcctResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\UnifiedOrderInSubOrderList.cs" />
@@ -10920,6 +10967,7 @@
     <Compile Include="Mgobe\V20190929\Models\DismissRoomResponse.cs" />
     <Compile Include="Mna\V20210119\MnaClient.cs" />
     <Compile Include="Mna\V20210119\Models\Capacity.cs" />
+    <Compile Include="Mna\V20210119\Models\Context.cs" />
     <Compile Include="Mna\V20210119\Models\CreateQosRequest.cs" />
     <Compile Include="Mna\V20210119\Models\CreateQosResponse.cs" />
     <Compile Include="Mna\V20210119\Models\DeleteQosRequest.cs" />
@@ -10928,6 +10976,8 @@
     <Compile Include="Mna\V20210119\Models\DescribeQosResponse.cs" />
     <Compile Include="Mna\V20210119\Models\DestAddressInfo.cs" />
     <Compile Include="Mna\V20210119\Models\DeviceInfo.cs" />
+    <Compile Include="Mna\V20210119\Models\ExpectedThreshold.cs" />
+    <Compile Include="Mna\V20210119\Models\NetworkData.cs" />
     <Compile Include="Mna\V20210119\Models\SrcAddressInfo.cs" />
     <Compile Include="Mongodb\V20180408\MongodbClient.cs" />
     <Compile Include="Mongodb\V20180408\Models\AssignProjectRequest.cs" />

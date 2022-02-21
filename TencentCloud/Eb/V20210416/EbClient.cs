@@ -53,7 +53,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 规则检验
+        /// 检验规则
         /// </summary>
         /// <param name="req"><see cref="CheckRuleRequest"/></param>
         /// <returns><see cref="CheckRuleResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Eb.V20210416
         }
 
         /// <summary>
-        /// 规则检验
+        /// 检验规则
         /// </summary>
         /// <param name="req"><see cref="CheckRuleRequest"/></param>
         /// <returns><see cref="CheckRuleResponse"/></returns>

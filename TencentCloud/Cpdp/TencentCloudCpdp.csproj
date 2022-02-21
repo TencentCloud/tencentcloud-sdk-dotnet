@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.463</VersionPrefix>
+    <VersionPrefix>3.0.464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -86,6 +86,9 @@
     <Compile Include="V20190820\Models\BindAccountResponse.cs" />
     <Compile Include="V20190820\Models\BindAcctRequest.cs" />
     <Compile Include="V20190820\Models\BindAcctResponse.cs" />
+    <Compile Include="V20190820\Models\BindOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\BindOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\BindOpenBankExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="V20190820\Models\BindRelateAccReUnionPayRequest.cs" />
     <Compile Include="V20190820\Models\BindRelateAccReUnionPayResponse.cs" />
     <Compile Include="V20190820\Models\BindRelateAcctSmallAmountRequest.cs" />
@@ -100,6 +103,9 @@
     <Compile Include="V20190820\Models\CheckAmountResponse.cs" />
     <Compile Include="V20190820\Models\CityCodeResult.cs" />
     <Compile Include="V20190820\Models\ClearItem.cs" />
+    <Compile Include="V20190820\Models\CloseOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CloseOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="V20190820\Models\CloseOpenBankPaymentOrderResult.cs" />
     <Compile Include="V20190820\Models\CloseOrderRequest.cs" />
     <Compile Include="V20190820\Models\CloseOrderResponse.cs" />
     <Compile Include="V20190820\Models\ConfirmOrderRequest.cs" />
@@ -139,6 +145,15 @@
     <Compile Include="V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResult.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResponse.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankMerchantRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankMerchantResponse.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankMerchantResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankOrderPaymentResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankPaymentOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreateOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreatePayMerchantRequest.cs" />
@@ -222,6 +237,12 @@
     <Compile Include="V20190820\Models\ModifyMntMbrBindRelateAcctBankCodeResponse.cs" />
     <Compile Include="V20190820\Models\MultiApplyDetail.cs" />
     <Compile Include="V20190820\Models\MultiApplyOrder.cs" />
+    <Compile Include="V20190820\Models\OpenBankGoodsInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankPayeeInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankPayerInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankProfitShareInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankRedirectInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankSceneInfo.cs" />
     <Compile Include="V20190820\Models\Order.cs" />
     <Compile Include="V20190820\Models\OrderItem.cs" />
     <Compile Include="V20190820\Models\OrganizationInfo.cs" />
@@ -311,6 +332,25 @@
     <Compile Include="V20190820\Models\QueryMerchantPayWayListResponse.cs" />
     <Compile Include="V20190820\Models\QueryMerchantRequest.cs" />
     <Compile Include="V20190820\Models\QueryMerchantResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountData.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="V20190820\Models\QueryOrderRequest.cs" />
@@ -402,6 +442,9 @@
     <Compile Include="V20190820\Models\TransferSinglePayResponse.cs" />
     <Compile Include="V20190820\Models\UnBindAcctRequest.cs" />
     <Compile Include="V20190820\Models\UnBindAcctResponse.cs" />
+    <Compile Include="V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\UnbindOpenBankExternalSubMerchantBankAccountResult.cs" />
     <Compile Include="V20190820\Models\UnbindRelateAcctRequest.cs" />
     <Compile Include="V20190820\Models\UnbindRelateAcctResponse.cs" />
     <Compile Include="V20190820\Models\UnifiedOrderInSubOrderList.cs" />

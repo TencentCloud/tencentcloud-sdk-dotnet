@@ -213,6 +213,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 创建消费者
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public async Task<CreateConsumerResponse> CreateConsumer(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建消费者
+        /// </summary>
+        /// <param name="req"><see cref="CreateConsumerRequest"/></param>
+        /// <returns><see cref="CreateConsumerResponse"/></returns>
+        public CreateConsumerResponse CreateConsumerSync(CreateConsumerRequest req)
+        {
+             JsonResponseModel<CreateConsumerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConsumer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建实例(预付费包年包月)
         /// </summary>
         /// <param name="req"><see cref="CreateInstancePreRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "CreatePartition");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePartitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加实例路由
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteRequest"/></param>
+        /// <returns><see cref="CreateRouteResponse"/></returns>
+        public async Task<CreateRouteResponse> CreateRoute(CreateRouteRequest req)
+        {
+             JsonResponseModel<CreateRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加实例路由
+        /// </summary>
+        /// <param name="req"><see cref="CreateRouteRequest"/></param>
+        /// <returns><see cref="CreateRouteResponse"/></returns>
+        public CreateRouteResponse CreateRouteSync(CreateRouteRequest req)
+        {
+             JsonResponseModel<CreateRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRouteResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -84,6 +84,18 @@ namespace TencentCloud.Mna.V20210119.Models
         [JsonProperty("Protocol")]
         public ulong? Protocol{ get; set; }
 
+        /// <summary>
+        /// 加速策略关键数据
+        /// </summary>
+        [JsonProperty("Context")]
+        public Context Context{ get; set; }
+
+        /// <summary>
+        /// 签名
+        /// </summary>
+        [JsonProperty("Extern")]
+        public string Extern{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +110,8 @@ namespace TencentCloud.Mna.V20210119.Models
             this.SetParamObj(map, prefix + "Capacity.", this.Capacity);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamObj(map, prefix + "Context.", this.Context);
+            this.SetParamSimple(map, prefix + "Extern", this.Extern);
         }
     }
 }

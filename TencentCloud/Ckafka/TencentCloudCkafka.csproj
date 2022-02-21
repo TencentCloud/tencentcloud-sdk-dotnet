@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.463</VersionPrefix>
+    <VersionPrefix>3.0.464</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -68,12 +68,16 @@
     <Compile Include="V20190819\Models\ConsumerRecord.cs" />
     <Compile Include="V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="V20190819\Models\CreateAclResponse.cs" />
+    <Compile Include="V20190819\Models\CreateConsumerRequest.cs" />
+    <Compile Include="V20190819\Models\CreateConsumerResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResp.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResponse.cs" />
     <Compile Include="V20190819\Models\CreatePartitionRequest.cs" />
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
+    <Compile Include="V20190819\Models\CreateRouteRequest.cs" />
+    <Compile Include="V20190819\Models\CreateRouteResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicRequest.cs" />
