@@ -211,7 +211,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。
+        /// 是否自动发起灾备同步功能。该参数仅对购买灾备实例生效。 可选值为：0 - 不自动发起灾备同步；1 - 自动发起灾备同步。该值默认为0。
         /// </summary>
         [JsonProperty("AutoSyncFlag")]
         public long? AutoSyncFlag{ get; set; }

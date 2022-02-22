@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量，最小值为0。
+        /// 偏移量，默认值为0，最小值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

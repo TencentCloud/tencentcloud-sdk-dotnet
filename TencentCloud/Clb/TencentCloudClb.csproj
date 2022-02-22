@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.464</VersionPrefix>
+    <VersionPrefix>3.0.465</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -151,6 +151,8 @@
     <Compile Include="V20180317\Models\DescribeLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaRequest.cs" />
     <Compile Include="V20180317\Models\DescribeQuotaResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeResourcesResponse.cs" />
     <Compile Include="V20180317\Models\DescribeRewriteRequest.cs" />
     <Compile Include="V20180317\Models\DescribeRewriteResponse.cs" />
     <Compile Include="V20180317\Models\DescribeTargetGroupInstancesRequest.cs" />
@@ -221,6 +223,7 @@
     <Compile Include="V20180317\Models\RegisterTargetsWithClassicalLBResponse.cs" />
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersRequest.cs" />
     <Compile Include="V20180317\Models\ReplaceCertForLoadBalancersResponse.cs" />
+    <Compile Include="V20180317\Models\Resource.cs" />
     <Compile Include="V20180317\Models\RewriteLocationMap.cs" />
     <Compile Include="V20180317\Models\RewriteTarget.cs" />
     <Compile Include="V20180317\Models\RsWeightRule.cs" />
@@ -248,5 +251,6 @@
     <Compile Include="V20180317\Models\TargetHealth.cs" />
     <Compile Include="V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="V20180317\Models\ZoneInfo.cs" />
+    <Compile Include="V20180317\Models\ZoneResource.cs" />
   </ItemGroup>
 </Project>

@@ -253,7 +253,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 创建边缘单元NodeUnit模版
+        /// 创建边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeNodeUnitTemplateRequest"/></param>
         /// <returns><see cref="CreateEdgeNodeUnitTemplateResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 创建边缘单元NodeUnit模版
+        /// 创建边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeNodeUnitTemplateRequest"/></param>
         /// <returns><see cref="CreateEdgeNodeUnitTemplateResponse"/></returns>
@@ -653,7 +653,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 删除边缘单元NodeUnit模版
+        /// 删除边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeNodeUnitTemplatesRequest"/></param>
         /// <returns><see cref="DeleteEdgeNodeUnitTemplatesResponse"/></returns>
@@ -673,7 +673,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 删除边缘单元NodeUnit模版
+        /// 删除边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="DeleteEdgeNodeUnitTemplatesRequest"/></param>
         /// <returns><see cref="DeleteEdgeNodeUnitTemplatesResponse"/></returns>
@@ -2293,7 +2293,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 查询边缘单元EdgeUnit模版列表
+        /// 查询边缘单元EdgeUnit模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitNodeUnitTemplatesRequest"/></param>
         /// <returns><see cref="DescribeEdgeUnitNodeUnitTemplatesResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 查询边缘单元EdgeUnit模版列表
+        /// 查询边缘单元EdgeUnit模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeUnitNodeUnitTemplatesRequest"/></param>
         /// <returns><see cref="DescribeEdgeUnitNodeUnitTemplatesResponse"/></returns>
@@ -2573,7 +2573,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 查询指定NodeGroup下NodeUnit模版列表
+        /// 查询指定NodeGroup下NodeUnit模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeUnitTemplateOnNodeGroupRequest"/></param>
         /// <returns><see cref="DescribeNodeUnitTemplateOnNodeGroupResponse"/></returns>
@@ -2593,7 +2593,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 查询指定NodeGroup下NodeUnit模版列表
+        /// 查询指定NodeGroup下NodeUnit模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNodeUnitTemplateOnNodeGroupRequest"/></param>
         /// <returns><see cref="DescribeNodeUnitTemplateOnNodeGroupResponse"/></returns>
@@ -3173,7 +3173,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 修改边缘单元NodeUnit模版
+        /// 修改边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="ModifyNodeUnitTemplateRequest"/></param>
         /// <returns><see cref="ModifyNodeUnitTemplateResponse"/></returns>
@@ -3193,7 +3193,7 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
-        /// 修改边缘单元NodeUnit模版
+        /// 修改边缘单元NodeUnit模板
         /// </summary>
         /// <param name="req"><see cref="ModifyNodeUnitTemplateRequest"/></param>
         /// <returns><see cref="ModifyNodeUnitTemplateResponse"/></returns>

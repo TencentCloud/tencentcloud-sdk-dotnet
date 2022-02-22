@@ -613,6 +613,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（DeleteDeviceResource）用于删除设备资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceResourceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResourceResponse"/></returns>
+        public async Task<DeleteDeviceResourceResponse> DeleteDeviceResource(DeleteDeviceResourceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDeviceResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDeviceResource）用于删除设备资源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceResourceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResourceResponse"/></returns>
+        public DeleteDeviceResourceResponse DeleteDeviceResourceSync(DeleteDeviceResourceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDeviceResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除lora类型的设备
         /// </summary>
         /// <param name="req"><see cref="DeleteLoraDeviceRequest"/></param>
@@ -1764,6 +1804,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "DisableTopicRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableTopicRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DownloadDeviceResource）用于下载设备资源
+        /// </summary>
+        /// <param name="req"><see cref="DownloadDeviceResourceRequest"/></param>
+        /// <returns><see cref="DownloadDeviceResourceResponse"/></returns>
+        public async Task<DownloadDeviceResourceResponse> DownloadDeviceResource(DownloadDeviceResourceRequest req)
+        {
+             JsonResponseModel<DownloadDeviceResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadDeviceResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadDeviceResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DownloadDeviceResource）用于下载设备资源
+        /// </summary>
+        /// <param name="req"><see cref="DownloadDeviceResourceRequest"/></param>
+        /// <returns><see cref="DownloadDeviceResourceResponse"/></returns>
+        public DownloadDeviceResourceResponse DownloadDeviceResourceSync(DownloadDeviceResourceRequest req)
+        {
+             JsonResponseModel<DownloadDeviceResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadDeviceResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadDeviceResourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -31,7 +31,7 @@ namespace TencentCloud.Iecp.V20210914.Models
         public ulong? EdgeUnitId{ get; set; }
 
         /// <summary>
-        /// 删除的NodeUnit模版ID列表
+        /// 删除的NodeUnit模板ID列表
         /// </summary>
         [JsonProperty("NodeUnitTemplateIDs")]
         public ulong?[] NodeUnitTemplateIDs{ get; set; }

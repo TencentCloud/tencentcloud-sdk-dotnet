@@ -1019,6 +1019,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public async Task<DescribeDatabaseObjectsResponse> DescribeDatabaseObjects(DescribeDatabaseObjectsRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatabaseObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDatabaseObjects）用于查询云数据库实例的数据库中的对象列表，包含表、存储过程、视图和函数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatabaseObjectsRequest"/></param>
+        /// <returns><see cref="DescribeDatabaseObjectsResponse"/></returns>
+        public DescribeDatabaseObjectsResponse DescribeDatabaseObjectsSync(DescribeDatabaseObjectsRequest req)
+        {
+             JsonResponseModel<DescribeDatabaseObjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatabaseObjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatabaseObjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDatabaseTable）用于查询云数据库实例的表信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabaseTableRequest"/></param>

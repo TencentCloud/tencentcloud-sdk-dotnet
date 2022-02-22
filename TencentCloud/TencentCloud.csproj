@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.464</VersionPrefix>
+    <VersionPrefix>3.0.465</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3709,6 +3709,8 @@
     <Compile Include="Clb\V20180317\Models\DescribeLoadBalancersResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeQuotaRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeQuotaResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\DescribeResourcesResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeRewriteRequest.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeRewriteResponse.cs" />
     <Compile Include="Clb\V20180317\Models\DescribeTargetGroupInstancesRequest.cs" />
@@ -3779,6 +3781,7 @@
     <Compile Include="Clb\V20180317\Models\RegisterTargetsWithClassicalLBResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ReplaceCertForLoadBalancersRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ReplaceCertForLoadBalancersResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\Resource.cs" />
     <Compile Include="Clb\V20180317\Models\RewriteLocationMap.cs" />
     <Compile Include="Clb\V20180317\Models\RewriteTarget.cs" />
     <Compile Include="Clb\V20180317\Models\RsWeightRule.cs" />
@@ -3806,6 +3809,7 @@
     <Compile Include="Clb\V20180317\Models\TargetHealth.cs" />
     <Compile Include="Clb\V20180317\Models\TargetRegionInfo.cs" />
     <Compile Include="Clb\V20180317\Models\ZoneInfo.cs" />
+    <Compile Include="Clb\V20180317\Models\ZoneResource.cs" />
     <Compile Include="Cloudaudit\V20190319\CloudauditClient.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\AttributeKeyDetail.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\AuditSummary.cs" />
@@ -9181,6 +9185,8 @@
     <Compile Include="Iotcloud\V20180614\Models\CreateTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\CreateTopicRuleResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceResourceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceResourceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteDeviceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteLoraDeviceRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DeleteLoraDeviceResponse.cs" />
@@ -9246,6 +9252,8 @@
     <Compile Include="Iotcloud\V20180614\Models\DeviceUpdateStatus.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\DisableTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DownloadDeviceResourceRequest.cs" />
+    <Compile Include="Iotcloud\V20180614\Models\DownloadDeviceResourceResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\EditFirmwareRequest.cs" />
     <Compile Include="Iotcloud\V20180614\Models\EditFirmwareResponse.cs" />
     <Compile Include="Iotcloud\V20180614\Models\EnableTopicRuleRequest.cs" />
@@ -10806,7 +10814,11 @@
     <Compile Include="Mariadb\V20170312\Models\DBInstance.cs" />
     <Compile Include="Mariadb\V20170312\Models\DBParamValue.cs" />
     <Compile Include="Mariadb\V20170312\Models\Database.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DatabaseFunction.cs" />
     <Compile Include="Mariadb\V20170312\Models\DatabasePrivilege.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DatabaseProcedure.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DatabaseTable.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DatabaseView.cs" />
     <Compile Include="Mariadb\V20170312\Models\DcnDetailItem.cs" />
     <Compile Include="Mariadb\V20170312\Models\Deal.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountRequest.cs" />
@@ -10837,6 +10849,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDatabaseObjectsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDatabaseObjectsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabaseTableRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabaseTableResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabasesRequest.cs" />

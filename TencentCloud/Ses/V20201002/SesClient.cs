@@ -174,7 +174,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 创建模板，该模板可以是TXT或者HTML，请注意如果HTML不要包含外部文件的CSS。模板中的变量使用 {{变量名}} 表示。
-        /// 注意：模版需要审核通过才可以使用。
+        /// 注意：模板需要审核通过才可以使用。
         /// </summary>
         /// <param name="req"><see cref="CreateEmailTemplateRequest"/></param>
         /// <returns><see cref="CreateEmailTemplateResponse"/></returns>
@@ -195,7 +195,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 创建模板，该模板可以是TXT或者HTML，请注意如果HTML不要包含外部文件的CSS。模板中的变量使用 {{变量名}} 表示。
-        /// 注意：模版需要审核通过才可以使用。
+        /// 注意：模板需要审核通过才可以使用。
         /// </summary>
         /// <param name="req"><see cref="CreateEmailTemplateRequest"/></param>
         /// <returns><see cref="CreateEmailTemplateResponse"/></returns>

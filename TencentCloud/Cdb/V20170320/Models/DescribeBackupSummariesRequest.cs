@@ -31,25 +31,25 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 分页查询数据的偏移量。
+        /// 分页查询数据的偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询数据的条目限制，默认值为20。
+        /// 分页查询数据的条目限制，默认值为20。最小值为1，最大值为100。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。
+        /// 指定按某一项排序，可选值包括： BackupVolume: 备份容量， DataBackupVolume: 数据备份容量， BinlogBackupVolume: 日志备份容量， AutoBackupVolume: 自动备份容量， ManualBackupVolume: 手动备份容量。默认按照BackupVolume排序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
 
         /// <summary>
-        /// 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。
+        /// 指定排序方向，可选值包括： ASC: 正序， DESC: 逆序。默认值为 ASC。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }
