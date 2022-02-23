@@ -1071,7 +1071,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模版。
+        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirewallRulesTemplateRequest"/></param>
         /// <returns><see cref="DescribeFirewallRulesTemplateResponse"/></returns>
@@ -1091,7 +1091,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模版。
+        /// 本接口（DescribeFirewallRulesTemplate）用于查询防火墙规则模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeFirewallRulesTemplateRequest"/></param>
         /// <returns><see cref="DescribeFirewallRulesTemplateResponse"/></returns>

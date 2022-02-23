@@ -1109,6 +1109,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 获取条件模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConditionsTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeConditionsTemplateListResponse"/></returns>
+        public async Task<DescribeConditionsTemplateListResponse> DescribeConditionsTemplateList(DescribeConditionsTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeConditionsTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConditionsTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取条件模板列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeConditionsTemplateListRequest"/></param>
+        /// <returns><see cref="DescribeConditionsTemplateListResponse"/></returns>
+        public DescribeConditionsTemplateListResponse DescribeConditionsTemplateListSync(DescribeConditionsTemplateListRequest req)
+        {
+             JsonResponseModel<DescribeConditionsTemplateListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeConditionsTemplateList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConditionsTemplateListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云监控支持多种类型的监控，此接口列出支持的所有类型
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>

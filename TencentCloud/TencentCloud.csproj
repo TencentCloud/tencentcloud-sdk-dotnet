@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.465</VersionPrefix>
+    <VersionPrefix>3.0.466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -122,6 +122,8 @@
     <Compile Include="Ame\V20190916\Models\Album.cs" />
     <Compile Include="Ame\V20190916\Models\Artist.cs" />
     <Compile Include="Ame\V20190916\Models\AuthInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\BatchDescribeKTVMusicDetailsRequest.cs" />
+    <Compile Include="Ame\V20190916\Models\BatchDescribeKTVMusicDetailsResponse.cs" />
     <Compile Include="Ame\V20190916\Models\ChorusClip.cs" />
     <Compile Include="Ame\V20190916\Models\CreateKTVRobotRequest.cs" />
     <Compile Include="Ame\V20190916\Models\CreateKTVRobotResponse.cs" />
@@ -173,6 +175,7 @@
     <Compile Include="Ame\V20190916\Models\JoinRoomInput.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicBaseInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicDefinitionInfo.cs" />
+    <Compile Include="Ame\V20190916\Models\KTVMusicDetailInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVMusicTopInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVPlaylistBaseInfo.cs" />
     <Compile Include="Ame\V20190916\Models\KTVRobotInfo.cs" />
@@ -6252,6 +6255,8 @@
     <Compile Include="Dcdb\V20180411\Models\CreateDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateDedicatedClusterDCDBInstanceRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\CreateDedicatedClusterDCDBInstanceResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\CreateHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBAccount.cs" />
     <Compile Include="Dcdb\V20180411\Models\DBParamValue.cs" />
     <Compile Include="Dcdb\V20180411\Models\DCDBInstanceInfo.cs" />
@@ -11129,6 +11134,7 @@
     <Compile Include="Monitor\V20180724\Models\BindingPolicyTagRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyTagResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="Monitor\V20180724\Models\Condition.cs" />
     <Compile Include="Monitor\V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\CreateAlarmNoticeResponse.cs" />
@@ -11186,6 +11192,8 @@
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListInstanceGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeConditionsTemplateListRequest.cs" />
+    <Compile Include="Monitor\V20180724\Models\DescribeConditionsTemplateListResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribeMonitorTypesResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\DescribePolicyConditionListCondition.cs" />
@@ -11228,6 +11236,7 @@
     <Compile Include="Monitor\V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Dimension.cs" />
     <Compile Include="Monitor\V20180724\Models\DimensionsDesc.cs" />
+    <Compile Include="Monitor\V20180724\Models\EventCondition.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\GetMonitorDataResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\Instance.cs" />
@@ -11262,6 +11271,8 @@
     <Compile Include="Monitor\V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\PeriodsSt.cs" />
     <Compile Include="Monitor\V20180724\Models\Point.cs" />
+    <Compile Include="Monitor\V20180724\Models\PolicyGroup.cs" />
+    <Compile Include="Monitor\V20180724\Models\PolicyGroupReceiverInfo.cs" />
     <Compile Include="Monitor\V20180724\Models\PolicyTag.cs" />
     <Compile Include="Monitor\V20180724\Models\ProductSimple.cs" />
     <Compile Include="Monitor\V20180724\Models\PrometheusInstanceGrantInfo.cs" />
@@ -11278,6 +11289,7 @@
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\TagInstance.cs" />
+    <Compile Include="Monitor\V20180724\Models\TemplateGroup.cs" />
     <Compile Include="Monitor\V20180724\Models\URLNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />

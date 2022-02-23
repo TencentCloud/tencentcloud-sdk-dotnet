@@ -36,6 +36,18 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DesiredCapacity")]
         public ulong? DesiredCapacity{ get; set; }
 
+        /// <summary>
+        /// 最小实例数，取值范围为0-2000。
+        /// </summary>
+        [JsonProperty("MinSize")]
+        public ulong? MinSize{ get; set; }
+
+        /// <summary>
+        /// 最大实例数，取值范围为0-2000。
+        /// </summary>
+        [JsonProperty("MaxSize")]
+        public ulong? MaxSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
             this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
+            this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
+            this.SetParamSimple(map, prefix + "MaxSize", this.MaxSize);
         }
     }
 }

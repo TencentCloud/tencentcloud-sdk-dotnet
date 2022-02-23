@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// IP地址模版。
+        /// IP地址模板。
         /// </summary>
         [JsonProperty("AddressTemplateSet")]
         public AddressTemplate[] AddressTemplateSet{ get; set; }

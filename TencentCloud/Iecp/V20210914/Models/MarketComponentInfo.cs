@@ -78,6 +78,18 @@ namespace TencentCloud.Iecp.V20210914.Models
         [JsonProperty("WorkloadVisualConfig")]
         public string WorkloadVisualConfig{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("DetailUrl")]
+        public string DetailUrl{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("Installed")]
+        public bool? Installed{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Iecp.V20210914.Models
             this.SetParamSimple(map, prefix + "Icon", this.Icon);
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "WorkloadVisualConfig", this.WorkloadVisualConfig);
+            this.SetParamSimple(map, prefix + "DetailUrl", this.DetailUrl);
+            this.SetParamSimple(map, prefix + "Installed", this.Installed);
         }
     }
 }

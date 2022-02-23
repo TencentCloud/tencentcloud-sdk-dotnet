@@ -53,6 +53,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 根据 Id 列表查询歌曲的详细信息，包含基础信息及播放信息。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeKTVMusicDetailsRequest"/></param>
+        /// <returns><see cref="BatchDescribeKTVMusicDetailsResponse"/></returns>
+        public async Task<BatchDescribeKTVMusicDetailsResponse> BatchDescribeKTVMusicDetails(BatchDescribeKTVMusicDetailsRequest req)
+        {
+             JsonResponseModel<BatchDescribeKTVMusicDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BatchDescribeKTVMusicDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeKTVMusicDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据 Id 列表查询歌曲的详细信息，包含基础信息及播放信息。
+        /// </summary>
+        /// <param name="req"><see cref="BatchDescribeKTVMusicDetailsRequest"/></param>
+        /// <returns><see cref="BatchDescribeKTVMusicDetailsResponse"/></returns>
+        public BatchDescribeKTVMusicDetailsResponse BatchDescribeKTVMusicDetailsSync(BatchDescribeKTVMusicDetailsRequest req)
+        {
+             JsonResponseModel<BatchDescribeKTVMusicDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BatchDescribeKTVMusicDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchDescribeKTVMusicDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建机器人，支持进入 RTC 房间，播放直播互动曲库歌曲。
         /// </summary>
         /// <param name="req"><see cref="CreateKTVRobotRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.465</VersionPrefix>
+    <VersionPrefix>3.0.466</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,7 @@
     <Compile Include="V20180724\Models\BindingPolicyTagRequest.cs" />
     <Compile Include="V20180724\Models\BindingPolicyTagResponse.cs" />
     <Compile Include="V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="V20180724\Models\Condition.cs" />
     <Compile Include="V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeResponse.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListInstanceGroup.cs" />
     <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeConditionsTemplateListRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeConditionsTemplateListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePolicyConditionListCondition.cs" />
@@ -160,6 +163,7 @@
     <Compile Include="V20180724\Models\DescribeStatisticDataResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
+    <Compile Include="V20180724\Models\EventCondition.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataResponse.cs" />
     <Compile Include="V20180724\Models\Instance.cs" />
@@ -194,6 +198,8 @@
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
     <Compile Include="V20180724\Models\Point.cs" />
+    <Compile Include="V20180724\Models\PolicyGroup.cs" />
+    <Compile Include="V20180724\Models\PolicyGroupReceiverInfo.cs" />
     <Compile Include="V20180724\Models\PolicyTag.cs" />
     <Compile Include="V20180724\Models\ProductSimple.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceGrantInfo.cs" />
@@ -210,6 +216,7 @@
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\TagInstance.cs" />
+    <Compile Include="V20180724\Models\TemplateGroup.cs" />
     <Compile Include="V20180724\Models\URLNotice.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />

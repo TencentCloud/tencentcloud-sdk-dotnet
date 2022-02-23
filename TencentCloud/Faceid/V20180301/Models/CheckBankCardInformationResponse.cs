@@ -49,7 +49,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string AccountBank{ get; set; }
 
         /// <summary>
-        /// 卡性质：1. 借记卡；2. 贷记卡
+        /// 卡性质：1. 借记卡；2. 贷记卡；3. 预付费卡；4. 准贷记卡
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }

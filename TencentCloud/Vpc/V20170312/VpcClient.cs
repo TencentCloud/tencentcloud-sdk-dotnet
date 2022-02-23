@@ -1139,7 +1139,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
+        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>
@@ -1159,7 +1159,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模版集合
+        /// 本接口（CreateAddressTemplateGroup）用于创建IP地址模板集合
         /// </summary>
         /// <param name="req"><see cref="CreateAddressTemplateGroupRequest"/></param>
         /// <returns><see cref="CreateAddressTemplateGroupResponse"/></returns>

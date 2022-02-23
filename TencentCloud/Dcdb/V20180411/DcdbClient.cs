@@ -375,6 +375,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 创建DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
+        public async Task<CreateHourDCDBInstanceResponse> CreateHourDCDBInstance(CreateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="CreateHourDCDBInstanceResponse"/></returns>
+        public CreateHourDCDBInstanceResponse CreateHourDCDBInstanceSync(CreateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<CreateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteAccount）用于删除云数据库账号。用户名+host唯一确定一个账号。
         /// </summary>
         /// <param name="req"><see cref="DeleteAccountRequest"/></param>

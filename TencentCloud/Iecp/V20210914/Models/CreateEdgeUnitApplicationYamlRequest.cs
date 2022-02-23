@@ -31,16 +31,16 @@ namespace TencentCloud.Iecp.V20210914.Models
         public long? EdgeUnitId{ get; set; }
 
         /// <summary>
+        /// base64后的Yaml配置
+        /// </summary>
+        [JsonProperty("Yaml")]
+        public string Yaml{ get; set; }
+
+        /// <summary>
         /// 基本信息
         /// </summary>
         [JsonProperty("BasicInfo")]
         public ApplicationBasicInfo BasicInfo{ get; set; }
-
-        /// <summary>
-        /// Yaml配置
-        /// </summary>
-        [JsonProperty("Yaml")]
-        public string Yaml{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Iecp.V20210914.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EdgeUnitId", this.EdgeUnitId);
-            this.SetParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
             this.SetParamSimple(map, prefix + "Yaml", this.Yaml);
+            this.SetParamObj(map, prefix + "BasicInfo.", this.BasicInfo);
         }
     }
 }
