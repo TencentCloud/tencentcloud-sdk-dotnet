@@ -147,6 +147,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ClsTopicId")]
         public string ClsTopicId{ get; set; }
 
+        /// <summary>
+        /// pyflink作业运行的python版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PythonVersion")]
+        public string PythonVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +178,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "TaskManagerSpec", this.TaskManagerSpec);
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
+            this.SetParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
         }
     }
 }

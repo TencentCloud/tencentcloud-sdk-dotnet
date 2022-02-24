@@ -39,7 +39,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 昵称
+        /// 昵称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisplayName")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string OrgNodeId{ get; set; }
 
         /// <summary>
-        /// 数据来源
+        /// 数据来源。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DataSource")]

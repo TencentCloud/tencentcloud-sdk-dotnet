@@ -2779,6 +2779,86 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 创建SSL-VPN-CLIENT
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewaySslClientRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewaySslClientResponse"/></returns>
+        public async Task<CreateVpnGatewaySslClientResponse> CreateVpnGatewaySslClient(CreateVpnGatewaySslClientRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewaySslClientResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpnGatewaySslClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewaySslClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建SSL-VPN-CLIENT
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewaySslClientRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewaySslClientResponse"/></returns>
+        public CreateVpnGatewaySslClientResponse CreateVpnGatewaySslClientSync(CreateVpnGatewaySslClientRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewaySslClientResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpnGatewaySslClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewaySslClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Server端
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewaySslServerResponse"/></returns>
+        public async Task<CreateVpnGatewaySslServerResponse> CreateVpnGatewaySslServer(CreateVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewaySslServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Server端
+        /// </summary>
+        /// <param name="req"><see cref="CreateVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="CreateVpnGatewaySslServerResponse"/></returns>
+        public CreateVpnGatewaySslServerResponse CreateVpnGatewaySslServerSync(CreateVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<CreateVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateVpnGatewaySslServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DeleteAddressTemplate）用于删除IP地址模板
         /// </summary>
         /// <param name="req"><see cref="DeleteAddressTemplateRequest"/></param>
@@ -4174,6 +4254,86 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteVpnGatewayRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewayRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除SSL-VPN-CLIENT
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewaySslClientRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewaySslClientResponse"/></returns>
+        public async Task<DeleteVpnGatewaySslClientResponse> DeleteVpnGatewaySslClient(DeleteVpnGatewaySslClientRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewaySslClientResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpnGatewaySslClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewaySslClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除SSL-VPN-CLIENT
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewaySslClientRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewaySslClientResponse"/></returns>
+        public DeleteVpnGatewaySslClientResponse DeleteVpnGatewaySslClientSync(DeleteVpnGatewaySslClientRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewaySslClientResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpnGatewaySslClient");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewaySslClientResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除SSL-VPN-SERVER 实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewaySslServerResponse"/></returns>
+        public async Task<DeleteVpnGatewaySslServerResponse> DeleteVpnGatewaySslServer(DeleteVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewaySslServerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除SSL-VPN-SERVER 实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteVpnGatewaySslServerRequest"/></param>
+        /// <returns><see cref="DeleteVpnGatewaySslServerResponse"/></returns>
+        public DeleteVpnGatewaySslServerResponse DeleteVpnGatewaySslServerSync(DeleteVpnGatewaySslServerRequest req)
+        {
+             JsonResponseModel<DeleteVpnGatewaySslServerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteVpnGatewaySslServer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteVpnGatewaySslServerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6937,6 +7097,86 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询SSL-VPN-CLIENT 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewaySslClientsRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewaySslClientsResponse"/></returns>
+        public async Task<DescribeVpnGatewaySslClientsResponse> DescribeVpnGatewaySslClients(DescribeVpnGatewaySslClientsRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewaySslClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnGatewaySslClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewaySslClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询SSL-VPN-CLIENT 列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewaySslClientsRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewaySslClientsResponse"/></returns>
+        public DescribeVpnGatewaySslClientsResponse DescribeVpnGatewaySslClientsSync(DescribeVpnGatewaySslClientsRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewaySslClientsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpnGatewaySslClients");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewaySslClientsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询SSL-VPN SERVER 列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewaySslServersRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewaySslServersResponse"/></returns>
+        public async Task<DescribeVpnGatewaySslServersResponse> DescribeVpnGatewaySslServers(DescribeVpnGatewaySslServersRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewaySslServersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVpnGatewaySslServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewaySslServersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询SSL-VPN SERVER 列表信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVpnGatewaySslServersRequest"/></param>
+        /// <returns><see cref="DescribeVpnGatewaySslServersResponse"/></returns>
+        public DescribeVpnGatewaySslServersResponse DescribeVpnGatewaySslServersSync(DescribeVpnGatewaySslServersRequest req)
+        {
+             JsonResponseModel<DescribeVpnGatewaySslServersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVpnGatewaySslServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpnGatewaySslServersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeVpnGateways）用于查询VPN网关列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpnGatewaysRequest"/></param>
@@ -7216,6 +7456,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DisableRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用SSL-VPN-CLIENT 证书
+        /// </summary>
+        /// <param name="req"><see cref="DisableVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="DisableVpnGatewaySslClientCertResponse"/></returns>
+        public async Task<DisableVpnGatewaySslClientCertResponse> DisableVpnGatewaySslClientCert(DisableVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<DisableVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableVpnGatewaySslClientCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用SSL-VPN-CLIENT 证书
+        /// </summary>
+        /// <param name="req"><see cref="DisableVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="DisableVpnGatewaySslClientCertResponse"/></returns>
+        public DisableVpnGatewaySslClientCertResponse DisableVpnGatewaySslClientCertSync(DisableVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<DisableVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableVpnGatewaySslClientCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7557,6 +7837,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 下载SSL-VPN-CLIENT 客户端证书
+        /// </summary>
+        /// <param name="req"><see cref="DownloadVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="DownloadVpnGatewaySslClientCertResponse"/></returns>
+        public async Task<DownloadVpnGatewaySslClientCertResponse> DownloadVpnGatewaySslClientCert(DownloadVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<DownloadVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadVpnGatewaySslClientCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 下载SSL-VPN-CLIENT 客户端证书
+        /// </summary>
+        /// <param name="req"><see cref="DownloadVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="DownloadVpnGatewaySslClientCertResponse"/></returns>
+        public DownloadVpnGatewaySslClientCertResponse DownloadVpnGatewaySslClientCertSync(DownloadVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<DownloadVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadVpnGatewaySslClientCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（EnableCcnRoutes）用于启用已经加入云联网（CCN）的路由。<br />
         /// 本接口会校验启用后，是否与已有路由冲突，如果冲突，则无法启用，失败处理。路由冲突时，需要先禁用与之冲突的路由，才能启用该路由。
         /// </summary>
@@ -7712,6 +8032,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableVpcEndPointConnect");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpcEndPointConnectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用SSL-VPN-CLIENT 证书
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="EnableVpnGatewaySslClientCertResponse"/></returns>
+        public async Task<EnableVpnGatewaySslClientCertResponse> EnableVpnGatewaySslClientCert(EnableVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<EnableVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpnGatewaySslClientCertResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 启用SSL-VPN-CLIENT 证书
+        /// </summary>
+        /// <param name="req"><see cref="EnableVpnGatewaySslClientCertRequest"/></param>
+        /// <returns><see cref="EnableVpnGatewaySslClientCertResponse"/></returns>
+        public EnableVpnGatewaySslClientCertResponse EnableVpnGatewaySslClientCertSync(EnableVpnGatewaySslClientCertRequest req)
+        {
+             JsonResponseModel<EnableVpnGatewaySslClientCertResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableVpnGatewaySslClientCert");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableVpnGatewaySslClientCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

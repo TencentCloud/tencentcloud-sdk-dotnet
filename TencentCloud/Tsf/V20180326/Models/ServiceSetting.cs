@@ -66,6 +66,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("AllowDeleteService")]
         public bool? AllowDeleteService{ get; set; }
 
+        /// <summary>
+        /// 开启SessionAffinity，true为开启，false为不开启，默认为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpenSessionAffinity")]
+        public bool? OpenSessionAffinity{ get; set; }
+
+        /// <summary>
+        /// SessionAffinity会话时间，默认10800
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SessionAffinityTimeoutSeconds")]
+        public long? SessionAffinityTimeoutSeconds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +92,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DisableService", this.DisableService);
             this.SetParamSimple(map, prefix + "HeadlessService", this.HeadlessService);
             this.SetParamSimple(map, prefix + "AllowDeleteService", this.AllowDeleteService);
+            this.SetParamSimple(map, prefix + "OpenSessionAffinity", this.OpenSessionAffinity);
+            this.SetParamSimple(map, prefix + "SessionAffinityTimeoutSeconds", this.SessionAffinityTimeoutSeconds);
         }
     }
 }

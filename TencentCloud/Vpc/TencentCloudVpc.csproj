@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.466</VersionPrefix>
+    <VersionPrefix>3.0.467</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -191,6 +191,10 @@
     <Compile Include="V20170312\Models\CreateVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\CreateVpnGatewayRoutesRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpnGatewayRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewaySslClientRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewaySslClientResponse.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewaySslServerRequest.cs" />
+    <Compile Include="V20170312\Models\CreateVpnGatewaySslServerResponse.cs" />
     <Compile Include="V20170312\Models\CrossBorderCompliance.cs" />
     <Compile Include="V20170312\Models\CustomerGateway.cs" />
     <Compile Include="V20170312\Models\CustomerGatewayVendor.cs" />
@@ -264,6 +268,10 @@
     <Compile Include="V20170312\Models\DeleteVpnGatewayResponse.cs" />
     <Compile Include="V20170312\Models\DeleteVpnGatewayRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteVpnGatewayRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewaySslClientRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewaySslClientResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewaySslServerRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteVpnGatewaySslServerResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountAttributesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAddressQuotaRequest.cs" />
@@ -398,6 +406,10 @@
     <Compile Include="V20170312\Models\DescribeVpnGatewayCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewayRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewayRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewaySslClientsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewaySslClientsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewaySslServersRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeVpnGatewaySslServersResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpnGatewaysResponse.cs" />
     <Compile Include="V20170312\Models\DestinationIpPortTranslationNatRule.cs" />
@@ -417,6 +429,8 @@
     <Compile Include="V20170312\Models\DisableGatewayFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\DisableRoutesRequest.cs" />
     <Compile Include="V20170312\Models\DisableRoutesResponse.cs" />
+    <Compile Include="V20170312\Models\DisableVpnGatewaySslClientCertRequest.cs" />
+    <Compile Include="V20170312\Models\DisableVpnGatewaySslClientCertResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateAddressRequest.cs" />
     <Compile Include="V20170312\Models\DisassociateAddressResponse.cs" />
     <Compile Include="V20170312\Models\DisassociateDhcpIpWithAddressIpRequest.cs" />
@@ -433,6 +447,8 @@
     <Compile Include="V20170312\Models\DisassociateVpcEndPointSecurityGroupsResponse.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationRequest.cs" />
     <Compile Include="V20170312\Models\DownloadCustomerGatewayConfigurationResponse.cs" />
+    <Compile Include="V20170312\Models\DownloadVpnGatewaySslClientCertRequest.cs" />
+    <Compile Include="V20170312\Models\DownloadVpnGatewaySslClientCertResponse.cs" />
     <Compile Include="V20170312\Models\EnableCcnRoutesRequest.cs" />
     <Compile Include="V20170312\Models\EnableCcnRoutesResponse.cs" />
     <Compile Include="V20170312\Models\EnableGatewayFlowMonitorRequest.cs" />
@@ -441,6 +457,8 @@
     <Compile Include="V20170312\Models\EnableRoutesResponse.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectRequest.cs" />
     <Compile Include="V20170312\Models\EnableVpcEndPointConnectResponse.cs" />
+    <Compile Include="V20170312\Models\EnableVpnGatewaySslClientCertRequest.cs" />
+    <Compile Include="V20170312\Models\EnableVpnGatewaySslClientCertResponse.cs" />
     <Compile Include="V20170312\Models\EndPoint.cs" />
     <Compile Include="V20170312\Models\EndPointService.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
@@ -644,6 +662,8 @@
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsRequest.cs" />
     <Compile Include="V20170312\Models\SetCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\SourceIpTranslationNatRule.cs" />
+    <Compile Include="V20170312\Models\SslVpnClient.cs" />
+    <Compile Include="V20170312\Models\SslVpnSever.cs" />
     <Compile Include="V20170312\Models\Subnet.cs" />
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />

@@ -43,7 +43,7 @@ namespace TencentCloud.Eiam.V20210420.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 用户自定义可选填的机构节点对外ID，如果非空则校验此ID的唯一性。
+        /// 机构代码。如果非空则校验此ID的唯一性。
         /// </summary>
         [JsonProperty("CustomizedOrgNodeId")]
         public string CustomizedOrgNodeId{ get; set; }

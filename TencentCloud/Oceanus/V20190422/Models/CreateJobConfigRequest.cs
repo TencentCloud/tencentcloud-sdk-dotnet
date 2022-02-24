@@ -114,6 +114,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogCollectType")]
         public long? LogCollectType{ get; set; }
 
+        /// <summary>
+        /// pyflink作业运行时使用的python版本
+        /// </summary>
+        [JsonProperty("PythonVersion")]
+        public string PythonVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ClsLogsetId", this.ClsLogsetId);
             this.SetParamSimple(map, prefix + "ClsTopicId", this.ClsTopicId);
             this.SetParamSimple(map, prefix + "LogCollectType", this.LogCollectType);
+            this.SetParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
         }
     }
 }

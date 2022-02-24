@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.466</VersionPrefix>
+    <VersionPrefix>3.0.467</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,8 @@
     <Compile Include="V20180801\Models\CreatePullStreamConfigResponse.cs" />
     <Compile Include="V20180801\Models\CreateRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\CreateRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\CreateScreenshotTaskRequest.cs" />
+    <Compile Include="V20180801\Models\CreateScreenshotTaskResponse.cs" />
     <Compile Include="V20180801\Models\DayStreamPlayInfo.cs" />
     <Compile Include="V20180801\Models\DelayInfo.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleRequest.cs" />
@@ -135,6 +137,8 @@
     <Compile Include="V20180801\Models\DeletePullStreamConfigResponse.cs" />
     <Compile Include="V20180801\Models\DeleteRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\DeleteRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\DeleteScreenshotTaskRequest.cs" />
+    <Compile Include="V20180801\Models\DeleteScreenshotTaskResponse.cs" />
     <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeAllStreamPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeAreaBillBandwidthAndFluxListRequest.cs" />
@@ -239,6 +243,8 @@
     <Compile Include="V20180801\Models\DescribeRecordTaskResponse.cs" />
     <Compile Include="V20180801\Models\DescribeScreenShotSheetNumListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeScreenShotSheetNumListResponse.cs" />
+    <Compile Include="V20180801\Models\DescribeScreenshotTaskRequest.cs" />
+    <Compile Include="V20180801\Models\DescribeScreenshotTaskResponse.cs" />
     <Compile Include="V20180801\Models\DescribeStreamDayPlayInfoListRequest.cs" />
     <Compile Include="V20180801\Models\DescribeStreamDayPlayInfoListResponse.cs" />
     <Compile Include="V20180801\Models\DescribeStreamPlayInfoListRequest.cs" />
@@ -322,11 +328,14 @@
     <Compile Include="V20180801\Models\ResumeLiveStreamRequest.cs" />
     <Compile Include="V20180801\Models\ResumeLiveStreamResponse.cs" />
     <Compile Include="V20180801\Models\RuleInfo.cs" />
+    <Compile Include="V20180801\Models\ScreenshotTask.cs" />
     <Compile Include="V20180801\Models\SnapshotTemplateInfo.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordRequest.cs" />
     <Compile Include="V20180801\Models\StopLiveRecordResponse.cs" />
     <Compile Include="V20180801\Models\StopRecordTaskRequest.cs" />
     <Compile Include="V20180801\Models\StopRecordTaskResponse.cs" />
+    <Compile Include="V20180801\Models\StopScreenshotTaskRequest.cs" />
+    <Compile Include="V20180801\Models\StopScreenshotTaskResponse.cs" />
     <Compile Include="V20180801\Models\StreamEventInfo.cs" />
     <Compile Include="V20180801\Models\StreamNameInfo.cs" />
     <Compile Include="V20180801\Models\StreamOnlineInfo.cs" />
