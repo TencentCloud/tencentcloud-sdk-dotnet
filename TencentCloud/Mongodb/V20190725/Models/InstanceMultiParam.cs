@@ -43,7 +43,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] EnumValue{ get; set; }
 
         /// <summary>
-        /// 是否需要重启
+        /// 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// 状态值
+        /// 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string[] Tips{ get; set; }
 
         /// <summary>
-        /// 值类型，multi混合类型
+        /// 当前值的类型描述，默认为multi
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }

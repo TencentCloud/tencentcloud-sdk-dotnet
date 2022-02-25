@@ -49,7 +49,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Min{ get; set; }
 
         /// <summary>
-        /// 是否徐亚哦重启后生效 1:需要重启；0:无需重启
+        /// 是否需要重启生效 1:需要重启后生效；0：无需重启，设置成功即可生效；
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// 是否正常获取到，1：未正常获取；0：正常获取，仅对前端有实际意义；
+        /// 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 暂时未用到，前端使用redis侧代码，为了兼容，保留该参数
+        /// 冗余字段，可忽略
         /// </summary>
         [JsonProperty("Unit")]
         public string Unit{ get; set; }

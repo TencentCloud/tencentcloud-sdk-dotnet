@@ -37,13 +37,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string BackupName{ get; set; }
 
         /// <summary>
-        /// 指定要查询任务的时间范围，StartTime指定开始时间，不填默认不限制开始时间
+        /// 指定查询时间范围内的任务，StartTime指定开始时间，不填默认不限制开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 指定要查询任务的时间范围，EndTime指定结束时间，不填默认不限制结束时间
+        /// 指定查询时间范围内的任务，EndTime指定截止时间，不填默认不限制截止时间
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -61,6 +61,12 @@ namespace TencentCloud.Ame.V20190916.Models
         public ChorusClip[] ChorusClipSet{ get; set; }
 
         /// <summary>
+        /// 前奏间隔，单位：毫秒；注：若参数返回为0则无人声部分
+        /// </summary>
+        [JsonProperty("PreludeInterval")]
+        public long? PreludeInterval{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamArrayObj(map, prefix + "DefinitionInfoSet.", this.DefinitionInfoSet);
             this.SetParamSimple(map, prefix + "MidiJsonUrl", this.MidiJsonUrl);
             this.SetParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
+            this.SetParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

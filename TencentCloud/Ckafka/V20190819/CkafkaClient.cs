@@ -213,7 +213,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建消费者
+        /// 创建消费者组
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建消费者
+        /// 创建消费者组
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
         /// <returns><see cref="CreateConsumerResponse"/></returns>

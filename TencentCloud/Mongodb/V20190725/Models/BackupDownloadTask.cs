@@ -72,6 +72,19 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 备份文件备份类型，0-逻辑备份，1-物理备份
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public long? BackupMethod{ get; set; }
+
+        /// <summary>
+        /// 发起备份时指定的备注信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupDesc")]
+        public string BackupDesc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +99,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "TimeSpend", this.TimeSpend);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "BackupDesc", this.BackupDesc);
         }
     }
 }

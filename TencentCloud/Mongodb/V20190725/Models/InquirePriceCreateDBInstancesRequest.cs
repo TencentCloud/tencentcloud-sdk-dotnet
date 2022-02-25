@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 每个副本集内节点个数，当前副本集节点数固定为3，分片从节点数可选，具体参照查询云数据库的售卖规格返回参数
+        /// 每个副本集内节点个数，具体参照查询云数据库的售卖规格返回参数
         /// </summary>
         [JsonProperty("NodeNum")]
         public long? NodeNum{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string MongoVersion{ get; set; }
 
         /// <summary>
-        /// 机器类型，HIO：高IO型；HIO10G：高IO万兆型；STDS5：标准型
+        /// 机器类型，HIO：高IO型；HIO10G：高IO万兆型；
         /// </summary>
         [JsonProperty("MachineCode")]
         public string MachineCode{ get; set; }

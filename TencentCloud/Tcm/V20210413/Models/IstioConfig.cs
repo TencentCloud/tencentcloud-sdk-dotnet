@@ -31,7 +31,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         public string OutboundTrafficPolicy{ get; set; }
 
         /// <summary>
-        /// 调用链配置
+        /// 调用链配置（Deprecated，请使用 MeshConfig.Tracing 进行配置）
         /// </summary>
         [JsonProperty("Tracing")]
         public TracingConfig Tracing{ get; set; }

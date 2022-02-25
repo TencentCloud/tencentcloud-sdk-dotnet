@@ -3469,6 +3469,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云-查询超额信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryExceedingInfoRequest"/></param>
+        /// <returns><see cref="QueryExceedingInfoResponse"/></returns>
+        public async Task<QueryExceedingInfoResponse> QueryExceedingInfo(QueryExceedingInfoRequest req)
+        {
+             JsonResponseModel<QueryExceedingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryExceedingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExceedingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云-查询超额信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryExceedingInfoRequest"/></param>
+        /// <returns><see cref="QueryExceedingInfoResponse"/></returns>
+        public QueryExceedingInfoResponse QueryExceedingInfoSync(QueryExceedingInfoRequest req)
+        {
+             JsonResponseModel<QueryExceedingInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryExceedingInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExceedingInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 跨境-查询汇率
         /// </summary>
         /// <param name="req"><see cref="QueryExchangeRateRequest"/></param>

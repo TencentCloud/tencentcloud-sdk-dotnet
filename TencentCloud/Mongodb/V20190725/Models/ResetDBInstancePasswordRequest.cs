@@ -37,7 +37,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 新密码
+        /// 新密码，新密码长度不能少于8位
         /// </summary>
         [JsonProperty("Password")]
         public string Password{ get; set; }

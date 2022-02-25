@@ -43,7 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 单次查询返回的日志条数，最大值为100
+        /// 单次查询返回的日志条数，最大值为1000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -42,6 +42,18 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("Volume")]
         public long? Volume{ get; set; }
 
+        /// <summary>
+        /// 实例变更后的节点数，取值范围具体参照查询云数据库的售卖规格返回参数。默认为不变更节点数
+        /// </summary>
+        [JsonProperty("NodeNum")]
+        public long? NodeNum{ get; set; }
+
+        /// <summary>
+        /// 实例变更后的分片数，取值范围具体参照查询云数据库的售卖规格返回参数。只能增加不能减少，默认为不变更分片数
+        /// </summary>
+        [JsonProperty("ReplicateSetNum")]
+        public long? ReplicateSetNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Volume", this.Volume);
+            this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
+            this.SetParamSimple(map, prefix + "ReplicateSetNum", this.ReplicateSetNum);
         }
     }
 }

@@ -25,49 +25,49 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 当前值(暂未使用)
+        /// 当前值
         /// </summary>
         [JsonProperty("CurrentValue")]
         public string CurrentValue{ get; set; }
 
         /// <summary>
-        /// 默认值(暂未使用)
+        /// 默认值
         /// </summary>
         [JsonProperty("DefaultValue")]
         public string DefaultValue{ get; set; }
 
         /// <summary>
-        /// 是否需要重启(暂未使用)
+        /// 是否需要重启
         /// </summary>
         [JsonProperty("NeedRestart")]
         public string NeedRestart{ get; set; }
 
         /// <summary>
-        /// 参数名称(暂未使用)
+        /// 参数名称
         /// </summary>
         [JsonProperty("ParamName")]
         public string ParamName{ get; set; }
 
         /// <summary>
-        /// text类型值(暂未使用)
+        /// text类型值
         /// </summary>
         [JsonProperty("TextValue")]
         public string TextValue{ get; set; }
 
         /// <summary>
-        /// 说明(暂未使用)
+        /// 参数说明
         /// </summary>
         [JsonProperty("Tips")]
         public string[] Tips{ get; set; }
 
         /// <summary>
-        /// 值类型(暂未使用)
+        /// 值类型说明
         /// </summary>
         [JsonProperty("ValueType")]
         public string ValueType{ get; set; }
 
         /// <summary>
-        /// 值获取状态(暂未使用)
+        /// 是否为运行中参数值 1:运行中参数值；0：非运行中参数值；
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

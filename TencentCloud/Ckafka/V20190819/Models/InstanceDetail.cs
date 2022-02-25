@@ -97,7 +97,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? RenewFlag{ get; set; }
 
         /// <summary>
-        /// 实例状态 int：0表示健康，1表示告警，2 表示实例状态异常
+        /// 实例状态 int：1表示健康，2表示告警，3 表示实例状态异常
         /// </summary>
         [JsonProperty("Healthy")]
         public long? Healthy{ get; set; }

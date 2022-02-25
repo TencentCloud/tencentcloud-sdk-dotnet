@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.467</VersionPrefix>
+    <VersionPrefix>3.0.468</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4519,6 +4519,7 @@
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrderItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\OrganizationInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\Paging.cs" />
     <Compile Include="Cpdp\V20190820\Models\PayDataResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\PayFeeDataResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\PayOrderResult.cs" />
@@ -4574,6 +4575,10 @@
     <Compile Include="Cpdp\V20190820\Models\QueryDeclareResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryDownloadBillURLRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryDownloadBillURLResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryExceedingInfoData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryExceedingInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryExceedingInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryExceedingInfoResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateData.cs" />
@@ -14470,6 +14475,7 @@
     <Compile Include="Tci\V20190318\Models\Word.cs" />
     <Compile Include="Tci\V20190318\Models\WordTimePair.cs" />
     <Compile Include="Tcm\V20210413\TcmClient.cs" />
+    <Compile Include="Tcm\V20210413\Models\APM.cs" />
     <Compile Include="Tcm\V20210413\Models\AccessLogConfig.cs" />
     <Compile Include="Tcm\V20210413\Models\ActiveOperation.cs" />
     <Compile Include="Tcm\V20210413\Models\AutoInjectionNamespaceState.cs" />

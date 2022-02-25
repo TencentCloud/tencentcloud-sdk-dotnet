@@ -37,7 +37,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string GroupName{ get; set; }
 
         /// <summary>
-        /// topic名称
+        /// topic名称，TopicName、TopicNameList 需要显示指定一个存在的topic名称
         /// </summary>
         [JsonProperty("TopicName")]
         public string TopicName{ get; set; }

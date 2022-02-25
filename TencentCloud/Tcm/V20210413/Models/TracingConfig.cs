@@ -30,6 +30,18 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Sampling")]
         public float? Sampling{ get; set; }
 
+        /// <summary>
+        /// 是否启用调用跟踪
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
+        /// <summary>
+        /// 腾讯云 APM 服务相关参数
+        /// </summary>
+        [JsonProperty("APM")]
+        public APM APM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Tcm.V20210413.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Sampling", this.Sampling);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
+            this.SetParamObj(map, prefix + "APM.", this.APM);
         }
     }
 }

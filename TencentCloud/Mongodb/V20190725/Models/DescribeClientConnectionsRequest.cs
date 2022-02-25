@@ -31,7 +31,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询返回记录条数，默认为10000。
+        /// 单次请求返回的数量，最小值为1，最大值为1000，默认值为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
