@@ -43,10 +43,16 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string LoadBalancerID{ get; set; }
 
         /// <summary>
-        /// Clb所在地域，例如：ap-hongkong。
+        /// CLB所在地域，例如：ap-hongkong。
         /// </summary>
         [JsonProperty("LoadBalancerRegion")]
         public string LoadBalancerRegion{ get; set; }
+
+        /// <summary>
+        /// CLB内网IP
+        /// </summary>
+        [JsonProperty("Vip")]
+        public string Vip{ get; set; }
 
 
         /// <summary>
@@ -58,6 +64,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Eip", this.Eip);
             this.SetParamSimple(map, prefix + "LoadBalancerID", this.LoadBalancerID);
             this.SetParamSimple(map, prefix + "LoadBalancerRegion", this.LoadBalancerRegion);
+            this.SetParamSimple(map, prefix + "Vip", this.Vip);
         }
     }
 }

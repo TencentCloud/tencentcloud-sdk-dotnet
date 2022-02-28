@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.468</VersionPrefix>
+    <VersionPrefix>3.0.469</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3820,8 +3820,12 @@
     <Compile Include="Cloudaudit\V20190319\Models\CosRegionInfo.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\CreateAuditRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\CreateAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\CreateAuditTrackResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditResponse.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\DeleteAuditTrackResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\DescribeAuditTracksRequest.cs" />
@@ -3845,6 +3849,8 @@
     <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookUpEventsResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\LookupAttribute.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ModifyAuditTrackRequest.cs" />
+    <Compile Include="Cloudaudit\V20190319\Models\ModifyAuditTrackResponse.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\Resource.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\StartLoggingRequest.cs" />
     <Compile Include="Cloudaudit\V20190319\Models\StartLoggingResponse.cs" />
@@ -7536,6 +7542,34 @@
     <Compile Include="Es\V20180416\Models\UpgradeLicenseResponse.cs" />
     <Compile Include="Es\V20180416\Models\WebNodeTypeInfo.cs" />
     <Compile Include="Es\V20180416\Models\ZoneDetail.cs" />
+    <Compile Include="Ess\V20201111\EssClient.cs" />
+    <Compile Include="Ess\V20201111\Models\Agent.cs" />
+    <Compile Include="Ess\V20201111\Models\ApproverInfo.cs" />
+    <Compile Include="Ess\V20201111\Models\CancelFlowRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\CancelFlowResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\CcInfo.cs" />
+    <Compile Include="Ess\V20201111\Models\Component.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateDocumentRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateDocumentResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateFlowByFilesRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateFlowByFilesResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateFlowRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateFlowResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateSchemeUrlRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\CreateSchemeUrlResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeFileUrlsRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeFileUrlsResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeFlowBriefsRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeFlowBriefsResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeThirdPartyAuthCodeRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\DescribeThirdPartyAuthCodeResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\FileUrl.cs" />
+    <Compile Include="Ess\V20201111\Models\FlowBrief.cs" />
+    <Compile Include="Ess\V20201111\Models\FlowCreateApprover.cs" />
+    <Compile Include="Ess\V20201111\Models\FormField.cs" />
+    <Compile Include="Ess\V20201111\Models\StartFlowRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\StartFlowResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\UserInfo.cs" />
     <Compile Include="Essbasic\V20210526\EssbasicClient.cs" />
     <Compile Include="Essbasic\V20210526\Models\Agent.cs" />
     <Compile Include="Essbasic\V20210526\Models\AuthFailMessage.cs" />

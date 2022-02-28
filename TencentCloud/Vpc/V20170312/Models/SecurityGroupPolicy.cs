@@ -38,6 +38,7 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 端口(all, 离散port,  range)。
+        /// 说明：如果Protocol设置为ALL，则Port也需要设置为all。
         /// </summary>
         [JsonProperty("Port")]
         public string Port{ get; set; }
