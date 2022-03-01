@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.469</VersionPrefix>
+    <VersionPrefix>3.0.470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20180411\DcdbClient.cs" />
+    <Compile Include="V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\AddShardConfig.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20180411\Models\AssociateSecurityGroupsResponse.cs" />
@@ -144,6 +146,8 @@
     <Compile Include="V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20180411\Models\InitDCDBInstancesRequest.cs" />
     <Compile Include="V20180411\Models\InitDCDBInstancesResponse.cs" />
+    <Compile Include="V20180411\Models\IsolateHourDCDBInstanceRequest.cs" />
+    <Compile Include="V20180411\Models\IsolateHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\KillSessionRequest.cs" />
     <Compile Include="V20180411\Models\KillSessionResponse.cs" />
     <Compile Include="V20180411\Models\LogFileInfo.cs" />

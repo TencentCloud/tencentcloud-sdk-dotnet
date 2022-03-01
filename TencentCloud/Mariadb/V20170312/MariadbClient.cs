@@ -53,6 +53,46 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
+        /// 解隔离后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateHourDBInstanceResponse"/></returns>
+        public async Task<ActivateHourDBInstanceResponse> ActivateHourDBInstance(ActivateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActivateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解隔离后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="ActivateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="ActivateHourDBInstanceResponse"/></returns>
+        public ActivateHourDBInstanceResponse ActivateHourDBInstanceSync(ActivateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<ActivateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActivateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActivateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定云资源。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -1812,6 +1852,46 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InitDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 隔离后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDBInstanceResponse"/></returns>
+        public async Task<IsolateHourDBInstanceResponse> IsolateHourDBInstance(IsolateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 隔离后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDBInstanceResponse"/></returns>
+        public IsolateHourDBInstanceResponse IsolateHourDBInstanceSync(IsolateHourDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateHourDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

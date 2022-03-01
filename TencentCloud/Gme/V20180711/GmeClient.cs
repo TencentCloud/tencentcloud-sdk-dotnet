@@ -353,6 +353,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 获取用户自定义送检信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeScanConfigResponse"/></returns>
+        public async Task<DescribeRealtimeScanConfigResponse> DescribeRealtimeScanConfig(DescribeRealtimeScanConfigRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeScanConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRealtimeScanConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScanConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户自定义送检信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRealtimeScanConfigRequest"/></param>
+        /// <returns><see cref="DescribeRealtimeScanConfigResponse"/></returns>
+        public DescribeRealtimeScanConfigResponse DescribeRealtimeScanConfigSync(DescribeRealtimeScanConfigRequest req)
+        {
+             JsonResponseModel<DescribeRealtimeScanConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRealtimeScanConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRealtimeScanConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间内用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomInfoRequest"/></param>
@@ -854,6 +894,86 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "ScanVoice");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ScanVoiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义送检房间号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScanRoomsRequest"/></param>
+        /// <returns><see cref="UpdateScanRoomsResponse"/></returns>
+        public async Task<UpdateScanRoomsResponse> UpdateScanRooms(UpdateScanRoomsRequest req)
+        {
+             JsonResponseModel<UpdateScanRoomsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateScanRooms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScanRoomsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义送检房间号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScanRoomsRequest"/></param>
+        /// <returns><see cref="UpdateScanRoomsResponse"/></returns>
+        public UpdateScanRoomsResponse UpdateScanRoomsSync(UpdateScanRoomsRequest req)
+        {
+             JsonResponseModel<UpdateScanRoomsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateScanRooms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScanRoomsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义送检用户号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScanUsersRequest"/></param>
+        /// <returns><see cref="UpdateScanUsersResponse"/></returns>
+        public async Task<UpdateScanUsersResponse> UpdateScanUsers(UpdateScanUsersRequest req)
+        {
+             JsonResponseModel<UpdateScanUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateScanUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScanUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义送检用户号
+        /// </summary>
+        /// <param name="req"><see cref="UpdateScanUsersRequest"/></param>
+        /// <returns><see cref="UpdateScanUsersResponse"/></returns>
+        public UpdateScanUsersResponse UpdateScanUsersSync(UpdateScanUsersRequest req)
+        {
+             JsonResponseModel<UpdateScanUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateScanUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScanUsersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

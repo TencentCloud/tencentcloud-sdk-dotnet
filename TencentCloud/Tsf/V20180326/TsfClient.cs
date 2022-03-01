@@ -3537,6 +3537,246 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询调用监控指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
+        /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>
+        public async Task<DescribeInovcationIndicatorsResponse> DescribeInovcationIndicators(DescribeInovcationIndicatorsRequest req)
+        {
+             JsonResponseModel<DescribeInovcationIndicatorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInovcationIndicators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInovcationIndicatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询调用监控指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInovcationIndicatorsRequest"/></param>
+        /// <returns><see cref="DescribeInovcationIndicatorsResponse"/></returns>
+        public DescribeInovcationIndicatorsResponse DescribeInovcationIndicatorsSync(DescribeInovcationIndicatorsRequest req)
+        {
+             JsonResponseModel<DescribeInovcationIndicatorsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInovcationIndicators");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInovcationIndicatorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询调用指标数据变化曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataCurveRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataCurveResponse"/></returns>
+        public async Task<DescribeInvocationMetricDataCurveResponse> DescribeInvocationMetricDataCurve(DescribeInvocationMetricDataCurveRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataCurveResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvocationMetricDataCurve");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataCurveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询调用指标数据变化曲线
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataCurveRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataCurveResponse"/></returns>
+        public DescribeInvocationMetricDataCurveResponse DescribeInvocationMetricDataCurveSync(DescribeInvocationMetricDataCurveRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataCurveResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvocationMetricDataCurve");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataCurveResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataDimensionRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataDimensionResponse"/></returns>
+        public async Task<DescribeInvocationMetricDataDimensionResponse> DescribeInvocationMetricDataDimension(DescribeInvocationMetricDataDimensionRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataDimensionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvocationMetricDataDimension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataDimensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataDimensionRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataDimensionResponse"/></returns>
+        public DescribeInvocationMetricDataDimensionResponse DescribeInvocationMetricDataDimensionSync(DescribeInvocationMetricDataDimensionRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataDimensionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvocationMetricDataDimension");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataDimensionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单值指标维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataPointRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataPointResponse"/></returns>
+        public async Task<DescribeInvocationMetricDataPointResponse> DescribeInvocationMetricDataPoint(DescribeInvocationMetricDataPointRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataPointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvocationMetricDataPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询单值指标维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricDataPointRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricDataPointResponse"/></returns>
+        public DescribeInvocationMetricDataPointResponse DescribeInvocationMetricDataPointSync(DescribeInvocationMetricDataPointRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricDataPointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvocationMetricDataPoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricDataPointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询调用指标数据散点图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricScatterPlotRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricScatterPlotResponse"/></returns>
+        public async Task<DescribeInvocationMetricScatterPlotResponse> DescribeInvocationMetricScatterPlot(DescribeInvocationMetricScatterPlotRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricScatterPlotResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInvocationMetricScatterPlot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricScatterPlotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询调用指标数据散点图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInvocationMetricScatterPlotRequest"/></param>
+        /// <returns><see cref="DescribeInvocationMetricScatterPlotResponse"/></returns>
+        public DescribeInvocationMetricScatterPlotResponse DescribeInvocationMetricScatterPlotSync(DescribeInvocationMetricScatterPlotRequest req)
+        {
+             JsonResponseModel<DescribeInvocationMetricScatterPlotResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInvocationMetricScatterPlot");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInvocationMetricScatterPlotResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询java实例jvm监控数据,返回数据可选
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJvmMonitorRequest"/></param>
+        /// <returns><see cref="DescribeJvmMonitorResponse"/></returns>
+        public async Task<DescribeJvmMonitorResponse> DescribeJvmMonitor(DescribeJvmMonitorRequest req)
+        {
+             JsonResponseModel<DescribeJvmMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJvmMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJvmMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询java实例jvm监控数据,返回数据可选
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJvmMonitorRequest"/></param>
+        /// <returns><see cref="DescribeJvmMonitorResponse"/></returns>
+        public DescribeJvmMonitorResponse DescribeJvmMonitorSync(DescribeJvmMonitorRequest req)
+        {
+             JsonResponseModel<DescribeJvmMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJvmMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJvmMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询泳道规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeLaneRulesRequest"/></param>
@@ -3728,6 +3968,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMsApiList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMsApiListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务调用监控统计概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewInvocationRequest"/></param>
+        /// <returns><see cref="DescribeOverviewInvocationResponse"/></returns>
+        public async Task<DescribeOverviewInvocationResponse> DescribeOverviewInvocation(DescribeOverviewInvocationRequest req)
+        {
+             JsonResponseModel<DescribeOverviewInvocationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewInvocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewInvocationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务调用监控统计概览
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewInvocationRequest"/></param>
+        /// <returns><see cref="DescribeOverviewInvocationResponse"/></returns>
+        public DescribeOverviewInvocationResponse DescribeOverviewInvocationSync(DescribeOverviewInvocationRequest req)
+        {
+             JsonResponseModel<DescribeOverviewInvocationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewInvocation");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewInvocationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4488,6 +4768,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSimpleNamespaces");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSimpleNamespacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务统计页面：接口和服务维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStatisticsResponse"/></returns>
+        public async Task<DescribeStatisticsResponse> DescribeStatistics(DescribeStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务统计页面：接口和服务维度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStatisticsRequest"/></param>
+        /// <returns><see cref="DescribeStatisticsResponse"/></returns>
+        public DescribeStatisticsResponse DescribeStatisticsSync(DescribeStatisticsRequest req)
+        {
+             JsonResponseModel<DescribeStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStatisticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

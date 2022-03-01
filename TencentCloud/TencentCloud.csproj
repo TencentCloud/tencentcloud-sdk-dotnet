@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.469</VersionPrefix>
+    <VersionPrefix>3.0.470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -581,6 +581,7 @@
     <Compile Include="Apigateway\V20180808\Models\Base64EncodedTriggerRule.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindApiAppRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindApiAppResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\BindApiInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindEnvironmentResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\BindIPStrategyRequest.cs" />
@@ -608,6 +609,8 @@
     <Compile Include="Apigateway\V20180808\Models\CreatePluginResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateServiceResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateUpstreamRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\CreateUpstreamResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\CreateUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteAPIDocRequest.cs" />
@@ -626,6 +629,8 @@
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceSubDomainMappingRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteServiceSubDomainMappingResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteUpstreamRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DeleteUpstreamResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DeleteUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DemoteServiceUsagePlanRequest.cs" />
@@ -697,6 +702,12 @@
     <Compile Include="Apigateway\V20180808\Models\DescribeServiceUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServicesStatusRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeServicesStatusResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamBindApis.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamBindApisRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamBindApisResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamsRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\DescribeUpstreamsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlanEnvironmentsRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlanEnvironmentsResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\DescribeUsagePlanRequest.cs" />
@@ -729,6 +740,8 @@
     <Compile Include="Apigateway\V20180808\Models\InstanceDetail.cs" />
     <Compile Include="Apigateway\V20180808\Models\InstanceInfo.cs" />
     <Compile Include="Apigateway\V20180808\Models\InstanceParameterInput.cs" />
+    <Compile Include="Apigateway\V20180808\Models\K8sLabel.cs" />
+    <Compile Include="Apigateway\V20180808\Models\K8sService.cs" />
     <Compile Include="Apigateway\V20180808\Models\LogQuery.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroService.cs" />
     <Compile Include="Apigateway\V20180808\Models\MicroServiceReq.cs" />
@@ -754,6 +767,8 @@
     <Compile Include="Apigateway\V20180808\Models\ModifyServiceResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifySubDomainRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifySubDomainResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyUpstreamRequest.cs" />
+    <Compile Include="Apigateway\V20180808\Models\ModifyUpstreamResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\ModifyUsagePlanResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\NetworkConfig.cs" />
@@ -804,6 +819,10 @@
     <Compile Include="Apigateway\V20180808\Models\UpdateApiKeyResponse.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateServiceRequest.cs" />
     <Compile Include="Apigateway\V20180808\Models\UpdateServiceResponse.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpstreamHealthChecker.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpstreamHealthCheckerReqHeaders.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpstreamInfo.cs" />
+    <Compile Include="Apigateway\V20180808\Models\UpstreamNode.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlan.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlanBindEnvironment.cs" />
     <Compile Include="Apigateway\V20180808\Models\UsagePlanBindSecret.cs" />
@@ -1935,6 +1954,8 @@
     <Compile Include="Cam\V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\GetUserAppIdRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\GetUserAppIdResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserPermissionBoundaryRequest.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserPermissionBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\GetUserRequest.cs" />
@@ -6247,6 +6268,8 @@
     <Compile Include="Dc\V20180410\Models\RouteFilterPrefix.cs" />
     <Compile Include="Dc\V20180410\Models\Tag.cs" />
     <Compile Include="Dcdb\V20180411\DcdbClient.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ActiveHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ActiveHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\AddShardConfig.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\AssociateSecurityGroupsResponse.cs" />
@@ -6346,6 +6369,8 @@
     <Compile Include="Dcdb\V20180411\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\InitDCDBInstancesResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\IsolateHourDCDBInstanceRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\IsolateHourDCDBInstanceResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\KillSessionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\KillSessionResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
@@ -8122,6 +8147,8 @@
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultListResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeFilterResultResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeRealtimeScanConfigRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DescribeRealtimeScanConfigResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeRoomInfoRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeRoomInfoResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeScanResult.cs" />
@@ -8146,6 +8173,10 @@
     <Compile Include="Gme\V20180711\Models\StatisticsItem.cs" />
     <Compile Include="Gme\V20180711\Models\Tag.cs" />
     <Compile Include="Gme\V20180711\Models\Task.cs" />
+    <Compile Include="Gme\V20180711\Models\UpdateScanRoomsRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\UpdateScanRoomsResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\UpdateScanUsersRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\UpdateScanUsersResponse.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilter.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterConf.cs" />
     <Compile Include="Gme\V20180711\Models\VoiceFilterInfo.cs" />
@@ -10840,6 +10871,8 @@
     <Compile Include="Lp\V20200224\Models\QueryLoginProtectionResponse.cs" />
     <Compile Include="Mariadb\V20170312\MariadbClient.cs" />
     <Compile Include="Mariadb\V20170312\Models\Account.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ActivateHourDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\ActivateHourDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\CancelDcnJobRequest.cs" />
@@ -10944,6 +10977,8 @@
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\InitDBInstancesResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\InstanceSpec.cs" />
+    <Compile Include="Mariadb\V20170312\Models\IsolateHourDBInstanceRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\IsolateHourDBInstanceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\KillSessionRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\KillSessionResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\LogFileInfo.cs" />
@@ -16481,6 +16516,7 @@
     <Compile Include="Tsf\V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateUnitRuleRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateUnitRuleResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\CurvePoint.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeleteApplicationRequest.cs" />
@@ -16602,6 +16638,18 @@
     <Compile Include="Tsf\V20180326\Models\DescribeImageRepositoryResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInovcationIndicatorsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInovcationIndicatorsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataCurveRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataCurveResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataDimensionRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataDimensionResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataPointRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataPointResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricScatterPlotRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricScatterPlotResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeJvmMonitorRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeJvmMonitorResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeLaneRulesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeLaneRulesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeLanesRequest.cs" />
@@ -16612,6 +16660,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeMicroservicesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMsApiListRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeMsApiListResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeOverviewInvocationRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeOverviewInvocationResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePathRewriteRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePathRewriteResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePathRewritesRequest.cs" />
@@ -16650,6 +16700,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeStatisticsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeStatisticsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeTaskLastStatusRequest.cs" />
@@ -16718,16 +16770,26 @@
     <Compile Include="Tsf\V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTag.cs" />
     <Compile Include="Tsf\V20180326\Models\ImageTagsResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\IndicatorCoord.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />
     <Compile Include="Tsf\V20180326\Models\InstanceAdvancedSettings.cs" />
+    <Compile Include="Tsf\V20180326\Models\InvocationIndicator.cs" />
+    <Compile Include="Tsf\V20180326\Models\InvocationMetricScatterPlot.cs" />
+    <Compile Include="Tsf\V20180326\Models\JvmMonitorData.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneInfos.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneRule.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="Tsf\V20180326\Models\LaneRules.cs" />
+    <Compile Include="Tsf\V20180326\Models\MemoryPicture.cs" />
+    <Compile Include="Tsf\V20180326\Models\Metric.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDataCurve.cs" />
     <Compile Include="Tsf\V20180326\Models\MetricDataPoint.cs" />
     <Compile Include="Tsf\V20180326\Models\MetricDataPointMap.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDataSingleValue.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDimension.cs" />
+    <Compile Include="Tsf\V20180326\Models\MetricDimensionValue.cs" />
     <Compile Include="Tsf\V20180326\Models\Microservice.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ModifyContainerGroupResponse.cs" />
@@ -16748,6 +16810,8 @@
     <Compile Include="Tsf\V20180326\Models\MonitorOverview.cs" />
     <Compile Include="Tsf\V20180326\Models\MsApiArray.cs" />
     <Compile Include="Tsf\V20180326\Models\MsInstance.cs" />
+    <Compile Include="Tsf\V20180326\Models\MultiValue.cs" />
+    <Compile Include="Tsf\V20180326\Models\MultiValueDataPoints.cs" />
     <Compile Include="Tsf\V20180326\Models\Namespace.cs" />
     <Compile Include="Tsf\V20180326\Models\OperateApplicationTcrBindingRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\OperateApplicationTcrBindingResponse.cs" />
@@ -16801,6 +16865,8 @@
     <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />
+    <Compile Include="Tsf\V20180326\Models\ServiceStatisticsResult.cs" />
+    <Compile Include="Tsf\V20180326\Models\ServiceStatisticsResults.cs" />
     <Compile Include="Tsf\V20180326\Models\ShardArgument.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\ShrinkGroupResponse.cs" />
@@ -16831,6 +16897,7 @@
     <Compile Include="Tsf\V20180326\Models\TcrRepoInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\ThreadPicture.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfApiListResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApiDetailInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageApiGroupInfo.cs" />
@@ -16841,6 +16908,7 @@
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageConfigReleaseLog.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageContainerEvent.cs" />
+    <Compile Include="Tsf\V20180326\Models\TsfPageDimension.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageFileConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\TsfPageGatewayPlugin.cs" />

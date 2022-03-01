@@ -2053,7 +2053,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过15
+        /// 本接口用于检索分析日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>
@@ -2073,7 +2073,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于搜索日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，并发数不能超过15
+        /// 本接口用于检索分析日志, 该接口除受默认接口请求频率限制外，针对单个日志主题，查询并发数不能超过15。
         /// </summary>
         /// <param name="req"><see cref="SearchLogRequest"/></param>
         /// <returns><see cref="SearchLogResponse"/></returns>

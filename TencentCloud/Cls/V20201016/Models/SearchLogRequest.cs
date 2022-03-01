@@ -25,56 +25,61 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 要查询的日志主题ID
+        /// 要检索分析的日志主题ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 要查询的日志的起始时间，Unix时间戳，单位ms
+        /// 要检索分析的日志的起始时间，Unix时间戳（毫秒）
         /// </summary>
         [JsonProperty("From")]
         public long? From{ get; set; }
 
         /// <summary>
-        /// 要查询的日志的结束时间，Unix时间戳，单位ms
+        /// 要检索分析的日志的结束时间，Unix时间戳（毫秒）
         /// </summary>
         [JsonProperty("To")]
         public long? To{ get; set; }
 
         /// <summary>
-        /// 查询语句，语句长度最大为12KB
-        /// 查询语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code>|</code>及SQL语句
+        /// 检索分析语句，最大长度为12KB
+        /// 语句由 <a href="https://cloud.tencent.com/document/product/614/47044" target="_blank">[检索条件]</a> | <a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>构成，无需对日志进行统计分析时，可省略其中的管道符<code> | </code>及SQL语句
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 仅当查询语句(Query)不包含SQL时有效
         /// 表示单次查询返回的原始日志条数，最大值为1000，获取后续日志需使用Context参数
-        /// SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL结果条数指定方式参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 仅当查询语句(Query)不包含SQL时有效
-        /// 透传上次接口返回的Context值，可获取后续日志，总计最多可获取1万条原始日志。过期时间1小时
-        /// SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
+        /// 透传上次接口返回的Context值，可获取后续更多日志，总计最多可获取1万条原始日志，过期时间1小时
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL获取后续结果参考<a href="https://cloud.tencent.com/document/product/614/58977" target="_blank">SQL LIMIT语法</a>
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 仅当查询语句(Query)不包含SQL时有效。
         /// 原始日志是否按时间排序返回；可选值：asc(升序)、desc(降序)，默认为 desc
-        /// SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY 语法</a>
+        /// 注意：
+        /// * 仅当检索分析语句(Query)不包含SQL时有效
+        /// * SQL结果排序方式参考<a href="https://cloud.tencent.com/document/product/614/58978" target="_blank">SQL ORDER BY语法</a>
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 为true代表使用新的检索结果返回方式，响应参数AnalysisRecords和Columns有效；为false时代表使用老检索结果返回方式, AnalysisResults和ColNames有效
+        /// 为true代表使用新的检索结果返回方式，输出参数AnalysisRecords和Columns有效
+        /// 为false时代表使用老的检索结果返回方式, 输出AnalysisResults和ColNames有效
+        /// 两种返回方式在编码格式上有少量区别，建议使用true
         /// </summary>
         [JsonProperty("UseNewAnalysis")]
         public bool? UseNewAnalysis{ get; set; }

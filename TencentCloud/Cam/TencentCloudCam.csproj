@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.469</VersionPrefix>
+    <VersionPrefix>3.0.470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -133,6 +133,8 @@
     <Compile Include="V20190116\Models\GetSecurityLastUsedResponse.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusRequest.cs" />
     <Compile Include="V20190116\Models\GetServiceLinkedRoleDeletionStatusResponse.cs" />
+    <Compile Include="V20190116\Models\GetUserAppIdRequest.cs" />
+    <Compile Include="V20190116\Models\GetUserAppIdResponse.cs" />
     <Compile Include="V20190116\Models\GetUserPermissionBoundaryRequest.cs" />
     <Compile Include="V20190116\Models\GetUserPermissionBoundaryResponse.cs" />
     <Compile Include="V20190116\Models\GetUserRequest.cs" />

@@ -623,6 +623,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 用于创建创建VPC通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
+        /// <returns><see cref="CreateUpstreamResponse"/></returns>
+        public async Task<CreateUpstreamResponse> CreateUpstream(CreateUpstreamRequest req)
+        {
+             JsonResponseModel<CreateUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建创建VPC通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
+        /// <returns><see cref="CreateUpstreamResponse"/></returns>
+        public CreateUpstreamResponse CreateUpstreamSync(CreateUpstreamRequest req)
+        {
+             JsonResponseModel<CreateUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateUsagePlan）用于创建使用计划。
         /// 用户在使用 API 网关时，需要创建使用计划并将其绑定到服务的环境中使用。
         /// </summary>
@@ -978,6 +1018,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "DeleteServiceSubDomainMapping");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteServiceSubDomainMappingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除VPC通道，需要注意有api绑定时，不允许删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
+        /// <returns><see cref="DeleteUpstreamResponse"/></returns>
+        public async Task<DeleteUpstreamResponse> DeleteUpstream(DeleteUpstreamRequest req)
+        {
+             JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除VPC通道，需要注意有api绑定时，不允许删除
+        /// </summary>
+        /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
+        /// <returns><see cref="DeleteUpstreamResponse"/></returns>
+        public DeleteUpstreamResponse DeleteUpstreamSync(DeleteUpstreamRequest req)
+        {
+             JsonResponseModel<DeleteUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteUpstreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2407,6 +2487,86 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 查询VPC通道绑定的api列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
+        public async Task<DescribeUpstreamBindApisResponse> DescribeUpstreamBindApis(DescribeUpstreamBindApisRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpstreamBindApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamBindApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询VPC通道绑定的api列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
+        public DescribeUpstreamBindApisResponse DescribeUpstreamBindApisSync(DescribeUpstreamBindApisRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamBindApisResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpstreamBindApis");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamBindApisResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询VPC通道列表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
+        public async Task<DescribeUpstreamsResponse> DescribeUpstreams(DescribeUpstreamsRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUpstreams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询VPC通道列表详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
+        /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
+        public DescribeUpstreamsResponse DescribeUpstreamsSync(DescribeUpstreamsRequest req)
+        {
+             JsonResponseModel<DescribeUpstreamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUpstreams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUpstreamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeUsagePlan）用于查询一个使用计划的详细信息，包括名称、QPS、创建时间绑定的环境等。
         /// </summary>
         /// <param name="req"><see cref="DescribeUsagePlanRequest"/></param>
@@ -3162,6 +3322,46 @@ namespace TencentCloud.Apigateway.V20180808
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改VPC通道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamResponse"/></returns>
+        public async Task<ModifyUpstreamResponse> ModifyUpstream(ModifyUpstreamRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改VPC通道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
+        /// <returns><see cref="ModifyUpstreamResponse"/></returns>
+        public ModifyUpstreamResponse ModifyUpstreamSync(ModifyUpstreamRequest req)
+        {
+             JsonResponseModel<ModifyUpstreamResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUpstream");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUpstreamResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

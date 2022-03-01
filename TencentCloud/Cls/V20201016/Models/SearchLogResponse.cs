@@ -25,53 +25,58 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 加载后续内容的Context，过期时间1小时
+        /// 透传本次接口返回的Context值，可获取后续更多日志，过期时间1小时
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
 
         /// <summary>
-        /// 原始日志查询结果是否全部返回。查询语句(Query)包含SQL时该参数无意义
+        /// 符合检索条件的日志是否已全部返回，如未全部返回可使用Context参数获取后续更多日志
+        /// 注意：仅当检索分析语句(Query)不包含SQL时有效
         /// </summary>
         [JsonProperty("ListOver")]
         public bool? ListOver{ get; set; }
 
         /// <summary>
-        /// 返回的是否为分析结果
+        /// 返回的是否为统计分析（即SQL）结果
         /// </summary>
         [JsonProperty("Analysis")]
         public bool? Analysis{ get; set; }
 
         /// <summary>
-        /// 如果Analysis为True，则返回分析结果的列名，否则为空
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ColNames")]
-        public string[] ColNames{ get; set; }
-
-        /// <summary>
-        /// 日志查询结果；当Analysis为True时，可能返回为null
+        /// 匹配检索条件的原始日志
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Results")]
         public LogInfo[] Results{ get; set; }
 
         /// <summary>
-        /// 日志分析结果；当Analysis为False时，可能返回为null
+        /// 日志统计分析结果的列名
+        /// 当UseNewAnalysis为false时生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColNames")]
+        public string[] ColNames{ get; set; }
+
+        /// <summary>
+        /// 日志统计分析结果
+        /// 当UseNewAnalysis为false时生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisResults")]
         public LogItems[] AnalysisResults{ get; set; }
 
         /// <summary>
-        /// 新的日志分析结果; UseNewAnalysis为true有效
+        /// 日志统计分析结果
+        /// 当UseNewAnalysis为true时生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AnalysisRecords")]
         public string[] AnalysisRecords{ get; set; }
 
         /// <summary>
-        /// 日志分析的列属性; UseNewAnalysis为true有效
+        /// 日志统计分析结果的列属性
+        /// 当UseNewAnalysis为true时生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Columns")]
@@ -92,8 +97,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Context", this.Context);
             this.SetParamSimple(map, prefix + "ListOver", this.ListOver);
             this.SetParamSimple(map, prefix + "Analysis", this.Analysis);
-            this.SetParamArraySimple(map, prefix + "ColNames.", this.ColNames);
             this.SetParamArrayObj(map, prefix + "Results.", this.Results);
+            this.SetParamArraySimple(map, prefix + "ColNames.", this.ColNames);
             this.SetParamArrayObj(map, prefix + "AnalysisResults.", this.AnalysisResults);
             this.SetParamArraySimple(map, prefix + "AnalysisRecords.", this.AnalysisRecords);
             this.SetParamArrayObj(map, prefix + "Columns.", this.Columns);

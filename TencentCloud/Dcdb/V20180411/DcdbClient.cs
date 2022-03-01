@@ -53,6 +53,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 解隔离DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
+        public async Task<ActiveHourDCDBInstanceResponse> ActiveHourDCDBInstance(ActiveHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ActiveHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActiveHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 解隔离DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="ActiveHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="ActiveHourDCDBInstanceResponse"/></returns>
+        public ActiveHourDCDBInstanceResponse ActiveHourDCDBInstanceSync(ActiveHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<ActiveHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ActiveHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ActiveHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AssociateSecurityGroups) 用于安全组批量绑定云资源。
         /// </summary>
         /// <param name="req"><see cref="AssociateSecurityGroupsRequest"/></param>
@@ -1732,6 +1772,46 @@ namespace TencentCloud.Dcdb.V20180411
              {
                  var strResp = this.InternalRequestSync(req, "InitDCDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InitDCDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 隔离DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
+        public async Task<IsolateHourDCDBInstanceResponse> IsolateHourDCDBInstance(IsolateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDCDBInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 隔离DCDB后付费实例
+        /// </summary>
+        /// <param name="req"><see cref="IsolateHourDCDBInstanceRequest"/></param>
+        /// <returns><see cref="IsolateHourDCDBInstanceResponse"/></returns>
+        public IsolateHourDCDBInstanceResponse IsolateHourDCDBInstanceSync(IsolateHourDCDBInstanceRequest req)
+        {
+             JsonResponseModel<IsolateHourDCDBInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateHourDCDBInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateHourDCDBInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

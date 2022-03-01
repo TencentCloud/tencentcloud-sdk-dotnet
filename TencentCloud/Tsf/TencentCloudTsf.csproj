@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.469</VersionPrefix>
+    <VersionPrefix>3.0.470</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -126,6 +126,7 @@
     <Compile Include="V20180326\Models\CreateTaskResponse.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\CreateUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\CurvePoint.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeleteApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeleteApplicationRequest.cs" />
@@ -247,6 +248,18 @@
     <Compile Include="V20180326\Models\DescribeImageRepositoryResponse.cs" />
     <Compile Include="V20180326\Models\DescribeImageTagsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeImageTagsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeInovcationIndicatorsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeInovcationIndicatorsResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataCurveRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataCurveResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataDimensionRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataDimensionResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataPointRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricDataPointResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricScatterPlotRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeInvocationMetricScatterPlotResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeJvmMonitorRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeJvmMonitorResponse.cs" />
     <Compile Include="V20180326\Models\DescribeLaneRulesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeLaneRulesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeLanesRequest.cs" />
@@ -257,6 +270,8 @@
     <Compile Include="V20180326\Models\DescribeMicroservicesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeMsApiListRequest.cs" />
     <Compile Include="V20180326\Models\DescribeMsApiListResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeOverviewInvocationRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeOverviewInvocationResponse.cs" />
     <Compile Include="V20180326\Models\DescribePathRewriteRequest.cs" />
     <Compile Include="V20180326\Models\DescribePathRewriteResponse.cs" />
     <Compile Include="V20180326\Models\DescribePathRewritesRequest.cs" />
@@ -295,6 +310,8 @@
     <Compile Include="V20180326\Models\DescribeSimpleGroupsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleNamespacesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeSimpleNamespacesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeStatisticsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeStatisticsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeTaskDetailRequest.cs" />
     <Compile Include="V20180326\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20180326\Models\DescribeTaskLastStatusRequest.cs" />
@@ -363,16 +380,26 @@
     <Compile Include="V20180326\Models\ImageRepositoryResult.cs" />
     <Compile Include="V20180326\Models\ImageTag.cs" />
     <Compile Include="V20180326\Models\ImageTagsResult.cs" />
+    <Compile Include="V20180326\Models\IndicatorCoord.cs" />
     <Compile Include="V20180326\Models\Instance.cs" />
     <Compile Include="V20180326\Models\InstanceAdvancedSettings.cs" />
+    <Compile Include="V20180326\Models\InvocationIndicator.cs" />
+    <Compile Include="V20180326\Models\InvocationMetricScatterPlot.cs" />
+    <Compile Include="V20180326\Models\JvmMonitorData.cs" />
     <Compile Include="V20180326\Models\LaneGroup.cs" />
     <Compile Include="V20180326\Models\LaneInfo.cs" />
     <Compile Include="V20180326\Models\LaneInfos.cs" />
     <Compile Include="V20180326\Models\LaneRule.cs" />
     <Compile Include="V20180326\Models\LaneRuleTag.cs" />
     <Compile Include="V20180326\Models\LaneRules.cs" />
+    <Compile Include="V20180326\Models\MemoryPicture.cs" />
+    <Compile Include="V20180326\Models\Metric.cs" />
+    <Compile Include="V20180326\Models\MetricDataCurve.cs" />
     <Compile Include="V20180326\Models\MetricDataPoint.cs" />
     <Compile Include="V20180326\Models\MetricDataPointMap.cs" />
+    <Compile Include="V20180326\Models\MetricDataSingleValue.cs" />
+    <Compile Include="V20180326\Models\MetricDimension.cs" />
+    <Compile Include="V20180326\Models\MetricDimensionValue.cs" />
     <Compile Include="V20180326\Models\Microservice.cs" />
     <Compile Include="V20180326\Models\ModifyContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\ModifyContainerGroupResponse.cs" />
@@ -393,6 +420,8 @@
     <Compile Include="V20180326\Models\MonitorOverview.cs" />
     <Compile Include="V20180326\Models\MsApiArray.cs" />
     <Compile Include="V20180326\Models\MsInstance.cs" />
+    <Compile Include="V20180326\Models\MultiValue.cs" />
+    <Compile Include="V20180326\Models\MultiValueDataPoints.cs" />
     <Compile Include="V20180326\Models\Namespace.cs" />
     <Compile Include="V20180326\Models\OperateApplicationTcrBindingRequest.cs" />
     <Compile Include="V20180326\Models\OperateApplicationTcrBindingResponse.cs" />
@@ -446,6 +475,8 @@
     <Compile Include="V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="V20180326\Models\ServiceConfig.cs" />
     <Compile Include="V20180326\Models\ServiceSetting.cs" />
+    <Compile Include="V20180326\Models\ServiceStatisticsResult.cs" />
+    <Compile Include="V20180326\Models\ServiceStatisticsResults.cs" />
     <Compile Include="V20180326\Models\ShardArgument.cs" />
     <Compile Include="V20180326\Models\ShrinkGroupRequest.cs" />
     <Compile Include="V20180326\Models\ShrinkGroupResponse.cs" />
@@ -476,6 +507,7 @@
     <Compile Include="V20180326\Models\TcrRepoInfo.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchRequest.cs" />
     <Compile Include="V20180326\Models\TerminateTaskFlowBatchResponse.cs" />
+    <Compile Include="V20180326\Models\ThreadPicture.cs" />
     <Compile Include="V20180326\Models\TsfApiListResponse.cs" />
     <Compile Include="V20180326\Models\TsfPageApiDetailInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApiGroupInfo.cs" />
@@ -486,6 +518,7 @@
     <Compile Include="V20180326\Models\TsfPageConfigRelease.cs" />
     <Compile Include="V20180326\Models\TsfPageConfigReleaseLog.cs" />
     <Compile Include="V20180326\Models\TsfPageContainerEvent.cs" />
+    <Compile Include="V20180326\Models\TsfPageDimension.cs" />
     <Compile Include="V20180326\Models\TsfPageFileConfig.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayDeployGroup.cs" />
     <Compile Include="V20180326\Models\TsfPageGatewayPlugin.cs" />
