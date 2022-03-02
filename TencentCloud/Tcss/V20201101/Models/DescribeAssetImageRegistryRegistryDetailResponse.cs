@@ -82,6 +82,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? SpeedLimit{ get; set; }
 
         /// <summary>
+        /// 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Insecure")]
+        public ulong? Insecure{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -102,6 +109,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "NetType", this.NetType);
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
+            this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

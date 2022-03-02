@@ -42,6 +42,12 @@ namespace TencentCloud.Tdid.V20210519.Models
         [JsonProperty("VersionCredential")]
         public string VersionCredential{ get; set; }
 
+        /// <summary>
+        /// 是否未签名
+        /// </summary>
+        [JsonProperty("UnSigned")]
+        public bool? UnSigned{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tdid.V20210519.Models
             this.SetParamObj(map, prefix + "FunctionArg.", this.FunctionArg);
             this.SetParamObj(map, prefix + "TransactionArg.", this.TransactionArg);
             this.SetParamSimple(map, prefix + "VersionCredential", this.VersionCredential);
+            this.SetParamSimple(map, prefix + "UnSigned", this.UnSigned);
         }
     }
 }

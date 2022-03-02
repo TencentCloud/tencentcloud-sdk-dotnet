@@ -31,13 +31,13 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 字符串房间号，逗号分隔
+        /// 需要送检的所有房间号。多个房间号之间用","分隔。示例："0001,0002,0003"
         /// </summary>
         [JsonProperty("RoomIdString")]
         public string RoomIdString{ get; set; }
 
         /// <summary>
-        /// 正则表达式房间号，["^6.*"]6开头的房间号
+        /// 符合此正则表达式规则的房间号将被送检。示例：["^6.*"] 表示所有以6开头的房间号将被送检
         /// </summary>
         [JsonProperty("RoomIdRegex")]
         public string[] RoomIdRegex{ get; set; }

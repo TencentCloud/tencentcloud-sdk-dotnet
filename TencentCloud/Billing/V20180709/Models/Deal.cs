@@ -178,6 +178,20 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
+        /// <summary>
+        /// 产品编码中文名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductName")]
+        public string ProductName{ get; set; }
+
+        /// <summary>
+        /// 子产品编码中文名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubProductName")]
+        public string SubProductName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +221,8 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RefReturnDeals", this.RefReturnDeals);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "Action", this.Action);
+            this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
+            this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
         }
     }
 }

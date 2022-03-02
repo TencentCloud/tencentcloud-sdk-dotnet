@@ -78,6 +78,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SpeedLimit")]
         public long? SpeedLimit{ get; set; }
 
+        /// <summary>
+        /// 安全模式（证书校验）：0（默认） 非安全模式（跳过证书校验）：1
+        /// </summary>
+        [JsonProperty("Insecure")]
+        public ulong? Insecure{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RegistryVersion", this.RegistryVersion);
             this.SetParamSimple(map, prefix + "RegistryRegion", this.RegistryRegion);
             this.SetParamSimple(map, prefix + "SpeedLimit", this.SpeedLimit);
+            this.SetParamSimple(map, prefix + "Insecure", this.Insecure);
         }
     }
 }

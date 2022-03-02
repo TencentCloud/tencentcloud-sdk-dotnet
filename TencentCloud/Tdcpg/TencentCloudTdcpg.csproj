@@ -1,0 +1,107 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{CE2F950C-A2C5-3522-9B5F-B37D6EAB00D9}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.471</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Tdcpg</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20211118\TdcpgClient.cs" />
+    <Compile Include="V20211118\Models\Account.cs" />
+    <Compile Include="V20211118\Models\AvailableRecoveryTimeRange.cs" />
+    <Compile Include="V20211118\Models\Backup.cs" />
+    <Compile Include="V20211118\Models\CloneClusterToPointInTimeRequest.cs" />
+    <Compile Include="V20211118\Models\CloneClusterToPointInTimeResponse.cs" />
+    <Compile Include="V20211118\Models\Cluster.cs" />
+    <Compile Include="V20211118\Models\CreateClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20211118\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20211118\Models\DeleteClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20211118\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterBackupsRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterBackupsResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterEndpointsRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterEndpointsResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterRecoveryTimeRangeRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeClusterRecoveryTimeRangeResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20211118\Models\DescribeResourcesByDealNameRequest.cs" />
+    <Compile Include="V20211118\Models\DescribeResourcesByDealNameResponse.cs" />
+    <Compile Include="V20211118\Models\Endpoint.cs" />
+    <Compile Include="V20211118\Models\Filter.cs" />
+    <Compile Include="V20211118\Models\Instance.cs" />
+    <Compile Include="V20211118\Models\IsolateClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\IsolateClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\IsolateClusterRequest.cs" />
+    <Compile Include="V20211118\Models\IsolateClusterResponse.cs" />
+    <Compile Include="V20211118\Models\ModifyAccountDescriptionRequest.cs" />
+    <Compile Include="V20211118\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterEndpointWanStatusRequest.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterEndpointWanStatusResponse.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterInstancesSpecRequest.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterInstancesSpecResponse.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterNameRequest.cs" />
+    <Compile Include="V20211118\Models\ModifyClusterNameResponse.cs" />
+    <Compile Include="V20211118\Models\ModifyClustersAutoRenewFlagRequest.cs" />
+    <Compile Include="V20211118\Models\ModifyClustersAutoRenewFlagResponse.cs" />
+    <Compile Include="V20211118\Models\RecoverClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\RecoverClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\RecoverClusterRequest.cs" />
+    <Compile Include="V20211118\Models\RecoverClusterResponse.cs" />
+    <Compile Include="V20211118\Models\RenewClusterRequest.cs" />
+    <Compile Include="V20211118\Models\RenewClusterResponse.cs" />
+    <Compile Include="V20211118\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="V20211118\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="V20211118\Models\ResourceIdInfo.cs" />
+    <Compile Include="V20211118\Models\RestartClusterInstancesRequest.cs" />
+    <Compile Include="V20211118\Models\RestartClusterInstancesResponse.cs" />
+    <Compile Include="V20211118\Models\TransformClusterPayModeRequest.cs" />
+    <Compile Include="V20211118\Models\TransformClusterPayModeResponse.cs" />
+  </ItemGroup>
+</Project>

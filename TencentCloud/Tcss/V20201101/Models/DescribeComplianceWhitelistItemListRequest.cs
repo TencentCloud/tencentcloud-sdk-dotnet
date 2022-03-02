@@ -48,6 +48,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Filters")]
         public ComplianceFilters[] Filters{ get; set; }
 
+        /// <summary>
+        /// 排序字段
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
+        /// <summary>
+        /// 排序方式 desc asc
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "AssetTypeSet.", this.AssetTypeSet);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

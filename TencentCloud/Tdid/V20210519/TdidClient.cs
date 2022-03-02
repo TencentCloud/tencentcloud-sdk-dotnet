@@ -173,6 +173,166 @@ namespace TencentCloud.Tdid.V20210519
         }
 
         /// <summary>
+        ///  新建DID根据公钥生成Tdid
+        /// </summary>
+        /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
+        /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
+        public async Task<CreateTDidByPublicKeyResponse> CreateTDidByPublicKey(CreateTDidByPublicKeyRequest req)
+        {
+             JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTDidByPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  新建DID根据公钥生成Tdid
+        /// </summary>
+        /// <param name="req"><see cref="CreateTDidByPublicKeyRequest"/></param>
+        /// <returns><see cref="CreateTDidByPublicKeyResponse"/></returns>
+        public CreateTDidByPublicKeyResponse CreateTDidByPublicKeySync(CreateTDidByPublicKeyRequest req)
+        {
+             JsonResponseModel<CreateTDidByPublicKeyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTDidByPublicKey");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTDidByPublicKeyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取权威机构信息
+        /// </summary>
+        /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
+        /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
+        public async Task<GetAuthorityIssuerResponse> GetAuthorityIssuer(GetAuthorityIssuerRequest req)
+        {
+             JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAuthorityIssuer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAuthorityIssuerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取权威机构信息
+        /// </summary>
+        /// <param name="req"><see cref="GetAuthorityIssuerRequest"/></param>
+        /// <returns><see cref="GetAuthorityIssuerResponse"/></returns>
+        public GetAuthorityIssuerResponse GetAuthorityIssuerSync(GetAuthorityIssuerRequest req)
+        {
+             JsonResponseModel<GetAuthorityIssuerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAuthorityIssuer");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAuthorityIssuerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看DID文档
+        /// </summary>
+        /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
+        /// <returns><see cref="GetDidDocumentResponse"/></returns>
+        public async Task<GetDidDocumentResponse> GetDidDocument(GetDidDocumentRequest req)
+        {
+             JsonResponseModel<GetDidDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDidDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查看DID文档
+        /// </summary>
+        /// <param name="req"><see cref="GetDidDocumentRequest"/></param>
+        /// <returns><see cref="GetDidDocumentResponse"/></returns>
+        public GetDidDocumentResponse GetDidDocumentSync(GetDidDocumentRequest req)
+        {
+             JsonResponseModel<GetDidDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDidDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDidDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置凭证链上状态
+        /// </summary>
+        /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
+        /// <returns><see cref="SetCredentialStatusResponse"/></returns>
+        public async Task<SetCredentialStatusResponse> SetCredentialStatus(SetCredentialStatusRequest req)
+        {
+             JsonResponseModel<SetCredentialStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetCredentialStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCredentialStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置凭证链上状态
+        /// </summary>
+        /// <param name="req"><see cref="SetCredentialStatusRequest"/></param>
+        /// <returns><see cref="SetCredentialStatusResponse"/></returns>
+        public SetCredentialStatusResponse SetCredentialStatusSync(SetCredentialStatusRequest req)
+        {
+             JsonResponseModel<SetCredentialStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetCredentialStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetCredentialStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 验证凭证
         /// </summary>
         /// <param name="req"><see cref="VerifyCredentialRequest"/></param>

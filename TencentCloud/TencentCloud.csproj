@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.470</VersionPrefix>
+    <VersionPrefix>3.0.471</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -297,10 +297,12 @@
     <Compile Include="Antiddos\V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="Antiddos\V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="Antiddos\V20200309\Models\BoundIpInfo.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCLevelPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCPrecisionPlyRecord.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCPrecisionPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCReqLimitPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CCReqLimitPolicyRecord.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CCThresholdPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CcBlackWhiteIpPolicy.cs" />
     <Compile Include="Antiddos\V20200309\Models\CcGeoIPBlockConfig.cs" />
     <Compile Include="Antiddos\V20200309\Models\CcGeoIpPolicyNew.cs" />
@@ -315,6 +317,8 @@
     <Compile Include="Antiddos\V20200309\Models\CreateCCPrecisionPolicyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateCCReqLimitPolicyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateCCReqLimitPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\CreateCcBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateCcGeoIPBlockConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\CreateDDoSAIRequest.cs" />
@@ -355,10 +359,14 @@
     <Compile Include="Antiddos\V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCLevelPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCLevelPolicyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCCPrecisionPolicyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCCPrecisionPolicyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCCRequestLimitPolicyRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCCRequestLimitPolicyResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCThresholdPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DeleteCCThresholdPolicyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCcBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCcBlackWhiteIpListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DeleteCcGeoIPBlockConfigRequest.cs" />
@@ -383,10 +391,16 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCLevelPolicyResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCReqLimitPolicyListRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCReqLimitPolicyListResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeCCThresholdListResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCCTrendResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />
@@ -15240,15 +15254,83 @@
     <Compile Include="Tcss\V20201101\Models\VirusInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\VirusTaskInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\WarningRule.cs" />
+    <Compile Include="Tdcpg\V20211118\TdcpgClient.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Account.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\AvailableRecoveryTimeRange.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Backup.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CloneClusterToPointInTimeRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CloneClusterToPointInTimeResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Cluster.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CreateClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CreateClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CreateClusterRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\CreateClusterResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DeleteClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DeleteClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DeleteClusterRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DeleteClusterResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeAccountsRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterBackupsRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterBackupsResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterEndpointsRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterEndpointsResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterRecoveryTimeRangeRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClusterRecoveryTimeRangeResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClustersRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeClustersResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeResourcesByDealNameRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\DescribeResourcesByDealNameResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Endpoint.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Filter.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\Instance.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\IsolateClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\IsolateClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\IsolateClusterRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\IsolateClusterResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyAccountDescriptionRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterEndpointWanStatusRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterEndpointWanStatusResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterInstancesSpecRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterInstancesSpecResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterNameRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClusterNameResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClustersAutoRenewFlagRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ModifyClustersAutoRenewFlagResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RecoverClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RecoverClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RecoverClusterRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RecoverClusterResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RenewClusterRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RenewClusterResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ResetAccountPasswordRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ResetAccountPasswordResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\ResourceIdInfo.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RestartClusterInstancesRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\RestartClusterInstancesResponse.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\TransformClusterPayModeRequest.cs" />
+    <Compile Include="Tdcpg\V20211118\Models\TransformClusterPayModeResponse.cs" />
     <Compile Include="Tdid\V20210519\TdidClient.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateCredentialRequest.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateCredentialResponse.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateSelectiveCredentialRequest.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateSelectiveCredentialResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateTDidByPublicKeyRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\CreateTDidByPublicKeyResponse.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateTDidRequest.cs" />
     <Compile Include="Tdid\V20210519\Models\CreateTDidResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\CredentialStatus.cs" />
     <Compile Include="Tdid\V20210519\Models\FunctionArg.cs" />
+    <Compile Include="Tdid\V20210519\Models\GetAuthorityIssuerRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\GetAuthorityIssuerResponse.cs" />
+    <Compile Include="Tdid\V20210519\Models\GetDidDocumentRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\GetDidDocumentResponse.cs" />
     <Compile Include="Tdid\V20210519\Models\Proof.cs" />
+    <Compile Include="Tdid\V20210519\Models\SetCredentialStatusRequest.cs" />
+    <Compile Include="Tdid\V20210519\Models\SetCredentialStatusResponse.cs" />
     <Compile Include="Tdid\V20210519\Models\TransactionArg.cs" />
     <Compile Include="Tdid\V20210519\Models\VerifyCredentialRequest.cs" />
     <Compile Include="Tdid\V20210519\Models\VerifyCredentialResponse.cs" />

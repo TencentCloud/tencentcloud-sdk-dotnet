@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.470</VersionPrefix>
+    <VersionPrefix>3.0.471</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -59,10 +59,12 @@
     <Compile Include="V20200309\Models\BGPInstanceUsages.cs" />
     <Compile Include="V20200309\Models\BlackWhiteIpRelation.cs" />
     <Compile Include="V20200309\Models\BoundIpInfo.cs" />
+    <Compile Include="V20200309\Models\CCLevelPolicy.cs" />
     <Compile Include="V20200309\Models\CCPrecisionPlyRecord.cs" />
     <Compile Include="V20200309\Models\CCPrecisionPolicy.cs" />
     <Compile Include="V20200309\Models\CCReqLimitPolicy.cs" />
     <Compile Include="V20200309\Models\CCReqLimitPolicyRecord.cs" />
+    <Compile Include="V20200309\Models\CCThresholdPolicy.cs" />
     <Compile Include="V20200309\Models\CcBlackWhiteIpPolicy.cs" />
     <Compile Include="V20200309\Models\CcGeoIPBlockConfig.cs" />
     <Compile Include="V20200309\Models\CcGeoIpPolicyNew.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="V20200309\Models\CreateCCPrecisionPolicyResponse.cs" />
     <Compile Include="V20200309\Models\CreateCCReqLimitPolicyRequest.cs" />
     <Compile Include="V20200309\Models\CreateCCReqLimitPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\CreateCcBlackWhiteIpListRequest.cs" />
+    <Compile Include="V20200309\Models\CreateCcBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\CreateCcGeoIPBlockConfigRequest.cs" />
     <Compile Include="V20200309\Models\CreateCcGeoIPBlockConfigResponse.cs" />
     <Compile Include="V20200309\Models\CreateDDoSAIRequest.cs" />
@@ -117,10 +121,14 @@
     <Compile Include="V20200309\Models\DefaultAlarmThreshold.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DeleteBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCCLevelPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCCLevelPolicyResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCCPrecisionPolicyRequest.cs" />
     <Compile Include="V20200309\Models\DeleteCCPrecisionPolicyResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCCRequestLimitPolicyRequest.cs" />
     <Compile Include="V20200309\Models\DeleteCCRequestLimitPolicyResponse.cs" />
+    <Compile Include="V20200309\Models\DeleteCCThresholdPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\DeleteCCThresholdPolicyResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCcBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DeleteCcBlackWhiteIpListResponse.cs" />
     <Compile Include="V20200309\Models\DeleteCcGeoIPBlockConfigRequest.cs" />
@@ -145,10 +153,16 @@
     <Compile Include="V20200309\Models\DescribeBizTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeBlackWhiteIpListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCLevelListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCLevelListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCLevelPolicyRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCLevelPolicyResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCPrecisionPlyListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCReqLimitPolicyListRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCReqLimitPolicyListResponse.cs" />
+    <Compile Include="V20200309\Models\DescribeCCThresholdListRequest.cs" />
+    <Compile Include="V20200309\Models\DescribeCCThresholdListResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendRequest.cs" />
     <Compile Include="V20200309\Models\DescribeCCTrendResponse.cs" />
     <Compile Include="V20200309\Models\DescribeCcBlackWhiteIpListRequest.cs" />

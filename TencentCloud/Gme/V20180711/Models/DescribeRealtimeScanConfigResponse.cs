@@ -25,7 +25,7 @@ namespace TencentCloud.Gme.V20180711.Models
     {
         
         /// <summary>
-        /// 返回结果码
+        /// 返回结果码，0正常，非0失败
         /// </summary>
         [JsonProperty("ErrorCode")]
         public long? ErrorCode{ get; set; }
@@ -37,31 +37,31 @@ namespace TencentCloud.Gme.V20180711.Models
         public ulong? BizId{ get; set; }
 
         /// <summary>
-        /// 送检类型
+        /// 送检类型，0: 全量送审，1: 自定义送审
         /// </summary>
         [JsonProperty("AuditType")]
         public long? AuditType{ get; set; }
 
         /// <summary>
-        /// 用户号正则
+        /// 用户号正则表达式
         /// </summary>
         [JsonProperty("UserIdRegex")]
         public string[] UserIdRegex{ get; set; }
 
         /// <summary>
-        /// 房间号正则
+        /// 房间号正则表达式
         /// </summary>
         [JsonProperty("RoomIdRegex")]
         public string[] RoomIdRegex{ get; set; }
 
         /// <summary>
-        /// 用户号字符串，逗号分隔
+        /// 用户号字符串，逗号分隔，示例："0001,0002,0003"
         /// </summary>
         [JsonProperty("UserIdString")]
         public string UserIdString{ get; set; }
 
         /// <summary>
-        /// 房间号字符串，逗号分隔
+        /// 房间号字符串，逗号分隔，示例："0001,0002,0003"
         /// </summary>
         [JsonProperty("RoomIdString")]
         public string RoomIdString{ get; set; }

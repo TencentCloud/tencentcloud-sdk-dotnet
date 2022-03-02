@@ -173,7 +173,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建告警策略
+        /// 创建云监控告警策略
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
-        /// 创建告警策略
+        /// 创建云监控告警策略
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmPolicyRequest"/></param>
         /// <returns><see cref="CreateAlarmPolicyResponse"/></returns>
