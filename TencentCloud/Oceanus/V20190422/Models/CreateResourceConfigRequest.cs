@@ -48,6 +48,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("AutoDelete")]
         public long? AutoDelete{ get; set; }
 
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamObj(map, prefix + "ResourceLoc.", this.ResourceLoc);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

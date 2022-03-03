@@ -150,6 +150,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SecurityGroups")]
         public string[] SecurityGroups{ get; set; }
 
+        /// <summary>
+        /// SSH密钥Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicKeyId")]
+        public string PublicKeyId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "CbsEncrypt", this.CbsEncrypt);
             this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
             this.SetParamArraySimple(map, prefix + "SecurityGroups.", this.SecurityGroups);
+            this.SetParamSimple(map, prefix + "PublicKeyId", this.PublicKeyId);
         }
     }
 }

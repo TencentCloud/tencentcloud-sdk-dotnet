@@ -42,6 +42,24 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+        /// </summary>
+        [JsonProperty("WriteBackCosPath")]
+        public string WriteBackCosPath{ get; set; }
+
+        /// <summary>
+        /// 自定义标签，可用于查询
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// 媒资导入完成的回调地址，该设置优先级高于控制台全局的设置；
+        /// </summary>
+        [JsonProperty("CallbackURL")]
+        public string CallbackURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "URL", this.URL);
             this.SetParamSimple(map, prefix + "MD5", this.MD5);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "WriteBackCosPath", this.WriteBackCosPath);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         }
     }
 }

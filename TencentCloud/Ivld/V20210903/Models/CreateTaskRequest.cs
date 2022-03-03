@@ -48,6 +48,18 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("UploadVideo")]
         public bool? UploadVideo{ get; set; }
 
+        /// <summary>
+        /// 自定义标签，可用于查询
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
+        /// <summary>
+        /// 任务分析完成的回调地址，该设置优先级高于控制台全局的设置；
+        /// </summary>
+        [JsonProperty("CallbackURL")]
+        public string CallbackURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamObj(map, prefix + "MediaPreknownInfo.", this.MediaPreknownInfo);
             this.SetParamSimple(map, prefix + "TaskName", this.TaskName);
             this.SetParamSimple(map, prefix + "UploadVideo", this.UploadVideo);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         }
     }
 }

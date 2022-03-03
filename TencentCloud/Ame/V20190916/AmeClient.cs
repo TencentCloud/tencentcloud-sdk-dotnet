@@ -453,7 +453,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询机器人列表，支持 Id、状态等过滤条件。
+        /// 获取机器人列表，支持 Id、状态等过滤条件。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVRobotsRequest"/></param>
         /// <returns><see cref="DescribeKTVRobotsResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
-        /// 查询机器人列表，支持 Id、状态等过滤条件。
+        /// 获取机器人列表，支持 Id、状态等过滤条件。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVRobotsRequest"/></param>
         /// <returns><see cref="DescribeKTVRobotsResponse"/></returns>

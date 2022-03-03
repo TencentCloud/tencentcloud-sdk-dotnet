@@ -42,6 +42,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("TableName")]
         public string TableName{ get; set; }
 
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "JobId", this.JobId);
             this.SetParamSimple(map, prefix + "DebugId", this.DebugId);
             this.SetParamSimple(map, prefix + "TableName", this.TableName);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

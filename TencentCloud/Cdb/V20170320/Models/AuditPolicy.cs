@@ -77,6 +77,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
+        /// <summary>
+        /// 数据库实例名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "PolicyName", this.PolicyName);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
         }
     }
 }

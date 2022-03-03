@@ -31,24 +31,59 @@ namespace TencentCloud.Cmq.V20190304.Models
         public string QueueId{ get; set; }
 
         /// <summary>
+        /// 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewindSeconds")]
+        public ulong? RewindSeconds{ get; set; }
+
+        /// <summary>
+        /// 创建者Uin。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUin")]
+        public ulong? CreateUin{ get; set; }
+
+        /// <summary>
+        /// 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LastModifyTime")]
+        public ulong? LastModifyTime{ get; set; }
+
+        /// <summary>
+        /// 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VisibilityTimeout")]
+        public ulong? VisibilityTimeout{ get; set; }
+
+        /// <summary>
         /// 消息队列名字。
         /// </summary>
         [JsonProperty("QueueName")]
         public string QueueName{ get; set; }
 
         /// <summary>
-        /// 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
+        /// 消息轨迹。true表示开启，false表示不开启。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Qps")]
-        public ulong? Qps{ get; set; }
+        [JsonProperty("Trace")]
+        public bool? Trace{ get; set; }
 
         /// <summary>
-        /// 带宽限制。
+        /// 关联的标签。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Bps")]
-        public ulong? Bps{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewindMsgNum")]
+        public ulong? RewindMsgNum{ get; set; }
 
         /// <summary>
         /// 飞行消息最大保留时间。
@@ -56,6 +91,27 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         [JsonProperty("MaxDelaySeconds")]
         public ulong? MaxDelaySeconds{ get; set; }
+
+        /// <summary>
+        /// 事务消息策略。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransactionPolicy")]
+        public TransactionPolicy TransactionPolicy{ get; set; }
+
+        /// <summary>
+        /// 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MsgRetentionSeconds")]
+        public ulong? MsgRetentionSeconds{ get; set; }
+
+        /// <summary>
+        /// 延迟消息数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DelayMsgNum")]
+        public ulong? DelayMsgNum{ get; set; }
 
         /// <summary>
         /// 最大堆积消息数。取值范围在公测期间为 1,000,000 - 10,000,000，正式上线后范围可达到 1000,000-1000,000,000。默认取值在公测期间为 10,000,000，正式上线后为 100,000,000。
@@ -72,53 +128,11 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? PollingWaitSeconds{ get; set; }
 
         /// <summary>
-        /// 消息保留周期。取值范围60-1296000秒（1min-15天），默认值345600秒（4 天）。
+        /// 带宽限制。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MsgRetentionSeconds")]
-        public ulong? MsgRetentionSeconds{ get; set; }
-
-        /// <summary>
-        /// 消息可见性超时。取值范围1 - 43200秒（即12小时内），默认值30。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("VisibilityTimeout")]
-        public ulong? VisibilityTimeout{ get; set; }
-
-        /// <summary>
-        /// 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxMsgSize")]
-        public ulong? MaxMsgSize{ get; set; }
-
-        /// <summary>
-        /// 回溯队列的消息回溯时间最大值，取值范围0 - 43200秒，0表示不开启消息回溯。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("RewindSeconds")]
-        public ulong? RewindSeconds{ get; set; }
-
-        /// <summary>
-        /// 队列的创建时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
-
-        /// <summary>
-        /// 最后一次修改队列属性的时间。返回 Unix 时间戳，精确到秒。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("LastModifyTime")]
-        public ulong? LastModifyTime{ get; set; }
-
-        /// <summary>
-        /// 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("ActiveMsgNum")]
-        public ulong? ActiveMsgNum{ get; set; }
+        [JsonProperty("Bps")]
+        public ulong? Bps{ get; set; }
 
         /// <summary>
         /// 在队列中处于 Inactive 状态（正处于被消费状态）的消息总数，为近似值。
@@ -128,18 +142,25 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? InactiveMsgNum{ get; set; }
 
         /// <summary>
-        /// 延迟消息数。
+        /// 死信队列策略。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DelayMsgNum")]
-        public ulong? DelayMsgNum{ get; set; }
+        [JsonProperty("DeadLetterPolicy")]
+        public DeadLetterPolicy DeadLetterPolicy{ get; set; }
 
         /// <summary>
-        /// 已调用 DelMsg 接口删除，但还在回溯保留时间内的消息数量。
+        /// 在队列中处于 Active 状态（不处于被消费状态）的消息总数，为近似值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RewindMsgNum")]
-        public ulong? RewindMsgNum{ get; set; }
+        [JsonProperty("ActiveMsgNum")]
+        public ulong? ActiveMsgNum{ get; set; }
+
+        /// <summary>
+        /// 消息最大长度。取值范围1024 - 1048576 Byte（即1K - 1024K），默认值65536。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxMsgSize")]
+        public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
         /// 消息最小未消费时间，单位为秒。
@@ -149,13 +170,6 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? MinMsgTime{ get; set; }
 
         /// <summary>
-        /// 事务消息队列。true表示是事务消息，false表示不是事务消息。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Transaction")]
-        public bool? Transaction{ get; set; }
-
-        /// <summary>
         /// 死信队列。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -163,39 +177,32 @@ namespace TencentCloud.Cmq.V20190304.Models
         public DeadLetterSource[] DeadLetterSource{ get; set; }
 
         /// <summary>
-        /// 死信队列策略。
+        /// 事务消息队列。true表示是事务消息，false表示不是事务消息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("DeadLetterPolicy")]
-        public DeadLetterPolicy DeadLetterPolicy{ get; set; }
+        [JsonProperty("Transaction")]
+        public bool? Transaction{ get; set; }
 
         /// <summary>
-        /// 事务消息策略。
+        /// 每秒钟生产消息条数的限制，消费消息的大小是该值的1.1倍。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TransactionPolicy")]
-        public TransactionPolicy TransactionPolicy{ get; set; }
+        [JsonProperty("Qps")]
+        public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// 创建者Uin。
+        /// 队列的创建时间。返回 Unix 时间戳，精确到秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CreateUin")]
-        public ulong? CreateUin{ get; set; }
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 关联的标签。
+        /// 是否迁移到新版本。0 表示仅同步元数据，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未迁移。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
-        /// 消息轨迹。true表示开启，false表示不开启。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Trace")]
-        public bool? Trace{ get; set; }
+        [JsonProperty("Migrate")]
+        public long? Migrate{ get; set; }
 
 
         /// <summary>
@@ -204,30 +211,31 @@ namespace TencentCloud.Cmq.V20190304.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "QueueId", this.QueueId);
+            this.SetParamSimple(map, prefix + "RewindSeconds", this.RewindSeconds);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+            this.SetParamSimple(map, prefix + "VisibilityTimeout", this.VisibilityTimeout);
             this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
-            this.SetParamSimple(map, prefix + "Qps", this.Qps);
-            this.SetParamSimple(map, prefix + "Bps", this.Bps);
+            this.SetParamSimple(map, prefix + "Trace", this.Trace);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "RewindMsgNum", this.RewindMsgNum);
             this.SetParamSimple(map, prefix + "MaxDelaySeconds", this.MaxDelaySeconds);
+            this.SetParamObj(map, prefix + "TransactionPolicy.", this.TransactionPolicy);
+            this.SetParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
+            this.SetParamSimple(map, prefix + "DelayMsgNum", this.DelayMsgNum);
             this.SetParamSimple(map, prefix + "MaxMsgHeapNum", this.MaxMsgHeapNum);
             this.SetParamSimple(map, prefix + "PollingWaitSeconds", this.PollingWaitSeconds);
-            this.SetParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
-            this.SetParamSimple(map, prefix + "VisibilityTimeout", this.VisibilityTimeout);
-            this.SetParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
-            this.SetParamSimple(map, prefix + "RewindSeconds", this.RewindSeconds);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
-            this.SetParamSimple(map, prefix + "ActiveMsgNum", this.ActiveMsgNum);
+            this.SetParamSimple(map, prefix + "Bps", this.Bps);
             this.SetParamSimple(map, prefix + "InactiveMsgNum", this.InactiveMsgNum);
-            this.SetParamSimple(map, prefix + "DelayMsgNum", this.DelayMsgNum);
-            this.SetParamSimple(map, prefix + "RewindMsgNum", this.RewindMsgNum);
-            this.SetParamSimple(map, prefix + "MinMsgTime", this.MinMsgTime);
-            this.SetParamSimple(map, prefix + "Transaction", this.Transaction);
-            this.SetParamArrayObj(map, prefix + "DeadLetterSource.", this.DeadLetterSource);
             this.SetParamObj(map, prefix + "DeadLetterPolicy.", this.DeadLetterPolicy);
-            this.SetParamObj(map, prefix + "TransactionPolicy.", this.TransactionPolicy);
-            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "Trace", this.Trace);
+            this.SetParamSimple(map, prefix + "ActiveMsgNum", this.ActiveMsgNum);
+            this.SetParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
+            this.SetParamSimple(map, prefix + "MinMsgTime", this.MinMsgTime);
+            this.SetParamArrayObj(map, prefix + "DeadLetterSource.", this.DeadLetterSource);
+            this.SetParamSimple(map, prefix + "Transaction", this.Transaction);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Migrate", this.Migrate);
         }
     }
 }

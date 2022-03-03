@@ -25,18 +25,18 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
-        /// 第一次回查时间。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("FirstQueryInterval")]
-        public ulong? FirstQueryInterval{ get; set; }
-
-        /// <summary>
         /// 最大查询次数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxQueryCount")]
         public ulong? MaxQueryCount{ get; set; }
+
+        /// <summary>
+        /// 第一次回查时间。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstQueryInterval")]
+        public ulong? FirstQueryInterval{ get; set; }
 
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
             this.SetParamSimple(map, prefix + "MaxQueryCount", this.MaxQueryCount);
+            this.SetParamSimple(map, prefix + "FirstQueryInterval", this.FirstQueryInterval);
         }
     }
 }

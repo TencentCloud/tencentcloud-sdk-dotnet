@@ -54,6 +54,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("ResourceConfigVersion")]
         public long? ResourceConfigVersion{ get; set; }
 
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "ResourceConfigVersion", this.ResourceConfigVersion);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

@@ -2483,6 +2483,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 修改IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标特性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerMixIpTargetRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerMixIpTargetResponse"/></returns>
+        public async Task<ModifyLoadBalancerMixIpTargetResponse> ModifyLoadBalancerMixIpTarget(ModifyLoadBalancerMixIpTargetRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLoadBalancerMixIpTarget");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改IPv6FullChain负载均衡7层监听器支持混绑IPv4/IPv6目标特性。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLoadBalancerMixIpTargetRequest"/></param>
+        /// <returns><see cref="ModifyLoadBalancerMixIpTargetResponse"/></returns>
+        public ModifyLoadBalancerMixIpTargetResponse ModifyLoadBalancerMixIpTargetSync(ModifyLoadBalancerMixIpTargetRequest req)
+        {
+             JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLoadBalancerMixIpTarget");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLoadBalancerMixIpTargetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持共享型clb升级到性能容量型clb（不支持性能保障降级到共享型）。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerSlaRequest"/></param>

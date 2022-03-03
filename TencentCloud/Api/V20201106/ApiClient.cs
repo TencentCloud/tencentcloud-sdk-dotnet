@@ -53,6 +53,46 @@ namespace TencentCloud.Api.V20201106
         }
 
         /// <summary>
+        /// 本接口(DescribeProducts)用于查询各个支持地域列表查询的产品信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductsRequest"/></param>
+        /// <returns><see cref="DescribeProductsResponse"/></returns>
+        public async Task<DescribeProductsResponse> DescribeProducts(DescribeProductsRequest req)
+        {
+             JsonResponseModel<DescribeProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeProducts)用于查询各个支持地域列表查询的产品信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductsRequest"/></param>
+        /// <returns><see cref="DescribeProductsResponse"/></returns>
+        public DescribeProductsResponse DescribeProductsSync(DescribeProductsRequest req)
+        {
+             JsonResponseModel<DescribeProductsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProducts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeRegions)用于查询各个产品支持地域信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeRegionsRequest"/></param>

@@ -25,25 +25,18 @@ namespace TencentCloud.Cmq.V20190304.Models
     {
         
         /// <summary>
+        /// 当前该主题中消息数目（消息堆积数）。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MsgCount")]
+        public ulong? MsgCount{ get; set; }
+
+        /// <summary>
         /// 主题的 ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
-
-        /// <summary>
-        /// 主题名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("TopicName")]
-        public string TopicName{ get; set; }
-
-        /// <summary>
-        /// 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MsgRetentionSeconds")]
-        public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
         /// 消息最大长度。取值范围1024 - 1048576Byte（即1 - 1024K），默认值为65536。
@@ -53,11 +46,25 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// 每秒钟发布消息的条数。
+        /// 消息轨迹。true表示开启，false表示不开启。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Qps")]
-        public ulong? Qps{ get; set; }
+        [JsonProperty("Trace")]
+        public bool? Trace{ get; set; }
+
+        /// <summary>
+        /// 关联的标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUin")]
+        public ulong? CreateUin{ get; set; }
 
         /// <summary>
         /// 描述用户创建订阅时选择的过滤策略：
@@ -69,11 +76,11 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? FilterType{ get; set; }
 
         /// <summary>
-        /// 主题的创建时间。返回 Unix 时间戳，精确到秒。
+        /// 主题名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public ulong? CreateTime{ get; set; }
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
 
         /// <summary>
         /// 最后一次修改主题属性的时间。返回 Unix 时间戳，精确到秒。
@@ -83,32 +90,32 @@ namespace TencentCloud.Cmq.V20190304.Models
         public ulong? LastModifyTime{ get; set; }
 
         /// <summary>
-        /// 当前该主题中消息数目（消息堆积数）。
+        /// 消息在主题中最长存活时间，从发送到该主题开始经过此参数指定的时间后，不论消息是否被成功推送给用户都将被删除，单位为秒。固定为一天（86400秒），该属性不能修改。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MsgCount")]
-        public ulong? MsgCount{ get; set; }
+        [JsonProperty("MsgRetentionSeconds")]
+        public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// 创建者 Uin，CAM 鉴权 resource 由该字段组合而成。
+        /// 每秒钟发布消息的条数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CreateUin")]
-        public ulong? CreateUin{ get; set; }
+        [JsonProperty("Qps")]
+        public ulong? Qps{ get; set; }
 
         /// <summary>
-        /// 关联的标签。
+        /// 主题的创建时间。返回 Unix 时间戳，精确到秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
+        [JsonProperty("CreateTime")]
+        public ulong? CreateTime{ get; set; }
 
         /// <summary>
-        /// 消息轨迹。true表示开启，false表示不开启。
+        /// 是否迁移到新版本。0 表示未迁移，1 表示迁移中，2 表示已经迁移完毕，3 表示回切状态，曾经迁移过，4 未知状态。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Trace")]
-        public bool? Trace{ get; set; }
+        [JsonProperty("Migrate")]
+        public long? Migrate{ get; set; }
 
 
         /// <summary>
@@ -116,18 +123,19 @@ namespace TencentCloud.Cmq.V20190304.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
-            this.SetParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
-            this.SetParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
-            this.SetParamSimple(map, prefix + "Qps", this.Qps);
-            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
-            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
             this.SetParamSimple(map, prefix + "MsgCount", this.MsgCount);
-            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "MaxMsgSize", this.MaxMsgSize);
             this.SetParamSimple(map, prefix + "Trace", this.Trace);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "CreateUin", this.CreateUin);
+            this.SetParamSimple(map, prefix + "FilterType", this.FilterType);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
+            this.SetParamSimple(map, prefix + "LastModifyTime", this.LastModifyTime);
+            this.SetParamSimple(map, prefix + "MsgRetentionSeconds", this.MsgRetentionSeconds);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "Migrate", this.Migrate);
         }
     }
 }

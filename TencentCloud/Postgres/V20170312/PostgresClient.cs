@@ -213,6 +213,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 可对实例进行网络的添加操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
+        public async Task<CreateDBInstanceNetworkAccessResponse> CreateDBInstanceNetworkAccess(CreateDBInstanceNetworkAccessRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDBInstanceNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对实例进行网络的添加操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDBInstanceNetworkAccessRequest"/></param>
+        /// <returns><see cref="CreateDBInstanceNetworkAccessResponse"/></returns>
+        public CreateDBInstanceNetworkAccessResponse CreateDBInstanceNetworkAccessSync(CreateDBInstanceNetworkAccessRequest req)
+        {
+             JsonResponseModel<CreateDBInstanceNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDBInstanceNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateDBInstances) 用于创建一个或者多个PostgreSQL实例,仅发货实例不会进行初始化。
         /// </summary>
         /// <param name="req"><see cref="CreateDBInstancesRequest"/></param>
@@ -373,6 +413,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 可对RO组进行网络的添加操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
+        public async Task<CreateReadOnlyGroupNetworkAccessResponse> CreateReadOnlyGroupNetworkAccess(CreateReadOnlyGroupNetworkAccessRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReadOnlyGroupNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对RO组进行网络的添加操作。
+        /// </summary>
+        /// <param name="req"><see cref="CreateReadOnlyGroupNetworkAccessRequest"/></param>
+        /// <returns><see cref="CreateReadOnlyGroupNetworkAccessResponse"/></returns>
+        public CreateReadOnlyGroupNetworkAccessResponse CreateReadOnlyGroupNetworkAccessSync(CreateReadOnlyGroupNetworkAccessRequest req)
+        {
+             JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReadOnlyGroupNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReadOnlyGroupNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateServerlessDBInstance) 用于创建一个ServerlessDB实例，创建成功返回实例ID。
         /// </summary>
         /// <param name="req"><see cref="CreateServerlessDBInstanceRequest"/></param>
@@ -413,6 +493,46 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
+        /// 可对实例进行网络的删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
+        /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
+        public async Task<DeleteDBInstanceNetworkAccessResponse> DeleteDBInstanceNetworkAccess(DeleteDBInstanceNetworkAccessRequest req)
+        {
+             JsonResponseModel<DeleteDBInstanceNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDBInstanceNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对实例进行网络的删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDBInstanceNetworkAccessRequest"/></param>
+        /// <returns><see cref="DeleteDBInstanceNetworkAccessResponse"/></returns>
+        public DeleteDBInstanceNetworkAccessResponse DeleteDBInstanceNetworkAccessSync(DeleteDBInstanceNetworkAccessRequest req)
+        {
+             JsonResponseModel<DeleteDBInstanceNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDBInstanceNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDBInstanceNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DeleteReadOnlyGroup)用于删除指定的只读组
         /// </summary>
         /// <param name="req"><see cref="DeleteReadOnlyGroupRequest"/></param>
@@ -444,6 +564,46 @@ namespace TencentCloud.Postgres.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteReadOnlyGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReadOnlyGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对RO组进行网络的删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
+        /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>
+        public async Task<DeleteReadOnlyGroupNetworkAccessResponse> DeleteReadOnlyGroupNetworkAccess(DeleteReadOnlyGroupNetworkAccessRequest req)
+        {
+             JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReadOnlyGroupNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可对RO组进行网络的删除操作。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReadOnlyGroupNetworkAccessRequest"/></param>
+        /// <returns><see cref="DeleteReadOnlyGroupNetworkAccessResponse"/></returns>
+        public DeleteReadOnlyGroupNetworkAccessResponse DeleteReadOnlyGroupNetworkAccessSync(DeleteReadOnlyGroupNetworkAccessRequest req)
+        {
+             JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReadOnlyGroupNetworkAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReadOnlyGroupNetworkAccessResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

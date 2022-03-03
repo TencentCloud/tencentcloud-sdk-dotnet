@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.471</VersionPrefix>
+    <VersionPrefix>3.0.472</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -562,11 +562,14 @@
     <Compile Include="Ape\V20200513\Models\ImageItem.cs" />
     <Compile Include="Ape\V20200513\Models\ImageMarshal.cs" />
     <Compile Include="Api\V20201106\ApiClient.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeProductsRequest.cs" />
+    <Compile Include="Api\V20201106\Models\DescribeProductsResponse.cs" />
     <Compile Include="Api\V20201106\Models\DescribeRegionsRequest.cs" />
     <Compile Include="Api\V20201106\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Api\V20201106\Models\DescribeZonesRequest.cs" />
     <Compile Include="Api\V20201106\Models\DescribeZonesResponse.cs" />
     <Compile Include="Api\V20201106\Models\RegionInfo.cs" />
+    <Compile Include="Api\V20201106\Models\RegionProduct.cs" />
     <Compile Include="Api\V20201106\Models\ZoneInfo.cs" />
     <Compile Include="Apigateway\V20180808\ApigatewayClient.cs" />
     <Compile Include="Apigateway\V20180808\Models\APIDoc.cs" />
@@ -3796,6 +3799,8 @@
     <Compile Include="Clb\V20180317\Models\ModifyListenerResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerAttributesResponse.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerMixIpTargetRequest.cs" />
+    <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerMixIpTargetResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaRequest.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyLoadBalancerSlaResponse.cs" />
     <Compile Include="Clb\V20180317\Models\ModifyRuleRequest.cs" />
@@ -7450,6 +7455,7 @@
     <Compile Include="Emr\V20190103\Models\BootstrapAction.cs" />
     <Compile Include="Emr\V20190103\Models\COSSettings.cs" />
     <Compile Include="Emr\V20190103\Models\CdbInfo.cs" />
+    <Compile Include="Emr\V20190103\Models\ClusterExternalServiceInfo.cs" />
     <Compile Include="Emr\V20190103\Models\ClusterInstancesInfo.cs" />
     <Compile Include="Emr\V20190103\Models\ClusterSetting.cs" />
     <Compile Include="Emr\V20190103\Models\Configuration.cs" />
@@ -10242,6 +10248,8 @@
     <Compile Include="Ivld\V20210903\Models\DeleteCustomPersonResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\DeleteMediaRequest.cs" />
     <Compile Include="Ivld\V20210903\Models\DeleteMediaResponse.cs" />
+    <Compile Include="Ivld\V20210903\Models\DeleteTaskRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\DeleteTaskResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\DescribeCustomCategoriesRequest.cs" />
     <Compile Include="Ivld\V20210903\Models\DescribeCustomCategoriesResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\DescribeCustomGroupRequest.cs" />
@@ -10269,8 +10277,12 @@
     <Compile Include="Ivld\V20210903\Models\MediaInfo.cs" />
     <Compile Include="Ivld\V20210903\Models\MediaMetadata.cs" />
     <Compile Include="Ivld\V20210903\Models\MediaPreknownInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\ModifyCallbackRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\ModifyCallbackResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\MultiLevelTag.cs" />
     <Compile Include="Ivld\V20210903\Models\PersonImageInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\QueryCallbackRequest.cs" />
+    <Compile Include="Ivld\V20210903\Models\QueryCallbackResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\ShowInfo.cs" />
     <Compile Include="Ivld\V20210903\Models\SortBy.cs" />
     <Compile Include="Ivld\V20210903\Models\TaskFilter.cs" />
@@ -11193,6 +11205,8 @@
     <Compile Include="Mongodb\V20190725\Models\IsolateDBInstanceResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\KillOpsRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\KillOpsResponse.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSecurityGroupRequest.cs" />
+    <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSecurityGroupResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSpecRequest.cs" />
     <Compile Include="Mongodb\V20190725\Models\ModifyDBInstanceSpecResponse.cs" />
     <Compile Include="Mongodb\V20190725\Models\OfflineIsolatedDBInstanceRequest.cs" />
@@ -12373,12 +12387,16 @@
     <Compile Include="Postgres\V20170312\Models\CloseDBExtranetAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CloseServerlessDBExtranetAccessResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateDBInstanceNetworkAccessRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateDBInstanceNetworkAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateReadOnlyDBInstanceResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupNetworkAccessRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupNetworkAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\CreateServerlessDBInstanceRequest.cs" />
@@ -12387,6 +12405,10 @@
     <Compile Include="Postgres\V20170312\Models\DBInstance.cs" />
     <Compile Include="Postgres\V20170312\Models\DBInstanceNetInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\DBNode.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteDBInstanceNetworkAccessRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteDBInstanceNetworkAccessResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupNetworkAccessRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupNetworkAccessResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteReadOnlyGroupResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DeleteServerlessDBInstanceRequest.cs" />

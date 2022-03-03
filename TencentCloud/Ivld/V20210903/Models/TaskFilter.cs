@@ -66,6 +66,12 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("MediaLabelSet")]
         public long?[] MediaLabelSet{ get; set; }
 
+        /// <summary>
+        /// 媒资自定义标签数组
+        /// </summary>
+        [JsonProperty("LabelSet")]
+        public string[] LabelSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamArraySimple(map, prefix + "MediaNameSet.", this.MediaNameSet);
             this.SetParamArraySimple(map, prefix + "MediaLangSet.", this.MediaLangSet);
             this.SetParamArraySimple(map, prefix + "MediaLabelSet.", this.MediaLabelSet);
+            this.SetParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
         }
     }
 }

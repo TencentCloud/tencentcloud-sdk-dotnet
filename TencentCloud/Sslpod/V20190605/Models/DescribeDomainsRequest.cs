@@ -37,13 +37,14 @@ namespace TencentCloud.Sslpod.V20190605.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索的类型有：none，tags，grade，brand，code，hash，limit。
+        /// 搜索的类型有：none，tags，grade，brand，code，hash，limit，domain。
         /// 选tags，入参请填Tag，
         /// 选grade，入参请填Grade，
         /// 选brand，入参请填Brand，
         /// 选code，入参请填Code，
         /// 选hash，入参请填Hash
         /// 选limit，标识只返回数量信息
+        /// 选domain，入参请填Domain
         /// </summary>
         [JsonProperty("SearchType")]
         public string SearchType{ get; set; }
@@ -90,6 +91,12 @@ namespace TencentCloud.Sslpod.V20190605.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 搜索域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -106,6 +113,7 @@ namespace TencentCloud.Sslpod.V20190605.Models
             this.SetParamSimple(map, prefix + "Hash", this.Hash);
             this.SetParamSimple(map, prefix + "Item", this.Item);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
         }
     }
 }

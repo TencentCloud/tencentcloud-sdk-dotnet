@@ -227,6 +227,20 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("FlinkVersion")]
         public string FlinkVersion{ get; set; }
 
+        /// <summary>
+        /// 工作空间 SerialId
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
+        /// <summary>
+        /// 工作空间名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WorkSpaceName")]
+        public string WorkSpaceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +276,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "ClusterStatus", this.ClusterStatus);
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
             this.SetParamSimple(map, prefix + "FlinkVersion", this.FlinkVersion);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
+            this.SetParamSimple(map, prefix + "WorkSpaceName", this.WorkSpaceName);
         }
     }
 }

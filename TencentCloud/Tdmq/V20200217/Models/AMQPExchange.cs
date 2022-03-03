@@ -73,6 +73,27 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Internal")]
         public bool? Internal{ get; set; }
 
+        /// <summary>
+        /// 备用Exchange名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlternateExchange")]
+        public string AlternateExchange{ get; set; }
+
+        /// <summary>
+        /// 备用Exchange是否删除标识: true(已删除)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlternateExchangeDeleteMark")]
+        public bool? AlternateExchangeDeleteMark{ get; set; }
+
+        /// <summary>
+        /// 延迟Exchange的类别，为枚举类型:Direct, Fanout, Topic
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DelayType")]
+        public string DelayType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +108,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "Internal", this.Internal);
+            this.SetParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+            this.SetParamSimple(map, prefix + "AlternateExchangeDeleteMark", this.AlternateExchangeDeleteMark);
+            this.SetParamSimple(map, prefix + "DelayType", this.DelayType);
         }
     }
 }

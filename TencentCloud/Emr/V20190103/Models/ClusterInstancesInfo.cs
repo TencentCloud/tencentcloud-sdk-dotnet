@@ -303,6 +303,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SubnetName")]
         public string SubnetName{ get; set; }
 
+        /// <summary>
+        /// 集群依赖关系
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterExternalServiceInfo")]
+        public ClusterExternalServiceInfo[] ClusterExternalServiceInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -345,6 +352,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "DisplayName", this.DisplayName);
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
+            this.SetParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0E79229-9B9B-3209-810B-66290F3BDD46}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.471</VersionPrefix>
+    <VersionPrefix>3.0.472</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -72,6 +72,8 @@
     <Compile Include="V20210903\Models\DeleteCustomPersonResponse.cs" />
     <Compile Include="V20210903\Models\DeleteMediaRequest.cs" />
     <Compile Include="V20210903\Models\DeleteMediaResponse.cs" />
+    <Compile Include="V20210903\Models\DeleteTaskRequest.cs" />
+    <Compile Include="V20210903\Models\DeleteTaskResponse.cs" />
     <Compile Include="V20210903\Models\DescribeCustomCategoriesRequest.cs" />
     <Compile Include="V20210903\Models\DescribeCustomCategoriesResponse.cs" />
     <Compile Include="V20210903\Models\DescribeCustomGroupRequest.cs" />
@@ -99,8 +101,12 @@
     <Compile Include="V20210903\Models\MediaInfo.cs" />
     <Compile Include="V20210903\Models\MediaMetadata.cs" />
     <Compile Include="V20210903\Models\MediaPreknownInfo.cs" />
+    <Compile Include="V20210903\Models\ModifyCallbackRequest.cs" />
+    <Compile Include="V20210903\Models\ModifyCallbackResponse.cs" />
     <Compile Include="V20210903\Models\MultiLevelTag.cs" />
     <Compile Include="V20210903\Models\PersonImageInfo.cs" />
+    <Compile Include="V20210903\Models\QueryCallbackRequest.cs" />
+    <Compile Include="V20210903\Models\QueryCallbackResponse.cs" />
     <Compile Include="V20210903\Models\ShowInfo.cs" />
     <Compile Include="V20210903\Models\SortBy.cs" />
     <Compile Include="V20210903\Models\TaskFilter.cs" />

@@ -30,6 +30,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("StopJobDescriptions")]
         public StopJobDescription[] StopJobDescriptions{ get; set; }
 
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "StopJobDescriptions.", this.StopJobDescriptions);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

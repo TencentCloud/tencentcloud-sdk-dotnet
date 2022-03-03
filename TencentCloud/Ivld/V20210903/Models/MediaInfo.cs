@@ -72,6 +72,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("Progress")]
         public float? Progress{ get; set; }
 
+        /// <summary>
+        /// 媒资自定义标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +92,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "FailedReason", this.FailedReason);
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

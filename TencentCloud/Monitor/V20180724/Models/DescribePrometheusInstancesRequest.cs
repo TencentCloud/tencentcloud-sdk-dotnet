@@ -82,6 +82,14 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 按照【计费类型】进行过滤。
+        /// <li>2：包年包月</li>
+        /// <li>3：按量</li>
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public long? InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +104,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "IPv4Address.", this.IPv4Address);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

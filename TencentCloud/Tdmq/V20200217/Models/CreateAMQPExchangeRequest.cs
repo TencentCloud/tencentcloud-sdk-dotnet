@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string[] VHosts{ get; set; }
 
         /// <summary>
-        /// 交换机类型，可选值为Direct, Fanout, Topic
+        /// 交换机类型，可选值为Direct, Fanout, Topic, x-delayed-message
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("AlternateExchange")]
         public string AlternateExchange{ get; set; }
 
+        /// <summary>
+        /// 延迟交换机类型，可选值为Direct, Fanout, Topic, 不允许为x-delayed-message
+        /// </summary>
+        [JsonProperty("DelayedType")]
+        public string DelayedType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "AlternateExchange", this.AlternateExchange);
+            this.SetParamSimple(map, prefix + "DelayedType", this.DelayedType);
         }
     }
 }

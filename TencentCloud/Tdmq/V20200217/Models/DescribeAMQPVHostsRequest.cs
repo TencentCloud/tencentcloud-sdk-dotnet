@@ -48,6 +48,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("NameKeyword")]
         public string NameKeyword{ get; set; }
 
+        /// <summary>
+        /// VHostId 列表过滤
+        /// </summary>
+        [JsonProperty("VHostIdList")]
+        public string[] VHostIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "NameKeyword", this.NameKeyword);
+            this.SetParamArraySimple(map, prefix + "VHostIdList.", this.VHostIdList);
         }
     }
 }
