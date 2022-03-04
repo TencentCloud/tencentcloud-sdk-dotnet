@@ -37,12 +37,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OpenKey{ get; set; }
 
         /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
-        /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
-
-        /// <summary>
         /// 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
         /// </summary>
         [JsonProperty("Storage")]
@@ -54,6 +48,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FilePath")]
         public string FilePath{ get; set; }
 
+        /// <summary>
+        /// 沙箱环境填sandbox，正式环境不填
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,9 +62,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         {
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "FilePath", this.FilePath);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

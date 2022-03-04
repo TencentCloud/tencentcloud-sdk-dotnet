@@ -333,6 +333,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 聚鑫-申请对账文件
+        /// </summary>
+        /// <param name="req"><see cref="ApplyReconciliationFileRequest"/></param>
+        /// <returns><see cref="ApplyReconciliationFileResponse"/></returns>
+        public async Task<ApplyReconciliationFileResponse> ApplyReconciliationFile(ApplyReconciliationFileRequest req)
+        {
+             JsonResponseModel<ApplyReconciliationFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyReconciliationFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyReconciliationFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-申请对账文件
+        /// </summary>
+        /// <param name="req"><see cref="ApplyReconciliationFileRequest"/></param>
+        /// <returns><see cref="ApplyReconciliationFileResponse"/></returns>
+        public ApplyReconciliationFileResponse ApplyReconciliationFileSync(ApplyReconciliationFileRequest req)
+        {
+             JsonResponseModel<ApplyReconciliationFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyReconciliationFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyReconciliationFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 跨境-提交贸易材料。通过提交贸易材料接口可为对接方累计贸易额度，在额度范围内可发起汇兑汇出交易。
         /// </summary>
         /// <param name="req"><see cref="ApplyTradeRequest"/></param>
@@ -2109,7 +2149,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付-T查询已添加分账接收方接口
+        /// 云支付-查询已添加分账接收方接口
         /// </summary>
         /// <param name="req"><see cref="DistributeQueryReceiverRequest"/></param>
         /// <returns><see cref="DistributeQueryReceiverResponse"/></returns>
@@ -2129,7 +2169,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云支付-T查询已添加分账接收方接口
+        /// 云支付-查询已添加分账接收方接口
         /// </summary>
         /// <param name="req"><see cref="DistributeQueryReceiverRequest"/></param>
         /// <returns><see cref="DistributeQueryReceiverResponse"/></returns>
@@ -3549,6 +3589,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 聚鑫-查询会员资金交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFundsTransactionDetailsRequest"/></param>
+        /// <returns><see cref="QueryFundsTransactionDetailsResponse"/></returns>
+        public async Task<QueryFundsTransactionDetailsResponse> QueryFundsTransactionDetails(QueryFundsTransactionDetailsRequest req)
+        {
+             JsonResponseModel<QueryFundsTransactionDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFundsTransactionDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFundsTransactionDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-查询会员资金交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFundsTransactionDetailsRequest"/></param>
+        /// <returns><see cref="QueryFundsTransactionDetailsResponse"/></returns>
+        public QueryFundsTransactionDetailsResponse QueryFundsTransactionDetailsSync(QueryFundsTransactionDetailsRequest req)
+        {
+             JsonResponseModel<QueryFundsTransactionDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFundsTransactionDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFundsTransactionDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 智慧零售-发票查询
         /// </summary>
         /// <param name="req"><see cref="QueryInvoiceRequest"/></param>
@@ -3742,6 +3822,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryMemberTransaction");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMemberTransactionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-查询会员间交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryMemberTransactionDetailsRequest"/></param>
+        /// <returns><see cref="QueryMemberTransactionDetailsResponse"/></returns>
+        public async Task<QueryMemberTransactionDetailsResponse> QueryMemberTransactionDetails(QueryMemberTransactionDetailsRequest req)
+        {
+             JsonResponseModel<QueryMemberTransactionDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMemberTransactionDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMemberTransactionDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-查询会员间交易信息列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryMemberTransactionDetailsRequest"/></param>
+        /// <returns><see cref="QueryMemberTransactionDetailsResponse"/></returns>
+        public QueryMemberTransactionDetailsResponse QueryMemberTransactionDetailsSync(QueryMemberTransactionDetailsRequest req)
+        {
+             JsonResponseModel<QueryMemberTransactionDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMemberTransactionDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMemberTransactionDetailsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4422,6 +4542,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryReconciliationDocument");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryReconciliationDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-查询对账文件申请结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryReconciliationFileApplyInfoRequest"/></param>
+        /// <returns><see cref="QueryReconciliationFileApplyInfoResponse"/></returns>
+        public async Task<QueryReconciliationFileApplyInfoResponse> QueryReconciliationFileApplyInfo(QueryReconciliationFileApplyInfoRequest req)
+        {
+             JsonResponseModel<QueryReconciliationFileApplyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryReconciliationFileApplyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryReconciliationFileApplyInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 聚鑫-查询对账文件申请结果
+        /// </summary>
+        /// <param name="req"><see cref="QueryReconciliationFileApplyInfoRequest"/></param>
+        /// <returns><see cref="QueryReconciliationFileApplyInfoResponse"/></returns>
+        public QueryReconciliationFileApplyInfoResponse QueryReconciliationFileApplyInfoSync(QueryReconciliationFileApplyInfoRequest req)
+        {
+             JsonResponseModel<QueryReconciliationFileApplyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryReconciliationFileApplyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryReconciliationFileApplyInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

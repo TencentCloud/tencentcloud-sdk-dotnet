@@ -25,13 +25,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收单系统分配的开放ID
+        /// 使用门店OpenId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 收单系统分配的密钥
+        /// 使用门店OpenKey
         /// </summary>
         [JsonProperty("OpenKey")]
         public string OpenKey{ get; set; }
@@ -43,10 +43,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OrderNo{ get; set; }
 
         /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
+        /// 商户分账单号，type为2时，和DistributeNo二者传其一
         /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
+        [JsonProperty("OutDistributeNo")]
+        public string OutDistributeNo{ get; set; }
 
         /// <summary>
         /// 平台分账单号，type为2时，和OutDistributeNo二者传其一
@@ -55,10 +55,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string DistributeNo{ get; set; }
 
         /// <summary>
-        /// 商户分账单号，type为2时，和DistributeNo二者传其一
+        /// 沙箱环境填sandbox，正式环境不填
         /// </summary>
-        [JsonProperty("OutDistributeNo")]
-        public string OutDistributeNo{ get; set; }
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
 
 
         /// <summary>
@@ -69,9 +69,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
             this.SetParamSimple(map, prefix + "OrderNo", this.OrderNo);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
-            this.SetParamSimple(map, prefix + "DistributeNo", this.DistributeNo);
             this.SetParamSimple(map, prefix + "OutDistributeNo", this.OutDistributeNo);
+            this.SetParamSimple(map, prefix + "DistributeNo", this.DistributeNo);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

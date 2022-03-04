@@ -260,6 +260,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("AsrUrl")]
         public string AsrUrl{ get; set; }
 
+        /// <summary>
+        /// 录音转存第三方COS地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomRecordURL")]
+        public string CustomRecordURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +302,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Uui", this.Uui);
             this.SetParamArrayObj(map, prefix + "IVRKeyPressedEx.", this.IVRKeyPressedEx);
             this.SetParamSimple(map, prefix + "AsrUrl", this.AsrUrl);
+            this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         }
     }
 }

@@ -25,28 +25,22 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收单系统分配的开放ID
+        /// 使用门店OpenId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
+
+        /// <summary>
+        /// 使用门店OpenKey
+        /// </summary>
+        [JsonProperty("OpenKey")]
+        public string OpenKey{ get; set; }
 
         /// <summary>
         /// 验证方式，传1手机验证(验证码时效60S)传2结算卡验证(时效6小时)，多种方式用逗号隔开
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }
-
-        /// <summary>
-        /// 收单系统分配的密钥
-        /// </summary>
-        [JsonProperty("OpenKey")]
-        public string OpenKey{ get; set; }
-
-        /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
-        /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
 
         /// <summary>
         /// 分账比例（500=5%）不传默认百分之10
@@ -60,6 +54,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FullName")]
         public string FullName{ get; set; }
 
+        /// <summary>
+        /// 沙箱环境填sandbox，正式环境不填
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,11 +67,11 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
-            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "Percent", this.Percent);
             this.SetParamSimple(map, prefix + "FullName", this.FullName);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

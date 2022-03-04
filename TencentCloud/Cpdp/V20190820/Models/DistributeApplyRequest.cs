@@ -25,10 +25,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收单系统分配的开放ID
+        /// 使用门店OpenId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
+
+        /// <summary>
+        /// 使用门店OpenKey
+        /// </summary>
+        [JsonProperty("OpenKey")]
+        public string OpenKey{ get; set; }
 
         /// <summary>
         /// 商户分账单号
@@ -37,28 +43,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OutDistributeNo{ get; set; }
 
         /// <summary>
-        /// 收单系统分配的密钥
-        /// </summary>
-        [JsonProperty("OpenKey")]
-        public string OpenKey{ get; set; }
-
-        /// <summary>
         /// 分账明细
         /// </summary>
         [JsonProperty("Details")]
         public MultiApplyDetail[] Details{ get; set; }
-
-        /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
-        /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
-
-        /// <summary>
-        /// 说明
-        /// </summary>
-        [JsonProperty("Remark")]
-        public string Remark{ get; set; }
 
         /// <summary>
         /// 商户交易订单号，和OrderNo二者传其一
@@ -72,6 +60,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("OrderNo")]
         public string OrderNo{ get; set; }
 
+        /// <summary>
+        /// 说明
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
+        /// <summary>
+        /// 沙箱环境填sandbox，正式环境不填
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,13 +79,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
-            this.SetParamSimple(map, prefix + "OutDistributeNo", this.OutDistributeNo);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
+            this.SetParamSimple(map, prefix + "OutDistributeNo", this.OutDistributeNo);
             this.SetParamArrayObj(map, prefix + "Details.", this.Details);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
-            this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DeveloperNo", this.DeveloperNo);
             this.SetParamSimple(map, prefix + "OrderNo", this.OrderNo);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

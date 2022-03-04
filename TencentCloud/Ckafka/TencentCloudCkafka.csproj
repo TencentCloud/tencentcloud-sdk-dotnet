@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.472</VersionPrefix>
+    <VersionPrefix>3.0.473</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
+    <Compile Include="V20190819\Models\AuthorizeTokenRequest.cs" />
+    <Compile Include="V20190819\Models\AuthorizeTokenResponse.cs" />
     <Compile Include="V20190819\Models\BatchContent.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclRequest.cs" />
     <Compile Include="V20190819\Models\BatchCreateAclResponse.cs" />
@@ -60,6 +62,8 @@
     <Compile Include="V20190819\Models\BatchModifyTopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\BatchModifyTopicInfo.cs" />
     <Compile Include="V20190819\Models\BatchModifyTopicResultDTO.cs" />
+    <Compile Include="V20190819\Models\CancelAuthorizationTokenRequest.cs" />
+    <Compile Include="V20190819\Models\CancelAuthorizationTokenResponse.cs" />
     <Compile Include="V20190819\Models\ClusterInfo.cs" />
     <Compile Include="V20190819\Models\Config.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />
@@ -78,6 +82,8 @@
     <Compile Include="V20190819\Models\CreatePartitionResponse.cs" />
     <Compile Include="V20190819\Models\CreateRouteRequest.cs" />
     <Compile Include="V20190819\Models\CreateRouteResponse.cs" />
+    <Compile Include="V20190819\Models\CreateTokenRequest.cs" />
+    <Compile Include="V20190819\Models\CreateTokenResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListRequest.cs" />
     <Compile Include="V20190819\Models\CreateTopicIpWhiteListResponse.cs" />
     <Compile Include="V20190819\Models\CreateTopicRequest.cs" />

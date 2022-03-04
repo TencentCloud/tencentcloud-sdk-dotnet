@@ -25,13 +25,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收单系统分配的开放ID
+        /// 使用门店OpenId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 收单系统分配的密钥
+        /// 使用门店OpenKey
         /// </summary>
         [JsonProperty("OpenKey")]
         public string OpenKey{ get; set; }
@@ -43,16 +43,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MerchantNo{ get; set; }
 
         /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
-        /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
-
-        /// <summary>
         /// 备注
         /// </summary>
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
+
+        /// <summary>
+        /// 沙箱环境填sandbox，正式环境不填
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
 
 
         /// <summary>
@@ -63,8 +63,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
             this.SetParamSimple(map, prefix + "MerchantNo", this.MerchantNo);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }

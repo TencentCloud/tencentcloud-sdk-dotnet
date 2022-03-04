@@ -53,6 +53,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 给实例授权token
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeTokenRequest"/></param>
+        /// <returns><see cref="AuthorizeTokenResponse"/></returns>
+        public async Task<AuthorizeTokenResponse> AuthorizeToken(AuthorizeTokenRequest req)
+        {
+             JsonResponseModel<AuthorizeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuthorizeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthorizeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 给实例授权token
+        /// </summary>
+        /// <param name="req"><see cref="AuthorizeTokenRequest"/></param>
+        /// <returns><see cref="AuthorizeTokenResponse"/></returns>
+        public AuthorizeTokenResponse AuthorizeTokenSync(AuthorizeTokenRequest req)
+        {
+             JsonResponseModel<AuthorizeTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuthorizeToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthorizeTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量添加ACL策略
         /// </summary>
         /// <param name="req"><see cref="BatchCreateAclRequest"/></param>
@@ -164,6 +204,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "BatchModifyTopicAttributes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<BatchModifyTopicAttributesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消授权token
+        /// </summary>
+        /// <param name="req"><see cref="CancelAuthorizationTokenRequest"/></param>
+        /// <returns><see cref="CancelAuthorizationTokenResponse"/></returns>
+        public async Task<CancelAuthorizationTokenResponse> CancelAuthorizationToken(CancelAuthorizationTokenRequest req)
+        {
+             JsonResponseModel<CancelAuthorizationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CancelAuthorizationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuthorizationTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消授权token
+        /// </summary>
+        /// <param name="req"><see cref="CancelAuthorizationTokenRequest"/></param>
+        /// <returns><see cref="CancelAuthorizationTokenResponse"/></returns>
+        public CancelAuthorizationTokenResponse CancelAuthorizationTokenSync(CancelAuthorizationTokenRequest req)
+        {
+             JsonResponseModel<CancelAuthorizationTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CancelAuthorizationToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelAuthorizationTokenResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -364,6 +444,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "CreateRoute");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建最高权限的token
+        /// </summary>
+        /// <param name="req"><see cref="CreateTokenRequest"/></param>
+        /// <returns><see cref="CreateTokenResponse"/></returns>
+        public async Task<CreateTokenResponse> CreateToken(CreateTokenRequest req)
+        {
+             JsonResponseModel<CreateTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建最高权限的token
+        /// </summary>
+        /// <param name="req"><see cref="CreateTokenRequest"/></param>
+        /// <returns><see cref="CreateTokenResponse"/></returns>
+        public CreateTokenResponse CreateTokenSync(CreateTokenRequest req)
+        {
+             JsonResponseModel<CreateTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTokenResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

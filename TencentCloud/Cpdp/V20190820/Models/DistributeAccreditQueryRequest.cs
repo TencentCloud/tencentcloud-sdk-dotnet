@@ -25,13 +25,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收单系统分配的开放ID
+        /// 使用门店OpenId
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }
 
         /// <summary>
-        /// 收单系统分配的密钥
+        /// 使用门店OpenKey
         /// </summary>
         [JsonProperty("OpenKey")]
         public string OpenKey{ get; set; }

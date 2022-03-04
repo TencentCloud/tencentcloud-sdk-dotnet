@@ -25,22 +25,22 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 日志主题
+        /// 日志主题ID
         /// </summary>
         [JsonProperty("TopicId")]
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 日志导出检索语句
-        /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
-
-        /// <summary>
-        /// 日志导出数量,  最大值1000万
+        /// 日志导出数量,  最大值5000万
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
+
+        /// <summary>
+        /// 日志导出检索语句，不支持<a href="https://cloud.tencent.com/document/product/614/44061" target="_blank">[SQL语句]</a>
+        /// </summary>
+        [JsonProperty("Query")]
+        public string Query{ get; set; }
 
         /// <summary>
         /// 日志导出起始时间，毫秒时间戳
@@ -73,8 +73,8 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
-            this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "Count", this.Count);
+            this.SetParamSimple(map, prefix + "Query", this.Query);
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "To", this.To);
             this.SetParamSimple(map, prefix + "Order", this.Order);

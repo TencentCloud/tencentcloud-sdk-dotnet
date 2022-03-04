@@ -136,6 +136,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupName")]
         public string SkillGroupName{ get; set; }
 
+        /// <summary>
+        /// 录音转存第三方COS地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomRecordURL")]
+        public string CustomRecordURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Sequence", this.Sequence);
             this.SetParamSimple(map, prefix + "StartTimestamp", this.StartTimestamp);
             this.SetParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
+            this.SetParamSimple(map, prefix + "CustomRecordURL", this.CustomRecordURL);
         }
     }
 }

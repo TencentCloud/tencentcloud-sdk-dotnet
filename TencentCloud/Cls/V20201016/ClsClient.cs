@@ -253,7 +253,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志下载任务
+        /// 本接口用于创建日志下载任务，导出原始日志
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建日志下载任务
+        /// 本接口用于创建日志下载任务，导出原始日志
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
         /// <returns><see cref="CreateExportResponse"/></returns>

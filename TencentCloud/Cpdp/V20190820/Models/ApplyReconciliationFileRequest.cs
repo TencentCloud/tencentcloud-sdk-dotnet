@@ -1,0 +1,73 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Cpdp.V20190820.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class ApplyReconciliationFileRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 申请的文件类型。
+        /// __CZ__：充值文件
+        /// __TX__：提现文件
+        /// __JY__：交易文件
+        /// __YE__：余额文件
+        /// </summary>
+        [JsonProperty("ApplyFileType")]
+        public string ApplyFileType{ get; set; }
+
+        /// <summary>
+        /// 申请的对账文件日期，格式：yyyyMMdd。
+        /// </summary>
+        [JsonProperty("ApplyFileDate")]
+        public string ApplyFileDate{ get; set; }
+
+        /// <summary>
+        /// 父账户账号。
+        /// _平安渠道为资金汇总账号_
+        /// </summary>
+        [JsonProperty("BankAccountNumber")]
+        public string BankAccountNumber{ get; set; }
+
+        /// <summary>
+        /// 环境名。
+        /// __release__: 现网环境
+        /// __sandbox__: 沙箱环境
+        /// __development__: 开发环境
+        /// _缺省: release_
+        /// </summary>
+        [JsonProperty("MidasEnvironment")]
+        public string MidasEnvironment{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamSimple(map, prefix + "ApplyFileType", this.ApplyFileType);
+            this.SetParamSimple(map, prefix + "ApplyFileDate", this.ApplyFileDate);
+            this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
+            this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
+        }
+    }
+}
+

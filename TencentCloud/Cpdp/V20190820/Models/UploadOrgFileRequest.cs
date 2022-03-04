@@ -31,6 +31,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OpenId{ get; set; }
 
         /// <summary>
+        /// 收单系统分配的密钥
+        /// </summary>
+        [JsonProperty("OpenKey")]
+        public string OpenKey{ get; set; }
+
+        /// <summary>
         /// 存储区域（0私密区，1公共区），请严格按文件要求，上传到不同的区域
         /// </summary>
         [JsonProperty("Storage")]
@@ -55,12 +61,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string FileExtension{ get; set; }
 
         /// <summary>
-        /// 收单系统分配的密钥
-        /// </summary>
-        [JsonProperty("OpenKey")]
-        public string OpenKey{ get; set; }
-
-        /// <summary>
         /// 沙箱环境填sandbox，正式环境不填
         /// </summary>
         [JsonProperty("Profile")]
@@ -73,11 +73,11 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
             this.SetParamSimple(map, prefix + "Storage", this.Storage);
             this.SetParamSimple(map, prefix + "FileMd5", this.FileMd5);
             this.SetParamSimple(map, prefix + "FileContent", this.FileContent);
             this.SetParamSimple(map, prefix + "FileExtension", this.FileExtension);
-            this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
             this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }

@@ -37,12 +37,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OpenKey{ get; set; }
 
         /// <summary>
-        /// 沙箱环境填sandbox，正式环境不填
-        /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
-
-        /// <summary>
         /// 外部合同主键编号（ContractId或OutContractId必须传一个）
         /// </summary>
         [JsonProperty("OutContractId")]
@@ -54,6 +48,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ContractId")]
         public string ContractId{ get; set; }
 
+        /// <summary>
+        /// 沙箱环境填sandbox，正式环境不填
+        /// </summary>
+        [JsonProperty("Profile")]
+        public string Profile{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,9 +62,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         {
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "OpenKey", this.OpenKey);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
             this.SetParamSimple(map, prefix + "OutContractId", this.OutContractId);
             this.SetParamSimple(map, prefix + "ContractId", this.ContractId);
+            this.SetParamSimple(map, prefix + "Profile", this.Profile);
         }
     }
 }
