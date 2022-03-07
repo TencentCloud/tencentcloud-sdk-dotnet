@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.473</VersionPrefix>
+    <VersionPrefix>3.0.474</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2094,6 +2094,10 @@
     <Compile Include="Captcha\V20190722\Models\TicketThroughUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoResponse.cs" />
+    <Compile Include="Casb\V20200507\CasbClient.cs" />
+    <Compile Include="Casb\V20200507\Models\CopyCryptoColumnPolicyRequest.cs" />
+    <Compile Include="Casb\V20200507\Models\CopyCryptoColumnPolicyResponse.cs" />
+    <Compile Include="Casb\V20200507\Models\CryptoCopyColumnPolicyTableFilter.cs" />
     <Compile Include="Cat\V20180409\CatClient.cs" />
     <Compile Include="Cat\V20180409\Models\AgentGroup.cs" />
     <Compile Include="Cat\V20180409\Models\AlarmInfo.cs" />
@@ -4409,6 +4413,7 @@
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyWithdrawalResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\AssignmentData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BankBranchInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\BankCardItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountResponse.cs" />
@@ -4673,6 +4678,9 @@
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantPayWayListResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryMerchantResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBankBranchListRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBankBranchListResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBankBranchListResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankBindExternalSubMerchantBankAccountResult.cs" />
@@ -4689,6 +4697,9 @@
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankSupportBankListRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankSupportBankListResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankSupportBankListResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResult.cs" />
@@ -4772,6 +4783,7 @@
     <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\RevokeRechargeByThirdPayResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\SceneInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\SupportBankInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\SyncContractDataRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\SyncContractDataResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\TerminateContractRequest.cs" />
@@ -10246,6 +10258,7 @@
     <Compile Include="Ivld\V20210903\Models\AppearIndexPair.cs" />
     <Compile Include="Ivld\V20210903\Models\AppearInfo.cs" />
     <Compile Include="Ivld\V20210903\Models\AudioInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\ClassifiedPersonInfo.cs" />
     <Compile Include="Ivld\V20210903\Models\CreateCustomCategoryRequest.cs" />
     <Compile Include="Ivld\V20210903\Models\CreateCustomCategoryResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\CreateCustomGroupRequest.cs" />
@@ -10301,6 +10314,7 @@
     <Compile Include="Ivld\V20210903\Models\ModifyCallbackResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\MultiLevelTag.cs" />
     <Compile Include="Ivld\V20210903\Models\PersonImageInfo.cs" />
+    <Compile Include="Ivld\V20210903\Models\PersonInfo.cs" />
     <Compile Include="Ivld\V20210903\Models\QueryCallbackRequest.cs" />
     <Compile Include="Ivld\V20210903\Models\QueryCallbackResponse.cs" />
     <Compile Include="Ivld\V20210903\Models\ShowInfo.cs" />
@@ -16297,6 +16311,8 @@
     <Compile Include="Tke\V20180525\Models\DescribeRegionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribeTKEEdgeScriptResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVersionsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />

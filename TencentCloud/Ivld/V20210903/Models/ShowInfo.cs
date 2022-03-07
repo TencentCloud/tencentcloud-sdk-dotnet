@@ -88,6 +88,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         public TextInfo[] TextInfoSet{ get; set; }
 
         /// <summary>
+        /// 已分类人物信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClassifiedPersonInfoSet")]
+        public ClassifiedPersonInfo[] ClassifiedPersonInfoSet{ get; set; }
+
+        /// <summary>
         /// 文本标签列表，包含标签内容和出现信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -137,6 +144,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamArraySimple(map, prefix + "TitleSet.", this.TitleSet);
             this.SetParamArrayObj(map, prefix + "AudioInfoSet.", this.AudioInfoSet);
             this.SetParamArrayObj(map, prefix + "TextInfoSet.", this.TextInfoSet);
+            this.SetParamArrayObj(map, prefix + "ClassifiedPersonInfoSet.", this.ClassifiedPersonInfoSet);
             this.SetParamObj(map, prefix + "TextTagSet.", this.TextTagSet);
             this.SetParamObj(map, prefix + "FrameTagSet.", this.FrameTagSet);
             this.SetParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);

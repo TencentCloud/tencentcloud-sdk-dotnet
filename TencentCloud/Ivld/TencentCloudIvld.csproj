@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C0E79229-9B9B-3209-810B-66290F3BDD46}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.473</VersionPrefix>
+    <VersionPrefix>3.0.474</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,7 @@
     <Compile Include="V20210903\Models\AppearIndexPair.cs" />
     <Compile Include="V20210903\Models\AppearInfo.cs" />
     <Compile Include="V20210903\Models\AudioInfo.cs" />
+    <Compile Include="V20210903\Models\ClassifiedPersonInfo.cs" />
     <Compile Include="V20210903\Models\CreateCustomCategoryRequest.cs" />
     <Compile Include="V20210903\Models\CreateCustomCategoryResponse.cs" />
     <Compile Include="V20210903\Models\CreateCustomGroupRequest.cs" />
@@ -105,6 +106,7 @@
     <Compile Include="V20210903\Models\ModifyCallbackResponse.cs" />
     <Compile Include="V20210903\Models\MultiLevelTag.cs" />
     <Compile Include="V20210903\Models\PersonImageInfo.cs" />
+    <Compile Include="V20210903\Models\PersonInfo.cs" />
     <Compile Include="V20210903\Models\QueryCallbackRequest.cs" />
     <Compile Include="V20210903\Models\QueryCallbackResponse.cs" />
     <Compile Include="V20210903\Models\ShowInfo.cs" />

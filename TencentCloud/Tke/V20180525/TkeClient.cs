@@ -2893,6 +2893,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取边缘脚本链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
+        public async Task<DescribeTKEEdgeScriptResponse> DescribeTKEEdgeScript(DescribeTKEEdgeScriptRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTKEEdgeScript");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeScriptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取边缘脚本链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
+        /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
+        public DescribeTKEEdgeScriptResponse DescribeTKEEdgeScriptSync(DescribeTKEEdgeScriptRequest req)
+        {
+             JsonResponseModel<DescribeTKEEdgeScriptResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTKEEdgeScript");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTKEEdgeScriptResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取集群版本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeVersionsRequest"/></param>

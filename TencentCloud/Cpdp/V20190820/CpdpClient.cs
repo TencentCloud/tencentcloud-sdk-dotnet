@@ -4111,6 +4111,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-查询联行号
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBankBranchListRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBankBranchListResponse"/></returns>
+        public async Task<QueryOpenBankBankBranchListResponse> QueryOpenBankBankBranchList(QueryOpenBankBankBranchListRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBankBranchListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankBankBranchList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBankBranchListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-查询联行号
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBankBranchListRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBankBranchListResponse"/></returns>
+        public QueryOpenBankBankBranchListResponse QueryOpenBankBankBranchListSync(QueryOpenBankBankBranchListRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBankBranchListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankBankBranchList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBankBranchListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-子商户银行卡绑定结果查询
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankBindExternalSubMerchantBankAccountRequest"/></param>
@@ -4302,6 +4342,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryOpenBankPaymentOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankPaymentOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-查询支持银行列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSupportBankListRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSupportBankListResponse"/></returns>
+        public async Task<QueryOpenBankSupportBankListResponse> QueryOpenBankSupportBankList(QueryOpenBankSupportBankListRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSupportBankListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankSupportBankList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSupportBankListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-查询支持银行列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSupportBankListRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSupportBankListResponse"/></returns>
+        public QueryOpenBankSupportBankListResponse QueryOpenBankSupportBankListSync(QueryOpenBankSupportBankListRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSupportBankListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankSupportBankList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSupportBankListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -55,6 +55,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("BankBranchId")]
         public string BankBranchId{ get; set; }
 
+        /// <summary>
+        /// 收款方绑卡序列号。
+        /// 当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+        /// </summary>
+        [JsonProperty("BindSerialNo")]
+        public string BindSerialNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "BankAccountNumber", this.BankAccountNumber);
             this.SetParamSimple(map, prefix + "BankBranchName", this.BankBranchName);
             this.SetParamSimple(map, prefix + "BankBranchId", this.BankBranchId);
+            this.SetParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
         }
     }
 }
