@@ -133,7 +133,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用户创建通知渠道组。
+        /// 该接口用于创建通知渠道组。
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 该接口用户创建通知渠道组。
+        /// 该接口用于创建通知渠道组。
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
         /// <returns><see cref="CreateAlarmNoticeResponse"/></returns>

@@ -72,6 +72,24 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConfigInternetServiceIp")]
         public string ConfigInternetServiceIp{ get; set; }
 
+        /// <summary>
+        /// 规格ID
+        /// </summary>
+        [JsonProperty("SpecId")]
+        public string SpecId{ get; set; }
+
+        /// <summary>
+        /// 环境的节点数
+        /// </summary>
+        [JsonProperty("EnvReplica")]
+        public long? EnvReplica{ get; set; }
+
+        /// <summary>
+        /// 环境运行的节点数
+        /// </summary>
+        [JsonProperty("RunningCount")]
+        public long? RunningCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +104,9 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "ConfigServiceIp", this.ConfigServiceIp);
             this.SetParamSimple(map, prefix + "EnableConfigInternet", this.EnableConfigInternet);
             this.SetParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
+            this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
+            this.SetParamSimple(map, prefix + "EnvReplica", this.EnvReplica);
+            this.SetParamSimple(map, prefix + "RunningCount", this.RunningCount);
         }
     }
 }

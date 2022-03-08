@@ -295,6 +295,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 添加收件人地址附带模板参数
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailWithDataRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailWithDataResponse"/></returns>
+        public async Task<CreateReceiverDetailWithDataResponse> CreateReceiverDetailWithData(CreateReceiverDetailWithDataRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailWithDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateReceiverDetailWithData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailWithDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加收件人地址附带模板参数
+        /// </summary>
+        /// <param name="req"><see cref="CreateReceiverDetailWithDataRequest"/></param>
+        /// <returns><see cref="CreateReceiverDetailWithDataResponse"/></returns>
+        public CreateReceiverDetailWithDataResponse CreateReceiverDetailWithDataSync(CreateReceiverDetailWithDataRequest req)
+        {
+             JsonResponseModel<CreateReceiverDetailWithDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateReceiverDetailWithData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateReceiverDetailWithDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 邮箱被拉黑之后，用户如果确认收件邮箱有效或者已经处于激活状态，可以从腾讯云地址库中删除该黑名单之后继续投递。
         /// </summary>
         /// <param name="req"><see cref="DeleteBlackListRequest"/></param>

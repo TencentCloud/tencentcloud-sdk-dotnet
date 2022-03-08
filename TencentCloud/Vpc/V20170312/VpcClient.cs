@@ -2575,7 +2575,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端节点服务。
+        /// 本接口(CreateVpcEndPointService)用于创建终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>
@@ -2595,7 +2595,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 创建终端节点服务。
+        /// 本接口(CreateVpcEndPointService)用于创建终端节点服务。
         /// </summary>
         /// <param name="req"><see cref="CreateVpcEndPointServiceRequest"/></param>
         /// <returns><see cref="CreateVpcEndPointServiceResponse"/></returns>

@@ -55,7 +55,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 接入渠道，默认值为cdn
+        /// 接入渠道，cdn或者ecdn，默认值为cdn
         /// </summary>
         [JsonProperty("Channel")]
         public string Channel{ get; set; }

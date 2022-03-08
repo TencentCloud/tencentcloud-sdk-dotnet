@@ -144,6 +144,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IsAuthorized")]
         public ulong? IsAuthorized{ get; set; }
 
+        /// <summary>
+        /// 组件个数
+        /// </summary>
+        [JsonProperty("ComponentCnt")]
+        public ulong? ComponentCnt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ScanRiskError", this.ScanRiskError);
             this.SetParamSimple(map, prefix + "IsSuggest", this.IsSuggest);
             this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+            this.SetParamSimple(map, prefix + "ComponentCnt", this.ComponentCnt);
         }
     }
 }

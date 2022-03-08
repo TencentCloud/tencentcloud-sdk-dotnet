@@ -4111,6 +4111,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-查询账户余额
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBankAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBankAccountBalanceResponse"/></returns>
+        public async Task<QueryOpenBankBankAccountBalanceResponse> QueryOpenBankBankAccountBalance(QueryOpenBankBankAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBankAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankBankAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBankAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-查询账户余额
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBankAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBankAccountBalanceResponse"/></returns>
+        public QueryOpenBankBankAccountBalanceResponse QueryOpenBankBankAccountBalanceSync(QueryOpenBankBankAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBankAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankBankAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBankAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-查询联行号
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankBankBranchListRequest"/></param>
@@ -4182,6 +4222,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryOpenBankBindExternalSubMerchantBankAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBindExternalSubMerchantBankAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-按日期批量查询回单下载地址
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankDailyReceiptDownloadUrlRequest"/></param>
+        /// <returns><see cref="QueryOpenBankDailyReceiptDownloadUrlResponse"/></returns>
+        public async Task<QueryOpenBankDailyReceiptDownloadUrlResponse> QueryOpenBankDailyReceiptDownloadUrl(QueryOpenBankDailyReceiptDownloadUrlRequest req)
+        {
+             JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankDailyReceiptDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-按日期批量查询回单下载地址
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankDailyReceiptDownloadUrlRequest"/></param>
+        /// <returns><see cref="QueryOpenBankDailyReceiptDownloadUrlResponse"/></returns>
+        public QueryOpenBankDailyReceiptDownloadUrlResponse QueryOpenBankDailyReceiptDownloadUrlSync(QueryOpenBankDailyReceiptDownloadUrlRequest req)
+        {
+             JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankDailyReceiptDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankDailyReceiptDownloadUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

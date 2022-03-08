@@ -30,7 +30,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// - domain：域名。
         /// - resourceId：域名id。
         /// - status：域名状态，online，offline或processing。
-        /// - serviceType：业务类型，web，download或media。
+        /// - serviceType：业务类型，web，download，media，hybrid或dynamic。
         /// - projectId：项目ID。
         /// - domainType：主源站类型，cname表示自有源，cos表示cos接入，third_party表示第三方对象存储。
         /// - fullUrlCache：全路径缓存，on或off。

@@ -32,16 +32,16 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 回调的类型。可选值：
-        /// <br><li> WeCom
-        /// <br><li> Http
+        /// <li> WeCom
+        /// <li> Http
         /// </summary>
         [JsonProperty("CallbackType")]
         public string CallbackType{ get; set; }
 
         /// <summary>
         /// 回调方法。可选值：
-        /// <br><li> POST
-        /// <br><li> PUT
+        /// <li> POST
+        /// <li> PUT
         /// 默认值为POST。CallbackType为Http时为必选。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -50,13 +50,15 @@ namespace TencentCloud.Cls.V20201016.Models
 
         /// <summary>
         /// 请求头。
+        /// 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求头。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Headers")]
         public string[] Headers{ get; set; }
 
         /// <summary>
-        /// 请求内容。CallbackType为Http时为必选。
+        /// 请求内容。
+        /// 注意：该参数已废弃，请在<a href="https://cloud.tencent.com/document/product/614/56466">创建告警策略</a>接口CallBack参数中指定请求内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Body")]

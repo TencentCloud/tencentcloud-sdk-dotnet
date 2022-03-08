@@ -25,28 +25,28 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 告警模板名称。
+        /// 通知渠道组名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 告警模板的类型。可选值：
-        /// <br><li> Trigger - 告警触发
-        /// <br><li> Recovery - 告警恢复
-        /// <br><li> All - 告警触发和告警恢复
+        /// 通知类型。可选值：
+        /// <li> Trigger - 告警触发
+        /// <li> Recovery - 告警恢复
+        /// <li> All - 告警触发和告警恢复
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 告警模板接收者信息。
+        /// 通知接收对象。
         /// </summary>
         [JsonProperty("NoticeReceivers")]
         public NoticeReceiver[] NoticeReceivers{ get; set; }
 
         /// <summary>
-        /// 告警模板回调信息。
+        /// 接口回调信息（包括企业微信）。
         /// </summary>
         [JsonProperty("WebCallbacks")]
         public WebCallback[] WebCallbacks{ get; set; }

@@ -129,6 +129,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("OrgIdentity")]
         public MemberIdentity[] OrgIdentity{ get; set; }
 
+        /// <summary>
+        /// 安全信息绑定状态  未绑定：Unbound，待激活：Valid，绑定成功：Success，绑定失败：Failed
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BindStatus")]
+        public string BindStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
             this.SetParamSimple(map, prefix + "PayName", this.PayName);
             this.SetParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
+            this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
         }
     }
 }
