@@ -84,6 +84,12 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
+        /// <summary>
+        /// 定时任务的执行类型。取值范围：<br><li>CRONTAB：代表定时任务为重复执行。<br><li>ONCE：代表定时任务为单次执行。
+        /// </summary>
+        [JsonProperty("ScheduledType")]
+        public string ScheduledType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DesiredCapacity", this.DesiredCapacity);
             this.SetParamSimple(map, prefix + "MinSize", this.MinSize);
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
+            this.SetParamSimple(map, prefix + "ScheduledType", this.ScheduledType);
         }
     }
 }

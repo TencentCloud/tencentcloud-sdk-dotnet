@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 分片名称
+        /// 副本集ID
         /// </summary>
         [JsonProperty("ReplicaSetId")]
         public string ReplicaSetId{ get; set; }

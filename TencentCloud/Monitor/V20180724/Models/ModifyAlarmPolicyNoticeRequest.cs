@@ -25,22 +25,28 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 模块名，这里填“monitor”
+        /// 模块名，这里填“monitor”。
         /// </summary>
         [JsonProperty("Module")]
         public string Module{ get; set; }
 
         /// <summary>
-        /// 告警策略 ID
+        /// 告警策略 ID，如果该参数与PolicyIds参数同时存在，则以PolicyIds为准。
         /// </summary>
         [JsonProperty("PolicyId")]
         public string PolicyId{ get; set; }
 
         /// <summary>
-        /// 告警通知模板 ID 列表
+        /// 告警通知模板 ID 列表。
         /// </summary>
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
+
+        /// <summary>
+        /// 告警策略ID数组，支持给多个告警策略批量绑定通知模板。最多30个。
+        /// </summary>
+        [JsonProperty("PolicyIds")]
+        public string[] PolicyIds{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
         }
     }
 }

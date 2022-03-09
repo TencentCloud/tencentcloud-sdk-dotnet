@@ -45,6 +45,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("SnapshotId")]
         public string SnapshotId{ get; set; }
 
+        /// <summary>
+        /// 数据盘是否随子机销毁。取值范围：<br><li>TRUE：子机销毁时，销毁数据盘，只支持按小时后付费云盘<br><li>FALSE：子机销毁时，保留数据盘
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeleteWithInstance")]
+        public bool? DeleteWithInstance{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
+            this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
         }
     }
 }

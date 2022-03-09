@@ -733,6 +733,86 @@ namespace TencentCloud.Billing.V20180709
         }
 
         /// <summary>
+        /// 获取代金券相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherInfoRequest"/></param>
+        /// <returns><see cref="DescribeVoucherInfoResponse"/></returns>
+        public async Task<DescribeVoucherInfoResponse> DescribeVoucherInfo(DescribeVoucherInfoRequest req)
+        {
+             JsonResponseModel<DescribeVoucherInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVoucherInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVoucherInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取代金券相关信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherInfoRequest"/></param>
+        /// <returns><see cref="DescribeVoucherInfoResponse"/></returns>
+        public DescribeVoucherInfoResponse DescribeVoucherInfoSync(DescribeVoucherInfoRequest req)
+        {
+             JsonResponseModel<DescribeVoucherInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVoucherInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVoucherInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取代金券使用记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherUsageDetailsRequest"/></param>
+        /// <returns><see cref="DescribeVoucherUsageDetailsResponse"/></returns>
+        public async Task<DescribeVoucherUsageDetailsResponse> DescribeVoucherUsageDetails(DescribeVoucherUsageDetailsRequest req)
+        {
+             JsonResponseModel<DescribeVoucherUsageDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeVoucherUsageDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVoucherUsageDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取代金券使用记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeVoucherUsageDetailsRequest"/></param>
+        /// <returns><see cref="DescribeVoucherUsageDetailsResponse"/></returns>
+        public DescribeVoucherUsageDetailsResponse DescribeVoucherUsageDetailsSync(DescribeVoucherUsageDetailsRequest req)
+        {
+             JsonResponseModel<DescribeVoucherUsageDetailsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeVoucherUsageDetails");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVoucherUsageDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支付订单
         /// </summary>
         /// <param name="req"><see cref="PayDealsRequest"/></param>

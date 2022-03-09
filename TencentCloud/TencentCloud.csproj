@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.475</VersionPrefix>
+    <VersionPrefix>3.0.476</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1276,6 +1276,7 @@
     <Compile Include="Bda\V20200324\Models\VideoBasicInformation.cs" />
     <Compile Include="Billing\V20180709\BillingClient.cs" />
     <Compile Include="Billing\V20180709\Models\ActionSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\ApplicableProducts.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetail.cs" />
     <Compile Include="Billing\V20180709\Models\BillDetailComponent.cs" />
     <Compile Include="Billing\V20180709\Models\BillResourceSummary.cs" />
@@ -1333,8 +1334,13 @@
     <Compile Include="Billing\V20180709\Models\DescribeDosageCosDetailByDateResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateRequest.cs" />
     <Compile Include="Billing\V20180709\Models\DescribeDosageDetailByDateResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherInfoRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherInfoResponse.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherUsageDetailsRequest.cs" />
+    <Compile Include="Billing\V20180709\Models\DescribeVoucherUsageDetailsResponse.cs" />
     <Compile Include="Billing\V20180709\Models\DetailPoint.cs" />
     <Compile Include="Billing\V20180709\Models\DetailSet.cs" />
+    <Compile Include="Billing\V20180709\Models\ExcludedProducts.cs" />
     <Compile Include="Billing\V20180709\Models\PayDealsRequest.cs" />
     <Compile Include="Billing\V20180709\Models\PayDealsResponse.cs" />
     <Compile Include="Billing\V20180709\Models\PayModeSummaryOverviewItem.cs" />
@@ -1343,6 +1349,9 @@
     <Compile Include="Billing\V20180709\Models\RegionSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\SummaryTotal.cs" />
     <Compile Include="Billing\V20180709\Models\TagSummaryOverviewItem.cs" />
+    <Compile Include="Billing\V20180709\Models\UsageDetails.cs" />
+    <Compile Include="Billing\V20180709\Models\UsageRecords.cs" />
+    <Compile Include="Billing\V20180709\Models\VoucherInfos.cs" />
     <Compile Include="Bizlive\V20190313\BizliveClient.cs" />
     <Compile Include="Bizlive\V20190313\Models\CreateSessionRequest.cs" />
     <Compile Include="Bizlive\V20190313\Models\CreateSessionResponse.cs" />

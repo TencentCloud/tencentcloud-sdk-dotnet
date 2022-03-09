@@ -260,6 +260,18 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("StartupProbe")]
         public HealthCheckConfig StartupProbe{ get; set; }
 
+        /// <summary>
+        /// 操作系统版本；
+        /// 当选择openjdk时，可选参数：
+        /// - ALPINE
+        /// - CENTOS
+        /// 当选择konajdk时，可选参数：
+        /// - ALPINE
+        /// - TENCENTOS
+        /// </summary>
+        [JsonProperty("OsFlavour")]
+        public string OsFlavour{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -304,6 +316,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ConfEdited", this.ConfEdited);
             this.SetParamSimple(map, prefix + "SpeedUp", this.SpeedUp);
             this.SetParamObj(map, prefix + "StartupProbe.", this.StartupProbe);
+            this.SetParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
         }
     }
 }
