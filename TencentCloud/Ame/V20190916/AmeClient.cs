@@ -373,6 +373,46 @@ namespace TencentCloud.Ame.V20190916
         }
 
         /// <summary>
+        /// 获取直播互动曲库标签分组信息和标签信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicTagsRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicTagsResponse"/></returns>
+        public async Task<DescribeKTVMusicTagsResponse> DescribeKTVMusicTags(DescribeKTVMusicTagsRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVMusicTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播互动曲库标签分组信息和标签信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicTagsRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicTagsResponse"/></returns>
+        public DescribeKTVMusicTagsResponse DescribeKTVMusicTagsSync(DescribeKTVMusicTagsRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVMusicTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据歌单 Id 获取歌单详情，包括歌单的基础信息以及歌曲列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistDetailRequest"/></param>
@@ -608,6 +648,46 @@ namespace TencentCloud.Ame.V20190916
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKTVSingers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSingersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播互动曲库联想词
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSuggestionsRequest"/></param>
+        /// <returns><see cref="DescribeKTVSuggestionsResponse"/></returns>
+        public async Task<DescribeKTVSuggestionsResponse> DescribeKTVSuggestions(DescribeKTVSuggestionsRequest req)
+        {
+             JsonResponseModel<DescribeKTVSuggestionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVSuggestions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSuggestionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取直播互动曲库联想词
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVSuggestionsRequest"/></param>
+        /// <returns><see cref="DescribeKTVSuggestionsResponse"/></returns>
+        public DescribeKTVSuggestionsResponse DescribeKTVSuggestionsSync(DescribeKTVSuggestionsRequest req)
+        {
+             JsonResponseModel<DescribeKTVSuggestionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVSuggestions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSuggestionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -52,6 +52,13 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("Sort")]
         public SortBy Sort{ get; set; }
 
+        /// <summary>
+        /// 标签 ID 集合，匹配集合指定所有 ID 。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("TagIds")]
+        public string[] TagIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "Sort.", this.Sort);
+            this.SetParamArraySimple(map, prefix + "TagIds.", this.TagIds);
         }
     }
 }

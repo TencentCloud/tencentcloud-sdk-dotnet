@@ -733,6 +733,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageCacheRequest"/></param>
+        /// <returns><see cref="CreateImageCacheResponse"/></returns>
+        public async Task<CreateImageCacheResponse> CreateImageCache(CreateImageCacheRequest req)
+        {
+             JsonResponseModel<CreateImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建镜像缓存的接口。创建过程中，请勿删除EKSCI实例和云盘，否则镜像缓存将创建失败。
+        /// </summary>
+        /// <param name="req"><see cref="CreateImageCacheRequest"/></param>
+        /// <returns><see cref="CreateImageCacheResponse"/></returns>
+        public CreateImageCacheResponse CreateImageCacheSync(CreateImageCacheRequest req)
+        {
+             JsonResponseModel<CreateImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImageCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建告警规则
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusAlertRuleRequest"/></param>
@@ -1244,6 +1284,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "DeleteEKSContainerInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEKSContainerInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageCachesRequest"/></param>
+        /// <returns><see cref="DeleteImageCachesResponse"/></returns>
+        public async Task<DeleteImageCachesResponse> DeleteImageCaches(DeleteImageCachesRequest req)
+        {
+             JsonResponseModel<DeleteImageCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteImageCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageCachesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="DeleteImageCachesRequest"/></param>
+        /// <returns><see cref="DeleteImageCachesResponse"/></returns>
+        public DeleteImageCachesResponse DeleteImageCachesSync(DeleteImageCachesRequest req)
+        {
+             JsonResponseModel<DeleteImageCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteImageCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteImageCachesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2413,6 +2493,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询镜像缓存信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageCachesRequest"/></param>
+        /// <returns><see cref="DescribeImageCachesResponse"/></returns>
+        public async Task<DescribeImageCachesResponse> DescribeImageCaches(DescribeImageCachesRequest req)
+        {
+             JsonResponseModel<DescribeImageCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageCachesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询镜像缓存信息接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageCachesRequest"/></param>
+        /// <returns><see cref="DescribeImageCachesResponse"/></returns>
+        public DescribeImageCachesResponse DescribeImageCachesSync(DescribeImageCachesRequest req)
+        {
+             JsonResponseModel<DescribeImageCachesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageCaches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageCachesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取镜像信息
         /// </summary>
         /// <param name="req"><see cref="DescribeImagesRequest"/></param>
@@ -3204,6 +3324,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ForwardApplicationRequestV3");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据镜像列表，查询匹配的镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="GetMostSuitableImageCacheRequest"/></param>
+        /// <returns><see cref="GetMostSuitableImageCacheResponse"/></returns>
+        public async Task<GetMostSuitableImageCacheResponse> GetMostSuitableImageCache(GetMostSuitableImageCacheRequest req)
+        {
+             JsonResponseModel<GetMostSuitableImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetMostSuitableImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMostSuitableImageCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据镜像列表，查询匹配的镜像缓存
+        /// </summary>
+        /// <param name="req"><see cref="GetMostSuitableImageCacheRequest"/></param>
+        /// <returns><see cref="GetMostSuitableImageCacheResponse"/></returns>
+        public GetMostSuitableImageCacheResponse GetMostSuitableImageCacheSync(GetMostSuitableImageCacheRequest req)
+        {
+             JsonResponseModel<GetMostSuitableImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetMostSuitableImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetMostSuitableImageCacheResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4044,6 +4204,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpdateEKSContainerInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSContainerInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像缓存接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageCacheRequest"/></param>
+        /// <returns><see cref="UpdateImageCacheResponse"/></returns>
+        public async Task<UpdateImageCacheResponse> UpdateImageCache(UpdateImageCacheRequest req)
+        {
+             JsonResponseModel<UpdateImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新镜像缓存接口
+        /// </summary>
+        /// <param name="req"><see cref="UpdateImageCacheRequest"/></param>
+        /// <returns><see cref="UpdateImageCacheResponse"/></returns>
+        public UpdateImageCacheResponse UpdateImageCacheSync(UpdateImageCacheRequest req)
+        {
+             JsonResponseModel<UpdateImageCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateImageCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateImageCacheResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

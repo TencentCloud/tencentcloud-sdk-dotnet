@@ -25,9 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 极速高清类型，可选值：
-        /// <li>TEHD-100：极速高清-100。</li>
-        /// 不填代表不启用极速高清。
+        /// 极速高清类型，可选值：<li>TEHD-100 表示极速高清-100;</li> <li>OFF 表示关闭极速高清。</li>不填表示 OFF。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

@@ -87,6 +87,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("AclRuleList")]
         public AclRule[] AclRuleList{ get; set; }
 
+        /// <summary>
+        /// topic 限流策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("QuotaConfig")]
+        public InstanceQuotaConfigResp QuotaConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamArrayObj(map, prefix + "AclRuleList.", this.AclRuleList);
+            this.SetParamObj(map, prefix + "QuotaConfig.", this.QuotaConfig);
         }
     }
 }

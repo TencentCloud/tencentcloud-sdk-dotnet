@@ -37,6 +37,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("JoinRoomInput")]
         public JoinRoomInput JoinRoomInput{ get; set; }
 
+        /// <summary>
+        /// license基础信息
+        /// </summary>
+        [JsonProperty("ApplicationLicenseInput")]
+        public ApplicationLicenseInput ApplicationLicenseInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +51,7 @@ namespace TencentCloud.Ame.V20190916.Models
         {
             this.SetParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
             this.SetParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
+            this.SetParamObj(map, prefix + "ApplicationLicenseInput.", this.ApplicationLicenseInput);
         }
     }
 }

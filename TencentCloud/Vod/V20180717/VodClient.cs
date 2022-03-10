@@ -4051,6 +4051,70 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 修改媒体文件的存储类型。
+        /// 当媒体文件的存储类型为标准存储时，可以修改为以下类型：
+        /// <li>低频存储</li>
+        /// <li>归档存储</li>
+        /// <li>深度归档存储</li>
+        /// 当媒体文件的当前存储类型为低频存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// <li>归档存储</li>
+        /// <li>深度归档存储</li>
+        /// 当媒体文件的当前存储类型为归档存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// 当媒体文件的当前存储类型为深度归档存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMediaStorageClassRequest"/></param>
+        /// <returns><see cref="ModifyMediaStorageClassResponse"/></returns>
+        public async Task<ModifyMediaStorageClassResponse> ModifyMediaStorageClass(ModifyMediaStorageClassRequest req)
+        {
+             JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMediaStorageClass");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaStorageClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改媒体文件的存储类型。
+        /// 当媒体文件的存储类型为标准存储时，可以修改为以下类型：
+        /// <li>低频存储</li>
+        /// <li>归档存储</li>
+        /// <li>深度归档存储</li>
+        /// 当媒体文件的当前存储类型为低频存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// <li>归档存储</li>
+        /// <li>深度归档存储</li>
+        /// 当媒体文件的当前存储类型为归档存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// 当媒体文件的当前存储类型为深度归档存储时，可以修改为以下类型：
+        /// <li>标准存储</li>
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMediaStorageClassRequest"/></param>
+        /// <returns><see cref="ModifyMediaStorageClassResponse"/></returns>
+        public ModifyMediaStorageClassResponse ModifyMediaStorageClassSync(ModifyMediaStorageClassRequest req)
+        {
+             JsonResponseModel<ModifyMediaStorageClassResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMediaStorageClass");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMediaStorageClassResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于根据素材 ID，修改素材样本信息，包括名称、描述的修改，以及五官、标签的添加、删除、重置操作。五官删除操作需保证至少剩余 1 张图片，否则，请使用重置操作。
         /// </summary>
         /// <param name="req"><see cref="ModifyPersonSampleRequest"/></param>

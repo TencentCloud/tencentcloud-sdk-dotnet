@@ -52,6 +52,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RemoveVideo")]
         public ulong? RemoveVideo{ get; set; }
 
+        /// <summary>
+        /// 极速高清转码参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TEHDConfig")]
+        public TEHDConfig TEHDConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "Audio.", this.Audio);
             this.SetParamSimple(map, prefix + "RemoveAudio", this.RemoveAudio);
             this.SetParamSimple(map, prefix + "RemoveVideo", this.RemoveVideo);
+            this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         }
     }
 }
