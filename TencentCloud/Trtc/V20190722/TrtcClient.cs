@@ -467,54 +467,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询音视频互动计费时长。
-        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-        /// - 单次查询统计区间最多不能超过31天。
-        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
-        public async Task<DescribeTrtcInteractiveTimeResponse> DescribeTrtcInteractiveTime(DescribeTrtcInteractiveTimeRequest req)
-        {
-             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeTrtcInteractiveTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询音视频互动计费时长。
-        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-        /// - 单次查询统计区间最多不能超过31天。
-        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeTrtcInteractiveTimeRequest"/></param>
-        /// <returns><see cref="DescribeTrtcInteractiveTimeResponse"/></returns>
-        public DescribeTrtcInteractiveTimeResponse DescribeTrtcInteractiveTimeSync(DescribeTrtcInteractiveTimeRequest req)
-        {
-             JsonResponseModel<DescribeTrtcInteractiveTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeTrtcInteractiveTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcInteractiveTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询旁路转码计费时长。
         /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
         /// - 单次查询统计区间最多不能超过31天。
