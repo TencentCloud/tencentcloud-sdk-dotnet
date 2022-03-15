@@ -38,6 +38,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 查询对账文件下载响应对象。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Result")]
         public QueryOpenBankDownLoadUrlResult Result{ get; set; }

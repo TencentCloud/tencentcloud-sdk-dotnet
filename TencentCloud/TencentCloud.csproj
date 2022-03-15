@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.478</VersionPrefix>
+    <VersionPrefix>3.0.479</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3970,13 +3970,19 @@
     <Compile Include="Cls\V20201016\Models\Ckafka.cs" />
     <Compile Include="Cls\V20201016\Models\Column.cs" />
     <Compile Include="Cls\V20201016\Models\CompressInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ConfigExtraInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConfigInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConsumerContent.cs" />
+    <Compile Include="Cls\V20201016\Models\ContainerFileInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ContainerStdoutInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ContainerWorkLoadInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ContentInfo.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConfigExtraRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CreateConfigExtraResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateConfigRequest.cs" />
     <Compile Include="Cls\V20201016\Models\CreateConfigResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CreateConsumerRequest.cs" />
@@ -3998,6 +4004,8 @@
     <Compile Include="Cls\V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigExtraRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DeleteConfigExtraResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteConfigFromMachineGroupRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteConfigFromMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DeleteConfigRequest.cs" />
@@ -4020,6 +4028,8 @@
     <Compile Include="Cls\V20201016\Models\DescribeAlarmNoticesResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeAlarmsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeAlarmsResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigExtrasRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeConfigExtrasResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeConfigMachineGroupsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeConfigMachineGroupsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeConfigsRequest.cs" />
@@ -4056,6 +4066,7 @@
     <Compile Include="Cls\V20201016\Models\FullTextInfo.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\HostFileInfo.cs" />
     <Compile Include="Cls\V20201016\Models\JsonInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyRegexInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyValueInfo.cs" />
@@ -4073,6 +4084,8 @@
     <Compile Include="Cls\V20201016\Models\ModifyAlarmNoticeResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyAlarmRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyAlarmResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConfigExtraRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\ModifyConfigExtraResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyConfigRequest.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyConfigResponse.cs" />
     <Compile Include="Cls\V20201016\Models\ModifyConsumerRequest.cs" />
@@ -12035,6 +12048,8 @@
     <Compile Include="Nlp\V20190408\Models\TextClassificationResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextSimilarityProRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextSimilarityProResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TripleContent.cs" />
@@ -13161,6 +13176,8 @@
     <Compile Include="Ses\V20201002\Models\DeleteEmailIdentityResponse.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateRequest.cs" />
     <Compile Include="Ses\V20201002\Models\DeleteEmailTemplateResponse.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteReceiverRequest.cs" />
+    <Compile Include="Ses\V20201002\Models\DeleteReceiverResponse.cs" />
     <Compile Include="Ses\V20201002\Models\EmailIdentity.cs" />
     <Compile Include="Ses\V20201002\Models\EmailSender.cs" />
     <Compile Include="Ses\V20201002\Models\GetEmailIdentityRequest.cs" />

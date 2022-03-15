@@ -38,6 +38,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("MetaFields")]
         public string[] MetaFields{ get; set; }
 
+        /// <summary>
+        /// 当EnableTag为true时，必须填写TagJsonNotTiled字段，TagJsonNotTiled用于标识tag信息是否json平铺，TagJsonNotTiled为true时不平铺，false时平铺
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagJsonNotTiled")]
+        public bool? TagJsonNotTiled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Cls.V20201016.Models
         {
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
+            this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 投递任务是否生效
+        /// 投递任务是否生效，默认不生效
         /// </summary>
         [JsonProperty("Effective")]
         public bool? Effective{ get; set; }

@@ -177,6 +177,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("EnableConsoleIntranet")]
         public bool? EnableConsoleIntranet{ get; set; }
 
+        /// <summary>
+        /// 引擎实例是否展示参数配置页面
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigInfoVisible")]
+        public bool? ConfigInfoVisible{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -206,6 +213,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
             this.SetParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
+            this.SetParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
         }
     }
 }

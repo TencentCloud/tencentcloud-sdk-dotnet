@@ -72,6 +72,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("PeriodRetain")]
         public string PeriodRetain{ get; set; }
 
+        /// <summary>
+        /// 实例购买渠道("cdn" 等)
+        /// </summary>
+        [JsonProperty("BuyingChannel")]
+        public string BuyingChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceDesc", this.InstanceDesc);
             this.SetParamSimple(map, prefix + "CountNum", this.CountNum);
             this.SetParamSimple(map, prefix + "PeriodRetain", this.PeriodRetain);
+            this.SetParamSimple(map, prefix + "BuyingChannel", this.BuyingChannel);
         }
     }
 }

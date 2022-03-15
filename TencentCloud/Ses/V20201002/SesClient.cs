@@ -495,6 +495,46 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
+        /// 根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReceiverRequest"/></param>
+        /// <returns><see cref="DeleteReceiverResponse"/></returns>
+        public async Task<DeleteReceiverResponse> DeleteReceiver(DeleteReceiverRequest req)
+        {
+             JsonResponseModel<DeleteReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据收件id删除收件人列表,同时删除列表中的所有收件邮箱
+        /// </summary>
+        /// <param name="req"><see cref="DeleteReceiverRequest"/></param>
+        /// <returns><see cref="DeleteReceiverResponse"/></returns>
+        public DeleteReceiverResponse DeleteReceiverSync(DeleteReceiverRequest req)
+        {
+             JsonResponseModel<DeleteReceiverResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteReceiver");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteReceiverResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取某个发信域名的配置详情
         /// </summary>
         /// <param name="req"><see cref="GetEmailIdentityRequest"/></param>

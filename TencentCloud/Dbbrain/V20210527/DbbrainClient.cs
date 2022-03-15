@@ -1253,7 +1253,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取SQL优化建议。
+        /// 获取SQL优化建议。【产品用户回馈，此接口限免开放，后续将并入dbbrain专业版】
         /// </summary>
         /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
         /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>
@@ -1273,7 +1273,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 获取SQL优化建议。
+        /// 获取SQL优化建议。【产品用户回馈，此接口限免开放，后续将并入dbbrain专业版】
         /// </summary>
         /// <param name="req"><see cref="DescribeUserSqlAdviceRequest"/></param>
         /// <returns><see cref="DescribeUserSqlAdviceResponse"/></returns>

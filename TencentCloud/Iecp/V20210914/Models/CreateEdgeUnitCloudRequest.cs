@@ -60,6 +60,12 @@ namespace TencentCloud.Iecp.V20210914.Models
         [JsonProperty("ServiceCIDR")]
         public string ServiceCIDR{ get; set; }
 
+        /// <summary>
+        /// 是否开启监控。目前内存中权限开启联系产品开通白名单
+        /// </summary>
+        [JsonProperty("OpenCloudMonitor")]
+        public bool? OpenCloudMonitor{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Iecp.V20210914.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "PodCIDR", this.PodCIDR);
             this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
+            this.SetParamSimple(map, prefix + "OpenCloudMonitor", this.OpenCloudMonitor);
         }
     }
 }

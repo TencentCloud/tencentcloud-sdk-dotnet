@@ -85,7 +85,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public string PayerMode{ get; set; }
 
         /// <summary>
-        /// 客户类型：可以为new(新拓)/assign(指定)/old(存量)/空
+        /// 客户类型：可以为new(自拓)/assign(指定)/old(官网)/direct(直销)/direct_newopp(直销(新商机))/空
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientType")]

@@ -57,7 +57,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 收款方绑卡序列号。
-        /// 当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付平台时，下发的绑卡序列号。
+        /// 当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
         /// </summary>
         [JsonProperty("BindSerialNo")]
         public string BindSerialNo{ get; set; }
