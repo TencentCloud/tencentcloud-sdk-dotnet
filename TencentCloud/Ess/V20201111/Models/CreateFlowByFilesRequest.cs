@@ -96,6 +96,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CcInfos")]
         public CcInfo[] CcInfos{ get; set; }
 
+        /// <summary>
+        /// 是否需要预览，true：预览模式，false：非预览（默认）
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +119,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         }
     }
 }

@@ -66,6 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 是否需要生成预览文件 默认不生成
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
         }
     }
 }

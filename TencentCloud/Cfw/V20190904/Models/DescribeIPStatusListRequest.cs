@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Captcha.V20190722.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCaptchaOperDataRequest : AbstractModel
+    public class DescribeIPStatusListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 验证码应用ID
+        /// 资产Id
         /// </summary>
-        [JsonProperty("CaptchaAppId")]
-        public ulong? CaptchaAppId{ get; set; }
-
-        /// <summary>
-        /// 查询开始时间
-        /// </summary>
-        [JsonProperty("Start")]
-        public ulong? Start{ get; set; }
-
-        /// <summary>
-        /// 查询类型
-        /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
-
-        /// <summary>
-        /// 查询结束时间
-        /// </summary>
-        [JsonProperty("End")]
-        public ulong? End{ get; set; }
+        [JsonProperty("IPList")]
+        public string[] IPList{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
-            this.SetParamSimple(map, prefix + "Start", this.Start);
-            this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "End", this.End);
+            this.SetParamArraySimple(map, prefix + "IPList.", this.IPList);
         }
     }
 }

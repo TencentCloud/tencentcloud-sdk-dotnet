@@ -31,6 +31,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowId{ get; set; }
 
         /// <summary>
+        /// 合同预览链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

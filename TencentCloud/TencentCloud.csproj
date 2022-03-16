@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.479</VersionPrefix>
+    <VersionPrefix>3.0.480</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3183,6 +3183,8 @@
     <Compile Include="Cfw\V20190904\Models\DescribeEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeGuideScanInfoRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeGuideScanInfoResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeIPStatusListRequest.cs" />
+    <Compile Include="Cfw\V20190904\Models\DescribeIPStatusListResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatFwInfoCountRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatFwInfoCountResponse.cs" />
     <Compile Include="Cfw\V20190904\Models\DescribeNatFwInstanceRequest.cs" />
@@ -3222,6 +3224,7 @@
     <Compile Include="Cfw\V20190904\Models\DnsVpcSwitch.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="Cfw\V20190904\Models\ExpandCfwVerticalResponse.cs" />
+    <Compile Include="Cfw\V20190904\Models\IPDefendStatus.cs" />
     <Compile Include="Cfw\V20190904\Models\InstanceInfo.cs" />
     <Compile Include="Cfw\V20190904\Models\IocListData.cs" />
     <Compile Include="Cfw\V20190904\Models\IpStatic.cs" />

@@ -42,6 +42,20 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("FunctionsCount")]
         public long? FunctionsCount{ get; set; }
 
+        /// <summary>
+        /// 命名空间配额总量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalConcurrencyMem")]
+        public long? TotalConcurrencyMem{ get; set; }
+
+        /// <summary>
+        /// 命名空间配额使用量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalAllocatedConcurrencyMem")]
+        public long? TotalAllocatedConcurrencyMem{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamArraySimple(map, prefix + "Functions.", this.Functions);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamSimple(map, prefix + "FunctionsCount", this.FunctionsCount);
+            this.SetParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
+            this.SetParamSimple(map, prefix + "TotalAllocatedConcurrencyMem", this.TotalAllocatedConcurrencyMem);
         }
     }
 }

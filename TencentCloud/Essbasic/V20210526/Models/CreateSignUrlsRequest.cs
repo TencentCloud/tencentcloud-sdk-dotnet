@@ -49,7 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 签署完成后H5引导页跳转URL
+        /// 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

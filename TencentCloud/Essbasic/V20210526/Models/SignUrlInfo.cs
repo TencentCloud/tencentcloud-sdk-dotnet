@@ -32,7 +32,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string SignUrl{ get; set; }
 
         /// <summary>
-        /// 链接失效时间
+        /// 链接失效时间,默认30分钟
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Deadline")]

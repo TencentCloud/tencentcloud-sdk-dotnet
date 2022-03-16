@@ -74,6 +74,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
+        /// <summary>
+        /// 邮件触发类型 0:非触发类，默认类型，营销类邮件、非即时类邮件等选择此类型  1:触发类，验证码等即时发送类邮件，若邮件超过一定大小，系统会自动选择非触发类型通道
+        /// </summary>
+        [JsonProperty("TriggerType")]
+        public ulong? TriggerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamObj(map, prefix + "Simple.", this.Simple);
             this.SetParamArrayObj(map, prefix + "Attachments.", this.Attachments);
             this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+            this.SetParamSimple(map, prefix + "TriggerType", this.TriggerType);
         }
     }
 }

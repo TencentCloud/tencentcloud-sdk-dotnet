@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 签署截止时间戳，超过有效签署时间则该签署流程失败
+        /// 签署截止时间戳，超过有效签署时间则该签署流程失败，默认一年
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
@@ -59,7 +59,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 多个签署人信息
+        /// 多个签署人信息，渠道侧目前不支持超过5个签署方信息
         /// </summary>
         [JsonProperty("FlowApprovers")]
         public FlowApproverInfo[] FlowApprovers{ get; set; }

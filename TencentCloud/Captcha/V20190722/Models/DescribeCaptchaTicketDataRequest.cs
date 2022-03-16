@@ -36,6 +36,12 @@ namespace TencentCloud.Captcha.V20190722.Models
         [JsonProperty("Start")]
         public long? Start{ get; set; }
 
+        /// <summary>
+        /// 查询结束时间 例如：20220314
+        /// </summary>
+        [JsonProperty("End")]
+        public long? End{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Captcha.V20190722.Models
         {
             this.SetParamSimple(map, prefix + "CaptchaAppId", this.CaptchaAppId);
             this.SetParamSimple(map, prefix + "Start", this.Start);
+            this.SetParamSimple(map, prefix + "End", this.End);
         }
     }
 }

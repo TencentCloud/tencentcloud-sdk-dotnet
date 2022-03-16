@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Cfw.V20190904.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QueryOpenBankPaymentOrderRequest : AbstractModel
+    public class DescribeIPStatusListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 渠道商户号。外部接入平台入驻云企付平台下发。
+        /// ip状态信息
         /// </summary>
-        [JsonProperty("ChannelMerchantId")]
-        public string ChannelMerchantId{ get; set; }
+        [JsonProperty("StatusList")]
+        public IPDefendStatus[] StatusList{ get; set; }
 
         /// <summary>
-        /// 外部商户订单号。与ChannelOrderId二者选一。
+        /// 状态码
         /// </summary>
-        [JsonProperty("OutOrderId")]
-        public string OutOrderId{ get; set; }
+        [JsonProperty("ReturnCode")]
+        public long? ReturnCode{ get; set; }
 
         /// <summary>
-        /// 云平台订单号。与OutOrderId二者选一。
+        /// 状态信息
         /// </summary>
-        [JsonProperty("ChannelOrderId")]
-        public string ChannelOrderId{ get; set; }
+        [JsonProperty("ReturnMsg")]
+        public string ReturnMsg{ get; set; }
 
         /// <summary>
-        /// 接入环境。沙箱环境填 sandbox。缺省默认调用生产环境。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Environment")]
-        public string Environment{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ChannelMerchantId", this.ChannelMerchantId);
-            this.SetParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
-            this.SetParamSimple(map, prefix + "ChannelOrderId", this.ChannelOrderId);
-            this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamArrayObj(map, prefix + "StatusList.", this.StatusList);
+            this.SetParamSimple(map, prefix + "ReturnCode", this.ReturnCode);
+            this.SetParamSimple(map, prefix + "ReturnMsg", this.ReturnMsg);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

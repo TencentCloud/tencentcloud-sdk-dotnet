@@ -39,15 +39,15 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 图片名称，最多支持64个字符， 
-        /// 同一个EntityId，最大支持5张图。如果图片名称已存在，则会更新库中的图片。
+        /// 同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
         /// </summary>
         [JsonProperty("PicName")]
         public string PicName{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 。对应图片 base64 编码后大小不可超过2M。  
+        /// 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
         /// Url、Image必须提供一个，如果都提供，只使用 Url。 
-        /// 图片分辨率不超过1920*1080。
+        /// 图片分辨率不超过4096*4096。
         /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
         /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -56,8 +56,8 @@ namespace TencentCloud.Tiia.V20190529.Models
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据，base64 编码后大小不可超过2M。 
-        /// 图片分辨率不超过1920*1080。 
+        /// 图片 base64 数据，base64 编码后大小不可超过5M。 
+        /// 图片分辨率不超过4096*4096。 
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
         /// </summary>
         [JsonProperty("ImageBase64")]

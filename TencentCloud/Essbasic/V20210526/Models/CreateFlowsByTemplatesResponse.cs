@@ -44,6 +44,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] ErrorMessages{ get; set; }
 
         /// <summary>
+        /// 预览模式下返回的预览文件url数组
+        /// </summary>
+        [JsonProperty("PreviewUrls")]
+        public string[] PreviewUrls{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +64,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamArraySimple(map, prefix + "CustomerData.", this.CustomerData);
             this.SetParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
+            this.SetParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

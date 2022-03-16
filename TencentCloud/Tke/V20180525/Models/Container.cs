@@ -115,6 +115,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("GpuLimit")]
         public ulong? GpuLimit{ get; set; }
 
+        /// <summary>
+        /// 容器的安全上下文
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityContext")]
+        public SecurityContext SecurityContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +142,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "LivenessProbe.", this.LivenessProbe);
             this.SetParamObj(map, prefix + "ReadinessProbe.", this.ReadinessProbe);
             this.SetParamSimple(map, prefix + "GpuLimit", this.GpuLimit);
+            this.SetParamObj(map, prefix + "SecurityContext.", this.SecurityContext);
         }
     }
 }

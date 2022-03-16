@@ -102,6 +102,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("OrganizationOpenId")]
         public string OrganizationOpenId{ get; set; }
 
+        /// <summary>
+        /// 指定签署人非渠道企业下员工，在ApproverType为ORGANIZATION时指定。
+        /// 默认为false，即签署人位于同一个渠道应用号下；
+        /// </summary>
+        [JsonProperty("NotChannelOrganization")]
+        public bool? NotChannelOrganization{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
+            this.SetParamSimple(map, prefix + "NotChannelOrganization", this.NotChannelOrganization);
         }
     }
 }

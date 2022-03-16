@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 控制台url
+        /// 控制台url，此链接5分钟内有效，且只能访问一次
         /// </summary>
         [JsonProperty("ConsoleUrl")]
         public string ConsoleUrl{ get; set; }

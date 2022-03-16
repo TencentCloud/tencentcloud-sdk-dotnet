@@ -1013,6 +1013,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// ip防护状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStatusListRequest"/></param>
+        /// <returns><see cref="DescribeIPStatusListResponse"/></returns>
+        public async Task<DescribeIPStatusListResponse> DescribeIPStatusList(DescribeIPStatusListRequest req)
+        {
+             JsonResponseModel<DescribeIPStatusListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIPStatusList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStatusListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// ip防护状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIPStatusListRequest"/></param>
+        /// <returns><see cref="DescribeIPStatusListResponse"/></returns>
+        public DescribeIPStatusListResponse DescribeIPStatusListSync(DescribeIPStatusListRequest req)
+        {
+             JsonResponseModel<DescribeIPStatusListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIPStatusList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIPStatusListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取当前用户接入nat防火墙的所有子网数及natfw实例个数
         /// </summary>
         /// <param name="req"><see cref="DescribeNatFwInfoCountRequest"/></param>
