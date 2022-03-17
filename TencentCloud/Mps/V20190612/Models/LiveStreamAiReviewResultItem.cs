@@ -27,8 +27,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 审核结果的类型，可以取的值有：
         /// <li>ImagePorn：图片鉴黄</li>
-        /// <li>ImageTerrorism：图片鉴恐</li>
-        /// <li>ImagePolitical：图片鉴政</li>
+        /// <li>ImageTerrorism：图片涉敏</li>
+        /// <li>ImagePolitical：图片涉敏</li>
         /// <li>PornVoice：声音鉴黄</li>
         /// </summary>
         [JsonProperty("Type")]
@@ -41,13 +41,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public LiveStreamAiReviewImagePornResult[] ImagePornResultSet{ get; set; }
 
         /// <summary>
-        /// 图片鉴恐的结果，当 Type 为 ImageTerrorism 时有效。
+        /// 图片涉敏的结果，当 Type 为 ImageTerrorism 时有效。
         /// </summary>
         [JsonProperty("ImageTerrorismResultSet")]
         public LiveStreamAiReviewImageTerrorismResult[] ImageTerrorismResultSet{ get; set; }
 
         /// <summary>
-        /// 图片鉴政的结果，当 Type 为 ImagePolitical 时有效。
+        /// 图片涉敏的结果，当 Type 为 ImagePolitical 时有效。
         /// </summary>
         [JsonProperty("ImagePoliticalResultSet")]
         public LiveStreamAiReviewImagePoliticalResult[] ImagePoliticalResultSet{ get; set; }

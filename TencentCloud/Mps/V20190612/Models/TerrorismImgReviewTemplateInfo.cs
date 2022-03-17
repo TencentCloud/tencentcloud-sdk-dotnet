@@ -25,24 +25,24 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 画面鉴恐任务开关，可选值：
-        /// <li>ON：开启画面鉴恐任务；</li>
-        /// <li>OFF：关闭画面鉴恐任务。</li>
+        /// 画面涉敏任务开关，可选值：
+        /// <li>ON：开启画面涉敏任务；</li>
+        /// <li>OFF：关闭画面涉敏任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 画面鉴恐过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+        /// 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
         /// <li>guns：武器枪支；</li>
         /// <li>crowd：人群聚集；</li>
         /// <li>bloody：血腥画面；</li>
         /// <li>police：警察部队；</li>
-        /// <li>banners：暴恐旗帜；</li>
+        /// <li>banners：涉敏旗帜；</li>
         /// <li>militant：武装分子；</li>
         /// <li>explosion：爆炸火灾；</li>
-        /// <li>terrorists：暴恐人物；</li>
-        /// <li>scenario：暴恐画面。</li>
+        /// <li>terrorists：涉敏人物；</li>
+        /// <li>scenario：涉敏画面。</li>
         /// </summary>
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }

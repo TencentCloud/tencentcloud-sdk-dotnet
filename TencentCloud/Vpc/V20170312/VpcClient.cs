@@ -4945,6 +4945,50 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DescribeCrossBorderCcnRegionBandwidthLimits）用于获取要锁定的限速实例列表。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（DescribeTenantCcns）
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderCcnRegionBandwidthLimitsResponse"/></returns>
+        public async Task<DescribeCrossBorderCcnRegionBandwidthLimitsResponse> DescribeCrossBorderCcnRegionBandwidthLimits(DescribeCrossBorderCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossBorderCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCrossBorderCcnRegionBandwidthLimits）用于获取要锁定的限速实例列表。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（DescribeTenantCcns）
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderCcnRegionBandwidthLimitsRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderCcnRegionBandwidthLimitsResponse"/></returns>
+        public DescribeCrossBorderCcnRegionBandwidthLimitsResponse DescribeCrossBorderCcnRegionBandwidthLimitsSync(DescribeCrossBorderCcnRegionBandwidthLimitsRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderCcnRegionBandwidthLimitsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossBorderCcnRegionBandwidthLimits");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderCcnRegionBandwidthLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCrossBorderCompliance）用于查询用户创建的合规化资质审批单。
         /// 服务商可以查询服务名下的任意 `APPID` 创建的审批单；非服务商，只能查询自己审批单。
         /// </summary>
@@ -6506,6 +6550,50 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTemplateLimits");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTemplateLimitsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTenantCcns）用于获取要锁定的云联网实例列表。
+        /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
+        /// 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTenantCcnsRequest"/></param>
+        /// <returns><see cref="DescribeTenantCcnsResponse"/></returns>
+        public async Task<DescribeTenantCcnsResponse> DescribeTenantCcns(DescribeTenantCcnsRequest req)
+        {
+             JsonResponseModel<DescribeTenantCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTenantCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTenantCcnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeTenantCcns）用于获取要锁定的云联网实例列表。
+        /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（DescribeCrossBorderCcnRegionBandwidthLimits）
+        /// 如有需要, 可以封禁任意云联网实例, 可接入到内部运营系统
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTenantCcnsRequest"/></param>
+        /// <returns><see cref="DescribeTenantCcnsResponse"/></returns>
+        public DescribeTenantCcnsResponse DescribeTenantCcnsSync(DescribeTenantCcnsRequest req)
+        {
+             JsonResponseModel<DescribeTenantCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTenantCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTenantCcnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -8356,6 +8444,100 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceResetVpnGatewayInternetMaxBandwidth");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceResetVpnGatewayInternetMaxBandwidthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（LockCcnBandwidths）用户锁定云联网限速实例。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（LockCcns）。
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统。
+        /// </summary>
+        /// <param name="req"><see cref="LockCcnBandwidthsRequest"/></param>
+        /// <returns><see cref="LockCcnBandwidthsResponse"/></returns>
+        public async Task<LockCcnBandwidthsResponse> LockCcnBandwidths(LockCcnBandwidthsRequest req)
+        {
+             JsonResponseModel<LockCcnBandwidthsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LockCcnBandwidths");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockCcnBandwidthsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（LockCcnBandwidths）用户锁定云联网限速实例。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（LockCcns）。
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统。
+        /// </summary>
+        /// <param name="req"><see cref="LockCcnBandwidthsRequest"/></param>
+        /// <returns><see cref="LockCcnBandwidthsResponse"/></returns>
+        public LockCcnBandwidthsResponse LockCcnBandwidthsSync(LockCcnBandwidthsRequest req)
+        {
+             JsonResponseModel<LockCcnBandwidthsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LockCcnBandwidths");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockCcnBandwidthsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（LockCcns）用于锁定云联网实例
+        /// 
+        /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
+        /// 
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="LockCcnsRequest"/></param>
+        /// <returns><see cref="LockCcnsResponse"/></returns>
+        public async Task<LockCcnsResponse> LockCcns(LockCcnsRequest req)
+        {
+             JsonResponseModel<LockCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LockCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockCcnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（LockCcns）用于锁定云联网实例
+        /// 
+        /// 该接口一般用来封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间封禁, 只能按更粗的云联网实例粒度封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度封禁（LockCcnBandwidths）
+        /// 
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="LockCcnsRequest"/></param>
+        /// <returns><see cref="LockCcnsResponse"/></returns>
+        public LockCcnsResponse LockCcnsSync(LockCcnsRequest req)
+        {
+             JsonResponseModel<LockCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LockCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockCcnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -11272,6 +11454,100 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "UnassignPrivateIpAddresses");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnassignPrivateIpAddressesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnlockCcnBandwidths）用户解锁云联网限速实例。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（SecurityUnlockCcns）。
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统。
+        /// </summary>
+        /// <param name="req"><see cref="UnlockCcnBandwidthsRequest"/></param>
+        /// <returns><see cref="UnlockCcnBandwidthsResponse"/></returns>
+        public async Task<UnlockCcnBandwidthsResponse> UnlockCcnBandwidths(UnlockCcnBandwidthsRequest req)
+        {
+             JsonResponseModel<UnlockCcnBandwidthsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlockCcnBandwidths");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockCcnBandwidthsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnlockCcnBandwidths）用户解锁云联网限速实例。
+        /// 该接口一般用来封禁地域间限速的云联网实例下的限速实例, 目前联通内部运营系统通过云API调用, 如果是出口限速, 一般使用更粗的云联网实例粒度封禁（SecurityUnlockCcns）。
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统。
+        /// </summary>
+        /// <param name="req"><see cref="UnlockCcnBandwidthsRequest"/></param>
+        /// <returns><see cref="UnlockCcnBandwidthsResponse"/></returns>
+        public UnlockCcnBandwidthsResponse UnlockCcnBandwidthsSync(UnlockCcnBandwidthsRequest req)
+        {
+             JsonResponseModel<UnlockCcnBandwidthsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlockCcnBandwidths");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockCcnBandwidthsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnlockCcns）用于解锁云联网实例
+        /// 
+        /// 该接口一般用来解封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间解封禁, 只能按更粗的云联网实例粒度解封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度解封禁（UnlockCcnBandwidths）
+        /// 
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="UnlockCcnsRequest"/></param>
+        /// <returns><see cref="UnlockCcnsResponse"/></returns>
+        public async Task<UnlockCcnsResponse> UnlockCcns(UnlockCcnsRequest req)
+        {
+             JsonResponseModel<UnlockCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlockCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockCcnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（UnlockCcns）用于解锁云联网实例
+        /// 
+        /// 该接口一般用来解封禁出口限速的云联网实例, 目前联通内部运营系统通过云API调用, 因为出口限速无法按地域间解封禁, 只能按更粗的云联网实例粒度解封禁, 如果是地域间限速, 一般可以通过更细的限速实例粒度解封禁（UnlockCcnBandwidths）
+        /// 
+        /// 如有需要, 可以封禁任意限速实例, 可接入到内部运营系统
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="UnlockCcnsRequest"/></param>
+        /// <returns><see cref="UnlockCcnsResponse"/></returns>
+        public UnlockCcnsResponse UnlockCcnsSync(UnlockCcnsRequest req)
+        {
+             JsonResponseModel<UnlockCcnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlockCcns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockCcnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

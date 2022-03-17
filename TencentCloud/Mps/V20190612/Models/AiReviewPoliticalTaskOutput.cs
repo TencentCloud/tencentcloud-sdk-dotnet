@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频涉政评分，分值为0到100。
+        /// 视频涉敏评分，分值为0到100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 涉政结果建议，取值范围：
+        /// 涉敏结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
@@ -40,17 +40,17 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 视频鉴政结果标签。内容审核模板[画面鉴政任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
+        /// 视频涉敏结果标签。内容审核模板[画面涉敏任务控制参数](https://cloud.tencent.com/document/api/862/37615#AiReviewPoliticalTaskOutput)里 LabelSet 参数与此参数取值范围的对应关系：
         /// violation_photo：
         /// <li>violation_photo：违规图标。</li>
         /// 其他（即 politician/entertainment/sport/entrepreneur/scholar/celebrity/military）：
-        /// <li>politician：政治人物。</li>
+        /// <li>politician：涉敏人物。</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 有涉政嫌疑的视频片段列表。
+        /// 有涉敏嫌疑的视频片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewPoliticalSegmentItem[] SegmentSet{ get; set; }

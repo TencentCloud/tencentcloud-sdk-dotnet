@@ -25,17 +25,17 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 画面鉴政任务开关，可选值：
-        /// <li>ON：开启画面鉴政任务；</li>
-        /// <li>OFF：关闭画面鉴政任务。</li>
+        /// 画面涉敏任务开关，可选值：
+        /// <li>ON：开启画面涉敏任务；</li>
+        /// <li>OFF：关闭画面涉敏任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 画面鉴政过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
+        /// 画面涉敏过滤标签，审核结果包含选择的标签则返回结果，如果过滤标签为空，则审核结果全部返回，可选值为：
         /// <li>violation_photo：违规图标；</li>
-        /// <li>politician：政治人物；</li>
+        /// <li>politician：涉敏人物；</li>
         /// <li>entertainment：娱乐人物；</li>
         /// <li>sport：体育人物；</li>
         /// <li>entrepreneur：商业人物；</li>

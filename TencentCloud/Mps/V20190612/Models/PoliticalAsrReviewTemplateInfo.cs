@@ -25,9 +25,9 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 语音鉴政任务开关，可选值：
-        /// <li>ON：开启语音鉴政任务；</li>
-        /// <li>OFF：关闭语音鉴政任务。</li>
+        /// 语音涉敏任务开关，可选值：
+        /// <li>ON：开启语音涉敏任务；</li>
+        /// <li>OFF：关闭语音涉敏任务。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

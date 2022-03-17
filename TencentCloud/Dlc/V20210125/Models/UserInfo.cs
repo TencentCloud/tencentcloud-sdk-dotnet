@@ -64,11 +64,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public WorkGroupMessage[] WorkGroupSet{ get; set; }
 
         /// <summary>
-        /// 是否是管理员账号
+        /// 是否是主账号
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsOwner")]
         public bool? IsOwner{ get; set; }
+
+        /// <summary>
+        /// 用户类型。ADMIN：管理员 COMMON：普通用户。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
 
 
         /// <summary>
@@ -83,6 +90,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamArrayObj(map, prefix + "WorkGroupSet.", this.WorkGroupSet);
             this.SetParamSimple(map, prefix + "IsOwner", this.IsOwner);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
         }
     }
 }

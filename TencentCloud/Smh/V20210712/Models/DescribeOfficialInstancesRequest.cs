@@ -48,6 +48,30 @@ namespace TencentCloud.Smh.V20210712.Models
         [JsonProperty("PageSize")]
         public ulong? PageSize{ get; set; }
 
+        /// <summary>
+        /// 对指定列进行排序
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 排序方式
+        /// </summary>
+        [JsonProperty("OrderByType")]
+        public string OrderByType{ get; set; }
+
+        /// <summary>
+        /// 续费管理筛选类型
+        /// </summary>
+        [JsonProperty("AutoRenew")]
+        public ulong? AutoRenew{ get; set; }
+
+        /// <summary>
+        /// 超级管理管理员账号是否绑定了手机号
+        /// </summary>
+        [JsonProperty("BindPhone")]
+        public bool? BindPhone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +82,10 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
+            this.SetParamSimple(map, prefix + "BindPhone", this.BindPhone);
         }
     }
 }

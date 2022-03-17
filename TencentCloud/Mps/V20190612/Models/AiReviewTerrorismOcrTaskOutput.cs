@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Ocr 文字涉恐评分，分值为0到100。
+        /// Ocr 文字涉敏评分，分值为0到100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Ocr 文字涉恐结果建议，取值范围：
+        /// Ocr 文字涉敏结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Ocr 文字有涉恐嫌疑的视频片段列表。
+        /// Ocr 文字有涉敏嫌疑的视频片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewOcrTextSegmentItem[] SegmentSet{ get; set; }

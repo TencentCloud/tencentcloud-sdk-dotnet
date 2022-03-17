@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 后端类型。启用vpc时生效，目前支持的类型为clb和vpc通道
+        /// 后端类型。启用vpc时生效，目前支持的类型为clb, cvm和upstream
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

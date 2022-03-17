@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? EnableTag{ get; set; }
 
         /// <summary>
-        /// 元数据信息列表
+        /// 元数据信息列表, 可选值为 __SOURCE__、__FILENAME__、__TIMESTAMP__。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaFields")]

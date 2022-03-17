@@ -66,7 +66,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Nullable{ get; set; }
 
         /// <summary>
-        /// 字段位置
+        /// 字段位置，小的在前
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Position")]

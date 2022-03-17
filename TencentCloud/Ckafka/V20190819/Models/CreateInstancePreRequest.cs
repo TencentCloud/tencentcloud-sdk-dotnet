@@ -120,6 +120,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
 
+        /// <summary>
+        /// 跨可用区，zoneIds必填
+        /// </summary>
+        [JsonProperty("MultiZoneFlag")]
+        public bool? MultiZoneFlag{ get; set; }
+
+        /// <summary>
+        /// 可用区列表
+        /// </summary>
+        [JsonProperty("ZoneIds")]
+        public long?[] ZoneIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Partition", this.Partition);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "MultiZoneFlag", this.MultiZoneFlag);
+            this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public float? EndPtsTime{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段涉恐分数。
+        /// 嫌疑片段涉敏分数。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// 嫌疑片段鉴恐结果建议，取值范围：
+        /// 嫌疑片段涉敏结果建议，取值范围：
         /// <li>pass</li>
         /// <li>review</li>
         /// <li>block</li>
@@ -52,15 +52,15 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 视频暴恐结果标签，取值范围：
+        /// 视频涉敏结果标签，取值范围：
         /// <li>guns：武器枪支。</li>
         /// <li>crowd：人群聚集。</li>
         /// <li>police：警察部队。</li>
         /// <li>bloody：血腥画面。</li>
-        /// <li>banners：暴恐旗帜。</li>
+        /// <li>banners：涉敏旗帜。</li>
         /// <li>militant：武装分子。</li>
         /// <li>explosion：爆炸火灾。</li>
-        /// <li>terrorists：暴恐人物。</li>
+        /// <li>terrorists：涉敏人物。</li>
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }

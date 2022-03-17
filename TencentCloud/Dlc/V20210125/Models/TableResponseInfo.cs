@@ -79,6 +79,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("InputFormat")]
         public string InputFormat{ get; set; }
 
+        /// <summary>
+        /// 数据表存储大小（单位：Byte）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StorageSize")]
+        public long? StorageSize{ get; set; }
+
+        /// <summary>
+        /// 数据表行数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordCount")]
+        public long? RecordCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +107,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "InputFormat", this.InputFormat);
+            this.SetParamSimple(map, prefix + "StorageSize", this.StorageSize);
+            this.SetParamSimple(map, prefix + "RecordCount", this.RecordCount);
         }
     }
 }

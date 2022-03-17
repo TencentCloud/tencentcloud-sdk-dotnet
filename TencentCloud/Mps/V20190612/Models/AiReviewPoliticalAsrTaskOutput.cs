@@ -25,13 +25,13 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// Asr 文字涉政、敏感评分，分值为0到100。
+        /// Asr 文字敏感评分，分值为0到100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }
 
         /// <summary>
-        /// Asr 文字涉政、敏感结果建议，取值范围：
+        /// Asr 文字敏感结果建议，取值范围：
         /// <li>pass。</li>
         /// <li>review。</li>
         /// <li>block。</li>
@@ -40,7 +40,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// Asr 文字有涉政、敏感嫌疑的视频片段列表。
+        /// Asr 文字敏感嫌疑的视频片段列表。
         /// </summary>
         [JsonProperty("SegmentSet")]
         public MediaContentReviewAsrTextSegmentItem[] SegmentSet{ get; set; }
