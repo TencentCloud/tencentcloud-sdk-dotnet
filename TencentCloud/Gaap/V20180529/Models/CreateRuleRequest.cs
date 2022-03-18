@@ -74,7 +74,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string ForwardProtocol{ get; set; }
 
         /// <summary>
-        /// 回源Host。加速通道转发到远照的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
+        /// 回源Host。加速通道转发到源站的host，不设置该参数时，使用默认的host设置，即客户端发起的http请求的host。
         /// </summary>
         [JsonProperty("ForwardHost")]
         public string ForwardHost{ get; set; }

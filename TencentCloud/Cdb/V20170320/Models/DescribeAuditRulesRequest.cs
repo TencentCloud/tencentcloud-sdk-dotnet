@@ -43,7 +43,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页偏移量。
+        /// 分页偏移量。默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

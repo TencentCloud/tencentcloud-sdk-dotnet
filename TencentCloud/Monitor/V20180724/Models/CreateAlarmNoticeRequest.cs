@@ -60,6 +60,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("URLNotices")]
         public URLNotice[] URLNotices{ get; set; }
 
+        /// <summary>
+        /// 推送CLS日志服务的操作 最多1个
+        /// </summary>
+        [JsonProperty("CLSNotices")]
+        public CLSNotice[] CLSNotices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
             this.SetParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
             this.SetParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
+            this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         }
     }
 }

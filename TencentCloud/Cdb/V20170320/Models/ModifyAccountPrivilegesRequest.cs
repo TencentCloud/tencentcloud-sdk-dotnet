@@ -65,7 +65,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ColumnPrivilege[] ColumnPrivileges{ get; set; }
 
         /// <summary>
-        /// 该参数不为空时，为批量修改权限。可选值为：grant，revoke。
+        /// 该参数不为空时，为批量修改权限。可选值为：grant - 授予权限，revoke - 回收权限。
         /// </summary>
         [JsonProperty("ModifyAction")]
         public string ModifyAction{ get; set; }

@@ -94,6 +94,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("PolicyIds")]
         public string[] PolicyIds{ get; set; }
 
+        /// <summary>
+        /// 推送cls渠道
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CLSNotices")]
+        public CLSNotice[] CLSNotices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +117,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "IsPreset", this.IsPreset);
             this.SetParamSimple(map, prefix + "NoticeLanguage", this.NoticeLanguage);
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
         }
     }
 }

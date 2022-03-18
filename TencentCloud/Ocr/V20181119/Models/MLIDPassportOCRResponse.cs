@@ -96,6 +96,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string AdvancedInfo{ get; set; }
 
         /// <summary>
+        /// 最下方第一行 MRZ Code 序列
+        /// </summary>
+        [JsonProperty("CodeSet")]
+        public string CodeSet{ get; set; }
+
+        /// <summary>
+        /// 最下方第二行 MRZ Code 序列
+        /// </summary>
+        [JsonProperty("CodeCrc")]
+        public string CodeCrc{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -117,6 +129,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "Warn.", this.Warn);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "AdvancedInfo", this.AdvancedInfo);
+            this.SetParamSimple(map, prefix + "CodeSet", this.CodeSet);
+            this.SetParamSimple(map, prefix + "CodeCrc", this.CodeCrc);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

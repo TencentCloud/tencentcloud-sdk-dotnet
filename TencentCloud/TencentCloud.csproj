@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.481</VersionPrefix>
+    <VersionPrefix>3.0.482</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -11332,6 +11332,7 @@
     <Compile Include="Monitor\V20180724\Models\BindingPolicyObjectResponse.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyTagRequest.cs" />
     <Compile Include="Monitor\V20180724\Models\BindingPolicyTagResponse.cs" />
+    <Compile Include="Monitor\V20180724\Models\CLSNotice.cs" />
     <Compile Include="Monitor\V20180724\Models\CommonNamespace.cs" />
     <Compile Include="Monitor\V20180724\Models\Condition.cs" />
     <Compile Include="Monitor\V20180724\Models\ConditionsTemp.cs" />
@@ -12065,6 +12066,8 @@
     <Compile Include="Nlp\V20190408\Models\Similarity.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextClassificationResponse.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextCorrectionProRequest.cs" />
+    <Compile Include="Nlp\V20190408\Models\TextCorrectionProResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextCorrectionResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityProRequest.cs" />

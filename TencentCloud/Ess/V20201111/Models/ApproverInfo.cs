@@ -86,12 +86,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ApproverRole{ get; set; }
 
         /// <summary>
-        /// 认证方式：
-        /// WEIXINAPP - 微信小程序；
-        /// VERIFYCODE - 验证码；
-        /// 
-        /// 可以选择多个, 按照顺序进行优先级选择
-        /// 注：使用验证码方式认证签署时，请传入["VERIFYCODE","WEIXINAPP"]
+        /// 签署意愿确认渠道,WEIXINAPP:人脸识别
         /// </summary>
         [JsonProperty("VerifyChannel")]
         public string[] VerifyChannel{ get; set; }

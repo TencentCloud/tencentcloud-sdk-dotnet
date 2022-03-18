@@ -86,7 +86,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public TagSpecification[] TagSpecification{ get; set; }
 
         /// <summary>
-        /// 集群状态 (Running 运行中  Creating 创建中 Abnormal 异常  )
+        /// 集群状态 (Running 运行中  Creating 创建中 Idling 闲置中  Abnormal 异常  )
         /// </summary>
         [JsonProperty("ClusterStatus")]
         public string ClusterStatus{ get; set; }

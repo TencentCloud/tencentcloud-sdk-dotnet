@@ -102,10 +102,10 @@ namespace TencentCloud.Asr.V20190614.Models
         public ulong? DataLen{ get; set; }
 
         /// <summary>
-        /// 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        /// 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
         /// </summary>
-        [JsonProperty("HotwordId")]
-        public string HotwordId{ get; set; }
+        [JsonProperty("ConvertNumMode")]
+        public long? ConvertNumMode{ get; set; }
 
         /// <summary>
         /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -114,16 +114,16 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? FilterDirty{ get; set; }
 
         /// <summary>
-        /// 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+        /// 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
         /// </summary>
-        [JsonProperty("FilterModal")]
-        public long? FilterModal{ get; set; }
+        [JsonProperty("HotwordId")]
+        public string HotwordId{ get; set; }
 
         /// <summary>
-        /// 是否进行阿拉伯数字智能转换（目前支持中文普通话引擎）。0：不转换，直接输出中文数字，1：根据场景智能转换为阿拉伯数字，3: 打开数学相关数字转换。默认值为 1。
+        /// 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
         /// </summary>
-        [JsonProperty("ConvertNumMode")]
-        public long? ConvertNumMode{ get; set; }
+        [JsonProperty("CustomizationId")]
+        public string CustomizationId{ get; set; }
 
         /// <summary>
         /// 附加参数(该参数无意义，忽略即可)
@@ -136,6 +136,12 @@ namespace TencentCloud.Asr.V20190614.Models
         /// </summary>
         [JsonProperty("FilterPunc")]
         public long? FilterPunc{ get; set; }
+
+        /// <summary>
+        /// 是否过滤语气词（目前支持中文普通话引擎）。0：不过滤语气词；1：部分过滤；2：严格过滤 。默认值为 0。
+        /// </summary>
+        [JsonProperty("FilterModal")]
+        public long? FilterModal{ get; set; }
 
 
         /// <summary>
@@ -153,12 +159,13 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "DataLen", this.DataLen);
-            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
-            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
-            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
             this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
+            this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
+            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+            this.SetParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
             this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
+            this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
         }
     }
 }

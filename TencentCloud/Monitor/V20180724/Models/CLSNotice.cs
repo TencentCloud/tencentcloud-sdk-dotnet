@@ -15,32 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaSnapshotByTimePicInfoItem : AbstractModel
+    public class CLSNotice : AbstractModel
     {
         
         /// <summary>
-        /// 该张截图对应视频文件中的时间偏移，单位为秒。
+        /// 地域
         /// </summary>
-        [JsonProperty("TimeOffset")]
-        public float? TimeOffset{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// 该张截图的路径。
+        /// 日志集Id
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("LogSetId")]
+        public string LogSetId{ get; set; }
 
         /// <summary>
-        /// 截图如果被打上了水印，被打水印的模板 ID 列表。
+        /// 主题Id
         /// </summary>
-        [JsonProperty("WaterMarkDefinition")]
-        public long?[] WaterMarkDefinition{ get; set; }
+        [JsonProperty("TopicId")]
+        public string TopicId{ get; set; }
+
+        /// <summary>
+        /// 启停状态，可不传，默认启用。0=停用，1=启用
+        /// </summary>
+        [JsonProperty("Enable")]
+        public long? Enable{ get; set; }
 
 
         /// <summary>
@@ -48,9 +54,10 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TimeOffset", this.TimeOffset);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamArraySimple(map, prefix + "WaterMarkDefinition.", this.WaterMarkDefinition);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "LogSetId", this.LogSetId);
+            this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

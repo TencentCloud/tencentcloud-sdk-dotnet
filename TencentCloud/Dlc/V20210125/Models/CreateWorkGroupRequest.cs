@@ -42,6 +42,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }
 
+        /// <summary>
+        /// 需要绑定到工作组的用户Id集合
+        /// </summary>
+        [JsonProperty("UserIds")]
+        public string[] UserIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "WorkGroupName", this.WorkGroupName);
             this.SetParamSimple(map, prefix + "WorkGroupDescription", this.WorkGroupDescription);
             this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+            this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
         }
     }
 }

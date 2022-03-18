@@ -147,6 +147,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NeedCorrespondence")]
         public long? NeedCorrespondence{ get; set; }
 
+        /// <summary>
+        /// 按照触发任务（例如弹性伸缩）过滤策略。最多10个
+        /// </summary>
+        [JsonProperty("TriggerTasks")]
+        public AlarmPolicyTriggerTask[] TriggerTasks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -172,6 +178,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "NotBindingNoticeRule", this.NotBindingNoticeRule);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
+            this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
         }
     }
 }

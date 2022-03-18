@@ -42,6 +42,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("PolicySet")]
         public Policy[] PolicySet{ get; set; }
 
+        /// <summary>
+        /// 用户类型。ADMIN：管理员 COMMON：一般用户。当用户类型为管理员的时候，不能设置权限集合和绑定的工作组集合，管理员默认拥有所有权限。该参数不填默认为COMMON
+        /// </summary>
+        [JsonProperty("UserType")]
+        public string UserType{ get; set; }
+
+        /// <summary>
+        /// 绑定到用户的工作组ID集合。
+        /// </summary>
+        [JsonProperty("WorkGroupIds")]
+        public long?[] WorkGroupIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "UserDescription", this.UserDescription);
             this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
+            this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
         }
     }
 }

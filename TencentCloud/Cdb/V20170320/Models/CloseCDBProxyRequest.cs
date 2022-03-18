@@ -37,7 +37,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 是否只关闭读写分离，取值："true" | "false"
+        /// 是否只关闭读写分离，取值："true" | "false"，默认为"false"
         /// </summary>
         [JsonProperty("OnlyCloseRW")]
         public bool? OnlyCloseRW{ get; set; }

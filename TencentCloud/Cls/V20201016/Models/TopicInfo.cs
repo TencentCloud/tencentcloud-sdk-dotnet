@@ -95,7 +95,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 生命周期，单位为天
+        /// 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]

@@ -15,32 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Mps.V20190612.Models
+namespace TencentCloud.Nlp.V20190408.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MediaSnapshotByTimePicInfoItem : AbstractModel
+    public class TextCorrectionProResponse : AbstractModel
     {
         
         /// <summary>
-        /// 该张截图对应视频文件中的时间偏移，单位为秒。
+        /// 纠错详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("TimeOffset")]
-        public float? TimeOffset{ get; set; }
+        [JsonProperty("CCITokens")]
+        public CCIToken[] CCITokens{ get; set; }
 
         /// <summary>
-        /// 该张截图的路径。
+        /// 纠错后的文本
         /// </summary>
-        [JsonProperty("Path")]
-        public string Path{ get; set; }
+        [JsonProperty("ResultText")]
+        public string ResultText{ get; set; }
 
         /// <summary>
-        /// 截图如果被打上了水印，被打水印的模板 ID 列表。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("WaterMarkDefinition")]
-        public long?[] WaterMarkDefinition{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +49,9 @@ namespace TencentCloud.Mps.V20190612.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TimeOffset", this.TimeOffset);
-            this.SetParamSimple(map, prefix + "Path", this.Path);
-            this.SetParamArraySimple(map, prefix + "WaterMarkDefinition.", this.WaterMarkDefinition);
+            this.SetParamArrayObj(map, prefix + "CCITokens.", this.CCITokens);
+            this.SetParamSimple(map, prefix + "ResultText", this.ResultText);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
