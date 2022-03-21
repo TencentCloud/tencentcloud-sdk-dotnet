@@ -42,6 +42,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
+        /// <summary>
+        /// 是否为demo模式（1=是，2=否）
+        /// </summary>
+        [JsonProperty("IsDemo")]
+        public long? IsDemo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "IsDemo", this.IsDemo);
         }
     }
 }

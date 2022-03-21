@@ -4599,6 +4599,58 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对点播中的图片文件发起处理任务，功能包括：
+        /// 
+        /// 1. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）;
+        /// 
+        /// ><li>图片文件大小支持：文件 < 5M；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响识别效果；</li>
+        /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageRequest"/></param>
+        /// <returns><see cref="ProcessImageResponse"/></returns>
+        public async Task<ProcessImageResponse> ProcessImage(ProcessImageRequest req)
+        {
+             JsonResponseModel<ProcessImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ProcessImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播中的图片文件发起处理任务，功能包括：
+        /// 
+        /// 1. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）;
+        /// 
+        /// ><li>图片文件大小支持：文件 < 5M；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响识别效果；</li>
+        /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ProcessImageRequest"/></param>
+        /// <returns><see cref="ProcessImageResponse"/></returns>
+        public ProcessImageResponse ProcessImageSync(ProcessImageRequest req)
+        {
+             JsonResponseModel<ProcessImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ProcessImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ProcessImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对点播中的音视频媒体发起处理任务，功能包括：
         /// 1. 视频转码（带水印）；
         /// 2. 视频转动图；

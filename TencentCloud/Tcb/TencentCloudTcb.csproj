@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{595222B7-5CB7-3D99-999E-AB13EC4D4012}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.482</VersionPrefix>
+    <VersionPrefix>3.0.483</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -209,6 +209,8 @@
     <Compile Include="V20180608\Models\ExtensionFile.cs" />
     <Compile Include="V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="V20180608\Models\FreequotaInfo.cs" />
+    <Compile Include="V20180608\Models\FreezeCloudBaseRunServersRequest.cs" />
+    <Compile Include="V20180608\Models\FreezeCloudBaseRunServersResponse.cs" />
     <Compile Include="V20180608\Models\FunctionInfo.cs" />
     <Compile Include="V20180608\Models\HpaPolicy.cs" />
     <Compile Include="V20180608\Models\KVPair.cs" />
@@ -252,5 +254,7 @@
     <Compile Include="V20180608\Models\TurnOffStandaloneGatewayResponse.cs" />
     <Compile Include="V20180608\Models\TurnOnStandaloneGatewayRequest.cs" />
     <Compile Include="V20180608\Models\TurnOnStandaloneGatewayResponse.cs" />
+    <Compile Include="V20180608\Models\UnfreezeCloudBaseRunServersRequest.cs" />
+    <Compile Include="V20180608\Models\UnfreezeCloudBaseRunServersResponse.cs" />
   </ItemGroup>
 </Project>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.482</VersionPrefix>
+    <VersionPrefix>3.0.483</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -179,6 +179,8 @@
     <Compile Include="V20180717\Models\ConcatTask2017.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsRequest.cs" />
     <Compile Include="V20180717\Models\ConfirmEventsResponse.cs" />
+    <Compile Include="V20180717\Models\ContentReviewOcrResult.cs" />
+    <Compile Include="V20180717\Models\ContentReviewResult.cs" />
     <Compile Include="V20180717\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\CoverBySnapshotTaskOutput.cs" />
@@ -366,6 +368,7 @@
     <Compile Include="V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageCenterCut.cs" />
+    <Compile Include="V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="V20180717\Models\ImageOperation.cs" />
     <Compile Include="V20180717\Models\ImageProcessingTemplate.cs" />
     <Compile Include="V20180717\Models\ImageScale.cs" />
@@ -493,6 +496,7 @@
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PoliticalImageResult.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PoliticalOcrReviewTemplateInfo.cs" />
@@ -501,12 +505,15 @@
     <Compile Include="V20180717\Models\PornAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfo.cs" />
     <Compile Include="V20180717\Models\PornConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\PornImageResult.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\ProcedureTask.cs" />
     <Compile Include="V20180717\Models\ProcedureTemplate.cs" />
+    <Compile Include="V20180717\Models\ProcessImageRequest.cs" />
+    <Compile Include="V20180717\Models\ProcessImageResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureRequest.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByProcedureResponse.cs" />
     <Compile Include="V20180717\Models\ProcessMediaByUrlRequest.cs" />
@@ -573,6 +580,7 @@
     <Compile Include="V20180717\Models\TempCertificate.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\TerrorismImageResult.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />

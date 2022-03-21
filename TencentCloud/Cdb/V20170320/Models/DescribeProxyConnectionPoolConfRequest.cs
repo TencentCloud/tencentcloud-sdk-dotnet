@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量
+        /// 分页
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页查询限制
+        /// 限制
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

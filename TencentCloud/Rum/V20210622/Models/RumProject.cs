@@ -118,6 +118,13 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("IsStar")]
         public long? IsStar{ get; set; }
 
+        /// <summary>
+        /// 项目状态(1 创建中，2 运行中，3 异常，4 重启中，5 停止中，6 已停止， 7 销毁中，8 已销毁)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectStatus")]
+        public long? ProjectStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -139,6 +146,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "InstanceKey", this.InstanceKey);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "IsStar", this.IsStar);
+            this.SetParamSimple(map, prefix + "ProjectStatus", this.ProjectStatus);
         }
     }
 }

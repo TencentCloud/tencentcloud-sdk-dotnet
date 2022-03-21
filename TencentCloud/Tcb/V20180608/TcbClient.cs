@@ -2659,6 +2659,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 批量冻结
+        /// </summary>
+        /// <param name="req"><see cref="FreezeCloudBaseRunServersRequest"/></param>
+        /// <returns><see cref="FreezeCloudBaseRunServersResponse"/></returns>
+        public async Task<FreezeCloudBaseRunServersResponse> FreezeCloudBaseRunServers(FreezeCloudBaseRunServersRequest req)
+        {
+             JsonResponseModel<FreezeCloudBaseRunServersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FreezeCloudBaseRunServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreezeCloudBaseRunServersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量冻结
+        /// </summary>
+        /// <param name="req"><see cref="FreezeCloudBaseRunServersRequest"/></param>
+        /// <returns><see cref="FreezeCloudBaseRunServersResponse"/></returns>
+        public FreezeCloudBaseRunServersResponse FreezeCloudBaseRunServersSync(FreezeCloudBaseRunServersRequest req)
+        {
+             JsonResponseModel<FreezeCloudBaseRunServersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FreezeCloudBaseRunServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreezeCloudBaseRunServersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改容器内的版本流量配置
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudBaseRunServerFlowConfRequest"/></param>
@@ -3090,6 +3130,46 @@ namespace TencentCloud.Tcb.V20180608
              {
                  var strResp = this.InternalRequestSync(req, "TurnOnStandaloneGateway");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<TurnOnStandaloneGatewayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解冻服务
+        /// </summary>
+        /// <param name="req"><see cref="UnfreezeCloudBaseRunServersRequest"/></param>
+        /// <returns><see cref="UnfreezeCloudBaseRunServersResponse"/></returns>
+        public async Task<UnfreezeCloudBaseRunServersResponse> UnfreezeCloudBaseRunServers(UnfreezeCloudBaseRunServersRequest req)
+        {
+             JsonResponseModel<UnfreezeCloudBaseRunServersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnfreezeCloudBaseRunServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnfreezeCloudBaseRunServersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量解冻服务
+        /// </summary>
+        /// <param name="req"><see cref="UnfreezeCloudBaseRunServersRequest"/></param>
+        /// <returns><see cref="UnfreezeCloudBaseRunServersResponse"/></returns>
+        public UnfreezeCloudBaseRunServersResponse UnfreezeCloudBaseRunServersSync(UnfreezeCloudBaseRunServersRequest req)
+        {
+             JsonResponseModel<UnfreezeCloudBaseRunServersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnfreezeCloudBaseRunServers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnfreezeCloudBaseRunServersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

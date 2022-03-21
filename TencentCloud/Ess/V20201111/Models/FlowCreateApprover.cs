@@ -100,6 +100,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }
 
+        /// <summary>
+        /// 签署意愿确认渠道,WEIXINAPP:人脸识别
+        /// </summary>
+        [JsonProperty("VerifyChannel")]
+        public string[] VerifyChannel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +124,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IsFullText", this.IsFullText);
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
             this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
+            this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
         }
     }
 }

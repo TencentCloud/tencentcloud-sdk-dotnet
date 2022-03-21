@@ -31,12 +31,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
         /// 流程id
         /// </summary>
         [JsonProperty("FlowId")]
@@ -48,6 +42,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CancelMessage")]
         public string CancelMessage{ get; set; }
 
+        /// <summary>
+        /// 应用相关信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -55,9 +55,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "CancelMessage", this.CancelMessage);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

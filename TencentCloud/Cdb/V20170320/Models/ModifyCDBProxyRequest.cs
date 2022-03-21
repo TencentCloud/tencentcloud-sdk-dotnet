@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 是否开始延迟剔除，取值："true" | "false"
+        /// 是否开始延迟剔除，默认false，取值："true" | "false"
         /// </summary>
         [JsonProperty("IsKickout")]
         public bool? IsKickout{ get; set; }
 
         /// <summary>
-        /// 最少保留数
+        /// 最少保留数，最小为0，最大为实例数量
         /// </summary>
         [JsonProperty("MinCount")]
         public ulong? MinCount{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoWeight RoWeightValues{ get; set; }
 
         /// <summary>
-        /// 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，取值："true" | "false"
+        /// 是否开启故障转移，代理出现故障后，连接地址将路由到主实例，默认false，取值："true" | "false"
         /// </summary>
         [JsonProperty("FailOver")]
         public bool? FailOver{ get; set; }
 
         /// <summary>
-        /// 是否自动添加只读实例，取值："true" | "false"
+        /// 是否自动添加只读实例，默认false，取值："true" | "false"
         /// </summary>
         [JsonProperty("AutoAddRo")]
         public bool? AutoAddRo{ get; set; }

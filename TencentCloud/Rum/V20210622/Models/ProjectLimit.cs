@@ -25,18 +25,6 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 主键ID
-        /// </summary>
-        [JsonProperty("ID")]
-        public long? ID{ get; set; }
-
-        /// <summary>
-        /// 项目ID
-        /// </summary>
-        [JsonProperty("ProjectID")]
-        public long? ProjectID{ get; set; }
-
-        /// <summary>
         /// 接口
         /// </summary>
         [JsonProperty("ProjectInterface")]
@@ -54,17 +42,29 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }
 
+        /// <summary>
+        /// 主键ID
+        /// </summary>
+        [JsonProperty("ID")]
+        public long? ID{ get; set; }
+
+        /// <summary>
+        /// 项目ID
+        /// </summary>
+        [JsonProperty("ProjectID")]
+        public long? ProjectID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ID", this.ID);
-            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
             this.SetParamSimple(map, prefix + "ProjectInterface", this.ProjectInterface);
             this.SetParamSimple(map, prefix + "ReportRate", this.ReportRate);
             this.SetParamSimple(map, prefix + "ReportType", this.ReportType);
+            this.SetParamSimple(map, prefix + "ID", this.ID);
+            this.SetParamSimple(map, prefix + "ProjectID", this.ProjectID);
         }
     }
 }

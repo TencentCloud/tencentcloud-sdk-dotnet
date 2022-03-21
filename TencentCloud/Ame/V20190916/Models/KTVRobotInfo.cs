@@ -58,13 +58,13 @@ namespace TencentCloud.Ame.V20190916.Models
         public ulong? Position{ get; set; }
 
         /// <summary>
-        /// 音频参数
+        /// 音频参数。
         /// </summary>
         [JsonProperty("SetAudioParamInput")]
         public SetAudioParamCommandInput SetAudioParamInput{ get; set; }
 
         /// <summary>
-        /// 进房信息
+        /// 进房信息。
         /// </summary>
         [JsonProperty("JoinRoomInput")]
         public JoinRoomInput JoinRoomInput{ get; set; }
@@ -86,6 +86,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("SetPlayModeInput")]
         public SetPlayModeCommandInput SetPlayModeInput{ get; set; }
 
+        /// <summary>
+        /// 音量，范围 0~100，默认为 50。
+        /// </summary>
+        [JsonProperty("SetVolumeInput")]
+        public SetVolumeCommandInput SetVolumeInput{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
             this.SetParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
             this.SetParamObj(map, prefix + "SetPlayModeInput.", this.SetPlayModeInput);
+            this.SetParamObj(map, prefix + "SetVolumeInput.", this.SetVolumeInput);
         }
     }
 }

@@ -37,13 +37,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string ProxyGroupId{ get; set; }
 
         /// <summary>
-        /// 代理节点个数
+        /// 代理节点个数，实际规格支持数
         /// </summary>
         [JsonProperty("ProxyCount")]
         public long? ProxyCount{ get; set; }
 
         /// <summary>
-        /// 代理节点核数
+        /// 代理节点核数，实际规格支持数
         /// </summary>
         [JsonProperty("Cpu")]
         public long? Cpu{ get; set; }

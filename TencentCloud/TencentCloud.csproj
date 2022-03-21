@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.482</VersionPrefix>
+    <VersionPrefix>3.0.483</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,7 @@
     <Compile Include="Ame\V20190916\Models\SetDestroyModeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetPlayModeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SetPlaylistCommandInput.cs" />
+    <Compile Include="Ame\V20190916\Models\SetVolumeCommandInput.cs" />
     <Compile Include="Ame\V20190916\Models\SortBy.cs" />
     <Compile Include="Ame\V20190916\Models\Station.cs" />
     <Compile Include="Ame\V20190916\Models\SyncKTVRobotCommandRequest.cs" />
@@ -14488,6 +14489,8 @@
     <Compile Include="Tcb\V20180608\Models\ExtensionFile.cs" />
     <Compile Include="Tcb\V20180608\Models\ExtensionFileInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\FreequotaInfo.cs" />
+    <Compile Include="Tcb\V20180608\Models\FreezeCloudBaseRunServersRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\FreezeCloudBaseRunServersResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\FunctionInfo.cs" />
     <Compile Include="Tcb\V20180608\Models\HpaPolicy.cs" />
     <Compile Include="Tcb\V20180608\Models\KVPair.cs" />
@@ -14531,6 +14534,8 @@
     <Compile Include="Tcb\V20180608\Models\TurnOffStandaloneGatewayResponse.cs" />
     <Compile Include="Tcb\V20180608\Models\TurnOnStandaloneGatewayRequest.cs" />
     <Compile Include="Tcb\V20180608\Models\TurnOnStandaloneGatewayResponse.cs" />
+    <Compile Include="Tcb\V20180608\Models\UnfreezeCloudBaseRunServersRequest.cs" />
+    <Compile Include="Tcb\V20180608\Models\UnfreezeCloudBaseRunServersResponse.cs" />
     <Compile Include="Tcex\V20200727\TcexClient.cs" />
     <Compile Include="Tcex\V20200727\Models\AlgorithmResult.cs" />
     <Compile Include="Tcex\V20200727\Models\DescribeInvocationResultRequest.cs" />
@@ -16219,6 +16224,7 @@
     <Compile Include="Tke\V20180525\Models\AddVpcCniSubnetsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\AppChart.cs" />
     <Compile Include="Tke\V20180525\Models\AutoScalingGroupRange.cs" />
+    <Compile Include="Tke\V20180525\Models\AutoUpgradeClusterLevel.cs" />
     <Compile Include="Tke\V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="Tke\V20180525\Models\Capabilities.cs" />
     <Compile Include="Tke\V20180525\Models\CbsVolume.cs" />
@@ -17441,6 +17447,8 @@
     <Compile Include="Vod\V20180717\Models\ConcatTask2017.cs" />
     <Compile Include="Vod\V20180717\Models\ConfirmEventsRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ConfirmEventsResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\ContentReviewOcrResult.cs" />
+    <Compile Include="Vod\V20180717\Models\ContentReviewResult.cs" />
     <Compile Include="Vod\V20180717\Models\ContentReviewTemplateItem.cs" />
     <Compile Include="Vod\V20180717\Models\CoverBySnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\CoverBySnapshotTaskOutput.cs" />
@@ -17628,6 +17636,7 @@
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\HighlightsConfigureInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageCenterCut.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageOperation.cs" />
     <Compile Include="Vod\V20180717\Models\ImageProcessingTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageScale.cs" />
@@ -17755,6 +17764,7 @@
     <Compile Include="Vod\V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\PoliticalImageResult.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalImgReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalOcrReviewTemplateInfo.cs" />
@@ -17763,12 +17773,15 @@
     <Compile Include="Vod\V20180717\Models\PornAsrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\PornConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PornConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\PornImageResult.cs" />
     <Compile Include="Vod\V20180717\Models\PornImgReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PornImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\PornOcrReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PornOcrReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ProcedureTask.cs" />
     <Compile Include="Vod\V20180717\Models\ProcedureTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\ProcessImageRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ProcessImageResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByProcedureRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByProcedureResponse.cs" />
     <Compile Include="Vod\V20180717\Models\ProcessMediaByUrlRequest.cs" />
@@ -17835,6 +17848,7 @@
     <Compile Include="Vod\V20180717\Models\TempCertificate.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismConfigureInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismConfigureInfoForUpdate.cs" />
+    <Compile Include="Vod\V20180717\Models\TerrorismImageResult.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismImgReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismImgReviewTemplateInfoForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\TerrorismOcrReviewTemplateInfo.cs" />

@@ -84,6 +84,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 集群等级，针对托管集群生效
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 自动变配集群等级，针对托管集群生效
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamSimple(map, prefix + "NeedWorkSecurityGroup", this.NeedWorkSecurityGroup);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         }
     }
 }

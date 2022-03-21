@@ -48,6 +48,18 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClusterDesc")]
         public string ClusterDesc{ get; set; }
 
+        /// <summary>
+        /// 集群等级
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 自动变配集群等级
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public AutoUpgradeClusterLevel AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamSimple(map, prefix + "ClusterDesc", this.ClusterDesc);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamObj(map, prefix + "AutoUpgradeClusterLevel.", this.AutoUpgradeClusterLevel);
         }
     }
 }

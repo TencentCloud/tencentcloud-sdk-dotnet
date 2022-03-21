@@ -54,6 +54,35 @@ namespace TencentCloud.Scf.V20180416.Models
         [JsonProperty("TriggerActions")]
         public TriggerAction[] TriggerActions{ get; set; }
 
+        /// <summary>
+        /// 预置类型，
+        /// 静态预置：Default
+        /// 动态追踪并发利用率指标预置：ConcurrencyUtilizationTracking
+        /// 预置类型二选一，设置静态预置时可以设置VersionProvisionedConcurrencyNum。
+        /// 
+        /// 动态利用率预置可以设置TrackingTarget，MinCapacity，MaxCapacity，保持向后兼容性此时VersionProvisionedConcurrencyNum设置为0.
+        /// </summary>
+        [JsonProperty("ProvisionedType")]
+        public string ProvisionedType{ get; set; }
+
+        /// <summary>
+        /// 指标追踪的并发利用率。设置范围(0,1)
+        /// </summary>
+        [JsonProperty("TrackingTarget")]
+        public float? TrackingTarget{ get; set; }
+
+        /// <summary>
+        /// 缩容时的最小值, 最小值为1
+        /// </summary>
+        [JsonProperty("MinCapacity")]
+        public ulong? MinCapacity{ get; set; }
+
+        /// <summary>
+        /// 扩容时的最大值
+        /// </summary>
+        [JsonProperty("MaxCapacity")]
+        public ulong? MaxCapacity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +94,10 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "VersionProvisionedConcurrencyNum", this.VersionProvisionedConcurrencyNum);
             this.SetParamSimple(map, prefix + "Namespace", this.Namespace);
             this.SetParamArrayObj(map, prefix + "TriggerActions.", this.TriggerActions);
+            this.SetParamSimple(map, prefix + "ProvisionedType", this.ProvisionedType);
+            this.SetParamSimple(map, prefix + "TrackingTarget", this.TrackingTarget);
+            this.SetParamSimple(map, prefix + "MinCapacity", this.MinCapacity);
+            this.SetParamSimple(map, prefix + "MaxCapacity", this.MaxCapacity);
         }
     }
 }
