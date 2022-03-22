@@ -131,6 +131,25 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 备源的类型：
+        /// PullLivePushLive -直播，
+        /// PullVodPushLive -点播。
+        /// 注意：
+        /// 1. 仅当主源类型为直播源时，备源才会生效。
+        /// 2. 主直播源拉流中断时，自动使用备源进行拉流。
+        /// 3. 如果备源为点播文件时，则每次轮播完点播文件就检查主源是否恢复，如果主源恢复则自动切回到主源，否则继续拉备源。
+        /// </summary>
+        [JsonProperty("BackupSourceType")]
+        public string BackupSourceType{ get; set; }
+
+        /// <summary>
+        /// 备源 URL。
+        /// 只允许填一个备源 URL
+        /// </summary>
+        [JsonProperty("BackupSourceUrl")]
+        public string BackupSourceUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +169,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "FileIndex", this.FileIndex);
             this.SetParamSimple(map, prefix + "OffsetTime", this.OffsetTime);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+            this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         }
     }
 }

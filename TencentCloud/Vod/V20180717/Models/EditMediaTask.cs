@@ -80,7 +80,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public EditMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// 原始视频的元信息。
+        /// 输出视频的元信息。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }

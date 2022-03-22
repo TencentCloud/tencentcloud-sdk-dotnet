@@ -548,5 +548,47 @@ namespace TencentCloud.Essbasic.V20210526
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 此接口（UploadFiles）用于文件上传。
+        /// 调用时需要设置Domain 为 file.ess.tencent.cn
+        /// </summary>
+        /// <param name="req"><see cref="UploadFilesRequest"/></param>
+        /// <returns><see cref="UploadFilesResponse"/></returns>
+        public async Task<UploadFilesResponse> UploadFiles(UploadFilesRequest req)
+        {
+             JsonResponseModel<UploadFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（UploadFiles）用于文件上传。
+        /// 调用时需要设置Domain 为 file.ess.tencent.cn
+        /// </summary>
+        /// <param name="req"><see cref="UploadFilesRequest"/></param>
+        /// <returns><see cref="UploadFilesResponse"/></returns>
+        public UploadFilesResponse UploadFilesSync(UploadFilesRequest req)
+        {
+             JsonResponseModel<UploadFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

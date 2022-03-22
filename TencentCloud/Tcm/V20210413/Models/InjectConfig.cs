@@ -38,6 +38,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("HoldApplicationUntilProxyStarts")]
         public bool? HoldApplicationUntilProxyStarts{ get; set; }
 
+        /// <summary>
+        /// 是否允许sidecar等待
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HoldProxyUntilApplicationEnds")]
+        public bool? HoldProxyUntilApplicationEnds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -46,6 +53,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         {
             this.SetParamArraySimple(map, prefix + "ExcludeIPRanges.", this.ExcludeIPRanges);
             this.SetParamSimple(map, prefix + "HoldApplicationUntilProxyStarts", this.HoldApplicationUntilProxyStarts);
+            this.SetParamSimple(map, prefix + "HoldProxyUntilApplicationEnds", this.HoldProxyUntilApplicationEnds);
         }
     }
 }

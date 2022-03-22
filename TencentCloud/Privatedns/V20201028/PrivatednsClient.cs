@@ -613,6 +613,46 @@ namespace TencentCloud.Privatedns.V20201028
         }
 
         /// <summary>
+        /// 查询额度使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaUsageRequest"/></param>
+        /// <returns><see cref="DescribeQuotaUsageResponse"/></returns>
+        public async Task<DescribeQuotaUsageResponse> DescribeQuotaUsage(DescribeQuotaUsageRequest req)
+        {
+             JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeQuotaUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询额度使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeQuotaUsageRequest"/></param>
+        /// <returns><see cref="DescribeQuotaUsageResponse"/></returns>
+        public DescribeQuotaUsageResponse DescribeQuotaUsageSync(DescribeQuotaUsageRequest req)
+        {
+             JsonResponseModel<DescribeQuotaUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeQuotaUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQuotaUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取私有域解析请求量
         /// </summary>
         /// <param name="req"><see cref="DescribeRequestDataRequest"/></param>

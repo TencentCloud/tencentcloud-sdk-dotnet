@@ -49,6 +49,20 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Inject")]
         public InjectConfig Inject{ get; set; }
 
+        /// <summary>
+        /// 调用跟踪配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tracing")]
+        public TracingConfig Tracing{ get; set; }
+
+        /// <summary>
+        /// Sidecar自定义资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SidecarResources")]
+        public ResourceRequirements SidecarResources{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamObj(map, prefix + "AccessLog.", this.AccessLog);
             this.SetParamObj(map, prefix + "Prometheus.", this.Prometheus);
             this.SetParamObj(map, prefix + "Inject.", this.Inject);
+            this.SetParamObj(map, prefix + "Tracing.", this.Tracing);
+            this.SetParamObj(map, prefix + "SidecarResources.", this.SidecarResources);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// 查询的网络产品名称，如vpc、ccn等
+        /// 查询的网络产品名称，可查询的产品有：vpc、ccn、vpn、dc、dfw、clb、eip。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

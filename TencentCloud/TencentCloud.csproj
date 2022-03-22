@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.483</VersionPrefix>
+    <VersionPrefix>3.0.484</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6520,6 +6520,10 @@
     <Compile Include="Dlc\V20210125\Models\Column.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateDatabaseRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateDatabaseResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateExportTaskRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateExportTaskResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateImportTaskRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateImportTaskResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateStoreLocationRequest.cs" />
@@ -7644,6 +7648,8 @@
     <Compile Include="Es\V20180416\Models\TaskDetail.cs" />
     <Compile Include="Es\V20180416\Models\UpdateDiagnoseSettingsRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateDiagnoseSettingsResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateDictionariesRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateDictionariesResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateJdkRequest.cs" />
@@ -7728,6 +7734,9 @@
     <Compile Include="Essbasic\V20210526\Models\SyncProxyOrganizationRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\SyncProxyOrganizationResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\TemplateInfo.cs" />
+    <Compile Include="Essbasic\V20210526\Models\UploadFile.cs" />
+    <Compile Include="Essbasic\V20210526\Models\UploadFilesRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\UploadFilesResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\UsageDetail.cs" />
     <Compile Include="Essbasic\V20210526\Models\UserInfo.cs" />
     <Compile Include="Essbasic\V20201222\EssbasicClient.cs" />
@@ -8227,6 +8236,10 @@
     <Compile Include="Gme\V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppResp.cs" />
     <Compile Include="Gme\V20180711\Models\CreateAppResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\CreateScanUserRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\CreateScanUserResponse.cs" />
+    <Compile Include="Gme\V20180711\Models\DeleteScanUserRequest.cs" />
+    <Compile Include="Gme\V20180711\Models\DeleteScanUserResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAgeDetectTaskRequest.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAgeDetectTaskResponse.cs" />
     <Compile Include="Gme\V20180711\Models\DescribeAppStatisticsRequest.cs" />
@@ -12659,6 +12672,8 @@
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneServiceRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribePrivateZoneServiceResponse.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeQuotaUsageRequest.cs" />
+    <Compile Include="Privatedns\V20201028\Models\DescribeQuotaUsageResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeRequestDataRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\DescribeRequestDataResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\Filter.cs" />
@@ -12676,6 +12691,7 @@
     <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceRequest.cs" />
     <Compile Include="Privatedns\V20201028\Models\SubscribePrivateZoneServiceResponse.cs" />
     <Compile Include="Privatedns\V20201028\Models\TagInfo.cs" />
+    <Compile Include="Privatedns\V20201028\Models\TldQuota.cs" />
     <Compile Include="Privatedns\V20201028\Models\VpcInfo.cs" />
     <Compile Include="Rce\V20201103\RceClient.cs" />
     <Compile Include="Rce\V20201103\Models\AccountInfo.cs" />

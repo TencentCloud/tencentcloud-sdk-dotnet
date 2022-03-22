@@ -293,6 +293,86 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 该接口（CreateExportTask）用于创建导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public async Task<CreateExportTaskResponse> CreateExportTask(CreateExportTaskRequest req)
+        {
+             JsonResponseModel<CreateExportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateExportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（CreateExportTask）用于创建导出任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateExportTaskRequest"/></param>
+        /// <returns><see cref="CreateExportTaskResponse"/></returns>
+        public CreateExportTaskResponse CreateExportTaskSync(CreateExportTaskRequest req)
+        {
+             JsonResponseModel<CreateExportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateExportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（CreateImportTask）用于创建导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImportTaskRequest"/></param>
+        /// <returns><see cref="CreateImportTaskResponse"/></returns>
+        public async Task<CreateImportTaskResponse> CreateImportTask(CreateImportTaskRequest req)
+        {
+             JsonResponseModel<CreateImportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateImportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口（CreateImportTask）用于创建导入任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateImportTaskRequest"/></param>
+        /// <returns><see cref="CreateImportTaskResponse"/></returns>
+        public CreateImportTaskResponse CreateImportTaskSync(CreateImportTaskRequest req)
+        {
+             JsonResponseModel<CreateImportTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateImportTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateImportTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateScript）用于创建sql脚本。
         /// </summary>
         /// <param name="req"><see cref="CreateScriptRequest"/></param>

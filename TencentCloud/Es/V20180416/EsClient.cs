@@ -533,6 +533,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 更新ES集群词典
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
+        /// <returns><see cref="UpdateDictionariesResponse"/></returns>
+        public async Task<UpdateDictionariesResponse> UpdateDictionaries(UpdateDictionariesRequest req)
+        {
+             JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDictionaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictionariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新ES集群词典
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDictionariesRequest"/></param>
+        /// <returns><see cref="UpdateDictionariesResponse"/></returns>
+        public UpdateDictionariesResponse UpdateDictionariesSync(UpdateDictionariesRequest req)
+        {
+             JsonResponseModel<UpdateDictionariesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDictionaries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictionariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对集群进行节点规格变更，修改实例名称，修改配置，重置密码， 添加Kibana黑白名单等操作。参数中InstanceId为必传参数，ForceRestart为选填参数，剩余参数传递组合及含义如下：
         /// - InstanceName：修改实例名称(仅用于标识实例)
         /// - NodeInfoList: 修改节点配置（节点横向扩缩容，纵向扩缩容，增加主节点，增加冷节点等）

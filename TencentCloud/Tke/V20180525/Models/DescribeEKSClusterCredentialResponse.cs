@@ -55,6 +55,12 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? ProxyLB{ get; set; }
 
         /// <summary>
+        /// 连接用户集群k8s 的Config
+        /// </summary>
+        [JsonProperty("Kubeconfig")]
+        public string Kubeconfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "PublicLB.", this.PublicLB);
             this.SetParamObj(map, prefix + "InternalLB.", this.InternalLB);
             this.SetParamSimple(map, prefix + "ProxyLB", this.ProxyLB);
+            this.SetParamSimple(map, prefix + "Kubeconfig", this.Kubeconfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

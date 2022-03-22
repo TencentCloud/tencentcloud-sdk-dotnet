@@ -153,6 +153,86 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 新增自定义送检用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanUserRequest"/></param>
+        /// <returns><see cref="CreateScanUserResponse"/></returns>
+        public async Task<CreateScanUserResponse> CreateScanUser(CreateScanUserRequest req)
+        {
+             JsonResponseModel<CreateScanUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateScanUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScanUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增自定义送检用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateScanUserRequest"/></param>
+        /// <returns><see cref="CreateScanUserResponse"/></returns>
+        public CreateScanUserResponse CreateScanUserSync(CreateScanUserRequest req)
+        {
+             JsonResponseModel<CreateScanUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateScanUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScanUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义送检用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScanUserRequest"/></param>
+        /// <returns><see cref="DeleteScanUserResponse"/></returns>
+        public async Task<DeleteScanUserResponse> DeleteScanUser(DeleteScanUserRequest req)
+        {
+             JsonResponseModel<DeleteScanUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteScanUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScanUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除自定义送检用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteScanUserRequest"/></param>
+        /// <returns><see cref="DeleteScanUserResponse"/></returns>
+        public DeleteScanUserResponse DeleteScanUserSync(DeleteScanUserRequest req)
+        {
+             JsonResponseModel<DeleteScanUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteScanUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteScanUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询年龄语音识别任务结果，请求频率10次/秒。该接口目前通过白名单开放试用，如有需求，请提交工单申请。
         /// </summary>
         /// <param name="req"><see cref="DescribeAgeDetectTaskRequest"/></param>

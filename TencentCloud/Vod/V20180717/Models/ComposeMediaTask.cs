@@ -73,7 +73,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ComposeMediaTaskOutput Output{ get; set; }
 
         /// <summary>
-        /// 原始视频的元信息。
+        /// 输出视频的元信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
