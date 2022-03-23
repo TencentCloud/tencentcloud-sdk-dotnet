@@ -92,6 +92,12 @@ namespace TencentCloud.Ses.V20201002.Models
         [JsonProperty("Unsubscribe")]
         public string Unsubscribe{ get; set; }
 
+        /// <summary>
+        /// 是否添加广告标识 0:不添加 1:添加到subject前面，2:添加到subject后面
+        /// </summary>
+        [JsonProperty("ADLocation")]
+        public ulong? ADLocation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +115,7 @@ namespace TencentCloud.Ses.V20201002.Models
             this.SetParamObj(map, prefix + "CycleParam.", this.CycleParam);
             this.SetParamObj(map, prefix + "TimedParam.", this.TimedParam);
             this.SetParamSimple(map, prefix + "Unsubscribe", this.Unsubscribe);
+            this.SetParamSimple(map, prefix + "ADLocation", this.ADLocation);
         }
     }
 }

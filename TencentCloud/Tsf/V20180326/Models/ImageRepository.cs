@@ -123,7 +123,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// ApplicationName值
+        /// ApplicationName值（类型是string）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]

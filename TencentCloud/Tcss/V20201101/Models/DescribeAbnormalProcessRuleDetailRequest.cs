@@ -36,6 +36,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
 
+        /// <summary>
+        /// 需要返回的数量，默认为10，最大值为100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "ImageId", this.ImageId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

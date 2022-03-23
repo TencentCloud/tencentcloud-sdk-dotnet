@@ -78,6 +78,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 绑定NAT网关的弹性IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+        /// </summary>
+        [JsonProperty("StockPublicIpAddressesBandwidthOut")]
+        public ulong? StockPublicIpAddressesBandwidthOut{ get; set; }
+
+        /// <summary>
+        /// 需要申请公网IP带宽大小（单位Mbps），默认为当前用户类型所能使用的最大值。
+        /// </summary>
+        [JsonProperty("PublicIpAddressesBandwidthOut")]
+        public ulong? PublicIpAddressesBandwidthOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
+            this.SetParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
         }
     }
 }

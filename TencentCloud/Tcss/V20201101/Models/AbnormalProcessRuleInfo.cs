@@ -61,6 +61,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SystemChildRules")]
         public AbnormalProcessSystemChildRuleInfo[] SystemChildRules{ get; set; }
 
+        /// <summary>
+        /// 是否是系统默认策略
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamArrayObj(map, prefix + "SystemChildRules.", this.SystemChildRules);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

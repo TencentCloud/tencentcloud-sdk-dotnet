@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5F9D0ED-59E6-3723-BDEC-F640E2ADDE86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.484</VersionPrefix>
+    <VersionPrefix>3.0.485</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -100,6 +100,8 @@
     <Compile Include="V20210914\Models\DeleteEdgeUnitDeployGridItemResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitPodRequest.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitPodResponse.cs" />
+    <Compile Include="V20210914\Models\DeleteIotDeviceBatchRequest.cs" />
+    <Compile Include="V20210914\Models\DeleteIotDeviceBatchResponse.cs" />
     <Compile Include="V20210914\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="V20210914\Models\DeleteNamespaceResponse.cs" />
     <Compile Include="V20210914\Models\DeleteNodeUnitRequest.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="V20210914\Models\DescribeConfigMapYamlErrorResponse.cs" />
     <Compile Include="V20210914\Models\DescribeConfigMapsRequest.cs" />
     <Compile Include="V20210914\Models\DescribeConfigMapsResponse.cs" />
+    <Compile Include="V20210914\Models\DescribeDracoEdgeNodeInstallerRequest.cs" />
+    <Compile Include="V20210914\Models\DescribeDracoEdgeNodeInstallerResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeAgentNodeInstallerRequest.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeAgentNodeInstallerResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeDefaultVpcRequest.cs" />

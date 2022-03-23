@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.484</VersionPrefix>
+    <VersionPrefix>3.0.485</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -8964,6 +8964,8 @@
     <Compile Include="Iecp\V20210914\Models\DeleteEdgeUnitDeployGridItemResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DeleteEdgeUnitPodRequest.cs" />
     <Compile Include="Iecp\V20210914\Models\DeleteEdgeUnitPodResponse.cs" />
+    <Compile Include="Iecp\V20210914\Models\DeleteIotDeviceBatchRequest.cs" />
+    <Compile Include="Iecp\V20210914\Models\DeleteIotDeviceBatchResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="Iecp\V20210914\Models\DeleteNamespaceResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DeleteNodeUnitRequest.cs" />
@@ -8984,6 +8986,8 @@
     <Compile Include="Iecp\V20210914\Models\DescribeConfigMapYamlErrorResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DescribeConfigMapsRequest.cs" />
     <Compile Include="Iecp\V20210914\Models\DescribeConfigMapsResponse.cs" />
+    <Compile Include="Iecp\V20210914\Models\DescribeDracoEdgeNodeInstallerRequest.cs" />
+    <Compile Include="Iecp\V20210914\Models\DescribeDracoEdgeNodeInstallerResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DescribeEdgeAgentNodeInstallerRequest.cs" />
     <Compile Include="Iecp\V20210914\Models\DescribeEdgeAgentNodeInstallerResponse.cs" />
     <Compile Include="Iecp\V20210914\Models\DescribeEdgeDefaultVpcRequest.cs" />
@@ -12814,6 +12818,8 @@
     <Compile Include="Redis\V20180412\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProxySlowLogRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeProxySlowLogResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeReplicationGroupRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\DescribeReplicationGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeSlowLogRequest.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeSlowLogResponse.cs" />
     <Compile Include="Redis\V20180412\Models\DescribeTaskInfoRequest.cs" />
@@ -12832,6 +12838,7 @@
     <Compile Include="Redis\V20180412\Models\DisassociateSecurityGroupsResponse.cs" />
     <Compile Include="Redis\V20180412\Models\EnableReplicaReadonlyRequest.cs" />
     <Compile Include="Redis\V20180412\Models\EnableReplicaReadonlyResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\Groups.cs" />
     <Compile Include="Redis\V20180412\Models\HotKeyInfo.cs" />
     <Compile Include="Redis\V20180412\Models\Inbound.cs" />
     <Compile Include="Redis\V20180412\Models\InquiryPriceCreateInstanceRequest.cs" />
@@ -12854,6 +12861,7 @@
     <Compile Include="Redis\V20180412\Models\InstanceSlowlogDetail.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTagInfo.cs" />
     <Compile Include="Redis\V20180412\Models\InstanceTextParam.cs" />
+    <Compile Include="Redis\V20180412\Models\Instances.cs" />
     <Compile Include="Redis\V20180412\Models\KillMasterGroupRequest.cs" />
     <Compile Include="Redis\V20180412\Models\KillMasterGroupResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ManualBackupInstanceRequest.cs" />
@@ -15351,6 +15359,7 @@
     <Compile Include="Tcss\V20201101\Models\ModifyVirusScanTimeoutSettingRequest.cs" />
     <Compile Include="Tcss\V20201101\Models\ModifyVirusScanTimeoutSettingResponse.cs" />
     <Compile Include="Tcss\V20201101\Models\PortInfo.cs" />
+    <Compile Include="Tcss\V20201101\Models\ProcessBaseInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ProcessDetailBaseInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ProcessDetailInfo.cs" />
     <Compile Include="Tcss\V20201101\Models\ProcessInfo.cs" />
@@ -17586,6 +17595,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeMediaPlayStatDetailsResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaProcessUsageDataRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaProcessUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribePersonSamplesRequest.cs" />
@@ -17775,6 +17786,7 @@
     <Compile Include="Vod\V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="Vod\V20180717\Models\ParseStreamingManifestResponse.cs" />
     <Compile Include="Vod\V20180717\Models\PlayStatFileInfo.cs" />
+    <Compile Include="Vod\V20180717\Models\PlayStatInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PlayerConfig.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="Vod\V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />

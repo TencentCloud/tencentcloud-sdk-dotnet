@@ -277,6 +277,69 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ClientIP{ get; set; }
 
         /// <summary>
+        /// 父进程启动用户
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PProcessStartUser")]
+        public string PProcessStartUser{ get; set; }
+
+        /// <summary>
+        /// 父进程用户组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PProcessUserGroup")]
+        public string PProcessUserGroup{ get; set; }
+
+        /// <summary>
+        /// 父进程路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PProcessPath")]
+        public string PProcessPath{ get; set; }
+
+        /// <summary>
+        /// 父进程命令行参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PProcessParam")]
+        public string PProcessParam{ get; set; }
+
+        /// <summary>
+        /// 祖先进程启动用户
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AncestorProcessStartUser")]
+        public string AncestorProcessStartUser{ get; set; }
+
+        /// <summary>
+        /// 祖先进程用户组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AncestorProcessUserGroup")]
+        public string AncestorProcessUserGroup{ get; set; }
+
+        /// <summary>
+        /// 祖先进程路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AncestorProcessPath")]
+        public string AncestorProcessPath{ get; set; }
+
+        /// <summary>
+        /// 祖先进程命令行参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AncestorProcessParam")]
+        public string AncestorProcessParam{ get; set; }
+
+        /// <summary>
+        /// 事件最后一次处理的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperationTime")]
+        public string OperationTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -322,6 +385,15 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
+            this.SetParamSimple(map, prefix + "PProcessStartUser", this.PProcessStartUser);
+            this.SetParamSimple(map, prefix + "PProcessUserGroup", this.PProcessUserGroup);
+            this.SetParamSimple(map, prefix + "PProcessPath", this.PProcessPath);
+            this.SetParamSimple(map, prefix + "PProcessParam", this.PProcessParam);
+            this.SetParamSimple(map, prefix + "AncestorProcessStartUser", this.AncestorProcessStartUser);
+            this.SetParamSimple(map, prefix + "AncestorProcessUserGroup", this.AncestorProcessUserGroup);
+            this.SetParamSimple(map, prefix + "AncestorProcessPath", this.AncestorProcessPath);
+            this.SetParamSimple(map, prefix + "AncestorProcessParam", this.AncestorProcessParam);
+            this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

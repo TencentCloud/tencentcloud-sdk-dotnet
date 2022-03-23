@@ -25,64 +25,10 @@ namespace TencentCloud.Memcached.V20190318.Models
     {
         
         /// <summary>
-        /// 实例关联的标签信息
+        /// 实例修改时间
         /// </summary>
-        [JsonProperty("Tags")]
-        public TagInfo[] Tags{ get; set; }
-
-        /// <summary>
-        /// 实例创建时间
-        /// </summary>
-        [JsonProperty("AddTimeStamp")]
-        public string AddTimeStamp{ get; set; }
-
-        /// <summary>
-        /// 用户AppID
-        /// </summary>
-        [JsonProperty("AppId")]
-        public long? AppId{ get; set; }
-
-        /// <summary>
-        /// 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
-        /// </summary>
-        [JsonProperty("AutoRenewFlag")]
-        public long? AutoRenewFlag{ get; set; }
-
-        /// <summary>
-        /// 实例内置ID
-        /// </summary>
-        [JsonProperty("CmemId")]
-        public long? CmemId{ get; set; }
-
-        /// <summary>
-        /// 实例截止时间
-        /// </summary>
-        [JsonProperty("DeadlineTimeStamp")]
-        public string DeadlineTimeStamp{ get; set; }
-
-        /// <summary>
-        /// 过期策略
-        /// </summary>
-        [JsonProperty("Expire")]
-        public long? Expire{ get; set; }
-
-        /// <summary>
-        /// 实例描述信息
-        /// </summary>
-        [JsonProperty("InstanceDesc")]
-        public string InstanceDesc{ get; set; }
-
-        /// <summary>
-        /// 实例ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 实例名称
-        /// </summary>
-        [JsonProperty("InstanceName")]
-        public string InstanceName{ get; set; }
+        [JsonProperty("ModTimeStamp")]
+        public string ModTimeStamp{ get; set; }
 
         /// <summary>
         /// 实例隔离时间
@@ -91,28 +37,10 @@ namespace TencentCloud.Memcached.V20190318.Models
         public string IsolateTimeStamp{ get; set; }
 
         /// <summary>
-        /// 实例修改时间
+        /// 实例是否设置自动续费标识，1：设置自动续费；0：未设置自动续费
         /// </summary>
-        [JsonProperty("ModTimeStamp")]
-        public string ModTimeStamp{ get; set; }
-
-        /// <summary>
-        /// 计费模式：0-按量计费，1-包年包月
-        /// </summary>
-        [JsonProperty("PayMode")]
-        public long? PayMode{ get; set; }
-
-        /// <summary>
-        /// 项目ID
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public long? ProjectId{ get; set; }
-
-        /// <summary>
-        /// 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
-        /// </summary>
-        [JsonProperty("RegionId")]
-        public long? RegionId{ get; set; }
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
         /// 仓库ID
@@ -121,10 +49,47 @@ namespace TencentCloud.Memcached.V20190318.Models
         public long? SetId{ get; set; }
 
         /// <summary>
-        /// 实例当前状态，0：待初始化；1：实例在流程中；2：实例运行中；-2：实例已隔离；-3：实例待删除
+        /// 实例当前状态，0：发货中；1：运行中；2：创建失败；4：销毁中；5：隔离中；6：下线中
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
+
+        /// <summary>
+        /// 实例内置ID
+        /// </summary>
+        [JsonProperty("CmemId")]
+        public long? CmemId{ get; set; }
+
+        /// <summary>
+        /// 实例关联的标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public TagInfo[] Tags{ get; set; }
+
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 地域id 1--广州 4--上海 5-- 香港 6--多伦多 7--上海金融 8--北京 9-- 新加坡 11--深圳金融 15--美西（硅谷）16--成都 17--德国 18--韩国 19--重庆 21--印度 22--美东（弗吉尼亚）23--泰国 24--俄罗斯 25--日本
+        /// </summary>
+        [JsonProperty("RegionId")]
+        public long? RegionId{ get; set; }
+
+        /// <summary>
+        /// 实例描述信息
+        /// </summary>
+        [JsonProperty("InstanceDesc")]
+        public string InstanceDesc{ get; set; }
+
+        /// <summary>
+        /// 过期策略
+        /// </summary>
+        [JsonProperty("Expire")]
+        public long? Expire{ get; set; }
 
         /// <summary>
         /// vpc网络下子网id 如：46315
@@ -133,10 +98,46 @@ namespace TencentCloud.Memcached.V20190318.Models
         public long? SubnetId{ get; set; }
 
         /// <summary>
-        /// vpc网络下子网id 如：subnet-fd3j6l35mm0
+        /// 项目ID
         /// </summary>
-        [JsonProperty("UniqSubnetId")]
-        public string UniqSubnetId{ get; set; }
+        [JsonProperty("ProjectId")]
+        public long? ProjectId{ get; set; }
+
+        /// <summary>
+        /// 实例创建时间
+        /// </summary>
+        [JsonProperty("AddTimeStamp")]
+        public string AddTimeStamp{ get; set; }
+
+        /// <summary>
+        /// 区域ID
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 计费模式：0-按量计费，1-包年包月
+        /// </summary>
+        [JsonProperty("PayMode")]
+        public long? PayMode{ get; set; }
+
+        /// <summary>
+        /// vpc网络id 如：75101
+        /// </summary>
+        [JsonProperty("VpcId")]
+        public long? VpcId{ get; set; }
+
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
+        /// <summary>
+        /// 实例截止时间
+        /// </summary>
+        [JsonProperty("DeadlineTimeStamp")]
+        public string DeadlineTimeStamp{ get; set; }
 
         /// <summary>
         /// vpc网络id 如：vpc-fk33jsf43kgv
@@ -151,10 +152,16 @@ namespace TencentCloud.Memcached.V20190318.Models
         public string Vip{ get; set; }
 
         /// <summary>
-        /// vpc网络id 如：75101
+        /// vpc网络下子网id 如：subnet-fd3j6l35mm0
         /// </summary>
-        [JsonProperty("VpcId")]
-        public long? VpcId{ get; set; }
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// 用户AppID
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
 
         /// <summary>
         /// 实例端口号
@@ -162,42 +169,36 @@ namespace TencentCloud.Memcached.V20190318.Models
         [JsonProperty("Vport")]
         public long? Vport{ get; set; }
 
-        /// <summary>
-        /// 区域ID
-        /// </summary>
-        [JsonProperty("ZoneId")]
-        public long? ZoneId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
-            this.SetParamSimple(map, prefix + "AddTimeStamp", this.AddTimeStamp);
-            this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
-            this.SetParamSimple(map, prefix + "CmemId", this.CmemId);
-            this.SetParamSimple(map, prefix + "DeadlineTimeStamp", this.DeadlineTimeStamp);
-            this.SetParamSimple(map, prefix + "Expire", this.Expire);
-            this.SetParamSimple(map, prefix + "InstanceDesc", this.InstanceDesc);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
-            this.SetParamSimple(map, prefix + "IsolateTimeStamp", this.IsolateTimeStamp);
             this.SetParamSimple(map, prefix + "ModTimeStamp", this.ModTimeStamp);
-            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
-            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "IsolateTimeStamp", this.IsolateTimeStamp);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "SetId", this.SetId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CmemId", this.CmemId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "InstanceDesc", this.InstanceDesc);
+            this.SetParamSimple(map, prefix + "Expire", this.Expire);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
-            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "AddTimeStamp", this.AddTimeStamp);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
+            this.SetParamSimple(map, prefix + "DeadlineTimeStamp", this.DeadlineTimeStamp);
             this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
-            this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
             this.SetParamSimple(map, prefix + "Vport", this.Vport);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
         }
     }
 }

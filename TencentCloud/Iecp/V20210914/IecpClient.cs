@@ -973,6 +973,46 @@ namespace TencentCloud.Iecp.V20210914
         }
 
         /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIotDeviceBatchRequest"/></param>
+        /// <returns><see cref="DeleteIotDeviceBatchResponse"/></returns>
+        public async Task<DeleteIotDeviceBatchResponse> DeleteIotDeviceBatch(DeleteIotDeviceBatchRequest req)
+        {
+             JsonResponseModel<DeleteIotDeviceBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIotDeviceBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIotDeviceBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除设备
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIotDeviceBatchRequest"/></param>
+        /// <returns><see cref="DeleteIotDeviceBatchResponse"/></returns>
+        public DeleteIotDeviceBatchResponse DeleteIotDeviceBatchSync(DeleteIotDeviceBatchRequest req)
+        {
+             JsonResponseModel<DeleteIotDeviceBatchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIotDeviceBatch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIotDeviceBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除命名空间
         /// </summary>
         /// <param name="req"><see cref="DeleteNamespaceRequest"/></param>
@@ -1364,6 +1404,46 @@ namespace TencentCloud.Iecp.V20210914
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConfigMaps");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConfigMapsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 自动获取Draco设备的安装包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDracoEdgeNodeInstallerRequest"/></param>
+        /// <returns><see cref="DescribeDracoEdgeNodeInstallerResponse"/></returns>
+        public async Task<DescribeDracoEdgeNodeInstallerResponse> DescribeDracoEdgeNodeInstaller(DescribeDracoEdgeNodeInstallerRequest req)
+        {
+             JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDracoEdgeNodeInstaller");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 自动获取Draco设备的安装包
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDracoEdgeNodeInstallerRequest"/></param>
+        /// <returns><see cref="DescribeDracoEdgeNodeInstallerResponse"/></returns>
+        public DescribeDracoEdgeNodeInstallerResponse DescribeDracoEdgeNodeInstallerSync(DescribeDracoEdgeNodeInstallerRequest req)
+        {
+             JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDracoEdgeNodeInstaller");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDracoEdgeNodeInstallerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

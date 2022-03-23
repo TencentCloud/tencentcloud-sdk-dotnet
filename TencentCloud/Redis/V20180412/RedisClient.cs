@@ -373,7 +373,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建参数模板
+        /// 创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 创建参数模板
+        /// 创建参数模板。
         /// </summary>
         /// <param name="req"><see cref="CreateParamTemplateRequest"/></param>
         /// <returns><see cref="CreateParamTemplateResponse"/></returns>
@@ -1773,6 +1773,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 查询复制组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
+        /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
+        public async Task<DescribeReplicationGroupResponse> DescribeReplicationGroup(DescribeReplicationGroupRequest req)
+        {
+             JsonResponseModel<DescribeReplicationGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeReplicationGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询复制组
+        /// </summary>
+        /// <param name="req"><see cref="DescribeReplicationGroupRequest"/></param>
+        /// <returns><see cref="DescribeReplicationGroupResponse"/></returns>
+        public DescribeReplicationGroupResponse DescribeReplicationGroupSync(DescribeReplicationGroupRequest req)
+        {
+             JsonResponseModel<DescribeReplicationGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeReplicationGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeReplicationGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实例慢查询记录
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
@@ -2373,7 +2413,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 设置自动备份时间
+        /// 设置自动备份配置
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoBackupConfigResponse"/></returns>
@@ -2393,7 +2433,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 设置自动备份时间
+        /// 设置自动备份配置
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoBackupConfigRequest"/></param>
         /// <returns><see cref="ModifyAutoBackupConfigResponse"/></returns>

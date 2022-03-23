@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// 生命周期，单位天；可取值范围1~366
+        /// 生命周期，单位天，可取值范围1~3600。取值为3640时代表永久保存
         /// </summary>
         [JsonProperty("Period")]
         public long? Period{ get; set; }

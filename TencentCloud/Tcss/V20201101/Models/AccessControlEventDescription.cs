@@ -61,6 +61,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 事件最后一次处理的时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperationTime")]
+        public string OperationTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "MatchRule.", this.MatchRule);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
         }
     }
 }

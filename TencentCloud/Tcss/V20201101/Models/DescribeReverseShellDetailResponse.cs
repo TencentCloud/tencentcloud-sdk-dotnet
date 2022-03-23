@@ -49,6 +49,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ReverseShellEventDescription EventDetail{ get; set; }
 
         /// <summary>
+        /// 祖先进程信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AncestorProcessInfo")]
+        public ProcessBaseInfo AncestorProcessInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamObj(map, prefix + "ProcessInfo.", this.ProcessInfo);
             this.SetParamObj(map, prefix + "ParentProcessInfo.", this.ParentProcessInfo);
             this.SetParamObj(map, prefix + "EventDetail.", this.EventDetail);
+            this.SetParamObj(map, prefix + "AncestorProcessInfo.", this.AncestorProcessInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

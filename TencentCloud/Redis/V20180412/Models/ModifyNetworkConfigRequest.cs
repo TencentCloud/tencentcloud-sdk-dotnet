@@ -54,6 +54,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// vip保留时间，单位：天
+        /// </summary>
+        [JsonProperty("Recycle")]
+        public long? Recycle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "Recycle", this.Recycle);
         }
     }
 }

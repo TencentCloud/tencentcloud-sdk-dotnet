@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.484</VersionPrefix>
+    <VersionPrefix>3.0.485</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -302,6 +302,8 @@
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaProcessUsageDataRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaProcessUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribePersonSamplesRequest.cs" />
@@ -491,6 +493,7 @@
     <Compile Include="V20180717\Models\ParseStreamingManifestRequest.cs" />
     <Compile Include="V20180717\Models\ParseStreamingManifestResponse.cs" />
     <Compile Include="V20180717\Models\PlayStatFileInfo.cs" />
+    <Compile Include="V20180717\Models\PlayStatInfo.cs" />
     <Compile Include="V20180717\Models\PlayerConfig.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfo.cs" />
     <Compile Include="V20180717\Models\PoliticalAsrReviewTemplateInfoForUpdate.cs" />
