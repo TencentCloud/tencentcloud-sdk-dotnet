@@ -1,67 +1,38 @@
 # 本版本更新包含以下内容：
 
-## 企业收付平台(cpdp) 版本：2019-08-20
+## 云原生数据库 TDSQL-C(cynosdb) 版本：2019-01-07
 
-### 第 60 次发布
+### 第 15 次发布
 
-发布时间：2022-03-24 08:09:21
+发布时间：2022-03-24 17:50:45
 
 本次发布包含了以下内容：
 
 改善已有的文档。
+
+新增接口：
+
+* [CreateAccounts](https://cloud.tencent.com/document/api/1003/71660)
 
 新增数据结构：
 
-* [OpenBankApprovalGuideInfo](https://cloud.tencent.com/document/api/1122/40683#OpenBankApprovalGuideInfo)
-
-修改数据结构：
-
-* [QueryOpenBankPaymentOrderResult](https://cloud.tencent.com/document/api/1122/40683#QueryOpenBankPaymentOrderResult)
-
-	* 新增成员：BankApprovalGuideInfo
+* [NewAccount](https://cloud.tencent.com/document/api/1003/48097#NewAccount)
 
 
 
+## 文字识别(ocr) 版本：2018-11-19
 
-## 云数据库 Redis(redis) 版本：2018-04-12
+### 第 64 次发布
 
-### 第 42 次发布
-
-发布时间：2022-03-24 08:15:42
+发布时间：2022-03-24 17:13:23
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
-修改接口：
+新增接口：
 
-* [DescribeAutoBackupConfig](https://cloud.tencent.com/document/api/239/20019)
-
-	* 新增出参：BackupStorageDays, BinlogStorageDays
-
-* [DescribeDBSecurityGroups](https://cloud.tencent.com/document/api/239/41259)
-
-	* 新增出参：VIP, VPort
-
-* [DescribeInstances](https://cloud.tencent.com/document/api/239/20018)
-
-	* 新增入参：InstanceTags, TagKeys
-
-* [ManualBackupInstance](https://cloud.tencent.com/document/api/239/20010)
-
-	* 新增入参：StorageDays
-
-* [UpgradeVersionToMultiAvailabilityZones](https://cloud.tencent.com/document/api/239/54759)
-
-	* 新增入参：UpgradeProxyAndRedisServer
-
-
-修改数据结构：
-
-* [RedisBackupSet](https://cloud.tencent.com/document/api/239/20022#RedisBackupSet)
-
-	* 新增成员：BackupSize, FullBackup, InstanceType
-
+* [RecognizeTravelCardOCR](https://cloud.tencent.com/document/api/866/71657)
 
 
 
@@ -19130,7 +19101,7 @@
 
 新增数据结构：
 
-* [[OpenBankApprovalGuideInfo](https://cloud.tencent.com/document/api/1122/40683#OpenBankApprovalGuideInfo)](https://cloud.tencent.com/document/api/1122/40683#[OpenBankApprovalGuideInfo](https://cloud.tencent.com/document/api/1122/40683#OpenBankApprovalGuideInfo))
+* [OpenBankApprovalGuideInfo](https://cloud.tencent.com/document/api/1122/40683#OpenBankApprovalGuideInfo)
 
 修改数据结构：
 
@@ -23782,6 +23753,22 @@
 
 
 ## 云原生数据库 TDSQL-C(cynosdb) 版本：2019-01-07
+
+### 第 15 次发布
+
+发布时间：2022-03-24 17:50:45
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[CreateAccounts](https://cloud.tencent.com/document/api/1003/71660)](https://cloud.tencent.com/document/api/#/#)
+
+新增数据结构：
+
+* [[NewAccount](https://cloud.tencent.com/document/api/1003/48097#NewAccount)](https://cloud.tencent.com/document/api/1003/48097#[NewAccount](https://cloud.tencent.com/document/api/1003/48097#NewAccount))
 
 ### 第 14 次发布
 
@@ -34949,8 +34936,8 @@
 
 新增接口：
 
-* [AnalyzeDenseLandmarks](https://cloud.tencent.com/document/api/#/#)
-* [DetectFaceAttributes](https://cloud.tencent.com/document/api/#/#)
+* [AnalyzeDenseLandmarks](https://cloud.tencent.com/document/api/867/71634)
+* [DetectFaceAttributes](https://cloud.tencent.com/document/api/867/71629)
 
 新增数据结构：
 
@@ -34975,10 +34962,10 @@
 
 新增接口：
 
-* [GetUpgradeGroupFaceModelVersionJobList](https://cloud.tencent.com/document/api/#/#)
-* [GetUpgradeGroupFaceModelVersionResult](https://cloud.tencent.com/document/api/#/#)
-* [RevertGroupFaceModelVersion](https://cloud.tencent.com/document/api/#/#)
-* [UpgradeGroupFaceModelVersion](https://cloud.tencent.com/document/api/#/#)
+* [GetUpgradeGroupFaceModelVersionJobList](https://cloud.tencent.com/document/api/867/71633)
+* [GetUpgradeGroupFaceModelVersionResult](https://cloud.tencent.com/document/api/867/71632)
+* [RevertGroupFaceModelVersion](https://cloud.tencent.com/document/api/867/71631)
+* [UpgradeGroupFaceModelVersion](https://cloud.tencent.com/document/api/867/71630)
 
 新增数据结构：
 
@@ -47041,6 +47028,18 @@
 
 
 ## 文字识别(ocr) 版本：2018-11-19
+
+### 第 64 次发布
+
+发布时间：2022-03-24 17:13:23
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [[RecognizeTravelCardOCR](https://cloud.tencent.com/document/api/866/71657)](https://cloud.tencent.com/document/api/#/#)
 
 ### 第 63 次发布
 

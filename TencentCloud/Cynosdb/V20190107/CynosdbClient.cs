@@ -173,6 +173,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 创建账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public async Task<CreateAccountsResponse> CreateAccounts(CreateAccountsRequest req)
+        {
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建账号
+        /// </summary>
+        /// <param name="req"><see cref="CreateAccountsRequest"/></param>
+        /// <returns><see cref="CreateAccountsResponse"/></returns>
+        public CreateAccountsResponse CreateAccountsSync(CreateAccountsRequest req)
+        {
+             JsonResponseModel<CreateAccountsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAccounts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAccountsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建集群
         /// </summary>
         /// <param name="req"><see cref="CreateClustersRequest"/></param>

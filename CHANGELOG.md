@@ -1,3 +1,41 @@
+# Release 3.0.487
+
+## 云原生数据库 TDSQL-C(cynosdb) 版本：2019-01-07
+
+### 第 15 次发布
+
+发布时间：2022-03-24 17:50:45
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [CreateAccounts](https://cloud.tencent.com/document/api/1003/71660)
+
+新增数据结构：
+
+* [NewAccount](https://cloud.tencent.com/document/api/1003/48097#NewAccount)
+
+
+
+## 文字识别(ocr) 版本：2018-11-19
+
+### 第 64 次发布
+
+发布时间：2022-03-24 17:13:23
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增接口：
+
+* [RecognizeTravelCardOCR](https://cloud.tencent.com/document/api/866/71657)
+
+
+
 # Release 3.0.486
 
 ## 企业收付平台(cpdp) 版本：2019-08-20

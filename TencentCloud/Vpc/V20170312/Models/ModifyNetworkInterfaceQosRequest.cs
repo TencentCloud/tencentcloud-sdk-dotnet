@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string[] NetworkInterfaceIds{ get; set; }
 
         /// <summary>
-        /// 服务质量，可选值：AU、AG、PT，分别代表金、银、白金三个等级。
+        /// 服务质量，可选值：PT、AU、AG、DEFAULT，分别代表白金、金、银、默认四个等级。
         /// </summary>
         [JsonProperty("QosLevel")]
         public string QosLevel{ get; set; }

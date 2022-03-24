@@ -2489,6 +2489,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTravelCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTravelCardOCRResponse"/></returns>
+        public async Task<RecognizeTravelCardOCRResponse> RecognizeTravelCardOCR(RecognizeTravelCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTravelCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeTravelCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTravelCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持通信大数据行程卡识别，包括行程卡颜色、更新时间、途经地、存在中高风险地区的城市、电话号码，五个字段的识别结果输出。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeTravelCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeTravelCardOCRResponse"/></returns>
+        public RecognizeTravelCardOCRResponse RecognizeTravelCardOCRSync(RecognizeTravelCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeTravelCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeTravelCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeTravelCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持居民户口簿户主页及成员页关键字段的识别，包括姓名、户别、地址、籍贯、身份证号码等。
         /// </summary>
         /// <param name="req"><see cref="ResidenceBookletOCRRequest"/></param>

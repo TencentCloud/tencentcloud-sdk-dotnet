@@ -9765,7 +9765,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改弹性网卡服务质量
+        /// 修改弹性网卡服务质量。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
         /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
@@ -9785,7 +9785,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 修改弹性网卡服务质量
+        /// 修改弹性网卡服务质量。
         /// </summary>
         /// <param name="req"><see cref="ModifyNetworkInterfaceQosRequest"/></param>
         /// <returns><see cref="ModifyNetworkInterfaceQosResponse"/></returns>
@@ -10477,7 +10477,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+        /// 本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
         /// </summary>
         /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
         /// <returns><see cref="NotifyRoutesResponse"/></returns>
@@ -10497,7 +10497,7 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
-        /// 路由表列表页操作增加“发布到云联网”，用于发布路由到云联网。
+        /// 本接口（NotifyRoutes）用于路由表列表页操作增加“发布到云联网”，发布路由到云联网。
         /// </summary>
         /// <param name="req"><see cref="NotifyRoutesRequest"/></param>
         /// <returns><see cref="NotifyRoutesResponse"/></returns>

@@ -25,13 +25,13 @@ namespace TencentCloud.Scf.V20180416.Models
     {
         
         /// <summary>
-        /// 变量的名称
+        /// 变量的名称，不可为空字符
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 变量的值
+        /// 变量的值，不可为空字符
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }
