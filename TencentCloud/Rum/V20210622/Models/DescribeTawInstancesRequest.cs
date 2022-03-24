@@ -67,13 +67,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 过滤参数
+        /// 过滤参数；demo模式传{"Name": "IsDemo", "Values":["1"]}
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 是否为demo模式（1=是，2=否）
+        /// 该参数已废弃，demo模式请在Filters内注明
         /// </summary>
         [JsonProperty("IsDemo")]
         public long? IsDemo{ get; set; }

@@ -61,6 +61,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("HaveSetValue")]
         public bool? HaveSetValue{ get; set; }
 
+        /// <summary>
+        /// 是否需要重启生效，false:不需要重启，
+        /// true:需要重启
+        /// </summary>
+        [JsonProperty("NeedRestart")]
+        public bool? NeedRestart{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "Default", this.Default);
             this.SetParamObj(map, prefix + "Constraint.", this.Constraint);
             this.SetParamSimple(map, prefix + "HaveSetValue", this.HaveSetValue);
+            this.SetParamSimple(map, prefix + "NeedRestart", this.NeedRestart);
         }
     }
 }

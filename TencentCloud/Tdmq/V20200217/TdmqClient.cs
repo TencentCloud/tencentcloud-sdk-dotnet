@@ -3693,6 +3693,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 重置指定Group的消费位点到指定时间戳
+        /// </summary>
+        /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
+        /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>
+        public async Task<ResetRocketMQConsumerOffSetResponse> ResetRocketMQConsumerOffSet(ResetRocketMQConsumerOffSetRequest req)
+        {
+             JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetRocketMQConsumerOffSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置指定Group的消费位点到指定时间戳
+        /// </summary>
+        /// <param name="req"><see cref="ResetRocketMQConsumerOffSetRequest"/></param>
+        /// <returns><see cref="ResetRocketMQConsumerOffSetResponse"/></returns>
+        public ResetRocketMQConsumerOffSetResponse ResetRocketMQConsumerOffSetSync(ResetRocketMQConsumerOffSetRequest req)
+        {
+             JsonResponseModel<ResetRocketMQConsumerOffSetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetRocketMQConsumerOffSet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRocketMQConsumerOffSetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 回溯cmq队列
         /// </summary>
         /// <param name="req"><see cref="RewindCmqQueueRequest"/></param>

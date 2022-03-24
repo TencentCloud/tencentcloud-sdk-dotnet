@@ -58,6 +58,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("UnionPackFlag")]
         public ulong? UnionPackFlag{ get; set; }
 
+        /// <summary>
+        /// 业务带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceBandWidth")]
+        public ulong? ServiceBandWidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +76,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ProtectIPNumberLimit", this.ProtectIPNumberLimit);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "UnionPackFlag", this.UnionPackFlag);
+            this.SetParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 是否为demo模式（1=是，2=否）
+        /// 该参数已废弃
         /// </summary>
         [JsonProperty("IsDemo")]
         public long? IsDemo{ get; set; }

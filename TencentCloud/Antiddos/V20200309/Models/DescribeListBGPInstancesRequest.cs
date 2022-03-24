@@ -78,6 +78,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterBoundStatus")]
         public string FilterBoundStatus{ get; set; }
 
+        /// <summary>
+        /// 实例id数组
+        /// </summary>
+        [JsonProperty("FilterInstanceIdList")]
+        public string[] FilterInstanceIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterLine", this.FilterLine);
             this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
             this.SetParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
+            this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.487</VersionPrefix>
+    <VersionPrefix>3.0.488</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -5486,6 +5486,8 @@
     <Compile Include="Cwp\V20180228\Models\DescribeSearchTemplatesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityDynamicsResponse.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventStatRequest.cs" />
+    <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventStatResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventsCntRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityEventsCntResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\DescribeSecurityTrendsRequest.cs" />
@@ -5539,6 +5541,7 @@
     <Compile Include="Cwp\V20180228\Models\EffectiveMachineInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\EmergencyResponseInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\EmergencyVul.cs" />
+    <Compile Include="Cwp\V20180228\Models\EventStat.cs" />
     <Compile Include="Cwp\V20180228\Models\ExpertServiceOrderInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ExportAssetCoreModuleListResponse.cs" />
@@ -15700,6 +15703,8 @@
     <Compile Include="Tdmq\V20200217\Models\ReceiveMessageResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\ResetMsgSubOffsetByTimestampResponse.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ResetRocketMQConsumerOffSetRequest.cs" />
+    <Compile Include="Tdmq\V20200217\Models\ResetRocketMQConsumerOffSetResponse.cs" />
     <Compile Include="Tdmq\V20200217\Models\RetentionPolicy.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueRequest.cs" />
     <Compile Include="Tdmq\V20200217\Models\RewindCmqQueueResponse.cs" />
