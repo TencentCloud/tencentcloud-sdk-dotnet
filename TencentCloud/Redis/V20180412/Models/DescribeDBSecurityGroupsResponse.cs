@@ -31,6 +31,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
+        /// 安全组生效内网地址
+        /// </summary>
+        [JsonProperty("VIP")]
+        public string VIP{ get; set; }
+
+        /// <summary>
+        /// 安全组生效内网端口
+        /// </summary>
+        [JsonProperty("VPort")]
+        public string VPort{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Redis.V20180412.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
+            this.SetParamSimple(map, prefix + "VIP", this.VIP);
+            this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

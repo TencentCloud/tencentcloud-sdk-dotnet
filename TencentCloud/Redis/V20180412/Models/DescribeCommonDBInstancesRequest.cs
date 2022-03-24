@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Vip信息列表
+        /// vpc网络ID信息列表
         /// </summary>
         [JsonProperty("VpcIds")]
         public long?[] VpcIds{ get; set; }
 
         /// <summary>
-        /// 子网id信息列表
+        /// 子网ID信息列表
         /// </summary>
         [JsonProperty("SubnetIds")]
         public long?[] SubnetIds{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例id过滤信息列表
+        /// 实例ID过滤信息列表
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

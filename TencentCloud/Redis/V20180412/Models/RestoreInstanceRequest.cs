@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 待操作的实例ID，可通过 DescribeRedis 接口返回值中的 redisId 获取。
+        /// 待操作的实例ID，可通过 DescribeInstances 接口返回值中的 InstanceId 获取。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

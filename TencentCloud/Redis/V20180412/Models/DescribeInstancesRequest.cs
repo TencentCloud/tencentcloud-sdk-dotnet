@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例列表的大小，参数默认值20
+        /// 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -156,6 +156,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("MonitorVersion")]
         public string MonitorVersion{ get; set; }
 
+        /// <summary>
+        /// 根据标签的Key和Value筛选资源，不传或者传空数组则不进行过滤
+        /// </summary>
+        [JsonProperty("InstanceTags")]
+        public InstanceTagInfo[] InstanceTags{ get; set; }
+
+        /// <summary>
+        /// 根据标签的Key筛选资源，不传或者传空数组则不进行过滤
+        /// </summary>
+        [JsonProperty("TagKeys")]
+        public string[] TagKeys{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +196,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "SearchKeys.", this.SearchKeys);
             this.SetParamArraySimple(map, prefix + "TypeList.", this.TypeList);
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
+            this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
         }
     }
 }

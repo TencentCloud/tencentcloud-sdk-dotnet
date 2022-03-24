@@ -60,6 +60,27 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("Locked")]
         public long? Locked{ get; set; }
 
+        /// <summary>
+        /// 内部字段，用户可忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSize")]
+        public long? BackupSize{ get; set; }
+
+        /// <summary>
+        /// 内部字段，用户可忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FullBackup")]
+        public long? FullBackup{ get; set; }
+
+        /// <summary>
+        /// 内部字段，用户可忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public long? InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +93,9 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Locked", this.Locked);
+            this.SetParamSimple(map, prefix + "BackupSize", this.BackupSize);
+            this.SetParamSimple(map, prefix + "FullBackup", this.FullBackup);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

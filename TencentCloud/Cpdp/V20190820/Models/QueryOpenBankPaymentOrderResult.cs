@@ -109,11 +109,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public OpenBankRedirectInfo RedirectInfo{ get; set; }
 
         /// <summary>
-        /// 第三方渠道返回信息，见渠道特殊说明
+        /// 第三方渠道返回信息，见渠道特殊说明,详情见附录-复杂类型。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExternalReturnData")]
         public string ExternalReturnData{ get; set; }
+
+        /// <summary>
+        /// 银行复核指引。当TENPAY下OPENBANT_PAYMENT时，下单受理成功是返回。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BankApprovalGuideInfo")]
+        public OpenBankApprovalGuideInfo BankApprovalGuideInfo{ get; set; }
 
 
         /// <summary>
@@ -134,6 +141,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Attachment", this.Attachment);
             this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
             this.SetParamSimple(map, prefix + "ExternalReturnData", this.ExternalReturnData);
+            this.SetParamObj(map, prefix + "BankApprovalGuideInfo.", this.BankApprovalGuideInfo);
         }
     }
 }

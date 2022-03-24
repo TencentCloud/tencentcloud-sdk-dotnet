@@ -1413,7 +1413,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis节点信息
+        /// 查询Redis节点详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -1433,7 +1433,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询Redis节点信息
+        /// 查询Redis节点详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceZoneInfoRequest"/></param>
         /// <returns><see cref="DescribeInstanceZoneInfoResponse"/></returns>
@@ -1533,7 +1533,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板详情
+        /// 查询参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -1553,7 +1553,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询参数模板详情
+        /// 查询参数模板详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeParamTemplateInfoRequest"/></param>
         /// <returns><see cref="DescribeParamTemplateInfoResponse"/></returns>
@@ -2453,7 +2453,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的连接配置，包括带宽和最大连接数
+        /// 修改实例的连接配置，包括带宽和最大连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
         /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>
@@ -2473,7 +2473,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 修改实例的连接配置，包括带宽和最大连接数
+        /// 修改实例的连接配置，包括带宽和最大连接数。
         /// </summary>
         /// <param name="req"><see cref="ModifyConnectionConfigRequest"/></param>
         /// <returns><see cref="ModifyConnectionConfigResponse"/></returns>

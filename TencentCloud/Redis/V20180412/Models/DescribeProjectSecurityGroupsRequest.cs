@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 拉取数量限制。
+        /// 拉取数量限制，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

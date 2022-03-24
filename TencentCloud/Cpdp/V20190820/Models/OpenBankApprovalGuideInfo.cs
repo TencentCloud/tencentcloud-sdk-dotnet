@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Redis.V20180412.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class UpgradeVersionToMultiAvailabilityZonesRequest : AbstractModel
+    public class OpenBankApprovalGuideInfo : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// PC网银指引
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PcGuideUrl")]
+        public string PcGuideUrl{ get; set; }
 
         /// <summary>
-        /// 是否升级proxy和redis内核版本，升级后可支持就近接入
+        /// 手机网银指引
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("UpgradeProxyAndRedisServer")]
-        public bool? UpgradeProxyAndRedisServer{ get; set; }
+        [JsonProperty("MobileGuideUrl")]
+        public string MobileGuideUrl{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Redis.V20180412.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "UpgradeProxyAndRedisServer", this.UpgradeProxyAndRedisServer);
+            this.SetParamSimple(map, prefix + "PcGuideUrl", this.PcGuideUrl);
+            this.SetParamSimple(map, prefix + "MobileGuideUrl", this.MobileGuideUrl);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 子账号路由策略：填写master或者slave，表示路由主节点，从节点
+        /// 路由策略：填写master或者replication，表示主节点或者从节点
         /// </summary>
         [JsonProperty("ReadonlyPolicy")]
         public string[] ReadonlyPolicy{ get; set; }

@@ -31,7 +31,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 副本Id
+        /// 副本组Id，多AZ实例必填
         /// </summary>
         [JsonProperty("GroupId")]
         public long? GroupId{ get; set; }

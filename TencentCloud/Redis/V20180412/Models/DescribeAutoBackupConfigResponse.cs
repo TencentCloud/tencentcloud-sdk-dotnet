@@ -43,6 +43,18 @@ namespace TencentCloud.Redis.V20180412.Models
         public string TimePeriod{ get; set; }
 
         /// <summary>
+        /// 全量备份文件保存天数
+        /// </summary>
+        [JsonProperty("BackupStorageDays")]
+        public long? BackupStorageDays{ get; set; }
+
+        /// <summary>
+        /// tendis binlog备份文件保存天数
+        /// </summary>
+        [JsonProperty("BinlogStorageDays")]
+        public long? BinlogStorageDays{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +69,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "AutoBackupType", this.AutoBackupType);
             this.SetParamArraySimple(map, prefix + "WeekDays.", this.WeekDays);
             this.SetParamSimple(map, prefix + "TimePeriod", this.TimePeriod);
+            this.SetParamSimple(map, prefix + "BackupStorageDays", this.BackupStorageDays);
+            this.SetParamSimple(map, prefix + "BinlogStorageDays", this.BinlogStorageDays);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

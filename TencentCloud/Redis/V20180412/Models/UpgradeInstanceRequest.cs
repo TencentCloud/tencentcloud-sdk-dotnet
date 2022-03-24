@@ -43,7 +43,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public ulong? RedisShardNum{ get; set; }
 
         /// <summary>
-        /// 副本数量，标准架构不需要填写，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
+        /// 副本数量，多AZ实例修改副本时必须要传入NodeSet。该参数不支持与RedisShardNum或MemSize同时输入。
         /// </summary>
         [JsonProperty("RedisReplicasNum")]
         public ulong? RedisReplicasNum{ get; set; }
