@@ -49,6 +49,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 输出的视频信息。
+        /// </summary>
+        [JsonProperty("VideoStream")]
+        public EditMediaVideoStream VideoStream{ get; set; }
+
+        /// <summary>
+        /// 极速高清转码参数。
+        /// </summary>
+        [JsonProperty("TEHDConfig")]
+        public EditMediaTEHDConfig TEHDConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +71,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamObj(map, prefix + "VideoStream.", this.VideoStream);
+            this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
         }
     }
 }

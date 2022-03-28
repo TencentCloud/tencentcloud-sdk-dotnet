@@ -45,7 +45,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 编辑模板 ID，取值有 10，20，不填代表使用 10 模板。
         /// <li>10：拼接时，以分辨率最高的输入为基准；</li>
-        /// <li>20：拼接时，以码率最高的输入为基准；</li>
+        /// <li>20：拼接时，以码率最高的输入为基准。</li>
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

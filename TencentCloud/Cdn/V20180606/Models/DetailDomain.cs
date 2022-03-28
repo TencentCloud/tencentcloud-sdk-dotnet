@@ -468,6 +468,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("RuleEngine")]
         public RuleEngine RuleEngine{ get; set; }
 
+        /// <summary>
+        /// 主域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParentHost")]
+        public string ParentHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -535,6 +542,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
             this.SetParamObj(map, prefix + "RuleEngine.", this.RuleEngine);
+            this.SetParamSimple(map, prefix + "ParentHost", this.ParentHost);
         }
     }
 }

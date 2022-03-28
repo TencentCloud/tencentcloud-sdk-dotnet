@@ -43,6 +43,12 @@ namespace TencentCloud.Cam.V20190116.Models
         public OffsiteFlag OffsiteFlag{ get; set; }
 
         /// <summary>
+        /// 1: 提示7天信任设备 0: 不提示
+        /// </summary>
+        [JsonProperty("PromptTrust")]
+        public ulong? PromptTrust{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamObj(map, prefix + "LoginFlag.", this.LoginFlag);
             this.SetParamObj(map, prefix + "ActionFlag.", this.ActionFlag);
             this.SetParamObj(map, prefix + "OffsiteFlag.", this.OffsiteFlag);
+            this.SetParamSimple(map, prefix + "PromptTrust", this.PromptTrust);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -31,13 +31,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TemplateId{ get; set; }
 
         /// <summary>
-        /// 模板名称。
+        /// 模板名称，长度不超过64。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 模板描述。
+        /// 模板描述，长度不超过255。
         /// </summary>
         [JsonProperty("Description")]
         public string Description{ get; set; }

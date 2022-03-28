@@ -130,6 +130,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
+        /// <summary>
+        /// 主域名
+        /// </summary>
+        [JsonProperty("ParentHost")]
+        public string ParentHost{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +156,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Readonly", this.Readonly);
             this.SetParamSimple(map, prefix + "Product", this.Product);
+            this.SetParamSimple(map, prefix + "ParentHost", this.ParentHost);
         }
     }
 }

@@ -973,7 +973,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询安全设置
+        /// 查询用户安全设置
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
-        /// 查询安全设置
+        /// 查询用户安全设置
         /// </summary>
         /// <param name="req"><see cref="DescribeSafeAuthFlagRequest"/></param>
         /// <returns><see cref="DescribeSafeAuthFlagResponse"/></returns>

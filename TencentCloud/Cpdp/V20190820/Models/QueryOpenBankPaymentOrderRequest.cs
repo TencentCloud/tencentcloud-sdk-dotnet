@@ -31,13 +31,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ChannelMerchantId{ get; set; }
 
         /// <summary>
-        /// 外部商户订单号。与ChannelOrderId二者选一。
+        /// 外部商户订单号。与ChannelOrderId不能同时为空。
         /// </summary>
         [JsonProperty("OutOrderId")]
         public string OutOrderId{ get; set; }
 
         /// <summary>
-        /// 云平台订单号。与OutOrderId二者选一。
+        /// 云平台订单号。与OutOrderId不能同时为空。
         /// </summary>
         [JsonProperty("ChannelOrderId")]
         public string ChannelOrderId{ get; set; }
