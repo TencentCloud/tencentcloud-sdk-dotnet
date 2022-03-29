@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Iecp.V20210914.Models
+namespace TencentCloud.Thpc.V20211109.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateUserTokenRequest : AbstractModel
+    public class LoginNodeOverview : AbstractModel
     {
         
         /// <summary>
-        /// token过期时间，有效值是1~300秒
+        /// 登录节点ID。
         /// </summary>
-        [JsonProperty("Second")]
-        public long? Second{ get; set; }
+        [JsonProperty("NodeId")]
+        public string NodeId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace TencentCloud.Iecp.V20210914.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Second", this.Second);
+            this.SetParamSimple(map, prefix + "NodeId", this.NodeId);
         }
     }
 }

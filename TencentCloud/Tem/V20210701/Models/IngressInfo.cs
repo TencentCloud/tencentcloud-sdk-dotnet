@@ -96,6 +96,15 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Mixed")]
         public bool? Mixed{ get; set; }
 
+        /// <summary>
+        /// 重定向模式，可选值：
+        /// - AUTO（自动重定向http到https）
+        /// - NONE（不使用重定向）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RewriteType")]
+        public string RewriteType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -113,6 +122,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Vip", this.Vip);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Mixed", this.Mixed);
+            this.SetParamSimple(map, prefix + "RewriteType", this.RewriteType);
         }
     }
 }

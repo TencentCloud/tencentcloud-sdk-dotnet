@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iecp.V20210914.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateUserTokenRequest : AbstractModel
+    public class EnablePrometheusConf : AbstractModel
     {
         
         /// <summary>
-        /// token过期时间，有效值是1~300秒
+        /// 应用开放的监听端口
         /// </summary>
-        [JsonProperty("Second")]
-        public long? Second{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
+
+        /// <summary>
+        /// 业务指标暴露的url path
+        /// </summary>
+        [JsonProperty("Path")]
+        public string Path{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Iecp.V20210914.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Second", this.Second);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Path", this.Path);
         }
     }
 }

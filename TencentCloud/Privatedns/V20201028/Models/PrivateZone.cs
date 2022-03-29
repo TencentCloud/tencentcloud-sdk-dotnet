@@ -98,6 +98,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("AccountVpcSet")]
         public AccountVpcInfoOutput[] AccountVpcSet{ get; set; }
 
+        /// <summary>
+        /// 是否自定义TLD
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsCustomTld")]
+        public bool? IsCustomTld{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
         }
     }
 }

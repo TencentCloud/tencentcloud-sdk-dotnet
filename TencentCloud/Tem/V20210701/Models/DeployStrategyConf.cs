@@ -37,7 +37,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? BetaBatchNum{ get; set; }
 
         /// <summary>
-        /// 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的
+        /// 分批策略：0-全自动，1-全手动，2-beta分批，beta批一定是手动的，3-首次发布
         /// </summary>
         [JsonProperty("DeployStrategyType")]
         public long? DeployStrategyType{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Data")]
         public Pair[] Data{ get; set; }
 
+        /// <summary>
+        /// 加密配置名称
+        /// </summary>
+        [JsonProperty("SecretDataName")]
+        public string SecretDataName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ConfigDataName", this.ConfigDataName);
             this.SetParamSimple(map, prefix + "MountedPath", this.MountedPath);
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "SecretDataName", this.SecretDataName);
         }
     }
 }

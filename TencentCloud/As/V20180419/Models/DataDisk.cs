@@ -52,6 +52,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DeleteWithInstance")]
         public bool? DeleteWithInstance{ get; set; }
 
+        /// <summary>
+        /// 数据盘是否加密。取值范围：<br><li>TRUE：加密<br><li>FALSE：不加密
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public bool? Encrypt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
         }
     }
 }

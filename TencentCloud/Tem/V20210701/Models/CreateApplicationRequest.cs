@@ -96,7 +96,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public string DeployMode{ get; set; }
 
         /// <summary>
-        /// 是否启用调用链功能
+        /// 是否开启 Java 应用的 APM 自动上报功能，1 表示启用；0 表示关闭
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }

@@ -48,6 +48,18 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("SourceChannel")]
         public long? SourceChannel{ get; set; }
 
+        /// <summary>
+        /// 资源来源，目前支持：existing，已有资源；creating，自动创建
+        /// </summary>
+        [JsonProperty("ResourceFrom")]
+        public string ResourceFrom{ get; set; }
+
+        /// <summary>
+        /// 设置 resource 的额外配置
+        /// </summary>
+        [JsonProperty("ResourceConfig")]
+        public string ResourceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
+            this.SetParamSimple(map, prefix + "ResourceFrom", this.ResourceFrom);
+            this.SetParamSimple(map, prefix + "ResourceConfig", this.ResourceConfig);
         }
     }
 }

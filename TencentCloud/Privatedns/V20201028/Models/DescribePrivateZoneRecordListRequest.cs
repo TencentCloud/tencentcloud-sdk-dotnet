@@ -43,7 +43,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页限制数目， 最大100，默认20
+        /// 分页限制数目， 最大200，默认20
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 是否查询官方demo实例
+        /// </summary>
+        [JsonProperty("DemoInstanceFlag")]
+        public long? DemoInstanceFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "DemoInstanceFlag", this.DemoInstanceFlag);
         }
     }
 }

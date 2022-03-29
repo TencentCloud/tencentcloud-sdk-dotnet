@@ -61,6 +61,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 实例名称
+        /// </summary>
+        [JsonProperty("InstanceName")]
+        public string InstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +79,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
         }
     }
 }

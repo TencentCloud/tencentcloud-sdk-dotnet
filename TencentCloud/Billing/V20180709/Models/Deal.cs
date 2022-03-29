@@ -192,6 +192,13 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("SubProductName")]
         public string SubProductName{ get; set; }
 
+        /// <summary>
+        /// 订单对应的资源id, 查询参数Limit超过200，将返回null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceId")]
+        public string[] ResourceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +230,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamSimple(map, prefix + "SubProductName", this.SubProductName);
+            this.SetParamArraySimple(map, prefix + "ResourceId.", this.ResourceId);
         }
     }
 }

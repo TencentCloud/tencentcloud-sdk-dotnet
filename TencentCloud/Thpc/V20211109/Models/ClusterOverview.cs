@@ -84,6 +84,18 @@ namespace TencentCloud.Thpc.V20211109.Models
         [JsonProperty("ManagerNodeSet")]
         public ManagerNodeOverview[] ManagerNodeSet{ get; set; }
 
+        /// <summary>
+        /// 登录节点概览。
+        /// </summary>
+        [JsonProperty("LoginNodeSet")]
+        public LoginNodeOverview[] LoginNodeSet{ get; set; }
+
+        /// <summary>
+        /// 登录节点数量。
+        /// </summary>
+        [JsonProperty("LoginNodeCount")]
+        public long? LoginNodeCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Thpc.V20211109.Models
             this.SetParamArrayObj(map, prefix + "ComputeNodeSet.", this.ComputeNodeSet);
             this.SetParamSimple(map, prefix + "ManagerNodeCount", this.ManagerNodeCount);
             this.SetParamArrayObj(map, prefix + "ManagerNodeSet.", this.ManagerNodeSet);
+            this.SetParamArrayObj(map, prefix + "LoginNodeSet.", this.LoginNodeSet);
+            this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
         }
     }
 }
