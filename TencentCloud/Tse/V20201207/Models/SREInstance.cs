@@ -184,6 +184,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConfigInfoVisible")]
         public bool? ConfigInfoVisible{ get; set; }
 
+        /// <summary>
+        /// 引擎实例控制台默认密码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsoleDefaultPwd")]
+        public string ConsoleDefaultPwd{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnableConsoleInternet", this.EnableConsoleInternet);
             this.SetParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
             this.SetParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
+            this.SetParamSimple(map, prefix + "ConsoleDefaultPwd", this.ConsoleDefaultPwd);
         }
     }
 }

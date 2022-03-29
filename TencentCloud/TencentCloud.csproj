@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.489</VersionPrefix>
+    <VersionPrefix>3.0.490</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4046,6 +4046,8 @@
     <Compile Include="Cls\V20201016\Models\DescribeIndexResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogContextRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogContextResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogHistogramRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\DescribeLogHistogramResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogsetsRequest.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeLogsetsResponse.cs" />
     <Compile Include="Cls\V20201016\Models\DescribeMachineGroupConfigsRequest.cs" />
@@ -4070,6 +4072,7 @@
     <Compile Include="Cls\V20201016\Models\FullTextInfo.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="Cls\V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\HistogramInfo.cs" />
     <Compile Include="Cls\V20201016\Models\HostFileInfo.cs" />
     <Compile Include="Cls\V20201016\Models\JsonInfo.cs" />
     <Compile Include="Cls\V20201016\Models\KeyRegexInfo.cs" />
@@ -4448,6 +4451,7 @@
     <Compile Include="Cpdp\V20190820\Models\AssignmentData.cs" />
     <Compile Include="Cpdp\V20190820\Models\BankBranchInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\BankCardItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\BillDownloadUrlResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAccountResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\BindAcctRequest.cs" />
@@ -4585,6 +4589,8 @@
     <Compile Include="Cpdp\V20190820\Models\ExternalReturnContractInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\FileItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\FundsTransactionItem.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetBillDownloadUrlRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetBillDownloadUrlResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MemberTransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantClassificationId.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
@@ -5825,10 +5831,14 @@
     <Compile Include="Cynosdb\V20190107\Models\ModifyAccountParamsResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyClusterNameRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyClusterNameResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyClusterParamRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyClusterParamResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyInstanceNameRequest.cs" />
+    <Compile Include="Cynosdb\V20190107\Models\ModifyInstanceNameResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyMaintainPeriodConfigRequest.cs" />
     <Compile Include="Cynosdb\V20190107\Models\ModifyMaintainPeriodConfigResponse.cs" />
     <Compile Include="Cynosdb\V20190107\Models\NetAddr.cs" />

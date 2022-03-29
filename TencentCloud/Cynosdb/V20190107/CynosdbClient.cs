@@ -1173,6 +1173,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 修改集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyClusterNameResponse"/></returns>
+        public async Task<ModifyClusterNameResponse> ModifyClusterName(ModifyClusterNameRequest req)
+        {
+             JsonResponseModel<ModifyClusterNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改集群名称
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterNameRequest"/></param>
+        /// <returns><see cref="ModifyClusterNameResponse"/></returns>
+        public ModifyClusterNameResponse ModifyClusterNameSync(ModifyClusterNameRequest req)
+        {
+             JsonResponseModel<ModifyClusterNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改集群参数
         /// </summary>
         /// <param name="req"><see cref="ModifyClusterParamRequest"/></param>
@@ -1244,6 +1284,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDBInstanceSecurityGroups");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceSecurityGroupsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceName)用于修改实例名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public async Task<ModifyInstanceNameResponse> ModifyInstanceName(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstanceName)用于修改实例名称。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyInstanceNameResponse"/></returns>
+        public ModifyInstanceNameResponse ModifyInstanceNameSync(ModifyInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -31,19 +31,19 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// 分页，限制当前返回多少条记录，大于等于10
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// 分页，从多少条数据开始返回
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 申请单状态，用于过滤
+        /// 申请单状态，用于过滤，0-待审核 1-已经审核并提交任务 2-已驳回
         /// </summary>
         [JsonProperty("CensorStatus")]
         public long? CensorStatus{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         public string Applicant{ get; set; }
 
         /// <summary>
-        /// 申请类型，用于过滤
+        /// 申请类型，用于过滤，0加表 1删除表 2清理表 3修改表 4表重建 5存储层扩缩容 6接入层扩缩容 7复制表数据 8key回档
         /// </summary>
         [JsonProperty("ApplyType")]
         public long? ApplyType{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? TemplateID{ get; set; }
 
         /// <summary>
-        /// 模版名字
+        /// 模板名字
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

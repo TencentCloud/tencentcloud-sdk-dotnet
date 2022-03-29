@@ -108,7 +108,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 购买个数，目前只支持传1（不传默认为1）
+        /// 购买集群数，可选值范围[1,50]，默认为1
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

@@ -36,6 +36,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ExecutionTime")]
         public string ExecutionTime{ get; set; }
 
+        /// <summary>
+        /// 是否开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Enable")]
+        public bool? Enable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +51,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         {
             this.SetParamSimple(map, prefix + "Frequency", this.Frequency);
             this.SetParamSimple(map, prefix + "ExecutionTime", this.ExecutionTime);
+            this.SetParamSimple(map, prefix + "Enable", this.Enable);
         }
     }
 }

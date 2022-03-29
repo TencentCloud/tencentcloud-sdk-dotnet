@@ -60,6 +60,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("PublicIpAddressesBandwidthOut")]
         public ulong? PublicIpAddressesBandwidthOut{ get; set; }
 
+        /// <summary>
+        /// 公网IP是否强制与NAT网关来自同可用区，true表示需要与NAT网关同可用区；false表示可与NAT网关不是同一个可用区。此参数只有当参数Zone存在时才能生效。
+        /// </summary>
+        [JsonProperty("PublicIpFromSameZone")]
+        public bool? PublicIpFromSameZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "StockPublicIpAddressesBandwidthOut", this.StockPublicIpAddressesBandwidthOut);
             this.SetParamSimple(map, prefix + "PublicIpAddressesBandwidthOut", this.PublicIpAddressesBandwidthOut);
+            this.SetParamSimple(map, prefix + "PublicIpFromSameZone", this.PublicIpFromSameZone);
         }
     }
 }

@@ -144,6 +144,18 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("StreamParam")]
         public string StreamParam{ get; set; }
 
+        /// <summary>
+        /// 带宽，单位Mbps。
+        /// </summary>
+        [JsonProperty("Bandwidth")]
+        public float? Bandwidth{ get; set; }
+
+        /// <summary>
+        /// 流量，单位MB。
+        /// </summary>
+        [JsonProperty("Flux")]
+        public float? Flux{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +182,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "MetaAudioRate", this.MetaAudioRate);
             this.SetParamSimple(map, prefix + "MateFps", this.MateFps);
             this.SetParamSimple(map, prefix + "StreamParam", this.StreamParam);
+            this.SetParamSimple(map, prefix + "Bandwidth", this.Bandwidth);
+            this.SetParamSimple(map, prefix + "Flux", this.Flux);
         }
     }
 }

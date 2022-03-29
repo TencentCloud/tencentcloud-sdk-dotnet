@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.489</VersionPrefix>
+    <VersionPrefix>3.0.490</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -128,6 +128,8 @@
     <Compile Include="V20201016\Models\DescribeIndexResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextRequest.cs" />
     <Compile Include="V20201016\Models\DescribeLogContextResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeLogHistogramRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeLogHistogramResponse.cs" />
     <Compile Include="V20201016\Models\DescribeLogsetsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeLogsetsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeMachineGroupConfigsRequest.cs" />
@@ -152,6 +154,7 @@
     <Compile Include="V20201016\Models\FullTextInfo.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogRequest.cs" />
     <Compile Include="V20201016\Models\GetAlarmLogResponse.cs" />
+    <Compile Include="V20201016\Models\HistogramInfo.cs" />
     <Compile Include="V20201016\Models\HostFileInfo.cs" />
     <Compile Include="V20201016\Models\JsonInfo.cs" />
     <Compile Include="V20201016\Models\KeyRegexInfo.cs" />

@@ -54,6 +54,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
 
+        /// <summary>
+        /// "APP" 类型的签署链接，可以设置此值；表示签署完成后自动回跳至源APP；
+        /// </summary>
+        [JsonProperty("AutoJumpBack")]
+        public bool? AutoJumpBack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         }
     }
 }

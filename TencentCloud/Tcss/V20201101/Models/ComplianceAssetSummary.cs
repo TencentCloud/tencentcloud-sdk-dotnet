@@ -145,6 +145,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("PeriodRule")]
         public CompliancePeriodTaskRule PeriodRule{ get; set; }
 
+        /// <summary>
+        /// 已开启的检查项总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OpenPolicyItemCount")]
+        public ulong? OpenPolicyItemCount{ get; set; }
+
+        /// <summary>
+        /// 已忽略的检查项总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IgnoredPolicyItemCount")]
+        public ulong? IgnoredPolicyItemCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -169,6 +183,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CheckCostTime", this.CheckCostTime);
             this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
             this.SetParamObj(map, prefix + "PeriodRule.", this.PeriodRule);
+            this.SetParamSimple(map, prefix + "OpenPolicyItemCount", this.OpenPolicyItemCount);
+            this.SetParamSimple(map, prefix + "IgnoredPolicyItemCount", this.IgnoredPolicyItemCount);
         }
     }
 }

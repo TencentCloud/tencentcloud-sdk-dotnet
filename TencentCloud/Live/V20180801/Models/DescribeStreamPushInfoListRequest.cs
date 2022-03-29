@@ -31,13 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string StreamName{ get; set; }
 
         /// <summary>
-        /// 起始时间点，格式为yyyy-mm-dd HH:MM:SS。
+        /// 起始时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间点，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
+        /// 结束时间点，北京时间，格式为yyyy-mm-dd HH:MM:SS，支持查询最近7天数据，建议查询时间跨度在3小时之内。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

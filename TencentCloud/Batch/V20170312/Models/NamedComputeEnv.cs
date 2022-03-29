@@ -82,7 +82,7 @@ namespace TencentCloud.Batch.V20170312.Models
         /// 通知信息
         /// </summary>
         [JsonProperty("Notifications")]
-        public Notification Notifications{ get; set; }
+        public Notification[] Notifications{ get; set; }
 
         /// <summary>
         /// 非活跃节点处理策略，默认“RECREATE”，即对于实例创建失败或异常退还的计算节点，定期重新创建实例资源。
@@ -117,7 +117,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamArrayObj(map, prefix + "Authentications.", this.Authentications);
             this.SetParamArrayObj(map, prefix + "InputMappings.", this.InputMappings);
             this.SetParamObj(map, prefix + "AgentRunningMode.", this.AgentRunningMode);
-            this.SetParamObj(map, prefix + "Notifications.", this.Notifications);
+            this.SetParamArrayObj(map, prefix + "Notifications.", this.Notifications);
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
             this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

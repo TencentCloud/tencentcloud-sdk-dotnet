@@ -1373,6 +1373,46 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
+        /// 本接口用于构建直方图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
+        /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
+        public async Task<DescribeLogHistogramResponse> DescribeLogHistogram(DescribeLogHistogramRequest req)
+        {
+             JsonResponseModel<DescribeLogHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于构建直方图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogHistogramRequest"/></param>
+        /// <returns><see cref="DescribeLogHistogramResponse"/></returns>
+        public DescribeLogHistogramResponse DescribeLogHistogramSync(DescribeLogHistogramRequest req)
+        {
+             JsonResponseModel<DescribeLogHistogramResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogHistogram");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogHistogramResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取日志集信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeLogsetsRequest"/></param>

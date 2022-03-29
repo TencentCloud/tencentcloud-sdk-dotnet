@@ -37,6 +37,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("BoundClusterType")]
         public string BoundClusterType{ get; set; }
 
+        /// <summary>
+        /// 服务同步模式，all为全量同步，demand为按需同步
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SyncMode")]
+        public string SyncMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Tse.V20201207.Models
         {
             this.SetParamSimple(map, prefix + "BoundClusterId", this.BoundClusterId);
             this.SetParamSimple(map, prefix + "BoundClusterType", this.BoundClusterType);
+            this.SetParamSimple(map, prefix + "SyncMode", this.SyncMode);
         }
     }
 }

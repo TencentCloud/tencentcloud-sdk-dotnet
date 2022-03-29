@@ -61,7 +61,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 签署人类型，PERSON和ORGANIZATION
+        /// 签署人类型，PERSON-个人；ORGANIZATION-企业；
+        /// ENTERPRISESERVER-企业静默签;
+        /// 注：ENTERPRISESERVER 类型仅用于使用文件创建流程（ChannelCreateFlowByFiles）接口；并且仅能指定发起方企业签署方为静默签署；
         /// </summary>
         [JsonProperty("ApproverType")]
         public string ApproverType{ get; set; }
@@ -109,6 +111,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("NotChannelOrganization")]
         public bool? NotChannelOrganization{ get; set; }
 
+        /// <summary>
+        /// 使用PDF文件直接发起合同时，签署人指定的签署控件
+        /// </summary>
+        [JsonProperty("SignComponents")]
+        public Component[] SignComponents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +137,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
             this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
             this.SetParamSimple(map, prefix + "NotChannelOrganization", this.NotChannelOrganization);
+            this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
         }
     }
 }

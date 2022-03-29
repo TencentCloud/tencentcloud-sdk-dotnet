@@ -62,6 +62,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("SubNetIds")]
         public string[] SubNetIds{ get; set; }
 
+        /// <summary>
+        /// 是否打开云调用
+        /// </summary>
+        [JsonProperty("IsOpenCloudInvoke")]
+        public bool? IsOpenCloudInvoke{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "Flag", this.Flag);
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamArraySimple(map, prefix + "SubNetIds.", this.SubNetIds);
+            this.SetParamSimple(map, prefix + "IsOpenCloudInvoke", this.IsOpenCloudInvoke);
         }
     }
 }

@@ -213,6 +213,13 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("DbClusterInfoStruct")]
         public string DbClusterInfoStruct{ get; set; }
 
+        /// <summary>
+        /// 表格Txh备份文件多少天后过期删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TxhBackupExpireDay")]
+        public ulong? TxhBackupExpireDay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +253,7 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamSimple(map, prefix + "SortFieldNum", this.SortFieldNum);
             this.SetParamSimple(map, prefix + "SortRule", this.SortRule);
             this.SetParamSimple(map, prefix + "DbClusterInfoStruct", this.DbClusterInfoStruct);
+            this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
         }
     }
 }

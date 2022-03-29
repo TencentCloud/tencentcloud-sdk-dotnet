@@ -54,6 +54,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Features")]
         public string[] Features{ get; set; }
 
+        /// <summary>
+        /// 主账户名默认为 polaris，该值为主账户的默认密码
+        /// </summary>
+        [JsonProperty("MainPassword")]
+        public string MainPassword{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "VpcInfos.", this.VpcInfos);
             this.SetParamSimple(map, prefix + "AuthOpen", this.AuthOpen);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
+            this.SetParamSimple(map, prefix + "MainPassword", this.MainPassword);
         }
     }
 }

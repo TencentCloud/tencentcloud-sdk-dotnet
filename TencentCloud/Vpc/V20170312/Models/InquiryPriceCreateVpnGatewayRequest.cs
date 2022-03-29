@@ -42,6 +42,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("InstanceChargePrepaid")]
         public InstanceChargePrepaid InstanceChargePrepaid{ get; set; }
 
+        /// <summary>
+        /// SSL VPN连接数设置，可选规格：5, 10, 20, 50, 100；单位：个。
+        /// </summary>
+        [JsonProperty("MaxConnection")]
+        public ulong? MaxConnection{ get; set; }
+
+        /// <summary>
+        /// 查询的VPN类型，支持IPSEC和SSL两种类型，为SSL类型时，MaxConnection参数必传。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
+            this.SetParamSimple(map, prefix + "MaxConnection", this.MaxConnection);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

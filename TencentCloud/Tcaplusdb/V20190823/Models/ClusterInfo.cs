@@ -192,6 +192,27 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
         [JsonProperty("KafkaInfo")]
         public KafkaInfo KafkaInfo{ get; set; }
 
+        /// <summary>
+        /// 集群Txh备份文件多少天后过期删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TxhBackupExpireDay")]
+        public ulong? TxhBackupExpireDay{ get; set; }
+
+        /// <summary>
+        /// 集群Ulog备份文件多少天后过期删除
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UlogBackupExpireDay")]
+        public ulong? UlogBackupExpireDay{ get; set; }
+
+        /// <summary>
+        /// 集群Ulog备份文件过期策略是否为只读， 0： UlogBackupExpire是只读，不可修改， 1： UlogBackupExpire可以修改（当前业务存在Svrid第二段等于clusterid的机器）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsReadOnlyUlogBackupExpireDay")]
+        public ulong? IsReadOnlyUlogBackupExpireDay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -224,6 +245,9 @@ namespace TencentCloud.Tcaplusdb.V20190823.Models
             this.SetParamArraySimple(map, prefix + "DbaUins.", this.DbaUins);
             this.SetParamSimple(map, prefix + "DataFlowStatus", this.DataFlowStatus);
             this.SetParamObj(map, prefix + "KafkaInfo.", this.KafkaInfo);
+            this.SetParamSimple(map, prefix + "TxhBackupExpireDay", this.TxhBackupExpireDay);
+            this.SetParamSimple(map, prefix + "UlogBackupExpireDay", this.UlogBackupExpireDay);
+            this.SetParamSimple(map, prefix + "IsReadOnlyUlogBackupExpireDay", this.IsReadOnlyUlogBackupExpireDay);
         }
     }
 }
