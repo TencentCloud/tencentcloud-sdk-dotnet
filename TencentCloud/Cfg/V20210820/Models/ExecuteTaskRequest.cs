@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EntityRelationSubject : AbstractModel
+    public class ExecuteTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// Subject对应popular
+        /// 需要执行的任务ID
         /// </summary>
-        [JsonProperty("Popular")]
-        public long?[] Popular{ get; set; }
-
-        /// <summary>
-        /// Subject对应id
-        /// </summary>
-        [JsonProperty("Id")]
-        public string[] Id{ get; set; }
-
-        /// <summary>
-        /// Subject对应name
-        /// </summary>
-        [JsonProperty("Name")]
-        public string[] Name{ get; set; }
+        [JsonProperty("TaskId")]
+        public long? TaskId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Popular.", this.Popular);
-            this.SetParamArraySimple(map, prefix + "Id.", this.Id);
-            this.SetParamArraySimple(map, prefix + "Name.", this.Name);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

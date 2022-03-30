@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EntityRelationContent : AbstractModel
+    public class TagWithCreate : AbstractModel
     {
         
         /// <summary>
-        /// 实体关系查询返回关系的object
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签键
         /// </summary>
-        [JsonProperty("Object")]
-        public EntityRelationObject[] Object{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
 
         /// <summary>
-        /// 实体关系查询返回的关系名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 标签值
         /// </summary>
-        [JsonProperty("Relation")]
-        public string Relation{ get; set; }
-
-        /// <summary>
-        /// 实体关系查询返回关系的subject
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Subject")]
-        public EntityRelationSubject[] Subject{ get; set; }
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Object.", this.Object);
-            this.SetParamSimple(map, prefix + "Relation", this.Relation);
-            this.SetParamArrayObj(map, prefix + "Subject.", this.Subject);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

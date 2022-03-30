@@ -613,6 +613,46 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
+        /// 列出云拨测指标详细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
+        /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>
+        public async Task<DescribeProbeMetricDataResponse> DescribeProbeMetricData(DescribeProbeMetricDataRequest req)
+        {
+             JsonResponseModel<DescribeProbeMetricDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProbeMetricData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProbeMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出云拨测指标详细数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
+        /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>
+        public DescribeProbeMetricDataResponse DescribeProbeMetricDataSync(DescribeProbeMetricDataRequest req)
+        {
+             JsonResponseModel<DescribeProbeMetricDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProbeMetricData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProbeMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询拨测节点
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeNodesRequest"/></param>

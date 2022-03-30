@@ -67,10 +67,16 @@ namespace TencentCloud.Partners.V20180321.Models
         public string[] OwnerUins{ get; set; }
 
         /// <summary>
-        /// 订单号列表
+        /// 子订单号列表
         /// </summary>
         [JsonProperty("DealNames")]
         public string[] DealNames{ get; set; }
+
+        /// <summary>
+        /// 大订单号列表
+        /// </summary>
+        [JsonProperty("BigDealIds")]
+        public string[] BigDealIds{ get; set; }
 
 
         /// <summary>
@@ -86,6 +92,7 @@ namespace TencentCloud.Partners.V20180321.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamArraySimple(map, prefix + "OwnerUins.", this.OwnerUins);
             this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamArraySimple(map, prefix + "BigDealIds.", this.BigDealIds);
         }
     }
 }

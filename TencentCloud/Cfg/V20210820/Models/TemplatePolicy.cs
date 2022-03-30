@@ -15,35 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EntityRelationObject : AbstractModel
+    public class TemplatePolicy : AbstractModel
     {
         
         /// <summary>
-        /// object对应popular值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 保护策略ID列表
         /// </summary>
-        [JsonProperty("Popular")]
-        public long?[] Popular{ get; set; }
+        [JsonProperty("TemplatePolicyIdList")]
+        public string[] TemplatePolicyIdList{ get; set; }
 
         /// <summary>
-        /// object对应id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 策略规则
         /// </summary>
-        [JsonProperty("Id")]
-        public string[] Id{ get; set; }
+        [JsonProperty("TemplatePolicyRule")]
+        public string TemplatePolicyRule{ get; set; }
 
         /// <summary>
-        /// object对应name
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 护栏策略生效处理策略 1:顺序执行，2:暂停
         /// </summary>
-        [JsonProperty("Name")]
-        public string[] Name{ get; set; }
+        [JsonProperty("TemplatePolicyDealType")]
+        public long? TemplatePolicyDealType{ get; set; }
 
 
         /// <summary>
@@ -51,9 +48,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Popular.", this.Popular);
-            this.SetParamArraySimple(map, prefix + "Id.", this.Id);
-            this.SetParamArraySimple(map, prefix + "Name.", this.Name);
+            this.SetParamArraySimple(map, prefix + "TemplatePolicyIdList.", this.TemplatePolicyIdList);
+            this.SetParamSimple(map, prefix + "TemplatePolicyRule", this.TemplatePolicyRule);
+            this.SetParamSimple(map, prefix + "TemplatePolicyDealType", this.TemplatePolicyDealType);
         }
     }
 }

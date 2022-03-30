@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRelationResponse : AbstractModel
+    public class DescribeTaskListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 返回查询实体间的关系
+        /// 无
         /// </summary>
-        [JsonProperty("Content")]
-        public EntityRelationContent[] Content{ get; set; }
+        [JsonProperty("TaskList")]
+        public TaskListItem[] TaskList{ get; set; }
+
+        /// <summary>
+        /// 列表数量
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +48,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
+            this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

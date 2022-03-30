@@ -373,7 +373,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// 供代理商拉取缓存的全量客户订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// 供代理商拉取缓存的全量客户订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsByCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsByCacheResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】供超大型代理商（代客数量>=3000 ）拉取缓存的全量客户订单。
+        /// 【该接口将逐步下线，请切换使用升级版本DescribeAgentDealsByCache】代理商拉取缓存的全量客户订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentDealsCacheRequest"/></param>
         /// <returns><see cref="DescribeAgentDealsCacheResponse"/></returns>
@@ -573,7 +573,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 可以查询代理商下指定客户的自付订单
+        /// 查询代理商名下指定代客的自付订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentSelfPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentSelfPayDealsV2Response"/></returns>
@@ -593,7 +593,7 @@ namespace TencentCloud.Partners.V20180321
         }
 
         /// <summary>
-        /// 可以查询代理商下指定客户的自付订单
+        /// 查询代理商名下指定代客的自付订单
         /// </summary>
         /// <param name="req"><see cref="DescribeAgentSelfPayDealsV2Request"/></param>
         /// <returns><see cref="DescribeAgentSelfPayDealsV2Response"/></returns>

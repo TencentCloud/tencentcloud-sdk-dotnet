@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.491</VersionPrefix>
+    <VersionPrefix>3.0.492</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2153,6 +2153,8 @@
     <Compile Include="Cat\V20180409\Models\DescribeCatLogsResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeDetailedSingleProbeDataRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeDetailedSingleProbeDataResponse.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeMetricDataRequest.cs" />
+    <Compile Include="Cat\V20180409\Models\DescribeProbeMetricDataResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeProbeNodesRequest.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeProbeNodesResponse.cs" />
     <Compile Include="Cat\V20180409\Models\DescribeProbeTasksRequest.cs" />
@@ -3078,6 +3080,45 @@
     <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagRequest.cs" />
     <Compile Include="Cds\V20180420\Models\ModifyDbauditInstancesRenewFlagResponse.cs" />
     <Compile Include="Cds\V20180420\Models\RegionInfo.cs" />
+    <Compile Include="Cfg\V20210820\CfgClient.cs" />
+    <Compile Include="Cfg\V20210820\Models\CreateTaskFromTemplateRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\CreateTaskFromTemplateResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DeleteTaskRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DeleteTaskResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribePolicy.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskExecuteLogsRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskExecuteLogsResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskListRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskListResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTaskResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTemplateListRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTemplateListResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTemplateRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\DescribeTemplateResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\ExecuteTaskInstanceRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\ExecuteTaskInstanceResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\ExecuteTaskRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\ExecuteTaskResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\ModifyTaskRunStatusRequest.cs" />
+    <Compile Include="Cfg\V20210820\Models\ModifyTaskRunStatusResponse.cs" />
+    <Compile Include="Cfg\V20210820\Models\TagWithCreate.cs" />
+    <Compile Include="Cfg\V20210820\Models\TagWithDescribe.cs" />
+    <Compile Include="Cfg\V20210820\Models\Task.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskConfig.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskGroup.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskGroupAction.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskGroupActionConfig.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskGroupConfig.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskGroupInstance.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskListItem.cs" />
+    <Compile Include="Cfg\V20210820\Models\TaskMonitor.cs" />
+    <Compile Include="Cfg\V20210820\Models\Template.cs" />
+    <Compile Include="Cfg\V20210820\Models\TemplateGroup.cs" />
+    <Compile Include="Cfg\V20210820\Models\TemplateGroupAction.cs" />
+    <Compile Include="Cfg\V20210820\Models\TemplateListItem.cs" />
+    <Compile Include="Cfg\V20210820\Models\TemplateMonitor.cs" />
+    <Compile Include="Cfg\V20210820\Models\TemplatePolicy.cs" />
     <Compile Include="Cfs\V20190719\CfsClient.cs" />
     <Compile Include="Cfs\V20190719\Models\AvailableProtoStatus.cs" />
     <Compile Include="Cfs\V20190719\Models\AvailableRegion.cs" />
@@ -12069,19 +12110,10 @@
     <Compile Include="Nlp\V20190408\Models\DescribeDictResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeDictsRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeDictsResponse.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeEntityRequest.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeEntityResponse.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeRelationRequest.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeRelationResponse.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeTripleRequest.cs" />
-    <Compile Include="Nlp\V20190408\Models\DescribeTripleResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeWordItemsRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\DescribeWordItemsResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\DictInfo.cs" />
     <Compile Include="Nlp\V20190408\Models\DpToken.cs" />
-    <Compile Include="Nlp\V20190408\Models\EntityRelationContent.cs" />
-    <Compile Include="Nlp\V20190408\Models\EntityRelationObject.cs" />
-    <Compile Include="Nlp\V20190408\Models\EntityRelationSubject.cs" />
     <Compile Include="Nlp\V20190408\Models\Keyword.cs" />
     <Compile Include="Nlp\V20190408\Models\KeywordsExtractionRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\KeywordsExtractionResponse.cs" />
@@ -12109,7 +12141,6 @@
     <Compile Include="Nlp\V20190408\Models\TextSimilarityProResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\TextSimilarityResponse.cs" />
-    <Compile Include="Nlp\V20190408\Models\TripleContent.cs" />
     <Compile Include="Nlp\V20190408\Models\UpdateDictRequest.cs" />
     <Compile Include="Nlp\V20190408\Models\UpdateDictResponse.cs" />
     <Compile Include="Nlp\V20190408\Models\WordEmbeddingRequest.cs" />

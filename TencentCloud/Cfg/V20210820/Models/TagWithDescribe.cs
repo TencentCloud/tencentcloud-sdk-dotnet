@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTripleRequest : AbstractModel
+    public class TagWithDescribe : AbstractModel
     {
         
         /// <summary>
-        /// 三元组查询条件
+        /// 标签键
         /// </summary>
-        [JsonProperty("TripleCondition")]
-        public string TripleCondition{ get; set; }
+        [JsonProperty("TagKey")]
+        public string TagKey{ get; set; }
+
+        /// <summary>
+        /// 标签值
+        /// </summary>
+        [JsonProperty("TagValue")]
+        public string TagValue{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TripleCondition", this.TripleCondition);
+            this.SetParamSimple(map, prefix + "TagKey", this.TagKey);
+            this.SetParamSimple(map, prefix + "TagValue", this.TagValue);
         }
     }
 }

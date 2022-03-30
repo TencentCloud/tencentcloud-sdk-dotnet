@@ -616,6 +616,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 获取邮件发送状态。仅支持查询30天之内的数据
+        /// 默认接口请求频率限制：1次/秒
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>
@@ -636,6 +637,7 @@ namespace TencentCloud.Ses.V20201002
 
         /// <summary>
         /// 获取邮件发送状态。仅支持查询30天之内的数据
+        /// 默认接口请求频率限制：1次/秒
         /// </summary>
         /// <param name="req"><see cref="GetSendEmailStatusRequest"/></param>
         /// <returns><see cref="GetSendEmailStatusResponse"/></returns>

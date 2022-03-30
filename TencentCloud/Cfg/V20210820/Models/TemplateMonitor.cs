@@ -15,42 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TripleContent : AbstractModel
+    public class TemplateMonitor : AbstractModel
     {
         
         /// <summary>
-        /// 实体流行度
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 监控指标ID
         /// </summary>
-        [JsonProperty("Popular")]
-        public long? Popular{ get; set; }
+        [JsonProperty("MonitorId")]
+        public long? MonitorId{ get; set; }
 
         /// <summary>
-        /// 实体名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 监控指标对象类型ID
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("ObjectTypeId")]
+        public long? ObjectTypeId{ get; set; }
 
         /// <summary>
-        /// 实体order
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 指标名称
         /// </summary>
-        [JsonProperty("Order")]
-        public long? Order{ get; set; }
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
 
         /// <summary>
-        /// 实体id
+        /// 中文指标
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("MetricChineseName")]
+        public string MetricChineseName{ get; set; }
 
 
         /// <summary>
@@ -58,10 +55,10 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Popular", this.Popular);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Order", this.Order);
-            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "MonitorId", this.MonitorId);
+            this.SetParamSimple(map, prefix + "ObjectTypeId", this.ObjectTypeId);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "MetricChineseName", this.MetricChineseName);
         }
     }
 }

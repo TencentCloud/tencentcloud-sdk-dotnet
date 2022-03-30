@@ -90,6 +90,15 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 表示通知信息的通知目标类型。
+        /// 取值范围：CMQ，TDMQ_CMQ。
+        /// CMQ:表示向腾讯云CMQ发送消息。
+        /// TDMQ_CMQ：表示向腾讯云TDMQ_CMQ发送消息。<br/>默认值为CMQ。<br/>注：腾讯云计划于2022年6月前正式下线消息队列 CMQ，建议使用TDMQ_CMQ。参考文档：[CMQ迁移到TDMQ_CMQ](https://cloud.tencent.com/document/product/406/60860)
+        /// </summary>
+        [JsonProperty("NotificationTarget")]
+        public string NotificationTarget{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +116,7 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "ActionIfComputeNodeInactive", this.ActionIfComputeNodeInactive);
             this.SetParamSimple(map, prefix + "ResourceMaxRetryCount", this.ResourceMaxRetryCount);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "NotificationTarget", this.NotificationTarget);
         }
     }
 }

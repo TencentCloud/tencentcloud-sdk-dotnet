@@ -15,21 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTripleResponse : AbstractModel
+    public class ModifyTaskRunStatusResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 返回三元组信息
-        /// </summary>
-        [JsonProperty("Content")]
-        public TripleContent[] Content{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -42,7 +36,6 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

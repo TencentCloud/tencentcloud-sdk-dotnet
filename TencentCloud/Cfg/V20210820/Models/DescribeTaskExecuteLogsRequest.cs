@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Nlp.V20190408.Models
+namespace TencentCloud.Cfg.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRelationRequest : AbstractModel
+    public class DescribeTaskExecuteLogsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 输入第一个实体
+        /// 任务ID
         /// </summary>
-        [JsonProperty("LeftEntityName")]
-        public string LeftEntityName{ get; set; }
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
 
         /// <summary>
-        /// 输入第二个实体
+        /// 返回的内容行数
         /// </summary>
-        [JsonProperty("RightEntityName")]
-        public string RightEntityName{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 日志起始的行数。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Nlp.V20190408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "LeftEntityName", this.LeftEntityName);
-            this.SetParamSimple(map, prefix + "RightEntityName", this.RightEntityName);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }
