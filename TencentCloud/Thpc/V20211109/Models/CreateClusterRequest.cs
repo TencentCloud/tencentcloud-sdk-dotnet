@@ -37,7 +37,7 @@ namespace TencentCloud.Thpc.V20211109.Models
         public ManagerNode ManagerNode{ get; set; }
 
         /// <summary>
-        /// 指定管理节点的数量。目前仅支持一个管理节点。
+        /// 指定管理节点的数量。默认取值：1。取值范围：1～2。
         /// </summary>
         [JsonProperty("ManagerNodeCount")]
         public long? ManagerNodeCount{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Thpc.V20211109.Models
         public long? ComputeNodeCount{ get; set; }
 
         /// <summary>
-        /// 调度器类型。<br><li>SGE：SGE调度器。
+        /// 调度器类型。<br><li>SGE：SGE调度器。<br><li>SLURM：SLURM调度器。
         /// </summary>
         [JsonProperty("SchedulerType")]
         public string SchedulerType{ get; set; }
 
         /// <summary>
-        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像和自定义镜像。
+        /// 指定有效的[镜像](https://cloud.tencent.com/document/product/213/4940)ID，格式形如`img-xxx`。目前仅支持公有镜像。
         /// </summary>
         [JsonProperty("ImageId")]
         public string ImageId{ get; set; }
@@ -101,7 +101,8 @@ namespace TencentCloud.Thpc.V20211109.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
-        /// 域名字服务类型。<br><li>NIS：NIS域名字服务。
+        /// 域名字服务类型。默认值：NIS
+        /// <li>NIS：NIS域名字服务。
         /// </summary>
         [JsonProperty("AccountType")]
         public string AccountType{ get; set; }
@@ -117,6 +118,26 @@ namespace TencentCloud.Thpc.V20211109.Models
         /// </summary>
         [JsonProperty("StorageOption")]
         public StorageOption StorageOption{ get; set; }
+
+        /// <summary>
+        /// 已废弃。
+        /// 指定登录节点。
+        /// </summary>
+        [JsonProperty("LoginNode")]
+        public LoginNode[] LoginNode{ get; set; }
+
+        /// <summary>
+        /// 已废弃。
+        /// 指定登录节点的数量。默认取值：0。取值范围：0～10。
+        /// </summary>
+        [JsonProperty("LoginNodeCount")]
+        public long? LoginNodeCount{ get; set; }
+
+        /// <summary>
+        /// 创建集群时同时绑定的标签对说明。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
 
         /// <summary>
@@ -139,6 +160,9 @@ namespace TencentCloud.Thpc.V20211109.Models
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
             this.SetParamObj(map, prefix + "StorageOption.", this.StorageOption);
+            this.SetParamArrayObj(map, prefix + "LoginNode.", this.LoginNode);
+            this.SetParamSimple(map, prefix + "LoginNodeCount", this.LoginNodeCount);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

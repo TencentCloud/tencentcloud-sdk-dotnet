@@ -32,7 +32,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public EffectiveMachineInfo[] EffectiveMachineInfoList{ get; set; }
 
         /// <summary>
-        /// 用户批量导入失败的机器列表（比如机器不存在等...）
+        /// 用户批量导入失败的机器列表（例如机器不存在等...）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InvalidMachineList")]

@@ -95,7 +95,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ProVersionOpenDate{ get; set; }
 
         /// <summary>
-        /// 云主机类型。
+        /// 云服务器类型。
         /// <li>CVM: 腾讯云服务器</li>
         /// <li>BM: 黑石物理机</li>
         /// <li>ECM: 边缘计算服务器</li>

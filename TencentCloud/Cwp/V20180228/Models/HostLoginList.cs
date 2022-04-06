@@ -66,7 +66,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string SrcIp{ get; set; }
 
         /// <summary>
-        /// 1:正常登录；2异地登录； 5已加白
+        /// 1:正常登录；2异地登录； 5已加白； 14：已处理；15：已忽略。
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

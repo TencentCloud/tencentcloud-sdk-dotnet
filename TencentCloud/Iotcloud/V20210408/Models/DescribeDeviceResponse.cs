@@ -178,6 +178,13 @@ namespace TencentCloud.Iotcloud.V20210408.Models
         public ulong? FirmwareUpdateTime{ get; set; }
 
         /// <summary>
+        /// 创建者账号ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreateUserId")]
+        public ulong? CreateUserId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -213,6 +220,7 @@ namespace TencentCloud.Iotcloud.V20210408.Models
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamSimple(map, prefix + "ClientIP", this.ClientIP);
             this.SetParamSimple(map, prefix + "FirmwareUpdateTime", this.FirmwareUpdateTime);
+            this.SetParamSimple(map, prefix + "CreateUserId", this.CreateUserId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

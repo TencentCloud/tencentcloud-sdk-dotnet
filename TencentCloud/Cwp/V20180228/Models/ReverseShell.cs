@@ -115,7 +115,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string ParentProcPath{ get; set; }
 
         /// <summary>
-        /// 处理状态：0-待处理 2-白名单
+        /// 处理状态：0-待处理 2-白名单 3-已处理 4-已忽略
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

@@ -207,7 +207,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string[] SubjectAltName{ get; set; }
 
         /// <summary>
-        /// 是否为 VIP 客户。
+        /// 是否为付费证书。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsVip")]
@@ -242,7 +242,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public SubmittedData SubmittedData{ get; set; }
 
         /// <summary>
-        /// 是否可重颁发证书。
+        /// 是否可续费。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RenewAble")]

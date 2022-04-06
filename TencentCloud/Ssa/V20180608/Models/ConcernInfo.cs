@@ -52,6 +52,41 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("StatisticsCount")]
         public long? StatisticsCount{ get; set; }
 
+        /// <summary>
+        /// 可疑关注点字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SearchData")]
+        public string SearchData{ get; set; }
+
+        /// <summary>
+        /// 可疑关注点字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpCountryIso")]
+        public string IpCountryIso{ get; set; }
+
+        /// <summary>
+        /// 可疑关注点字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpProvinceIso")]
+        public string IpProvinceIso{ get; set; }
+
+        /// <summary>
+        /// 可疑关注点字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpCity")]
+        public string IpCity{ get; set; }
+
+        /// <summary>
+        /// 可疑关注点字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EventSubType")]
+        public string EventSubType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +97,11 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "EntityType", this.EntityType);
             this.SetParamSimple(map, prefix + "Concern", this.Concern);
             this.SetParamSimple(map, prefix + "StatisticsCount", this.StatisticsCount);
+            this.SetParamSimple(map, prefix + "SearchData", this.SearchData);
+            this.SetParamSimple(map, prefix + "IpCountryIso", this.IpCountryIso);
+            this.SetParamSimple(map, prefix + "IpProvinceIso", this.IpProvinceIso);
+            this.SetParamSimple(map, prefix + "IpCity", this.IpCity);
+            this.SetParamSimple(map, prefix + "EventSubType", this.EventSubType);
         }
     }
 }

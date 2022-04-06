@@ -2063,7 +2063,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceCreateInstances）用于续费实例询价。
+        /// 本接口（InquirePriceRenewInstances）用于续费实例询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
         /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>
@@ -2083,7 +2083,7 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
-        /// 本接口（InquirePriceCreateInstances）用于续费实例询价。
+        /// 本接口（InquirePriceRenewInstances）用于续费实例询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewInstancesRequest"/></param>
         /// <returns><see cref="InquirePriceRenewInstancesResponse"/></returns>

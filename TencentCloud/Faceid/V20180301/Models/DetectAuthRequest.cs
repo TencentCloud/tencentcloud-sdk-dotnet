@@ -75,7 +75,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public Encryption Encryption{ get; set; }
 
         /// <summary>
-        /// 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受100的字符串长度。
+        /// 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
         /// </summary>
         [JsonProperty("IntentionVerifyText")]
         public string IntentionVerifyText{ get; set; }

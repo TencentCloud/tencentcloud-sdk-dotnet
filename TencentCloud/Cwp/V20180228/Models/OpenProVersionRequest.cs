@@ -25,7 +25,7 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云主机类型。(当前参数已作废,可以留空值 )
+        /// 云服务器类型。(当前参数已作废,可以留空值 )
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }

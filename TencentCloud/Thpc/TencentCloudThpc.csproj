@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B259DC45-AEEA-3779-9220-C0A0DBFA50EF}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.492</VersionPrefix>
+    <VersionPrefix>3.0.493</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,7 @@
     <Compile Include="V20211109\Models\GooseFSOption.cs" />
     <Compile Include="V20211109\Models\InstanceChargePrepaid.cs" />
     <Compile Include="V20211109\Models\InternetAccessible.cs" />
+    <Compile Include="V20211109\Models\LoginNode.cs" />
     <Compile Include="V20211109\Models\LoginNodeOverview.cs" />
     <Compile Include="V20211109\Models\LoginSettings.cs" />
     <Compile Include="V20211109\Models\ManagerNode.cs" />
@@ -68,6 +69,38 @@
     <Compile Include="V20211109\Models\Placement.cs" />
     <Compile Include="V20211109\Models\StorageOption.cs" />
     <Compile Include="V20211109\Models\SystemDisk.cs" />
+    <Compile Include="V20211109\Models\Tag.cs" />
     <Compile Include="V20211109\Models\VirtualPrivateCloud.cs" />
+    <Compile Include="V20220401\ThpcClient.cs" />
+    <Compile Include="V20220401\Models\AddNodesRequest.cs" />
+    <Compile Include="V20220401\Models\AddNodesResponse.cs" />
+    <Compile Include="V20220401\Models\BindAutoScalingGroupRequest.cs" />
+    <Compile Include="V20220401\Models\BindAutoScalingGroupResponse.cs" />
+    <Compile Include="V20220401\Models\CFSOption.cs" />
+    <Compile Include="V20220401\Models\ClusterOverview.cs" />
+    <Compile Include="V20220401\Models\ComputeNode.cs" />
+    <Compile Include="V20220401\Models\ComputeNodeOverview.cs" />
+    <Compile Include="V20220401\Models\CreateClusterRequest.cs" />
+    <Compile Include="V20220401\Models\CreateClusterResponse.cs" />
+    <Compile Include="V20220401\Models\DataDisk.cs" />
+    <Compile Include="V20220401\Models\DeleteClusterRequest.cs" />
+    <Compile Include="V20220401\Models\DeleteClusterResponse.cs" />
+    <Compile Include="V20220401\Models\DeleteNodesRequest.cs" />
+    <Compile Include="V20220401\Models\DeleteNodesResponse.cs" />
+    <Compile Include="V20220401\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20220401\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20220401\Models\GooseFSOption.cs" />
+    <Compile Include="V20220401\Models\InstanceChargePrepaid.cs" />
+    <Compile Include="V20220401\Models\InternetAccessible.cs" />
+    <Compile Include="V20220401\Models\LoginNode.cs" />
+    <Compile Include="V20220401\Models\LoginNodeOverview.cs" />
+    <Compile Include="V20220401\Models\LoginSettings.cs" />
+    <Compile Include="V20220401\Models\ManagerNode.cs" />
+    <Compile Include="V20220401\Models\ManagerNodeOverview.cs" />
+    <Compile Include="V20220401\Models\Placement.cs" />
+    <Compile Include="V20220401\Models\StorageOption.cs" />
+    <Compile Include="V20220401\Models\SystemDisk.cs" />
+    <Compile Include="V20220401\Models\Tag.cs" />
+    <Compile Include="V20220401\Models\VirtualPrivateCloud.cs" />
   </ItemGroup>
 </Project>

@@ -533,6 +533,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="CreateUserOIDCConfigResponse"/></returns>
+        public async Task<CreateUserOIDCConfigResponse> CreateUserOIDCConfig(CreateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建用户OIDC配置。只能创建一个用户OIDC身份提供商，并且创建用户OIDC配置之后会自动关闭用户SAML SSO身份提供商。
+        /// </summary>
+        /// <param name="req"><see cref="CreateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="CreateUserOIDCConfigResponse"/></returns>
+        public CreateUserOIDCConfigResponse CreateUserOIDCConfigSync(CreateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<CreateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户SAML配置
         /// </summary>
         /// <param name="req"><see cref="CreateUserSAMLConfigRequest"/></param>
@@ -1133,6 +1173,46 @@ namespace TencentCloud.Cam.V20190116
         }
 
         /// <summary>
+        /// 查询用户OIDC配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserOIDCConfigResponse"/></returns>
+        public async Task<DescribeUserOIDCConfigResponse> DescribeUserOIDCConfig(DescribeUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户OIDC配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="DescribeUserOIDCConfigResponse"/></returns>
+        public DescribeUserOIDCConfigResponse DescribeUserOIDCConfigSync(DescribeUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<DescribeUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户SAML配置
         /// </summary>
         /// <param name="req"><see cref="DescribeUserSAMLConfigRequest"/></param>
@@ -1284,6 +1364,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "DetachUserPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachUserPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用用户SSO
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserSSORequest"/></param>
+        /// <returns><see cref="DisableUserSSOResponse"/></returns>
+        public async Task<DisableUserSSOResponse> DisableUserSSO(DisableUserSSORequest req)
+        {
+             JsonResponseModel<DisableUserSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableUserSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 禁用用户SSO
+        /// </summary>
+        /// <param name="req"><see cref="DisableUserSSORequest"/></param>
+        /// <returns><see cref="DisableUserSSOResponse"/></returns>
+        public DisableUserSSOResponse DisableUserSSOSync(DisableUserSSORequest req)
+        {
+             JsonResponseModel<DisableUserSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableUserSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableUserSSOResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2926,6 +3046,46 @@ namespace TencentCloud.Cam.V20190116
              {
                  var strResp = this.InternalRequestSync(req, "UpdateUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户OIDC配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserOIDCConfigResponse"/></returns>
+        public async Task<UpdateUserOIDCConfigResponse> UpdateUserOIDCConfig(UpdateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserOIDCConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户OIDC配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateUserOIDCConfigRequest"/></param>
+        /// <returns><see cref="UpdateUserOIDCConfigResponse"/></returns>
+        public UpdateUserOIDCConfigResponse UpdateUserOIDCConfigSync(UpdateUserOIDCConfigRequest req)
+        {
+             JsonResponseModel<UpdateUserOIDCConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateUserOIDCConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateUserOIDCConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

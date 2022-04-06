@@ -65,14 +65,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Image{ get; set; }
 
         /// <summary>
-        /// 扩展字段：
+        /// 此字段为扩展字段。
+        /// 返回字段识别结果的置信度，格式如下
         /// {
-        ///     ID:{
-        ///         Confidence:0.9999
-        ///     },
-        ///     Name:{
-        ///         Confidence:0.9996
-        ///     }
+        ///   字段名:{
+        ///     Confidence:0.9999
+        ///   }
         /// }
         /// </summary>
         [JsonProperty("AdvancedInfo")]

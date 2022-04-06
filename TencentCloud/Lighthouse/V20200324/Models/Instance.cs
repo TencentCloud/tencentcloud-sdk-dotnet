@@ -109,7 +109,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
 
         /// <summary>
         /// 实例状态。取值范围： 
-        /// <li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li>
+        /// <li>PENDING：表示创建中</li><li>LAUNCH_FAILED：表示创建失败</li><li>RUNNING：表示运行中</li><li>STOPPED：表示关机</li><li>STARTING：表示开机中</li><li>STOPPING：表示关机中</li><li>REBOOTING：表示重启中</li><li>SHUTDOWN：表示停止待销毁</li><li>TERMINATING：表示销毁中</li><li>DELETING：表示删除中</li><li>FREEZING：表示冻结中</li>
         /// </summary>
         [JsonProperty("InstanceState")]
         public string InstanceState{ get; set; }
@@ -197,6 +197,13 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 实例封禁状态。取值范围：
+        /// <li>NORMAL实例正常。</li><li>NETWORK_RESTRICT：网络封禁。</li>
+        /// </summary>
+        [JsonProperty("InstanceRestrictState")]
+        public string InstanceRestrictState{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -229,6 +236,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "OsName", this.OsName);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "InstanceRestrictState", this.InstanceRestrictState);
         }
     }
 }

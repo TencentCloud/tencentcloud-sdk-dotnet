@@ -172,6 +172,13 @@ namespace TencentCloud.Ssa.V20180608.Models
         public long? SsaAssetCategory{ get; set; }
 
         /// <summary>
+        /// 资产文件路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulPath")]
+        public string VulPath{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -204,6 +211,7 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "VulUrl", this.VulUrl);
             this.SetParamSimple(map, prefix + "SsaAssetCategory", this.SsaAssetCategory);
+            this.SetParamSimple(map, prefix + "VulPath", this.VulPath);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

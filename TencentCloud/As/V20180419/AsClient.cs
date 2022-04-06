@@ -1233,52 +1233,6 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
-        /// 本接口（DescribePaiInstances）用于查询PAI实例信息。
-        /// 
-        /// * 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
-        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
-        /// </summary>
-        /// <param name="req"><see cref="DescribePaiInstancesRequest"/></param>
-        /// <returns><see cref="DescribePaiInstancesResponse"/></returns>
-        public async Task<DescribePaiInstancesResponse> DescribePaiInstances(DescribePaiInstancesRequest req)
-        {
-             JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribePaiInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePaiInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribePaiInstances）用于查询PAI实例信息。
-        /// 
-        /// * 可以根据实例ID、实例域名等信息来查询PAI实例的详细信息。过滤信息详细请见过滤器`Filter`。
-        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的PAI实例。
-        /// </summary>
-        /// <param name="req"><see cref="DescribePaiInstancesRequest"/></param>
-        /// <returns><see cref="DescribePaiInstancesResponse"/></returns>
-        public DescribePaiInstancesResponse DescribePaiInstancesSync(DescribePaiInstancesRequest req)
-        {
-             JsonResponseModel<DescribePaiInstancesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribePaiInstances");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePaiInstancesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（DescribeScalingPolicies）用于查询告警触发策略。
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>

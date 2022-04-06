@@ -175,6 +175,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
+        /// 地域属性特殊配置
+        /// 适用于域名境内加速、境外加速配置不一致场景
+        /// </summary>
+        [JsonProperty("SpecificConfig")]
+        public SpecificConfig SpecificConfig{ get; set; }
+
+        /// <summary>
         /// 域名业务类型
         /// web：静态加速
         /// download：下载加速
@@ -182,13 +189,6 @@ namespace TencentCloud.Cdn.V20180606.Models
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
-
-        /// <summary>
-        /// 地域属性特殊配置
-        /// 适用于域名境内加速、境外加速配置不一致场景
-        /// </summary>
-        [JsonProperty("SpecificConfig")]
-        public SpecificConfig SpecificConfig{ get; set; }
 
         /// <summary>
         /// 域名加速区域
@@ -327,8 +327,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "ForceRedirect.", this.ForceRedirect);
             this.SetParamObj(map, prefix + "Referer.", this.Referer);
             this.SetParamObj(map, prefix + "MaxAge.", this.MaxAge);
-            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamObj(map, prefix + "SpecificConfig.", this.SpecificConfig);
+            this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamObj(map, prefix + "OriginPullTimeout.", this.OriginPullTimeout);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);

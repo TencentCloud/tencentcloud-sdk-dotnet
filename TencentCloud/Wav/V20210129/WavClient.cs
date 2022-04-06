@@ -413,6 +413,86 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 通过接口拉取租户/指定成员/部门在指定日期范围内的CRM跟进统计数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryCrmStatisticsRequest"/></param>
+        /// <returns><see cref="QueryCrmStatisticsResponse"/></returns>
+        public async Task<QueryCrmStatisticsResponse> QueryCrmStatistics(QueryCrmStatisticsRequest req)
+        {
+             JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCrmStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCrmStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取租户/指定成员/部门在指定日期范围内的CRM跟进统计数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryCrmStatisticsRequest"/></param>
+        /// <returns><see cref="QueryCrmStatisticsResponse"/></returns>
+        public QueryCrmStatisticsResponse QueryCrmStatisticsSync(QueryCrmStatisticsRequest req)
+        {
+             JsonResponseModel<QueryCrmStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCrmStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCrmStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取SaaS内C端外部联系人在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerEventDetailStatisticsRequest"/></param>
+        /// <returns><see cref="QueryCustomerEventDetailStatisticsResponse"/></returns>
+        public async Task<QueryCustomerEventDetailStatisticsResponse> QueryCustomerEventDetailStatistics(QueryCustomerEventDetailStatisticsRequest req)
+        {
+             JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCustomerEventDetailStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取SaaS内C端外部联系人在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCustomerEventDetailStatisticsRequest"/></param>
+        /// <returns><see cref="QueryCustomerEventDetailStatisticsResponse"/></returns>
+        public QueryCustomerEventDetailStatisticsResponse QueryCustomerEventDetailStatisticsSync(QueryCustomerEventDetailStatisticsRequest req)
+        {
+             JsonResponseModel<QueryCustomerEventDetailStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCustomerEventDetailStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCustomerEventDetailStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 企业可通过此接口获取录入在企微SaaS平台上的经销商信息。
         /// </summary>
         /// <param name="req"><see cref="QueryDealerInfoListRequest"/></param>
@@ -533,6 +613,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 通过接口拉取租户在指定时间范围内的外部联系人添加/删除明细，此接口提供的数据以天为维度，查询的时间范围为[StarTime, EndTime]，即前后均为闭区间，支持的最大查询跨度为365天；
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalUserEventListRequest"/></param>
+        /// <returns><see cref="QueryExternalUserEventListResponse"/></returns>
+        public async Task<QueryExternalUserEventListResponse> QueryExternalUserEventList(QueryExternalUserEventListRequest req)
+        {
+             JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryExternalUserEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取租户在指定时间范围内的外部联系人添加/删除明细，此接口提供的数据以天为维度，查询的时间范围为[StarTime, EndTime]，即前后均为闭区间，支持的最大查询跨度为365天；
+        /// </summary>
+        /// <param name="req"><see cref="QueryExternalUserEventListRequest"/></param>
+        /// <returns><see cref="QueryExternalUserEventListResponse"/></returns>
+        public QueryExternalUserEventListResponse QueryExternalUserEventListSync(QueryExternalUserEventListRequest req)
+        {
+             JsonResponseModel<QueryExternalUserEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryExternalUserEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExternalUserEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 企业可通过此接口将企业主体对应的外部联系人id转换为乐销车应用主体对应的外部联系人。
         /// </summary>
         /// <param name="req"><see cref="QueryExternalUserMappingInfoRequest"/></param>
@@ -613,6 +733,46 @@ namespace TencentCloud.Wav.V20210129
         }
 
         /// <summary>
+        /// 通过接口按类型拉取租户当前的素材列表及关键信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryMaterialListRequest"/></param>
+        /// <returns><see cref="QueryMaterialListResponse"/></returns>
+        public async Task<QueryMaterialListResponse> QueryMaterialList(QueryMaterialListRequest req)
+        {
+             JsonResponseModel<QueryMaterialListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryMaterialList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaterialListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口按类型拉取租户当前的素材列表及关键信息
+        /// </summary>
+        /// <param name="req"><see cref="QueryMaterialListRequest"/></param>
+        /// <returns><see cref="QueryMaterialListResponse"/></returns>
+        public QueryMaterialListResponse QueryMaterialListSync(QueryMaterialListRequest req)
+        {
+             JsonResponseModel<QueryMaterialListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryMaterialList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMaterialListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询小程序码列表接口
         /// </summary>
         /// <param name="req"><see cref="QueryMiniAppCodeListRequest"/></param>
@@ -644,6 +804,86 @@ namespace TencentCloud.Wav.V20210129
              {
                  var strResp = this.InternalRequestSync(req, "QueryMiniAppCodeList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryMiniAppCodeListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取SaaS内企业成员在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+        /// </summary>
+        /// <param name="req"><see cref="QueryStaffEventDetailStatisticsRequest"/></param>
+        /// <returns><see cref="QueryStaffEventDetailStatisticsResponse"/></returns>
+        public async Task<QueryStaffEventDetailStatisticsResponse> QueryStaffEventDetailStatistics(QueryStaffEventDetailStatisticsRequest req)
+        {
+             JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryStaffEventDetailStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过接口拉取SaaS内企业成员在指定时间范围内的行为事件明细。此接口提供的数据以天为维度，查询的时间范围为[start_time,end_time]，即前后均为闭区间，支持的最大查询跨度为365天。
+        /// </summary>
+        /// <param name="req"><see cref="QueryStaffEventDetailStatisticsRequest"/></param>
+        /// <returns><see cref="QueryStaffEventDetailStatisticsResponse"/></returns>
+        public QueryStaffEventDetailStatisticsResponse QueryStaffEventDetailStatisticsSync(QueryStaffEventDetailStatisticsRequest req)
+        {
+             JsonResponseModel<QueryStaffEventDetailStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryStaffEventDetailStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryStaffEventDetailStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业成员信息列表接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserInfoListRequest"/></param>
+        /// <returns><see cref="QueryUserInfoListResponse"/></returns>
+        public async Task<QueryUserInfoListResponse> QueryUserInfoList(QueryUserInfoListRequest req)
+        {
+             JsonResponseModel<QueryUserInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryUserInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryUserInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业成员信息列表接口
+        /// </summary>
+        /// <param name="req"><see cref="QueryUserInfoListRequest"/></param>
+        /// <returns><see cref="QueryUserInfoListResponse"/></returns>
+        public QueryUserInfoListResponse QueryUserInfoListSync(QueryUserInfoListRequest req)
+        {
+             JsonResponseModel<QueryUserInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryUserInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryUserInfoListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

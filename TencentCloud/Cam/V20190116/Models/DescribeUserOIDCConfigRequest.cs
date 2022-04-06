@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.As.V20180419.Models
+namespace TencentCloud.Cam.V20190116.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class PaiInstance : AbstractModel
+    public class DescribeUserOIDCConfigRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 实例ID
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
-
-        /// <summary>
-        /// 实例域名
-        /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
-
-        /// <summary>
-        /// PAI管理页面URL
-        /// </summary>
-        [JsonProperty("PaiMateUrl")]
-        public string PaiMateUrl{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "PaiMateUrl", this.PaiMateUrl);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 时间戳
+        /// 标准时间格式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlertTime")]

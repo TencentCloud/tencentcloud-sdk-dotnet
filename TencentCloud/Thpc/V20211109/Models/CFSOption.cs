@@ -37,7 +37,10 @@ namespace TencentCloud.Thpc.V20211109.Models
         public string RemotePath{ get; set; }
 
         /// <summary>
-        /// 文件系统协议类型，默认值NFS 3.0
+        /// 文件系统协议类型，默认值NFS 3.0。
+        /// <li>NFS 3.0。
+        /// <li>NFS 4.0。
+        /// <li>TURBO。
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

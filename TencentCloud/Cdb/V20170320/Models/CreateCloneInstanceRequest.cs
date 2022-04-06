@@ -144,6 +144,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CageId")]
         public string CageId{ get; set; }
 
+        /// <summary>
+        /// 项目ID，默认项目ID0
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -170,6 +176,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "DeployGroupId", this.DeployGroupId);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "CageId", this.CageId);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

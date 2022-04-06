@@ -25,13 +25,24 @@ namespace TencentCloud.Ame.V20190916.Models
     {
         
         /// <summary>
+        /// 歌单类型，取值有：
+        /// ·OfficialRec：官方推荐
+        /// ·Normal：自定义
+        /// 当该字段未填时，默认为取OfficialRec
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 分页返回的起始偏移量，默认值：0。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// 取值范围：Offset + Limit 不超过5000
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
         /// 分页返回的记录条数，默认值：50。将返回第 Offset 到第 Offset+Limit-1 条。
+        /// 取值范围：Offset + Limit 不超过5000
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -42,6 +53,7 @@ namespace TencentCloud.Ame.V20190916.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }

@@ -1017,6 +1017,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(ModifyDBInstanceNetworkAddress)用于修改云数据库实例的网络信息，可进行基础网络转VPC网络和VPC网络之间的变换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkAddressRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkAddressResponse"/></returns>
+        public async Task<ModifyDBInstanceNetworkAddressResponse> ModifyDBInstanceNetworkAddress(ModifyDBInstanceNetworkAddressRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceNetworkAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyDBInstanceNetworkAddress)用于修改云数据库实例的网络信息，可进行基础网络转VPC网络和VPC网络之间的变换。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNetworkAddressRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNetworkAddressResponse"/></returns>
+        public ModifyDBInstanceNetworkAddressResponse ModifyDBInstanceNetworkAddressSync(ModifyDBInstanceNetworkAddressRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNetworkAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceNetworkAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNetworkAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例绑定的安全组
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupRequest"/></param>

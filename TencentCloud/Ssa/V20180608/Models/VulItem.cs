@@ -225,6 +225,13 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("VulRepairPlan")]
         public string VulRepairPlan{ get; set; }
 
+        /// <summary>
+        /// 漏洞文件路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulPath")]
+        public string VulPath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
             this.SetParamSimple(map, prefix + "YzHostId", this.YzHostId);
             this.SetParamSimple(map, prefix + "VulRepairPlan", this.VulRepairPlan);
+            this.SetParamSimple(map, prefix + "VulPath", this.VulPath);
         }
     }
 }

@@ -54,6 +54,12 @@ namespace TencentCloud.Ssa.V20180608.Models
         [JsonProperty("Sorter")]
         public QuerySort[] Sorter{ get; set; }
 
+        /// <summary>
+        /// 是否导出
+        /// </summary>
+        [JsonProperty("ExportFlag")]
+        public bool? ExportFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ssa.V20180608.Models
             this.SetParamSimple(map, prefix + "Scenes", this.Scenes);
             this.SetParamArrayObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArrayObj(map, prefix + "Sorter.", this.Sorter);
+            this.SetParamSimple(map, prefix + "ExportFlag", this.ExportFlag);
         }
     }
 }

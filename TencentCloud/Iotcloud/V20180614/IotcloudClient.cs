@@ -1413,6 +1413,46 @@ namespace TencentCloud.Iotcloud.V20180614
         }
 
         /// <summary>
+        /// 本接口（DescribeProduct）用于查看产品详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductRequest"/></param>
+        /// <returns><see cref="DescribeProductResponse"/></returns>
+        public async Task<DescribeProductResponse> DescribeProduct(DescribeProductRequest req)
+        {
+             JsonResponseModel<DescribeProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeProduct）用于查看产品详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProductRequest"/></param>
+        /// <returns><see cref="DescribeProductResponse"/></returns>
+        public DescribeProductResponse DescribeProductSync(DescribeProductRequest req)
+        {
+             JsonResponseModel<DescribeProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeProductResource）用于查询产品资源详情。 
         /// </summary>
         /// <param name="req"><see cref="DescribeProductResourceRequest"/></param>
@@ -2644,6 +2684,46 @@ namespace TencentCloud.Iotcloud.V20180614
              {
                  var strResp = this.InternalRequestSync(req, "UpdateDevicesEnableState");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDevicesEnableStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新产品动态注册的配置 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>
+        public async Task<UpdateProductDynamicRegisterResponse> UpdateProductDynamicRegister(UpdateProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProductDynamicRegisterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新产品动态注册的配置 
+        /// </summary>
+        /// <param name="req"><see cref="UpdateProductDynamicRegisterRequest"/></param>
+        /// <returns><see cref="UpdateProductDynamicRegisterResponse"/></returns>
+        public UpdateProductDynamicRegisterResponse UpdateProductDynamicRegisterSync(UpdateProductDynamicRegisterRequest req)
+        {
+             JsonResponseModel<UpdateProductDynamicRegisterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateProductDynamicRegister");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateProductDynamicRegisterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
