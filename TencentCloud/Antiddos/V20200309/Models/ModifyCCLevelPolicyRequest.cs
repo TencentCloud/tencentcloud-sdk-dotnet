@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// Ip地址
+        /// IP地址
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

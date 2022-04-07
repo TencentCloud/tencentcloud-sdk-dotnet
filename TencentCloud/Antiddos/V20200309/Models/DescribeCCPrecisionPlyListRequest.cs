@@ -25,7 +25,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
     {
         
         /// <summary>
-        /// 大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防ip）
+        /// 大禹子产品代号（bgpip-multip：表示高防包；bgpip：表示高防IP）
         /// </summary>
         [JsonProperty("Business")]
         public string Business{ get; set; }
@@ -49,19 +49,19 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// ip地址，普通高防ip要传该字段
+        /// IP地址，普通高防IP要传该字段
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 域名，普通高防ip要传该字段
+        /// 域名，普通高防IP要传该字段
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 协议，普通高防ip要传该字段
+        /// 协议，普通高防IP要传该字段
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

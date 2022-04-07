@@ -31,7 +31,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         public long? Replicas{ get; set; }
 
         /// <summary>
-        /// 资源限制
+        /// 资源配置
         /// </summary>
         [JsonProperty("Resources")]
         public ResourceRequirements Resources{ get; set; }

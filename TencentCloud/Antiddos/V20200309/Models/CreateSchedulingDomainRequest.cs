@@ -24,12 +24,21 @@ namespace TencentCloud.Antiddos.V20200309.Models
     public class CreateSchedulingDomainRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 代表是否混合云本地化的产品。
+        /// hybrid: 宙斯盾本地化
+        /// 不填写：其他
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

@@ -146,6 +146,20 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("EnableExternalNode")]
         public bool? EnableExternalNode{ get; set; }
 
+        /// <summary>
+        /// 集群等级，针对托管集群生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 自动变配集群等级，针对托管集群生效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +185,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
             this.SetParamSimple(map, prefix + "EnableExternalNode", this.EnableExternalNode);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         }
     }
 }

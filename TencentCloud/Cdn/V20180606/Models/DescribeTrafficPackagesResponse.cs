@@ -49,6 +49,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public long? EnabledCount{ get; set; }
 
         /// <summary>
+        /// 付费流量包个数
+        /// </summary>
+        [JsonProperty("PaidCount")]
+        public long? PaidCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "TrafficPackages.", this.TrafficPackages);
             this.SetParamSimple(map, prefix + "ExpiringCount", this.ExpiringCount);
             this.SetParamSimple(map, prefix + "EnabledCount", this.EnabledCount);
+            this.SetParamSimple(map, prefix + "PaidCount", this.PaidCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

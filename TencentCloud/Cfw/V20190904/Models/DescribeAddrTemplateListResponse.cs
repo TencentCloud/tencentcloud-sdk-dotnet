@@ -25,19 +25,19 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 模版总数
+        /// 模板总数
         /// </summary>
         [JsonProperty("Total")]
         public long? Total{ get; set; }
 
         /// <summary>
-        /// 模版列表数据
+        /// 模板列表数据
         /// </summary>
         [JsonProperty("Data")]
         public TemplateListInfo[] Data{ get; set; }
 
         /// <summary>
-        /// 模版名称列表
+        /// 模板名称列表
         /// </summary>
         [JsonProperty("NameList")]
         public string[] NameList{ get; set; }

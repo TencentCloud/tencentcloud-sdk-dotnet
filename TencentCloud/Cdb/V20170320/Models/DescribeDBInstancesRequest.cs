@@ -109,7 +109,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public ulong?[] SubnetIds{ get; set; }
 
         /// <summary>
-        /// 是否锁定标记。
+        /// 是否锁定标记，可选值：0 - 不锁定，1 - 锁定，默认为0。
         /// </summary>
         [JsonProperty("CdbErrors")]
         public long?[] CdbErrors{ get; set; }
@@ -192,6 +192,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CageIds")]
         public string[] CageIds{ get; set; }
 
+        /// <summary>
+        /// 标签值
+        /// </summary>
+        [JsonProperty("TagValues")]
+        public string[] TagValues{ get; set; }
+
+        /// <summary>
+        /// 私有网络字符型vpcId
+        /// </summary>
+        [JsonProperty("UniqueVpcIds")]
+        public string[] UniqueVpcIds{ get; set; }
+
+        /// <summary>
+        /// 私有网络字符型subnetId
+        /// </summary>
+        [JsonProperty("UniqSubnetIds")]
+        public string[] UniqSubnetIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +244,9 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "DeployGroupIds.", this.DeployGroupIds);
             this.SetParamArraySimple(map, prefix + "TagKeysForSearch.", this.TagKeysForSearch);
             this.SetParamArraySimple(map, prefix + "CageIds.", this.CageIds);
+            this.SetParamArraySimple(map, prefix + "TagValues.", this.TagValues);
+            this.SetParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
+            this.SetParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
         }
     }
 }

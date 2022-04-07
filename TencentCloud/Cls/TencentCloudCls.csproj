@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C24FD66F-D1E5-392B-9497-95B74C57D999}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.493</VersionPrefix>
+    <VersionPrefix>3.0.494</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -73,6 +73,8 @@
     <Compile Include="V20201016\Models\CreateConfigResponse.cs" />
     <Compile Include="V20201016\Models\CreateConsumerRequest.cs" />
     <Compile Include="V20201016\Models\CreateConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\CreateDataTransformRequest.cs" />
+    <Compile Include="V20201016\Models\CreateDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\CreateExportRequest.cs" />
     <Compile Include="V20201016\Models\CreateExportResponse.cs" />
     <Compile Include="V20201016\Models\CreateIndexRequest.cs" />
@@ -86,6 +88,8 @@
     <Compile Include="V20201016\Models\CreateTopicRequest.cs" />
     <Compile Include="V20201016\Models\CreateTopicResponse.cs" />
     <Compile Include="V20201016\Models\CsvInfo.cs" />
+    <Compile Include="V20201016\Models\DataTransformResouceInfo.cs" />
+    <Compile Include="V20201016\Models\DataTransformTaskInfo.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeRequest.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmNoticeResponse.cs" />
     <Compile Include="V20201016\Models\DeleteAlarmRequest.cs" />
@@ -98,6 +102,8 @@
     <Compile Include="V20201016\Models\DeleteConfigResponse.cs" />
     <Compile Include="V20201016\Models\DeleteConsumerRequest.cs" />
     <Compile Include="V20201016\Models\DeleteConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\DeleteDataTransformRequest.cs" />
+    <Compile Include="V20201016\Models\DeleteDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\DeleteExportRequest.cs" />
     <Compile Include="V20201016\Models\DeleteExportResponse.cs" />
     <Compile Include="V20201016\Models\DeleteIndexRequest.cs" />
@@ -122,6 +128,8 @@
     <Compile Include="V20201016\Models\DescribeConfigsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeConsumerRequest.cs" />
     <Compile Include="V20201016\Models\DescribeConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\DescribeDataTransformInfoRequest.cs" />
+    <Compile Include="V20201016\Models\DescribeDataTransformInfoResponse.cs" />
     <Compile Include="V20201016\Models\DescribeExportsRequest.cs" />
     <Compile Include="V20201016\Models\DescribeExportsResponse.cs" />
     <Compile Include="V20201016\Models\DescribeIndexRequest.cs" />
@@ -179,6 +187,8 @@
     <Compile Include="V20201016\Models\ModifyConfigResponse.cs" />
     <Compile Include="V20201016\Models\ModifyConsumerRequest.cs" />
     <Compile Include="V20201016\Models\ModifyConsumerResponse.cs" />
+    <Compile Include="V20201016\Models\ModifyDataTransformRequest.cs" />
+    <Compile Include="V20201016\Models\ModifyDataTransformResponse.cs" />
     <Compile Include="V20201016\Models\ModifyIndexRequest.cs" />
     <Compile Include="V20201016\Models\ModifyIndexResponse.cs" />
     <Compile Include="V20201016\Models\ModifyLogsetRequest.cs" />
@@ -192,6 +202,7 @@
     <Compile Include="V20201016\Models\MonitorTime.cs" />
     <Compile Include="V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="V20201016\Models\PartitionInfo.cs" />
+    <Compile Include="V20201016\Models\PreviewLogStatistic.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskRequest.cs" />
     <Compile Include="V20201016\Models\RetryShipperTaskResponse.cs" />
     <Compile Include="V20201016\Models\RuleInfo.cs" />

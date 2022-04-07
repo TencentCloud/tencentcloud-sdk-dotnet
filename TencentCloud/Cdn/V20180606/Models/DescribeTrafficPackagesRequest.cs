@@ -36,6 +36,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 流量包排序方式，支持以下值：
+        /// expireTimeDesc：默认值，按过期时间倒序
+        /// expireTimeAsc：按过期时间正序
+        /// createTimeDesc：按创建时间倒序
+        /// createTimeAsc：按创建时间正序
+        /// status：按状态排序，正常抵扣>未生效>已用尽>已过期
+        /// channel：按来源排序，主动购买>自动续订>CDN赠送
+        /// </summary>
+        [JsonProperty("SortBy")]
+        public string SortBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         {
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "SortBy", this.SortBy);
         }
     }
 }
