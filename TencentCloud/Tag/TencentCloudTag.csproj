@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{80362009-8C42-353D-A625-92286A782F86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.494</VersionPrefix>
+    <VersionPrefix>3.0.495</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,10 +51,14 @@
     <Compile Include="V20180813\Models\AttachResourcesTagResponse.cs" />
     <Compile Include="V20180813\Models\CreateTagRequest.cs" />
     <Compile Include="V20180813\Models\CreateTagResponse.cs" />
+    <Compile Include="V20180813\Models\CreateTagsRequest.cs" />
+    <Compile Include="V20180813\Models\CreateTagsResponse.cs" />
     <Compile Include="V20180813\Models\DeleteResourceTagRequest.cs" />
     <Compile Include="V20180813\Models\DeleteResourceTagResponse.cs" />
     <Compile Include="V20180813\Models\DeleteTagRequest.cs" />
     <Compile Include="V20180813\Models\DeleteTagResponse.cs" />
+    <Compile Include="V20180813\Models\DeleteTagsRequest.cs" />
+    <Compile Include="V20180813\Models\DeleteTagsResponse.cs" />
     <Compile Include="V20180813\Models\DescribeResourceTagsByResourceIdsRequest.cs" />
     <Compile Include="V20180813\Models\DescribeResourceTagsByResourceIdsResponse.cs" />
     <Compile Include="V20180813\Models\DescribeResourceTagsByResourceIdsSeqRequest.cs" />
@@ -79,17 +83,31 @@
     <Compile Include="V20180813\Models\DescribeTagsSeqResponse.cs" />
     <Compile Include="V20180813\Models\DetachResourcesTagRequest.cs" />
     <Compile Include="V20180813\Models\DetachResourcesTagResponse.cs" />
+    <Compile Include="V20180813\Models\FailedResource.cs" />
+    <Compile Include="V20180813\Models\GetResourcesRequest.cs" />
+    <Compile Include="V20180813\Models\GetResourcesResponse.cs" />
+    <Compile Include="V20180813\Models\GetTagKeysRequest.cs" />
+    <Compile Include="V20180813\Models\GetTagKeysResponse.cs" />
+    <Compile Include="V20180813\Models\GetTagValuesRequest.cs" />
+    <Compile Include="V20180813\Models\GetTagValuesResponse.cs" />
+    <Compile Include="V20180813\Models\GetTagsRequest.cs" />
+    <Compile Include="V20180813\Models\GetTagsResponse.cs" />
     <Compile Include="V20180813\Models\ModifyResourceTagsRequest.cs" />
     <Compile Include="V20180813\Models\ModifyResourceTagsResponse.cs" />
     <Compile Include="V20180813\Models\ModifyResourcesTagValueRequest.cs" />
     <Compile Include="V20180813\Models\ModifyResourcesTagValueResponse.cs" />
     <Compile Include="V20180813\Models\ResourceIdTag.cs" />
     <Compile Include="V20180813\Models\ResourceTag.cs" />
+    <Compile Include="V20180813\Models\ResourceTagMapping.cs" />
     <Compile Include="V20180813\Models\Tag.cs" />
     <Compile Include="V20180813\Models\TagFilter.cs" />
     <Compile Include="V20180813\Models\TagKeyObject.cs" />
     <Compile Include="V20180813\Models\TagResource.cs" />
+    <Compile Include="V20180813\Models\TagResourcesRequest.cs" />
+    <Compile Include="V20180813\Models\TagResourcesResponse.cs" />
     <Compile Include="V20180813\Models\TagWithDelete.cs" />
+    <Compile Include="V20180813\Models\UnTagResourcesRequest.cs" />
+    <Compile Include="V20180813\Models\UnTagResourcesResponse.cs" />
     <Compile Include="V20180813\Models\UpdateResourceTagValueRequest.cs" />
     <Compile Include="V20180813\Models\UpdateResourceTagValueResponse.cs" />
   </ItemGroup>

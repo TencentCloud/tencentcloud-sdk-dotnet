@@ -26,14 +26,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         
         /// <summary>
         /// 查询起始日期：yyyy-MM-dd HH:mm:ss
-        /// 当前仅支持按天粒度的数据查询，参数需为某天的起点时刻
+        /// 仅支持按天粒度的数据查询，取入参中的天信息作为起始日期
+        /// 返回大于等于起始日期当天 00:00:00 点产生的数据，如 StartTime为2018-09-04 10:40:00，返回数据的起始时间为2018-09-04 00:00:00
+        /// 仅支持 90 天内数据查询
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 查询起始日期：yyyy-MM-dd HH:mm:ss
-        /// 当前仅支持按天粒度的数据查询，参数需为某天的结束时刻
+        /// 查询结束日期：yyyy-MM-dd HH:mm:ss
+        /// 仅支持按天粒度的数据查询，取入参中的天信息作为结束日期
+        /// 返回小于等于结束日期当天 23:59:59 产生的数据，如EndTime为2018-09-05 22:40:00，返回数据的结束时间为2018-09-05 23:59:59
+        /// EndTime 需要大于等于 StartTime
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
@@ -72,13 +76,15 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? Detail{ get; set; }
 
         /// <summary>
-        /// 地域，目前可不填，默认是大陆
+        /// 指定服务地域查询，不填充表示查询中国境内 CDN 数据
+        /// mainland：指定查询中国境内 CDN 数据
+        /// overseas：指定查询中国境外 CDN 数据
         /// </summary>
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
         /// <summary>
-        /// 产品名，目前仅可使用cdn
+        /// 指定查询的产品数据，目前仅可使用cdn
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

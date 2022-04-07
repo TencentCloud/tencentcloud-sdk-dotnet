@@ -49,6 +49,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 公网接入点地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PublicEndpoint")]
+        public string PublicEndpoint{ get; set; }
+
+        /// <summary>
+        /// VPC接入点地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcEndpoint")]
+        public string VpcEndpoint{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +73,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
             this.SetParamSimple(map, prefix + "RetentionTime", this.RetentionTime);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PublicEndpoint", this.PublicEndpoint);
+            this.SetParamSimple(map, prefix + "VpcEndpoint", this.VpcEndpoint);
         }
     }
 }

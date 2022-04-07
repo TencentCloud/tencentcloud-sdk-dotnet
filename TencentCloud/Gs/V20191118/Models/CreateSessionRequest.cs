@@ -126,6 +126,14 @@ namespace TencentCloud.Gs.V20191118.Models
         [JsonProperty("GameContext")]
         public string GameContext{ get; set; }
 
+        /// <summary>
+        /// 云端运行模式。
+        /// RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+        /// 默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+        /// </summary>
+        [JsonProperty("RunMode")]
+        public string RunMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +157,7 @@ namespace TencentCloud.Gs.V20191118.Models
             this.SetParamSimple(map, prefix + "HostUserId", this.HostUserId);
             this.SetParamSimple(map, prefix + "Role", this.Role);
             this.SetParamSimple(map, prefix + "GameContext", this.GameContext);
+            this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
         }
     }
 }

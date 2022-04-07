@@ -187,6 +187,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ChcIds")]
         public string[] ChcIds{ get; set; }
 
+        /// <summary>
+        /// 实例销毁保护标志，表示是否允许通过api接口删除实例。取值范围：<br><li>TRUE：表示开启实例保护，不允许通过api接口删除实例<br><li>FALSE：表示关闭实例保护，允许通过api接口删除实例<br><br>默认取值：FALSE。
+        /// </summary>
+        [JsonProperty("DisableApiTermination")]
+        public bool? DisableApiTermination{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -219,6 +225,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
             this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
+            this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         }
     }
 }

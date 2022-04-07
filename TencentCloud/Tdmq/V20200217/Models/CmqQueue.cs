@@ -231,6 +231,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("MaxMsgBacklogSize")]
         public long? MaxMsgBacklogSize{ get; set; }
 
+        /// <summary>
+        /// 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RetentionSizeInMB")]
+        public ulong? RetentionSizeInMB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -267,6 +274,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MaxUnackedMsgNum", this.MaxUnackedMsgNum);
             this.SetParamSimple(map, prefix + "MaxMsgBacklogSize", this.MaxMsgBacklogSize);
+            this.SetParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
         }
     }
 }

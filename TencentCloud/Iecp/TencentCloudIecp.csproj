@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5F9D0ED-59E6-3723-BDEC-F640E2ADDE86}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.494</VersionPrefix>
+    <VersionPrefix>3.0.495</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20210914\Models\ApplicationTemplate.cs" />
     <Compile Include="V20210914\Models\ApplyMarketComponentRequest.cs" />
     <Compile Include="V20210914\Models\ApplyMarketComponentResponse.cs" />
+    <Compile Include="V20210914\Models\BuildMessageRouteRequest.cs" />
+    <Compile Include="V20210914\Models\BuildMessageRouteResponse.cs" />
     <Compile Include="V20210914\Models\ConfigMapBasicInfo.cs" />
     <Compile Include="V20210914\Models\Container.cs" />
     <Compile Include="V20210914\Models\ContainerStatus.cs" />
@@ -73,6 +75,12 @@
     <Compile Include="V20210914\Models\CreateEdgeUnitApplicationYamlResponse.cs" />
     <Compile Include="V20210914\Models\CreateEdgeUnitCloudRequest.cs" />
     <Compile Include="V20210914\Models\CreateEdgeUnitCloudResponse.cs" />
+    <Compile Include="V20210914\Models\CreateEdgeUnitDevicesRequest.cs" />
+    <Compile Include="V20210914\Models\CreateEdgeUnitDevicesResponse.cs" />
+    <Compile Include="V20210914\Models\CreateIotDeviceRequest.cs" />
+    <Compile Include="V20210914\Models\CreateIotDeviceResponse.cs" />
+    <Compile Include="V20210914\Models\CreateMessageRouteRequest.cs" />
+    <Compile Include="V20210914\Models\CreateMessageRouteResponse.cs" />
     <Compile Include="V20210914\Models\CreateNamespaceRequest.cs" />
     <Compile Include="V20210914\Models\CreateNamespaceResponse.cs" />
     <Compile Include="V20210914\Models\CreateSecretRequest.cs" />
@@ -98,10 +106,17 @@
     <Compile Include="V20210914\Models\DeleteEdgeUnitCloudResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitDeployGridItemRequest.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitDeployGridItemResponse.cs" />
+    <Compile Include="V20210914\Models\DeleteEdgeUnitDevicesDevice.cs" />
+    <Compile Include="V20210914\Models\DeleteEdgeUnitDevicesRequest.cs" />
+    <Compile Include="V20210914\Models\DeleteEdgeUnitDevicesResponse.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitPodRequest.cs" />
     <Compile Include="V20210914\Models\DeleteEdgeUnitPodResponse.cs" />
     <Compile Include="V20210914\Models\DeleteIotDeviceBatchRequest.cs" />
     <Compile Include="V20210914\Models\DeleteIotDeviceBatchResponse.cs" />
+    <Compile Include="V20210914\Models\DeleteIotDeviceRequest.cs" />
+    <Compile Include="V20210914\Models\DeleteIotDeviceResponse.cs" />
+    <Compile Include="V20210914\Models\DeleteMessageRouteRequest.cs" />
+    <Compile Include="V20210914\Models\DeleteMessageRouteResponse.cs" />
     <Compile Include="V20210914\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="V20210914\Models\DeleteNamespaceResponse.cs" />
     <Compile Include="V20210914\Models\DeleteNodeUnitRequest.cs" />
@@ -182,6 +197,12 @@
     <Compile Include="V20210914\Models\DescribeEdgeUnitNodeUnitTemplatesResponse.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitsCloudRequest.cs" />
     <Compile Include="V20210914\Models\DescribeEdgeUnitsCloudResponse.cs" />
+    <Compile Include="V20210914\Models\DescribeIotDeviceRequest.cs" />
+    <Compile Include="V20210914\Models\DescribeIotDeviceResponse.cs" />
+    <Compile Include="V20210914\Models\DescribeIotDevicesRequest.cs" />
+    <Compile Include="V20210914\Models\DescribeIotDevicesResponse.cs" />
+    <Compile Include="V20210914\Models\DescribeMessageRouteListRequest.cs" />
+    <Compile Include="V20210914\Models\DescribeMessageRouteListResponse.cs" />
     <Compile Include="V20210914\Models\DescribeMonitorMetricsRequest.cs" />
     <Compile Include="V20210914\Models\DescribeMonitorMetricsResponse.cs" />
     <Compile Include="V20210914\Models\DescribeNamespaceRequest.cs" />
@@ -229,6 +250,7 @@
     <Compile Include="V20210914\Models\HorizontalPodAutoscaler.cs" />
     <Compile Include="V20210914\Models\HttpHeader.cs" />
     <Compile Include="V20210914\Models\HttpProbe.cs" />
+    <Compile Include="V20210914\Models\IotDevicesInfo.cs" />
     <Compile Include="V20210914\Models\Job.cs" />
     <Compile Include="V20210914\Models\KeyValueObj.cs" />
     <Compile Include="V20210914\Models\Label.cs" />
@@ -255,6 +277,8 @@
     <Compile Include="V20210914\Models\ModifyEdgeUnitDeployGridItemResponse.cs" />
     <Compile Include="V20210914\Models\ModifyEdgeUnitRequest.cs" />
     <Compile Include="V20210914\Models\ModifyEdgeUnitResponse.cs" />
+    <Compile Include="V20210914\Models\ModifyIotDeviceRequest.cs" />
+    <Compile Include="V20210914\Models\ModifyIotDeviceResponse.cs" />
     <Compile Include="V20210914\Models\ModifyNodeUnitTemplateRequest.cs" />
     <Compile Include="V20210914\Models\ModifyNodeUnitTemplateResponse.cs" />
     <Compile Include="V20210914\Models\ModifySecretRequest.cs" />
@@ -276,10 +300,13 @@
     <Compile Include="V20210914\Models\RedeployEdgeUnitApplicationRequest.cs" />
     <Compile Include="V20210914\Models\RedeployEdgeUnitApplicationResponse.cs" />
     <Compile Include="V20210914\Models\ResourceMetricTarget.cs" />
+    <Compile Include="V20210914\Models\RouteInfo.cs" />
     <Compile Include="V20210914\Models\SecretItem.cs" />
     <Compile Include="V20210914\Models\SecurityCapabilities.cs" />
     <Compile Include="V20210914\Models\SecurityContext.cs" />
     <Compile Include="V20210914\Models\Service.cs" />
+    <Compile Include="V20210914\Models\SetRouteOnOffRequest.cs" />
+    <Compile Include="V20210914\Models\SetRouteOnOffResponse.cs" />
     <Compile Include="V20210914\Models\Sort.cs" />
     <Compile Include="V20210914\Models\TcpProbe.cs" />
     <Compile Include="V20210914\Models\Volume.cs" />

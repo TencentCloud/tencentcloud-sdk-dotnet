@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string InvoiceNo{ get; set; }
 
         /// <summary>
-        /// 开票日期（不支持当天发票查询，只支持一年以内），如：2019-12-20。
+        /// 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
         /// </summary>
         [JsonProperty("InvoiceDate")]
         public string InvoiceDate{ get; set; }

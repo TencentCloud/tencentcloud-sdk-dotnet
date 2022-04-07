@@ -293,7 +293,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据结果
+        /// 核查验证码票据结果(小程序插件) 
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码小程序插件票据结果
+        /// 核查验证码票据结果(小程序插件) 
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaMiniResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaMiniResultResponse"/></returns>
@@ -413,7 +413,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码票据结果
+        /// 核查验证码票据结果(Web|APP)
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
-        /// 核查验证码票据结果
+        /// 核查验证码票据结果(Web|APP)
         /// </summary>
         /// <param name="req"><see cref="DescribeCaptchaResultRequest"/></param>
         /// <returns><see cref="DescribeCaptchaResultResponse"/></returns>

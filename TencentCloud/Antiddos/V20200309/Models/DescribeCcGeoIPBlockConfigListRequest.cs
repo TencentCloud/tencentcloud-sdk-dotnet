@@ -43,13 +43,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 指定特定实例Id
+        /// 指定特定实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// IP地址，普通高防ip要传该字段
+        /// IP地址，普通高防IP要传该字段
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }

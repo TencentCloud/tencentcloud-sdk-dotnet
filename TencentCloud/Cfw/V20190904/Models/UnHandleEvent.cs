@@ -48,6 +48,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("BaseLineOutSwitch")]
         public ulong? BaseLineOutSwitch{ get; set; }
 
+        /// <summary>
+        /// vpc间防火墙实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VpcFwCount")]
+        public ulong? VpcFwCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "BaseLineUser", this.BaseLineUser);
             this.SetParamSimple(map, prefix + "BaseLineInSwitch", this.BaseLineInSwitch);
             this.SetParamSimple(map, prefix + "BaseLineOutSwitch", this.BaseLineOutSwitch);
+            this.SetParamSimple(map, prefix + "VpcFwCount", this.VpcFwCount);
         }
     }
 }

@@ -60,6 +60,18 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Source")]
         public string Source{ get; set; }
 
+        /// <summary>
+        /// vpc间防火墙开关边id
+        /// </summary>
+        [JsonProperty("EdgeId")]
+        public string EdgeId{ get; set; }
+
+        /// <summary>
+        /// 日志来源 move：vpc间防火墙
+        /// </summary>
+        [JsonProperty("LogSource")]
+        public string LogSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Direction", this.Direction);
             this.SetParamSimple(map, prefix + "Source", this.Source);
+            this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
+            this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
         }
     }
 }

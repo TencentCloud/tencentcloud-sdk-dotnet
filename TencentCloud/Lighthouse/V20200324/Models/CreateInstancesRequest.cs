@@ -88,6 +88,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("Containers")]
         public DockerContainerConfiguration[] Containers{ get; set; }
 
+        /// <summary>
+        /// 是否自动使用代金券。默认不使用。
+        /// </summary>
+        [JsonProperty("AutoVoucher")]
+        public bool? AutoVoucher{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +110,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
             this.SetParamObj(map, prefix + "LoginConfiguration.", this.LoginConfiguration);
             this.SetParamArrayObj(map, prefix + "Containers.", this.Containers);
+            this.SetParamSimple(map, prefix + "AutoVoucher", this.AutoVoucher);
         }
     }
 }
