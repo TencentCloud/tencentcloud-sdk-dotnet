@@ -37,7 +37,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public string FilterValue{ get; set; }
 
         /// <summary>
-        /// 匹配类型，枚举见pb
+        /// 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
         /// </summary>
         [JsonProperty("FilterOperatorType")]
         public long? FilterOperatorType{ get; set; }

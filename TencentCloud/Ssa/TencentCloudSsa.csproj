@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.495</VersionPrefix>
+    <VersionPrefix>3.0.496</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,6 +52,8 @@
     <Compile Include="V20180608\Models\Asset.cs" />
     <Compile Include="V20180608\Models\AssetDetail.cs" />
     <Compile Include="V20180608\Models\AssetList.cs" />
+    <Compile Include="V20180608\Models\AssetQueryFilter.cs" />
+    <Compile Include="V20180608\Models\AssetTypeStatistic.cs" />
     <Compile Include="V20180608\Models\Bucket.cs" />
     <Compile Include="V20180608\Models\CheckAssetItem.cs" />
     <Compile Include="V20180608\Models\CheckConfigDetail.cs" />
@@ -83,6 +85,8 @@
     <Compile Include="V20180608\Models\DescribeEventDetailResponse.cs" />
     <Compile Include="V20180608\Models\DescribeLeakDetectionListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeLeakDetectionListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeMappingResultsRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeMappingResultsResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSafetyEventListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSocAlertDetailsRequest.cs" />
@@ -96,12 +100,15 @@
     <Compile Include="V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="V20180608\Models\Filter.cs" />
+    <Compile Include="V20180608\Models\MappingResult.cs" />
     <Compile Include="V20180608\Models\QueryFilter.cs" />
     <Compile Include="V20180608\Models\QuerySort.cs" />
+    <Compile Include="V20180608\Models\Results.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPub.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubList.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
     <Compile Include="V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="V20180608\Models\SecurityStatus.cs" />
     <Compile Include="V20180608\Models\SocCheckItem.cs" />
     <Compile Include="V20180608\Models\SocComplianceInfoResp.cs" />
     <Compile Include="V20180608\Models\SocComplianceItem.cs" />

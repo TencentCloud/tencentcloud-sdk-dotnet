@@ -493,6 +493,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 获取测绘列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMappingResultsRequest"/></param>
+        /// <returns><see cref="DescribeMappingResultsResponse"/></returns>
+        public async Task<DescribeMappingResultsResponse> DescribeMappingResults(DescribeMappingResultsRequest req)
+        {
+             JsonResponseModel<DescribeMappingResultsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMappingResults");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMappingResultsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取测绘列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMappingResultsRequest"/></param>
+        /// <returns><see cref="DescribeMappingResultsResponse"/></returns>
+        public DescribeMappingResultsResponse DescribeMappingResultsSync(DescribeMappingResultsRequest req)
+        {
+             JsonResponseModel<DescribeMappingResultsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMappingResults");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMappingResultsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取安全事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeSafetyEventListRequest"/></param>

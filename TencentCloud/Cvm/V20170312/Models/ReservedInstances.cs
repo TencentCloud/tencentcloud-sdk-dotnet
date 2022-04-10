@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 已购买的预留实例计费ID。形如：650c138f-ae7e-4750-952a-96841d6e9fc1。
+        /// （此字段已废弃，建议使用字段：ReservedInstanceId）已购买的预留实例计费ID。形如：ri-rtbh4han。
         /// </summary>
         [JsonProperty("ReservedInstancesId")]
         public string ReservedInstancesId{ get; set; }
@@ -104,6 +104,18 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("InstanceFamily")]
         public string InstanceFamily{ get; set; }
 
+        /// <summary>
+        /// 已购买的预留实例计费ID。形如：ri-rtbh4han。
+        /// </summary>
+        [JsonProperty("ReservedInstanceId")]
+        public string ReservedInstanceId{ get; set; }
+
+        /// <summary>
+        /// 预留实例显示名称。形如：riname-01
+        /// </summary>
+        [JsonProperty("ReservedInstanceName")]
+        public string ReservedInstanceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -122,6 +134,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CurrencyCode", this.CurrencyCode);
             this.SetParamSimple(map, prefix + "OfferingType", this.OfferingType);
             this.SetParamSimple(map, prefix + "InstanceFamily", this.InstanceFamily);
+            this.SetParamSimple(map, prefix + "ReservedInstanceId", this.ReservedInstanceId);
+            this.SetParamSimple(map, prefix + "ReservedInstanceName", this.ReservedInstanceName);
         }
     }
 }

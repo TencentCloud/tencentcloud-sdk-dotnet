@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.495</VersionPrefix>
+    <VersionPrefix>3.0.496</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4041,6 +4041,8 @@
     <Compile Include="Cls\V20201016\Models\ApplyConfigToMachineGroupResponse.cs" />
     <Compile Include="Cls\V20201016\Models\CallBackInfo.cs" />
     <Compile Include="Cls\V20201016\Models\Ckafka.cs" />
+    <Compile Include="Cls\V20201016\Models\CloseKafkaConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\CloseKafkaConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\Column.cs" />
     <Compile Include="Cls\V20201016\Models\CompressInfo.cs" />
     <Compile Include="Cls\V20201016\Models\ConfigExtraInfo.cs" />
@@ -4188,6 +4190,8 @@
     <Compile Include="Cls\V20201016\Models\ModifyTopicResponse.cs" />
     <Compile Include="Cls\V20201016\Models\MonitorTime.cs" />
     <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
+    <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerRequest.cs" />
+    <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerResponse.cs" />
     <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
     <Compile Include="Cls\V20201016\Models\PreviewLogStatistic.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskRequest.cs" />
@@ -13857,6 +13861,8 @@
     <Compile Include="Ssa\V20180608\Models\Asset.cs" />
     <Compile Include="Ssa\V20180608\Models\AssetDetail.cs" />
     <Compile Include="Ssa\V20180608\Models\AssetList.cs" />
+    <Compile Include="Ssa\V20180608\Models\AssetQueryFilter.cs" />
+    <Compile Include="Ssa\V20180608\Models\AssetTypeStatistic.cs" />
     <Compile Include="Ssa\V20180608\Models\Bucket.cs" />
     <Compile Include="Ssa\V20180608\Models\CheckAssetItem.cs" />
     <Compile Include="Ssa\V20180608\Models\CheckConfigDetail.cs" />
@@ -13888,6 +13894,8 @@
     <Compile Include="Ssa\V20180608\Models\DescribeEventDetailResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeLeakDetectionListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeMappingResultsRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeMappingResultsResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSafetyEventListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocAlertDetailsRequest.cs" />
@@ -13901,12 +13909,15 @@
     <Compile Include="Ssa\V20180608\Models\DescribeVulListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\Filter.cs" />
+    <Compile Include="Ssa\V20180608\Models\MappingResult.cs" />
     <Compile Include="Ssa\V20180608\Models\QueryFilter.cs" />
     <Compile Include="Ssa\V20180608\Models\QuerySort.cs" />
+    <Compile Include="Ssa\V20180608\Models\Results.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPub.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubList.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\SecurityStatus.cs" />
     <Compile Include="Ssa\V20180608\Models\SocCheckItem.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceInfoResp.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceItem.cs" />
@@ -17094,6 +17105,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribeImageTagsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeInovcationIndicatorsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeInovcationIndicatorsResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInstancesRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataCurveRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataCurveResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeInvocationMetricDataDimensionRequest.cs" />
@@ -17202,6 +17215,7 @@
     <Compile Include="Tsf\V20180326\Models\FieldRef.cs" />
     <Compile Include="Tsf\V20180326\Models\FileConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\FileConfigRelease.cs" />
+    <Compile Include="Tsf\V20180326\Models\Filter.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayApiGroupVo.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayDeployGroup.cs" />
     <Compile Include="Tsf\V20180326\Models\GatewayGroupApiVo.cs" />
@@ -17227,6 +17241,8 @@
     <Compile Include="Tsf\V20180326\Models\IndicatorCoord.cs" />
     <Compile Include="Tsf\V20180326\Models\Instance.cs" />
     <Compile Include="Tsf\V20180326\Models\InstanceAdvancedSettings.cs" />
+    <Compile Include="Tsf\V20180326\Models\InstanceEnrichedInfo.cs" />
+    <Compile Include="Tsf\V20180326\Models\InstanceEnrichedInfoPage.cs" />
     <Compile Include="Tsf\V20180326\Models\InvocationIndicator.cs" />
     <Compile Include="Tsf\V20180326\Models\InvocationMetricScatterPlot.cs" />
     <Compile Include="Tsf\V20180326\Models\JvmMonitorData.cs" />

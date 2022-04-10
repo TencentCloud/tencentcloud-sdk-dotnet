@@ -100,6 +100,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("DeadLetterRoutingKey")]
         public string DeadLetterRoutingKey{ get; set; }
 
+        /// <summary>
+        /// Queue对应的Topic名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopicName")]
+        public string TopicName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +124,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AutoDelete", this.AutoDelete);
             this.SetParamSimple(map, prefix + "DeadLetterExchange", this.DeadLetterExchange);
             this.SetParamSimple(map, prefix + "DeadLetterRoutingKey", this.DeadLetterRoutingKey);
+            this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
         }
     }
 }

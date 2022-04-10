@@ -25,18 +25,6 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 准确度
-        /// </summary>
-        [JsonProperty("Accuracy")]
-        public float? Accuracy{ get; set; }
-
-        /// <summary>
-        /// 海拔
-        /// </summary>
-        [JsonProperty("Altitude")]
-        public float? Altitude{ get; set; }
-
-        /// <summary>
         /// 纬度
         /// </summary>
         [JsonProperty("Latitude")]
@@ -48,16 +36,28 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Longitude")]
         public float? Longitude{ get; set; }
 
+        /// <summary>
+        /// 准确度
+        /// </summary>
+        [JsonProperty("Accuracy")]
+        public float? Accuracy{ get; set; }
+
+        /// <summary>
+        /// 海拔
+        /// </summary>
+        [JsonProperty("Altitude")]
+        public float? Altitude{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Accuracy", this.Accuracy);
-            this.SetParamSimple(map, prefix + "Altitude", this.Altitude);
             this.SetParamSimple(map, prefix + "Latitude", this.Latitude);
             this.SetParamSimple(map, prefix + "Longitude", this.Longitude);
+            this.SetParamSimple(map, prefix + "Accuracy", this.Accuracy);
+            this.SetParamSimple(map, prefix + "Altitude", this.Altitude);
         }
     }
 }

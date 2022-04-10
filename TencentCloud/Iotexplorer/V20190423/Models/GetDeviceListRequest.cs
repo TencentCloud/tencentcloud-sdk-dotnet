@@ -25,7 +25,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
     {
         
         /// <summary>
-        /// 需要查看设备列表的产品 ID
+        /// 需要查看设备列表的产品ID, -1代表ProjectId来筛选
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }

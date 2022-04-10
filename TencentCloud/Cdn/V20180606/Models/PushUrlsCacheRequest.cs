@@ -64,6 +64,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ParseM3U8")]
         public bool? ParseM3U8{ get; set; }
 
+        /// <summary>
+        /// 是否关闭Range回源
+        /// 注意事项：
+        /// 此功能灰度发布中，敬请期待
+        /// </summary>
+        [JsonProperty("DisableRange")]
+        public bool? DisableRange{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +83,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
             this.SetParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
+            this.SetParamSimple(map, prefix + "DisableRange", this.DisableRange);
         }
     }
 }

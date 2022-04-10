@@ -37,13 +37,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string DevStatus{ get; set; }
 
         /// <summary>
-        /// Offset
+        /// 偏移量
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// Limit
+        /// 数量限制
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
