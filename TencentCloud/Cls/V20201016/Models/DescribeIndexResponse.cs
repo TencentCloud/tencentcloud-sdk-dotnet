@@ -50,6 +50,20 @@ namespace TencentCloud.Cls.V20201016.Models
         public string ModifyTime{ get; set; }
 
         /// <summary>
+        /// 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IncludeInternalFields")]
+        public bool? IncludeInternalFields{ get; set; }
+
+        /// <summary>
+        /// 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetadataFlag")]
+        public ulong? MetadataFlag{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +79,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
+            this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+            this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

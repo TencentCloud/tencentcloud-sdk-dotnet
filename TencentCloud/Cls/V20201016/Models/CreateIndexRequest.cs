@@ -42,6 +42,18 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Status")]
         public bool? Status{ get; set; }
 
+        /// <summary>
+        /// 全文索引系统预置字段标记，默认false。  false:不包含系统预置字段， true:包含系统预置字段
+        /// </summary>
+        [JsonProperty("IncludeInternalFields")]
+        public bool? IncludeInternalFields{ get; set; }
+
+        /// <summary>
+        /// 元数据相关标志位，默认为0。 0：全文索引包括开启键值索引的元数据字段， 1：全文索引包括所有元数据字段，2：全文索引不包括元数据字段。
+        /// </summary>
+        [JsonProperty("MetadataFlag")]
+        public ulong? MetadataFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IncludeInternalFields", this.IncludeInternalFields);
+            this.SetParamSimple(map, prefix + "MetadataFlag", this.MetadataFlag);
         }
     }
 }

@@ -73,6 +73,13 @@ namespace TencentCloud.Asr.V20190614.Models
         [JsonProperty("SpeechSpeed")]
         public float? SpeechSpeed{ get; set; }
 
+        /// <summary>
+        /// 声道或说话人 Id（请求中如果设置了 speaker_diarization或者ChannelNum为双声道，可区分说话人或声道）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpeakerId")]
+        public long? SpeakerId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "WordsNum", this.WordsNum);
             this.SetParamArrayObj(map, prefix + "Words.", this.Words);
             this.SetParamSimple(map, prefix + "SpeechSpeed", this.SpeechSpeed);
+            this.SetParamSimple(map, prefix + "SpeakerId", this.SpeakerId);
         }
     }
 }

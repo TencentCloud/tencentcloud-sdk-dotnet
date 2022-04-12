@@ -172,6 +172,62 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
+        /// <summary>
+        /// Apdex值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Apdex")]
+        public float? Apdex{ get; set; }
+
+        /// <summary>
+        /// Qps值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Qps")]
+        public float? Qps{ get; set; }
+
+        /// <summary>
+        /// 实例在线数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceOnlineCount")]
+        public long? InstanceOnlineCount{ get; set; }
+
+        /// <summary>
+        /// 实例总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceTotalCount")]
+        public long? InstanceTotalCount{ get; set; }
+
+        /// <summary>
+        /// normal/error
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// normal/warn/error
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorRateLevel")]
+        public string ErrorRateLevel{ get; set; }
+
+        /// <summary>
+        /// normal/warn/error
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AvgTimeConsumingLevel")]
+        public string AvgTimeConsumingLevel{ get; set; }
+
+        /// <summary>
+        /// normal/warn/error
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApdexLevel")]
+        public string ApdexLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +256,14 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
             this.SetParamSimple(map, prefix + "Script", this.Script);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamSimple(map, prefix + "Apdex", this.Apdex);
+            this.SetParamSimple(map, prefix + "Qps", this.Qps);
+            this.SetParamSimple(map, prefix + "InstanceOnlineCount", this.InstanceOnlineCount);
+            this.SetParamSimple(map, prefix + "InstanceTotalCount", this.InstanceTotalCount);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ErrorRateLevel", this.ErrorRateLevel);
+            this.SetParamSimple(map, prefix + "AvgTimeConsumingLevel", this.AvgTimeConsumingLevel);
+            this.SetParamSimple(map, prefix + "ApdexLevel", this.ApdexLevel);
         }
     }
 }

@@ -39,6 +39,13 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string GatewayDeviceName{ get; set; }
 
         /// <summary>
+        /// 网关产品名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GatewayName")]
+        public string GatewayName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         {
             this.SetParamSimple(map, prefix + "GatewayProductId", this.GatewayProductId);
             this.SetParamSimple(map, prefix + "GatewayDeviceName", this.GatewayDeviceName);
+            this.SetParamSimple(map, prefix + "GatewayName", this.GatewayName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -123,11 +123,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// ApplicationName值（类型是string）
+        /// ApplicationName值（废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationName")]
         public ScalableRule ApplicationName{ get; set; }
+
+        /// <summary>
+        /// ApplicationName值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationNameReal")]
+        public string ApplicationNameReal{ get; set; }
 
 
         /// <summary>
@@ -150,6 +157,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "TcrBindingId", this.TcrBindingId);
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamObj(map, prefix + "ApplicationName.", this.ApplicationName);
+            this.SetParamSimple(map, prefix + "ApplicationNameReal", this.ApplicationNameReal);
         }
     }
 }

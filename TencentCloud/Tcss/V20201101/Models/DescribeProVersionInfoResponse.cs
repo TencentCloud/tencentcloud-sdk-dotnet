@@ -58,6 +58,21 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
+        /// 购买状态
+        /// 待购: Pending
+        /// 已购: Normal
+        /// 隔离: Isolate
+        /// </summary>
+        [JsonProperty("BuyStatus")]
+        public string BuyStatus{ get; set; }
+
+        /// <summary>
+        /// 是否曾经购买过(false:未曾 true:曾经购买过)
+        /// </summary>
+        [JsonProperty("IsPurchased")]
+        public bool? IsPurchased{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -74,6 +89,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CoresCnt", this.CoresCnt);
             this.SetParamSimple(map, prefix + "MaxPostPayCoresCnt", this.MaxPostPayCoresCnt);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "BuyStatus", this.BuyStatus);
+            this.SetParamSimple(map, prefix + "IsPurchased", this.IsPurchased);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -129,6 +129,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
+        /// <summary>
+        /// KubeInjectEnable值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KubeInjectEnable")]
+        public bool? KubeInjectEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MemRequest", this.MemRequest);
             this.SetParamSimple(map, prefix + "MemLimit", this.MemLimit);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamSimple(map, prefix + "KubeInjectEnable", this.KubeInjectEnable);
         }
     }
 }

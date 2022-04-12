@@ -37,7 +37,7 @@ namespace TencentCloud.Iecp.V20210914.Models
         public string ConfigMapName{ get; set; }
 
         /// <summary>
-        /// Yaml配置
+        /// Yaml配置, base64之后的串
         /// </summary>
         [JsonProperty("Yaml")]
         public string Yaml{ get; set; }
