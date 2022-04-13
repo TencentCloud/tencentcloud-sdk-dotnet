@@ -43,7 +43,7 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 按项目D搜索
+        /// 按项目ID搜索
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

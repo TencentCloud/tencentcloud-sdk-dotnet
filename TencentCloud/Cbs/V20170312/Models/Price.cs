@@ -25,11 +25,11 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 预付费云盘预支费用的原价，单位：元。
+        /// 后付费云盘折扣单价，单位：元。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("OriginalPrice")]
-        public float? OriginalPrice{ get; set; }
+        [JsonProperty("UnitPriceDiscount")]
+        public float? UnitPriceDiscount{ get; set; }
 
         /// <summary>
         /// 预付费云盘预支费用的折扣价，单位：元。
@@ -46,18 +46,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public float? UnitPrice{ get; set; }
 
         /// <summary>
-        /// 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+        /// 高精度后付费云盘原单价, 单位：元
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ChargeUnit")]
-        public string ChargeUnit{ get; set; }
-
-        /// <summary>
-        /// 后付费云盘折扣单价，单位：元。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("UnitPriceDiscount")]
-        public float? UnitPriceDiscount{ get; set; }
+        [JsonProperty("UnitPriceHigh")]
+        public string UnitPriceHigh{ get; set; }
 
         /// <summary>
         /// 高精度预付费云盘预支费用的原价, 单位：元	。
@@ -67,18 +60,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string OriginalPriceHigh{ get; set; }
 
         /// <summary>
+        /// 预付费云盘预支费用的原价，单位：元。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalPrice")]
+        public float? OriginalPrice{ get; set; }
+
+        /// <summary>
         /// 高精度预付费云盘预支费用的折扣价, 单位：元
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DiscountPriceHigh")]
         public string DiscountPriceHigh{ get; set; }
-
-        /// <summary>
-        /// 高精度后付费云盘原单价, 单位：元
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("UnitPriceHigh")]
-        public string UnitPriceHigh{ get; set; }
 
         /// <summary>
         /// 高精度后付费云盘折扣单价, 单位：元
@@ -87,21 +80,28 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("UnitPriceDiscountHigh")]
         public string UnitPriceDiscountHigh{ get; set; }
 
+        /// <summary>
+        /// 后付费云盘的计价单元，取值范围：<br><li>HOUR：表示后付费云盘的计价单元是按小时计算。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeUnit")]
+        public string ChargeUnit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
             this.SetParamSimple(map, prefix + "UnitPrice", this.UnitPrice);
-            this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
-            this.SetParamSimple(map, prefix + "UnitPriceDiscount", this.UnitPriceDiscount);
-            this.SetParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
-            this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
             this.SetParamSimple(map, prefix + "UnitPriceHigh", this.UnitPriceHigh);
+            this.SetParamSimple(map, prefix + "OriginalPriceHigh", this.OriginalPriceHigh);
+            this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "DiscountPriceHigh", this.DiscountPriceHigh);
             this.SetParamSimple(map, prefix + "UnitPriceDiscountHigh", this.UnitPriceDiscountHigh);
+            this.SetParamSimple(map, prefix + "ChargeUnit", this.ChargeUnit);
         }
     }
 }

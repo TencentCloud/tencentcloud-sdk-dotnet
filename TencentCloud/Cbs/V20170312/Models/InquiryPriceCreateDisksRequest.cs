@@ -25,6 +25,12 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
+        /// 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+        /// </summary>
+        [JsonProperty("DiskChargeType")]
+        public string DiskChargeType{ get; set; }
+
+        /// <summary>
         /// 硬盘介质类型。取值范围：<br><li>CLOUD_BASIC：表示普通云硬盘<br><li>CLOUD_PREMIUM：表示高性能云硬盘<br><li>CLOUD_SSD：表示SSD云硬盘<br><li>CLOUD_HSSD：表示增强型SSD云硬盘<br><li>CLOUD_TSSD：表示极速型SSD云硬盘。
         /// </summary>
         [JsonProperty("DiskType")]
@@ -37,16 +43,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskSize{ get; set; }
 
         /// <summary>
-        /// 云硬盘计费类型。<br><li>PREPAID：预付费，即包年包月<br><li>POSTPAID_BY_HOUR：按小时后付费
+        /// 云盘所属项目ID。
         /// </summary>
-        [JsonProperty("DiskChargeType")]
-        public string DiskChargeType{ get; set; }
-
-        /// <summary>
-        /// 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
-        /// </summary>
-        [JsonProperty("DiskChargePrepaid")]
-        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// 购买云盘的数量。不填则默认为1。
@@ -55,16 +55,22 @@ namespace TencentCloud.Cbs.V20170312.Models
         public ulong? DiskCount{ get; set; }
 
         /// <summary>
-        /// 云盘所属项目ID。
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
         /// 额外购买的云硬盘性能值，单位MB/s。<br>目前仅支持增强型SSD云硬盘（CLOUD_HSSD）和极速型SSD云硬盘（CLOUD_TSSD）
         /// </summary>
         [JsonProperty("ThroughputPerformance")]
         public ulong? ThroughputPerformance{ get; set; }
+
+        /// <summary>
+        /// 预付费模式，即包年包月相关参数设置。通过该参数指定包年包月云盘的购买时长、是否设置自动续费等属性。<br>创建预付费云盘该参数必传，创建按小时后付费云盘无需传该参数。
+        /// </summary>
+        [JsonProperty("DiskChargePrepaid")]
+        public DiskChargePrepaid DiskChargePrepaid{ get; set; }
+
+        /// <summary>
+        /// 指定云硬盘备份点配额。
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
 
 
         /// <summary>
@@ -72,13 +78,14 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
-            this.SetParamSimple(map, prefix + "DiskChargeType", this.DiskChargeType);
-            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
-            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "ThroughputPerformance", this.ThroughputPerformance);
+            this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

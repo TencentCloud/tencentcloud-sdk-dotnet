@@ -129,6 +129,30 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("CloudAttachId")]
         public string CloudAttachId{ get; set; }
 
+        /// <summary>
+        /// 是否开启BFD
+        /// </summary>
+        [JsonProperty("BfdEnable")]
+        public long? BfdEnable{ get; set; }
+
+        /// <summary>
+        /// 是否开启NQA
+        /// </summary>
+        [JsonProperty("NqaEnable")]
+        public long? NqaEnable{ get; set; }
+
+        /// <summary>
+        /// BFD配置信息
+        /// </summary>
+        [JsonProperty("BfdInfo")]
+        public BFDInfo BfdInfo{ get; set; }
+
+        /// <summary>
+        /// NQA配置信息
+        /// </summary>
+        [JsonProperty("NqaInfo")]
+        public NQAInfo NqaInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +175,10 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamSimple(map, prefix + "CustomerAddress", this.CustomerAddress);
             this.SetParamSimple(map, prefix + "TencentBackupAddress", this.TencentBackupAddress);
             this.SetParamSimple(map, prefix + "CloudAttachId", this.CloudAttachId);
+            this.SetParamSimple(map, prefix + "BfdEnable", this.BfdEnable);
+            this.SetParamSimple(map, prefix + "NqaEnable", this.NqaEnable);
+            this.SetParamObj(map, prefix + "BfdInfo.", this.BfdInfo);
+            this.SetParamObj(map, prefix + "NqaInfo.", this.NqaInfo);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Icr.V20211014.Models
     {
         
         /// <summary>
-        /// 无
+        /// 纬度
         /// </summary>
         [JsonProperty("Latitude")]
         public float? Latitude{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 经度
         /// </summary>
         [JsonProperty("Longitude")]
         public float? Longitude{ get; set; }

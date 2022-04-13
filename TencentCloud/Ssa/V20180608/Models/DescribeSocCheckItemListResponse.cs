@@ -15,35 +15,15 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Ssa.V20180608.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBSecurityGroupsResponse : AbstractModel
+    public class DescribeSocCheckItemListResponse : AbstractModel
     {
         
-        /// <summary>
-        /// 安全组详情。
-        /// </summary>
-        [JsonProperty("Groups")]
-        public SecurityGroup[] Groups{ get; set; }
-
-        /// <summary>
-        /// 实例VIP
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("VIP")]
-        public string VIP{ get; set; }
-
-        /// <summary>
-        /// 实例端口
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("VPort")]
-        public long? VPort{ get; set; }
-
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -56,9 +36,6 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "Groups.", this.Groups);
-            this.SetParamSimple(map, prefix + "VIP", this.VIP);
-            this.SetParamSimple(map, prefix + "VPort", this.VPort);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

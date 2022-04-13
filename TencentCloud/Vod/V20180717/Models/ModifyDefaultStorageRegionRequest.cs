@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOrdersResponse : AbstractModel
+    public class ModifyDefaultStorageRegionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回的订单数量。
+        /// 默认的存储地域，必须是已经开通的地域」，建议改成「默认的存储地域，必须是已经开通的地域（通过 DescribeStorageRegions 接口查询）。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long?[] TotalCount{ get; set; }
+        [JsonProperty("StorageRegion")]
+        public string StorageRegion{ get; set; }
 
         /// <summary>
-        /// 订单信息列表。
+        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
         /// </summary>
-        [JsonProperty("Deals")]
-        public Deal[] Deals{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "TotalCount.", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Deals.", this.Deals);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

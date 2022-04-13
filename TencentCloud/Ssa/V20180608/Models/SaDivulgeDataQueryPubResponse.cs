@@ -25,7 +25,7 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 结果
+        /// 自定义泄露事件列表
         /// </summary>
         [JsonProperty("Data")]
         public SaDivulgeDataQueryPubList Data{ get; set; }

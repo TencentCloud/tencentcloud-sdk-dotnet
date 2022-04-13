@@ -98,6 +98,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("KernelVersion")]
         public string KernelVersion{ get; set; }
 
+        /// <summary>
+        /// 是否支持TDE数据加密功能，0-不支持，1-支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportTDE")]
+        public long? IsSupportTDE{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +123,7 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "MajorVersion", this.MajorVersion);
             this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
+            this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
         }
     }
 }

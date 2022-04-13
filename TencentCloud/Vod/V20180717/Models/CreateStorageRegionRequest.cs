@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Dcdb.V20180411.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeOrdersRequest : AbstractModel
+    public class CreateStorageRegionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 待查询的长订单号列表，创建实例、续费实例、扩容实例接口返回。
+        /// 待开通的存储地域，必须是系统支持的地域。
         /// </summary>
-        [JsonProperty("DealNames")]
-        public string[] DealNames{ get; set; }
+        [JsonProperty("StorageRegion")]
+        public string StorageRegion{ get; set; }
+
+        /// <summary>
+        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DealNames.", this.DealNames);
+            this.SetParamSimple(map, prefix + "StorageRegion", this.StorageRegion);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

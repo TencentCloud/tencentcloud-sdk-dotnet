@@ -133,7 +133,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string ReadOnlyGroupId{ get; set; }
 
         /// <summary>
-        /// 实例需要绑定的Tag信息，默认为空
+        /// 实例需要绑定的Tag信息，默认为空（该类型为Tag数组类型）
         /// </summary>
         [JsonProperty("TagList")]
         public Tag TagList{ get; set; }

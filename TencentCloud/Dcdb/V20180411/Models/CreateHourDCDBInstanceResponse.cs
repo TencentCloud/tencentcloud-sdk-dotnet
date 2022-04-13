@@ -37,6 +37,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         public long? FlowId{ get; set; }
 
         /// <summary>
+        /// 订单号。可以据此调用 DescribeOrders
+        ///  查询订单详细信息，或在支付失败时调用用户账号相关接口进行支付。
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
         {
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

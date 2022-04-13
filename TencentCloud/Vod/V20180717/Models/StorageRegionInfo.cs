@@ -15,32 +15,40 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeProxyConnectionPoolConfRequest : AbstractModel
+    public class StorageRegionInfo : AbstractModel
     {
         
         /// <summary>
-        /// 实例ID
+        /// 存储地域
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
 
         /// <summary>
-        /// 分页查询偏移量
+        /// 存储地域描述信息
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
+        [JsonProperty("Description")]
+        public string Description{ get; set; }
 
         /// <summary>
-        /// 分页查询限制
+        /// 状态，是否开通，取值有：
+        /// <li>opened：已经开通。</li>
+        /// <li>unopened：未开通。</li>
         /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 是否默认的存储地域，true：是；false：否
+        /// </summary>
+        [JsonProperty("IsDefault")]
+        public bool? IsDefault{ get; set; }
 
 
         /// <summary>
@@ -48,9 +56,10 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "IsDefault", this.IsDefault);
         }
     }
 }

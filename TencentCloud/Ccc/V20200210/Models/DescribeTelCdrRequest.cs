@@ -37,6 +37,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
+        /// 实例 ID（deprecated）
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public long? InstanceId{ get; set; }
+
+        /// <summary>
         /// 返回数据条数，上限（deprecated）
         /// </summary>
         [JsonProperty("Limit")]
@@ -47,12 +53,6 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 实例 ID（deprecated）
-        /// </summary>
-        [JsonProperty("InstanceId")]
-        public long? InstanceId{ get; set; }
 
         /// <summary>
         /// 应用 ID
@@ -92,9 +92,9 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "StartTimeStamp", this.StartTimeStamp);
             this.SetParamSimple(map, prefix + "EndTimeStamp", this.EndTimeStamp);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);

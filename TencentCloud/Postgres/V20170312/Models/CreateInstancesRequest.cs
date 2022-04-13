@@ -79,7 +79,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+        /// PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -151,13 +151,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例
+        /// PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例
+        /// PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
@@ -167,6 +167,24 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("DBNodeSet")]
         public DBNode[] DBNodeSet{ get; set; }
+
+        /// <summary>
+        /// 是否需要支持数据透明加密，1：是，0：否（默认）。
+        /// </summary>
+        [JsonProperty("NeedSupportTDE")]
+        public ulong? NeedSupportTDE{ get; set; }
+
+        /// <summary>
+        /// 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+        /// </summary>
+        [JsonProperty("KMSKeyId")]
+        public string KMSKeyId{ get; set; }
+
+        /// <summary>
+        /// 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+        /// </summary>
+        [JsonProperty("KMSRegion")]
+        public string KMSRegion{ get; set; }
 
 
         /// <summary>
@@ -198,6 +216,9 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
+            this.SetParamSimple(map, prefix + "NeedSupportTDE", this.NeedSupportTDE);
+            this.SetParamSimple(map, prefix + "KMSKeyId", this.KMSKeyId);
+            this.SetParamSimple(map, prefix + "KMSRegion", this.KMSRegion);
         }
     }
 }

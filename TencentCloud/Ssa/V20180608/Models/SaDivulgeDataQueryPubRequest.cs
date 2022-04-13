@@ -25,7 +25,7 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 模糊查询字段
+        /// 模糊查询字段(针对appid或者uin)
         /// </summary>
         [JsonProperty("QueryKey")]
         public string QueryKey{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public string EventName{ get; set; }
 
         /// <summary>
-        /// 监控源
+        /// 监控源  0:全部 1:GitHub 2:暗网 默认值1
         /// </summary>
         [JsonProperty("DivulgeSoure")]
         public string DivulgeSoure{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Ssa.V20180608.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 安全事件状态
+        /// 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

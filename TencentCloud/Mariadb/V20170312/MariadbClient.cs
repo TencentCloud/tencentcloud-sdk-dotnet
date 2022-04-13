@@ -979,46 +979,6 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
-        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
-        public async Task<DescribeDBSecurityGroupsResponse> DescribeDBSecurityGroups(DescribeDBSecurityGroupsRequest req)
-        {
-             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDBSecurityGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeDBSecurityGroups）用于查询实例安全组信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBSecurityGroupsRequest"/></param>
-        /// <returns><see cref="DescribeDBSecurityGroupsResponse"/></returns>
-        public DescribeDBSecurityGroupsResponse DescribeDBSecurityGroupsSync(DescribeDBSecurityGroupsRequest req)
-        {
-             JsonResponseModel<DescribeDBSecurityGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBSecurityGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBSecurityGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(DescribeDBSlowLogs)用于查询慢查询日志列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBSlowLogsRequest"/></param>
@@ -1370,46 +1330,6 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeLogFileRetentionPeriod");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogFileRetentionPeriodResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeOrders）用于查询云数据库订单信息。传入订单ID来查询订单关联的云数据库实例，和对应的任务流程ID。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
-        /// <returns><see cref="DescribeOrdersResponse"/></returns>
-        public async Task<DescribeOrdersResponse> DescribeOrders(DescribeOrdersRequest req)
-        {
-             JsonResponseModel<DescribeOrdersResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeOrders");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeOrders）用于查询云数据库订单信息。传入订单ID来查询订单关联的云数据库实例，和对应的任务流程ID。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeOrdersRequest"/></param>
-        /// <returns><see cref="DescribeOrdersResponse"/></returns>
-        public DescribeOrdersResponse DescribeOrdersSync(DescribeOrdersRequest req)
-        {
-             JsonResponseModel<DescribeOrdersResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeOrders");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrdersResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

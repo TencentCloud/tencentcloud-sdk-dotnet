@@ -42,6 +42,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("Deadline")]
         public string Deadline{ get; set; }
 
+        /// <summary>
+        /// 云硬盘备份点ID。传入此参数时，将通过备份点创建快照。
+        /// </summary>
+        [JsonProperty("DiskBackupId")]
+        public string DiskBackupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskId", this.DiskId);
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
         }
     }
 }

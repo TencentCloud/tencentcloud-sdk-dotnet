@@ -253,6 +253,18 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DeleteSnapshot")]
         public long? DeleteSnapshot{ get; set; }
 
+        /// <summary>
+        /// 云硬盘备份点已使用的数量。
+        /// </summary>
+        [JsonProperty("DiskBackupCount")]
+        public ulong? DiskBackupCount{ get; set; }
+
+        /// <summary>
+        /// 云硬盘挂载实例的类型。取值范围：<br><li>CVM<br><li>EKS
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -295,6 +307,8 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "Shareable", this.Shareable);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
+            this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

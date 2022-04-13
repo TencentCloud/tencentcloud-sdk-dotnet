@@ -114,6 +114,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("AutoMountConfiguration")]
         public AutoMountConfiguration AutoMountConfiguration{ get; set; }
 
+        /// <summary>
+        /// 指定云硬盘备份点配额。
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public ulong? DiskBackupQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DeleteSnapshot", this.DeleteSnapshot);
             this.SetParamObj(map, prefix + "AutoMountConfiguration.", this.AutoMountConfiguration);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

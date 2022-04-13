@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.497</VersionPrefix>
+    <VersionPrefix>3.0.498</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -213,6 +213,8 @@
     <Compile Include="V20180717\Models\CreateSampleSnapshotTemplateResponse.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateRequest.cs" />
     <Compile Include="V20180717\Models\CreateSnapshotByTimeOffsetTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\CreateStorageRegionRequest.cs" />
+    <Compile Include="V20180717\Models\CreateStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\CreateSubAppIdRequest.cs" />
     <Compile Include="V20180717\Models\CreateSubAppIdResponse.cs" />
     <Compile Include="V20180717\Models\CreateSuperPlayerConfigRequest.cs" />
@@ -322,6 +324,8 @@
     <Compile Include="V20180717\Models\DescribeStorageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeStorageDetailsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeStorageDetailsResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeStorageRegionsRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeStorageRegionsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSubAppIdsRequest.cs" />
     <Compile Include="V20180717\Models\DescribeSubAppIdsResponse.cs" />
     <Compile Include="V20180717\Models\DescribeSuperPlayerConfigsRequest.cs" />
@@ -451,6 +455,8 @@
     <Compile Include="V20180717\Models\ModifyClassResponse.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateRequest.cs" />
     <Compile Include="V20180717\Models\ModifyContentReviewTemplateResponse.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultStorageRegionRequest.cs" />
+    <Compile Include="V20180717\Models\ModifyDefaultStorageRegionResponse.cs" />
     <Compile Include="V20180717\Models\ModifyEventConfigRequest.cs" />
     <Compile Include="V20180717\Models\ModifyEventConfigResponse.cs" />
     <Compile Include="V20180717\Models\ModifyHeadTailTemplateRequest.cs" />
@@ -570,6 +576,7 @@
     <Compile Include="V20180717\Models\SplitMediaTaskSegmentInfo.cs" />
     <Compile Include="V20180717\Models\StatDataItem.cs" />
     <Compile Include="V20180717\Models\StickerTrackItem.cs" />
+    <Compile Include="V20180717\Models\StorageRegionInfo.cs" />
     <Compile Include="V20180717\Models\StorageStatData.cs" />
     <Compile Include="V20180717\Models\SubAppIdInfo.cs" />
     <Compile Include="V20180717\Models\SvgWatermarkInput.cs" />

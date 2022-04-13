@@ -799,6 +799,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于开通某地域的存储。
+        ///   1. 用户开通点播业务时，系统默认为用户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通。
+        ///   2. 通过 DescribeStorageRegions 接口可以查询到所有存储地域及已经开通的地域。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRegionRequest"/></param>
+        /// <returns><see cref="CreateStorageRegionResponse"/></returns>
+        public async Task<CreateStorageRegionResponse> CreateStorageRegion(CreateStorageRegionRequest req)
+        {
+             JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于开通某地域的存储。
+        ///   1. 用户开通点播业务时，系统默认为用户开通了部分地域的存储，用户如果需要开通其它地域的存储，可以通过该接口进行开通。
+        ///   2. 通过 DescribeStorageRegions 接口可以查询到所有存储地域及已经开通的地域。
+        /// </summary>
+        /// <param name="req"><see cref="CreateStorageRegionRequest"/></param>
+        /// <returns><see cref="CreateStorageRegionResponse"/></returns>
+        public CreateStorageRegionResponse CreateStorageRegionSync(CreateStorageRegionRequest req)
+        {
+             JsonResponseModel<CreateStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于创建点播子应用。
         /// </summary>
         /// <param name="req"><see cref="CreateSubAppIdRequest"/></param>
@@ -3083,6 +3127,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口用于：
+        ///   1. 查询点播可开通的所有存储园区列表。
+        ///   2. 查询已经开通的园区列表。
+        ///   3. 查询默认使用的存储园区。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStorageRegionsResponse"/></returns>
+        public async Task<DescribeStorageRegionsResponse> DescribeStorageRegions(DescribeStorageRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeStorageRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于：
+        ///   1. 查询点播可开通的所有存储园区列表。
+        ///   2. 查询已经开通的园区列表。
+        ///   3. 查询默认使用的存储园区。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeStorageRegionsRequest"/></param>
+        /// <returns><see cref="DescribeStorageRegionsResponse"/></returns>
+        public DescribeStorageRegionsResponse DescribeStorageRegionsSync(DescribeStorageRegionsRequest req)
+        {
+             JsonResponseModel<DescribeStorageRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeStorageRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeStorageRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用于获取当前账号的子应用列表，包含主应用。
         /// </summary>
         /// <param name="req"><see cref="DescribeSubAppIdsRequest"/></param>
@@ -3918,6 +4008,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ModifyContentReviewTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyContentReviewTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于设置默认的存储地域。上传文件时如果没有指定地域，将上传到默认地域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultStorageRegionRequest"/></param>
+        /// <returns><see cref="ModifyDefaultStorageRegionResponse"/></returns>
+        public async Task<ModifyDefaultStorageRegionResponse> ModifyDefaultStorageRegion(ModifyDefaultStorageRegionRequest req)
+        {
+             JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDefaultStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultStorageRegionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口用于设置默认的存储地域。上传文件时如果没有指定地域，将上传到默认地域。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDefaultStorageRegionRequest"/></param>
+        /// <returns><see cref="ModifyDefaultStorageRegionResponse"/></returns>
+        public ModifyDefaultStorageRegionResponse ModifyDefaultStorageRegionSync(ModifyDefaultStorageRegionRequest req)
+        {
+             JsonResponseModel<ModifyDefaultStorageRegionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDefaultStorageRegion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDefaultStorageRegionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

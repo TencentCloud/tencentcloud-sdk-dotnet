@@ -55,13 +55,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? MaxMsgSize{ get; set; }
 
         /// <summary>
-        /// 消息保留周期。取值范围 60-1296000 秒（1min-15天），默认值 345600 (4 天)。
+        /// 消息最长未确认时间。取值范围 30-43200 秒（30秒~12小时），默认值 3600 (1 小时)。
         /// </summary>
         [JsonProperty("MsgRetentionSeconds")]
         public ulong? MsgRetentionSeconds{ get; set; }
 
         /// <summary>
-        /// 消息最长回溯时间，取值范围0-msgRetentionSeconds，消息的最大回溯之间为消息在队列中的保存周期，0表示不开启消息回溯。
+        /// 队列是否开启回溯消息能力，该参数取值范围0-1296000，0表示不开启。
         /// </summary>
         [JsonProperty("RewindSeconds")]
         public ulong? RewindSeconds{ get; set; }
@@ -114,6 +114,12 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Transaction")]
         public ulong? Transaction{ get; set; }
 
+        /// <summary>
+        /// 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+        /// </summary>
+        [JsonProperty("RetentionSizeInMB")]
+        public ulong? RetentionSizeInMB{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "Trace", this.Trace);
             this.SetParamSimple(map, prefix + "Transaction", this.Transaction);
+            this.SetParamSimple(map, prefix + "RetentionSizeInMB", this.RetentionSizeInMB);
         }
     }
 }
