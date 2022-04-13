@@ -44,6 +44,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("SecretKey")]
         public string SecretKey{ get; set; }
 
+        /// <summary>
+        /// 地域
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// Bucketname
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Bucket")]
+        public string Bucket{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +67,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "AccessKey", this.AccessKey);
             this.SetParamSimple(map, prefix + "SecretKey", this.SecretKey);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
         }
     }
 }

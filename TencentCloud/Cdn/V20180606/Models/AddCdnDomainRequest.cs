@@ -250,6 +250,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("OssPrivateAccess")]
         public OssPrivateAccess OssPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// 华为云对象存储回源鉴权
+        /// </summary>
+        [JsonProperty("HwPrivateAccess")]
+        public HwPrivateAccess HwPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// 七牛云对象存储回源鉴权
+        /// </summary>
+        [JsonProperty("QnPrivateAccess")]
+        public QnPrivateAccess QnPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -292,6 +304,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "AwsPrivateAccess.", this.AwsPrivateAccess);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
+            this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+            this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         }
     }
 }

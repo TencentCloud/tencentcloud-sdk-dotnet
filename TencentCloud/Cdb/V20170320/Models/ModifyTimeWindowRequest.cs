@@ -42,6 +42,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("Weekdays")]
         public string[] Weekdays{ get; set; }
 
+        /// <summary>
+        /// 数据延迟阈值，仅对主实例和灾备实例有效，不传默认修改为10
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public ulong? MaxDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArraySimple(map, prefix + "TimeRanges.", this.TimeRanges);
             this.SetParamArraySimple(map, prefix + "Weekdays.", this.Weekdays);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         }
     }
 }

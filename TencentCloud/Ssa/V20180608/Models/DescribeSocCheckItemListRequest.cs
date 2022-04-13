@@ -24,12 +24,40 @@ namespace TencentCloud.Ssa.V20180608.Models
     public class DescribeSocCheckItemListRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 查询参数,可支持的排序字段:Name,Type,AssetType,Level,Standard,IsFree
+        /// </summary>
+        [JsonProperty("Filter")]
+        public QueryFilter[] Filter{ get; set; }
+
+        /// <summary>
+        /// 排序参数:无
+        /// </summary>
+        [JsonProperty("Sorter")]
+        public QuerySort[] Sorter{ get; set; }
+
+        /// <summary>
+        /// 当前页码数据，默认值为10
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 当前页面索引，默认值为0
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filter.", this.Filter);
+            this.SetParamArrayObj(map, prefix + "Sorter.", this.Sorter);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
         }
     }
 }

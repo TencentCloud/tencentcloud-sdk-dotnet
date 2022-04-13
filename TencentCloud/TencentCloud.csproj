@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.498</VersionPrefix>
+    <VersionPrefix>3.0.499</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2695,6 +2695,8 @@
     <Compile Include="Cdb\V20170320\Models\ReloadBalanceProxyNodeResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RenewDBInstanceRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\RenewDBInstanceResponse.cs" />
+    <Compile Include="Cdb\V20170320\Models\ResetRootAccountRequest.cs" />
+    <Compile Include="Cdb\V20170320\Models\ResetRootAccountResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesRequest.cs" />
     <Compile Include="Cdb\V20170320\Models\RestartDBInstancesResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\RoGroup.cs" />
@@ -2937,6 +2939,7 @@
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderRule.cs" />
     <Compile Include="Cdn\V20180606\Models\Https.cs" />
+    <Compile Include="Cdn\V20180606\Models\HwPrivateAccess.cs" />
     <Compile Include="Cdn\V20180606\Models\ImageOptimization.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFilter.cs" />
     <Compile Include="Cdn\V20180606\Models\IpFilterPathRule.cs" />
@@ -2999,6 +3002,7 @@
     <Compile Include="Cdn\V20180606\Models\PushTask.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\PushUrlsCacheResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\QnPrivateAccess.cs" />
     <Compile Include="Cdn\V20180606\Models\QueryStringKey.cs" />
     <Compile Include="Cdn\V20180606\Models\Quic.cs" />
     <Compile Include="Cdn\V20180606\Models\Quota.cs" />
@@ -13908,6 +13912,7 @@
     <Compile Include="Ssa\V20180608\Models\DescribeSocAlertListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListRspRsp.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulDetailRequest.cs" />
@@ -13925,6 +13930,7 @@
     <Compile Include="Ssa\V20180608\Models\SaDivulgeDataQueryPubResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\SecurityStatus.cs" />
     <Compile Include="Ssa\V20180608\Models\SocCheckItem.cs" />
+    <Compile Include="Ssa\V20180608\Models\SocCheckItemV1.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceInfoResp.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceItem.cs" />
     <Compile Include="Ssa\V20180608\Models\SocProductionItem.cs" />
@@ -16303,6 +16309,8 @@
     <Compile Include="Tiia\V20190529\Models\Location.cs" />
     <Compile Include="Tiia\V20190529\Models\Product.cs" />
     <Compile Include="Tiia\V20190529\Models\ProductInfo.cs" />
+    <Compile Include="Tiia\V20190529\Models\RecognizeCarProRequest.cs" />
+    <Compile Include="Tiia\V20190529\Models\RecognizeCarProResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\RecognizeCarRequest.cs" />
     <Compile Include="Tiia\V20190529\Models\RecognizeCarResponse.cs" />
     <Compile Include="Tiia\V20190529\Models\RegionDetected.cs" />

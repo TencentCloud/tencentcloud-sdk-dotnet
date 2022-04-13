@@ -25,13 +25,13 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// Count
+        /// 数据条数
         /// </summary>
         [JsonProperty("Count")]
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// List
+        /// 自定义泄露事件列表
         /// </summary>
         [JsonProperty("List")]
         public SaDivulgeDataQueryPub[] List{ get; set; }

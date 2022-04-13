@@ -795,6 +795,52 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 车辆识别（增强版）可对图片中汽车的车型和车牌进行识别，可识别7000多种车型，覆盖轿车、SUV、大型客车等市面常见车，输出车辆的车身颜色、品牌、车系、年份、车牌和位置等信息。如果图片中存在多辆车，会分别输出每辆车的车型、车牌和坐标。
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeCarProRequest"/></param>
+        /// <returns><see cref="RecognizeCarProResponse"/></returns>
+        public async Task<RecognizeCarProResponse> RecognizeCarPro(RecognizeCarProRequest req)
+        {
+             JsonResponseModel<RecognizeCarProResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeCarPro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeCarProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 车辆识别（增强版）可对图片中汽车的车型和车牌进行识别，可识别7000多种车型，覆盖轿车、SUV、大型客车等市面常见车，输出车辆的车身颜色、品牌、车系、年份、车牌和位置等信息。如果图片中存在多辆车，会分别输出每辆车的车型、车牌和坐标。
+        /// 
+        /// >     
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeCarProRequest"/></param>
+        /// <returns><see cref="RecognizeCarProResponse"/></returns>
+        public RecognizeCarProResponse RecognizeCarProSync(RecognizeCarProRequest req)
+        {
+             JsonResponseModel<RecognizeCarProResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeCarPro");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeCarProResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于对一张待识别的商品图片，在指定图片库中检索出最相似的图片列表。
         /// </summary>
         /// <param name="req"><see cref="SearchImageRequest"/></param>

@@ -4805,6 +4805,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 重置实例ROOT账，初始化账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ResetRootAccountRequest"/></param>
+        /// <returns><see cref="ResetRootAccountResponse"/></returns>
+        public async Task<ResetRootAccountResponse> ResetRootAccount(ResetRootAccountRequest req)
+        {
+             JsonResponseModel<ResetRootAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResetRootAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRootAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重置实例ROOT账，初始化账号权限
+        /// </summary>
+        /// <param name="req"><see cref="ResetRootAccountRequest"/></param>
+        /// <returns><see cref="ResetRootAccountResponse"/></returns>
+        public ResetRootAccountResponse ResetRootAccountSync(ResetRootAccountRequest req)
+        {
+             JsonResponseModel<ResetRootAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResetRootAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetRootAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(RestartDBInstances)用于重启云数据库实例。
         /// 
         /// 注意：

@@ -67,6 +67,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string[] Sunday{ get; set; }
 
         /// <summary>
+        /// 最大数据延迟阈值
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public ulong? MaxDelayTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "Friday.", this.Friday);
             this.SetParamArraySimple(map, prefix + "Saturday.", this.Saturday);
             this.SetParamArraySimple(map, prefix + "Sunday.", this.Sunday);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

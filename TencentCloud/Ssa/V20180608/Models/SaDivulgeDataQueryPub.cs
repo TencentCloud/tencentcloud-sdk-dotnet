@@ -25,97 +25,97 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// Id
+        /// Id信息
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// Uin
+        /// 用户Uin
         /// </summary>
         [JsonProperty("Uin")]
         public string Uin{ get; set; }
 
         /// <summary>
-        /// AppId
+        /// 用户AppId
         /// </summary>
         [JsonProperty("AppId")]
         public string AppId{ get; set; }
 
         /// <summary>
-        /// EventName
+        /// 事件名称
         /// </summary>
         [JsonProperty("EventName")]
         public string EventName{ get; set; }
 
         /// <summary>
-        /// DivulgeSoure
+        /// 监控源 0:全部 1:GitHub 2:暗网 默认值1
         /// </summary>
         [JsonProperty("DivulgeSoure")]
         public string DivulgeSoure{ get; set; }
 
         /// <summary>
-        /// Asset
+        /// 受影响资产
         /// </summary>
         [JsonProperty("Asset")]
         public string Asset{ get; set; }
 
         /// <summary>
-        /// RuleName
+        /// 命中主题集下的规则topic名称
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
-        /// RuleId
+        /// 命中主题集下的规则topic唯一id
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// RuleWord
+        /// 命中主题集下的自定义规则策略
         /// </summary>
         [JsonProperty("RuleWord")]
         public string RuleWord{ get; set; }
 
         /// <summary>
-        /// ScanUrl
+        /// 扫描监测url"
         /// </summary>
         [JsonProperty("ScanUrl")]
         public string ScanUrl{ get; set; }
 
         /// <summary>
-        /// ScanCount
+        /// 扫描监测命中次数
         /// </summary>
         [JsonProperty("ScanCount")]
         public string ScanCount{ get; set; }
 
         /// <summary>
-        /// Level
+        /// 风险等级 -1:未知 1:低危 2:中危 3:高危 4:严重
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// Status
+        /// 安全事件处理状态 -1:未知 1:待处理 2:已处理 3:误报 4:已忽略 5:已知晓 6:已信任
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// EventTime
+        /// 安全事件发生时间
         /// </summary>
         [JsonProperty("EventTime")]
         public string EventTime{ get; set; }
 
         /// <summary>
-        /// InsertTime
+        /// 事件插入时间
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// UpdateTime
+        /// 事件更新时间
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

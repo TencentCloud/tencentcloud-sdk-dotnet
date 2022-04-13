@@ -145,6 +145,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AdvanceHttps")]
         public AdvanceHttps AdvanceHttps{ get; set; }
 
+        /// <summary>
+        /// 对象存储回源厂商
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginCompany")]
+        public string OriginCompany{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +170,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArrayObj(map, prefix + "PathRules.", this.PathRules);
             this.SetParamArrayObj(map, prefix + "PathBasedOrigin.", this.PathBasedOrigin);
             this.SetParamObj(map, prefix + "AdvanceHttps.", this.AdvanceHttps);
+            this.SetParamSimple(map, prefix + "OriginCompany", this.OriginCompany);
         }
     }
 }

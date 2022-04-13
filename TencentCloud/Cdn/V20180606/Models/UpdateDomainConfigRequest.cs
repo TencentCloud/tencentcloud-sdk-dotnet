@@ -296,6 +296,18 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ShareCname")]
         public ShareCname ShareCname{ get; set; }
 
+        /// <summary>
+        /// 华为云对象存储回源鉴权
+        /// </summary>
+        [JsonProperty("HwPrivateAccess")]
+        public HwPrivateAccess HwPrivateAccess{ get; set; }
+
+        /// <summary>
+        /// 七牛云对象存储回源鉴权
+        /// </summary>
+        [JsonProperty("QnPrivateAccess")]
+        public QnPrivateAccess QnPrivateAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -346,6 +358,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "RemoteAuthentication.", this.RemoteAuthentication);
             this.SetParamObj(map, prefix + "ShareCname.", this.ShareCname);
+            this.SetParamObj(map, prefix + "HwPrivateAccess.", this.HwPrivateAccess);
+            this.SetParamObj(map, prefix + "QnPrivateAccess.", this.QnPrivateAccess);
         }
     }
 }
