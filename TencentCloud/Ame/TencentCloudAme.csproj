@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D56E3EFD-C760-38D8-8424-8856F2207A21}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.499</VersionPrefix>
+    <VersionPrefix>3.0.500</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -144,6 +144,7 @@
     <Compile Include="V20190916\Models\Station.cs" />
     <Compile Include="V20190916\Models\SyncKTVRobotCommandRequest.cs" />
     <Compile Include="V20190916\Models\SyncKTVRobotCommandResponse.cs" />
+    <Compile Include="V20190916\Models\SyncRobotCommand.cs" />
     <Compile Include="V20190916\Models\TRTCJoinRoomInput.cs" />
     <Compile Include="V20190916\Models\TakeMusicOffShelves.cs" />
     <Compile Include="V20190916\Models\TakeMusicOffShelvesRequest.cs" />

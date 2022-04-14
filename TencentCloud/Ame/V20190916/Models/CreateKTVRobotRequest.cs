@@ -43,6 +43,12 @@ namespace TencentCloud.Ame.V20190916.Models
         [JsonProperty("ApplicationLicenseInput")]
         public ApplicationLicenseInput ApplicationLicenseInput{ get; set; }
 
+        /// <summary>
+        /// 创建机器人时初始化参数。
+        /// </summary>
+        [JsonProperty("SyncRobotCommands")]
+        public SyncRobotCommand[] SyncRobotCommands{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +58,7 @@ namespace TencentCloud.Ame.V20190916.Models
             this.SetParamSimple(map, prefix + "RTCSystem", this.RTCSystem);
             this.SetParamObj(map, prefix + "JoinRoomInput.", this.JoinRoomInput);
             this.SetParamObj(map, prefix + "ApplicationLicenseInput.", this.ApplicationLicenseInput);
+            this.SetParamArrayObj(map, prefix + "SyncRobotCommands.", this.SyncRobotCommands);
         }
     }
 }

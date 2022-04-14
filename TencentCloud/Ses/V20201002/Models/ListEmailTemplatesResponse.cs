@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public TemplatesMetadata[] TemplatesMetadata{ get; set; }
 
         /// <summary>
-        /// 模版总数量
+        /// 模板总数量
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }

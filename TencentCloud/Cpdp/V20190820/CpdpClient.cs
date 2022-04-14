@@ -787,6 +787,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 通过此接口关闭此前已创建的订单。关闭后，用户将无法继续付款，仅能关闭创建后未支付的订单。
+        /// </summary>
+        /// <param name="req"><see cref="CloseCloudOrderRequest"/></param>
+        /// <returns><see cref="CloseCloudOrderResponse"/></returns>
+        public async Task<CloseCloudOrderResponse> CloseCloudOrder(CloseCloudOrderRequest req)
+        {
+             JsonResponseModel<CloseCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过此接口关闭此前已创建的订单。关闭后，用户将无法继续付款，仅能关闭创建后未支付的订单。
+        /// </summary>
+        /// <param name="req"><see cref="CloseCloudOrderRequest"/></param>
+        /// <returns><see cref="CloseCloudOrderResponse"/></returns>
+        public CloseCloudOrderResponse CloseCloudOrderSync(CloseCloudOrderRequest req)
+        {
+             JsonResponseModel<CloseCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-关闭订单
         /// </summary>
         /// <param name="req"><see cref="CloseOpenBankPaymentOrderRequest"/></param>
@@ -1098,6 +1138,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateBatchPayment");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建子商户
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudSubMerchantRequest"/></param>
+        /// <returns><see cref="CreateCloudSubMerchantResponse"/></returns>
+        public async Task<CreateCloudSubMerchantResponse> CreateCloudSubMerchant(CreateCloudSubMerchantRequest req)
+        {
+             JsonResponseModel<CreateCloudSubMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCloudSubMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudSubMerchantResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建子商户
+        /// </summary>
+        /// <param name="req"><see cref="CreateCloudSubMerchantRequest"/></param>
+        /// <returns><see cref="CreateCloudSubMerchantResponse"/></returns>
+        public CreateCloudSubMerchantResponse CreateCloudSubMerchantSync(CreateCloudSubMerchantRequest req)
+        {
+             JsonResponseModel<CreateCloudSubMerchantResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCloudSubMerchant");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudSubMerchantResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3271,6 +3351,126 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 发起支付等渠道操作后，可以调用该接口查询渠道的数据。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudChannelDataRequest"/></param>
+        /// <returns><see cref="QueryCloudChannelDataResponse"/></returns>
+        public async Task<QueryCloudChannelDataResponse> QueryCloudChannelData(QueryCloudChannelDataRequest req)
+        {
+             JsonResponseModel<QueryCloudChannelDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCloudChannelData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudChannelDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发起支付等渠道操作后，可以调用该接口查询渠道的数据。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudChannelDataRequest"/></param>
+        /// <returns><see cref="QueryCloudChannelDataResponse"/></returns>
+        public QueryCloudChannelDataResponse QueryCloudChannelDataSync(QueryCloudChannelDataRequest req)
+        {
+             JsonResponseModel<QueryCloudChannelDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCloudChannelData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudChannelDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据订单号或用户ID，查询支付订单状态。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudOrderRequest"/></param>
+        /// <returns><see cref="QueryCloudOrderResponse"/></returns>
+        public async Task<QueryCloudOrderResponse> QueryCloudOrder(QueryCloudOrderRequest req)
+        {
+             JsonResponseModel<QueryCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据订单号或用户ID，查询支付订单状态。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudOrderRequest"/></param>
+        /// <returns><see cref="QueryCloudOrderResponse"/></returns>
+        public QueryCloudOrderResponse QueryCloudOrderSync(QueryCloudOrderRequest req)
+        {
+             JsonResponseModel<QueryCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudRefundOrderRequest"/></param>
+        /// <returns><see cref="QueryCloudRefundOrderResponse"/></returns>
+        public async Task<QueryCloudRefundOrderResponse> QueryCloudRefundOrder(QueryCloudRefundOrderRequest req)
+        {
+             JsonResponseModel<QueryCloudRefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCloudRefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudRefundOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交退款申请后，通过调用该接口查询退款状态。退款可能有一定延时，用微信零钱支付的退款约20分钟内到账，银行卡支付的退款约3个工作日后到账。
+        /// </summary>
+        /// <param name="req"><see cref="QueryCloudRefundOrderRequest"/></param>
+        /// <returns><see cref="QueryCloudRefundOrderResponse"/></returns>
+        public QueryCloudRefundOrderResponse QueryCloudRefundOrderSync(QueryCloudRefundOrderRequest req)
+        {
+             JsonResponseModel<QueryCloudRefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCloudRefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCloudRefundOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询普通转账充值明细。接口用于查询会员主动转账进资金汇总账户的明细情况。若会员使用绑定账号转入，则直接入账到会员子账户。若未使用绑定账号转入，则系统无法自动清分到对应子账户，则转入挂账子账户由平台自行清分。若是 “见证+收单充值”T0充值记录时备注Note为“见证+收单充值,订单号” 此接口可以查到T0到账的“见证+收单充值”充值记录。
         /// </summary>
         /// <param name="req"><see cref="QueryCommonTransferRechargeRequest"/></param>
@@ -5313,6 +5513,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
+        /// </summary>
+        /// <param name="req"><see cref="RefundCloudOrderRequest"/></param>
+        /// <returns><see cref="RefundCloudOrderResponse"/></returns>
+        public async Task<RefundCloudOrderResponse> RefundCloudOrder(RefundCloudOrderRequest req)
+        {
+             JsonResponseModel<RefundCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 如交易订单需退款，可以通过本接口将支付款全部或部分退还给付款方，聚鑫将在收到退款请求并且验证成功之后，按照退款规则将支付款按原路退回到支付帐号。最长支持1年的订单退款。在订单包含多个子订单的情况下，如果使用本接口传入OutTradeNo或TransactionId退款，则只支持全单退款；如果需要部分退款，请通过传入子订单的方式来指定部分金额退款。 
+        /// </summary>
+        /// <param name="req"><see cref="RefundCloudOrderRequest"/></param>
+        /// <returns><see cref="RefundCloudOrderResponse"/></returns>
+        public RefundCloudOrderResponse RefundCloudOrderSync(RefundCloudOrderRequest req)
+        {
+             JsonResponseModel<RefundCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 会员间交易退款
         /// </summary>
         /// <param name="req"><see cref="RefundMemberTransactionRequest"/></param>
@@ -5944,6 +6184,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "UnbindRelateAcct");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindRelateAcctResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+        /// </summary>
+        /// <param name="req"><see cref="UnifiedCloudOrderRequest"/></param>
+        /// <returns><see cref="UnifiedCloudOrderResponse"/></returns>
+        public async Task<UnifiedCloudOrderResponse> UnifiedCloudOrder(UnifiedCloudOrderRequest req)
+        {
+             JsonResponseModel<UnifiedCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnifiedCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnifiedCloudOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 应用需要先调用本接口生成支付订单号，并将应答的PayInfo透传给聚鑫SDK，拉起客户端（包括微信公众号/微信小程序/客户端App）支付。
+        /// </summary>
+        /// <param name="req"><see cref="UnifiedCloudOrderRequest"/></param>
+        /// <returns><see cref="UnifiedCloudOrderResponse"/></returns>
+        public UnifiedCloudOrderResponse UnifiedCloudOrderSync(UnifiedCloudOrderRequest req)
+        {
+             JsonResponseModel<UnifiedCloudOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnifiedCloudOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnifiedCloudOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

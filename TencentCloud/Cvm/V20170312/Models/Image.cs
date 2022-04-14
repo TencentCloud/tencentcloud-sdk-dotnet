@@ -124,6 +124,13 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("SnapshotSet")]
         public Snapshot[] SnapshotSet{ get; set; }
 
+        /// <summary>
+        /// 镜像关联的标签列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +152,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "SyncPercent", this.SyncPercent);
             this.SetParamSimple(map, prefix + "IsSupportCloudinit", this.IsSupportCloudinit);
             this.SetParamArrayObj(map, prefix + "SnapshotSet.", this.SnapshotSet);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

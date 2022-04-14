@@ -613,6 +613,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 获取主被叫受保护的电话服务记录与录音
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectedTelCdrRequest"/></param>
+        /// <returns><see cref="DescribeProtectedTelCdrResponse"/></returns>
+        public async Task<DescribeProtectedTelCdrResponse> DescribeProtectedTelCdr(DescribeProtectedTelCdrRequest req)
+        {
+             JsonResponseModel<DescribeProtectedTelCdrResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProtectedTelCdr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProtectedTelCdrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取主被叫受保护的电话服务记录与录音
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProtectedTelCdrRequest"/></param>
+        /// <returns><see cref="DescribeProtectedTelCdrResponse"/></returns>
+        public DescribeProtectedTelCdrResponse DescribeProtectedTelCdrSync(DescribeProtectedTelCdrRequest req)
+        {
+             JsonResponseModel<DescribeProtectedTelCdrResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProtectedTelCdr");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProtectedTelCdrResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 废弃接口下架
         /// 
         /// 获取坐席用户列表（废弃）

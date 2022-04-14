@@ -229,6 +229,12 @@ namespace TencentCloud.Af.V20200226.Models
         [JsonProperty("NameCryptoType")]
         public string NameCryptoType{ get; set; }
 
+        /// <summary>
+        /// 是否使用旧回包
+        /// </summary>
+        [JsonProperty("OldResponseType")]
+        public string OldResponseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +269,7 @@ namespace TencentCloud.Af.V20200226.Models
             this.SetParamSimple(map, prefix + "IdCryptoType", this.IdCryptoType);
             this.SetParamSimple(map, prefix + "PhoneCryptoType", this.PhoneCryptoType);
             this.SetParamSimple(map, prefix + "NameCryptoType", this.NameCryptoType);
+            this.SetParamSimple(map, prefix + "OldResponseType", this.OldResponseType);
         }
     }
 }

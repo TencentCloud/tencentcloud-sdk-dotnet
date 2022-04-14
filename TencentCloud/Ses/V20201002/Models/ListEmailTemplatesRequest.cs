@@ -25,13 +25,13 @@ namespace TencentCloud.Ses.V20201002.Models
     {
         
         /// <summary>
-        /// 获取模版数据量，用于分页
+        /// 获取模板数据量，用于分页
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 获取模版偏移值，用于分页
+        /// 获取模板偏移值，用于分页
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }

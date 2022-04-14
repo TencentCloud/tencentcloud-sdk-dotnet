@@ -25,49 +25,49 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 起始时间戳，Unix 时间戳
+        /// 起始时间戳，Unix 秒级时间戳
         /// </summary>
         [JsonProperty("StartTimeStamp")]
         public long? StartTimeStamp{ get; set; }
 
         /// <summary>
-        /// 结束时间戳，Unix 时间戳
+        /// 结束时间戳，Unix 秒级时间戳
         /// </summary>
         [JsonProperty("EndTimeStamp")]
         public long? EndTimeStamp{ get; set; }
 
         /// <summary>
-        /// 实例 ID（deprecated）
+        /// 实例 ID（废弃）
         /// </summary>
         [JsonProperty("InstanceId")]
         public long? InstanceId{ get; set; }
 
         /// <summary>
-        /// 返回数据条数，上限（deprecated）
+        /// 返回数据条数，上限（废弃）
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移（deprecated）
+        /// 偏移（废弃）
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 应用 ID
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 分页尺寸，上限 100
+        /// 分页尺寸（必填），上限 100
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 分页页码，从 0 开始
+        /// 分页页码（必填），从 0 开始
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }

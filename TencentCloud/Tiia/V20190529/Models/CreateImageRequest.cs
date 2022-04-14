@@ -39,7 +39,7 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 图片名称，最多支持64个字符， 
-        /// 同一个EntityId，最大支持10张图。如果图片名称已存在，则会更新库中的图片。
+        /// 同一个EntityId，最大支持10张图。
         /// </summary>
         [JsonProperty("PicName")]
         public string PicName{ get; set; }
