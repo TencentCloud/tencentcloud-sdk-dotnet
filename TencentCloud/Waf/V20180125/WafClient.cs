@@ -93,6 +93,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 增加域名规则白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddDomainWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddDomainWhiteRuleResponse"/></returns>
+        public async Task<AddDomainWhiteRuleResponse> AddDomainWhiteRule(AddDomainWhiteRuleRequest req)
+        {
+             JsonResponseModel<AddDomainWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddDomainWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDomainWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增加域名规则白名单
+        /// </summary>
+        /// <param name="req"><see cref="AddDomainWhiteRuleRequest"/></param>
+        /// <returns><see cref="AddDomainWhiteRuleResponse"/></returns>
+        public AddDomainWhiteRuleResponse AddDomainWhiteRuleSync(AddDomainWhiteRuleRequest req)
+        {
+             JsonResponseModel<AddDomainWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddDomainWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDomainWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建访问日志导出
         /// </summary>
         /// <param name="req"><see cref="CreateAccessExportRequest"/></param>
@@ -253,6 +293,48 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 删除域名规则白名单
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainWhiteRulesRequest"/></param>
+        /// <returns><see cref="DeleteDomainWhiteRulesResponse"/></returns>
+        public async Task<DeleteDomainWhiteRulesResponse> DeleteDomainWhiteRules(DeleteDomainWhiteRulesRequest req)
+        {
+             JsonResponseModel<DeleteDomainWhiteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDomainWhiteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainWhiteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名规则白名单
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDomainWhiteRulesRequest"/></param>
+        /// <returns><see cref="DeleteDomainWhiteRulesResponse"/></returns>
+        public DeleteDomainWhiteRulesResponse DeleteDomainWhiteRulesSync(DeleteDomainWhiteRulesRequest req)
+        {
+             JsonResponseModel<DeleteDomainWhiteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDomainWhiteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainWhiteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除访问日志下载记录
         /// </summary>
         /// <param name="req"><see cref="DeleteDownloadRecordRequest"/></param>
@@ -284,6 +366,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDownloadRecord");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDownloadRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单Delete接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlRequest"/></param>
+        /// <returns><see cref="DeleteIpAccessControlResponse"/></returns>
+        public async Task<DeleteIpAccessControlResponse> DeleteIpAccessControl(DeleteIpAccessControlRequest req)
+        {
+             JsonResponseModel<DeleteIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单Delete接口
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIpAccessControlRequest"/></param>
+        /// <returns><see cref="DeleteIpAccessControlResponse"/></returns>
+        public DeleteIpAccessControlResponse DeleteIpAccessControlSync(DeleteIpAccessControlRequest req)
+        {
+             JsonResponseModel<DeleteIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIpAccessControlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -453,6 +575,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 描述WAF自动封禁IP详情,对齐自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDenyIPRequest"/></param>
+        /// <returns><see cref="DescribeAutoDenyIPResponse"/></returns>
+        public async Task<DescribeAutoDenyIPResponse> DescribeAutoDenyIP(DescribeAutoDenyIPRequest req)
+        {
+             JsonResponseModel<DescribeAutoDenyIPResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAutoDenyIP");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoDenyIPResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述WAF自动封禁IP详情,对齐自动封堵状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAutoDenyIPRequest"/></param>
+        /// <returns><see cref="DescribeAutoDenyIPResponse"/></returns>
+        public DescribeAutoDenyIPResponse DescribeAutoDenyIPSync(DescribeAutoDenyIPRequest req)
+        {
+             JsonResponseModel<DescribeAutoDenyIPResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAutoDenyIP");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAutoDenyIPResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取防护配置中的自定义策略列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomRulesRequest"/></param>
@@ -484,6 +646,48 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCustomRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的规则白名单
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeDomainWhiteRulesResponse"/></returns>
+        public async Task<DescribeDomainWhiteRulesResponse> DescribeDomainWhiteRules(DescribeDomainWhiteRulesRequest req)
+        {
+             JsonResponseModel<DescribeDomainWhiteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainWhiteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainWhiteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名的规则白名单
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainWhiteRulesRequest"/></param>
+        /// <returns><see cref="DescribeDomainWhiteRulesResponse"/></returns>
+        public DescribeDomainWhiteRulesResponse DescribeDomainWhiteRulesSync(DescribeDomainWhiteRulesRequest req)
+        {
+             JsonResponseModel<DescribeDomainWhiteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainWhiteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainWhiteRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -533,6 +737,86 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// Waf ip黑白名单查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeIpAccessControlResponse"/></returns>
+        public async Task<DescribeIpAccessControlResponse> DescribeIpAccessControl(DescribeIpAccessControlRequest req)
+        {
+             JsonResponseModel<DescribeIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf ip黑白名单查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpAccessControlRequest"/></param>
+        /// <returns><see cref="DescribeIpAccessControlResponse"/></returns>
+        public DescribeIpAccessControlResponse DescribeIpAccessControlSync(DescribeIpAccessControlRequest req)
+        {
+             JsonResponseModel<DescribeIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  IP封堵状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpHitItemsRequest"/></param>
+        /// <returns><see cref="DescribeIpHitItemsResponse"/></returns>
+        public async Task<DescribeIpHitItemsResponse> DescribeIpHitItems(DescribeIpHitItemsRequest req)
+        {
+             JsonResponseModel<DescribeIpHitItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIpHitItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpHitItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf  IP封堵状态查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIpHitItemsRequest"/></param>
+        /// <returns><see cref="DescribeIpHitItemsResponse"/></returns>
+        public DescribeIpHitItemsResponse DescribeIpHitItemsSync(DescribeIpHitItemsRequest req)
+        {
+             JsonResponseModel<DescribeIpHitItemsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIpHitItems");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIpHitItemsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserClbWafRegionsRequest"/></param>
@@ -564,6 +848,126 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserClbWafRegions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserClbWafRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回ip惩罚规则详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafAutoDenyRulesRequest"/></param>
+        /// <returns><see cref="DescribeWafAutoDenyRulesResponse"/></returns>
+        public async Task<DescribeWafAutoDenyRulesResponse> DescribeWafAutoDenyRules(DescribeWafAutoDenyRulesRequest req)
+        {
+             JsonResponseModel<DescribeWafAutoDenyRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWafAutoDenyRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafAutoDenyRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回ip惩罚规则详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafAutoDenyRulesRequest"/></param>
+        /// <returns><see cref="DescribeWafAutoDenyRulesResponse"/></returns>
+        public DescribeWafAutoDenyRulesResponse DescribeWafAutoDenyRulesSync(DescribeWafAutoDenyRulesRequest req)
+        {
+             JsonResponseModel<DescribeWafAutoDenyRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWafAutoDenyRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafAutoDenyRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述WAF自动封禁模块详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafAutoDenyStatusRequest"/></param>
+        /// <returns><see cref="DescribeWafAutoDenyStatusResponse"/></returns>
+        public async Task<DescribeWafAutoDenyStatusResponse> DescribeWafAutoDenyStatus(DescribeWafAutoDenyStatusRequest req)
+        {
+             JsonResponseModel<DescribeWafAutoDenyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWafAutoDenyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafAutoDenyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述WAF自动封禁模块详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafAutoDenyStatusRequest"/></param>
+        /// <returns><see cref="DescribeWafAutoDenyStatusResponse"/></returns>
+        public DescribeWafAutoDenyStatusResponse DescribeWafAutoDenyStatusSync(DescribeWafAutoDenyStatusRequest req)
+        {
+             JsonResponseModel<DescribeWafAutoDenyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWafAutoDenyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafAutoDenyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述WAF威胁情报封禁模块配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafThreatenIntelligenceRequest"/></param>
+        /// <returns><see cref="DescribeWafThreatenIntelligenceResponse"/></returns>
+        public async Task<DescribeWafThreatenIntelligenceResponse> DescribeWafThreatenIntelligence(DescribeWafThreatenIntelligenceRequest req)
+        {
+             JsonResponseModel<DescribeWafThreatenIntelligenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeWafThreatenIntelligence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafThreatenIntelligenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 描述WAF威胁情报封禁模块配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeWafThreatenIntelligenceRequest"/></param>
+        /// <returns><see cref="DescribeWafThreatenIntelligenceResponse"/></returns>
+        public DescribeWafThreatenIntelligenceResponse DescribeWafThreatenIntelligenceSync(DescribeWafThreatenIntelligenceRequest req)
+        {
+             JsonResponseModel<DescribeWafThreatenIntelligenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeWafThreatenIntelligence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeWafThreatenIntelligenceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -653,6 +1057,166 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 更改某一条规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyDomainWhiteRuleResponse"/></returns>
+        public async Task<ModifyDomainWhiteRuleResponse> ModifyDomainWhiteRule(ModifyDomainWhiteRuleRequest req)
+        {
+             JsonResponseModel<ModifyDomainWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDomainWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更改某一条规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDomainWhiteRuleRequest"/></param>
+        /// <returns><see cref="ModifyDomainWhiteRuleResponse"/></returns>
+        public ModifyDomainWhiteRuleResponse ModifyDomainWhiteRuleSync(ModifyDomainWhiteRuleRequest req)
+        {
+             JsonResponseModel<ModifyDomainWhiteRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDomainWhiteRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainWhiteRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改ip惩罚规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafAutoDenyRulesRequest"/></param>
+        /// <returns><see cref="ModifyWafAutoDenyRulesResponse"/></returns>
+        public async Task<ModifyWafAutoDenyRulesResponse> ModifyWafAutoDenyRules(ModifyWafAutoDenyRulesRequest req)
+        {
+             JsonResponseModel<ModifyWafAutoDenyRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWafAutoDenyRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改ip惩罚规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafAutoDenyRulesRequest"/></param>
+        /// <returns><see cref="ModifyWafAutoDenyRulesResponse"/></returns>
+        public ModifyWafAutoDenyRulesResponse ModifyWafAutoDenyRulesSync(ModifyWafAutoDenyRulesRequest req)
+        {
+             JsonResponseModel<ModifyWafAutoDenyRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWafAutoDenyRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置WAF自动封禁模块状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafAutoDenyStatusRequest"/></param>
+        /// <returns><see cref="ModifyWafAutoDenyStatusResponse"/></returns>
+        public async Task<ModifyWafAutoDenyStatusResponse> ModifyWafAutoDenyStatus(ModifyWafAutoDenyStatusRequest req)
+        {
+             JsonResponseModel<ModifyWafAutoDenyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWafAutoDenyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置WAF自动封禁模块状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafAutoDenyStatusRequest"/></param>
+        /// <returns><see cref="ModifyWafAutoDenyStatusResponse"/></returns>
+        public ModifyWafAutoDenyStatusResponse ModifyWafAutoDenyStatusSync(ModifyWafAutoDenyStatusRequest req)
+        {
+             JsonResponseModel<ModifyWafAutoDenyStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWafAutoDenyStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafAutoDenyStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置WAF威胁情报封禁模块详情
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafThreatenIntelligenceRequest"/></param>
+        /// <returns><see cref="ModifyWafThreatenIntelligenceResponse"/></returns>
+        public async Task<ModifyWafThreatenIntelligenceResponse> ModifyWafThreatenIntelligence(ModifyWafThreatenIntelligenceRequest req)
+        {
+             JsonResponseModel<ModifyWafThreatenIntelligenceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyWafThreatenIntelligence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafThreatenIntelligenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置WAF威胁情报封禁模块详情
+        /// </summary>
+        /// <param name="req"><see cref="ModifyWafThreatenIntelligenceRequest"/></param>
+        /// <returns><see cref="ModifyWafThreatenIntelligenceResponse"/></returns>
+        public ModifyWafThreatenIntelligenceResponse ModifyWafThreatenIntelligenceSync(ModifyWafThreatenIntelligenceRequest req)
+        {
+             JsonResponseModel<ModifyWafThreatenIntelligenceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyWafThreatenIntelligence");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyWafThreatenIntelligenceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于搜索WAF访问日志
         /// </summary>
         /// <param name="req"><see cref="SearchAccessLogRequest"/></param>
@@ -684,6 +1248,46 @@ namespace TencentCloud.Waf.V20180125
              {
                  var strResp = this.InternalRequestSync(req, "SearchAccessLog");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchAccessLogResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertIpAccessControlRequest"/></param>
+        /// <returns><see cref="UpsertIpAccessControlResponse"/></returns>
+        public async Task<UpsertIpAccessControlResponse> UpsertIpAccessControl(UpsertIpAccessControlRequest req)
+        {
+             JsonResponseModel<UpsertIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpsertIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertIpAccessControlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Waf IP黑白名单Upsert接口
+        /// </summary>
+        /// <param name="req"><see cref="UpsertIpAccessControlRequest"/></param>
+        /// <returns><see cref="UpsertIpAccessControlResponse"/></returns>
+        public UpsertIpAccessControlResponse UpsertIpAccessControlSync(UpsertIpAccessControlRequest req)
+        {
+             JsonResponseModel<UpsertIpAccessControlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpsertIpAccessControl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpsertIpAccessControlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

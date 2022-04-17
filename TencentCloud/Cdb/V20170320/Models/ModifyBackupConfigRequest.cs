@@ -60,6 +60,42 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BackupTimeWindow")]
         public CommonTimeWindow BackupTimeWindow{ get; set; }
 
+        /// <summary>
+        /// 定期保留开关，off - 不开启定期保留策略，on - 开启定期保留策略，默认为off
+        /// </summary>
+        [JsonProperty("EnableBackupPeriodSave")]
+        public string EnableBackupPeriodSave{ get; set; }
+
+        /// <summary>
+        /// 长期保留开关,该字段功能暂未上线，可忽略。off - 不开启长期保留策略，on - 开启长期保留策略，默认为off，如果开启，则BackupPeriodSaveDays，BackupPeriodSaveInterval，BackupPeriodSaveCount参数无效
+        /// </summary>
+        [JsonProperty("EnableBackupPeriodLongTermSave")]
+        public string EnableBackupPeriodLongTermSave{ get; set; }
+
+        /// <summary>
+        /// 定期保留最长天数，最小值：90，最大值：3650，默认值：1080
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveDays")]
+        public long? BackupPeriodSaveDays{ get; set; }
+
+        /// <summary>
+        /// 定期保留策略周期，可取值：weekly - 周，monthly - 月， quarterly - 季度，yearly - 年，默认为monthly
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveInterval")]
+        public string BackupPeriodSaveInterval{ get; set; }
+
+        /// <summary>
+        /// 定期保留的备份数量，最小值为1，最大值不超过定期保留策略周期内常规备份个数，默认值为1
+        /// </summary>
+        [JsonProperty("BackupPeriodSaveCount")]
+        public long? BackupPeriodSaveCount{ get; set; }
+
+        /// <summary>
+        /// 定期保留策略周期起始日期，格式：YYYY-MM-dd HH:mm:ss
+        /// </summary>
+        [JsonProperty("StartBackupPeriodSaveDate")]
+        public string StartBackupPeriodSaveDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +108,12 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BinlogExpireDays", this.BinlogExpireDays);
             this.SetParamObj(map, prefix + "BackupTimeWindow.", this.BackupTimeWindow);
+            this.SetParamSimple(map, prefix + "EnableBackupPeriodSave", this.EnableBackupPeriodSave);
+            this.SetParamSimple(map, prefix + "EnableBackupPeriodLongTermSave", this.EnableBackupPeriodLongTermSave);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveDays", this.BackupPeriodSaveDays);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveInterval", this.BackupPeriodSaveInterval);
+            this.SetParamSimple(map, prefix + "BackupPeriodSaveCount", this.BackupPeriodSaveCount);
+            this.SetParamSimple(map, prefix + "StartBackupPeriodSaveDate", this.StartBackupPeriodSaveDate);
         }
     }
 }

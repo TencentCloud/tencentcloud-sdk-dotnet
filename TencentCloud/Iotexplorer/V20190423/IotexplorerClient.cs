@@ -3133,6 +3133,46 @@ namespace TencentCloud.Iotexplorer.V20190423
         }
 
         /// <summary>
+        /// 发布广播消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
+        /// <returns><see cref="PublishBroadcastMessageResponse"/></returns>
+        public async Task<PublishBroadcastMessageResponse> PublishBroadcastMessage(PublishBroadcastMessageRequest req)
+        {
+             JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PublishBroadcastMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishBroadcastMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 发布广播消息
+        /// </summary>
+        /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>
+        /// <returns><see cref="PublishBroadcastMessageResponse"/></returns>
+        public PublishBroadcastMessageResponse PublishBroadcastMessageSync(PublishBroadcastMessageRequest req)
+        {
+             JsonResponseModel<PublishBroadcastMessageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PublishBroadcastMessage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PublishBroadcastMessageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（PublishMessage）用于使用自定义透传协议进行设备远控
         /// </summary>
         /// <param name="req"><see cref="PublishMessageRequest"/></param>

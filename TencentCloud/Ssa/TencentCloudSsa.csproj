@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{2D2665D3-3EFE-35CA-BBCD-325648942550}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.500</VersionPrefix>
+    <VersionPrefix>3.0.501</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,6 +96,9 @@
     <Compile Include="V20180608\Models\DescribeSocCheckItemListRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSocCheckItemListResponse.cs" />
     <Compile Include="V20180608\Models\DescribeSocCheckItemListRspRsp.cs" />
+    <Compile Include="V20180608\Models\DescribeSocCheckResultListRequest.cs" />
+    <Compile Include="V20180608\Models\DescribeSocCheckResultListResponse.cs" />
+    <Compile Include="V20180608\Models\DescribeSocCheckResultListRspRsp.cs" />
     <Compile Include="V20180608\Models\DescribeSocCspmComplianceRequest.cs" />
     <Compile Include="V20180608\Models\DescribeSocCspmComplianceResponse.cs" />
     <Compile Include="V20180608\Models\DescribeVulDetailRequest.cs" />
@@ -114,6 +117,7 @@
     <Compile Include="V20180608\Models\SecurityStatus.cs" />
     <Compile Include="V20180608\Models\SocCheckItem.cs" />
     <Compile Include="V20180608\Models\SocCheckItemV1.cs" />
+    <Compile Include="V20180608\Models\SocCheckResult.cs" />
     <Compile Include="V20180608\Models\SocComplianceInfoResp.cs" />
     <Compile Include="V20180608\Models\SocComplianceItem.cs" />
     <Compile Include="V20180608\Models\SocProductionItem.cs" />

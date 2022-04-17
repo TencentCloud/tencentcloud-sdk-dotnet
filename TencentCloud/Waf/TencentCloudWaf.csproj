@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.500</VersionPrefix>
+    <VersionPrefix>3.0.501</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,9 @@
     <Compile Include="V20180125\Models\AccessValueInfo.cs" />
     <Compile Include="V20180125\Models\AddCustomRuleRequest.cs" />
     <Compile Include="V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AddDomainWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\AddDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
@@ -65,8 +68,12 @@
     <Compile Include="V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteDomainWhiteRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordRequest.cs" />
     <Compile Include="V20180125\Models\DeleteDownloadRecordResponse.cs" />
+    <Compile Include="V20180125\Models\DeleteIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\DeleteIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="V20180125\Models\DeleteSessionResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessExportsRequest.cs" />
@@ -75,22 +82,52 @@
     <Compile Include="V20180125\Models\DescribeAccessFastAnalysisResponse.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexRequest.cs" />
     <Compile Include="V20180125\Models\DescribeAccessIndexResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeAutoDenyIPRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeAutoDenyIPResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
     <Compile Include="V20180125\Models\DescribeFlowTrendRequest.cs" />
     <Compile Include="V20180125\Models\DescribeFlowTrendResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWafAutoDenyStatusRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWafAutoDenyStatusResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\ExportAccessInfo.cs" />
+    <Compile Include="V20180125\Models\IpAccessControlData.cs" />
+    <Compile Include="V20180125\Models\IpAccessControlItem.cs" />
+    <Compile Include="V20180125\Models\IpHitItem.cs" />
+    <Compile Include="V20180125\Models\IpHitItemsData.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainWhiteRuleRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyDomainWhiteRuleResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyWafAutoDenyRulesResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyWafAutoDenyStatusRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyWafAutoDenyStatusResponse.cs" />
+    <Compile Include="V20180125\Models\ModifyWafThreatenIntelligenceRequest.cs" />
+    <Compile Include="V20180125\Models\ModifyWafThreatenIntelligenceResponse.cs" />
     <Compile Include="V20180125\Models\ResponseCode.cs" />
+    <Compile Include="V20180125\Models\RuleList.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="V20180125\Models\Strategy.cs" />
+    <Compile Include="V20180125\Models\UpsertIpAccessControlRequest.cs" />
+    <Compile Include="V20180125\Models\UpsertIpAccessControlResponse.cs" />
+    <Compile Include="V20180125\Models\WafThreatenIntelligenceDetails.cs" />
   </ItemGroup>
 </Project>

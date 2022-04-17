@@ -108,6 +108,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("ManualBackupName")]
         public string ManualBackupName{ get; set; }
 
+        /// <summary>
+        /// 备份保留类型，save_mode_regular - 常规保存备份，save_mode_period - 定期保存备份
+        /// </summary>
+        [JsonProperty("SaveMode")]
+        public string SaveMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "Way", this.Way);
             this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
+            this.SetParamSimple(map, prefix + "SaveMode", this.SaveMode);
         }
     }
 }

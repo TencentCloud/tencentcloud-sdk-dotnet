@@ -2413,7 +2413,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 打开kafka协议消费
+        /// 打开Kafka协议消费功能
         /// </summary>
         /// <param name="req"><see cref="OpenKafkaConsumerRequest"/></param>
         /// <returns><see cref="OpenKafkaConsumerResponse"/></returns>
@@ -2433,7 +2433,7 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 打开kafka协议消费
+        /// 打开Kafka协议消费功能
         /// </summary>
         /// <param name="req"><see cref="OpenKafkaConsumerRequest"/></param>
         /// <returns><see cref="OpenKafkaConsumerResponse"/></returns>

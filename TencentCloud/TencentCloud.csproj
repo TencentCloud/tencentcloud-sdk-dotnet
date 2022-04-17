@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.500</VersionPrefix>
+    <VersionPrefix>3.0.501</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -9894,6 +9894,8 @@
     <Compile Include="Iotexplorer\V20190423\Models\ProductModelDefinition.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ProjectEntry.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\ProjectEntryEx.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\PublishBroadcastMessageRequest.cs" />
+    <Compile Include="Iotexplorer\V20190423\Models\PublishBroadcastMessageResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PublishMessageRequest.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PublishMessageResponse.cs" />
     <Compile Include="Iotexplorer\V20190423\Models\PublishRRPCMessageRequest.cs" />
@@ -13944,6 +13946,9 @@
     <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCheckItemListRspRsp.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocCheckResultListRequest.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocCheckResultListResponse.cs" />
+    <Compile Include="Ssa\V20180608\Models\DescribeSocCheckResultListRspRsp.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceRequest.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeSocCspmComplianceResponse.cs" />
     <Compile Include="Ssa\V20180608\Models\DescribeVulDetailRequest.cs" />
@@ -13962,6 +13967,7 @@
     <Compile Include="Ssa\V20180608\Models\SecurityStatus.cs" />
     <Compile Include="Ssa\V20180608\Models\SocCheckItem.cs" />
     <Compile Include="Ssa\V20180608\Models\SocCheckItemV1.cs" />
+    <Compile Include="Ssa\V20180608\Models\SocCheckResult.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceInfoResp.cs" />
     <Compile Include="Ssa\V20180608\Models\SocComplianceItem.cs" />
     <Compile Include="Ssa\V20180608\Models\SocProductionItem.cs" />
@@ -18861,6 +18867,9 @@
     <Compile Include="Waf\V20180125\Models\AccessValueInfo.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleRequest.cs" />
     <Compile Include="Waf\V20180125\Models\AddCustomRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\AddDomainWhiteRuleRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\AddDomainWhiteRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="Waf\V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAccessExportResponse.cs" />
@@ -18870,8 +18879,12 @@
     <Compile Include="Waf\V20180125\Models\DeleteAccessExportResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteAttackDownloadRecordResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteDomainWhiteRulesRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteDomainWhiteRulesResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteDownloadRecordResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteIpAccessControlRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DeleteIpAccessControlResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteSessionRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DeleteSessionResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeAccessExportsRequest.cs" />
@@ -18880,23 +18893,53 @@
     <Compile Include="Waf\V20180125\Models\DescribeAccessFastAnalysisResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeAccessIndexRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeAccessIndexResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAutoDenyIPRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeAutoDenyIPResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesPagingInfo.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeIpAccessControlRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeIpAccessControlResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeIpHitItemsRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeIpHitItemsResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafAutoDenyRulesResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafAutoDenyStatusRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafAutoDenyStatusResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafThreatenIntelligenceRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ExportAccessInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\IpAccessControlData.cs" />
+    <Compile Include="Waf\V20180125\Models\IpAccessControlItem.cs" />
+    <Compile Include="Waf\V20180125\Models\IpHitItem.cs" />
+    <Compile Include="Waf\V20180125\Models\IpHitItemsData.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyAccessPeriodResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyCustomRuleStatusResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyDomainWhiteRuleRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyDomainWhiteRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafAutoDenyRulesRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafAutoDenyRulesResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafAutoDenyStatusRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafAutoDenyStatusResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafThreatenIntelligenceRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\ModifyWafThreatenIntelligenceResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />
+    <Compile Include="Waf\V20180125\Models\RuleList.cs" />
     <Compile Include="Waf\V20180125\Models\SearchAccessLogRequest.cs" />
     <Compile Include="Waf\V20180125\Models\SearchAccessLogResponse.cs" />
     <Compile Include="Waf\V20180125\Models\Strategy.cs" />
+    <Compile Include="Waf\V20180125\Models\UpsertIpAccessControlRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\UpsertIpAccessControlResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\WafThreatenIntelligenceDetails.cs" />
     <Compile Include="Wav\V20210129\WavClient.cs" />
     <Compile Include="Wav\V20210129\Models\ActivityDetail.cs" />
     <Compile Include="Wav\V20210129\Models\ActivityJoinDetail.cs" />

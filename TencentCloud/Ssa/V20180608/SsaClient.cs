@@ -693,6 +693,46 @@ namespace TencentCloud.Ssa.V20180608
         }
 
         /// <summary>
+        /// 云安全配置检查项结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocCheckResultListRequest"/></param>
+        /// <returns><see cref="DescribeSocCheckResultListResponse"/></returns>
+        public async Task<DescribeSocCheckResultListResponse> DescribeSocCheckResultList(DescribeSocCheckResultListRequest req)
+        {
+             JsonResponseModel<DescribeSocCheckResultListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSocCheckResultList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocCheckResultListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云安全配置检查项结果列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSocCheckResultListRequest"/></param>
+        /// <returns><see cref="DescribeSocCheckResultListResponse"/></returns>
+        public DescribeSocCheckResultListResponse DescribeSocCheckResultListSync(DescribeSocCheckResultListRequest req)
+        {
+             JsonResponseModel<DescribeSocCheckResultListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSocCheckResultList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSocCheckResultListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 合规详情项
         /// </summary>
         /// <param name="req"><see cref="DescribeSocCspmComplianceRequest"/></param>
