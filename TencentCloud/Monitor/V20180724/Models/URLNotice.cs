@@ -59,6 +59,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
+        /// <summary>
+        /// 通知周期 1-7表示周一到周日
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Weekday")]
+        public long?[] Weekday{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ValidationCode", this.ValidationCode);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "Weekday.", this.Weekday);
         }
     }
 }

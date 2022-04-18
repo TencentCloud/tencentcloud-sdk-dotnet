@@ -4805,7 +4805,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 重置实例ROOT账，初始化账号权限
+        /// 重置实例ROOT账号，初始化账号权限
         /// </summary>
         /// <param name="req"><see cref="ResetRootAccountRequest"/></param>
         /// <returns><see cref="ResetRootAccountResponse"/></returns>
@@ -4825,7 +4825,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 重置实例ROOT账，初始化账号权限
+        /// 重置实例ROOT账号，初始化账号权限
         /// </summary>
         /// <param name="req"><see cref="ResetRootAccountRequest"/></param>
         /// <returns><see cref="ResetRootAccountResponse"/></returns>

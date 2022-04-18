@@ -133,6 +133,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 添加Spart防护域名
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionResponse"/></returns>
+        public async Task<AddSpartaProtectionResponse> AddSpartaProtection(AddSpartaProtectionRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddSpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加Spart防护域名
+        /// </summary>
+        /// <param name="req"><see cref="AddSpartaProtectionRequest"/></param>
+        /// <returns><see cref="AddSpartaProtectionResponse"/></returns>
+        public AddSpartaProtectionResponse AddSpartaProtectionSync(AddSpartaProtectionRequest req)
+        {
+             JsonResponseModel<AddSpartaProtectionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddSpartaProtection");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddSpartaProtectionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于创建访问日志导出
         /// </summary>
         /// <param name="req"><see cref="CreateAccessExportRequest"/></param>

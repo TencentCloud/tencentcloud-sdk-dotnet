@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.501</VersionPrefix>
+    <VersionPrefix>3.0.502</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -18869,6 +18869,8 @@
     <Compile Include="Waf\V20180125\Models\AddCustomRuleResponse.cs" />
     <Compile Include="Waf\V20180125\Models\AddDomainWhiteRuleRequest.cs" />
     <Compile Include="Waf\V20180125\Models\AddDomainWhiteRuleResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\AddSpartaProtectionRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\AddSpartaProtectionResponse.cs" />
     <Compile Include="Waf\V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="Waf\V20180125\Models\BotStatPointItem.cs" />
     <Compile Include="Waf\V20180125\Models\CreateAccessExportRequest.cs" />
@@ -18932,6 +18934,7 @@
     <Compile Include="Waf\V20180125\Models\ModifyWafAutoDenyStatusResponse.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyWafThreatenIntelligenceRequest.cs" />
     <Compile Include="Waf\V20180125\Models\ModifyWafThreatenIntelligenceResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\PortItem.cs" />
     <Compile Include="Waf\V20180125\Models\ResponseCode.cs" />
     <Compile Include="Waf\V20180125\Models\RuleList.cs" />
     <Compile Include="Waf\V20180125\Models\SearchAccessLogRequest.cs" />

@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 任务持续时间时间，单位秒，手动关闭任务传-1。
+        /// 任务持续时间，单位秒，手动关闭任务传-1。
         /// </summary>
         [JsonProperty("Duration")]
         public long? Duration{ get; set; }

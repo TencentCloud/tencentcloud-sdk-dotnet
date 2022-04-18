@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份文件的保留时间，单位为天。最小值为7天，最大值为732天。
+        /// 备份文件的保留时间，单位为天。最小值为7天，最大值为1830天。
         /// </summary>
         [JsonProperty("ExpireDays")]
         public long? ExpireDays{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string BackupMethod{ get; set; }
 
         /// <summary>
-        /// binlog的保留时间，单位为天。最小值为7天，最大值为732天。该值的设置不能大于备份文件的保留时间。
+        /// binlog的保留时间，单位为天。最小值为7天，最大值为1830天。该值的设置不能大于备份文件的保留时间。
         /// </summary>
         [JsonProperty("BinlogExpireDays")]
         public long? BinlogExpireDays{ get; set; }

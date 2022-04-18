@@ -40,7 +40,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string SubMchName{ get; set; }
 
         /// <summary>
-        /// 子账号号
+        /// 子账号
         /// </summary>
         [JsonProperty("SubAcctNo")]
         public string SubAcctNo{ get; set; }

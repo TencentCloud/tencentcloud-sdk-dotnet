@@ -79,7 +79,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public string RuleWord{ get; set; }
 
         /// <summary>
-        /// 扫描监测url"
+        /// 扫描监测url
         /// </summary>
         [JsonProperty("ScanUrl")]
         public string ScanUrl{ get; set; }

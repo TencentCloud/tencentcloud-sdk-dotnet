@@ -44,7 +44,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 退款金额，单位：分
-        /// 当该字段为空或者为0时，系统会默认使用订单当实付金额做为退款金额
+        /// 当该字段为空或者为0时，系统会默认使用订单当实付金额作为退款金额
         /// </summary>
         [JsonProperty("TotalRefundAmt")]
         public long? TotalRefundAmt{ get; set; }
