@@ -43,6 +43,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 需要识别的健康码类型列表，为空或不填表示默认为粤康码。
+        /// 
+        /// 1:粤康码
+        /// 
+        /// 2:随申码
+        /// 
+        /// 3:健康宝
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         {
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

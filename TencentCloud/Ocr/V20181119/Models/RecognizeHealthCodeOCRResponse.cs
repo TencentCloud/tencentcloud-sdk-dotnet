@@ -25,10 +25,16 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 持码人姓名
+        /// 持码人姓名，如：王*
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
+
+        /// <summary>
+        /// 持码人身份证号，如：11**************01
+        /// </summary>
+        [JsonProperty("IDNumber")]
+        public string IDNumber{ get; set; }
 
         /// <summary>
         /// 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
@@ -43,6 +49,24 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Color{ get; set; }
 
         /// <summary>
+        /// 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+        /// </summary>
+        [JsonProperty("TestingInterval")]
+        public string TestingInterval{ get; set; }
+
+        /// <summary>
+        /// 核酸检测结果：阴性、阳性、暂无核酸检测记录
+        /// </summary>
+        [JsonProperty("TestingResult")]
+        public string TestingResult{ get; set; }
+
+        /// <summary>
+        /// 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+        /// </summary>
+        [JsonProperty("TestingTime")]
+        public string TestingTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -55,8 +79,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "IDNumber", this.IDNumber);
             this.SetParamSimple(map, prefix + "Time", this.Time);
             this.SetParamSimple(map, prefix + "Color", this.Color);
+            this.SetParamSimple(map, prefix + "TestingInterval", this.TestingInterval);
+            this.SetParamSimple(map, prefix + "TestingResult", this.TestingResult);
+            this.SetParamSimple(map, prefix + "TestingTime", this.TestingTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
