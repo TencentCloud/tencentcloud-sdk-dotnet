@@ -93,6 +93,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 开通外网
+        /// </summary>
+        /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
+        /// <returns><see cref="AllocateWanAddressResponse"/></returns>
+        public async Task<AllocateWanAddressResponse> AllocateWanAddress(AllocateWanAddressRequest req)
+        {
+             JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AllocateWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开通外网
+        /// </summary>
+        /// <param name="req"><see cref="AllocateWanAddressRequest"/></param>
+        /// <returns><see cref="AllocateWanAddressResponse"/></returns>
+        public AllocateWanAddressResponse AllocateWanAddressSync(AllocateWanAddressRequest req)
+        {
+             JsonResponseModel<AllocateWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AllocateWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AllocateWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 应用参数模板到实例
         /// </summary>
         /// <param name="req"><see cref="ApplyParamsTemplateRequest"/></param>
@@ -2764,6 +2804,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭外网
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
+        /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
+        public async Task<ReleaseWanAddressResponse> ReleaseWanAddress(ReleaseWanAddressRequest req)
+        {
+             JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭外网
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseWanAddressRequest"/></param>
+        /// <returns><see cref="ReleaseWanAddressResponse"/></returns>
+        public ReleaseWanAddressResponse ReleaseWanAddressSync(ReleaseWanAddressRequest req)
+        {
+             JsonResponseModel<ReleaseWanAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseWanAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseWanAddressResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -85,7 +85,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public long? UncleanLeaderElectionEnable{ get; set; }
 
         /// <summary>
-        /// 可消息选。保留时间，单位ms，当前最小值为60000ms
+        /// 可选参数。消息保留时间，单位ms，当前最小值为60000ms
         /// </summary>
         [JsonProperty("RetentionMs")]
         public long? RetentionMs{ get; set; }
@@ -95,6 +95,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         /// </summary>
         [JsonProperty("SegmentMs")]
         public long? SegmentMs{ get; set; }
+
+        /// <summary>
+        /// 主题消息最大值，单位为 Byte，最小值1024Byte(即1KB)，最大值为8388608Byte（即8MB）。
+        /// </summary>
+        [JsonProperty("MaxMessageBytes")]
+        public long? MaxMessageBytes{ get; set; }
 
         /// <summary>
         /// 预设ACL规则, 1:打开  0:关闭，默认不打开
@@ -138,6 +144,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "UncleanLeaderElectionEnable", this.UncleanLeaderElectionEnable);
             this.SetParamSimple(map, prefix + "RetentionMs", this.RetentionMs);
             this.SetParamSimple(map, prefix + "SegmentMs", this.SegmentMs);
+            this.SetParamSimple(map, prefix + "MaxMessageBytes", this.MaxMessageBytes);
             this.SetParamSimple(map, prefix + "EnableAclRule", this.EnableAclRule);
             this.SetParamSimple(map, prefix + "AclRuleName", this.AclRuleName);
             this.SetParamSimple(map, prefix + "RetentionBytes", this.RetentionBytes);

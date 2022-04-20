@@ -623,7 +623,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于创建创建VPC通道
+        /// 用于创建创建后端通道
         /// </summary>
         /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
         /// <returns><see cref="CreateUpstreamResponse"/></returns>
@@ -643,7 +643,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 用于创建创建VPC通道
+        /// 用于创建创建后端通道
         /// </summary>
         /// <param name="req"><see cref="CreateUpstreamRequest"/></param>
         /// <returns><see cref="CreateUpstreamResponse"/></returns>
@@ -1027,7 +1027,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 删除VPC通道，需要注意有api绑定时，不允许删除
+        /// 删除后端通道，需要注意有API绑定时，不允许删除
         /// </summary>
         /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
         /// <returns><see cref="DeleteUpstreamResponse"/></returns>
@@ -1047,7 +1047,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 删除VPC通道，需要注意有api绑定时，不允许删除
+        /// 删除后端通道，需要注意有API绑定时，不允许删除
         /// </summary>
         /// <param name="req"><see cref="DeleteUpstreamRequest"/></param>
         /// <returns><see cref="DeleteUpstreamResponse"/></returns>
@@ -2487,7 +2487,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 查询VPC通道绑定的api列表
+        /// 查询后端通道所绑定的API列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
         /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
@@ -2507,7 +2507,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 查询VPC通道绑定的api列表
+        /// 查询后端通道所绑定的API列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamBindApisRequest"/></param>
         /// <returns><see cref="DescribeUpstreamBindApisResponse"/></returns>
@@ -2527,7 +2527,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 查询VPC通道列表详情
+        /// 查询后端通道列表详情
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
         /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
@@ -2547,7 +2547,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 查询VPC通道列表详情
+        /// 查询后端通道列表详情
         /// </summary>
         /// <param name="req"><see cref="DescribeUpstreamsRequest"/></param>
         /// <returns><see cref="DescribeUpstreamsResponse"/></returns>
@@ -3331,7 +3331,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 修改VPC通道
+        /// 修改后端通道
         /// </summary>
         /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
         /// <returns><see cref="ModifyUpstreamResponse"/></returns>
@@ -3351,7 +3351,7 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
-        /// 修改VPC通道
+        /// 修改后端通道
         /// </summary>
         /// <param name="req"><see cref="ModifyUpstreamRequest"/></param>
         /// <returns><see cref="ModifyUpstreamResponse"/></returns>

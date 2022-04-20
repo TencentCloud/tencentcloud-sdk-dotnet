@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{1A598BDC-5BEF-32B7-B541-7C63864D9C2F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.504</VersionPrefix>
+    <VersionPrefix>3.0.505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,7 @@
     <Compile Include="V20180606\Models\BotStatsDetailData.cs" />
     <Compile Include="V20180606\Models\BriefDomain.cs" />
     <Compile Include="V20180606\Models\Cache.cs" />
+    <Compile Include="V20180606\Models\CacheConfig.cs" />
     <Compile Include="V20180606\Models\CacheConfigCache.cs" />
     <Compile Include="V20180606\Models\CacheConfigFollowOrigin.cs" />
     <Compile Include="V20180606\Models\CacheConfigNoCache.cs" />
@@ -220,6 +221,7 @@
     <Compile Include="V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="V20180606\Models\HeaderKey.cs" />
+    <Compile Include="V20180606\Models\HeuristicCache.cs" />
     <Compile Include="V20180606\Models\Hsts.cs" />
     <Compile Include="V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="V20180606\Models\HttpHeaderRule.cs" />

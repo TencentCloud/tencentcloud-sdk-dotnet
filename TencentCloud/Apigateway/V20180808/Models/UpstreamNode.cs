@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// IP（domain）
+        /// IP或域名
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ulong? Weight{ get; set; }
 
         /// <summary>
-        /// vm实例id
+        /// CVM实例ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("VmInstanceId")]
@@ -57,21 +57,21 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string[] Tags{ get; set; }
 
         /// <summary>
-        /// 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报
+        /// 节点健康状态，创建、编辑时不需要传该参数。OFF：关闭，HEALTHY：健康，UNHEALTHY：异常，NO_DATA：数据未上报。目前只支持VPC通道。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Healthy")]
         public string Healthy{ get; set; }
 
         /// <summary>
-        /// k8s服务名字
+        /// K8S容器服务名字
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceName")]
         public string ServiceName{ get; set; }
 
         /// <summary>
-        /// k8s命名空间
+        /// K8S命名空间
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameSpace")]
@@ -85,7 +85,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// Node的来源
+        /// Node的来源，取值范围：K8S
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Source")]

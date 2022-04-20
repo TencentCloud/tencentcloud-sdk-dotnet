@@ -37,13 +37,13 @@ namespace TencentCloud.Mongodb.V20190725.Models
         public ulong? OldIpExpiredTime{ get; set; }
 
         /// <summary>
-        /// 切换后IP地址所属私有网络统一ID，若为基础网络，该字段为空
+        /// 切换后IP地址的归属私有网络统一ID，若为基础网络，该字段为空
         /// </summary>
         [JsonProperty("NewUniqVpcId")]
         public string NewUniqVpcId{ get; set; }
 
         /// <summary>
-        /// 切换后IP地址所属子网统一ID，若为基础网络，该字段为空
+        /// 切换后IP地址的归属子网统一ID，若为基础网络，该字段为空
         /// </summary>
         [JsonProperty("NewUniqSubnetId")]
         public string NewUniqSubnetId{ get; set; }

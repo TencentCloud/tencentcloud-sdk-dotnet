@@ -737,6 +737,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询用户所有域名的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
+        /// <returns><see cref="DescribeDomainsResponse"/></returns>
+        public async Task<DescribeDomainsResponse> DescribeDomains(DescribeDomainsRequest req)
+        {
+             JsonResponseModel<DescribeDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户所有域名的详细信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainsRequest"/></param>
+        /// <returns><see cref="DescribeDomainsResponse"/></returns>
+        public DescribeDomainsResponse DescribeDomainsSync(DescribeDomainsRequest req)
+        {
+             JsonResponseModel<DescribeDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取waf流量访问趋势
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowTrendRequest"/></param>

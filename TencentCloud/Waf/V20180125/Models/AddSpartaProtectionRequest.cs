@@ -115,7 +115,7 @@ namespace TencentCloud.Waf.V20180125.Models
         public string UpstreamDomain{ get; set; }
 
         /// <summary>
-        /// UpstreamType=0时，填次字段表示回源ip
+        /// UpstreamType=0时，填次字段表示回源IP
         /// </summary>
         [JsonProperty("SrcList")]
         public string[] SrcList{ get; set; }
@@ -157,10 +157,16 @@ namespace TencentCloud.Waf.V20180125.Models
         public string InstanceID{ get; set; }
 
         /// <summary>
-        /// anycast ip类型开关： 0 普通ip 1 Anycast ip
+        /// anycast IP类型开关： 0 普通IP 1 Anycast IP
         /// </summary>
         [JsonProperty("Anycast")]
         public long? Anycast{ get; set; }
+
+        /// <summary>
+        /// src权重
+        /// </summary>
+        [JsonProperty("Weights")]
+        public long?[] Weights{ get; set; }
 
 
         /// <summary>
@@ -191,6 +197,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "IsKeepAlive", this.IsKeepAlive);
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Anycast", this.Anycast);
+            this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
         }
     }
 }

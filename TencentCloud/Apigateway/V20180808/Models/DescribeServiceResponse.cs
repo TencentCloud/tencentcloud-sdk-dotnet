@@ -186,7 +186,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public string DeploymentType{ get; set; }
 
         /// <summary>
-        /// 特殊用途
+        /// 特殊用途, NULL和DEFAULT表示无特殊用途，其他用途如HTTP_DNS等
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SpecialUse")]

@@ -267,6 +267,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public OriginCombine OriginCombine{ get; set; }
 
         /// <summary>
+        /// POST请求传输配置
+        /// </summary>
+        [JsonProperty("PostMaxSize")]
+        public PostSize PostMaxSize{ get; set; }
+
+        /// <summary>
         /// Quic访问（收费服务，详见计费说明和产品文档）
         /// </summary>
         [JsonProperty("Quic")]
@@ -353,6 +359,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamObj(map, prefix + "Ipv6Access.", this.Ipv6Access);
             this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "OriginCombine.", this.OriginCombine);
+            this.SetParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "OssPrivateAccess.", this.OssPrivateAccess);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);

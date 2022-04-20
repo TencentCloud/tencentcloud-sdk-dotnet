@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string JumpUrl{ get; set; }
 
         /// <summary>
-        /// Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后后自动回跳至调用方小程序
+        /// Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }

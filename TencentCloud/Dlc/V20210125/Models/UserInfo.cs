@@ -77,6 +77,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserType")]
         public string UserType{ get; set; }
 
+        /// <summary>
+        /// 用户别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -91,6 +98,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "WorkGroupSet.", this.WorkGroupSet);
             this.SetParamSimple(map, prefix + "IsOwner", this.IsOwner);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
         }
     }
 }

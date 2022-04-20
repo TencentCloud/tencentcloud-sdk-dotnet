@@ -30,6 +30,18 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SimpleAesDefinition")]
         public ulong? SimpleAesDefinition{ get; set; }
 
+        /// <summary>
+        /// 保护类型为 Widevine 的转自适应码流模板 ID。
+        /// </summary>
+        [JsonProperty("WidevineDefinition")]
+        public ulong? WidevineDefinition{ get; set; }
+
+        /// <summary>
+        /// 保护类型为 FairPlay 的转自适应码流模板 ID。
+        /// </summary>
+        [JsonProperty("FairPlayDefinition")]
+        public ulong? FairPlayDefinition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SimpleAesDefinition", this.SimpleAesDefinition);
+            this.SetParamSimple(map, prefix + "WidevineDefinition", this.WidevineDefinition);
+            this.SetParamSimple(map, prefix + "FairPlayDefinition", this.FairPlayDefinition);
         }
     }
 }

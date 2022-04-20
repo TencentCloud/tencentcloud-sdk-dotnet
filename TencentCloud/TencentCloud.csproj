@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.504</VersionPrefix>
+    <VersionPrefix>3.0.505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2139,6 +2139,13 @@
     <Compile Include="Captcha\V20190722\Models\TicketThroughUnit.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoRequest.cs" />
     <Compile Include="Captcha\V20190722\Models\UpdateCaptchaAppIdInfoResponse.cs" />
+    <Compile Include="Car\V20220110\CarClient.cs" />
+    <Compile Include="Car\V20220110\Models\ApplyConcurrentRequest.cs" />
+    <Compile Include="Car\V20220110\Models\ApplyConcurrentResponse.cs" />
+    <Compile Include="Car\V20220110\Models\CreateSessionRequest.cs" />
+    <Compile Include="Car\V20220110\Models\CreateSessionResponse.cs" />
+    <Compile Include="Car\V20220110\Models\DestroySessionRequest.cs" />
+    <Compile Include="Car\V20220110\Models\DestroySessionResponse.cs" />
     <Compile Include="Casb\V20200507\CasbClient.cs" />
     <Compile Include="Casb\V20200507\Models\CopyCryptoColumnPolicyRequest.cs" />
     <Compile Include="Casb\V20200507\Models\CopyCryptoColumnPolicyResponse.cs" />
@@ -2797,6 +2804,7 @@
     <Compile Include="Cdn\V20180606\Models\BotStatsDetailData.cs" />
     <Compile Include="Cdn\V20180606\Models\BriefDomain.cs" />
     <Compile Include="Cdn\V20180606\Models\Cache.cs" />
+    <Compile Include="Cdn\V20180606\Models\CacheConfig.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigCache.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigFollowOrigin.cs" />
     <Compile Include="Cdn\V20180606\Models\CacheConfigNoCache.cs" />
@@ -2938,6 +2946,7 @@
     <Compile Include="Cdn\V20180606\Models\GetDisableRecordsResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\GuetzliAdapter.cs" />
     <Compile Include="Cdn\V20180606\Models\HeaderKey.cs" />
+    <Compile Include="Cdn\V20180606\Models\HeuristicCache.cs" />
     <Compile Include="Cdn\V20180606\Models\Hsts.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderPathRule.cs" />
     <Compile Include="Cdn\V20180606\Models\HttpHeaderRule.cs" />
@@ -6340,6 +6349,8 @@
     <Compile Include="Dbbrain\V20210527\DbbrainClient.cs" />
     <Compile Include="Dbbrain\V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CancelKillTaskRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CancelKillTaskResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ContactItem.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
@@ -6355,8 +6366,12 @@
     <Compile Include="Dbbrain\V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSqlFilterRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\CreateSqlFilterResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DeleteSqlFiltersRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DeleteSqlFiltersResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeAllUserGroupRequest.cs" />
@@ -6379,8 +6394,12 @@
     <Compile Include="Dbbrain\V20210527\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeMySqlProcessListRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeMySqlProcessListResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeNoPrimaryKeyTablesRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeNoPrimaryKeyTablesResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -6391,6 +6410,10 @@
     <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogTopSqlsResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSqlFiltersRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSqlFiltersResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSqlTemplateRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\DescribeSqlTemplateResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemaTimeSeriesRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
@@ -6416,12 +6439,16 @@
     <Compile Include="Dbbrain\V20210527\Models\MailConfiguration.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ModifySqlFiltersRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\ModifySqlFiltersResponse.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorFloatMetric.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorMetric.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="Dbbrain\V20210527\Models\MySqlProcess.cs" />
     <Compile Include="Dbbrain\V20210527\Models\ProfileInfo.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\RedisKeySpaceData.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\SQLFilter.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SchemaItem.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SchemaSpaceData.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SchemaSpaceTimeSeries.cs" />
@@ -6430,11 +6457,14 @@
     <Compile Include="Dbbrain\V20210527\Models\SecLogExportTaskInfo.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SlowLogHost.cs" />
     <Compile Include="Dbbrain\V20210527\Models\SlowLogTopSqlItem.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\Table.cs" />
     <Compile Include="Dbbrain\V20210527\Models\TableSpaceData.cs" />
     <Compile Include="Dbbrain\V20210527\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="Dbbrain\V20210527\Models\TaskInfo.cs" />
     <Compile Include="Dbbrain\V20210527\Models\TimeSlice.cs" />
     <Compile Include="Dbbrain\V20210527\Models\UserProfile.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\VerifyUserAccountRequest.cs" />
+    <Compile Include="Dbbrain\V20210527\Models\VerifyUserAccountResponse.cs" />
     <Compile Include="Dc\V20180410\DcClient.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelRequest.cs" />
     <Compile Include="Dc\V20180410\Models\AcceptDirectConnectTunnelResponse.cs" />
@@ -6856,6 +6886,8 @@
     <Compile Include="Domain\V20180808\Models\DescribeDomainNameListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeDomainPriceListResponse.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeDomainSimpleInfoRequest.cs" />
+    <Compile Include="Domain\V20180808\Models\DescribeDomainSimpleInfoResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribePhoneEmailListRequest.cs" />
     <Compile Include="Domain\V20180808\Models\DescribePhoneEmailListResponse.cs" />
     <Compile Include="Domain\V20180808\Models\DescribeTemplateListRequest.cs" />
@@ -6866,6 +6898,7 @@
     <Compile Include="Domain\V20180808\Models\DomainBatchDetailSet.cs" />
     <Compile Include="Domain\V20180808\Models\DomainBatchLogSet.cs" />
     <Compile Include="Domain\V20180808\Models\DomainList.cs" />
+    <Compile Include="Domain\V20180808\Models\DomainSimpleInfo.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchRequest.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainDNSBatchResponse.cs" />
     <Compile Include="Domain\V20180808\Models\ModifyDomainOwnerBatchRequest.cs" />
@@ -12917,6 +12950,8 @@
     <Compile Include="Redis\V20180412\Models\Account.cs" />
     <Compile Include="Redis\V20180412\Models\AddReplicationInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\AddReplicationInstanceResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\AllocateWanAddressRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\AllocateWanAddressResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="Redis\V20180412\Models\AssociateSecurityGroupsRequest.cs" />
@@ -13086,6 +13121,8 @@
     <Compile Include="Redis\V20180412\Models\RedisNodeInfo.cs" />
     <Compile Include="Redis\V20180412\Models\RedisNodes.cs" />
     <Compile Include="Redis\V20180412\Models\RegionConf.cs" />
+    <Compile Include="Redis\V20180412\Models\ReleaseWanAddressRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ReleaseWanAddressResponse.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\RenewInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ReplicaGroup.cs" />
@@ -18903,6 +18940,8 @@
     <Compile Include="Waf\V20180125\Models\DescribeCustomRulesRspRuleListItem.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeDomainWhiteRulesRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeDomainWhiteRulesResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeDomainsRequest.cs" />
+    <Compile Include="Waf\V20180125\Models\DescribeDomainsResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeFlowTrendResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeIpAccessControlRequest.cs" />
@@ -18917,7 +18956,9 @@
     <Compile Include="Waf\V20180125\Models\DescribeWafAutoDenyStatusResponse.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeWafThreatenIntelligenceRequest.cs" />
     <Compile Include="Waf\V20180125\Models\DescribeWafThreatenIntelligenceResponse.cs" />
+    <Compile Include="Waf\V20180125\Models\DomainInfo.cs" />
     <Compile Include="Waf\V20180125\Models\ExportAccessInfo.cs" />
+    <Compile Include="Waf\V20180125\Models\FiltersItemNew.cs" />
     <Compile Include="Waf\V20180125\Models\IpAccessControlData.cs" />
     <Compile Include="Waf\V20180125\Models\IpAccessControlItem.cs" />
     <Compile Include="Waf\V20180125\Models\IpHitItem.cs" />

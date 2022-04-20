@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.504</VersionPrefix>
+    <VersionPrefix>3.0.505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
     <Compile Include="V20180412\Models\Account.cs" />
     <Compile Include="V20180412\Models\AddReplicationInstanceRequest.cs" />
     <Compile Include="V20180412\Models\AddReplicationInstanceResponse.cs" />
+    <Compile Include="V20180412\Models\AllocateWanAddressRequest.cs" />
+    <Compile Include="V20180412\Models\AllocateWanAddressResponse.cs" />
     <Compile Include="V20180412\Models\ApplyParamsTemplateRequest.cs" />
     <Compile Include="V20180412\Models\ApplyParamsTemplateResponse.cs" />
     <Compile Include="V20180412\Models\AssociateSecurityGroupsRequest.cs" />
@@ -217,6 +219,8 @@
     <Compile Include="V20180412\Models\RedisNodeInfo.cs" />
     <Compile Include="V20180412\Models\RedisNodes.cs" />
     <Compile Include="V20180412\Models\RegionConf.cs" />
+    <Compile Include="V20180412\Models\ReleaseWanAddressRequest.cs" />
+    <Compile Include="V20180412\Models\ReleaseWanAddressResponse.cs" />
     <Compile Include="V20180412\Models\RenewInstanceRequest.cs" />
     <Compile Include="V20180412\Models\RenewInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ReplicaGroup.cs" />

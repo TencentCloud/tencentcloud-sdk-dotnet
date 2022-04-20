@@ -156,6 +156,12 @@ namespace TencentCloud.Rce.V20201103.Models
         [JsonProperty("OnlineScam")]
         public OnlineScamInfo OnlineScam{ get; set; }
 
+        /// <summary>
+        /// 平台: 1android
+        /// </summary>
+        [JsonProperty("Platform")]
+        public string Platform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +189,7 @@ namespace TencentCloud.Rce.V20201103.Models
             this.SetParamArrayObj(map, prefix + "Details.", this.Details);
             this.SetParamObj(map, prefix + "Sponsor.", this.Sponsor);
             this.SetParamObj(map, prefix + "OnlineScam.", this.OnlineScam);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
         }
     }
 }

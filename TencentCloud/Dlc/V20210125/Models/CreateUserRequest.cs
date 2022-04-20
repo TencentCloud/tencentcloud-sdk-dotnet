@@ -54,6 +54,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("WorkGroupIds")]
         public long?[] WorkGroupIds{ get; set; }
 
+        /// <summary>
+        /// 用户别名，字符长度小50
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "PolicySet.", this.PolicySet);
             this.SetParamSimple(map, prefix + "UserType", this.UserType);
             this.SetParamArraySimple(map, prefix + "WorkGroupIds.", this.WorkGroupIds);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
         }
     }
 }

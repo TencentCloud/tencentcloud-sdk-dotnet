@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 用户上传的模版ID
+        /// 用户上传的模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
@@ -67,7 +67,8 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ClientToken{ get; set; }
 
         /// <summary>
-        /// 是否需要生成预览文件 默认不生成
+        /// 是否需要生成预览文件 默认不生成；
+        /// 预览链接有效期300秒；
         /// </summary>
         [JsonProperty("NeedPreview")]
         public bool? NeedPreview{ get; set; }

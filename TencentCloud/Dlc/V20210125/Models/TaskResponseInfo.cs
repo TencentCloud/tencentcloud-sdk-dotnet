@@ -184,6 +184,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CanDownload")]
         public bool? CanDownload{ get; set; }
 
+        /// <summary>
+        /// 用户别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -215,6 +222,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "InputConf", this.InputConf);
             this.SetParamSimple(map, prefix + "DataNumber", this.DataNumber);
             this.SetParamSimple(map, prefix + "CanDownload", this.CanDownload);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
         }
     }
 }

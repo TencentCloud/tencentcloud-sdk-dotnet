@@ -49,6 +49,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
+        /// <summary>
+        /// 用户别名
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "UserDescription", this.UserDescription);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
         }
     }
 }

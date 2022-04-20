@@ -55,7 +55,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。
+        /// 过滤条件，支持如下字段类型，user-type：根据用户类型过滤。user-keyword：根据用户名称过滤
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

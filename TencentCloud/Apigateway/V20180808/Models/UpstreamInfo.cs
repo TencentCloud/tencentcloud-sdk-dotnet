@@ -25,43 +25,43 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// VPC通道唯一ID
+        /// 后端通道唯一ID
         /// </summary>
         [JsonProperty("UpstreamId")]
         public string UpstreamId{ get; set; }
 
         /// <summary>
-        /// VPC通道名字
+        /// 后端通道名字
         /// </summary>
         [JsonProperty("UpstreamName")]
         public string UpstreamName{ get; set; }
 
         /// <summary>
-        /// VPC通道描述
+        /// 后端通道描述
         /// </summary>
         [JsonProperty("UpstreamDescription")]
         public string UpstreamDescription{ get; set; }
 
         /// <summary>
-        /// 写意
+        /// 后端协议，取值范围：HTTP, HTTPS
         /// </summary>
         [JsonProperty("Scheme")]
         public string Scheme{ get; set; }
 
         /// <summary>
-        /// 负载均衡算法
+        /// 负载均衡算法，取值范围：ROUND_ROBIN
         /// </summary>
         [JsonProperty("Algorithm")]
         public string Algorithm{ get; set; }
 
         /// <summary>
-        /// vpc唯一ID
+        /// VPC唯一ID
         /// </summary>
         [JsonProperty("UniqVpcId")]
         public string UniqVpcId{ get; set; }
 
         /// <summary>
-        /// 请求重拾次数
+        /// 请求重试次数
         /// </summary>
         [JsonProperty("Retries")]
         public ulong? Retries{ get; set; }
@@ -93,20 +93,20 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public UpstreamHealthChecker HealthChecker{ get; set; }
 
         /// <summary>
-        /// Upstream的类型
+        /// 后端的类型，取值范围：IP_PORT, K8S
         /// </summary>
         [JsonProperty("UpstreamType")]
         public string UpstreamType{ get; set; }
 
         /// <summary>
-        /// k8s服务配置
+        /// K8S容器服务配置
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("K8sServices")]
         public K8sService[] K8sServices{ get; set; }
 
         /// <summary>
-        /// vpc通道的Host
+        /// 网关转发给后端的Host请求头
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamHost")]

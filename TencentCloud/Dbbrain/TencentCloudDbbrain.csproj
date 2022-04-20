@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.504</VersionPrefix>
+    <VersionPrefix>3.0.505</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -131,6 +131,8 @@
     <Compile Include="V20210527\DbbrainClient.cs" />
     <Compile Include="V20210527\Models\AddUserContactRequest.cs" />
     <Compile Include="V20210527\Models\AddUserContactResponse.cs" />
+    <Compile Include="V20210527\Models\CancelKillTaskRequest.cs" />
+    <Compile Include="V20210527\Models\CancelKillTaskResponse.cs" />
     <Compile Include="V20210527\Models\ContactItem.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskRequest.cs" />
     <Compile Include="V20210527\Models\CreateDBDiagReportTaskResponse.cs" />
@@ -146,8 +148,12 @@
     <Compile Include="V20210527\Models\CreateSchedulerMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskRequest.cs" />
     <Compile Include="V20210527\Models\CreateSecurityAuditLogExportTaskResponse.cs" />
+    <Compile Include="V20210527\Models\CreateSqlFilterRequest.cs" />
+    <Compile Include="V20210527\Models\CreateSqlFilterResponse.cs" />
     <Compile Include="V20210527\Models\DeleteSecurityAuditLogExportTasksRequest.cs" />
     <Compile Include="V20210527\Models\DeleteSecurityAuditLogExportTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DeleteSqlFiltersRequest.cs" />
+    <Compile Include="V20210527\Models\DeleteSqlFiltersResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserContactRequest.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserContactResponse.cs" />
     <Compile Include="V20210527\Models\DescribeAllUserGroupRequest.cs" />
@@ -170,8 +176,12 @@
     <Compile Include="V20210527\Models\DescribeMailProfileResponse.cs" />
     <Compile Include="V20210527\Models\DescribeMySqlProcessListRequest.cs" />
     <Compile Include="V20210527\Models\DescribeMySqlProcessListResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeNoPrimaryKeyTablesRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeNoPrimaryKeyTablesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksRequest.cs" />
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -182,6 +192,10 @@
     <Compile Include="V20210527\Models\DescribeSlowLogTopSqlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSlowLogUserHostStatsResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeSqlFiltersRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeSqlFiltersResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeSqlTemplateRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeSqlTemplateResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemaTimeSeriesRequest.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemaTimeSeriesResponse.cs" />
     <Compile Include="V20210527\Models\DescribeTopSpaceSchemasRequest.cs" />
@@ -207,12 +221,16 @@
     <Compile Include="V20210527\Models\MailConfiguration.cs" />
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfRequest.cs" />
     <Compile Include="V20210527\Models\ModifyDiagDBInstanceConfResponse.cs" />
+    <Compile Include="V20210527\Models\ModifySqlFiltersRequest.cs" />
+    <Compile Include="V20210527\Models\ModifySqlFiltersResponse.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetric.cs" />
     <Compile Include="V20210527\Models\MonitorFloatMetricSeriesData.cs" />
     <Compile Include="V20210527\Models\MonitorMetric.cs" />
     <Compile Include="V20210527\Models\MonitorMetricSeriesData.cs" />
     <Compile Include="V20210527\Models\MySqlProcess.cs" />
     <Compile Include="V20210527\Models\ProfileInfo.cs" />
+    <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
+    <Compile Include="V20210527\Models\SQLFilter.cs" />
     <Compile Include="V20210527\Models\SchemaItem.cs" />
     <Compile Include="V20210527\Models\SchemaSpaceData.cs" />
     <Compile Include="V20210527\Models\SchemaSpaceTimeSeries.cs" />
@@ -221,10 +239,13 @@
     <Compile Include="V20210527\Models\SecLogExportTaskInfo.cs" />
     <Compile Include="V20210527\Models\SlowLogHost.cs" />
     <Compile Include="V20210527\Models\SlowLogTopSqlItem.cs" />
+    <Compile Include="V20210527\Models\Table.cs" />
     <Compile Include="V20210527\Models\TableSpaceData.cs" />
     <Compile Include="V20210527\Models\TableSpaceTimeSeries.cs" />
     <Compile Include="V20210527\Models\TaskInfo.cs" />
     <Compile Include="V20210527\Models\TimeSlice.cs" />
     <Compile Include="V20210527\Models\UserProfile.cs" />
+    <Compile Include="V20210527\Models\VerifyUserAccountRequest.cs" />
+    <Compile Include="V20210527\Models\VerifyUserAccountResponse.cs" />
   </ItemGroup>
 </Project>

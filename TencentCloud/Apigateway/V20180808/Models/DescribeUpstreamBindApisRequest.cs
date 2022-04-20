@@ -25,19 +25,19 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 分页
+        /// 分页大小
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 分页
+        /// 分页起始位置
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// vpc通道Id
+        /// 后端通道ID
         /// </summary>
         [JsonProperty("UpstreamId")]
         public string UpstreamId{ get; set; }

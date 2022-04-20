@@ -25,7 +25,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
     {
         
         /// <summary>
-        /// 待删除的VPC通道唯一ID
+        /// 待删除的后端通道ID
         /// </summary>
         [JsonProperty("UpstreamId")]
         public string UpstreamId{ get; set; }

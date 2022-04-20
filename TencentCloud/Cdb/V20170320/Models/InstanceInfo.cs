@@ -216,7 +216,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Vport{ get; set; }
 
         /// <summary>
-        /// 是否锁定标记
+        /// 磁盘写入是否被锁定（实例数据写入量已经超过磁盘配额）。0 -未被锁定 1 -已被锁定
         /// </summary>
         [JsonProperty("CdbError")]
         public long? CdbError{ get; set; }

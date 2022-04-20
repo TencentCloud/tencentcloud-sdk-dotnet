@@ -573,6 +573,46 @@ namespace TencentCloud.Domain.V20180808
         }
 
         /// <summary>
+        /// 获取域名实名信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainSimpleInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainSimpleInfoResponse"/></returns>
+        public async Task<DescribeDomainSimpleInfoResponse> DescribeDomainSimpleInfo(DescribeDomainSimpleInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainSimpleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainSimpleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainSimpleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名实名信息详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainSimpleInfoRequest"/></param>
+        /// <returns><see cref="DescribeDomainSimpleInfoResponse"/></returns>
+        public DescribeDomainSimpleInfoResponse DescribeDomainSimpleInfoSync(DescribeDomainSimpleInfoRequest req)
+        {
+             JsonResponseModel<DescribeDomainSimpleInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainSimpleInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainSimpleInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于获取已验证的手机邮箱列表
         /// </summary>
         /// <param name="req"><see cref="DescribePhoneEmailListRequest"/></param>
