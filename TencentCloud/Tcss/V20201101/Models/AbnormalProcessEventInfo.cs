@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string EventType{ get; set; }
 
         /// <summary>
-        /// 命中规则
+        /// 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
         /// </summary>
         [JsonProperty("MatchRuleName")]
         public string MatchRuleName{ get; set; }
@@ -153,6 +153,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+        /// </summary>
+        [JsonProperty("MatchGroupName")]
+        public string MatchGroupName{ get; set; }
+
+        /// <summary>
+        /// 命中规则等级，HIGH：高危，MIDDLE：中危，LOW：低危。
+        /// </summary>
+        [JsonProperty("MatchRuleLevel")]
+        public string MatchRuleLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +191,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EventCount", this.EventCount);
             this.SetParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "MatchGroupName", this.MatchGroupName);
+            this.SetParamSimple(map, prefix + "MatchRuleLevel", this.MatchRuleLevel);
         }
     }
 }

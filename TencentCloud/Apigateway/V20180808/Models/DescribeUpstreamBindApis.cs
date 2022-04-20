@@ -31,7 +31,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 绑定的api信息
+        /// 绑定的API信息
         /// </summary>
         [JsonProperty("BindApiSet")]
         public BindApiInfo[] BindApiSet{ get; set; }

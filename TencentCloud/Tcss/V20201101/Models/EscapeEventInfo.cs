@@ -49,10 +49,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 状态
-        ///      EVENT_UNDEAL:事件未处理
-        ///      EVENT_DEALED:事件已经处理
-        ///      EVENT_INGNORE：事件忽略
+        /// 状态，EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -129,6 +126,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("LatestFoundTime")]
         public string LatestFoundTime{ get; set; }
 
+        /// <summary>
+        /// 节点IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeIP")]
+        public string NodeIP{ get; set; }
+
+        /// <summary>
+        /// 主机IP
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostID")]
+        public string HostID{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +161,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "EventCount", this.EventCount);
             this.SetParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
+            this.SetParamSimple(map, prefix + "NodeIP", this.NodeIP);
+            this.SetParamSimple(map, prefix + "HostID", this.HostID);
         }
     }
 }

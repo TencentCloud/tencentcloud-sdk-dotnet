@@ -31,10 +31,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] EventIdSet{ get; set; }
 
         /// <summary>
-        /// 标记事件的状态
-        ///    EVENT_DEALED:事件已经处理
-        ///      EVENT_INGNORE：事件忽略
-        ///      EVENT_DEL:事件删除
+        /// 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

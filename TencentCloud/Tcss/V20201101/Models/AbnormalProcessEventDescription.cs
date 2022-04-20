@@ -50,7 +50,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public AbnormalProcessChildRuleInfo MatchRule{ get; set; }
 
         /// <summary>
-        /// 命中规则名字
+        /// 命中规则名称，PROXY_TOOL：代理软件，TRANSFER_CONTROL：横向渗透，ATTACK_CMD：恶意命令，REVERSE_SHELL：反弹shell，FILELESS：无文件程序执行，RISK_CMD：高危命令，ABNORMAL_CHILD_PROC：敏感服务异常子进程启动，USER_DEFINED_RULE：用户自定义规则
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
@@ -68,6 +68,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("OperationTime")]
         public string OperationTime{ get; set; }
 
+        /// <summary>
+        /// 命中策略名称：SYSTEM_DEFINED_RULE （系统策略）或  用户自定义的策略名字
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupName")]
+        public string GroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,6 +88,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
+            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
         }
     }
 }

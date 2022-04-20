@@ -45,6 +45,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
 
+        /// <summary>
+        /// 威胁等级，HIGH:高，MIDDLE:中，LOW:低
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleLevel")]
+        public string RuleLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RuleMode", this.RuleMode);
             this.SetParamSimple(map, prefix + "ProcessPath", this.ProcessPath);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamSimple(map, prefix + "RuleLevel", this.RuleLevel);
         }
     }
 }

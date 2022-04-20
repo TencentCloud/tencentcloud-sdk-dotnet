@@ -37,7 +37,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数,"Filters":[{"Name":"Status","Values":["2"]}]
+        /// 过滤参数,Status：EVENT_UNDEAL:未处理，EVENT_DEALED:已处理，EVENT_INGNORE:忽略
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

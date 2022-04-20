@@ -336,6 +336,12 @@ namespace TencentCloud.Apigateway.V20180808.Models
         [JsonProperty("EIAMAppId")]
         public string EIAMAppId{ get; set; }
 
+        /// <summary>
+        /// 资源的Owner
+        /// </summary>
+        [JsonProperty("Owner")]
+        public string Owner{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -394,6 +400,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
             this.SetParamSimple(map, prefix + "EIAMAuthType", this.EIAMAuthType);
             this.SetParamSimple(map, prefix + "TokenTimeout", this.TokenTimeout);
             this.SetParamSimple(map, prefix + "EIAMAppId", this.EIAMAppId);
+            this.SetParamSimple(map, prefix + "Owner", this.Owner);
         }
     }
 }

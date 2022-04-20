@@ -54,6 +54,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("IsEnable")]
         public bool? IsEnable{ get; set; }
 
+        /// <summary>
+        /// 规则组别。RISK_CONTAINER：风险容器，PROCESS_PRIVILEGE：程序特权，CONTAINER_ESCAPE：容器逃逸
+        /// </summary>
+        [JsonProperty("Group")]
+        public string Group{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "IsEnable", this.IsEnable);
+            this.SetParamSimple(map, prefix + "Group", this.Group);
         }
     }
 }
