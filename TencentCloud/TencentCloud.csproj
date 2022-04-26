@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.505</VersionPrefix>
+    <VersionPrefix>3.0.506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -977,6 +977,8 @@
     <Compile Include="As\V20180419\Models\ModifyDesiredCapacityResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLaunchConfigurationAttributesResponse.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLifecycleHookRequest.cs" />
+    <Compile Include="As\V20180419\Models\ModifyLifecycleHookResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesRequest.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancerTargetAttributesResponse.cs" />
     <Compile Include="As\V20180419\Models\ModifyLoadBalancersRequest.cs" />
@@ -3072,6 +3074,7 @@
     <Compile Include="Cdn\V20180606\Models\StartCdnDomainResponse.cs" />
     <Compile Include="Cdn\V20180606\Models\StartScdnDomainRequest.cs" />
     <Compile Include="Cdn\V20180606\Models\StartScdnDomainResponse.cs" />
+    <Compile Include="Cdn\V20180606\Models\StatisticItem.cs" />
     <Compile Include="Cdn\V20180606\Models\StatusCodeCache.cs" />
     <Compile Include="Cdn\V20180606\Models\StatusCodeCacheRule.cs" />
     <Compile Include="Cdn\V20180606\Models\StopCdnDomainRequest.cs" />
@@ -4408,6 +4411,7 @@
     <Compile Include="Cme\V20191029\Models\VideoEncodingPresetAudioSettingForUpdate.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEncodingPresetVideoSetting.cs" />
     <Compile Include="Cme\V20191029\Models\VideoEncodingPresetVideoSettingForUpdate.cs" />
+    <Compile Include="Cme\V20191029\Models\VideoExportCompletedEvent.cs" />
     <Compile Include="Cme\V20191029\Models\VideoExportExtensionArgs.cs" />
     <Compile Include="Cme\V20191029\Models\VideoMaterial.cs" />
     <Compile Include="Cme\V20191029\Models\VideoSegmentationProjectInput.cs" />
@@ -4529,6 +4533,9 @@
     <Compile Include="Cpdp\V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyDeclareData.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyDeclareResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ApplyOpenBankOrderDetailReceiptRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ApplyOpenBankOrderDetailReceiptResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\ApplyOpenBankOrderDetailReceiptResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyOutwardOrderData.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyOutwardOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\ApplyOutwardOrderResponse.cs" />
@@ -4618,6 +4625,7 @@
     <Compile Include="Cpdp\V20190820\Models\CreateCloudSubMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateCustAcctIdResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateExternalAccountBookResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorData.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateExternalAnchorResponse.cs" />
@@ -4633,6 +4641,8 @@
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantAccountBookRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantAccountBookResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResult.cs" />
@@ -4640,8 +4650,11 @@
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankMerchantResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankMerchantResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankOrderPaymentResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankOrderRechargeResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankPaymentOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankRechargeOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreateOpenBankRechargeOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantRequest.cs" />
@@ -4734,6 +4747,8 @@
     <Compile Include="Cpdp\V20190820\Models\OpenBankPayeeInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\OpenBankPayerInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\OpenBankProfitShareInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankRechargePayeeInfo.cs" />
+    <Compile Include="Cpdp\V20190820\Models\OpenBankRechargeRedirectInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\OpenBankRedirectInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\OpenBankSceneInfo.cs" />
     <Compile Include="Cpdp\V20190820\Models\Order.cs" />
@@ -4809,6 +4824,7 @@
     <Compile Include="Cpdp\V20190820\Models\QueryExchangeRateResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryExchangerateResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryExternalAccountBookResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryFundsTransactionDetailsRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryFundsTransactionDetailsResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryFundsTransactionDetailsResult.cs" />
@@ -4857,6 +4873,8 @@
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankDownLoadUrlResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubAccountBookBalanceRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubAccountBookBalanceResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountData.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResponse.cs" />
@@ -4864,6 +4882,9 @@
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankOrderDetailReceiptInfoRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankOrderDetailReceiptInfoResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\QueryOpenBankOrderDetailReceiptInfoResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryOpenBankPaymentOrderResult.cs" />
@@ -7831,6 +7852,7 @@
     <Compile Include="Ess\V20201111\EssClient.cs" />
     <Compile Include="Ess\V20201111\Models\Agent.cs" />
     <Compile Include="Ess\V20201111\Models\ApproverInfo.cs" />
+    <Compile Include="Ess\V20201111\Models\Caller.cs" />
     <Compile Include="Ess\V20201111\Models\CancelFlowRequest.cs" />
     <Compile Include="Ess\V20201111\Models\CancelFlowResponse.cs" />
     <Compile Include="Ess\V20201111\Models\CcInfo.cs" />
@@ -7855,16 +7877,23 @@
     <Compile Include="Ess\V20201111\Models\FormField.cs" />
     <Compile Include="Ess\V20201111\Models\StartFlowRequest.cs" />
     <Compile Include="Ess\V20201111\Models\StartFlowResponse.cs" />
+    <Compile Include="Ess\V20201111\Models\UploadFile.cs" />
+    <Compile Include="Ess\V20201111\Models\UploadFilesRequest.cs" />
+    <Compile Include="Ess\V20201111\Models\UploadFilesResponse.cs" />
     <Compile Include="Ess\V20201111\Models\UserInfo.cs" />
     <Compile Include="Essbasic\V20210526\EssbasicClient.cs" />
     <Compile Include="Essbasic\V20210526\Models\Agent.cs" />
     <Compile Include="Essbasic\V20210526\Models\AuthFailMessage.cs" />
     <Compile Include="Essbasic\V20210526\Models\CcInfo.cs" />
+    <Compile Include="Essbasic\V20210526\Models\ChannelCreateFlowByFilesRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\ChannelCreateFlowByFilesResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\Component.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateConsoleLoginUrlResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateFlowsByTemplatesRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateFlowsByTemplatesResponse.cs" />
+    <Compile Include="Essbasic\V20210526\Models\CreateSealByImageRequest.cs" />
+    <Compile Include="Essbasic\V20210526\Models\CreateSealByImageResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateSignUrlsRequest.cs" />
     <Compile Include="Essbasic\V20210526\Models\CreateSignUrlsResponse.cs" />
     <Compile Include="Essbasic\V20210526\Models\DescribeFlowDetailInfoRequest.cs" />
@@ -8738,8 +8767,6 @@
     <Compile Include="Iai\V20200303\Models\AnalyzeFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20200303\Models\Candidate.cs" />
-    <Compile Include="Iai\V20200303\Models\CheckSimilarPersonRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\CheckSimilarPersonResponse.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\CompareFaceResponse.cs" />
     <Compile Include="Iai\V20200303\Models\CompareMaskFaceRequest.cs" />
@@ -8769,8 +8796,6 @@
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20200303\Models\DetectLiveFaceResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
     <Compile Include="Iai\V20200303\Models\Eye.cs" />
     <Compile Include="Iai\V20200303\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20200303\Models\FaceAttributesInfo.cs" />
@@ -8782,8 +8807,6 @@
     <Compile Include="Iai\V20200303\Models\FaceQualityInfo.cs" />
     <Compile Include="Iai\V20200303\Models\FaceRect.cs" />
     <Compile Include="Iai\V20200303\Models\FaceShape.cs" />
-    <Compile Include="Iai\V20200303\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetGroupInfoRequest.cs" />
     <Compile Include="Iai\V20200303\Models\GetGroupInfoResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetGroupListRequest.cs" />
@@ -8796,8 +8819,6 @@
     <Compile Include="Iai\V20200303\Models\GetPersonListNumResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetPersonListRequest.cs" />
     <Compile Include="Iai\V20200303\Models\GetPersonListResponse.cs" />
-    <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultRequest.cs" />
-    <Compile Include="Iai\V20200303\Models\GetSimilarPersonResultResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
     <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
     <Compile Include="Iai\V20200303\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
@@ -8808,7 +8829,6 @@
     <Compile Include="Iai\V20200303\Models\Hair.cs" />
     <Compile Include="Iai\V20200303\Models\Hat.cs" />
     <Compile Include="Iai\V20200303\Models\HeadPose.cs" />
-    <Compile Include="Iai\V20200303\Models\JobIdInfo.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyGroupResponse.cs" />
     <Compile Include="Iai\V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
@@ -8846,8 +8866,6 @@
     <Compile Include="Iai\V20180301\Models\AnalyzeFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\AttributeItem.cs" />
     <Compile Include="Iai\V20180301\Models\Candidate.cs" />
-    <Compile Include="Iai\V20180301\Models\CheckSimilarPersonRequest.cs" />
-    <Compile Include="Iai\V20180301\Models\CheckSimilarPersonResponse.cs" />
     <Compile Include="Iai\V20180301\Models\CompareFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\CompareFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\CopyPersonRequest.cs" />
@@ -8873,8 +8891,6 @@
     <Compile Include="Iai\V20180301\Models\DetectFaceResponse.cs" />
     <Compile Include="Iai\V20180301\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="Iai\V20180301\Models\DetectLiveFaceResponse.cs" />
-    <Compile Include="Iai\V20180301\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
-    <Compile Include="Iai\V20180301\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
     <Compile Include="Iai\V20180301\Models\Eye.cs" />
     <Compile Include="Iai\V20180301\Models\Eyebrow.cs" />
     <Compile Include="Iai\V20180301\Models\FaceAttributesInfo.cs" />
@@ -8886,8 +8902,6 @@
     <Compile Include="Iai\V20180301\Models\FaceQualityInfo.cs" />
     <Compile Include="Iai\V20180301\Models\FaceRect.cs" />
     <Compile Include="Iai\V20180301\Models\FaceShape.cs" />
-    <Compile Include="Iai\V20180301\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
-    <Compile Include="Iai\V20180301\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetGroupInfoRequest.cs" />
     <Compile Include="Iai\V20180301\Models\GetGroupInfoResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetGroupListRequest.cs" />
@@ -8900,8 +8914,6 @@
     <Compile Include="Iai\V20180301\Models\GetPersonListNumResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetPersonListRequest.cs" />
     <Compile Include="Iai\V20180301\Models\GetPersonListResponse.cs" />
-    <Compile Include="Iai\V20180301\Models\GetSimilarPersonResultRequest.cs" />
-    <Compile Include="Iai\V20180301\Models\GetSimilarPersonResultResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
     <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
     <Compile Include="Iai\V20180301\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
@@ -8912,7 +8924,6 @@
     <Compile Include="Iai\V20180301\Models\Hair.cs" />
     <Compile Include="Iai\V20180301\Models\Hat.cs" />
     <Compile Include="Iai\V20180301\Models\HeadPose.cs" />
-    <Compile Include="Iai\V20180301\Models\JobIdInfo.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyGroupRequest.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyGroupResponse.cs" />
     <Compile Include="Iai\V20180301\Models\ModifyPersonBaseInfoRequest.cs" />
@@ -12770,6 +12781,8 @@
     <Compile Include="Postgres\V20170312\Models\DescribeDBXlogsResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDatabasesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeDatabasesResponse.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeEncryptionKeysRequest.cs" />
+    <Compile Include="Postgres\V20170312\Models\DescribeEncryptionKeysResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DescribeParamsEventRequest.cs" />
@@ -12794,6 +12807,7 @@
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesRequest.cs" />
     <Compile Include="Postgres\V20170312\Models\DisIsolateDBInstancesResponse.cs" />
     <Compile Include="Postgres\V20170312\Models\DurationAnalysis.cs" />
+    <Compile Include="Postgres\V20170312\Models\EncryptionKey.cs" />
     <Compile Include="Postgres\V20170312\Models\ErrLogDetail.cs" />
     <Compile Include="Postgres\V20170312\Models\EventInfo.cs" />
     <Compile Include="Postgres\V20170312\Models\EventItem.cs" />
@@ -14166,6 +14180,8 @@
     <Compile Include="Sts\V20180813\Models\AssumeRoleResponse.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLRequest.cs" />
     <Compile Include="Sts\V20180813\Models\AssumeRoleWithSAMLResponse.cs" />
+    <Compile Include="Sts\V20180813\Models\AssumeRoleWithWebIdentityRequest.cs" />
+    <Compile Include="Sts\V20180813\Models\AssumeRoleWithWebIdentityResponse.cs" />
     <Compile Include="Sts\V20180813\Models\Credentials.cs" />
     <Compile Include="Sts\V20180813\Models\GetCallerIdentityRequest.cs" />
     <Compile Include="Sts\V20180813\Models\GetCallerIdentityResponse.cs" />

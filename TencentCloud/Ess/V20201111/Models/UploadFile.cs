@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSimilarPersonResultRequest : AbstractModel
+    public class UploadFile : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。取值为人员查重接口返回的JobId
+        /// Base64编码后的文件内容
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("FileBody")]
+        public string FileBody{ get; set; }
+
+        /// <summary>
+        /// 文件名
+        /// </summary>
+        [JsonProperty("FileName")]
+        public string FileName{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "FileBody", this.FileBody);
+            this.SetParamSimple(map, prefix + "FileName", this.FileName);
         }
     }
 }

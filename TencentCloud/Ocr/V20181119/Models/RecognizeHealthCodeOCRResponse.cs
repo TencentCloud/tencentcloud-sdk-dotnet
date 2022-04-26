@@ -37,7 +37,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string IDNumber{ get; set; }
 
         /// <summary>
-        /// 健康码更新时间，格式为：XXXX-XX-XX XX:XX:XX
+        /// 健康码更新时间
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string TestingResult{ get; set; }
 
         /// <summary>
-        /// 核酸检测时间，格式为：XXXX-XX-XX XX:XX
+        /// 核酸检测时间
         /// </summary>
         [JsonProperty("TestingTime")]
         public string TestingTime{ get; set; }

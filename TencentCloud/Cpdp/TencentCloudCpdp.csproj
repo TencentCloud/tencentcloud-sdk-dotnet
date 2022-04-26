@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.505</VersionPrefix>
+    <VersionPrefix>3.0.506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,6 +64,9 @@
     <Compile Include="V20190820\Models\ApplyApplicationMaterialResponse.cs" />
     <Compile Include="V20190820\Models\ApplyDeclareData.cs" />
     <Compile Include="V20190820\Models\ApplyDeclareResult.cs" />
+    <Compile Include="V20190820\Models\ApplyOpenBankOrderDetailReceiptRequest.cs" />
+    <Compile Include="V20190820\Models\ApplyOpenBankOrderDetailReceiptResponse.cs" />
+    <Compile Include="V20190820\Models\ApplyOpenBankOrderDetailReceiptResult.cs" />
     <Compile Include="V20190820\Models\ApplyOutwardOrderData.cs" />
     <Compile Include="V20190820\Models\ApplyOutwardOrderRequest.cs" />
     <Compile Include="V20190820\Models\ApplyOutwardOrderResponse.cs" />
@@ -153,6 +156,7 @@
     <Compile Include="V20190820\Models\CreateCloudSubMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateCustAcctIdRequest.cs" />
     <Compile Include="V20190820\Models\CreateCustAcctIdResponse.cs" />
+    <Compile Include="V20190820\Models\CreateExternalAccountBookResult.cs" />
     <Compile Include="V20190820\Models\CreateExternalAnchorData.cs" />
     <Compile Include="V20190820\Models\CreateExternalAnchorRequest.cs" />
     <Compile Include="V20190820\Models\CreateExternalAnchorResponse.cs" />
@@ -168,6 +172,8 @@
     <Compile Include="V20190820\Models\CreateMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResult.cs" />
     <Compile Include="V20190820\Models\CreateMerchantResultData.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantAccountBookRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantAccountBookResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankExternalSubMerchantRegistrationResult.cs" />
@@ -175,8 +181,11 @@
     <Compile Include="V20190820\Models\CreateOpenBankMerchantResponse.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankMerchantResult.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankOrderPaymentResult.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankOrderRechargeResult.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankPaymentOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankPaymentOrderResponse.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankRechargeOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankRechargeOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreateOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreatePayMerchantRequest.cs" />
@@ -269,6 +278,8 @@
     <Compile Include="V20190820\Models\OpenBankPayeeInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankPayerInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankProfitShareInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankRechargePayeeInfo.cs" />
+    <Compile Include="V20190820\Models\OpenBankRechargeRedirectInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankRedirectInfo.cs" />
     <Compile Include="V20190820\Models\OpenBankSceneInfo.cs" />
     <Compile Include="V20190820\Models\Order.cs" />
@@ -344,6 +355,7 @@
     <Compile Include="V20190820\Models\QueryExchangeRateResponse.cs" />
     <Compile Include="V20190820\Models\QueryExchangerateData.cs" />
     <Compile Include="V20190820\Models\QueryExchangerateResult.cs" />
+    <Compile Include="V20190820\Models\QueryExternalAccountBookResult.cs" />
     <Compile Include="V20190820\Models\QueryFundsTransactionDetailsRequest.cs" />
     <Compile Include="V20190820\Models\QueryFundsTransactionDetailsResponse.cs" />
     <Compile Include="V20190820\Models\QueryFundsTransactionDetailsResult.cs" />
@@ -392,6 +404,8 @@
     <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlRequest.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlResponse.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankDownLoadUrlResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubAccountBookBalanceRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankExternalSubAccountBookBalanceResponse.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountData.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountRequest.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantBankAccountResponse.cs" />
@@ -399,6 +413,9 @@
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationRequest.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResponse.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankExternalSubMerchantRegistrationResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankOrderDetailReceiptInfoRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankOrderDetailReceiptInfoResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankOrderDetailReceiptInfoResult.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderRequest.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderResponse.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankPaymentOrderResult.cs" />

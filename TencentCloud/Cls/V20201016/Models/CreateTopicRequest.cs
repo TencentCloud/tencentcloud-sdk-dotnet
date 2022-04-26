@@ -61,7 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public long? MaxSplitPartitions{ get; set; }
 
         /// <summary>
-        /// 日志主题的存储类型，可选值 hot（实时存储），cold（低频存储）；默认为hot。
+        /// 日志主题的存储类型，可选值 hot（标准存储），cold（低频存储）；默认为hot。
         /// </summary>
         [JsonProperty("StorageType")]
         public string StorageType{ get; set; }

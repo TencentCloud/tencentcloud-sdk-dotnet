@@ -173,7 +173,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (CloseProVersion) 用于关闭专业版。
+        /// 本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
         /// </summary>
         /// <param name="req"><see cref="CloseProVersionRequest"/></param>
         /// <returns><see cref="CloseProVersionResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (CloseProVersion) 用于关闭专业版。
+        /// 本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
         /// </summary>
         /// <param name="req"><see cref="CloseProVersionRequest"/></param>
         /// <returns><see cref="CloseProVersionResponse"/></returns>

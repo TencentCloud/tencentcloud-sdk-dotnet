@@ -191,6 +191,34 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConsoleDefaultPwd")]
         public string ConsoleDefaultPwd{ get; set; }
 
+        /// <summary>
+        /// 交易付费类型，0后付费/1预付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TradeType")]
+        public long? TradeType{ get; set; }
+
+        /// <summary>
+        /// 自动续费标记：0表示默认状态(用户未设置，即初始状态)， 1表示自动续费，2表示明确不自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewFlag")]
+        public long? AutoRenewFlag{ get; set; }
+
+        /// <summary>
+        /// 预付费到期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurDeadline")]
+        public string CurDeadline{ get; set; }
+
+        /// <summary>
+        /// 隔离开始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public string IsolateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -222,6 +250,10 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnableConsoleIntranet", this.EnableConsoleIntranet);
             this.SetParamSimple(map, prefix + "ConfigInfoVisible", this.ConfigInfoVisible);
             this.SetParamSimple(map, prefix + "ConsoleDefaultPwd", this.ConsoleDefaultPwd);
+            this.SetParamSimple(map, prefix + "TradeType", this.TradeType);
+            this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         }
     }
 }

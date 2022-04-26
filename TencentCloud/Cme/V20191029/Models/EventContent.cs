@@ -36,7 +36,8 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <li>Material.Deleted：媒体删除事件；</li>
         /// <li>Class.Created：分类新增事件；</li>
         /// <li>Class.Moved：分类移动事件；</li>
-        /// <li>Class.Deleted：分类删除事件。</li>
+        /// <li>Class.Deleted：分类删除事件；</li>
+        /// <li>Task.VideoExportCompleted：视频导出完成事件。 </li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -122,6 +123,13 @@ namespace TencentCloud.Cme.V20191029.Models
         [JsonProperty("ClassDeletedEvent")]
         public ClassDeletedEvent ClassDeletedEvent{ get; set; }
 
+        /// <summary>
+        /// 视频导出完成事件。仅当 EventType 为 Task.VideoExportCompleted 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VideoExportCompletedEvent")]
+        public VideoExportCompletedEvent VideoExportCompletedEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +149,7 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "ClassCreatedEvent.", this.ClassCreatedEvent);
             this.SetParamObj(map, prefix + "ClassMovedEvent.", this.ClassMovedEvent);
             this.SetParamObj(map, prefix + "ClassDeletedEvent.", this.ClassDeletedEvent);
+            this.SetParamObj(map, prefix + "VideoExportCompletedEvent.", this.VideoExportCompletedEvent);
         }
     }
 }

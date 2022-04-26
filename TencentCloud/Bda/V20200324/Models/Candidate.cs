@@ -31,7 +31,7 @@ namespace TencentCloud.Bda.V20200324.Models
         public string PersonId{ get; set; }
 
         /// <summary>
-        /// 人体轨迹ID。
+        /// 人体动作轨迹ID。
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }

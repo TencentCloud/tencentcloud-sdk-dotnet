@@ -43,6 +43,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string RecordType{ get; set; }
 
         /// <summary>
+        /// 文件验证 URL 指引
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileVerifyUrl")]
+        public string FileVerifyUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +64,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
             this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
+            this.SetParamSimple(map, prefix + "FileVerifyUrl", this.FileVerifyUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

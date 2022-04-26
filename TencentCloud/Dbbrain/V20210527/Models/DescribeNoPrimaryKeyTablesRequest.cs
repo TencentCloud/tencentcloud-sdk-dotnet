@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询日期，最早为30天前的日期。
+        /// 查询日期，如2021-05-27，最早为30天前的日期。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }

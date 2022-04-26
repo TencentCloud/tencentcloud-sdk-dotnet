@@ -37,10 +37,16 @@ namespace TencentCloud.Smh.V20210712.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 将作为超级管理员账号的手机号码，仅限中国境内手机号，无需国家代码“+86”。
+        /// 将作为超级管理员账号的手机号码
         /// </summary>
         [JsonProperty("PhoneNumber")]
         public string PhoneNumber{ get; set; }
+
+        /// <summary>
+        /// 将作为超级管理员账号的手机号码的国家代码。默认为 +86。
+        /// </summary>
+        [JsonProperty("CountryCode")]
+        public string CountryCode{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Smh.V20210712.Models
             this.SetParamSimple(map, prefix + "Purpose", this.Purpose);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "PhoneNumber", this.PhoneNumber);
+            this.SetParamSimple(map, prefix + "CountryCode", this.CountryCode);
         }
     }
 }

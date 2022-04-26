@@ -43,6 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// 付款方式。如
         /// __EBANK_PAYMENT__:B2B EBank付款
         /// __OPENBANK_PAYMENT__:B2C  openbank付款
+        /// __SAFT_ISV__:支付宝安心发
         /// </summary>
         [JsonProperty("PaymentMethod")]
         public string PaymentMethod{ get; set; }

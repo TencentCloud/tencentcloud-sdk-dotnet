@@ -133,6 +133,46 @@ namespace TencentCloud.Sts.V20180813
         }
 
         /// <summary>
+        /// 申请OIDC角色临时密钥
+        /// </summary>
+        /// <param name="req"><see cref="AssumeRoleWithWebIdentityRequest"/></param>
+        /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
+        public async Task<AssumeRoleWithWebIdentityResponse> AssumeRoleWithWebIdentity(AssumeRoleWithWebIdentityRequest req)
+        {
+             JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssumeRoleWithWebIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请OIDC角色临时密钥
+        /// </summary>
+        /// <param name="req"><see cref="AssumeRoleWithWebIdentityRequest"/></param>
+        /// <returns><see cref="AssumeRoleWithWebIdentityResponse"/></returns>
+        public AssumeRoleWithWebIdentityResponse AssumeRoleWithWebIdentitySync(AssumeRoleWithWebIdentityRequest req)
+        {
+             JsonResponseModel<AssumeRoleWithWebIdentityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssumeRoleWithWebIdentity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssumeRoleWithWebIdentityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取当前调用者的身份信息。
         /// 接口支持主账号，子账号长期密钥以及AssumeRole，GetFederationToken生成的临时凭据的身份获取。
         /// </summary>

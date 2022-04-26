@@ -15,35 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Postgres.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class JobIdInfo : AbstractModel
+    public class DescribeEncryptionKeysResponse : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。
+        /// 实例密钥信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("EncryptionKeys")]
+        public EncryptionKey[] EncryptionKeys{ get; set; }
 
         /// <summary>
-        /// 查重起始时间。 
-        /// StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-        /// Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
-        /// 有关更多信息，请参阅 Unix 时间。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
-
-        /// <summary>
-        /// 查重任务是否已完成。0: 成功 1: 未完成 2: 失败
-        /// </summary>
-        [JsonProperty("JobStatus")]
-        public long? JobStatus{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -51,9 +43,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
+            this.SetParamArrayObj(map, prefix + "EncryptionKeys.", this.EncryptionKeys);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

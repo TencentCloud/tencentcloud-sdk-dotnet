@@ -25,7 +25,7 @@ namespace TencentCloud.Bda.V20200324.Models
     {
         
         /// <summary>
-        /// 人体轨迹图片 Base64 数组。 
+        /// 人体动作轨迹图片 Base64 数组。 
         /// 数组长度最小为1最大为5。 
         /// 单个图片 base64 编码后大小不可超过2M。 
         /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
@@ -34,7 +34,7 @@ namespace TencentCloud.Bda.V20200324.Models
         public string[] Images{ get; set; }
 
         /// <summary>
-        /// 人体轨迹图片 Url 数组。 
+        /// 人体动作轨迹图片 Url 数组。 
         /// 数组长度最小为1最大为5。 
         /// 单个图片 base64 编码后大小不可超过2M。 
         /// Urls、Images必须提供一个，如果都提供，只使用 Urls。 

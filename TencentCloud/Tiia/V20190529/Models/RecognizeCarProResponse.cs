@@ -32,6 +32,7 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 车辆属性识别的结果数组，如果识别到多辆车，则会输出每辆车的top1结果。
+        /// 注意：置信度是指车牌信息置信度。
         /// </summary>
         [JsonProperty("CarTags")]
         public CarTagItem[] CarTags{ get; set; }

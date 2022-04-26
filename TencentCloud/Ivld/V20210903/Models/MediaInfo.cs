@@ -79,6 +79,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
+        /// <summary>
+        /// 媒资导入完成后的回调地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CallbackURL")]
+        public string CallbackURL{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "Label", this.Label);
+            this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
         }
     }
 }

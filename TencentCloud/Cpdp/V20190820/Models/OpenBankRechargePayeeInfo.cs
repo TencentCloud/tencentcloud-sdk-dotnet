@@ -15,21 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeRequest : AbstractModel
+    public class OpenBankRechargePayeeInfo : AbstractModel
     {
         
         /// <summary>
-        /// 待整理的人员库列表。 
-        /// 人员库总人数不可超过200万，人员库个数不可超过10个。
+        /// 收款方标识
+        /// 收款方类型为电子记账本时，上送渠道电子记账本ID
         /// </summary>
-        [JsonProperty("GroupIds")]
-        public string[] GroupIds{ get; set; }
+        [JsonProperty("PayeeId")]
+        public string PayeeId{ get; set; }
+
+        /// <summary>
+        /// 收款方标识类型
+        /// ACCOUNT_BOOK_ID：电子记账本ID
+        /// </summary>
+        [JsonProperty("PayeeIdType")]
+        public string PayeeIdType{ get; set; }
+
+        /// <summary>
+        /// 收款方名称
+        /// </summary>
+        [JsonProperty("PayeeName")]
+        public string PayeeName{ get; set; }
 
 
         /// <summary>
@@ -37,7 +50,9 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
+            this.SetParamSimple(map, prefix + "PayeeIdType", this.PayeeIdType);
+            this.SetParamSimple(map, prefix + "PayeeName", this.PayeeName);
         }
     }
 }

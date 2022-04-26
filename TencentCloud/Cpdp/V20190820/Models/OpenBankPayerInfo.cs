@@ -38,10 +38,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PayerName{ get; set; }
 
         /// <summary>
-        /// 付款方付款账户标识，当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID。
+        /// 付款方付款账户标识。
+        /// 当付款方式为OPENBANK_PAYMENT时，必输表示企业账户ID；当付款方式为SAFT_ISV时，必须上送付款方的渠道电子记账本ID。
         /// </summary>
         [JsonProperty("BindSerialNo")]
         public string BindSerialNo{ get; set; }
+
+        /// <summary>
+        /// 付款账户标识类型
+        /// BANK_ACCOUNT：绑定银行账户
+        /// ACCOUNT_BOOK_ID：电子记账本ID。
+        /// 当付款方式为SAFT_ISV时，必须上送类型为ACCOUNT_BOOK_ID。
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -52,6 +62,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PayerId", this.PayerId);
             this.SetParamSimple(map, prefix + "PayerName", this.PayerName);
             this.SetParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

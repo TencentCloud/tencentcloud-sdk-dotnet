@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCheckSimilarPersonJobIdListRequest : AbstractModel
+    public class ChannelCreateFlowByFilesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 起始序号，默认值为0。
+        /// 合同流程ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为10，最大值为1000。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

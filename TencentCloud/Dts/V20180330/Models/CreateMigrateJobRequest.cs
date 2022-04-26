@@ -88,6 +88,18 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// 源实例类型: ""或者"simple":主从节点，"cluster": 集群节点
+        /// </summary>
+        [JsonProperty("SrcNodeType")]
+        public string SrcNodeType{ get; set; }
+
+        /// <summary>
+        /// 源实例信息，具体内容跟迁移任务类型相关
+        /// </summary>
+        [JsonProperty("SrcInfoMulti")]
+        public SrcInfo[] SrcInfoMulti{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +116,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamObj(map, prefix + "DstInfo.", this.DstInfo);
             this.SetParamSimple(map, prefix + "DatabaseInfo", this.DatabaseInfo);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "SrcNodeType", this.SrcNodeType);
+            this.SetParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
         }
     }
 }

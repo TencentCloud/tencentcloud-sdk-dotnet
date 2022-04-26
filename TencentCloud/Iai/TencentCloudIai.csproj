@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{834A72D7-C6C9-328D-BA87-F356292B5AB0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.505</VersionPrefix>
+    <VersionPrefix>3.0.506</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,8 +51,6 @@
     <Compile Include="V20200303\Models\AnalyzeFaceResponse.cs" />
     <Compile Include="V20200303\Models\AttributeItem.cs" />
     <Compile Include="V20200303\Models\Candidate.cs" />
-    <Compile Include="V20200303\Models\CheckSimilarPersonRequest.cs" />
-    <Compile Include="V20200303\Models\CheckSimilarPersonResponse.cs" />
     <Compile Include="V20200303\Models\CompareFaceRequest.cs" />
     <Compile Include="V20200303\Models\CompareFaceResponse.cs" />
     <Compile Include="V20200303\Models\CompareMaskFaceRequest.cs" />
@@ -82,8 +80,6 @@
     <Compile Include="V20200303\Models\DetectLiveFaceAccurateResponse.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="V20200303\Models\DetectLiveFaceResponse.cs" />
-    <Compile Include="V20200303\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
-    <Compile Include="V20200303\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
     <Compile Include="V20200303\Models\Eye.cs" />
     <Compile Include="V20200303\Models\Eyebrow.cs" />
     <Compile Include="V20200303\Models\FaceAttributesInfo.cs" />
@@ -95,8 +91,6 @@
     <Compile Include="V20200303\Models\FaceQualityInfo.cs" />
     <Compile Include="V20200303\Models\FaceRect.cs" />
     <Compile Include="V20200303\Models\FaceShape.cs" />
-    <Compile Include="V20200303\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
-    <Compile Include="V20200303\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
     <Compile Include="V20200303\Models\GetGroupInfoRequest.cs" />
     <Compile Include="V20200303\Models\GetGroupInfoResponse.cs" />
     <Compile Include="V20200303\Models\GetGroupListRequest.cs" />
@@ -109,8 +103,6 @@
     <Compile Include="V20200303\Models\GetPersonListNumResponse.cs" />
     <Compile Include="V20200303\Models\GetPersonListRequest.cs" />
     <Compile Include="V20200303\Models\GetPersonListResponse.cs" />
-    <Compile Include="V20200303\Models\GetSimilarPersonResultRequest.cs" />
-    <Compile Include="V20200303\Models\GetSimilarPersonResultResponse.cs" />
     <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
     <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
     <Compile Include="V20200303\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
@@ -121,7 +113,6 @@
     <Compile Include="V20200303\Models\Hair.cs" />
     <Compile Include="V20200303\Models\Hat.cs" />
     <Compile Include="V20200303\Models\HeadPose.cs" />
-    <Compile Include="V20200303\Models\JobIdInfo.cs" />
     <Compile Include="V20200303\Models\ModifyGroupRequest.cs" />
     <Compile Include="V20200303\Models\ModifyGroupResponse.cs" />
     <Compile Include="V20200303\Models\ModifyPersonBaseInfoRequest.cs" />
@@ -159,8 +150,6 @@
     <Compile Include="V20180301\Models\AnalyzeFaceResponse.cs" />
     <Compile Include="V20180301\Models\AttributeItem.cs" />
     <Compile Include="V20180301\Models\Candidate.cs" />
-    <Compile Include="V20180301\Models\CheckSimilarPersonRequest.cs" />
-    <Compile Include="V20180301\Models\CheckSimilarPersonResponse.cs" />
     <Compile Include="V20180301\Models\CompareFaceRequest.cs" />
     <Compile Include="V20180301\Models\CompareFaceResponse.cs" />
     <Compile Include="V20180301\Models\CopyPersonRequest.cs" />
@@ -186,8 +175,6 @@
     <Compile Include="V20180301\Models\DetectFaceResponse.cs" />
     <Compile Include="V20180301\Models\DetectLiveFaceRequest.cs" />
     <Compile Include="V20180301\Models\DetectLiveFaceResponse.cs" />
-    <Compile Include="V20180301\Models\EstimateCheckSimilarPersonCostTimeRequest.cs" />
-    <Compile Include="V20180301\Models\EstimateCheckSimilarPersonCostTimeResponse.cs" />
     <Compile Include="V20180301\Models\Eye.cs" />
     <Compile Include="V20180301\Models\Eyebrow.cs" />
     <Compile Include="V20180301\Models\FaceAttributesInfo.cs" />
@@ -199,8 +186,6 @@
     <Compile Include="V20180301\Models\FaceQualityInfo.cs" />
     <Compile Include="V20180301\Models\FaceRect.cs" />
     <Compile Include="V20180301\Models\FaceShape.cs" />
-    <Compile Include="V20180301\Models\GetCheckSimilarPersonJobIdListRequest.cs" />
-    <Compile Include="V20180301\Models\GetCheckSimilarPersonJobIdListResponse.cs" />
     <Compile Include="V20180301\Models\GetGroupInfoRequest.cs" />
     <Compile Include="V20180301\Models\GetGroupInfoResponse.cs" />
     <Compile Include="V20180301\Models\GetGroupListRequest.cs" />
@@ -213,8 +198,6 @@
     <Compile Include="V20180301\Models\GetPersonListNumResponse.cs" />
     <Compile Include="V20180301\Models\GetPersonListRequest.cs" />
     <Compile Include="V20180301\Models\GetPersonListResponse.cs" />
-    <Compile Include="V20180301\Models\GetSimilarPersonResultRequest.cs" />
-    <Compile Include="V20180301\Models\GetSimilarPersonResultResponse.cs" />
     <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionJobListRequest.cs" />
     <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionJobListResponse.cs" />
     <Compile Include="V20180301\Models\GetUpgradeGroupFaceModelVersionResultRequest.cs" />
@@ -225,7 +208,6 @@
     <Compile Include="V20180301\Models\Hair.cs" />
     <Compile Include="V20180301\Models\Hat.cs" />
     <Compile Include="V20180301\Models\HeadPose.cs" />
-    <Compile Include="V20180301\Models\JobIdInfo.cs" />
     <Compile Include="V20180301\Models\ModifyGroupRequest.cs" />
     <Compile Include="V20180301\Models\ModifyGroupResponse.cs" />
     <Compile Include="V20180301\Models\ModifyPersonBaseInfoRequest.cs" />

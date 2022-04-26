@@ -1779,7 +1779,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询数据库代理
+        /// 查询数据库代理（待下线，替换接口QueryCDBProxy）
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
         /// <returns><see cref="DescribeCDBProxyResponse"/></returns>
@@ -1799,7 +1799,7 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 查询数据库代理
+        /// 查询数据库代理（待下线，替换接口QueryCDBProxy）
         /// </summary>
         /// <param name="req"><see cref="DescribeCDBProxyRequest"/></param>
         /// <returns><see cref="DescribeCDBProxyResponse"/></returns>

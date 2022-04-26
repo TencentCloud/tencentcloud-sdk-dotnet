@@ -15,20 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSimilarPersonResultRequest : AbstractModel
+    public class CreateSealByImageRequest : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。
+        /// 渠道应用相关信息
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 印章名称
+        /// </summary>
+        [JsonProperty("SealName")]
+        public string SealName{ get; set; }
+
+        /// <summary>
+        /// 印章图片base64
+        /// </summary>
+        [JsonProperty("SealImage")]
+        public string SealImage{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -36,7 +54,10 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "SealName", this.SealName);
+            this.SetParamSimple(map, prefix + "SealImage", this.SealImage);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

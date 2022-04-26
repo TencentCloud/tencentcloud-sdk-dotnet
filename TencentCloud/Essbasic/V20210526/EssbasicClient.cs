@@ -53,6 +53,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建流程。此接口不可直接使用，需要运营申请
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowByFilesResponse"/></returns>
+        public async Task<ChannelCreateFlowByFilesResponse> ChannelCreateFlowByFiles(ChannelCreateFlowByFilesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateFlowByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建流程。此接口不可直接使用，需要运营申请
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowByFilesResponse"/></returns>
+        public ChannelCreateFlowByFilesResponse ChannelCreateFlowByFilesSync(ChannelCreateFlowByFilesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateFlowByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateConsoleLoginUrl）用于创建电子签控制台登录链接。若企业未激活，调用同步企业信息、同步经办人信息
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleLoginUrlRequest"/></param>
@@ -124,6 +164,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "CreateFlowsByTemplates");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowsByTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道通过图片为子客代创建印章，图片最大5m；此接口不可直接使用，需要运营申请
+        /// </summary>
+        /// <param name="req"><see cref="CreateSealByImageRequest"/></param>
+        /// <returns><see cref="CreateSealByImageResponse"/></returns>
+        public async Task<CreateSealByImageResponse> CreateSealByImage(CreateSealByImageRequest req)
+        {
+             JsonResponseModel<CreateSealByImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSealByImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSealByImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道通过图片为子客代创建印章，图片最大5m；此接口不可直接使用，需要运营申请
+        /// </summary>
+        /// <param name="req"><see cref="CreateSealByImageRequest"/></param>
+        /// <returns><see cref="CreateSealByImageResponse"/></returns>
+        public CreateSealByImageResponse CreateSealByImageSync(CreateSealByImageRequest req)
+        {
+             JsonResponseModel<CreateSealByImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSealByImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSealByImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -26,6 +26,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         
         /// <summary>
         /// 任务信息，不包含任务结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskInfo")]
         public TaskInfo TaskInfo{ get; set; }

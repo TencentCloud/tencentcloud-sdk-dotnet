@@ -15,35 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class JobIdInfo : AbstractModel
+    public class QueryExternalAccountBookResult : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。
+        /// 渠道记账本ID
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("ChannelAccountBookId")]
+        public string ChannelAccountBookId{ get; set; }
 
         /// <summary>
-        /// 查重起始时间。 
-        /// StartTime的值是自 Unix 纪元时间到Group创建时间的毫秒数。 
-        /// Unix 纪元时间是 1970 年 1 月 1 日星期四，协调世界时 (UTC) 00:00:00。 
-        /// 有关更多信息，请参阅 Unix 时间。
+        /// 可用余额。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public ulong? StartTime{ get; set; }
+        [JsonProperty("AvailableBalance")]
+        public string AvailableBalance{ get; set; }
 
         /// <summary>
-        /// 查重任务是否已完成。0: 成功 1: 未完成 2: 失败
+        /// 电子记账本对外收款的账户信息。为JSON格式字符串（成功状态下返回）。详情见附录-复杂类型。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("JobStatus")]
-        public long? JobStatus{ get; set; }
+        [JsonProperty("CollectMoneyAccountInfo")]
+        public string CollectMoneyAccountInfo{ get; set; }
 
 
         /// <summary>
@@ -51,9 +50,9 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "JobStatus", this.JobStatus);
+            this.SetParamSimple(map, prefix + "ChannelAccountBookId", this.ChannelAccountBookId);
+            this.SetParamSimple(map, prefix + "AvailableBalance", this.AvailableBalance);
+            this.SetParamSimple(map, prefix + "CollectMoneyAccountInfo", this.CollectMoneyAccountInfo);
         }
     }
 }

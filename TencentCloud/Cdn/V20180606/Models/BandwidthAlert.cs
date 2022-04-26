@@ -87,6 +87,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
+        /// <summary>
+        /// 累计用量配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StatisticItems")]
+        public StatisticItem[] StatisticItems{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "AlertPercentage", this.AlertPercentage);
             this.SetParamSimple(map, prefix + "LastTriggerTimeOverseas", this.LastTriggerTimeOverseas);
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
+            this.SetParamArrayObj(map, prefix + "StatisticItems.", this.StatisticItems);
         }
     }
 }

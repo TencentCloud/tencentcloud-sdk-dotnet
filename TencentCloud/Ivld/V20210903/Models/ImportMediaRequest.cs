@@ -43,7 +43,8 @@ namespace TencentCloud.Ivld.V20210903.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)
+        /// 当非本人外部视频地址导入时，该字段为转存的cos桶地址且不可为空; 示例：https://${Bucket}-${AppId}.cos.${Region}.myqcloud.com/${PathPrefix}/  (注意，cos路径需要以/分隔符结尾)。
+        /// 推荐采用本主帐号COS桶，如果使用其他帐号COS桶，请确保COS桶可写，否则可导致分析失败
         /// </summary>
         [JsonProperty("WriteBackCosPath")]
         public string WriteBackCosPath{ get; set; }

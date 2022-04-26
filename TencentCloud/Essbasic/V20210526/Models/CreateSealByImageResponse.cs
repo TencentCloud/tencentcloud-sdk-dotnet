@@ -15,22 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeRequest : AbstractModel
+    public class CreateSealByImageResponse : AbstractModel
     {
         
         /// <summary>
-        /// 待整理的人员库列表。 
-        /// 人员库总人数不可超过200万，人员库个数不可超过10个。
-        /// 数组元素取值为创建人员库接口中的GroupId
+        /// 印章id
         /// </summary>
-        [JsonProperty("GroupIds")]
-        public string[] GroupIds{ get; set; }
+        [JsonProperty("SealId")]
+        public string SealId{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -38,7 +42,8 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
+            this.SetParamSimple(map, prefix + "SealId", this.SealId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

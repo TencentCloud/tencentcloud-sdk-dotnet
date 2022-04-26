@@ -1683,6 +1683,46 @@ namespace TencentCloud.As.V20180419
         }
 
         /// <summary>
+        /// 此接口用于修改生命周期挂钩。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecycleHookRequest"/></param>
+        /// <returns><see cref="ModifyLifecycleHookResponse"/></returns>
+        public async Task<ModifyLifecycleHookResponse> ModifyLifecycleHook(ModifyLifecycleHookRequest req)
+        {
+             JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifecycleHookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口用于修改生命周期挂钩。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLifecycleHookRequest"/></param>
+        /// <returns><see cref="ModifyLifecycleHookResponse"/></returns>
+        public ModifyLifecycleHookResponse ModifyLifecycleHookSync(ModifyLifecycleHookRequest req)
+        {
+             JsonResponseModel<ModifyLifecycleHookResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLifecycleHook");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLifecycleHookResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyLoadBalancerTargetAttributes）用于修改伸缩组内负载均衡器的目标规则属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyLoadBalancerTargetAttributesRequest"/></param>

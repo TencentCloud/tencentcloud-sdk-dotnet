@@ -139,66 +139,6 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// 对指定的人员库进行人员查重，给出疑似相同人的信息。
-        /// 
-        /// 可以使用本接口对已有的单个人员库进行人员查重，避免同一人在单个人员库中拥有多个身份；也可以使用本接口对已有的多个人员库进行人员查重，查询同一人是否同时存在多个人员库中。
-        /// 
-        /// 不支持跨算法模型版本查重，且目前仅支持算法模型为3.0的人员库使用查重功能。
-        /// 
-        /// >     
-        /// - 若对完全相同的指定人员库进行查重操作，需等待上次操作完成才可。即，若两次请求输入的 GroupIds 相同，第一次请求若未完成，第二次请求将返回失败。
-        /// 
-        /// >     
-        /// - 查重的人员库状态为腾讯云开始进行查重任务的那一刻，即您可以理解为当您发起查重请求后，若您的查重任务需要排队，在排队期间您对人员库的增删操作均会会影响查重的结果。腾讯云将以开始进行查重任务的那一刻人员库的状态进行查重。查重任务开始后，您对人员库的任何操作均不影响查重任务的进行。但建议查重任务开始后，请不要对人员库中人员和人脸进行增删操作。
-        /// </summary>
-        /// <param name="req"><see cref="CheckSimilarPersonRequest"/></param>
-        /// <returns><see cref="CheckSimilarPersonResponse"/></returns>
-        public async Task<CheckSimilarPersonResponse> CheckSimilarPerson(CheckSimilarPersonRequest req)
-        {
-             JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CheckSimilarPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSimilarPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 对指定的人员库进行人员查重，给出疑似相同人的信息。
-        /// 
-        /// 可以使用本接口对已有的单个人员库进行人员查重，避免同一人在单个人员库中拥有多个身份；也可以使用本接口对已有的多个人员库进行人员查重，查询同一人是否同时存在多个人员库中。
-        /// 
-        /// 不支持跨算法模型版本查重，且目前仅支持算法模型为3.0的人员库使用查重功能。
-        /// 
-        /// >     
-        /// - 若对完全相同的指定人员库进行查重操作，需等待上次操作完成才可。即，若两次请求输入的 GroupIds 相同，第一次请求若未完成，第二次请求将返回失败。
-        /// 
-        /// >     
-        /// - 查重的人员库状态为腾讯云开始进行查重任务的那一刻，即您可以理解为当您发起查重请求后，若您的查重任务需要排队，在排队期间您对人员库的增删操作均会会影响查重的结果。腾讯云将以开始进行查重任务的那一刻人员库的状态进行查重。查重任务开始后，您对人员库的任何操作均不影响查重任务的进行。但建议查重任务开始后，请不要对人员库中人员和人脸进行增删操作。
-        /// </summary>
-        /// <param name="req"><see cref="CheckSimilarPersonRequest"/></param>
-        /// <returns><see cref="CheckSimilarPersonResponse"/></returns>
-        public CheckSimilarPersonResponse CheckSimilarPersonSync(CheckSimilarPersonRequest req)
-        {
-             JsonResponseModel<CheckSimilarPersonResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CheckSimilarPerson");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSimilarPersonResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
         /// 若您需要判断 “此人是否是某人”，即验证某张图片中的人是否是已知身份的某人，如常见的人脸登录场景，建议使用[人脸验证](https://cloud.tencent.com/document/product/867/44983)或[人员验证](https://cloud.tencent.com/document/product/867/44982)接口。
@@ -251,9 +191,9 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
-        /// 戴口罩人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+        /// 防疫场景人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
         /// 
-        /// 如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
+        /// 如图片人脸不存在防疫场景下戴口罩的情况，建议使用人脸比对服务。
         /// </summary>
         /// <param name="req"><see cref="CompareMaskFaceRequest"/></param>
         /// <returns><see cref="CompareMaskFaceResponse"/></returns>
@@ -275,9 +215,9 @@ namespace TencentCloud.Iai.V20200303
         /// <summary>
         /// 对两张图片中的人脸进行相似度比对，返回人脸相似度分数。
         /// 
-        /// 戴口罩人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
+        /// 防疫场景人脸比对接口可在人脸戴口罩情况下使用，口罩遮挡程度最高可以遮挡鼻尖。
         /// 
-        /// 如图片人脸不存在戴口罩情况，建议使用人脸比对服务。
+        /// 如图片人脸不存在防疫场景下戴口罩的情况，建议使用人脸比对服务。
         /// </summary>
         /// <param name="req"><see cref="CompareMaskFaceRequest"/></param>
         /// <returns><see cref="CompareMaskFaceResponse"/></returns>
@@ -899,98 +839,6 @@ namespace TencentCloud.Iai.V20200303
         }
 
         /// <summary>
-        /// 获取若要开始一个人员查重任务，这个任务结束的预估时间。
-        /// 
-        /// 若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
-        /// 
-        /// 若预估时间超过5小时，则无法使用人员查重功能。
-        /// </summary>
-        /// <param name="req"><see cref="EstimateCheckSimilarPersonCostTimeRequest"/></param>
-        /// <returns><see cref="EstimateCheckSimilarPersonCostTimeResponse"/></returns>
-        public async Task<EstimateCheckSimilarPersonCostTimeResponse> EstimateCheckSimilarPersonCostTime(EstimateCheckSimilarPersonCostTimeRequest req)
-        {
-             JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EstimateCheckSimilarPersonCostTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取若要开始一个人员查重任务，这个任务结束的预估时间。
-        /// 
-        /// 若EndTimestamp符合您预期，请您尽快发起人员查重请求，否则导致可能需要更多处理时间。
-        /// 
-        /// 若预估时间超过5小时，则无法使用人员查重功能。
-        /// </summary>
-        /// <param name="req"><see cref="EstimateCheckSimilarPersonCostTimeRequest"/></param>
-        /// <returns><see cref="EstimateCheckSimilarPersonCostTimeResponse"/></returns>
-        public EstimateCheckSimilarPersonCostTimeResponse EstimateCheckSimilarPersonCostTimeSync(EstimateCheckSimilarPersonCostTimeRequest req)
-        {
-             JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EstimateCheckSimilarPersonCostTime");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EstimateCheckSimilarPersonCostTimeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
-        /// 
-        /// 只保留最近1年的数据。
-        /// </summary>
-        /// <param name="req"><see cref="GetCheckSimilarPersonJobIdListRequest"/></param>
-        /// <returns><see cref="GetCheckSimilarPersonJobIdListResponse"/></returns>
-        public async Task<GetCheckSimilarPersonJobIdListResponse> GetCheckSimilarPersonJobIdList(GetCheckSimilarPersonJobIdListRequest req)
-        {
-             JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetCheckSimilarPersonJobIdList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取人员查重任务列表，按任务创建时间逆序（最新的在前面）。
-        /// 
-        /// 只保留最近1年的数据。
-        /// </summary>
-        /// <param name="req"><see cref="GetCheckSimilarPersonJobIdListRequest"/></param>
-        /// <returns><see cref="GetCheckSimilarPersonJobIdListResponse"/></returns>
-        public GetCheckSimilarPersonJobIdListResponse GetCheckSimilarPersonJobIdListSync(GetCheckSimilarPersonJobIdListRequest req)
-        {
-             JsonResponseModel<GetCheckSimilarPersonJobIdListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetCheckSimilarPersonJobIdList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCheckSimilarPersonJobIdListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取人员库信息。
         /// </summary>
         /// <param name="req"><see cref="GetGroupInfoRequest"/></param>
@@ -1222,46 +1070,6 @@ namespace TencentCloud.Iai.V20200303
              {
                  var strResp = this.InternalRequestSync(req, "GetPersonListNum");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPersonListNumResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取人员查重接口（CheckSimilarPerson）结果。
-        /// </summary>
-        /// <param name="req"><see cref="GetSimilarPersonResultRequest"/></param>
-        /// <returns><see cref="GetSimilarPersonResultResponse"/></returns>
-        public async Task<GetSimilarPersonResultResponse> GetSimilarPersonResult(GetSimilarPersonResultRequest req)
-        {
-             JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetSimilarPersonResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSimilarPersonResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取人员查重接口（CheckSimilarPerson）结果。
-        /// </summary>
-        /// <param name="req"><see cref="GetSimilarPersonResultRequest"/></param>
-        /// <returns><see cref="GetSimilarPersonResultResponse"/></returns>
-        public GetSimilarPersonResultResponse GetSimilarPersonResultSync(GetSimilarPersonResultRequest req)
-        {
-             JsonResponseModel<GetSimilarPersonResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetSimilarPersonResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetSimilarPersonResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

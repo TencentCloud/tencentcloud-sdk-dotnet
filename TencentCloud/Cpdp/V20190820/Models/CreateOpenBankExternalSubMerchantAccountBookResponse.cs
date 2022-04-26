@@ -15,20 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CheckSimilarPersonResponse : AbstractModel
+    public class CreateOpenBankExternalSubMerchantAccountBookResponse : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务ID，用于查询、获取查重的进度和结果。
+        /// 错误码。
+        /// __SUCCESS__: 成功
+        /// __其他__: 见附录-错误码表
         /// </summary>
-        [JsonProperty("JobId")]
-        public string JobId{ get; set; }
+        [JsonProperty("ErrCode")]
+        public string ErrCode{ get; set; }
+
+        /// <summary>
+        /// 错误消息。
+        /// </summary>
+        [JsonProperty("ErrMessage")]
+        public string ErrMessage{ get; set; }
+
+        /// <summary>
+        /// 返回结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Result")]
+        public CreateExternalAccountBookResult Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +57,9 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

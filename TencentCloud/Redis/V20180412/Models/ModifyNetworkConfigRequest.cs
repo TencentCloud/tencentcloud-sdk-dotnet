@@ -55,7 +55,7 @@ namespace TencentCloud.Redis.V20180412.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// vip保留时间，单位：天
+        /// vip保留时间，单位：天，注：需要最新版SDK支持
         /// </summary>
         [JsonProperty("Recycle")]
         public long? Recycle{ get; set; }

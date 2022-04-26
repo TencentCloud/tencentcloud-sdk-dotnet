@@ -31,6 +31,15 @@ namespace TencentCloud.As.V20180419.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
+        /// 伸缩组警告级别。取值范围：<br>
+        /// <li>NORMAL：正常<br>
+        /// <li>WARNING：警告级别<br>
+        /// <li>CRITICAL：严重级别<br>
+        /// </summary>
+        [JsonProperty("Level")]
+        public string Level{ get; set; }
+
+        /// <summary>
         /// 伸缩组配置建议集合。
         /// </summary>
         [JsonProperty("Advices")]
@@ -43,6 +52,7 @@ namespace TencentCloud.As.V20180419.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamArrayObj(map, prefix + "Advices.", this.Advices);
         }
     }

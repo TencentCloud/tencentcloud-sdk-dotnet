@@ -31,13 +31,13 @@ namespace TencentCloud.Bda.V20200324.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 人体轨迹信息。
+        /// 人体动作轨迹信息。
         /// </summary>
         [JsonProperty("Trace")]
         public Trace Trace{ get; set; }
 
         /// <summary>
-        /// 单张被识别的人体轨迹返回的最相似人员数量。
+        /// 单张被识别的人体动作轨迹返回的最相似人员数量。
         /// 默认值为5，最大值为100。
         ///  例，设MaxPersonNum为8，则返回Top8相似的人员信息。 值越大，需要处理的时间越长。建议不要超过10。
         /// </summary>

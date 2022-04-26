@@ -15,27 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Sts.V20180813.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetSimilarPersonResultResponse : AbstractModel
+    public class AssumeRoleWithWebIdentityResponse : AbstractModel
     {
         
         /// <summary>
-        /// 查重任务完成进度。取值[0.0，100.0]。当且仅当值为100时，SimilarPersons才有意义。
+        /// 临时秘钥过期时间(时间戳)
         /// </summary>
-        [JsonProperty("Progress")]
-        public float? Progress{ get; set; }
+        [JsonProperty("ExpiredTime")]
+        public ulong? ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 疑似同一人的人员信息文件临时下载链接， 有效时间为5分钟，结果文件实际保存90天。
-        /// 文件内容由 SimilarPerson 的数组组成。
+        /// 临时秘钥过期时间
         /// </summary>
-        [JsonProperty("SimilarPersonsUrl")]
-        public string SimilarPersonsUrl{ get; set; }
+        [JsonProperty("Expiration")]
+        public string Expiration{ get; set; }
+
+        /// <summary>
+        /// 临时秘钥
+        /// </summary>
+        [JsonProperty("Credentials")]
+        public Credentials Credentials{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -49,8 +54,9 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Progress", this.Progress);
-            this.SetParamSimple(map, prefix + "SimilarPersonsUrl", this.SimilarPersonsUrl);
+            this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
+            this.SetParamSimple(map, prefix + "Expiration", this.Expiration);
+            this.SetParamObj(map, prefix + "Credentials.", this.Credentials);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

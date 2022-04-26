@@ -57,6 +57,20 @@ namespace TencentCloud.Tse.V20201207.Models
         public string ConsoleIntranetAddress{ get; set; }
 
         /// <summary>
+        /// 客户端公网带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InternetBandWidth")]
+        public long? InternetBandWidth{ get; set; }
+
+        /// <summary>
+        /// 控制台公网带宽
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConsoleInternetBandWidth")]
+        public long? ConsoleInternetBandWidth{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +87,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamArrayObj(map, prefix + "EnvAddressInfos.", this.EnvAddressInfos);
             this.SetParamSimple(map, prefix + "ConsoleInternetAddress", this.ConsoleInternetAddress);
             this.SetParamSimple(map, prefix + "ConsoleIntranetAddress", this.ConsoleIntranetAddress);
+            this.SetParamSimple(map, prefix + "InternetBandWidth", this.InternetBandWidth);
+            this.SetParamSimple(map, prefix + "ConsoleInternetBandWidth", this.ConsoleInternetBandWidth);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

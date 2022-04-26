@@ -32,7 +32,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 收款方名称。当渠道为TENPAY，付款方式为EBANK_PAYMENT时，上送收款方入驻云企付的商户名称；
-        /// 渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称
+        /// 渠道为TENPAY，付款方式为OPENBANK_PAYMENT时必选，上送收款方账户名称；渠道为ALIPAY，付款方式为SAFT_ISV时，收款账户标识类型为ALIPAY_LOGON_ID时必传，上送收款方真实姓名。
         /// </summary>
         [JsonProperty("PayeeName")]
         public string PayeeName{ get; set; }
@@ -57,10 +57,21 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 收款方绑卡序列号。
-        /// 当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号。
+        /// 当渠道为TENPAY，付款方式为EBANK_PAYMENT时，必填，上送收款方入驻云企付平台时，下发的绑卡序列号；当渠道为ALIPAY，付款方式为SAFT_ISV时，必填，根据收款账户标识类型上送。
         /// </summary>
         [JsonProperty("BindSerialNo")]
         public string BindSerialNo{ get; set; }
+
+        /// <summary>
+        /// 收款账户标识类型
+        /// BANK_ACCOUNT：绑定银行账户
+        /// ACCOUNT_BOOK_ID：电子记账本ID
+        /// ALIPAY_USER_ID：支付宝的会员ID
+        /// ALIPAY_LOGON_ID：支付宝登录号。
+        /// 付款方式为SAFT_ISV时，必填。
+        /// </summary>
+        [JsonProperty("AccountType")]
+        public string AccountType{ get; set; }
 
 
         /// <summary>
@@ -74,6 +85,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "BankBranchName", this.BankBranchName);
             this.SetParamSimple(map, prefix + "BankBranchId", this.BankBranchId);
             this.SetParamSimple(map, prefix + "BindSerialNo", this.BindSerialNo);
+            this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
         }
     }
 }

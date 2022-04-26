@@ -1333,7 +1333,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 查询SQL模版。
+        /// 查询SQL模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlTemplateRequest"/></param>
         /// <returns><see cref="DescribeSqlTemplateResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
-        /// 查询SQL模版。
+        /// 查询SQL模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeSqlTemplateRequest"/></param>
         /// <returns><see cref="DescribeSqlTemplateResponse"/></returns>

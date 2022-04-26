@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetCheckSimilarPersonJobIdListRequest : AbstractModel
+    public class UploadFilesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 起始序号，默认值为0。
+        /// 文件id数组
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("FileIds")]
+        public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为10，最大值为1000。
+        /// 上传成功文件数量
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -31,56 +31,56 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasAppId{ get; set; }
 
         /// <summary>
-        /// 用户Id。
+        /// 用户ID
         /// 长度不小于5位，仅支持字母和数字的组合，长度限制以具体接入渠道为准
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 开发者主订单号。
+        /// 开发者主订单号
         /// 支付订单号，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合，长度供参考，部分渠道存在长度更短的情况接入时请联系开发咨询
         /// </summary>
         [JsonProperty("OutTradeNo")]
         public string OutTradeNo{ get; set; }
 
         /// <summary>
-        /// 货币类型。
+        /// 货币类型
         /// ISO货币代码，CNY
         /// </summary>
         [JsonProperty("CurrencyType")]
         public string CurrencyType{ get; set; }
 
         /// <summary>
-        /// 商品Id。
+        /// 商品ID
         /// 业务自定义的商品id，仅支持数字、字母、下划线（_）、横杠字符（-）、点（.）的组合。
         /// </summary>
         [JsonProperty("ProductId")]
         public string ProductId{ get; set; }
 
         /// <summary>
-        /// 商品名称。
+        /// 商品名称
         /// 业务自定义的商品名称，无需URL编码，长度限制以具体所接入渠道为准。
         /// </summary>
         [JsonProperty("ProductName")]
         public string ProductName{ get; set; }
 
         /// <summary>
-        /// 商品详情。
+        /// 商品详情
         /// 业务自定义的商品详情，无需URL编码，长度限制以具体所接入渠道为准。
         /// </summary>
         [JsonProperty("ProductDetail")]
         public string ProductDetail{ get; set; }
 
         /// <summary>
-        /// 原始金额。
+        /// 原始金额
         /// 单位：分，需要注意的是，OriginalAmt>=TotalAmt
         /// </summary>
         [JsonProperty("OriginalAmt")]
         public long? OriginalAmt{ get; set; }
 
         /// <summary>
-        /// 支付金额。
+        /// 支付金额
         /// 单位：分，需要注意的是，TotalAmt=TotalPlatformIncome+TotalMchIncome。
         /// </summary>
         [JsonProperty("TotalAmt")]
@@ -96,14 +96,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string MidasEnvironment{ get; set; }
 
         /// <summary>
-        /// 支付SubAppId。
+        /// 支付SubAppId
         /// 米大师计费SubAppId，代表子商户。指定使用该商户的商户号下单时必传。
         /// </summary>
         [JsonProperty("SubAppId")]
         public string SubAppId{ get; set; }
 
         /// <summary>
-        /// 顶层支付渠道。
+        /// 顶层支付渠道
         /// 银行收单:
         /// openbank_ccb: 建设银行
         /// openbank_icbc: 工商银行
@@ -116,7 +116,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string RealChannel{ get; set; }
 
         /// <summary>
-        /// 支付渠道。
+        /// 支付渠道
         /// wechat：微信支付
         /// wechat_ecommerce: 微信电商收付通
         /// open_alipay: 支付宝
@@ -132,83 +132,83 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 透传字段。
+        /// 透传字段
         /// 支付成功回调透传给应用，用于开发者透传自定义内容。
         /// </summary>
         [JsonProperty("Metadata")]
         public string Metadata{ get; set; }
 
         /// <summary>
-        /// 数量。
+        /// 数量
         /// 购买数量,不传默认为1。
         /// </summary>
         [JsonProperty("Quantity")]
         public long? Quantity{ get; set; }
 
         /// <summary>
-        /// Web端回调地址。
+        /// Web端回调地址
         /// Web端网页回调地址，仅当Web端SDK使用页面跳转方式时有效。
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 支付取消地址。
+        /// 支付取消地址
         /// </summary>
         [JsonProperty("CancelUrl")]
         public string CancelUrl{ get; set; }
 
         /// <summary>
-        /// 微信AppId。
+        /// 微信AppId
         /// wechat渠道或wchat_ecommerce渠道可以指定下单时的wxappid。
         /// </summary>
         [JsonProperty("WxAppId")]
         public string WxAppId{ get; set; }
 
         /// <summary>
-        /// 微信SubAppId。
+        /// 微信SubAppId
         /// wechat渠道可以指定下单时的sub_appid。
         /// </summary>
         [JsonProperty("WxSubAppId")]
         public string WxSubAppId{ get; set; }
 
         /// <summary>
-        /// 微信公众号/小程序OpenId。
+        /// 微信公众号/小程序OpenId
         /// 微信公众号/小程序支付时为必选，需要传微信下的openid。
         /// </summary>
         [JsonProperty("WxOpenId")]
         public string WxOpenId{ get; set; }
 
         /// <summary>
-        /// 微信公众号/小程序SubOpenId。
+        /// 微信公众号/小程序SubOpenId
         /// 在服务商模式下，微信公众号/小程序支付时wx_sub_openid和wx_openid二选一。
         /// </summary>
         [JsonProperty("WxSubOpenId")]
         public string WxSubOpenId{ get; set; }
 
         /// <summary>
-        /// 平台应收金额。
+        /// 平台应收金额
         /// 单位：分，需要注意的是，TotalAmt=TotalPlatformIncome+TotalMchIncome
         /// </summary>
         [JsonProperty("TotalPlatformIncome")]
         public long? TotalPlatformIncome{ get; set; }
 
         /// <summary>
-        /// 结算应收金额。
+        /// 结算应收金额
         /// 单位：分，需要注意的是，TotalAmt=TotalPlatformIncome+TotalMchIncome
         /// </summary>
         [JsonProperty("TotalMchIncome")]
         public long? TotalMchIncome{ get; set; }
 
         /// <summary>
-        /// 子订单列表。
+        /// 子订单列表
         /// 格式：子订单号、子应用Id、金额。压缩后最长不可超过32K字节(去除空格，换行，制表符等无意义字符)。
         /// </summary>
         [JsonProperty("SubOrderList")]
         public CloudSubOrder[] SubOrderList{ get; set; }
 
         /// <summary>
-        /// 结算信息。
+        /// 结算信息
         /// 例如是否需要分账、是否需要支付确认等，
         /// 注意：如果子单列表中传入了SettleInfo，在主单中不可再传入SettleInfo字段。
         /// </summary>
@@ -216,7 +216,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public CloudSettleInfo SettleInfo{ get; set; }
 
         /// <summary>
-        /// 附加项信息列表。
+        /// 附加项信息列表
         /// 例如溢价信息、抵扣信息、积分信息、补贴信息
         /// 通过该字段可以实现渠道方的优惠抵扣补贴等营销功能
         /// 注意：当传SubOrderList时，请在子单信息中传附加项信息，不要在主单中传该字段。
@@ -225,14 +225,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public CloudAttachmentInfo[] AttachmentInfoList{ get; set; }
 
         /// <summary>
-        /// 支付通知地址。
+        /// 支付通知地址
         /// 调用方可通过该字段传入自定义支付通知地址。
         /// </summary>
         [JsonProperty("PaymentNotifyUrl")]
         public string PaymentNotifyUrl{ get; set; }
 
         /// <summary>
-        /// 支付场景。
+        /// 支付场景
         /// 需要结合 RealChannel和Channel字段使用可选值:
         /// wechat-app 微信APP支付方式
         /// wechat-mini 微信小程序支付，示例：当 RealChannel=wechat Channel=wechat PayScene=wechat-mini时，内部会直接以小程序方式调用微信统一下单接口。
@@ -241,21 +241,21 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string PayScene{ get; set; }
 
         /// <summary>
-        /// 语言代码。
-        /// (BCP-47格式)，取值请参考https://mpay.pages.woa.com/zh/api/objectdefinitions/objects/#mpayapisordersapplicationcontextapplicationcontext
+        /// 语言代码
+        /// 取值请参考[ISO 639-1代码表](https://zh.wikipedia.org/zh-cn/ISO_639-1%E4%BB%A3%E7%A0%81%E8%A1%A8)
         /// </summary>
         [JsonProperty("LocaleCode")]
         public string LocaleCode{ get; set; }
 
         /// <summary>
-        /// 地区代码。
-        /// 取值请参考https://mpay.pages.woa.com/zh/api/objectdefinitions/objects/#mpayapisordersapplicationcontextapplicationcontext
+        /// 地区代码
+        /// 取值请参考[ISO 3166-1二位字母代码表](https://zh.wikipedia.org/zh-cn/ISO_3166-1%E4%BA%8C%E4%BD%8D%E5%AD%97%E6%AF%8D%E4%BB%A3%E7%A0%81#%E6%AD%A3%E5%BC%8F%E5%88%86%E9%85%8D%E4%BB%A3%E7%A0%81)
         /// </summary>
         [JsonProperty("RegionCode")]
         public string RegionCode{ get; set; }
 
         /// <summary>
-        /// 用户IP。
+        /// 用户IP
         /// 请求用户的IP地址，特定的渠道或特定的支付方式，此字段为必填
         /// wechat_ecommerce渠道 - h5支付方式，此字段必填。
         /// </summary>
@@ -263,20 +263,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string UserClientIp{ get; set; }
 
         /// <summary>
-        /// 渠道订单号生成模式。
+        /// 渠道订单号生成模式
         /// 枚举值。决定请求渠道方时的订单号的生成模式，详情请联系米大师沟通。不指定时默认为由米大师自行生成。
         /// </summary>
         [JsonProperty("ChannelOrderIdMode")]
         public string ChannelOrderIdMode{ get; set; }
 
         /// <summary>
-        /// 全局支付时间信息。
+        /// 全局支付时间信息
         /// </summary>
         [JsonProperty("GlobalPayTimeInfo")]
         public CloudGlobalPayTimeInfo GlobalPayTimeInfo{ get; set; }
 
         /// <summary>
-        /// 渠道应用Id取用方式。
+        /// 渠道应用ID取用方式
         /// USE_APPID 使用渠道应用Id;
         /// USE_SUB_APPID 使用子渠道应用Id;
         /// USE_APPID_AND_SUB_APPID 既使用渠道应用Id也使用子渠道应用ID。
@@ -285,7 +285,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ChannelAppIdPolicy{ get; set; }
 
         /// <summary>
-        /// 门店信息。
+        /// 门店信息
         /// 特定的渠道或特定的支付方式，此字段为必填
         /// wechat_ecommerce渠道 - h5支付方式，此字段必填
         /// </summary>
@@ -293,7 +293,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public CloudStoreInfo StoreInfo{ get; set; }
 
         /// <summary>
-        /// 客户端信息。
+        /// 客户端信息
         /// 特定的渠道或特定的支付方式，此字段为必填
         /// wechat_ecommerce渠道 - h5支付方式，此字段必填
         /// </summary>
@@ -301,14 +301,14 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public CloudClientInfo ClientInfo{ get; set; }
 
         /// <summary>
-        /// 渠道扩展促销列表。
+        /// 渠道扩展促销列表
         /// 可将各个渠道的促销信息放于该列表。
         /// </summary>
         [JsonProperty("ExternalPromptGroupList")]
         public CloudExternalPromptGroup[] ExternalPromptGroupList{ get; set; }
 
         /// <summary>
-        /// 收单模式。
+        /// 收单模式
         /// ORDER_RECEIVE_MODE_COMMON - 普通支付
         /// ORDER_RECEIVE_MODE_COMBINE - 合单支付
         /// ORDER_RECEIVE_MODE_V_COMBINE - 虚拟合单支付

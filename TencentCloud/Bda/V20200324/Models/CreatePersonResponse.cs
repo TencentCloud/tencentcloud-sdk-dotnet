@@ -25,7 +25,7 @@ namespace TencentCloud.Bda.V20200324.Models
     {
         
         /// <summary>
-        /// 人员轨迹唯一标识。
+        /// 人员动作轨迹唯一标识。
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
@@ -37,16 +37,16 @@ namespace TencentCloud.Bda.V20200324.Models
         public string BodyModelVersion{ get; set; }
 
         /// <summary>
-        /// 输入的人体轨迹图片中的合法性校验结果。
+        /// 输入的人体动作轨迹图片中的合法性校验结果。
         /// 只有为0时结果才有意义。
-        /// -1001: 输入图片不合法。-1002: 输入图片不能构成轨迹。
+        /// -1001: 输入图片不合法。-1002: 输入图片不能构成动作轨迹。
         /// </summary>
         [JsonProperty("InputRetCode")]
         public long? InputRetCode{ get; set; }
 
         /// <summary>
-        /// 输入的人体轨迹图片中的合法性校验结果详情。 
-        /// -1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:轨迹中有非同人图片。-2024: 轨迹提取失败。-2025: 人体检测失败。
+        /// 输入的人体动作轨迹图片中的合法性校验结果详情。 
+        /// -1101:图片无效，-1102:url不合法。-1103:图片过大。-1104:图片下载失败。-1105:图片解码失败。-1109:图片分辨率过高。-2023:动作轨迹中有非同人图片。-2024: 动作轨迹提取失败。-2025: 人体检测失败。
         /// RetCode 的顺序和入参中Images 或 Urls 的顺序一致。
         /// </summary>
         [JsonProperty("InputRetCodeDetails")]

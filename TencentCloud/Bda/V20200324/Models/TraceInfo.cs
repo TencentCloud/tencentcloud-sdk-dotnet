@@ -25,13 +25,13 @@ namespace TencentCloud.Bda.V20200324.Models
     {
         
         /// <summary>
-        /// 人体轨迹ID。
+        /// 人体动作轨迹ID。
         /// </summary>
         [JsonProperty("TraceId")]
         public string TraceId{ get; set; }
 
         /// <summary>
-        /// 包含的人体轨迹图片Id列表。
+        /// 包含的人体动作轨迹图片Id列表。
         /// </summary>
         [JsonProperty("BodyIds")]
         public string[] BodyIds{ get; set; }

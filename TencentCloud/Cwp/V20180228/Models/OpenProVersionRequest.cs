@@ -25,13 +25,13 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 云服务器类型。(当前参数已作废,可以留空值 )
+        /// 云服务器类型（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
         /// </summary>
         [JsonProperty("MachineType")]
         public string MachineType{ get; set; }
 
         /// <summary>
-        /// 机器所属地域。(当前参数已作废,可以留空值 )
+        /// 机器所属地域（当前字段已作废，暂时填string类型空字符串代替，例如：""，英文双引号）
         /// </summary>
         [JsonProperty("MachineRegion")]
         public string MachineRegion{ get; set; }

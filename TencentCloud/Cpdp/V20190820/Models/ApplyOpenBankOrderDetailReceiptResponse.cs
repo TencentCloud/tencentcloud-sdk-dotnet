@@ -15,20 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20180301.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeResponse : AbstractModel
+    public class ApplyOpenBankOrderDetailReceiptResponse : AbstractModel
     {
         
         /// <summary>
-        /// 人员查重任务预估需要耗费时间。 单位为分钟。
+        /// 错误码。
         /// </summary>
-        [JsonProperty("EstimatedTimeCost")]
-        public ulong? EstimatedTimeCost{ get; set; }
+        [JsonProperty("ErrCode")]
+        public string ErrCode{ get; set; }
+
+        /// <summary>
+        /// 错误消息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrMessage")]
+        public string ErrMessage{ get; set; }
+
+        /// <summary>
+        /// 返回结果。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Result")]
+        public ApplyOpenBankOrderDetailReceiptResult Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +56,9 @@ namespace TencentCloud.Iai.V20180301.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EstimatedTimeCost", this.EstimatedTimeCost);
+            this.SetParamSimple(map, prefix + "ErrCode", this.ErrCode);
+            this.SetParamSimple(map, prefix + "ErrMessage", this.ErrMessage);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -30,6 +30,14 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
+        /// <summary>
+        /// 验证方式
+        /// dns: DNS 解析验证（默认值）
+        /// file: 文件验证
+        /// </summary>
+        [JsonProperty("VerifyType")]
+        public string VerifyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "VerifyType", this.VerifyType);
         }
     }
 }

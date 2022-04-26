@@ -15,26 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Iai.V20200303.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EstimateCheckSimilarPersonCostTimeResponse : AbstractModel
+    public class Caller : AbstractModel
     {
         
         /// <summary>
-        /// 人员查重任务预估需要耗费时间。 单位为分钟。
+        /// 应用号
         /// </summary>
-        [JsonProperty("EstimatedTimeCost")]
-        public ulong? EstimatedTimeCost{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 主机构ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("OrganizationId")]
+        public string OrganizationId{ get; set; }
+
+        /// <summary>
+        /// 下属机构ID
+        /// </summary>
+        [JsonProperty("SubOrganizationId")]
+        public string SubOrganizationId{ get; set; }
+
+        /// <summary>
+        /// 经办人的用户ID
+        /// </summary>
+        [JsonProperty("OperatorId")]
+        public string OperatorId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +54,10 @@ namespace TencentCloud.Iai.V20200303.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EstimatedTimeCost", this.EstimatedTimeCost);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
+            this.SetParamSimple(map, prefix + "SubOrganizationId", this.SubOrganizationId);
+            this.SetParamSimple(map, prefix + "OperatorId", this.OperatorId);
         }
     }
 }

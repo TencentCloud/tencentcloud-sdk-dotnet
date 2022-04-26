@@ -31,7 +31,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 查询日期，最早可为前30天的日期。
+        /// 查询日期，如2021-05-27，最早可为前30天的日期。
         /// </summary>
         [JsonProperty("Date")]
         public string Date{ get; set; }
@@ -43,7 +43,7 @@ namespace TencentCloud.Dbbrain.V20210527.Models
         public string Product{ get; set; }
 
         /// <summary>
-        /// 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量。
+        /// 排序字段，取值包括Capacity - 内存，ItemCount - 元素数量，默认为Capacity。
         /// </summary>
         [JsonProperty("SortBy")]
         public string SortBy{ get; set; }
