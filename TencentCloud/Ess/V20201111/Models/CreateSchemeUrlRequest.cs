@@ -60,6 +60,24 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }
 
+        /// <summary>
+        /// 企业名称
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+        /// </summary>
+        [JsonProperty("EndPoint")]
+        public string EndPoint{ get; set; }
+
+        /// <summary>
+        /// 是否自动回跳 true：是， false：否。该参数只针对"APP" 类型的签署链接有效
+        /// </summary>
+        [JsonProperty("AutoJumpBack")]
+        public bool? AutoJumpBack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "PathType", this.PathType);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "EndPoint", this.EndPoint);
+            this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
         }
     }
 }

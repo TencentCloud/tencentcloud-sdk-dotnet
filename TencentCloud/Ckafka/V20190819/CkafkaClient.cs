@@ -773,6 +773,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 删除路由
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteRequest"/></param>
+        /// <returns><see cref="DeleteRouteResponse"/></returns>
+        public async Task<DeleteRouteResponse> DeleteRoute(DeleteRouteRequest req)
+        {
+             JsonResponseModel<DeleteRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除路由
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRouteRequest"/></param>
+        /// <returns><see cref="DeleteRouteResponse"/></returns>
+        public DeleteRouteResponse DeleteRouteSync(DeleteRouteRequest req)
+        {
+             JsonResponseModel<DeleteRouteResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRouteResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改删除路由延迟触发时间
         /// </summary>
         /// <param name="req"><see cref="DeleteRouteTriggerTimeRequest"/></param>

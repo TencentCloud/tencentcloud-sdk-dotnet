@@ -45,8 +45,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// DRM方案类型，取值范围：
-        /// <li>SimpleAES。</li>
+        /// DRM 方案类型，取值范围：
+        /// <li>SimpleAES</li>
+        /// <li>Widevine</li>
+        /// <li>FairPlay</li>
         /// 如果取值为空字符串，代表不对视频做 DRM 保护。
         /// </summary>
         [JsonProperty("DrmType")]

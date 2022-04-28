@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7652443B-815B-37FE-B0E4-42C34070E9BC}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.507</VersionPrefix>
+    <VersionPrefix>3.0.508</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -173,6 +173,8 @@
     <Compile Include="V20200324\Models\InstanceReturnable.cs" />
     <Compile Include="V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="V20200324\Models\InternetAccessible.cs" />
+    <Compile Include="V20200324\Models\IsolateInstancesRequest.cs" />
+    <Compile Include="V20200324\Models\IsolateInstancesResponse.cs" />
     <Compile Include="V20200324\Models\KeyPair.cs" />
     <Compile Include="V20200324\Models\LoginConfiguration.cs" />
     <Compile Include="V20200324\Models\LoginSettings.cs" />

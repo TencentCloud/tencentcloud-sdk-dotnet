@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.507</VersionPrefix>
+    <VersionPrefix>3.0.508</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -3660,6 +3660,8 @@
     <Compile Include="Ckafka\V20190819\Models\DeleteGroupResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteInstancePreRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteInstancePreResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\DeleteRouteResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteRouteTriggerTimeResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\DeleteTopicIpWhiteListRequest.cs" />
@@ -4213,6 +4215,8 @@
     <Compile Include="Cls\V20201016\Models\NoticeReceiver.cs" />
     <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerRequest.cs" />
     <Compile Include="Cls\V20201016\Models\OpenKafkaConsumerResponse.cs" />
+    <Compile Include="Cls\V20201016\Models\ParquetInfo.cs" />
+    <Compile Include="Cls\V20201016\Models\ParquetKeyInfo.cs" />
     <Compile Include="Cls\V20201016\Models\PartitionInfo.cs" />
     <Compile Include="Cls\V20201016\Models\PreviewLogStatistic.cs" />
     <Compile Include="Cls\V20201016\Models\RetryShipperTaskRequest.cs" />
@@ -10877,6 +10881,8 @@
     <Compile Include="Lighthouse\V20200324\Models\InstanceReturnable.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InstanceTrafficPackage.cs" />
     <Compile Include="Lighthouse\V20200324\Models\InternetAccessible.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\IsolateInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\IsolateInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\KeyPair.cs" />
     <Compile Include="Lighthouse\V20200324\Models\LoginConfiguration.cs" />
     <Compile Include="Lighthouse\V20200324\Models\LoginSettings.cs" />
@@ -17923,6 +17929,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeHeadTailTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageProcessingTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -18002,6 +18010,7 @@
     <Compile Include="Vod\V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageOperation.cs" />
     <Compile Include="Vod\V20180717\Models\ImageProcessingTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\ImageReviewUsageDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\ImageScale.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageSpriteTemplate.cs" />
@@ -18175,6 +18184,8 @@
     <Compile Include="Vod\V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="Vod\V20180717\Models\ResourceTag.cs" />
     <Compile Include="Vod\V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="Vod\V20180717\Models\ReviewImageRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\ReviewImageResponse.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="Vod\V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="Vod\V20180717\Models\SearchMediaRequest.cs" />

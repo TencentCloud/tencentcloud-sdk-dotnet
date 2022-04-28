@@ -44,6 +44,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Json")]
         public JsonInfo Json{ get; set; }
 
+        /// <summary>
+        /// parquet格式内容描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Parquet")]
+        public ParquetInfo Parquet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Format", this.Format);
             this.SetParamObj(map, prefix + "Csv.", this.Csv);
             this.SetParamObj(map, prefix + "Json.", this.Json);
+            this.SetParamObj(map, prefix + "Parquet.", this.Parquet);
         }
     }
 }

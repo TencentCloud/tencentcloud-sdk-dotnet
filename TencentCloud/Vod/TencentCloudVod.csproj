@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.507</VersionPrefix>
+    <VersionPrefix>3.0.508</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -300,6 +300,8 @@
     <Compile Include="V20180717\Models\DescribeHeadTailTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageProcessingTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageProcessingTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeImageReviewUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
@@ -379,6 +381,7 @@
     <Compile Include="V20180717\Models\ImageContentReviewInput.cs" />
     <Compile Include="V20180717\Models\ImageOperation.cs" />
     <Compile Include="V20180717\Models\ImageProcessingTemplate.cs" />
+    <Compile Include="V20180717\Models\ImageReviewUsageDataItem.cs" />
     <Compile Include="V20180717\Models\ImageScale.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTaskInput.cs" />
     <Compile Include="V20180717\Models\ImageSpriteTemplate.cs" />
@@ -552,6 +555,8 @@
     <Compile Include="V20180717\Models\ResolutionNameInfo.cs" />
     <Compile Include="V20180717\Models\ResourceTag.cs" />
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
+    <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
+    <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />

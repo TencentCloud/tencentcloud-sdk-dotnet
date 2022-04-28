@@ -2597,6 +2597,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口返回查询时间范围内每天使用的图片智能识别用量信息。
+        ///    1. 可以查询最近365天内的图片智能识别统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
+        public async Task<DescribeImageReviewUsageDataResponse> DescribeImageReviewUsageData(DescribeImageReviewUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeImageReviewUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageReviewUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内每天使用的图片智能识别用量信息。
+        ///    1. 可以查询最近365天内的图片智能识别统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeImageReviewUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeImageReviewUsageDataResponse"/></returns>
+        public DescribeImageReviewUsageDataResponse DescribeImageReviewUsageDataSync(DescribeImageReviewUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeImageReviewUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeImageReviewUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeImageReviewUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询雪碧图模板，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeImageSpriteTemplatesRequest"/></param>
@@ -5146,6 +5192,54 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ResetProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
+        /// 
+        /// ><li>图片文件大小支持：文件 < 5M；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响智能识别效果；</li>
+        /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ReviewImageRequest"/></param>
+        /// <returns><see cref="ReviewImageResponse"/></returns>
+        public async Task<ReviewImageResponse> ReviewImage(ReviewImageRequest req)
+        {
+             JsonResponseModel<ReviewImageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReviewImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
+        /// 
+        /// ><li>图片文件大小支持：文件 < 5M；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响智能识别效果；</li>
+        /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
+        /// </summary>
+        /// <param name="req"><see cref="ReviewImageRequest"/></param>
+        /// <returns><see cref="ReviewImageResponse"/></returns>
+        public ReviewImageResponse ReviewImageSync(ReviewImageRequest req)
+        {
+             JsonResponseModel<ReviewImageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReviewImage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewImageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

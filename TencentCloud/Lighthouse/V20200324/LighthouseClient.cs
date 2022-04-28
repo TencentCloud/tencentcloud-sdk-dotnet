@@ -2103,6 +2103,54 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(IsolateInstances)用于退还一个或多个轻量应用服务器实例。
+        /// * 只有状态为 RUNNING 或 STOPPED 的实例才可以进行此操作。
+        /// * 接口调用成功后，实例会进入SHUTDOWN 状态。
+        /// * 支持批量操作。每次请求批量资源（包括实例与数据盘）的上限为 20。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateInstancesRequest"/></param>
+        /// <returns><see cref="IsolateInstancesResponse"/></returns>
+        public async Task<IsolateInstancesResponse> IsolateInstances(IsolateInstancesRequest req)
+        {
+             JsonResponseModel<IsolateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "IsolateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(IsolateInstances)用于退还一个或多个轻量应用服务器实例。
+        /// * 只有状态为 RUNNING 或 STOPPED 的实例才可以进行此操作。
+        /// * 接口调用成功后，实例会进入SHUTDOWN 状态。
+        /// * 支持批量操作。每次请求批量资源（包括实例与数据盘）的上限为 20。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
+        /// </summary>
+        /// <param name="req"><see cref="IsolateInstancesRequest"/></param>
+        /// <returns><see cref="IsolateInstancesResponse"/></returns>
+        public IsolateInstancesResponse IsolateInstancesSync(IsolateInstancesRequest req)
+        {
+             JsonResponseModel<IsolateInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "IsolateInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<IsolateInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyBlueprintAttribute) 用于修改镜像属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyBlueprintAttributeRequest"/></param>
@@ -2572,6 +2620,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+        /// * 只有状态为 RUNNING，STOPPED 或 SHUTDOWN 的实例才可以进行此操作。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
         /// </summary>
         /// <param name="req"><see cref="RenewInstancesRequest"/></param>
         /// <returns><see cref="RenewInstancesResponse"/></returns>
@@ -2592,6 +2643,9 @@ namespace TencentCloud.Lighthouse.V20200324
 
         /// <summary>
         /// 本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+        /// * 只有状态为 RUNNING，STOPPED 或 SHUTDOWN 的实例才可以进行此操作。
+        /// * 支持批量操作。每次请求批量实例的上限为 100。
+        /// * 本接口为异步接口，请求发送成功后会返回一个 RequestId，此时操作并未立即完成。实例操作结果可以通过调用 DescribeInstances 接口查询，如果实例的最新操作状态（LatestOperationState）为“SUCCESS”，则代表操作成功。
         /// </summary>
         /// <param name="req"><see cref="RenewInstancesRequest"/></param>
         /// <returns><see cref="RenewInstancesResponse"/></returns>
