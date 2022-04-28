@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CloseProVersionResponse : AbstractModel
+    public class ModifyResourceSchedulerRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// emr集群的英文id
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 老的调度器:fair
+        /// </summary>
+        [JsonProperty("OldValue")]
+        public string OldValue{ get; set; }
+
+        /// <summary>
+        /// 新的调度器:capacity
+        /// </summary>
+        [JsonProperty("NewValue")]
+        public string NewValue{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "OldValue", this.OldValue);
+            this.SetParamSimple(map, prefix + "NewValue", this.NewValue);
         }
     }
 }

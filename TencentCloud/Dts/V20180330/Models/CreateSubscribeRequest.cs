@@ -60,6 +60,12 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// 用户自定义实例名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

@@ -140,6 +140,8 @@ namespace TencentCloud.Dts.V20180330
         /// 创建校验迁移任务
         /// 在开始迁移前, 必须调用本接口创建校验, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrateCheckJob查看.
         /// 校验成功后,迁移任务若有修改, 则必须重新创建校验并通过后, 才能开始迁移.
+        /// 
+        /// 如果是金融区链路, 请使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
         /// </summary>
         /// <param name="req"><see cref="CreateMigrateCheckJobRequest"/></param>
         /// <returns><see cref="CreateMigrateCheckJobResponse"/></returns>
@@ -162,6 +164,8 @@ namespace TencentCloud.Dts.V20180330
         /// 创建校验迁移任务
         /// 在开始迁移前, 必须调用本接口创建校验, 且校验成功后才能开始迁移. 校验的结果可以通过DescribeMigrateCheckJob查看.
         /// 校验成功后,迁移任务若有修改, 则必须重新创建校验并通过后, 才能开始迁移.
+        /// 
+        /// 如果是金融区链路, 请使用域名: https://dts.ap-shenzhen-fsi.tencentcloudapi.com
         /// </summary>
         /// <param name="req"><see cref="CreateMigrateCheckJobRequest"/></param>
         /// <returns><see cref="CreateMigrateCheckJobResponse"/></returns>

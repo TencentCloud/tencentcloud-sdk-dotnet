@@ -30,6 +30,12 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("WxAppId")]
         public string WxAppId{ get; set; }
 
+        /// <summary>
+        /// 是否查询全地域
+        /// </summary>
+        [JsonProperty("AllRegions")]
+        public bool? AllRegions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tcb.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "WxAppId", this.WxAppId);
+            this.SetParamSimple(map, prefix + "AllRegions", this.AllRegions);
         }
     }
 }

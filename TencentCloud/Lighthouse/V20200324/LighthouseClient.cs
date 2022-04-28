@@ -2571,6 +2571,46 @@ namespace TencentCloud.Lighthouse.V20200324
         }
 
         /// <summary>
+        /// 本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public async Task<RenewInstancesResponse> RenewInstances(RenewInstancesRequest req)
+        {
+             JsonResponseModel<RenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(RenewInstances)用于续费一个或多个轻量应用服务器实例。
+        /// </summary>
+        /// <param name="req"><see cref="RenewInstancesRequest"/></param>
+        /// <returns><see cref="RenewInstancesResponse"/></returns>
+        public RenewInstancesResponse RenewInstancesSync(RenewInstancesRequest req)
+        {
+             JsonResponseModel<RenewInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RenewInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ResetAttachCcn) 用于关联云联网实例申请过期时，重新申请关联操作。
         /// </summary>
         /// <param name="req"><see cref="ResetAttachCcnRequest"/></param>

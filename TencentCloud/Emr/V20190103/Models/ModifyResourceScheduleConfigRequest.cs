@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewProVersionRequest : AbstractModel
+    public class ModifyResourceScheduleConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 购买相关参数。
+        /// emr集群的英文id
         /// </summary>
-        [JsonProperty("ChargePrepaid")]
-        public ChargePrepaid ChargePrepaid{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主机唯一ID，对应CVM的uuid、BM的InstanceId。
+        /// 业务标识，fair表示编辑公平的配置项，fairPlan表示编辑执行计划，capacity表示编辑容量的配置项
         /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
+
+        /// <summary>
+        /// 修改后的模块消息
+        /// </summary>
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);
-            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

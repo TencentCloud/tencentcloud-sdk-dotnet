@@ -15,15 +15,39 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RenewProVersionResponse : AbstractModel
+    public class DescribeResourceScheduleResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 资源调度功能是否开启
+        /// </summary>
+        [JsonProperty("OpenSwitch")]
+        public bool? OpenSwitch{ get; set; }
+
+        /// <summary>
+        /// 正在使用的资源调度器
+        /// </summary>
+        [JsonProperty("Scheduler")]
+        public string Scheduler{ get; set; }
+
+        /// <summary>
+        /// 公平调度器的信息
+        /// </summary>
+        [JsonProperty("FSInfo")]
+        public string FSInfo{ get; set; }
+
+        /// <summary>
+        /// 容量调度器的信息
+        /// </summary>
+        [JsonProperty("CSInfo")]
+        public string CSInfo{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "OpenSwitch", this.OpenSwitch);
+            this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
+            this.SetParamSimple(map, prefix + "FSInfo", this.FSInfo);
+            this.SetParamSimple(map, prefix + "CSInfo", this.CSInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

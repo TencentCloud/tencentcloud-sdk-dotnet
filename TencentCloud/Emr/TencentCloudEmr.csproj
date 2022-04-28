@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{05965FFC-72EE-352D-B47A-37859982E12F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.506</VersionPrefix>
+    <VersionPrefix>3.0.507</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,8 @@
     <Compile Include="V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20190103\Models\DescribeJobFlowRequest.cs" />
     <Compile Include="V20190103\Models\DescribeJobFlowResponse.cs" />
+    <Compile Include="V20190103\Models\DescribeResourceScheduleRequest.cs" />
+    <Compile Include="V20190103\Models\DescribeResourceScheduleResponse.cs" />
     <Compile Include="V20190103\Models\DiskGroup.cs" />
     <Compile Include="V20190103\Models\DiskSpec.cs" />
     <Compile Include="V20190103\Models\DynamicPodSpec.cs" />
@@ -89,6 +91,12 @@
     <Compile Include="V20190103\Models\JobResult.cs" />
     <Compile Include="V20190103\Models\LoginSettings.cs" />
     <Compile Include="V20190103\Models\MetaDbInfo.cs" />
+    <Compile Include="V20190103\Models\ModifyResourcePoolsRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyResourcePoolsResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceScheduleConfigRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceScheduleConfigResponse.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceSchedulerRequest.cs" />
+    <Compile Include="V20190103\Models\ModifyResourceSchedulerResponse.cs" />
     <Compile Include="V20190103\Models\MultiDisk.cs" />
     <Compile Include="V20190103\Models\MultiDiskMC.cs" />
     <Compile Include="V20190103\Models\NewResourceSpec.cs" />

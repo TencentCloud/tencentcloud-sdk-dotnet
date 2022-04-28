@@ -127,6 +127,13 @@ namespace TencentCloud.Dts.V20180330.Models
         [JsonProperty("Tags")]
         public TagItem[] Tags{ get; set; }
 
+        /// <summary>
+        /// 源实例为集群时且接入为非cdb时源实例信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SrcInfoMulti")]
+        public SrcInfo[] SrcInfoMulti{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +157,7 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamObj(map, prefix + "Detail.", this.Detail);
             this.SetParamArrayObj(map, prefix + "ErrorInfo.", this.ErrorInfo);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "SrcInfoMulti.", this.SrcInfoMulti);
         }
     }
 }

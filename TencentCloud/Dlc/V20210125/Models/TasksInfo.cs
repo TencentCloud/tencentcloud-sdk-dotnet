@@ -48,6 +48,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Config")]
         public KVPair[] Config{ get; set; }
 
+        /// <summary>
+        /// 任务的用户自定义参数信息
+        /// </summary>
+        [JsonProperty("Params")]
+        public KVPair[] Params{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "FailureTolerance", this.FailureTolerance);
             this.SetParamSimple(map, prefix + "SQL", this.SQL);
             this.SetParamArrayObj(map, prefix + "Config.", this.Config);
+            this.SetParamArrayObj(map, prefix + "Params.", this.Params);
         }
     }
 }

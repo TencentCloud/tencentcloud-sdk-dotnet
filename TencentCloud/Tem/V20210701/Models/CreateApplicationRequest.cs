@@ -101,6 +101,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }
 
+        /// <summary>
+        /// 使用默认镜像服务额外参数
+        /// </summary>
+        [JsonProperty("UseDefaultImageServiceParameters")]
+        public UseDefaultRepoParameters UseDefaultImageServiceParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -119,6 +125,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "CodingLanguage", this.CodingLanguage);
             this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamObj(map, prefix + "UseDefaultImageServiceParameters.", this.UseDefaultImageServiceParameters);
         }
     }
 }

@@ -173,46 +173,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
-        /// </summary>
-        /// <param name="req"><see cref="CloseProVersionRequest"/></param>
-        /// <returns><see cref="CloseProVersionResponse"/></returns>
-        public async Task<CloseProVersionResponse> CloseProVersion(CloseProVersionRequest req)
-        {
-             JsonResponseModel<CloseProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CloseProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (CloseProVersion) 已全面改为授权模式,该接口只能解绑授权.
-        /// </summary>
-        /// <param name="req"><see cref="CloseProVersionRequest"/></param>
-        /// <returns><see cref="CloseProVersionResponse"/></returns>
-        public CloseProVersionResponse CloseProVersionSync(CloseProVersionRequest req)
-        {
-             JsonResponseModel<CloseProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CloseProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseProVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 根据策略信息创建基线策略
         /// </summary>
         /// <param name="req"><see cref="CreateBaselineStrategyRequest"/></param>
@@ -7493,46 +7453,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceOpenProVersionPrepaidRequest"/></param>
-        /// <returns><see cref="InquiryPriceOpenProVersionPrepaidResponse"/></returns>
-        public async Task<InquiryPriceOpenProVersionPrepaidResponse> InquiryPriceOpenProVersionPrepaid(InquiryPriceOpenProVersionPrepaidRequest req)
-        {
-             JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "InquiryPriceOpenProVersionPrepaid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (InquiryPriceOpenProVersionPrepaid) 用于开通专业版询价(预付费)。
-        /// </summary>
-        /// <param name="req"><see cref="InquiryPriceOpenProVersionPrepaidRequest"/></param>
-        /// <returns><see cref="InquiryPriceOpenProVersionPrepaidResponse"/></returns>
-        public InquiryPriceOpenProVersionPrepaidResponse InquiryPriceOpenProVersionPrepaidSync(InquiryPriceOpenProVersionPrepaidRequest req)
-        {
-             JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "InquiryPriceOpenProVersionPrepaid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceOpenProVersionPrepaidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         ///  用于设置新增主机自动开通专业防护配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyAutoOpenProVersionConfigRequest"/></param>
@@ -7733,46 +7653,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyProVersionRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyProVersionRenewFlagResponse"/></returns>
-        public async Task<ModifyProVersionRenewFlagResponse> ModifyProVersionRenewFlag(ModifyProVersionRenewFlagRequest req)
-        {
-             JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyProVersionRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProVersionRenewFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (ModifyProVersionRenewFlag) 用于修改专业版包年包月续费标识。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyProVersionRenewFlagRequest"/></param>
-        /// <returns><see cref="ModifyProVersionRenewFlagResponse"/></returns>
-        public ModifyProVersionRenewFlagResponse ModifyProVersionRenewFlagSync(ModifyProVersionRenewFlagRequest req)
-        {
-             JsonResponseModel<ModifyProVersionRenewFlagResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyProVersionRenewFlag");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyProVersionRenewFlagResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 修改告警设置
         /// </summary>
         /// <param name="req"><see cref="ModifyWarningSettingRequest"/></param>
@@ -7933,86 +7813,6 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 本接口 (OpenProVersion) 用于开通专业版。
-        /// </summary>
-        /// <param name="req"><see cref="OpenProVersionRequest"/></param>
-        /// <returns><see cref="OpenProVersionResponse"/></returns>
-        public async Task<OpenProVersionResponse> OpenProVersion(OpenProVersionRequest req)
-        {
-             JsonResponseModel<OpenProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "OpenProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (OpenProVersion) 用于开通专业版。
-        /// </summary>
-        /// <param name="req"><see cref="OpenProVersionRequest"/></param>
-        /// <returns><see cref="OpenProVersionResponse"/></returns>
-        public OpenProVersionResponse OpenProVersionSync(OpenProVersionRequest req)
-        {
-             JsonResponseModel<OpenProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OpenProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
-        /// </summary>
-        /// <param name="req"><see cref="OpenProVersionPrepaidRequest"/></param>
-        /// <returns><see cref="OpenProVersionPrepaidResponse"/></returns>
-        public async Task<OpenProVersionPrepaidResponse> OpenProVersionPrepaid(OpenProVersionPrepaidRequest req)
-        {
-             JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "OpenProVersionPrepaid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProVersionPrepaidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (OpenProVersionPrepaid) 用于开通专业版(包年包月)。
-        /// </summary>
-        /// <param name="req"><see cref="OpenProVersionPrepaidRequest"/></param>
-        /// <returns><see cref="OpenProVersionPrepaidResponse"/></returns>
-        public OpenProVersionPrepaidResponse OpenProVersionPrepaidSync(OpenProVersionPrepaidRequest req)
-        {
-             JsonResponseModel<OpenProVersionPrepaidResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "OpenProVersionPrepaid");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenProVersionPrepaidResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口（RecoverMalwares）用于批量恢复已经被隔离的木马文件。
         /// </summary>
         /// <param name="req"><see cref="RecoverMalwaresRequest"/></param>
@@ -8044,46 +7844,6 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "RecoverMalwares");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecoverMalwaresResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
-        /// </summary>
-        /// <param name="req"><see cref="RenewProVersionRequest"/></param>
-        /// <returns><see cref="RenewProVersionResponse"/></returns>
-        public async Task<RenewProVersionResponse> RenewProVersion(RenewProVersionRequest req)
-        {
-             JsonResponseModel<RenewProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RenewProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewProVersionResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口 (RenewProVersion) 用于续费专业版(包年包月)。
-        /// </summary>
-        /// <param name="req"><see cref="RenewProVersionRequest"/></param>
-        /// <returns><see cref="RenewProVersionResponse"/></returns>
-        public RenewProVersionResponse RenewProVersionSync(RenewProVersionRequest req)
-        {
-             JsonResponseModel<RenewProVersionResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RenewProVersion");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RenewProVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

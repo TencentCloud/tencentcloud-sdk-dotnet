@@ -43,6 +43,12 @@ namespace TencentCloud.Thpc.V20220401.Models
         public string AutoScalingGroupId{ get; set; }
 
         /// <summary>
+        /// 队列名称。
+        /// </summary>
+        [JsonProperty("QueueName")]
+        public string QueueName{ get; set; }
+
+        /// <summary>
         /// 任务连续等待时间，队列的任务处于连续等待的时间。单位秒。默认值120。
         /// </summary>
         [JsonProperty("ExpansionBusyTime")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Thpc.V20220401.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "LaunchConfigurationId", this.LaunchConfigurationId);
             this.SetParamSimple(map, prefix + "AutoScalingGroupId", this.AutoScalingGroupId);
+            this.SetParamSimple(map, prefix + "QueueName", this.QueueName);
             this.SetParamSimple(map, prefix + "ExpansionBusyTime", this.ExpansionBusyTime);
             this.SetParamSimple(map, prefix + "ShrinkIdleTime", this.ShrinkIdleTime);
             this.SetParamSimple(map, prefix + "EnableAutoExpansion", this.EnableAutoExpansion);

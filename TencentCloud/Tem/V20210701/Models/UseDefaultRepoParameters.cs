@@ -15,27 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeServerlessGroupResponse : AbstractModel
+    public class UseDefaultRepoParameters : AbstractModel
     {
         
         /// <summary>
-        /// 结果
+        /// 企业版实例名
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public ServerlessGroup Result{ get; set; }
+        [JsonProperty("EnterpriseInstanceName")]
+        public string EnterpriseInstanceName{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 企业版收费类型  0 按量收费   1 包年包月
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("EnterpriseInstanceChargeType")]
+        public long? EnterpriseInstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 企业版规格：basic-基础班 ，standard-标准版，premium-高级版
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnterpriseInstanceType")]
+        public string EnterpriseInstanceType{ get; set; }
 
 
         /// <summary>
@@ -43,8 +51,9 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnterpriseInstanceName", this.EnterpriseInstanceName);
+            this.SetParamSimple(map, prefix + "EnterpriseInstanceChargeType", this.EnterpriseInstanceChargeType);
+            this.SetParamSimple(map, prefix + "EnterpriseInstanceType", this.EnterpriseInstanceType);
         }
     }
 }

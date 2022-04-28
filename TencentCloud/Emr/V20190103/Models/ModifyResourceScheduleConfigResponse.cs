@@ -15,15 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyProVersionRenewFlagResponse : AbstractModel
+    public class ModifyResourceScheduleConfigResponse : AbstractModel
     {
         
+        /// <summary>
+        /// true为草稿，表示还没有刷新资源池
+        /// </summary>
+        [JsonProperty("IsDraft")]
+        public bool? IsDraft{ get; set; }
+
+        /// <summary>
+        /// 校验错误信息，如果不为空，则说明校验失败，配置没有成功
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +49,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "IsDraft", this.IsDraft);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

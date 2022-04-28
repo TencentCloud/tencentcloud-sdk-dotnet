@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OpenProVersionPrepaidRequest : AbstractModel
+    public class FailReason : AbstractModel
     {
         
         /// <summary>
-        /// 购买相关参数。
+        /// 失败原因
         /// </summary>
-        [JsonProperty("ChargePrepaid")]
-        public ChargePrepaid ChargePrepaid{ get; set; }
+        [JsonProperty("Reason")]
+        public string Reason{ get; set; }
 
         /// <summary>
-        /// 需要开通专业版主机信息数组。
+        /// 失败列表
         /// </summary>
-        [JsonProperty("Machines")]
-        public ProVersionMachine[] Machines{ get; set; }
+        [JsonProperty("Targets")]
+        public string[] Targets{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);
-            this.SetParamArrayObj(map, prefix + "Machines.", this.Machines);
+            this.SetParamSimple(map, prefix + "Reason", this.Reason);
+            this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
         }
     }
 }

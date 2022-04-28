@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.506</VersionPrefix>
+    <VersionPrefix>3.0.507</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -94,11 +94,8 @@
     <Compile Include="V20180228\Models\CancelIgnoreVulResponse.cs" />
     <Compile Include="V20180228\Models\ChangeRuleEventsIgnoreStatusRequest.cs" />
     <Compile Include="V20180228\Models\ChangeRuleEventsIgnoreStatusResponse.cs" />
-    <Compile Include="V20180228\Models\ChargePrepaid.cs" />
     <Compile Include="V20180228\Models\CheckBashRuleParamsRequest.cs" />
     <Compile Include="V20180228\Models\CheckBashRuleParamsResponse.cs" />
-    <Compile Include="V20180228\Models\CloseProVersionRequest.cs" />
-    <Compile Include="V20180228\Models\CloseProVersionResponse.cs" />
     <Compile Include="V20180228\Models\ComponentStatistics.cs" />
     <Compile Include="V20180228\Models\CreateBaselineStrategyRequest.cs" />
     <Compile Include="V20180228\Models\CreateBaselineStrategyResponse.cs" />
@@ -476,8 +473,6 @@
     <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
-    <Compile Include="V20180228\Models\InquiryPriceOpenProVersionPrepaidRequest.cs" />
-    <Compile Include="V20180228\Models\InquiryPriceOpenProVersionPrepaidResponse.cs" />
     <Compile Include="V20180228\Models\LoginWhiteCombinedInfo.cs" />
     <Compile Include="V20180228\Models\LoginWhiteLists.cs" />
     <Compile Include="V20180228\Models\Machine.cs" />
@@ -496,8 +491,6 @@
     <Compile Include="V20180228\Models\ModifyBruteAttackRulesResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
-    <Compile Include="V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
-    <Compile Include="V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWarningSettingRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWarningSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectDirRequest.cs" />
@@ -508,15 +501,10 @@
     <Compile Include="V20180228\Models\ModifyWebPageProtectSwitchResponse.cs" />
     <Compile Include="V20180228\Models\MonthInspectionReport.cs" />
     <Compile Include="V20180228\Models\OpenPortStatistics.cs" />
-    <Compile Include="V20180228\Models\OpenProVersionPrepaidRequest.cs" />
-    <Compile Include="V20180228\Models\OpenProVersionPrepaidResponse.cs" />
-    <Compile Include="V20180228\Models\OpenProVersionRequest.cs" />
-    <Compile Include="V20180228\Models\OpenProVersionResponse.cs" />
     <Compile Include="V20180228\Models\OsName.cs" />
     <Compile Include="V20180228\Models\Place.cs" />
     <Compile Include="V20180228\Models\PrivilegeEscalationProcess.cs" />
     <Compile Include="V20180228\Models\PrivilegeRule.cs" />
-    <Compile Include="V20180228\Models\ProVersionMachine.cs" />
     <Compile Include="V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="V20180228\Models\ProtectDirInfo.cs" />
     <Compile Include="V20180228\Models\ProtectDirRelatedServer.cs" />
@@ -530,8 +518,6 @@
     <Compile Include="V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="V20180228\Models\RegionInfo.cs" />
     <Compile Include="V20180228\Models\RegionSet.cs" />
-    <Compile Include="V20180228\Models\RenewProVersionRequest.cs" />
-    <Compile Include="V20180228\Models\RenewProVersionResponse.cs" />
     <Compile Include="V20180228\Models\ReverseShell.cs" />
     <Compile Include="V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="V20180228\Models\RiskDnsList.cs" />

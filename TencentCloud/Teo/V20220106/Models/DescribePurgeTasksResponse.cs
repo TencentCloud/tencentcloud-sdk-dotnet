@@ -15,29 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyProVersionRenewFlagRequest : AbstractModel
+    public class DescribePurgeTasksResponse : AbstractModel
     {
         
         /// <summary>
-        /// 自动续费标识。取值范围：
-        /// <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
-        /// <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
-        /// <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
+        /// 该查询条件总共条目数
         /// </summary>
-        [JsonProperty("RenewFlag")]
-        public string RenewFlag{ get; set; }
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 主机唯一ID，对应CVM的uuid、BM的instanceId。
+        /// 任务结果列表
         /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
+        [JsonProperty("Tasks")]
+        public Task[] Tasks{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +48,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
-            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Tasks.", this.Tasks);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

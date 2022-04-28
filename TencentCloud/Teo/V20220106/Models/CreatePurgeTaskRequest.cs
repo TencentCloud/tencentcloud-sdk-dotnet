@@ -15,38 +15,43 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateServerlessGroupRequest : AbstractModel
+    public class CreatePurgeTaskRequest : AbstractModel
     {
         
         /// <summary>
-        /// 分组所属应用ID
+        /// Zone ID
         /// </summary>
-        [JsonProperty("ApplicationId")]
-        public string ApplicationId{ get; set; }
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 分组名称字段，长度1~60，字母或下划线开头，可包含字母数字下划线
+        /// 类型，当前支持的类型：
+        /// - purge_url：URL
+        /// - purge_prefix：前缀
+        /// - purge_host：Hostname
+        /// - purge_all：全部缓存
         /// </summary>
-        [JsonProperty("GroupName")]
-        public string GroupName{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 分组所属名字空间ID
+        /// 内容，一行一个
         /// </summary>
-        [JsonProperty("NamespaceId")]
-        public string NamespaceId{ get; set; }
+        [JsonProperty("Targets")]
+        public string[] Targets{ get; set; }
 
         /// <summary>
-        /// 分组所属集群ID
+        /// 若有编码转换，仅清除编码转换后匹配的资源
+        /// 若内容含有非 ASCII 字符集的字符，请打开 URL Encode 开关，编码转换（编码规则遵循 RFC3986）
         /// </summary>
-        [JsonProperty("ClusterId")]
-        public string ClusterId{ get; set; }
+        [JsonProperty("EncodeUrl")]
+        public bool? EncodeUrl{ get; set; }
 
 
         /// <summary>
@@ -54,10 +59,10 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
-            this.SetParamSimple(map, prefix + "GroupName", this.GroupName);
-            this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
-            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "Targets.", this.Targets);
+            this.SetParamSimple(map, prefix + "EncodeUrl", this.EncodeUrl);
         }
     }
 }

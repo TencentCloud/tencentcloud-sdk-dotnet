@@ -60,8 +60,8 @@ namespace TencentCloud.Cdn.V20180606.Models
 
         /// <summary>
         /// 是否允许空 referer
-        /// true：允许空 referer
-        /// false：不允许空 referer
+        /// 防盗链类型为白名单时，true表示允许空 referer，false表示不允许空 referer；
+        /// 防盗链类型为黑名单时，true表示拒绝空referer，false表示不拒绝空referer；
         /// </summary>
         [JsonProperty("AllowEmpty")]
         public bool? AllowEmpty{ get; set; }

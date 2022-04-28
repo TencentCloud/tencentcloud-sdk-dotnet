@@ -15,21 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeServerlessGroupsResponse : AbstractModel
+    public class CreatePurgeTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// 数据列表对象
+        /// 任务ID
+        /// </summary>
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
+
+        /// <summary>
+        /// 失败的任务列表及原因
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Result")]
-        public ServerlessGroupPage Result{ get; set; }
+        [JsonProperty("FailedList")]
+        public FailReason[] FailedList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +49,8 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArrayObj(map, prefix + "FailedList.", this.FailedList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -73,7 +73,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string OsCustomizeType{ get; set; }
 
         /// <summary>
-        /// 是否开启节点的默认安全组(默认: 否，Aphla特性)
+        /// 是否开启节点的默认安全组(默认: 否，Alpha特性)
         /// </summary>
         [JsonProperty("NeedWorkSecurityGroup")]
         public bool? NeedWorkSecurityGroup{ get; set; }

@@ -15,21 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tsf.V20180326.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateServerlessGroupResponse : AbstractModel
+    public class ModifyDBInstanceNameResponse : AbstractModel
     {
         
         /// <summary>
-        /// 创建成功的部署组ID，返回null表示失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 实例ID
         /// </summary>
-        [JsonProperty("Result")]
-        public string Result{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,7 +42,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

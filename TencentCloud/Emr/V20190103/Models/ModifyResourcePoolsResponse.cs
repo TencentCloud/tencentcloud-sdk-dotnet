@@ -15,39 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ProVersionMachine : AbstractModel
+    public class ModifyResourcePoolsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 主机类型。
-        /// <li>CVM: 云服务器</li>
-        /// <li>BM: 黑石物理机</li>
-        /// <li>ECM: 边缘计算服务器</li>
-        /// <li>LH: 轻量应用服务器</li>
-        /// <li>Other: 混合云机器</li>
+        /// false表示不是草稿，提交刷新请求成功
         /// </summary>
-        [JsonProperty("MachineType")]
-        public string MachineType{ get; set; }
+        [JsonProperty("IsDraft")]
+        public bool? IsDraft{ get; set; }
 
         /// <summary>
-        /// 主机所在地域。
-        /// 如：ap-guangzhou、ap-beijing
+        /// 扩展字段，暂时没用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("MachineRegion")]
-        public string MachineRegion{ get; set; }
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
         /// <summary>
-        /// 主机唯一标识Uuid数组。
-        /// 黑石的InstanceId，CVM的Uuid ,边缘计算的Uuid , 轻量应用服务器的Uuid ,混合云机器的Quuid 。 当前参数最大长度限制20
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -55,9 +49,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
-            this.SetParamSimple(map, prefix + "MachineRegion", this.MachineRegion);
-            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamSimple(map, prefix + "IsDraft", this.IsDraft);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

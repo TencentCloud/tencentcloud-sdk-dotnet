@@ -74,6 +74,18 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("Tag")]
         public Tag[] Tag{ get; set; }
 
+        /// <summary>
+        /// 测试类型，包含定时测试与即时测试
+        /// </summary>
+        [JsonProperty("ProbeType")]
+        public ulong? ProbeType{ get; set; }
+
+        /// <summary>
+        /// 插件类型
+        /// </summary>
+        [JsonProperty("PluginSource")]
+        public string PluginSource{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +100,8 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "TaskCategory", this.TaskCategory);
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
+            this.SetParamSimple(map, prefix + "ProbeType", this.ProbeType);
+            this.SetParamSimple(map, prefix + "PluginSource", this.PluginSource);
         }
     }
 }

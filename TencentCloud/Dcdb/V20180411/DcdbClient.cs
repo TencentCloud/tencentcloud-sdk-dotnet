@@ -1823,6 +1823,46 @@ namespace TencentCloud.Dcdb.V20180411
         }
 
         /// <summary>
+        /// 本接口（ModifyDBInstanceName）用于修改实例名字
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNameResponse"/></returns>
+        public async Task<ModifyDBInstanceNameResponse> ModifyDBInstanceName(ModifyDBInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDBInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyDBInstanceName）用于修改实例名字
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDBInstanceNameRequest"/></param>
+        /// <returns><see cref="ModifyDBInstanceNameResponse"/></returns>
+        public ModifyDBInstanceNameResponse ModifyDBInstanceNameSync(ModifyDBInstanceNameRequest req)
+        {
+             JsonResponseModel<ModifyDBInstanceNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDBInstanceName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDBInstanceNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ModifyDBInstanceSecurityGroups）用于修改云数据库安全组
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>

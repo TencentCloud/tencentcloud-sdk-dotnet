@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.506</VersionPrefix>
+    <VersionPrefix>3.0.507</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -875,6 +875,8 @@
     <Compile Include="Apm\V20210622\Models\DescribeApmInstancesResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeMetricRecordsRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeMetricRecordsResponse.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeServiceOverviewRequest.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeServiceOverviewResponse.cs" />
     <Compile Include="Apm\V20210622\Models\Filter.cs" />
     <Compile Include="Apm\V20210622\Models\OrderBy.cs" />
     <Compile Include="Apm\V20210622\Models\QueryMetricItem.cs" />
@@ -5370,11 +5372,8 @@
     <Compile Include="Cwp\V20180228\Models\CancelIgnoreVulResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ChangeRuleEventsIgnoreStatusRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ChangeRuleEventsIgnoreStatusResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\ChargePrepaid.cs" />
     <Compile Include="Cwp\V20180228\Models\CheckBashRuleParamsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CheckBashRuleParamsResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\CloseProVersionRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\CloseProVersionResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ComponentStatistics.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateBaselineStrategyRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\CreateBaselineStrategyResponse.cs" />
@@ -5752,8 +5751,6 @@
     <Compile Include="Cwp\V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
-    <Compile Include="Cwp\V20180228\Models\InquiryPriceOpenProVersionPrepaidRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\InquiryPriceOpenProVersionPrepaidResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\LoginWhiteCombinedInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\LoginWhiteLists.cs" />
     <Compile Include="Cwp\V20180228\Models\Machine.cs" />
@@ -5772,8 +5769,6 @@
     <Compile Include="Cwp\V20180228\Models\ModifyBruteAttackRulesResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\ModifyProVersionRenewFlagResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyWarningSettingRequest.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyWarningSettingResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectDirRequest.cs" />
@@ -5784,15 +5779,10 @@
     <Compile Include="Cwp\V20180228\Models\ModifyWebPageProtectSwitchResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\MonthInspectionReport.cs" />
     <Compile Include="Cwp\V20180228\Models\OpenPortStatistics.cs" />
-    <Compile Include="Cwp\V20180228\Models\OpenProVersionPrepaidRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\OpenProVersionPrepaidResponse.cs" />
-    <Compile Include="Cwp\V20180228\Models\OpenProVersionRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\OpenProVersionResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\OsName.cs" />
     <Compile Include="Cwp\V20180228\Models\Place.cs" />
     <Compile Include="Cwp\V20180228\Models\PrivilegeEscalationProcess.cs" />
     <Compile Include="Cwp\V20180228\Models\PrivilegeRule.cs" />
-    <Compile Include="Cwp\V20180228\Models\ProVersionMachine.cs" />
     <Compile Include="Cwp\V20180228\Models\ProcessStatistics.cs" />
     <Compile Include="Cwp\V20180228\Models\ProtectDirInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\ProtectDirRelatedServer.cs" />
@@ -5806,8 +5796,6 @@
     <Compile Include="Cwp\V20180228\Models\RecoverMalwaresResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\RegionInfo.cs" />
     <Compile Include="Cwp\V20180228\Models\RegionSet.cs" />
-    <Compile Include="Cwp\V20180228\Models\RenewProVersionRequest.cs" />
-    <Compile Include="Cwp\V20180228\Models\RenewProVersionResponse.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShell.cs" />
     <Compile Include="Cwp\V20180228\Models\ReverseShellRule.cs" />
     <Compile Include="Cwp\V20180228\Models\RiskDnsList.cs" />
@@ -6648,6 +6636,8 @@
     <Compile Include="Dcdb\V20180411\Models\LogFileInfo.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyAccountDescriptionResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceNameRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceNameResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\ModifyDBInstancesProjectRequest.cs" />
@@ -7055,6 +7045,7 @@
     <Compile Include="Dts\V20180330\Models\StartMigrateJobResponse.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobRequest.cs" />
     <Compile Include="Dts\V20180330\Models\StopMigrateJobResponse.cs" />
+    <Compile Include="Dts\V20180330\Models\SubsErr.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeInfo.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeObject.cs" />
     <Compile Include="Dts\V20180330\Models\SubscribeRegionConf.cs" />
@@ -7733,6 +7724,8 @@
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeResourceScheduleRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeResourceScheduleResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DiskGroup.cs" />
     <Compile Include="Emr\V20190103\Models\DiskSpec.cs" />
     <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
@@ -7756,6 +7749,12 @@
     <Compile Include="Emr\V20190103\Models\JobResult.cs" />
     <Compile Include="Emr\V20190103\Models\LoginSettings.cs" />
     <Compile Include="Emr\V20190103\Models\MetaDbInfo.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourcePoolsRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourcePoolsResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourceScheduleConfigRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourceScheduleConfigResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourceSchedulerRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\ModifyResourceSchedulerResponse.cs" />
     <Compile Include="Emr\V20190103\Models\MultiDisk.cs" />
     <Compile Include="Emr\V20190103\Models\MultiDiskMC.cs" />
     <Compile Include="Emr\V20190103\Models\NewResourceSpec.cs" />
@@ -10906,6 +10905,8 @@
     <Compile Include="Lighthouse\V20200324\Models\RebootInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RegionInfo.cs" />
     <Compile Include="Lighthouse\V20200324\Models\RenewDiskChargePrepaid.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\RenewInstancesRequest.cs" />
+    <Compile Include="Lighthouse\V20200324\Models\RenewInstancesResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetAttachCcnRequest.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetAttachCcnResponse.cs" />
     <Compile Include="Lighthouse\V20200324\Models\ResetInstanceBlueprint.cs" />
@@ -16076,6 +16077,7 @@
     <Compile Include="Tem\V20210701\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20210701\Models\TemDeployApplicationDetailInfo.cs" />
     <Compile Include="Tem\V20210701\Models\TemNamespaceInfo.cs" />
+    <Compile Include="Tem\V20210701\Models\UseDefaultRepoParameters.cs" />
     <Compile Include="Tem\V20201221\TemClient.cs" />
     <Compile Include="Tem\V20201221\Models\CosToken.cs" />
     <Compile Include="Tem\V20201221\Models\CreateCosTokenRequest.cs" />
@@ -16132,6 +16134,13 @@
     <Compile Include="Tem\V20201221\Models\StorageConf.cs" />
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
+    <Compile Include="Teo\V20220106\TeoClient.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePurgeTaskRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePurgeTasksRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\FailReason.cs" />
+    <Compile Include="Teo\V20220106\Models\Task.cs" />
     <Compile Include="Thpc\V20211109\ThpcClient.cs" />
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupResponse.cs" />
@@ -17077,8 +17086,6 @@
     <Compile Include="Tsf\V20180326\Models\CreatePublicConfigResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateRepositoryRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateRepositoryResponse.cs" />
-    <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupRequest.cs" />
-    <Compile Include="Tsf\V20180326\Models\CreateServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateTaskFlowRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateTaskFlowResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\CreateTaskRequest.cs" />
@@ -17127,8 +17134,6 @@
     <Compile Include="Tsf\V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployGroupRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DeployGroupResponse.cs" />
-    <Compile Include="Tsf\V20180326\Models\DeployServerlessGroupRequest.cs" />
-    <Compile Include="Tsf\V20180326\Models\DeployServerlessGroupResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeApiDetailRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeApiDetailResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeApiGroupRequest.cs" />
@@ -17259,10 +17264,6 @@
     <Compile Include="Tsf\V20180326\Models\DescribeRepositoriesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeRepositoryRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeRepositoryResponse.cs" />
-    <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupRequest.cs" />
-    <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupResponse.cs" />
-    <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupsRequest.cs" />
-    <Compile Include="Tsf\V20180326\Models\DescribeServerlessGroupsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleApplicationsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleApplicationsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribeSimpleClustersRequest.cs" />
@@ -17435,8 +17436,6 @@
     <Compile Include="Tsf\V20180326\Models\SearchBusinessLogResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\SearchStdoutLogRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\SearchStdoutLogResponse.cs" />
-    <Compile Include="Tsf\V20180326\Models\ServerlessGroup.cs" />
-    <Compile Include="Tsf\V20180326\Models\ServerlessGroupPage.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceConfig.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceSetting.cs" />
     <Compile Include="Tsf\V20180326\Models\ServiceStatisticsResult.cs" />

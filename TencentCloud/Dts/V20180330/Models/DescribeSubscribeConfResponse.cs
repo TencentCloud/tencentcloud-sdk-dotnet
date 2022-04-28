@@ -183,6 +183,19 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
+        /// 数据订阅版本。老版订阅填txdts，kafka版填kafka
+        /// </summary>
+        [JsonProperty("SubscribeVersion")]
+        public string SubscribeVersion{ get; set; }
+
+        /// <summary>
+        /// 错误信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Errors")]
+        public SubsErr[] Errors{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -220,6 +233,8 @@ namespace TencentCloud.Dts.V20180330.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "SubscribeVersion", this.SubscribeVersion);
+            this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

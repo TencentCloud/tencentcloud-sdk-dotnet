@@ -293,6 +293,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 获取yarn资源调度页面的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
+        public async Task<DescribeResourceScheduleResponse> DescribeResourceSchedule(DescribeResourceScheduleRequest req)
+        {
+             JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取yarn资源调度页面的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceScheduleRequest"/></param>
+        /// <returns><see cref="DescribeResourceScheduleResponse"/></returns>
+        public DescribeResourceScheduleResponse DescribeResourceScheduleSync(DescribeResourceScheduleRequest req)
+        {
+             JsonResponseModel<DescribeResourceScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集群续费询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewEmrRequest"/></param>
@@ -484,6 +524,126 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "InquiryPriceUpdateInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquiryPriceUpdateInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新动态资源池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
+        /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
+        public async Task<ModifyResourcePoolsResponse> ModifyResourcePools(ModifyResourcePoolsRequest req)
+        {
+             JsonResponseModel<ModifyResourcePoolsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourcePools");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePoolsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 刷新动态资源池
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourcePoolsRequest"/></param>
+        /// <returns><see cref="ModifyResourcePoolsResponse"/></returns>
+        public ModifyResourcePoolsResponse ModifyResourcePoolsSync(ModifyResourcePoolsRequest req)
+        {
+             JsonResponseModel<ModifyResourcePoolsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourcePools");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourcePoolsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改yarn资源调度的资源配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
+        /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
+        public async Task<ModifyResourceScheduleConfigResponse> ModifyResourceScheduleConfig(ModifyResourceScheduleConfigRequest req)
+        {
+             JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourceScheduleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceScheduleConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改yarn资源调度的资源配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceScheduleConfigRequest"/></param>
+        /// <returns><see cref="ModifyResourceScheduleConfigResponse"/></returns>
+        public ModifyResourceScheduleConfigResponse ModifyResourceScheduleConfigSync(ModifyResourceScheduleConfigRequest req)
+        {
+             JsonResponseModel<ModifyResourceScheduleConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourceScheduleConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceScheduleConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改了yarn的资源调度器，点击部署生效
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
+        /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
+        public async Task<ModifyResourceSchedulerResponse> ModifyResourceScheduler(ModifyResourceSchedulerRequest req)
+        {
+             JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyResourceScheduler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceSchedulerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改了yarn的资源调度器，点击部署生效
+        /// </summary>
+        /// <param name="req"><see cref="ModifyResourceSchedulerRequest"/></param>
+        /// <returns><see cref="ModifyResourceSchedulerResponse"/></returns>
+        public ModifyResourceSchedulerResponse ModifyResourceSchedulerSync(ModifyResourceSchedulerRequest req)
+        {
+             JsonResponseModel<ModifyResourceSchedulerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyResourceScheduler");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyResourceSchedulerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

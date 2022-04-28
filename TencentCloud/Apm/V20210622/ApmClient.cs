@@ -212,5 +212,45 @@ namespace TencentCloud.Apm.V20210622
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 服务概览数据拉取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceOverviewRequest"/></param>
+        /// <returns><see cref="DescribeServiceOverviewResponse"/></returns>
+        public async Task<DescribeServiceOverviewResponse> DescribeServiceOverview(DescribeServiceOverviewRequest req)
+        {
+             JsonResponseModel<DescribeServiceOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServiceOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务概览数据拉取
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServiceOverviewRequest"/></param>
+        /// <returns><see cref="DescribeServiceOverviewResponse"/></returns>
+        public DescribeServiceOverviewResponse DescribeServiceOverviewSync(DescribeServiceOverviewRequest req)
+        {
+             JsonResponseModel<DescribeServiceOverviewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServiceOverview");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServiceOverviewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

@@ -973,46 +973,6 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
-        /// 创建Serverless部署组
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessGroupRequest"/></param>
-        /// <returns><see cref="CreateServerlessGroupResponse"/></returns>
-        public async Task<CreateServerlessGroupResponse> CreateServerlessGroup(CreateServerlessGroupRequest req)
-        {
-             JsonResponseModel<CreateServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建Serverless部署组
-        /// </summary>
-        /// <param name="req"><see cref="CreateServerlessGroupRequest"/></param>
-        /// <returns><see cref="CreateServerlessGroupResponse"/></returns>
-        public CreateServerlessGroupResponse CreateServerlessGroupSync(CreateServerlessGroupRequest req)
-        {
-             JsonResponseModel<CreateServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateServerlessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
@@ -1926,46 +1886,6 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DeployGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 部署Serverless应用
-        /// </summary>
-        /// <param name="req"><see cref="DeployServerlessGroupRequest"/></param>
-        /// <returns><see cref="DeployServerlessGroupResponse"/></returns>
-        public async Task<DeployServerlessGroupResponse> DeployServerlessGroup(DeployServerlessGroupRequest req)
-        {
-             JsonResponseModel<DeployServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeployServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployServerlessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 部署Serverless应用
-        /// </summary>
-        /// <param name="req"><see cref="DeployServerlessGroupRequest"/></param>
-        /// <returns><see cref="DeployServerlessGroupResponse"/></returns>
-        public DeployServerlessGroupResponse DeployServerlessGroupSync(DeployServerlessGroupRequest req)
-        {
-             JsonResponseModel<DeployServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeployServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployServerlessGroupResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4568,86 +4488,6 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRepository");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRepositoryResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询Serverless部署组明细
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessGroupRequest"/></param>
-        /// <returns><see cref="DescribeServerlessGroupResponse"/></returns>
-        public async Task<DescribeServerlessGroupResponse> DescribeServerlessGroup(DescribeServerlessGroupRequest req)
-        {
-             JsonResponseModel<DescribeServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询Serverless部署组明细
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessGroupRequest"/></param>
-        /// <returns><see cref="DescribeServerlessGroupResponse"/></returns>
-        public DescribeServerlessGroupResponse DescribeServerlessGroupSync(DescribeServerlessGroupRequest req)
-        {
-             JsonResponseModel<DescribeServerlessGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeServerlessGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询Serverless部署组列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessGroupsRequest"/></param>
-        /// <returns><see cref="DescribeServerlessGroupsResponse"/></returns>
-        public async Task<DescribeServerlessGroupsResponse> DescribeServerlessGroups(DescribeServerlessGroupsRequest req)
-        {
-             JsonResponseModel<DescribeServerlessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeServerlessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询Serverless部署组列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeServerlessGroupsRequest"/></param>
-        /// <returns><see cref="DescribeServerlessGroupsResponse"/></returns>
-        public DescribeServerlessGroupsResponse DescribeServerlessGroupsSync(DescribeServerlessGroupsRequest req)
-        {
-             JsonResponseModel<DescribeServerlessGroupsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeServerlessGroups");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerlessGroupsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

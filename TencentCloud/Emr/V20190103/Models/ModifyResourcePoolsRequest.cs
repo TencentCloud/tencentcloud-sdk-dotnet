@@ -15,31 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Emr.V20190103.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ChargePrepaid : AbstractModel
+    public class ModifyResourcePoolsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 购买实例的时长，单位：月。取值范围：1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 24, 36。
+        /// emr集群id
         /// </summary>
-        [JsonProperty("Period")]
-        public ulong? Period{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 自动续费标识。取值范围：
-        /// <li>NOTIFY_AND_AUTO_RENEW：通知过期且自动续费</li>
-        /// <li>NOTIFY_AND_MANUAL_RENEW：通知过期不自动续费</li>
-        /// <li>DISABLE_NOTIFY_AND_MANUAL_RENEW：不通知过期不自动续费</li>
-        /// 
-        /// 默认取值：NOTIFY_AND_MANUAL_RENEW。若该参数指定为NOTIFY_AND_AUTO_RENEW，在账户余额充足的情况下，实例到期后将按月自动续费。
+        /// 标识是fair还是capacity
         /// </summary>
-        [JsonProperty("RenewFlag")]
-        public string RenewFlag{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
 
         /// <summary>
@@ -47,8 +42,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Period", this.Period);
-            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
         }
     }
 }

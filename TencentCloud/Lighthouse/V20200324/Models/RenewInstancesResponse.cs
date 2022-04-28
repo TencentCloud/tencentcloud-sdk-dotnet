@@ -15,26 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Lighthouse.V20200324.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InquiryPriceOpenProVersionPrepaidRequest : AbstractModel
+    public class RenewInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 预付费模式(包年包月)参数设置。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("ChargePrepaid")]
-        public ChargePrepaid ChargePrepaid{ get; set; }
-
-        /// <summary>
-        /// 需要开通专业版机器列表数组。
-        /// </summary>
-        [JsonProperty("Machines")]
-        public ProVersionMachine[] Machines{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +36,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "ChargePrepaid.", this.ChargePrepaid);
-            this.SetParamArrayObj(map, prefix + "Machines.", this.Machines);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
