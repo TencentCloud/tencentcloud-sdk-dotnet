@@ -53,7 +53,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// AddCdnDomain 用于新增内容分发网络加速域名。
+        /// AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
         /// </summary>
         /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
         /// <returns><see cref="AddCdnDomainResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
-        /// AddCdnDomain 用于新增内容分发网络加速域名。
+        /// AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
         /// </summary>
         /// <param name="req"><see cref="AddCdnDomainRequest"/></param>
         /// <returns><see cref="AddCdnDomainResponse"/></returns>

@@ -132,5 +132,45 @@ namespace TencentCloud.Teo.V20220106
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 用户查询用户站点信息列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
+        public async Task<DescribeZonesResponse> DescribeZones(DescribeZonesRequest req)
+        {
+             JsonResponseModel<DescribeZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户查询用户站点信息列表，支持分页
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZonesRequest"/></param>
+        /// <returns><see cref="DescribeZonesResponse"/></returns>
+        public DescribeZonesResponse DescribeZonesSync(DescribeZonesRequest req)
+        {
+             JsonResponseModel<DescribeZonesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeZones");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZonesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

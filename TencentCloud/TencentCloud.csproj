@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.508</VersionPrefix>
+    <VersionPrefix>3.0.509</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -455,6 +455,14 @@
     <Compile Include="Antiddos\V20200309\Models\DescribeListSchedulingDomainResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListWaterPrintConfigRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DescribeListWaterPrintConfigResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewAttackTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewAttackTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewCCTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewCCTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewDDoSTrendRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewDDoSTrendResponse.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewIndexRequest.cs" />
+    <Compile Include="Antiddos\V20200309\Models\DescribeOverviewIndexResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\DisassociateDDoSEipAddressRequest.cs" />
     <Compile Include="Antiddos\V20200309\Models\DisassociateDDoSEipAddressResponse.cs" />
     <Compile Include="Antiddos\V20200309\Models\EipAddressPackRelation.cs" />
@@ -4728,6 +4736,8 @@
     <Compile Include="Cpdp\V20190820\Models\FundsTransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\GetBillDownloadUrlRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\GetBillDownloadUrlResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetDistributeBillDownloadUrlRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetDistributeBillDownloadUrlResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MemberTransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantClassificationId.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
@@ -16145,8 +16155,12 @@
     <Compile Include="Teo\V20220106\Models\CreatePurgeTaskResponse.cs" />
     <Compile Include="Teo\V20220106\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="Teo\V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribeZonesRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribeZonesResponse.cs" />
     <Compile Include="Teo\V20220106\Models\FailReason.cs" />
     <Compile Include="Teo\V20220106\Models\Task.cs" />
+    <Compile Include="Teo\V20220106\Models\Zone.cs" />
+    <Compile Include="Teo\V20220106\Models\ZoneFilter.cs" />
     <Compile Include="Thpc\V20211109\ThpcClient.cs" />
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupRequest.cs" />
     <Compile Include="Thpc\V20211109\Models\BindAutoScalingGroupResponse.cs" />

@@ -4853,7 +4853,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 专家服务-旗舰护网列表
+        /// 专家服务-旗舰重保列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProtectNetListRequest"/></param>
         /// <returns><see cref="DescribeProtectNetListResponse"/></returns>
@@ -4873,7 +4873,7 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
-        /// 专家服务-旗舰护网列表
+        /// 专家服务-旗舰重保列表
         /// </summary>
         /// <param name="req"><see cref="DescribeProtectNetListRequest"/></param>
         /// <returns><see cref="DescribeProtectNetListResponse"/></returns>

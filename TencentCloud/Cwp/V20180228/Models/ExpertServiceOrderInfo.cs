@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? OrderId{ get; set; }
 
         /// <summary>
-        /// 订单类型 1应急 2 旗舰护网 3 安全管家
+        /// 订单类型 1应急 2 旗舰重保 3 安全管家
         /// </summary>
         [JsonProperty("InquireType")]
         public ulong? InquireType{ get; set; }

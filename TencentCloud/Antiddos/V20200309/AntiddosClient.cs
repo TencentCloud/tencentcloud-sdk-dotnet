@@ -2733,6 +2733,166 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 拉取防护概览攻击趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewAttackTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewAttackTrendResponse"/></returns>
+        public async Task<DescribeOverviewAttackTrendResponse> DescribeOverviewAttackTrend(DescribeOverviewAttackTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewAttackTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewAttackTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewAttackTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取防护概览攻击趋势
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewAttackTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewAttackTrendResponse"/></returns>
+        public DescribeOverviewAttackTrendResponse DescribeOverviewAttackTrendSync(DescribeOverviewAttackTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewAttackTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewAttackTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewAttackTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewCCTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewCCTrendResponse"/></returns>
+        public async Task<DescribeOverviewCCTrendResponse> DescribeOverviewCCTrend(DescribeOverviewCCTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewCCTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewCCTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防护概览总请求峰值(QPS)和攻击请求(QPS)以及总请求次数和攻击请求次数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewCCTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewCCTrendResponse"/></returns>
+        public DescribeOverviewCCTrendResponse DescribeOverviewCCTrendSync(DescribeOverviewCCTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewCCTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewCCTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewCCTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防护概览DDoS攻击流量带宽和攻击包速率数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSTrendResponse"/></returns>
+        public async Task<DescribeOverviewDDoSTrendResponse> DescribeOverviewDDoSTrend(DescribeOverviewDDoSTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewDDoSTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防护概览DDoS攻击流量带宽和攻击包速率数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSTrendRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSTrendResponse"/></returns>
+        public DescribeOverviewDDoSTrendResponse DescribeOverviewDDoSTrendSync(DescribeOverviewDDoSTrendRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewDDoSTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取防护概览指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewIndexRequest"/></param>
+        /// <returns><see cref="DescribeOverviewIndexResponse"/></returns>
+        public async Task<DescribeOverviewIndexResponse> DescribeOverviewIndex(DescribeOverviewIndexRequest req)
+        {
+             JsonResponseModel<DescribeOverviewIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 拉取防护概览指标
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewIndexRequest"/></param>
+        /// <returns><see cref="DescribeOverviewIndexResponse"/></returns>
+        public DescribeOverviewIndexResponse DescribeOverviewIndexSync(DescribeOverviewIndexRequest req)
+        {
+             JsonResponseModel<DescribeOverviewIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DisassociateDDoSEipAddress) 用于解绑高防弹性公网IP。
         /// </summary>
         /// <param name="req"><see cref="DisassociateDDoSEipAddressRequest"/></param>
