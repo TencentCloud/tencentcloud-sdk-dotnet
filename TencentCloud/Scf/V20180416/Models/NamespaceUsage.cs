@@ -50,11 +50,18 @@ namespace TencentCloud.Scf.V20180416.Models
         public long? TotalConcurrencyMem{ get; set; }
 
         /// <summary>
-        /// 命名空间配额使用量
+        /// 命名空间并发使用量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalAllocatedConcurrencyMem")]
         public long? TotalAllocatedConcurrencyMem{ get; set; }
+
+        /// <summary>
+        /// 命名空间预置使用量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalAllocatedProvisionedMem")]
+        public long? TotalAllocatedProvisionedMem{ get; set; }
 
 
         /// <summary>
@@ -67,6 +74,7 @@ namespace TencentCloud.Scf.V20180416.Models
             this.SetParamSimple(map, prefix + "FunctionsCount", this.FunctionsCount);
             this.SetParamSimple(map, prefix + "TotalConcurrencyMem", this.TotalConcurrencyMem);
             this.SetParamSimple(map, prefix + "TotalAllocatedConcurrencyMem", this.TotalAllocatedConcurrencyMem);
+            this.SetParamSimple(map, prefix + "TotalAllocatedProvisionedMem", this.TotalAllocatedProvisionedMem);
         }
     }
 }

@@ -241,6 +241,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         public bool? DryRun{ get; set; }
 
         /// <summary>
+        /// 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
         /// 指定实例的IP列表。仅支持主实例指定，按实例顺序，不足则按未指定处理。
         /// </summary>
         [JsonProperty("Vips")]
@@ -288,6 +294,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ParamTemplateType", this.ParamTemplateType);
             this.SetParamArraySimple(map, prefix + "AlarmPolicyIdList.", this.AlarmPolicyIdList);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
             this.SetParamArraySimple(map, prefix + "Vips.", this.Vips);
         }
     }

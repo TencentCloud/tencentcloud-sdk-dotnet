@@ -126,6 +126,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("UidSet")]
         public string[] UidSet{ get; set; }
 
+        /// <summary>
+        /// 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
             this.SetParamArraySimple(map, prefix + "UidSet.", this.UidSet);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

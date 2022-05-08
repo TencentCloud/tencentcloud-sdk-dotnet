@@ -1819,6 +1819,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 提供导出自定义镜像到指定COS存储桶的能力
+        /// </summary>
+        /// <param name="req"><see cref="ExportImagesRequest"/></param>
+        /// <returns><see cref="ExportImagesResponse"/></returns>
+        public async Task<ExportImagesResponse> ExportImages(ExportImagesRequest req)
+        {
+             JsonResponseModel<ExportImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供导出自定义镜像到指定COS存储桶的能力
+        /// </summary>
+        /// <param name="req"><see cref="ExportImagesRequest"/></param>
+        /// <returns><see cref="ExportImagesResponse"/></returns>
+        public ExportImagesResponse ExportImagesSync(ExportImagesRequest req)
+        {
+             JsonResponseModel<ExportImagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportImages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportImagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ImportImage)用于导入镜像，导入后的镜像可用于创建实例。目前支持 RAW、VHD、QCOW2、VMDK 镜像格式。
         /// </summary>
         /// <param name="req"><see cref="ImportImageRequest"/></param>

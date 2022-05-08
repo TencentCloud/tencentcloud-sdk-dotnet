@@ -258,6 +258,37 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
+        /// <summary>
+        /// 实例备份信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceNote")]
+        public string InstanceNote{ get; set; }
+
+        /// <summary>
+        /// 备份周期
+        /// </summary>
+        [JsonProperty("BackupCycle")]
+        public long?[] BackupCycle{ get; set; }
+
+        /// <summary>
+        /// 备份周期类型，[daily、weekly、monthly]
+        /// </summary>
+        [JsonProperty("BackupCycleType")]
+        public string BackupCycleType{ get; set; }
+
+        /// <summary>
+        /// 数据(日志)备份保留时间
+        /// </summary>
+        [JsonProperty("BackupSaveDays")]
+        public long? BackupSaveDays{ get; set; }
+
+        /// <summary>
+        /// 实例类型 HA-高可用 RO-只读实例 SI-基础版 BI-商业智能服务
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -302,6 +333,11 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "HAFlag", this.HAFlag);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
+            this.SetParamSimple(map, prefix + "InstanceNote", this.InstanceNote);
+            this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+            this.SetParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
+            this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
         }
     }
 }

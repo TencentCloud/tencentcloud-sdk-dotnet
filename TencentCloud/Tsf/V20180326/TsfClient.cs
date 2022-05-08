@@ -4177,6 +4177,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询数据集列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProgramsRequest"/></param>
+        /// <returns><see cref="DescribeProgramsResponse"/></returns>
+        public async Task<DescribeProgramsResponse> DescribePrograms(DescribeProgramsRequest req)
+        {
+             JsonResponseModel<DescribeProgramsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrograms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProgramsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询数据集列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProgramsRequest"/></param>
+        /// <returns><see cref="DescribeProgramsResponse"/></returns>
+        public DescribeProgramsResponse DescribeProgramsSync(DescribeProgramsRequest req)
+        {
+             JsonResponseModel<DescribeProgramsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrograms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProgramsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询公共配置（单条）
         /// </summary>
         /// <param name="req"><see cref="DescribePublicConfigRequest"/></param>

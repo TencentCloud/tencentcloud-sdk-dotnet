@@ -55,13 +55,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] QQDict{ get; set; }
 
         /// <summary>
-        /// 0：安装；1：删除
+        /// 0：安装；1：删除。默认值0
         /// </summary>
         [JsonProperty("UpdateType")]
         public long? UpdateType{ get; set; }
 
         /// <summary>
-        /// 是否强制重启集群
+        /// 是否强制重启集群。默认值false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }

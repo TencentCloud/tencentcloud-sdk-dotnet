@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{35B03DD2-7919-36B9-9AF9-8C160C55C632}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.509</VersionPrefix>
+    <VersionPrefix>3.0.510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="V20190116\Models\CreateGroupRequest.cs" />
     <Compile Include="V20190116\Models\CreateGroupResponse.cs" />
+    <Compile Include="V20190116\Models\CreateOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\CreateOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\CreatePolicyRequest.cs" />
     <Compile Include="V20190116\Models\CreatePolicyResponse.cs" />
     <Compile Include="V20190116\Models\CreatePolicyVersionRequest.cs" />
@@ -81,6 +83,8 @@
     <Compile Include="V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="V20190116\Models\DeleteGroupResponse.cs" />
+    <Compile Include="V20190116\Models\DeleteOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\DeleteOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\DeletePolicyRequest.cs" />
     <Compile Include="V20190116\Models\DeletePolicyResponse.cs" />
     <Compile Include="V20190116\Models\DeletePolicyVersionRequest.cs" />
@@ -97,6 +101,8 @@
     <Compile Include="V20190116\Models\DeleteUserPermissionsBoundaryResponse.cs" />
     <Compile Include="V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="V20190116\Models\DescribeOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\DescribeOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\DescribeRoleListRequest.cs" />
     <Compile Include="V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="V20190116\Models\DescribeSafeAuthFlagCollRequest.cs" />
@@ -210,6 +216,8 @@
     <Compile Include="V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="V20190116\Models\UpdateOIDCConfigRequest.cs" />
+    <Compile Include="V20190116\Models\UpdateOIDCConfigResponse.cs" />
     <Compile Include="V20190116\Models\UpdatePolicyRequest.cs" />
     <Compile Include="V20190116\Models\UpdatePolicyResponse.cs" />
     <Compile Include="V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />

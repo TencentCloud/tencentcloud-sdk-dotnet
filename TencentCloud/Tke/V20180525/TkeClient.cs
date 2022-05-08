@@ -333,46 +333,6 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 为已经存在的集群创建伸缩组
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterAsGroupRequest"/></param>
-        /// <returns><see cref="CreateClusterAsGroupResponse"/></returns>
-        public async Task<CreateClusterAsGroupResponse> CreateClusterAsGroup(CreateClusterAsGroupRequest req)
-        {
-             JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateClusterAsGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterAsGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 为已经存在的集群创建伸缩组
-        /// </summary>
-        /// <param name="req"><see cref="CreateClusterAsGroupRequest"/></param>
-        /// <returns><see cref="CreateClusterAsGroupResponse"/></returns>
-        public CreateClusterAsGroupResponse CreateClusterAsGroupSync(CreateClusterAsGroupRequest req)
-        {
-             JsonResponseModel<CreateClusterAsGroupResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateClusterAsGroup");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateClusterAsGroupResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>

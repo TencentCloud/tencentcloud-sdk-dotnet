@@ -61,19 +61,19 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? ActivityId{ get; set; }
 
         /// <summary>
-        /// 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。
+        /// 指定实例配置完成变更后的切换时间，默认为 立即切换，入参为 0 ：立即切换 。1：指定时间切换。2：维护时间窗口内切换。
         /// </summary>
         [JsonProperty("SwitchTag")]
         public ulong? SwitchTag{ get; set; }
 
         /// <summary>
-        /// 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。
+        /// 切换开始时间，时间格式：HH:MM:SS，例如：01:00:00。当SwitchTag为0或2时，该参数失效。
         /// </summary>
         [JsonProperty("SwitchStartTime")]
         public string SwitchStartTime{ get; set; }
 
         /// <summary>
-        /// 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。
+        /// 切换截止时间，时间格式：HH:MM:SS，例如：01:30:00。当SwitchTag为0或2时，该参数失效。
         /// </summary>
         [JsonProperty("SwitchEndTime")]
         public string SwitchEndTime{ get; set; }

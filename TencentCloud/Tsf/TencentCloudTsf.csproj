@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.509</VersionPrefix>
+    <VersionPrefix>3.0.510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -280,6 +280,8 @@
     <Compile Include="V20180326\Models\DescribePluginInstancesResponse.cs" />
     <Compile Include="V20180326\Models\DescribePodInstancesRequest.cs" />
     <Compile Include="V20180326\Models\DescribePodInstancesResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeProgramsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeProgramsResponse.cs" />
     <Compile Include="V20180326\Models\DescribePublicConfigReleaseLogsRequest.cs" />
     <Compile Include="V20180326\Models\DescribePublicConfigReleaseLogsResponse.cs" />
     <Compile Include="V20180326\Models\DescribePublicConfigReleasesRequest.cs" />
@@ -425,6 +427,7 @@
     <Compile Include="V20180326\Models\OperationInfo.cs" />
     <Compile Include="V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="V20180326\Models\OverviewBasicResourceUsage.cs" />
+    <Compile Include="V20180326\Models\PagedProgram.cs" />
     <Compile Include="V20180326\Models\PathRewrite.cs" />
     <Compile Include="V20180326\Models\PathRewriteCreateObject.cs" />
     <Compile Include="V20180326\Models\PathRewritePage.cs" />
@@ -432,6 +435,8 @@
     <Compile Include="V20180326\Models\PkgInfo.cs" />
     <Compile Include="V20180326\Models\PkgList.cs" />
     <Compile Include="V20180326\Models\Ports.cs" />
+    <Compile Include="V20180326\Models\Program.cs" />
+    <Compile Include="V20180326\Models\ProgramItem.cs" />
     <Compile Include="V20180326\Models\PropertyField.cs" />
     <Compile Include="V20180326\Models\ProtocolPort.cs" />
     <Compile Include="V20180326\Models\QuantileEntity.cs" />
@@ -455,6 +460,7 @@
     <Compile Include="V20180326\Models\RemoveInstancesResponse.cs" />
     <Compile Include="V20180326\Models\RepositoryInfo.cs" />
     <Compile Include="V20180326\Models\RepositoryList.cs" />
+    <Compile Include="V20180326\Models\Resource.cs" />
     <Compile Include="V20180326\Models\ResourceFieldRef.cs" />
     <Compile Include="V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="V20180326\Models\RevocationConfigResponse.cs" />

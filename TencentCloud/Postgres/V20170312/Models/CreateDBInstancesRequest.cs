@@ -61,7 +61,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public long? ProjectId{ get; set; }
 
         /// <summary>
-        /// PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+        /// PostgreSQL版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBMajorVersion、DBKernelVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -133,13 +133,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string[] SecurityGroupIds{ get; set; }
 
         /// <summary>
-        /// PostgreSQL主要版本。目前支持10，11，12，13这几个版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。
+        /// PostgreSQL主要版本。当输入该参数时，会基于此版本创建对应的最新内核版本号实例。该参数和DBVersion、DBKernelVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBMajorVersion")]
         public string DBMajorVersion{ get; set; }
 
         /// <summary>
-        /// PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。
+        /// PostgreSQL内核版本。当输入该参数时，会创建该内核版本号实例。该参数和DBVersion、DBMajorVersion至少需要传递一个。
         /// </summary>
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }

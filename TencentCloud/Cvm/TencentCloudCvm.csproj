@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.509</VersionPrefix>
+    <VersionPrefix>3.0.510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20170312\Models\DisasterRecoverGroup.cs" />
     <Compile Include="V20170312\Models\DisasterRecoverGroupQuota.cs" />
     <Compile Include="V20170312\Models\EnhancedService.cs" />
+    <Compile Include="V20170312\Models\ExportImagesRequest.cs" />
+    <Compile Include="V20170312\Models\ExportImagesResponse.cs" />
     <Compile Include="V20170312\Models\Externals.cs" />
     <Compile Include="V20170312\Models\Filter.cs" />
     <Compile Include="V20170312\Models\GPUInfo.cs" />

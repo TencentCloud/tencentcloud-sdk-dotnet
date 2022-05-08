@@ -31,7 +31,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 备份类型，当前只支持按天备份，取值为daily
+        /// 备份类型，当length(BackupDay) <=7 && length(BackupDay) >=2时，取值为weekly，当length(BackupDay)=1时，取值daily，默认daily
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -54,6 +54,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupModel")]
         public string BackupModel{ get; set; }
 
+        /// <summary>
+        /// BackupType取值为weekly时，表示每周的星期N做备份。（如果数据备份保留时间<7天，则取值[1,2,3,4,5,6,7]。如果数据备份保留时间>=7天，则备份周期取值至少是一周的任意2天）
+        /// </summary>
+        [JsonProperty("BackupCycle")]
+        public ulong?[] BackupCycle{ get; set; }
+
+        /// <summary>
+        /// 数据(日志)备份保留时间，取值[3-1830]天，默认7天
+        /// </summary>
+        [JsonProperty("BackupSaveDays")]
+        public ulong? BackupSaveDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupTime", this.BackupTime);
             this.SetParamSimple(map, prefix + "BackupDay", this.BackupDay);
             this.SetParamSimple(map, prefix + "BackupModel", this.BackupModel);
+            this.SetParamArraySimple(map, prefix + "BackupCycle.", this.BackupCycle);
+            this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
         }
     }
 }

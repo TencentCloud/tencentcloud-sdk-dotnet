@@ -53,6 +53,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 创建预热任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
+        /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
+        public async Task<CreatePrefetchTaskResponse> CreatePrefetchTask(CreatePrefetchTaskRequest req)
+        {
+             JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrefetchTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrefetchTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建预热任务
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
+        /// <returns><see cref="CreatePrefetchTaskResponse"/></returns>
+        public CreatePrefetchTaskResponse CreatePrefetchTaskSync(CreatePrefetchTaskRequest req)
+        {
+             JsonResponseModel<CreatePrefetchTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrefetchTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrefetchTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建清除缓存任务
         /// </summary>
         /// <param name="req"><see cref="CreatePurgeTaskRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "CreatePurgeTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePurgeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询预热任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
+        /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
+        public async Task<DescribePrefetchTasksResponse> DescribePrefetchTasks(DescribePrefetchTasksRequest req)
+        {
+             JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrefetchTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrefetchTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询预热任务状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrefetchTasksRequest"/></param>
+        /// <returns><see cref="DescribePrefetchTasksResponse"/></returns>
+        public DescribePrefetchTasksResponse DescribePrefetchTasksSync(DescribePrefetchTasksRequest req)
+        {
+             JsonResponseModel<DescribePrefetchTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrefetchTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrefetchTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

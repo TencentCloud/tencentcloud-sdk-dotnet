@@ -54,6 +54,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("DatabaseName")]
         public string DatabaseName{ get; set; }
 
+        /// <summary>
+        /// 列表项排序，目前只按照备份大小排序（desc-降序，asc-升序），默认desc
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public string OrderBy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
         }
     }
 }

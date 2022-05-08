@@ -43,13 +43,13 @@ namespace TencentCloud.Es.V20180416.Models
         public string[] RemovePluginList{ get; set; }
 
         /// <summary>
-        /// 是否强制重启
+        /// 是否强制重启，默认值false
         /// </summary>
         [JsonProperty("ForceRestart")]
         public bool? ForceRestart{ get; set; }
 
         /// <summary>
-        /// 是否重新安装
+        /// 是否重新安装，默认值false
         /// </summary>
         [JsonProperty("ForceUpdate")]
         public bool? ForceUpdate{ get; set; }

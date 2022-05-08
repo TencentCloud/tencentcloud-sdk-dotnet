@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.509</VersionPrefix>
+    <VersionPrefix>3.0.510</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1952,6 +1952,8 @@
     <Compile Include="Cam\V20190116\Models\ConsumeCustomMFATokenResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\CreateOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\CreatePolicyVersionRequest.cs" />
@@ -1968,6 +1970,8 @@
     <Compile Include="Cam\V20190116\Models\CreateUserSAMLConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DeleteOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeletePolicyVersionRequest.cs" />
@@ -1984,6 +1988,8 @@
     <Compile Include="Cam\V20190116\Models\DeleteUserPermissionsBoundaryResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DeleteUserResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\DescribeOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListRequest.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeRoleListResponse.cs" />
     <Compile Include="Cam\V20190116\Models\DescribeSafeAuthFlagCollRequest.cs" />
@@ -2097,6 +2103,8 @@
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateOIDCConfigRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UpdateOIDCConfigResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdatePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateRoleConsoleLoginRequest.cs" />
@@ -5205,6 +5213,8 @@
     <Compile Include="Cvm\V20170312\Models\DisasterRecoverGroup.cs" />
     <Compile Include="Cvm\V20170312\Models\DisasterRecoverGroupQuota.cs" />
     <Compile Include="Cvm\V20170312\Models\EnhancedService.cs" />
+    <Compile Include="Cvm\V20170312\Models\ExportImagesRequest.cs" />
+    <Compile Include="Cvm\V20170312\Models\ExportImagesResponse.cs" />
     <Compile Include="Cvm\V20170312\Models\Externals.cs" />
     <Compile Include="Cvm\V20170312\Models\Filter.cs" />
     <Compile Include="Cvm\V20170312\Models\GPUInfo.cs" />
@@ -16151,13 +16161,18 @@
     <Compile Include="Tem\V20201221\Models\StorageMountConf.cs" />
     <Compile Include="Tem\V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="Teo\V20220106\TeoClient.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePrefetchTaskRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="Teo\V20220106\Models\CreatePurgeTaskRequest.cs" />
     <Compile Include="Teo\V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePrefetchTasksRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="Teo\V20220106\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="Teo\V20220106\Models\DescribePurgeTasksResponse.cs" />
     <Compile Include="Teo\V20220106\Models\DescribeZonesRequest.cs" />
     <Compile Include="Teo\V20220106\Models\DescribeZonesResponse.cs" />
     <Compile Include="Teo\V20220106\Models\FailReason.cs" />
+    <Compile Include="Teo\V20220106\Models\Header.cs" />
     <Compile Include="Teo\V20220106\Models\Task.cs" />
     <Compile Include="Teo\V20220106\Models\Zone.cs" />
     <Compile Include="Teo\V20220106\Models\ZoneFilter.cs" />
@@ -16618,8 +16633,6 @@
     <Compile Include="Tke\V20180525\Models\Container.cs" />
     <Compile Include="Tke\V20180525\Models\ContainerState.cs" />
     <Compile Include="Tke\V20180525\Models\ControllerStatus.cs" />
-    <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupRequest.cs" />
-    <Compile Include="Tke\V20180525\Models\CreateClusterAsGroupResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateClusterEndpointVipRequest.cs" />
@@ -17268,6 +17281,8 @@
     <Compile Include="Tsf\V20180326\Models\DescribePluginInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePodInstancesRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePodInstancesResponse.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeProgramsRequest.cs" />
+    <Compile Include="Tsf\V20180326\Models\DescribeProgramsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePublicConfigReleaseLogsRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePublicConfigReleaseLogsResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\DescribePublicConfigReleasesRequest.cs" />
@@ -17413,6 +17428,7 @@
     <Compile Include="Tsf\V20180326\Models\OperationInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\OperationInfoDetail.cs" />
     <Compile Include="Tsf\V20180326\Models\OverviewBasicResourceUsage.cs" />
+    <Compile Include="Tsf\V20180326\Models\PagedProgram.cs" />
     <Compile Include="Tsf\V20180326\Models\PathRewrite.cs" />
     <Compile Include="Tsf\V20180326\Models\PathRewriteCreateObject.cs" />
     <Compile Include="Tsf\V20180326\Models\PathRewritePage.cs" />
@@ -17420,6 +17436,8 @@
     <Compile Include="Tsf\V20180326\Models\PkgInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\PkgList.cs" />
     <Compile Include="Tsf\V20180326\Models\Ports.cs" />
+    <Compile Include="Tsf\V20180326\Models\Program.cs" />
+    <Compile Include="Tsf\V20180326\Models\ProgramItem.cs" />
     <Compile Include="Tsf\V20180326\Models\PropertyField.cs" />
     <Compile Include="Tsf\V20180326\Models\ProtocolPort.cs" />
     <Compile Include="Tsf\V20180326\Models\QuantileEntity.cs" />
@@ -17443,6 +17461,7 @@
     <Compile Include="Tsf\V20180326\Models\RemoveInstancesResponse.cs" />
     <Compile Include="Tsf\V20180326\Models\RepositoryInfo.cs" />
     <Compile Include="Tsf\V20180326\Models\RepositoryList.cs" />
+    <Compile Include="Tsf\V20180326\Models\Resource.cs" />
     <Compile Include="Tsf\V20180326\Models\ResourceFieldRef.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigRequest.cs" />
     <Compile Include="Tsf\V20180326\Models\RevocationConfigResponse.cs" />

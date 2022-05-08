@@ -121,6 +121,54 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string TaskCreateTime{ get; set; }
 
         /// <summary>
+        /// 网络类型.PublicNetwork为公网类型,VPCNetwork为VPC网络
+        /// </summary>
+        [JsonProperty("NetworkType")]
+        public string NetworkType{ get; set; }
+
+        /// <summary>
+        /// API Server地址
+        /// </summary>
+        [JsonProperty("ApiServerAddress")]
+        public string ApiServerAddress{ get; set; }
+
+        /// <summary>
+        /// 节点数
+        /// </summary>
+        [JsonProperty("NodeCount")]
+        public ulong? NodeCount{ get; set; }
+
+        /// <summary>
+        /// 命名空间数
+        /// </summary>
+        [JsonProperty("NamespaceCount")]
+        public ulong? NamespaceCount{ get; set; }
+
+        /// <summary>
+        /// 工作负载数
+        /// </summary>
+        [JsonProperty("WorkloadCount")]
+        public ulong? WorkloadCount{ get; set; }
+
+        /// <summary>
+        /// Pod数量
+        /// </summary>
+        [JsonProperty("PodCount")]
+        public ulong? PodCount{ get; set; }
+
+        /// <summary>
+        /// Service数量
+        /// </summary>
+        [JsonProperty("ServiceCount")]
+        public ulong? ServiceCount{ get; set; }
+
+        /// <summary>
+        /// Ingress数量
+        /// </summary>
+        [JsonProperty("IngressCount")]
+        public ulong? IngressCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +196,14 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CheckStatus", this.CheckStatus);
             this.SetParamSimple(map, prefix + "DefenderStatus", this.DefenderStatus);
             this.SetParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
+            this.SetParamSimple(map, prefix + "NetworkType", this.NetworkType);
+            this.SetParamSimple(map, prefix + "ApiServerAddress", this.ApiServerAddress);
+            this.SetParamSimple(map, prefix + "NodeCount", this.NodeCount);
+            this.SetParamSimple(map, prefix + "NamespaceCount", this.NamespaceCount);
+            this.SetParamSimple(map, prefix + "WorkloadCount", this.WorkloadCount);
+            this.SetParamSimple(map, prefix + "PodCount", this.PodCount);
+            this.SetParamSimple(map, prefix + "ServiceCount", this.ServiceCount);
+            this.SetParamSimple(map, prefix + "IngressCount", this.IngressCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

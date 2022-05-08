@@ -90,6 +90,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("Group")]
         public long? Group{ get; set; }
 
+        /// <summary>
+        /// 备份类型，1-数据备份，2-日志备份，默认值为1
+        /// </summary>
+        [JsonProperty("Type")]
+        public long? Type{ get; set; }
+
+        /// <summary>
+        /// 按照备份文件形式筛选，pkg-打包备份文件，single-单库备份文件
+        /// </summary>
+        [JsonProperty("BackupFormat")]
+        public string BackupFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +119,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "Group", this.Group);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
         }
     }
 }

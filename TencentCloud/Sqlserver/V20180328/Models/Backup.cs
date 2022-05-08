@@ -102,6 +102,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
+        /// <summary>
+        /// 备份文件形式（pkg-打包备份文件，single-单库备份文件）
+        /// </summary>
+        [JsonProperty("BackupFormat")]
+        public string BackupFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupWay", this.BackupWay);
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
         }
     }
 }
