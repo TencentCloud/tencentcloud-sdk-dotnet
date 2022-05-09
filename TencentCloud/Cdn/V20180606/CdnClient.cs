@@ -1432,7 +1432,6 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
-        /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
         /// <param name="req"><see cref="DescribePushTasksRequest"/></param>
         /// <returns><see cref="DescribePushTasksResponse"/></returns>
@@ -1453,7 +1452,6 @@ namespace TencentCloud.Cdn.V20180606
 
         /// <summary>
         /// DescribePushTasks  用于查询预热任务提交历史记录及执行进度。
-        /// 接口灰度中，暂未全量开放，敬请期待。
         /// </summary>
         /// <param name="req"><see cref="DescribePushTasksRequest"/></param>
         /// <returns><see cref="DescribePushTasksResponse"/></returns>
