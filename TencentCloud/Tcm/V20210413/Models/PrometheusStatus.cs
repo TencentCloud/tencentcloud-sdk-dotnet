@@ -67,6 +67,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Grafana")]
         public GrafanaInfo Grafana{ get; set; }
 
+        /// <summary>
+        /// Prometheus 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +87,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "State", this.State);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamObj(map, prefix + "Grafana.", this.Grafana);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

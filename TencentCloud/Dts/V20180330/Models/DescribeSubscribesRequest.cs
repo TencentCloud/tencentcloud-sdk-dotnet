@@ -73,13 +73,13 @@ namespace TencentCloud.Dts.V20180330.Models
         public string[] SubsStatus{ get; set; }
 
         /// <summary>
-        /// 返回记录的起始偏移量
+        /// 返回记录的起始偏移量，默认为0。请输入非负整数
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 单次返回的记录数量
+        /// 单次返回的记录数量，默认20。请输入1到100的整数
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }

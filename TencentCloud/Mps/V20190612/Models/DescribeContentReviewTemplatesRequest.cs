@@ -42,6 +42,14 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 模板类型过滤条件，不填则返回所有，可选值：
+        /// * Preset：系统预置模板；
+        /// * Custom：用户自定义模板。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }

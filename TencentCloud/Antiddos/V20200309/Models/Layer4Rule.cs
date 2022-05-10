@@ -52,10 +52,16 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public SourceServer[] RealServers{ get; set; }
 
         /// <summary>
-        /// 规则所属的资源实例
+        /// 资源实例
         /// </summary>
         [JsonProperty("InstanceDetails")]
         public InstanceRelation[] InstanceDetails{ get; set; }
+
+        /// <summary>
+        /// 规则所属的资源实例
+        /// </summary>
+        [JsonProperty("InstanceDetailRule")]
+        public RuleInstanceRelation[] InstanceDetailRule{ get; set; }
 
 
         /// <summary>
@@ -68,6 +74,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamArrayObj(map, prefix + "RealServers.", this.RealServers);
             this.SetParamArrayObj(map, prefix + "InstanceDetails.", this.InstanceDetails);
+            this.SetParamArrayObj(map, prefix + "InstanceDetailRule.", this.InstanceDetailRule);
         }
     }
 }

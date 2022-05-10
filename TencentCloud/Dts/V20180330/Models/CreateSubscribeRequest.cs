@@ -49,7 +49,7 @@ namespace TencentCloud.Dts.V20180330.Models
         public long? Count{ get; set; }
 
         /// <summary>
-        /// 是否自动续费，默认为0，1表示自动续费。小时计费实例设置该标识无效。
+        /// 是否自动续费，0表示不自动续费，1表示自动续费，默认为0。小时计费实例设置该标识无效。
         /// </summary>
         [JsonProperty("AutoRenew")]
         public long? AutoRenew{ get; set; }
