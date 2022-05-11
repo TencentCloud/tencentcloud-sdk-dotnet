@@ -455,7 +455,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
         /// </summary>
         /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>
         /// <returns><see cref="EncryptedPhoneVerificationResponse"/></returns>
@@ -475,7 +475,7 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持MD5加密传输。
+        /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
         /// </summary>
         /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>
         /// <returns><see cref="EncryptedPhoneVerificationResponse"/></returns>

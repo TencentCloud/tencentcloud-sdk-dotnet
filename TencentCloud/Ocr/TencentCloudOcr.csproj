@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B4E416C7-439C-325A-91AD-B0D5C05720A7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.512</VersionPrefix>
+    <VersionPrefix>3.0.513</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -143,6 +143,7 @@
     <Compile Include="V20181119\Models\OnlineTaxiItineraryInfo.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRRequest.cs" />
     <Compile Include="V20181119\Models\OrgCodeCertOCRResponse.cs" />
+    <Compile Include="V20181119\Models\PassInvoiceInfo.cs" />
     <Compile Include="V20181119\Models\PassportOCRRequest.cs" />
     <Compile Include="V20181119\Models\PassportOCRResponse.cs" />
     <Compile Include="V20181119\Models\PermitOCRRequest.cs" />
@@ -222,6 +223,8 @@
     <Compile Include="V20181119\Models\VatInvoiceOCRRequest.cs" />
     <Compile Include="V20181119\Models\VatInvoiceOCRResponse.cs" />
     <Compile Include="V20181119\Models\VatInvoiceUserInfo.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceVerifyNewRequest.cs" />
+    <Compile Include="V20181119\Models\VatInvoiceVerifyNewResponse.cs" />
     <Compile Include="V20181119\Models\VatInvoiceVerifyRequest.cs" />
     <Compile Include="V20181119\Models\VatInvoiceVerifyResponse.cs" />
     <Compile Include="V20181119\Models\VatRollInvoiceInfo.cs" />

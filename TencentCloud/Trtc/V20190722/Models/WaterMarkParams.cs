@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? LocationY{ get; set; }
 
         /// <summary>
-        /// 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过10MB。
+        /// 混流-水印图片URL地址，支持png、jpg、jpeg、bmp格式，暂不支持透明通道。URL链接长度限制为512字节。WaterMarkUrl和WaterMarkId参数都填时，以WaterMarkUrl为准。图片大小限制不超过2MB。
         /// </summary>
         [JsonProperty("WaterMarkUrl")]
         public string WaterMarkUrl{ get; set; }

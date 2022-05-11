@@ -42,6 +42,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("IsExtranet")]
         public bool? IsExtranet{ get; set; }
 
+        /// <summary>
+        /// 设置域名
+        /// </summary>
+        [JsonProperty("Domain")]
+        public string Domain{ get; set; }
+
+        /// <summary>
+        /// 使用的安全组，只有外网访问需要传递
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
+        /// <summary>
+        /// 创建lb参数，只有外网访问需要设置
+        /// </summary>
+        [JsonProperty("ExtensiveParameters")]
+        public string ExtensiveParameters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "IsExtranet", this.IsExtranet);
+            this.SetParamSimple(map, prefix + "Domain", this.Domain);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
+            this.SetParamSimple(map, prefix + "ExtensiveParameters", this.ExtensiveParameters);
         }
     }
 }

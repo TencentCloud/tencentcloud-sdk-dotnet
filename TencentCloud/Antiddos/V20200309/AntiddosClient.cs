@@ -2813,6 +2813,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取防护概览的ddos攻击事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSEventListRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSEventListResponse"/></returns>
+        public async Task<DescribeOverviewDDoSEventListResponse> DescribeOverviewDDoSEventList(DescribeOverviewDDoSEventListRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOverviewDDoSEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取防护概览的ddos攻击事件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOverviewDDoSEventListRequest"/></param>
+        /// <returns><see cref="DescribeOverviewDDoSEventListResponse"/></returns>
+        public DescribeOverviewDDoSEventListResponse DescribeOverviewDDoSEventListSync(DescribeOverviewDDoSEventListRequest req)
+        {
+             JsonResponseModel<DescribeOverviewDDoSEventListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOverviewDDoSEventList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOverviewDDoSEventListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取防护概览DDoS攻击流量带宽和攻击包速率数据
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewDDoSTrendRequest"/></param>

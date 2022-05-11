@@ -79,6 +79,20 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("ChannelEditionFlag")]
         public ulong? ChannelEditionFlag{ get; set; }
 
+        /// <summary>
+        /// 高防包企业版标记，0表示普通高防包；1表示企业版高防包
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnterpriseFlag")]
+        public ulong? EnterpriseFlag{ get; set; }
+
+        /// <summary>
+        /// 高防包企业版弹性阈值，0表示未开启；大于0为弹性防护阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ElasticLimit")]
+        public ulong? ElasticLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +107,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "ServiceBandWidth", this.ServiceBandWidth);
             this.SetParamSimple(map, prefix + "BattleEditionFlag", this.BattleEditionFlag);
             this.SetParamSimple(map, prefix + "ChannelEditionFlag", this.ChannelEditionFlag);
+            this.SetParamSimple(map, prefix + "EnterpriseFlag", this.EnterpriseFlag);
+            this.SetParamSimple(map, prefix + "ElasticLimit", this.ElasticLimit);
         }
     }
 }

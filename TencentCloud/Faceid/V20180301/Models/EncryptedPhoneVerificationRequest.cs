@@ -43,10 +43,11 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 敏感信息的加密方式，目前只支持MD5加密传输，参数取值：
+        /// 敏感信息的加密方式，目前支持明文、MD5和SHA256加密传输，参数取值：
         /// 
         /// 0：明文，不加密
-        /// 1：使用MD5加密
+        /// 1:   使用MD5加密
+        /// 2:   使用SHA256
         /// </summary>
         [JsonProperty("EncryptionMode")]
         public string EncryptionMode{ get; set; }

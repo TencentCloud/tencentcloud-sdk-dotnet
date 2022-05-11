@@ -25,13 +25,13 @@ namespace TencentCloud.Iotcloud.V20210408.Models
     {
         
         /// <summary>
-        /// 日志开始时间
+        /// 日志开始时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("MinTime")]
         public ulong? MinTime{ get; set; }
 
         /// <summary>
-        /// 日志结束时间
+        /// 日志结束时间，毫秒级时间戳
         /// </summary>
         [JsonProperty("MaxTime")]
         public ulong? MaxTime{ get; set; }

@@ -57,6 +57,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterIp")]
         public string FilterIp{ get; set; }
 
+        /// <summary>
+        /// 高防IP实例资源的cname
+        /// </summary>
+        [JsonProperty("FilterCname")]
+        public string FilterCname{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterInstanceId", this.FilterInstanceId);
             this.SetParamSimple(map, prefix + "FilterAlarmType", this.FilterAlarmType);
             this.SetParamSimple(map, prefix + "FilterIp", this.FilterIp);
+            this.SetParamSimple(map, prefix + "FilterCname", this.FilterCname);
         }
     }
 }

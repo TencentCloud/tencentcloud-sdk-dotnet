@@ -42,6 +42,12 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 是否延迟下发，1则延迟下发，否则立即下发
+        /// </summary>
+        [JsonProperty("IsDelay")]
+        public ulong? IsDelay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamSimple(map, prefix + "IsDelay", this.IsDelay);
         }
     }
 }

@@ -3057,6 +3057,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
+        /// </summary>
+        /// <param name="req"><see cref="VatInvoiceVerifyNewRequest"/></param>
+        /// <returns><see cref="VatInvoiceVerifyNewResponse"/></returns>
+        public async Task<VatInvoiceVerifyNewResponse> VatInvoiceVerifyNew(VatInvoiceVerifyNewRequest req)
+        {
+             JsonResponseModel<VatInvoiceVerifyNewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VatInvoiceVerifyNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VatInvoiceVerifyNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口支持增值税发票的准确性核验，您可以通过输入增值税发票的关键字段提供所需的验证信息，接口返回真实的票面相关信息，包括发票代码、发票号码、开票日期、金额、消费类型、购方名称、购方税号、销方名称、销方税号等多个常用字段。支持多种发票类型核验，包括增值税专用发票、增值税普通发票（含电子普通发票、卷式发票、通行费发票）、全电发票、机动车销售统一发票、货物运输业增值税专用发票、二手车销售统一发票。
+        /// </summary>
+        /// <param name="req"><see cref="VatInvoiceVerifyNewRequest"/></param>
+        /// <returns><see cref="VatInvoiceVerifyNewResponse"/></returns>
+        public VatInvoiceVerifyNewResponse VatInvoiceVerifyNewSync(VatInvoiceVerifyNewRequest req)
+        {
+             JsonResponseModel<VatInvoiceVerifyNewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VatInvoiceVerifyNew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VatInvoiceVerifyNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持对增值税发票（卷票）的发票代码、发票号码、日期、校验码、合计金额（小写）等关键字段的识别。
         /// </summary>
         /// <param name="req"><see cref="VatRollInvoiceOCRRequest"/></param>

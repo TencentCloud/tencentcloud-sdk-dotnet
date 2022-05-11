@@ -42,6 +42,18 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Eip")]
         public string Eip{ get; set; }
 
+        /// <summary>
+        /// 实例对应的cname
+        /// </summary>
+        [JsonProperty("Cname")]
+        public string Cname{ get; set; }
+
+        /// <summary>
+        /// 资源flag，0：高防包资源，1：高防IP资源，2：非高防资源IP
+        /// </summary>
+        [JsonProperty("ResourceFlag")]
+        public long? ResourceFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -50,6 +62,8 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Eip", this.Eip);
+            this.SetParamSimple(map, prefix + "Cname", this.Cname);
+            this.SetParamSimple(map, prefix + "ResourceFlag", this.ResourceFlag);
         }
     }
 }

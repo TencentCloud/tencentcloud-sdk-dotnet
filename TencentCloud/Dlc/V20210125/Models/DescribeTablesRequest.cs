@@ -86,6 +86,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TableType")]
         public string TableType{ get; set; }
 
+        /// <summary>
+        /// 筛选字段-表格式：不传（默认）为查全部；LAKEFS：托管表；ICEBERG：非托管iceberg表；HIVE：非托管hive表；OTHER：非托管其它；
+        /// </summary>
+        [JsonProperty("TableFormat")]
+        public string TableFormat{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Asc", this.Asc);
             this.SetParamSimple(map, prefix + "TableType", this.TableType);
+            this.SetParamSimple(map, prefix + "TableFormat", this.TableFormat);
         }
     }
 }
