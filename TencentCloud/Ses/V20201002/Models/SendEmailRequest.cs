@@ -57,7 +57,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Template Template{ get; set; }
 
         /// <summary>
-        /// 使用API直接发送内容时，填写的邮件内容
+        /// 已废弃
         /// </summary>
         [JsonProperty("Simple")]
         public Simple Simple{ get; set; }

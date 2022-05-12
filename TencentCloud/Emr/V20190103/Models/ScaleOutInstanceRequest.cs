@@ -167,6 +167,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("StartServiceAfterScaleOut")]
         public string StartServiceAfterScaleOut{ get; set; }
 
+        /// <summary>
+        /// 可用区，默认是集群的主可用区
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public long? ZoneId{ get; set; }
+
+        /// <summary>
+        /// 子网，默认是集群创建时的子网
+        /// </summary>
+        [JsonProperty("SubnetId")]
+        public string SubnetId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -195,6 +207,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamObj(map, prefix + "PodParameter.", this.PodParameter);
             this.SetParamSimple(map, prefix + "MasterCount", this.MasterCount);
             this.SetParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
         }
     }
 }

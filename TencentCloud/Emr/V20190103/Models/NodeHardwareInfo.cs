@@ -305,6 +305,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SupportModifyPayMode")]
         public long? SupportModifyPayMode{ get; set; }
 
+        /// <summary>
+        /// 系统盘类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RootStorageType")]
+        public long? RootStorageType{ get; set; }
+
+        /// <summary>
+        /// 可用区信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 子网
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubnetInfo")]
+        public SubnetInfo SubnetInfo{ get; set; }
+
+        /// <summary>
+        /// 客户端
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Clients")]
+        public string Clients{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -351,6 +379,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "IsDynamicSpec", this.IsDynamicSpec);
             this.SetParamSimple(map, prefix + "DynamicPodSpec", this.DynamicPodSpec);
             this.SetParamSimple(map, prefix + "SupportModifyPayMode", this.SupportModifyPayMode);
+            this.SetParamSimple(map, prefix + "RootStorageType", this.RootStorageType);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
+            this.SetParamSimple(map, prefix + "Clients", this.Clients);
         }
     }
 }

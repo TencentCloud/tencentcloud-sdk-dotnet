@@ -30,6 +30,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("FileIdSet")]
         public string[] FileIdSet{ get; set; }
 
+        /// <summary>
+        /// 删除文件结果信息列表。
+        /// </summary>
+        [JsonProperty("FileDeleteResultInfo")]
+        public FileDeleteResultItem[] FileDeleteResultInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "FileIdSet.", this.FileIdSet);
+            this.SetParamArrayObj(map, prefix + "FileDeleteResultInfo.", this.FileDeleteResultInfo);
         }
     }
 }

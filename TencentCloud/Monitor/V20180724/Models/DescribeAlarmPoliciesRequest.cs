@@ -153,6 +153,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("TriggerTasks")]
         public AlarmPolicyTriggerTask[] TriggerTasks{ get; set; }
 
+        /// <summary>
+        /// 根据一键告警策略筛选 不传展示全部策略 ONECLICK=展示一键告警策略 NOT_ONECLICK=展示非一键告警策略
+        /// </summary>
+        [JsonProperty("OneClickPolicyType")]
+        public string[] OneClickPolicyType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
             this.SetParamSimple(map, prefix + "NeedCorrespondence", this.NeedCorrespondence);
             this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
+            this.SetParamArraySimple(map, prefix + "OneClickPolicyType.", this.OneClickPolicyType);
         }
     }
 }

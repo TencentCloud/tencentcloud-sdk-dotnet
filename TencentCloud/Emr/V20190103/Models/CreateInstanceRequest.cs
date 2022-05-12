@@ -51,23 +51,11 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? ProductId{ get; set; }
 
         /// <summary>
-        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
-        /// </summary>
-        [JsonProperty("VPCSettings")]
-        public VPCSettings VPCSettings{ get; set; }
-
-        /// <summary>
         /// 部署的组件列表。不同的EMR产品ID（ProductId：具体含义参考入参ProductId字段）对应不同可选组件列表，不同产品版本可选组件列表查询：[组件版本](https://cloud.tencent.com/document/product/589/20279) ；
         /// 填写实例值：hive、flink。
         /// </summary>
         [JsonProperty("Software")]
         public string[] Software{ get; set; }
-
-        /// <summary>
-        /// 节点资源的规格。
-        /// </summary>
-        [JsonProperty("ResourceSpec")]
-        public NewResourceSpec ResourceSpec{ get; set; }
 
         /// <summary>
         /// 是否开启节点高可用。取值范围：
@@ -94,12 +82,6 @@ namespace TencentCloud.Emr.V20190103.Models
         public ulong? PayMode{ get; set; }
 
         /// <summary>
-        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
-        /// </summary>
-        [JsonProperty("Placement")]
-        public Placement Placement{ get; set; }
-
-        /// <summary>
         /// 购买实例的时长。结合TimeUnit一起使用。
         /// <li>TimeUnit为s时，该参数只能填写3600，表示按量计费实例。</li>
         /// <li>TimeUnit为m时，该参数填写的数字表示包年包月实例的购买时长，如1表示购买一个月</li>
@@ -124,10 +106,28 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
+        /// 私有网络相关信息配置。通过该参数可以指定私有网络的ID，子网ID等信息。
+        /// </summary>
+        [JsonProperty("VPCSettings")]
+        public VPCSettings VPCSettings{ get; set; }
+
+        /// <summary>
+        /// 节点资源的规格。
+        /// </summary>
+        [JsonProperty("ResourceSpec")]
+        public NewResourceSpec ResourceSpec{ get; set; }
+
+        /// <summary>
         /// 开启COS访问需要设置的参数。
         /// </summary>
         [JsonProperty("COSSettings")]
         public COSSettings COSSettings{ get; set; }
+
+        /// <summary>
+        /// 实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        /// </summary>
+        [JsonProperty("Placement")]
+        public Placement Placement{ get; set; }
 
         /// <summary>
         /// 实例所属安全组的ID，形如sg-xxxxxxxx。该参数可以通过调用 [DescribeSecurityGroups](https://cloud.tencent.com/document/api/215/15808) 的返回值中的SecurityGroupId字段来获取。
@@ -243,6 +243,24 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ExternalService")]
         public ExternalService[] ExternalService{ get; set; }
 
+        /// <summary>
+        /// 如果为0，则MultiZone、MultiDeployStrategy、MultiZoneSettings是disable的状态，如果为1，则废弃ResourceSpec，使用MultiZoneSettings。
+        /// </summary>
+        [JsonProperty("VersionID")]
+        public long? VersionID{ get; set; }
+
+        /// <summary>
+        /// true表示开启跨AZ部署；仅为新建集群时的用户参数，后续不支持调整。
+        /// </summary>
+        [JsonProperty("MultiZone")]
+        public bool? MultiZone{ get; set; }
+
+        /// <summary>
+        /// 节点资源的规格，有几个可用区，就填几个，按顺序第一个为主可用区，第二个为备可用区，第三个为仲裁可用区。如果没有开启跨AZ，则长度为1即可。
+        /// </summary>
+        [JsonProperty("MultiZoneSettings")]
+        public MultiZoneSetting[] MultiZoneSettings{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -250,17 +268,17 @@ namespace TencentCloud.Emr.V20190103.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
-            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
             this.SetParamArraySimple(map, prefix + "Software.", this.Software);
-            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamSimple(map, prefix + "SupportHA", this.SupportHA);
             this.SetParamSimple(map, prefix + "InstanceName", this.InstanceName);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
-            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamObj(map, prefix + "LoginSettings.", this.LoginSettings);
+            this.SetParamObj(map, prefix + "VPCSettings.", this.VPCSettings);
+            this.SetParamObj(map, prefix + "ResourceSpec.", this.ResourceSpec);
             this.SetParamObj(map, prefix + "COSSettings.", this.COSSettings);
+            this.SetParamObj(map, prefix + "Placement.", this.Placement);
             this.SetParamSimple(map, prefix + "SgId", this.SgId);
             this.SetParamArrayObj(map, prefix + "PreExecutedFileSettings.", this.PreExecutedFileSettings);
             this.SetParamSimple(map, prefix + "AutoRenew", this.AutoRenew);
@@ -278,6 +296,9 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "ApplicationRole", this.ApplicationRole);
             this.SetParamSimple(map, prefix + "SceneName", this.SceneName);
             this.SetParamArrayObj(map, prefix + "ExternalService.", this.ExternalService);
+            this.SetParamSimple(map, prefix + "VersionID", this.VersionID);
+            this.SetParamSimple(map, prefix + "MultiZone", this.MultiZone);
+            this.SetParamArrayObj(map, prefix + "MultiZoneSettings.", this.MultiZoneSettings);
         }
     }
 }

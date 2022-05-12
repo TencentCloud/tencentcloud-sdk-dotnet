@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 推流[直播码](https://cloud.tencent.com/document/product/267/5959)。
+        /// 推流直播码。
         /// </summary>
         [JsonProperty("StreamId")]
         public string StreamId{ get; set; }

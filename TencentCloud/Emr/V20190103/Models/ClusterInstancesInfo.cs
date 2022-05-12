@@ -310,6 +310,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("ClusterExternalServiceInfo")]
         public ClusterExternalServiceInfo[] ClusterExternalServiceInfo{ get; set; }
 
+        /// <summary>
+        /// 集群vpcid 字符串类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqVpcId")]
+        public string UniqVpcId{ get; set; }
+
+        /// <summary>
+        /// 子网id 字符串类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UniqSubnetId")]
+        public string UniqSubnetId{ get; set; }
+
+        /// <summary>
+        /// 节点信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TopologyInfoList")]
+        public TopologyInfo[] TopologyInfoList{ get; set; }
+
+        /// <summary>
+        /// 是否是跨AZ集群
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsMultiZoneCluster")]
+        public bool? IsMultiZoneCluster{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -353,6 +381,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "VpcName", this.VpcName);
             this.SetParamSimple(map, prefix + "SubnetName", this.SubnetName);
             this.SetParamArrayObj(map, prefix + "ClusterExternalServiceInfo.", this.ClusterExternalServiceInfo);
+            this.SetParamSimple(map, prefix + "UniqVpcId", this.UniqVpcId);
+            this.SetParamSimple(map, prefix + "UniqSubnetId", this.UniqSubnetId);
+            this.SetParamArrayObj(map, prefix + "TopologyInfoList.", this.TopologyInfoList);
+            this.SetParamSimple(map, prefix + "IsMultiZoneCluster", this.IsMultiZoneCluster);
         }
     }
 }

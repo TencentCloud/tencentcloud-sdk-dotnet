@@ -31,25 +31,25 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? WaterMarkId{ get; set; }
 
         /// <summary>
-        /// 混流-水印宽。单位为像素值。
+        /// 混流-水印宽。单位为像素值。水印宽+X偏移不能超过整个画布宽。
         /// </summary>
         [JsonProperty("WaterMarkWidth")]
         public ulong? WaterMarkWidth{ get; set; }
 
         /// <summary>
-        /// 混流-水印高。单位为像素值。
+        /// 混流-水印高。单位为像素值。水印高+Y偏移不能超过整个画布高。
         /// </summary>
         [JsonProperty("WaterMarkHeight")]
         public ulong? WaterMarkHeight{ get; set; }
 
         /// <summary>
-        /// 水印在输出时的X偏移。单位为像素值。
+        /// 水印在输出时的X偏移。单位为像素值。水印宽+X偏移不能超过整个画布宽。
         /// </summary>
         [JsonProperty("LocationX")]
         public ulong? LocationX{ get; set; }
 
         /// <summary>
-        /// 水印在输出时的Y偏移。单位为像素值。
+        /// 水印在输出时的Y偏移。单位为像素值。水印高+Y偏移不能超过整个画布高。
         /// </summary>
         [JsonProperty("LocationY")]
         public ulong? LocationY{ get; set; }
