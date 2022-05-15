@@ -1815,6 +1815,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 预付费实例变配接口，调整磁盘，带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePreRequest"/></param>
+        /// <returns><see cref="ModifyInstancePreResponse"/></returns>
+        public async Task<ModifyInstancePreResponse> ModifyInstancePre(ModifyInstancePreRequest req)
+        {
+             JsonResponseModel<ModifyInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 预付费实例变配接口，调整磁盘，带宽
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePreRequest"/></param>
+        /// <returns><see cref="ModifyInstancePreResponse"/></returns>
+        public ModifyInstancePreResponse ModifyInstancePreSync(ModifyInstancePreRequest req)
+        {
+             JsonResponseModel<ModifyInstancePreResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancePre");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePreResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改密码
         /// </summary>
         /// <param name="req"><see cref="ModifyPasswordRequest"/></param>

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.514</VersionPrefix>
+    <VersionPrefix>3.0.515</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -1295,6 +1295,13 @@
     <Compile Include="Bda\V20200324\Models\UpperBodyClothSleeve.cs" />
     <Compile Include="Bda\V20200324\Models\UpperBodyClothTexture.cs" />
     <Compile Include="Bda\V20200324\Models\VideoBasicInformation.cs" />
+    <Compile Include="Bi\V20220105\BiClient.cs" />
+    <Compile Include="Bi\V20220105\Models\ApplyEmbedIntervalRequest.cs" />
+    <Compile Include="Bi\V20220105\Models\ApplyEmbedIntervalResponse.cs" />
+    <Compile Include="Bi\V20220105\Models\ApplyEmbedTokenInfo.cs" />
+    <Compile Include="Bi\V20220105\Models\CreateEmbedTokenRequest.cs" />
+    <Compile Include="Bi\V20220105\Models\CreateEmbedTokenResponse.cs" />
+    <Compile Include="Bi\V20220105\Models\EmbedTokenInfo.cs" />
     <Compile Include="Billing\V20180709\BillingClient.cs" />
     <Compile Include="Billing\V20180709\Models\ActionSummaryOverviewItem.cs" />
     <Compile Include="Billing\V20180709\Models\ApplicableProducts.cs" />
@@ -3753,6 +3760,8 @@
     <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesConfig.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyInstanceAttributesResponse.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyInstancePreRequest.cs" />
+    <Compile Include="Ckafka\V20190819\Models\ModifyInstancePreResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyPasswordRequest.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyPasswordResponse.cs" />
     <Compile Include="Ckafka\V20190819\Models\ModifyTopicAttributesRequest.cs" />
@@ -8246,6 +8255,7 @@
     <Compile Include="Gaap\V20180529\Models\BindRealServerInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\BindRuleRealServersRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\BindRuleRealServersResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\Capacity.cs" />
     <Compile Include="Gaap\V20180529\Models\Certificate.cs" />
     <Compile Include="Gaap\V20180529\Models\CertificateAliasInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\CertificateDetail.cs" />
@@ -8266,6 +8276,8 @@
     <Compile Include="Gaap\V20180529\Models\CreateDomainErrorPageInfoResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateDomainResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateFirstLinkSessionRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\CreateFirstLinkSessionResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateHTTPListenerRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateHTTPListenerResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\CreateHTTPSListenerRequest.cs" />
@@ -8292,6 +8304,8 @@
     <Compile Include="Gaap\V20180529\Models\DeleteDomainErrorPageInfoResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DeleteDomainRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DeleteDomainResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DeleteFirstLinkSessionRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DeleteFirstLinkSessionResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DeleteListenersRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DeleteListenersResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DeleteProxyGroupRequest.cs" />
@@ -8322,6 +8336,8 @@
     <Compile Include="Gaap\V20180529\Models\DescribeDomainErrorPageInfoByIdsResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDomainErrorPageInfoRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeDomainErrorPageInfoResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeFirstLinkSessionRequest.cs" />
+    <Compile Include="Gaap\V20180529\Models\DescribeFirstLinkSessionResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeGroupAndStatisticsProxyRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeGroupAndStatisticsProxyResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeGroupDomainConfigRequest.cs" />
@@ -8374,8 +8390,10 @@
     <Compile Include="Gaap\V20180529\Models\DescribeTCPListenersResponse.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeUDPListenersRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DescribeUDPListenersResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DestAddressInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\DestroyProxiesRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\DestroyProxiesResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\DeviceInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\DomainAccessRegionDict.cs" />
     <Compile Include="Gaap\V20180529\Models\DomainErrorPageInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\DomainRuleSet.cs" />
@@ -8445,6 +8463,7 @@
     <Compile Include="Gaap\V20180529\Models\SecurityPolicyRuleOut.cs" />
     <Compile Include="Gaap\V20180529\Models\SetAuthenticationRequest.cs" />
     <Compile Include="Gaap\V20180529\Models\SetAuthenticationResponse.cs" />
+    <Compile Include="Gaap\V20180529\Models\SrcAddressInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\StatisticsDataInfo.cs" />
     <Compile Include="Gaap\V20180529\Models\TCPListener.cs" />
     <Compile Include="Gaap\V20180529\Models\TagPair.cs" />

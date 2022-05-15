@@ -25,43 +25,43 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 持码人姓名，如：王*
+        /// 持码人姓名，如：王*（允许返回空值）
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 持码人身份证号，如：11**************01
+        /// 持码人身份证号，如：11**************01（允许返回空值）
         /// </summary>
         [JsonProperty("IDNumber")]
         public string IDNumber{ get; set; }
 
         /// <summary>
-        /// 健康码更新时间
+        /// 健康码更新时间（允许返回空值）
         /// </summary>
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
         /// <summary>
-        /// 健康码颜色：绿色、黄色、红色
+        /// 健康码颜色：绿色、黄色、红色（允许返回空值）
         /// </summary>
         [JsonProperty("Color")]
         public string Color{ get; set; }
 
         /// <summary>
-        /// 核酸检测间隔时长：24小时、48小时、72小时、暂无核酸检测记录
+        /// 核酸检测间隔时长（允许返回空值）
         /// </summary>
         [JsonProperty("TestingInterval")]
         public string TestingInterval{ get; set; }
 
         /// <summary>
-        /// 核酸检测结果：阴性、阳性、暂无核酸检测记录
+        /// 核酸检测结果：阴性、阳性、暂无核酸检测记录（允许返回空值）
         /// </summary>
         [JsonProperty("TestingResult")]
         public string TestingResult{ get; set; }
 
         /// <summary>
-        /// 核酸检测时间
+        /// 核酸检测时间（允许返回空值）
         /// </summary>
         [JsonProperty("TestingTime")]
         public string TestingTime{ get; set; }

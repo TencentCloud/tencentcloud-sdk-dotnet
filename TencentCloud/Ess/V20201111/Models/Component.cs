@@ -38,13 +38,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 参数控件宽度，单位px
+        /// 参数控件宽度，单位pt
         /// </summary>
         [JsonProperty("ComponentWidth")]
         public float? ComponentWidth{ get; set; }
 
         /// <summary>
-        /// 参数控件高度，单位px
+        /// 参数控件高度，单位pt
         /// </summary>
         [JsonProperty("ComponentHeight")]
         public float? ComponentHeight{ get; set; }
@@ -56,13 +56,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ComponentPage{ get; set; }
 
         /// <summary>
-        /// 参数控件X位置，单位px
+        /// 参数控件X位置，单位pt
         /// </summary>
         [JsonProperty("ComponentPosX")]
         public float? ComponentPosX{ get; set; }
 
         /// <summary>
-        /// 参数控件Y位置，单位px
+        /// 参数控件Y位置，单位pt
         /// </summary>
         [JsonProperty("ComponentPosY")]
         public float? ComponentPosY{ get; set; }
@@ -74,13 +74,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? FileIndex{ get; set; }
 
         /// <summary>
-        /// 控件编号
+        /// GenerateMode==KEYWORD 指定关键字
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
 
         /// <summary>
-        /// 控件名称
+        /// GenerateMode==FIELD 指定表单域名称
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
@@ -92,7 +92,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? ComponentRequired{ get; set; }
 
         /// <summary>
-        /// 参数控件样式
+        /// 扩展参数：
+        /// ComponentType为SIGN_SIGNATURE类型可以控制签署方式
+        /// {“ComponentTypeLimit”: [“xxx”]}
+        /// xxx可以为：
+        /// HANDWRITE – 手写签名
+        /// BORDERLESS_ESIGN – 自动生成无边框腾讯体
+        /// OCR_ESIGN -- AI智能识别手写签名
+        /// ESIGN -- 个人印章类型
+        /// 如：{“ComponentTypeLimit”: [“BORDERLESS_ESIGN”]}
         /// </summary>
         [JsonProperty("ComponentExtra")]
         public string ComponentExtra{ get; set; }
@@ -129,6 +137,18 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ComponentDateFontSize")]
         public long? ComponentDateFontSize{ get; set; }
 
+        /// <summary>
+        /// 指定关键字时横坐标偏移量
+        /// </summary>
+        [JsonProperty("OffsetX")]
+        public float? OffsetX{ get; set; }
+
+        /// <summary>
+        /// 指定关键字时纵坐标偏移量
+        /// </summary>
+        [JsonProperty("OffsetY")]
+        public float? OffsetY{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +171,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "IsFormType", this.IsFormType);
             this.SetParamSimple(map, prefix + "GenerateMode", this.GenerateMode);
             this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
+            this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
+            this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
         }
     }
 }

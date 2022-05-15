@@ -46,14 +46,6 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 需要识别的健康码类型列表，为空或不填表示默认为自动识别。
         /// 0:自动识别
-        /// 
-        /// 1:粤康码
-        /// 
-        /// 2:随申码
-        /// 
-        /// 3:健康宝
-        /// 
-        /// 4.穗康码
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

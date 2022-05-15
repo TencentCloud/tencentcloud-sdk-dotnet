@@ -497,6 +497,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="CreateFirstLinkSessionResponse"/></returns>
+        public async Task<CreateFirstLinkSessionResponse> CreateFirstLinkSession(CreateFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<CreateFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateFirstLinkSession）用于创建接入段加速会话，创建有可能成功，也可能失败，需要通过返回码来进行判断。
+        /// </summary>
+        /// <param name="req"><see cref="CreateFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="CreateFirstLinkSessionResponse"/></returns>
+        public CreateFirstLinkSessionResponse CreateFirstLinkSessionSync(CreateFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<CreateFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
         /// </summary>
         /// <param name="req"><see cref="CreateHTTPListenerRequest"/></param>
@@ -1008,6 +1048,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DeleteDomainErrorPageInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDomainErrorPageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="DeleteFirstLinkSessionResponse"/></returns>
+        public async Task<DeleteFirstLinkSessionResponse> DeleteFirstLinkSession(DeleteFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<DeleteFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteFirstLinkSession）用于删除接入段加速会话，删除加速会话后会停止加速。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="DeleteFirstLinkSessionResponse"/></returns>
+        public DeleteFirstLinkSessionResponse DeleteFirstLinkSessionSync(DeleteFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<DeleteFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirstLinkSessionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1608,6 +1688,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDomainErrorPageInfoByIds");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainErrorPageInfoByIdsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="DescribeFirstLinkSessionResponse"/></returns>
+        public async Task<DescribeFirstLinkSessionResponse> DescribeFirstLinkSession(DescribeFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<DescribeFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeFirstLinkSession）用于查询接入段加速会话状态，包括会话状态，生效时长，加速套餐等信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFirstLinkSessionRequest"/></param>
+        /// <returns><see cref="DescribeFirstLinkSessionResponse"/></returns>
+        public DescribeFirstLinkSessionResponse DescribeFirstLinkSessionSync(DescribeFirstLinkSessionRequest req)
+        {
+             JsonResponseModel<DescribeFirstLinkSessionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFirstLinkSession");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirstLinkSessionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
