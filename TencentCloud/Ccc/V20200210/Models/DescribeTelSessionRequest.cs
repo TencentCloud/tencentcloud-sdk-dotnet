@@ -25,13 +25,13 @@ namespace TencentCloud.Ccc.V20200210.Models
     {
         
         /// <summary>
-        /// 应用ID
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 会话ID
+        /// 会话 ID
         /// </summary>
         [JsonProperty("SessionId")]
         public string SessionId{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.515</VersionPrefix>
+    <VersionPrefix>3.0.516</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -304,6 +304,8 @@
     <Compile Include="V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
@@ -390,6 +392,7 @@
     <Compile Include="V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="V20180717\Models\LiveRealTimeClipResponse.cs" />

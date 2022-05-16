@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.515</VersionPrefix>
+    <VersionPrefix>3.0.516</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2800,6 +2800,62 @@
     <Compile Include="Cdb\V20170320\Models\VerifyRootAccountResponse.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneConf.cs" />
     <Compile Include="Cdb\V20170320\Models\ZoneSellConf.cs" />
+    <Compile Include="Cdc\V20201214\CdcClient.cs" />
+    <Compile Include="Cdc\V20201214\Models\CbsInfo.cs" />
+    <Compile Include="Cdc\V20201214\Models\CosCapacity.cs" />
+    <Compile Include="Cdc\V20201214\Models\CosInfo.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateDedicatedClusterOrderRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateDedicatedClusterOrderResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateDedicatedClusterRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateDedicatedClusterResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateSiteRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\CreateSiteResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedCluster.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedClusterInstanceType.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedClusterOrder.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedClusterOrderItem.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedClusterType.cs" />
+    <Compile Include="Cdc\V20201214\Models\DedicatedClusterTypeInfo.cs" />
+    <Compile Include="Cdc\V20201214\Models\DeleteDedicatedClustersRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DeleteDedicatedClustersResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DeleteSitesRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DeleteSitesResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterCosCapacityRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterCosCapacityResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterHostStatisticsRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterHostStatisticsResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterHostsRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterHostsResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterInstanceTypesRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterInstanceTypesResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterOrdersRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterOrdersResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterOverviewRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterOverviewResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterTypesRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClusterTypesResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClustersRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedClustersResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedSupportedZonesRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeDedicatedSupportedZonesResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeSitesDetailRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeSitesDetailResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeSitesRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\DescribeSitesResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\HostInfo.cs" />
+    <Compile Include="Cdc\V20201214\Models\HostStatistic.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifyDedicatedClusterInfoRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifyDedicatedClusterInfoResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifyOrderStatusRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifyOrderStatusResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifySiteDeviceInfoRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifySiteDeviceInfoResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifySiteInfoRequest.cs" />
+    <Compile Include="Cdc\V20201214\Models\ModifySiteInfoResponse.cs" />
+    <Compile Include="Cdc\V20201214\Models\RegionZoneInfo.cs" />
+    <Compile Include="Cdc\V20201214\Models\Site.cs" />
+    <Compile Include="Cdc\V20201214\Models\SiteDetail.cs" />
+    <Compile Include="Cdc\V20201214\Models\ZoneInfo.cs" />
     <Compile Include="Cdn\V20180606\CdnClient.cs" />
     <Compile Include="Cdn\V20180606\Models\AccessControl.cs" />
     <Compile Include="Cdn\V20180606\Models\AccessControlRule.cs" />
@@ -13273,6 +13329,8 @@
     <Compile Include="Redis\V20180412\Models\ModifyInstanceAccountResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceParamsRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceParamsResponse.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyInstanceReadOnlyRequest.cs" />
+    <Compile Include="Redis\V20180412\Models\ModifyInstanceReadOnlyResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceRequest.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyInstanceResponse.cs" />
     <Compile Include="Redis\V20180412\Models\ModifyMaintenanceWindowRequest.cs" />
@@ -16650,6 +16708,7 @@
     <Compile Include="Tione\V20191022\Models\UpdateNotebookLifecycleScriptResponse.cs" />
     <Compile Include="Tione\V20191022\Models\VpcConfig.cs" />
     <Compile Include="Tiw\V20190919\TiwClient.cs" />
+    <Compile Include="Tiw\V20190919\Models\AuthParam.cs" />
     <Compile Include="Tiw\V20190919\Models\Canvas.cs" />
     <Compile Include="Tiw\V20190919\Models\Concat.cs" />
     <Compile Include="Tiw\V20190919\Models\CreateSnapshotTaskRequest.cs" />
@@ -17101,16 +17160,25 @@
     <Compile Include="Trtc\V20190722\TrtcClient.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="Trtc\V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="Trtc\V20190722\Models\AudioParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\CloudStorage.cs" />
+    <Compile Include="Trtc\V20190722\Models\CloudVod.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeleteCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\DescribeCloudRecordingResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeDetailEventRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\DescribeHistoryScaleRequest.cs" />
@@ -17133,6 +17201,11 @@
     <Compile Include="Trtc\V20190722\Models\EventList.cs" />
     <Compile Include="Trtc\V20190722\Models\EventMessage.cs" />
     <Compile Include="Trtc\V20190722\Models\LayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixLayout.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixLayoutParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\MixTranscodeParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyCloudRecordingRequest.cs" />
+    <Compile Include="Trtc\V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
@@ -17141,6 +17214,7 @@
     <Compile Include="Trtc\V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="Trtc\V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="Trtc\V20190722\Models\QualityData.cs" />
+    <Compile Include="Trtc\V20190722\Models\RecordParams.cs" />
     <Compile Include="Trtc\V20190722\Models\RecordUsage.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
@@ -17159,8 +17233,15 @@
     <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeRequest.cs" />
     <Compile Include="Trtc\V20190722\Models\StopMCUMixTranscodeResponse.cs" />
+    <Compile Include="Trtc\V20190722\Models\StorageFile.cs" />
+    <Compile Include="Trtc\V20190722\Models\StorageParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\SubscribeStreamUserIds.cs" />
+    <Compile Include="Trtc\V20190722\Models\TencentVod.cs" />
     <Compile Include="Trtc\V20190722\Models\TimeValue.cs" />
     <Compile Include="Trtc\V20190722\Models\UserInformation.cs" />
+    <Compile Include="Trtc\V20190722\Models\VideoParams.cs" />
+    <Compile Include="Trtc\V20190722\Models\WaterMark.cs" />
+    <Compile Include="Trtc\V20190722\Models\WaterMarkImage.cs" />
     <Compile Include="Trtc\V20190722\Models\WaterMarkParams.cs" />
     <Compile Include="Tse\V20201207\TseClient.cs" />
     <Compile Include="Tse\V20201207\Models\BoundK8SInfo.cs" />
@@ -18096,6 +18177,8 @@
     <Compile Include="Vod\V20180717\Models\DescribeImageReviewUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeImageSpriteTemplatesResponse.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeLicenseUsageDataRequest.cs" />
+    <Compile Include="Vod\V20180717\Models\DescribeLicenseUsageDataResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosRequest.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaInfosResponse.cs" />
     <Compile Include="Vod\V20180717\Models\DescribeMediaPlayStatDetailsRequest.cs" />
@@ -18182,6 +18265,7 @@
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInput.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkInputForUpdate.cs" />
     <Compile Include="Vod\V20180717\Models\ImageWatermarkTemplate.cs" />
+    <Compile Include="Vod\V20180717\Models\LicenseUsageDataItem.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipMediaSegmentInfo.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipRequest.cs" />
     <Compile Include="Vod\V20180717\Models\LiveRealTimeClipResponse.cs" />

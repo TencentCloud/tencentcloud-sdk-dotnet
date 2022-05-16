@@ -1,0 +1,104 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{8AB887EC-F4EC-35B4-91D9-F555401998D9}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.516</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Cdc</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20201214\CdcClient.cs" />
+    <Compile Include="V20201214\Models\CbsInfo.cs" />
+    <Compile Include="V20201214\Models\CosCapacity.cs" />
+    <Compile Include="V20201214\Models\CosInfo.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterOrderRequest.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterOrderResponse.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterRequest.cs" />
+    <Compile Include="V20201214\Models\CreateDedicatedClusterResponse.cs" />
+    <Compile Include="V20201214\Models\CreateSiteRequest.cs" />
+    <Compile Include="V20201214\Models\CreateSiteResponse.cs" />
+    <Compile Include="V20201214\Models\DedicatedCluster.cs" />
+    <Compile Include="V20201214\Models\DedicatedClusterInstanceType.cs" />
+    <Compile Include="V20201214\Models\DedicatedClusterOrder.cs" />
+    <Compile Include="V20201214\Models\DedicatedClusterOrderItem.cs" />
+    <Compile Include="V20201214\Models\DedicatedClusterType.cs" />
+    <Compile Include="V20201214\Models\DedicatedClusterTypeInfo.cs" />
+    <Compile Include="V20201214\Models\DeleteDedicatedClustersRequest.cs" />
+    <Compile Include="V20201214\Models\DeleteDedicatedClustersResponse.cs" />
+    <Compile Include="V20201214\Models\DeleteSitesRequest.cs" />
+    <Compile Include="V20201214\Models\DeleteSitesResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterCosCapacityRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterCosCapacityResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterHostStatisticsRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterHostStatisticsResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterHostsRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterHostsResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterInstanceTypesRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterInstanceTypesResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterOrdersRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterOrdersResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterOverviewRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterOverviewResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterTypesRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClusterTypesResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClustersRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedClustersResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedSupportedZonesRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeDedicatedSupportedZonesResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeSitesDetailRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeSitesDetailResponse.cs" />
+    <Compile Include="V20201214\Models\DescribeSitesRequest.cs" />
+    <Compile Include="V20201214\Models\DescribeSitesResponse.cs" />
+    <Compile Include="V20201214\Models\HostInfo.cs" />
+    <Compile Include="V20201214\Models\HostStatistic.cs" />
+    <Compile Include="V20201214\Models\ModifyDedicatedClusterInfoRequest.cs" />
+    <Compile Include="V20201214\Models\ModifyDedicatedClusterInfoResponse.cs" />
+    <Compile Include="V20201214\Models\ModifyOrderStatusRequest.cs" />
+    <Compile Include="V20201214\Models\ModifyOrderStatusResponse.cs" />
+    <Compile Include="V20201214\Models\ModifySiteDeviceInfoRequest.cs" />
+    <Compile Include="V20201214\Models\ModifySiteDeviceInfoResponse.cs" />
+    <Compile Include="V20201214\Models\ModifySiteInfoRequest.cs" />
+    <Compile Include="V20201214\Models\ModifySiteInfoResponse.cs" />
+    <Compile Include="V20201214\Models\RegionZoneInfo.cs" />
+    <Compile Include="V20201214\Models\Site.cs" />
+    <Compile Include="V20201214\Models\SiteDetail.cs" />
+    <Compile Include="V20201214\Models\ZoneInfo.cs" />
+  </ItemGroup>
+</Project>

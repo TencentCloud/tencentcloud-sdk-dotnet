@@ -39,7 +39,8 @@ namespace TencentCloud.Tiw.V20190919.Models
         public long? RoomId{ get; set; }
 
         /// <summary>
-        /// 用于白板推流服务进房进行推流的用户ID，最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
+        /// 用于白板推流服务进入白板房间的用户ID。在没有进行额外指定的情况下，这个用户ID同时会用于IM登录、IM加群、TRTC进房推流等操作。
+        /// 用户ID最大长度不能大于60个字节，该ID必须是一个单独的未在SDK中使用的ID，白板推流服务使用这个用户ID进入房间进行白板音视频推流，若该ID和SDK中使用的ID重复，会导致SDK和白板推流服务互踢，影响正常推流。
         /// </summary>
         [JsonProperty("PushUserId")]
         public string PushUserId{ get; set; }
@@ -176,6 +177,28 @@ namespace TencentCloud.Tiw.V20190919.Models
         [JsonProperty("TRTCRoomIdStr")]
         public string TRTCRoomIdStr{ get; set; }
 
+        /// <summary>
+        /// 内测参数，需开通白名单进行体验。
+        /// 
+        /// IM鉴权信息参数，用于IM鉴权。
+        /// 当白板信令所使用的IM应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应IM应用鉴权信息。
+        /// 
+        /// 如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板信令的传输通道，否则使用公共参数中的SdkAppId作为白板信令的传输通道。
+        /// </summary>
+        [JsonProperty("IMAuthParam")]
+        public AuthParam IMAuthParam{ get; set; }
+
+        /// <summary>
+        /// 内测参数，需开通白名单进行体验。
+        /// 
+        /// TRTC鉴权信息参数，用于TRTC进房推流鉴权。
+        /// 当需要推流到的TRTC房间所对应的TRTC应用与白板应用的SdkAppId不一致时，可以通过此参数提供对应的TRTC应用鉴权信息。
+        /// 
+        /// 如果提供了此参数，白板推流服务会优先使用此参数指定的SdkAppId作为白板推流的目标TRTC应用，否则使用公共参数中的SdkAppId作为白板推流的目标TRTC应用。
+        /// </summary>
+        [JsonProperty("TRTCAuthParam")]
+        public AuthParam TRTCAuthParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -200,6 +223,8 @@ namespace TencentCloud.Tiw.V20190919.Models
             this.SetParamSimple(map, prefix + "ExtraData", this.ExtraData);
             this.SetParamSimple(map, prefix + "TRTCRoomId", this.TRTCRoomId);
             this.SetParamSimple(map, prefix + "TRTCRoomIdStr", this.TRTCRoomIdStr);
+            this.SetParamObj(map, prefix + "IMAuthParam.", this.IMAuthParam);
+            this.SetParamObj(map, prefix + "TRTCAuthParam.", this.TRTCAuthParam);
         }
     }
 }

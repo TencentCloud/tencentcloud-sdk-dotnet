@@ -61,6 +61,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Status{ get; set; }
 
         /// <summary>
+        /// 开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +84,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsAutoOpenRenew", this.IsAutoOpenRenew);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

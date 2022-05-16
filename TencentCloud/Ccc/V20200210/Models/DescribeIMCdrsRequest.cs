@@ -37,13 +37,13 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? EndTimestamp{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 实例 ID（废弃）
         /// </summary>
         [JsonProperty("InstanceId")]
         public long? InstanceId{ get; set; }
 
         /// <summary>
-        /// 应用ID
+        /// 应用 ID（必填），可以查看 https://console.cloud.tencent.com/ccc
         /// </summary>
         [JsonProperty("SdkAppId")]
         public long? SdkAppId{ get; set; }

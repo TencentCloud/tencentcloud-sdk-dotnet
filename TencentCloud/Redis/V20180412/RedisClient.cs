@@ -2693,6 +2693,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 设置实例输入模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
+        public async Task<ModifyInstanceReadOnlyResponse> ModifyInstanceReadOnly(ModifyInstanceReadOnlyRequest req)
+        {
+             JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstanceReadOnly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceReadOnlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置实例输入模式
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstanceReadOnlyRequest"/></param>
+        /// <returns><see cref="ModifyInstanceReadOnlyResponse"/></returns>
+        public ModifyInstanceReadOnlyResponse ModifyInstanceReadOnlySync(ModifyInstanceReadOnlyRequest req)
+        {
+             JsonResponseModel<ModifyInstanceReadOnlyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstanceReadOnly");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstanceReadOnlyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改实例维护时间窗时间，需要进行版本升级或者架构升级的实例，会在维护时间窗内进行时间切换。注意：已经发起版本升级或者架构升级的实例，无法修改维护时间窗。
         /// </summary>
         /// <param name="req"><see cref="ModifyMaintenanceWindowRequest"/></param>

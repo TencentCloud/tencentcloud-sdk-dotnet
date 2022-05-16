@@ -2683,6 +2683,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 该接口返回查询时间范围内每天 License 请求次数信息。
+        ///    1. 可以查询最近365天内的 License 请求次数统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
+        public async Task<DescribeLicenseUsageDataResponse> DescribeLicenseUsageData(DescribeLicenseUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口返回查询时间范围内每天 License 请求次数信息。
+        ///    1. 可以查询最近365天内的 License 请求次数统计数据。
+        ///    2. 查询时间跨度不超过90天。
+        ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseUsageDataRequest"/></param>
+        /// <returns><see cref="DescribeLicenseUsageDataResponse"/></returns>
+        public DescribeLicenseUsageDataResponse DescribeLicenseUsageDataSync(DescribeLicenseUsageDataRequest req)
+        {
+             JsonResponseModel<DescribeLicenseUsageDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseUsageData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseUsageDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 1. 该接口可以获取多个媒体文件的多种信息，包括：
         ///     1. 基础信息（basicInfo）：包括媒体名称、分类、播放地址、封面图片等。
         ///     2. 元信息（metaData）：包括大小、时长、视频流信息、音频流信息等。

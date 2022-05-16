@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.515</VersionPrefix>
+    <VersionPrefix>3.0.516</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -200,6 +200,8 @@
     <Compile Include="V20180412\Models\ModifyInstanceAccountResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceParamsRequest.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceParamsResponse.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceReadOnlyRequest.cs" />
+    <Compile Include="V20180412\Models\ModifyInstanceReadOnlyResponse.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceRequest.cs" />
     <Compile Include="V20180412\Models\ModifyInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ModifyMaintenanceWindowRequest.cs" />

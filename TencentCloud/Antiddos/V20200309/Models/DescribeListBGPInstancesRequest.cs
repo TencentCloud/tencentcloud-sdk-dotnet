@@ -84,6 +84,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterInstanceIdList")]
         public string[] FilterInstanceIdList{ get; set; }
 
+        /// <summary>
+        /// 企业版搜索
+        /// </summary>
+        [JsonProperty("FilterEnterpriseFlag")]
+        public ulong? FilterEnterpriseFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterStatus", this.FilterStatus);
             this.SetParamSimple(map, prefix + "FilterBoundStatus", this.FilterBoundStatus);
             this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
+            this.SetParamSimple(map, prefix + "FilterEnterpriseFlag", this.FilterEnterpriseFlag);
         }
     }
 }

@@ -32,6 +32,7 @@ namespace TencentCloud.Ccc.V20200210.Models
 
         /// <summary>
         /// 消息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Messages")]
         public MessageBody[] Messages{ get; set; }

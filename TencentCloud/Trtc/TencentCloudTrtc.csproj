@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.515</VersionPrefix>
+    <VersionPrefix>3.0.516</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,16 +47,25 @@
     <Compile Include="V20190722\TrtcClient.cs" />
     <Compile Include="V20190722\Models\AbnormalEvent.cs" />
     <Compile Include="V20190722\Models\AbnormalExperience.cs" />
+    <Compile Include="V20190722\Models\AudioParams.cs" />
+    <Compile Include="V20190722\Models\CloudStorage.cs" />
+    <Compile Include="V20190722\Models\CloudVod.cs" />
+    <Compile Include="V20190722\Models\CreateCloudRecordingRequest.cs" />
+    <Compile Include="V20190722\Models\CreateCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\CreatePictureRequest.cs" />
     <Compile Include="V20190722\Models\CreatePictureResponse.cs" />
     <Compile Include="V20190722\Models\CreateTroubleInfoRequest.cs" />
     <Compile Include="V20190722\Models\CreateTroubleInfoResponse.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudRecordingRequest.cs" />
+    <Compile Include="V20190722\Models\DeleteCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DeletePictureRequest.cs" />
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAbnormalEventRequest.cs" />
     <Compile Include="V20190722\Models\DescribeAbnormalEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudRecordingRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\DescribeDetailEventRequest.cs" />
     <Compile Include="V20190722\Models\DescribeDetailEventResponse.cs" />
     <Compile Include="V20190722\Models\DescribeHistoryScaleRequest.cs" />
@@ -79,6 +88,11 @@
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
+    <Compile Include="V20190722\Models\MixLayout.cs" />
+    <Compile Include="V20190722\Models\MixLayoutParams.cs" />
+    <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudRecordingRequest.cs" />
+    <Compile Include="V20190722\Models\ModifyCloudRecordingResponse.cs" />
     <Compile Include="V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
@@ -87,6 +101,7 @@
     <Compile Include="V20190722\Models\PresetLayoutConfig.cs" />
     <Compile Include="V20190722\Models\PublishCdnParams.cs" />
     <Compile Include="V20190722\Models\QualityData.cs" />
+    <Compile Include="V20190722\Models\RecordParams.cs" />
     <Compile Include="V20190722\Models\RecordUsage.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdRequest.cs" />
     <Compile Include="V20190722\Models\RemoveUserByStrRoomIdResponse.cs" />
@@ -105,8 +120,15 @@
     <Compile Include="V20190722\Models\StopMCUMixTranscodeByStrRoomIdResponse.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeRequest.cs" />
     <Compile Include="V20190722\Models\StopMCUMixTranscodeResponse.cs" />
+    <Compile Include="V20190722\Models\StorageFile.cs" />
+    <Compile Include="V20190722\Models\StorageParams.cs" />
+    <Compile Include="V20190722\Models\SubscribeStreamUserIds.cs" />
+    <Compile Include="V20190722\Models\TencentVod.cs" />
     <Compile Include="V20190722\Models\TimeValue.cs" />
     <Compile Include="V20190722\Models\UserInformation.cs" />
+    <Compile Include="V20190722\Models\VideoParams.cs" />
+    <Compile Include="V20190722\Models\WaterMark.cs" />
+    <Compile Include="V20190722\Models\WaterMarkImage.cs" />
     <Compile Include="V20190722\Models\WaterMarkParams.cs" />
   </ItemGroup>
 </Project>
