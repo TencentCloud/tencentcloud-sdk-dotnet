@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.516</VersionPrefix>
+    <VersionPrefix>3.0.517</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -885,11 +885,15 @@
     <Compile Include="Apm\V20210622\Models\DescribeApmAgentResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmInstancesRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeApmInstancesResponse.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeGeneralMetricDataRequest.cs" />
+    <Compile Include="Apm\V20210622\Models\DescribeGeneralMetricDataResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeMetricRecordsRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeMetricRecordsResponse.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeServiceOverviewRequest.cs" />
     <Compile Include="Apm\V20210622\Models\DescribeServiceOverviewResponse.cs" />
     <Compile Include="Apm\V20210622\Models\Filter.cs" />
+    <Compile Include="Apm\V20210622\Models\GeneralFilter.cs" />
+    <Compile Include="Apm\V20210622\Models\Line.cs" />
     <Compile Include="Apm\V20210622\Models\OrderBy.cs" />
     <Compile Include="Apm\V20210622\Models\QueryMetricItem.cs" />
     <Compile Include="As\V20180419\AsClient.cs" />
@@ -14404,6 +14408,7 @@
     <Compile Include="Sts\V20180813\Models\GetFederationTokenResponse.cs" />
     <Compile Include="Sts\V20180813\Models\QueryApiKeyRequest.cs" />
     <Compile Include="Sts\V20180813\Models\QueryApiKeyResponse.cs" />
+    <Compile Include="Sts\V20180813\Models\Tag.cs" />
     <Compile Include="Taf\V20200210\TafClient.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLRequest.cs" />
     <Compile Include="Taf\V20200210\Models\DetectFraudKOLResponse.cs" />
@@ -16359,8 +16364,11 @@
     <Compile Include="Teo\V20220106\Models\DescribePurgeTasksResponse.cs" />
     <Compile Include="Teo\V20220106\Models\DescribeZonesRequest.cs" />
     <Compile Include="Teo\V20220106\Models\DescribeZonesResponse.cs" />
+    <Compile Include="Teo\V20220106\Models\DownloadL7LogsRequest.cs" />
+    <Compile Include="Teo\V20220106\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="Teo\V20220106\Models\FailReason.cs" />
     <Compile Include="Teo\V20220106\Models\Header.cs" />
+    <Compile Include="Teo\V20220106\Models\L7OfflineLog.cs" />
     <Compile Include="Teo\V20220106\Models\Task.cs" />
     <Compile Include="Teo\V20220106\Models\Zone.cs" />
     <Compile Include="Teo\V20220106\Models\ZoneFilter.cs" />
@@ -16844,10 +16852,14 @@
     <Compile Include="Tke\V20180525\Models\CreateEKSContainerInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreateImageCacheRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreateImageCacheResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertPolicyRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusTempRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DNSConfig.cs" />
@@ -16875,8 +16887,14 @@
     <Compile Include="Tke\V20180525\Models\DeleteEKSContainerInstancesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteImageCachesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeleteImageCachesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertPolicyRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusAlertRuleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusTempRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusTempResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusTempSyncRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DeletePrometheusTempSyncResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
@@ -16947,14 +16965,26 @@
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAgentsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertHistoryRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertHistoryResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertPolicyRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusClusterAgentsRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusClusterAgentsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstancesOverviewRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusInstancesOverviewResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusOverviewsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusOverviewsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusRecordRulesRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusRecordRulesResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTargetsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTargetsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusTempRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusTempResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusTempSyncRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusTempSyncResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTemplateSyncRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTemplateSyncResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusTemplatesRequest.cs" />
@@ -16971,8 +17001,12 @@
     <Compile Include="Tke\V20180525\Models\DescribeVersionsResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribeVpcCniPodLimitsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableClusterAuditRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableClusterAuditResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DisableClusterDeletionProtectionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DisableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableEventPersistenceRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DisableEventPersistenceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DnsServerConf.cs" />
@@ -16981,8 +17015,12 @@
     <Compile Include="Tke\V20180525\Models\EksCiRegionInfo.cs" />
     <Compile Include="Tke\V20180525\Models\EksCiVolume.cs" />
     <Compile Include="Tke\V20180525\Models\EksCluster.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableClusterAuditRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableClusterAuditResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnableClusterDeletionProtectionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\EnableClusterDeletionProtectionResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableEventPersistenceRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\EnableEventPersistenceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="Tke\V20180525\Models\EnableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="Tke\V20180525\Models\EnhancedService.cs" />
@@ -17010,6 +17048,8 @@
     <Compile Include="Tke\V20180525\Models\ImageCacheEvent.cs" />
     <Compile Include="Tke\V20180525\Models\ImageInstance.cs" />
     <Compile Include="Tke\V20180525\Models\ImageRegistryCredential.cs" />
+    <Compile Include="Tke\V20180525\Models\InstallLogAgentRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\InstallLogAgentResponse.cs" />
     <Compile Include="Tke\V20180525\Models\Instance.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceAdvancedSettings.cs" />
     <Compile Include="Tke\V20180525\Models\InstanceDataDiskMountSetting.cs" />
@@ -17038,6 +17078,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyNodePoolDesiredCapacityAboutAsgResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyNodePoolInstanceTypesRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyNodePoolInstanceTypesResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertPolicyRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
@@ -17086,6 +17128,8 @@
     <Compile Include="Tke\V20180525\Models\ServiceAccountAuthenticationOptions.cs" />
     <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\SetNodePoolNodeProtectionResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\SyncPrometheusTempRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\SyncPrometheusTempResponse.cs" />
     <Compile Include="Tke\V20180525\Models\SyncPrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\SyncPrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\Tag.cs" />
@@ -17093,6 +17137,8 @@
     <Compile Include="Tke\V20180525\Models\Taint.cs" />
     <Compile Include="Tke\V20180525\Models\TaskStepInfo.cs" />
     <Compile Include="Tke\V20180525\Models\TcpSocket.cs" />
+    <Compile Include="Tke\V20180525\Models\UninstallLogAgentRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\UninstallLogAgentResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpdateClusterVersionRequest.cs" />
     <Compile Include="Tke\V20180525\Models\UpdateClusterVersionResponse.cs" />
     <Compile Include="Tke\V20180525\Models\UpdateEKSClusterRequest.cs" />
@@ -17145,6 +17191,11 @@
     <Compile Include="Tms\V20200713\Models\TrendCount.cs" />
     <Compile Include="Tms\V20200713\Models\User.cs" />
     <Compile Include="Tmt\V20180321\TmtClient.cs" />
+    <Compile Include="Tmt\V20180321\Models\FileTranslateRequest.cs" />
+    <Compile Include="Tmt\V20180321\Models\FileTranslateResponse.cs" />
+    <Compile Include="Tmt\V20180321\Models\GetFileTranslateData.cs" />
+    <Compile Include="Tmt\V20180321\Models\GetFileTranslateRequest.cs" />
+    <Compile Include="Tmt\V20180321\Models\GetFileTranslateResponse.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageRecord.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\ImageTranslateResponse.cs" />
@@ -17153,6 +17204,7 @@
     <Compile Include="Tmt\V20180321\Models\LanguageDetectResponse.cs" />
     <Compile Include="Tmt\V20180321\Models\SpeechTranslateRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\SpeechTranslateResponse.cs" />
+    <Compile Include="Tmt\V20180321\Models\Task.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateBatchRequest.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateBatchResponse.cs" />
     <Compile Include="Tmt\V20180321\Models\TextTranslateRequest.cs" />
@@ -18892,6 +18944,8 @@
     <Compile Include="Vpc\V20170312\Models\DirectConnectSubnet.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisableFlowLogsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\DisableFlowLogsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableGatewayFlowMonitorRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableGatewayFlowMonitorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\DisableRoutesRequest.cs" />
@@ -18918,6 +18972,8 @@
     <Compile Include="Vpc\V20170312\Models\DownloadVpnGatewaySslClientCertResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableCcnRoutesResponse.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableFlowLogsRequest.cs" />
+    <Compile Include="Vpc\V20170312\Models\EnableFlowLogsResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorRequest.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableGatewayFlowMonitorResponse.cs" />
     <Compile Include="Vpc\V20170312\Models\EnableRoutesRequest.cs" />

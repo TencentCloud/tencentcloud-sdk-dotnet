@@ -7475,6 +7475,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（DisableFlowLogs）用于停止流日志。
+        /// </summary>
+        /// <param name="req"><see cref="DisableFlowLogsRequest"/></param>
+        /// <returns><see cref="DisableFlowLogsResponse"/></returns>
+        public async Task<DisableFlowLogsResponse> DisableFlowLogs(DisableFlowLogsRequest req)
+        {
+             JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DisableFlowLogs）用于停止流日志。
+        /// </summary>
+        /// <param name="req"><see cref="DisableFlowLogsRequest"/></param>
+        /// <returns><see cref="DisableFlowLogsResponse"/></returns>
+        public DisableFlowLogsResponse DisableFlowLogsSync(DisableFlowLogsRequest req)
+        {
+             JsonResponseModel<DisableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DisableGatewayFlowMonitor）用于关闭网关流量监控。
         /// </summary>
         /// <param name="req"><see cref="DisableGatewayFlowMonitorRequest"/></param>
@@ -8000,6 +8040,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "EnableCcnRoutes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableCcnRoutesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableFlowLogs）用于启动流日志。
+        /// </summary>
+        /// <param name="req"><see cref="EnableFlowLogsRequest"/></param>
+        /// <returns><see cref="EnableFlowLogsResponse"/></returns>
+        public async Task<EnableFlowLogsResponse> EnableFlowLogs(EnableFlowLogsRequest req)
+        {
+             JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableFlowLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（EnableFlowLogs）用于启动流日志。
+        /// </summary>
+        /// <param name="req"><see cref="EnableFlowLogsRequest"/></param>
+        /// <returns><see cref="EnableFlowLogsResponse"/></returns>
+        public EnableFlowLogsResponse EnableFlowLogsSync(EnableFlowLogsRequest req)
+        {
+             JsonResponseModel<EnableFlowLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableFlowLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableFlowLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

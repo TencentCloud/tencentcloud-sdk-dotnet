@@ -173,6 +173,48 @@ namespace TencentCloud.Apm.V20210622
         }
 
         /// <summary>
+        /// 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
+        /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
+        /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
+        public async Task<DescribeGeneralMetricDataResponse> DescribeGeneralMetricData(DescribeGeneralMetricDataRequest req)
+        {
+             JsonResponseModel<DescribeGeneralMetricDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGeneralMetricData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指标数据通用接口。用户根据需要上送请求参数，返回对应的指标数据。
+        /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求的数据点数限制为1440个。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGeneralMetricDataRequest"/></param>
+        /// <returns><see cref="DescribeGeneralMetricDataResponse"/></returns>
+        public DescribeGeneralMetricDataResponse DescribeGeneralMetricDataSync(DescribeGeneralMetricDataRequest req)
+        {
+             JsonResponseModel<DescribeGeneralMetricDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGeneralMetricData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGeneralMetricDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取通用指标列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMetricRecordsRequest"/></param>

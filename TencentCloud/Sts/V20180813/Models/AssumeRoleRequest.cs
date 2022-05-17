@@ -64,6 +64,12 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("ExternalId")]
         public string ExternalId{ get; set; }
 
+        /// <summary>
+        /// 会话标签列表。最多可以传递 50 个会话标签，不支持包含相同标签键。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +81,7 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "DurationSeconds", this.DurationSeconds);
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

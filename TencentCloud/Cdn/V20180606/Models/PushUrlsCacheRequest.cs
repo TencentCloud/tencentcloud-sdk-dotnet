@@ -48,8 +48,8 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Area{ get; set; }
 
         /// <summary>
-        /// 填写"middle"或不填充时预热至中间层节点。
-        /// 注意：中国境外区域预热，资源默认加载至中国境外边缘节点，所产生的边缘层流量会计入计费流量。
+        /// 中国境内区域默认预热至中间层节点，中国境外区域默认预热至边缘节点。预热至边缘产生的边缘层流量会计入计费流量。
+        /// 填写"middle"或不填充时，可指定预热至中间层节点。
         /// </summary>
         [JsonProperty("Layer")]
         public string Layer{ get; set; }

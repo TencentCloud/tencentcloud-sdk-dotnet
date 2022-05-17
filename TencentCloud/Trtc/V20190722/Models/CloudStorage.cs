@@ -56,7 +56,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string SecretKey{ get; set; }
 
         /// <summary>
-        /// 第三方云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围a~z,A~Z,0~9，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
+        /// 第三方云存储bucket 的指定位置，由字符串数组组成。合法的字符串范围a~z,A~Z,0~9,'_'和'-'，举个例子，录制文件xxx.m3u8在 ["prefix1", "prefix2"]作用下，会变成prefix1/prefix2/TaskId/xxx.m3u8。
         /// </summary>
         [JsonProperty("FileNamePrefix")]
         public string[] FileNamePrefix{ get; set; }

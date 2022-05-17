@@ -35,6 +35,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// __TENPAY__: 商企付
         /// __WECHAT__: 微信支付
         /// __ALIPAY__: 支付宝
+        /// __WECHAT__: 微信支付
         /// </summary>
         [JsonProperty("ChannelName")]
         public string ChannelName{ get; set; }
@@ -44,6 +45,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// __EBANK_PAYMENT__:B2B EBank付款
         /// __OPENBANK_PAYMENT__:B2C  openbank付款
         /// __SAFT_ISV__:支付宝安心发
+        /// __TRANS_TO_CHANGE__: 微信支付转账到零钱v2
         /// </summary>
         [JsonProperty("PaymentMethod")]
         public string PaymentMethod{ get; set; }

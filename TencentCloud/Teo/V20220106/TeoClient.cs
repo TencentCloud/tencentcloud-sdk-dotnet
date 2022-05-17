@@ -252,5 +252,45 @@ namespace TencentCloud.Teo.V20220106
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 查询七层离线日志
+        /// </summary>
+        /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
+        /// <returns><see cref="DownloadL7LogsResponse"/></returns>
+        public async Task<DownloadL7LogsResponse> DownloadL7Logs(DownloadL7LogsRequest req)
+        {
+             JsonResponseModel<DownloadL7LogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DownloadL7Logs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadL7LogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询七层离线日志
+        /// </summary>
+        /// <param name="req"><see cref="DownloadL7LogsRequest"/></param>
+        /// <returns><see cref="DownloadL7LogsResponse"/></returns>
+        public DownloadL7LogsResponse DownloadL7LogsSync(DownloadL7LogsRequest req)
+        {
+             JsonResponseModel<DownloadL7LogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DownloadL7Logs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DownloadL7LogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

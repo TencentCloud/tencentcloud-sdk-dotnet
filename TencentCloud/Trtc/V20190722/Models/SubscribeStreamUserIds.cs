@@ -25,25 +25,25 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流，默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
+        /// 订阅音频流白名单，指定订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表订阅UserId 1，2，3的音频流；["1.*$"], 代表订阅UserId前缀为1的音频流。默认不填订阅房间内所有的音频流，订阅列表用户数不超过32。
         /// </summary>
         [JsonProperty("SubscribeAudioUserIds")]
         public string[] SubscribeAudioUserIds{ get; set; }
 
         /// <summary>
-        /// 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流，默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
+        /// 订阅音频流黑名单，指定不订阅哪几个UserId的音频流，例如["1", "2", "3"], 代表不订阅UserId 1，2，3的音频流；["1.*$"], 代表不订阅UserId前缀为1的音频流。默认不填订阅房间内所有音频流，订阅列表用户数不超过32。
         /// </summary>
         [JsonProperty("UnSubscribeAudioUserIds")]
         public string[] UnSubscribeAudioUserIds{ get; set; }
 
         /// <summary>
-        /// 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+        /// 订阅视频流白名单，指定订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表订阅UserId  1，2，3的视频流；["1.*$"], 代表订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
         /// </summary>
         [JsonProperty("SubscribeVideoUserIds")]
         public string[] SubscribeVideoUserIds{ get; set; }
 
         /// <summary>
-        /// 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流，默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
+        /// 订阅视频流黑名单，指定不订阅哪几个UserId的视频流，例如["1", "2", "3"], 代表不订阅UserId  1，2，3的视频流；["1.*$"], 代表不订阅UserId前缀为1的视频流。默认不填订阅房间内所有视频流，订阅列表用户数不超过32。
         /// </summary>
         [JsonProperty("UnSubscribeVideoUserIds")]
         public string[] UnSubscribeVideoUserIds{ get; set; }

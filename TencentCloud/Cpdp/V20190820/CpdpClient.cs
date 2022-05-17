@@ -4515,7 +4515,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付-查询账户余额
+        /// 云企付-子商户银行卡余额查询
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankBankAccountBalanceRequest"/></param>
         /// <returns><see cref="QueryOpenBankBankAccountBalanceResponse"/></returns>
@@ -4535,7 +4535,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付-查询账户余额
+        /// 云企付-子商户银行卡余额查询
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankBankAccountBalanceRequest"/></param>
         /// <returns><see cref="QueryOpenBankBankAccountBalanceResponse"/></returns>

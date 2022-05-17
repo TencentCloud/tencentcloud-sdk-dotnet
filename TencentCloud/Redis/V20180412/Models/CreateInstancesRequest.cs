@@ -159,6 +159,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
+        /// <summary>
+        /// false ：默认值,发送正常请求，通过检查后直接创建实例 true：发送检查请求，不会创建实例。
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -187,6 +193,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

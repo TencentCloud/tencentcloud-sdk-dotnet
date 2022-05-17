@@ -31,13 +31,15 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 预热的资源列表
+        /// 要预热的资源列表，每个元素格式类似如下:
+        /// http://www.example.com/example.txt
         /// </summary>
         [JsonProperty("Targets")]
         public string[] Targets{ get; set; }
 
         /// <summary>
         /// 是否对url进行encode
+        /// 若内容含有非 ASCII 字符集的字符，请开启此开关，编码转换（编码规则遵循 RFC3986）
         /// </summary>
         [JsonProperty("EncodeUrl")]
         public bool? EncodeUrl{ get; set; }
