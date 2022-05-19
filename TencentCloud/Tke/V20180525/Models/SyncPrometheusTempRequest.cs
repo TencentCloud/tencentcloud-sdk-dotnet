@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class SyncPrometheusTempRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 同步目标
+        /// </summary>
+        [JsonProperty("Targets")]
+        public PrometheusTemplateSyncTarget[] Targets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
         }
     }
 }

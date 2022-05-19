@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DeletePrometheusTempSyncRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 模板id
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 取消同步的对象列表
+        /// </summary>
+        [JsonProperty("Targets")]
+        public PrometheusTemplateSyncTarget[] Targets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
         }
     }
 }

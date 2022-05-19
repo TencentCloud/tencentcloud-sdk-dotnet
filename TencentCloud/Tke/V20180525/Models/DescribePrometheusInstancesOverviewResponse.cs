@@ -25,6 +25,19 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 实例列表
+        /// </summary>
+        [JsonProperty("Instances")]
+        public PrometheusInstancesOverview[] Instances{ get; set; }
+
+        /// <summary>
+        /// 实例总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +49,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Instances.", this.Instances);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

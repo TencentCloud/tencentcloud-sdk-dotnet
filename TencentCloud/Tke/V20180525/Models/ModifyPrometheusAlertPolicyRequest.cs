@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class ModifyPrometheusAlertPolicyRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 告警配置
+        /// </summary>
+        [JsonProperty("AlertRule")]
+        public PrometheusAlertPolicyItem AlertRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "AlertRule.", this.AlertRule);
         }
     }
 }

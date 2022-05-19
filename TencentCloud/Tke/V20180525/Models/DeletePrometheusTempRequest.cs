@@ -24,12 +24,19 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DeletePrometheusTempRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 模板id
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

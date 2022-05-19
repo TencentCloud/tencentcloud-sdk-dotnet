@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class ModifyPrometheusTempRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 模板ID
+        /// </summary>
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 修改内容
+        /// </summary>
+        [JsonProperty("Template")]
+        public PrometheusTempModify Template{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamObj(map, prefix + "Template.", this.Template);
         }
     }
 }

@@ -182,6 +182,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         public LaunchTemplate LaunchTemplate{ get; set; }
 
         /// <summary>
+        /// 指定专用集群创建。
+        /// </summary>
+        [JsonProperty("DedicatedClusterId")]
+        public string DedicatedClusterId{ get; set; }
+
+        /// <summary>
         /// 指定CHC物理服务器来创建CHC云主机。
         /// </summary>
         [JsonProperty("ChcIds")]
@@ -224,6 +230,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
             this.SetParamObj(map, prefix + "LaunchTemplate.", this.LaunchTemplate);
+            this.SetParamSimple(map, prefix + "DedicatedClusterId", this.DedicatedClusterId);
             this.SetParamArraySimple(map, prefix + "ChcIds.", this.ChcIds);
             this.SetParamSimple(map, prefix + "DisableApiTermination", this.DisableApiTermination);
         }

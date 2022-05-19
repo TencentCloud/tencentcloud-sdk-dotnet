@@ -24,12 +24,40 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DescribePrometheusRecordRulesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 分页
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 分页
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 过滤
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

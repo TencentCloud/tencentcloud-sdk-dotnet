@@ -1853,6 +1853,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// 本接口（GetAllVersion）用于获取所有的版本列表 
+        /// </summary>
+        /// <param name="req"><see cref="GetAllVersionRequest"/></param>
+        /// <returns><see cref="GetAllVersionResponse"/></returns>
+        public async Task<GetAllVersionResponse> GetAllVersion(GetAllVersionRequest req)
+        {
+             JsonResponseModel<GetAllVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAllVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAllVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（GetAllVersion）用于获取所有的版本列表 
+        /// </summary>
+        /// <param name="req"><see cref="GetAllVersionRequest"/></param>
+        /// <returns><see cref="GetAllVersionResponse"/></returns>
+        public GetAllVersionResponse GetAllVersionSync(GetAllVersionRequest req)
+        {
+             JsonResponseModel<GetAllVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAllVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAllVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（GetCOSURL）用于获取固件存储在COS的URL 
         /// </summary>
         /// <param name="req"><see cref="GetCOSURLRequest"/></param>
@@ -1924,6 +1964,46 @@ namespace TencentCloud.Iotcloud.V20210408
              {
                  var strResp = this.InternalRequestSync(req, "GetUserResourceInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetUserResourceInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// </summary>
+        /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
+        /// <returns><see cref="ListFirmwaresResponse"/></returns>
+        public async Task<ListFirmwaresResponse> ListFirmwares(ListFirmwaresRequest req)
+        {
+             JsonResponseModel<ListFirmwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListFirmwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListFirmwaresResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListFirmwares）用于获取固件列表 
+        /// </summary>
+        /// <param name="req"><see cref="ListFirmwaresRequest"/></param>
+        /// <returns><see cref="ListFirmwaresResponse"/></returns>
+        public ListFirmwaresResponse ListFirmwaresSync(ListFirmwaresRequest req)
+        {
+             JsonResponseModel<ListFirmwaresResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListFirmwares");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListFirmwaresResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

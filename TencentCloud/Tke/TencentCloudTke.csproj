@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.518</VersionPrefix>
+    <VersionPrefix>3.0.519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -111,6 +111,8 @@
     <Compile Include="V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusDashboardResponse.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="V20180525\Models\CreatePrometheusGlobalNotificationResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTempRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
@@ -224,6 +226,8 @@
     <Compile Include="V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusClusterAgentsRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusClusterAgentsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="V20180525\Models\DescribePrometheusGlobalNotificationResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusInstanceRequest.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="V20180525\Models\DescribePrometheusInstancesOverviewRequest.cs" />
@@ -335,6 +339,8 @@
     <Compile Include="V20180525\Models\ModifyPrometheusAlertPolicyResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="V20180525\Models\ModifyPrometheusGlobalNotificationResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTempRequest.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
@@ -348,14 +354,21 @@
     <Compile Include="V20180525\Models\Probe.cs" />
     <Compile Include="V20180525\Models\PrometheusAgentOverview.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertHistoryItem.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertManagerConfig.cs" />
+    <Compile Include="V20180525\Models\PrometheusAlertPolicyItem.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="V20180525\Models\PrometheusConfigItem.cs" />
     <Compile Include="V20180525\Models\PrometheusGrafanaInfo.cs" />
     <Compile Include="V20180525\Models\PrometheusInstanceOverview.cs" />
+    <Compile Include="V20180525\Models\PrometheusInstancesOverview.cs" />
     <Compile Include="V20180525\Models\PrometheusJobTargets.cs" />
     <Compile Include="V20180525\Models\PrometheusNotification.cs" />
+    <Compile Include="V20180525\Models\PrometheusNotificationItem.cs" />
+    <Compile Include="V20180525\Models\PrometheusRecordRuleYamlItem.cs" />
     <Compile Include="V20180525\Models\PrometheusTarget.cs" />
+    <Compile Include="V20180525\Models\PrometheusTemp.cs" />
+    <Compile Include="V20180525\Models\PrometheusTempModify.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplate.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateModify.cs" />
     <Compile Include="V20180525\Models\PrometheusTemplateSyncTarget.cs" />

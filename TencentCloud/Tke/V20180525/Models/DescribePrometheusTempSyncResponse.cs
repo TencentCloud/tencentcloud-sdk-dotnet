@@ -25,6 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 同步目标详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Targets")]
+        public PrometheusTemplateSyncTarget[] Targets{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Targets.", this.Targets);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

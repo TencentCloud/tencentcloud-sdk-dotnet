@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.518</VersionPrefix>
+    <VersionPrefix>3.0.519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -4755,6 +4755,12 @@
     <Compile Include="Cpdp\V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreatePayMerchantResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollPreOrderRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollPreOrderResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollPreOrderWithAuthRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollPreOrderWithAuthResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollTokenRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\CreatePayRollTokenResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\CreateRedInvoiceResponse.cs" />
@@ -4820,6 +4826,12 @@
     <Compile Include="Cpdp\V20190820\Models\GetBillDownloadUrlResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\GetDistributeBillDownloadUrlRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\GetDistributeBillDownloadUrlResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthListRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthListResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthResponse.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthResultRequest.cs" />
+    <Compile Include="Cpdp\V20190820\Models\GetPayRollAuthResultResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\MemberTransactionItem.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantClassificationId.cs" />
     <Compile Include="Cpdp\V20190820\Models\MerchantManagementList.cs" />
@@ -4856,6 +4868,7 @@
     <Compile Include="Cpdp\V20190820\Models\PayDataResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\PayFeeDataResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\PayOrderResult.cs" />
+    <Compile Include="Cpdp\V20190820\Models\PayRollAuthResult.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingRequest.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctBindingResponse.cs" />
     <Compile Include="Cpdp\V20190820\Models\QueryAcctInfoListRequest.cs" />
@@ -7801,6 +7814,8 @@
     <Compile Include="Eis\V20200715\Models\ListEisConnectorsRequest.cs" />
     <Compile Include="Eis\V20200715\Models\ListEisConnectorsResponse.cs" />
     <Compile Include="Emr\V20190103\EmrClient.cs" />
+    <Compile Include="Emr\V20190103\Models\AddUsersForUserManagerRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\AddUsersForUserManagerResponse.cs" />
     <Compile Include="Emr\V20190103\Models\BootstrapAction.cs" />
     <Compile Include="Emr\V20190103\Models\COSSettings.cs" />
     <Compile Include="Emr\V20190103\Models\CdbInfo.cs" />
@@ -7818,6 +7833,8 @@
     <Compile Include="Emr\V20190103\Models\DescribeCvmQuotaResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstanceRenewNodesResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeInstancesListRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeInstancesListResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeInstancesResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowRequest.cs" />
@@ -7827,9 +7844,11 @@
     <Compile Include="Emr\V20190103\Models\DiskGroup.cs" />
     <Compile Include="Emr\V20190103\Models\DiskSpec.cs" />
     <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
+    <Compile Include="Emr\V20190103\Models\EmrListInstance.cs" />
     <Compile Include="Emr\V20190103\Models\EmrProductConfigOutter.cs" />
     <Compile Include="Emr\V20190103\Models\Execution.cs" />
     <Compile Include="Emr\V20190103\Models\ExternalService.cs" />
+    <Compile Include="Emr\V20190103\Models\Filters.cs" />
     <Compile Include="Emr\V20190103\Models\HostVolumeContext.cs" />
     <Compile Include="Emr\V20190103\Models\InquirePriceRenewEmrRequest.cs" />
     <Compile Include="Emr\V20190103\Models\InquirePriceRenewEmrResponse.cs" />
@@ -7888,6 +7907,7 @@
     <Compile Include="Emr\V20190103\Models\TerminateTasksResponse.cs" />
     <Compile Include="Emr\V20190103\Models\TopologyInfo.cs" />
     <Compile Include="Emr\V20190103\Models\UpdateInstanceSettings.cs" />
+    <Compile Include="Emr\V20190103\Models\UserInfoForUserManager.cs" />
     <Compile Include="Emr\V20190103\Models\VPCSettings.cs" />
     <Compile Include="Es\V20180416\EsClient.cs" />
     <Compile Include="Es\V20180416\Models\ClusterView.cs" />
@@ -9741,11 +9761,16 @@
     <Compile Include="Iotcloud\V20210408\Models\EditFirmwareResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\EnableTopicRuleRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\EnableTopicRuleResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\FirmwareInfo.cs" />
     <Compile Include="Iotcloud\V20210408\Models\FirmwareTaskInfo.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\GetAllVersionRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\GetAllVersionResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\GetCOSURLRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\GetCOSURLResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\GetUserResourceInfoRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\GetUserResourceInfoResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ListFirmwaresRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ListFirmwaresResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ListLogPayloadRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ListLogPayloadResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ListLogRequest.cs" />
@@ -14250,6 +14275,7 @@
     <Compile Include="Ssl\V20191205\Models\ApplyCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\CancelCertificateOrderRequest.cs" />
     <Compile Include="Ssl\V20191205\Models\CancelCertificateOrderResponse.cs" />
+    <Compile Include="Ssl\V20191205\Models\CertHostingInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\CertificateExtra.cs" />
     <Compile Include="Ssl\V20191205\Models\Certificates.cs" />
     <Compile Include="Ssl\V20191205\Models\CheckCertificateChainRequest.cs" />
@@ -14284,6 +14310,8 @@
     <Compile Include="Ssl\V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="Ssl\V20191205\Models\DvAuths.cs" />
+    <Compile Include="Ssl\V20191205\Models\HostCertificateRequest.cs" />
+    <Compile Include="Ssl\V20191205\Models\HostCertificateResponse.cs" />
     <Compile Include="Ssl\V20191205\Models\ManagerInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\ManagerStatusInfo.cs" />
     <Compile Include="Ssl\V20191205\Models\ModifyCertificateAliasRequest.cs" />
@@ -16859,6 +16887,8 @@
     <Compile Include="Tke\V20180525\Models\CreatePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusDashboardResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\CreatePrometheusGlobalNotificationResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTempRequest.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="Tke\V20180525\Models\CreatePrometheusTemplateRequest.cs" />
@@ -16972,6 +17002,8 @@
     <Compile Include="Tke\V20180525\Models\DescribePrometheusAlertRuleResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusClusterAgentsRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusClusterAgentsResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\DescribePrometheusGlobalNotificationResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceRequest.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstanceResponse.cs" />
     <Compile Include="Tke\V20180525\Models\DescribePrometheusInstancesOverviewRequest.cs" />
@@ -17083,6 +17115,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusGlobalNotificationRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusGlobalNotificationResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTempRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTempResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
@@ -17096,14 +17130,21 @@
     <Compile Include="Tke\V20180525\Models\Probe.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAgentOverview.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertHistoryItem.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusAlertManagerConfig.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusAlertPolicyItem.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRule.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusAlertRuleDetail.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusConfigItem.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusGrafanaInfo.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusInstanceOverview.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusInstancesOverview.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusJobTargets.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusNotification.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusNotificationItem.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusRecordRuleYamlItem.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusTarget.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusTemp.cs" />
+    <Compile Include="Tke\V20180525\Models\PrometheusTempModify.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusTemplate.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusTemplateModify.cs" />
     <Compile Include="Tke\V20180525\Models\PrometheusTemplateSyncTarget.cs" />

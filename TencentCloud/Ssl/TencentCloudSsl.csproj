@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6E5F67EE-DB08-3C18-905D-3312ECC2D894}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.518</VersionPrefix>
+    <VersionPrefix>3.0.519</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
     <Compile Include="V20191205\Models\ApplyCertificateResponse.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderRequest.cs" />
     <Compile Include="V20191205\Models\CancelCertificateOrderResponse.cs" />
+    <Compile Include="V20191205\Models\CertHostingInfo.cs" />
     <Compile Include="V20191205\Models\CertificateExtra.cs" />
     <Compile Include="V20191205\Models\Certificates.cs" />
     <Compile Include="V20191205\Models\CheckCertificateChainRequest.cs" />
@@ -83,6 +84,8 @@
     <Compile Include="V20191205\Models\DownloadCertificateResponse.cs" />
     <Compile Include="V20191205\Models\DvAuthDetail.cs" />
     <Compile Include="V20191205\Models\DvAuths.cs" />
+    <Compile Include="V20191205\Models\HostCertificateRequest.cs" />
+    <Compile Include="V20191205\Models\HostCertificateResponse.cs" />
     <Compile Include="V20191205\Models\ManagerInfo.cs" />
     <Compile Include="V20191205\Models\ManagerStatusInfo.cs" />
     <Compile Include="V20191205\Models\ModifyCertificateAliasRequest.cs" />

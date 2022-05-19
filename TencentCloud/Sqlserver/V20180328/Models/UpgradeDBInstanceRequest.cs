@@ -78,6 +78,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("MultiZones")]
         public string MultiZones{ get; set; }
 
+        /// <summary>
+        /// 执行变配的方式，默认为 1。支持值包括：0 - 立刻执行，1 - 维护时间窗执行
+        /// </summary>
+        [JsonProperty("WaitSwitch")]
+        public long? WaitSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "HAType", this.HAType);
             this.SetParamSimple(map, prefix + "MultiZones", this.MultiZones);
+            this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
         }
     }
 }

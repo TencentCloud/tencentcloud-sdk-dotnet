@@ -24,12 +24,33 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DeletePrometheusAlertPolicyRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例id
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 告警策略id列表
+        /// </summary>
+        [JsonProperty("AlertIds")]
+        public string[] AlertIds{ get; set; }
+
+        /// <summary>
+        /// 告警策略名称
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArraySimple(map, prefix + "AlertIds.", this.AlertIds);
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
         }
     }
 }

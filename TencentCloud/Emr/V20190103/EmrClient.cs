@@ -53,6 +53,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 新增用户列表（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
+        public async Task<AddUsersForUserManagerResponse> AddUsersForUserManager(AddUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增用户列表（用户管理）
+        /// </summary>
+        /// <param name="req"><see cref="AddUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="AddUsersForUserManagerResponse"/></returns>
+        public AddUsersForUserManagerResponse AddUsersForUserManagerSync(AddUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<AddUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建EMR集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -244,6 +284,46 @@ namespace TencentCloud.Emr.V20190103
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EMR集群实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
+        /// <returns><see cref="DescribeInstancesListResponse"/></returns>
+        public async Task<DescribeInstancesListResponse> DescribeInstancesList(DescribeInstancesListRequest req)
+        {
+             JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstancesList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// EMR集群实例列表查询
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstancesListRequest"/></param>
+        /// <returns><see cref="DescribeInstancesListResponse"/></returns>
+        public DescribeInstancesListResponse DescribeInstancesListSync(DescribeInstancesListRequest req)
+        {
+             JsonResponseModel<DescribeInstancesListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstancesList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstancesListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("IsAdmin")]
         public bool? IsAdmin{ get; set; }
 
+        /// <summary>
+        /// win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+        /// </summary>
+        [JsonProperty("Authentication")]
+        public string Authentication{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
+            this.SetParamSimple(map, prefix + "Authentication", this.Authentication);
         }
     }
 }

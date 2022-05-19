@@ -191,6 +191,34 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UserAlias")]
         public string UserAlias{ get; set; }
 
+        /// <summary>
+        /// spark应用作业名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkJobName")]
+        public string SparkJobName{ get; set; }
+
+        /// <summary>
+        /// spark应用作业Id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkJobId")]
+        public string SparkJobId{ get; set; }
+
+        /// <summary>
+        /// spark应用入口jar文件
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkJobFile")]
+        public string SparkJobFile{ get; set; }
+
+        /// <summary>
+        /// spark ui url
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UiUrl")]
+        public string UiUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -223,6 +251,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataNumber", this.DataNumber);
             this.SetParamSimple(map, prefix + "CanDownload", this.CanDownload);
             this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "SparkJobName", this.SparkJobName);
+            this.SetParamSimple(map, prefix + "SparkJobId", this.SparkJobId);
+            this.SetParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
+            this.SetParamSimple(map, prefix + "UiUrl", this.UiUrl);
         }
     }
 }

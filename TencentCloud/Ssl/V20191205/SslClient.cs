@@ -693,6 +693,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 云资源托管
+        /// </summary>
+        /// <param name="req"><see cref="HostCertificateRequest"/></param>
+        /// <returns><see cref="HostCertificateResponse"/></returns>
+        public async Task<HostCertificateResponse> HostCertificate(HostCertificateRequest req)
+        {
+             JsonResponseModel<HostCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "HostCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HostCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云资源托管
+        /// </summary>
+        /// <param name="req"><see cref="HostCertificateRequest"/></param>
+        /// <returns><see cref="HostCertificateResponse"/></returns>
+        public HostCertificateResponse HostCertificateSync(HostCertificateRequest req)
+        {
+             JsonResponseModel<HostCertificateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "HostCertificate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<HostCertificateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用户传入证书id和备注来修改证书备注。
         /// </summary>
         /// <param name="req"><see cref="ModifyCertificateAliasRequest"/></param>

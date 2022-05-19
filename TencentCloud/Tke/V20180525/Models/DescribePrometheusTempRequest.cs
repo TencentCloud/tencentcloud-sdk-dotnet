@@ -24,12 +24,37 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DescribePrometheusTempRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 模糊过滤条件，支持
+        /// Level 按模板级别过滤
+        /// Name 按名称过滤
+        /// Describe 按描述过滤
+        /// ID 按templateId过滤
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 分页偏移
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 总数限制
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

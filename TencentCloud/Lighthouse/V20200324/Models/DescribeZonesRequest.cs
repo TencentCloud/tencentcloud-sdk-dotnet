@@ -24,12 +24,32 @@ namespace TencentCloud.Lighthouse.V20200324.Models
     public class DescribeZonesRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 可用区列表排序的依据字段。取值范围：
+        /// <li>ZONE：依据可用区排序。
+        /// <li>INSTANCE_DISPLAY_LABEL：依据可用区展示标签排序, 可用区展示标签按可选择程度, 升序排列为: ['HIDDEN', 'NORMAL', 'SELECTED']。
+        /// 默认按可用区排序。
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 输出可用区列表的排列顺序。取值范围：
+        /// <li>ASC：升序排列。 
+        /// <li>DESC：降序排列。
+        /// 默认按升序排列。
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
         }
     }
 }

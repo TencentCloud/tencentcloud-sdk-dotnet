@@ -25,6 +25,18 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 被关联集群信息
+        /// </summary>
+        [JsonProperty("Agents")]
+        public PrometheusAgentOverview[] Agents{ get; set; }
+
+        /// <summary>
+        /// 被关联集群总量
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Agents.", this.Agents);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

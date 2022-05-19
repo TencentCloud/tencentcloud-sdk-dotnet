@@ -1709,6 +1709,126 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 务工卡-核身预下单
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollPreOrderRequest"/></param>
+        /// <returns><see cref="CreatePayRollPreOrderResponse"/></returns>
+        public async Task<CreatePayRollPreOrderResponse> CreatePayRollPreOrder(CreatePayRollPreOrderRequest req)
+        {
+             JsonResponseModel<CreatePayRollPreOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePayRollPreOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollPreOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-核身预下单
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollPreOrderRequest"/></param>
+        /// <returns><see cref="CreatePayRollPreOrderResponse"/></returns>
+        public CreatePayRollPreOrderResponse CreatePayRollPreOrderSync(CreatePayRollPreOrderRequest req)
+        {
+             JsonResponseModel<CreatePayRollPreOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePayRollPreOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollPreOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-核身预下单带授权
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollPreOrderWithAuthRequest"/></param>
+        /// <returns><see cref="CreatePayRollPreOrderWithAuthResponse"/></returns>
+        public async Task<CreatePayRollPreOrderWithAuthResponse> CreatePayRollPreOrderWithAuth(CreatePayRollPreOrderWithAuthRequest req)
+        {
+             JsonResponseModel<CreatePayRollPreOrderWithAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePayRollPreOrderWithAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollPreOrderWithAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-核身预下单带授权
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollPreOrderWithAuthRequest"/></param>
+        /// <returns><see cref="CreatePayRollPreOrderWithAuthResponse"/></returns>
+        public CreatePayRollPreOrderWithAuthResponse CreatePayRollPreOrderWithAuthSync(CreatePayRollPreOrderWithAuthRequest req)
+        {
+             JsonResponseModel<CreatePayRollPreOrderWithAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePayRollPreOrderWithAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollPreOrderWithAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-生成授权令牌
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollTokenRequest"/></param>
+        /// <returns><see cref="CreatePayRollTokenResponse"/></returns>
+        public async Task<CreatePayRollTokenResponse> CreatePayRollToken(CreatePayRollTokenRequest req)
+        {
+             JsonResponseModel<CreatePayRollTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePayRollToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-生成授权令牌
+        /// </summary>
+        /// <param name="req"><see cref="CreatePayRollTokenRequest"/></param>
+        /// <returns><see cref="CreatePayRollTokenResponse"/></returns>
+        public CreatePayRollTokenResponse CreatePayRollTokenSync(CreatePayRollTokenRequest req)
+        {
+             JsonResponseModel<CreatePayRollTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePayRollToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePayRollTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 智慧零售-发票红冲
         /// </summary>
         /// <param name="req"><see cref="CreateRedInvoiceRequest"/></param>
@@ -2664,6 +2784,126 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "GetDistributeBillDownloadUrl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDistributeBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-查询授权关系
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthResponse"/></returns>
+        public async Task<GetPayRollAuthResponse> GetPayRollAuth(GetPayRollAuthRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPayRollAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-查询授权关系
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthResponse"/></returns>
+        public GetPayRollAuthResponse GetPayRollAuthSync(GetPayRollAuthRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPayRollAuth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-查询核身记录
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthListRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthListResponse"/></returns>
+        public async Task<GetPayRollAuthListResponse> GetPayRollAuthList(GetPayRollAuthListRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPayRollAuthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-查询核身记录
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthListRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthListResponse"/></returns>
+        public GetPayRollAuthListResponse GetPayRollAuthListSync(GetPayRollAuthListRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPayRollAuthList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-获取核身结果
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthResultRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthResultResponse"/></returns>
+        public async Task<GetPayRollAuthResultResponse> GetPayRollAuthResult(GetPayRollAuthResultRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetPayRollAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 务工卡-获取核身结果
+        /// </summary>
+        /// <param name="req"><see cref="GetPayRollAuthResultRequest"/></param>
+        /// <returns><see cref="GetPayRollAuthResultResponse"/></returns>
+        public GetPayRollAuthResultResponse GetPayRollAuthResultSync(GetPayRollAuthResultRequest req)
+        {
+             JsonResponseModel<GetPayRollAuthResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetPayRollAuthResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPayRollAuthResultResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

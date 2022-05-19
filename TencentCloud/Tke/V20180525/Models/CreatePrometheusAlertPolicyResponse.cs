@@ -25,6 +25,12 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 告警id
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

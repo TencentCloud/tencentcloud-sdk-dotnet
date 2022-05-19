@@ -853,6 +853,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="CreatePrometheusGlobalNotificationResponse"/></returns>
+        public async Task<CreatePrometheusGlobalNotificationResponse> CreatePrometheusGlobalNotification(CreatePrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<CreatePrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="CreatePrometheusGlobalNotificationResponse"/></returns>
+        public CreatePrometheusGlobalNotificationResponse CreatePrometheusGlobalNotificationSync(CreatePrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<CreatePrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusGlobalNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建一个云原生Prometheus模板
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusTempRequest"/></param>
@@ -3053,6 +3093,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 查询全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="DescribePrometheusGlobalNotificationResponse"/></returns>
+        public async Task<DescribePrometheusGlobalNotificationResponse> DescribePrometheusGlobalNotification(DescribePrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<DescribePrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="DescribePrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="DescribePrometheusGlobalNotificationResponse"/></returns>
+        public DescribePrometheusGlobalNotificationResponse DescribePrometheusGlobalNotificationSync(DescribePrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<DescribePrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusGlobalNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取实例详细信息
         /// </summary>
         /// <param name="req"><see cref="DescribePrometheusInstanceRequest"/></param>
@@ -4604,6 +4684,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "ModifyPrometheusAlertRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusAlertRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusGlobalNotificationResponse"/></returns>
+        public async Task<ModifyPrometheusGlobalNotificationResponse> ModifyPrometheusGlobalNotification(ModifyPrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改全局告警通知渠道
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusGlobalNotificationRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusGlobalNotificationResponse"/></returns>
+        public ModifyPrometheusGlobalNotificationResponse ModifyPrometheusGlobalNotificationSync(ModifyPrometheusGlobalNotificationRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusGlobalNotificationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrometheusGlobalNotification");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusGlobalNotificationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
