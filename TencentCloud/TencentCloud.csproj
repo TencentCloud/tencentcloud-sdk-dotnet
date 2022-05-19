@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.517</VersionPrefix>
+    <VersionPrefix>3.0.518</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2105,6 +2105,7 @@
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupRequest.cs" />
     <Compile Include="Cam\V20190116\Models\RemoveUserFromGroupResponse.cs" />
     <Compile Include="Cam\V20190116\Models\RoleInfo.cs" />
+    <Compile Include="Cam\V20190116\Models\RoleTags.cs" />
     <Compile Include="Cam\V20190116\Models\SAMLProviderInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SecretIdLastUsed.cs" />
     <Compile Include="Cam\V20190116\Models\SetDefaultPolicyVersionRequest.cs" />
@@ -17082,6 +17083,8 @@
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertPolicyResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusAlertRuleResponse.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusTempRequest.cs" />
+    <Compile Include="Tke\V20180525\Models\ModifyPrometheusTempResponse.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateRequest.cs" />
     <Compile Include="Tke\V20180525\Models\ModifyPrometheusTemplateResponse.cs" />
     <Compile Include="Tke\V20180525\Models\NfsVolume.cs" />

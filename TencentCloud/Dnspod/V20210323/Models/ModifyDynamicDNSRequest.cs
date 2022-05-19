@@ -66,6 +66,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("RecordLineId")]
         public string RecordLineId{ get; set; }
 
+        /// <summary>
+        /// TTL值，如果不传，默认为域名的TTL值。
+        /// </summary>
+        [JsonProperty("Ttl")]
+        public ulong? Ttl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "DomainId", this.DomainId);
             this.SetParamSimple(map, prefix + "SubDomain", this.SubDomain);
             this.SetParamSimple(map, prefix + "RecordLineId", this.RecordLineId);
+            this.SetParamSimple(map, prefix + "Ttl", this.Ttl);
         }
     }
 }

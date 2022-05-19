@@ -54,6 +54,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("SessionDuration")]
         public ulong? SessionDuration{ get; set; }
 
+        /// <summary>
+        /// 角色绑定标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RoleTags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "ConsoleLogin", this.ConsoleLogin);
             this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

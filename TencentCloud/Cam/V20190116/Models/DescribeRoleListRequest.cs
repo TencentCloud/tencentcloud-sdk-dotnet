@@ -36,6 +36,12 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("Rp")]
         public ulong? Rp{ get; set; }
 
+        /// <summary>
+        /// 标签筛选
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RoleTags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cam.V20190116.Models
         {
             this.SetParamSimple(map, prefix + "Page", this.Page);
             this.SetParamSimple(map, prefix + "Rp", this.Rp);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -31,7 +31,9 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? CaseSensitive{ get; set; }
 
         /// <summary>
-        /// 全文索引的分词符，字符串中每个字符代表一个分词符
+        /// 全文索引的分词符，其中的每个字符代表一个分词符；
+        /// 仅支持英文符号及\n\t\r；
+        /// 推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\ 作为分词符；
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

@@ -31,7 +31,10 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 字段的分词符，只有当字段类型为text时才有意义；输入字符串中的每个字符代表一个分词符
+        /// 字段的分词符，其中的每个字符代表一个分词符；
+        /// 仅支持英文符号及\n\t\r；
+        /// long及double类型字段需为空；
+        /// text类型字段推荐使用 @&?|#()='",;:<>[]{}/ \n\t\r\\ 作为分词符；
         /// </summary>
         [JsonProperty("Tokenizer")]
         public string Tokenizer{ get; set; }

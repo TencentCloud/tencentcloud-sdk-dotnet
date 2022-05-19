@@ -21,32 +21,20 @@ namespace TencentCloud.Cam.V20190116.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateServiceLinkedRoleRequest : AbstractModel
+    public class RoleTags : AbstractModel
     {
         
         /// <summary>
-        /// 授权服务，附加了此角色的腾讯云服务主体。
+        /// 标签键
         /// </summary>
-        [JsonProperty("QCSServiceName")]
-        public string[] QCSServiceName{ get; set; }
+        [JsonProperty("Key")]
+        public string Key{ get; set; }
 
         /// <summary>
-        /// 自定义后缀，根据您提供的字符串，与服务提供的前缀组合在一起以形成完整的角色名称。
+        /// 标签值
         /// </summary>
-        [JsonProperty("CustomSuffix")]
-        public string CustomSuffix{ get; set; }
-
-        /// <summary>
-        /// 角色说明。
-        /// </summary>
-        [JsonProperty("Description")]
-        public string Description{ get; set; }
-
-        /// <summary>
-        /// 角色绑定标签。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public RoleTags[] Tags{ get; set; }
+        [JsonProperty("Value")]
+        public string Value{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Cam.V20190116.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "QCSServiceName.", this.QCSServiceName);
-            this.SetParamSimple(map, prefix + "CustomSuffix", this.CustomSuffix);
-            this.SetParamSimple(map, prefix + "Description", this.Description);
-            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Value", this.Value);
         }
     }
 }

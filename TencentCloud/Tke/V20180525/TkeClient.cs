@@ -4615,6 +4615,46 @@ namespace TencentCloud.Tke.V20180525
         /// <summary>
         /// 修改模板内容
         /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusTempRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusTempResponse"/></returns>
+        public async Task<ModifyPrometheusTempResponse> ModifyPrometheusTemp(ModifyPrometheusTempRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPrometheusTemp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusTempResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模板内容
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPrometheusTempRequest"/></param>
+        /// <returns><see cref="ModifyPrometheusTempResponse"/></returns>
+        public ModifyPrometheusTempResponse ModifyPrometheusTempSync(ModifyPrometheusTempRequest req)
+        {
+             JsonResponseModel<ModifyPrometheusTempResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPrometheusTemp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPrometheusTempResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改模板内容
+        /// </summary>
         /// <param name="req"><see cref="ModifyPrometheusTemplateRequest"/></param>
         /// <returns><see cref="ModifyPrometheusTemplateResponse"/></returns>
         public async Task<ModifyPrometheusTemplateResponse> ModifyPrometheusTemplate(ModifyPrometheusTemplateRequest req)

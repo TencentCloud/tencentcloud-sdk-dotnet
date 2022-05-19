@@ -15,42 +15,21 @@
  * under the License.
  */
 
-namespace TencentCloud.Sqlserver.V20180328.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AccountPrivilegeModifyInfo : AbstractModel
+    public class ModifyPrometheusTempRequest : AbstractModel
     {
         
-        /// <summary>
-        /// 数据库用户名
-        /// </summary>
-        [JsonProperty("UserName")]
-        public string UserName{ get; set; }
-
-        /// <summary>
-        /// 账号权限变更信息
-        /// </summary>
-        [JsonProperty("DBPrivileges")]
-        public DBPrivilegeModifyInfo[] DBPrivileges{ get; set; }
-
-        /// <summary>
-        /// 是否为管理员账户
-        /// </summary>
-        [JsonProperty("IsAdmin")]
-        public bool? IsAdmin{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "UserName", this.UserName);
-            this.SetParamArrayObj(map, prefix + "DBPrivileges.", this.DBPrivileges);
-            this.SetParamSimple(map, prefix + "IsAdmin", this.IsAdmin);
         }
     }
 }

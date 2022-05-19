@@ -87,6 +87,13 @@ namespace TencentCloud.Cam.V20190116.Models
         [JsonProperty("DeletionTaskId")]
         public string DeletionTaskId{ get; set; }
 
+        /// <summary>
+        /// 标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public RoleTags[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Cam.V20190116.Models
             this.SetParamSimple(map, prefix + "RoleType", this.RoleType);
             this.SetParamSimple(map, prefix + "SessionDuration", this.SessionDuration);
             this.SetParamSimple(map, prefix + "DeletionTaskId", this.DeletionTaskId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

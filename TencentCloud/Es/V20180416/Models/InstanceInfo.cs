@@ -79,6 +79,17 @@ namespace TencentCloud.Es.V20180416.Models
         public long? Status{ get; set; }
 
         /// <summary>
+        /// 自动续费标识。取值范围：
+        /// RENEW_FLAG_AUTO：自动续费  
+        /// RENEW_FLAG_MANUAL：不自动续费
+        /// 默认取值：
+        /// RENEW_FLAG_DEFAULT：不自动续费
+        /// 若该参数指定为 RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
+        /// </summary>
+        [JsonProperty("RenewFlag")]
+        public string RenewFlag{ get; set; }
+
+        /// <summary>
         /// 实例计费模式。取值范围：  PREPAID：表示预付费，即包年包月  POSTPAID_BY_HOUR：表示后付费，即按量计费  CDHPAID：CDH付费，即只对CDH计费，不对CDH上的实例计费。
         /// </summary>
         [JsonProperty("ChargeType")]
@@ -89,12 +100,6 @@ namespace TencentCloud.Es.V20180416.Models
         /// </summary>
         [JsonProperty("ChargePeriod")]
         public ulong? ChargePeriod{ get; set; }
-
-        /// <summary>
-        /// 自动续费标识。取值范围：RENEW_FLAG_AUTO：自动续费  RENEW_FLAG_MANUAL：不自动续费  默认取值：RENEW_FLAG_DEFAULT：不自动续费。若该参数指定为RENEW_FLAG_AUTO，在账户余额充足的情况下，实例到期后将按月自动续费。
-        /// </summary>
-        [JsonProperty("RenewFlag")]
-        public string RenewFlag{ get; set; }
 
         /// <summary>
         /// 节点规格<li>ES.S1.SMALL2：1核2G</li><li>ES.S1.MEDIUM4：2核4G</li><li>ES.S1.MEDIUM8：2核8G</li><li>ES.S1.LARGE16：4核16G</li><li>ES.S1.2XLARGE32：8核32G</li><li>ES.S1.4XLARGE32：16核32G</li><li>ES.S1.4XLARGE64：16核64G</li>
@@ -521,9 +526,9 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "VpcUid", this.VpcUid);
             this.SetParamSimple(map, prefix + "SubnetUid", this.SubnetUid);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
             this.SetParamSimple(map, prefix + "ChargePeriod", this.ChargePeriod);
-            this.SetParamSimple(map, prefix + "RenewFlag", this.RenewFlag);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "NodeNum", this.NodeNum);
             this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
