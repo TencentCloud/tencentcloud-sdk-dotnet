@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.519</VersionPrefix>
+    <VersionPrefix>3.0.520</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -7841,6 +7841,8 @@
     <Compile Include="Emr\V20190103\Models\DescribeJobFlowResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeResourceScheduleRequest.cs" />
     <Compile Include="Emr\V20190103\Models\DescribeResourceScheduleResponse.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeUsersForUserManagerRequest.cs" />
+    <Compile Include="Emr\V20190103\Models\DescribeUsersForUserManagerResponse.cs" />
     <Compile Include="Emr\V20190103\Models\DiskGroup.cs" />
     <Compile Include="Emr\V20190103\Models\DiskSpec.cs" />
     <Compile Include="Emr\V20190103\Models\DynamicPodSpec.cs" />
@@ -12594,6 +12596,8 @@
     <Compile Include="Npp\V20190823\Models\RreCallerHandle.cs" />
     <Compile Include="Npp\V20190823\Models\VirturalNumCdr.cs" />
     <Compile Include="Oceanus\V20190422\OceanusClient.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CheckSavepointRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\CheckSavepointResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\CreateJobConfigRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\CreateJobConfigResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\CreateJobRequest.cs" />
@@ -12610,6 +12614,8 @@
     <Compile Include="Oceanus\V20190422\Models\DeleteTableConfigResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobConfigsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobSavepointRequest.cs" />
+    <Compile Include="Oceanus\V20190422\Models\DescribeJobSavepointResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeJobsResponse.cs" />
     <Compile Include="Oceanus\V20190422\Models\DescribeResourceConfigsRequest.cs" />
@@ -12634,6 +12640,7 @@
     <Compile Include="Oceanus\V20190422\Models\RunJobDescription.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\RunJobsResponse.cs" />
+    <Compile Include="Oceanus\V20190422\Models\Savepoint.cs" />
     <Compile Include="Oceanus\V20190422\Models\StopJobDescription.cs" />
     <Compile Include="Oceanus\V20190422\Models\StopJobsRequest.cs" />
     <Compile Include="Oceanus\V20190422\Models\StopJobsResponse.cs" />

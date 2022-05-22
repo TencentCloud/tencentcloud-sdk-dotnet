@@ -86,6 +86,12 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("PluginSource")]
         public string PluginSource{ get; set; }
 
+        /// <summary>
+        /// 客户度ID
+        /// </summary>
+        [JsonProperty("ClientNum")]
+        public string ClientNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +108,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "ProbeType", this.ProbeType);
             this.SetParamSimple(map, prefix + "PluginSource", this.PluginSource);
+            this.SetParamSimple(map, prefix + "ClientNum", this.ClientNum);
         }
     }
 }

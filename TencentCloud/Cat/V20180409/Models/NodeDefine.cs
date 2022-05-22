@@ -82,6 +82,20 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("Location")]
         public long? Location{ get; set; }
 
+        /// <summary>
+        /// 节点类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodeType")]
+        public string CodeType{ get; set; }
+
+        /// <summary>
+        /// 节点状态：1-运行,2-下线
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeDefineStatus")]
+        public ulong? NodeDefineStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +110,8 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "City", this.City);
             this.SetParamSimple(map, prefix + "IPType", this.IPType);
             this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
+            this.SetParamSimple(map, prefix + "NodeDefineStatus", this.NodeDefineStatus);
         }
     }
 }

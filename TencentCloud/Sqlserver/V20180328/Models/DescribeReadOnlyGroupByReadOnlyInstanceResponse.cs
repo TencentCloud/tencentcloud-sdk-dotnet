@@ -97,6 +97,12 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public string MasterInstanceId{ get; set; }
 
         /// <summary>
+        /// 主实例的地域ID
+        /// </summary>
+        [JsonProperty("MasterRegionId")]
+        public string MasterRegionId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -120,6 +126,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "MasterInstanceId", this.MasterInstanceId);
+            this.SetParamSimple(map, prefix + "MasterRegionId", this.MasterRegionId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

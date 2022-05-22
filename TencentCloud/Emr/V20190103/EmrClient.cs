@@ -413,6 +413,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// 批量导出用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
+        public async Task<DescribeUsersForUserManagerResponse> DescribeUsersForUserManager(DescribeUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量导出用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUsersForUserManagerRequest"/></param>
+        /// <returns><see cref="DescribeUsersForUserManagerResponse"/></returns>
+        public DescribeUsersForUserManagerResponse DescribeUsersForUserManagerSync(DescribeUsersForUserManagerRequest req)
+        {
+             JsonResponseModel<DescribeUsersForUserManagerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUsersForUserManager");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUsersForUserManagerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 集群续费询价。
         /// </summary>
         /// <param name="req"><see cref="InquirePriceRenewEmrRequest"/></param>

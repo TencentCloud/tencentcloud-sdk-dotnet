@@ -25,46 +25,58 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// cdh实例总cpu核数
+        /// 专用宿主机实例总cpu核数
         /// </summary>
         [JsonProperty("CpuTotal")]
         public ulong? CpuTotal{ get; set; }
 
         /// <summary>
-        /// cdh实例可用cpu核数
+        /// 专用宿主机实例可用cpu核数
         /// </summary>
         [JsonProperty("CpuAvailable")]
         public ulong? CpuAvailable{ get; set; }
 
         /// <summary>
-        /// cdh实例总内存大小（单位为:GiB）
+        /// 专用宿主机实例总内存大小（单位为:GiB）
         /// </summary>
         [JsonProperty("MemTotal")]
         public float? MemTotal{ get; set; }
 
         /// <summary>
-        /// cdh实例可用内存大小（单位为:GiB）
+        /// 专用宿主机实例可用内存大小（单位为:GiB）
         /// </summary>
         [JsonProperty("MemAvailable")]
         public float? MemAvailable{ get; set; }
 
         /// <summary>
-        /// cdh实例总磁盘大小（单位为:GiB）
+        /// 专用宿主机实例总磁盘大小（单位为:GiB）
         /// </summary>
         [JsonProperty("DiskTotal")]
         public ulong? DiskTotal{ get; set; }
 
         /// <summary>
-        /// cdh实例可用磁盘大小（单位为:GiB）
+        /// 专用宿主机实例可用磁盘大小（单位为:GiB）
         /// </summary>
         [JsonProperty("DiskAvailable")]
         public ulong? DiskAvailable{ get; set; }
 
         /// <summary>
-        /// cdh实例磁盘类型
+        /// 专用宿主机实例磁盘类型
         /// </summary>
         [JsonProperty("DiskType")]
         public string DiskType{ get; set; }
+
+        /// <summary>
+        /// 专用宿主机实例总GPU卡数
+        /// </summary>
+        [JsonProperty("GpuTotal")]
+        public ulong? GpuTotal{ get; set; }
+
+        /// <summary>
+        /// 专用宿主机实例可用GPU卡数
+        /// </summary>
+        [JsonProperty("GpuAvailable")]
+        public ulong? GpuAvailable{ get; set; }
 
 
         /// <summary>
@@ -79,6 +91,8 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskTotal", this.DiskTotal);
             this.SetParamSimple(map, prefix + "DiskAvailable", this.DiskAvailable);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
+            this.SetParamSimple(map, prefix + "GpuTotal", this.GpuTotal);
+            this.SetParamSimple(map, prefix + "GpuAvailable", this.GpuAvailable);
         }
     }
 }

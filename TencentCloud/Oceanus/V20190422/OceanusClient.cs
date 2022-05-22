@@ -53,6 +53,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 检查快照是否可用
+        /// </summary>
+        /// <param name="req"><see cref="CheckSavepointRequest"/></param>
+        /// <returns><see cref="CheckSavepointResponse"/></returns>
+        public async Task<CheckSavepointResponse> CheckSavepoint(CheckSavepointRequest req)
+        {
+             JsonResponseModel<CheckSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSavepointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 检查快照是否可用
+        /// </summary>
+        /// <param name="req"><see cref="CheckSavepointRequest"/></param>
+        /// <returns><see cref="CheckSavepointResponse"/></returns>
+        public CheckSavepointResponse CheckSavepointSync(CheckSavepointRequest req)
+        {
+             JsonResponseModel<CheckSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckSavepointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新建作业接口，一个 AppId 最多允许创建1000个作业
         /// </summary>
         /// <param name="req"><see cref="CreateJobRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Oceanus.V20190422
              {
                  var strResp = this.InternalRequestSync(req, "DescribeJobConfigs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查找Savepoint列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSavepointRequest"/></param>
+        /// <returns><see cref="DescribeJobSavepointResponse"/></returns>
+        public async Task<DescribeJobSavepointResponse> DescribeJobSavepoint(DescribeJobSavepointRequest req)
+        {
+             JsonResponseModel<DescribeJobSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJobSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobSavepointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查找Savepoint列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobSavepointRequest"/></param>
+        /// <returns><see cref="DescribeJobSavepointResponse"/></returns>
+        public DescribeJobSavepointResponse DescribeJobSavepointSync(DescribeJobSavepointRequest req)
+        {
+             JsonResponseModel<DescribeJobSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobSavepointResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
