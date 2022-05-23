@@ -67,6 +67,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
+        /// <summary>
+        /// 任务Id
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public ulong? TaskId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "NotAfter", this.NotAfter);
             this.SetParamSimple(map, prefix + "IvrId", this.IvrId);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
         }
     }
 }

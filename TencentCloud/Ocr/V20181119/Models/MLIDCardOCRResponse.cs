@@ -90,7 +90,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 出生日期（目前该字段仅支持IKAD劳工证）
+        /// 出生日期（目前该字段仅支持IKAD劳工证、MyKad 身份证）
         /// </summary>
         [JsonProperty("Birthday")]
         public string Birthday{ get; set; }

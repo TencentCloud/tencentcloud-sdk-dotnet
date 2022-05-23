@@ -21,32 +21,14 @@ namespace TencentCloud.Tcm.V20210413.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TracingConfig : AbstractModel
+    public class TracingZipkin : AbstractModel
     {
         
         /// <summary>
-        /// 调用链采样率，百分比
+        /// Zipkin调用地址
         /// </summary>
-        [JsonProperty("Sampling")]
-        public float? Sampling{ get; set; }
-
-        /// <summary>
-        /// 是否启用调用跟踪
-        /// </summary>
-        [JsonProperty("Enable")]
-        public bool? Enable{ get; set; }
-
-        /// <summary>
-        /// 腾讯云 APM 服务相关参数
-        /// </summary>
-        [JsonProperty("APM")]
-        public APM APM{ get; set; }
-
-        /// <summary>
-        /// 启动第三方服务器的地址
-        /// </summary>
-        [JsonProperty("Zipkin")]
-        public TracingZipkin Zipkin{ get; set; }
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Tcm.V20210413.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Sampling", this.Sampling);
-            this.SetParamSimple(map, prefix + "Enable", this.Enable);
-            this.SetParamObj(map, prefix + "APM.", this.APM);
-            this.SetParamObj(map, prefix + "Zipkin.", this.Zipkin);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
         }
     }
 }

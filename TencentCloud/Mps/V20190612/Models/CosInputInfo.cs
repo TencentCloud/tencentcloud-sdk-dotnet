@@ -25,19 +25,19 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
+        /// 媒体处理对象文件所在的 COS Bucket 名，如 TopRankVideo-125xxx88。
         /// </summary>
         [JsonProperty("Bucket")]
         public string Bucket{ get; set; }
 
         /// <summary>
-        /// 视频处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
+        /// 媒体处理对象文件所在的 COS Bucket 所属园区，如 ap-chongqing。
         /// </summary>
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
         /// <summary>
-        /// 视频处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
+        /// 媒体处理对象文件的输入路径，如`/movie/201907/WildAnimal.mov`。
         /// </summary>
         [JsonProperty("Object")]
         public string Object{ get; set; }

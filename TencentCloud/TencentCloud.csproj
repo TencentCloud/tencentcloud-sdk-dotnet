@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.520</VersionPrefix>
+    <VersionPrefix>3.0.521</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -15276,6 +15276,7 @@
     <Compile Include="Tcm\V20210413\Models\SelectedRange.cs" />
     <Compile Include="Tcm\V20210413\Models\Service.cs" />
     <Compile Include="Tcm\V20210413\Models\TracingConfig.cs" />
+    <Compile Include="Tcm\V20210413\Models\TracingZipkin.cs" />
     <Compile Include="Tcm\V20210413\Models\WorkloadConfig.cs" />
     <Compile Include="Tcr\V20190924\TcrClient.cs" />
     <Compile Include="Tcr\V20190924\Models\AccessVpc.cs" />

@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 内容智能识别模板唯一标识过滤条件，数组长度限制：50。
+        /// 智能审核模板唯一标识过滤条件，数组长度限制：50。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

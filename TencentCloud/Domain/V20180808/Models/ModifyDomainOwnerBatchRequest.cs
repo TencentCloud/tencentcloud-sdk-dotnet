@@ -42,6 +42,12 @@ namespace TencentCloud.Domain.V20180808.Models
         [JsonProperty("TransferDns")]
         public bool? TransferDns{ get; set; }
 
+        /// <summary>
+        /// 转入账户的appid。
+        /// </summary>
+        [JsonProperty("NewOwnerAppId")]
+        public string NewOwnerAppId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Domain.V20180808.Models
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "NewOwnerUin", this.NewOwnerUin);
             this.SetParamSimple(map, prefix + "TransferDns", this.TransferDns);
+            this.SetParamSimple(map, prefix + "NewOwnerAppId", this.NewOwnerAppId);
         }
     }
 }

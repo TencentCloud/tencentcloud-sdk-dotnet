@@ -759,7 +759,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 删除用户自定义内容智能识别模板。
+        /// 删除用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -779,7 +779,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 删除用户自定义内容智能识别模板。
+        /// 删除用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -1279,7 +1279,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 根据内容智能识别模板唯一标识，获取内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置内容智能识别模板。
+        /// 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -1299,7 +1299,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 根据内容智能识别模板唯一标识，获取内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置内容智能识别模板。
+        /// 根据智能审核模板唯一标识，获取智能审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及系统预置智能审核模板。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -1891,7 +1891,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+        /// 本接口仅用于定制开发的特殊场景，除非云媒体处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
         /// <returns><see cref="ExecuteFunctionResponse"/></returns>
@@ -1911,7 +1911,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 本接口仅用于定制开发的特殊场景，除非云视频处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
+        /// 本接口仅用于定制开发的特殊场景，除非云媒体处理客服人员主动告知您需要使用本接口，其它情况请勿调用。
         /// </summary>
         /// <param name="req"><see cref="ExecuteFunctionRequest"/></param>
         /// <returns><see cref="ExecuteFunctionResponse"/></returns>
@@ -2135,7 +2135,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 修改用户自定义内容智能识别模板。
+        /// 修改用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
         /// <returns><see cref="ModifyContentReviewTemplateResponse"/></returns>
@@ -2155,7 +2155,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 修改用户自定义内容智能识别模板。
+        /// 修改用户自定义内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
         /// <returns><see cref="ModifyContentReviewTemplateResponse"/></returns>

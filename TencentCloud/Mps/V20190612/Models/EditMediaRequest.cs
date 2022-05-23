@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public EditMediaFileInfo[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 视频处理输出文件的目标存储。
+        /// 媒体处理输出文件的目标存储。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 视频处理输出文件的目标路径。
+        /// 媒体处理输出文件的目标路径。
         /// </summary>
         [JsonProperty("OutputObjectPath")]
         public string OutputObjectPath{ get; set; }

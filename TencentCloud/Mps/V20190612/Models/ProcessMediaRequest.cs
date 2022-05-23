@@ -25,25 +25,25 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频处理的文件输入信息。
+        /// 媒体处理的文件输入信息。
         /// </summary>
         [JsonProperty("InputInfo")]
         public MediaInputInfo InputInfo{ get; set; }
 
         /// <summary>
-        /// 视频处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
+        /// 媒体处理输出文件的目标存储。不填则继承 InputInfo 中的存储位置。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 视频处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
+        /// 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。如果不填，表示与 InputInfo 中文件所在的目录一致。
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
 
         /// <summary>
-        /// 视频处理类型任务参数。
+        /// 媒体处理类型任务参数。
         /// </summary>
         [JsonProperty("MediaProcessTask")]
         public MediaProcessTaskInput MediaProcessTask{ get; set; }

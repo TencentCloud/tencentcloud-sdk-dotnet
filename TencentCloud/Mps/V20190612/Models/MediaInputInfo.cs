@@ -31,13 +31,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 当 Type 为 COS 时有效，则该项为必填，表示视频处理 COS 对象信息。
+        /// 当 Type 为 COS 时有效，则该项为必填，表示媒体处理 COS 对象信息。
         /// </summary>
         [JsonProperty("CosInputInfo")]
         public CosInputInfo CosInputInfo{ get; set; }
 
         /// <summary>
-        /// 当 Type 为 URL 时有效，则该项为必填，表示视频处理 URL 对象信息。
+        /// 当 Type 为 URL 时有效，则该项为必填，表示媒体处理 URL 对象信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UrlInputInfo")]

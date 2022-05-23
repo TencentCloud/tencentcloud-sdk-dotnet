@@ -25,7 +25,7 @@ namespace TencentCloud.Mps.V20190612.Models
     {
         
         /// <summary>
-        /// 视频处理任务 ID。
+        /// 媒体处理任务 ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 视频处理的目标文件信息。
+        /// 媒体处理的目标文件信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("InputInfo")]
@@ -65,7 +65,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 视频处理任务的执行状态与结果。
+        /// 媒体处理任务的执行状态与结果。
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }

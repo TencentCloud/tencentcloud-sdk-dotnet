@@ -51,14 +51,14 @@ namespace TencentCloud.Mps.V20190612.Models
         public WorkflowTrigger Trigger{ get; set; }
 
         /// <summary>
-        /// 视频处理的文件输出存储位置。
+        /// 媒体处理的文件输出存储位置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputStorage")]
         public TaskOutputStorage OutputStorage{ get; set; }
 
         /// <summary>
-        /// 视频处理类型任务参数。
+        /// 媒体处理类型任务参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaProcessTask")]
@@ -99,7 +99,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public long? TaskPriority{ get; set; }
 
         /// <summary>
-        /// 视频处理生成的文件输出的目标目录，如`/movie/201907/`。
+        /// 媒体处理生成的文件输出的目标目录，如`/movie/201907/`。
         /// </summary>
         [JsonProperty("OutputDir")]
         public string OutputDir{ get; set; }
