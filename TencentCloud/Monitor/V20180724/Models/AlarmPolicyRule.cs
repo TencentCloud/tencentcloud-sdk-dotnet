@@ -119,6 +119,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RuleType")]
         public string RuleType{ get; set; }
 
+        /// <summary>
+        /// 是否为高级指标，0否，1是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAdvanced")]
+        public long? IsAdvanced{ get; set; }
+
+        /// <summary>
+        /// 高级指标是否开通，0否，1是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public long? IsOpen{ get; set; }
+
+        /// <summary>
+        /// 集成中心产品ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +157,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamSimple(map, prefix + "RuleType", this.RuleType);
+            this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

@@ -204,6 +204,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CerebroPrivateAccess")]
         public string CerebroPrivateAccess{ get; set; }
 
+        /// <summary>
+        /// 新增或修改的配置组信息
+        /// </summary>
+        [JsonProperty("EsConfigSet")]
+        public EsConfigSetInfo EsConfigSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -239,6 +245,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EnableCerebro", this.EnableCerebro);
             this.SetParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
             this.SetParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
+            this.SetParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
         }
     }
 }

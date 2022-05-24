@@ -34,9 +34,11 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// 标记事件的状态，   
         ///     EVENT_DEALED:事件处理
         ///     EVENT_INGNORE"：事件忽略
-        ///      EVENT_DEL:事件删除
-        ///      EVENT_ADD_WHITE:事件加白
-        ///      EVENT_PENDING: 事件待处理
+        ///     EVENT_DEL:事件删除
+        ///     EVENT_ADD_WHITE:事件加白
+        ///     EVENT_PENDING: 事件待处理
+        /// 	EVENT_ISOLATE_CONTAINER: 隔离容器
+        /// 	EVENT_RESOTRE_CONTAINER: 恢复容器
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -47,6 +49,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 是否后续自动隔离相同MD5文件
+        /// </summary>
+        [JsonProperty("AutoIsolate")]
+        public bool? AutoIsolate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -56,6 +64,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "EventIdSet.", this.EventIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "AutoIsolate", this.AutoIsolate);
         }
     }
 }

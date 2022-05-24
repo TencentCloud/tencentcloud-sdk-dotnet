@@ -134,6 +134,44 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("SubStatus")]
         public string SubStatus{ get; set; }
 
+        /// <summary>
+        /// 网络状态
+        /// 未隔离  	NORMAL
+        /// 已隔离		ISOLATED
+        /// 隔离中		ISOLATING
+        /// 隔离失败	ISOLATE_FAILED
+        /// 解除隔离中  RESTORING
+        /// 解除隔离失败 RESTORE_FAILED
+        /// </summary>
+        [JsonProperty("ContainerNetStatus")]
+        public string ContainerNetStatus{ get; set; }
+
+        /// <summary>
+        /// 容器子状态
+        /// "AGENT_OFFLINE"       //Agent离线
+        /// 	"NODE_DESTROYED"      //节点已销毁
+        /// 	"CONTAINER_EXITED"    //容器已退出
+        /// 	"CONTAINER_DESTROYED" //容器已销毁
+        /// 	"SHARED_HOST"         // 容器与主机共享网络
+        /// 	"RESOURCE_LIMIT"      //隔离操作资源超限
+        /// 	"UNKNOW"              // 原因未知
+        /// </summary>
+        [JsonProperty("ContainerNetSubStatus")]
+        public string ContainerNetSubStatus{ get; set; }
+
+        /// <summary>
+        /// 容器隔离操作来源
+        /// </summary>
+        [JsonProperty("ContainerIsolateOperationSrc")]
+        public string ContainerIsolateOperationSrc{ get; set; }
+
+        /// <summary>
+        /// md5值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MD5")]
+        public string MD5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +193,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "HarmDescribe", this.HarmDescribe);
             this.SetParamSimple(map, prefix + "SuggestScheme", this.SuggestScheme);
             this.SetParamSimple(map, prefix + "SubStatus", this.SubStatus);
+            this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+            this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+            this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+            this.SetParamSimple(map, prefix + "MD5", this.MD5);
         }
     }
 }

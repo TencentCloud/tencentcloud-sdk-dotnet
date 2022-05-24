@@ -42,6 +42,20 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
         [JsonProperty("Latitude")]
         public float? Latitude{ get; set; }
 
+        /// <summary>
+        /// 位置点的定位类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LocationType")]
+        public string LocationType{ get; set; }
+
+        /// <summary>
+        /// 位置点的精度预估，单位为米
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Accuracy")]
+        public float? Accuracy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Iotexplorer.V20190423.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Longitude", this.Longitude);
             this.SetParamSimple(map, prefix + "Latitude", this.Latitude);
+            this.SetParamSimple(map, prefix + "LocationType", this.LocationType);
+            this.SetParamSimple(map, prefix + "Accuracy", this.Accuracy);
         }
     }
 }

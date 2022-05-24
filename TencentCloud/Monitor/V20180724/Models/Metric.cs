@@ -73,6 +73,27 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("MetricConfig")]
         public MetricConfig MetricConfig{ get; set; }
 
+        /// <summary>
+        /// 是否为高级指标。1是 0否
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAdvanced")]
+        public long? IsAdvanced{ get; set; }
+
+        /// <summary>
+        /// 高级指标是否开通。1是 0否
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsOpen")]
+        public long? IsOpen{ get; set; }
+
+        /// <summary>
+        /// 集成中心产品ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public long? ProductId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +108,9 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "Dimensions.", this.Dimensions);
             this.SetParamSimple(map, prefix + "Unit", this.Unit);
             this.SetParamObj(map, prefix + "MetricConfig.", this.MetricConfig);
+            this.SetParamSimple(map, prefix + "IsAdvanced", this.IsAdvanced);
+            this.SetParamSimple(map, prefix + "IsOpen", this.IsOpen);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
         }
     }
 }

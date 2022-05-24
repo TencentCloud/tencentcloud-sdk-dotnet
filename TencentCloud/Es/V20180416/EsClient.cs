@@ -53,6 +53,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 创建索引
+        /// </summary>
+        /// <param name="req"><see cref="CreateIndexRequest"/></param>
+        /// <returns><see cref="CreateIndexResponse"/></returns>
+        public async Task<CreateIndexResponse> CreateIndex(CreateIndexRequest req)
+        {
+             JsonResponseModel<CreateIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建索引
+        /// </summary>
+        /// <param name="req"><see cref="CreateIndexRequest"/></param>
+        /// <returns><see cref="CreateIndexResponse"/></returns>
+        public CreateIndexResponse CreateIndexSync(CreateIndexRequest req)
+        {
+             JsonResponseModel<CreateIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建指定规格的ES集群实例
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceRequest"/></param>
@@ -93,6 +133,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 删除索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIndexRequest"/></param>
+        /// <returns><see cref="DeleteIndexResponse"/></returns>
+        public async Task<DeleteIndexResponse> DeleteIndex(DeleteIndexRequest req)
+        {
+             JsonResponseModel<DeleteIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除索引
+        /// </summary>
+        /// <param name="req"><see cref="DeleteIndexRequest"/></param>
+        /// <returns><see cref="DeleteIndexResponse"/></returns>
+        public DeleteIndexResponse DeleteIndexSync(DeleteIndexRequest req)
+        {
+             JsonResponseModel<DeleteIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 销毁集群实例 
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
@@ -124,6 +204,86 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取索引列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
+        /// <returns><see cref="DescribeIndexListResponse"/></returns>
+        public async Task<DescribeIndexListResponse> DescribeIndexList(DescribeIndexListRequest req)
+        {
+             JsonResponseModel<DescribeIndexListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIndexList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取索引列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexListRequest"/></param>
+        /// <returns><see cref="DescribeIndexListResponse"/></returns>
+        public DescribeIndexListResponse DescribeIndexListSync(DescribeIndexListRequest req)
+        {
+             JsonResponseModel<DescribeIndexListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIndexList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取索引元数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexMetaRequest"/></param>
+        /// <returns><see cref="DescribeIndexMetaResponse"/></returns>
+        public async Task<DescribeIndexMetaResponse> DescribeIndexMeta(DescribeIndexMetaRequest req)
+        {
+             JsonResponseModel<DescribeIndexMetaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIndexMeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexMetaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取索引元数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIndexMetaRequest"/></param>
+        /// <returns><see cref="DescribeIndexMetaResponse"/></returns>
+        public DescribeIndexMetaResponse DescribeIndexMetaSync(DescribeIndexMetaRequest req)
+        {
+             JsonResponseModel<DescribeIndexMetaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIndexMeta");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIndexMetaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -564,6 +724,46 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateDictionaries");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDictionariesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIndexRequest"/></param>
+        /// <returns><see cref="UpdateIndexResponse"/></returns>
+        public async Task<UpdateIndexResponse> UpdateIndex(UpdateIndexRequest req)
+        {
+             JsonResponseModel<UpdateIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateIndexResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新索引
+        /// </summary>
+        /// <param name="req"><see cref="UpdateIndexRequest"/></param>
+        /// <returns><see cref="UpdateIndexResponse"/></returns>
+        public UpdateIndexResponse UpdateIndexSync(UpdateIndexRequest req)
+        {
+             JsonResponseModel<UpdateIndexResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateIndex");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateIndexResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

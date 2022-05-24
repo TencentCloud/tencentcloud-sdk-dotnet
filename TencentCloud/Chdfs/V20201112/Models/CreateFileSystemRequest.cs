@@ -78,6 +78,12 @@ namespace TencentCloud.Chdfs.V20201112.Models
         [JsonProperty("RangerServiceAddresses")]
         public string[] RangerServiceAddresses{ get; set; }
 
+        /// <summary>
+        /// 多个资源标签，可以为空数组
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Chdfs.V20201112.Models
             this.SetParamSimple(map, prefix + "RootInodeGroup", this.RootInodeGroup);
             this.SetParamSimple(map, prefix + "EnableRanger", this.EnableRanger);
             this.SetParamArraySimple(map, prefix + "RangerServiceAddresses.", this.RangerServiceAddresses);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

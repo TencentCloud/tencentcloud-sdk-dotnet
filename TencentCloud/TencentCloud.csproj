@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.521</VersionPrefix>
+    <VersionPrefix>3.0.522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -2115,6 +2115,10 @@
     <Compile Include="Cam\V20190116\Models\StrategyInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountInfo.cs" />
     <Compile Include="Cam\V20190116\Models\SubAccountUser.cs" />
+    <Compile Include="Cam\V20190116\Models\TagRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\TagRoleResponse.cs" />
+    <Compile Include="Cam\V20190116\Models\UntagRoleRequest.cs" />
+    <Compile Include="Cam\V20190116\Models\UntagRoleResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyRequest.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateAssumeRolePolicyResponse.cs" />
     <Compile Include="Cam\V20190116\Models\UpdateGroupRequest.cs" />
@@ -6677,6 +6681,7 @@
     <Compile Include="Dcdb\V20180411\Models\DatabaseTable.cs" />
     <Compile Include="Dcdb\V20180411\Models\DatabaseView.cs" />
     <Compile Include="Dcdb\V20180411\Models\DcnDetailItem.cs" />
+    <Compile Include="Dcdb\V20180411\Models\Deal.cs" />
     <Compile Include="Dcdb\V20180411\Models\DeleteAccountRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DeleteAccountResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -6687,6 +6692,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBParametersResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeDBSyncModeRequest.cs" />
@@ -6717,6 +6724,8 @@
     <Compile Include="Dcdb\V20180411\Models\DescribeFileDownloadUrlResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeFlowResponse.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="Dcdb\V20180411\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsRequest.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectSecurityGroupsResponse.cs" />
     <Compile Include="Dcdb\V20180411\Models\DescribeProjectsRequest.cs" />
@@ -7912,12 +7921,21 @@
     <Compile Include="Emr\V20190103\Models\UserInfoForUserManager.cs" />
     <Compile Include="Emr\V20190103\Models\VPCSettings.cs" />
     <Compile Include="Es\V20180416\EsClient.cs" />
+    <Compile Include="Es\V20180416\Models\BackingIndexMetaField.cs" />
     <Compile Include="Es\V20180416\Models\ClusterView.cs" />
     <Compile Include="Es\V20180416\Models\CosBackup.cs" />
+    <Compile Include="Es\V20180416\Models\CreateIndexRequest.cs" />
+    <Compile Include="Es\V20180416\Models\CreateIndexResponse.cs" />
     <Compile Include="Es\V20180416\Models\CreateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\CreateInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DeleteIndexRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DeleteIndexResponse.cs" />
     <Compile Include="Es\V20180416\Models\DeleteInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeIndexListRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeIndexListResponse.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeIndexMetaRequest.cs" />
+    <Compile Include="Es\V20180416\Models\DescribeIndexMetaResponse.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstanceLogsRequest.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstanceLogsResponse.cs" />
     <Compile Include="Es\V20180416\Models\DescribeInstanceOperationsRequest.cs" />
@@ -7930,10 +7948,15 @@
     <Compile Include="Es\V20180416\Models\DiagnoseInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\DictInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsAcl.cs" />
+    <Compile Include="Es\V20180416\Models\EsConfigSetInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="Es\V20180416\Models\EsPublicAcl.cs" />
     <Compile Include="Es\V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
     <Compile Include="Es\V20180416\Models\GetRequestTargetNodeTypesResponse.cs" />
+    <Compile Include="Es\V20180416\Models\IndexMetaField.cs" />
+    <Compile Include="Es\V20180416\Models\IndexOptionsField.cs" />
+    <Compile Include="Es\V20180416\Models\IndexPolicyField.cs" />
+    <Compile Include="Es\V20180416\Models\IndexSettingsField.cs" />
     <Compile Include="Es\V20180416\Models\InstanceInfo.cs" />
     <Compile Include="Es\V20180416\Models\InstanceLog.cs" />
     <Compile Include="Es\V20180416\Models\KeyValue.cs" />
@@ -7958,6 +7981,8 @@
     <Compile Include="Es\V20180416\Models\UpdateDiagnoseSettingsResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateDictionariesRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateDictionariesResponse.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateIndexRequest.cs" />
+    <Compile Include="Es\V20180416\Models\UpdateIndexResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="Es\V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="Es\V20180416\Models\UpdateJdkRequest.cs" />
@@ -11523,6 +11548,7 @@
     <Compile Include="Mariadb\V20170312\Models\DatabaseTable.cs" />
     <Compile Include="Mariadb\V20170312\Models\DatabaseView.cs" />
     <Compile Include="Mariadb\V20170312\Models\DcnDetailItem.cs" />
+    <Compile Include="Mariadb\V20170312\Models\Deal.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DeleteAccountResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeAccountPrivilegesRequest.cs" />
@@ -11547,6 +11573,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBResourceUsageResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDBSlowLogsResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeDatabaseObjectsRequest.cs" />
@@ -11565,6 +11593,8 @@
     <Compile Include="Mariadb\V20170312\Models\DescribeInstanceNodeInfoResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeLogFileRetentionPeriodResponse.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeOrdersRequest.cs" />
+    <Compile Include="Mariadb\V20170312\Models\DescribeOrdersResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribePriceRequest.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribePriceResponse.cs" />
     <Compile Include="Mariadb\V20170312\Models\DescribeProjectSecurityGroupsRequest.cs" />

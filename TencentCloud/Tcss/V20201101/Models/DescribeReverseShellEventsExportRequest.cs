@@ -25,12 +25,6 @@ namespace TencentCloud.Tcss.V20201101.Models
     {
         
         /// <summary>
-        /// 导出字段
-        /// </summary>
-        [JsonProperty("ExportField")]
-        public string[] ExportField{ get; set; }
-
-        /// <summary>
         /// 需要返回的数量，默认为10，最大值为100
         /// </summary>
         [JsonProperty("Limit")]
@@ -60,18 +54,24 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("By")]
         public string By{ get; set; }
 
+        /// <summary>
+        /// 导出字段
+        /// </summary>
+        [JsonProperty("ExportField")]
+        public string[] ExportField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
+            this.SetParamArraySimple(map, prefix + "ExportField.", this.ExportField);
         }
     }
 }

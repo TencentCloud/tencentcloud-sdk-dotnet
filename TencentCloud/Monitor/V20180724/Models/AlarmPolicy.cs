@@ -251,6 +251,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("OneClickStatus")]
         public long? OneClickStatus{ get; set; }
 
+        /// <summary>
+        /// 高级指标数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedMetricNumber")]
+        public long? AdvancedMetricNumber{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -289,6 +296,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "FilterDimensionsParam", this.FilterDimensionsParam);
             this.SetParamSimple(map, prefix + "IsOneClick", this.IsOneClick);
             this.SetParamSimple(map, prefix + "OneClickStatus", this.OneClickStatus);
+            this.SetParamSimple(map, prefix + "AdvancedMetricNumber", this.AdvancedMetricNumber);
         }
     }
 }

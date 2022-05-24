@@ -5173,7 +5173,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 运行时文件查杀事件列表
+        /// 查询运行时文件查杀事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVirusListRequest"/></param>
         /// <returns><see cref="DescribeVirusListResponse"/></returns>
@@ -5193,7 +5193,7 @@ namespace TencentCloud.Tcss.V20201101
         }
 
         /// <summary>
-        /// 运行时文件查杀事件列表
+        /// 查询运行时文件查杀事件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeVirusListRequest"/></param>
         /// <returns><see cref="DescribeVirusListResponse"/></returns>

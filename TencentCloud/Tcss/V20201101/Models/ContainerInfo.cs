@@ -120,6 +120,38 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("PublicIp")]
         public string PublicIp{ get; set; }
 
+        /// <summary>
+        /// 网络状态
+        /// 未隔离  	NORMAL
+        /// 已隔离		ISOLATED
+        /// 隔离中		ISOLATING
+        /// 隔离失败	ISOLATE_FAILED
+        /// 解除隔离中  RESTORING
+        /// 解除隔离失败 RESTORE_FAILED
+        /// </summary>
+        [JsonProperty("NetStatus")]
+        public string NetStatus{ get; set; }
+
+        /// <summary>
+        /// 网络子状态
+        /// </summary>
+        [JsonProperty("NetSubStatus")]
+        public string NetSubStatus{ get; set; }
+
+        /// <summary>
+        /// 隔离来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateSource")]
+        public string IsolateSource{ get; set; }
+
+        /// <summary>
+        /// 隔离时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateTime")]
+        public string IsolateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +174,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "HostName", this.HostName);
             this.SetParamSimple(map, prefix + "PublicIp", this.PublicIp);
+            this.SetParamSimple(map, prefix + "NetStatus", this.NetStatus);
+            this.SetParamSimple(map, prefix + "NetSubStatus", this.NetSubStatus);
+            this.SetParamSimple(map, prefix + "IsolateSource", this.IsolateSource);
+            this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
         }
     }
 }

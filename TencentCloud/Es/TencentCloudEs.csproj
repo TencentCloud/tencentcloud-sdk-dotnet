@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BAB1D217-C279-3DCE-8001-02A83445B39E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.521</VersionPrefix>
+    <VersionPrefix>3.0.522</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,12 +45,21 @@
 
   <ItemGroup>
     <Compile Include="V20180416\EsClient.cs" />
+    <Compile Include="V20180416\Models\BackingIndexMetaField.cs" />
     <Compile Include="V20180416\Models\ClusterView.cs" />
     <Compile Include="V20180416\Models\CosBackup.cs" />
+    <Compile Include="V20180416\Models\CreateIndexRequest.cs" />
+    <Compile Include="V20180416\Models\CreateIndexResponse.cs" />
     <Compile Include="V20180416\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20180416\Models\CreateInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\DeleteIndexRequest.cs" />
+    <Compile Include="V20180416\Models\DeleteIndexResponse.cs" />
     <Compile Include="V20180416\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20180416\Models\DeleteInstanceResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeIndexListRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeIndexListResponse.cs" />
+    <Compile Include="V20180416\Models\DescribeIndexMetaRequest.cs" />
+    <Compile Include="V20180416\Models\DescribeIndexMetaResponse.cs" />
     <Compile Include="V20180416\Models\DescribeInstanceLogsRequest.cs" />
     <Compile Include="V20180416\Models\DescribeInstanceLogsResponse.cs" />
     <Compile Include="V20180416\Models\DescribeInstanceOperationsRequest.cs" />
@@ -63,10 +72,15 @@
     <Compile Include="V20180416\Models\DiagnoseInstanceResponse.cs" />
     <Compile Include="V20180416\Models\DictInfo.cs" />
     <Compile Include="V20180416\Models\EsAcl.cs" />
+    <Compile Include="V20180416\Models\EsConfigSetInfo.cs" />
     <Compile Include="V20180416\Models\EsDictionaryInfo.cs" />
     <Compile Include="V20180416\Models\EsPublicAcl.cs" />
     <Compile Include="V20180416\Models\GetRequestTargetNodeTypesRequest.cs" />
     <Compile Include="V20180416\Models\GetRequestTargetNodeTypesResponse.cs" />
+    <Compile Include="V20180416\Models\IndexMetaField.cs" />
+    <Compile Include="V20180416\Models\IndexOptionsField.cs" />
+    <Compile Include="V20180416\Models\IndexPolicyField.cs" />
+    <Compile Include="V20180416\Models\IndexSettingsField.cs" />
     <Compile Include="V20180416\Models\InstanceInfo.cs" />
     <Compile Include="V20180416\Models\InstanceLog.cs" />
     <Compile Include="V20180416\Models\KeyValue.cs" />
@@ -91,6 +105,8 @@
     <Compile Include="V20180416\Models\UpdateDiagnoseSettingsResponse.cs" />
     <Compile Include="V20180416\Models\UpdateDictionariesRequest.cs" />
     <Compile Include="V20180416\Models\UpdateDictionariesResponse.cs" />
+    <Compile Include="V20180416\Models\UpdateIndexRequest.cs" />
+    <Compile Include="V20180416\Models\UpdateIndexResponse.cs" />
     <Compile Include="V20180416\Models\UpdateInstanceRequest.cs" />
     <Compile Include="V20180416\Models\UpdateInstanceResponse.cs" />
     <Compile Include="V20180416\Models\UpdateJdkRequest.cs" />

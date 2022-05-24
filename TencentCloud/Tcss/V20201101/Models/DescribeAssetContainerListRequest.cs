@@ -44,6 +44,7 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <li>ImageName- String - 是否必填：否 - 镜像名称搜索</li>
         /// <li>HostIP- string - 是否必填：否 - 主机ip搜索</li>
         /// <li>OrderBy - String 是否必填：否 -排序字段，支持：cpu_usage, mem_usage的动态排序 ["cpu_usage","+"]  '+'升序、'-'降序</li>
+        /// <li>NetStatus - String -是否必填: 否 -  容器网络状态筛选 normal isolated isolating isolate_failed restoring restore_failed</li>
         /// </summary>
         [JsonProperty("Filters")]
         public AssetFilters[] Filters{ get; set; }

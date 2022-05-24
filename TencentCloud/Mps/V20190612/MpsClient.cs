@@ -213,7 +213,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 创建用户自定义内容智能识别模板，数量上限：50。
+        /// 创建用户自定义内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
         /// <returns><see cref="CreateContentReviewTemplateResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Mps.V20190612
         }
 
         /// <summary>
-        /// 创建用户自定义内容智能识别模板，数量上限：50。
+        /// 创建用户自定义内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
         /// <returns><see cref="CreateContentReviewTemplateResponse"/></returns>

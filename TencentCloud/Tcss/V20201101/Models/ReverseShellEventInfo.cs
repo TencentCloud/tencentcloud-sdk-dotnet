@@ -123,6 +123,37 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("DstAddress")]
         public string DstAddress{ get; set; }
 
+        /// <summary>
+        /// 网络状态
+        /// 未隔离  	NORMAL
+        /// 已隔离		ISOLATED
+        /// 隔离中		ISOLATING
+        /// 隔离失败	ISOLATE_FAILED
+        /// 解除隔离中  RESTORING
+        /// 解除隔离失败 RESTORE_FAILED
+        /// </summary>
+        [JsonProperty("ContainerNetStatus")]
+        public string ContainerNetStatus{ get; set; }
+
+        /// <summary>
+        /// 容器子状态
+        /// "AGENT_OFFLINE"       //Agent离线
+        /// 	"NODE_DESTROYED"      //节点已销毁
+        /// 	"CONTAINER_EXITED"    //容器已退出
+        /// 	"CONTAINER_DESTROYED" //容器已销毁
+        /// 	"SHARED_HOST"         // 容器与主机共享网络
+        /// 	"RESOURCE_LIMIT"      //隔离操作资源超限
+        /// 	"UNKNOW"              // 原因未知
+        /// </summary>
+        [JsonProperty("ContainerNetSubStatus")]
+        public string ContainerNetSubStatus{ get; set; }
+
+        /// <summary>
+        /// 容器隔离操作来源
+        /// </summary>
+        [JsonProperty("ContainerIsolateOperationSrc")]
+        public string ContainerIsolateOperationSrc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,6 +176,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "EventCount", this.EventCount);
             this.SetParamSimple(map, prefix + "LatestFoundTime", this.LatestFoundTime);
             this.SetParamSimple(map, prefix + "DstAddress", this.DstAddress);
+            this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+            this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+            this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
         }
     }
 }

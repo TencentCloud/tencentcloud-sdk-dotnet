@@ -55,7 +55,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public bool? IsTagFilter{ get; set; }
 
         /// <summary>
-        /// 过滤器。目前支持按标签过滤。
+        /// 过滤器。目前支持按标签过滤，标签的Name需要加前缀“tag:”，例如：tag:负责人、tag:环境、tag:业务
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

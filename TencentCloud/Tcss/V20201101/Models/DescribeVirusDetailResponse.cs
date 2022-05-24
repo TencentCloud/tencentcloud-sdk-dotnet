@@ -340,6 +340,27 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string OperationTime{ get; set; }
 
         /// <summary>
+        /// 容器隔离状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerNetStatus")]
+        public string ContainerNetStatus{ get; set; }
+
+        /// <summary>
+        /// 容器隔离子状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerNetSubStatus")]
+        public string ContainerNetSubStatus{ get; set; }
+
+        /// <summary>
+        /// 容器隔离操作来源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContainerIsolateOperationSrc")]
+        public string ContainerIsolateOperationSrc{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -394,6 +415,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "AncestorProcessPath", this.AncestorProcessPath);
             this.SetParamSimple(map, prefix + "AncestorProcessParam", this.AncestorProcessParam);
             this.SetParamSimple(map, prefix + "OperationTime", this.OperationTime);
+            this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
+            this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
+            this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
