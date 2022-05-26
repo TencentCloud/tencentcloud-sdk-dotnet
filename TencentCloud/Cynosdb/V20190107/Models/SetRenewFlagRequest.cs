@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] ResourceIds{ get; set; }
 
         /// <summary>
-        /// 自动续费标志位
+        /// 自动续费标志位，续费标记 0:正常续费  1:自动续费 2:到期不续
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }

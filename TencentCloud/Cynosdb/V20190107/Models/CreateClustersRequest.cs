@@ -51,7 +51,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
 
         /// <summary>
         /// 数据库版本，取值范围: 
-        /// <li> MYSQL可选值：5.7 </li>
+        /// <li> MYSQL可选值：5.7，8.0 </li>
         /// </summary>
         [JsonProperty("DbVersion")]
         public string DbVersion{ get; set; }
@@ -84,7 +84,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Storage{ get; set; }
 
         /// <summary>
-        /// 集群名称
+        /// 集群名称，长度小于64个字符，每个字符取值范围：大/小写字母，数字，特殊符号（'-','_','.'）
         /// </summary>
         [JsonProperty("ClusterName")]
         public string ClusterName{ get; set; }
@@ -167,7 +167,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? TimeSpan{ get; set; }
 
         /// <summary>
-        /// 包年包月购买时长单位
+        /// 包年包月购买时长单位，['s','d','m','y']
         /// </summary>
         [JsonProperty("TimeUnit")]
         public string TimeUnit{ get; set; }

@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 数据库内存
+        /// 数据库内存，单位GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E52C27D4-C9DE-3FC7-9236-F3BDC08EFC51}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.523</VersionPrefix>
+    <VersionPrefix>3.0.524</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -162,6 +162,8 @@
     <Compile Include="V20210408\Models\ListLogResponse.cs" />
     <Compile Include="V20210408\Models\ListSDKLogRequest.cs" />
     <Compile Include="V20210408\Models\ListSDKLogResponse.cs" />
+    <Compile Include="V20210408\Models\ListTopicRulesRequest.cs" />
+    <Compile Include="V20210408\Models\ListTopicRulesResponse.cs" />
     <Compile Include="V20210408\Models\PayloadLogItem.cs" />
     <Compile Include="V20210408\Models\ProductInfo.cs" />
     <Compile Include="V20210408\Models\ProductMetadata.cs" />
@@ -186,6 +188,7 @@
     <Compile Include="V20210408\Models\SetProductsForbiddenStatusRequest.cs" />
     <Compile Include="V20210408\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="V20210408\Models\StatusStatistic.cs" />
+    <Compile Include="V20210408\Models\TopicRuleInfo.cs" />
     <Compile Include="V20210408\Models\TopicRulePayload.cs" />
     <Compile Include="V20210408\Models\UnbindDevicesRequest.cs" />
     <Compile Include="V20210408\Models\UnbindDevicesResponse.cs" />

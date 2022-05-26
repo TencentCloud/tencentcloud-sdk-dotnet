@@ -25,7 +25,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 集群id
+        /// 集群id，不超过32个字符
         /// </summary>
         [JsonProperty("ClusterId")]
         public string ClusterId{ get; set; }

@@ -413,6 +413,86 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 创建spark应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
+        /// <returns><see cref="CreateSparkAppResponse"/></returns>
+        public async Task<CreateSparkAppResponse> CreateSparkApp(CreateSparkAppRequest req)
+        {
+             JsonResponseModel<CreateSparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建spark应用
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppRequest"/></param>
+        /// <returns><see cref="CreateSparkAppResponse"/></returns>
+        public CreateSparkAppResponse CreateSparkAppSync(CreateSparkAppRequest req)
+        {
+             JsonResponseModel<CreateSparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建spark任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
+        /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
+        public async Task<CreateSparkAppTaskResponse> CreateSparkAppTask(CreateSparkAppTaskRequest req)
+        {
+             JsonResponseModel<CreateSparkAppTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSparkAppTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建spark任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateSparkAppTaskRequest"/></param>
+        /// <returns><see cref="CreateSparkAppTaskResponse"/></returns>
+        public CreateSparkAppTaskResponse CreateSparkAppTaskSync(CreateSparkAppTaskRequest req)
+        {
+             JsonResponseModel<CreateSparkAppTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSparkAppTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSparkAppTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateStoreLocation）新增或覆盖计算结果存储位置。
         /// </summary>
         /// <param name="req"><see cref="CreateStoreLocationRequest"/></param>
@@ -733,6 +813,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 删除spark应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
+        /// <returns><see cref="DeleteSparkAppResponse"/></returns>
+        public async Task<DeleteSparkAppResponse> DeleteSparkApp(DeleteSparkAppRequest req)
+        {
+             JsonResponseModel<DeleteSparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除spark应用
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSparkAppRequest"/></param>
+        /// <returns><see cref="DeleteSparkAppResponse"/></returns>
+        public DeleteSparkAppResponse DeleteSparkAppSync(DeleteSparkAppRequest req)
+        {
+             JsonResponseModel<DeleteSparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除用户
         /// </summary>
         /// <param name="req"><see cref="DeleteUserRequest"/></param>
@@ -924,6 +1044,126 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeScripts");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeScriptsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询具体的spark应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
+        public async Task<DescribeSparkAppJobResponse> DescribeSparkAppJob(DescribeSparkAppJobRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkAppJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询具体的spark应用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppJobRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppJobResponse"/></returns>
+        public DescribeSparkAppJobResponse DescribeSparkAppJobSync(DescribeSparkAppJobRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkAppJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取spark应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
+        public async Task<DescribeSparkAppJobsResponse> DescribeSparkAppJobs(DescribeSparkAppJobsRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkAppJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取spark应用列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppJobsRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppJobsResponse"/></returns>
+        public DescribeSparkAppJobsResponse DescribeSparkAppJobsSync(DescribeSparkAppJobsRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkAppJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询spark应用的运行任务实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
+        public async Task<DescribeSparkAppTasksResponse> DescribeSparkAppTasks(DescribeSparkAppTasksRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSparkAppTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询spark应用的运行任务实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSparkAppTasksRequest"/></param>
+        /// <returns><see cref="DescribeSparkAppTasksResponse"/></returns>
+        public DescribeSparkAppTasksResponse DescribeSparkAppTasksSync(DescribeSparkAppTasksRequest req)
+        {
+             JsonResponseModel<DescribeSparkAppTasksResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSparkAppTasks");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSparkAppTasksResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1324,6 +1564,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "DetachWorkGroupPolicy");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetachWorkGroupPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新spark应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
+        /// <returns><see cref="ModifySparkAppResponse"/></returns>
+        public async Task<ModifySparkAppResponse> ModifySparkApp(ModifySparkAppRequest req)
+        {
+             JsonResponseModel<ModifySparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifySparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新spark应用
+        /// </summary>
+        /// <param name="req"><see cref="ModifySparkAppRequest"/></param>
+        /// <returns><see cref="ModifySparkAppResponse"/></returns>
+        public ModifySparkAppResponse ModifySparkAppSync(ModifySparkAppRequest req)
+        {
+             JsonResponseModel<ModifySparkAppResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifySparkApp");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySparkAppResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

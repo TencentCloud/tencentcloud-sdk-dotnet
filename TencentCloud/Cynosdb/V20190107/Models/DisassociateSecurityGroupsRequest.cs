@@ -31,7 +31,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 要修改的安全组ID列表，一个或者多个安全组Id组成的数组。
+        /// 要修改的安全组ID列表，一个或者多个安全组ID组成的数组。
         /// </summary>
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }

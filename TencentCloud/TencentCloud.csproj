@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{423CA746-9292-4983-8EFD-3A0B2F167221}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.523</VersionPrefix>
+    <VersionPrefix>3.0.524</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -6845,6 +6845,10 @@
     <Compile Include="Dlc\V20210125\Models\CreateImportTaskResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateScriptResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateSparkAppRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateSparkAppResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateSparkAppTaskRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\CreateSparkAppTaskResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateStoreLocationRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateStoreLocationResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\CreateTableRequest.cs" />
@@ -6864,6 +6868,8 @@
     <Compile Include="Dlc\V20210125\Models\DatabaseResponseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteScriptRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteScriptResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteSparkAppRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DeleteSparkAppResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteUserRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteUserResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DeleteUsersFromWorkGroupRequest.cs" />
@@ -6874,6 +6880,12 @@
     <Compile Include="Dlc\V20210125\Models\DescribeDatabasesResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeScriptsRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeScriptsResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppJobRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppJobResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppJobsRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppJobsResponse.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppTasksRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\DescribeSparkAppTasksResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeStoreLocationRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeStoreLocationResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\DescribeTableRequest.cs" />
@@ -6897,6 +6909,8 @@
     <Compile Include="Dlc\V20210125\Models\Execution.cs" />
     <Compile Include="Dlc\V20210125\Models\Filter.cs" />
     <Compile Include="Dlc\V20210125\Models\KVPair.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifySparkAppRequest.cs" />
+    <Compile Include="Dlc\V20210125\Models\ModifySparkAppResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\ModifyUserRequest.cs" />
     <Compile Include="Dlc\V20210125\Models\ModifyUserResponse.cs" />
     <Compile Include="Dlc\V20210125\Models\ModifyWorkGroupRequest.cs" />
@@ -6907,6 +6921,8 @@
     <Compile Include="Dlc\V20210125\Models\Property.cs" />
     <Compile Include="Dlc\V20210125\Models\SQLTask.cs" />
     <Compile Include="Dlc\V20210125\Models\Script.cs" />
+    <Compile Include="Dlc\V20210125\Models\SparkJobInfo.cs" />
+    <Compile Include="Dlc\V20210125\Models\StreamingStatistics.cs" />
     <Compile Include="Dlc\V20210125\Models\TableBaseInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TableInfo.cs" />
     <Compile Include="Dlc\V20210125\Models\TableResponseInfo.cs" />
@@ -9831,6 +9847,8 @@
     <Compile Include="Iotcloud\V20210408\Models\ListLogResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ListSDKLogRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ListSDKLogResponse.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ListTopicRulesRequest.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\ListTopicRulesResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\PayloadLogItem.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ProductInfo.cs" />
     <Compile Include="Iotcloud\V20210408\Models\ProductMetadata.cs" />
@@ -9855,6 +9873,7 @@
     <Compile Include="Iotcloud\V20210408\Models\SetProductsForbiddenStatusRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\SetProductsForbiddenStatusResponse.cs" />
     <Compile Include="Iotcloud\V20210408\Models\StatusStatistic.cs" />
+    <Compile Include="Iotcloud\V20210408\Models\TopicRuleInfo.cs" />
     <Compile Include="Iotcloud\V20210408\Models\TopicRulePayload.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UnbindDevicesRequest.cs" />
     <Compile Include="Iotcloud\V20210408\Models\UnbindDevicesResponse.cs" />

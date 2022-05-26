@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认为 20，最大值为 100
+        /// 返回数量，默认为 20，取值范围为(0,100]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 记录偏移量，默认值为0
+        /// 记录偏移量，默认值为0，取值范围为[0,INF)
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

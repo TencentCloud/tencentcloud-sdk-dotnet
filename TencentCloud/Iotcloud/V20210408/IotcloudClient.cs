@@ -2133,6 +2133,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// 本接口（ListTopicRules）用于分页获取规则列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTopicRulesRequest"/></param>
+        /// <returns><see cref="ListTopicRulesResponse"/></returns>
+        public async Task<ListTopicRulesResponse> ListTopicRules(ListTopicRulesRequest req)
+        {
+             JsonResponseModel<ListTopicRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTopicRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopicRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListTopicRules）用于分页获取规则列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTopicRulesRequest"/></param>
+        /// <returns><see cref="ListTopicRulesResponse"/></returns>
+        public ListTopicRulesResponse ListTopicRulesSync(ListTopicRulesRequest req)
+        {
+             JsonResponseModel<ListTopicRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTopicRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTopicRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 发布广播消息
         /// </summary>
         /// <param name="req"><see cref="PublishBroadcastMessageRequest"/></param>

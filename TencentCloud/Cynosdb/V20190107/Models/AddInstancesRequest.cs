@@ -37,13 +37,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 内存
+        /// 内存，单位为GB
         /// </summary>
         [JsonProperty("Memory")]
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 新增只读实例数
+        /// 新增只读实例数，取值范围为(0,16]
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }
@@ -61,19 +61,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 所属子网ID
+        /// 所属子网ID，如果设置了VpcId，则SubnetId必填
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 新增RO组时使用的Port
+        /// 新增RO组时使用的Port，取值范围为[0,65535)
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 实例名称，字符串长度范围为[0,64)
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }
@@ -92,7 +92,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string DbType{ get; set; }
 
         /// <summary>
-        /// 订单来源
+        /// 订单来源，字符串长度范围为[0,64)
         /// </summary>
         [JsonProperty("OrderSource")]
         public string OrderSource{ get; set; }
