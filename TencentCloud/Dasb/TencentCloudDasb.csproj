@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.523</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Dasb</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20191018\DasbClient.cs" />
+    <Compile Include="V20191018\Models\Acl.cs" />
+    <Compile Include="V20191018\Models\CmdTemplate.cs" />
+    <Compile Include="V20191018\Models\CreateAclRequest.cs" />
+    <Compile Include="V20191018\Models\CreateAclResponse.cs" />
+    <Compile Include="V20191018\Models\CreateUserRequest.cs" />
+    <Compile Include="V20191018\Models\CreateUserResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteAclsRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteUsersRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteUsersResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeAclsRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeDasbImageIdsRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeDasbImageIdsResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeDevicesRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeUsersRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeUsersResponse.cs" />
+    <Compile Include="V20191018\Models\Device.cs" />
+    <Compile Include="V20191018\Models\Group.cs" />
+    <Compile Include="V20191018\Models\ModifyAclRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyAclResponse.cs" />
+    <Compile Include="V20191018\Models\ModifyUserRequest.cs" />
+    <Compile Include="V20191018\Models\ModifyUserResponse.cs" />
+    <Compile Include="V20191018\Models\Resource.cs" />
+    <Compile Include="V20191018\Models\User.cs" />
+  </ItemGroup>
+</Project>

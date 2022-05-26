@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Keyword{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// <b>关键词应用场景，可选值：</b>
         /// 1. Recognition.Ocr：通过光学字符识别技术，进行内容识别；
         /// 2. Recognition.Asr：通过音频识别技术，进行内容识别；
@@ -50,12 +56,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("TagOperationInfo")]
         public AiSampleTagOperation TagOperationInfo{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,9 +63,9 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Keyword", this.Keyword);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "Usages.", this.Usages);
             this.SetParamObj(map, prefix + "TagOperationInfo.", this.TagOperationInfo);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

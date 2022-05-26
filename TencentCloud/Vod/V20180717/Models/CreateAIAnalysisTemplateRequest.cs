@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 视频内容分析模板名称，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
@@ -66,18 +72,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("HighlightConfigure")]
         public HighlightsConfigureInfo HighlightConfigure{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
             this.SetParamObj(map, prefix + "ClassificationConfigure.", this.ClassificationConfigure);
@@ -85,7 +86,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CoverConfigure.", this.CoverConfigure);
             this.SetParamObj(map, prefix + "FrameTagConfigure.", this.FrameTagConfigure);
             this.SetParamObj(map, prefix + "HighlightConfigure.", this.HighlightConfigure);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

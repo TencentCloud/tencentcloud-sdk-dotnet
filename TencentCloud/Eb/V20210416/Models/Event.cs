@@ -48,6 +48,13 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("Subject")]
         public string Subject{ get; set; }
 
+        /// <summary>
+        /// 事件发生的毫秒时间戳，
+        /// time.Now().UnixNano()/1e6
+        /// </summary>
+        [JsonProperty("Time")]
+        public long? Time{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Subject", this.Subject);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
         }
     }
 }

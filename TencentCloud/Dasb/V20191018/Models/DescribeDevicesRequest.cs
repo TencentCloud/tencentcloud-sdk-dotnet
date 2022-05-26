@@ -1,0 +1,106 @@
+/*
+ * Copyright (c) 2018 THL A29 Limited, a Tencent company. All Rights Reserved.
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing,
+ * software distributed under the License is distributed on an
+ * "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+ * KIND, either express or implied.  See the License for the
+ * specific language governing permissions and limitations
+ * under the License.
+ */
+
+namespace TencentCloud.Dasb.V20191018.Models
+{
+    using Newtonsoft.Json;
+    using System.Collections.Generic;
+    using TencentCloud.Common;
+
+    public class DescribeDevicesRequest : AbstractModel
+    {
+        
+        /// <summary>
+        /// 主机ID集合，非必需
+        /// </summary>
+        [JsonProperty("IdSet")]
+        public ulong?[] IdSet{ get; set; }
+
+        /// <summary>
+        /// 主机名或主机IP，模糊查询
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 暂未使用
+        /// </summary>
+        [JsonProperty("Ip")]
+        public string Ip{ get; set; }
+
+        /// <summary>
+        /// 地域码集合
+        /// </summary>
+        [JsonProperty("ApCodeSet")]
+        public string[] ApCodeSet{ get; set; }
+
+        /// <summary>
+        /// 操作系统类型
+        /// </summary>
+        [JsonProperty("Kind")]
+        public ulong? Kind{ get; set; }
+
+        /// <summary>
+        /// 分页，偏移位置
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 每页条目数量，默认20
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 有该主机访问权限的用户ID集合
+        /// </summary>
+        [JsonProperty("AuthorizedUserIdSet")]
+        public ulong?[] AuthorizedUserIdSet{ get; set; }
+
+        /// <summary>
+        /// 过滤条件，主机绑定的堡垒机服务ID集合
+        /// </summary>
+        [JsonProperty("ResourceIdSet")]
+        public string[] ResourceIdSet{ get; set; }
+
+        /// <summary>
+        /// 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+        /// </summary>
+        [JsonProperty("KindSet")]
+        public ulong?[] KindSet{ get; set; }
+
+
+        /// <summary>
+        /// For internal usage only. DO NOT USE IT.
+        /// </summary>
+        public override void ToMap(Dictionary<string, string> map, string prefix)
+        {
+            this.SetParamArraySimple(map, prefix + "IdSet.", this.IdSet);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Ip", this.Ip);
+            this.SetParamArraySimple(map, prefix + "ApCodeSet.", this.ApCodeSet);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
+            this.SetParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
+            this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
+        }
+    }
+}
+

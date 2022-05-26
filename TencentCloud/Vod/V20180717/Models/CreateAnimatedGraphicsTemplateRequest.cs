@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Fps{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 动图宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
         /// <li>当 Width、Height 均为 0，则分辨率同源；</li>
         /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
@@ -85,12 +91,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -98,6 +98,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
             this.SetParamSimple(map, prefix + "ResolutionAdaptive", this.ResolutionAdaptive);
@@ -105,7 +106,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Quality", this.Quality);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }
