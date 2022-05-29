@@ -133,6 +133,46 @@ namespace TencentCloud.Organization.V20210331
         }
 
         /// <summary>
+        /// 创建组织成员的授权策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
+        public async Task<CreateOrganizationMemberPolicyResponse> CreateOrganizationMemberPolicy(CreateOrganizationMemberPolicyRequest req)
+        {
+             JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOrganizationMemberPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建组织成员的授权策略
+        /// </summary>
+        /// <param name="req"><see cref="CreateOrganizationMemberPolicyRequest"/></param>
+        /// <returns><see cref="CreateOrganizationMemberPolicyResponse"/></returns>
+        public CreateOrganizationMemberPolicyResponse CreateOrganizationMemberPolicySync(CreateOrganizationMemberPolicyRequest req)
+        {
+             JsonResponseModel<CreateOrganizationMemberPolicyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOrganizationMemberPolicy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOrganizationMemberPolicyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取企业组织信息
         /// </summary>
         /// <param name="req"><see cref="DescribeOrganizationRequest"/></param>

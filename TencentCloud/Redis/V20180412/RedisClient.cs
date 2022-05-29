@@ -3173,6 +3173,86 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 实例proxy版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
+        public async Task<UpgradeProxyVersionResponse> UpgradeProxyVersion(UpgradeProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例proxy版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeProxyVersionRequest"/></param>
+        /// <returns><see cref="UpgradeProxyVersionResponse"/></returns>
+        public UpgradeProxyVersionResponse UpgradeProxyVersionSync(UpgradeProxyVersionRequest req)
+        {
+             JsonResponseModel<UpgradeProxyVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeProxyVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeProxyVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例小版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
+        /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
+        public async Task<UpgradeSmallVersionResponse> UpgradeSmallVersion(UpgradeSmallVersionRequest req)
+        {
+             JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeSmallVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeSmallVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 实例小版本升级
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeSmallVersionRequest"/></param>
+        /// <returns><see cref="UpgradeSmallVersionResponse"/></returns>
+        public UpgradeSmallVersionResponse UpgradeSmallVersionSync(UpgradeSmallVersionRequest req)
+        {
+             JsonResponseModel<UpgradeSmallVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeSmallVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeSmallVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 升级实例支持多AZ
         /// </summary>
         /// <param name="req"><see cref="UpgradeVersionToMultiAvailabilityZonesRequest"/></param>

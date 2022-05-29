@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.524</VersionPrefix>
+    <VersionPrefix>3.0.525</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -248,6 +248,10 @@
     <Compile Include="V20180412\Models\UpgradeInstanceResponse.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceVersionRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeInstanceVersionResponse.cs" />
+    <Compile Include="V20180412\Models\UpgradeProxyVersionRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeProxyVersionResponse.cs" />
+    <Compile Include="V20180412\Models\UpgradeSmallVersionRequest.cs" />
+    <Compile Include="V20180412\Models\UpgradeSmallVersionResponse.cs" />
     <Compile Include="V20180412\Models\UpgradeVersionToMultiAvailabilityZonesRequest.cs" />
     <Compile Include="V20180412\Models\UpgradeVersionToMultiAvailabilityZonesResponse.cs" />
     <Compile Include="V20180412\Models\ZoneCapacityConf.cs" />
