@@ -78,6 +78,12 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("TagFilters")]
         public TagFilter[] TagFilters{ get; set; }
 
+        /// <summary>
+        /// KMS 高级版对应的 HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）。
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         }
     }
 }

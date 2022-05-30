@@ -55,7 +55,7 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         public bool? IsAdmin{ get; set; }
 
         /// <summary>
-        /// win-windows鉴权,sql-sqlserver鉴权，不填模式兼容接口sqlserver鉴权
+        /// win-windows鉴权,sql-sqlserver鉴权，不填默认值为sql-sqlserver鉴权
         /// </summary>
         [JsonProperty("Authentication")]
         public string Authentication{ get; set; }

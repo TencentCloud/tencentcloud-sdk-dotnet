@@ -48,6 +48,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SecurityGroupIds")]
         public string[] SecurityGroupIds{ get; set; }
 
+        /// <summary>
+        /// 网卡trunking模式设置，Enable-开启，Disable--关闭，默认关闭。
+        /// </summary>
+        [JsonProperty("TrunkingFlag")]
+        public string TrunkingFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "NetworkInterfaceName", this.NetworkInterfaceName);
             this.SetParamSimple(map, prefix + "NetworkInterfaceDescription", this.NetworkInterfaceDescription);
             this.SetParamArraySimple(map, prefix + "SecurityGroupIds.", this.SecurityGroupIds);
+            this.SetParamSimple(map, prefix + "TrunkingFlag", this.TrunkingFlag);
         }
     }
 }

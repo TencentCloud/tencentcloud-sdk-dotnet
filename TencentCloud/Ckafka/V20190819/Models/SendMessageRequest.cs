@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string DataHubId{ get; set; }
 
         /// <summary>
-        /// 发送消息内容
+        /// 发送消息内容(单次请求最多500条)
         /// </summary>
         [JsonProperty("Message")]
         public BatchContent[] Message{ get; set; }

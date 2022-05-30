@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Ccc.V20200210.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeTelCallInfoResponse : AbstractModel
+    public class TerminateDedicatedDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 呼出套餐包消耗分钟数
+        /// 异步流程Id
         /// </summary>
-        [JsonProperty("TelCallOutCount")]
-        public long? TelCallOutCount{ get; set; }
-
-        /// <summary>
-        /// 呼入套餐包消耗分钟数
-        /// </summary>
-        [JsonProperty("TelCallInCount")]
-        public long? TelCallInCount{ get; set; }
-
-        /// <summary>
-        /// 坐席使用统计个数
-        /// </summary>
-        [JsonProperty("SeatUsedCount")]
-        public long? SeatUsedCount{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +42,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TelCallOutCount", this.TelCallOutCount);
-            this.SetParamSimple(map, prefix + "TelCallInCount", this.TelCallInCount);
-            this.SetParamSimple(map, prefix + "SeatUsedCount", this.SeatUsedCount);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

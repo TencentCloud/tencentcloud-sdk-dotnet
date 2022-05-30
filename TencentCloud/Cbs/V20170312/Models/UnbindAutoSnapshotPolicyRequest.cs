@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 要解绑定期快照策略的云盘ID列表。
-        /// </summary>
-        [JsonProperty("DiskIds")]
-        public string[] DiskIds{ get; set; }
-
-        /// <summary>
         /// 要解绑的定期快照策略ID。
         /// </summary>
         [JsonProperty("AutoSnapshotPolicyId")]
         public string AutoSnapshotPolicyId{ get; set; }
+
+        /// <summary>
+        /// 要解绑定期快照策略的云盘ID列表。
+        /// </summary>
+        [JsonProperty("DiskIds")]
+        public string[] DiskIds{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
+            this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
         }
     }
 }

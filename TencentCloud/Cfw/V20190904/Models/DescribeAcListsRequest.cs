@@ -55,7 +55,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 出站还是入站，0：入站，1：出站
+        /// 出站还是入站，1：入站，0：出站
         /// </summary>
         [JsonProperty("Direction")]
         public ulong? Direction{ get; set; }

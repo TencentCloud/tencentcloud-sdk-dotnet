@@ -48,6 +48,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("DiskBackupId")]
         public string DiskBackupId{ get; set; }
 
+        /// <summary>
+        /// 快照绑定的标签。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "SnapshotName", this.SnapshotName);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "DiskBackupId", this.DiskBackupId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -76,6 +76,13 @@ namespace TencentCloud.Kms.V20190118.Models
         public string TagMsg{ get; set; }
 
         /// <summary>
+        /// HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -95,6 +102,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "KeyUsage", this.KeyUsage);
             this.SetParamSimple(map, prefix + "TagCode", this.TagCode);
             this.SetParamSimple(map, prefix + "TagMsg", this.TagMsg);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

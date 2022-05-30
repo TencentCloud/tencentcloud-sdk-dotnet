@@ -51,6 +51,20 @@ namespace TencentCloud.Vpc.V20170312.Models
         public long? ExtendEniPrivateIpAddressQuantity{ get; set; }
 
         /// <summary>
+        /// 中继网卡配额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubEniQuantity")]
+        public long? SubEniQuantity{ get; set; }
+
+        /// <summary>
+        /// 每个中继网卡可以分配的IP配额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubEniPrivateIpAddressQuantity")]
+        public long? SubEniPrivateIpAddressQuantity{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -66,6 +80,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "EniPrivateIpAddressQuantity", this.EniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "ExtendEniQuantity", this.ExtendEniQuantity);
             this.SetParamSimple(map, prefix + "ExtendEniPrivateIpAddressQuantity", this.ExtendEniPrivateIpAddressQuantity);
+            this.SetParamSimple(map, prefix + "SubEniQuantity", this.SubEniQuantity);
+            this.SetParamSimple(map, prefix + "SubEniPrivateIpAddressQuantity", this.SubEniPrivateIpAddressQuantity);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

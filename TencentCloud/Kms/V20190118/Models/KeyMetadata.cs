@@ -117,6 +117,13 @@ namespace TencentCloud.Kms.V20190118.Models
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
 
+        /// <summary>
+        /// HSM 集群 ID（仅对 KMS 独占版/托管版服务实例有效）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HsmClusterId")]
+        public string HsmClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -138,6 +145,7 @@ namespace TencentCloud.Kms.V20190118.Models
             this.SetParamSimple(map, prefix + "Origin", this.Origin);
             this.SetParamSimple(map, prefix + "ValidTo", this.ValidTo);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "HsmClusterId", this.HsmClusterId);
         }
     }
 }

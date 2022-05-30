@@ -138,6 +138,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("TimeStartShare")]
         public string TimeStartShare{ get; set; }
 
+        /// <summary>
+        /// 快照绑定的标签列表。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -163,6 +169,7 @@ namespace TencentCloud.Cbs.V20170312.Models
             this.SetParamSimple(map, prefix + "DiskUsage", this.DiskUsage);
             this.SetParamSimple(map, prefix + "SnapshotId", this.SnapshotId);
             this.SetParamSimple(map, prefix + "TimeStartShare", this.TimeStartShare);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

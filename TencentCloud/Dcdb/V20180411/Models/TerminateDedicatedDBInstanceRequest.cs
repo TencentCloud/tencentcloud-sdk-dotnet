@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Vod.V20180717.Models
+namespace TencentCloud.Dcdb.V20180411.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class WeChatMiniProgramPublishRequest : AbstractModel
+    public class TerminateDedicatedDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 媒体文件 ID。
+        /// 实例 Id，形如：dcdbt-ow728lmc。
         /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
-
-        /// <summary>
-        /// 发布视频所对应的转码模板 ID，为0代表原始视频。
-        /// </summary>
-        [JsonProperty("SourceDefinition")]
-        public long? SourceDefinition{ get; set; }
-
-        /// <summary>
-        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +36,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "SourceDefinition", this.SourceDefinition);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }
