@@ -263,6 +263,27 @@ namespace TencentCloud.Ssl.V20191205.Models
         public Tags[] Tags{ get; set; }
 
         /// <summary>
+        /// 根证书。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RootCert")]
+        public RootCertificates RootCert{ get; set; }
+
+        /// <summary>
+        /// 国密加密证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptCert")]
+        public string EncryptCert{ get; set; }
+
+        /// <summary>
+        /// 国密加密私钥
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptPrivateKey")]
+        public string EncryptPrivateKey{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -308,6 +329,9 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "RenewAble", this.RenewAble);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "RootCert.", this.RootCert);
+            this.SetParamSimple(map, prefix + "EncryptCert", this.EncryptCert);
+            this.SetParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

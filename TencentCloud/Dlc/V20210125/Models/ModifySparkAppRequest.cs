@@ -127,6 +127,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppFiles{ get; set; }
 
         /// <summary>
+        /// pyspark：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+        /// </summary>
+        [JsonProperty("IsLocalPythonFiles")]
+        public string IsLocalPythonFiles{ get; set; }
+
+        /// <summary>
+        /// pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+        /// </summary>
+        [JsonProperty("AppPythonFiles")]
+        public string AppPythonFiles{ get; set; }
+
+        /// <summary>
         /// spark作业命令行参数
         /// </summary>
         [JsonProperty("CmdArgs")]
@@ -167,6 +179,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "AppJars", this.AppJars);
             this.SetParamSimple(map, prefix + "IsLocalFiles", this.IsLocalFiles);
             this.SetParamSimple(map, prefix + "AppFiles", this.AppFiles);
+            this.SetParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
+            this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
             this.SetParamSimple(map, prefix + "CmdArgs", this.CmdArgs);
             this.SetParamSimple(map, prefix + "MaxRetries", this.MaxRetries);
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);

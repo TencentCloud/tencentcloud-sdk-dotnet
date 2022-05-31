@@ -25,10 +25,10 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 水印模板唯一标识过滤条件，数组长度限制：100。
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
         /// </summary>
-        [JsonProperty("Definitions")]
-        public long?[] Definitions{ get; set; }
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// 水印类型过滤条件，可选值：
@@ -46,6 +46,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
+        /// 水印模板唯一标识过滤条件，数组长度限制：100。
+        /// </summary>
+        [JsonProperty("Definitions")]
+        public long?[] Definitions{ get; set; }
+
+        /// <summary>
         /// 返回记录条数
         /// <li>默认值：10；</li>
         /// <li>最大值：100。</li>
@@ -53,23 +59,17 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamArraySimple(map, prefix + "Definitions.", this.Definitions);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }
