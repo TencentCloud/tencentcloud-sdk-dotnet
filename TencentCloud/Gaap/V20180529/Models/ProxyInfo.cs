@@ -85,7 +85,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// ISOLATING表示隔离中；
         /// ISOLATED表示已隔离；
         /// CLONING表示复制中；
-        /// RECOVERING表示通道维护中。
+        /// RECOVERING表示通道维护中；
+        /// MOVING表示迁移中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -218,7 +219,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string IPAddressVersion{ get; set; }
 
         /// <summary>
-        /// 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全eip
+        /// 网络类型：normal表示常规BGP，cn2表示精品BGP，triple表示三网，secure_eip表示定制安全EIP
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NetworkType")]

@@ -210,6 +210,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("UniqSubnetIds")]
         public string[] UniqSubnetIds{ get; set; }
 
+        /// <summary>
+        /// 标签键值
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -247,6 +253,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArraySimple(map, prefix + "TagValues.", this.TagValues);
             this.SetParamArraySimple(map, prefix + "UniqueVpcIds.", this.UniqueVpcIds);
             this.SetParamArraySimple(map, prefix + "UniqSubnetIds.", this.UniqSubnetIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

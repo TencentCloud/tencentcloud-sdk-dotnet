@@ -25,7 +25,7 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 资源实例id，如bh-saas-s3ed4r5e
+        /// 服务实例ID，如bh-saas-s3ed4r5e
         /// </summary>
         [JsonProperty("ResourceId")]
         public string ResourceId{ get; set; }
@@ -37,25 +37,25 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string ApCode{ get; set; }
 
         /// <summary>
-        /// 实例规格信息（询价参数）
+        /// 服务实例规格信息
         /// </summary>
         [JsonProperty("SvArgs")]
         public string SvArgs{ get; set; }
 
         /// <summary>
-        /// vpc id
+        /// VPC ID
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 堡垒机规格对应的资产数
+        /// 服务规格对应的资产数
         /// </summary>
         [JsonProperty("Nodes")]
         public ulong? Nodes{ get; set; }
 
         /// <summary>
-        /// 自动续费标记，0表示默认状态，1表示自动续费，2表示明确不自动续费
+        /// 自动续费标记，0 - 表示默认状态，1 - 表示自动续费，2 - 表示明确不自动续费
         /// </summary>
         [JsonProperty("RenewFlag")]
         public ulong? RenewFlag{ get; set; }
@@ -67,13 +67,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 资源状态，0未初始化，1正常，2隔离，3销毁，4初始化失败，5初始化中
+        /// 资源状态，0 - 未初始化，1 - 正常，2 - 隔离，3 - 销毁，4 - 初始化失败，5 - 初始化中
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
         /// <summary>
-        /// 实例名，如T-Sec-堡垒机（SaaS型）
+        /// 服务实例名，如T-Sec-堡垒机（SaaS型）
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
@@ -121,13 +121,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public bool? Deployed{ get; set; }
 
         /// <summary>
-        /// 开通服务的VPC名称
+        /// 开通服务的 VPC 名称
         /// </summary>
         [JsonProperty("VpcName")]
         public string VpcName{ get; set; }
 
         /// <summary>
-        /// 开通服务的VPC对应的网段
+        /// 开通服务的 VPC 对应的网段
         /// </summary>
         [JsonProperty("VpcCidrBlock")]
         public string VpcCidrBlock{ get; set; }
@@ -163,7 +163,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string[] PrivateIpSet{ get; set; }
 
         /// <summary>
-        /// 资源开通的高级功能列表，如:[DB]
+        /// 服务开通的高级功能列表，如:[DB]
         /// </summary>
         [JsonProperty("ModuleSet")]
         public string[] ModuleSet{ get; set; }

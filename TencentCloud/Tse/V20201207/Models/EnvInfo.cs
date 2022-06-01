@@ -90,6 +90,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("RunningCount")]
         public long? RunningCount{ get; set; }
 
+        /// <summary>
+        /// 环境别名
+        /// </summary>
+        [JsonProperty("AliasEnvName")]
+        public string AliasEnvName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SpecId", this.SpecId);
             this.SetParamSimple(map, prefix + "EnvReplica", this.EnvReplica);
             this.SetParamSimple(map, prefix + "RunningCount", this.RunningCount);
+            this.SetParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
         }
     }
 }

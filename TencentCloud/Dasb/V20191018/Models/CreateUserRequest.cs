@@ -25,19 +25,19 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 用户名，最大长度32字符，不能为空
+        /// 用户名, 3-20个字符, 必须以英文字母开头，且不能包含字母、数字、.、_、-以外的字符
         /// </summary>
         [JsonProperty("UserName")]
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 用户姓名，最大长度32字符，不能为空
+        /// 用户姓名，最大长度20个字符，不能包含空白字符
         /// </summary>
         [JsonProperty("RealName")]
         public string RealName{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 大陆手机号直接填写，如果是其他国家、地区号码， 按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
@@ -49,13 +49,15 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string Email{ get; set; }
 
         /// <summary>
-        /// 生效起始时间,不设置则为1970-01-01T08:00:01+08:00
+        /// 用户生效时间，如:"2021-09-22T00:00:00+00:00"
+        /// 生效、失效时间不填则用户长期有效
         /// </summary>
         [JsonProperty("ValidateFrom")]
         public string ValidateFrom{ get; set; }
 
         /// <summary>
-        /// 生效结束时间,不设置则为1970-01-01T08:00:01+08:00
+        /// 用户失效时间，如:"2021-09-23T00:00:00+00:00"
+        /// 生效、失效时间不填则用户长期有效
         /// </summary>
         [JsonProperty("ValidateTo")]
         public string ValidateTo{ get; set; }
@@ -67,13 +69,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong?[] GroupIdSet{ get; set; }
 
         /// <summary>
-        /// 认证方式，0-本地 1-ldap 2-oauth,不传则默认为0
+        /// 认证方式，0 - 本地， 1 - LDAP， 2 - OAuth 不传则默认为0
         /// </summary>
         [JsonProperty("AuthType")]
         public ulong? AuthType{ get; set; }
 
         /// <summary>
-        /// 生效时间段, 0、1组成的字符串，长度168(7*24), 代表该用户的生效时间. 0 - 未生效，1 - 生效
+        /// 访问时间段限制， 由0、1组成的字符串，长度168(7 × 24)，代表该用户在一周中允许访问的时间段。字符串中第N个字符代表在一周中的第N个小时， 0 - 代表不允许访问，1 - 代表允许访问
         /// </summary>
         [JsonProperty("ValidateTime")]
         public string ValidateTime{ get; set; }

@@ -84,6 +84,15 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
 
+        /// <summary>
+        /// cname 接入状态
+        /// - finished 站点已验证
+        /// - pending 站点验证中
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CnameStatus")]
+        public string CnameStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +108,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Paused", this.Paused);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
         }
     }
 }

@@ -25,19 +25,19 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 主机记录ID
+        /// 资产ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 主机ID，对应cvm实例id
+        /// 实例ID，对应CVM、CDB等实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 主机名
+        /// 资产名
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string OsName{ get; set; }
 
         /// <summary>
-        /// 主机类型，1-Linux, 2-Windows
+        /// 资产类型 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
         /// </summary>
         [JsonProperty("Kind")]
         public ulong? Kind{ get; set; }
@@ -79,13 +79,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Port{ get; set; }
 
         /// <summary>
-        /// 所属主机组信息列表
+        /// 所属资产组列表
         /// </summary>
         [JsonProperty("GroupSet")]
         public Group[] GroupSet{ get; set; }
 
         /// <summary>
-        /// 主机绑定的账号数
+        /// 资产绑定的账号数
         /// </summary>
         [JsonProperty("AccountCount")]
         public ulong? AccountCount{ get; set; }

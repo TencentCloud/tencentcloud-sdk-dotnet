@@ -48,6 +48,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// 1表示创建中；
         /// 4表示销毁中；
         /// 11表示迁移中；
+        /// 12表示部分部署中。
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }

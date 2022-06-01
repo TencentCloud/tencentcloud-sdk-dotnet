@@ -42,6 +42,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("TemplateId")]
         public string TemplateId{ get; set; }
 
+        /// <summary>
+        /// 查询内容：0-模版列表及详情（默认），1-仅模版列表
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public long? ContentType{ get; set; }
+
+        /// <summary>
+        /// 查询个数，默认20，最大100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 查询偏移位置，默认0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +69,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
         }
     }
 }

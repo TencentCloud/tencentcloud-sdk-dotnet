@@ -25,19 +25,19 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 模板ID
+        /// 高危命令模板ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 模板名称
+        /// 高危命令模板名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 命令列表，\n分隔
+        /// 命令列表，命令之间用换行符（"\n"）分隔
         /// </summary>
         [JsonProperty("CmdList")]
         public string CmdList{ get; set; }

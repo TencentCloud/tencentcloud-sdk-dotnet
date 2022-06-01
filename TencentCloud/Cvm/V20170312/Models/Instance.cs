@@ -247,6 +247,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("GPUInfo")]
         public GPUInfo GPUInfo{ get; set; }
 
+        /// <summary>
+        /// 实例的操作系统许可类型，默认为TencentCloud
+        /// </summary>
+        [JsonProperty("LicenseType")]
+        public string LicenseType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -288,6 +294,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "RdmaIpAddresses.", this.RdmaIpAddresses);
             this.SetParamSimple(map, prefix + "IsolatedSource", this.IsolatedSource);
             this.SetParamObj(map, prefix + "GPUInfo.", this.GPUInfo);
+            this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Id{ get; set; }
 
         /// <summary>
-        /// 规则名
+        /// 访问权限名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -55,13 +55,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public bool? AllowClipFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板text（目前含图片）上行
+        /// 是否开启剪贴板文本（目前含图片）上行
         /// </summary>
         [JsonProperty("AllowClipTextUp")]
         public bool? AllowClipTextUp{ get; set; }
 
         /// <summary>
-        /// 是否开启剪贴板text（目前含图片）下行
+        /// 是否开启剪贴板文本（目前含图片）下行
         /// </summary>
         [JsonProperty("AllowClipTextDown")]
         public bool? AllowClipTextDown{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public bool? AllowFileUp{ get; set; }
 
         /// <summary>
-        /// 文件传输上传大小限制
+        /// 文件传输上传大小限制（预留参数，暂未启用）
         /// </summary>
         [JsonProperty("MaxFileUpSize")]
         public ulong? MaxFileUpSize{ get; set; }
@@ -85,13 +85,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public bool? AllowFileDown{ get; set; }
 
         /// <summary>
-        /// 文件传输下载大小限制
+        /// 文件传输下载大小限制（预留参数，暂未启用）
         /// </summary>
         [JsonProperty("MaxFileDownSize")]
         public ulong? MaxFileDownSize{ get; set; }
 
         /// <summary>
-        /// 是否允许任意账号登陆
+        /// 是否允许任意账号登录
         /// </summary>
         [JsonProperty("AllowAnyAccount")]
         public bool? AllowAnyAccount{ get; set; }
@@ -109,13 +109,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         public Group[] UserGroupSet{ get; set; }
 
         /// <summary>
-        /// 关联的主机列表
+        /// 关联的资产列表
         /// </summary>
         [JsonProperty("DeviceSet")]
         public Device[] DeviceSet{ get; set; }
 
         /// <summary>
-        /// 关联的主机组列表
+        /// 关联的资产组列表
         /// </summary>
         [JsonProperty("DeviceGroupSet")]
         public Group[] DeviceGroupSet{ get; set; }
@@ -133,49 +133,51 @@ namespace TencentCloud.Dasb.V20191018.Models
         public CmdTemplate[] CmdTemplateSet{ get; set; }
 
         /// <summary>
-        /// 是否开启rdp磁盘映射文件上传
+        /// 是否开启 RDP 磁盘映射文件上传
         /// </summary>
         [JsonProperty("AllowDiskFileUp")]
         public bool? AllowDiskFileUp{ get; set; }
 
         /// <summary>
-        /// 是否开启rdp磁盘映射文件下载
+        /// 是否开启 RDP 磁盘映射文件下载
         /// </summary>
         [JsonProperty("AllowDiskFileDown")]
         public bool? AllowDiskFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启rz sz文件上传
+        /// 是否开启 rz sz 文件上传
         /// </summary>
         [JsonProperty("AllowShellFileUp")]
         public bool? AllowShellFileUp{ get; set; }
 
         /// <summary>
-        /// 是否开启rz sz文件下载
+        /// 是否开启 rz sz 文件下载
         /// </summary>
         [JsonProperty("AllowShellFileDown")]
         public bool? AllowShellFileDown{ get; set; }
 
         /// <summary>
-        /// 是否开启SFTP文件删除
+        /// 是否开启 SFTP 文件删除
         /// </summary>
         [JsonProperty("AllowFileDel")]
         public bool? AllowFileDel{ get; set; }
 
         /// <summary>
-        /// 生效日期
+        /// 访问权限生效时间，如:"2021-09-22T00:00:00+00:00"
+        /// 生效、失效时间不填则访问权限长期有效
         /// </summary>
         [JsonProperty("ValidateFrom")]
         public string ValidateFrom{ get; set; }
 
         /// <summary>
-        /// 失效日期
+        /// 访问权限失效时间，如:"2021-09-23T00:00:00+00:00"
+        /// 生效、失效时间不填则访问权限长期有效
         /// </summary>
         [JsonProperty("ValidateTo")]
         public string ValidateTo{ get; set; }
 
         /// <summary>
-        /// 策略状态，1-已生效，2-未生效，3-已过期
+        /// 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

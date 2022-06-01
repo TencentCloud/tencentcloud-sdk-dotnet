@@ -73,6 +73,18 @@ namespace TencentCloud.Tke.V20180525.Models
         public Taint[] Taints{ get; set; }
 
         /// <summary>
+        /// 节点池纬度运行时类型及版本
+        /// </summary>
+        [JsonProperty("ContainerRuntime")]
+        public string ContainerRuntime{ get; set; }
+
+        /// <summary>
+        /// 运行时版本
+        /// </summary>
+        [JsonProperty("RuntimeVersion")]
+        public string RuntimeVersion{ get; set; }
+
+        /// <summary>
         /// 节点池os
         /// </summary>
         [JsonProperty("NodePoolOs")]
@@ -104,6 +116,8 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamArrayObj(map, prefix + "Labels.", this.Labels);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
+            this.SetParamSimple(map, prefix + "ContainerRuntime", this.ContainerRuntime);
+            this.SetParamSimple(map, prefix + "RuntimeVersion", this.RuntimeVersion);
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);

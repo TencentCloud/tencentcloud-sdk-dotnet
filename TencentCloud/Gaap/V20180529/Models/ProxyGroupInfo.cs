@@ -62,7 +62,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// RUNNING表示运行中；
         /// CREATING表示创建中；
         /// DESTROYING表示销毁中；
-        /// MOVING表示通道迁移中。
+        /// MOVING表示通道迁移中；
+        /// CHANGING表示部分部署中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -96,8 +97,8 @@ namespace TencentCloud.Gaap.V20180529.Models
 
         /// <summary>
         /// 支持Http3特性的标识，其中：
-        /// 0，表示不支持Http3；
-        /// 1，表示支持Http3。
+        /// 0表示关闭；
+        /// 1表示启用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http3Supported")]

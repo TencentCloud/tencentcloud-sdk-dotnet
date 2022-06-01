@@ -43,7 +43,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条目数量，默认20
+        /// 每页条目数量，默认20, 最大500
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -55,19 +55,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 精确查询，IdSet、UserName为空时才生效
+        /// 精确查询，IdSet、UserName为空时才生效。
+        /// 大陆手机号直接填写，如果是其他国家、地区号码,按照"国家地区代码|手机号"的格式输入。如: "+852|xxxxxxxx"
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// 有访问权限的主机ID集合
+        /// 查询具有指定资产ID访问权限的用户
         /// </summary>
         [JsonProperty("AuthorizedDeviceIdSet")]
         public ulong?[] AuthorizedDeviceIdSet{ get; set; }
 
         /// <summary>
-        /// 认证方式，0-本地，1-ldap, 2-oauth 不传为全部
+        /// 认证方式，0 - 本地, 1 - LDAP, 2 - OAuth, 不传为全部
         /// </summary>
         [JsonProperty("AuthTypeSet")]
         public ulong?[] AuthTypeSet{ get; set; }

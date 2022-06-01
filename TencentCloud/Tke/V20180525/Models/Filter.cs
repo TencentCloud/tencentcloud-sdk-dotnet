@@ -25,13 +25,13 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 需要过滤的字段。
+        /// 属性名称, 若存在多个Filter时，Filter间的关系为逻辑与（AND）关系。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 字段的过滤值。
+        /// 属性值, 若同一个Filter存在多个Values，同一Filter下Values间的关系为逻辑或（OR）关系。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }

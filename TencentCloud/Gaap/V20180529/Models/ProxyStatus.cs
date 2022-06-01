@@ -41,7 +41,8 @@ namespace TencentCloud.Gaap.V20180529.Models
         /// CLOSED表示已关闭；
         /// ADJUSTING表示配置变更中；
         /// ISOLATING表示隔离中；
-        /// ISOLATED表示已隔离。
+        /// ISOLATED表示已隔离；
+        /// MOVING表示迁移中。
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

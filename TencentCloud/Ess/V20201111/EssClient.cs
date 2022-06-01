@@ -214,6 +214,11 @@ namespace TencentCloud.Ess.V20201111
 
         /// <summary>
         /// 获取小程序跳转链接
+        /// 
+        /// 跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式）
+        /// 
+        /// 
+        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://tcloud-doc.isd.com/document/product/1323/74774">跳转小程序链接配置说明</a>
         /// </summary>
         /// <param name="req"><see cref="CreateSchemeUrlRequest"/></param>
         /// <returns><see cref="CreateSchemeUrlResponse"/></returns>
@@ -234,6 +239,11 @@ namespace TencentCloud.Ess.V20201111
 
         /// <summary>
         /// 获取小程序跳转链接
+        /// 
+        /// 跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式）
+        /// 
+        /// 
+        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://tcloud-doc.isd.com/document/product/1323/74774">跳转小程序链接配置说明</a>
         /// </summary>
         /// <param name="req"><see cref="CreateSchemeUrlRequest"/></param>
         /// <returns><see cref="CreateSchemeUrlResponse"/></returns>
@@ -324,6 +334,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowBriefs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowBriefsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 二期接口-查询模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTemplatesResponse"/></returns>
+        public async Task<DescribeFlowTemplatesResponse> DescribeFlowTemplates(DescribeFlowTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeFlowTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 二期接口-查询模板
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeFlowTemplatesResponse"/></returns>
+        public DescribeFlowTemplatesResponse DescribeFlowTemplatesSync(DescribeFlowTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeFlowTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowTemplatesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

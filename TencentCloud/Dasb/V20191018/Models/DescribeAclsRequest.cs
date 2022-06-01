@@ -25,7 +25,7 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 访问权限ID集合，非必需
+        /// 访问权限ID集合
         /// </summary>
         [JsonProperty("IdSet")]
         public ulong?[] IdSet{ get; set; }
@@ -37,37 +37,37 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分页，偏移位置
+        /// 分页偏移位置
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 每页条目数量，默认20
+        /// 每页条目数量，默认20，最大500
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 是否根据Name进行精确查询,默认值false
+        /// 是否根据Name进行精确查询，默认值false
         /// </summary>
         [JsonProperty("Exact")]
         public bool? Exact{ get; set; }
 
         /// <summary>
-        /// 有权限的用户ID集合
+        /// 有访问权限的用户ID集合
         /// </summary>
         [JsonProperty("AuthorizedUserIdSet")]
         public ulong?[] AuthorizedUserIdSet{ get; set; }
 
         /// <summary>
-        /// 有权限的主机ID集合
+        /// 有访问权限的资产ID集合
         /// </summary>
         [JsonProperty("AuthorizedDeviceIdSet")]
         public ulong?[] AuthorizedDeviceIdSet{ get; set; }
 
         /// <summary>
-        /// 策略状态，0-不限，1-已生效，2-未生效，3-已过期
+        /// 访问权限状态，1 - 已生效，2 - 未生效，3 - 已过期
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }

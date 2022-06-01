@@ -67,7 +67,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 链接类型 HTTP：跳转电子签小程序的http_url，APP：第三方APP或小程序跳转电子签小程序，默认为HTTP类型
+        /// 链接类型
+        /// HTTP：跳转电子签小程序的http_url，
+        /// APP：第三方APP或小程序跳转电子签小程序的path。
+        /// 默认为HTTP类型
         /// </summary>
         [JsonProperty("EndPoint")]
         public string EndPoint{ get; set; }

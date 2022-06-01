@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4ACC8A01-FDA5-3C33-AEEA-E6EE529B3ACA}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.527</VersionPrefix>
+    <VersionPrefix>3.0.528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,21 +46,49 @@
   <ItemGroup>
     <Compile Include="V20191018\DasbClient.cs" />
     <Compile Include="V20191018\Models\Acl.cs" />
+    <Compile Include="V20191018\Models\AddDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\AddDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\AddUserGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\AddUserGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\BindDeviceResourceRequest.cs" />
+    <Compile Include="V20191018\Models\BindDeviceResourceResponse.cs" />
     <Compile Include="V20191018\Models\CmdTemplate.cs" />
     <Compile Include="V20191018\Models\CreateAclRequest.cs" />
     <Compile Include="V20191018\Models\CreateAclResponse.cs" />
+    <Compile Include="V20191018\Models\CreateDeviceGroupRequest.cs" />
+    <Compile Include="V20191018\Models\CreateDeviceGroupResponse.cs" />
+    <Compile Include="V20191018\Models\CreateUserGroupRequest.cs" />
+    <Compile Include="V20191018\Models\CreateUserGroupResponse.cs" />
     <Compile Include="V20191018\Models\CreateUserRequest.cs" />
     <Compile Include="V20191018\Models\CreateUserResponse.cs" />
     <Compile Include="V20191018\Models\DeleteAclsRequest.cs" />
     <Compile Include="V20191018\Models\DeleteAclsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceGroupsRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteDeviceGroupsResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteUserGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteUserGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\DeleteUserGroupsRequest.cs" />
+    <Compile Include="V20191018\Models\DeleteUserGroupsResponse.cs" />
     <Compile Include="V20191018\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20191018\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20191018\Models\DescribeAclsRequest.cs" />
     <Compile Include="V20191018\Models\DescribeAclsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDasbImageIdsRequest.cs" />
     <Compile Include="V20191018\Models\DescribeDasbImageIdsResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceGroupsRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeDeviceGroupsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeDevicesRequest.cs" />
     <Compile Include="V20191018\Models\DescribeDevicesResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeResourcesRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeResourcesResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeUserGroupMembersRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeUserGroupMembersResponse.cs" />
+    <Compile Include="V20191018\Models\DescribeUserGroupsRequest.cs" />
+    <Compile Include="V20191018\Models\DescribeUserGroupsResponse.cs" />
     <Compile Include="V20191018\Models\DescribeUsersRequest.cs" />
     <Compile Include="V20191018\Models\DescribeUsersResponse.cs" />
     <Compile Include="V20191018\Models\Device.cs" />

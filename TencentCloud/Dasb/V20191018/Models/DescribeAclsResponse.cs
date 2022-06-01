@@ -25,13 +25,13 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 记录总数
+        /// 访问权限总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 访问权限记录集合，当前分页
+        /// 访问权限列表
         /// </summary>
         [JsonProperty("AclSet")]
         public Acl[] AclSet{ get; set; }

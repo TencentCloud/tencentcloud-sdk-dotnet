@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.527</VersionPrefix>
+    <VersionPrefix>3.0.528</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,8 @@
     <Compile Include="V20180525\Models\AutoscalingAdded.cs" />
     <Compile Include="V20180525\Models\Capabilities.cs" />
     <Compile Include="V20180525\Models\CbsVolume.cs" />
+    <Compile Include="V20180525\Models\CheckEdgeClusterCIDRRequest.cs" />
+    <Compile Include="V20180525\Models\CheckEdgeClusterCIDRResponse.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleRequest.cs" />
     <Compile Include="V20180525\Models\CheckInstancesUpgradeAbleResponse.cs" />
     <Compile Include="V20180525\Models\Cluster.cs" />
@@ -70,6 +72,7 @@
     <Compile Include="V20180525\Models\ClusterAsGroupOption.cs" />
     <Compile Include="V20180525\Models\ClusterBasicSettings.cs" />
     <Compile Include="V20180525\Models\ClusterCIDRSettings.cs" />
+    <Compile Include="V20180525\Models\ClusterCondition.cs" />
     <Compile Include="V20180525\Models\ClusterCredential.cs" />
     <Compile Include="V20180525\Models\ClusterExtraArgs.cs" />
     <Compile Include="V20180525\Models\ClusterInternalLB.cs" />
@@ -99,6 +102,8 @@
     <Compile Include="V20180525\Models\CreateClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\CreateClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\CreateECMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\CreateECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\CreateEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSContainerInstancesRequest.cs" />
@@ -117,6 +122,8 @@
     <Compile Include="V20180525\Models\CreatePrometheusTempResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateRequest.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusTemplateResponse.cs" />
+    <Compile Include="V20180525\Models\CreateTKEEdgeClusterRequest.cs" />
+    <Compile Include="V20180525\Models\CreateTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\DNSConfig.cs" />
     <Compile Include="V20180525\Models\DNSConfigOption.cs" />
     <Compile Include="V20180525\Models\DataDisk.cs" />
@@ -136,10 +143,16 @@
     <Compile Include="V20180525\Models\DeleteClusterRouteResponse.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableRequest.cs" />
     <Compile Include="V20180525\Models\DeleteClusterRouteTableResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteECMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\DeleteEKSContainerInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteEdgeCVMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteEdgeCVMInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteEdgeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesRequest.cs" />
     <Compile Include="V20180525\Models\DeleteImageCachesResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusAlertPolicyRequest.cs" />
@@ -154,8 +167,12 @@
     <Compile Include="V20180525\Models\DeletePrometheusTemplateResponse.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncRequest.cs" />
     <Compile Include="V20180525\Models\DeletePrometheusTemplateSyncResponse.cs" />
+    <Compile Include="V20180525\Models\DeleteTKEEdgeClusterRequest.cs" />
+    <Compile Include="V20180525\Models\DeleteTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeAvailableClusterVersionResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeAvailableTKEEdgeVersionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupOptionResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterAsGroupsRequest.cs" />
@@ -192,6 +209,8 @@
     <Compile Include="V20180525\Models\DescribeClusterStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeECMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeECMInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClusterCredentialRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClusterCredentialResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSClustersRequest.cs" />
@@ -202,6 +221,14 @@
     <Compile Include="V20180525\Models\DescribeEKSContainerInstanceRegionsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEKSContainerInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeAvailableExtraArgsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeAvailableExtraArgsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeCVMInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeCVMInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterExtraArgsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterExtraArgsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeEdgeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEksContainerInstanceLogRequest.cs" />
     <Compile Include="V20180525\Models\DescribeEksContainerInstanceLogResponse.cs" />
     <Compile Include="V20180525\Models\DescribeEnableVpcCniProgressRequest.cs" />
@@ -252,6 +279,14 @@
     <Compile Include="V20180525\Models\DescribeResourceUsageResponse.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsRequest.cs" />
     <Compile Include="V20180525\Models\DescribeRouteTableConflictsResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClusterCredentialRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClusterCredentialResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClusterStatusRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClusterStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClustersRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeClustersResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeExternalKubeconfigRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeTKEEdgeExternalKubeconfigResponse.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeScriptRequest.cs" />
     <Compile Include="V20180525\Models\DescribeTKEEdgeScriptResponse.cs" />
     <Compile Include="V20180525\Models\DescribeVersionsRequest.cs" />
@@ -267,6 +302,17 @@
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeRequest.cs" />
     <Compile Include="V20180525\Models\DisableVpcCniNetworkTypeResponse.cs" />
     <Compile Include="V20180525\Models\DnsServerConf.cs" />
+    <Compile Include="V20180525\Models\ECMEnhancedService.cs" />
+    <Compile Include="V20180525\Models\ECMRunMonitorServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\ECMRunSecurityServiceEnabled.cs" />
+    <Compile Include="V20180525\Models\ECMZoneInstanceCountISP.cs" />
+    <Compile Include="V20180525\Models\EdgeArgsFlag.cs" />
+    <Compile Include="V20180525\Models\EdgeAvailableExtraArgs.cs" />
+    <Compile Include="V20180525\Models\EdgeCluster.cs" />
+    <Compile Include="V20180525\Models\EdgeClusterAdvancedSettings.cs" />
+    <Compile Include="V20180525\Models\EdgeClusterExtraArgs.cs" />
+    <Compile Include="V20180525\Models\EdgeClusterInternalLB.cs" />
+    <Compile Include="V20180525\Models\EdgeClusterPublicLB.cs" />
     <Compile Include="V20180525\Models\EipAttribute.cs" />
     <Compile Include="V20180525\Models\EksCi.cs" />
     <Compile Include="V20180525\Models\EksCiRegionInfo.cs" />
@@ -415,6 +461,8 @@
     <Compile Include="V20180525\Models\UpdateEKSContainerInstanceResponse.cs" />
     <Compile Include="V20180525\Models\UpdateImageCacheRequest.cs" />
     <Compile Include="V20180525\Models\UpdateImageCacheResponse.cs" />
+    <Compile Include="V20180525\Models\UpdateTKEEdgeClusterRequest.cs" />
+    <Compile Include="V20180525\Models\UpdateTKEEdgeClusterResponse.cs" />
     <Compile Include="V20180525\Models\UpgradeAbleInstancesItem.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\UpgradeClusterInstancesResponse.cs" />

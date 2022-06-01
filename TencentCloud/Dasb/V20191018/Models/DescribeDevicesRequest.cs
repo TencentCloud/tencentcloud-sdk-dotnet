@@ -25,13 +25,13 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 主机ID集合，非必需
+        /// 资产ID集合
         /// </summary>
         [JsonProperty("IdSet")]
         public ulong?[] IdSet{ get; set; }
 
         /// <summary>
-        /// 主机名或主机IP，模糊查询
+        /// 资产名或资产IP，模糊查询
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public string[] ApCodeSet{ get; set; }
 
         /// <summary>
-        /// 操作系统类型
+        /// 操作系统类型, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
         /// </summary>
         [JsonProperty("Kind")]
         public ulong? Kind{ get; set; }
@@ -67,19 +67,19 @@ namespace TencentCloud.Dasb.V20191018.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 有该主机访问权限的用户ID集合
+        /// 有该资产访问权限的用户ID集合
         /// </summary>
         [JsonProperty("AuthorizedUserIdSet")]
         public ulong?[] AuthorizedUserIdSet{ get; set; }
 
         /// <summary>
-        /// 过滤条件，主机绑定的堡垒机服务ID集合
+        /// 过滤条件，资产绑定的堡垒机服务ID集合
         /// </summary>
         [JsonProperty("ResourceIdSet")]
         public string[] ResourceIdSet{ get; set; }
 
         /// <summary>
-        /// 可提供按照多种类型过滤, 1-Linux, 2-Windows, 3-MySQL
+        /// 可提供按照多种类型过滤, 1 - Linux, 2 - Windows, 3 - MySQL, 4 - SQLServer
         /// </summary>
         [JsonProperty("KindSet")]
         public ulong?[] KindSet{ get; set; }

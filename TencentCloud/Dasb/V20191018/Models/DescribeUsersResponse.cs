@@ -25,13 +25,13 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 记录总数
+        /// 用户总数
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 用户信息列表
+        /// 用户列表
         /// </summary>
         [JsonProperty("UserSet")]
         public User[] UserSet{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Dasb.V20191018.Models
     {
         
         /// <summary>
-        /// 访问权限ID
+        /// 新建成功的访问权限ID
         /// </summary>
         [JsonProperty("Id")]
         public ulong? Id{ get; set; }
