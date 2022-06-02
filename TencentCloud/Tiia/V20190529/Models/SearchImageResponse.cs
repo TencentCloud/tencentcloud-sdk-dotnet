@@ -38,6 +38,15 @@ namespace TencentCloud.Tiia.V20190529.Models
         public ImageInfo[] ImageInfos{ get; set; }
 
         /// <summary>
+        /// 输入图的主体信息。
+        /// 若启用主体识别且在请求中指定了类目ID或主体区域，以指定的主体为准。若启用主体识别且没有指定，以最大面积主体为准。
+        /// 注意：此字段可能返回 null，表示取不到有效值。服务类型为商品图像搜索时生效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Object")]
+        public ObjectInfo Object{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -51,6 +60,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamArrayObj(map, prefix + "ImageInfos.", this.ImageInfos);
+            this.SetParamObj(map, prefix + "Object.", this.Object);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

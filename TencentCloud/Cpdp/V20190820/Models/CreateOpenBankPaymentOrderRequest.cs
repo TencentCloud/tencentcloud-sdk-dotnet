@@ -101,15 +101,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 前端成功回调URL。条件可选
-        /// 当付款方式PaymentMethod为EBANK_PAYMENT时必填
+        /// 前端成功回调URL。条件可选。
         /// </summary>
         [JsonProperty("FrontUrl")]
         public string FrontUrl{ get; set; }
 
         /// <summary>
-        /// 前端刷新 URL。条件可选
-        /// 当付款方式PaymentMethod为EBANK_PAYMENT时必填
+        /// 前端刷新 URL。条件可选。
         /// </summary>
         [JsonProperty("RefreshUrl")]
         public string RefreshUrl{ get; set; }

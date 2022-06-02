@@ -87,6 +87,13 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Subnets")]
         public string[] Subnets{ get; set; }
 
+        /// <summary>
+        /// 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IgnoreServiceCIDRConflict")]
+        public bool? IgnoreServiceCIDRConflict{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -103,6 +110,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "KubeProxyMode", this.KubeProxyMode);
             this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
             this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
+            this.SetParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
         }
     }
 }

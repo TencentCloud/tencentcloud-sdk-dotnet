@@ -25,7 +25,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 商品名称，默认值“商品支付”
+        /// 商品标题，默认值“商品支付”
         /// </summary>
         [JsonProperty("GoodsName")]
         public string GoodsName{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string GoodsDetail{ get; set; }
 
         /// <summary>
-        /// 商品简单描述。需传入应用市场上的 APP 名字-实际商品名称，例如：天天爱消除-游戏充值
+        /// 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
         /// </summary>
         [JsonProperty("GoodsDescription")]
         public string GoodsDescription{ get; set; }

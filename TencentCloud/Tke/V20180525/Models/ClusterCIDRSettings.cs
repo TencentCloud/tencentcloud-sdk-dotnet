@@ -66,6 +66,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ClaimExpiredSeconds")]
         public long? ClaimExpiredSeconds{ get; set; }
 
+        /// <summary>
+        /// 是否忽略 ServiceCIDR 冲突错误, 仅在 VPC-CNI 模式生效，默认不忽略
+        /// </summary>
+        [JsonProperty("IgnoreServiceCIDRConflict")]
+        public bool? IgnoreServiceCIDRConflict{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ServiceCIDR", this.ServiceCIDR);
             this.SetParamArraySimple(map, prefix + "EniSubnetIds.", this.EniSubnetIds);
             this.SetParamSimple(map, prefix + "ClaimExpiredSeconds", this.ClaimExpiredSeconds);
+            this.SetParamSimple(map, prefix + "IgnoreServiceCIDRConflict", this.IgnoreServiceCIDRConflict);
         }
     }
 }
