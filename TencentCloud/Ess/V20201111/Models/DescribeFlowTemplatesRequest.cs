@@ -61,7 +61,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? GenerateSource{ get; set; }
 
         /// <summary>
-        /// 查询内容：0-模版列表及详情（默认），1-仅模版列表
+        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
         /// </summary>
         [JsonProperty("ContentType")]
         public long? ContentType{ get; set; }

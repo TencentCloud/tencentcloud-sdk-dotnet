@@ -437,6 +437,46 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalTrtcMeasureRequest"/></param>
+        /// <returns><see cref="DescribeExternalTrtcMeasureResponse"/></returns>
+        public async Task<DescribeExternalTrtcMeasureResponse> DescribeExternalTrtcMeasure(DescribeExternalTrtcMeasureRequest req)
+        {
+             JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExternalTrtcMeasure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取Trtc的用量统计数据。走计费渠道二期 只允许查两天的数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExternalTrtcMeasureRequest"/></param>
+        /// <returns><see cref="DescribeExternalTrtcMeasureResponse"/></returns>
+        public DescribeExternalTrtcMeasureResponse DescribeExternalTrtcMeasureSync(DescribeExternalTrtcMeasureRequest req)
+        {
+             JsonResponseModel<DescribeExternalTrtcMeasureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExternalTrtcMeasure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 可查询sdkqppid 每天的房间数和用户数，每分钟1次，可查询最近14天的数据。当天未结束，无法查到当天的房间数与用户数。 
         /// </summary>
         /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
@@ -770,6 +810,54 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DismissRoomByStrRoomId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询旁路转码计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过2天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="MeasureTrtcMcuExternalRequest"/></param>
+        /// <returns><see cref="MeasureTrtcMcuExternalResponse"/></returns>
+        public async Task<MeasureTrtcMcuExternalResponse> MeasureTrtcMcuExternal(MeasureTrtcMcuExternalRequest req)
+        {
+             JsonResponseModel<MeasureTrtcMcuExternalResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MeasureTrtcMcuExternal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MeasureTrtcMcuExternalResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询旁路转码计费时长。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过2天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
+        /// </summary>
+        /// <param name="req"><see cref="MeasureTrtcMcuExternalRequest"/></param>
+        /// <returns><see cref="MeasureTrtcMcuExternalResponse"/></returns>
+        public MeasureTrtcMcuExternalResponse MeasureTrtcMcuExternalSync(MeasureTrtcMcuExternalRequest req)
+        {
+             JsonResponseModel<MeasureTrtcMcuExternalResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MeasureTrtcMcuExternal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MeasureTrtcMcuExternalResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

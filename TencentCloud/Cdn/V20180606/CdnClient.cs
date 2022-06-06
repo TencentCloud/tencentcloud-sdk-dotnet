@@ -53,6 +53,46 @@ namespace TencentCloud.Cdn.V20180606
         }
 
         /// <summary>
+        /// AddCLSTopicDomains 用于新增域名到某日志主题下
+        /// </summary>
+        /// <param name="req"><see cref="AddCLSTopicDomainsRequest"/></param>
+        /// <returns><see cref="AddCLSTopicDomainsResponse"/></returns>
+        public async Task<AddCLSTopicDomainsResponse> AddCLSTopicDomains(AddCLSTopicDomainsRequest req)
+        {
+             JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddCLSTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCLSTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// AddCLSTopicDomains 用于新增域名到某日志主题下
+        /// </summary>
+        /// <param name="req"><see cref="AddCLSTopicDomainsRequest"/></param>
+        /// <returns><see cref="AddCLSTopicDomainsResponse"/></returns>
+        public AddCLSTopicDomainsResponse AddCLSTopicDomainsSync(AddCLSTopicDomainsRequest req)
+        {
+             JsonResponseModel<AddCLSTopicDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddCLSTopicDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddCLSTopicDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// AddCdnDomain 用于新增内容分发网络加速域名。1分钟内最多可新增100个域名。
         /// </summary>
         /// <param name="req"><see cref="AddCdnDomainRequest"/></param>

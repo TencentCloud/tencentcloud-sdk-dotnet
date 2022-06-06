@@ -25,7 +25,7 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
-        /// 任务列表
+        /// 任务结果（该字段已废弃）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Tasks")]
@@ -36,6 +36,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 任务结果列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SparkAppTasks")]
+        public TaskResponseInfo[] SparkAppTasks{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +58,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamObj(map, prefix + "Tasks.", this.Tasks);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "SparkAppTasks.", this.SparkAppTasks);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

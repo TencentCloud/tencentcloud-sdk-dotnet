@@ -213,6 +213,86 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-付款
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexPaymentRequest"/></param>
+        /// <returns><see cref="ApplyFlexPaymentResponse"/></returns>
+        public async Task<ApplyFlexPaymentResponse> ApplyFlexPayment(ApplyFlexPaymentRequest req)
+        {
+             JsonResponseModel<ApplyFlexPaymentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyFlexPayment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-付款
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexPaymentRequest"/></param>
+        /// <returns><see cref="ApplyFlexPaymentResponse"/></returns>
+        public ApplyFlexPaymentResponse ApplyFlexPaymentSync(ApplyFlexPaymentRequest req)
+        {
+             JsonResponseModel<ApplyFlexPaymentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyFlexPayment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-结算
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexSettlementRequest"/></param>
+        /// <returns><see cref="ApplyFlexSettlementResponse"/></returns>
+        public async Task<ApplyFlexSettlementResponse> ApplyFlexSettlement(ApplyFlexSettlementRequest req)
+        {
+             JsonResponseModel<ApplyFlexSettlementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ApplyFlexSettlement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexSettlementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-结算
+        /// </summary>
+        /// <param name="req"><see cref="ApplyFlexSettlementRequest"/></param>
+        /// <returns><see cref="ApplyFlexSettlementResponse"/></returns>
+        public ApplyFlexSettlementResponse ApplyFlexSettlementSync(ApplyFlexSettlementRequest req)
+        {
+             JsonResponseModel<ApplyFlexSettlementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ApplyFlexSettlement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ApplyFlexSettlementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-申请单笔交易回单
         /// </summary>
         /// <param name="req"><see cref="ApplyOpenBankOrderDetailReceiptRequest"/></param>
@@ -1300,6 +1380,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateExternalAnchor");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExternalAnchorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户开立
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlexPayeeRequest"/></param>
+        /// <returns><see cref="CreateFlexPayeeResponse"/></returns>
+        public async Task<CreateFlexPayeeResponse> CreateFlexPayee(CreateFlexPayeeRequest req)
+        {
+             JsonResponseModel<CreateFlexPayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlexPayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlexPayeeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户开立
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlexPayeeRequest"/></param>
+        /// <returns><see cref="CreateFlexPayeeResponse"/></returns>
+        public CreateFlexPayeeResponse CreateFlexPayeeSync(CreateFlexPayeeRequest req)
+        {
+             JsonResponseModel<CreateFlexPayeeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlexPayee");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlexPayeeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2709,6 +2829,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-冻结余额
+        /// </summary>
+        /// <param name="req"><see cref="FreezeFlexBalanceRequest"/></param>
+        /// <returns><see cref="FreezeFlexBalanceResponse"/></returns>
+        public async Task<FreezeFlexBalanceResponse> FreezeFlexBalance(FreezeFlexBalanceRequest req)
+        {
+             JsonResponseModel<FreezeFlexBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "FreezeFlexBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreezeFlexBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-冻结余额
+        /// </summary>
+        /// <param name="req"><see cref="FreezeFlexBalanceRequest"/></param>
+        /// <returns><see cref="FreezeFlexBalanceResponse"/></returns>
+        public FreezeFlexBalanceResponse FreezeFlexBalanceSync(FreezeFlexBalanceRequest req)
+        {
+             JsonResponseModel<FreezeFlexBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "FreezeFlexBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<FreezeFlexBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 调用该接口返回对账单下载地址，对账单下载URL通过GET方式访问，返回zip包，解压后为csv格式文件。文件首行如下：
         /// 订单号,订单归属日期,机构编号,订单描述,交易类型,订单状态,支付场景,原始金额,折扣金额,实际交易金额,支付渠道优惠金额,抹零金额,币种,下单时间,付款成功时间,商户编号,门店编号,付款方式编号,付款方式名称,商户手续费T1,商户扣率,是否信用卡交易,原始订单号,用户账号,外部订单号,订单备注
         /// </summary>
@@ -3064,6 +3224,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBindedAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBindedAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户权益状态修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlexPayeeAccountRightStatusRequest"/></param>
+        /// <returns><see cref="ModifyFlexPayeeAccountRightStatusResponse"/></returns>
+        public async Task<ModifyFlexPayeeAccountRightStatusResponse> ModifyFlexPayeeAccountRightStatus(ModifyFlexPayeeAccountRightStatusRequest req)
+        {
+             JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyFlexPayeeAccountRightStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户权益状态修改
+        /// </summary>
+        /// <param name="req"><see cref="ModifyFlexPayeeAccountRightStatusRequest"/></param>
+        /// <returns><see cref="ModifyFlexPayeeAccountRightStatusResponse"/></returns>
+        public ModifyFlexPayeeAccountRightStatusResponse ModifyFlexPayeeAccountRightStatusSync(ModifyFlexPayeeAccountRightStatusRequest req)
+        {
+             JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyFlexPayeeAccountRightStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyFlexPayeeAccountRightStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4224,6 +4424,366 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryExchangeRate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryExchangeRateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询税前金额
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexAmountBeforeTaxRequest"/></param>
+        /// <returns><see cref="QueryFlexAmountBeforeTaxResponse"/></returns>
+        public async Task<QueryFlexAmountBeforeTaxResponse> QueryFlexAmountBeforeTax(QueryFlexAmountBeforeTaxRequest req)
+        {
+             JsonResponseModel<QueryFlexAmountBeforeTaxResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexAmountBeforeTax");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexAmountBeforeTaxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询税前金额
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexAmountBeforeTaxRequest"/></param>
+        /// <returns><see cref="QueryFlexAmountBeforeTaxResponse"/></returns>
+        public QueryFlexAmountBeforeTaxResponse QueryFlexAmountBeforeTaxSync(QueryFlexAmountBeforeTaxRequest req)
+        {
+             JsonResponseModel<QueryFlexAmountBeforeTaxResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexAmountBeforeTax");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexAmountBeforeTaxResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询冻结订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexFreezeOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexFreezeOrderListResponse"/></returns>
+        public async Task<QueryFlexFreezeOrderListResponse> QueryFlexFreezeOrderList(QueryFlexFreezeOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexFreezeOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexFreezeOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexFreezeOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询冻结订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexFreezeOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexFreezeOrderListResponse"/></returns>
+        public QueryFlexFreezeOrderListResponse QueryFlexFreezeOrderListSync(QueryFlexFreezeOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexFreezeOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexFreezeOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexFreezeOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountBalanceResponse"/></returns>
+        public async Task<QueryFlexPayeeAccountBalanceResponse> QueryFlexPayeeAccountBalance(QueryFlexPayeeAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPayeeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户余额查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountBalanceRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountBalanceResponse"/></returns>
+        public QueryFlexPayeeAccountBalanceResponse QueryFlexPayeeAccountBalanceSync(QueryFlexPayeeAccountBalanceRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPayeeAccountBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户信息查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountInfoRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountInfoResponse"/></returns>
+        public async Task<QueryFlexPayeeAccountInfoResponse> QueryFlexPayeeAccountInfo(QueryFlexPayeeAccountInfoRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPayeeAccountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户信息查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountInfoRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountInfoResponse"/></returns>
+        public QueryFlexPayeeAccountInfoResponse QueryFlexPayeeAccountInfoSync(QueryFlexPayeeAccountInfoRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPayeeAccountInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户列表查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountListRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountListResponse"/></returns>
+        public async Task<QueryFlexPayeeAccountListResponse> QueryFlexPayeeAccountList(QueryFlexPayeeAccountListRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPayeeAccountList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户账户列表查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeAccountListRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeAccountListResponse"/></returns>
+        public QueryFlexPayeeAccountListResponse QueryFlexPayeeAccountListSync(QueryFlexPayeeAccountListRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeAccountListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPayeeAccountList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeAccountListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户信息查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeInfoRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeInfoResponse"/></returns>
+        public async Task<QueryFlexPayeeInfoResponse> QueryFlexPayeeInfo(QueryFlexPayeeInfoRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPayeeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-收款用户信息查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPayeeInfoRequest"/></param>
+        /// <returns><see cref="QueryFlexPayeeInfoResponse"/></returns>
+        public QueryFlexPayeeInfoResponse QueryFlexPayeeInfoSync(QueryFlexPayeeInfoRequest req)
+        {
+             JsonResponseModel<QueryFlexPayeeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPayeeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPayeeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询付款订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPaymentOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexPaymentOrderListResponse"/></returns>
+        public async Task<QueryFlexPaymentOrderListResponse> QueryFlexPaymentOrderList(QueryFlexPaymentOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexPaymentOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPaymentOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPaymentOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询付款订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPaymentOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexPaymentOrderListResponse"/></returns>
+        public QueryFlexPaymentOrderListResponse QueryFlexPaymentOrderListSync(QueryFlexPaymentOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexPaymentOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPaymentOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPaymentOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询付款订单状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPaymentOrderStatusRequest"/></param>
+        /// <returns><see cref="QueryFlexPaymentOrderStatusResponse"/></returns>
+        public async Task<QueryFlexPaymentOrderStatusResponse> QueryFlexPaymentOrderStatus(QueryFlexPaymentOrderStatusRequest req)
+        {
+             JsonResponseModel<QueryFlexPaymentOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexPaymentOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPaymentOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询付款订单状态
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexPaymentOrderStatusRequest"/></param>
+        /// <returns><see cref="QueryFlexPaymentOrderStatusResponse"/></returns>
+        public QueryFlexPaymentOrderStatusResponse QueryFlexPaymentOrderStatusSync(QueryFlexPaymentOrderStatusRequest req)
+        {
+             JsonResponseModel<QueryFlexPaymentOrderStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexPaymentOrderStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexPaymentOrderStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询结算订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexSettlementOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexSettlementOrderListResponse"/></returns>
+        public async Task<QueryFlexSettlementOrderListResponse> QueryFlexSettlementOrderList(QueryFlexSettlementOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexSettlementOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexSettlementOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexSettlementOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询结算订单列表
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexSettlementOrderListRequest"/></param>
+        /// <returns><see cref="QueryFlexSettlementOrderListResponse"/></returns>
+        public QueryFlexSettlementOrderListResponse QueryFlexSettlementOrderListSync(QueryFlexSettlementOrderListRequest req)
+        {
+             JsonResponseModel<QueryFlexSettlementOrderListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexSettlementOrderList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexSettlementOrderListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

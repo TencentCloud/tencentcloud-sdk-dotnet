@@ -25,7 +25,7 @@ namespace TencentCloud.Api.V20201106.Models
     {
         
         /// <summary>
-        /// 待查询产品的名称，例如cvm
+        /// 待查询产品的名称，例如cvm，具体取值请查询DescribeProducts接口
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }

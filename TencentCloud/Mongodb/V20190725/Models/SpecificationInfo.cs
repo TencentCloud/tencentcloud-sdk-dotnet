@@ -42,6 +42,12 @@ namespace TencentCloud.Mongodb.V20190725.Models
         [JsonProperty("SpecItems")]
         public SpecItem[] SpecItems{ get; set; }
 
+        /// <summary>
+        /// 是否支持跨可用区部署 1-支持，0-不支持
+        /// </summary>
+        [JsonProperty("SupportMultiAZ")]
+        public long? SupportMultiAZ{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamArrayObj(map, prefix + "SpecItems.", this.SpecItems);
+            this.SetParamSimple(map, prefix + "SupportMultiAZ", this.SupportMultiAZ);
         }
     }
 }
