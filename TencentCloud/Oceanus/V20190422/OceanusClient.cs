@@ -732,5 +732,45 @@ namespace TencentCloud.Oceanus.V20190422
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 触发Savepoint
+        /// </summary>
+        /// <param name="req"><see cref="TriggerJobSavepointRequest"/></param>
+        /// <returns><see cref="TriggerJobSavepointResponse"/></returns>
+        public async Task<TriggerJobSavepointResponse> TriggerJobSavepoint(TriggerJobSavepointRequest req)
+        {
+             JsonResponseModel<TriggerJobSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TriggerJobSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerJobSavepointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 触发Savepoint
+        /// </summary>
+        /// <param name="req"><see cref="TriggerJobSavepointRequest"/></param>
+        /// <returns><see cref="TriggerJobSavepointResponse"/></returns>
+        public TriggerJobSavepointResponse TriggerJobSavepointSync(TriggerJobSavepointRequest req)
+        {
+             JsonResponseModel<TriggerJobSavepointResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TriggerJobSavepoint");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TriggerJobSavepointResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

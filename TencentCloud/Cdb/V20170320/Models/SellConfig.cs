@@ -122,6 +122,13 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("DeviceTypeName")]
         public string DeviceTypeName{ get; set; }
 
+        /// <summary>
+        /// 引擎类型描述，可能的取值范围有：Innodb，RocksDB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +151,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Tag", this.Tag);
             this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
             this.SetParamSimple(map, prefix + "DeviceTypeName", this.DeviceTypeName);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

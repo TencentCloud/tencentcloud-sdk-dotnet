@@ -84,6 +84,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }
 
+        /// <summary>
+        /// FLV 录制定制参数。
+        /// </summary>
+        [JsonProperty("FlvSpecialParam")]
+        public FlvSpecialParam FlvSpecialParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
             this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+            this.SetParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
         }
     }
 }

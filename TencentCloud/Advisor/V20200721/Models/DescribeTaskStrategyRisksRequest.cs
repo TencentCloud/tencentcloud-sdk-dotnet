@@ -42,6 +42,18 @@ namespace TencentCloud.Advisor.V20200721.Models
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
+        /// <summary>
+        /// 环境
+        /// </summary>
+        [JsonProperty("Env")]
+        public string Env{ get; set; }
+
+        /// <summary>
+        /// 任务类型
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public string TaskType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Advisor.V20200721.Models
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
         }
     }
 }

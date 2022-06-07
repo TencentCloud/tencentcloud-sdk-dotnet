@@ -25,6 +25,12 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// 集群字符串ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
         /// 用户信息列表
         /// </summary>
         [JsonProperty("UserManagerUserList")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamArrayObj(map, prefix + "UserManagerUserList.", this.UserManagerUserList);
         }
     }

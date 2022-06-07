@@ -66,6 +66,20 @@ namespace TencentCloud.Tcss.V20201101.Models
         public long? RiskIncrease{ get; set; }
 
         /// <summary>
+        /// 隔离事件个数较昨日新增
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateIncrease")]
+        public long? IsolateIncrease{ get; set; }
+
+        /// <summary>
+        /// 隔离事件总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsolateCnt")]
+        public long? IsolateCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -83,6 +97,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "VirusDataBaseModifyTime", this.VirusDataBaseModifyTime);
             this.SetParamSimple(map, prefix + "RiskContainerIncrease", this.RiskContainerIncrease);
             this.SetParamSimple(map, prefix + "RiskIncrease", this.RiskIncrease);
+            this.SetParamSimple(map, prefix + "IsolateIncrease", this.IsolateIncrease);
+            this.SetParamSimple(map, prefix + "IsolateCnt", this.IsolateCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

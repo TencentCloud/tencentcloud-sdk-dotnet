@@ -56,9 +56,19 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 11：增值税发票（卷票 ）
         /// 12：购车发票
         /// 13：过路过桥费发票
+        /// 15：非税发票
+        /// 16：全电发票
         /// </summary>
         [JsonProperty("Types")]
         public long?[] Types{ get; set; }
+
+        /// <summary>
+        /// 是否识别其他类型发票，默认为Yes
+        /// Yes：识别其他类型发票
+        /// No：不识别其他类型发票
+        /// </summary>
+        [JsonProperty("ReturnOther")]
+        public string ReturnOther{ get; set; }
 
 
         /// <summary>
@@ -69,6 +79,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
             this.SetParamArraySimple(map, prefix + "Types.", this.Types);
+            this.SetParamSimple(map, prefix + "ReturnOther", this.ReturnOther);
         }
     }
 }

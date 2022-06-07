@@ -74,7 +74,7 @@ namespace TencentCloud.Live.V20180801.Models
         public long? IsDelayLive{ get; set; }
 
         /// <summary>
-        /// HLS 录制定制参数
+        /// HLS 录制定制参数。
         /// </summary>
         [JsonProperty("HlsSpecialParam")]
         public HlsSpecialParam HlsSpecialParam{ get; set; }
@@ -91,6 +91,13 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         [JsonProperty("RemoveWatermark")]
         public bool? RemoveWatermark{ get; set; }
+
+        /// <summary>
+        /// FLV 录制定制参数。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlvSpecialParam")]
+        public FlvSpecialParam FlvSpecialParam{ get; set; }
 
 
         /// <summary>
@@ -109,6 +116,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamObj(map, prefix + "HlsSpecialParam.", this.HlsSpecialParam);
             this.SetParamObj(map, prefix + "Mp3Param.", this.Mp3Param);
             this.SetParamSimple(map, prefix + "RemoveWatermark", this.RemoveWatermark);
+            this.SetParamObj(map, prefix + "FlvSpecialParam.", this.FlvSpecialParam);
         }
     }
 }

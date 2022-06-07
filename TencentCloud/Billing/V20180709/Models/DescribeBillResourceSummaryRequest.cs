@@ -82,10 +82,6 @@ namespace TencentCloud.Billing.V20180709.Models
         /// 小时费用
         /// 预留实例退款
         /// 按量计费冲正
-        /// 按量计费冲正
-        /// 按量计费冲正
-        /// 按量计费冲正
-        /// 按量计费冲正
         /// 包年包月转按量
         /// </summary>
         [JsonProperty("ActionType")]

@@ -141,6 +141,55 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("ContractPrice")]
         public string ContractPrice{ get; set; }
 
+        /// <summary>
+        /// 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 预留实例抵扣的使用时长，时长单位与被抵扣的时长单位保持一致
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiTimeSpan")]
+        public string RiTimeSpan{ get; set; }
+
+        /// <summary>
+        /// 按组件原价的口径换算的预留实例抵扣金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalCostWithRI")]
+        public string OriginalCostWithRI{ get; set; }
+
+        /// <summary>
+        /// 节省计划可用余额额度范围内，节省计划对于此组件打的折扣率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SPDeductionRate")]
+        public string SPDeductionRate{ get; set; }
+
+        /// <summary>
+        /// 节省计划抵扣的SP包面值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// 按组件原价的口径换算的节省计划抵扣金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OriginalCostWithSP")]
+        public string OriginalCostWithSP{ get; set; }
+
+        /// <summary>
+        /// 综合了官网折扣、预留实例抵扣、节省计划抵扣的混合折扣率。若没有预留实例抵扣、节省计划抵扣,混合折扣率等于折扣率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BlendedDiscount")]
+        public string BlendedDiscount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -166,6 +215,13 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "ItemCode", this.ItemCode);
             this.SetParamSimple(map, prefix + "ComponentCode", this.ComponentCode);
             this.SetParamSimple(map, prefix + "ContractPrice", this.ContractPrice);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "RiTimeSpan", this.RiTimeSpan);
+            this.SetParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+            this.SetParamSimple(map, prefix + "SPDeductionRate", this.SPDeductionRate);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
+            this.SetParamSimple(map, prefix + "BlendedDiscount", this.BlendedDiscount);
         }
     }
 }

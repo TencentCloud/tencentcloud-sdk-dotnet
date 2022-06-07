@@ -54,6 +54,13 @@ namespace TencentCloud.Advisor.V20200721.Models
         public string Risks{ get; set; }
 
         /// <summary>
+        /// 巡检资源数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceCount")]
+        public ulong? ResourceCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -69,6 +76,7 @@ namespace TencentCloud.Advisor.V20200721.Models
             this.SetParamSimple(map, prefix + "StrategyId", this.StrategyId);
             this.SetParamSimple(map, prefix + "RiskTotalCount", this.RiskTotalCount);
             this.SetParamSimple(map, prefix + "Risks", this.Risks);
+            this.SetParamSimple(map, prefix + "ResourceCount", this.ResourceCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

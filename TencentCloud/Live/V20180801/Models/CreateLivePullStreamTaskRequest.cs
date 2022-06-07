@@ -166,6 +166,15 @@ namespace TencentCloud.Live.V20180801.Models
         public string Comment{ get; set; }
 
         /// <summary>
+        /// 完整目标 URL 地址。
+        /// 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+        /// 
+        /// 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
+        /// </summary>
+        [JsonProperty("ToUrl")]
+        public string ToUrl{ get; set; }
+
+        /// <summary>
         /// 备源的类型：
         /// PullLivePushLive -直播，
         /// PullVodPushLive -点播。
@@ -205,6 +214,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamSimple(map, prefix + "ExtraCmd", this.ExtraCmd);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
         }

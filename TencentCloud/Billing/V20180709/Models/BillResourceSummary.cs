@@ -224,6 +224,38 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("RegionId")]
         public long? RegionId{ get; set; }
 
+        /// <summary>
+        /// 资源包、预留实例、节省计划、竞价实例这四类特殊实例本身的扣费行为，此字段体现对应的实例类型。枚举值如下：
+        /// 
+        /// ri=Standard RI
+        /// 
+        /// svp=Savings Plan
+        /// 
+        /// si=Spot Instances
+        /// 
+        /// rp=Resource Pack
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// 按组件原价的口径换算的预留实例抵扣金额
+        /// </summary>
+        [JsonProperty("OriginalCostWithRI")]
+        public string OriginalCostWithRI{ get; set; }
+
+        /// <summary>
+        /// 节省计划抵扣的SP包面值
+        /// </summary>
+        [JsonProperty("SPDeduction")]
+        public string SPDeduction{ get; set; }
+
+        /// <summary>
+        /// 按组件原价的口径换算的节省计划抵扣金额
+        /// </summary>
+        [JsonProperty("OriginalCostWithSP")]
+        public string OriginalCostWithSP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -263,6 +295,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "BusinessCode", this.BusinessCode);
             this.SetParamSimple(map, prefix + "ProductCode", this.ProductCode);
             this.SetParamSimple(map, prefix + "RegionId", this.RegionId);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "OriginalCostWithRI", this.OriginalCostWithRI);
+            this.SetParamSimple(map, prefix + "SPDeduction", this.SPDeduction);
+            this.SetParamSimple(map, prefix + "OriginalCostWithSP", this.OriginalCostWithSP);
         }
     }
 }

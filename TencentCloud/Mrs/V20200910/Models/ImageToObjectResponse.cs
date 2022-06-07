@@ -32,6 +32,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         public Template Template{ get; set; }
 
         /// <summary>
+        /// 多级分类结果
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextTypeList")]
+        public TextType[] TextTypeList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +51,7 @@ namespace TencentCloud.Mrs.V20200910.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Template.", this.Template);
+            this.SetParamArrayObj(map, prefix + "TextTypeList.", this.TextTypeList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

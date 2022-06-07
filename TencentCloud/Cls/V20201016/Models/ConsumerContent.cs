@@ -32,7 +32,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public bool? EnableTag{ get; set; }
 
         /// <summary>
-        /// 需要投递的元数据列表，目前仅支持：__SOURCE__，__FILENAME__和__TIMESTAMP__
+        /// 需要投递的元数据列表，目前仅支持：\_\_SOURCE\_\_，\_\_FILENAME\_\_和\_\_TIMESTAMP\_\_
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaFields")]
@@ -45,6 +45,13 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("TagJsonNotTiled")]
         public bool? TagJsonNotTiled{ get; set; }
 
+        /// <summary>
+        /// 投递时间戳精度，可选项 [1:秒；2:毫秒] ，默认是秒
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimestampAccuracy")]
+        public long? TimestampAccuracy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "EnableTag", this.EnableTag);
             this.SetParamArraySimple(map, prefix + "MetaFields.", this.MetaFields);
             this.SetParamSimple(map, prefix + "TagJsonNotTiled", this.TagJsonNotTiled);
+            this.SetParamSimple(map, prefix + "TimestampAccuracy", this.TimestampAccuracy);
         }
     }
 }

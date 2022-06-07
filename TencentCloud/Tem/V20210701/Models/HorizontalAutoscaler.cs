@@ -25,13 +25,13 @@ namespace TencentCloud.Tem.V20210701.Models
     {
         
         /// <summary>
-        /// 最小实例数
+        /// 最小实例数（可以不传）
         /// </summary>
         [JsonProperty("MinReplicas")]
         public long? MinReplicas{ get; set; }
 
         /// <summary>
-        /// 最大实例数
+        /// 最大实例数（可以不传）
         /// </summary>
         [JsonProperty("MaxReplicas")]
         public long? MaxReplicas{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
 
+        /// <summary>
+        /// 是否启用
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public bool? Enabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "MaxReplicas", this.MaxReplicas);
             this.SetParamSimple(map, prefix + "Metrics", this.Metrics);
             this.SetParamSimple(map, prefix + "Threshold", this.Threshold);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

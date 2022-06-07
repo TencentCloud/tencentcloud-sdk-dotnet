@@ -48,6 +48,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 第三方 Prometheus
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CustomProm")]
+        public CustomPromConfig CustomProm{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamObj(map, prefix + "CustomProm.", this.CustomProm);
         }
     }
 }

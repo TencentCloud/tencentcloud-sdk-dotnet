@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.530</VersionPrefix>
+    <VersionPrefix>3.0.531</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,8 +45,16 @@
 
   <ItemGroup>
     <Compile Include="V20220106\TeoClient.cs" />
+    <Compile Include="V20220106\Models\ACLCondition.cs" />
+    <Compile Include="V20220106\Models\ACLUserRule.cs" />
+    <Compile Include="V20220106\Models\AclConfig.cs" />
+    <Compile Include="V20220106\Models\AiRule.cs" />
     <Compile Include="V20220106\Models\ApplicationProxy.cs" />
     <Compile Include="V20220106\Models\ApplicationProxyRule.cs" />
+    <Compile Include="V20220106\Models\BotConfig.cs" />
+    <Compile Include="V20220106\Models\BotManagedRule.cs" />
+    <Compile Include="V20220106\Models\BotManagedRuleDetail.cs" />
+    <Compile Include="V20220106\Models\BotPortraitRule.cs" />
     <Compile Include="V20220106\Models\CacheConfig.cs" />
     <Compile Include="V20220106\Models\CacheConfigCache.cs" />
     <Compile Include="V20220106\Models\CacheConfigFollowOrigin.cs" />
@@ -65,17 +73,33 @@
     <Compile Include="V20220106\Models\CreateApplicationProxyRuleResponse.cs" />
     <Compile Include="V20220106\Models\CreateApplicationProxyRulesRequest.cs" />
     <Compile Include="V20220106\Models\CreateApplicationProxyRulesResponse.cs" />
+    <Compile Include="V20220106\Models\CreateCustomErrorPageRequest.cs" />
+    <Compile Include="V20220106\Models\CreateCustomErrorPageResponse.cs" />
     <Compile Include="V20220106\Models\CreateDnsRecordRequest.cs" />
     <Compile Include="V20220106\Models\CreateDnsRecordResponse.cs" />
     <Compile Include="V20220106\Models\CreateLoadBalancingRequest.cs" />
     <Compile Include="V20220106\Models\CreateLoadBalancingResponse.cs" />
+    <Compile Include="V20220106\Models\CreateOriginGroupRequest.cs" />
+    <Compile Include="V20220106\Models\CreateOriginGroupResponse.cs" />
     <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
     <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
     <Compile Include="V20220106\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220106\Models\CreateZoneResponse.cs" />
+    <Compile Include="V20220106\Models\DDoSAcl.cs" />
+    <Compile Include="V20220106\Models\DDoSAntiPly.cs" />
+    <Compile Include="V20220106\Models\DDoSApplication.cs" />
+    <Compile Include="V20220106\Models\DDoSConfig.cs" />
+    <Compile Include="V20220106\Models\DDoSFeaturesFilter.cs" />
+    <Compile Include="V20220106\Models\DDoSGeoIp.cs" />
+    <Compile Include="V20220106\Models\DDoSStatusInfo.cs" />
+    <Compile Include="V20220106\Models\DDoSUserAllowBlockIP.cs" />
     <Compile Include="V20220106\Models\DataItem.cs" />
+    <Compile Include="V20220106\Models\DdosAcls.cs" />
+    <Compile Include="V20220106\Models\DdosAllowBlock.cs" />
+    <Compile Include="V20220106\Models\DdosPacketFilter.cs" />
+    <Compile Include="V20220106\Models\DdosRule.cs" />
     <Compile Include="V20220106\Models\DefaultServerCertInfo.cs" />
     <Compile Include="V20220106\Models\DeleteApplicationProxyRequest.cs" />
     <Compile Include="V20220106\Models\DeleteApplicationProxyResponse.cs" />
@@ -85,14 +109,20 @@
     <Compile Include="V20220106\Models\DeleteDnsRecordsResponse.cs" />
     <Compile Include="V20220106\Models\DeleteLoadBalancingRequest.cs" />
     <Compile Include="V20220106\Models\DeleteLoadBalancingResponse.cs" />
+    <Compile Include="V20220106\Models\DeleteOriginGroupRequest.cs" />
+    <Compile Include="V20220106\Models\DeleteOriginGroupResponse.cs" />
     <Compile Include="V20220106\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220106\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyDetailRequest.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyDetailResponse.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyRequest.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeBotManagedRulesRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeBotManagedRulesResponse.cs" />
     <Compile Include="V20220106\Models\DescribeCnameStatusRequest.cs" />
     <Compile Include="V20220106\Models\DescribeCnameStatusResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDoSPolicyRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDoSPolicyResponse.cs" />
     <Compile Include="V20220106\Models\DescribeDefaultCertificatesRequest.cs" />
     <Compile Include="V20220106\Models\DescribeDefaultCertificatesResponse.cs" />
     <Compile Include="V20220106\Models\DescribeDnsDataRequest.cs" />
@@ -111,10 +141,26 @@
     <Compile Include="V20220106\Models\DescribeLoadBalancingDetailResponse.cs" />
     <Compile Include="V20220106\Models\DescribeLoadBalancingRequest.cs" />
     <Compile Include="V20220106\Models\DescribeLoadBalancingResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeOriginGroupDetailRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeOriginGroupDetailResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeOriginGroupRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeOriginGroupResponse.cs" />
     <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
     <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyListRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyListResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyManagedRulesIdRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyManagedRulesIdResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyManagedRulesRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyManagedRulesResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyRegionsRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyRegionsResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeSecurityPolicyResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeZoneDDoSPolicyRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeZoneDDoSPolicyResponse.cs" />
     <Compile Include="V20220106\Models\DescribeZoneDetailsRequest.cs" />
     <Compile Include="V20220106\Models\DescribeZoneDetailsResponse.cs" />
     <Compile Include="V20220106\Models\DescribeZoneSettingRequest.cs" />
@@ -130,6 +176,7 @@
     <Compile Include="V20220106\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220106\Models\FailReason.cs" />
     <Compile Include="V20220106\Models\ForceRedirect.cs" />
+    <Compile Include="V20220106\Models\GeoIp.cs" />
     <Compile Include="V20220106\Models\Header.cs" />
     <Compile Include="V20220106\Models\HostCertSetting.cs" />
     <Compile Include="V20220106\Models\Hsts.cs" />
@@ -140,6 +187,7 @@
     <Compile Include="V20220106\Models\ImportDnsRecordsResponse.cs" />
     <Compile Include="V20220106\Models\L7OfflineLog.cs" />
     <Compile Include="V20220106\Models\LoadBalancing.cs" />
+    <Compile Include="V20220106\Models\ManagedRule.cs" />
     <Compile Include="V20220106\Models\MaxAge.cs" />
     <Compile Include="V20220106\Models\ModifyApplicationProxyRequest.cs" />
     <Compile Include="V20220106\Models\ModifyApplicationProxyResponse.cs" />
@@ -149,6 +197,10 @@
     <Compile Include="V20220106\Models\ModifyApplicationProxyRuleStatusResponse.cs" />
     <Compile Include="V20220106\Models\ModifyApplicationProxyStatusRequest.cs" />
     <Compile Include="V20220106\Models\ModifyApplicationProxyStatusResponse.cs" />
+    <Compile Include="V20220106\Models\ModifyDDoSPolicyHostRequest.cs" />
+    <Compile Include="V20220106\Models\ModifyDDoSPolicyHostResponse.cs" />
+    <Compile Include="V20220106\Models\ModifyDDoSPolicyRequest.cs" />
+    <Compile Include="V20220106\Models\ModifyDDoSPolicyResponse.cs" />
     <Compile Include="V20220106\Models\ModifyDefaultCertificateRequest.cs" />
     <Compile Include="V20220106\Models\ModifyDefaultCertificateResponse.cs" />
     <Compile Include="V20220106\Models\ModifyDnsRecordRequest.cs" />
@@ -161,6 +213,10 @@
     <Compile Include="V20220106\Models\ModifyLoadBalancingResponse.cs" />
     <Compile Include="V20220106\Models\ModifyLoadBalancingStatusRequest.cs" />
     <Compile Include="V20220106\Models\ModifyLoadBalancingStatusResponse.cs" />
+    <Compile Include="V20220106\Models\ModifyOriginGroupRequest.cs" />
+    <Compile Include="V20220106\Models\ModifyOriginGroupResponse.cs" />
+    <Compile Include="V20220106\Models\ModifySecurityPolicyRequest.cs" />
+    <Compile Include="V20220106\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20220106\Models\ModifyZoneCnameSpeedUpRequest.cs" />
     <Compile Include="V20220106\Models\ModifyZoneCnameSpeedUpResponse.cs" />
     <Compile Include="V20220106\Models\ModifyZoneRequest.cs" />
@@ -171,22 +227,33 @@
     <Compile Include="V20220106\Models\ModifyZoneStatusResponse.cs" />
     <Compile Include="V20220106\Models\OfflineCache.cs" />
     <Compile Include="V20220106\Models\Origin.cs" />
+    <Compile Include="V20220106\Models\OriginFilter.cs" />
     <Compile Include="V20220106\Models\OriginGroup.cs" />
     <Compile Include="V20220106\Models\OriginRecord.cs" />
     <Compile Include="V20220106\Models\OriginRecordPrivateParameter.cs" />
     <Compile Include="V20220106\Models\PostMaxSize.cs" />
     <Compile Include="V20220106\Models\QueryString.cs" />
     <Compile Include="V20220106\Models\Quic.cs" />
+    <Compile Include="V20220106\Models\RateLimitConfig.cs" />
+    <Compile Include="V20220106\Models\RateLimitTemplate.cs" />
+    <Compile Include="V20220106\Models\RateLimitTemplateDetail.cs" />
+    <Compile Include="V20220106\Models\RateLimitUserRule.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneRequest.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneResponse.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsResponse.cs" />
+    <Compile Include="V20220106\Models\SecurityConfig.cs" />
+    <Compile Include="V20220106\Models\SecurityEntity.cs" />
     <Compile Include="V20220106\Models\ServerCertInfo.cs" />
+    <Compile Include="V20220106\Models\ShieldArea.cs" />
     <Compile Include="V20220106\Models\SmartRouting.cs" />
+    <Compile Include="V20220106\Models\SwitchConfig.cs" />
     <Compile Include="V20220106\Models\Task.cs" />
     <Compile Include="V20220106\Models\UpstreamHttp2.cs" />
     <Compile Include="V20220106\Models\VanityNameServers.cs" />
     <Compile Include="V20220106\Models\VanityNameServersIps.cs" />
+    <Compile Include="V20220106\Models\WafConfig.cs" />
+    <Compile Include="V20220106\Models\WafRule.cs" />
     <Compile Include="V20220106\Models\WebSocket.cs" />
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />

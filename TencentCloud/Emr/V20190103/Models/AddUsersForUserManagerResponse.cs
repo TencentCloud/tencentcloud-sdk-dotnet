@@ -25,6 +25,20 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// 添加成功的用户列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccessUserList")]
+        public string[] SuccessUserList{ get; set; }
+
+        /// <summary>
+        /// 添加失败的用户列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailedUserList")]
+        public string[] FailedUserList{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +50,8 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "SuccessUserList.", this.SuccessUserList);
+            this.SetParamArraySimple(map, prefix + "FailedUserList.", this.FailedUserList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

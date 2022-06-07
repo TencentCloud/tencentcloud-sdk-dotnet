@@ -1,0 +1,115 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.531</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Trp</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210515\TrpClient.cs" />
+    <Compile Include="V20210515\Models\ChainData.cs" />
+    <Compile Include="V20210515\Models\CodeBatch.cs" />
+    <Compile Include="V20210515\Models\CodeItem.cs" />
+    <Compile Include="V20210515\Models\CreateCodeBatchRequest.cs" />
+    <Compile Include="V20210515\Models\CreateCodeBatchResponse.cs" />
+    <Compile Include="V20210515\Models\CreateCodePackRequest.cs" />
+    <Compile Include="V20210515\Models\CreateCodePackResponse.cs" />
+    <Compile Include="V20210515\Models\CreateMerchantRequest.cs" />
+    <Compile Include="V20210515\Models\CreateMerchantResponse.cs" />
+    <Compile Include="V20210515\Models\CreateProductRequest.cs" />
+    <Compile Include="V20210515\Models\CreateProductResponse.cs" />
+    <Compile Include="V20210515\Models\CreateTraceChainRequest.cs" />
+    <Compile Include="V20210515\Models\CreateTraceChainResponse.cs" />
+    <Compile Include="V20210515\Models\CreateTraceCodesRequest.cs" />
+    <Compile Include="V20210515\Models\CreateTraceCodesResponse.cs" />
+    <Compile Include="V20210515\Models\CreateTraceDataRequest.cs" />
+    <Compile Include="V20210515\Models\CreateTraceDataResponse.cs" />
+    <Compile Include="V20210515\Models\DeleteCodeBatchRequest.cs" />
+    <Compile Include="V20210515\Models\DeleteCodeBatchResponse.cs" />
+    <Compile Include="V20210515\Models\DeleteMerchantRequest.cs" />
+    <Compile Include="V20210515\Models\DeleteMerchantResponse.cs" />
+    <Compile Include="V20210515\Models\DeleteProductRequest.cs" />
+    <Compile Include="V20210515\Models\DeleteProductResponse.cs" />
+    <Compile Include="V20210515\Models\DeleteTraceDataRequest.cs" />
+    <Compile Include="V20210515\Models\DeleteTraceDataResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodeBatchByIdRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodeBatchByIdResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodeBatchsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodeBatchsResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePacksRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePacksResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodesByPackRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodesByPackResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeMerchantByIdRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeMerchantByIdResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeMerchantsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeMerchantsResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeProductByIdRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeProductByIdResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeProductsRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeProductsResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceCodeByIdRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceCodeByIdResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceCodesRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceCodesResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceDataListRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeTraceDataListResponse.cs" />
+    <Compile Include="V20210515\Models\Ext.cs" />
+    <Compile Include="V20210515\Models\Merchant.cs" />
+    <Compile Include="V20210515\Models\ModifyCodeBatchRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyCodeBatchResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyMerchantRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyMerchantResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyProductRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyProductResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceCodeRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceCodeResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceDataRanksRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceDataRanksResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceDataRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyTraceDataResponse.cs" />
+    <Compile Include="V20210515\Models\PackSpec.cs" />
+    <Compile Include="V20210515\Models\Product.cs" />
+    <Compile Include="V20210515\Models\TraceCode.cs" />
+    <Compile Include="V20210515\Models\TraceData.cs" />
+    <Compile Include="V20210515\Models\TraceItem.cs" />
+  </ItemGroup>
+</Project>

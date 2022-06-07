@@ -25,6 +25,30 @@ namespace TencentCloud.Emr.V20190103.Models
     {
         
         /// <summary>
+        /// 集群实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [JsonProperty("PageNo")]
+        public long? PageNo{ get; set; }
+
+        /// <summary>
+        /// 分页的大小
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 查询用户列表过滤器
+        /// </summary>
+        [JsonProperty("UserManagerFilter")]
+        public UserManagerFilter UserManagerFilter{ get; set; }
+
+        /// <summary>
         /// 是否需要keytab文件的信息，仅对开启kerberos的集群有效，默认为false
         /// </summary>
         [JsonProperty("NeedKeytabInfo")]
@@ -36,6 +60,10 @@ namespace TencentCloud.Emr.V20190103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "PageNo", this.PageNo);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamObj(map, prefix + "UserManagerFilter.", this.UserManagerFilter);
             this.SetParamSimple(map, prefix + "NeedKeytabInfo", this.NeedKeytabInfo);
         }
     }

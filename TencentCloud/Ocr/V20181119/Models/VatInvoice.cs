@@ -112,6 +112,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 11：卷式发票 
         /// 14：通行费发票 
         /// 15：二手车发票
+        /// 32：深圳区块链发票（仅支持新版接口）
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

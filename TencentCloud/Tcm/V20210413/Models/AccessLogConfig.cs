@@ -60,6 +60,24 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Format")]
         public string Format{ get; set; }
 
+        /// <summary>
+        /// GRPC第三方服务器地址
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// 是否启用GRPC第三方服务器
+        /// </summary>
+        [JsonProperty("EnableServer")]
+        public bool? EnableServer{ get; set; }
+
+        /// <summary>
+        /// 是否启用标准输出
+        /// </summary>
+        [JsonProperty("EnableStdout")]
+        public bool? EnableStdout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +90,9 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamObj(map, prefix + "CLS.", this.CLS);
             this.SetParamSimple(map, prefix + "Encoding", this.Encoding);
             this.SetParamSimple(map, prefix + "Format", this.Format);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "EnableServer", this.EnableServer);
+            this.SetParamSimple(map, prefix + "EnableStdout", this.EnableStdout);
         }
     }
 }
