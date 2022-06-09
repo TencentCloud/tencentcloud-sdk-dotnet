@@ -84,6 +84,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification[] TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 子网信息列表
+        /// </summary>
+        [JsonProperty("SubnetInfos")]
+        public SubnetInfos[] SubnetInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ExtraParam", this.ExtraParam);
             this.SetParamSimple(map, prefix + "EnableVpcCoreDNS", this.EnableVpcCoreDNS);
             this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamArrayObj(map, prefix + "SubnetInfos.", this.SubnetInfos);
         }
     }
 }

@@ -24,12 +24,20 @@ namespace TencentCloud.Emr.V20190103.Models
     public class UserManagerFilter : AbstractModel
     {
         
+        /// <summary>
+        /// 用户名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }
 }

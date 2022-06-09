@@ -48,6 +48,15 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("Ipv6AddressCount")]
         public long? Ipv6AddressCount{ get; set; }
 
+        /// <summary>
+        /// ipv6运营商如下：
+        /// CTCC：中国电信
+        /// CUCC：中国联通
+        /// CMCC：中国移动
+        /// </summary>
+        [JsonProperty("Ipv6ISP")]
+        public string Ipv6ISP{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +67,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamSimple(map, prefix + "NetworkInterfaceId", this.NetworkInterfaceId);
             this.SetParamArrayObj(map, prefix + "Ipv6Addresses.", this.Ipv6Addresses);
             this.SetParamSimple(map, prefix + "Ipv6AddressCount", this.Ipv6AddressCount);
+            this.SetParamSimple(map, prefix + "Ipv6ISP", this.Ipv6ISP);
         }
     }
 }

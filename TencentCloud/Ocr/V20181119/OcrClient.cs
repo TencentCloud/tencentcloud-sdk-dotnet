@@ -2339,6 +2339,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 印尼身份证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
+        public async Task<RecognizeIndonesiaIDCardOCRResponse> RecognizeIndonesiaIDCardOCR(RecognizeIndonesiaIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeIndonesiaIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 印尼身份证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeIndonesiaIDCardOCRRequest"/></param>
+        /// <returns><see cref="RecognizeIndonesiaIDCardOCRResponse"/></returns>
+        public RecognizeIndonesiaIDCardOCRResponse RecognizeIndonesiaIDCardOCRSync(RecognizeIndonesiaIDCardOCRRequest req)
+        {
+             JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeIndonesiaIDCardOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeIndonesiaIDCardOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
         /// </summary>
         /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>
@@ -2370,6 +2410,86 @@ namespace TencentCloud.Ocr.V20181119
              {
                  var strResp = this.InternalRequestSync(req, "RecognizeOnlineTaxiItineraryOCR");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeOnlineTaxiItineraryOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾驾驶证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesDrivingLicenseOCRResponse> RecognizePhilippinesDrivingLicenseOCR(RecognizePhilippinesDrivingLicenseOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesDrivingLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾驾驶证识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesDrivingLicenseOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesDrivingLicenseOCRResponse"/></returns>
+        public RecognizePhilippinesDrivingLicenseOCRResponse RecognizePhilippinesDrivingLicenseOCRSync(RecognizePhilippinesDrivingLicenseOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesDrivingLicenseOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesDrivingLicenseOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾VoteID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesVoteIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
+        public async Task<RecognizePhilippinesVoteIDOCRResponse> RecognizePhilippinesVoteIDOCR(RecognizePhilippinesVoteIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizePhilippinesVoteIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 菲律宾VoteID识别
+        /// </summary>
+        /// <param name="req"><see cref="RecognizePhilippinesVoteIDOCRRequest"/></param>
+        /// <returns><see cref="RecognizePhilippinesVoteIDOCRResponse"/></returns>
+        public RecognizePhilippinesVoteIDOCRResponse RecognizePhilippinesVoteIDOCRSync(RecognizePhilippinesVoteIDOCRRequest req)
+        {
+             JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizePhilippinesVoteIDOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizePhilippinesVoteIDOCRResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

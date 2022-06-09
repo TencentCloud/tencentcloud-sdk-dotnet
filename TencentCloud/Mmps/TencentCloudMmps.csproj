@@ -1,0 +1,75 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{9CA2A895-9D26-3F66-A6D9-FA1BB5E7CD47}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.532</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Mmps</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20200710\MmpsClient.cs" />
+    <Compile Include="V20200710\Models\AppInfoItem.cs" />
+    <Compile Include="V20200710\Models\AppTaskData.cs" />
+    <Compile Include="V20200710\Models\CreateAppScanTaskRepeatRequest.cs" />
+    <Compile Include="V20200710\Models\CreateAppScanTaskRepeatResponse.cs" />
+    <Compile Include="V20200710\Models\CreateAppScanTaskRequest.cs" />
+    <Compile Include="V20200710\Models\CreateAppScanTaskResponse.cs" />
+    <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskRepeatRequest.cs" />
+    <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskRepeatResponse.cs" />
+    <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskRequest.cs" />
+    <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppReportUrlRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppReportUrlResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskListRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskListResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskParamRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskParamResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskStatusRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskStatusResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskListRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskListResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskReportUrlRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskReportUrlResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskStatusRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeScanTaskStatusResponse.cs" />
+    <Compile Include="V20200710\Models\FlySecMiniAppTaskData.cs" />
+    <Compile Include="V20200710\Models\TaskFlowStepsInfo.cs" />
+  </ItemGroup>
+</Project>

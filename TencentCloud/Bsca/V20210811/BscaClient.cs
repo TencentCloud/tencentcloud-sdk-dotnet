@@ -212,5 +212,45 @@ namespace TencentCloud.Bsca.V20210811
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 本接口(MatchKBPURLList)用于在知识库中匹配与特征对应的开源组件列表。
+        /// </summary>
+        /// <param name="req"><see cref="MatchKBPURLListRequest"/></param>
+        /// <returns><see cref="MatchKBPURLListResponse"/></returns>
+        public async Task<MatchKBPURLListResponse> MatchKBPURLList(MatchKBPURLListRequest req)
+        {
+             JsonResponseModel<MatchKBPURLListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "MatchKBPURLList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MatchKBPURLListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(MatchKBPURLList)用于在知识库中匹配与特征对应的开源组件列表。
+        /// </summary>
+        /// <param name="req"><see cref="MatchKBPURLListRequest"/></param>
+        /// <returns><see cref="MatchKBPURLListResponse"/></returns>
+        public MatchKBPURLListResponse MatchKBPURLListSync(MatchKBPURLListRequest req)
+        {
+             JsonResponseModel<MatchKBPURLListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "MatchKBPURLList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MatchKBPURLListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }
