@@ -123,6 +123,13 @@ namespace TencentCloud.Organization.V20210331.Models
         public string PayName{ get; set; }
 
         /// <summary>
+        /// 是否集团服务委派管理员 true-是、false-否
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsAssignManager")]
+        public bool? IsAssignManager{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -148,6 +155,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "IsAllowQuit", this.IsAllowQuit);
             this.SetParamSimple(map, prefix + "PayUin", this.PayUin);
             this.SetParamSimple(map, prefix + "PayName", this.PayName);
+            this.SetParamSimple(map, prefix + "IsAssignManager", this.IsAssignManager);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

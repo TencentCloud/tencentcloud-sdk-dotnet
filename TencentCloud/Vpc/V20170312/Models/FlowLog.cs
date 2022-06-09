@@ -110,6 +110,13 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("FlowLogStorage")]
         public FlowLogStorage FlowLogStorage{ get; set; }
 
+        /// <summary>
+        /// 流日志存储ID对应的地域信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudLogRegion")]
+        public string CloudLogRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -130,6 +137,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
             this.SetParamObj(map, prefix + "FlowLogStorage.", this.FlowLogStorage);
+            this.SetParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
         }
     }
 }

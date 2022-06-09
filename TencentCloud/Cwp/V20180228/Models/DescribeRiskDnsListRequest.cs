@@ -54,7 +54,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段：AccessCount-请求次数
+        /// 排序字段：AccessCount-请求次数。MergeTime-最近请求时间
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

@@ -48,6 +48,18 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }
 
+        /// <summary>
+        /// 主体名称
+        /// </summary>
+        [JsonProperty("AuthName")]
+        public string AuthName{ get; set; }
+
+        /// <summary>
+        /// 集团服务（服务管理员查询时，必须指定）
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
             this.SetParamSimple(map, prefix + "SearchKey", this.SearchKey);
+            this.SetParamSimple(map, prefix + "AuthName", this.AuthName);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }

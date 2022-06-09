@@ -104,6 +104,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Filters")]
         public Filter Filters{ get; set; }
 
+        /// <summary>
+        /// 流日志存储ID对应的地域信息
+        /// </summary>
+        [JsonProperty("CloudLogRegion")]
+        public string CloudLogRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +129,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "CloudLogRegion", this.CloudLogRegion);
         }
     }
 }

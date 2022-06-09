@@ -53,6 +53,86 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 创建引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateEngineRequest"/></param>
+        /// <returns><see cref="CreateEngineResponse"/></returns>
+        public async Task<CreateEngineResponse> CreateEngine(CreateEngineRequest req)
+        {
+             JsonResponseModel<CreateEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateEngineRequest"/></param>
+        /// <returns><see cref="CreateEngineResponse"/></returns>
+        public CreateEngineResponse CreateEngineSync(CreateEngineRequest req)
+        {
+             JsonResponseModel<CreateEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEngineRequest"/></param>
+        /// <returns><see cref="DeleteEngineResponse"/></returns>
+        public async Task<DeleteEngineResponse> DeleteEngine(DeleteEngineRequest req)
+        {
+             JsonResponseModel<DeleteEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除引擎实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteEngineRequest"/></param>
+        /// <returns><see cref="DeleteEngineResponse"/></returns>
+        public DeleteEngineResponse DeleteEngineSync(DeleteEngineRequest req)
+        {
+             JsonResponseModel<DeleteEngineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteEngine");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteEngineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询引擎实例访问地址
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>

@@ -33,10 +33,26 @@ namespace TencentCloud.Cme.V20191029.Models
         /// <summary>
         /// 项目状态，取值有：
         /// <li>Working：云转推推流开始；</li>
-        /// <li>Stopped：云转推推流结束。</li>
+        /// <li>Stopped：云转推推流结束；</li>
+        /// <li>InputInterrupted：云转推输入断流；</li>
+        /// <li>OutputInterrupted：云转推输出断流。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
+
+        /// <summary>
+        /// 云转推输入断流信息，仅当 Status 取值 InputInterrupted 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InputInterruptInfo")]
+        public StreamConnectInputInterruptInfo InputInterruptInfo{ get; set; }
+
+        /// <summary>
+        /// 云转推输出断流信息，仅当 Status 取值 OutputInterrupted 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OutputInterruptInfo")]
+        public StreamConnectOutputInterruptInfo OutputInterruptInfo{ get; set; }
 
 
         /// <summary>
@@ -46,6 +62,8 @@ namespace TencentCloud.Cme.V20191029.Models
         {
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "InputInterruptInfo.", this.InputInterruptInfo);
+            this.SetParamObj(map, prefix + "OutputInterruptInfo.", this.OutputInterruptInfo);
         }
     }
 }

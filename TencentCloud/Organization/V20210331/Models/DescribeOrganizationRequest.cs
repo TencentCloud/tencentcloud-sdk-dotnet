@@ -30,6 +30,12 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("Lang")]
         public string Lang{ get; set; }
 
+        /// <summary>
+        /// 产品简称（查询是否集团服务委派管理员必须）
+        /// </summary>
+        [JsonProperty("Product")]
+        public string Product{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Organization.V20210331.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Lang", this.Lang);
+            this.SetParamSimple(map, prefix + "Product", this.Product);
         }
     }
 }
