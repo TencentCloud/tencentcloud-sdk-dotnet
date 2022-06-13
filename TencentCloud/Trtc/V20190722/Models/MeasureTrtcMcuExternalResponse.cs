@@ -25,6 +25,20 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
+        /// 应用的用量信息数组。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Usages")]
+        public OneSdkAppIdTranscodeTimeUsagesNewInfo[] Usages{ get; set; }
+
+        /// <summary>
+        /// 用户计费类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +50,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Usages.", this.Usages);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -39,8 +39,9 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>libmp3lame：更适合 flv；</li>
         /// <li>mp2。</li>
         /// 当外层参数 Container 为 hls 时，可选值为：
-        /// <li>libfdk_aac；</li>
-        /// <li>libmp3lame。</li>
+        /// <li>libfdk_aac。</li>
+        /// 当外层参数 Format 为 HLS 或 MPEG-DASH 时，可选值为：
+        /// <li>libfdk_aac。</li>
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }

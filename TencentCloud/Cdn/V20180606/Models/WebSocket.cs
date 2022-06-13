@@ -33,7 +33,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 设置超时时间，单位为秒，最大超时时间65秒。
+        /// 设置超时时间，单位为秒，最大超时时间300秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timeout")]

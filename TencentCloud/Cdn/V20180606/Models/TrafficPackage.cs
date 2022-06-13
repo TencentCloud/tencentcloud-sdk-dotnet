@@ -147,6 +147,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("ExtensionMode")]
         public ulong? ExtensionMode{ get; set; }
 
+        /// <summary>
+        /// 流量包实际生效时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrueEnableTime")]
+        public string TrueEnableTime{ get; set; }
+
+        /// <summary>
+        /// 流量包实际过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrueExpireTime")]
+        public string TrueExpireTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +185,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "ConfigId", this.ConfigId);
             this.SetParamSimple(map, prefix + "ExtensionMode", this.ExtensionMode);
+            this.SetParamSimple(map, prefix + "TrueEnableTime", this.TrueEnableTime);
+            this.SetParamSimple(map, prefix + "TrueExpireTime", this.TrueExpireTime);
         }
     }
 }

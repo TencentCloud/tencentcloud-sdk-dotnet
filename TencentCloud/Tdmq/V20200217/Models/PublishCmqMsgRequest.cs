@@ -31,13 +31,13 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 消息内容
+        /// 消息内容，消息总大小需不大于1024K
         /// </summary>
         [JsonProperty("MsgContent")]
         public string MsgContent{ get; set; }
 
         /// <summary>
-        /// 消息标签
+        /// 消息标签，支持传递多标签或单路由，单个标签、路由长度不能超过64个字符。
         /// </summary>
         [JsonProperty("MsgTag")]
         public string[] MsgTag{ get; set; }

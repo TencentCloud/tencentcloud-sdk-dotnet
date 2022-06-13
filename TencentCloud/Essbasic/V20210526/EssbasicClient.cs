@@ -53,6 +53,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelMultiFlowSignQRCodeRequest"/></param>
+        /// <returns><see cref="ChannelCancelMultiFlowSignQRCodeResponse"/></returns>
+        public async Task<ChannelCancelMultiFlowSignQRCodeResponse> ChannelCancelMultiFlowSignQRCode(ChannelCancelMultiFlowSignQRCodeRequest req)
+        {
+             JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCancelMultiFlowSignQRCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCancelMultiFlowSignQRCodeRequest"/></param>
+        /// <returns><see cref="ChannelCancelMultiFlowSignQRCodeResponse"/></returns>
+        public ChannelCancelMultiFlowSignQRCodeResponse ChannelCancelMultiFlowSignQRCodeSync(ChannelCancelMultiFlowSignQRCodeRequest req)
+        {
+             JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCancelMultiFlowSignQRCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCancelMultiFlowSignQRCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建流程。此接口不可直接使用，需要运营申请
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>
@@ -84,6 +124,48 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelCreateFlowByFiles");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
+        /// 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateMultiFlowSignQRCodeRequest"/></param>
+        /// <returns><see cref="ChannelCreateMultiFlowSignQRCodeResponse"/></returns>
+        public async Task<ChannelCreateMultiFlowSignQRCodeResponse> ChannelCreateMultiFlowSignQRCode(ChannelCreateMultiFlowSignQRCodeRequest req)
+        {
+             JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateMultiFlowSignQRCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ChannelCreateMultiFlowSignQRCode）用于创建一码多扫流程签署二维码。
+        /// 适用的模版仅限于B2C（1、无序签署，2、顺序签署时B静默签署，3、顺序签署时B非首位签署）、单C的模版，且模版中发起方没有填写控件。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateMultiFlowSignQRCodeRequest"/></param>
+        /// <returns><see cref="ChannelCreateMultiFlowSignQRCodeResponse"/></returns>
+        public ChannelCreateMultiFlowSignQRCodeResponse ChannelCreateMultiFlowSignQRCodeSync(ChannelCreateMultiFlowSignQRCodeRequest req)
+        {
+             JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateMultiFlowSignQRCode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

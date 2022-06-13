@@ -115,7 +115,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public ulong? Transaction{ get; set; }
 
         /// <summary>
-        /// 队列可回溯存储空间，取值范围1024MB - 10240MB，0表示不开启
+        /// 队列可回溯存储空间：若开启消息回溯，取值范围：10240MB - 512000MB，若不开启消息回溯，取值：0
         /// </summary>
         [JsonProperty("RetentionSizeInMB")]
         public ulong? RetentionSizeInMB{ get; set; }

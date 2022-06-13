@@ -937,7 +937,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 您可以通过此API发送TEXT或者HTML邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。
+        /// 您可以通过此API发送HTML或者TEXT邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。
         /// </summary>
         /// <param name="req"><see cref="SendEmailRequest"/></param>
         /// <returns><see cref="SendEmailResponse"/></returns>
@@ -957,7 +957,7 @@ namespace TencentCloud.Ses.V20201002
         }
 
         /// <summary>
-        /// 您可以通过此API发送TEXT或者HTML邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。
+        /// 您可以通过此API发送HTML或者TEXT邮件，适用于触发类邮件（验证码、交易类）。默认仅支持使用模板发送邮件。
         /// </summary>
         /// <param name="req"><see cref="SendEmailRequest"/></param>
         /// <returns><see cref="SendEmailResponse"/></returns>

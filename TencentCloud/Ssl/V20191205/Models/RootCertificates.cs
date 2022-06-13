@@ -24,12 +24,36 @@ namespace TencentCloud.Ssl.V20191205.Models
     public class RootCertificates : AbstractModel
     {
         
+        /// <summary>
+        /// 国密签名证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Sign")]
+        public string Sign{ get; set; }
+
+        /// <summary>
+        /// 国密加密证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Encrypt")]
+        public string Encrypt{ get; set; }
+
+        /// <summary>
+        /// 标准证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Standard")]
+        public string Standard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Sign", this.Sign);
+            this.SetParamSimple(map, prefix + "Encrypt", this.Encrypt);
+            this.SetParamSimple(map, prefix + "Standard", this.Standard);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("DeleteBucket")]
         public bool? DeleteBucket{ get; set; }
 
+        /// <summary>
+        /// 是否dryRun模式，缺省值：false
+        /// </summary>
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         {
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "DeleteBucket", this.DeleteBucket);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

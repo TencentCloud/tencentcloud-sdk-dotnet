@@ -35,7 +35,7 @@ namespace TencentCloud.Trtc.V20190722.Models
 
         /// <summary>
         /// 声道数:
-        /// 1：单身道;
+        /// 1：单声道;
         /// 2：双声道（默认）。
         /// </summary>
         [JsonProperty("Channel")]

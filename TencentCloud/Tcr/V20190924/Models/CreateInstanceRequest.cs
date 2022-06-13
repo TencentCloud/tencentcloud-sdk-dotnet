@@ -48,6 +48,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("RegistryChargeType")]
         public long? RegistryChargeType{ get; set; }
 
+        /// <summary>
+        /// 是否同步TCR云标签至生成的COS Bucket
+        /// </summary>
+        [JsonProperty("SyncTag")]
+        public bool? SyncTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryType", this.RegistryType);
             this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
             this.SetParamSimple(map, prefix + "RegistryChargeType", this.RegistryChargeType);
+            this.SetParamSimple(map, prefix + "SyncTag", this.SyncTag);
         }
     }
 }

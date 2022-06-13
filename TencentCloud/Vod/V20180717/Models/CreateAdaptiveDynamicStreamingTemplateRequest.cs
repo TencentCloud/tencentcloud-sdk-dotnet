@@ -26,7 +26,8 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 自适应转码格式，取值范围：
-        /// <li>HLS。</li>
+        /// <li>HLS；</li>
+        /// <li>MPEG-DASH。</li>
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }
