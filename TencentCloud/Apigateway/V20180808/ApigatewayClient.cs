@@ -1797,6 +1797,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 查询专享实例列表（新）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstancesStatusRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstancesStatusResponse"/></returns>
+        public async Task<DescribeExclusiveInstancesStatusResponse> DescribeExclusiveInstancesStatus(DescribeExclusiveInstancesStatusRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstancesStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeExclusiveInstancesStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstancesStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询专享实例列表（新）
+        /// </summary>
+        /// <param name="req"><see cref="DescribeExclusiveInstancesStatusRequest"/></param>
+        /// <returns><see cref="DescribeExclusiveInstancesStatusResponse"/></returns>
+        public DescribeExclusiveInstancesStatusResponse DescribeExclusiveInstancesStatusSync(DescribeExclusiveInstancesStatusRequest req)
+        {
+             JsonResponseModel<DescribeExclusiveInstancesStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeExclusiveInstancesStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExclusiveInstancesStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeIPStrategy）用于查询IP策略详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeIPStrategyRequest"/></param>

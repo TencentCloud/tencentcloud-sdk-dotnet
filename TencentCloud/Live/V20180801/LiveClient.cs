@@ -3141,6 +3141,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftBillInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftBillInfoListResponse"/></returns>
+        public async Task<DescribeLiveTimeShiftBillInfoListResponse> DescribeLiveTimeShiftBillInfoList(DescribeLiveTimeShiftBillInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveTimeShiftBillInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提供给客户对账，按天统计，维度：推流域名、时移文件时长（累加）、配置天数（不累加）、时移总时长（累加）。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveTimeShiftBillInfoListRequest"/></param>
+        /// <returns><see cref="DescribeLiveTimeShiftBillInfoListResponse"/></returns>
+        public DescribeLiveTimeShiftBillInfoListResponse DescribeLiveTimeShiftBillInfoListSync(DescribeLiveTimeShiftBillInfoListRequest req)
+        {
+             JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveTimeShiftBillInfoList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveTimeShiftBillInfoListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 支持查询某天或某段时间的转码详细信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveTranscodeDetailInfoRequest"/></param>

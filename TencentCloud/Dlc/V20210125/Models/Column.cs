@@ -86,6 +86,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 是否为分区字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsPartition")]
+        public bool? IsPartition{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +108,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "Position", this.Position);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "IsPartition", this.IsPartition);
         }
     }
 }

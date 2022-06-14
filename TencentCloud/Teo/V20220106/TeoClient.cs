@@ -1653,6 +1653,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 查询Bot用户画像规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPortraitRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPortraitRulesResponse"/></returns>
+        public async Task<DescribeSecurityPortraitRulesResponse> DescribeSecurityPortraitRules(DescribeSecurityPortraitRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSecurityPortraitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Bot用户画像规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSecurityPortraitRulesRequest"/></param>
+        /// <returns><see cref="DescribeSecurityPortraitRulesResponse"/></returns>
+        public DescribeSecurityPortraitRulesResponse DescribeSecurityPortraitRulesSync(DescribeSecurityPortraitRulesRequest req)
+        {
+             JsonResponseModel<DescribeSecurityPortraitRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSecurityPortraitRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSecurityPortraitRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询所有DDoS防护分区
         /// </summary>
         /// <param name="req"><see cref="DescribeZoneDDoSPolicyRequest"/></param>

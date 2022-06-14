@@ -59,6 +59,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }
 
+        /// <summary>
+        /// 本功能的开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +77,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArraySimple(map, prefix + "CapManagedIds.", this.CapManagedIds);
             this.SetParamArraySimple(map, prefix + "MonManagedIds.", this.MonManagedIds);
             this.SetParamArraySimple(map, prefix + "DropManagedIds.", this.DropManagedIds);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }
