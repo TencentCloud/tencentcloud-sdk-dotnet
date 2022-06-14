@@ -31,13 +31,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 分页返回，每页最大返回数目，默认20，取值范围为1-100
+        /// 分页返回，每页最大返回数目，默认10，取值范围为1-100
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 分页返回，返回第几页的用户数据。页码从0开始计数
+        /// 数据偏移量，从0开始。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

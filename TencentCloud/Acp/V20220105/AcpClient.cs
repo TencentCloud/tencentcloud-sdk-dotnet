@@ -173,6 +173,46 @@ namespace TencentCloud.Acp.V20220105
         }
 
         /// <summary>
+        /// 查询应用合规平台用户资源的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
+        public async Task<DescribeResourceUsageInfoResponse> DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用合规平台用户资源的使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
+        public DescribeResourceUsageInfoResponse DescribeResourceUsageInfoSync(DescribeResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取App隐私合规诊断任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeScanTaskListRequest"/></param>

@@ -453,6 +453,52 @@ namespace TencentCloud.Tiia.V20190529
         }
 
         /// <summary>
+        /// 文件封识别可检测图片中是否包含符合文件封（即文件、单据、资料等的袋状包装）特征的物品，覆盖顺丰快递文件封、文件袋、档案袋等多种文件封类型，可应用于物流行业对文件快递的包装审核等场景。
+        /// 
+        /// >?   
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectEnvelopeRequest"/></param>
+        /// <returns><see cref="DetectEnvelopeResponse"/></returns>
+        public async Task<DetectEnvelopeResponse> DetectEnvelope(DetectEnvelopeRequest req)
+        {
+             JsonResponseModel<DetectEnvelopeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DetectEnvelope");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectEnvelopeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 文件封识别可检测图片中是否包含符合文件封（即文件、单据、资料等的袋状包装）特征的物品，覆盖顺丰快递文件封、文件袋、档案袋等多种文件封类型，可应用于物流行业对文件快递的包装审核等场景。
+        /// 
+        /// >?   
+        /// - 公共参数中的签名方式必须指定为V3版本，即配置SignatureMethod参数为TC3-HMAC-SHA256。
+        /// </summary>
+        /// <param name="req"><see cref="DetectEnvelopeRequest"/></param>
+        /// <returns><see cref="DetectEnvelopeResponse"/></returns>
+        public DetectEnvelopeResponse DetectEnvelopeSync(DetectEnvelopeRequest req)
+        {
+             JsonResponseModel<DetectEnvelopeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DetectEnvelope");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectEnvelopeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// >!
         /// - **图像标签已升级服务，建议前往使用新版接口[通用图像标签](https://cloud.tencent.com/document/product/865/75196)。**
         /// - **与本接口相比，[通用图像标签](https://cloud.tencent.com/document/product/865/75196)新版接口提供更高精度的图像标签识别服务，覆盖更广泛的物体与场景类型，效果和通用性更优。**

@@ -175,13 +175,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? NeedSupportTDE{ get; set; }
 
         /// <summary>
-        /// 自定义密钥的keyId，若选择自定义密匙加密，则需要传入自定义密匙的keyId，keyId是CMK的唯一标识。
+        /// 自定义密钥的KeyId，若选择自定义密匙加密，则需要传入自定义密匙的KeyId，KeyId是CMK的唯一标识。
         /// </summary>
         [JsonProperty("KMSKeyId")]
         public string KMSKeyId{ get; set; }
 
         /// <summary>
-        /// 使用KMS服务的地域，KMSRegion为空默认使用本地域的kms，本地域不支持的情况下需自选其他KMS支持的地域。
+        /// 使用KMS服务的地域，KMSRegion为空默认使用本地域的KMS，本地域不支持的情况下需自选其他KMS支持的地域。
         /// </summary>
         [JsonProperty("KMSRegion")]
         public string KMSRegion{ get; set; }

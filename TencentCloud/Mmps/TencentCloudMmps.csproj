@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9CA2A895-9D26-3F66-A6D9-FA1BB5E7CD47}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.535</VersionPrefix>
+    <VersionPrefix>3.0.536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskRepeatResponse.cs" />
     <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskRequest.cs" />
     <Compile Include="V20200710\Models\CreateFlySecMiniAppScanTaskResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeBasicDiagnosisResourceUsageInfoRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeBasicDiagnosisResourceUsageInfoResponse.cs" />
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppReportUrlRequest.cs" />
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppReportUrlResponse.cs" />
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskListRequest.cs" />
@@ -63,6 +65,8 @@
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskParamResponse.cs" />
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskStatusRequest.cs" />
     <Compile Include="V20200710\Models\DescribeFlySecMiniAppScanTaskStatusResponse.cs" />
+    <Compile Include="V20200710\Models\DescribeResourceUsageInfoRequest.cs" />
+    <Compile Include="V20200710\Models\DescribeResourceUsageInfoResponse.cs" />
     <Compile Include="V20200710\Models\DescribeScanTaskListRequest.cs" />
     <Compile Include="V20200710\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20200710\Models\DescribeScanTaskReportUrlRequest.cs" />
@@ -70,6 +74,7 @@
     <Compile Include="V20200710\Models\DescribeScanTaskStatusRequest.cs" />
     <Compile Include="V20200710\Models\DescribeScanTaskStatusResponse.cs" />
     <Compile Include="V20200710\Models\FlySecMiniAppTaskData.cs" />
+    <Compile Include="V20200710\Models\ResourceUsageInfoData.cs" />
     <Compile Include="V20200710\Models\TaskFlowStepsInfo.cs" />
   </ItemGroup>
 </Project>

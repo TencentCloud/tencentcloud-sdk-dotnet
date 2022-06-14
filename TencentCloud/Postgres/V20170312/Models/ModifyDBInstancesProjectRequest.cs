@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// postgresql实例ID数组
+        /// 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }
 
         /// <summary>
-        /// postgresql实例所属新项目的ID
+        /// 所属新项目的ID
         /// </summary>
         [JsonProperty("ProjectId")]
         public string ProjectId{ get; set; }

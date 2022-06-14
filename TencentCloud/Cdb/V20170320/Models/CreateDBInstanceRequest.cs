@@ -157,7 +157,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public RoGroup RoGroup{ get; set; }
 
         /// <summary>
-        /// 实例名称。
+        /// 实例名称。一次购买多个实例命名会用后缀数字区分，例instnaceName=db，goodsNum=3，实例命名分别为db1，db2，db3。
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

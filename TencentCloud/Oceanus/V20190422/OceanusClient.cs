@@ -653,6 +653,64 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
+        /// (1)	更新作业名称
+        /// (2)	更新作业备注 
+        /// (3)	更新作业最大并行度
+        /// 变更前提：WorkerCuNum<=MaxParallelism
+        /// 如果MaxParallelism变小，不重启作业，待下一次重启生效
+        /// 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
+        /// 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
+        /// 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJobRequest"/></param>
+        /// <returns><see cref="ModifyJobResponse"/></returns>
+        public async Task<ModifyJobResponse> ModifyJob(ModifyJobRequest req)
+        {
+             JsonResponseModel<ModifyJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
+        /// (1)	更新作业名称
+        /// (2)	更新作业备注 
+        /// (3)	更新作业最大并行度
+        /// 变更前提：WorkerCuNum<=MaxParallelism
+        /// 如果MaxParallelism变小，不重启作业，待下一次重启生效
+        /// 如果MaxParallelism变大，则要求入参RestartAllowed必须为True
+        /// 假设作业运行状态，则先停止作业，再启动作业，中间状态丢失
+        /// 假设作业暂停状态，则将作业更改为停止状态，中间状态丢失
+        /// 
+        /// </summary>
+        /// <param name="req"><see cref="ModifyJobRequest"/></param>
+        /// <returns><see cref="ModifyJobResponse"/></returns>
+        public ModifyJobResponse ModifyJobSync(ModifyJobRequest req)
+        {
+             JsonResponseModel<ModifyJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量启动或者恢复作业，批量操作数量上限20
         /// </summary>
         /// <param name="req"><see cref="RunJobsRequest"/></param>

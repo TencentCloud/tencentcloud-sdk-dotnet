@@ -213,6 +213,46 @@ namespace TencentCloud.Mmps.V20200710
         }
 
         /// <summary>
+        /// 查询翼扬安全基础诊断资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDiagnosisResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeBasicDiagnosisResourceUsageInfoResponse"/></returns>
+        public async Task<DescribeBasicDiagnosisResourceUsageInfoResponse> DescribeBasicDiagnosisResourceUsageInfo(DescribeBasicDiagnosisResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBasicDiagnosisResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询翼扬安全基础诊断资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBasicDiagnosisResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeBasicDiagnosisResourceUsageInfoResponse"/></returns>
+        public DescribeBasicDiagnosisResourceUsageInfoResponse DescribeBasicDiagnosisResourceUsageInfoSync(DescribeBasicDiagnosisResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBasicDiagnosisResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDiagnosisResourceUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取翼扬诊断任务报告链接地址
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppReportUrlRequest"/></param>
@@ -364,6 +404,46 @@ namespace TencentCloud.Mmps.V20200710
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanTaskStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanTaskStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询翼扬安全资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
+        public async Task<DescribeResourceUsageInfoResponse> DescribeResourceUsageInfo(DescribeResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询翼扬安全资源使用情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeResourceUsageInfoRequest"/></param>
+        /// <returns><see cref="DescribeResourceUsageInfoResponse"/></returns>
+        public DescribeResourceUsageInfoResponse DescribeResourceUsageInfoSync(DescribeResourceUsageInfoRequest req)
+        {
+             JsonResponseModel<DescribeResourceUsageInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeResourceUsageInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeResourceUsageInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

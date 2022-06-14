@@ -37,6 +37,12 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Price{ get; set; }
 
         /// <summary>
+        /// 币种。例如，CNY：人民币。
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Price", this.Price);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

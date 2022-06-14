@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3A214076-5D0C-39CF-A676-21E201216E6D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.535</VersionPrefix>
+    <VersionPrefix>3.0.536</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,12 +53,15 @@
     <Compile Include="V20220105\Models\CreateAppScanTaskResponse.cs" />
     <Compile Include="V20220105\Models\DescribeFileTicketRequest.cs" />
     <Compile Include="V20220105\Models\DescribeFileTicketResponse.cs" />
+    <Compile Include="V20220105\Models\DescribeResourceUsageInfoRequest.cs" />
+    <Compile Include="V20220105\Models\DescribeResourceUsageInfoResponse.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskListRequest.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskListResponse.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskReportUrlRequest.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskReportUrlResponse.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskStatusRequest.cs" />
     <Compile Include="V20220105\Models\DescribeScanTaskStatusResponse.cs" />
+    <Compile Include="V20220105\Models\ResourceUsageInfoData.cs" />
     <Compile Include="V20220105\Models\TaskFlowStepsInfo.cs" />
   </ItemGroup>
 </Project>

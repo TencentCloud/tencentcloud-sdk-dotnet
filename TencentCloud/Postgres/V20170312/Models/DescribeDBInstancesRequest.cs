@@ -42,16 +42,16 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Limit{ get; set; }
 
         /// <summary>
+        /// 数据偏移量，从0开始。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
         /// 排序指标，如实例名、创建时间等，支持DBInstanceId,CreateTime,Name,EndTime
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
-
-        /// <summary>
-        /// 页码偏移量，从0开始。
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 排序方式，包括升序：asc、降序：desc。
@@ -67,8 +67,8 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
         }
     }

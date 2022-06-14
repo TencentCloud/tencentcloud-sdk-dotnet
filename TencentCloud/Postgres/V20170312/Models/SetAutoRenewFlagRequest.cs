@@ -25,7 +25,7 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 实例ID数组
+        /// 实例ID集合。注意：当前已不支持同时操作多个实例，这里只能传入单个实例ID。
         /// </summary>
         [JsonProperty("DBInstanceIdSet")]
         public string[] DBInstanceIdSet{ get; set; }

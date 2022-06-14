@@ -37,7 +37,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         public string ChainId{ get; set; }
 
         /// <summary>
-        /// 区块高度，-1表示最新区块
+        /// 区块高度
         /// </summary>
         [JsonProperty("BlockHeight")]
         public long? BlockHeight{ get; set; }
