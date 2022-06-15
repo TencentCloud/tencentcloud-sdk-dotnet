@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 协议（可取值htttps）
+        /// 协议（可取值https）
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }

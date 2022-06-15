@@ -31,7 +31,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         public ulong? Total{ get; set; }
 
         /// <summary>
-        /// 分级策略列表详情
+        /// 分级策略列表总数
         /// </summary>
         [JsonProperty("LevelList")]
         public CCLevelPolicy[] LevelList{ get; set; }

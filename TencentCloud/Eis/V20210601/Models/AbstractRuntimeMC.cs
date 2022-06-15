@@ -60,6 +60,18 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("Addr")]
         public string Addr{ get; set; }
 
+        /// <summary>
+        /// 运行时状态
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
+        /// <summary>
+        /// 运行时过期时间
+        /// </summary>
+        [JsonProperty("ExpiredAt")]
+        public long? ExpiredAt{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "Addr", this.Addr);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
         }
     }
 }

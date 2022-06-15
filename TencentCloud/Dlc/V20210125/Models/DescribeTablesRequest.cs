@@ -75,7 +75,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 排序字段，false：降序（默认）；true
+        /// 排序字段，false：降序（默认）；true：升序
         /// </summary>
         [JsonProperty("Asc")]
         public bool? Asc{ get; set; }

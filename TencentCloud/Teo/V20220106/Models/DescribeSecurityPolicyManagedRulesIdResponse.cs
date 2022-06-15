@@ -37,6 +37,12 @@ namespace TencentCloud.Teo.V20220106.Models
         public ManagedRule[] Rules{ get; set; }
 
         /// <summary>
+        /// 返回总数
+        /// </summary>
+        [JsonProperty("Count")]
+        public long? Count{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Teo.V20220106.Models
         {
             this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamSimple(map, prefix + "Count", this.Count);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

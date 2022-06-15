@@ -114,6 +114,34 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("MemoryLimit")]
         public float? MemoryLimit{ get; set; }
 
+        /// <summary>
+        /// 运行时过期时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExpiredAt")]
+        public long? ExpiredAt{ get; set; }
+
+        /// <summary>
+        /// 收费类型：0:缺省，1:通过订单页自助下单(支持续费/升配等操作)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public long? ChargeType{ get; set; }
+
+        /// <summary>
+        /// 资源限制类型：0:无限制，1:有限制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResourceLimitType")]
+        public long? ResourceLimitType{ get; set; }
+
+        /// <summary>
+        /// 是否开启自动续费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoRenewal")]
+        public bool? AutoRenewal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +163,10 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "CpuLimit", this.CpuLimit);
             this.SetParamSimple(map, prefix + "MemoryUsed", this.MemoryUsed);
             this.SetParamSimple(map, prefix + "MemoryLimit", this.MemoryLimit);
+            this.SetParamSimple(map, prefix + "ExpiredAt", this.ExpiredAt);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
+            this.SetParamSimple(map, prefix + "ResourceLimitType", this.ResourceLimitType);
+            this.SetParamSimple(map, prefix + "AutoRenewal", this.AutoRenewal);
         }
     }
 }

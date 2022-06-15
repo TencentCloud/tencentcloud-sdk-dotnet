@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.536</VersionPrefix>
+    <VersionPrefix>3.0.537</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -52,9 +52,15 @@
     <Compile Include="V20220106\Models\ApplicationProxy.cs" />
     <Compile Include="V20220106\Models\ApplicationProxyRule.cs" />
     <Compile Include="V20220106\Models\BotConfig.cs" />
+    <Compile Include="V20220106\Models\BotLog.cs" />
+    <Compile Include="V20220106\Models\BotLogData.cs" />
     <Compile Include="V20220106\Models\BotManagedRule.cs" />
     <Compile Include="V20220106\Models\BotManagedRuleDetail.cs" />
     <Compile Include="V20220106\Models\BotPortraitRule.cs" />
+    <Compile Include="V20220106\Models\CCInterceptEvent.cs" />
+    <Compile Include="V20220106\Models\CCInterceptEventData.cs" />
+    <Compile Include="V20220106\Models\CCLog.cs" />
+    <Compile Include="V20220106\Models\CCLogData.cs" />
     <Compile Include="V20220106\Models\CacheConfig.cs" />
     <Compile Include="V20220106\Models\CacheConfigCache.cs" />
     <Compile Include="V20220106\Models\CacheConfigFollowOrigin.cs" />
@@ -95,6 +101,13 @@
     <Compile Include="V20220106\Models\DDoSGeoIp.cs" />
     <Compile Include="V20220106\Models\DDoSStatusInfo.cs" />
     <Compile Include="V20220106\Models\DDoSUserAllowBlockIP.cs" />
+    <Compile Include="V20220106\Models\DDosAttackEvent.cs" />
+    <Compile Include="V20220106\Models\DDosAttackEventData.cs" />
+    <Compile Include="V20220106\Models\DDosAttackEventDetailData.cs" />
+    <Compile Include="V20220106\Models\DDosAttackSourceEvent.cs" />
+    <Compile Include="V20220106\Models\DDosAttackSourceEventData.cs" />
+    <Compile Include="V20220106\Models\DDosMajorAttackEvent.cs" />
+    <Compile Include="V20220106\Models\DDosMajorAttackEventData.cs" />
     <Compile Include="V20220106\Models\DataItem.cs" />
     <Compile Include="V20220106\Models\DdosAcls.cs" />
     <Compile Include="V20220106\Models\DdosAllowBlock.cs" />
@@ -117,12 +130,26 @@
     <Compile Include="V20220106\Models\DescribeApplicationProxyDetailResponse.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyRequest.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeBotLogRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeBotLogResponse.cs" />
     <Compile Include="V20220106\Models\DescribeBotManagedRulesRequest.cs" />
     <Compile Include="V20220106\Models\DescribeBotManagedRulesResponse.cs" />
     <Compile Include="V20220106\Models\DescribeCnameStatusRequest.cs" />
     <Compile Include="V20220106\Models\DescribeCnameStatusResponse.cs" />
     <Compile Include="V20220106\Models\DescribeDDoSPolicyRequest.cs" />
     <Compile Include="V20220106\Models\DescribeDDoSPolicyResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackEventDetailRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackEventDetailResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackEventRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackEventResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackSourceEventRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackSourceEventResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackTopDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosAttackTopDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosMajorAttackEventRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeDDosMajorAttackEventResponse.cs" />
     <Compile Include="V20220106\Models\DescribeDefaultCertificatesRequest.cs" />
     <Compile Include="V20220106\Models\DescribeDefaultCertificatesResponse.cs" />
     <Compile Include="V20220106\Models\DescribeDnsDataRequest.cs" />
@@ -145,6 +172,8 @@
     <Compile Include="V20220106\Models\DescribeOriginGroupDetailResponse.cs" />
     <Compile Include="V20220106\Models\DescribeOriginGroupRequest.cs" />
     <Compile Include="V20220106\Models\DescribeOriginGroupResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeOverviewL7DataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeOverviewL7DataResponse.cs" />
     <Compile Include="V20220106\Models\DescribePrefetchTasksRequest.cs" />
     <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
@@ -161,6 +190,26 @@
     <Compile Include="V20220106\Models\DescribeSecurityPolicyResponse.cs" />
     <Compile Include="V20220106\Models\DescribeSecurityPortraitRulesRequest.cs" />
     <Compile Include="V20220106\Models\DescribeSecurityPortraitRulesResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeTimingL4DataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeTimingL4DataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeTimingL7AnalysisDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeTimingL7AnalysisDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeTopL7AnalysisDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeTopL7AnalysisDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesAttackEventsRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesAttackEventsResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesLogRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesLogResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesTopDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebManagedRulesTopDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionAttackEventsRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionAttackEventsResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionDataRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionDataResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionLogRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeWebProtectionLogResponse.cs" />
     <Compile Include="V20220106\Models\DescribeZoneDDoSPolicyRequest.cs" />
     <Compile Include="V20220106\Models\DescribeZoneDDoSPolicyResponse.cs" />
     <Compile Include="V20220106\Models\DescribeZoneDetailsRequest.cs" />
@@ -177,6 +226,7 @@
     <Compile Include="V20220106\Models\DownloadL7LogsRequest.cs" />
     <Compile Include="V20220106\Models\DownloadL7LogsResponse.cs" />
     <Compile Include="V20220106\Models\FailReason.cs" />
+    <Compile Include="V20220106\Models\Filter.cs" />
     <Compile Include="V20220106\Models\ForceRedirect.cs" />
     <Compile Include="V20220106\Models\GeoIp.cs" />
     <Compile Include="V20220106\Models\Header.cs" />
@@ -235,6 +285,7 @@
     <Compile Include="V20220106\Models\OriginRecordPrivateParameter.cs" />
     <Compile Include="V20220106\Models\PortraitManagedRuleDetail.cs" />
     <Compile Include="V20220106\Models\PostMaxSize.cs" />
+    <Compile Include="V20220106\Models\QueryCondition.cs" />
     <Compile Include="V20220106\Models\QueryString.cs" />
     <Compile Include="V20220106\Models\Quic.cs" />
     <Compile Include="V20220106\Models\RateLimitConfig.cs" />
@@ -245,6 +296,8 @@
     <Compile Include="V20220106\Models\ReclaimZoneResponse.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsResponse.cs" />
+    <Compile Include="V20220106\Models\SecEntry.cs" />
+    <Compile Include="V20220106\Models\SecEntryValue.cs" />
     <Compile Include="V20220106\Models\SecurityConfig.cs" />
     <Compile Include="V20220106\Models\SecurityEntity.cs" />
     <Compile Include="V20220106\Models\ServerCertInfo.cs" />
@@ -252,11 +305,22 @@
     <Compile Include="V20220106\Models\SmartRouting.cs" />
     <Compile Include="V20220106\Models\SwitchConfig.cs" />
     <Compile Include="V20220106\Models\Task.cs" />
+    <Compile Include="V20220106\Models\TimingDataItem.cs" />
+    <Compile Include="V20220106\Models\TimingDataRecord.cs" />
+    <Compile Include="V20220106\Models\TimingTypeValue.cs" />
+    <Compile Include="V20220106\Models\TopDataRecord.cs" />
+    <Compile Include="V20220106\Models\TopDetailData.cs" />
+    <Compile Include="V20220106\Models\TopNEntry.cs" />
+    <Compile Include="V20220106\Models\TopNEntryValue.cs" />
     <Compile Include="V20220106\Models\UpstreamHttp2.cs" />
     <Compile Include="V20220106\Models\VanityNameServers.cs" />
     <Compile Include="V20220106\Models\VanityNameServersIps.cs" />
     <Compile Include="V20220106\Models\WafConfig.cs" />
     <Compile Include="V20220106\Models\WafRule.cs" />
+    <Compile Include="V20220106\Models\WebAttackEvent.cs" />
+    <Compile Include="V20220106\Models\WebEventData.cs" />
+    <Compile Include="V20220106\Models\WebLogData.cs" />
+    <Compile Include="V20220106\Models\WebLogs.cs" />
     <Compile Include="V20220106\Models\WebSocket.cs" />
     <Compile Include="V20220106\Models\Zone.cs" />
     <Compile Include="V20220106\Models\ZoneFilter.cs" />

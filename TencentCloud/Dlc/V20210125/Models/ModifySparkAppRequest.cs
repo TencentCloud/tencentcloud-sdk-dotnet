@@ -103,7 +103,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppConf{ get; set; }
 
         /// <summary>
-        /// 是否本地上传，可去cos,lakefs
+        /// jar资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalJars")]
         public string IsLocalJars{ get; set; }
@@ -115,7 +115,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string AppJars{ get; set; }
 
         /// <summary>
-        /// 是否本地上传，可去cos,lakefs
+        /// file资源依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
         /// </summary>
         [JsonProperty("IsLocalFiles")]
         public string IsLocalFiles{ get; set; }

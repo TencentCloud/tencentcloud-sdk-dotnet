@@ -63,19 +63,19 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sort{ get; set; }
 
         /// <summary>
-        /// 排序规则
+        /// 排序规则，true:升序；false:降序
         /// </summary>
         [JsonProperty("Asc")]
         public bool? Asc{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 按视图更新时间筛选，开始时间，如2021-11-11 00:00:00
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 按视图更新时间筛选，结束时间，如2021-11-12 00:00:00
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

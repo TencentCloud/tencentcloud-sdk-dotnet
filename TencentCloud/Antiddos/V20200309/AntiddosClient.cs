@@ -1653,7 +1653,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取CC防护等级列表
+        /// 获取边界防护CC防护等级列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
         /// <returns><see cref="DescribeCCLevelListResponse"/></returns>
@@ -1673,7 +1673,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取CC防护等级列表
+        /// 获取边界防护CC防护等级列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCCLevelListRequest"/></param>
         /// <returns><see cref="DescribeCCLevelListResponse"/></returns>

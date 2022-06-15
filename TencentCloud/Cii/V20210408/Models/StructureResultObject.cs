@@ -54,6 +54,13 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("TaskFiles")]
         public string[] TaskFiles{ get; set; }
 
+        /// <summary>
+        /// 结构化字段结果数组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ResultFields")]
+        public OcrRecognise[] ResultFields{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "StructureResult", this.StructureResult);
             this.SetParamSimple(map, prefix + "SubTaskId", this.SubTaskId);
             this.SetParamArraySimple(map, prefix + "TaskFiles.", this.TaskFiles);
+            this.SetParamArrayObj(map, prefix + "ResultFields.", this.ResultFields);
         }
     }
 }

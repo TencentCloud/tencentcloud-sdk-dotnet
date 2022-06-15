@@ -1573,6 +1573,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
+        /// <returns><see cref="ListTaskJobLogDetailResponse"/></returns>
+        public async Task<ListTaskJobLogDetailResponse> ListTaskJobLogDetail(ListTaskJobLogDetailRequest req)
+        {
+             JsonResponseModel<ListTaskJobLogDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListTaskJobLogDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTaskJobLogDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
+        /// </summary>
+        /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
+        /// <returns><see cref="ListTaskJobLogDetailResponse"/></returns>
+        public ListTaskJobLogDetailResponse ListTaskJobLogDetailSync(ListTaskJobLogDetailRequest req)
+        {
+             JsonResponseModel<ListTaskJobLogDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListTaskJobLogDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTaskJobLogDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新spark应用
         /// </summary>
         /// <param name="req"><see cref="ModifySparkAppRequest"/></param>

@@ -165,6 +165,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("BGPIPChannelFlag")]
         public ulong? BGPIPChannelFlag{ get; set; }
 
+        /// <summary>
+        /// 资源关联标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public TagInfo[] TagInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +198,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "DamDDoSStatus", this.DamDDoSStatus);
             this.SetParamSimple(map, prefix + "V6Flag", this.V6Flag);
             this.SetParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         }
     }
 }

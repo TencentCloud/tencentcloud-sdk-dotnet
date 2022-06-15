@@ -36,6 +36,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("InstanceDetailList")]
         public InstanceRelation[] InstanceDetailList{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
         {
             this.SetParamObj(map, prefix + "PacketFilterConfig.", this.PacketFilterConfig);
             this.SetParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

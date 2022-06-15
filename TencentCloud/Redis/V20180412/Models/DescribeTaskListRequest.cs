@@ -78,6 +78,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TaskStatus")]
         public long?[] TaskStatus{ get; set; }
 
+        /// <summary>
+        /// 任务状态
+        /// </summary>
+        [JsonProperty("Result")]
+        public long?[] Result{ get; set; }
+
+        /// <summary>
+        /// 操作者Uin
+        /// </summary>
+        [JsonProperty("OperatorUin")]
+        public long?[] OperatorUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
+            this.SetParamArraySimple(map, prefix + "Result.", this.Result);
+            this.SetParamArraySimple(map, prefix + "OperatorUin.", this.OperatorUin);
         }
     }
 }

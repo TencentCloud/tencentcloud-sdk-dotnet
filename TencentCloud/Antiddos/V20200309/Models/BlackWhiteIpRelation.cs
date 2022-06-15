@@ -48,6 +48,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Mask")]
         public ulong? Mask{ get; set; }
 
+        /// <summary>
+        /// 修改时间
+        /// </summary>
+        [JsonProperty("ModifyTime")]
+        public string ModifyTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "InstanceDetailList.", this.InstanceDetailList);
             this.SetParamSimple(map, prefix + "Mask", this.Mask);
+            this.SetParamSimple(map, prefix + "ModifyTime", this.ModifyTime);
         }
     }
 }

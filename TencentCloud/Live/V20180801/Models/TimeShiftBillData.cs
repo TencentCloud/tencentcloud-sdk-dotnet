@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 时移时长,单位分钟。
+        /// 时移文件时长,单位分钟。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }

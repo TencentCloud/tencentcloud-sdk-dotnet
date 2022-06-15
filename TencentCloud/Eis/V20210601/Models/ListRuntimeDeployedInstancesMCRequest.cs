@@ -60,6 +60,12 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("Zone")]
         public string Zone{ get; set; }
 
+        /// <summary>
+        /// 1:3.0版本新控制台传1；否则传0
+        /// </summary>
+        [JsonProperty("ApiVersion")]
+        public long? ApiVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "SortType", this.SortType);
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
         }
     }
 }

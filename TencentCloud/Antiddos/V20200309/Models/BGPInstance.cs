@@ -114,6 +114,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("CCEnable")]
         public long? CCEnable{ get; set; }
 
+        /// <summary>
+        /// 资源关联标签
+        /// </summary>
+        [JsonProperty("TagInfoList")]
+        public TagInfo[] TagInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +139,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "BoundStatus", this.BoundStatus);
             this.SetParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
+            this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
         }
     }
 }
