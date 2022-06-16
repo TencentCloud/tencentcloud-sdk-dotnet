@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18B8B6A9-26F9-3537-BC24-EEBEC5421791}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.537</VersionPrefix>
+    <VersionPrefix>3.0.538</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,15 +45,26 @@
 
   <ItemGroup>
     <Compile Include="V20220331\CiamClient.cs" />
+    <Compile Include="V20220331\Models\CreateApiImportUserJobRequest.cs" />
+    <Compile Include="V20220331\Models\CreateApiImportUserJobResponse.cs" />
+    <Compile Include="V20220331\Models\CreateFileExportUserJobRequest.cs" />
+    <Compile Include="V20220331\Models\CreateFileExportUserJobResponse.cs" />
     <Compile Include="V20220331\Models\CreateUserRequest.cs" />
     <Compile Include="V20220331\Models\CreateUserResponse.cs" />
     <Compile Include="V20220331\Models\DeleteUsersRequest.cs" />
     <Compile Include="V20220331\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20220331\Models\DescribeUserByIdRequest.cs" />
     <Compile Include="V20220331\Models\DescribeUserByIdResponse.cs" />
+    <Compile Include="V20220331\Models\ErrorDetails.cs" />
+    <Compile Include="V20220331\Models\ExportPropertyMap.cs" />
+    <Compile Include="V20220331\Models\FailedUsers.cs" />
     <Compile Include="V20220331\Models\Filter.cs" />
+    <Compile Include="V20220331\Models\ImportUser.cs" />
+    <Compile Include="V20220331\Models\Job.cs" />
     <Compile Include="V20220331\Models\LinkAccountRequest.cs" />
     <Compile Include="V20220331\Models\LinkAccountResponse.cs" />
+    <Compile Include="V20220331\Models\ListJobsRequest.cs" />
+    <Compile Include="V20220331\Models\ListJobsResponse.cs" />
     <Compile Include="V20220331\Models\ListUserByPropertyRequest.cs" />
     <Compile Include="V20220331\Models\ListUserByPropertyResponse.cs" />
     <Compile Include="V20220331\Models\ListUserRequest.cs" />
@@ -62,6 +73,8 @@
     <Compile Include="V20220331\Models\Pageable.cs" />
     <Compile Include="V20220331\Models\ResetPasswordRequest.cs" />
     <Compile Include="V20220331\Models\ResetPasswordResponse.cs" />
+    <Compile Include="V20220331\Models\Salt.cs" />
+    <Compile Include="V20220331\Models\SaltLocation.cs" />
     <Compile Include="V20220331\Models\SetPasswordRequest.cs" />
     <Compile Include="V20220331\Models\SetPasswordResponse.cs" />
     <Compile Include="V20220331\Models\UpdateUserRequest.cs" />

@@ -31,6 +31,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string InputType{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 输入的视频文件信息，当 InputType 为 File 时必填。
         /// </summary>
         [JsonProperty("FileInfos")]
@@ -86,12 +92,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("ExtInfo")]
         public string ExtInfo{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -99,6 +99,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArrayObj(map, prefix + "StreamInfos.", this.StreamInfos);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
@@ -108,7 +109,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

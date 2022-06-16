@@ -53,6 +53,86 @@ namespace TencentCloud.Ciam.V20220331
         }
 
         /// <summary>
+        /// 新建接口导入用户任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiImportUserJobRequest"/></param>
+        /// <returns><see cref="CreateApiImportUserJobResponse"/></returns>
+        public async Task<CreateApiImportUserJobResponse> CreateApiImportUserJob(CreateApiImportUserJobRequest req)
+        {
+             JsonResponseModel<CreateApiImportUserJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApiImportUserJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiImportUserJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建接口导入用户任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateApiImportUserJobRequest"/></param>
+        /// <returns><see cref="CreateApiImportUserJobResponse"/></returns>
+        public CreateApiImportUserJobResponse CreateApiImportUserJobSync(CreateApiImportUserJobRequest req)
+        {
+             JsonResponseModel<CreateApiImportUserJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApiImportUserJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApiImportUserJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建文件导出用户任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileExportUserJobRequest"/></param>
+        /// <returns><see cref="CreateFileExportUserJobResponse"/></returns>
+        public async Task<CreateFileExportUserJobResponse> CreateFileExportUserJob(CreateFileExportUserJobRequest req)
+        {
+             JsonResponseModel<CreateFileExportUserJobResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFileExportUserJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileExportUserJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建文件导出用户任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFileExportUserJobRequest"/></param>
+        /// <returns><see cref="CreateFileExportUserJobResponse"/></returns>
+        public CreateFileExportUserJobResponse CreateFileExportUserJobSync(CreateFileExportUserJobRequest req)
+        {
+             JsonResponseModel<CreateFileExportUserJobResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFileExportUserJob");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFileExportUserJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建用户
         /// </summary>
         /// <param name="req"><see cref="CreateUserRequest"/></param>
@@ -204,6 +284,46 @@ namespace TencentCloud.Ciam.V20220331
              {
                  var strResp = this.InternalRequestSync(req, "LinkAccount");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<LinkAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务详情
+        /// </summary>
+        /// <param name="req"><see cref="ListJobsRequest"/></param>
+        /// <returns><see cref="ListJobsResponse"/></returns>
+        public async Task<ListJobsResponse> ListJobs(ListJobsRequest req)
+        {
+             JsonResponseModel<ListJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询任务详情
+        /// </summary>
+        /// <param name="req"><see cref="ListJobsRequest"/></param>
+        /// <returns><see cref="ListJobsResponse"/></returns>
+        public ListJobsResponse ListJobsSync(ListJobsRequest req)
+        {
+             JsonResponseModel<ListJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListJobsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

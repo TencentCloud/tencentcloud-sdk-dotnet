@@ -49,7 +49,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// ddos策略组id 集合
+        /// ddos策略组id列表
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 协议类型,{tcp,udp,all}
+        /// 子域名列表
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }

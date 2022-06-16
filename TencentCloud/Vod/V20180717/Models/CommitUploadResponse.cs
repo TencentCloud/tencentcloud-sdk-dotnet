@@ -32,14 +32,12 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 媒体播放地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
 
         /// <summary>
         /// 媒体封面地址。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CoverUrl")]
         public string CoverUrl{ get; set; }

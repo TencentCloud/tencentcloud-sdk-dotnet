@@ -2093,6 +2093,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 七层查询缓存分析时序类流量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
+        public async Task<DescribeTimingL7CacheDataResponse> DescribeTimingL7CacheData(DescribeTimingL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTimingL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 七层查询缓存分析时序类流量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTimingL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTimingL7CacheDataResponse"/></returns>
+        public DescribeTimingL7CacheDataResponse DescribeTimingL7CacheDataSync(DescribeTimingL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTimingL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTimingL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTimingL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询top类流量数据
         /// </summary>
         /// <param name="req"><see cref="DescribeTopL7AnalysisDataRequest"/></param>
@@ -2124,6 +2164,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTopL7AnalysisData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7AnalysisDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 七层查询缓存分析top类流量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
+        public async Task<DescribeTopL7CacheDataResponse> DescribeTopL7CacheData(DescribeTopL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTopL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7CacheDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 七层查询缓存分析top类流量数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTopL7CacheDataRequest"/></param>
+        /// <returns><see cref="DescribeTopL7CacheDataResponse"/></returns>
+        public DescribeTopL7CacheDataResponse DescribeTopL7CacheDataSync(DescribeTopL7CacheDataRequest req)
+        {
+             JsonResponseModel<DescribeTopL7CacheDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTopL7CacheData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTopL7CacheDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

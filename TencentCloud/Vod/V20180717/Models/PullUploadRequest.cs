@@ -26,10 +26,16 @@ namespace TencentCloud.Vod.V20180717.Models
         
         /// <summary>
         /// 要拉取的媒体 URL，暂不支持拉取 Dash 格式（可以支持 HLS）。
-        /// 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。
+        /// 支持的扩展名详见[媒体类型](https://cloud.tencent.com/document/product/266/9760#.E5.AA.92.E4.BD.93.E7.B1.BB.E5.9E.8B)。请确保媒体 URL 可以访问。
         /// </summary>
         [JsonProperty("MediaUrl")]
         public string MediaUrl{ get; set; }
+
+        /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
 
         /// <summary>
         /// 媒体名称。
@@ -88,12 +94,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ExtInfo{ get; set; }
 
         /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。
         /// </summary>
         [JsonProperty("SourceContext")]
@@ -106,6 +106,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "MediaUrl", this.MediaUrl);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
@@ -115,7 +116,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
         }
     }

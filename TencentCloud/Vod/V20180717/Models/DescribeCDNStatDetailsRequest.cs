@@ -46,6 +46,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 域名列表。一次最多查询20个域名的数据。默认返回所有域名叠加的用量数据。
         /// </summary>
         [JsonProperty("DomainNames")]
@@ -130,12 +136,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DataInterval")]
         public ulong? DataInterval{ get; set; }
 
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -145,12 +145,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
             this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArraySimple(map, prefix + "Districts.", this.Districts);
             this.SetParamArraySimple(map, prefix + "Isps.", this.Isps);
             this.SetParamSimple(map, prefix + "DataInterval", this.DataInterval);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

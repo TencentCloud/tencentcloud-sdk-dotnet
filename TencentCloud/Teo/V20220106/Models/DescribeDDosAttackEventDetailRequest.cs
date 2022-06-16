@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 时间id
+        /// 事件id
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }

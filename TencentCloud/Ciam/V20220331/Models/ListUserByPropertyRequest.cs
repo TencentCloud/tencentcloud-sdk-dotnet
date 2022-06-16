@@ -31,7 +31,10 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string UserStoreId{ get; set; }
 
         /// <summary>
-        /// 查询的属性（支持phoneNumber，email）
+        /// 查询的属性
+        /// 
+        /// <li> **phoneNumber** </li>	  手机号码
+        /// <li> **email** </li>  邮箱
         /// </summary>
         [JsonProperty("PropertyCode")]
         public string PropertyCode{ get; set; }

@@ -37,6 +37,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+        /// 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 统计时间粒度，有效值：
         /// <li>Minute：以5分钟为粒度。</li>
         /// <li>Day：以天为粒度。</li>
@@ -66,13 +73,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string StorageType{ get; set; }
 
         /// <summary>
-        /// 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// 查询的存储区域，有效值：
         /// <li>Chinese Mainland：中国境内（不包含港澳台）。</li>
         /// <li>Outside Chinese Mainland：中国境外。</li>
@@ -89,9 +89,9 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }

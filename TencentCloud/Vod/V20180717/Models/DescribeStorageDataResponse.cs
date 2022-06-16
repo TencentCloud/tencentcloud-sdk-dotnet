@@ -37,16 +37,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalStorage{ get; set; }
 
         /// <summary>
+        /// 当前标准存储量，单位是字节。
+        /// </summary>
+        [JsonProperty("StandardStorage")]
+        public ulong? StandardStorage{ get; set; }
+
+        /// <summary>
         /// 当前低频存储量，单位是字节。
         /// </summary>
         [JsonProperty("InfrequentStorage")]
         public ulong? InfrequentStorage{ get; set; }
 
         /// <summary>
-        /// 当前标准存储量，单位是字节。
+        /// 当前归档存储量，单位是字节。
         /// </summary>
-        [JsonProperty("StandardStorage")]
-        public ulong? StandardStorage{ get; set; }
+        [JsonProperty("ArchiveStorage")]
+        public ulong? ArchiveStorage{ get; set; }
+
+        /// <summary>
+        /// 当前深度归档存储量，单位是字节。
+        /// </summary>
+        [JsonProperty("DeepArchiveStorage")]
+        public ulong? DeepArchiveStorage{ get; set; }
 
         /// <summary>
         /// 各计费区域的存储用量。
@@ -68,8 +80,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "MediaCount", this.MediaCount);
             this.SetParamSimple(map, prefix + "TotalStorage", this.TotalStorage);
-            this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
             this.SetParamSimple(map, prefix + "StandardStorage", this.StandardStorage);
+            this.SetParamSimple(map, prefix + "InfrequentStorage", this.InfrequentStorage);
+            this.SetParamSimple(map, prefix + "ArchiveStorage", this.ArchiveStorage);
+            this.SetParamSimple(map, prefix + "DeepArchiveStorage", this.DeepArchiveStorage);
             this.SetParamArrayObj(map, prefix + "StorageStat.", this.StorageStat);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }

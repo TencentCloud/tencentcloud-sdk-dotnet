@@ -37,7 +37,11 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string UserId{ get; set; }
 
         /// <summary>
-        /// NORMAL（正常）,LOCK（锁定）,FREEZE（冻结）,请传英文大写字母
+        /// 用户状态
+        /// 
+        /// <li> **NORMAL** </li>	  正常
+        /// <li> **LOCK** </li>  锁定
+        /// <li> **FREEZE** </li>	  冻结
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

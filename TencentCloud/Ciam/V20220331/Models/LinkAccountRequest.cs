@@ -43,7 +43,10 @@ namespace TencentCloud.Ciam.V20220331.Models
         public string SecondaryUserId{ get; set; }
 
         /// <summary>
-        /// 融合属性(PHONENUMBER,EMAIL)
+        /// 融合属性
+        /// 
+        /// <li> **PHONENUMBER** </li>	  手机号码
+        /// <li> **EMAIL** </li>  邮箱
         /// </summary>
         [JsonProperty("UserLinkedOnAttribute")]
         public string UserLinkedOnAttribute{ get; set; }

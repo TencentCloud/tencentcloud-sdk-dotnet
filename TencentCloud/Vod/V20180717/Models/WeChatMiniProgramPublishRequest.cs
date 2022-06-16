@@ -31,16 +31,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 发布视频所对应的转码模板 ID，为0代表原始视频。
-        /// </summary>
-        [JsonProperty("SourceDefinition")]
-        public long? SourceDefinition{ get; set; }
-
-        /// <summary>
         /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
         /// </summary>
         [JsonProperty("SubAppId")]
         public ulong? SubAppId{ get; set; }
+
+        /// <summary>
+        /// 发布视频所对应的转码模板 ID，为0代表原始视频。
+        /// </summary>
+        [JsonProperty("SourceDefinition")]
+        public long? SourceDefinition{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamSimple(map, prefix + "SourceDefinition", this.SourceDefinition);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamSimple(map, prefix + "SourceDefinition", this.SourceDefinition);
         }
     }
 }

@@ -45,6 +45,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DataType{ get; set; }
 
         /// <summary>
+        /// <b>点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
+        /// 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 用量数据的时间粒度，单位：分钟，取值有：
         /// <li>5：5 分钟粒度，返回指定查询时间内5分钟粒度的明细数据。</li>
         /// <li>60：小时粒度，返回指定查询时间内1小时粒度的数据。</li>
@@ -60,13 +67,6 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("DomainNames")]
         public string[] DomainNames{ get; set; }
 
-        /// <summary>
-        /// 点播 [子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// 当该字段为1时，表示以管理员身份查询所有子应用（含主应用）的用量合计，此时时间粒度只支持天粒度。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,9 +76,9 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "DataType", this.DataType);
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "DataInterval", this.DataInterval);
             this.SetParamArraySimple(map, prefix + "DomainNames.", this.DomainNames);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
         }
     }
 }

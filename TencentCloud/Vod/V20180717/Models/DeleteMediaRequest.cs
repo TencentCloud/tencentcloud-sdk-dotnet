@@ -31,16 +31,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 指定本次需要删除的部分。默认值为 "[]", 表示删除媒体及其对应的全部视频处理文件。
         /// </summary>
         [JsonProperty("DeleteParts")]
         public MediaDeleteItem[] DeleteParts{ get; set; }
-
-        /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID 。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
-            this.SetParamArrayObj(map, prefix + "DeleteParts.", this.DeleteParts);
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
+            this.SetParamArrayObj(map, prefix + "DeleteParts.", this.DeleteParts);
         }
     }
 }

@@ -83,7 +83,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public long? Location{ get; set; }
 
         /// <summary>
-        /// 节点类型
+        /// 节点类型  如果为base 则为可用性拨测点，为空则为高级拨测点
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CodeType")]

@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string SortBy{ get; set; }
 
         /// <summary>
-        /// 排序方式，desc表示正序，asc表示反序
+        /// 排序方式，desc表示正序，asc表示反序，默认asc
         /// </summary>
         [JsonProperty("Sorting")]
         public string Sorting{ get; set; }

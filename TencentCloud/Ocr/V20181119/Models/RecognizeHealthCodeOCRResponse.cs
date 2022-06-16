@@ -67,6 +67,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string TestingTime{ get; set; }
 
         /// <summary>
+        /// 疫苗接种信息，返回接种针数或接种情况（允许返回空值）
+        /// </summary>
+        [JsonProperty("Vaccination")]
+        public string Vaccination{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -85,6 +91,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TestingInterval", this.TestingInterval);
             this.SetParamSimple(map, prefix + "TestingResult", this.TestingResult);
             this.SetParamSimple(map, prefix + "TestingTime", this.TestingTime);
+            this.SetParamSimple(map, prefix + "Vaccination", this.Vaccination);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

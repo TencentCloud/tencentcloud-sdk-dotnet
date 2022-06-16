@@ -5213,6 +5213,52 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 1. 刷新指定的 URL 列表。
+        /// 2. URL 的域名必须已在云点播中注册。
+        /// 3. 单次请求最多指定20个 URL。
+        /// 4. 默认刷新配额为每天100000个 URL。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshUrlCacheRequest"/></param>
+        /// <returns><see cref="RefreshUrlCacheResponse"/></returns>
+        public async Task<RefreshUrlCacheResponse> RefreshUrlCache(RefreshUrlCacheRequest req)
+        {
+             JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefreshUrlCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshUrlCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 1. 刷新指定的 URL 列表。
+        /// 2. URL 的域名必须已在云点播中注册。
+        /// 3. 单次请求最多指定20个 URL。
+        /// 4. 默认刷新配额为每天100000个 URL。
+        /// </summary>
+        /// <param name="req"><see cref="RefreshUrlCacheRequest"/></param>
+        /// <returns><see cref="RefreshUrlCacheResponse"/></returns>
+        public RefreshUrlCacheResponse RefreshUrlCacheSync(RefreshUrlCacheRequest req)
+        {
+             JsonResponseModel<RefreshUrlCacheResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefreshUrlCache");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefreshUrlCacheResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 重新设置用户自定义任务流模板的内容。  
         /// </summary>
         /// <param name="req"><see cref="ResetProcedureTemplateRequest"/></param>
@@ -5244,6 +5290,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "ResetProcedureTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResetProcedureTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当媒体文件的存储类型是归档存储或深度归档存储时，是不可访问的。如需访问，则需要调用本接口进行解冻，解冻后可访问的媒体文件是临时的，在有效期过后，则不可访问。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMediaRequest"/></param>
+        /// <returns><see cref="RestoreMediaResponse"/></returns>
+        public async Task<RestoreMediaResponse> RestoreMedia(RestoreMediaRequest req)
+        {
+             JsonResponseModel<RestoreMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestoreMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当媒体文件的存储类型是归档存储或深度归档存储时，是不可访问的。如需访问，则需要调用本接口进行解冻，解冻后可访问的媒体文件是临时的，在有效期过后，则不可访问。
+        /// </summary>
+        /// <param name="req"><see cref="RestoreMediaRequest"/></param>
+        /// <returns><see cref="RestoreMediaResponse"/></returns>
+        public RestoreMediaResponse RestoreMediaSync(RestoreMediaRequest req)
+        {
+             JsonResponseModel<RestoreMediaResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestoreMedia");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestoreMediaResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
