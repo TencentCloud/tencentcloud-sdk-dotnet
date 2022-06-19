@@ -44,9 +44,11 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// 8：通用机打发票
         /// 9：汽车票
         /// 10：轮船票
-        /// 11：增值税发票（卷票 ）
+        /// 11：增值税发票（卷票）
         /// 12：购车发票
         /// 13：过路过桥费发票
+        /// 15：非税发票
+        /// 16：全电发票
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }

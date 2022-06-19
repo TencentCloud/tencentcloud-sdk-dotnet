@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.538</VersionPrefix>
+    <VersionPrefix>3.0.539</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -67,6 +67,8 @@
     <Compile Include="V20210701\Models\DeployStrategyConf.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationPodsRequest.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationPodsResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationsStatusRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationsStatusResponse.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailRequest.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailResponse.cs" />
     <Compile Include="V20210701\Models\DescribeEnvironmentsRequest.cs" />
@@ -115,6 +117,7 @@
     <Compile Include="V20210701\Models\RollingUpdateApplicationByVersionRequest.cs" />
     <Compile Include="V20210701\Models\RollingUpdateApplicationByVersionResponse.cs" />
     <Compile Include="V20210701\Models\RunVersionPod.cs" />
+    <Compile Include="V20210701\Models\ServiceVersionBrief.cs" />
     <Compile Include="V20210701\Models\StopApplicationRequest.cs" />
     <Compile Include="V20210701\Models\StopApplicationResponse.cs" />
     <Compile Include="V20210701\Models\StorageConf.cs" />

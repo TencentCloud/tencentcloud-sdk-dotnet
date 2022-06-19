@@ -511,6 +511,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EsPrivateDomain")]
         public string EsPrivateDomain{ get; set; }
 
+        /// <summary>
+        /// 集群的配置组信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EsConfigSets")]
+        public EsConfigSetInfo[] EsConfigSets{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -591,6 +598,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "HealthStatus", this.HealthStatus);
             this.SetParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
             this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
+            this.SetParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
         }
     }
 }

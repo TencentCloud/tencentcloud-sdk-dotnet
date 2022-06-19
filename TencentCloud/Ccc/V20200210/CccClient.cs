@@ -133,6 +133,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 创建技能组
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="CreateCCCSkillGroupResponse"/></returns>
+        public async Task<CreateCCCSkillGroupResponse> CreateCCCSkillGroup(CreateCCCSkillGroupRequest req)
+        {
+             JsonResponseModel<CreateCCCSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCCCSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCCSkillGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建技能组
+        /// </summary>
+        /// <param name="req"><see cref="CreateCCCSkillGroupRequest"/></param>
+        /// <returns><see cref="CreateCCCSkillGroupResponse"/></returns>
+        public CreateCCCSkillGroupResponse CreateCCCSkillGroupSync(CreateCCCSkillGroupRequest req)
+        {
+             JsonResponseModel<CreateCCCSkillGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCCCSkillGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCCCSkillGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建外呼会话，当前仅支持双呼，即先使用平台号码呼出到坐席手机上，坐席接听后，然后再外呼用户，而且由于运营商频率限制，坐席手机号必须先加白名单，避免频控导致外呼失败。
         /// </summary>
         /// <param name="req"><see cref="CreateCallOutSessionRequest"/></param>

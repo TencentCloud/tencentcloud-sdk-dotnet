@@ -24,12 +24,19 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     public class DescribeSupportedHsmRequest : AbstractModel
     {
         
+        /// <summary>
+        /// Hsm类型，可选值all、virtulization、GHSM、EHSM、SHSM
+        /// </summary>
+        [JsonProperty("HsmType")]
+        public string HsmType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
         }
     }
 }

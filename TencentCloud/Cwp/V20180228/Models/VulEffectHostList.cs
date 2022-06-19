@@ -95,7 +95,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Description{ get; set; }
 
         /// <summary>
-        /// 版本信息 0=普通版本 1=专业版 2=旗舰版
+        /// 版本信息：0-基础版 1-专业版 2-旗舰版 3-普惠版
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostVersion")]
@@ -114,6 +114,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         [JsonProperty("FixStatusMsg")]
         public string FixStatusMsg{ get; set; }
+
+        /// <summary>
+        /// 首次发现时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstDiscoveryTime")]
+        public string FirstDiscoveryTime{ get; set; }
+
+        /// <summary>
+        /// 实例状态："PENDING"-创建中 "LAUNCH_FAILED"-创建失败 "RUNNING"-运行中 "STOPPED"-关机 "STARTING"-表示开机中 "STOPPING"-表示关机中 "REBOOTING"-重启中 "SHUTDOWN"-表示停止待销毁 "TERMINATING"-表示销毁中 "
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceState")]
+        public string InstanceState{ get; set; }
 
 
         /// <summary>
@@ -134,6 +148,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "HostVersion", this.HostVersion);
             this.SetParamSimple(map, prefix + "IsSupportAutoFix", this.IsSupportAutoFix);
             this.SetParamSimple(map, prefix + "FixStatusMsg", this.FixStatusMsg);
+            this.SetParamSimple(map, prefix + "FirstDiscoveryTime", this.FirstDiscoveryTime);
+            this.SetParamSimple(map, prefix + "InstanceState", this.InstanceState);
         }
     }
 }

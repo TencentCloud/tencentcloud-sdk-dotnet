@@ -37,7 +37,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 商品的时间大小
+        /// 商品的时间大小，整型参数，举例：当TimeSpan为1，TImeUnit为m时，表示询价购买时长为1个月时的价格
         /// </summary>
         [JsonProperty("TimeSpan")]
         public string TimeSpan{ get; set; }
@@ -60,6 +60,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// Hsm服务类型，可选值virtualization、physical、GHSM、EHSM、SHSM
+        /// </summary>
+        [JsonProperty("HsmType")]
+        public string HsmType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
             this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
         }
     }
 }

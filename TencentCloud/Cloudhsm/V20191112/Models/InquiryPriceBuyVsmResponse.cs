@@ -25,7 +25,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
     {
         
         /// <summary>
-        /// 原始总金额
+        /// 原始总金额，浮点型参数，精确到小数点后两位，如：2000.99
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TotalCost")]
@@ -53,7 +53,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 应付总金额
+        /// 应付总金额，浮点型参数，精确到小数点后两位，如：2000.99
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalCost")]

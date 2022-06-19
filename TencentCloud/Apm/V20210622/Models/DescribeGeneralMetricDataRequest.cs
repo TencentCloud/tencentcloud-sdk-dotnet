@@ -50,7 +50,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 视图名称
+        /// 视图名称，不可自定义输入。支持：service_metric
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }

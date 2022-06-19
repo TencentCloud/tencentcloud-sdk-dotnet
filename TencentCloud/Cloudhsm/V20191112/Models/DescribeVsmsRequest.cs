@@ -54,6 +54,12 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
         [JsonProperty("Manufacturer")]
         public string Manufacturer{ get; set; }
 
+        /// <summary>
+        /// Hsm服务类型，可选virtualization、physical、GHSM、EHSM、SHSM、all
+        /// </summary>
+        [JsonProperty("HsmType")]
+        public string HsmType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Cloudhsm.V20191112.Models
             this.SetParamSimple(map, prefix + "SearchWord", this.SearchWord);
             this.SetParamArrayObj(map, prefix + "TagFilters.", this.TagFilters);
             this.SetParamSimple(map, prefix + "Manufacturer", this.Manufacturer);
+            this.SetParamSimple(map, prefix + "HsmType", this.HsmType);
         }
     }
 }

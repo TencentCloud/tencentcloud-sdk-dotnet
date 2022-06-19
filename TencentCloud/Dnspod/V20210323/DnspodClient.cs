@@ -573,6 +573,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAnalyticsRequest"/></param>
+        /// <returns><see cref="DescribeDomainAnalyticsResponse"/></returns>
+        public async Task<DescribeDomainAnalyticsResponse> DescribeDomainAnalytics(DescribeDomainAnalyticsRequest req)
+        {
+             JsonResponseModel<DescribeDomainAnalyticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainAnalytics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAnalyticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计各个域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainAnalyticsRequest"/></param>
+        /// <returns><see cref="DescribeDomainAnalyticsResponse"/></returns>
+        public DescribeDomainAnalyticsResponse DescribeDomainAnalyticsSync(DescribeDomainAnalyticsRequest req)
+        {
+             JsonResponseModel<DescribeDomainAnalyticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainAnalytics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainAnalyticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>
@@ -884,6 +924,46 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRecordType");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordTypeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubdomainAnalyticsRequest"/></param>
+        /// <returns><see cref="DescribeSubdomainAnalyticsResponse"/></returns>
+        public async Task<DescribeSubdomainAnalyticsResponse> DescribeSubdomainAnalytics(DescribeSubdomainAnalyticsRequest req)
+        {
+             JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSubdomainAnalytics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 统计子域名的解析量，帮助您了解流量情况、时间段分布。支持查看近 3 个月内的统计情况。仅付费套餐域名可用。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSubdomainAnalyticsRequest"/></param>
+        /// <returns><see cref="DescribeSubdomainAnalyticsResponse"/></returns>
+        public DescribeSubdomainAnalyticsResponse DescribeSubdomainAnalyticsSync(DescribeSubdomainAnalyticsRequest req)
+        {
+             JsonResponseModel<DescribeSubdomainAnalyticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSubdomainAnalytics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSubdomainAnalyticsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -48,6 +48,12 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("LanguageEnvironment")]
         public string LanguageEnvironment{ get; set; }
 
+        /// <summary>
+        /// 上报方式
+        /// </summary>
+        [JsonProperty("ReportMethod")]
+        public string ReportMethod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "AgentType", this.AgentType);
             this.SetParamSimple(map, prefix + "NetworkMode", this.NetworkMode);
             this.SetParamSimple(map, prefix + "LanguageEnvironment", this.LanguageEnvironment);
+            this.SetParamSimple(map, prefix + "ReportMethod", this.ReportMethod);
         }
     }
 }

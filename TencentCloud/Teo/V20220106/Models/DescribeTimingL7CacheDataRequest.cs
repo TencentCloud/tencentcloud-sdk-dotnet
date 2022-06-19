@@ -55,7 +55,9 @@ namespace TencentCloud.Teo.V20220106.Models
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 筛选条件
+        /// 筛选条件，筛选EO/源站响应如下：
+        /// EO响应：{Key: "cacheType", Value: ["hit"], Operator: "equals"}；
+        /// 源站响应：{Key: "cacheType", Value: ["miss", "dynamic"], Operator: "equals"}
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

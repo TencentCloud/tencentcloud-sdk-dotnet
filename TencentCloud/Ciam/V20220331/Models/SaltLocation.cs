@@ -24,12 +24,26 @@ namespace TencentCloud.Ciam.V20220331.Models
     public class SaltLocation : AbstractModel
     {
         
+        /// <summary>
+        /// 密码加盐的类型（HEAD，TAIL，OTHER）
+        /// </summary>
+        [JsonProperty("SaltLocationTypeEnum")]
+        public string SaltLocationTypeEnum{ get; set; }
+
+        /// <summary>
+        /// 加盐规则
+        /// </summary>
+        [JsonProperty("SaltLocationRule")]
+        public SaltLocationRule SaltLocationRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SaltLocationTypeEnum", this.SaltLocationTypeEnum);
+            this.SetParamObj(map, prefix + "SaltLocationRule.", this.SaltLocationRule);
         }
     }
 }

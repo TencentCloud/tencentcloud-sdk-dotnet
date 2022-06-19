@@ -234,6 +234,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("Tags")]
         public Tags[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否已忽略到期通知
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsIgnore")]
+        public bool? IsIgnore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -270,6 +277,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamArraySimple(map, prefix + "BoundResource.", this.BoundResource);
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
         }
     }
 }
