@@ -55,7 +55,7 @@ namespace TencentCloud.Iotvideo.V20201215.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 单次获取的历史数据项目的最大数量, 缺省10
+        /// 查询数据项目的最大数量, 默认为10。假设传Size=10，返回的实际事件数量为N，则 5 <= N <= 10。
         /// </summary>
         [JsonProperty("Size")]
         public ulong? Size{ get; set; }

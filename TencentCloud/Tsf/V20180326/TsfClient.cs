@@ -133,6 +133,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 关联日志配置项到应用
+        /// </summary>
+        /// <param name="req"><see cref="AssociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="AssociateBusinessLogConfigResponse"/></returns>
+        public async Task<AssociateBusinessLogConfigResponse> AssociateBusinessLogConfig(AssociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<AssociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联日志配置项到应用
+        /// </summary>
+        /// <param name="req"><see cref="AssociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="AssociateBusinessLogConfigResponse"/></returns>
+        public AssociateBusinessLogConfigResponse AssociateBusinessLogConfigSync(AssociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<AssociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联投递配置到部署组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateConfigWithGroupRequest"/></param>
+        /// <returns><see cref="AssociateConfigWithGroupResponse"/></returns>
+        public async Task<AssociateConfigWithGroupResponse> AssociateConfigWithGroup(AssociateConfigWithGroupRequest req)
+        {
+             JsonResponseModel<AssociateConfigWithGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AssociateConfigWithGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateConfigWithGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关联投递配置到部署组
+        /// </summary>
+        /// <param name="req"><see cref="AssociateConfigWithGroupRequest"/></param>
+        /// <returns><see cref="AssociateConfigWithGroupResponse"/></returns>
+        public AssociateConfigWithGroupResponse AssociateConfigWithGroupSync(AssociateConfigWithGroupRequest req)
+        {
+             JsonResponseModel<AssociateConfigWithGroupResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AssociateConfigWithGroup");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AssociateConfigWithGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 网关与API分组批量绑定
         /// </summary>
         /// <param name="req"><see cref="BindApiGroupRequest"/></param>
@@ -2215,6 +2295,46 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 查询应用关联日志配置项信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeApplicationBusinessLogConfigResponse"/></returns>
+        public async Task<DescribeApplicationBusinessLogConfigResponse> DescribeApplicationBusinessLogConfig(DescribeApplicationBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeApplicationBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用关联日志配置项信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeApplicationBusinessLogConfigResponse"/></returns>
+        public DescribeApplicationBusinessLogConfigResponse DescribeApplicationBusinessLogConfigSync(DescribeApplicationBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeApplicationBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取应用列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
@@ -2286,6 +2406,86 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBasicResourceUsage");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicResourceUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询业务日志配置项信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBusinessLogConfigResponse"/></returns>
+        public async Task<DescribeBusinessLogConfigResponse> DescribeBusinessLogConfig(DescribeBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询业务日志配置项信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeBusinessLogConfigResponse"/></returns>
+        public DescribeBusinessLogConfigResponse DescribeBusinessLogConfigSync(DescribeBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询日志配置项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeBusinessLogConfigsResponse"/></returns>
+        public async Task<DescribeBusinessLogConfigsResponse> DescribeBusinessLogConfigs(DescribeBusinessLogConfigsRequest req)
+        {
+             JsonResponseModel<DescribeBusinessLogConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBusinessLogConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessLogConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询日志配置项列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeBusinessLogConfigsResponse"/></returns>
+        public DescribeBusinessLogConfigsResponse DescribeBusinessLogConfigsSync(DescribeBusinessLogConfigsRequest req)
+        {
+             JsonResponseModel<DescribeBusinessLogConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBusinessLogConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessLogConfigsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2735,6 +2935,126 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 获取单个投递项配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigResponse"/></returns>
+        public async Task<DescribeDeliveryConfigResponse> DescribeDeliveryConfig(DescribeDeliveryConfigRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliveryConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取单个投递项配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigResponse"/></returns>
+        public DescribeDeliveryConfigResponse DescribeDeliveryConfigSync(DescribeDeliveryConfigRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliveryConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用部署组id获取绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigByGroupIdRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigByGroupIdResponse"/></returns>
+        public async Task<DescribeDeliveryConfigByGroupIdResponse> DescribeDeliveryConfigByGroupId(DescribeDeliveryConfigByGroupIdRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliveryConfigByGroupId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用部署组id获取绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigByGroupIdRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigByGroupIdResponse"/></returns>
+        public DescribeDeliveryConfigByGroupIdResponse DescribeDeliveryConfigByGroupIdSync(DescribeDeliveryConfigByGroupIdRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliveryConfigByGroupId");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigByGroupIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取多个投递项配置 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigsResponse"/></returns>
+        public async Task<DescribeDeliveryConfigsResponse> DescribeDeliveryConfigs(DescribeDeliveryConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDeliveryConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取多个投递项配置 
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDeliveryConfigsRequest"/></param>
+        /// <returns><see cref="DescribeDeliveryConfigsResponse"/></returns>
+        public DescribeDeliveryConfigsResponse DescribeDeliveryConfigsSync(DescribeDeliveryConfigsRequest req)
+        {
+             JsonResponseModel<DescribeDeliveryConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDeliveryConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeliveryConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// TSF上传的程序包存放在腾讯云对象存储（COS）中，通过该API可以获取从COS下载程序包需要的信息，包括包所在的桶、存储路径、鉴权信息等，之后使用COS API（或SDK）进行下载。
         /// COS相关文档请查阅：https://cloud.tencent.com/document/product/436
         /// </summary>
@@ -3128,6 +3448,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "DescribeGroupBindedGateways");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupBindedGatewaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询分组管理日志配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupBusinessLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeGroupBusinessLogConfigsResponse"/></returns>
+        public async Task<DescribeGroupBusinessLogConfigsResponse> DescribeGroupBusinessLogConfigs(DescribeGroupBusinessLogConfigsRequest req)
+        {
+             JsonResponseModel<DescribeGroupBusinessLogConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGroupBusinessLogConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupBusinessLogConfigsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询分组管理日志配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGroupBusinessLogConfigsRequest"/></param>
+        /// <returns><see cref="DescribeGroupBusinessLogConfigsResponse"/></returns>
+        public DescribeGroupBusinessLogConfigsResponse DescribeGroupBusinessLogConfigsSync(DescribeGroupBusinessLogConfigsRequest req)
+        {
+             JsonResponseModel<DescribeGroupBusinessLogConfigsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGroupBusinessLogConfigs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGroupBusinessLogConfigsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5259,6 +5619,86 @@ namespace TencentCloud.Tsf.V20180326
         }
 
         /// <summary>
+        /// 取消关联业务日志配置项和应用
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DisassociateBusinessLogConfigResponse"/></returns>
+        public async Task<DisassociateBusinessLogConfigResponse> DisassociateBusinessLogConfig(DisassociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DisassociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消关联业务日志配置项和应用
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="DisassociateBusinessLogConfigResponse"/></returns>
+        public DisassociateBusinessLogConfigResponse DisassociateBusinessLogConfigSync(DisassociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<DisassociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消关联投递信息和部署组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateKafkaConfigRequest"/></param>
+        /// <returns><see cref="DisassociateKafkaConfigResponse"/></returns>
+        public async Task<DisassociateKafkaConfigResponse> DisassociateKafkaConfig(DisassociateKafkaConfigRequest req)
+        {
+             JsonResponseModel<DisassociateKafkaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisassociateKafkaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateKafkaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 取消关联投递信息和部署组
+        /// </summary>
+        /// <param name="req"><see cref="DisassociateKafkaConfigRequest"/></param>
+        /// <returns><see cref="DisassociateKafkaConfigResponse"/></returns>
+        public DisassociateKafkaConfigResponse DisassociateKafkaConfigSync(DisassociateKafkaConfigRequest req)
+        {
+             JsonResponseModel<DisassociateKafkaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisassociateKafkaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisassociateKafkaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 下线Api分组
         /// </summary>
         /// <param name="req"><see cref="DraftApiGroupRequest"/></param>
@@ -5932,6 +6372,46 @@ namespace TencentCloud.Tsf.V20180326
              {
                  var strResp = this.InternalRequestSync(req, "OperateApplicationTcrBinding");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<OperateApplicationTcrBindingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重关联业务日志配置
+        /// </summary>
+        /// <param name="req"><see cref="ReassociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="ReassociateBusinessLogConfigResponse"/></returns>
+        public async Task<ReassociateBusinessLogConfigResponse> ReassociateBusinessLogConfig(ReassociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<ReassociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReassociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReassociateBusinessLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 重关联业务日志配置
+        /// </summary>
+        /// <param name="req"><see cref="ReassociateBusinessLogConfigRequest"/></param>
+        /// <returns><see cref="ReassociateBusinessLogConfigResponse"/></returns>
+        public ReassociateBusinessLogConfigResponse ReassociateBusinessLogConfigSync(ReassociateBusinessLogConfigRequest req)
+        {
+             JsonResponseModel<ReassociateBusinessLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReassociateBusinessLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReassociateBusinessLogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

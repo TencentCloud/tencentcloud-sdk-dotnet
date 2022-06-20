@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OneSdkAppIdTranscodeTimeUsagesNewInfo : AbstractModel
+    public class DisassociateBusinessLogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 旁路转码时长查询结果数组
+        /// 业务日志配置项ID列表
         /// </summary>
-        [JsonProperty("SdkAppIdTranscodeTimeUsages")]
-        public SdkAppIdTrtcMcuTranscodeTimeNewUsage[] SdkAppIdTranscodeTimeUsages{ get; set; }
+        [JsonProperty("ConfigIdList")]
+        public string[] ConfigIdList{ get; set; }
 
         /// <summary>
-        /// 查询记录数量
+        /// TSF分组ID
         /// </summary>
-        [JsonProperty("TotalNum")]
-        public ulong? TotalNum{ get; set; }
-
-        /// <summary>
-        /// 所查询的应用ID，可能值为:1-应用的应用ID，2-total，显示为total则表示查询的是所有应用的用量合计值。
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public string SdkAppId{ get; set; }
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "SdkAppIdTranscodeTimeUsages.", this.SdkAppIdTranscodeTimeUsages);
-            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamArraySimple(map, prefix + "ConfigIdList.", this.ConfigIdList);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

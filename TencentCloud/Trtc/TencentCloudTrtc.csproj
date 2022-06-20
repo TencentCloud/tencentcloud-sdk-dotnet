@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.540</VersionPrefix>
+    <VersionPrefix>3.0.541</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,8 +90,6 @@
     <Compile Include="V20190722\Models\EventList.cs" />
     <Compile Include="V20190722\Models\EventMessage.cs" />
     <Compile Include="V20190722\Models\LayoutParams.cs" />
-    <Compile Include="V20190722\Models\MeasureTrtcMcuExternalRequest.cs" />
-    <Compile Include="V20190722\Models\MeasureTrtcMcuExternalResponse.cs" />
     <Compile Include="V20190722\Models\MixLayout.cs" />
     <Compile Include="V20190722\Models\MixLayoutParams.cs" />
     <Compile Include="V20190722\Models\MixTranscodeParams.cs" />
@@ -100,7 +98,6 @@
     <Compile Include="V20190722\Models\ModifyPictureRequest.cs" />
     <Compile Include="V20190722\Models\ModifyPictureResponse.cs" />
     <Compile Include="V20190722\Models\OneSdkAppIdTranscodeTimeUsagesInfo.cs" />
-    <Compile Include="V20190722\Models\OneSdkAppIdTranscodeTimeUsagesNewInfo.cs" />
     <Compile Include="V20190722\Models\OutputParams.cs" />
     <Compile Include="V20190722\Models\PictureInfo.cs" />
     <Compile Include="V20190722\Models\PresetLayoutConfig.cs" />
@@ -116,7 +113,6 @@
     <Compile Include="V20190722\Models\ScaleInfomation.cs" />
     <Compile Include="V20190722\Models\SdkAppIdNewTrtcTimeUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdRecordUsage.cs" />
-    <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeNewUsage.cs" />
     <Compile Include="V20190722\Models\SdkAppIdTrtcMcuTranscodeTimeUsage.cs" />
     <Compile Include="V20190722\Models\SmallVideoLayoutParams.cs" />
     <Compile Include="V20190722\Models\StartMCUMixTranscodeByStrRoomIdRequest.cs" />

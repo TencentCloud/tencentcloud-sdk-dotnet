@@ -819,54 +819,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询旁路转码计费时长。
-        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-        /// - 单次查询统计区间最多不能超过2天。
-        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
-        /// </summary>
-        /// <param name="req"><see cref="MeasureTrtcMcuExternalRequest"/></param>
-        /// <returns><see cref="MeasureTrtcMcuExternalResponse"/></returns>
-        public async Task<MeasureTrtcMcuExternalResponse> MeasureTrtcMcuExternal(MeasureTrtcMcuExternalRequest req)
-        {
-             JsonResponseModel<MeasureTrtcMcuExternalResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "MeasureTrtcMcuExternal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MeasureTrtcMcuExternalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询旁路转码计费时长。
-        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
-        /// - 单次查询统计区间最多不能超过2天。
-        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
-        /// - 日结后付费将于次日上午推送账单，建议次日上午9点以后再来查询前一天的用量。
-        /// </summary>
-        /// <param name="req"><see cref="MeasureTrtcMcuExternalRequest"/></param>
-        /// <returns><see cref="MeasureTrtcMcuExternalResponse"/></returns>
-        public MeasureTrtcMcuExternalResponse MeasureTrtcMcuExternalSync(MeasureTrtcMcuExternalRequest req)
-        {
-             JsonResponseModel<MeasureTrtcMcuExternalResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "MeasureTrtcMcuExternal");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<MeasureTrtcMcuExternalResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
         /// </summary>
         /// <param name="req"><see cref="ModifyCloudRecordingRequest"/></param>

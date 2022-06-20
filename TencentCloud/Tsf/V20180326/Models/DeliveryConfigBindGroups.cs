@@ -15,33 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Tsf.V20180326.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MeasureTrtcMcuExternalRequest : AbstractModel
+    public class DeliveryConfigBindGroups : AbstractModel
     {
         
         /// <summary>
-        /// 查询开始时间，格式为YYYY-MM-DD。
+        /// 公共条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，格式为YYYY-MM-DD。
-        /// 单次查询统计区间最多不能超过2天。
+        /// 内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 应用ID，可不传。传应用ID时返回的是该应用的用量，不传时返回多个应用的合计值。
-        /// </summary>
-        [JsonProperty("SdkAppId")]
-        public ulong? SdkAppId{ get; set; }
+        [JsonProperty("Content")]
+        public DeliveryConfigBindGroup[] Content{ get; set; }
 
 
         /// <summary>
@@ -49,9 +44,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "SdkAppId", this.SdkAppId);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "Content.", this.Content);
         }
     }
 }

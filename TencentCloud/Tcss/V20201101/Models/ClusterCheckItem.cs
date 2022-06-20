@@ -135,6 +135,27 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("AffectedVersion")]
         public string AffectedVersion{ get; set; }
 
+        /// <summary>
+        /// 忽略的资产数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IgnoredAssetNum")]
+        public long? IgnoredAssetNum{ get; set; }
+
+        /// <summary>
+        /// 是否忽略该检测项
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsIgnored")]
+        public bool? IsIgnored{ get; set; }
+
+        /// <summary>
+        /// 受影响评估
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskAssessment")]
+        public string RiskAssessment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +178,9 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "RelateLink", this.RelateLink);
             this.SetParamSimple(map, prefix + "AffectedType", this.AffectedType);
             this.SetParamSimple(map, prefix + "AffectedVersion", this.AffectedVersion);
+            this.SetParamSimple(map, prefix + "IgnoredAssetNum", this.IgnoredAssetNum);
+            this.SetParamSimple(map, prefix + "IsIgnored", this.IsIgnored);
+            this.SetParamSimple(map, prefix + "RiskAssessment", this.RiskAssessment);
         }
     }
 }

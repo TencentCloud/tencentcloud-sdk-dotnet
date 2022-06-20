@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{DA95AE5B-1DB3-3342-A5B5-EA1C4CB7B305}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.540</VersionPrefix>
+    <VersionPrefix>3.0.541</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,10 +63,17 @@
     <Compile Include="V20180326\Models\ApiVersionArray.cs" />
     <Compile Include="V20180326\Models\ApplicationAttribute.cs" />
     <Compile Include="V20180326\Models\ApplicationForPage.cs" />
+    <Compile Include="V20180326\Models\AssociateBusinessLogConfigRequest.cs" />
+    <Compile Include="V20180326\Models\AssociateBusinessLogConfigResponse.cs" />
+    <Compile Include="V20180326\Models\AssociateConfigWithGroupRequest.cs" />
+    <Compile Include="V20180326\Models\AssociateConfigWithGroupResponse.cs" />
     <Compile Include="V20180326\Models\BindApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\BindApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\BindPluginRequest.cs" />
     <Compile Include="V20180326\Models\BindPluginResponse.cs" />
+    <Compile Include="V20180326\Models\BusinesLogConfigAssociatedGroup.cs" />
+    <Compile Include="V20180326\Models\BusinessLogConfig.cs" />
+    <Compile Include="V20180326\Models\BusinessLogConfigSchema.cs" />
     <Compile Include="V20180326\Models\BusinessLogV2.cs" />
     <Compile Include="V20180326\Models\ChangeApiUsableStatusRequest.cs" />
     <Compile Include="V20180326\Models\ChangeApiUsableStatusResponse.cs" />
@@ -162,6 +169,8 @@
     <Compile Include="V20180326\Models\DeleteUnitNamespacesResponse.cs" />
     <Compile Include="V20180326\Models\DeleteUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\DeleteUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\DeliveryConfigBindGroup.cs" />
+    <Compile Include="V20180326\Models\DeliveryConfigBindGroups.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\DeployContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\DeployGroupRequest.cs" />
@@ -180,12 +189,18 @@
     <Compile Include="V20180326\Models\DescribeApiVersionsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationAttributeRequest.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationAttributeResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeApplicationBusinessLogConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeApplicationBusinessLogConfigResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationRequest.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationResponse.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationsRequest.cs" />
     <Compile Include="V20180326\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeBasicResourceUsageRequest.cs" />
     <Compile Include="V20180326\Models\DescribeBasicResourceUsageResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeBusinessLogConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeBusinessLogConfigResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeBusinessLogConfigsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeBusinessLogConfigsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20180326\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180326\Models\DescribeConfigReleaseLogsRequest.cs" />
@@ -208,6 +223,12 @@
     <Compile Include="V20180326\Models\DescribeContainerGroupsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeCreateGatewayApiStatusRequest.cs" />
     <Compile Include="V20180326\Models\DescribeCreateGatewayApiStatusResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigByGroupIdRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigByGroupIdResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeDeliveryConfigsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoRequest.cs" />
     <Compile Include="V20180326\Models\DescribeDownloadInfoResponse.cs" />
     <Compile Include="V20180326\Models\DescribeEnabledUnitRuleRequest.cs" />
@@ -226,6 +247,8 @@
     <Compile Include="V20180326\Models\DescribeGroupAttributeResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupBindedGatewaysResponse.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupBusinessLogConfigsRequest.cs" />
+    <Compile Include="V20180326\Models\DescribeGroupBusinessLogConfigsResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupGatewaysRequest.cs" />
     <Compile Include="V20180326\Models\DescribeGroupGatewaysResponse.cs" />
     <Compile Include="V20180326\Models\DescribeGroupInstancesRequest.cs" />
@@ -334,6 +357,10 @@
     <Compile Include="V20180326\Models\DisableUnitRouteResponse.cs" />
     <Compile Include="V20180326\Models\DisableUnitRuleRequest.cs" />
     <Compile Include="V20180326\Models\DisableUnitRuleResponse.cs" />
+    <Compile Include="V20180326\Models\DisassociateBusinessLogConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DisassociateBusinessLogConfigResponse.cs" />
+    <Compile Include="V20180326\Models\DisassociateKafkaConfigRequest.cs" />
+    <Compile Include="V20180326\Models\DisassociateKafkaConfigResponse.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupRequest.cs" />
     <Compile Include="V20180326\Models\DraftApiGroupResponse.cs" />
     <Compile Include="V20180326\Models\EnableTaskFlowRequest.cs" />
@@ -364,6 +391,7 @@
     <Compile Include="V20180326\Models\GatewayVo.cs" />
     <Compile Include="V20180326\Models\GroupApiUseStatistics.cs" />
     <Compile Include="V20180326\Models\GroupDailyUseStatistics.cs" />
+    <Compile Include="V20180326\Models\GroupInfo.cs" />
     <Compile Include="V20180326\Models\GroupPod.cs" />
     <Compile Include="V20180326\Models\GroupPodResult.cs" />
     <Compile Include="V20180326\Models\GroupRelease.cs" />
@@ -385,6 +413,7 @@
     <Compile Include="V20180326\Models\InvocationIndicator.cs" />
     <Compile Include="V20180326\Models\InvocationMetricScatterPlot.cs" />
     <Compile Include="V20180326\Models\JvmMonitorData.cs" />
+    <Compile Include="V20180326\Models\KafkaDeliveryConfig.cs" />
     <Compile Include="V20180326\Models\LaneGroup.cs" />
     <Compile Include="V20180326\Models\LaneInfo.cs" />
     <Compile Include="V20180326\Models\LaneInfos.cs" />
@@ -440,6 +469,8 @@
     <Compile Include="V20180326\Models\PropertyField.cs" />
     <Compile Include="V20180326\Models\ProtocolPort.cs" />
     <Compile Include="V20180326\Models\QuantileEntity.cs" />
+    <Compile Include="V20180326\Models\ReassociateBusinessLogConfigRequest.cs" />
+    <Compile Include="V20180326\Models\ReassociateBusinessLogConfigResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchRequest.cs" />
     <Compile Include="V20180326\Models\RedoTaskBatchResponse.cs" />
     <Compile Include="V20180326\Models\RedoTaskExecuteRequest.cs" />
@@ -485,6 +516,7 @@
     <Compile Include="V20180326\Models\ShrinkInstancesResponse.cs" />
     <Compile Include="V20180326\Models\SimpleApplication.cs" />
     <Compile Include="V20180326\Models\SimpleGroup.cs" />
+    <Compile Include="V20180326\Models\SimpleKafkaDeliveryConfig.cs" />
     <Compile Include="V20180326\Models\StartContainerGroupRequest.cs" />
     <Compile Include="V20180326\Models\StartContainerGroupResponse.cs" />
     <Compile Include="V20180326\Models\StartGroupRequest.cs" />
@@ -513,6 +545,7 @@
     <Compile Include="V20180326\Models\TsfPageApiDetailInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApiGroupInfo.cs" />
     <Compile Include="V20180326\Models\TsfPageApplication.cs" />
+    <Compile Include="V20180326\Models\TsfPageBusinessLogConfig.cs" />
     <Compile Include="V20180326\Models\TsfPageBusinessLogV2.cs" />
     <Compile Include="V20180326\Models\TsfPageCluster.cs" />
     <Compile Include="V20180326\Models\TsfPageConfig.cs" />

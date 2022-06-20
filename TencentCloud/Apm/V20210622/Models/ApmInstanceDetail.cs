@@ -59,7 +59,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string CreateUin{ get; set; }
 
         /// <summary>
-        /// 该实例已上报的服务数
+        /// 该实例已上报的服务端应用数量
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ServiceCount")]
@@ -176,6 +176,20 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("LogTopicID")]
         public string LogTopicID{ get; set; }
 
+        /// <summary>
+        /// 该实例已上报的客户端应用数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientCount")]
+        public long? ClientCount{ get; set; }
+
+        /// <summary>
+        /// 该实例已上报的总应用数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +218,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "LogSource", this.LogSource);
             this.SetParamSimple(map, prefix + "IsRelatedLog", this.IsRelatedLog);
             this.SetParamSimple(map, prefix + "LogTopicID", this.LogTopicID);
+            this.SetParamSimple(map, prefix + "ClientCount", this.ClientCount);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
         }
     }
 }
