@@ -25,28 +25,35 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 用户端实际 ip，示例值：14.17.22.32
+        /// 用户端实际 ip。汇付渠道必填。
         /// </summary>
         [JsonProperty("PayerClientIp")]
         public string PayerClientIp{ get; set; }
 
         /// <summary>
-        /// 浏览器 User-Agent
+        /// 浏览器 User-Agent。
         /// </summary>
         [JsonProperty("PayerUa")]
         public string PayerUa{ get; set; }
 
         /// <summary>
-        /// 用户下单时间，若不上送，服务端默认当前时间
+        /// 用户下单时间。若不上送，服务端默认当前时间。
         /// </summary>
         [JsonProperty("OrderTime")]
         public string OrderTime{ get; set; }
 
         /// <summary>
-        /// 终端设备号（门店号或收银设备 ID），示例值：POS1:1
+        /// 终端设备号（门店号或收银设备 ID），示例值：POS1:1。
         /// </summary>
         [JsonProperty("DeviceId")]
         public string DeviceId{ get; set; }
+
+        /// <summary>
+        /// 终端设备类型。MOBILE_BROWSER:手机浏览器，MOBILE_APP:手机应用程序，TABLET:平板；WATCH:手表，PC:电脑PC，OTHER:其他。
+        /// 汇付渠道必填。
+        /// </summary>
+        [JsonProperty("DeviceType")]
+        public string DeviceType{ get; set; }
 
 
         /// <summary>
@@ -58,6 +65,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PayerUa", this.PayerUa);
             this.SetParamSimple(map, prefix + "OrderTime", this.OrderTime);
             this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "DeviceType", this.DeviceType);
         }
     }
 }

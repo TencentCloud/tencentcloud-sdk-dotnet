@@ -172,6 +172,20 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ShortEdgeAsHeight")]
         public long? ShortEdgeAsHeight{ get; set; }
 
+        /// <summary>
+        /// DRM 加密类型，可选值：fairplay、normalaes、widevine。
+        /// 不传递或着为空字符串，清空之前的DRM配置。
+        /// </summary>
+        [JsonProperty("DRMType")]
+        public string DRMType{ get; set; }
+
+        /// <summary>
+        /// DRM 加密项，可选值：AUDIO、SD、HD、UHD1、UHD2，后四个为一组，同组中的内容只能选一个。
+        /// 不传递或着为空字符串，清空之前的DRM配置。
+        /// </summary>
+        [JsonProperty("DRMTracks")]
+        public string DRMTracks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +212,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "AiTransCode", this.AiTransCode);
             this.SetParamSimple(map, prefix + "AdaptBitratePercent", this.AdaptBitratePercent);
             this.SetParamSimple(map, prefix + "ShortEdgeAsHeight", this.ShortEdgeAsHeight);
+            this.SetParamSimple(map, prefix + "DRMType", this.DRMType);
+            this.SetParamSimple(map, prefix + "DRMTracks", this.DRMTracks);
         }
     }
 }

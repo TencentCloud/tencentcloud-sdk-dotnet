@@ -25,22 +25,28 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 商品标题，默认值“商品支付”
+        /// 商品标题。默认值“商品支付”。
         /// </summary>
         [JsonProperty("GoodsName")]
         public string GoodsName{ get; set; }
 
         /// <summary>
-        /// 商品详细描述（商品列表）
+        /// 商品详细描述（商品列表）。
         /// </summary>
         [JsonProperty("GoodsDetail")]
         public string GoodsDetail{ get; set; }
 
         /// <summary>
-        /// 银行附言，不可以有以下字符：<>+{}()%*&';"[]等特殊符号
+        /// 银行附言。不可以有以下字符：<>+{}()%*&';"[]等特殊符号
         /// </summary>
         [JsonProperty("GoodsDescription")]
         public string GoodsDescription{ get; set; }
+
+        /// <summary>
+        /// 业务类型。汇付渠道必填，汇付渠道传入固定值100099。
+        /// </summary>
+        [JsonProperty("GoodsBizType")]
+        public string GoodsBizType{ get; set; }
 
 
         /// <summary>
@@ -51,6 +57,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "GoodsName", this.GoodsName);
             this.SetParamSimple(map, prefix + "GoodsDetail", this.GoodsDetail);
             this.SetParamSimple(map, prefix + "GoodsDescription", this.GoodsDescription);
+            this.SetParamSimple(map, prefix + "GoodsBizType", this.GoodsBizType);
         }
     }
 }

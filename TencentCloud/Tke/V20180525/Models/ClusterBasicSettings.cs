@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// 集群系统。centos7.2x86_64 或者 ubuntu16.04.1 LTSx86_64，默认取值为ubuntu16.04.1 LTSx86_64
+        /// 集群系统，支持的os：https://cloud.tencent.com/document/product/457/68289
         /// </summary>
         [JsonProperty("ClusterOs")]
         public string ClusterOs{ get; set; }

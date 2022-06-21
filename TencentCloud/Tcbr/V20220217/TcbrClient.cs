@@ -293,6 +293,86 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
+        /// 操作发布单
+        /// </summary>
+        /// <param name="req"><see cref="OperateServerManageRequest"/></param>
+        /// <returns><see cref="OperateServerManageResponse"/></returns>
+        public async Task<OperateServerManageResponse> OperateServerManage(OperateServerManageRequest req)
+        {
+             JsonResponseModel<OperateServerManageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OperateServerManage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OperateServerManageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 操作发布单
+        /// </summary>
+        /// <param name="req"><see cref="OperateServerManageRequest"/></param>
+        /// <returns><see cref="OperateServerManageResponse"/></returns>
+        public OperateServerManageResponse OperateServerManageSync(OperateServerManageRequest req)
+        {
+             JsonResponseModel<OperateServerManageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OperateServerManage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OperateServerManageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灰度发布
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseGrayRequest"/></param>
+        /// <returns><see cref="ReleaseGrayResponse"/></returns>
+        public async Task<ReleaseGrayResponse> ReleaseGray(ReleaseGrayRequest req)
+        {
+             JsonResponseModel<ReleaseGrayResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReleaseGray");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseGrayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灰度发布
+        /// </summary>
+        /// <param name="req"><see cref="ReleaseGrayRequest"/></param>
+        /// <returns><see cref="ReleaseGrayResponse"/></returns>
+        public ReleaseGrayResponse ReleaseGraySync(ReleaseGrayRequest req)
+        {
+             JsonResponseModel<ReleaseGrayResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReleaseGray");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReleaseGrayResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新云托管服务
         /// </summary>
         /// <param name="req"><see cref="UpdateCloudRunServerRequest"/></param>

@@ -217,6 +217,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口 (AdjustPublicAddress) 用于更换IP地址，支持更换CVM实例的普通公网IP和包月带宽的EIP。
+        /// </summary>
+        /// <param name="req"><see cref="AdjustPublicAddressRequest"/></param>
+        /// <returns><see cref="AdjustPublicAddressResponse"/></returns>
+        public async Task<AdjustPublicAddressResponse> AdjustPublicAddress(AdjustPublicAddressRequest req)
+        {
+             JsonResponseModel<AdjustPublicAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AdjustPublicAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdjustPublicAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (AdjustPublicAddress) 用于更换IP地址，支持更换CVM实例的普通公网IP和包月带宽的EIP。
+        /// </summary>
+        /// <param name="req"><see cref="AdjustPublicAddressRequest"/></param>
+        /// <returns><see cref="AdjustPublicAddressResponse"/></returns>
+        public AdjustPublicAddressResponse AdjustPublicAddressSync(AdjustPublicAddressRequest req)
+        {
+             JsonResponseModel<AdjustPublicAddressResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AdjustPublicAddress");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AdjustPublicAddressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (AllocateAddresses) 用于申请一个或多个[弹性公网IP](https://cloud.tencent.com/document/product/213/1941)（简称 EIP）。
         /// * EIP 是专为动态云计算设计的静态 IP 地址。借助 EIP，您可以快速将 EIP 重新映射到您的另一个实例上，从而屏蔽实例故障。
         /// * 您的 EIP 与腾讯云账户相关联，而不是与某个实例相关联。在您选择显式释放该地址，或欠费超过24小时之前，它会一直与您的腾讯云账户保持关联。

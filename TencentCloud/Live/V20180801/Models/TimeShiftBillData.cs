@@ -31,7 +31,7 @@ namespace TencentCloud.Live.V20180801.Models
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 时移文件时长,单位分钟。
+        /// 时移文件时长，单位分钟。
         /// </summary>
         [JsonProperty("Duration")]
         public float? Duration{ get; set; }
@@ -48,6 +48,12 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Time")]
         public string Time{ get; set; }
 
+        /// <summary>
+        /// 时移总时长，单位分钟。
+        /// </summary>
+        [JsonProperty("TotalDuration")]
+        public float? TotalDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "StoragePeriod", this.StoragePeriod);
             this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "TotalDuration", this.TotalDuration);
         }
     }
 }

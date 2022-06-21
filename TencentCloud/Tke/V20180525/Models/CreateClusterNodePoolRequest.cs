@@ -85,7 +85,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string RuntimeVersion{ get; set; }
 
         /// <summary>
-        /// 节点池os
+        /// 节点池os，当为自定义镜像时，传镜像id；否则为公共镜像的osName
         /// </summary>
         [JsonProperty("NodePoolOs")]
         public string NodePoolOs{ get; set; }

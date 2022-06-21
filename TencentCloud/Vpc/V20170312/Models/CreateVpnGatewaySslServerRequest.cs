@@ -78,6 +78,24 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("Compress")]
         public bool? Compress{ get; set; }
 
+        /// <summary>
+        /// 是否开启SSO认证
+        /// </summary>
+        [JsonProperty("SsoEnabled")]
+        public bool? SsoEnabled{ get; set; }
+
+        /// <summary>
+        /// 是否开启策略访问控制
+        /// </summary>
+        [JsonProperty("AccessPolicyEnabled")]
+        public bool? AccessPolicyEnabled{ get; set; }
+
+        /// <summary>
+        /// SAML-DATA
+        /// </summary>
+        [JsonProperty("SamlData")]
+        public string SamlData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "IntegrityAlgorithm", this.IntegrityAlgorithm);
             this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
+            this.SetParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
+            this.SetParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
+            this.SetParamSimple(map, prefix + "SamlData", this.SamlData);
         }
     }
 }

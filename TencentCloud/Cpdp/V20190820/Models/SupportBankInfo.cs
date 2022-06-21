@@ -52,6 +52,21 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("BankNotice")]
         public string BankNotice{ get; set; }
 
+        /// <summary>
+        /// 支持银行代码
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BankId")]
+        public string BankId{ get; set; }
+
+        /// <summary>
+        /// 卡类型。
+        /// D：借记卡，C：信用卡，Z：借贷合一卡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CardType")]
+        public string CardType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +77,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "BankName", this.BankName);
             this.SetParamSimple(map, prefix + "MaintainStatus", this.MaintainStatus);
             this.SetParamSimple(map, prefix + "BankNotice", this.BankNotice);
+            this.SetParamSimple(map, prefix + "BankId", this.BankId);
+            this.SetParamSimple(map, prefix + "CardType", this.CardType);
         }
     }
 }
