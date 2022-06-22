@@ -43,22 +43,28 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 策略标签
-        /// </summary>
-        [JsonProperty("Tag")]
-        public PolicyTag Tag{ get; set; }
-
-        /// <summary>
         /// 产品类型
         /// </summary>
         [JsonProperty("ServiceType")]
         public string ServiceType{ get; set; }
 
         /// <summary>
+        /// 策略标签
+        /// </summary>
+        [JsonProperty("Tag")]
+        public PolicyTag Tag{ get; set; }
+
+        /// <summary>
         /// 实例分组ID
         /// </summary>
         [JsonProperty("InstanceGroupId")]
         public long? InstanceGroupId{ get; set; }
+
+        /// <summary>
+        /// 批量绑定标签
+        /// </summary>
+        [JsonProperty("BatchTag")]
+        public PolicyTag[] BatchTag{ get; set; }
 
 
         /// <summary>
@@ -69,9 +75,10 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "PolicyId", this.PolicyId);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
-            this.SetParamObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "ServiceType", this.ServiceType);
+            this.SetParamObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "InstanceGroupId", this.InstanceGroupId);
+            this.SetParamArrayObj(map, prefix + "BatchTag.", this.BatchTag);
         }
     }
 }

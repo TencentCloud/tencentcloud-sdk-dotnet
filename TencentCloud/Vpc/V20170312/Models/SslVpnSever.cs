@@ -123,6 +123,30 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
+        /// <summary>
+        /// 是否开启SSO认证。1：开启  0： 不开启
+        /// </summary>
+        [JsonProperty("SsoEnabled")]
+        public ulong? SsoEnabled{ get; set; }
+
+        /// <summary>
+        /// EIAM应用ID
+        /// </summary>
+        [JsonProperty("EiamApplicationId")]
+        public string EiamApplicationId{ get; set; }
+
+        /// <summary>
+        /// 是否开启策略控制。0：不开启 1： 开启
+        /// </summary>
+        [JsonProperty("AccessPolicyEnabled")]
+        public ulong? AccessPolicyEnabled{ get; set; }
+
+        /// <summary>
+        /// 策略信息
+        /// </summary>
+        [JsonProperty("AccessPolicy")]
+        public AccessPolicy[] AccessPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -144,6 +168,10 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Compress", this.Compress);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamSimple(map, prefix + "SsoEnabled", this.SsoEnabled);
+            this.SetParamSimple(map, prefix + "EiamApplicationId", this.EiamApplicationId);
+            this.SetParamSimple(map, prefix + "AccessPolicyEnabled", this.AccessPolicyEnabled);
+            this.SetParamArrayObj(map, prefix + "AccessPolicy.", this.AccessPolicy);
         }
     }
 }

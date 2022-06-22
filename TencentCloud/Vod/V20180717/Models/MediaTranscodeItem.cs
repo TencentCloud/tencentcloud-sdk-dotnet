@@ -55,7 +55,8 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 媒体文件总大小（视频为 HLS 时，大小是 m3u8 和 ts 文件大小的总和），单位：字节。
+        /// 媒体文件总大小，单位：字节。
+        /// <li>当媒体文件为 HLS 时，大小是 m3u8 和 ts 文件大小的总和。</li>
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -67,28 +68,28 @@ namespace TencentCloud.Vod.V20180717.Models
         public float? Duration{ get; set; }
 
         /// <summary>
-        /// 容器类型，例如 m4a，mp4 等。
-        /// </summary>
-        [JsonProperty("Container")]
-        public string Container{ get; set; }
-
-        /// <summary>
         /// 视频的 md5 值。
         /// </summary>
         [JsonProperty("Md5")]
         public string Md5{ get; set; }
 
         /// <summary>
-        /// 音频流信息。
+        /// 容器类型，例如 m4a，mp4 等。
         /// </summary>
-        [JsonProperty("AudioStreamSet")]
-        public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
+        [JsonProperty("Container")]
+        public string Container{ get; set; }
 
         /// <summary>
         /// 视频流信息。
         /// </summary>
         [JsonProperty("VideoStreamSet")]
         public MediaVideoStreamItem[] VideoStreamSet{ get; set; }
+
+        /// <summary>
+        /// 音频流信息。
+        /// </summary>
+        [JsonProperty("AudioStreamSet")]
+        public MediaAudioStreamItem[] AudioStreamSet{ get; set; }
 
 
         /// <summary>
@@ -103,10 +104,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
-            this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
-            this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
+            this.SetParamSimple(map, prefix + "Container", this.Container);
             this.SetParamArrayObj(map, prefix + "VideoStreamSet.", this.VideoStreamSet);
+            this.SetParamArrayObj(map, prefix + "AudioStreamSet.", this.AudioStreamSet);
         }
     }
 }

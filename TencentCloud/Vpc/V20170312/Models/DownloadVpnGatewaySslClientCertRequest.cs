@@ -30,6 +30,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SslVpnClientId")]
         public string SslVpnClientId{ get; set; }
 
+        /// <summary>
+        /// SAML-TOKEN
+        /// </summary>
+        [JsonProperty("SamlToken")]
+        public string SamlToken{ get; set; }
+
+        /// <summary>
+        /// VPN门户网站使用。默认Flase
+        /// </summary>
+        [JsonProperty("IsVpnPortal")]
+        public bool? IsVpnPortal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +49,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SslVpnClientId", this.SslVpnClientId);
+            this.SetParamSimple(map, prefix + "SamlToken", this.SamlToken);
+            this.SetParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
         }
     }
 }

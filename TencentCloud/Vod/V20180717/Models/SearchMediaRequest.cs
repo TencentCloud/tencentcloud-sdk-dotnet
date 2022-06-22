@@ -25,6 +25,12 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
+        /// <b>点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。</b>
+        /// </summary>
+        [JsonProperty("SubAppId")]
+        public ulong? SubAppId{ get; set; }
+
+        /// <summary>
         /// 文件 ID 集合，匹配集合中的任意元素。
         /// <li>数组长度限制：10。</li>
         /// <li>单个 ID 长度限制：40个字符。</li>
@@ -65,7 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
 
         /// <summary>
         /// 标签集合，匹配集合中任意元素。
-        /// <li>单个标签长度限制：8个字符。</li>
+        /// <li>单个标签长度限制：16个字符。</li>
         /// <li>数组长度限制：10。</li>
         /// </summary>
         [JsonProperty("Tags")]
@@ -162,12 +168,6 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageRegions{ get; set; }
 
         /// <summary>
-        /// 点播[子应用](/document/product/266/14574) ID。如果要访问子应用中的资源，则将该字段填写为子应用 ID；否则无需填写该字段。
-        /// </summary>
-        [JsonProperty("SubAppId")]
-        public ulong? SubAppId{ get; set; }
-
-        /// <summary>
         /// 存储类型数组。可选值有：
         /// <li> STANDARD：标准存储。</li>
         /// <li> STANDARD_IA：低频存储。</li>
@@ -231,6 +231,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamArraySimple(map, prefix + "NamePrefixes.", this.NamePrefixes);
@@ -248,7 +249,6 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
-            this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);

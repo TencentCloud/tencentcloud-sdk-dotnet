@@ -53,6 +53,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// DNSPod商品下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDealRequest"/></param>
+        /// <returns><see cref="CreateDealResponse"/></returns>
+        public async Task<CreateDealResponse> CreateDeal(CreateDealRequest req)
+        {
+             JsonResponseModel<CreateDealResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DNSPod商品下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateDealRequest"/></param>
+        /// <returns><see cref="CreateDealResponse"/></returns>
+        public CreateDealResponse CreateDealSync(CreateDealRequest req)
+        {
+             JsonResponseModel<CreateDealResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDeal");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDealResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加域名
         /// </summary>
         /// <param name="req"><see cref="CreateDomainRequest"/></param>
@@ -1253,6 +1293,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        ///  DNS 解析套餐自动续费设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
+        /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>
+        public async Task<ModifyPackageAutoRenewResponse> ModifyPackageAutoRenew(ModifyPackageAutoRenewRequest req)
+        {
+             JsonResponseModel<ModifyPackageAutoRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyPackageAutoRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPackageAutoRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  DNS 解析套餐自动续费设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyPackageAutoRenewRequest"/></param>
+        /// <returns><see cref="ModifyPackageAutoRenewResponse"/></returns>
+        public ModifyPackageAutoRenewResponse ModifyPackageAutoRenewSync(ModifyPackageAutoRenewRequest req)
+        {
+             JsonResponseModel<ModifyPackageAutoRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyPackageAutoRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyPackageAutoRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改记录
         /// </summary>
         /// <param name="req"><see cref="ModifyRecordRequest"/></param>
@@ -1444,6 +1524,86 @@ namespace TencentCloud.Dnspod.V20210323
              {
                  var strResp = this.InternalRequestSync(req, "ModifySubdomainStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifySubdomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增值服务自动续费设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVasAutoRenewStatusRequest"/></param>
+        /// <returns><see cref="ModifyVasAutoRenewStatusResponse"/></returns>
+        public async Task<ModifyVasAutoRenewStatusResponse> ModifyVasAutoRenewStatus(ModifyVasAutoRenewStatusRequest req)
+        {
+             JsonResponseModel<ModifyVasAutoRenewStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyVasAutoRenewStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVasAutoRenewStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增值服务自动续费设置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyVasAutoRenewStatusRequest"/></param>
+        /// <returns><see cref="ModifyVasAutoRenewStatusResponse"/></returns>
+        public ModifyVasAutoRenewStatusResponse ModifyVasAutoRenewStatusSync(ModifyVasAutoRenewStatusRequest req)
+        {
+             JsonResponseModel<ModifyVasAutoRenewStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyVasAutoRenewStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVasAutoRenewStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DNSPod商品余额支付
+        /// </summary>
+        /// <param name="req"><see cref="PayOrderWithBalanceRequest"/></param>
+        /// <returns><see cref="PayOrderWithBalanceResponse"/></returns>
+        public async Task<PayOrderWithBalanceResponse> PayOrderWithBalance(PayOrderWithBalanceRequest req)
+        {
+             JsonResponseModel<PayOrderWithBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PayOrderWithBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayOrderWithBalanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DNSPod商品余额支付
+        /// </summary>
+        /// <param name="req"><see cref="PayOrderWithBalanceRequest"/></param>
+        /// <returns><see cref="PayOrderWithBalanceResponse"/></returns>
+        public PayOrderWithBalanceResponse PayOrderWithBalanceSync(PayOrderWithBalanceRequest req)
+        {
+             JsonResponseModel<PayOrderWithBalanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PayOrderWithBalance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayOrderWithBalanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

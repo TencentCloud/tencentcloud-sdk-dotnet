@@ -50,6 +50,20 @@ namespace TencentCloud.Cdn.V20180606.Models
         public string FileVerifyUrl{ get; set; }
 
         /// <summary>
+        /// 文件校验域名列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileVerifyDomains")]
+        public string[] FileVerifyDomains{ get; set; }
+
+        /// <summary>
+        /// 文件校验文件名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileVerifyName")]
+        public string FileVerifyName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +79,8 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Record", this.Record);
             this.SetParamSimple(map, prefix + "RecordType", this.RecordType);
             this.SetParamSimple(map, prefix + "FileVerifyUrl", this.FileVerifyUrl);
+            this.SetParamArraySimple(map, prefix + "FileVerifyDomains.", this.FileVerifyDomains);
+            this.SetParamSimple(map, prefix + "FileVerifyName", this.FileVerifyName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

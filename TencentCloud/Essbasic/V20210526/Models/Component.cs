@@ -149,6 +149,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ComponentDescription")]
         public string ComponentDescription{ get; set; }
 
+        /// <summary>
+        /// 指定关键字时横坐标偏移量
+        /// </summary>
+        [JsonProperty("OffsetX")]
+        public float? OffsetX{ get; set; }
+
+        /// <summary>
+        /// 指定关键字时纵坐标偏移量
+        /// </summary>
+        [JsonProperty("OffsetY")]
+        public float? OffsetY{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -171,6 +183,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ComponentDateFontSize", this.ComponentDateFontSize);
             this.SetParamSimple(map, prefix + "DocumentId", this.DocumentId);
             this.SetParamSimple(map, prefix + "ComponentDescription", this.ComponentDescription);
+            this.SetParamSimple(map, prefix + "OffsetX", this.OffsetX);
+            this.SetParamSimple(map, prefix + "OffsetY", this.OffsetY);
         }
     }
 }

@@ -37,7 +37,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public string Repo{ get; set; }
 
         /// <summary>
-        /// 分之名
+        /// 分支名
         /// </summary>
         [JsonProperty("Branch")]
         public string Branch{ get; set; }

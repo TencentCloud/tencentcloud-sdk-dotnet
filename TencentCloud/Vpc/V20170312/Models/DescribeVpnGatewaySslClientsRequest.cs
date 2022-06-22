@@ -53,6 +53,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("SslVpnClientIds")]
         public string[] SslVpnClientIds{ get; set; }
 
+        /// <summary>
+        /// VPN门户网站使用。默认是False。
+        /// </summary>
+        [JsonProperty("IsVpnPortal")]
+        public bool? IsVpnPortal{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -63,6 +69,7 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArraySimple(map, prefix + "SslVpnClientIds.", this.SslVpnClientIds);
+            this.SetParamSimple(map, prefix + "IsVpnPortal", this.IsVpnPortal);
         }
     }
 }

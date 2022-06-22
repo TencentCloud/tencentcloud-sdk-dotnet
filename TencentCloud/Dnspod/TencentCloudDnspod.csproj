@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{6871BDC8-3FEA-34C4-9C01-55CCD07191D7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.542</VersionPrefix>
+    <VersionPrefix>3.0.543</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -47,6 +47,8 @@
     <Compile Include="V20210323\DnspodClient.cs" />
     <Compile Include="V20210323\Models\AddRecordBatch.cs" />
     <Compile Include="V20210323\Models\BatchRecordInfo.cs" />
+    <Compile Include="V20210323\Models\CreateDealRequest.cs" />
+    <Compile Include="V20210323\Models\CreateDealResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainAliasRequest.cs" />
     <Compile Include="V20210323\Models\CreateDomainAliasResponse.cs" />
     <Compile Include="V20210323\Models\CreateDomainBatchDetail.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="V20210323\Models\CreateRecordBatchResponse.cs" />
     <Compile Include="V20210323\Models\CreateRecordRequest.cs" />
     <Compile Include="V20210323\Models\CreateRecordResponse.cs" />
+    <Compile Include="V20210323\Models\Deals.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasRequest.cs" />
     <Compile Include="V20210323\Models\DeleteDomainAliasResponse.cs" />
     <Compile Include="V20210323\Models\DeleteDomainRequest.cs" />
@@ -124,6 +127,8 @@
     <Compile Include="V20210323\Models\ModifyDomainUnlockResponse.cs" />
     <Compile Include="V20210323\Models\ModifyDynamicDNSRequest.cs" />
     <Compile Include="V20210323\Models\ModifyDynamicDNSResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyPackageAutoRenewRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyPackageAutoRenewResponse.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchDetail.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchRequest.cs" />
     <Compile Include="V20210323\Models\ModifyRecordBatchResponse.cs" />
@@ -135,6 +140,10 @@
     <Compile Include="V20210323\Models\ModifyRecordStatusResponse.cs" />
     <Compile Include="V20210323\Models\ModifySubdomainStatusRequest.cs" />
     <Compile Include="V20210323\Models\ModifySubdomainStatusResponse.cs" />
+    <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusRequest.cs" />
+    <Compile Include="V20210323\Models\ModifyVasAutoRenewStatusResponse.cs" />
+    <Compile Include="V20210323\Models\PayOrderWithBalanceRequest.cs" />
+    <Compile Include="V20210323\Models\PayOrderWithBalanceResponse.cs" />
     <Compile Include="V20210323\Models\PurviewInfo.cs" />
     <Compile Include="V20210323\Models\RecordCountInfo.cs" />
     <Compile Include="V20210323\Models\RecordInfo.cs" />

@@ -25,10 +25,22 @@ namespace TencentCloud.Vpc.V20170312.Models
     {
         
         /// <summary>
-        /// SSL-VPN-CLIENT 证书配置
+        /// 无
         /// </summary>
         [JsonProperty("SslClientConfigsSet")]
         public string SslClientConfigsSet{ get; set; }
+
+        /// <summary>
+        /// SSL-VPN client配置
+        /// </summary>
+        [JsonProperty("SslClientConfig")]
+        public SslClientConfig[] SslClientConfig{ get; set; }
+
+        /// <summary>
+        /// 是否鉴权成功 只有传入SamlToken 才生效
+        /// </summary>
+        [JsonProperty("Authenticated")]
+        public ulong? Authenticated{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +55,8 @@ namespace TencentCloud.Vpc.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SslClientConfigsSet", this.SslClientConfigsSet);
+            this.SetParamArrayObj(map, prefix + "SslClientConfig.", this.SslClientConfig);
+            this.SetParamSimple(map, prefix + "Authenticated", this.Authenticated);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

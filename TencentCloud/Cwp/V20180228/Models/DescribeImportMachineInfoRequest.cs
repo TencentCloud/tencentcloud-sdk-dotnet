@@ -43,8 +43,8 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? IsQueryProMachine{ get; set; }
 
         /// <summary>
-        /// 过滤条件。
-        /// <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship : 旗舰版 | ProtectedMachines: 专业版+旗舰版）</li>
+        /// 过滤条件：
+        /// <li>Version - String  是否必填：否 - 当前防护版本（ PRO_VERSION：专业版 | BASIC_VERSION：基础版 | Flagship：旗舰版 | ProtectedMachines：专业版+旗舰版） | BASIC_PROPOST_GENERAL_DISCOUNT：普惠版+专业版按量计费+基础版主机 | UnFlagship：专业版预付费+专业版后付费+基础版+普惠版</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
