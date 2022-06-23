@@ -150,6 +150,55 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("Diagnose")]
         public string Diagnose{ get; set; }
 
+        /// <summary>
+        /// 检查项目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckItem")]
+        public string CheckItem{ get; set; }
+
+        /// <summary>
+        /// 检查方法
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckMethod")]
+        public string CheckMethod{ get; set; }
+
+        /// <summary>
+        /// 诊断时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DiagnoseTime")]
+        public string DiagnoseTime{ get; set; }
+
+        /// <summary>
+        /// 体检号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HealthCheckupNum")]
+        public string HealthCheckupNum{ get; set; }
+
+        /// <summary>
+        /// 其它时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OtherTime")]
+        public string OtherTime{ get; set; }
+
+        /// <summary>
+        /// 打印时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PrintTime")]
+        public string PrintTime{ get; set; }
+
+        /// <summary>
+        /// 未归类时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Times")]
+        public Time[] Times{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +223,13 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "ReportName", this.ReportName);
             this.SetParamSimple(map, prefix + "UltraNum", this.UltraNum);
             this.SetParamSimple(map, prefix + "Diagnose", this.Diagnose);
+            this.SetParamSimple(map, prefix + "CheckItem", this.CheckItem);
+            this.SetParamSimple(map, prefix + "CheckMethod", this.CheckMethod);
+            this.SetParamSimple(map, prefix + "DiagnoseTime", this.DiagnoseTime);
+            this.SetParamSimple(map, prefix + "HealthCheckupNum", this.HealthCheckupNum);
+            this.SetParamSimple(map, prefix + "OtherTime", this.OtherTime);
+            this.SetParamSimple(map, prefix + "PrintTime", this.PrintTime);
+            this.SetParamArrayObj(map, prefix + "Times.", this.Times);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public IPAddress[] Addresses{ get; set; }
 
         /// <summary>
-        /// 集群的认证信息
+        /// 集群的认证信息（token只有请求是主账号才返回，子账户请使用返回的kubeconfig）
         /// </summary>
         [JsonProperty("Credential")]
         public ClusterCredential Credential{ get; set; }

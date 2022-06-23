@@ -293,6 +293,46 @@ namespace TencentCloud.Tcbr.V20220217
         }
 
         /// <summary>
+        /// 查询服务管理任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerManageTaskRequest"/></param>
+        /// <returns><see cref="DescribeServerManageTaskResponse"/></returns>
+        public async Task<DescribeServerManageTaskResponse> DescribeServerManageTask(DescribeServerManageTaskRequest req)
+        {
+             JsonResponseModel<DescribeServerManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeServerManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询服务管理任务信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeServerManageTaskRequest"/></param>
+        /// <returns><see cref="DescribeServerManageTaskResponse"/></returns>
+        public DescribeServerManageTaskResponse DescribeServerManageTaskSync(DescribeServerManageTaskRequest req)
+        {
+             JsonResponseModel<DescribeServerManageTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeServerManageTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeServerManageTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 操作发布单
         /// </summary>
         /// <param name="req"><see cref="OperateServerManageRequest"/></param>

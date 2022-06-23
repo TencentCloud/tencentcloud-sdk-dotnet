@@ -78,6 +78,13 @@ namespace TencentCloud.Mmps.V20200710.Models
         [JsonProperty("BehaviorTitle")]
         public string BehaviorTitle{ get; set; }
 
+        /// <summary>
+        /// 诊断风险项数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HighRiskCount")]
+        public long? HighRiskCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Mmps.V20200710.Models
             this.SetParamSimple(map, prefix + "ReportTitle", this.ReportTitle);
             this.SetParamSimple(map, prefix + "BehaviorUrl", this.BehaviorUrl);
             this.SetParamSimple(map, prefix + "BehaviorTitle", this.BehaviorTitle);
+            this.SetParamSimple(map, prefix + "HighRiskCount", this.HighRiskCount);
         }
     }
 }

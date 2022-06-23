@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.543</VersionPrefix>
+    <VersionPrefix>3.0.544</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -26,12 +26,12 @@
   </PropertyGroup>
 
   <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
     <Reference Include="System.Net.Http" />
-    <PackageReference Include="Newtonsoft.Json" Version="11.0.1" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
     <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
   </ItemGroup>
 
@@ -55,6 +55,8 @@
     <Compile Include="V20180724\Models\AlarmPolicyFilter.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyRule.cs" />
     <Compile Include="V20180724\Models\AlarmPolicyTriggerTask.cs" />
+    <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaRequest.cs" />
+    <Compile Include="V20180724\Models\BindPrometheusManagedGrafanaResponse.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectDimension.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\BindingPolicyObjectResponse.cs" />
@@ -70,10 +72,16 @@
     <Compile Include="V20180724\Models\CreateAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleRequest.cs" />
     <Compile Include="V20180724\Models\CreateAlertRuleResponse.cs" />
+    <Compile Include="V20180724\Models\CreateExporterIntegrationRequest.cs" />
+    <Compile Include="V20180724\Models\CreateExporterIntegrationResponse.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupCondition.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupEventCondition.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\CreatePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusAgentRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusAgentResponse.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusScrapeJobRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusScrapeJobResponse.cs" />
     <Compile Include="V20180724\Models\CreateServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\CreateServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DataPoint.cs" />
@@ -83,8 +91,12 @@
     <Compile Include="V20180724\Models\DeleteAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\DeleteAlertRulesRequest.cs" />
     <Compile Include="V20180724\Models\DeleteAlertRulesResponse.cs" />
+    <Compile Include="V20180724\Models\DeleteExporterIntegrationRequest.cs" />
+    <Compile Include="V20180724\Models\DeleteExporterIntegrationResponse.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\DeletePolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusScrapeJobsRequest.cs" />
+    <Compile Include="V20180724\Models\DeletePrometheusScrapeJobsResponse.cs" />
     <Compile Include="V20180724\Models\DeleteServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\DeleteServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DescribeAccidentEventListAlarms.cs" />
@@ -122,6 +134,8 @@
     <Compile Include="V20180724\Models\DescribeBindingPolicyObjectListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeConditionsTemplateListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeConditionsTemplateListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribeExporterIntegrationsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribeExporterIntegrationsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesRequest.cs" />
     <Compile Include="V20180724\Models\DescribeMonitorTypesResponse.cs" />
     <Compile Include="V20180724\Models\DescribePolicyConditionListCondition.cs" />
@@ -156,20 +170,30 @@
     <Compile Include="V20180724\Models\DescribeProductEventListResponse.cs" />
     <Compile Include="V20180724\Models\DescribeProductListRequest.cs" />
     <Compile Include="V20180724\Models\DescribeProductListResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAgentsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusAgentsResponse.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesRequest.cs" />
     <Compile Include="V20180724\Models\DescribePrometheusInstancesResponse.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsRequest.cs" />
+    <Compile Include="V20180724\Models\DescribePrometheusScrapeJobsResponse.cs" />
     <Compile Include="V20180724\Models\DescribeServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\DescribeServiceDiscoveryResponse.cs" />
     <Compile Include="V20180724\Models\DescribeStatisticDataRequest.cs" />
     <Compile Include="V20180724\Models\DescribeStatisticDataResponse.cs" />
+    <Compile Include="V20180724\Models\DestroyPrometheusInstanceRequest.cs" />
+    <Compile Include="V20180724\Models\DestroyPrometheusInstanceResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="V20180724\Models\EventCondition.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\GetMonitorDataResponse.cs" />
+    <Compile Include="V20180724\Models\GetPrometheusAgentManagementCommandRequest.cs" />
+    <Compile Include="V20180724\Models\GetPrometheusAgentManagementCommandResponse.cs" />
     <Compile Include="V20180724\Models\Instance.cs" />
     <Compile Include="V20180724\Models\InstanceGroup.cs" />
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
+    <Compile Include="V20180724\Models\IntegrationConfiguration.cs" />
+    <Compile Include="V20180724\Models\ManagementCommand.cs" />
     <Compile Include="V20180724\Models\Metric.cs" />
     <Compile Include="V20180724\Models\MetricConfig.cs" />
     <Compile Include="V20180724\Models\MetricData.cs" />
@@ -196,6 +220,8 @@
     <Compile Include="V20180724\Models\ModifyPolicyGroupEventCondition.cs" />
     <Compile Include="V20180724\Models\ModifyPolicyGroupRequest.cs" />
     <Compile Include="V20180724\Models\ModifyPolicyGroupResponse.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusInstanceAttributesRequest.cs" />
+    <Compile Include="V20180724\Models\ModifyPrometheusInstanceAttributesResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
     <Compile Include="V20180724\Models\Point.cs" />
@@ -203,10 +229,12 @@
     <Compile Include="V20180724\Models\PolicyGroupReceiverInfo.cs" />
     <Compile Include="V20180724\Models\PolicyTag.cs" />
     <Compile Include="V20180724\Models\ProductSimple.cs" />
+    <Compile Include="V20180724\Models\PrometheusAgent.cs" />
     <Compile Include="V20180724\Models\PrometheusInstanceGrantInfo.cs" />
     <Compile Include="V20180724\Models\PrometheusInstancesItem.cs" />
     <Compile Include="V20180724\Models\PrometheusRuleKV.cs" />
     <Compile Include="V20180724\Models\PrometheusRuleSet.cs" />
+    <Compile Include="V20180724\Models\PrometheusScrapeJob.cs" />
     <Compile Include="V20180724\Models\PrometheusTag.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataRequest.cs" />
     <Compile Include="V20180724\Models\PutMonitorDataResponse.cs" />
@@ -218,17 +246,31 @@
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
     <Compile Include="V20180724\Models\TagInstance.cs" />
     <Compile Include="V20180724\Models\TemplateGroup.cs" />
+    <Compile Include="V20180724\Models\TerminatePrometheusInstancesRequest.cs" />
+    <Compile Include="V20180724\Models\TerminatePrometheusInstancesResponse.cs" />
     <Compile Include="V20180724\Models\URLNotice.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingAllPolicyObjectResponse.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectRequest.cs" />
     <Compile Include="V20180724\Models\UnBindingPolicyObjectResponse.cs" />
+    <Compile Include="V20180724\Models\UnbindPrometheusManagedGrafanaRequest.cs" />
+    <Compile Include="V20180724\Models\UnbindPrometheusManagedGrafanaResponse.cs" />
+    <Compile Include="V20180724\Models\UninstallGrafanaDashboardRequest.cs" />
+    <Compile Include="V20180724\Models\UninstallGrafanaDashboardResponse.cs" />
     <Compile Include="V20180724\Models\UpdateAlertRuleRequest.cs" />
     <Compile Include="V20180724\Models\UpdateAlertRuleResponse.cs" />
     <Compile Include="V20180724\Models\UpdateAlertRuleStateRequest.cs" />
     <Compile Include="V20180724\Models\UpdateAlertRuleStateResponse.cs" />
+    <Compile Include="V20180724\Models\UpdateExporterIntegrationRequest.cs" />
+    <Compile Include="V20180724\Models\UpdateExporterIntegrationResponse.cs" />
+    <Compile Include="V20180724\Models\UpdatePrometheusAgentStatusRequest.cs" />
+    <Compile Include="V20180724\Models\UpdatePrometheusAgentStatusResponse.cs" />
+    <Compile Include="V20180724\Models\UpdatePrometheusScrapeJobRequest.cs" />
+    <Compile Include="V20180724\Models\UpdatePrometheusScrapeJobResponse.cs" />
     <Compile Include="V20180724\Models\UpdateServiceDiscoveryRequest.cs" />
     <Compile Include="V20180724\Models\UpdateServiceDiscoveryResponse.cs" />
+    <Compile Include="V20180724\Models\UpgradeGrafanaDashboardRequest.cs" />
+    <Compile Include="V20180724\Models\UpgradeGrafanaDashboardResponse.cs" />
     <Compile Include="V20180724\Models\UserNotice.cs" />
   </ItemGroup>
 </Project>

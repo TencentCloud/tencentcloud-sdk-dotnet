@@ -43,7 +43,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string OutSubMerchantId{ get; set; }
 
         /// <summary>
-        /// 渠道名称。
+        /// 渠道名称。详见附录-云企付枚举类说明-ChannelName。
         /// __TENPAY__: 商企付
         /// __WECHAT__: 微信支付
         /// __ALIPAY__: 支付宝
@@ -52,7 +52,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 支付方式。
+        /// 支付方式。详见附录-云企付枚举类说明-PaymentMethod。
         /// __EBANK_PAYMENT__: ebank支付
         /// __OPENBANK_PAYMENT__: openbank支付
         /// </summary>

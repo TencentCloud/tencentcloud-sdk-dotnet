@@ -31,7 +31,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string NetworkAclId{ get; set; }
 
         /// <summary>
-        /// 网络ACL规则集。
+        /// 网络ACL规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
         /// </summary>
         [JsonProperty("NetworkAclEntrySet")]
         public NetworkAclEntrySet NetworkAclEntrySet{ get; set; }

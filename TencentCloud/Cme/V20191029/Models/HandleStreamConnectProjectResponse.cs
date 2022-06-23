@@ -31,6 +31,13 @@ namespace TencentCloud.Cme.V20191029.Models
         public string StreamInputRtmpPushUrl{ get; set; }
 
         /// <summary>
+        /// 点播输入源播放进度信息，当 Operation 取值 DescribeInputPlayInfo 且 InputType 为 VodPull 类型时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VodPullInputPlayInfo")]
+        public VodPullInputPlayInfo VodPullInputPlayInfo{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Cme.V20191029.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "StreamInputRtmpPushUrl", this.StreamInputRtmpPushUrl);
+            this.SetParamObj(map, prefix + "VodPullInputPlayInfo.", this.VodPullInputPlayInfo);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -171,6 +171,13 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("MedicalInsuranceTypeCode")]
         public string MedicalInsuranceTypeCode{ get; set; }
 
+        /// <summary>
+        /// 床号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BedNo")]
+        public string BedNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "MarriedCode", this.MarriedCode);
             this.SetParamSimple(map, prefix + "ProfessionCode", this.ProfessionCode);
             this.SetParamSimple(map, prefix + "MedicalInsuranceTypeCode", this.MedicalInsuranceTypeCode);
+            this.SetParamSimple(map, prefix + "BedNo", this.BedNo);
         }
     }
 }

@@ -49,9 +49,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ThirdPayOrderId{ get; set; }
 
         /// <summary>
+        /// 订单状态。
         /// INIT：初始化
         /// PAYING：支付中
-        /// DEDUCTED：扣款成功
         /// ACCEPTED：支付受理成功
         /// SUCCESS：支付成功
         /// CLOSED：关单
@@ -122,6 +122,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("BankApprovalGuideInfo")]
         public OpenBankApprovalGuideInfo BankApprovalGuideInfo{ get; set; }
 
+        /// <summary>
+        /// 手续费金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeAmount")]
+        public long? FeeAmount{ get; set; }
+
+        /// <summary>
+        /// 手续费费率
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FeeRate")]
+        public long? FeeRate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +156,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
             this.SetParamSimple(map, prefix + "ExternalReturnData", this.ExternalReturnData);
             this.SetParamObj(map, prefix + "BankApprovalGuideInfo.", this.BankApprovalGuideInfo);
+            this.SetParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
+            this.SetParamSimple(map, prefix + "FeeRate", this.FeeRate);
         }
     }
 }
