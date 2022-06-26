@@ -48,6 +48,12 @@ namespace TencentCloud.Cii.V20210408.Models
         [JsonProperty("Location")]
         public Location Location{ get; set; }
 
+        /// <summary>
+        /// 字段名
+        /// </summary>
+        [JsonProperty("Field")]
+        public string Field{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cii.V20210408.Models
             this.SetParamSimple(map, prefix + "Value", this.Value);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamObj(map, prefix + "Location.", this.Location);
+            this.SetParamSimple(map, prefix + "Field", this.Field);
         }
     }
 }

@@ -114,6 +114,12 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("ClientIpHeader")]
         public ClientIp ClientIpHeader{ get; set; }
 
+        /// <summary>
+        /// 缓存预刷新配置
+        /// </summary>
+        [JsonProperty("CachePrefresh")]
+        public CachePrefresh CachePrefresh{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +141,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "SmartRouting.", this.SmartRouting);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
+            this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
         }
     }
 }

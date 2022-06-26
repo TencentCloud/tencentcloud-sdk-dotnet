@@ -135,6 +135,13 @@ namespace TencentCloud.Teo.V20220106.Models
         public ClientIp ClientIpHeader{ get; set; }
 
         /// <summary>
+        /// 缓存预刷新配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CachePrefresh")]
+        public CachePrefresh CachePrefresh{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -162,6 +169,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
+            this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

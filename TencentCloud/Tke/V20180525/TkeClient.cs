@@ -4773,6 +4773,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 操作TKEEdge集群的addon
+        /// </summary>
+        /// <param name="req"><see cref="ForwardTKEEdgeApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardTKEEdgeApplicationRequestV3Response"/></returns>
+        public async Task<ForwardTKEEdgeApplicationRequestV3Response> ForwardTKEEdgeApplicationRequestV3(ForwardTKEEdgeApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ForwardTKEEdgeApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 操作TKEEdge集群的addon
+        /// </summary>
+        /// <param name="req"><see cref="ForwardTKEEdgeApplicationRequestV3Request"/></param>
+        /// <returns><see cref="ForwardTKEEdgeApplicationRequestV3Response"/></returns>
+        public ForwardTKEEdgeApplicationRequestV3Response ForwardTKEEdgeApplicationRequestV3Sync(ForwardTKEEdgeApplicationRequestV3Request req)
+        {
+             JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ForwardTKEEdgeApplicationRequestV3");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ForwardTKEEdgeApplicationRequestV3Response>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取集群规模价格
         /// </summary>
         /// <param name="req"><see cref="GetClusterLevelPriceRequest"/></param>

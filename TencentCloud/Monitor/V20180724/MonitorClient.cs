@@ -457,6 +457,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 创建 Prometheus 的预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleResponse"/></returns>
+        public async Task<CreateRecordingRuleResponse> CreateRecordingRule(CreateRecordingRuleRequest req)
+        {
+             JsonResponseModel<CreateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Prometheus 的预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateRecordingRuleRequest"/></param>
+        /// <returns><see cref="CreateRecordingRuleResponse"/></returns>
+        public CreateRecordingRuleResponse CreateRecordingRuleSync(CreateRecordingRuleRequest req)
+        {
+             JsonResponseModel<CreateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在腾讯云容器服务下创建 Prometheus 服务发现。
         /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
         /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -732,6 +772,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DeletePrometheusScrapeJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeletePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除 Prometheus 预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRulesRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRulesResponse"/></returns>
+        public async Task<DeleteRecordingRulesResponse> DeleteRecordingRules(DeleteRecordingRulesRequest req)
+        {
+             JsonResponseModel<DeleteRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除 Prometheus 预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRecordingRulesRequest"/></param>
+        /// <returns><see cref="DeleteRecordingRulesResponse"/></returns>
+        public DeleteRecordingRulesResponse DeleteRecordingRulesSync(DeleteRecordingRulesRequest req)
+        {
+             JsonResponseModel<DeleteRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1788,6 +1868,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribePrometheusScrapeJobs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePrometheusScrapeJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据条件查询 Prometheus 预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRulesResponse"/></returns>
+        public async Task<DescribeRecordingRulesResponse> DescribeRecordingRules(DescribeRecordingRulesRequest req)
+        {
+             JsonResponseModel<DescribeRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 根据条件查询 Prometheus 预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingRulesRequest"/></param>
+        /// <returns><see cref="DescribeRecordingRulesResponse"/></returns>
+        public DescribeRecordingRulesResponse DescribeRecordingRulesSync(DescribeRecordingRulesRequest req)
+        {
+             JsonResponseModel<DescribeRecordingRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordingRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingRulesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2896,6 +3016,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UpdatePrometheusScrapeJob");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdatePrometheusScrapeJobResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Prometheus 的预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecordingRuleRequest"/></param>
+        /// <returns><see cref="UpdateRecordingRuleResponse"/></returns>
+        public async Task<UpdateRecordingRuleResponse> UpdateRecordingRule(UpdateRecordingRuleRequest req)
+        {
+             JsonResponseModel<UpdateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Prometheus 的预聚合规则
+        /// </summary>
+        /// <param name="req"><see cref="UpdateRecordingRuleRequest"/></param>
+        /// <returns><see cref="UpdateRecordingRuleResponse"/></returns>
+        public UpdateRecordingRuleResponse UpdateRecordingRuleSync(UpdateRecordingRuleRequest req)
+        {
+             JsonResponseModel<UpdateRecordingRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateRecordingRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateRecordingRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

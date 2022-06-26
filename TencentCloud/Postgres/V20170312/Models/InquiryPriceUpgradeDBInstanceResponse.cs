@@ -25,13 +25,13 @@ namespace TencentCloud.Postgres.V20170312.Models
     {
         
         /// <summary>
-        /// 总费用，打折前的
+        /// 刊例价费用
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
 
         /// <summary>
-        /// 实际需要付款金额
+        /// 折后实际付款金额
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }
