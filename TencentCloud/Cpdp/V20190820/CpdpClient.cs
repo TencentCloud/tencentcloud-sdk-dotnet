@@ -1549,6 +1549,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-子商户进件V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankAggregatedSubMerchantRegistrationRequest"/></param>
+        /// <returns><see cref="CreateOpenBankAggregatedSubMerchantRegistrationResponse"/></returns>
+        public async Task<CreateOpenBankAggregatedSubMerchantRegistrationResponse> CreateOpenBankAggregatedSubMerchantRegistration(CreateOpenBankAggregatedSubMerchantRegistrationRequest req)
+        {
+             JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenBankAggregatedSubMerchantRegistration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户进件V2
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankAggregatedSubMerchantRegistrationRequest"/></param>
+        /// <returns><see cref="CreateOpenBankAggregatedSubMerchantRegistrationResponse"/></returns>
+        public CreateOpenBankAggregatedSubMerchantRegistrationResponse CreateOpenBankAggregatedSubMerchantRegistrationSync(CreateOpenBankAggregatedSubMerchantRegistrationRequest req)
+        {
+             JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOpenBankAggregatedSubMerchantRegistration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankAggregatedSubMerchantRegistrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 第三方子商户电子记账本创建接口
         /// </summary>
         /// <param name="req"><see cref="CreateOpenBankExternalSubMerchantAccountBookRequest"/></param>
@@ -1740,6 +1780,86 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateOpenBankRechargeOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankRechargeOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户费率配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankSubMerchantRateConfigureRequest"/></param>
+        /// <returns><see cref="CreateOpenBankSubMerchantRateConfigureResponse"/></returns>
+        public async Task<CreateOpenBankSubMerchantRateConfigureResponse> CreateOpenBankSubMerchantRateConfigure(CreateOpenBankSubMerchantRateConfigureRequest req)
+        {
+             JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenBankSubMerchantRateConfigure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户费率配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankSubMerchantRateConfigureRequest"/></param>
+        /// <returns><see cref="CreateOpenBankSubMerchantRateConfigureResponse"/></returns>
+        public CreateOpenBankSubMerchantRateConfigureResponse CreateOpenBankSubMerchantRateConfigureSync(CreateOpenBankSubMerchantRateConfigureRequest req)
+        {
+             JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOpenBankSubMerchantRateConfigure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankSubMerchantRateConfigureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-聚合下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankUnifiedOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankUnifiedOrderResponse"/></returns>
+        public async Task<CreateOpenBankUnifiedOrderResponse> CreateOpenBankUnifiedOrder(CreateOpenBankUnifiedOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankUnifiedOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenBankUnifiedOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankUnifiedOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-聚合下单
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankUnifiedOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankUnifiedOrderResponse"/></returns>
+        public CreateOpenBankUnifiedOrderResponse CreateOpenBankUnifiedOrderSync(CreateOpenBankUnifiedOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankUnifiedOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOpenBankUnifiedOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankUnifiedOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5395,6 +5515,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-分页查询对账单数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBillDataPageRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBillDataPageResponse"/></returns>
+        public async Task<QueryOpenBankBillDataPageResponse> QueryOpenBankBillDataPage(QueryOpenBankBillDataPageRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBillDataPageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankBillDataPage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBillDataPageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-分页查询对账单数据
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankBillDataPageRequest"/></param>
+        /// <returns><see cref="QueryOpenBankBillDataPageResponse"/></returns>
+        public QueryOpenBankBillDataPageResponse QueryOpenBankBillDataPageSync(QueryOpenBankBillDataPageRequest req)
+        {
+             JsonResponseModel<QueryOpenBankBillDataPageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankBillDataPage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankBillDataPageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云企付-子商户银行卡绑定结果查询
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankBindExternalSubMerchantBankAccountRequest"/></param>
@@ -5706,6 +5866,126 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryOpenBankPaymentOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankPaymentOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-退款结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankRefundOrderRequest"/></param>
+        /// <returns><see cref="QueryOpenBankRefundOrderResponse"/></returns>
+        public async Task<QueryOpenBankRefundOrderResponse> QueryOpenBankRefundOrder(QueryOpenBankRefundOrderRequest req)
+        {
+             JsonResponseModel<QueryOpenBankRefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankRefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankRefundOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-退款结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankRefundOrderRequest"/></param>
+        /// <returns><see cref="QueryOpenBankRefundOrderResponse"/></returns>
+        public QueryOpenBankRefundOrderResponse QueryOpenBankRefundOrderSync(QueryOpenBankRefundOrderRequest req)
+        {
+             JsonResponseModel<QueryOpenBankRefundOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankRefundOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankRefundOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户资质文件查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSubMerchantCredentialRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSubMerchantCredentialResponse"/></returns>
+        public async Task<QueryOpenBankSubMerchantCredentialResponse> QueryOpenBankSubMerchantCredential(QueryOpenBankSubMerchantCredentialRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankSubMerchantCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户资质文件查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSubMerchantCredentialRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSubMerchantCredentialResponse"/></returns>
+        public QueryOpenBankSubMerchantCredentialResponse QueryOpenBankSubMerchantCredentialSync(QueryOpenBankSubMerchantCredentialRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankSubMerchantCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSubMerchantCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户费率配置结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSubMerchantRateConfigureRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSubMerchantRateConfigureResponse"/></returns>
+        public async Task<QueryOpenBankSubMerchantRateConfigureResponse> QueryOpenBankSubMerchantRateConfigure(QueryOpenBankSubMerchantRateConfigureRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankSubMerchantRateConfigure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户费率配置结果查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankSubMerchantRateConfigureRequest"/></param>
+        /// <returns><see cref="QueryOpenBankSubMerchantRateConfigureResponse"/></returns>
+        public QueryOpenBankSubMerchantRateConfigureResponse QueryOpenBankSubMerchantRateConfigureSync(QueryOpenBankSubMerchantRateConfigureRequest req)
+        {
+             JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankSubMerchantRateConfigure");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankSubMerchantRateConfigureResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6635,6 +6915,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-退款申请
+        /// </summary>
+        /// <param name="req"><see cref="RefundOpenBankOrderRequest"/></param>
+        /// <returns><see cref="RefundOpenBankOrderResponse"/></returns>
+        public async Task<RefundOpenBankOrderResponse> RefundOpenBankOrder(RefundOpenBankOrderRequest req)
+        {
+             JsonResponseModel<RefundOpenBankOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RefundOpenBankOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundOpenBankOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-退款申请
+        /// </summary>
+        /// <param name="req"><see cref="RefundOpenBankOrderRequest"/></param>
+        /// <returns><see cref="RefundOpenBankOrderResponse"/></returns>
+        public RefundOpenBankOrderResponse RefundOpenBankOrderSync(RefundOpenBankOrderRequest req)
+        {
+             JsonResponseModel<RefundOpenBankOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RefundOpenBankOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RefundOpenBankOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云鉴-消费订单退款的接口
         /// </summary>
         /// <param name="req"><see cref="RefundOrderRequest"/></param>
@@ -7426,6 +7746,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "UploadFile");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户资质文件上传
+        /// </summary>
+        /// <param name="req"><see cref="UploadOpenBankSubMerchantCredentialRequest"/></param>
+        /// <returns><see cref="UploadOpenBankSubMerchantCredentialResponse"/></returns>
+        public async Task<UploadOpenBankSubMerchantCredentialResponse> UploadOpenBankSubMerchantCredential(UploadOpenBankSubMerchantCredentialRequest req)
+        {
+             JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UploadOpenBankSubMerchantCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户资质文件上传
+        /// </summary>
+        /// <param name="req"><see cref="UploadOpenBankSubMerchantCredentialRequest"/></param>
+        /// <returns><see cref="UploadOpenBankSubMerchantCredentialResponse"/></returns>
+        public UploadOpenBankSubMerchantCredentialResponse UploadOpenBankSubMerchantCredentialSync(UploadOpenBankSubMerchantCredentialRequest req)
+        {
+             JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UploadOpenBankSubMerchantCredential");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadOpenBankSubMerchantCredentialResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

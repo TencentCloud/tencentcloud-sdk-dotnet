@@ -39,6 +39,13 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public ServerBaseConfig ServerConfig{ get; set; }
 
         /// <summary>
+        /// 在线版本信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OnlineVersionInfos")]
+        public OnlineVersionInfo[] OnlineVersionInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
         {
             this.SetParamObj(map, prefix + "BaseInfo.", this.BaseInfo);
             this.SetParamObj(map, prefix + "ServerConfig.", this.ServerConfig);
+            this.SetParamArrayObj(map, prefix + "OnlineVersionInfos.", this.OnlineVersionInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

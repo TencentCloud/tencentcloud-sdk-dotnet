@@ -133,6 +133,86 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 查询Nacos类型引擎实例副本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNacosReplicasRequest"/></param>
+        /// <returns><see cref="DescribeNacosReplicasResponse"/></returns>
+        public async Task<DescribeNacosReplicasResponse> DescribeNacosReplicas(DescribeNacosReplicasRequest req)
+        {
+             JsonResponseModel<DescribeNacosReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNacosReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Nacos类型引擎实例副本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNacosReplicasRequest"/></param>
+        /// <returns><see cref="DescribeNacosReplicasResponse"/></returns>
+        public DescribeNacosReplicasResponse DescribeNacosReplicasSync(DescribeNacosReplicasRequest req)
+        {
+             JsonResponseModel<DescribeNacosReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNacosReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询nacos服务接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNacosServerInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNacosServerInterfacesResponse"/></returns>
+        public async Task<DescribeNacosServerInterfacesResponse> DescribeNacosServerInterfaces(DescribeNacosServerInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNacosServerInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNacosServerInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosServerInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询nacos服务接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNacosServerInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeNacosServerInterfacesResponse"/></returns>
+        public DescribeNacosServerInterfacesResponse DescribeNacosServerInterfacesSync(DescribeNacosServerInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeNacosServerInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNacosServerInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNacosServerInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询引擎实例访问地址
         /// </summary>
         /// <param name="req"><see cref="DescribeSREInstanceAccessAddressRequest"/></param>
@@ -204,6 +284,86 @@ namespace TencentCloud.Tse.V20201207
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSREInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSREInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Zookeeper类型注册引擎实例副本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZookeeperReplicasRequest"/></param>
+        /// <returns><see cref="DescribeZookeeperReplicasResponse"/></returns>
+        public async Task<DescribeZookeeperReplicasResponse> DescribeZookeeperReplicas(DescribeZookeeperReplicasRequest req)
+        {
+             JsonResponseModel<DescribeZookeeperReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZookeeperReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询Zookeeper类型注册引擎实例副本信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZookeeperReplicasRequest"/></param>
+        /// <returns><see cref="DescribeZookeeperReplicasResponse"/></returns>
+        public DescribeZookeeperReplicasResponse DescribeZookeeperReplicasSync(DescribeZookeeperReplicasRequest req)
+        {
+             JsonResponseModel<DescribeZookeeperReplicasResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeZookeeperReplicas");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询zookeeper服务接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZookeeperServerInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeZookeeperServerInterfacesResponse"/></returns>
+        public async Task<DescribeZookeeperServerInterfacesResponse> DescribeZookeeperServerInterfaces(DescribeZookeeperServerInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeZookeeperServerInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeZookeeperServerInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperServerInterfacesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询zookeeper服务接口列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeZookeeperServerInterfacesRequest"/></param>
+        /// <returns><see cref="DescribeZookeeperServerInterfacesResponse"/></returns>
+        public DescribeZookeeperServerInterfacesResponse DescribeZookeeperServerInterfacesSync(DescribeZookeeperServerInterfacesRequest req)
+        {
+             JsonResponseModel<DescribeZookeeperServerInterfacesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeZookeeperServerInterfaces");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeZookeeperServerInterfacesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -94,6 +94,20 @@ namespace TencentCloud.Mrs.V20200910.Models
         [JsonProperty("ItemString")]
         public string ItemString{ get; set; }
 
+        /// <summary>
+        /// 指标项ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Id")]
+        public long? Id{ get; set; }
+
+        /// <summary>
+        /// 指标项坐标位置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Coords")]
+        public Coordinate Coords{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Mrs.V20200910.Models
             this.SetParamSimple(map, prefix + "Arrow", this.Arrow);
             this.SetParamSimple(map, prefix + "Normal", this.Normal);
             this.SetParamSimple(map, prefix + "ItemString", this.ItemString);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamObj(map, prefix + "Coords.", this.Coords);
         }
     }
 }

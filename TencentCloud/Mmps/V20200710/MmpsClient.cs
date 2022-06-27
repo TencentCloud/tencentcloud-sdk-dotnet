@@ -293,6 +293,46 @@ namespace TencentCloud.Mmps.V20200710
         }
 
         /// <summary>
+        /// 查询指定小程序版本的翼扬诊断安全得分
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlySecMiniAppScanReportListRequest"/></param>
+        /// <returns><see cref="DescribeFlySecMiniAppScanReportListResponse"/></returns>
+        public async Task<DescribeFlySecMiniAppScanReportListResponse> DescribeFlySecMiniAppScanReportList(DescribeFlySecMiniAppScanReportListRequest req)
+        {
+             JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlySecMiniAppScanReportList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询指定小程序版本的翼扬诊断安全得分
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlySecMiniAppScanReportListRequest"/></param>
+        /// <returns><see cref="DescribeFlySecMiniAppScanReportListResponse"/></returns>
+        public DescribeFlySecMiniAppScanReportListResponse DescribeFlySecMiniAppScanReportListSync(DescribeFlySecMiniAppScanReportListRequest req)
+        {
+             JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlySecMiniAppScanReportList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlySecMiniAppScanReportListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取翼扬安全诊断任务列表
         /// </summary>
         /// <param name="req"><see cref="DescribeFlySecMiniAppScanTaskListRequest"/></param>

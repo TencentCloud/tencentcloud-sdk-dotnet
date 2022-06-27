@@ -417,6 +417,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 创建按量 Prometheus 实例，根据用量收费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusMultiTenantInstancePostPayModeRequest"/></param>
+        /// <returns><see cref="CreatePrometheusMultiTenantInstancePostPayModeResponse"/></returns>
+        public async Task<CreatePrometheusMultiTenantInstancePostPayModeResponse> CreatePrometheusMultiTenantInstancePostPayMode(CreatePrometheusMultiTenantInstancePostPayModeRequest req)
+        {
+             JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePrometheusMultiTenantInstancePostPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建按量 Prometheus 实例，根据用量收费实例
+        /// </summary>
+        /// <param name="req"><see cref="CreatePrometheusMultiTenantInstancePostPayModeRequest"/></param>
+        /// <returns><see cref="CreatePrometheusMultiTenantInstancePostPayModeResponse"/></returns>
+        public CreatePrometheusMultiTenantInstancePostPayModeResponse CreatePrometheusMultiTenantInstancePostPayModeSync(CreatePrometheusMultiTenantInstancePostPayModeRequest req)
+        {
+             JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePrometheusMultiTenantInstancePostPayMode");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePrometheusMultiTenantInstancePostPayModeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建 Prometheus 抓取任务
         /// </summary>
         /// <param name="req"><see cref="CreatePrometheusScrapeJobRequest"/></param>

@@ -48,6 +48,24 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("SubInitialPosition")]
         public string SubInitialPosition{ get; set; }
 
+        /// <summary>
+        /// 用于设置BatchReceivePolicy，指在一次batch中最多接收多少条消息，默认是 0。即不开启BatchReceivePolicy
+        /// </summary>
+        [JsonProperty("MaxNumMessages")]
+        public long? MaxNumMessages{ get; set; }
+
+        /// <summary>
+        /// 用于设置BatchReceivePolicy，指在一次batch中最多接收的消息体有多大，单位是 bytes。默认是 0，即不开启BatchReceivePolicy
+        /// </summary>
+        [JsonProperty("MaxNumBytes")]
+        public long? MaxNumBytes{ get; set; }
+
+        /// <summary>
+        /// 用于设置BatchReceivePolicy，指在一次batch消息的接收z中最多等待的超时时间，单位是毫秒。默认是 0，即不开启BatchReceivePolicy
+        /// </summary>
+        [JsonProperty("Timeout")]
+        public long? Timeout{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "SubscriptionName", this.SubscriptionName);
             this.SetParamSimple(map, prefix + "ReceiverQueueSize", this.ReceiverQueueSize);
             this.SetParamSimple(map, prefix + "SubInitialPosition", this.SubInitialPosition);
+            this.SetParamSimple(map, prefix + "MaxNumMessages", this.MaxNumMessages);
+            this.SetParamSimple(map, prefix + "MaxNumBytes", this.MaxNumBytes);
+            this.SetParamSimple(map, prefix + "Timeout", this.Timeout);
         }
     }
 }

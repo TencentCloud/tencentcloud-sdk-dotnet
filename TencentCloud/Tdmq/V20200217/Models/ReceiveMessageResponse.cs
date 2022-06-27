@@ -57,6 +57,20 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string SubName{ get; set; }
 
         /// <summary>
+        /// BatchReceivePolicy 一次性返回的多条消息的 MessageID，用 ‘###’ 来区分不同的 MessageID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessageIDList")]
+        public string MessageIDList{ get; set; }
+
+        /// <summary>
+        /// BatchReceivePolicy 一次性返回的多条消息的消息内容，用 ‘###’ 来区分不同的消息内容
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MessagesPayload")]
+        public string MessagesPayload{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +87,8 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "AckTopic", this.AckTopic);
             this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
             this.SetParamSimple(map, prefix + "SubName", this.SubName);
+            this.SetParamSimple(map, prefix + "MessageIDList", this.MessageIDList);
+            this.SetParamSimple(map, prefix + "MessagesPayload", this.MessagesPayload);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

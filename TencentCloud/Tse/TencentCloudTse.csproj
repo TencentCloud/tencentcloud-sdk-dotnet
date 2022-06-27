@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{C9840D4F-C22D-3561-A83C-36F13531DB7A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.545</VersionPrefix>
+    <VersionPrefix>3.0.546</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,18 +51,30 @@
     <Compile Include="V20201207\Models\CreateEngineResponse.cs" />
     <Compile Include="V20201207\Models\DeleteEngineRequest.cs" />
     <Compile Include="V20201207\Models\DeleteEngineResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeNacosReplicasRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeNacosReplicasResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeNacosServerInterfacesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeNacosServerInterfacesResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressRequest.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstanceAccessAddressResponse.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesRequest.cs" />
     <Compile Include="V20201207\Models\DescribeSREInstancesResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeZookeeperReplicasRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeZookeeperReplicasResponse.cs" />
+    <Compile Include="V20201207\Models\DescribeZookeeperServerInterfacesRequest.cs" />
+    <Compile Include="V20201207\Models\DescribeZookeeperServerInterfacesResponse.cs" />
     <Compile Include="V20201207\Models\EngineAdmin.cs" />
     <Compile Include="V20201207\Models\EnvAddressInfo.cs" />
     <Compile Include="V20201207\Models\EnvInfo.cs" />
     <Compile Include="V20201207\Models\Filter.cs" />
     <Compile Include="V20201207\Models\InstanceTagInfo.cs" />
     <Compile Include="V20201207\Models\KVPair.cs" />
+    <Compile Include="V20201207\Models\NacosReplica.cs" />
+    <Compile Include="V20201207\Models\NacosServerInterface.cs" />
     <Compile Include="V20201207\Models\SREInstance.cs" />
     <Compile Include="V20201207\Models\ServiceGovernanceInfo.cs" />
     <Compile Include="V20201207\Models\VpcInfo.cs" />
+    <Compile Include="V20201207\Models\ZookeeperReplica.cs" />
+    <Compile Include="V20201207\Models\ZookeeperServerInterface.cs" />
   </ItemGroup>
 </Project>

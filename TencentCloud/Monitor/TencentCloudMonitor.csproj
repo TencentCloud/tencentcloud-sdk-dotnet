@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.545</VersionPrefix>
+    <VersionPrefix>3.0.546</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -80,6 +80,8 @@
     <Compile Include="V20180724\Models\CreatePolicyGroupResponse.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusAgentRequest.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusAgentResponse.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusMultiTenantInstancePostPayModeRequest.cs" />
+    <Compile Include="V20180724\Models\CreatePrometheusMultiTenantInstancePostPayModeResponse.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusScrapeJobRequest.cs" />
     <Compile Include="V20180724\Models\CreatePrometheusScrapeJobResponse.cs" />
     <Compile Include="V20180724\Models\CreateRecordingRuleRequest.cs" />

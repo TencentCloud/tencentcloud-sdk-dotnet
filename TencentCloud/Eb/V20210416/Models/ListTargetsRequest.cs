@@ -25,12 +25,6 @@ namespace TencentCloud.Eb.V20210416.Models
     {
         
         /// <summary>
-        /// 事件规则ID
-        /// </summary>
-        [JsonProperty("RuleId")]
-        public string RuleId{ get; set; }
-
-        /// <summary>
         /// 事件集ID
         /// </summary>
         [JsonProperty("EventBusId")]
@@ -41,6 +35,12 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }
+
+        /// <summary>
+        /// 事件规则ID
+        /// </summary>
+        [JsonProperty("RuleId")]
+        public string RuleId{ get; set; }
 
         /// <summary>
         /// 返回数量，默认为20，最大值为100。
@@ -66,9 +66,9 @@ namespace TencentCloud.Eb.V20210416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "OrderBy", this.OrderBy);
+            this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Order", this.Order);
