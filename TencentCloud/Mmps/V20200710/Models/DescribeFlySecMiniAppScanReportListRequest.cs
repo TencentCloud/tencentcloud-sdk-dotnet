@@ -25,7 +25,7 @@ namespace TencentCloud.Mmps.V20200710.Models
     {
         
         /// <summary>
-        /// 任务id
+        /// 小程序AppID
         /// </summary>
         [JsonProperty("MiniAppID")]
         public string MiniAppID{ get; set; }

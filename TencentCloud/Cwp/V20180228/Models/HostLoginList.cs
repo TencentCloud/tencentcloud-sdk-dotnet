@@ -150,6 +150,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Location")]
         public string Location{ get; set; }
 
+        /// <summary>
+        /// 主机quuid
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "IsRiskSrcIp", this.IsRiskSrcIp);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
             this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
         }
     }
 }

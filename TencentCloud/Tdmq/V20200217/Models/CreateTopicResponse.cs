@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 0：非分区topic，无分区；非0：具体分区topic的分区数。
+        /// 0或1：非分区topic，无分区；大于1：具体分区topic的分区数。（存量非分区主题返回0，增量非分区主题返回1）
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
@@ -55,7 +55,6 @@ namespace TencentCloud.Tdmq.V20200217.Models
         /// 2 ：局部顺序消息；
         /// 3 ：重试队列；
         /// 4 ：死信队列；
-        /// 5 ：事务消息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TopicType")]

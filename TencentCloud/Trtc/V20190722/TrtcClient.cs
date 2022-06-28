@@ -53,68 +53,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// ###接口说明：
-        /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
-        /// 
-        /// ###您可以通过此接口实现如下目标：
-        /// * 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
-        /// * 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储
-        /// * 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
-        /// * 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
-        /// 
-        /// ###关键名词：
-        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件（M3U8/TS）上传至云存储。
-        /// * 混流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件（M3U8/TS）上传至云存储。
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
-        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
-        public async Task<CreateCloudRecordingResponse> CreateCloudRecording(CreateCloudRecordingRequest req)
-        {
-             JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// ###接口说明：
-        /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
-        /// 
-        /// ###您可以通过此接口实现如下目标：
-        /// * 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
-        /// * 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储
-        /// * 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
-        /// * 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
-        /// 
-        /// ###关键名词：
-        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件（M3U8/TS）上传至云存储。
-        /// * 混流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件（M3U8/TS）上传至云存储。
-        /// </summary>
-        /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
-        /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
-        public CreateCloudRecordingResponse CreateCloudRecordingSync(CreateCloudRecordingRequest req)
-        {
-             JsonResponseModel<CreateCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁新增自定义背景图或水印，可通过此接口上传新的图片素材。无需频繁新增图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
         /// </summary>
         /// <param name="req"><see cref="CreatePictureRequest"/></param>
@@ -186,46 +124,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "CreateTroubleInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来停止录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
-        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
-        public async Task<DeleteCloudRecordingResponse> DeleteCloudRecording(DeleteCloudRecordingRequest req)
-        {
-             JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来停止录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
-        /// </summary>
-        /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
-        /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
-        public DeleteCloudRecordingResponse DeleteCloudRecordingSync(DeleteCloudRecordingRequest req)
-        {
-             JsonResponseModel<DeleteCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -348,46 +246,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCallDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
-        /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
-        public async Task<DescribeCloudRecordingResponse> DescribeCloudRecording(DescribeCloudRecordingRequest req)
-        {
-             JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
-        /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
-        public DescribeCloudRecordingResponse DescribeCloudRecordingSync(DescribeCloudRecordingRequest req)
-        {
-             JsonResponseModel<DescribeCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -810,46 +668,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DismissRoomByStrRoomId");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DismissRoomByStrRoomIdResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCloudRecordingRequest"/></param>
-        /// <returns><see cref="ModifyCloudRecordingResponse"/></returns>
-        public async Task<ModifyCloudRecordingResponse> ModifyCloudRecording(ModifyCloudRecordingRequest req)
-        {
-             JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 成功开启录制后，可以使用此接口来更新录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。更新操作是全量覆盖，并不是增量更新的模式，也就是说每次更新都需要携带全量的信息。
-        /// </summary>
-        /// <param name="req"><see cref="ModifyCloudRecordingRequest"/></param>
-        /// <returns><see cref="ModifyCloudRecordingResponse"/></returns>
-        public ModifyCloudRecordingResponse ModifyCloudRecordingSync(ModifyCloudRecordingRequest req)
-        {
-             JsonResponseModel<ModifyCloudRecordingResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyCloudRecording");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCloudRecordingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

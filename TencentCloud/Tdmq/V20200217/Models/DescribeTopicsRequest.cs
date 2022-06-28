@@ -50,12 +50,10 @@ namespace TencentCloud.Tdmq.V20200217.Models
 
         /// <summary>
         /// topic类型描述：
-        /// 0：普通消息；
-        /// 1：全局顺序消息；
-        /// 2：局部顺序消息；
-        /// 3：重试队列；
-        /// 4：死信队列；
-        /// 5：事务消息。
+        /// 0：非持久非分区主题类型；
+        /// 1：非持久分区主题类型；
+        /// 2：持久非分区主题类型；
+        /// 3：持久分区主题类型；
         /// </summary>
         [JsonProperty("TopicType")]
         public ulong? TopicType{ get; set; }
@@ -75,6 +73,14 @@ namespace TencentCloud.Tdmq.V20200217.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 创建来源：
+        /// 1：用户创建
+        /// 2：系统创建
+        /// </summary>
+        [JsonProperty("TopicCreator")]
+        public ulong? TopicCreator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +94,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "TopicCreator", this.TopicCreator);
         }
     }
 }

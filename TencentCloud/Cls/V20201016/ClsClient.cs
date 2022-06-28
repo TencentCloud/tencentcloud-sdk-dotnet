@@ -333,46 +333,6 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于创建数据加工任务。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDataTransformRequest"/></param>
-        /// <returns><see cref="CreateDataTransformResponse"/></returns>
-        public async Task<CreateDataTransformResponse> CreateDataTransform(CreateDataTransformRequest req)
-        {
-             JsonResponseModel<CreateDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataTransformResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于创建数据加工任务。
-        /// </summary>
-        /// <param name="req"><see cref="CreateDataTransformRequest"/></param>
-        /// <returns><see cref="CreateDataTransformResponse"/></returns>
-        public CreateDataTransformResponse CreateDataTransformSync(CreateDataTransformRequest req)
-        {
-             JsonResponseModel<CreateDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataTransformResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口仅创建下载任务，任务返回的下载地址，请用户调用DescribeExports查看任务列表。其中有下载地址CosPath参数。参考文档https://cloud.tencent.com/document/product/614/56449
         /// </summary>
         /// <param name="req"><see cref="CreateExportRequest"/></param>
@@ -853,46 +813,6 @@ namespace TencentCloud.Cls.V20201016
         }
 
         /// <summary>
-        /// 本接口用于删除数据加工任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDataTransformRequest"/></param>
-        /// <returns><see cref="DeleteDataTransformResponse"/></returns>
-        public async Task<DeleteDataTransformResponse> DeleteDataTransform(DeleteDataTransformRequest req)
-        {
-             JsonResponseModel<DeleteDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataTransformResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于删除数据加工任务
-        /// </summary>
-        /// <param name="req"><see cref="DeleteDataTransformRequest"/></param>
-        /// <returns><see cref="DeleteDataTransformResponse"/></returns>
-        public DeleteDataTransformResponse DeleteDataTransformSync(DeleteDataTransformRequest req)
-        {
-             JsonResponseModel<DeleteDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataTransformResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口用于删除日志下载任务
         /// </summary>
         /// <param name="req"><see cref="DeleteExportRequest"/></param>
@@ -1364,46 +1284,6 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "DescribeConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeConsumerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于获取数据加工任务列表基本信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>
-        /// <returns><see cref="DescribeDataTransformInfoResponse"/></returns>
-        public async Task<DescribeDataTransformInfoResponse> DescribeDataTransformInfo(DescribeDataTransformInfoRequest req)
-        {
-             JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDataTransformInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTransformInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于获取数据加工任务列表基本信息
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDataTransformInfoRequest"/></param>
-        /// <returns><see cref="DescribeDataTransformInfoResponse"/></returns>
-        public DescribeDataTransformInfoResponse DescribeDataTransformInfoSync(DescribeDataTransformInfoRequest req)
-        {
-             JsonResponseModel<DescribeDataTransformInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDataTransformInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataTransformInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2164,46 +2044,6 @@ namespace TencentCloud.Cls.V20201016
              {
                  var strResp = this.InternalRequestSync(req, "ModifyConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyConsumerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于修改数据加工任务
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
-        /// <returns><see cref="ModifyDataTransformResponse"/></returns>
-        public async Task<ModifyDataTransformResponse> ModifyDataTransform(ModifyDataTransformRequest req)
-        {
-             JsonResponseModel<ModifyDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataTransformResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于修改数据加工任务
-        /// </summary>
-        /// <param name="req"><see cref="ModifyDataTransformRequest"/></param>
-        /// <returns><see cref="ModifyDataTransformResponse"/></returns>
-        public ModifyDataTransformResponse ModifyDataTransformSync(ModifyDataTransformRequest req)
-        {
-             JsonResponseModel<ModifyDataTransformResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyDataTransform");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataTransformResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

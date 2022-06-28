@@ -39,7 +39,7 @@ namespace TencentCloud.Tsf.V20180326.Models
         public string PodId{ get; set; }
 
         /// <summary>
-        /// 实例状态，请参考后面的实例以及容器的状态定义
+        /// 实例状态，请参考后面的实例以及容器的状态定义。启动中（pod 未 ready）：Starting；运行中：Running；异常：Abnormal；停止：Stopped；
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

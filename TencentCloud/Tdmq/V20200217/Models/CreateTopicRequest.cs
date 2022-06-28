@@ -37,7 +37,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string TopicName{ get; set; }
 
         /// <summary>
-        /// 0：非分区topic，无分区；非0：具体分区topic的分区数，最大不允许超过128。
+        /// 入参为1，即是创建非分区topic，无分区；入参大于1，表示分区topic的分区数，最大不允许超过128。
         /// </summary>
         [JsonProperty("Partitions")]
         public ulong? Partitions{ get; set; }
@@ -49,6 +49,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string Remark{ get; set; }
 
         /// <summary>
+        /// 该入参将逐步弃用，可切换至PulsarTopicType参数
         /// 0： 普通消息；
         /// 1 ：全局顺序消息；
         /// 2 ：局部顺序消息；

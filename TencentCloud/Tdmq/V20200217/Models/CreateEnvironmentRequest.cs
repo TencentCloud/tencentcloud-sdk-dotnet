@@ -31,7 +31,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 未消费消息过期时间，单位：秒，最小60，最大1296000，（15天）。
+        /// 未消费消息过期时间，单位：秒，取值范围：60秒~1天。
         /// </summary>
         [JsonProperty("MsgTTL")]
         public ulong? MsgTTL{ get; set; }
