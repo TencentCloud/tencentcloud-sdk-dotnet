@@ -25,19 +25,19 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 智能识别模板唯一标识。
+        /// 音视频审核模板唯一标识。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }
 
         /// <summary>
-        /// 智能识别模板名称，长度限制：64 个字符。
+        /// 音视频审核模板名称，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 智能识别模板描述信息，长度限制：256 个字符。
+        /// 音视频审核模板描述信息，长度限制：256 个字符。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -73,14 +73,14 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// 用户自定义智能识别控制参数。
+        /// 用户自定义音视频审核控制参数。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }
 
         /// <summary>
-        /// 智能识别结果是否进入智能识别墙（对智能识别结果进行人工复核）的开关。
+        /// 音视频审核结果是否进入音视频审核墙（对音视频审核结果进行人工复核）的开关。
         /// <li>ON：是；</li>
         /// <li>OFF：否。</li>
         /// </summary>

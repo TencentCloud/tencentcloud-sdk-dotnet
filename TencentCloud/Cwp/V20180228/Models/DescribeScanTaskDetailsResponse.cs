@@ -113,6 +113,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         public bool? StoppingAll{ get; set; }
 
         /// <summary>
+        /// 扫描出漏洞个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulCount")]
+        public ulong? VulCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -138,6 +145,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "RiskEventCount", this.RiskEventCount);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "StoppingAll", this.StoppingAll);
+            this.SetParamSimple(map, prefix + "VulCount", this.VulCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

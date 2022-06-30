@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 流程资源对应链接信息
+        /// 签署流程资源对应链接信息
         /// </summary>
         [JsonProperty("FlowResourceUrlInfos")]
         public FlowResourceUrlInfo[] FlowResourceUrlInfos{ get; set; }

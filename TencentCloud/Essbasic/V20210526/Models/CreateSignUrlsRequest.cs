@@ -31,25 +31,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 所签署合同ID数组
+        /// 签署流程编号数组，最多支持100个。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 签署链接类型，默认：“WEIXINAPP”-直接跳小程序; “CHANNEL”-跳转H5页面; “APP”-第三方APP或小程序跳转电子签小程序;
+        /// 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效
+        /// 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }
@@ -60,6 +54,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }
 
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,10 +68,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

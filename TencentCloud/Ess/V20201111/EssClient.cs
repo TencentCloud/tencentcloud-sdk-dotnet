@@ -53,7 +53,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 用于撤销流程
+        /// 用于撤销签署流程
         /// </summary>
         /// <param name="req"><see cref="CancelFlowRequest"/></param>
         /// <returns><see cref="CancelFlowResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 用于撤销流程
+        /// 用于撤销签署流程
         /// </summary>
         /// <param name="req"><see cref="CancelFlowRequest"/></param>
         /// <returns><see cref="CancelFlowResponse"/></returns>
@@ -213,7 +213,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建流程。
+        /// 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建签署流程。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowByFilesRequest"/></param>
         /// <returns><see cref="CreateFlowByFilesResponse"/></returns>
@@ -233,7 +233,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建流程。
+        /// 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建签署流程。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowByFilesRequest"/></param>
         /// <returns><see cref="CreateFlowByFilesResponse"/></returns>
@@ -300,7 +300,7 @@ namespace TencentCloud.Ess.V20201111
         /// 跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式）
         /// 
         /// 
-        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://tcloud-doc.isd.com/document/product/1323/74774">跳转小程序链接配置说明</a>
+        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://cloud.tencent.com/document/product/1323/74774">跳转小程序链接配置说明</a>
         /// </summary>
         /// <param name="req"><see cref="CreateSchemeUrlRequest"/></param>
         /// <returns><see cref="CreateSchemeUrlResponse"/></returns>
@@ -325,7 +325,7 @@ namespace TencentCloud.Ess.V20201111
         /// 跳转到小程序的实现，参考官方文档（分为<a href="https://developers.weixin.qq.com/miniprogram/dev/api/navigate/wx.navigateToMiniProgram.html">全屏</a>、<a href="https://developers.weixin.qq.com/miniprogram/dev/framework/open-ability/openEmbeddedMiniProgram.html">半屏</a>两种方式）
         /// 
         /// 
-        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://tcloud-doc.isd.com/document/product/1323/74774">跳转小程序链接配置说明</a>
+        /// 如您需要自主配置小程序跳转链接，请参考: <a href="https://cloud.tencent.com/document/product/1323/74774">跳转小程序链接配置说明</a>
         /// </summary>
         /// <param name="req"><see cref="CreateSchemeUrlRequest"/></param>
         /// <returns><see cref="CreateSchemeUrlResponse"/></returns>

@@ -38,19 +38,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 合同名称
+        /// 签署流程名称，最大长度200个字符。
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 用户信息
+        /// 最大可发起签署流程份数，默认5份；发起签署流程数量超过此上限后，二维码自动失效。
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("MaxFlowNum")]
+        public long? MaxFlowNum{ get; set; }
 
         /// <summary>
-        /// 合同有效天数 默认7天 最高设置不超过30天
+        /// 签署流程有效天数 默认7天 最高设置不超过30天
         /// </summary>
         [JsonProperty("FlowEffectiveDay")]
         public long? FlowEffectiveDay{ get; set; }
@@ -62,16 +62,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? QrEffectiveDay{ get; set; }
 
         /// <summary>
-        /// 最大合同份数，默认5份 超过此上限 二维码自动失效
-        /// </summary>
-        [JsonProperty("MaxFlowNum")]
-        public long? MaxFlowNum{ get; set; }
-
-        /// <summary>
-        /// 回调地址
+        /// 回调地址，最大长度1000个字符
+        /// 不传默认使用渠道应用号配置的回调地址
+        /// 回调时机:用户通过签署二维码发起合同时，企业额度不足导致失败
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 用户信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -82,11 +84,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
-            this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

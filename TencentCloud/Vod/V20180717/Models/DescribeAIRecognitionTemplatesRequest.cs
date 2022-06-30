@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 视频内容识别模板唯一标识过滤条件，数组长度限制：100。
+        /// 音视频内容识别模板唯一标识过滤条件，数组长度限制：100。
         /// </summary>
         [JsonProperty("Definitions")]
         public long?[] Definitions{ get; set; }

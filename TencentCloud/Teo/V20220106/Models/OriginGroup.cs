@@ -37,7 +37,9 @@ namespace TencentCloud.Teo.V20220106.Models
         public string OriginName{ get; set; }
 
         /// <summary>
-        /// 配置类型
+        /// 源站组配置类型
+        /// area：表示按照Record记录中的Area字段进行按客户端IP所在区域回源。
+        /// weight：表示按照Record记录中的Weight字段进行按权重回源。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -74,18 +76,36 @@ namespace TencentCloud.Teo.V20220106.Models
         public string OriginType{ get; set; }
 
         /// <summary>
-        /// 是否为四层代理使用
+        /// 当前源站组是否被四层代理使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ApplicationProxyUsed")]
         public bool? ApplicationProxyUsed{ get; set; }
 
         /// <summary>
-        /// 是否为负载均衡使用
+        /// 当前源站组是否被负载均衡使用。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("LoadBalancingUsed")]
         public bool? LoadBalancingUsed{ get; set; }
+
+        /// <summary>
+        /// 源站状态信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public OriginCheckOriginStatus Status{ get; set; }
+
+        /// <summary>
+        /// 使用当前源站组的负载均衡的类型：
+        /// none：未被使用
+        /// dns_only：被仅DNS类型负载均衡使用
+        /// proxied：被代理加速类型负载均衡使用
+        /// both：同时被仅DNS和代理加速类型负载均衡使用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LoadBalancingUsedType")]
+        public string LoadBalancingUsedType{ get; set; }
 
 
         /// <summary>
@@ -103,6 +123,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
             this.SetParamSimple(map, prefix + "ApplicationProxyUsed", this.ApplicationProxyUsed);
             this.SetParamSimple(map, prefix + "LoadBalancingUsed", this.LoadBalancingUsed);
+            this.SetParamObj(map, prefix + "Status.", this.Status);
+            this.SetParamSimple(map, prefix + "LoadBalancingUsedType", this.LoadBalancingUsedType);
         }
     }
 }

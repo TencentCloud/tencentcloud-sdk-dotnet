@@ -25,20 +25,23 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 要过滤的维度信息，支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
-        /// 
+        /// 要过滤的维度信息
+        /// service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
         /// span.kind:
-        /// 
-        ///        server:服务端视角
-        ///        client:客户端视角
-        /// 
+        /// 	server:服务端视角
+        /// 	client:客户端视角
         /// 默认为服务端视角进行查询。
+        /// runtime_metric视图支持：service.name（服务名）维度进行过滤。
+        /// sql_metric视图支持：service.name（服务名）维度进行过滤。
         /// </summary>
         [JsonProperty("Filters")]
         public GeneralFilter[] Filters{ get; set; }
 
         /// <summary>
-        /// 需要查询的指标，不可自定义输入。支持：service_request_count（总请求）、service_duration（平均响应时间）的指标数据。
+        /// 需要查询的指标，不可自定义输入。
+        /// service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+        /// runtime_metric视图支持：service_gc_full_count（Full GC）。
+        /// sql_metric视图支持：service_slow_sql_count（慢sql）。
         /// </summary>
         [JsonProperty("Metrics")]
         public string[] Metrics{ get; set; }
@@ -50,13 +53,16 @@ namespace TencentCloud.Apm.V20210622.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 视图名称，不可自定义输入。支持：service_metric
+        /// 视图名称，不可自定义输入。支持：service_metric、runtime_metric、sql_metric。
         /// </summary>
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 聚合维度，支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+        /// 聚合维度
+        /// service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
+        /// runtime_metric视图支持：service.name（服务名）维度进行聚合。
+        /// sql_metric视图支持：service.name（服务名）维度进行聚合。
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }

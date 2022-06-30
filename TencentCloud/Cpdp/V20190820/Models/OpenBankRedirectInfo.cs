@@ -67,6 +67,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("MpUserName")]
         public string MpUserName{ get; set; }
 
+        /// <summary>
+        /// 网银支付提交页面信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FormInfo")]
+        public OpenBankFormInfo FormInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +87,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "MpAppId", this.MpAppId);
             this.SetParamSimple(map, prefix + "MpPath", this.MpPath);
             this.SetParamSimple(map, prefix + "MpUserName", this.MpUserName);
+            this.SetParamObj(map, prefix + "FormInfo.", this.FormInfo);
         }
     }
 }

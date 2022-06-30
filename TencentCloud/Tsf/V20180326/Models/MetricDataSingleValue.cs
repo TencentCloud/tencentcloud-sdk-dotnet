@@ -45,6 +45,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("MetricDataValue")]
         public string MetricDataValue{ get; set; }
 
+        /// <summary>
+        /// 日环比
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DailyPercent")]
+        public float? DailyPercent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
             this.SetParamSimple(map, prefix + "MetricFunction", this.MetricFunction);
             this.SetParamSimple(map, prefix + "MetricDataValue", this.MetricDataValue);
+            this.SetParamSimple(map, prefix + "DailyPercent", this.DailyPercent);
         }
     }
 }

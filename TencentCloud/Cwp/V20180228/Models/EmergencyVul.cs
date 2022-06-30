@@ -100,6 +100,20 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("HostCount")]
         public ulong? HostCount{ get; set; }
 
+        /// <summary>
+        /// 是否支持防御， 0:不支持 1:支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportDefense")]
+        public ulong? IsSupportDefense{ get; set; }
+
+        /// <summary>
+        /// 已防御的攻击次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefenseAttackCount")]
+        public ulong? DefenseAttackCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +132,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "CvssScore", this.CvssScore);
             this.SetParamSimple(map, prefix + "Labels", this.Labels);
             this.SetParamSimple(map, prefix + "HostCount", this.HostCount);
+            this.SetParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
+            this.SetParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
         }
     }
 }

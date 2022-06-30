@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 图片智能识别任务结果。
+        /// 图片审核任务结果。
         /// </summary>
         [JsonProperty("ReviewResultSet")]
         public ContentReviewResult[] ReviewResultSet{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 被抄送人手机号
+        /// 被抄送人手机号，大陆11位手机号
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

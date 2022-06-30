@@ -26,34 +26,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 应用信息
-        /// 此接口Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
+        /// 此接口Agent.AppId、Agent.ProxyOrganizationOpenId 和 Agent. ProxyOperator.OpenId 必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业名称
+        /// 渠道侧合作企业名称，最大长度64个字符
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业统一社会信用代码
-        /// </summary>
-        [JsonProperty("UniformSocialCreditCode")]
-        public string UniformSocialCreditCode{ get; set; }
-
-        /// <summary>
-        /// 渠道侧合作企业经办人的姓名
+        /// 渠道侧合作企业经办人的姓名，最大长度50个字符
         /// </summary>
         [JsonProperty("ProxyOperatorName")]
         public string ProxyOperatorName{ get; set; }
-
-        /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
 
         /// <summary>
         /// 控制台指定模块，文件/合同管理:"DOCUMENT"，模板管理:"TEMPLATE"，印章管理:"SEAL"，组织架构/人员:"OPERATOR"，空字符串："账号信息"
@@ -67,6 +55,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("ModuleId")]
         public string ModuleId{ get; set; }
 
+        /// <summary>
+        /// 渠道侧合作企业统一社会信用代码，最大长度200个字符
+        /// </summary>
+        [JsonProperty("UniformSocialCreditCode")]
+        public string UniformSocialCreditCode{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,11 +75,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
-            this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "ProxyOperatorName", this.ProxyOperatorName);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
+            this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

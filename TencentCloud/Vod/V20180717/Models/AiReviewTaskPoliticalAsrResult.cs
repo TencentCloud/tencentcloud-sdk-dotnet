@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 智能识别 Asr 文字涉及令人不适宜信息的任务输入。
+        /// 音视频审核 Asr 文字涉及令人不适宜信息的任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPoliticalAsrTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 智能识别 Asr 文字涉及令人不适宜信息的任务输出。
+        /// 音视频审核 Asr 文字涉及令人不适宜信息的任务输出。
         /// </summary>
         [JsonProperty("Output")]
         public AiReviewPoliticalAsrTaskOutput Output{ get; set; }

@@ -25,10 +25,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 自定义用户编号
+        /// 用户在渠道的编号
         /// </summary>
-        [JsonProperty("CustomUserId")]
-        public string CustomUserId{ get; set; }
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
 
         /// <summary>
         /// 用户的来源渠道
@@ -37,10 +37,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Channel{ get; set; }
 
         /// <summary>
-        /// 用户在渠道的编号
+        /// 自定义用户编号
         /// </summary>
-        [JsonProperty("OpenId")]
-        public string OpenId{ get; set; }
+        [JsonProperty("CustomUserId")]
+        public string CustomUserId{ get; set; }
 
         /// <summary>
         /// 用户真实IP
@@ -60,9 +60,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
-            this.SetParamSimple(map, prefix + "Channel", this.Channel);
             this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
+            this.SetParamSimple(map, prefix + "Channel", this.Channel);
+            this.SetParamSimple(map, prefix + "CustomUserId", this.CustomUserId);
             this.SetParamSimple(map, prefix + "ClientIp", this.ClientIp);
             this.SetParamSimple(map, prefix + "ProxyIp", this.ProxyIp);
         }

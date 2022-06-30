@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频内容分析模板唯一标识。
+        /// 音视频内容分析模板唯一标识。
         /// </summary>
         [JsonProperty("Definition")]
         public long? Definition{ get; set; }

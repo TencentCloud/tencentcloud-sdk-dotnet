@@ -25,28 +25,29 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息
+        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 多个合同（流程）信息
+        /// 多个合同（签署流程）信息，最多支持20个
         /// </summary>
         [JsonProperty("FlowInfos")]
         public FlowInfo[] FlowInfos{ get; set; }
+
+        /// <summary>
+        /// 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
+        /// 预览链接有效期300秒；
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
 
         /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 是否为预览模式；默认为false，即非预览模式，此时发起合同并返回FlowIds；若为预览模式，则返回PreviewUrls；
-        /// </summary>
-        [JsonProperty("NeedPreview")]
-        public bool? NeedPreview{ get; set; }
 
 
         /// <summary>
@@ -56,8 +57,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "FlowInfos.", this.FlowInfos);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

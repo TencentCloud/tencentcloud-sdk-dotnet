@@ -26,28 +26,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
         
         /// <summary>
         /// 应用信息
-        /// 此接口Agent.ProxyOrganizationOpenId必填
+        /// 此接口Agent.AppId、Agent.ProxyOrganizationOpenId必填
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业名称
+        /// 渠道侧合作企业名称，最大长度64个字符
         /// </summary>
         [JsonProperty("ProxyOrganizationName")]
         public string ProxyOrganizationName{ get; set; }
-
-        /// <summary>
-        /// 渠道侧合作企业统一社会信用代码
-        /// </summary>
-        [JsonProperty("UniformSocialCreditCode")]
-        public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
         /// 营业执照正面照(PNG或JPG) base64格式, 大小不超过5M
         /// </summary>
         [JsonProperty("BusinessLicense")]
         public string BusinessLicense{ get; set; }
+
+        /// <summary>
+        /// 渠道侧合作企业统一社会信用代码，最大长度200个字符
+        /// </summary>
+        [JsonProperty("UniformSocialCreditCode")]
+        public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
         /// 操作者的信息
@@ -63,8 +63,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
-            this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamSimple(map, prefix + "BusinessLicense", this.BusinessLicense);
+            this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

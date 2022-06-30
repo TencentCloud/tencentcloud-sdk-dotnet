@@ -25,14 +25,16 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 代理ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 实例名称
+        /// 代理名称
+        /// 当ProxyType=hostname时，表示域名或者子域名
+        /// 当ProxyType=instance时，表示实例名称
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
@@ -124,15 +126,17 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// 服务类型
-        /// hostname：子域名
-        /// instance：实例
+        /// hostname：子域名模式
+        /// instance：实例模式
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
-        /// 七层实例ID
+        /// 当ProxyType=hostname时：
+        /// ProxyName为域名，如：test.123.com
+        /// HostId表示该域名，即test.123.com对应的代理加速唯一标识
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HostId")]

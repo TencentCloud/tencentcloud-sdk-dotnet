@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 智能识别结果是否进入智能识别墙（对识别结果进行人工复核）的开关。
+        /// 音视频审核结果是否进入音视频审核墙（对识别结果进行人工复核）的开关。
         /// <li>ON：是；</li>
         /// <li>OFF：否。</li>
         /// </summary>
@@ -39,13 +39,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 内容智能识别模板名称，长度限制：64 个字符。
+        /// 内容审核模板名称，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 内容智能识别模板描述信息，长度限制：256 个字符。
+        /// 内容审核模板描述信息，长度限制：256 个字符。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
@@ -77,7 +77,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ProhibitedConfigureInfo ProhibitedConfigure{ get; set; }
 
         /// <summary>
-        /// 用户自定义内容智能识别控制参数。
+        /// 用户自定义内容审核控制参数。
         /// </summary>
         [JsonProperty("UserDefineConfigure")]
         public UserDefineConfigureInfo UserDefineConfigure{ get; set; }

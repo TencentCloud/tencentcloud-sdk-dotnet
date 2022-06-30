@@ -31,10 +31,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 消耗量
+        /// 渠道侧合作企业名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Usage")]
-        public ulong? Usage{ get; set; }
+        [JsonProperty("ProxyOrganizationName")]
+        public string ProxyOrganizationName{ get; set; }
 
         /// <summary>
         /// 日期，当需要汇总数据时日期为空
@@ -44,11 +45,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// 渠道侧合作企业名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 消耗量
         /// </summary>
-        [JsonProperty("ProxyOrganizationName")]
-        public string ProxyOrganizationName{ get; set; }
+        [JsonProperty("Usage")]
+        public ulong? Usage{ get; set; }
 
 
         /// <summary>
@@ -57,9 +57,9 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
-            this.SetParamSimple(map, prefix + "Usage", this.Usage);
-            this.SetParamSimple(map, prefix + "Date", this.Date);
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
+            this.SetParamSimple(map, prefix + "Date", this.Date);
+            this.SetParamSimple(map, prefix + "Usage", this.Usage);
         }
     }
 }

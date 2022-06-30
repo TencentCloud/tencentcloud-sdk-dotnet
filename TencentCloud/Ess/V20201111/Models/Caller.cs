@@ -37,16 +37,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string OrganizationId{ get; set; }
 
         /// <summary>
-        /// 下属机构ID
-        /// </summary>
-        [JsonProperty("SubOrganizationId")]
-        public string SubOrganizationId{ get; set; }
-
-        /// <summary>
         /// 经办人的用户ID
         /// </summary>
         [JsonProperty("OperatorId")]
         public string OperatorId{ get; set; }
+
+        /// <summary>
+        /// 下属机构ID
+        /// </summary>
+        [JsonProperty("SubOrganizationId")]
+        public string SubOrganizationId{ get; set; }
 
 
         /// <summary>
@@ -56,8 +56,8 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "OrganizationId", this.OrganizationId);
-            this.SetParamSimple(map, prefix + "SubOrganizationId", this.SubOrganizationId);
             this.SetParamSimple(map, prefix + "OperatorId", this.OperatorId);
+            this.SetParamSimple(map, prefix + "SubOrganizationId", this.SubOrganizationId);
         }
     }
 }

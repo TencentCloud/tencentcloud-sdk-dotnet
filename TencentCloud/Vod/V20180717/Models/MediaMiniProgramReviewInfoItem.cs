@@ -37,7 +37,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 小程序智能识别视频播放地址。
+        /// 小程序音视频审核视频播放地址。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }
@@ -51,7 +51,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ReviewResult{ get; set; }
 
         /// <summary>
-        /// 小程序智能识别元素。
+        /// 小程序音视频审核元素。
         /// </summary>
         [JsonProperty("ReviewSummary")]
         public MediaMiniProgramReviewElem[] ReviewSummary{ get; set; }

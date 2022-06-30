@@ -15,28 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputTaValue : AbstractModel
+    public class DescribeDMSTablesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 是否查得[0：未查得；1：查得]
+        /// DMS元数据列表信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsCheck")]
-        public long? IsCheck{ get; set; }
+        [JsonProperty("TableList")]
+        public DMSTableInfo[] TableList{ get; set; }
 
         /// <summary>
-        /// 是否符合[0：不符合；1：符合]
+        /// 统计值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsMatch")]
-        public long? IsMatch{ get; set; }
+        [JsonProperty("TotalCount")]
+        public long? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +50,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "IsCheck", this.IsCheck);
-            this.SetParamSimple(map, prefix + "IsMatch", this.IsMatch);
+            this.SetParamArrayObj(map, prefix + "TableList.", this.TableList);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

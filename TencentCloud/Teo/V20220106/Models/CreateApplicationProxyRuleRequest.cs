@@ -54,7 +54,6 @@ namespace TencentCloud.Teo.V20220106.Models
         /// 源站类型，取值：
         /// custom：手动添加
         /// origins：源站组
-        /// load_balancing：负载均衡
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
@@ -65,7 +64,6 @@ namespace TencentCloud.Teo.V20220106.Models
         /// IP:端口
         /// 域名:端口
         /// 当OriginType=origins时，包含一个元素，表示源站组ID
-        /// 当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }

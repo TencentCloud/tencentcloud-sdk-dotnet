@@ -42,6 +42,12 @@ namespace TencentCloud.Eb.V20210416.Models
         [JsonProperty("CkafkaTargetParams")]
         public CkafkaTargetParams CkafkaTargetParams{ get; set; }
 
+        /// <summary>
+        /// ElasticSearch参数
+        /// </summary>
+        [JsonProperty("ESTargetParams")]
+        public ESTargetParams ESTargetParams{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "ResourceDescription", this.ResourceDescription);
             this.SetParamObj(map, prefix + "SCFParams.", this.SCFParams);
             this.SetParamObj(map, prefix + "CkafkaTargetParams.", this.CkafkaTargetParams);
+            this.SetParamObj(map, prefix + "ESTargetParams.", this.ESTargetParams);
         }
     }
 }

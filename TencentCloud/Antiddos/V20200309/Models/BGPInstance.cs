@@ -120,6 +120,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("TagInfoList")]
         public TagInfo[] TagInfoList{ get; set; }
 
+        /// <summary>
+        /// 新版本1ip高防包
+        /// </summary>
+        [JsonProperty("IpCountNewFlag")]
+        public ulong? IpCountNewFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -140,6 +146,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "DDoSLevel", this.DDoSLevel);
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
         }
     }
 }

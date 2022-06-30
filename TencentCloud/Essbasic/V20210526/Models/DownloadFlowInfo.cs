@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 合同（流程）的标识数组
+        /// 签署流程的标识数组
         /// </summary>
         [JsonProperty("FlowIdList")]
         public string[] FlowIdList{ get; set; }

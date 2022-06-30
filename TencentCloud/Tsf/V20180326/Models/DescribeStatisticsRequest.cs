@@ -108,6 +108,12 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("DbName")]
         public string DbName{ get; set; }
 
+        /// <summary>
+        /// 命名空间id数组
+        /// </summary>
+        [JsonProperty("NamespaceIdList")]
+        public string[] NamespaceIdList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +134,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "MetricDimensionValues.", this.MetricDimensionValues);
             this.SetParamSimple(map, prefix + "BucketKey", this.BucketKey);
             this.SetParamSimple(map, prefix + "DbName", this.DbName);
+            this.SetParamArraySimple(map, prefix + "NamespaceIdList.", this.NamespaceIdList);
         }
     }
 }

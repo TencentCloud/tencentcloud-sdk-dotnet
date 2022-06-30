@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 视频处理任务 ID。
+        /// 音视频处理任务 ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
@@ -75,32 +75,32 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// 原始视频的元信息。
+        /// 原始音视频的元信息。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MetaData")]
         public MediaMetaData MetaData{ get; set; }
 
         /// <summary>
-        /// 视频处理任务的执行状态与结果。
+        /// 音视频处理任务的执行状态与结果。
         /// </summary>
         [JsonProperty("MediaProcessResultSet")]
         public MediaProcessTaskResult[] MediaProcessResultSet{ get; set; }
 
         /// <summary>
-        /// 视频智能识别任务的执行状态与结果。
+        /// 音视频审核任务的执行状态与结果。
         /// </summary>
         [JsonProperty("AiContentReviewResultSet")]
         public AiContentReviewResult[] AiContentReviewResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容分析任务的执行状态与结果。
+        /// 音视频内容分析任务的执行状态与结果。
         /// </summary>
         [JsonProperty("AiAnalysisResultSet")]
         public AiAnalysisResult[] AiAnalysisResultSet{ get; set; }
 
         /// <summary>
-        /// 视频内容识别任务的执行状态与结果。
+        /// 音视频内容识别任务的执行状态与结果。
         /// </summary>
         [JsonProperty("AiRecognitionResultSet")]
         public AiRecognitionResult[] AiRecognitionResultSet{ get; set; }

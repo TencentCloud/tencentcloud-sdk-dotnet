@@ -31,13 +31,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? SubAppId{ get; set; }
 
         /// <summary>
-        /// 视频内容分析模板名称，长度限制：64 个字符。
+        /// 音视频内容分析模板名称，长度限制：64 个字符。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 视频内容分析模板描述信息，长度限制：256 个字符。
+        /// 音视频内容分析模板描述信息，长度限制：256 个字符。
         /// </summary>
         [JsonProperty("Comment")]
         public string Comment{ get; set; }

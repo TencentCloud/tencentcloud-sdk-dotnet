@@ -25,10 +25,10 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 无
+        /// 签署流程编号,由CreateFlow接口返回
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
 
         /// <summary>
         /// 用户上传的模板ID
@@ -37,22 +37,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 流程ID
-        /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
-
-        /// <summary>
-        /// 文件名列表
+        /// 文件名列表,单个文件名最大长度200个字符
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
 
         /// <summary>
-        /// 内容控件信息数组
+        /// 无
         /// </summary>
-        [JsonProperty("FormFields")]
-        public FormField[] FormFields{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
         /// <summary>
         /// 应用相关信息
@@ -61,10 +55,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 客户端Token，保持接口幂等性
+        /// 内容控件信息数组
         /// </summary>
-        [JsonProperty("ClientToken")]
-        public string ClientToken{ get; set; }
+        [JsonProperty("FormFields")]
+        public FormField[] FormFields{ get; set; }
 
         /// <summary>
         /// 是否需要生成预览文件 默认不生成；
@@ -73,20 +67,26 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("NeedPreview")]
         public bool? NeedPreview{ get; set; }
 
+        /// <summary>
+        /// 客户端Token，保持接口幂等性,最大长度64个字符
+        /// </summary>
+        [JsonProperty("ClientToken")]
+        public string ClientToken{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
-            this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
+            this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }
     }
 }

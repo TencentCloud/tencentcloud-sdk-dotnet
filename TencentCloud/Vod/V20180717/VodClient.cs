@@ -273,7 +273,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容分析模板，数量上限：50。
+        /// 创建用户自定义音视频内容分析模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
         /// <returns><see cref="CreateAIAnalysisTemplateResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容分析模板，数量上限：50。
+        /// 创建用户自定义音视频内容分析模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIAnalysisTemplateRequest"/></param>
         /// <returns><see cref="CreateAIAnalysisTemplateResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容识别模板，数量上限：50。
+        /// 创建用户自定义音视频内容识别模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="CreateAIRecognitionTemplateResponse"/></returns>
@@ -333,7 +333,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容识别模板，数量上限：50。
+        /// 创建用户自定义音视频内容识别模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="CreateAIRecognitionTemplateResponse"/></returns>
@@ -479,7 +479,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容智能识别模板，数量上限：50。
+        /// 创建用户自定义音视频内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
         /// <returns><see cref="CreateContentReviewTemplateResponse"/></returns>
@@ -499,7 +499,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建用户自定义视频内容智能识别模板，数量上限：50。
+        /// 创建用户自定义音视频内容审核模板，数量上限：50。
         /// </summary>
         /// <param name="req"><see cref="CreateContentReviewTemplateRequest"/></param>
         /// <returns><see cref="CreateContentReviewTemplateResponse"/></returns>
@@ -1085,7 +1085,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容分析模板。
+        /// 删除用户自定义音视频内容分析模板。
         /// 
         /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
         /// </summary>
@@ -1107,7 +1107,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容分析模板。
+        /// 删除用户自定义音视频内容分析模板。
         /// 
         /// 注意：模板 ID 为 10000 以下的为系统预置模板，不允许删除。
         /// </summary>
@@ -1129,7 +1129,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容识别模板。
+        /// 删除用户自定义音视频内容识别模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="DeleteAIRecognitionTemplateResponse"/></returns>
@@ -1149,7 +1149,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容识别模板。
+        /// 删除用户自定义音视频内容识别模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="DeleteAIRecognitionTemplateResponse"/></returns>
@@ -1291,7 +1291,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容智能识别模板。
+        /// 删除用户自定义音视频内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -1311,7 +1311,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除用户自定义视频内容智能识别模板。
+        /// 删除用户自定义音视频内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="DeleteContentReviewTemplateRequest"/></param>
         /// <returns><see cref="DeleteContentReviewTemplateResponse"/></returns>
@@ -1859,7 +1859,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容分析模板唯一标识，获取音视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义音视频内容分析模板及[系统预置音视频内容分析模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
@@ -1879,7 +1879,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容分析模板唯一标识，获取视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义视频内容分析模板及[系统预置视频内容分析模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容分析模板唯一标识，获取音视频内容分析模板详情列表。返回结果包含符合条件的所有用户自定义音视频内容分析模板及[系统预置音视频内容分析模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.88.86.E6.9E.90.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAIAnalysisTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIAnalysisTemplatesResponse"/></returns>
@@ -1899,7 +1899,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容识别模板唯一标识，获取视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义视频内容识别模板及[系统预置视频内容识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容识别模板唯一标识，获取音视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义音视频内容识别模板及[系统预置音视频内容识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAIRecognitionTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIRecognitionTemplatesResponse"/></returns>
@@ -1919,7 +1919,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容识别模板唯一标识，获取视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义视频内容识别模板及[系统预置视频内容识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容识别模板唯一标识，获取音视频内容识别模板详情列表。返回结果包含符合条件的所有用户自定义音视频内容识别模板及[系统预置音视频内容识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E8.AF.86.E5.88.AB.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeAIRecognitionTemplatesRequest"/></param>
         /// <returns><see cref="DescribeAIRecognitionTemplatesResponse"/></returns>
@@ -2199,7 +2199,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容智能识别模板唯一标识，获取视频内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容智能识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -2219,7 +2219,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 根据视频内容智能识别模板唯一标识，获取视频内容智能识别模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容智能识别模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
+        /// 根据音视频内容审核模板唯一标识，获取音视频内容审核模板详情列表。返回结果包含符合条件的所有用户自定义模板及[系统预置内容审核模板](https://cloud.tencent.com/document/product/266/33476#.E9.A2.84.E7.BD.AE.E8.A7.86.E9.A2.91.E5.86.85.E5.AE.B9.E5.AE.A1.E6.A0.B8.E6.A8.A1.E6.9D.BF)。
         /// </summary>
         /// <param name="req"><see cref="DescribeContentReviewTemplatesRequest"/></param>
         /// <returns><see cref="DescribeContentReviewTemplatesResponse"/></returns>
@@ -2597,8 +2597,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口返回查询时间范围内每天使用的图片智能识别用量信息。
-        ///    1. 可以查询最近365天内的图片智能识别统计数据。
+        /// 该接口返回查询时间范围内每天使用的图片审核用量信息。
+        ///    1. 可以查询最近365天内的图片审核统计数据。
         ///    2. 查询时间跨度不超过90天。
         ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
         /// </summary>
@@ -2620,8 +2620,8 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 该接口返回查询时间范围内每天使用的图片智能识别用量信息。
-        ///    1. 可以查询最近365天内的图片智能识别统计数据。
+        /// 该接口返回查询时间范围内每天使用的图片审核用量信息。
+        ///    1. 可以查询最近365天内的图片审核统计数据。
         ///    2. 查询时间跨度不超过90天。
         ///    3. 查询时间跨度超过1天的，返回以天为粒度的数据，否则，返回以5分钟为粒度的数据。
         /// </summary>
@@ -3865,7 +3865,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容分析模板。
+        /// 修改用户自定义音视频内容分析模板。
         /// 
         /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
         /// </summary>
@@ -3887,7 +3887,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容分析模板。
+        /// 修改用户自定义音视频内容分析模板。
         /// 
         /// 注意：模板 ID 10000 以下的为系统预置模板，不允许修改。
         /// </summary>
@@ -3909,7 +3909,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容识别模板。
+        /// 修改用户自定义音视频内容识别模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="ModifyAIRecognitionTemplateResponse"/></returns>
@@ -3929,7 +3929,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容识别模板。
+        /// 修改用户自定义音视频内容识别模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyAIRecognitionTemplateRequest"/></param>
         /// <returns><see cref="ModifyAIRecognitionTemplateResponse"/></returns>
@@ -4069,7 +4069,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容智能识别模板。
+        /// 修改用户自定义音视频内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
         /// <returns><see cref="ModifyContentReviewTemplateResponse"/></returns>
@@ -4089,7 +4089,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改用户自定义视频内容智能识别模板。
+        /// 修改用户自定义音视频内容审核模板。
         /// </summary>
         /// <param name="req"><see cref="ModifyContentReviewTemplateRequest"/></param>
         /// <returns><see cref="ModifyContentReviewTemplateResponse"/></returns>
@@ -4931,8 +4931,8 @@ namespace TencentCloud.Vod.V20180717
         /// 5. 对视频截图雪碧图；
         /// 6. 对视频截取一张图做封面；
         /// 7. 对视频转自适应码流（并加密）；
-        /// 8. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）；
-        /// 9. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 8. 内容审核（令人反感的信息、不安全的信息、不适宜的信息）；
+        /// 9. 内容分析（标签、分类、封面、按帧标签）；
         /// 10. 内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
         /// 
         /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
@@ -4969,8 +4969,8 @@ namespace TencentCloud.Vod.V20180717
         /// 5. 对视频截图雪碧图；
         /// 6. 对视频截取一张图做封面；
         /// 7. 对视频转自适应码流（并加密）；
-        /// 8. 智能识别（令人反感的信息、不安全的信息、不适宜的信息）；
-        /// 9. 智能内容分析（标签、分类、封面、按帧标签）；
+        /// 8. 内容审核（令人反感的信息、不安全的信息、不适宜的信息）；
+        /// 9. 内容分析（标签、分类、封面、按帧标签）；
         /// 10. 内容识别（视频片头片尾、人脸、文本全文、文本关键词、语音全文、语音关键词、物体）。
         /// 
         /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
@@ -5351,10 +5351,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
+        /// 对点播中的图片文件发起审核（令人反感的信息、不安全的信息、不适宜的信息）任务。
         /// 
         /// ><li>图片文件大小支持：文件 < 5M；</li>
-        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响智能识别效果；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响审核效果；</li>
         /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
         /// </summary>
         /// <param name="req"><see cref="ReviewImageRequest"/></param>
@@ -5375,10 +5375,10 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 对点播中的图片文件发起智能识别（令人反感的信息、不安全的信息、不适宜的信息）任务。
+        /// 对点播中的图片文件发起审核（令人反感的信息、不安全的信息、不适宜的信息）任务。
         /// 
         /// ><li>图片文件大小支持：文件 < 5M；</li>
-        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响智能识别效果；</li>
+        /// ><li>图片文件分辨率支持：建议分辨率大于256x256，否则可能会影响审核效果；</li>
         /// ><li>图片文件支持格式：PNG、JPG、JPEG、BMP、GIF、WEBP格式。</li>
         /// </summary>
         /// <param name="req"><see cref="ReviewImageRequest"/></param>

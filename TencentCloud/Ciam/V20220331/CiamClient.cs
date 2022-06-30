@@ -333,6 +333,46 @@ namespace TencentCloud.Ciam.V20220331
         }
 
         /// <summary>
+        /// 查询日志信息
+        /// </summary>
+        /// <param name="req"><see cref="ListLogMessageByConditionRequest"/></param>
+        /// <returns><see cref="ListLogMessageByConditionResponse"/></returns>
+        public async Task<ListLogMessageByConditionResponse> ListLogMessageByCondition(ListLogMessageByConditionRequest req)
+        {
+             JsonResponseModel<ListLogMessageByConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ListLogMessageByCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogMessageByConditionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询日志信息
+        /// </summary>
+        /// <param name="req"><see cref="ListLogMessageByConditionRequest"/></param>
+        /// <returns><see cref="ListLogMessageByConditionResponse"/></returns>
+        public ListLogMessageByConditionResponse ListLogMessageByConditionSync(ListLogMessageByConditionRequest req)
+        {
+             JsonResponseModel<ListLogMessageByConditionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ListLogMessageByCondition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListLogMessageByConditionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询用户列表
         /// </summary>
         /// <param name="req"><see cref="ListUserRequest"/></param>

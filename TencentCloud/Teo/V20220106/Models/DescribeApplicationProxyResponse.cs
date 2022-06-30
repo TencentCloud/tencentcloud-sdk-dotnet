@@ -39,11 +39,25 @@ namespace TencentCloud.Teo.V20220106.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 当ZoneId不为空时，表示当前站点允许创建的实例数量
+        /// 字段已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
+
+        /// <summary>
+        /// 表示套餐内PlatType为ip的Anycast IP实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpCount")]
+        public ulong? IpCount{ get; set; }
+
+        /// <summary>
+        /// 表示套餐内PlatType为domain的CNAME实例数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainCount")]
+        public ulong? DomainCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -60,6 +74,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArrayObj(map, prefix + "Data.", this.Data);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "Quota", this.Quota);
+            this.SetParamSimple(map, prefix + "IpCount", this.IpCount);
+            this.SetParamSimple(map, prefix + "DomainCount", this.DomainCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

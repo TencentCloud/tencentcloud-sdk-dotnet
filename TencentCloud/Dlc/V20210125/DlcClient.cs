@@ -53,6 +53,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// DMS元数据新增分区
+        /// </summary>
+        /// <param name="req"><see cref="AddDMSPartitionsRequest"/></param>
+        /// <returns><see cref="AddDMSPartitionsResponse"/></returns>
+        public async Task<AddDMSPartitionsResponse> AddDMSPartitions(AddDMSPartitionsRequest req)
+        {
+             JsonResponseModel<AddDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据新增分区
+        /// </summary>
+        /// <param name="req"><see cref="AddDMSPartitionsRequest"/></param>
+        /// <returns><see cref="AddDMSPartitionsResponse"/></returns>
+        public AddDMSPartitionsResponse AddDMSPartitionsSync(AddDMSPartitionsRequest req)
+        {
+             JsonResponseModel<AddDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加用户到工作组
         /// </summary>
         /// <param name="req"><see cref="AddUsersToWorkGroupRequest"/></param>
@@ -84,6 +124,126 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "AddUsersToWorkGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddUsersToWorkGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新库
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSDatabaseRequest"/></param>
+        /// <returns><see cref="AlterDMSDatabaseResponse"/></returns>
+        public async Task<AlterDMSDatabaseResponse> AlterDMSDatabase(AlterDMSDatabaseRequest req)
+        {
+             JsonResponseModel<AlterDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AlterDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新库
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSDatabaseRequest"/></param>
+        /// <returns><see cref="AlterDMSDatabaseResponse"/></returns>
+        public AlterDMSDatabaseResponse AlterDMSDatabaseSync(AlterDMSDatabaseRequest req)
+        {
+             JsonResponseModel<AlterDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AlterDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新分区
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSPartitionRequest"/></param>
+        /// <returns><see cref="AlterDMSPartitionResponse"/></returns>
+        public async Task<AlterDMSPartitionResponse> AlterDMSPartition(AlterDMSPartitionRequest req)
+        {
+             JsonResponseModel<AlterDMSPartitionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AlterDMSPartition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSPartitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新分区
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSPartitionRequest"/></param>
+        /// <returns><see cref="AlterDMSPartitionResponse"/></returns>
+        public AlterDMSPartitionResponse AlterDMSPartitionSync(AlterDMSPartitionRequest req)
+        {
+             JsonResponseModel<AlterDMSPartitionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AlterDMSPartition");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSPartitionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新表
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSTableRequest"/></param>
+        /// <returns><see cref="AlterDMSTableResponse"/></returns>
+        public async Task<AlterDMSTableResponse> AlterDMSTable(AlterDMSTableRequest req)
+        {
+             JsonResponseModel<AlterDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AlterDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据更新表
+        /// </summary>
+        /// <param name="req"><see cref="AlterDMSTableRequest"/></param>
+        /// <returns><see cref="AlterDMSTableResponse"/></returns>
+        public AlterDMSTableResponse AlterDMSTableSync(AlterDMSTableRequest req)
+        {
+             JsonResponseModel<AlterDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AlterDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AlterDMSTableResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -244,6 +404,126 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "CancelTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CancelTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据锁检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckLockMetaDataRequest"/></param>
+        /// <returns><see cref="CheckLockMetaDataResponse"/></returns>
+        public async Task<CheckLockMetaDataResponse> CheckLockMetaData(CheckLockMetaDataRequest req)
+        {
+             JsonResponseModel<CheckLockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckLockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckLockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据锁检查
+        /// </summary>
+        /// <param name="req"><see cref="CheckLockMetaDataRequest"/></param>
+        /// <returns><see cref="CheckLockMetaDataResponse"/></returns>
+        public CheckLockMetaDataResponse CheckLockMetaDataSync(CheckLockMetaDataRequest req)
+        {
+             JsonResponseModel<CheckLockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckLockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckLockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据创建库
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDMSDatabaseResponse"/></returns>
+        public async Task<CreateDMSDatabaseResponse> CreateDMSDatabase(CreateDMSDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据创建库
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSDatabaseRequest"/></param>
+        /// <returns><see cref="CreateDMSDatabaseResponse"/></returns>
+        public CreateDMSDatabaseResponse CreateDMSDatabaseSync(CreateDMSDatabaseRequest req)
+        {
+             JsonResponseModel<CreateDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据创建表
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSTableRequest"/></param>
+        /// <returns><see cref="CreateDMSTableResponse"/></returns>
+        public async Task<CreateDMSTableResponse> CreateDMSTable(CreateDMSTableRequest req)
+        {
+             JsonResponseModel<CreateDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据创建表
+        /// </summary>
+        /// <param name="req"><see cref="CreateDMSTableRequest"/></param>
+        /// <returns><see cref="CreateDMSTableResponse"/></returns>
+        public CreateDMSTableResponse CreateDMSTableSync(CreateDMSTableRequest req)
+        {
+             JsonResponseModel<CreateDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDMSTableResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1253,166 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// DMS元数据获取库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseResponse"/></returns>
+        public async Task<DescribeDMSDatabaseResponse> DescribeDMSDatabase(DescribeDMSDatabaseRequest req)
+        {
+             JsonResponseModel<DescribeDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取库
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DescribeDMSDatabaseResponse"/></returns>
+        public DescribeDMSDatabaseResponse DescribeDMSDatabaseSync(DescribeDMSDatabaseRequest req)
+        {
+             JsonResponseModel<DescribeDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取分区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSPartitionsRequest"/></param>
+        /// <returns><see cref="DescribeDMSPartitionsResponse"/></returns>
+        public async Task<DescribeDMSPartitionsResponse> DescribeDMSPartitions(DescribeDMSPartitionsRequest req)
+        {
+             JsonResponseModel<DescribeDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取分区
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSPartitionsRequest"/></param>
+        /// <returns><see cref="DescribeDMSPartitionsResponse"/></returns>
+        public DescribeDMSPartitionsResponse DescribeDMSPartitionsSync(DescribeDMSPartitionsRequest req)
+        {
+             JsonResponseModel<DescribeDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSTableRequest"/></param>
+        /// <returns><see cref="DescribeDMSTableResponse"/></returns>
+        public async Task<DescribeDMSTableResponse> DescribeDMSTable(DescribeDMSTableRequest req)
+        {
+             JsonResponseModel<DescribeDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSTableRequest"/></param>
+        /// <returns><see cref="DescribeDMSTableResponse"/></returns>
+        public DescribeDMSTableResponse DescribeDMSTableSync(DescribeDMSTableRequest req)
+        {
+             JsonResponseModel<DescribeDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSTablesRequest"/></param>
+        /// <returns><see cref="DescribeDMSTablesResponse"/></returns>
+        public async Task<DescribeDMSTablesResponse> DescribeDMSTables(DescribeDMSTablesRequest req)
+        {
+             JsonResponseModel<DescribeDMSTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDMSTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据获取表列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDMSTablesRequest"/></param>
+        /// <returns><see cref="DescribeDMSTablesResponse"/></returns>
+        public DescribeDMSTablesResponse DescribeDMSTablesSync(DescribeDMSTablesRequest req)
+        {
+             JsonResponseModel<DescribeDMSTablesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDMSTables");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDMSTablesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeDatabases）用于查询数据库列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeDatabasesRequest"/></param>
@@ -1573,6 +2013,126 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// DMS元数据删除库
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DropDMSDatabaseResponse"/></returns>
+        public async Task<DropDMSDatabaseResponse> DropDMSDatabase(DropDMSDatabaseRequest req)
+        {
+             JsonResponseModel<DropDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DropDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据删除库
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSDatabaseRequest"/></param>
+        /// <returns><see cref="DropDMSDatabaseResponse"/></returns>
+        public DropDMSDatabaseResponse DropDMSDatabaseSync(DropDMSDatabaseRequest req)
+        {
+             JsonResponseModel<DropDMSDatabaseResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DropDMSDatabase");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSDatabaseResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据删除分区
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSPartitionsRequest"/></param>
+        /// <returns><see cref="DropDMSPartitionsResponse"/></returns>
+        public async Task<DropDMSPartitionsResponse> DropDMSPartitions(DropDMSPartitionsRequest req)
+        {
+             JsonResponseModel<DropDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DropDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据删除分区
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSPartitionsRequest"/></param>
+        /// <returns><see cref="DropDMSPartitionsResponse"/></returns>
+        public DropDMSPartitionsResponse DropDMSPartitionsSync(DropDMSPartitionsRequest req)
+        {
+             JsonResponseModel<DropDMSPartitionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DropDMSPartitions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSPartitionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据删除表
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSTableRequest"/></param>
+        /// <returns><see cref="DropDMSTableResponse"/></returns>
+        public async Task<DropDMSTableResponse> DropDMSTable(DropDMSTableRequest req)
+        {
+             JsonResponseModel<DropDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DropDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DMS元数据删除表
+        /// </summary>
+        /// <param name="req"><see cref="DropDMSTableRequest"/></param>
+        /// <returns><see cref="DropDMSTableResponse"/></returns>
+        public DropDMSTableResponse DropDMSTableSync(DropDMSTableRequest req)
+        {
+             JsonResponseModel<DropDMSTableResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DropDMSTable");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DropDMSTableResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（ListTaskJobLogDetail）用于获取spark-jar日志列表
         /// </summary>
         /// <param name="req"><see cref="ListTaskJobLogDetailRequest"/></param>
@@ -1604,6 +2164,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "ListTaskJobLogDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ListTaskJobLogDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据锁
+        /// </summary>
+        /// <param name="req"><see cref="LockMetaDataRequest"/></param>
+        /// <returns><see cref="LockMetaDataResponse"/></returns>
+        public async Task<LockMetaDataResponse> LockMetaData(LockMetaDataRequest req)
+        {
+             JsonResponseModel<LockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "LockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据锁
+        /// </summary>
+        /// <param name="req"><see cref="LockMetaDataRequest"/></param>
+        /// <returns><see cref="LockMetaDataResponse"/></returns>
+        public LockMetaDataResponse LockMetaDataSync(LockMetaDataRequest req)
+        {
+             JsonResponseModel<LockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "LockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<LockMetaDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1764,6 +2364,46 @@ namespace TencentCloud.Dlc.V20210125
              {
                  var strResp = this.InternalRequestSync(req, "UnbindWorkGroupsFromUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnbindWorkGroupsFromUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据解锁
+        /// </summary>
+        /// <param name="req"><see cref="UnlockMetaDataRequest"/></param>
+        /// <returns><see cref="UnlockMetaDataResponse"/></returns>
+        public async Task<UnlockMetaDataResponse> UnlockMetaData(UnlockMetaDataRequest req)
+        {
+             JsonResponseModel<UnlockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UnlockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 元数据解锁
+        /// </summary>
+        /// <param name="req"><see cref="UnlockMetaDataRequest"/></param>
+        /// <returns><see cref="UnlockMetaDataResponse"/></returns>
+        public UnlockMetaDataResponse UnlockMetaDataSync(UnlockMetaDataRequest req)
+        {
+             JsonResponseModel<UnlockMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UnlockMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UnlockMetaDataResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

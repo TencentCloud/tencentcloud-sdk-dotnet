@@ -977,6 +977,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 修改客服账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffRequest"/></param>
+        /// <returns><see cref="ModifyStaffResponse"/></returns>
+        public async Task<ModifyStaffResponse> ModifyStaff(ModifyStaffRequest req)
+        {
+             JsonResponseModel<ModifyStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改客服账号
+        /// </summary>
+        /// <param name="req"><see cref="ModifyStaffRequest"/></param>
+        /// <returns><see cref="ModifyStaffResponse"/></returns>
+        public ModifyStaffResponse ModifyStaffSync(ModifyStaffRequest req)
+        {
+             JsonResponseModel<ModifyStaffResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyStaff");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyStaffResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 停止自动外呼任务
         /// </summary>
         /// <param name="req"><see cref="StopAutoCalloutTaskRequest"/></param>

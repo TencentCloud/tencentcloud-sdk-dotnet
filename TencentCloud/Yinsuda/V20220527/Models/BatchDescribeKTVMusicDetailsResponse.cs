@@ -15,34 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Yinsuda.V20220527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputTaData : AbstractModel
+    public class BatchDescribeKTVMusicDetailsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 错误码[0:成功；非0：失败的错误码]
+        /// 歌曲详细信息列表。
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
+        [JsonProperty("KTVMusicDetailInfoSet")]
+        public KTVMusicDetailInfo[] KTVMusicDetailInfoSet{ get; set; }
 
         /// <summary>
-        /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 不存在歌曲Id列表。
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
+        [JsonProperty("NotExistMusicIdSet")]
+        public string[] NotExistMusicIdSet{ get; set; }
 
         /// <summary>
-        /// 结果数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Value")]
-        public OutputTaValue Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -50,9 +48,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamArrayObj(map, prefix + "KTVMusicDetailInfoSet.", this.KTVMusicDetailInfoSet);
+            this.SetParamArraySimple(map, prefix + "NotExistMusicIdSet.", this.NotExistMusicIdSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

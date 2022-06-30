@@ -31,16 +31,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 文件夹数组，签署流程总数不能超过50个，一个文件夹下，不能超过20个签署流程
+        /// </summary>
+        [JsonProperty("DownLoadFlows")]
+        public DownloadFlowInfo[] DownLoadFlows{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 文件夹数组，合同（流程）总数不能超过50个，一个文件夹下，不能超过20个合同（流程），
-        /// </summary>
-        [JsonProperty("DownLoadFlows")]
-        public DownloadFlowInfo[] DownLoadFlows{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArrayObj(map, prefix + "DownLoadFlows.", this.DownLoadFlows);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

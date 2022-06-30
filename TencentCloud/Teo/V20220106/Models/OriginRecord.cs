@@ -32,13 +32,15 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// 当源站配置类型Type=area时，表示区域
-        /// 当源站类型Type=area时，为空表示默认区域
+        /// 为空表示默认区域
         /// </summary>
         [JsonProperty("Area")]
         public string[] Area{ get; set; }
 
         /// <summary>
         /// 当源站配置类型Type=weight时，表示权重
+        /// 取值范围为[1-100]
+        /// 源站组内多个源站权重总和应为100
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }

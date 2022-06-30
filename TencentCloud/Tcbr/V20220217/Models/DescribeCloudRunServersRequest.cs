@@ -30,6 +30,20 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("EnvId")]
         public string EnvId{ get; set; }
 
+        /// <summary>
+        /// 默认为9， 最大为30
+        /// 不传或传0时 取默认9
+        /// 大于30时取30
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
+        /// <summary>
+        /// 不传或传0时 会默认为1
+        /// </summary>
+        [JsonProperty("PageNum")]
+        public long? PageNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +51,8 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EnvId", this.EnvId);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
+            this.SetParamSimple(map, prefix + "PageNum", this.PageNum);
         }
     }
 }

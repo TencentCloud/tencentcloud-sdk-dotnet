@@ -55,7 +55,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ComponentType{ get; set; }
 
         /// <summary>
-        /// 控件简称
+        /// 控件简称，不能超过30个字符
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? ComponentRequired{ get; set; }
 
         /// <summary>
-        /// 控件所属文件的序号 (文档中文件的排列序号)
+        /// 控件所属文件的序号 (文档中文件的排列序号，从0开始)
         /// </summary>
         [JsonProperty("FileIndex")]
         public long? FileIndex{ get; set; }
@@ -96,7 +96,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public float? ComponentHeight{ get; set; }
 
         /// <summary>
-        /// 参数控件所在页码
+        /// 参数控件所在页码，从1开始
         /// </summary>
         [JsonProperty("ComponentPage")]
         public long? ComponentPage{ get; set; }
@@ -144,19 +144,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// 控件描述
+        /// 控件描述，不能超过30个字符
         /// </summary>
         [JsonProperty("ComponentDescription")]
         public string ComponentDescription{ get; set; }
 
         /// <summary>
-        /// 指定关键字时横坐标偏移量
+        /// 指定关键字时横坐标偏移量，单位pt
         /// </summary>
         [JsonProperty("OffsetX")]
         public float? OffsetX{ get; set; }
 
         /// <summary>
-        /// 指定关键字时纵坐标偏移量
+        /// 指定关键字时纵坐标偏移量，单位pt
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }

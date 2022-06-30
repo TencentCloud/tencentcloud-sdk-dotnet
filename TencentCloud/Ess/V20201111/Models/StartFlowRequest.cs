@@ -25,16 +25,16 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 签署流程编号，由CreateFlow接口返回
+        /// </summary>
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
+
+        /// <summary>
         /// 用户信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 流程编号
-        /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
 
         /// <summary>
         /// 应用相关信息
@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 客户端Token，保持接口幂等性
+        /// 客户端Token，保持接口幂等性,最大长度64个字符
         /// </summary>
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
@@ -54,8 +54,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
         }

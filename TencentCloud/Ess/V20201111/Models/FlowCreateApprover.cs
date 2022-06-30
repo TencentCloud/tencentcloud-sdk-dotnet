@@ -41,14 +41,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string OrganizationName{ get; set; }
 
         /// <summary>
-        /// 是否需要签署
-        /// - `false`: 不需要签署
-        /// -  `true`:  需要签署
-        /// </summary>
-        [JsonProperty("Required")]
-        public bool? Required{ get; set; }
-
-        /// <summary>
         /// 签署方经办人姓名
         /// </summary>
         [JsonProperty("ApproverName")]
@@ -61,12 +53,6 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 签署方经办人证件号码
-        /// </summary>
-        [JsonProperty("ApproverIdCardNumber")]
-        public string ApproverIdCardNumber{ get; set; }
-
-        /// <summary>
         /// 签署方经办人证件类型ID_CARD 身份证
         /// HONGKONG_AND_MACAO 港澳居民来往内地通行证
         /// HONGKONG_MACAO_AND_TAIWAN 港澳台居民居住证(格式同居民身份证)
@@ -75,16 +61,28 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverIdCardType{ get; set; }
 
         /// <summary>
+        /// 签署方经办人证件号码
+        /// </summary>
+        [JsonProperty("ApproverIdCardNumber")]
+        public string ApproverIdCardNumber{ get; set; }
+
+        /// <summary>
         /// 签署方经办人在模板中的角色ID
         /// </summary>
         [JsonProperty("RecipientId")]
         public string RecipientId{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+        /// 签署意愿确认渠道,WEIXINAPP:人脸识别
         /// </summary>
-        [JsonProperty("UserId")]
-        public string UserId{ get; set; }
+        [JsonProperty("VerifyChannel")]
+        public string[] VerifyChannel{ get; set; }
+
+        /// <summary>
+        /// 是否发送短信，sms--短信通知，none--不通知，默认为sms
+        /// </summary>
+        [JsonProperty("NotifyType")]
+        public string NotifyType{ get; set; }
 
         /// <summary>
         /// 签署前置条件：是否需要阅读全文，默认为不需要
@@ -99,16 +97,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 是否发送短信，sms--短信通知，none--不通知，默认为sms
+        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
         /// </summary>
-        [JsonProperty("NotifyType")]
-        public string NotifyType{ get; set; }
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
 
         /// <summary>
-        /// 签署意愿确认渠道,WEIXINAPP:人脸识别
+        /// 当前只支持true，默认为true
         /// </summary>
-        [JsonProperty("VerifyChannel")]
-        public string[] VerifyChannel{ get; set; }
+        [JsonProperty("Required")]
+        public bool? Required{ get; set; }
 
 
         /// <summary>
@@ -118,17 +116,17 @@ namespace TencentCloud.Ess.V20201111.Models
         {
             this.SetParamSimple(map, prefix + "ApproverType", this.ApproverType);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
-            this.SetParamSimple(map, prefix + "Required", this.Required);
             this.SetParamSimple(map, prefix + "ApproverName", this.ApproverName);
             this.SetParamSimple(map, prefix + "ApproverMobile", this.ApproverMobile);
-            this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "ApproverIdCardType", this.ApproverIdCardType);
+            this.SetParamSimple(map, prefix + "ApproverIdCardNumber", this.ApproverIdCardNumber);
             this.SetParamSimple(map, prefix + "RecipientId", this.RecipientId);
-            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
+            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
             this.SetParamSimple(map, prefix + "IsFullText", this.IsFullText);
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
-            this.SetParamSimple(map, prefix + "NotifyType", this.NotifyType);
-            this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Required", this.Required);
         }
     }
 }

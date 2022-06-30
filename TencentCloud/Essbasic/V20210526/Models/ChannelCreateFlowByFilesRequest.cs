@@ -31,10 +31,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// 签署流程名称，长度不超过200个字符
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
+
+        /// <summary>
+        /// 签署流程签约方列表，最多不超过5个参与方
+        /// </summary>
+        [JsonProperty("FlowApprovers")]
+        public FlowApproverInfo[] FlowApprovers{ get; set; }
 
         /// <summary>
         /// 签署文件资源Id列表，目前仅支持单个文件
@@ -43,40 +49,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 流程名称，长度不超过200个字符
+        /// 签署文件中的控件，如：填写控件等
         /// </summary>
-        [JsonProperty("FlowName")]
-        public string FlowName{ get; set; }
+        [JsonProperty("Components")]
+        public Component[] Components{ get; set; }
 
         /// <summary>
-        /// 流程截止时间，十位数时间戳，最大值为33162419560，即3020年
+        /// 签署流程截止时间，十位数时间戳，最大值为33162419560，即3020年
         /// </summary>
         [JsonProperty("Deadline")]
         public long? Deadline{ get; set; }
 
         /// <summary>
-        /// 流程的描述，长度不超过1000个字符
-        /// </summary>
-        [JsonProperty("FlowDescription")]
-        public string FlowDescription{ get; set; }
-
-        /// <summary>
-        /// 流程的类型，长度不超过255个字符
-        /// </summary>
-        [JsonProperty("FlowType")]
-        public string FlowType{ get; set; }
-
-        /// <summary>
-        /// 流程回调地址，长度不超过255个字符
+        /// 签署流程回调地址，长度不超过255个字符
         /// </summary>
         [JsonProperty("CallbackUrl")]
         public string CallbackUrl{ get; set; }
-
-        /// <summary>
-        /// 流程签约方列表，最多不超过5个参与方
-        /// </summary>
-        [JsonProperty("FlowApprovers")]
-        public FlowApproverInfo[] FlowApprovers{ get; set; }
 
         /// <summary>
         /// 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
@@ -85,10 +73,28 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 签署文件中的控件，如：填写控件等
+        /// 签署流程的类型，长度不超过255个字符
         /// </summary>
-        [JsonProperty("Components")]
-        public Component[] Components{ get; set; }
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
+
+        /// <summary>
+        /// 签署流程的描述，长度不超过1000个字符
+        /// </summary>
+        [JsonProperty("FlowDescription")]
+        public string FlowDescription{ get; set; }
+
+        /// <summary>
+        /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+        /// </summary>
+        [JsonProperty("CustomShowMap")]
+        public string CustomShowMap{ get; set; }
+
+        /// <summary>
+        /// 操作者的信息
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -97,16 +103,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
-            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
-            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
-            this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
+            this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
+            this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
+            this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

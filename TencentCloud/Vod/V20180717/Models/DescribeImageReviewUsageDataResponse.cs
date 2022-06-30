@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 图片智能识别次数统计数据，展示查询时间范围内的图片智能识别次数的概览数据。
+        /// 图片审核次数统计数据，展示查询时间范围内的图片审核次数的概览数据。
         /// </summary>
         [JsonProperty("ImageReviewUsageDataSet")]
         public ImageReviewUsageDataItem[] ImageReviewUsageDataSet{ get; set; }

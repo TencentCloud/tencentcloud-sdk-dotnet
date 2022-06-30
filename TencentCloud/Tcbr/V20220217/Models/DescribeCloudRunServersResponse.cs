@@ -31,6 +31,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public ServerBaseInfo[] ServerList{ get; set; }
 
         /// <summary>
+        /// 服务总数
+        /// </summary>
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "ServerList.", this.ServerList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

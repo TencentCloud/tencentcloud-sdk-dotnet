@@ -55,6 +55,24 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Component[] SignComponents{ get; set; }
 
         /// <summary>
+        /// 模板中的流程参与人信息
+        /// </summary>
+        [JsonProperty("Recipients")]
+        public Recipient[] Recipients{ get; set; }
+
+        /// <summary>
+        /// 模板类型：1-静默签；2-静默签授权；3-普通模板
+        /// </summary>
+        [JsonProperty("TemplateType")]
+        public long? TemplateType{ get; set; }
+
+        /// <summary>
+        /// 是否是发起人
+        /// </summary>
+        [JsonProperty("IsPromoter")]
+        public bool? IsPromoter{ get; set; }
+
+        /// <summary>
         /// 模板的创建者信息
         /// </summary>
         [JsonProperty("Creator")]
@@ -65,24 +83,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         [JsonProperty("CreatedOn")]
         public long? CreatedOn{ get; set; }
-
-        /// <summary>
-        /// 模板类型：1-静默签；2-静默签授权；3-普通模板
-        /// </summary>
-        [JsonProperty("TemplateType")]
-        public long? TemplateType{ get; set; }
-
-        /// <summary>
-        /// 模板中的流程参与人信息
-        /// </summary>
-        [JsonProperty("Recipients")]
-        public Recipient[] Recipients{ get; set; }
-
-        /// <summary>
-        /// 是否是发起人
-        /// </summary>
-        [JsonProperty("IsPromoter")]
-        public bool? IsPromoter{ get; set; }
 
 
         /// <summary>
@@ -95,11 +95,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
             this.SetParamArrayObj(map, prefix + "SignComponents.", this.SignComponents);
+            this.SetParamArrayObj(map, prefix + "Recipients.", this.Recipients);
+            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
             this.SetParamSimple(map, prefix + "Creator", this.Creator);
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-            this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
-            this.SetParamArrayObj(map, prefix + "Recipients.", this.Recipients);
-            this.SetParamSimple(map, prefix + "IsPromoter", this.IsPromoter);
         }
     }
 }

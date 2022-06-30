@@ -172,6 +172,14 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("TagInfoList")]
         public TagInfo[] TagInfoList{ get; set; }
 
+        /// <summary>
+        /// 资产实例所属的全力防护套餐包详情，
+        /// 注意：当资产实例不是全力防护套餐包的实例时，此字段为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AnycastOutPackRelation")]
+        public AnycastOutPackRelation AnycastOutPackRelation{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -199,6 +207,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "V6Flag", this.V6Flag);
             this.SetParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
+            this.SetParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
         }
     }
 }

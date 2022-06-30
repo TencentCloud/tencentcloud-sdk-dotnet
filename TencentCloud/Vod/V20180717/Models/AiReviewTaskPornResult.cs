@@ -49,13 +49,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Message{ get; set; }
 
         /// <summary>
-        /// 智能识别涉及令人反感的信息的任务输入。
+        /// 音视频审核涉及令人反感的信息的任务输入。
         /// </summary>
         [JsonProperty("Input")]
         public AiReviewPornTaskInput Input{ get; set; }
 
         /// <summary>
-        /// 智能识别涉及令人反感的信息的任务输出。
+        /// 音视频审核涉及令人反感的信息的任务输出。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Output")]

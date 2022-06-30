@@ -25,13 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 返回的电子文档ID
+        /// 签署流程电子文档ID
         /// </summary>
         [JsonProperty("DocumentId")]
         public string DocumentId{ get; set; }
 
         /// <summary>
-        /// 返回合同文件的预览地址 5分钟内有效。仅当NeedPreview为true 时返回
+        /// 签署流程文件的预览地址, 5分钟内有效。仅当NeedPreview为true 时返回
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PreviewFileUrl")]

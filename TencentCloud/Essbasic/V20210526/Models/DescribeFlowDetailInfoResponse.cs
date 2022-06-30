@@ -37,7 +37,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
-        /// 合同(流程)的具体详细描述信息
+        /// 合同(签署流程)的具体详细描述信息
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FlowInfo")]

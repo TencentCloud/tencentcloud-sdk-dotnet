@@ -25,19 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息
+        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 多个合同（流程）信息
+        /// 多个合同（签署流程）信息，最大支持20个签署流程。
         /// </summary>
         [JsonProperty("FlowInfos")]
         public FlowInfo[] FlowInfos{ get; set; }
 
         /// <summary>
-        /// 操作完成后的跳转地址
+        /// 操作完成后的跳转地址，最大长度200
         /// </summary>
         [JsonProperty("JumpUrl")]
         public string JumpUrl{ get; set; }

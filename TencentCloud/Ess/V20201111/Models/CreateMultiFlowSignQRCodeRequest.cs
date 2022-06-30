@@ -31,16 +31,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
+        /// 签署流程名称，最大长度不超过200字符
+        /// </summary>
+        [JsonProperty("FlowName")]
+        public string FlowName{ get; set; }
+
+        /// <summary>
         /// 用户信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 合同名称
-        /// </summary>
-        [JsonProperty("FlowName")]
-        public string FlowName{ get; set; }
 
         /// <summary>
         /// 应用信息
@@ -49,7 +49,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同有效天数 默认7天 最高设置不超过30天
+        /// 回调地址,最大长度1000字符串
+        /// 回调时机：
+        /// 用户通过签署二维码发起签署流程时，企业额度不足导致失败
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 最大可发起签署流程份数，默认5份 
+        /// 发起流程数量超过此上限后二维码自动失效
+        /// </summary>
+        [JsonProperty("MaxFlowNum")]
+        public long? MaxFlowNum{ get; set; }
+
+        /// <summary>
+        /// 签署流程有效天数 默认7天 最高设置不超过30天
         /// </summary>
         [JsonProperty("FlowEffectiveDay")]
         public long? FlowEffectiveDay{ get; set; }
@@ -60,18 +75,6 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("QrEffectiveDay")]
         public long? QrEffectiveDay{ get; set; }
 
-        /// <summary>
-        /// 最大合同份数，默认5份 超过此上限 二维码自动失效
-        /// </summary>
-        [JsonProperty("MaxFlowNum")]
-        public long? MaxFlowNum{ get; set; }
-
-        /// <summary>
-        /// 回调地址
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,13 +82,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
-            this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
         }
     }
 }

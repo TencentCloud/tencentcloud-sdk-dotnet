@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
-        /// 图片智能识别模板 ID，当前固定填 10。
+        /// 图片审核模板 ID，当前固定填 10。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }

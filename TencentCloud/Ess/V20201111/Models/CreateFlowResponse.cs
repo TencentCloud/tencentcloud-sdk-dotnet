@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 流程编号
+        /// 签署流程编号
         /// </summary>
         [JsonProperty("FlowId")]
         public string FlowId{ get; set; }

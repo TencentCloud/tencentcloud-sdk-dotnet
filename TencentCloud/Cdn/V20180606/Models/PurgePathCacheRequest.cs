@@ -44,6 +44,16 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("UrlEncode")]
         public bool? UrlEncode{ get; set; }
 
+        /// <summary>
+        /// 刷新区域
+        /// 无此参数时，默认刷新加速域名所在加速区域
+        /// 填充 mainland 时，仅刷新中国境内加速节点上缓存内容
+        /// 填充 overseas 时，仅刷新中国境外加速节点上缓存内容
+        /// 指定刷新区域时，需要与域名加速区域匹配
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +63,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamArraySimple(map, prefix + "Paths.", this.Paths);
             this.SetParamSimple(map, prefix + "FlushType", this.FlushType);
             this.SetParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

@@ -34,7 +34,7 @@ namespace TencentCloud.Teo.V20220106.Models
         /// 配置类型，当OriginType=self 时，需要填写：
         /// area: 按区域配置
         /// weight: 按权重配置
-        /// 当OriginType=third_party 时，不需要填写
+        /// 当OriginType=third_party/cos 时，不需要填写
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -55,6 +55,7 @@ namespace TencentCloud.Teo.V20220106.Models
         /// 源站类型
         /// self：自有源站
         /// third_party：第三方源站
+        /// cos：腾讯云COS源站
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }

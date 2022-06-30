@@ -25,13 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 渠道应用相关信息
+        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填。
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 印章名称
+        /// 印章名称，最大长度不超过30字符
         /// </summary>
         [JsonProperty("SealName")]
         public string SealName{ get; set; }

@@ -96,6 +96,12 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("FailType")]
         public ulong? FailType{ get; set; }
 
+        /// <summary>
+        /// 外网ip
+        /// </summary>
+        [JsonProperty("MachineWanIp")]
+        public string MachineWanIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "FailType", this.FailType);
+            this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         }
     }
 }

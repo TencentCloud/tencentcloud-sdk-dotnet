@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentId{ get; set; }
 
         /// <summary>
-        /// 控件名字
+        /// 控件名字，最大长度不超过30字符
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }

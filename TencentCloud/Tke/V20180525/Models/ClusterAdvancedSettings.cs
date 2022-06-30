@@ -132,6 +132,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("CiliumMode")]
         public string CiliumMode{ get; set; }
 
+        /// <summary>
+        /// 集群VPC-CNI模式下是否是双栈集群，默认false，表明非双栈集群。
+        /// </summary>
+        [JsonProperty("IsDualStack")]
+        public bool? IsDualStack{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -155,6 +161,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "EnableCustomizedPodCIDR", this.EnableCustomizedPodCIDR);
             this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
+            this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
         }
     }
 }

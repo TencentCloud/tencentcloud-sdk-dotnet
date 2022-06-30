@@ -31,16 +31,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 腾讯电子签颁发给渠道侧合作企业的企业ID
+        /// 渠道/平台合作企业的企业ID
         /// </summary>
-        [JsonProperty("ProxyOrganizationId")]
-        public string ProxyOrganizationId{ get; set; }
-
-        /// <summary>
-        /// 腾讯电子签颁发给渠道侧合作企业的应用ID
-        /// </summary>
-        [JsonProperty("ProxyAppId")]
-        public string ProxyAppId{ get; set; }
+        [JsonProperty("ProxyOrganizationOpenId")]
+        public string ProxyOrganizationOpenId{ get; set; }
 
         /// <summary>
         /// 渠道/平台合作企业经办人（操作员）
@@ -49,10 +43,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo ProxyOperator{ get; set; }
 
         /// <summary>
-        /// 渠道/平台合作企业的企业ID
+        /// 腾讯电子签颁发给渠道侧合作企业的应用ID
         /// </summary>
-        [JsonProperty("ProxyOrganizationOpenId")]
-        public string ProxyOrganizationOpenId{ get; set; }
+        [JsonProperty("ProxyAppId")]
+        public string ProxyAppId{ get; set; }
+
+        /// <summary>
+        /// 腾讯电子签颁发给渠道侧合作企业的企业ID
+        /// </summary>
+        [JsonProperty("ProxyOrganizationId")]
+        public string ProxyOrganizationId{ get; set; }
 
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AppId", this.AppId);
-            this.SetParamSimple(map, prefix + "ProxyOrganizationId", this.ProxyOrganizationId);
-            this.SetParamSimple(map, prefix + "ProxyAppId", this.ProxyAppId);
-            this.SetParamObj(map, prefix + "ProxyOperator.", this.ProxyOperator);
             this.SetParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
+            this.SetParamObj(map, prefix + "ProxyOperator.", this.ProxyOperator);
+            this.SetParamSimple(map, prefix + "ProxyAppId", this.ProxyAppId);
+            this.SetParamSimple(map, prefix + "ProxyOrganizationId", this.ProxyOrganizationId);
         }
     }
 }

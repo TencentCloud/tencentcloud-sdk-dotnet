@@ -32,16 +32,16 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
+        /// 查询资源所对应的签署流程Id，最多支持50个。
+        /// </summary>
+        [JsonProperty("FlowIds")]
+        public string[] FlowIds{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 查询资源所对应的流程Id
-        /// </summary>
-        [JsonProperty("FlowIds")]
-        public string[] FlowIds{ get; set; }
 
 
         /// <summary>
@@ -50,8 +50,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

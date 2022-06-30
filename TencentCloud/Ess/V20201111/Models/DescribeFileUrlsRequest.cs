@@ -35,22 +35,23 @@ namespace TencentCloud.Ess.V20201111.Models
         public string BusinessType{ get; set; }
 
         /// <summary>
+        /// 业务编号的数组，如模板编号、文档编号、印章编号
+        /// 最大支持20个资源
+        /// </summary>
+        [JsonProperty("BusinessIds")]
+        public string[] BusinessIds{ get; set; }
+
+        /// <summary>
         /// 操作者信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 业务编号的数组，如模板编号、文档编号、印章编号
+        /// 应用相关信息
         /// </summary>
-        [JsonProperty("BusinessIds")]
-        public string[] BusinessIds{ get; set; }
-
-        /// <summary>
-        /// 文件类型，"JPG", "PDF","ZIP"等
-        /// </summary>
-        [JsonProperty("FileType")]
-        public string FileType{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
         /// <summary>
         /// 下载后的文件命名，只有fileType为zip的时候生效
@@ -59,7 +60,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 指定资源起始偏移量
+        /// 文件类型，"JPG", "PDF","ZIP"等
+        /// </summary>
+        [JsonProperty("FileType")]
+        public string FileType{ get; set; }
+
+        /// <summary>
+        /// 指定资源起始偏移量，默认0
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -71,28 +78,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 下载url过期时间，0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+        /// 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
         /// </summary>
         [JsonProperty("UrlTtl")]
         public long? UrlTtl{ get; set; }
 
         /// <summary>
-        /// 流程校验发送邮件权限
-        /// </summary>
-        [JsonProperty("CcToken")]
-        public string CcToken{ get; set; }
-
-        /// <summary>
-        /// 场景
+        /// 暂不开放
         /// </summary>
         [JsonProperty("Scene")]
         public string Scene{ get; set; }
+
+        /// <summary>
+        /// 暂不开放
+        /// </summary>
+        [JsonProperty("CcToken")]
+        public string CcToken{ get; set; }
 
 
         /// <summary>
@@ -101,16 +102,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "BusinessType", this.BusinessType);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamArraySimple(map, prefix + "BusinessIds.", this.BusinessIds);
-            this.SetParamSimple(map, prefix + "FileType", this.FileType);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamSimple(map, prefix + "FileType", this.FileType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamSimple(map, prefix + "UrlTtl", this.UrlTtl);
-            this.SetParamSimple(map, prefix + "CcToken", this.CcToken);
             this.SetParamSimple(map, prefix + "Scene", this.Scene);
+            this.SetParamSimple(map, prefix + "CcToken", this.CcToken);
         }
     }
 }

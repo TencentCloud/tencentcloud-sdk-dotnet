@@ -290,6 +290,13 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("AgentVersion")]
         public string AgentVersion{ get; set; }
 
+        /// <summary>
+        /// 容器母机实例ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NodeInstanceId")]
+        public string NodeInstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -334,6 +341,7 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "AgentVersion", this.AgentVersion);
+            this.SetParamSimple(map, prefix + "NodeInstanceId", this.NodeInstanceId);
         }
     }
 }

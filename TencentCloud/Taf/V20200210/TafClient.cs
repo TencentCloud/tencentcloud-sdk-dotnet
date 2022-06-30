@@ -93,46 +93,6 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// 流量反欺诈-虚假TA识别
-        /// </summary>
-        /// <param name="req"><see cref="EnhanceTaDegreeRequest"/></param>
-        /// <returns><see cref="EnhanceTaDegreeResponse"/></returns>
-        public async Task<EnhanceTaDegreeResponse> EnhanceTaDegree(EnhanceTaDegreeRequest req)
-        {
-             JsonResponseModel<EnhanceTaDegreeResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "EnhanceTaDegree");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnhanceTaDegreeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 流量反欺诈-虚假TA识别
-        /// </summary>
-        /// <param name="req"><see cref="EnhanceTaDegreeRequest"/></param>
-        /// <returns><see cref="EnhanceTaDegreeResponse"/></returns>
-        public EnhanceTaDegreeResponse EnhanceTaDegreeSync(EnhanceTaDegreeRequest req)
-        {
-             JsonResponseModel<EnhanceTaDegreeResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "EnhanceTaDegree");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnhanceTaDegreeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 流量反欺诈-流量验准定制版
         /// </summary>
         /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>

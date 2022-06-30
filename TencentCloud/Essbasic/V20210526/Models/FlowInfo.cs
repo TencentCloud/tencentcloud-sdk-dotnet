@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 合同名字
+        /// 合同名字，最大长度200个字符
         /// </summary>
         [JsonProperty("FlowName")]
         public string FlowName{ get; set; }
@@ -43,23 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 合同类型：
-        /// 1. “劳务”
-        /// 2. “销售”
-        /// 3. “租赁”
-        /// 4. “其他”
-        /// </summary>
-        [JsonProperty("FlowType")]
-        public string FlowType{ get; set; }
-
-        /// <summary>
-        /// 回调地址
-        /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
-
-        /// <summary>
-        /// 多个签署人信息，渠道侧目前不支持超过5个签署方信息
+        /// 多个签署人信息，最大支持50个签署方
         /// </summary>
         [JsonProperty("FlowApprovers")]
         public FlowApproverInfo[] FlowApprovers{ get; set; }
@@ -71,16 +55,34 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FormField[] FormFields{ get; set; }
 
         /// <summary>
-        /// 合同描述
+        /// 回调地址，最大长度1000个字符
+        /// </summary>
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
+
+        /// <summary>
+        /// 合同类型，如：1. “劳务”；2. “销售”；3. “租赁”；4. “其他”，最大长度200个字符
+        /// </summary>
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
+
+        /// <summary>
+        /// 合同描述，最大长度1000个字符
         /// </summary>
         [JsonProperty("FlowDescription")]
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 渠道的业务信息，限制1024字符
+        /// 渠道的业务信息，最大长度1000个字符
         /// </summary>
         [JsonProperty("CustomerData")]
         public string CustomerData{ get; set; }
+
+        /// <summary>
+        /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
+        /// </summary>
+        [JsonProperty("CustomShowMap")]
+        public string CustomShowMap{ get; set; }
 
         /// <summary>
         /// 被抄送人的信息列表，抄送功能暂不开放
@@ -97,12 +99,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
-            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamArrayObj(map, prefix + "FlowApprovers.", this.FlowApprovers);
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "CustomerData", this.CustomerData);
+            this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
         }
     }

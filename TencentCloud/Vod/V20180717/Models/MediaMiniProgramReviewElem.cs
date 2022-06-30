@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 智能识别类型。 
+        /// 音视频审核类型。 
         /// <li>Porn：画面涉及令人反感的信息，</li>
         /// <li>Porn.Ocr：文字涉及令人反感的信息，</li>
         /// <li>Porn.Asr：声音涉及令人反感的信息，</li>
@@ -38,7 +38,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
-        /// 智能识别意见。
+        /// 音视频审核意见。
         /// <li>pass：确认正常，</li>
         /// <li>block：确认违规，</li>
         /// <li>review：疑似违规。</li>
@@ -47,7 +47,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Suggestion{ get; set; }
 
         /// <summary>
-        /// 智能识别结果置信度。取值 0~100。
+        /// 音视频审核结果置信度。取值 0~100。
         /// </summary>
         [JsonProperty("Confidence")]
         public float? Confidence{ get; set; }

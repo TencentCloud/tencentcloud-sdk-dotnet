@@ -149,6 +149,34 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("TaskId")]
         public ulong? TaskId{ get; set; }
 
+        /// <summary>
+        /// 是否支持防御， 0:不支持 1:支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSupportDefense")]
+        public ulong? IsSupportDefense{ get; set; }
+
+        /// <summary>
+        /// 已防御的攻击次数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DefenseAttackCount")]
+        public ulong? DefenseAttackCount{ get; set; }
+
+        /// <summary>
+        /// 首次出现时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FirstAppearTime")]
+        public string FirstAppearTime{ get; set; }
+
+        /// <summary>
+        /// 漏洞类别 1: web-cms漏洞 2:应用漏洞  4: Linux软件漏洞 5: Windows系统漏洞
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulCategory")]
+        public ulong? VulCategory{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +202,10 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Labels", this.Labels);
             this.SetParamSimple(map, prefix + "FixSwitch", this.FixSwitch);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "IsSupportDefense", this.IsSupportDefense);
+            this.SetParamSimple(map, prefix + "DefenseAttackCount", this.DefenseAttackCount);
+            this.SetParamSimple(map, prefix + "FirstAppearTime", this.FirstAppearTime);
+            this.SetParamSimple(map, prefix + "VulCategory", this.VulCategory);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 合同(流程)编号数组
+        /// 合同(流程)编号数组，最多支持100个。
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

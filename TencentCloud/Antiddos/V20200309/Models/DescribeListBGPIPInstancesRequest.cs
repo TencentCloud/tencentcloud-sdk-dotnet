@@ -114,6 +114,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("FilterTag")]
         public TagFilter FilterTag{ get; set; }
 
+        /// <summary>
+        /// 按照套餐类型进行过滤
+        /// </summary>
+        [JsonProperty("FilterPackType")]
+        public string[] FilterPackType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -134,6 +140,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "FilterCname", this.FilterCname);
             this.SetParamArraySimple(map, prefix + "FilterInstanceIdList.", this.FilterInstanceIdList);
             this.SetParamObj(map, prefix + "FilterTag.", this.FilterTag);
+            this.SetParamArraySimple(map, prefix + "FilterPackType.", this.FilterPackType);
         }
     }
 }

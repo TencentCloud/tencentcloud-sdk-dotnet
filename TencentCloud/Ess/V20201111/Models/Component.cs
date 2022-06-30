@@ -28,7 +28,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 如果是 Component 控件类型，则可选类型为：
         /// TEXT - 内容文本控件
         /// DATE - 内容日期控件
-        /// SELECT - 勾选框控件
+        /// CHECK_BOX - 勾选框控件
         /// 如果是 SignComponent 控件类型，则可选类型为：
         /// SIGN_SEAL - 签署印章控件
         /// SIGN_DATE - 签署日期控件
@@ -138,13 +138,13 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? ComponentDateFontSize{ get; set; }
 
         /// <summary>
-        /// 指定关键字时横坐标偏移量
+        /// 指定关键字时横坐标偏移量，单位pt
         /// </summary>
         [JsonProperty("OffsetX")]
         public float? OffsetX{ get; set; }
 
         /// <summary>
-        /// 指定关键字时纵坐标偏移量
+        /// 指定关键字时纵坐标偏移量，单位pt
         /// </summary>
         [JsonProperty("OffsetY")]
         public float? OffsetY{ get; set; }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// AuthCode 值
+        /// 电子签小程序跳转客户小程序时携带的授权查看码
         /// </summary>
         [JsonProperty("AuthCode")]
         public string AuthCode{ get; set; }

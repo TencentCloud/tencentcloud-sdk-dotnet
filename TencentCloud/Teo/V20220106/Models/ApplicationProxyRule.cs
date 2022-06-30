@@ -42,18 +42,18 @@ namespace TencentCloud.Teo.V20220106.Models
         /// 源站类型，取值：
         /// custom：手动添加
         /// origins：源站组
-        /// load_balancing：负载均衡
         /// </summary>
         [JsonProperty("OriginType")]
         public string OriginType{ get; set; }
 
         /// <summary>
         /// 源站信息：
-        /// 当OriginType=custom时，表示多个：
-        /// IP:端口
-        /// 域名:端口
-        /// 当OriginType=origins时，包含一个元素，表示源站组ID
-        /// 当OriginType=load_balancing时，包含一个元素，表示负载均衡ID
+        /// 当OriginType=custom时，表示一个或多个源站，如：
+        /// OriginValue=["8.8.8.8:80","9.9.9.9:80"]
+        /// OriginValue=["test.com:80"]
+        /// 
+        /// 当OriginType=origins时，包含一个元素，表示源站组ID，如：
+        /// OriginValue=["origin-xxx"]
         /// </summary>
         [JsonProperty("OriginValue")]
         public string[] OriginValue{ get; set; }

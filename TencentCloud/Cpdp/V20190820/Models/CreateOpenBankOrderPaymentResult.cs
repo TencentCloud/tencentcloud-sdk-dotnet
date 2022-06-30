@@ -38,7 +38,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public string ThirdPayOrderId{ get; set; }
 
         /// <summary>
-        /// 小程序跳转参数
+        /// 跳转参数
         /// 渠道为TENPAY，付款方式为EBANK_PAYMENT时必选。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>

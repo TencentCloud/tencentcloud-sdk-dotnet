@@ -31,7 +31,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 视频内容分析模板详情列表。
+        /// 音视频内容分析模板详情列表。
         /// </summary>
         [JsonProperty("AIAnalysisTemplateSet")]
         public AIAnalysisTemplateItem[] AIAnalysisTemplateSet{ get; set; }

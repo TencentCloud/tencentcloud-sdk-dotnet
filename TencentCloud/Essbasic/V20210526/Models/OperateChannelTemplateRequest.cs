@@ -31,22 +31,22 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 渠道方模板库模板唯一标识
-        /// </summary>
-        [JsonProperty("TemplateId")]
-        public string TemplateId{ get; set; }
-
-        /// <summary>
         /// 操作类型，查询:"SELECT"，删除:"DELETE"，更新:"UPDATE"
         /// </summary>
         [JsonProperty("OperateType")]
         public string OperateType{ get; set; }
 
         /// <summary>
-        /// 操作者的信息
+        /// 渠道方模板库模板唯一标识
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("TemplateId")]
+        public string TemplateId{ get; set; }
+
+        /// <summary>
+        /// 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+        /// </summary>
+        [JsonProperty("ProxyOrganizationOpenIds")]
+        public string ProxyOrganizationOpenIds{ get; set; }
 
         /// <summary>
         /// 模板可见性, 全部可见-"all", 部分可见-"part"
@@ -55,10 +55,10 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AuthTag{ get; set; }
 
         /// <summary>
-        /// 合作企业方第三方机构唯一标识数据，支持多个， 用","进行分隔
+        /// 操作者的信息
         /// </summary>
-        [JsonProperty("ProxyOrganizationOpenIds")]
-        public string ProxyOrganizationOpenIds{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
 
         /// <summary>
@@ -67,11 +67,11 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "OperateType", this.OperateType);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamSimple(map, prefix + "AuthTag", this.AuthTag);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "ProxyOrganizationOpenIds", this.ProxyOrganizationOpenIds);
+            this.SetParamSimple(map, prefix + "AuthTag", this.AuthTag);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }
 }

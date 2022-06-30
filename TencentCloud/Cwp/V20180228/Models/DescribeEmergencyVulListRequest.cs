@@ -42,6 +42,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>Level - String - 是否必填：否 - 漏洞等级筛选 1:低 2:中 3:高 4:提示</li>
         /// <li>VulName- String - 是否必填：否 - 漏洞名称搜索</li>
         /// <li>Uuids- String - 是否必填：否 - 主机uuid</li>
+        /// <li>IsSupportDefense - int- 是否必填：否 - 是否支持防御 0:不支持 1:支持</li>
         /// </summary>
         [JsonProperty("Filters")]
         public Filters[] Filters{ get; set; }
@@ -53,7 +54,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序字段 PublishDate
+        /// 排序字段 PublishDate  LastScanTime HostCount
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }

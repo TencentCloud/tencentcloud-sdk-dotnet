@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Dlc.V20210125.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class EnhanceTaDegreeRequest : AbstractModel
+    public class DropDMSPartitionsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 业务数据
+        /// 状态
         /// </summary>
-        [JsonProperty("BspData")]
-        public InputTaBspData BspData{ get; set; }
+        [JsonProperty("Status")]
+        public bool? Status{ get; set; }
 
         /// <summary>
-        /// 业务加密数据
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("BusinessEncryptData")]
-        public InputBusinessEncryptData BusinessEncryptData{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BspData.", this.BspData);
-            this.SetParamObj(map, prefix + "BusinessEncryptData.", this.BusinessEncryptData);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

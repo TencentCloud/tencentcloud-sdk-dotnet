@@ -31,10 +31,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? Top{ get; set; }
 
         /// <summary>
-        /// 1:web-cms 漏洞，2.应用漏洞 3:安全基线 4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞
+        /// 1:web-cms 漏洞，2.应用漏洞   4: Linux软件漏洞 5: windows系统漏洞 6:应急漏洞，不填或者填0时返回 1，2，4，5 的总统计数据
         /// </summary>
         [JsonProperty("VulCategory")]
         public ulong? VulCategory{ get; set; }
+
+        /// <summary>
+        /// 是否仅统计重点关注漏洞 1=仅统计重点关注漏洞, 0=统计全部漏洞
+        /// </summary>
+        [JsonProperty("IsFollowVul")]
+        public ulong? IsFollowVul{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Top", this.Top);
             this.SetParamSimple(map, prefix + "VulCategory", this.VulCategory);
+            this.SetParamSimple(map, prefix + "IsFollowVul", this.IsFollowVul);
         }
     }
 }

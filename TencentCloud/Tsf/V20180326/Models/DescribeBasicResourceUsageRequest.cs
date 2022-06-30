@@ -24,12 +24,19 @@ namespace TencentCloud.Tsf.V20180326.Models
     public class DescribeBasicResourceUsageRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 是否无视权限查询全租户的，默认 true。注：无论 true 还是 false，PackageSpaceUsed 和 ConsulInstanceCount  都是全租户的
+        /// </summary>
+        [JsonProperty("All")]
+        public bool? All{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "All", this.All);
         }
     }
 }
