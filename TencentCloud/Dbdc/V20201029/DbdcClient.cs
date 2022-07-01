@@ -93,6 +93,46 @@ namespace TencentCloud.Dbdc.V20201029
         }
 
         /// <summary>
+        /// 本接口用于查询主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostListRequest"/></param>
+        /// <returns><see cref="DescribeHostListResponse"/></returns>
+        public async Task<DescribeHostListResponse> DescribeHostList(DescribeHostListRequest req)
+        {
+             JsonResponseModel<DescribeHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口用于查询主机列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeHostListRequest"/></param>
+        /// <returns><see cref="DescribeHostListResponse"/></returns>
+        public DescribeHostListResponse DescribeHostListSync(DescribeHostListRequest req)
+        {
+             JsonResponseModel<DescribeHostListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeHostList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于查询独享集群详情
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceDetailRequest"/></param>

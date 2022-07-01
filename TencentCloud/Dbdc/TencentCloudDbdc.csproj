@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{50461850-F9C3-3A53-AD7B-51584C3A8A40}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.548</VersionPrefix>
+    <VersionPrefix>3.0.549</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,8 @@
     <Compile Include="V20201029\Models\DBInstanceDetail.cs" />
     <Compile Include="V20201029\Models\DescribeDBInstancesRequest.cs" />
     <Compile Include="V20201029\Models\DescribeDBInstancesResponse.cs" />
+    <Compile Include="V20201029\Models\DescribeHostListRequest.cs" />
+    <Compile Include="V20201029\Models\DescribeHostListResponse.cs" />
     <Compile Include="V20201029\Models\DescribeInstanceDetail.cs" />
     <Compile Include="V20201029\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="V20201029\Models\DescribeInstanceDetailResponse.cs" />
@@ -56,6 +58,7 @@
     <Compile Include="V20201029\Models\DescribeInstancesRequest.cs" />
     <Compile Include="V20201029\Models\DescribeInstancesResponse.cs" />
     <Compile Include="V20201029\Models\DeviceInfo.cs" />
+    <Compile Include="V20201029\Models\HostDetail.cs" />
     <Compile Include="V20201029\Models\InstanceDetail.cs" />
     <Compile Include="V20201029\Models\InstanceDeviceInfo.cs" />
     <Compile Include="V20201029\Models\InstanceExpand.cs" />

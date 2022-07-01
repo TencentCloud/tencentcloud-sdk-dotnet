@@ -617,6 +617,46 @@ namespace TencentCloud.Ms.V20180408
         }
 
         /// <summary>
+        /// 移动安全-网址检测服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUrlDetectionResultRequest"/></param>
+        /// <returns><see cref="DescribeUrlDetectionResultResponse"/></returns>
+        public async Task<DescribeUrlDetectionResultResponse> DescribeUrlDetectionResult(DescribeUrlDetectionResultRequest req)
+        {
+             JsonResponseModel<DescribeUrlDetectionResultResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUrlDetectionResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUrlDetectionResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 移动安全-网址检测服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUrlDetectionResultRequest"/></param>
+        /// <returns><see cref="DescribeUrlDetectionResultResponse"/></returns>
+        public DescribeUrlDetectionResultResponse DescribeUrlDetectionResultSync(DescribeUrlDetectionResultRequest req)
+        {
+             JsonResponseModel<DescribeUrlDetectionResultResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUrlDetectionResult");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUrlDetectionResultResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取用户基础信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserBaseInfoInstanceRequest"/></param>
