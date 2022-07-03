@@ -53,6 +53,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 获取项目信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectRequest"/></param>
+        /// <returns><see cref="DescribeProjectResponse"/></returns>
+        public async Task<DescribeProjectResponse> DescribeProject(DescribeProjectRequest req)
+        {
+             JsonResponseModel<DescribeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectRequest"/></param>
+        /// <returns><see cref="DescribeProjectResponse"/></returns>
+        public DescribeProjectResponse DescribeProjectSync(DescribeProjectRequest req)
+        {
+             JsonResponseModel<DescribeProjectResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProject");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询任务实例的关联实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRelatedInstancesRequest"/></param>

@@ -48,6 +48,26 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("PageNumber")]
         public Paging PageNumber{ get; set; }
 
+        /// <summary>
+        /// 操作类型。
+        /// ENABLE_SETTLE: 正常结算
+        /// DISABLE_SETTLE: 停用结算
+        /// UNFREEZE_SETTLE: 解冻结算
+        /// 若需要支持多个操作类型，则以;分隔
+        /// </summary>
+        [JsonProperty("OperationType")]
+        public string OperationType{ get; set; }
+
+        /// <summary>
+        /// 环境类型
+        /// __release__:生产环境
+        /// __sandbox__:沙箱环境
+        /// __test__:测试环境
+        /// 缺省默认为生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +78,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "PageNumber.", this.PageNumber);
+            this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

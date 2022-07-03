@@ -37,8 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string[] InstanceIdList{ get; set; }
 
         /// <summary>
-        /// 数据库类型，取值范围: 
-        /// <li> MYSQL </li>
+        /// 该参数已废弃
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

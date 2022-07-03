@@ -24,12 +24,26 @@ namespace TencentCloud.Tke.V20180525.Models
     public class CreatePrometheusClusterAgentRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 实例ID
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// agent列表
+        /// </summary>
+        [JsonProperty("Agents")]
+        public PrometheusClusterAgentBasic[] Agents{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamArrayObj(map, prefix + "Agents.", this.Agents);
         }
     }
 }

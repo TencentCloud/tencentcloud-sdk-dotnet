@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.549</VersionPrefix>
+    <VersionPrefix>3.0.550</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,7 @@
     <Compile Include="V20190107\Models\AssociateSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
+    <Compile Include="V20190107\Models\BinlogItem.cs" />
     <Compile Include="V20190107\Models\ClusterInstanceDetail.cs" />
     <Compile Include="V20190107\Models\ClusterParamModifyLog.cs" />
     <Compile Include="V20190107\Models\CreateAccountsRequest.cs" />
@@ -75,8 +76,16 @@
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadUrlRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBackupDownloadUrlResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupListRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupListResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogDownloadUrlRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogDownloadUrlResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogSaveDaysRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogSaveDaysResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeBinlogsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDetailRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterDetailResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsRequest.cs" />
@@ -89,6 +98,8 @@
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceDetailResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceSlowQueriesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeInstanceSlowQueriesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSpecsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeInstanceSpecsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeInstancesRequest.cs" />
@@ -105,6 +116,8 @@
     <Compile Include="V20190107\Models\DescribeRollbackTimeValidityResponse.cs" />
     <Compile Include="V20190107\Models\DisassociateSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\DisassociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\ExportInstanceSlowQueriesRequest.cs" />
+    <Compile Include="V20190107\Models\ExportInstanceSlowQueriesResponse.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\InputAccount.cs" />
@@ -117,6 +130,8 @@
     <Compile Include="V20190107\Models\ModifyAccountParamsResponse.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\ModifyBackupConfigResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupNameRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyBackupNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterNameRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterParamRequest.cs" />
@@ -151,6 +166,7 @@
     <Compile Include="V20190107\Models\SecurityGroup.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
+    <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
     <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />

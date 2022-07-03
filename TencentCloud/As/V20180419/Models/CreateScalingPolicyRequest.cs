@@ -61,7 +61,8 @@ namespace TencentCloud.As.V20180419.Models
         public ulong? Cooldown{ get; set; }
 
         /// <summary>
-        /// 通知组ID，即为用户组ID集合，用户组ID可以通过[ListGroups](https://cloud.tencent.com/document/product/598/34589)查询。
+        /// 此参数已不再生效，请使用[创建通知](https://cloud.tencent.com/document/api/377/33185)。
+        /// 通知组ID，即为用户组ID集合。
         /// </summary>
         [JsonProperty("NotificationUserGroupIds")]
         public string[] NotificationUserGroupIds{ get; set; }

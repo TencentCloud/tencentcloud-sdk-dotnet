@@ -74,6 +74,22 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 手机号码
+        /// </summary>
+        [JsonProperty("PhoneNo")]
+        public string PhoneNo{ get; set; }
+
+        /// <summary>
+        /// 环境类型
+        /// __release__:生产环境
+        /// __sandbox__:沙箱环境
+        /// __test__:测试环境
+        /// 缺省默认为生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +104,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamObj(map, prefix + "TaxInfo.", this.TaxInfo);
             this.SetParamSimple(map, prefix + "IdType", this.IdType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "PhoneNo", this.PhoneNo);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

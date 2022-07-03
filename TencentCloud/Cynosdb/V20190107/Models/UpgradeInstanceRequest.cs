@@ -49,7 +49,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string UpgradeType{ get; set; }
 
         /// <summary>
-        /// 存储上限，为0表示使用标准配置
+        /// 该参数已废弃
         /// </summary>
         [JsonProperty("StorageLimit")]
         public ulong? StorageLimit{ get; set; }
@@ -61,8 +61,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? AutoVoucher{ get; set; }
 
         /// <summary>
-        /// 数据库类型，取值范围: 
-        /// <li> MYSQL </li>
+        /// 该参数已废弃
         /// </summary>
         [JsonProperty("DbType")]
         public string DbType{ get; set; }

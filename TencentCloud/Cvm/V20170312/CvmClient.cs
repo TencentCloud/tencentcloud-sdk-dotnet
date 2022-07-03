@@ -659,6 +659,52 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
+        /// 
+        /// * 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcHostsRequest"/></param>
+        /// <returns><see cref="DescribeChcHostsResponse"/></returns>
+        public async Task<DescribeChcHostsResponse> DescribeChcHosts(DescribeChcHostsRequest req)
+        {
+             JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChcHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
+        /// 
+        /// * 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。
+        /// * 如果参数为空，返回当前用户一定数量（`Limit`所指定的数量，默认为20）的实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcHostsRequest"/></param>
+        /// <returns><see cref="DescribeChcHostsResponse"/></returns>
+        public DescribeChcHostsResponse DescribeChcHostsSync(DescribeChcHostsRequest req)
+        {
+             JsonResponseModel<DescribeChcHostsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChcHosts");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcHostsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeDisasterRecoverGroupQuota)用于查询[分散置放群组](https://cloud.tencent.com/document/product/213/15486)配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeDisasterRecoverGroupQuotaRequest"/></param>

@@ -373,6 +373,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
+        public async Task<DescribeBackupDownloadUrlResponse> DescribeBackupDownloadUrl(DescribeBackupDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBackupDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBackupDownloadUrl）用于查询集群备份文件下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBackupDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBackupDownloadUrlResponse"/></returns>
+        public DescribeBackupDownloadUrlResponse DescribeBackupDownloadUrlSync(DescribeBackupDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBackupDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBackupDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询备份文件列表
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupListRequest"/></param>
@@ -404,6 +444,126 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBackupList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
+        public async Task<DescribeBinlogDownloadUrlResponse> DescribeBinlogDownloadUrl(DescribeBinlogDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBinlogDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBinlogDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogDownloadUrl）用于查询Binlog的下载地址。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogDownloadUrlRequest"/></param>
+        /// <returns><see cref="DescribeBinlogDownloadUrlResponse"/></returns>
+        public DescribeBinlogDownloadUrlResponse DescribeBinlogDownloadUrlSync(DescribeBinlogDownloadUrlRequest req)
+        {
+             JsonResponseModel<DescribeBinlogDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBinlogDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogSaveDays）用于查询集群的Binlog保留天数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="DescribeBinlogSaveDaysResponse"/></returns>
+        public async Task<DescribeBinlogSaveDaysResponse> DescribeBinlogSaveDays(DescribeBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<DescribeBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogSaveDays）用于查询集群的Binlog保留天数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogSaveDaysRequest"/></param>
+        /// <returns><see cref="DescribeBinlogSaveDaysResponse"/></returns>
+        public DescribeBinlogSaveDaysResponse DescribeBinlogSaveDaysSync(DescribeBinlogSaveDaysRequest req)
+        {
+             JsonResponseModel<DescribeBinlogSaveDaysResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBinlogSaveDays");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogSaveDaysResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
+        /// <returns><see cref="DescribeBinlogsResponse"/></returns>
+        public async Task<DescribeBinlogsResponse> DescribeBinlogs(DescribeBinlogsRequest req)
+        {
+             JsonResponseModel<DescribeBinlogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBinlogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeBinlogs）用来查询集群Binlog日志列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBinlogsRequest"/></param>
+        /// <returns><see cref="DescribeBinlogsResponse"/></returns>
+        public DescribeBinlogsResponse DescribeBinlogsSync(DescribeBinlogsRequest req)
+        {
+             JsonResponseModel<DescribeBinlogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBinlogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBinlogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -644,6 +804,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeInstanceSlowQueries）用于查询实例慢查询日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSlowQueriesResponse"/></returns>
+        public async Task<DescribeInstanceSlowQueriesResponse> DescribeInstanceSlowQueries(DescribeInstanceSlowQueriesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceSlowQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstanceSlowQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceSlowQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（DescribeInstanceSlowQueries）用于查询实例慢查询日志。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstanceSlowQueriesRequest"/></param>
+        /// <returns><see cref="DescribeInstanceSlowQueriesResponse"/></returns>
+        public DescribeInstanceSlowQueriesResponse DescribeInstanceSlowQueriesSync(DescribeInstanceSlowQueriesRequest req)
+        {
+             JsonResponseModel<DescribeInstanceSlowQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstanceSlowQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceSlowQueriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -973,6 +1173,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
+        /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>
+        public async Task<ExportInstanceSlowQueriesResponse> ExportInstanceSlowQueries(ExportInstanceSlowQueriesRequest req)
+        {
+             JsonResponseModel<ExportInstanceSlowQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportInstanceSlowQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceSlowQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ExportInstanceSlowQueries）用于导出实例慢日志。
+        /// </summary>
+        /// <param name="req"><see cref="ExportInstanceSlowQueriesRequest"/></param>
+        /// <returns><see cref="ExportInstanceSlowQueriesResponse"/></returns>
+        public ExportInstanceSlowQueriesResponse ExportInstanceSlowQueriesSync(ExportInstanceSlowQueriesRequest req)
+        {
+             JsonResponseModel<ExportInstanceSlowQueriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportInstanceSlowQueries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportInstanceSlowQueriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量授权账号权限
         /// </summary>
         /// <param name="req"><see cref="GrantAccountPrivilegesRequest"/></param>
@@ -1164,6 +1404,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "ModifyBackupConfig");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ModifyBackupName）用于修改备份文件备注名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public async Task<ModifyBackupNameResponse> ModifyBackupName(ModifyBackupNameRequest req)
+        {
+             JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBackupName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupNameResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 此接口（ModifyBackupName）用于修改备份文件备注名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBackupNameRequest"/></param>
+        /// <returns><see cref="ModifyBackupNameResponse"/></returns>
+        public ModifyBackupNameResponse ModifyBackupNameSync(ModifyBackupNameRequest req)
+        {
+             JsonResponseModel<ModifyBackupNameResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBackupName");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBackupNameResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

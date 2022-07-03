@@ -43,25 +43,25 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Memory{ get; set; }
 
         /// <summary>
-        /// 新增只读实例数，取值范围为(0,16]
+        /// 新增只读实例数，取值范围为[0,4]
         /// </summary>
         [JsonProperty("ReadOnlyCount")]
         public long? ReadOnlyCount{ get; set; }
 
         /// <summary>
-        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组
+        /// 实例组ID，在已有RO组中新增实例时使用，不传则新增RO组。当前版本不建议传输该值。
         /// </summary>
         [JsonProperty("InstanceGrpId")]
         public string InstanceGrpId{ get; set; }
 
         /// <summary>
-        /// 所属VPC网络ID
+        /// 所属VPC网络ID，该参数已废弃
         /// </summary>
         [JsonProperty("VpcId")]
         public string VpcId{ get; set; }
 
         /// <summary>
-        /// 所属子网ID，如果设置了VpcId，则SubnetId必填
+        /// 所属子网ID，如果设置了VpcId，则SubnetId必填。该参数已废弃。
         /// </summary>
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 实例名称，字符串长度范围为[0,64)
+        /// 实例名称，字符串长度范围为[0,64)，取值范围为大小写字母，0-9数字，'_','-','.'
         /// </summary>
         [JsonProperty("InstanceName")]
         public string InstanceName{ get; set; }

@@ -56,6 +56,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("PageNumber")]
         public Paging PageNumber{ get; set; }
 
+        /// <summary>
+        /// 环境类型
+        /// __release__:生产环境
+        /// __sandbox__:沙箱环境
+        /// __test__:测试环境
+        /// 缺省默认为生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,6 +77,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "PageNumber.", this.PageNumber);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

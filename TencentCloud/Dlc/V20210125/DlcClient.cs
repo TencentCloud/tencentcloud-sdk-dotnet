@@ -2333,6 +2333,46 @@ namespace TencentCloud.Dlc.V20210125
         }
 
         /// <summary>
+        /// 上报元数据心跳
+        /// </summary>
+        /// <param name="req"><see cref="ReportHeartbeatMetaDataRequest"/></param>
+        /// <returns><see cref="ReportHeartbeatMetaDataResponse"/></returns>
+        public async Task<ReportHeartbeatMetaDataResponse> ReportHeartbeatMetaData(ReportHeartbeatMetaDataRequest req)
+        {
+             JsonResponseModel<ReportHeartbeatMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReportHeartbeatMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportHeartbeatMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 上报元数据心跳
+        /// </summary>
+        /// <param name="req"><see cref="ReportHeartbeatMetaDataRequest"/></param>
+        /// <returns><see cref="ReportHeartbeatMetaDataResponse"/></returns>
+        public ReportHeartbeatMetaDataResponse ReportHeartbeatMetaDataSync(ReportHeartbeatMetaDataRequest req)
+        {
+             JsonResponseModel<ReportHeartbeatMetaDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReportHeartbeatMetaData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReportHeartbeatMetaDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 解绑用户上的用户组
         /// </summary>
         /// <param name="req"><see cref="UnbindWorkGroupsFromUserRequest"/></param>

@@ -64,6 +64,16 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 环境类型
+        /// __release__:生产环境
+        /// __sandbox__:沙箱环境
+        /// __test__:测试环境
+        /// 缺省默认为生产环境
+        /// </summary>
+        [JsonProperty("Environment")]
+        public string Environment{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +86,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
             this.SetParamSimple(map, prefix + "OperationType", this.OperationType);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }
 }

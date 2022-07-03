@@ -37,7 +37,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public InputAccount Account{ get; set; }
 
         /// <summary>
-        /// 数据库表权限数组,当前仅支持参数：max_user_connections
+        /// 数据库表权限数组,当前仅支持参数：max_user_connections，max_user_connections不能大于10240
         /// </summary>
         [JsonProperty("AccountParams")]
         public AccountParam[] AccountParams{ get; set; }

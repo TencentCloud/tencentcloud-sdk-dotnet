@@ -43,19 +43,19 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public ulong? BackupTimeEnd{ get; set; }
 
         /// <summary>
-        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800
+        /// 表示保留备份时长, 单位秒，超过该时间将被清理, 七天表示为3600*24*7=604800，最大为158112000
         /// </summary>
         [JsonProperty("ReserveDuration")]
         public ulong? ReserveDuration{ get; set; }
 
         /// <summary>
-        /// 备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
+        /// 该参数目前不支持修改，无需填写。备份频率，长度为7的数组，分别对应周一到周日的备份方式，full-全量备份，increment-增量备份
         /// </summary>
         [JsonProperty("BackupFreq")]
         public string[] BackupFreq{ get; set; }
 
         /// <summary>
-        /// 备份方式，logic-逻辑备份，snapshot-快照备份
+        /// 该参数目前不支持修改，无需填写。备份方式，logic-逻辑备份，snapshot-快照备份
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
