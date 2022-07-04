@@ -53,7 +53,7 @@ namespace TencentCloud.Ie.V20200304.Models
         public long? Height{ get; set; }
 
         /// <summary>
-        /// 视频帧率
+        /// 视频帧率，如果高于原始帧率，部分服务将无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Fps")]

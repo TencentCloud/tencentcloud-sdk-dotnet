@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.550</VersionPrefix>
+    <VersionPrefix>3.0.551</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,10 @@
     <Compile Include="V20190820\Models\AddContractRequest.cs" />
     <Compile Include="V20190820\Models\AddContractResponse.cs" />
     <Compile Include="V20190820\Models\AddContractResult.cs" />
+    <Compile Include="V20190820\Models\AddFlexIdInfoRequest.cs" />
+    <Compile Include="V20190820\Models\AddFlexIdInfoResponse.cs" />
+    <Compile Include="V20190820\Models\AddFlexPhoneNoRequest.cs" />
+    <Compile Include="V20190820\Models\AddFlexPhoneNoResponse.cs" />
     <Compile Include="V20190820\Models\AddMerchantRequest.cs" />
     <Compile Include="V20190820\Models\AddMerchantResponse.cs" />
     <Compile Include="V20190820\Models\AddMerchantResult.cs" />
@@ -276,6 +280,7 @@
     <Compile Include="V20190820\Models\ExternalReturnContractInfo.cs" />
     <Compile Include="V20190820\Models\FeeRangInfo.cs" />
     <Compile Include="V20190820\Models\FileItem.cs" />
+    <Compile Include="V20190820\Models\FlexBillDownloadUrlResult.cs" />
     <Compile Include="V20190820\Models\FlexFundingAccountInfo.cs" />
     <Compile Include="V20190820\Models\FreezeFlexBalanceRequest.cs" />
     <Compile Include="V20190820\Models\FreezeFlexBalanceResponse.cs" />
@@ -333,6 +338,8 @@
     <Compile Include="V20190820\Models\OpenBankStoreInfo.cs" />
     <Compile Include="V20190820\Models\Order.cs" />
     <Compile Include="V20190820\Models\OrderItem.cs" />
+    <Compile Include="V20190820\Models\OrderSummaries.cs" />
+    <Compile Include="V20190820\Models\OrderSummaryResult.cs" />
     <Compile Include="V20190820\Models\OrganizationInfo.cs" />
     <Compile Include="V20190820\Models\OutSubMerchantExtensionInfo.cs" />
     <Compile Include="V20190820\Models\Paging.cs" />
@@ -420,8 +427,12 @@
     <Compile Include="V20190820\Models\QueryExternalAccountBookResult.cs" />
     <Compile Include="V20190820\Models\QueryFlexAmountBeforeTaxRequest.cs" />
     <Compile Include="V20190820\Models\QueryFlexAmountBeforeTaxResponse.cs" />
+    <Compile Include="V20190820\Models\QueryFlexBillDownloadUrlRequest.cs" />
+    <Compile Include="V20190820\Models\QueryFlexBillDownloadUrlResponse.cs" />
     <Compile Include="V20190820\Models\QueryFlexFreezeOrderListRequest.cs" />
     <Compile Include="V20190820\Models\QueryFlexFreezeOrderListResponse.cs" />
+    <Compile Include="V20190820\Models\QueryFlexOrderSummaryListRequest.cs" />
+    <Compile Include="V20190820\Models\QueryFlexOrderSummaryListResponse.cs" />
     <Compile Include="V20190820\Models\QueryFlexPayeeAccountBalanceRequest.cs" />
     <Compile Include="V20190820\Models\QueryFlexPayeeAccountBalanceResponse.cs" />
     <Compile Include="V20190820\Models\QueryFlexPayeeAccountInfoRequest.cs" />

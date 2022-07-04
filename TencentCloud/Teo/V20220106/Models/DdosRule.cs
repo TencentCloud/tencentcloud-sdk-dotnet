@@ -73,6 +73,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// UDP分片功能是否支持，off-不支持，on-支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UdpShardOpen")]
+        public string UdpShardOpen{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "DdosPacketFilter.", this.DdosPacketFilter);
             this.SetParamObj(map, prefix + "DdosAcl.", this.DdosAcl);
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "UdpShardOpen", this.UdpShardOpen);
         }
     }
 }

@@ -52,6 +52,16 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("LastFile")]
         public TaskResultFile LastFile{ get; set; }
 
+        /// <summary>
+        /// 任务结果包含的图片总数。
+        /// 静态图：总数即为文件数；
+        /// 雪碧图：所有小图总数；
+        /// 动图、视频：不计算图片数，为 0。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageCount")]
+        public long? ImageCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +72,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "ResultCount", this.ResultCount);
             this.SetParamObj(map, prefix + "FirstFile.", this.FirstFile);
             this.SetParamObj(map, prefix + "LastFile.", this.LastFile);
+            this.SetParamSimple(map, prefix + "ImageCount", this.ImageCount);
         }
     }
 }

@@ -24,12 +24,19 @@ namespace TencentCloud.Ckafka.V20190819.Models
     public class DescribeCkafkaZoneRequest : AbstractModel
     {
         
+        /// <summary>
+        /// cdc专业集群业务参数
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

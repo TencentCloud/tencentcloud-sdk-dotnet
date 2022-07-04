@@ -93,6 +93,86 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-补充证件信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexIdInfoRequest"/></param>
+        /// <returns><see cref="AddFlexIdInfoResponse"/></returns>
+        public async Task<AddFlexIdInfoResponse> AddFlexIdInfo(AddFlexIdInfoRequest req)
+        {
+             JsonResponseModel<AddFlexIdInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddFlexIdInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexIdInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-补充证件信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexIdInfoRequest"/></param>
+        /// <returns><see cref="AddFlexIdInfoResponse"/></returns>
+        public AddFlexIdInfoResponse AddFlexIdInfoSync(AddFlexIdInfoRequest req)
+        {
+             JsonResponseModel<AddFlexIdInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddFlexIdInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexIdInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-补充手机号信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexPhoneNoRequest"/></param>
+        /// <returns><see cref="AddFlexPhoneNoResponse"/></returns>
+        public async Task<AddFlexPhoneNoResponse> AddFlexPhoneNo(AddFlexPhoneNoRequest req)
+        {
+             JsonResponseModel<AddFlexPhoneNoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddFlexPhoneNo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexPhoneNoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-补充手机号信息
+        /// </summary>
+        /// <param name="req"><see cref="AddFlexPhoneNoRequest"/></param>
+        /// <returns><see cref="AddFlexPhoneNoResponse"/></returns>
+        public AddFlexPhoneNoResponse AddFlexPhoneNoSync(AddFlexPhoneNoRequest req)
+        {
+             JsonResponseModel<AddFlexPhoneNoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddFlexPhoneNo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddFlexPhoneNoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云支付-添加商户接口
         /// </summary>
         /// <param name="req"><see cref="AddMerchantRequest"/></param>
@@ -4593,6 +4673,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 灵云V2-查询对账单文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="QueryFlexBillDownloadUrlResponse"/></returns>
+        public async Task<QueryFlexBillDownloadUrlResponse> QueryFlexBillDownloadUrl(QueryFlexBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<QueryFlexBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-查询对账单文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexBillDownloadUrlRequest"/></param>
+        /// <returns><see cref="QueryFlexBillDownloadUrlResponse"/></returns>
+        public QueryFlexBillDownloadUrlResponse QueryFlexBillDownloadUrlSync(QueryFlexBillDownloadUrlRequest req)
+        {
+             JsonResponseModel<QueryFlexBillDownloadUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexBillDownloadUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexBillDownloadUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云V2-查询冻结订单列表
         /// </summary>
         /// <param name="req"><see cref="QueryFlexFreezeOrderListRequest"/></param>
@@ -4624,6 +4744,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "QueryFlexFreezeOrderList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexFreezeOrderListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-订单汇总列表查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexOrderSummaryListRequest"/></param>
+        /// <returns><see cref="QueryFlexOrderSummaryListResponse"/></returns>
+        public async Task<QueryFlexOrderSummaryListResponse> QueryFlexOrderSummaryList(QueryFlexOrderSummaryListRequest req)
+        {
+             JsonResponseModel<QueryFlexOrderSummaryListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFlexOrderSummaryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexOrderSummaryListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 灵云V2-订单汇总列表查询
+        /// </summary>
+        /// <param name="req"><see cref="QueryFlexOrderSummaryListRequest"/></param>
+        /// <returns><see cref="QueryFlexOrderSummaryListResponse"/></returns>
+        public QueryFlexOrderSummaryListResponse QueryFlexOrderSummaryListSync(QueryFlexOrderSummaryListRequest req)
+        {
+             JsonResponseModel<QueryFlexOrderSummaryListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFlexOrderSummaryList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFlexOrderSummaryListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

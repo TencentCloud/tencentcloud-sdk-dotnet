@@ -173,7 +173,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 列出云拨测指标详细数据
+        /// 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
         /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>
@@ -193,7 +193,7 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
-        /// 列出云拨测指标详细数据
+        /// 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>
         /// <returns><see cref="DescribeProbeMetricDataResponse"/></returns>

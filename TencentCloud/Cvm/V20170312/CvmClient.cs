@@ -187,6 +187,86 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcAssistVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcAssistVpcResponse"/></returns>
+        public async Task<ConfigureChcAssistVpcResponse> ConfigureChcAssistVpc(ConfigureChcAssistVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConfigureChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置CHC物理服务器的带外和部署网络。传入带外网络和部署网络信息
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcAssistVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcAssistVpcResponse"/></returns>
+        public ConfigureChcAssistVpcResponse ConfigureChcAssistVpcSync(ConfigureChcAssistVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ConfigureChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置CHC物理服务器部署网络
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcDeployVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcDeployVpcResponse"/></returns>
+        public async Task<ConfigureChcDeployVpcResponse> ConfigureChcDeployVpc(ConfigureChcDeployVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ConfigureChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 配置CHC物理服务器部署网络
+        /// </summary>
+        /// <param name="req"><see cref="ConfigureChcDeployVpcRequest"/></param>
+        /// <returns><see cref="ConfigureChcDeployVpcResponse"/></returns>
+        public ConfigureChcDeployVpcResponse ConfigureChcDeployVpcSync(ConfigureChcDeployVpcRequest req)
+        {
+             JsonResponseModel<ConfigureChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ConfigureChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ConfigureChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (CreateDisasterRecoverGroup)用于创建[分散置放群组](https://cloud.tencent.com/document/product/213/15486)。创建好的置放群组，可在[创建实例](https://cloud.tencent.com/document/api/213/15730)时指定。
         /// </summary>
         /// <param name="req"><see cref="CreateDisasterRecoverGroupRequest"/></param>
@@ -2405,6 +2485,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 修改CHC物理服务器的属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyChcAttributeResponse"/></returns>
+        public async Task<ModifyChcAttributeResponse> ModifyChcAttribute(ModifyChcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyChcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyChcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改CHC物理服务器的属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyChcAttributeRequest"/></param>
+        /// <returns><see cref="ModifyChcAttributeResponse"/></returns>
+        public ModifyChcAttributeResponse ModifyChcAttributeSync(ModifyChcAttributeRequest req)
+        {
+             JsonResponseModel<ModifyChcAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyChcAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyChcAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (ModifyDisasterRecoverGroupAttribute)用于修改[分散置放群组](https://cloud.tencent.com/document/product/213/15486)属性。
         /// </summary>
         /// <param name="req"><see cref="ModifyDisasterRecoverGroupAttributeRequest"/></param>
@@ -3090,6 +3210,86 @@ namespace TencentCloud.Cvm.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "RebootInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RebootInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清理CHC物理服务器的带外网络和部署网络
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcAssistVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcAssistVpcResponse"/></returns>
+        public async Task<RemoveChcAssistVpcResponse> RemoveChcAssistVpc(RemoveChcAssistVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清理CHC物理服务器的带外网络和部署网络
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcAssistVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcAssistVpcResponse"/></returns>
+        public RemoveChcAssistVpcResponse RemoveChcAssistVpcSync(RemoveChcAssistVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcAssistVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveChcAssistVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcAssistVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清理CHC物理服务器的部署网络
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcDeployVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcDeployVpcResponse"/></returns>
+        public async Task<RemoveChcDeployVpcResponse> RemoveChcDeployVpc(RemoveChcDeployVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcDeployVpcResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 清理CHC物理服务器的部署网络
+        /// </summary>
+        /// <param name="req"><see cref="RemoveChcDeployVpcRequest"/></param>
+        /// <returns><see cref="RemoveChcDeployVpcResponse"/></returns>
+        public RemoveChcDeployVpcResponse RemoveChcDeployVpcSync(RemoveChcDeployVpcRequest req)
+        {
+             JsonResponseModel<RemoveChcDeployVpcResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveChcDeployVpc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveChcDeployVpcResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -54,6 +54,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("PortraitRule")]
         public BotPortraitRule PortraitRule{ get; set; }
 
+        /// <summary>
+        /// Bot智能分析
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntelligenceRule")]
+        public IntelligenceRule IntelligenceRule{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "UaBotRule.", this.UaBotRule);
             this.SetParamObj(map, prefix + "IspBotRule.", this.IspBotRule);
             this.SetParamObj(map, prefix + "PortraitRule.", this.PortraitRule);
+            this.SetParamObj(map, prefix + "IntelligenceRule.", this.IntelligenceRule);
         }
     }
 }

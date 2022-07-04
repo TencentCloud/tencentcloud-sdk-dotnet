@@ -49,7 +49,7 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 数据库版本
+        /// TDSQL-C PostgreSQL 合入的社区版本号
         /// </summary>
         [JsonProperty("DBVersion")]
         public string DBVersion{ get; set; }
@@ -137,6 +137,18 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         [JsonProperty("EndpointSet")]
         public Endpoint[] EndpointSet{ get; set; }
 
+        /// <summary>
+        /// TDSQL-C PostgreSQL 合入的社区主要版本号
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// TDSQL-C PostgreSQL 内核版本号
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -160,6 +172,8 @@ namespace TencentCloud.Tdcpg.V20211118.Models
             this.SetParamSimple(map, prefix + "DBCharset", this.DBCharset);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamArrayObj(map, prefix + "EndpointSet.", this.EndpointSet);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         }
     }
 }

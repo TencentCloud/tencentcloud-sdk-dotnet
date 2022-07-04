@@ -25,13 +25,13 @@ namespace TencentCloud.Ie.V20200304.Models
     {
         
         /// <summary>
-        /// 视频宽度，单位像素
+        /// 视频宽度，单位像素，一般要求是偶数，否则会向下对齐。
         /// </summary>
         [JsonProperty("Width")]
         public long? Width{ get; set; }
 
         /// <summary>
-        /// 视频高度，单位像素
+        /// 视频高度，单位像素，一般要求是偶数，否则会向下对齐。
         /// </summary>
         [JsonProperty("Height")]
         public long? Height{ get; set; }

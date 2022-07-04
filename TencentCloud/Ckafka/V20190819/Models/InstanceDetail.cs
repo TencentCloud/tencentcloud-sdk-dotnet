@@ -215,6 +215,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("PublicNetwork")]
         public long? PublicNetwork{ get; set; }
 
+        /// <summary>
+        /// 实例类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterType")]
+        public string ClusterType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -251,6 +258,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PartitionNumber", this.PartitionNumber);
             this.SetParamSimple(map, prefix + "PublicNetworkChargeType", this.PublicNetworkChargeType);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
+            this.SetParamSimple(map, prefix + "ClusterType", this.ClusterType);
         }
     }
 }

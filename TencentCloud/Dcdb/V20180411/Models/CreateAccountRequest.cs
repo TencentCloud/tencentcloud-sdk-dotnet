@@ -67,6 +67,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("DelayThresh")]
         public long? DelayThresh{ get; set; }
 
+        /// <summary>
+        /// 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+        /// </summary>
+        [JsonProperty("SlaveConst")]
+        public long? SlaveConst{ get; set; }
+
+        /// <summary>
+        /// 用户最大连接数限制参数。不传或者传0表示为不限制，对应max_user_connections参数，目前10.1内核版本不支持设置。
+        /// </summary>
+        [JsonProperty("MaxUserConnections")]
+        public ulong? MaxUserConnections{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +92,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+            this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
+            this.SetParamSimple(map, prefix + "MaxUserConnections", this.MaxUserConnections);
         }
     }
 }

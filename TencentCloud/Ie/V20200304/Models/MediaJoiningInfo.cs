@@ -31,6 +31,14 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("TargetInfo")]
         public MediaTargetInfo TargetInfo{ get; set; }
 
+        /// <summary>
+        /// 拼接模式：
+        /// Fast：快速；
+        /// Normal：正常；
+        /// </summary>
+        [JsonProperty("Mode")]
+        public string Mode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +46,7 @@ namespace TencentCloud.Ie.V20200304.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TargetInfo.", this.TargetInfo);
+            this.SetParamSimple(map, prefix + "Mode", this.Mode);
         }
     }
 }

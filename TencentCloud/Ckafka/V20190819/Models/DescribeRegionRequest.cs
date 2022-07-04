@@ -42,6 +42,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Business")]
         public string Business{ get; set; }
 
+        /// <summary>
+        /// cdc专有集群业务字段，可忽略
+        /// </summary>
+        [JsonProperty("CdcId")]
+        public string CdcId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Business", this.Business);
+            this.SetParamSimple(map, prefix + "CdcId", this.CdcId);
         }
     }
 }

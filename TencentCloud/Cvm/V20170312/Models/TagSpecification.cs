@@ -25,7 +25,7 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”
+        /// 标签绑定的资源类型，云服务器为“instance”，专用宿主机为“host”，镜像为“image”，密钥为“keypair”
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }

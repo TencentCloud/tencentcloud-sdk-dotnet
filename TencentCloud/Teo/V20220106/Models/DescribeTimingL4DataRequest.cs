@@ -43,19 +43,19 @@ namespace TencentCloud.Teo.V20220106.Models
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// ZoneId列表，仅在zone/instance维度下查询时该参数有效
+        /// 站点id列表
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// InstanceId列表，仅在Instance维度下查询时该参数有效
+        /// 该字段已废弃，请使用ProxyIds字段
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// 协议类型， 该字段当前无效
+        /// 该字段当前无效
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
@@ -67,10 +67,22 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 规则ID，仅在instance维度有效
+        /// 该字段当前无效，请使用Filter筛选
         /// </summary>
         [JsonProperty("RuleId")]
         public string RuleId{ get; set; }
+
+        /// <summary>
+        /// 支持的 Filter：proxyd,ruleId
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
+
+        /// <summary>
+        /// 四层实例列表
+        /// </summary>
+        [JsonProperty("ProxyIds")]
+        public string[] ProxyIds{ get; set; }
 
 
         /// <summary>
@@ -86,6 +98,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamArraySimple(map, prefix + "ProxyIds.", this.ProxyIds);
         }
     }
 }

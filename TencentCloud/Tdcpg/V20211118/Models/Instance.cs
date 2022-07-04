@@ -120,6 +120,18 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// TDSQL-C PostgreSQL 合入的社区主要版本号
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// TDSQL-C PostgreSQL 内核版本号
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +153,8 @@ namespace TencentCloud.Tdcpg.V20211118.Models
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         }
     }
 }

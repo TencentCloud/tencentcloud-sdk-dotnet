@@ -66,6 +66,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("SwitchConfig")]
         public SwitchConfig SwitchConfig{ get; set; }
 
+        /// <summary>
+        /// IP黑白名单
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IpTableConfig")]
+        public IpTableConfig IpTableConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +85,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "AclConfig.", this.AclConfig);
             this.SetParamObj(map, prefix + "BotConfig.", this.BotConfig);
             this.SetParamObj(map, prefix + "SwitchConfig.", this.SwitchConfig);
+            this.SetParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
         }
     }
 }

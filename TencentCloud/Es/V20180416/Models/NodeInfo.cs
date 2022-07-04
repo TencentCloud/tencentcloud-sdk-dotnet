@@ -76,6 +76,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskEncrypt")]
         public ulong? DiskEncrypt{ get; set; }
 
+        /// <summary>
+        /// cpu数目
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CpuNum")]
+        public ulong? CpuNum{ get; set; }
+
+        /// <summary>
+        /// 内存大小，单位GB
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MemSize")]
+        public long? MemSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -90,6 +104,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "LocalDiskInfo.", this.LocalDiskInfo);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
             this.SetParamSimple(map, prefix + "DiskEncrypt", this.DiskEncrypt);
+            this.SetParamSimple(map, prefix + "CpuNum", this.CpuNum);
+            this.SetParamSimple(map, prefix + "MemSize", this.MemSize);
         }
     }
 }

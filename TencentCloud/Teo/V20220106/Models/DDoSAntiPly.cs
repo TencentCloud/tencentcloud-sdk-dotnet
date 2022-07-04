@@ -102,6 +102,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("EmptyConnectProtect")]
         public string EmptyConnectProtect{ get; set; }
 
+        /// <summary>
+        /// UDP分片开关；off-关闭，on-开启
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UdpShard")]
+        public string UdpShard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +128,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "AbnormalSynNum", this.AbnormalSynNum);
             this.SetParamSimple(map, prefix + "ConnectTimeout", this.ConnectTimeout);
             this.SetParamSimple(map, prefix + "EmptyConnectProtect", this.EmptyConnectProtect);
+            this.SetParamSimple(map, prefix + "UdpShard", this.UdpShard);
         }
     }
 }

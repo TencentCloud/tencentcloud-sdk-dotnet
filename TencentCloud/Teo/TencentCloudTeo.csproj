@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.550</VersionPrefix>
+    <VersionPrefix>3.0.551</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -242,6 +242,10 @@
     <Compile Include="V20220106\Models\IdentifyZoneResponse.cs" />
     <Compile Include="V20220106\Models\ImportDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ImportDnsRecordsResponse.cs" />
+    <Compile Include="V20220106\Models\IntelligenceRule.cs" />
+    <Compile Include="V20220106\Models\IntelligenceRuleItem.cs" />
+    <Compile Include="V20220106\Models\IpTableConfig.cs" />
+    <Compile Include="V20220106\Models\IpTableRule.cs" />
     <Compile Include="V20220106\Models\L7OfflineLog.cs" />
     <Compile Include="V20220106\Models\LoadBalancing.cs" />
     <Compile Include="V20220106\Models\ManagedRule.cs" />
@@ -295,6 +299,7 @@
     <Compile Include="V20220106\Models\QueryString.cs" />
     <Compile Include="V20220106\Models\Quic.cs" />
     <Compile Include="V20220106\Models\RateLimitConfig.cs" />
+    <Compile Include="V20220106\Models\RateLimitIntelligence.cs" />
     <Compile Include="V20220106\Models\RateLimitTemplate.cs" />
     <Compile Include="V20220106\Models\RateLimitTemplateDetail.cs" />
     <Compile Include="V20220106\Models\RateLimitUserRule.cs" />

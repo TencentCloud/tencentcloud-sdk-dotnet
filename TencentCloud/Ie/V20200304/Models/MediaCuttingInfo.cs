@@ -44,11 +44,24 @@ namespace TencentCloud.Ie.V20200304.Models
 
         /// <summary>
         /// 列表文件形式，存储到用户存储服务中，可选值：
-        /// UseSaveInfo：默认，结果列表和结果存储同一位置；
-        /// NoListFile：不存储结果列表。
+        /// <li>NoListFile：不存储结果列表; </li>
+        /// <li>UseSaveInfo：默认，结果列表和结果存储同一位置（即SaveInfoSet 的第一个存储位置）；</li>
+        /// <li>SaveInfoSet 存储的Id：存储在指定的存储位置。</li>
         /// </summary>
         [JsonProperty("ResultListSaveType")]
         public string ResultListSaveType{ get; set; }
+
+        /// <summary>
+        /// 水印信息，最多支持 10 个水印。
+        /// </summary>
+        [JsonProperty("WatermarkInfoSet")]
+        public MediaCuttingWatermark[] WatermarkInfoSet{ get; set; }
+
+        /// <summary>
+        /// 是否去除纯色截图，如果值为 True ，对应时间点的截图如果是纯色，将略过。
+        /// </summary>
+        [JsonProperty("DropPureColor")]
+        public string DropPureColor{ get; set; }
 
 
         /// <summary>
@@ -60,6 +73,8 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamObj(map, prefix + "TargetInfo.", this.TargetInfo);
             this.SetParamObj(map, prefix + "OutForm.", this.OutForm);
             this.SetParamSimple(map, prefix + "ResultListSaveType", this.ResultListSaveType);
+            this.SetParamArrayObj(map, prefix + "WatermarkInfoSet.", this.WatermarkInfoSet);
+            this.SetParamSimple(map, prefix + "DropPureColor", this.DropPureColor);
         }
     }
 }

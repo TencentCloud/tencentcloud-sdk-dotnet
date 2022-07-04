@@ -126,6 +126,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Partitions")]
         public DMSPartition[] Partitions{ get; set; }
 
+        /// <summary>
+        /// 当前表名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "ViewOriginalText", this.ViewOriginalText);
             this.SetParamSimple(map, prefix + "ViewExpandedText", this.ViewExpandedText);
             this.SetParamArrayObj(map, prefix + "Partitions.", this.Partitions);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

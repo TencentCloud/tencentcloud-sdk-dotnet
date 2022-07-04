@@ -50,6 +50,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("CloseAudit")]
         public bool? CloseAudit{ get; set; }
 
+        /// <summary>
+        /// 高频审计日志保存时长。支持值包括：
+        /// 7 - 一周
+        /// 30 - 一个月；
+        /// 180 - 六个月；
+        /// 365 - 一年；
+        /// 1095 - 三年；
+        /// 1825 - 五年；
+        /// </summary>
+        [JsonProperty("HighLogExpireDay")]
+        public long? HighLogExpireDay{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +71,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
             this.SetParamSimple(map, prefix + "LogExpireDay", this.LogExpireDay);
             this.SetParamSimple(map, prefix + "CloseAudit", this.CloseAudit);
+            this.SetParamSimple(map, prefix + "HighLogExpireDay", this.HighLogExpireDay);
         }
     }
 }

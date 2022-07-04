@@ -67,6 +67,12 @@ namespace TencentCloud.Mariadb.V20170312.Models
         [JsonProperty("DelayThresh")]
         public long? DelayThresh{ get; set; }
 
+        /// <summary>
+        /// 针对只读账号，设置策略是否固定备机，0：不固定备机，即备机不满足条件与客户端不断开连接，Proxy选择其他可用备机，1：备机不满足条件断开连接，确保一个连接固定备机。
+        /// </summary>
+        [JsonProperty("SlaveConst")]
+        public long? SlaveConst{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Mariadb.V20170312.Models
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "ReadOnly", this.ReadOnly);
             this.SetParamSimple(map, prefix + "DelayThresh", this.DelayThresh);
+            this.SetParamSimple(map, prefix + "SlaveConst", this.SlaveConst);
         }
     }
 }

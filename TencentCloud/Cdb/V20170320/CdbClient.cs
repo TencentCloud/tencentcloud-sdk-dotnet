@@ -4561,6 +4561,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// CDB实例开通审计服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public async Task<OpenAuditServiceResponse> OpenAuditService(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CDB实例开通审计服务
+        /// </summary>
+        /// <param name="req"><see cref="OpenAuditServiceRequest"/></param>
+        /// <returns><see cref="OpenAuditServiceResponse"/></returns>
+        public OpenAuditServiceResponse OpenAuditServiceSync(OpenAuditServiceRequest req)
+        {
+             JsonResponseModel<OpenAuditServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenAuditService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenAuditServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(OpenDBInstanceGTID)用于开启云数据库实例的 GTID，只支持版本为 5.6 以及以上的实例。
         /// </summary>
         /// <param name="req"><see cref="OpenDBInstanceGTIDRequest"/></param>

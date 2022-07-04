@@ -45,6 +45,13 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("MediaInfo")]
         public MediaResultInfo MediaInfo{ get; set; }
 
+        /// <summary>
+        /// 文件对应的md5。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Md5")]
+        public string Md5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +61,7 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "FileSize", this.FileSize);
             this.SetParamObj(map, prefix + "MediaInfo.", this.MediaInfo);
+            this.SetParamSimple(map, prefix + "Md5", this.Md5);
         }
     }
 }

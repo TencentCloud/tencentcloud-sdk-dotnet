@@ -54,16 +54,28 @@ namespace TencentCloud.Ie.V20200304.Models
         public string FillType{ get; set; }
 
         /// <summary>
-        /// Type=Sprite时有效，表示雪碧图行数，范围为 [1,200]，默认100。
+        /// 【废弃】参考SpriteInfo
         /// </summary>
         [JsonProperty("SpriteRowCount")]
         public long? SpriteRowCount{ get; set; }
 
         /// <summary>
-        /// Type=Sprite时有效，表示雪碧图列数，范围为 [1,200]，默认100。
+        /// 【废弃】参考SpriteInfo
         /// </summary>
         [JsonProperty("SpriteColumnCount")]
         public long? SpriteColumnCount{ get; set; }
+
+        /// <summary>
+        /// Type=Sprite时有效，表示雪碧图参数信息。
+        /// </summary>
+        [JsonProperty("SpriteInfo")]
+        public SpriteImageInfo SpriteInfo{ get; set; }
+
+        /// <summary>
+        /// Type=Dynamic时有效，表示动图参数信息。
+        /// </summary>
+        [JsonProperty("DynamicInfo")]
+        public DynamicImageInfo DynamicInfo{ get; set; }
 
 
         /// <summary>
@@ -75,6 +87,8 @@ namespace TencentCloud.Ie.V20200304.Models
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "SpriteRowCount", this.SpriteRowCount);
             this.SetParamSimple(map, prefix + "SpriteColumnCount", this.SpriteColumnCount);
+            this.SetParamObj(map, prefix + "SpriteInfo.", this.SpriteInfo);
+            this.SetParamObj(map, prefix + "DynamicInfo.", this.DynamicInfo);
         }
     }
 }

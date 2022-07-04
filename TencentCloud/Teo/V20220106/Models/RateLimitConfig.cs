@@ -43,6 +43,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Template")]
         public RateLimitTemplate Template{ get; set; }
 
+        /// <summary>
+        /// 智能客户端过滤
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Intelligence")]
+        public RateLimitIntelligence Intelligence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "UserRules.", this.UserRules);
             this.SetParamObj(map, prefix + "Template.", this.Template);
+            this.SetParamObj(map, prefix + "Intelligence.", this.Intelligence);
         }
     }
 }

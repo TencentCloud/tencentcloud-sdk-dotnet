@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{22A3B506-BD68-3DED-BEAD-BFF07ADD88E7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.550</VersionPrefix>
+    <VersionPrefix>3.0.551</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,6 +79,7 @@
     <Compile Include="V20200304\Models\DescribeQualityControlTaskResultRequest.cs" />
     <Compile Include="V20200304\Models\DescribeQualityControlTaskResultResponse.cs" />
     <Compile Include="V20200304\Models\DownInfo.cs" />
+    <Compile Include="V20200304\Models\DynamicImageInfo.cs" />
     <Compile Include="V20200304\Models\EditInfo.cs" />
     <Compile Include="V20200304\Models\EditingInfo.cs" />
     <Compile Include="V20200304\Models\EditingTaskResult.cs" />
@@ -99,6 +100,9 @@
     <Compile Include="V20200304\Models\MediaCuttingOutForm.cs" />
     <Compile Include="V20200304\Models\MediaCuttingTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaCuttingTimeInfo.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingWatermark.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingWatermarkImage.cs" />
+    <Compile Include="V20200304\Models\MediaCuttingWatermarkText.cs" />
     <Compile Include="V20200304\Models\MediaJoiningInfo.cs" />
     <Compile Include="V20200304\Models\MediaJoiningTaskResult.cs" />
     <Compile Include="V20200304\Models\MediaProcessInfo.cs" />
@@ -126,6 +130,7 @@
     <Compile Include="V20200304\Models\SectionTime.cs" />
     <Compile Include="V20200304\Models\SegmentInfo.cs" />
     <Compile Include="V20200304\Models\Sharp.cs" />
+    <Compile Include="V20200304\Models\SpriteImageInfo.cs" />
     <Compile Include="V20200304\Models\StopMediaProcessTaskRequest.cs" />
     <Compile Include="V20200304\Models\StopMediaProcessTaskResponse.cs" />
     <Compile Include="V20200304\Models\StopMediaQualityRestorationTaskRequest.cs" />

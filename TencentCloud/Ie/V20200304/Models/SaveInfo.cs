@@ -37,6 +37,13 @@ namespace TencentCloud.Ie.V20200304.Models
         [JsonProperty("CosInfo")]
         public CosInfo CosInfo{ get; set; }
 
+        /// <summary>
+        /// 存储信息ID标记，用于多个输出场景。部分任务支持多输出时，一般要求必选。
+        /// ID只能包含字母、数字、下划线、中划线，长读不能超过128。
+        /// </summary>
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -45,6 +52,7 @@ namespace TencentCloud.Ie.V20200304.Models
         {
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamObj(map, prefix + "CosInfo.", this.CosInfo);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
         }
     }
 }

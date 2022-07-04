@@ -31,12 +31,6 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 数据库版本，目前仅支持 10.17
-        /// </summary>
-        [JsonProperty("DBVersion")]
-        public string DBVersion{ get; set; }
-
-        /// <summary>
         /// 数据库用户密码，必须满足 8-64个字符，至少包含 大写字母、小写字母、数字和符号~!@#$%^&*_-+=`|\(){}[]:;'<>,.?/中的任意三种
         /// </summary>
         [JsonProperty("MasterUserPassword")]
@@ -81,6 +75,14 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         public string ClusterName{ get; set; }
 
         /// <summary>
+        /// TDSQL-C PostgreSQL 合入的社区版本号。
+        /// 支持入参值为：10.17。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+        /// 注：该参数与DBMajorVersion、DBKernelVersion只能传递一个，且需要传递一个。
+        /// </summary>
+        [JsonProperty("DBVersion")]
+        public string DBVersion{ get; set; }
+
+        /// <summary>
         /// 项目Id，默认为0表示默认项目
         /// </summary>
         [JsonProperty("ProjectId")]
@@ -111,6 +113,22 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         [JsonProperty("AutoRenewFlag")]
         public ulong? AutoRenewFlag{ get; set; }
 
+        /// <summary>
+        /// TDSQL-C PostgreSQL 合入的社区主要版本号。
+        /// 支持入参值为：10。当输入该参数时，会基于此版本号创建对应的最新DBKernelVersion数据库内核。
+        /// 注：该参数和DBVersion、DBKernelVersion只能传递一个，且需要传递一个。
+        /// </summary>
+        [JsonProperty("DBMajorVersion")]
+        public string DBMajorVersion{ get; set; }
+
+        /// <summary>
+        /// TDSQL-C PostgreSQL 内核版本号。
+        /// 支持入参值为：v10.17_r1.4。当输入该参数时，会创建此版本号对应的数据库内核。
+        /// 注：该参数和DBVersion、DBMajorVersion只能传递一个，且需要传递一个。
+        /// </summary>
+        [JsonProperty("DBKernelVersion")]
+        public string DBKernelVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,7 +136,6 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
-            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "MasterUserPassword", this.MasterUserPassword);
             this.SetParamSimple(map, prefix + "CPU", this.CPU);
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
@@ -126,11 +143,14 @@ namespace TencentCloud.Tdcpg.V20211118.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
             this.SetParamSimple(map, prefix + "ClusterName", this.ClusterName);
+            this.SetParamSimple(map, prefix + "DBVersion", this.DBVersion);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
+            this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
+            this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
         }
     }
 }
