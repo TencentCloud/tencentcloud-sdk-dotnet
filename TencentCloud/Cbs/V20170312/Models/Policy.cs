@@ -25,16 +25,16 @@ namespace TencentCloud.Cbs.V20170312.Models
     {
         
         /// <summary>
-        /// 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
-        /// </summary>
-        [JsonProperty("DayOfWeek")]
-        public ulong?[] DayOfWeek{ get; set; }
-
-        /// <summary>
         /// 指定定期快照策略的触发时间。单位为小时，取值范围：[0, 23]。00:00 ~ 23:00 共 24 个时间点可选，1表示 01:00，依此类推。
         /// </summary>
         [JsonProperty("Hour")]
         public ulong?[] Hour{ get; set; }
+
+        /// <summary>
+        /// 指定每周从周一到周日需要触发定期快照的日期，取值范围：[0, 6]。0表示周日触发，1-6分别表示周一至周六。
+        /// </summary>
+        [JsonProperty("DayOfWeek")]
+        public ulong?[] DayOfWeek{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
             this.SetParamArraySimple(map, prefix + "Hour.", this.Hour);
+            this.SetParamArraySimple(map, prefix + "DayOfWeek.", this.DayOfWeek);
         }
     }
 }

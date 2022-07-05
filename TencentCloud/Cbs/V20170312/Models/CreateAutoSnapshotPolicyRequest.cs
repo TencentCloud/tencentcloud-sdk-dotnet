@@ -31,16 +31,22 @@ namespace TencentCloud.Cbs.V20170312.Models
         public Policy[] Policy{ get; set; }
 
         /// <summary>
-        /// 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+        /// 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
         /// </summary>
-        [JsonProperty("AutoSnapshotPolicyName")]
-        public string AutoSnapshotPolicyName{ get; set; }
+        [JsonProperty("DryRun")]
+        public bool? DryRun{ get; set; }
 
         /// <summary>
         /// 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }
+
+        /// <summary>
+        /// 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyName")]
+        public string AutoSnapshotPolicyName{ get; set; }
 
         /// <summary>
         /// 通过该定期快照策略创建的快照是否永久保留。FALSE表示非永久保留，TRUE表示永久保留，默认为FALSE。
@@ -54,12 +60,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
 
-        /// <summary>
-        /// 是否创建定期快照的执行策略。TRUE表示只需获取首次开始备份的时间，不实际创建定期快照策略，FALSE表示创建，默认为FALSE。
-        /// </summary>
-        [JsonProperty("DryRun")]
-        public bool? DryRun{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -67,11 +67,11 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
             this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
-            this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
         }
     }
 }

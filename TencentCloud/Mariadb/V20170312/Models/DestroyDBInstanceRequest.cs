@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AlterDMSDatabaseRequest : AbstractModel
+    public class DestroyDBInstanceRequest : AbstractModel
     {
         
         /// <summary>
-        /// 当前名称
+        /// 实例 ID，格式如：tdsqlshard-c1nl9rpv，与云数据库控制台页面中显示的实例 ID 相同。
         /// </summary>
-        [JsonProperty("CurrentName")]
-        public string CurrentName{ get; set; }
-
-        /// <summary>
-        /// schema名称
-        /// </summary>
-        [JsonProperty("SchemaName")]
-        public string SchemaName{ get; set; }
-
-        /// <summary>
-        /// 路径
-        /// </summary>
-        [JsonProperty("Location")]
-        public string Location{ get; set; }
-
-        /// <summary>
-        /// 基础对象
-        /// </summary>
-        [JsonProperty("Asset")]
-        public Asset Asset{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CurrentName", this.CurrentName);
-            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
-            this.SetParamSimple(map, prefix + "Location", this.Location);
-            this.SetParamObj(map, prefix + "Asset.", this.Asset);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

@@ -87,6 +87,21 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? GivenAuthorizedCnt{ get; set; }
 
         /// <summary>
+        /// 起始时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public string BeginTime{ get; set; }
+
+        /// <summary>
+        /// 子状态(具体意义依据State字段而定)
+        /// State为4时，有效值为: ISOLATE(隔离) DESTROED(已销毁)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubState")]
+        public string SubState{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -107,6 +122,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ExpirationTime", this.ExpirationTime);
             this.SetParamSimple(map, prefix + "AutomaticRenewal", this.AutomaticRenewal);
             this.SetParamSimple(map, prefix + "GivenAuthorizedCnt", this.GivenAuthorizedCnt);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "SubState", this.SubState);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

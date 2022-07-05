@@ -24,12 +24,33 @@ namespace TencentCloud.Dlc.V20210125.Models
     public class DropDMSDatabaseRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 数据库名称
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 是否删除数据
+        /// </summary>
+        [JsonProperty("DeleteData")]
+        public bool? DeleteData{ get; set; }
+
+        /// <summary>
+        /// 是否级联删除
+        /// </summary>
+        [JsonProperty("Cascade")]
+        public bool? Cascade{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DeleteData", this.DeleteData);
+            this.SetParamSimple(map, prefix + "Cascade", this.Cascade);
         }
     }
 }

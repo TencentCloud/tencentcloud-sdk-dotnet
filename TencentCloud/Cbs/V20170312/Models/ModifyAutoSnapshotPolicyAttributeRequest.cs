@@ -31,18 +31,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string AutoSnapshotPolicyId{ get; set; }
 
         /// <summary>
-        /// 定期快照的执行策略。
-        /// </summary>
-        [JsonProperty("Policy")]
-        public Policy[] Policy{ get; set; }
-
-        /// <summary>
-        /// 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
-        /// </summary>
-        [JsonProperty("AutoSnapshotPolicyName")]
-        public string AutoSnapshotPolicyName{ get; set; }
-
-        /// <summary>
         /// 是否激活定期快照策略，FALSE表示未激活，TRUE表示激活，默认为TRUE。
         /// </summary>
         [JsonProperty("IsActivated")]
@@ -55,7 +43,19 @@ namespace TencentCloud.Cbs.V20170312.Models
         public bool? IsPermanent{ get; set; }
 
         /// <summary>
-        /// 通过该定期快照策略创建的快照保留天数，该参数不可与`IsPermanent`参数冲突，即若定期快照策略设置为永久保留，`RetentionDays`应置0。
+        /// 要创建的定期快照策略名。不传则默认为“未命名”。最大长度不能超60个字节。
+        /// </summary>
+        [JsonProperty("AutoSnapshotPolicyName")]
+        public string AutoSnapshotPolicyName{ get; set; }
+
+        /// <summary>
+        /// 定期快照的执行策略。
+        /// </summary>
+        [JsonProperty("Policy")]
+        public Policy[] Policy{ get; set; }
+
+        /// <summary>
+        /// 通过该定期快照策略创建的快照保留天数。如果指定本参数，则IsPermanent入参不可指定为TRUE，否则会产生冲突。
         /// </summary>
         [JsonProperty("RetentionDays")]
         public ulong? RetentionDays{ get; set; }
@@ -67,10 +67,10 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AutoSnapshotPolicyId", this.AutoSnapshotPolicyId);
-            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
-            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
             this.SetParamSimple(map, prefix + "IsActivated", this.IsActivated);
             this.SetParamSimple(map, prefix + "IsPermanent", this.IsPermanent);
+            this.SetParamSimple(map, prefix + "AutoSnapshotPolicyName", this.AutoSnapshotPolicyName);
+            this.SetParamArrayObj(map, prefix + "Policy.", this.Policy);
             this.SetParamSimple(map, prefix + "RetentionDays", this.RetentionDays);
         }
     }

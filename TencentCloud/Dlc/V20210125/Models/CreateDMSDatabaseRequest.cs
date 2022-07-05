@@ -25,6 +25,24 @@ namespace TencentCloud.Dlc.V20210125.Models
     {
         
         /// <summary>
+        /// 基础元数据对象
+        /// </summary>
+        [JsonProperty("Asset")]
+        public Asset Asset{ get; set; }
+
+        /// <summary>
+        /// Schema目录
+        /// </summary>
+        [JsonProperty("SchemaName")]
+        public string SchemaName{ get; set; }
+
+        /// <summary>
+        /// Db存储路径
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
         /// 数据库名称
         /// </summary>
         [JsonProperty("Name")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Asset.", this.Asset);
+            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
             this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }

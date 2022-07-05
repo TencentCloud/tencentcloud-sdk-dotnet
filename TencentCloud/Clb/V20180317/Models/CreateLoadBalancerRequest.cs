@@ -100,7 +100,7 @@ namespace TencentCloud.Clb.V20180317.Models
         public string VipIsp{ get; set; }
 
         /// <summary>
-        /// 购买负载均衡的同时，给负载均衡打上标签。
+        /// 购买负载均衡的同时，给负载均衡打上标签，最大支持20个标签键值对。
         /// </summary>
         [JsonProperty("Tags")]
         public TagInfo[] Tags{ get; set; }

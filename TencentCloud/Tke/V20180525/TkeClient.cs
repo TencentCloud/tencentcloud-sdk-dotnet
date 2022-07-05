@@ -4653,7 +4653,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取边缘脚本链接
+        /// 获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
         /// </summary>
         /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
         /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>
@@ -4673,7 +4673,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 获取边缘脚本链接
+        /// 获取边缘脚本链接，此接口用于添加第三方节点，通过下载脚本从而将节点添加到边缘集群。
         /// </summary>
         /// <param name="req"><see cref="DescribeTKEEdgeScriptRequest"/></param>
         /// <returns><see cref="DescribeTKEEdgeScriptResponse"/></returns>

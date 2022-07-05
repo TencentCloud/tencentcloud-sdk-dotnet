@@ -87,6 +87,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("LicenseOrder")]
         public LicenseOrder LicenseOrder{ get; set; }
 
+        /// <summary>
+        /// 漏洞数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VulNum")]
+        public ulong? VulNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +109,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
             this.SetParamSimple(map, prefix + "MachineStatus", this.MachineStatus);
             this.SetParamObj(map, prefix + "LicenseOrder.", this.LicenseOrder);
+            this.SetParamSimple(map, prefix + "VulNum", this.VulNum);
         }
     }
 }

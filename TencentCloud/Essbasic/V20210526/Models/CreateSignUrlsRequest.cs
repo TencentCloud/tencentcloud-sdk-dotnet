@@ -37,22 +37,62 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序。
+        /// 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
 
         /// <summary>
-        /// 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
+        /// 签署链接生成类型，默认是 "ALL"；
+        /// "ALL"：全部签署方签署链接；
+        /// "CHANNEL"：渠道合作企业；
+        /// "NOT_CHANNEL"：非渠道合作企业；
+        /// "PERSON"：个人；
         /// </summary>
-        [JsonProperty("JumpUrl")]
-        public string JumpUrl{ get; set; }
+        [JsonProperty("GenerateType")]
+        public string GenerateType{ get; set; }
+
+        /// <summary>
+        /// 非渠道合作企业参与方的企业名称，GenerateType为"NOT_CHANNEL"时必填
+        /// </summary>
+        [JsonProperty("OrganizationName")]
+        public string OrganizationName{ get; set; }
+
+        /// <summary>
+        /// 参与人姓名，GenerateType为"PERSON"时必填
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 参与人手机号，GenerateType为"PERSON"时必填
+        /// </summary>
+        [JsonProperty("Mobile")]
+        public string Mobile{ get; set; }
+
+        /// <summary>
+        /// 渠道合作企业的企业Id，GenerateType为"CHANNEL"时必填
+        /// </summary>
+        [JsonProperty("OrganizationOpenId")]
+        public string OrganizationOpenId{ get; set; }
+
+        /// <summary>
+        /// 渠道合作企业参与人OpenId，GenerateType为"CHANNEL"时可用，指定到具体参与人
+        /// </summary>
+        [JsonProperty("OpenId")]
+        public string OpenId{ get; set; }
 
         /// <summary>
         /// Endpoint为"APP" 类型的签署链接，可以设置此值；支持调用方小程序打开签署链接，在电子签小程序完成签署后自动回跳至调用方小程序
         /// </summary>
         [JsonProperty("AutoJumpBack")]
         public bool? AutoJumpBack{ get; set; }
+
+        /// <summary>
+        /// 签署完之后的H5页面的跳转链接，针对Endpoint为CHANNEL时有效，最大长度1000个字符。
+        /// </summary>
+        [JsonProperty("JumpUrl")]
+        public string JumpUrl{ get; set; }
 
         /// <summary>
         /// 操作者的信息
@@ -69,8 +109,14 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
-            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
+            this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
+            this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
+            this.SetParamSimple(map, prefix + "OrganizationOpenId", this.OrganizationOpenId);
+            this.SetParamSimple(map, prefix + "OpenId", this.OpenId);
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
+            this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

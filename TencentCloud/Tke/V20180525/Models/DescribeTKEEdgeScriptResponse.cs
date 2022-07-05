@@ -25,6 +25,24 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
+        /// 下载链接
+        /// </summary>
+        [JsonProperty("Link")]
+        public string Link{ get; set; }
+
+        /// <summary>
+        /// 下载需要的token
+        /// </summary>
+        [JsonProperty("Token")]
+        public string Token{ get; set; }
+
+        /// <summary>
+        /// 下载命令
+        /// </summary>
+        [JsonProperty("Command")]
+        public string Command{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +54,9 @@ namespace TencentCloud.Tke.V20180525.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Link", this.Link);
+            this.SetParamSimple(map, prefix + "Token", this.Token);
+            this.SetParamSimple(map, prefix + "Command", this.Command);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

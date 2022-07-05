@@ -90,6 +90,12 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
+        /// <summary>
+        /// 表达式
+        /// </summary>
+        [JsonProperty("Expression")]
+        public string Expression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "MaxParts", this.MaxParts);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Expression", this.Expression);
         }
     }
 }

@@ -85,10 +85,16 @@ namespace TencentCloud.Redis.V20180412.Models
         public long?[] Result{ get; set; }
 
         /// <summary>
-        /// 操作者Uin
+        /// 操作者Uin，该字段已废弃，使用OperateUin代替
         /// </summary>
         [JsonProperty("OperatorUin")]
         public long?[] OperatorUin{ get; set; }
+
+        /// <summary>
+        /// 操作者Uin
+        /// </summary>
+        [JsonProperty("OperateUin")]
+        public string[] OperateUin{ get; set; }
 
 
         /// <summary>
@@ -107,6 +113,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArraySimple(map, prefix + "TaskStatus.", this.TaskStatus);
             this.SetParamArraySimple(map, prefix + "Result.", this.Result);
             this.SetParamArraySimple(map, prefix + "OperatorUin.", this.OperatorUin);
+            this.SetParamArraySimple(map, prefix + "OperateUin.", this.OperateUin);
         }
     }
 }

@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Dlc.V20210125.Models
+namespace TencentCloud.Mariadb.V20170312.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class AlterDMSDatabaseRequest : AbstractModel
+    public class DestroyDBInstanceResponse : AbstractModel
     {
         
         /// <summary>
-        /// 当前名称
+        /// 实例 ID，与入参InstanceId一致。
         /// </summary>
-        [JsonProperty("CurrentName")]
-        public string CurrentName{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// schema名称
+        /// 异步任务的请求 ID，可使用此 ID [查询异步任务的执行结果](https://cloud.tencent.com/document/product/237/16177)。
         /// </summary>
-        [JsonProperty("SchemaName")]
-        public string SchemaName{ get; set; }
+        [JsonProperty("FlowId")]
+        public long? FlowId{ get; set; }
 
         /// <summary>
-        /// 路径
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Location")]
-        public string Location{ get; set; }
-
-        /// <summary>
-        /// 基础对象
-        /// </summary>
-        [JsonProperty("Asset")]
-        public Asset Asset{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CurrentName", this.CurrentName);
-            this.SetParamSimple(map, prefix + "SchemaName", this.SchemaName);
-            this.SetParamSimple(map, prefix + "Location", this.Location);
-            this.SetParamObj(map, prefix + "Asset.", this.Asset);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }
