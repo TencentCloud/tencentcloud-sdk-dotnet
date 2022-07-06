@@ -67,8 +67,14 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ContainerId{ get; set; }
 
         /// <summary>
-        /// 容器状态，CS_RUNING:运行， CS_PAUSE:暂停，CS_STOP:停止，
-        /// 												       CS_CREATE:已经创建， CS_DESTORY:销毁
+        /// 容器状态
+        /// 正在运行: RUNNING
+        /// 暂停: PAUSED
+        /// 停止: STOPPED
+        /// 已经创建: CREATED
+        /// 已经销毁: DESTROYED
+        /// 正在重启中: RESTARTING
+        /// 迁移中: REMOVING
         /// </summary>
         [JsonProperty("ContainerStatus")]
         public string ContainerStatus{ get; set; }

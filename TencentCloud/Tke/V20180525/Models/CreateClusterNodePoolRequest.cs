@@ -102,6 +102,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 删除保护开关
+        /// </summary>
+        [JsonProperty("DeletionProtection")]
+        public bool? DeletionProtection{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +127,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "NodePoolOs", this.NodePoolOs);
             this.SetParamSimple(map, prefix + "OsCustomizeType", this.OsCustomizeType);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "DeletionProtection", this.DeletionProtection);
         }
     }
 }

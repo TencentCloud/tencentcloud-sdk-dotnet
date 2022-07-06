@@ -70,6 +70,12 @@ namespace TencentCloud.Sts.V20180813.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 调用者身份uin
+        /// </summary>
+        [JsonProperty("SourceIdentity")]
+        public string SourceIdentity{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +88,7 @@ namespace TencentCloud.Sts.V20180813.Models
             this.SetParamSimple(map, prefix + "Policy", this.Policy);
             this.SetParamSimple(map, prefix + "ExternalId", this.ExternalId);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "SourceIdentity", this.SourceIdentity);
         }
     }
 }

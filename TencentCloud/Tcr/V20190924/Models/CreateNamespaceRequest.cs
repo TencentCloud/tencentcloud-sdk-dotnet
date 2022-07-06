@@ -42,6 +42,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("IsPublic")]
         public bool? IsPublic{ get; set; }
 
+        /// <summary>
+        /// 云标签描述
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "RegistryId", this.RegistryId);
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "IsPublic", this.IsPublic);
+            this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

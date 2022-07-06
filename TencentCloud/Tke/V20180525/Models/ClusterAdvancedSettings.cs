@@ -138,6 +138,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("IsDualStack")]
         public bool? IsDualStack{ get; set; }
 
+        /// <summary>
+        /// 是否开启QGPU共享
+        /// </summary>
+        [JsonProperty("QGPUShareEnable")]
+        public bool? QGPUShareEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -162,6 +168,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "BasePodNumber", this.BasePodNumber);
             this.SetParamSimple(map, prefix + "CiliumMode", this.CiliumMode);
             this.SetParamSimple(map, prefix + "IsDualStack", this.IsDualStack);
+            this.SetParamSimple(map, prefix + "QGPUShareEnable", this.QGPUShareEnable);
         }
     }
 }

@@ -202,6 +202,19 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ContainerIsolateOperationSrc")]
         public string ContainerIsolateOperationSrc{ get; set; }
 
+        /// <summary>
+        /// 容器状态
+        /// 正在运行: RUNNING
+        /// 暂停: PAUSED
+        /// 停止: STOPPED
+        /// 已经创建: CREATED
+        /// 已经销毁: DESTROYED
+        /// 正在重启中: RESTARTING
+        /// 迁移中: REMOVING
+        /// </summary>
+        [JsonProperty("ContainerStatus")]
+        public string ContainerStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -234,6 +247,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+            this.SetParamSimple(map, prefix + "ContainerStatus", this.ContainerStatus);
         }
     }
 }

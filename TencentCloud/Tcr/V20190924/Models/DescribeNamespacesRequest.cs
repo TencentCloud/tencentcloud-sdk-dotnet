@@ -43,10 +43,22 @@ namespace TencentCloud.Tcr.V20190924.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 页偏移
+        /// 页面偏移（第几页）
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 列出所有命名空间
+        /// </summary>
+        [JsonProperty("All")]
+        public bool? All{ get; set; }
+
+        /// <summary>
+        /// 过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -58,6 +70,8 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "NamespaceName", this.NamespaceName);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "All", this.All);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

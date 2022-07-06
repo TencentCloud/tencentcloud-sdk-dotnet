@@ -45,10 +45,17 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Date{ get; set; }
 
         /// <summary>
-        /// 消耗量
+        /// 消耗数量
         /// </summary>
         [JsonProperty("Usage")]
         public ulong? Usage{ get; set; }
+
+        /// <summary>
+        /// 撤回数量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Cancel")]
+        public ulong? Cancel{ get; set; }
 
 
         /// <summary>
@@ -60,6 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ProxyOrganizationName", this.ProxyOrganizationName);
             this.SetParamSimple(map, prefix + "Date", this.Date);
             this.SetParamSimple(map, prefix + "Usage", this.Usage);
+            this.SetParamSimple(map, prefix + "Cancel", this.Cancel);
         }
     }
 }

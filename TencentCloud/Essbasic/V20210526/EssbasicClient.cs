@@ -295,7 +295,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建参与者签署短链
+        /// 创建跳转小程序查看或签署的链接
         /// </summary>
         /// <param name="req"><see cref="CreateSignUrlsRequest"/></param>
         /// <returns><see cref="CreateSignUrlsResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建参与者签署短链
+        /// 创建跳转小程序查看或签署的链接
         /// </summary>
         /// <param name="req"><see cref="CreateSignUrlsRequest"/></param>
         /// <returns><see cref="CreateSignUrlsResponse"/></returns>

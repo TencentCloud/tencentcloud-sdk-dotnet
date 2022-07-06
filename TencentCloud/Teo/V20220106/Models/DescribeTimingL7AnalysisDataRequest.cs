@@ -37,7 +37,10 @@ namespace TencentCloud.Teo.V20220106.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 时序类访问流量指标
+        /// 指标列表，支持的指标
+        /// l7Flow_outFlux: 访问流量
+        /// l7Flow_request: 访问请求数
+        /// l7Flow_outBandwidth: 访问带宽
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }

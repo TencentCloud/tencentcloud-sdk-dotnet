@@ -25,13 +25,7 @@ namespace TencentCloud.Ms.V20180408.Models
     {
         
         /// <summary>
-        /// 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
-        /// </summary>
-        [JsonProperty("Pids")]
-        public ulong?[] Pids{ get; set; }
-
-        /// <summary>
-        /// 支持通过资源id，pid进行查询
+        /// 支持CreateTime、ExpireTime、AppName、AppPkgName、BindValue、IsBind过滤
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
@@ -47,6 +41,12 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 资源类别id数组，13624：加固专业版，12750：企业版。空数组表示返回全部资源。
+        /// </summary>
+        [JsonProperty("Pids")]
+        public ulong?[] Pids{ get; set; }
 
         /// <summary>
         /// 按某个字段排序，目前支持CreateTime、ExpireTime其中的一个排序。
@@ -66,10 +66,10 @@ namespace TencentCloud.Ms.V20180408.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "Pids.", this.Pids);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamArraySimple(map, prefix + "Pids.", this.Pids);
             this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
             this.SetParamSimple(map, prefix + "OrderDirection", this.OrderDirection);
         }

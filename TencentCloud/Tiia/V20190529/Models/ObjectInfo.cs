@@ -48,6 +48,13 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Attributes")]
         public Attribute[] Attributes{ get; set; }
 
+        /// <summary>
+        /// 图像的所有主体区域。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllBox")]
+        public Box[] AllBox{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +65,7 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
             this.SetParamArrayObj(map, prefix + "Colors.", this.Colors);
             this.SetParamArrayObj(map, prefix + "Attributes.", this.Attributes);
+            this.SetParamArrayObj(map, prefix + "AllBox.", this.AllBox);
         }
     }
 }
