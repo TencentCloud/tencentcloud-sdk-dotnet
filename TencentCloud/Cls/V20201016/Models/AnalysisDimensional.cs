@@ -31,7 +31,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 分析类型：query，field
+        /// 分析类型：query，field ，original
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// 配置
+        /// </summary>
+        [JsonProperty("ConfigInfo")]
+        public AlarmAnalysisConfig[] ConfigInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamArrayObj(map, prefix + "ConfigInfo.", this.ConfigInfo);
         }
     }
 }

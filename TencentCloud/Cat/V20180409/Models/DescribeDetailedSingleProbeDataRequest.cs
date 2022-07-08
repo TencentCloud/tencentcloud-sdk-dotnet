@@ -38,12 +38,19 @@ namespace TencentCloud.Cat.V20180409.Models
 
         /// <summary>
         /// 任务类型
+        /// AnalyzeTaskType_Network：网络质量
+        /// AnalyzeTaskType_Browse：页面性能
+        /// AnalyzeTaskType_UploadDownload：文件传输（含文件上传、文件下载）
+        /// AnalyzeTaskType_Transport：端口性能
+        /// AnalyzeTaskType_MediaStream：音视频体验
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
 
         /// <summary>
         /// 待排序字段
+        /// 可以填写 ProbeTime 拨测时间排序
+        /// 也可填写SelectedFields 中的选中字段
         /// </summary>
         [JsonProperty("SortField")]
         public string SortField{ get; set; }
@@ -80,12 +87,24 @@ namespace TencentCloud.Cat.V20180409.Models
 
         /// <summary>
         /// 拨测点运营商
+        /// 	
+        /// 这里实际按拨测结果中的运营商来填写即可
+        /// 
+        /// 电信：中国电信
+        /// 移动：中国移动
+        /// 联通：中国联通
         /// </summary>
         [JsonProperty("Operators")]
         public string[] Operators{ get; set; }
 
         /// <summary>
         /// 拨测点地区
+        /// 	
+        /// 这里实际按拨测结果中的地区来填写即可
+        /// 
+        /// 国内一般是省级单位，如广东、广西、香港特区、新疆；直辖市则填北京、上海
+        /// 
+        /// 海外一般是国家名，如澳大利亚、新加坡
         /// </summary>
         [JsonProperty("Districts")]
         public string[] Districts{ get; set; }
@@ -98,6 +117,14 @@ namespace TencentCloud.Cat.V20180409.Models
 
         /// <summary>
         /// 城市
+        /// 这里实际按拨测结果中的城市来填写即可
+        /// 
+        /// 示例：
+        /// 
+        /// 深圳市
+        /// 武汉市
+        /// 首尔
+        /// 多伦多
         /// </summary>
         [JsonProperty("City")]
         public string[] City{ get; set; }

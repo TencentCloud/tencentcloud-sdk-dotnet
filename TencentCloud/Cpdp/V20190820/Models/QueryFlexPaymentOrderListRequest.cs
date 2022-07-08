@@ -25,12 +25,6 @@ namespace TencentCloud.Cpdp.V20190820.Models
     {
         
         /// <summary>
-        /// 收款用户ID
-        /// </summary>
-        [JsonProperty("PayeeId")]
-        public string PayeeId{ get; set; }
-
-        /// <summary>
         /// 开始时间，格式"yyyy-MM-dd hh:mm:ss"
         /// </summary>
         [JsonProperty("StartTime")]
@@ -49,6 +43,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public Paging PageNumber{ get; set; }
 
         /// <summary>
+        /// 收款用户ID
+        /// </summary>
+        [JsonProperty("PayeeId")]
+        public string PayeeId{ get; set; }
+
+        /// <summary>
         /// 环境类型
         /// __release__:生产环境
         /// __sandbox__:沙箱环境
@@ -64,10 +64,10 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamObj(map, prefix + "PageNumber.", this.PageNumber);
+            this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }
     }

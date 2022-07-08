@@ -49,7 +49,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 发送类型(true为无序签,false为顺序签)
+        /// 发送类型：
+        /// true：无序签
+        /// false：有序签
+        /// 注：默认为false（有序签），请和模板中的配置保持一致
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }

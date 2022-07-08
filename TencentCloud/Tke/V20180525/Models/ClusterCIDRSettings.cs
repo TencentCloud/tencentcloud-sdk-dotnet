@@ -37,7 +37,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public bool? IgnoreClusterCIDRConflict{ get; set; }
 
         /// <summary>
-        /// 集群中每个Node上最大的Pod数量。取值范围4～256。不为2的幂值时会向上取最接近的2的幂值。
+        /// 集群中每个Node上最大的Pod数量。取值范围16～256。不为2的幂值时会向上取最接近的2的幂值。
         /// </summary>
         [JsonProperty("MaxNodePodNum")]
         public ulong? MaxNodePodNum{ get; set; }

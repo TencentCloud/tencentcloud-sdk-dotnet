@@ -66,6 +66,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("SummaryCount")]
         public long? SummaryCount{ get; set; }
 
+        /// <summary>
+        /// 外部用户ID
+        /// </summary>
+        [JsonProperty("OutUserId")]
+        public string OutUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "SummaryAmount", this.SummaryAmount);
             this.SetParamSimple(map, prefix + "SummaryTime", this.SummaryTime);
             this.SetParamSimple(map, prefix + "SummaryCount", this.SummaryCount);
+            this.SetParamSimple(map, prefix + "OutUserId", this.OutUserId);
         }
     }
 }

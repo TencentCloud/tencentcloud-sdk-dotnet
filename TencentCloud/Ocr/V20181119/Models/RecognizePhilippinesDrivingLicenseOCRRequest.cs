@@ -25,12 +25,6 @@ namespace TencentCloud.Ocr.V20181119.Models
     {
         
         /// <summary>
-        /// 是否返回人像照片。
-        /// </summary>
-        [JsonProperty("ReturnHeadImage")]
-        public bool? ReturnHeadImage{ get; set; }
-
-        /// <summary>
         /// 图片的 Base64 值。
         /// 支持的图片格式：PNG、JPG、JPEG，暂不支持 GIF 格式。
         /// 支持的图片大小：所下载图片经Base64编码后不超过 7M。图片下载时间不超过 3 秒。
@@ -49,15 +43,21 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
+        /// <summary>
+        /// 是否返回人像照片。
+        /// </summary>
+        [JsonProperty("ReturnHeadImage")]
+        public bool? ReturnHeadImage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamSimple(map, prefix + "ImageUrl", this.ImageUrl);
+            this.SetParamSimple(map, prefix + "ReturnHeadImage", this.ReturnHeadImage);
         }
     }
 }

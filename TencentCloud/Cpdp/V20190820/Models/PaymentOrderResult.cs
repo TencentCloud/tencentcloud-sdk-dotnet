@@ -106,6 +106,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("PayeeId")]
         public string PayeeId{ get; set; }
 
+        /// <summary>
+        /// 外部用户ID
+        /// </summary>
+        [JsonProperty("OutUserId")]
+        public string OutUserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "StatusDesc", this.StatusDesc);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
+            this.SetParamSimple(map, prefix + "OutUserId", this.OutUserId);
         }
     }
 }
