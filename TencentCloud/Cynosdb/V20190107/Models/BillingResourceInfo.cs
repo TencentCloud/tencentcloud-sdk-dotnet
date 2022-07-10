@@ -36,6 +36,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
+        /// <summary>
+        /// 订单ID
+        /// </summary>
+        [JsonProperty("DealName")]
+        public string DealName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
+            this.SetParamSimple(map, prefix + "DealName", this.DealName);
         }
     }
 }

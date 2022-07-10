@@ -15,32 +15,31 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLiveDomainCertRequest : AbstractModel
+    public class VerifyOpenBankAccountResult : AbstractModel
     {
         
         /// <summary>
-        /// 播放域名。
+        /// 打款验证状态。
+        ///  INIT("打款中"),
+        /// PENDING("打款成功待验证"),
+        /// VERIFIED("验证成功"),
+        /// FAILED("打款失败"),
+        /// VERIFY_FAILED("验证失败")
         /// </summary>
-        [JsonProperty("DomainName")]
-        public string DomainName{ get; set; }
+        [JsonProperty("VerifyState")]
+        public string VerifyState{ get; set; }
 
         /// <summary>
-        /// 证书Id。
+        /// 重定向参数，用于客户端跳转，收款商户未完成打款验证时返回该参数
         /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
-
-        /// <summary>
-        /// 状态，0：关闭  1：打开。
-        /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("RedirectInfo")]
+        public OpenBankRedirectInfo RedirectInfo{ get; set; }
 
 
         /// <summary>
@@ -48,9 +47,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "VerifyState", this.VerifyState);
+            this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
         }
     }
 }

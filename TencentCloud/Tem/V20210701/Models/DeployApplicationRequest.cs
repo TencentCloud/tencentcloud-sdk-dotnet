@@ -279,7 +279,8 @@ namespace TencentCloud.Tem.V20210701.Models
         public EnablePrometheusConf EnablePrometheusConf{ get; set; }
 
         /// <summary>
-        /// 1：开始apm采集；0：关闭apm采集
+        /// 1：开始apm采集（skywalking）；
+        /// 0：关闭apm采集；
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }

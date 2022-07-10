@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{9606A5AB-94D6-3512-9394-9CFA341DBB7D}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.554</VersionPrefix>
+    <VersionPrefix>3.0.555</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,8 +55,6 @@
     <Compile Include="V20180801\Models\BillAreaInfo.cs" />
     <Compile Include="V20180801\Models\BillCountryInfo.cs" />
     <Compile Include="V20180801\Models\BillDataInfo.cs" />
-    <Compile Include="V20180801\Models\BindLiveDomainCertRequest.cs" />
-    <Compile Include="V20180801\Models\BindLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\CallBackRuleInfo.cs" />
     <Compile Include="V20180801\Models\CallBackTemplateInfo.cs" />
     <Compile Include="V20180801\Models\CallbackEventInfo.cs" />
@@ -77,8 +75,6 @@
     <Compile Include="V20180801\Models\CreateLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\CreateLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\CreateLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\CreateLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskRequest.cs" />
     <Compile Include="V20180801\Models\CreateLivePullStreamTaskResponse.cs" />
     <Compile Include="V20180801\Models\CreateLiveRecordRequest.cs" />
@@ -109,8 +105,6 @@
     <Compile Include="V20180801\Models\DeleteLiveCallbackRuleResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\DeleteLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\DeleteLiveCertResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainRequest.cs" />
     <Compile Include="V20180801\Models\DeleteLiveDomainResponse.cs" />
     <Compile Include="V20180801\Models\DeleteLivePullStreamTaskRequest.cs" />
@@ -283,10 +277,6 @@
     <Compile Include="V20180801\Models\LogInfo.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveCallbackTemplateResponse.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveCertRequest.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveCertResponse.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveDomainCertRequest.cs" />
-    <Compile Include="V20180801\Models\ModifyLiveDomainCertResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererRequest.cs" />
     <Compile Include="V20180801\Models\ModifyLiveDomainRefererResponse.cs" />
     <Compile Include="V20180801\Models\ModifyLivePlayAuthKeyRequest.cs" />

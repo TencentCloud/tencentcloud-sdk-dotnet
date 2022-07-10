@@ -179,48 +179,6 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 域名绑定证书。
-        /// 注意：需先调用添加证书接口进行证书添加。获取到证书Id后再调用该接口进行绑定。
-        /// </summary>
-        /// <param name="req"><see cref="BindLiveDomainCertRequest"/></param>
-        /// <returns><see cref="BindLiveDomainCertResponse"/></returns>
-        public async Task<BindLiveDomainCertResponse> BindLiveDomainCert(BindLiveDomainCertRequest req)
-        {
-             JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BindLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 域名绑定证书。
-        /// 注意：需先调用添加证书接口进行证书添加。获取到证书Id后再调用该接口进行绑定。
-        /// </summary>
-        /// <param name="req"><see cref="BindLiveDomainCertRequest"/></param>
-        /// <returns><see cref="BindLiveDomainCertResponse"/></returns>
-        public BindLiveDomainCertResponse BindLiveDomainCertSync(BindLiveDomainCertRequest req)
-        {
-             JsonResponseModel<BindLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BindLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BindLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
         /// </summary>
         /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>
@@ -382,46 +340,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "CreateLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCallbackTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 添加证书
-        /// </summary>
-        /// <param name="req"><see cref="CreateLiveCertRequest"/></param>
-        /// <returns><see cref="CreateLiveCertResponse"/></returns>
-        public async Task<CreateLiveCertResponse> CreateLiveCert(CreateLiveCertRequest req)
-        {
-             JsonResponseModel<CreateLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 添加证书
-        /// </summary>
-        /// <param name="req"><see cref="CreateLiveCertRequest"/></param>
-        /// <returns><see cref="CreateLiveCertResponse"/></returns>
-        public CreateLiveCertResponse CreateLiveCertSync(CreateLiveCertRequest req)
-        {
-             JsonResponseModel<CreateLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLiveCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1078,46 +996,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "DeleteLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCallbackTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除域名对应的证书
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLiveCertRequest"/></param>
-        /// <returns><see cref="DeleteLiveCertResponse"/></returns>
-        public async Task<DeleteLiveCertResponse> DeleteLiveCert(DeleteLiveCertRequest req)
-        {
-             JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除域名对应的证书
-        /// </summary>
-        /// <param name="req"><see cref="DeleteLiveCertRequest"/></param>
-        /// <returns><see cref="DeleteLiveCertResponse"/></returns>
-        public DeleteLiveCertResponse DeleteLiveCertSync(DeleteLiveCertRequest req)
-        {
-             JsonResponseModel<DeleteLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLiveCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -4358,86 +4236,6 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改证书
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveCertResponse"/></returns>
-        public async Task<ModifyLiveCertResponse> ModifyLiveCert(ModifyLiveCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改证书
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveCertResponse"/></returns>
-        public ModifyLiveCertResponse ModifyLiveCertSync(ModifyLiveCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLiveCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改域名和证书绑定信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveDomainCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveDomainCertResponse"/></returns>
-        public async Task<ModifyLiveDomainCertResponse> ModifyLiveDomainCert(ModifyLiveDomainCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 修改域名和证书绑定信息
-        /// </summary>
-        /// <param name="req"><see cref="ModifyLiveDomainCertRequest"/></param>
-        /// <returns><see cref="ModifyLiveDomainCertResponse"/></returns>
-        public ModifyLiveDomainCertResponse ModifyLiveDomainCertSync(ModifyLiveDomainCertRequest req)
-        {
-             JsonResponseModel<ModifyLiveDomainCertResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCert");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

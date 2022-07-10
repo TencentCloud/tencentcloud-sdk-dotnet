@@ -15,15 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Antiddos.V20200309.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyLiveDomainCertResponse : AbstractModel
+    public class DescribeNewL7RulesResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 转发规则列表
+        /// </summary>
+        [JsonProperty("Rules")]
+        public NewL7RuleEntry[] Rules{ get; set; }
+
+        /// <summary>
+        /// 健康检查配置列表
+        /// </summary>
+        [JsonProperty("Healths")]
+        public L7RuleHealth[] Healths{ get; set; }
+
+        /// <summary>
+        /// 总规则数
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +54,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
+            this.SetParamArrayObj(map, prefix + "Healths.", this.Healths);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

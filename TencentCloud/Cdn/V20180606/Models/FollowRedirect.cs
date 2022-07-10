@@ -32,6 +32,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// 自定义回源302 follow请求host配置，该功能为白名单功能，需要开启请联系腾讯云工程师。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RedirectConfig")]
+        public RedirectConfig RedirectConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +46,7 @@ namespace TencentCloud.Cdn.V20180606.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamObj(map, prefix + "RedirectConfig.", this.RedirectConfig);
         }
     }
 }

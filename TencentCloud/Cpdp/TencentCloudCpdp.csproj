@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B186FF13-FD16-359A-A101-87D58EC61A57}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.554</VersionPrefix>
+    <VersionPrefix>3.0.555</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -209,6 +209,9 @@
     <Compile Include="V20190820\Models\CreateOpenBankSubMerchantRateConfigureResult.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankUnifiedOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOpenBankUnifiedOrderResponse.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankVerificationOrderRequest.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankVerificationOrderResponse.cs" />
+    <Compile Include="V20190820\Models\CreateOpenBankVerificationResult.cs" />
     <Compile Include="V20190820\Models\CreateOrderRequest.cs" />
     <Compile Include="V20190820\Models\CreateOrderResponse.cs" />
     <Compile Include="V20190820\Models\CreatePayMerchantRequest.cs" />
@@ -528,6 +531,9 @@
     <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountRequest.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResponse.cs" />
     <Compile Include="V20190820\Models\QueryOpenBankUnbindExternalSubMerchantBankAccountResult.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankVerificationOrderRequest.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankVerificationOrderResponse.cs" />
+    <Compile Include="V20190820\Models\QueryOpenBankVerificationResult.cs" />
     <Compile Include="V20190820\Models\QueryOrderOutOrderList.cs" />
     <Compile Include="V20190820\Models\QueryOrderOutSubOrderList.cs" />
     <Compile Include="V20190820\Models\QueryOrderRequest.cs" />
@@ -656,6 +662,9 @@
     <Compile Include="V20190820\Models\UploadTaxListResponse.cs" />
     <Compile Include="V20190820\Models\UploadTaxPaymentRequest.cs" />
     <Compile Include="V20190820\Models\UploadTaxPaymentResponse.cs" />
+    <Compile Include="V20190820\Models\VerifyOpenBankAccountRequest.cs" />
+    <Compile Include="V20190820\Models\VerifyOpenBankAccountResponse.cs" />
+    <Compile Include="V20190820\Models\VerifyOpenBankAccountResult.cs" />
     <Compile Include="V20190820\Models\ViewContractRequest.cs" />
     <Compile Include="V20190820\Models\ViewContractResponse.cs" />
     <Compile Include="V20190820\Models\ViewContractResult.cs" />

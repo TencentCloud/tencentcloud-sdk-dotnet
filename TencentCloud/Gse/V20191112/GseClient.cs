@@ -53,6 +53,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（AttachCcnInstances）用于关联云联网实例。
         /// </summary>
         /// <param name="req"><see cref="AttachCcnInstancesRequest"/></param>
@@ -73,6 +75,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（AttachCcnInstances）用于关联云联网实例。
         /// </summary>
         /// <param name="req"><see cref="AttachCcnInstancesRequest"/></param>
@@ -93,6 +97,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CopyFleet）用于复制服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="CopyFleetRequest"/></param>
@@ -113,6 +119,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CopyFleet）用于复制服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="CopyFleetRequest"/></param>
@@ -133,6 +141,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAlias）用于创建别名。
         /// </summary>
         /// <param name="req"><see cref="CreateAliasRequest"/></param>
@@ -153,6 +163,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAlias）用于创建别名。
         /// </summary>
         /// <param name="req"><see cref="CreateAliasRequest"/></param>
@@ -173,6 +185,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAsset）用于创建生成包。
         /// 通过获取上传cos的临时密钥，将文件上传至cos，然后将生成包的zip名称下发给本接口完成资源创建。  
         /// 
@@ -206,6 +220,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAsset）用于创建生成包。
         /// 通过获取上传cos的临时密钥，将文件上传至cos，然后将生成包的zip名称下发给本接口完成资源创建。  
         /// 
@@ -239,6 +255,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
         /// </summary>
         /// <param name="req"><see cref="CreateAssetWithImageRequest"/></param>
@@ -259,6 +277,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateAssetWithImage）用于创建生成包镜像信息。
         /// </summary>
         /// <param name="req"><see cref="CreateAssetWithImageRequest"/></param>
@@ -279,6 +299,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateFleet）用于创建服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="CreateFleetRequest"/></param>
@@ -299,6 +321,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateFleet）用于创建服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="CreateFleetRequest"/></param>
@@ -319,6 +343,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateGameServerSession）用于创建游戏服务会话。
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionRequest"/></param>
@@ -339,6 +365,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateGameServerSession）用于创建游戏服务会话。
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionRequest"/></param>
@@ -359,6 +387,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionQueueRequest"/></param>
@@ -379,6 +409,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（CreateGameServerSessionQueue）用于创建游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="CreateGameServerSessionQueueRequest"/></param>
@@ -399,6 +431,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteAlias）用于删除别名。
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasRequest"/></param>
@@ -419,6 +453,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteAlias）用于删除别名。
         /// </summary>
         /// <param name="req"><see cref="DeleteAliasRequest"/></param>
@@ -439,6 +475,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteAsset）用于删除生成包。
         /// </summary>
         /// <param name="req"><see cref="DeleteAssetRequest"/></param>
@@ -459,6 +497,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteAsset）用于删除生成包。
         /// </summary>
         /// <param name="req"><see cref="DeleteAssetRequest"/></param>
@@ -479,6 +519,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteFleet）用于删除服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="DeleteFleetRequest"/></param>
@@ -499,6 +541,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteFleet）用于删除服务器舰队。
         /// </summary>
         /// <param name="req"><see cref="DeleteFleetRequest"/></param>
@@ -519,6 +563,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="DeleteGameServerSessionQueueRequest"/></param>
@@ -539,6 +585,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteGameServerSessionQueue）用于删除游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="DeleteGameServerSessionQueueRequest"/></param>
@@ -559,6 +607,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteScalingPolicy）用于删除服务器舰队的扩缩容策略。
         /// 通过服务器舰队ID和策略名称删除服务器舰队的扩缩容策略，只传递服务器舰队ID时，会将这个服务器舰队下的所有策略都删除。
         /// 传递策略名称时，单独删除策略名称对应的策略。
@@ -581,6 +631,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteScalingPolicy）用于删除服务器舰队的扩缩容策略。
         /// 通过服务器舰队ID和策略名称删除服务器舰队的扩缩容策略，只传递服务器舰队ID时，会将这个服务器舰队下的所有策略都删除。
         /// 传递策略名称时，单独删除策略名称对应的策略。
@@ -603,6 +655,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
         /// </summary>
         /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
@@ -623,6 +677,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DeleteTimerScalingPolicy）用于删除fleet下的定时器。
         /// </summary>
         /// <param name="req"><see cref="DeleteTimerScalingPolicyRequest"/></param>
@@ -643,6 +699,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAlias）用于获取别名详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasRequest"/></param>
@@ -663,6 +721,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAlias）用于获取别名详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeAliasRequest"/></param>
@@ -683,6 +743,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAsset）获取生成包信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetRequest"/></param>
@@ -703,6 +765,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAsset）获取生成包信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetRequest"/></param>
@@ -723,6 +787,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAssetSystems）用于获取生成包支持的操作系统。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSystemsRequest"/></param>
@@ -743,6 +809,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAssetSystems）用于获取生成包支持的操作系统。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetSystemsRequest"/></param>
@@ -763,6 +831,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAssets）用于获取生成包列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetsRequest"/></param>
@@ -783,6 +853,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeAssets）用于获取生成包列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetsRequest"/></param>
@@ -803,6 +875,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeCcnInstances）用于查询云联网实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnInstancesRequest"/></param>
@@ -823,6 +897,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeCcnInstances）用于查询云联网实例。
         /// </summary>
         /// <param name="req"><see cref="DescribeCcnInstancesRequest"/></param>
@@ -843,6 +919,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetAttributes）用于查询服务器舰队属性。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetAttributesRequest"/></param>
@@ -863,6 +941,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetAttributes）用于查询服务器舰队属性。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetAttributesRequest"/></param>
@@ -883,6 +963,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetCapacity）用于查询服务部署容量配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetCapacityRequest"/></param>
@@ -903,6 +985,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetCapacity）用于查询服务部署容量配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetCapacityRequest"/></param>
@@ -923,6 +1007,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetEvents）用于查询服务器舰队相关的事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetEventsRequest"/></param>
@@ -943,6 +1029,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetEvents）用于查询服务器舰队相关的事件列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetEventsRequest"/></param>
@@ -963,6 +1051,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetPortSettingsRequest"/></param>
@@ -983,6 +1073,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetPortSettings）用于获取服务器舰队安全组信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetPortSettingsRequest"/></param>
@@ -1003,6 +1095,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetRelatedResourcesRequest"/></param>
@@ -1023,6 +1117,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetRelatedResources）用于获取与游戏服务器舰队关联的资源信息，如别名、队列
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetRelatedResourcesRequest"/></param>
@@ -1043,6 +1139,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticDetailsRequest"/></param>
@@ -1063,6 +1161,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticDetails）用于查询服务部署统计详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticDetailsRequest"/></param>
@@ -1083,6 +1183,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticFlowsRequest"/></param>
@@ -1103,6 +1205,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticFlows）用于查询服务部署统计用量。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticFlowsRequest"/></param>
@@ -1123,6 +1227,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticSummaryRequest"/></param>
@@ -1143,6 +1249,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetStatisticSummary）用于查询服务部署统计汇总信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetStatisticSummaryRequest"/></param>
@@ -1163,6 +1271,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetUtilization）用于查询服务器舰队的利用率信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetUtilizationRequest"/></param>
@@ -1183,6 +1293,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeFleetUtilization）用于查询服务器舰队的利用率信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeFleetUtilizationRequest"/></param>
@@ -1203,6 +1315,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionDetailsRequest"/></param>
@@ -1223,6 +1337,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionDetails）用于查询游戏服务器会话详情列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionDetailsRequest"/></param>
@@ -1243,6 +1359,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionPlacementRequest"/></param>
@@ -1263,6 +1381,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionPlacement）用于查询游戏服务器会话的放置。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionPlacementRequest"/></param>
@@ -1283,6 +1403,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionQueuesRequest"/></param>
@@ -1303,6 +1425,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessionQueues）用于查询游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionQueuesRequest"/></param>
@@ -1323,6 +1447,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionsRequest"/></param>
@@ -1343,6 +1469,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeGameServerSessions）用于查询游戏服务器会话列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeGameServerSessionsRequest"/></param>
@@ -1363,6 +1491,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstanceLimit）用于查询用户实例数限额。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLimitRequest"/></param>
@@ -1383,6 +1513,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstanceLimit）用于查询用户实例数限额。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLimitRequest"/></param>
@@ -1403,6 +1535,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstanceTypes）用于获取服务器实例类型列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceTypesRequest"/></param>
@@ -1423,6 +1557,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstanceTypes）用于获取服务器实例类型列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceTypesRequest"/></param>
@@ -1443,6 +1579,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstances）用于查询服务器实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -1463,6 +1601,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstances）用于查询服务器实例列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -1483,6 +1623,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstancesExtend）用于查询实例扩展信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesExtendRequest"/></param>
@@ -1503,6 +1645,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeInstancesExtend）用于查询实例扩展信息列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesExtendRequest"/></param>
@@ -1523,6 +1667,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribePlayerSessions）用于获取玩家会话列表。
         /// </summary>
         /// <param name="req"><see cref="DescribePlayerSessionsRequest"/></param>
@@ -1543,6 +1689,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribePlayerSessions）用于获取玩家会话列表。
         /// </summary>
         /// <param name="req"><see cref="DescribePlayerSessionsRequest"/></param>
@@ -1563,6 +1711,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeRuntimeConfiguration）用于获取服务器舰队运行配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeRuntimeConfigurationRequest"/></param>
@@ -1583,6 +1733,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeRuntimeConfiguration）用于获取服务器舰队运行配置。
         /// </summary>
         /// <param name="req"><see cref="DescribeRuntimeConfigurationRequest"/></param>
@@ -1603,6 +1755,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeScalingPolicies）用于查询服务器舰队的动态扩缩容策略列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
@@ -1623,6 +1777,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeScalingPolicies）用于查询服务器舰队的动态扩缩容策略列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeScalingPoliciesRequest"/></param>
@@ -1643,6 +1799,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
@@ -1663,6 +1821,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeTimerScalingPolicies）用于查询fleet下的定时器列表。可以通过fleetid，定时器名称分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeTimerScalingPoliciesRequest"/></param>
@@ -1683,6 +1843,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeUserQuota）获取用户单个模块配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
@@ -1703,6 +1865,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeUserQuota）获取用户单个模块配额。
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotaRequest"/></param>
@@ -1723,6 +1887,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeUserQuotas）用于获取用户配额
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotasRequest"/></param>
@@ -1743,6 +1909,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DescribeUserQuotas）用于获取用户配额
         /// </summary>
         /// <param name="req"><see cref="DescribeUserQuotasRequest"/></param>
@@ -1763,6 +1931,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DetachCcnInstances）用于解关联云联网实例。
         /// </summary>
         /// <param name="req"><see cref="DetachCcnInstancesRequest"/></param>
@@ -1783,6 +1953,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（DetachCcnInstances）用于解关联云联网实例。
         /// </summary>
         /// <param name="req"><see cref="DetachCcnInstancesRequest"/></param>
@@ -1803,6 +1975,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程，适用于时限保护和不保护。
         /// </summary>
         /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
@@ -1823,6 +1997,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（EndGameServerSessionAndProcess）用于终止游戏服务器会话和对应的进程，适用于时限保护和不保护。
         /// </summary>
         /// <param name="req"><see cref="EndGameServerSessionAndProcessRequest"/></param>
@@ -1843,6 +2019,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口用于获取游戏服务器实例的日志URL。
         /// </summary>
         /// <param name="req"><see cref="GetGameServerInstanceLogUrlRequest"/></param>
@@ -1863,6 +2041,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口用于获取游戏服务器实例的日志URL。
         /// </summary>
         /// <param name="req"><see cref="GetGameServerInstanceLogUrlRequest"/></param>
@@ -1883,6 +2063,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
         /// </summary>
         /// <param name="req"><see cref="GetGameServerSessionLogUrlRequest"/></param>
@@ -1903,6 +2085,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetGameServerSessionLogUrl）用于获取游戏服务器会话的日志URL。
         /// </summary>
         /// <param name="req"><see cref="GetGameServerSessionLogUrlRequest"/></param>
@@ -1923,6 +2107,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。
         /// </summary>
         /// <param name="req"><see cref="GetInstanceAccessRequest"/></param>
@@ -1943,6 +2129,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetInstanceAccess）用于获取实例登录所需要的凭据。
         /// </summary>
         /// <param name="req"><see cref="GetInstanceAccessRequest"/></param>
@@ -1963,6 +2151,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetUploadCredentials）获取上传文件授权信息。
         /// 通过 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) 接口获取临时授权信息后，调用 COS API将数据上传，根据上传的 BucketKey 信息进行生成包 [CreateAsset](https://cloud.tencent.com/document/product/1165/48731) 的创建。参考下面的示例部分。
         /// </summary>
@@ -1984,6 +2174,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetUploadCredentials）获取上传文件授权信息。
         /// 通过 [GetUploadCredentials](https://cloud.tencent.com/document/product/1165/48727) 接口获取临时授权信息后，调用 COS API将数据上传，根据上传的 BucketKey 信息进行生成包 [CreateAsset](https://cloud.tencent.com/document/product/1165/48731) 的创建。参考下面的示例部分。
         /// </summary>
@@ -2005,6 +2197,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetUploadFederationToken）用于 获取生成包上传所需要的临时密钥。
         /// </summary>
         /// <param name="req"><see cref="GetUploadFederationTokenRequest"/></param>
@@ -2025,6 +2219,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（GetUploadFederationToken）用于 获取生成包上传所需要的临时密钥。
         /// </summary>
         /// <param name="req"><see cref="GetUploadFederationTokenRequest"/></param>
@@ -2045,6 +2241,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（JoinGameServerSession）用于加入游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="JoinGameServerSessionRequest"/></param>
@@ -2065,6 +2263,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（JoinGameServerSession）用于加入游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="JoinGameServerSessionRequest"/></param>
@@ -2085,6 +2285,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（JoinGameServerSessionBatch）用于批量加入游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
@@ -2105,6 +2307,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（JoinGameServerSessionBatch）用于批量加入游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="JoinGameServerSessionBatchRequest"/></param>
@@ -2125,6 +2329,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ListAliases）用于检索帐户下的所有别名。
         /// </summary>
         /// <param name="req"><see cref="ListAliasesRequest"/></param>
@@ -2145,6 +2351,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ListAliases）用于检索帐户下的所有别名。
         /// </summary>
         /// <param name="req"><see cref="ListAliasesRequest"/></param>
@@ -2165,6 +2373,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ListFleets）用于获取服务器舰队列表。
         /// </summary>
         /// <param name="req"><see cref="ListFleetsRequest"/></param>
@@ -2185,6 +2395,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ListFleets）用于获取服务器舰队列表。
         /// </summary>
         /// <param name="req"><see cref="ListFleetsRequest"/></param>
@@ -2205,6 +2417,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（PutScalingPolicy）用于设置服务器舰队的动态扩缩容策略。
         /// 
         /// 通过此接口可以增加或者更新服务器舰队的扩缩容策略。
@@ -2322,6 +2536,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（PutScalingPolicy）用于设置服务器舰队的动态扩缩容策略。
         /// 
         /// 通过此接口可以增加或者更新服务器舰队的扩缩容策略。
@@ -2439,6 +2655,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
         /// 
         /// 填写字段timer_id，表示更新；不填字段timer_id表示新增。
@@ -2461,6 +2679,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（PutTimerScalingPolicy）用于给fleet创建或更新定时器。
         /// 
         /// 填写字段timer_id，表示更新；不填字段timer_id表示新增。
@@ -2483,6 +2703,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ResolveAlias）用于获取别名当前指向的fleetId。
         /// </summary>
         /// <param name="req"><see cref="ResolveAliasRequest"/></param>
@@ -2503,6 +2725,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（ResolveAlias）用于获取别名当前指向的fleetId。
         /// </summary>
         /// <param name="req"><see cref="ResolveAliasRequest"/></param>
@@ -2523,6 +2747,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表。
         /// </summary>
         /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
@@ -2543,6 +2769,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SearchGameServerSessions）用于搜索游戏服务器会话列表。
         /// </summary>
         /// <param name="req"><see cref="SearchGameServerSessionsRequest"/></param>
@@ -2563,6 +2791,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
         /// 
         /// 字段ReserveValue：0默认值，不保留；1 保留
@@ -2585,6 +2815,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SetServerReserved）用于将异常的实例标记为保留，用于问题排查。
         /// 
         /// 字段ReserveValue：0默认值，不保留；1 保留
@@ -2607,6 +2839,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SetServerWeight）用于设置服务器权重。
         /// </summary>
         /// <param name="req"><see cref="SetServerWeightRequest"/></param>
@@ -2627,6 +2861,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（SetServerWeight）用于设置服务器权重。
         /// </summary>
         /// <param name="req"><see cref="SetServerWeightRequest"/></param>
@@ -2647,6 +2883,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StartFleetActions）用于启用服务器舰队自动扩缩容。
         /// </summary>
         /// <param name="req"><see cref="StartFleetActionsRequest"/></param>
@@ -2667,6 +2905,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StartFleetActions）用于启用服务器舰队自动扩缩容。
         /// </summary>
         /// <param name="req"><see cref="StartFleetActionsRequest"/></param>
@@ -2687,6 +2927,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="StartGameServerSessionPlacementRequest"/></param>
@@ -2707,6 +2949,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StartGameServerSessionPlacement）用于开始放置游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="StartGameServerSessionPlacementRequest"/></param>
@@ -2727,6 +2971,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容。
         /// </summary>
         /// <param name="req"><see cref="StopFleetActionsRequest"/></param>
@@ -2747,6 +2993,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StopFleetActions）用于停止服务器舰队自动扩缩容，改为手动扩缩容。
         /// </summary>
         /// <param name="req"><see cref="StopFleetActionsRequest"/></param>
@@ -2767,6 +3015,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="StopGameServerSessionPlacementRequest"/></param>
@@ -2787,6 +3037,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（StopGameServerSessionPlacement）用于停止放置游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="StopGameServerSessionPlacementRequest"/></param>
@@ -2807,6 +3059,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateAlias）用于更新别名的属性。
         /// </summary>
         /// <param name="req"><see cref="UpdateAliasRequest"/></param>
@@ -2827,6 +3081,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateAlias）用于更新别名的属性。
         /// </summary>
         /// <param name="req"><see cref="UpdateAliasRequest"/></param>
@@ -2847,6 +3103,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateAsset）用于修改生成包信息。
         /// </summary>
         /// <param name="req"><see cref="UpdateAssetRequest"/></param>
@@ -2867,6 +3125,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateAsset）用于修改生成包信息。
         /// </summary>
         /// <param name="req"><see cref="UpdateAssetRequest"/></param>
@@ -2887,6 +3147,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
         /// </summary>
         /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
@@ -2907,6 +3169,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateBucketAccelerateOpt）用于开启cos全球加速。
         /// </summary>
         /// <param name="req"><see cref="UpdateBucketAccelerateOptRequest"/></param>
@@ -2927,6 +3191,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
         /// </summary>
         /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
@@ -2947,6 +3213,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateBucketCORSOpt）用于设置cos跨域访问。
         /// </summary>
         /// <param name="req"><see cref="UpdateBucketCORSOptRequest"/></param>
@@ -2967,6 +3235,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetAttributesRequest"/></param>
@@ -2987,6 +3257,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetAttributes）用于更新服务器舰队属性。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetAttributesRequest"/></param>
@@ -3007,6 +3279,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetCapacity）用于更新服务器舰队容量配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetCapacityRequest"/></param>
@@ -3027,6 +3301,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetCapacity）用于更新服务器舰队容量配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetCapacityRequest"/></param>
@@ -3047,6 +3323,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetName）用于更新服务器舰队名称。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetNameRequest"/></param>
@@ -3067,6 +3345,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetName）用于更新服务器舰队名称。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetNameRequest"/></param>
@@ -3087,6 +3367,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetPortSettingsRequest"/></param>
@@ -3107,6 +3389,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateFleetPortSettings）用于更新服务器舰队安全组。
         /// </summary>
         /// <param name="req"><see cref="UpdateFleetPortSettingsRequest"/></param>
@@ -3127,6 +3411,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateGameServerSession）用于更新游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="UpdateGameServerSessionRequest"/></param>
@@ -3147,6 +3433,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateGameServerSession）用于更新游戏服务器会话。
         /// </summary>
         /// <param name="req"><see cref="UpdateGameServerSessionRequest"/></param>
@@ -3167,6 +3455,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="UpdateGameServerSessionQueueRequest"/></param>
@@ -3187,6 +3477,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateGameServerSessionQueue）用于修改游戏服务器会话队列。
         /// </summary>
         /// <param name="req"><see cref="UpdateGameServerSessionQueueRequest"/></param>
@@ -3207,6 +3499,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateRuntimeConfiguration）用于更新服务器舰队配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateRuntimeConfigurationRequest"/></param>
@@ -3227,6 +3521,8 @@ namespace TencentCloud.Gse.V20191112
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏服务器引擎GSE已于6.1正式下架，感谢您的支持
+        /// 
         /// 本接口（UpdateRuntimeConfiguration）用于更新服务器舰队配置。
         /// </summary>
         /// <param name="req"><see cref="UpdateRuntimeConfigurationRequest"/></param>

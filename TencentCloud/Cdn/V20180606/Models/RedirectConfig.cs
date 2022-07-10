@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Live.V20180801.Models
+namespace TencentCloud.Cdn.V20180606.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteLiveCertRequest : AbstractModel
+    public class RedirectConfig : AbstractModel
     {
         
         /// <summary>
-        /// DescribeLiveCerts接口获取到的证书Id。
+        /// 配置开关
         /// </summary>
-        [JsonProperty("CertId")]
-        public long? CertId{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// 主源站follow302请求时带的自定义的host头部
+        /// </summary>
+        [JsonProperty("FollowRedirectHost")]
+        public string FollowRedirectHost{ get; set; }
+
+        /// <summary>
+        /// 备份源站follow302请求时带的自定义的host头部
+        /// </summary>
+        [JsonProperty("FollowRedirectBackupHost")]
+        public string FollowRedirectBackupHost{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CertId", this.CertId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "FollowRedirectHost", this.FollowRedirectHost);
+            this.SetParamSimple(map, prefix + "FollowRedirectBackupHost", this.FollowRedirectBackupHost);
         }
     }
 }

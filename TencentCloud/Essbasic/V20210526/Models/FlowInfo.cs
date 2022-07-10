@@ -73,7 +73,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string FlowDescription{ get; set; }
 
         /// <summary>
-        /// 渠道的业务信息，最大长度1000个字符
+        /// 渠道的业务信息，最大长度1000个字符。发起自动签署时，需设置对应自动签署场景，目前仅支持场景：处方单-E_PRESCRIPTION_AUTO_SIGN
         /// </summary>
         [JsonProperty("CustomerData")]
         public string CustomerData{ get; set; }

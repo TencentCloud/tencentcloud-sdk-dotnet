@@ -42,6 +42,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FundingAccountBindSerialNo")]
         public string FundingAccountBindSerialNo{ get; set; }
 
+        /// <summary>
+        /// 资金账户名称
+        /// </summary>
+        [JsonProperty("FundingAccountName")]
+        public string FundingAccountName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "FundingAccountNo", this.FundingAccountNo);
             this.SetParamSimple(map, prefix + "FundingAccountType", this.FundingAccountType);
             this.SetParamSimple(map, prefix + "FundingAccountBindSerialNo", this.FundingAccountBindSerialNo);
+            this.SetParamSimple(map, prefix + "FundingAccountName", this.FundingAccountName);
         }
     }
 }

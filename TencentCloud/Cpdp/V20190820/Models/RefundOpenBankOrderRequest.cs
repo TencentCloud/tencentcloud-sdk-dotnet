@@ -37,19 +37,19 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public long? RefundAmount{ get; set; }
 
         /// <summary>
-        /// 渠道商户号。
+        /// 渠道商户号。外部平台接入云企付平台下发。必填。
         /// </summary>
         [JsonProperty("ChannelMerchantId")]
         public string ChannelMerchantId{ get; set; }
 
         /// <summary>
-        /// 外部商户订单号，与云企付渠道订单号二者选填其一。
+        /// 外部商户订单号，与云企付渠道订单号二者不能同时为空。
         /// </summary>
         [JsonProperty("OutOrderId")]
         public string OutOrderId{ get; set; }
 
         /// <summary>
-        /// 云企付渠道订单号，与外部订单号二者选填其一。
+        /// 云企付渠道订单号，与外部订单号二者不能同时为空。
         /// </summary>
         [JsonProperty("ChannelOrderId")]
         public string ChannelOrderId{ get; set; }
@@ -62,6 +62,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
 
         /// <summary>
         /// 退款原因。
+        /// 当EBANK_PAYMENT担保支付订单退款时，此字段必传。
         /// </summary>
         [JsonProperty("RefundReason")]
         public string RefundReason{ get; set; }

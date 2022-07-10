@@ -37,13 +37,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Color{ get; set; }
 
         /// <summary>
-        /// 14天内到达或途经的城市
+        /// 7天内到达或途经的城市（自2022年7月8日起，通信行程卡查询结果的覆盖时间范围由“14天”调整为“7天”）
         /// </summary>
         [JsonProperty("ReachedCity")]
         public string[] ReachedCity{ get; set; }
 
         /// <summary>
-        /// 14天内到达或途径存在中高风险地区的城市
+        /// 7天内到达或途径存在中高风险地区的城市（自2022年6月29日起，通信行程卡取消“星号”标记，改字段将返回空值）
         /// </summary>
         [JsonProperty("RiskArea")]
         public string[] RiskArea{ get; set; }

@@ -42,6 +42,12 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// k8s service名称
+        /// </summary>
+        [JsonProperty("ServiceName")]
+        public string ServiceName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "Port", this.Port);
             this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "ServiceName", this.ServiceName);
         }
     }
 }

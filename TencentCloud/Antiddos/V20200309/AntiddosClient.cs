@@ -2733,6 +2733,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 高防IP获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesResponse"/></returns>
+        public async Task<DescribeNewL7RulesResponse> DescribeNewL7Rules(DescribeNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 高防IP获取7层规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesResponse"/></returns>
+        public DescribeNewL7RulesResponse DescribeNewL7RulesSync(DescribeNewL7RulesRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL7Rules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取防护概览攻击趋势
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewAttackTrendRequest"/></param>

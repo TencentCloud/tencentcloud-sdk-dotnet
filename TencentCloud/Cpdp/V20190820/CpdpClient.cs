@@ -1789,7 +1789,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付-创建支付订单
+        /// 云企付-创建支付订单。支持B2B网关支付，B2C转账下单。
         /// </summary>
         /// <param name="req"><see cref="CreateOpenBankPaymentOrderRequest"/></param>
         /// <returns><see cref="CreateOpenBankPaymentOrderResponse"/></returns>
@@ -1809,7 +1809,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付-创建支付订单
+        /// 云企付-创建支付订单。支持B2B网关支付，B2C转账下单。
         /// </summary>
         /// <param name="req"><see cref="CreateOpenBankPaymentOrderRequest"/></param>
         /// <returns><see cref="CreateOpenBankPaymentOrderResponse"/></returns>
@@ -1940,6 +1940,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "CreateOpenBankUnifiedOrder");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankUnifiedOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-创建核销申请，适用于针对支付订单维度的确认收货，解冻等业务场景。目前支持的渠道有TENPAY下的EBANK_PAYMENT付款方式创建支付订单时，选择担保支付下单的订单进行解冻。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankVerificationOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankVerificationOrderResponse"/></returns>
+        public async Task<CreateOpenBankVerificationOrderResponse> CreateOpenBankVerificationOrder(CreateOpenBankVerificationOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankVerificationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateOpenBankVerificationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankVerificationOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-创建核销申请，适用于针对支付订单维度的确认收货，解冻等业务场景。目前支持的渠道有TENPAY下的EBANK_PAYMENT付款方式创建支付订单时，选择担保支付下单的订单进行解冻。
+        /// </summary>
+        /// <param name="req"><see cref="CreateOpenBankVerificationOrderRequest"/></param>
+        /// <returns><see cref="CreateOpenBankVerificationOrderResponse"/></returns>
+        public CreateOpenBankVerificationOrderResponse CreateOpenBankVerificationOrderSync(CreateOpenBankVerificationOrderRequest req)
+        {
+             JsonResponseModel<CreateOpenBankVerificationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateOpenBankVerificationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateOpenBankVerificationOrderResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -6235,6 +6275,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 云企付-查询核销订单状态，客户可以使用该接口来查询核销申请的订单状态。目前仅支持TENPAY渠道EBANK_PAYMENT付款方式的担保支付订单查询。
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankVerificationOrderRequest"/></param>
+        /// <returns><see cref="QueryOpenBankVerificationOrderResponse"/></returns>
+        public async Task<QueryOpenBankVerificationOrderResponse> QueryOpenBankVerificationOrder(QueryOpenBankVerificationOrderRequest req)
+        {
+             JsonResponseModel<QueryOpenBankVerificationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryOpenBankVerificationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankVerificationOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-查询核销订单状态，客户可以使用该接口来查询核销申请的订单状态。目前仅支持TENPAY渠道EBANK_PAYMENT付款方式的担保支付订单查询。
+        /// </summary>
+        /// <param name="req"><see cref="QueryOpenBankVerificationOrderRequest"/></param>
+        /// <returns><see cref="QueryOpenBankVerificationOrderResponse"/></returns>
+        public QueryOpenBankVerificationOrderResponse QueryOpenBankVerificationOrderSync(QueryOpenBankVerificationOrderRequest req)
+        {
+             JsonResponseModel<QueryOpenBankVerificationOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryOpenBankVerificationOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryOpenBankVerificationOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据订单号，或者用户Id，查询支付订单状态 
         /// </summary>
         /// <param name="req"><see cref="QueryOrderRequest"/></param>
@@ -8066,6 +8146,46 @@ namespace TencentCloud.Cpdp.V20190820
              {
                  var strResp = this.InternalRequestSync(req, "UploadTaxPayment");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UploadTaxPaymentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户银行卡打款验证，在接入TENPAY渠道EBANK_PAYMENT付款时，若客户期望接入担保支付，需在接入前先完成，收款商户绑定的银行卡进行打款验证。验证成功后，才可以调用CreateOpenBankPaymentOrder接口进行担保支付下单。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOpenBankAccountRequest"/></param>
+        /// <returns><see cref="VerifyOpenBankAccountResponse"/></returns>
+        public async Task<VerifyOpenBankAccountResponse> VerifyOpenBankAccount(VerifyOpenBankAccountRequest req)
+        {
+             JsonResponseModel<VerifyOpenBankAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyOpenBankAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOpenBankAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 云企付-子商户银行卡打款验证，在接入TENPAY渠道EBANK_PAYMENT付款时，若客户期望接入担保支付，需在接入前先完成，收款商户绑定的银行卡进行打款验证。验证成功后，才可以调用CreateOpenBankPaymentOrder接口进行担保支付下单。
+        /// </summary>
+        /// <param name="req"><see cref="VerifyOpenBankAccountRequest"/></param>
+        /// <returns><see cref="VerifyOpenBankAccountResponse"/></returns>
+        public VerifyOpenBankAccountResponse VerifyOpenBankAccountSync(VerifyOpenBankAccountRequest req)
+        {
+             JsonResponseModel<VerifyOpenBankAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyOpenBankAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyOpenBankAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -43,7 +43,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public long? SourceChannel{ get; set; }
 
         /// <summary>
-        /// 是否开启调用链, 0 为关闭，1位开启
+        /// 是否开启调用链,（此参数已弃用）
         /// </summary>
         [JsonProperty("EnableTracing")]
         public ulong? EnableTracing{ get; set; }

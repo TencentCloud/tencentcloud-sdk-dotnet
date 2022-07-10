@@ -53,6 +53,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 取消匹配。
         /// </summary>
         /// <param name="req"><see cref="CancelMatchingRequest"/></param>
@@ -73,6 +75,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 取消匹配。
         /// </summary>
         /// <param name="req"><see cref="CancelMatchingRequest"/></param>
@@ -93,6 +97,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 创建匹配
         /// </summary>
         /// <param name="req"><see cref="CreateMatchRequest"/></param>
@@ -113,6 +119,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 创建匹配
         /// </summary>
         /// <param name="req"><see cref="CreateMatchRequest"/></param>
@@ -133,6 +141,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 创建规则
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
@@ -153,6 +163,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 创建规则
         /// </summary>
         /// <param name="req"><see cref="CreateRuleRequest"/></param>
@@ -173,6 +185,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 删除匹配
         /// </summary>
         /// <param name="req"><see cref="DeleteMatchRequest"/></param>
@@ -193,6 +207,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 删除匹配
         /// </summary>
         /// <param name="req"><see cref="DeleteMatchRequest"/></param>
@@ -213,6 +229,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteRuleRequest"/></param>
@@ -233,6 +251,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteRuleRequest"/></param>
@@ -253,6 +273,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 统计数据
         /// </summary>
         /// <param name="req"><see cref="DescribeDataRequest"/></param>
@@ -273,6 +295,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 统计数据
         /// </summary>
         /// <param name="req"><see cref="DescribeDataRequest"/></param>
@@ -293,6 +317,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchRequest"/></param>
@@ -313,6 +339,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchRequest"/></param>
@@ -333,6 +361,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询匹配Code
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchCodesRequest"/></param>
@@ -353,6 +383,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询匹配Code
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchCodesRequest"/></param>
@@ -373,6 +405,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询匹配列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchesRequest"/></param>
@@ -393,6 +427,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询匹配列表
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchesRequest"/></param>
@@ -413,6 +449,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配进度。
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchingProgressRequest"/></param>
@@ -433,6 +471,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配进度。
         /// </summary>
         /// <param name="req"><see cref="DescribeMatchingProgressRequest"/></param>
@@ -453,6 +493,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询规则详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleRequest"/></param>
@@ -473,6 +515,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询规则详情
         /// </summary>
         /// <param name="req"><see cref="DescribeRuleRequest"/></param>
@@ -493,6 +537,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询规则集列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
@@ -513,6 +559,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 分页查询规则集列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRulesRequest"/></param>
@@ -533,6 +581,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配Token，Token用于push消息验证。
         /// </summary>
         /// <param name="req"><see cref="DescribeTokenRequest"/></param>
@@ -553,6 +603,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 查询匹配Token，Token用于push消息验证。
         /// </summary>
         /// <param name="req"><see cref="DescribeTokenRequest"/></param>
@@ -573,6 +625,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改匹配
         /// </summary>
         /// <param name="req"><see cref="ModifyMatchRequest"/></param>
@@ -593,6 +647,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改匹配
         /// </summary>
         /// <param name="req"><see cref="ModifyMatchRequest"/></param>
@@ -613,6 +669,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改规则（描述、标签）
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
@@ -633,6 +691,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改规则（描述、标签）
         /// </summary>
         /// <param name="req"><see cref="ModifyRuleRequest"/></param>
@@ -653,6 +713,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改匹配Token。
         /// </summary>
         /// <param name="req"><see cref="ModifyTokenRequest"/></param>
@@ -673,6 +735,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 修改匹配Token。
         /// </summary>
         /// <param name="req"><see cref="ModifyTokenRequest"/></param>
@@ -693,6 +757,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
         /// </summary>
         /// <param name="req"><see cref="StartMatchingRequest"/></param>
@@ -713,6 +779,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 支持传入一个玩家或多个玩家发起匹配，在同一个请求内的玩家将被分到同一个对局。
         /// </summary>
         /// <param name="req"><see cref="StartMatchingRequest"/></param>
@@ -733,6 +801,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
         /// </summary>
         /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
@@ -753,6 +823,8 @@ namespace TencentCloud.Gpm.V20200820
         }
 
         /// <summary>
+        /// 此接口无法使用，游戏玩家匹配GPM已于6.1正式下架，感谢您的支持
+        /// 
         /// 通过调用StartMatchingBackfill，用户可以传入一个回填的匹配请求，GPM为回填请求搜索符合条件的ticket并形成一个新的match。
         /// </summary>
         /// <param name="req"><see cref="StartMatchingBackfillRequest"/></param>
