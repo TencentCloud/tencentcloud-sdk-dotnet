@@ -28,6 +28,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// 过滤字段名，支持的列表如下：
         /// - name: 站点名。
         /// - status: 站点状态
+        /// - tagKey: 标签键
+        /// - tagValue: 标签值
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

@@ -96,7 +96,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string AdminPassword{ get; set; }
 
         /// <summary>
-        /// 端口，默认5432
+        /// 端口，默认3306，取值范围[0, 65535)
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
@@ -155,7 +155,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? StorageLimit{ get; set; }
 
         /// <summary>
-        /// 实例数量
+        /// 实例数量，数量范围为(0,16]
         /// </summary>
         [JsonProperty("InstanceCount")]
         public long? InstanceCount{ get; set; }
@@ -173,7 +173,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string TimeUnit{ get; set; }
 
         /// <summary>
-        /// 包年包月购买是否自动续费
+        /// 包年包月购买是否自动续费，默认为0
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
@@ -274,10 +274,16 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public long? DealMode{ get; set; }
 
         /// <summary>
-        /// 参数模版ID
+        /// 参数模版ID，可以通过查询参数模板信息DescribeParamTemplates获得参数模板ID
         /// </summary>
         [JsonProperty("ParamTemplateId")]
         public long? ParamTemplateId{ get; set; }
+
+        /// <summary>
+        /// 多可用区地址
+        /// </summary>
+        [JsonProperty("SlaveZone")]
+        public string SlaveZone{ get; set; }
 
 
         /// <summary>
@@ -324,6 +330,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArrayObj(map, prefix + "ClusterParams.", this.ClusterParams);
             this.SetParamSimple(map, prefix + "DealMode", this.DealMode);
             this.SetParamSimple(map, prefix + "ParamTemplateId", this.ParamTemplateId);
+            this.SetParamSimple(map, prefix + "SlaveZone", this.SlaveZone);
         }
     }
 }

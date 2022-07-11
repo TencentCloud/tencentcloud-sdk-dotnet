@@ -93,6 +93,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("CnameStatus")]
         public string CnameStatus{ get; set; }
 
+        /// <summary>
+        /// 资源标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

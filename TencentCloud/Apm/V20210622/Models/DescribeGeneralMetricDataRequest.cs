@@ -25,15 +25,14 @@ namespace TencentCloud.Apm.V20210622.Models
     {
         
         /// <summary>
-        /// 要过滤的维度信息
-        /// service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤。
+        /// 要过滤的维度信息：
+        /// service_metric视图支持：service.name（服务名）、span.kind（客户端/服务端视角）为维度进行过滤，service.name（服务名）必填。
         /// span.kind:
         /// 	server:服务端视角
         /// 	client:客户端视角
         /// 默认为服务端视角进行查询。
-        /// runtime_metric视图支持：service.name（服务名）维度进行过滤。
-        /// sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、（db.ip）数据库实例ip维度进行过滤。
-        /// 查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必输入。
+        /// runtime_metric视图支持：service.name（服务名）维度进行过滤，service.name（服务名）必填。
+        /// sql_metric视图支持：service.name（服务名）、db.instance（数据库名称）、db.ip（数据库实例ip）维度进行过滤，查询service_slow_sql_count（慢sql）指标时service.name必填，查询sql_duration_avg（耗时）指标时db.instance（数据库名称）必填。
         /// </summary>
         [JsonProperty("Filters")]
         public GeneralFilter[] Filters{ get; set; }
@@ -48,7 +47,7 @@ namespace TencentCloud.Apm.V20210622.Models
         public string[] Metrics{ get; set; }
 
         /// <summary>
-        /// 实例ID
+        /// 业务系统ID
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
@@ -60,11 +59,10 @@ namespace TencentCloud.Apm.V20210622.Models
         public string ViewName{ get; set; }
 
         /// <summary>
-        /// 聚合维度
-        /// service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合。
-        /// runtime_metric视图支持：service.name（服务名）维度进行聚合。
-        /// sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合。
-        /// 查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必输入。
+        /// 聚合维度：
+        /// service_metric视图支持：service.name（服务名）、span.kind （客户端/服务端视角）维度进行聚合，service.name（服务名）必填。
+        /// runtime_metric视图支持：service.name（服务名）维度进行聚合，service.name（服务名）必填。
+        /// sql_metric视图支持：service.name（服务名）、db.statement（sql语句）维度进行聚合，查询service_slow_sql_count（慢sql）时service.name（服务名）必填，查询sql_duration_avg（耗时）指标时service.name（服务名）、db.statement（sql语句）必填。
         /// </summary>
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
@@ -87,6 +85,23 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("Period")]
         public long? Period{ get; set; }
 
+        /// <summary>
+        /// 对查询指标进行排序：
+        /// service_metric视图支持：service_request_count（总请求）、service_duration（平均响应时间）、service_error_req_rate（平均错误率）、service_slow_call_count（慢调用）、service_error_request_count（异常数量）。
+        /// runtime_metric视图支持：service_gc_full_count（Full GC）。
+        /// sql_metric视图支持：service_slow_sql_count（慢sql）、sql_duration_avg（耗时）。
+        /// asc:对查询指标进行升序排序
+        /// desc：对查询指标进行降序排序
+        /// </summary>
+        [JsonProperty("OrderBy")]
+        public OrderBy OrderBy{ get; set; }
+
+        /// <summary>
+        /// 查询指标的限制条数，目前最多展示50条数据，PageSize取值为1-50，上送PageSize则根据PageSize的值展示限制条数。
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +116,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamObj(map, prefix + "OrderBy.", this.OrderBy);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

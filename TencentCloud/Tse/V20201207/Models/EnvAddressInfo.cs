@@ -42,6 +42,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ConfigInternetServiceIp")]
         public string ConfigInternetServiceIp{ get; set; }
 
+        /// <summary>
+        /// config内网访问地址
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ConfigIntranetAddress")]
+        public string ConfigIntranetAddress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnvName", this.EnvName);
             this.SetParamSimple(map, prefix + "EnableConfigInternet", this.EnableConfigInternet);
             this.SetParamSimple(map, prefix + "ConfigInternetServiceIp", this.ConfigInternetServiceIp);
+            this.SetParamSimple(map, prefix + "ConfigIntranetAddress", this.ConfigIntranetAddress);
         }
     }
 }

@@ -44,6 +44,12 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("JumpStart")]
         public bool? JumpStart{ get; set; }
 
+        /// <summary>
+        /// 资源标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +59,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

@@ -76,6 +76,13 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("RegionNames")]
         public string[] RegionNames{ get; set; }
 
+        /// <summary>
+        /// 国家，映射表参照如下文档：
+        /// https://cloud.tencent.com/document/product/267/34019。
+        /// </summary>
+        [JsonProperty("CountryNames")]
+        public string[] CountryNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -88,6 +95,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "MainlandOrOversea", this.MainlandOrOversea);
             this.SetParamSimple(map, prefix + "Granularity", this.Granularity);
             this.SetParamArraySimple(map, prefix + "RegionNames.", this.RegionNames);
+            this.SetParamArraySimple(map, prefix + "CountryNames.", this.CountryNames);
         }
     }
 }

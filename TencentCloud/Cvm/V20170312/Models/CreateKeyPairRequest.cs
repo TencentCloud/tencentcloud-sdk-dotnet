@@ -39,6 +39,12 @@ namespace TencentCloud.Cvm.V20170312.Models
         [JsonProperty("ProjectId")]
         public long? ProjectId{ get; set; }
 
+        /// <summary>
+        /// 标签描述列表。通过指定该参数可以同时绑定标签到密钥对。
+        /// </summary>
+        [JsonProperty("TagSpecification")]
+        public TagSpecification[] TagSpecification{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -47,6 +53,7 @@ namespace TencentCloud.Cvm.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "KeyName", this.KeyName);
             this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "TagSpecification.", this.TagSpecification);
         }
     }
 }

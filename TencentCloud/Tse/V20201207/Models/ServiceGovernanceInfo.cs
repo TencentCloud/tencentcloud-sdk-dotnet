@@ -60,6 +60,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("MainPassword")]
         public string MainPassword{ get; set; }
 
+        /// <summary>
+        /// 服务治理pushgateway引擎绑定的网络信息
+        /// </summary>
+        [JsonProperty("PgwVpcInfos")]
+        public VpcInfo[] PgwVpcInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "AuthOpen", this.AuthOpen);
             this.SetParamArraySimple(map, prefix + "Features.", this.Features);
             this.SetParamSimple(map, prefix + "MainPassword", this.MainPassword);
+            this.SetParamArrayObj(map, prefix + "PgwVpcInfos.", this.PgwVpcInfos);
         }
     }
 }

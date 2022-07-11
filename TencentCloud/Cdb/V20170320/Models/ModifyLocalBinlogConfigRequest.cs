@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 本地binlog保留时长，可取值范围：[120,168]。
+        /// 本地binlog保留时长，可取值范围：[72,168]，当实例存在灾备实例时，可取值范围：[120,168]。
         /// </summary>
         [JsonProperty("SaveHours")]
         public long? SaveHours{ get; set; }

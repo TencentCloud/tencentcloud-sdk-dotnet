@@ -78,7 +78,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24*60*60s(1天)
+        /// 下载url过期时间，单位秒。0: 按默认值5分钟，允许范围：1s~24x60x60s(1天)
         /// </summary>
         [JsonProperty("UrlTtl")]
         public long? UrlTtl{ get; set; }
