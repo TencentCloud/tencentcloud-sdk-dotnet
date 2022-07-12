@@ -25,7 +25,7 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例列表的大小，参数默认值20，传值则以传参为准，如果传参大于具体配置etc/conf/component.properties中的DescribeInstancesPageLimit配置项 （读不到配置默认配置项为1000），则以配置项为准
+        /// 返回数量，参数默认值20，最大值为1000
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
@@ -168,6 +168,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("TagKeys")]
         public string[] TagKeys{ get; set; }
 
+        /// <summary>
+        /// 需要过滤的产品版本支持多个，"local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传则默认不过滤
+        /// </summary>
+        [JsonProperty("ProductVersions")]
+        public string[] ProductVersions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +204,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MonitorVersion", this.MonitorVersion);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
+            this.SetParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
         }
     }
 }

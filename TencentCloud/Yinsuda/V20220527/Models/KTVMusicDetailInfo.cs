@@ -54,6 +54,18 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("ChorusClipSet")]
         public ChorusClip[] ChorusClipSet{ get; set; }
 
+        /// <summary>
+        /// 前奏间隔。
+        /// </summary>
+        [JsonProperty("PreludeInterval")]
+        public long? PreludeInterval{ get; set; }
+
+        /// <summary>
+        /// 歌曲流派列表。
+        /// </summary>
+        [JsonProperty("GenreSet")]
+        public string[] GenreSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "LyricsUrl", this.LyricsUrl);
             this.SetParamSimple(map, prefix + "MidiUrl", this.MidiUrl);
             this.SetParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
+            this.SetParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
+            this.SetParamArraySimple(map, prefix + "GenreSet.", this.GenreSet);
         }
     }
 }

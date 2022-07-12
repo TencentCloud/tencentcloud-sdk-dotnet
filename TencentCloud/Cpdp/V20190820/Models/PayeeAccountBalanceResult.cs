@@ -82,6 +82,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("InPayBalance")]
         public string InPayBalance{ get; set; }
 
+        /// <summary>
+        /// 累计结算金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SumSettlementAmount")]
+        public string SumSettlementAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -96,6 +103,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "PayableBalance", this.PayableBalance);
             this.SetParamSimple(map, prefix + "PaidBalance", this.PaidBalance);
             this.SetParamSimple(map, prefix + "InPayBalance", this.InPayBalance);
+            this.SetParamSimple(map, prefix + "SumSettlementAmount", this.SumSettlementAmount);
         }
     }
 }

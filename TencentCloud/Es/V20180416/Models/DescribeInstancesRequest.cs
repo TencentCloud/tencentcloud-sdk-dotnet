@@ -90,6 +90,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("HealthStatus")]
         public long?[] HealthStatus{ get; set; }
 
+        /// <summary>
+        /// Vpc列表 筛选项
+        /// </summary>
+        [JsonProperty("VpcIds")]
+        public string[] VpcIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArraySimple(map, prefix + "IpList.", this.IpList);
             this.SetParamArraySimple(map, prefix + "ZoneList.", this.ZoneList);
             this.SetParamArraySimple(map, prefix + "HealthStatus.", this.HealthStatus);
+            this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         }
     }
 }

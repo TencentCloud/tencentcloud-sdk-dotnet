@@ -122,6 +122,14 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
 
+        /// <summary>
+        /// 实例的IPv6地址。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IPv6Addresses")]
+        public string[] IPv6Addresses{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +150,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamSimple(map, prefix + "AutoscalingGroupId", this.AutoscalingGroupId);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamArraySimple(map, prefix + "IPv6Addresses.", this.IPv6Addresses);
         }
     }
 }

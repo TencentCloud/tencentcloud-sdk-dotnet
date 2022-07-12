@@ -37,7 +37,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Sorting{ get; set; }
 
         /// <summary>
-        /// 按照该参数过滤
+        /// 按照该参数过滤,支持spark-job-name
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

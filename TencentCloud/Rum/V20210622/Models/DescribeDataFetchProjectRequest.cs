@@ -162,6 +162,18 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
+        /// <summary>
+        /// httpcode响应码
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// retcode
+        /// </summary>
+        [JsonProperty("Ret")]
+        public string Ret{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -191,6 +203,8 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "CostType", this.CostType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Ret", this.Ret);
         }
     }
 }

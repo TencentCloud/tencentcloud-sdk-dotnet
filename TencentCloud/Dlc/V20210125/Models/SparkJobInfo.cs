@@ -190,11 +190,39 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string IsLocalPythonFiles{ get; set; }
 
         /// <summary>
-        /// pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+        /// 注：该返回值已废弃
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AppPythonFiles")]
         public string AppPythonFiles{ get; set; }
+
+        /// <summary>
+        /// archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsLocalArchives")]
+        public string IsLocalArchives{ get; set; }
+
+        /// <summary>
+        /// archives：依赖资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobArchives")]
+        public string JobArchives{ get; set; }
+
+        /// <summary>
+        /// pyspark：python依赖, 除py文件外，还支持zip/egg等归档格式，多文件以逗号分隔
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JobPythonFiles")]
+        public string JobPythonFiles{ get; set; }
+
+        /// <summary>
+        /// 当前job正在运行或准备运行的任务个数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskNum")]
+        public long? TaskNum{ get; set; }
 
 
         /// <summary>
@@ -230,6 +258,10 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
             this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
+            this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
+            this.SetParamSimple(map, prefix + "JobArchives", this.JobArchives);
+            this.SetParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
+            this.SetParamSimple(map, prefix + "TaskNum", this.TaskNum);
         }
     }
 }

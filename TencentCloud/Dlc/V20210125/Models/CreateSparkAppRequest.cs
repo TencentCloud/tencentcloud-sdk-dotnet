@@ -150,6 +150,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("AppPythonFiles")]
         public string AppPythonFiles{ get; set; }
 
+        /// <summary>
+        /// archives：依赖上传方式，1、cos；2、lakefs（控制台使用，该方式不支持直接接口调用）
+        /// </summary>
+        [JsonProperty("IsLocalArchives")]
+        public string IsLocalArchives{ get; set; }
+
+        /// <summary>
+        /// archives：依赖资源
+        /// </summary>
+        [JsonProperty("AppArchives")]
+        public string AppArchives{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -177,6 +189,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "DataSource", this.DataSource);
             this.SetParamSimple(map, prefix + "IsLocalPythonFiles", this.IsLocalPythonFiles);
             this.SetParamSimple(map, prefix + "AppPythonFiles", this.AppPythonFiles);
+            this.SetParamSimple(map, prefix + "IsLocalArchives", this.IsLocalArchives);
+            this.SetParamSimple(map, prefix + "AppArchives", this.AppArchives);
         }
     }
 }

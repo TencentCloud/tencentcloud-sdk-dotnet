@@ -210,6 +210,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EsConfigSet")]
         public EsConfigSetInfo EsConfigSet{ get; set; }
 
+        /// <summary>
+        /// 可维护时间段
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDurationUpdated OperationDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -246,6 +252,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CerebroPublicAccess", this.CerebroPublicAccess);
             this.SetParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
             this.SetParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         }
     }
 }

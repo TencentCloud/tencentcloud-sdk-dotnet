@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.556</VersionPrefix>
+    <VersionPrefix>3.0.557</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,8 +45,11 @@
 
   <ItemGroup>
     <Compile Include="V20190422\OceanusClient.cs" />
+    <Compile Include="V20190422\Models\CCN.cs" />
     <Compile Include="V20190422\Models\CheckSavepointRequest.cs" />
     <Compile Include="V20190422\Models\CheckSavepointResponse.cs" />
+    <Compile Include="V20190422\Models\Cluster.cs" />
+    <Compile Include="V20190422\Models\ClusterVersion.cs" />
     <Compile Include="V20190422\Models\CreateJobConfigRequest.cs" />
     <Compile Include="V20190422\Models\CreateJobConfigResponse.cs" />
     <Compile Include="V20190422\Models\CreateJobRequest.cs" />
@@ -55,12 +58,16 @@
     <Compile Include="V20190422\Models\CreateResourceConfigResponse.cs" />
     <Compile Include="V20190422\Models\CreateResourceRequest.cs" />
     <Compile Include="V20190422\Models\CreateResourceResponse.cs" />
+    <Compile Include="V20190422\Models\DeleteJobsRequest.cs" />
+    <Compile Include="V20190422\Models\DeleteJobsResponse.cs" />
     <Compile Include="V20190422\Models\DeleteResourceConfigsRequest.cs" />
     <Compile Include="V20190422\Models\DeleteResourceConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DeleteResourcesRequest.cs" />
     <Compile Include="V20190422\Models\DeleteResourcesResponse.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigRequest.cs" />
     <Compile Include="V20190422\Models\DeleteTableConfigResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeClustersRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeJobConfigsResponse.cs" />
     <Compile Include="V20190422\Models\DescribeJobSavepointRequest.cs" />
@@ -75,6 +82,8 @@
     <Compile Include="V20190422\Models\DescribeResourcesResponse.cs" />
     <Compile Include="V20190422\Models\DescribeSystemResourcesRequest.cs" />
     <Compile Include="V20190422\Models\DescribeSystemResourcesResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeTreeJobsRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeTreeJobsResponse.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />
@@ -96,7 +105,9 @@
     <Compile Include="V20190422\Models\StopJobsRequest.cs" />
     <Compile Include="V20190422\Models\StopJobsResponse.cs" />
     <Compile Include="V20190422\Models\SystemResourceItem.cs" />
+    <Compile Include="V20190422\Models\Tag.cs" />
     <Compile Include="V20190422\Models\TriggerJobSavepointRequest.cs" />
     <Compile Include="V20190422\Models\TriggerJobSavepointResponse.cs" />
+    <Compile Include="V20190422\Models\WorkSpaceClusterItem.cs" />
   </ItemGroup>
 </Project>

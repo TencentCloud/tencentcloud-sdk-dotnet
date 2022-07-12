@@ -518,6 +518,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("EsConfigSets")]
         public EsConfigSetInfo[] EsConfigSets{ get; set; }
 
+        /// <summary>
+        /// 集群可维护时间段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDuration OperationDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -599,6 +606,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EsPrivateUrl", this.EsPrivateUrl);
             this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
             this.SetParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         }
     }
 }

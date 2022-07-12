@@ -115,6 +115,13 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("ServerNameIndication")]
         public string ServerNameIndication{ get; set; }
 
+        /// <summary>
+        /// 强转HTTPS指示，当传递值为https:时表示强转为https
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ForcedRedirect")]
+        public string ForcedRedirect{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +142,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "ForwardHost", this.ForwardHost);
             this.SetParamSimple(map, prefix + "ServerNameIndicationSwitch", this.ServerNameIndicationSwitch);
             this.SetParamSimple(map, prefix + "ServerNameIndication", this.ServerNameIndication);
+            this.SetParamSimple(map, prefix + "ForcedRedirect", this.ForcedRedirect);
         }
     }
 }
