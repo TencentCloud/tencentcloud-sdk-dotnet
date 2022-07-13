@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{59D16650-F6B2-3107-8C2B-90A5E4FD868E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.557</VersionPrefix>
+    <VersionPrefix>3.0.558</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -204,12 +204,18 @@
     <Compile Include="V20211125\Models\CallDeviceActionAsyncResponse.cs" />
     <Compile Include="V20211125\Models\CallDeviceActionSyncRequest.cs" />
     <Compile Include="V20211125\Models\CallDeviceActionSyncResponse.cs" />
+    <Compile Include="V20211125\Models\CreateProductRequest.cs" />
+    <Compile Include="V20211125\Models\CreateProductResponse.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceDataStatsRequest.cs" />
     <Compile Include="V20211125\Models\DescribeDeviceDataStatsResponse.cs" />
     <Compile Include="V20211125\Models\DescribeMessageDataStatsRequest.cs" />
     <Compile Include="V20211125\Models\DescribeMessageDataStatsResponse.cs" />
     <Compile Include="V20211125\Models\DeviceCntStats.cs" />
+    <Compile Include="V20211125\Models\DeviceSignatureInfo.cs" />
+    <Compile Include="V20211125\Models\GenSingleDeviceSignatureOfPublicRequest.cs" />
+    <Compile Include="V20211125\Models\GenSingleDeviceSignatureOfPublicResponse.cs" />
     <Compile Include="V20211125\Models\MessageCntStats.cs" />
+    <Compile Include="V20211125\Models\VideoProduct.cs" />
     <Compile Include="V20201215\IotvideoClient.cs" />
     <Compile Include="V20201215\Models\AIModelApplication.cs" />
     <Compile Include="V20201215\Models\AIModelInfo.cs" />

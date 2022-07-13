@@ -61,7 +61,7 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string ExpirationSort{ get; set; }
 
         /// <summary>
-        /// 证书状态。
+        /// 证书状态：0 = 审核中，1 = 已通过，2 = 审核失败，3 = 已过期，4 = 已添加DNS记录，5 = 企业证书，待提交，6 = 订单取消中，7 = 已取消，8 = 已提交资料， 待上传确认函，9 = 证书吊销中，10 = 已吊销，11 = 重颁发中，12 = 待上传吊销确认函，13 = 免费证书待提交资料。
         /// </summary>
         [JsonProperty("CertificateStatus")]
         public ulong?[] CertificateStatus{ get; set; }
@@ -90,6 +90,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("FilterSource")]
         public string FilterSource{ get; set; }
 
+        /// <summary>
+        /// 是否筛选国密证书。1:筛选  0:不筛选
+        /// </summary>
+        [JsonProperty("IsSM")]
+        public long? IsSM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Upload", this.Upload);
             this.SetParamSimple(map, prefix + "Renew", this.Renew);
             this.SetParamSimple(map, prefix + "FilterSource", this.FilterSource);
+            this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
         }
     }
 }

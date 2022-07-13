@@ -241,6 +241,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("IsIgnore")]
         public bool? IsIgnore{ get; set; }
 
+        /// <summary>
+        /// 是否国密证书
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsSM")]
+        public bool? IsSM{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +285,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "Deployable", this.Deployable);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "IsIgnore", this.IsIgnore);
+            this.SetParamSimple(map, prefix + "IsSM", this.IsSM);
         }
     }
 }

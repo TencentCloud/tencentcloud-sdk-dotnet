@@ -53,7 +53,7 @@ namespace TencentCloud.Tan.V20220420
         }
 
         /// <summary>
-        /// 创建节点记录
+        /// 推送节点数据
         /// </summary>
         /// <param name="req"><see cref="CreateBlockNodeRecordsRequest"/></param>
         /// <returns><see cref="CreateBlockNodeRecordsResponse"/></returns>
@@ -73,7 +73,7 @@ namespace TencentCloud.Tan.V20220420
         }
 
         /// <summary>
-        /// 创建节点记录
+        /// 推送节点数据
         /// </summary>
         /// <param name="req"><see cref="CreateBlockNodeRecordsRequest"/></param>
         /// <returns><see cref="CreateBlockNodeRecordsResponse"/></returns>

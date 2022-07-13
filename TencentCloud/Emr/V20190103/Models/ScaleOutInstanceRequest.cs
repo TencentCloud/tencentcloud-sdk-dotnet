@@ -179,6 +179,12 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SubnetId")]
         public string SubnetId{ get; set; }
 
+        /// <summary>
+        /// 预设配置组
+        /// </summary>
+        [JsonProperty("ScaleOutServiceConfAssign")]
+        public string ScaleOutServiceConfAssign{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -209,6 +215,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "StartServiceAfterScaleOut", this.StartServiceAfterScaleOut);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
+            this.SetParamSimple(map, prefix + "ScaleOutServiceConfAssign", this.ScaleOutServiceConfAssign);
         }
     }
 }

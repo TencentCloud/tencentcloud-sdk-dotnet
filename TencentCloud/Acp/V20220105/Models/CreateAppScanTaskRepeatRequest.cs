@@ -25,7 +25,7 @@ namespace TencentCloud.Acp.V20220105.Models
     {
         
         /// <summary>
-        /// 任务来源, 0:默认值(私域), 1:灵犀, 2:灵鲲;
+        /// 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }
@@ -55,19 +55,19 @@ namespace TencentCloud.Acp.V20220105.Models
         public string AppPackage{ get; set; }
 
         /// <summary>
-        /// 上传的文件ID(灵犀诊断必填)
+        /// 上传的文件ID(任务来源为1时必填)
         /// </summary>
         [JsonProperty("FileID")]
         public string FileID{ get; set; }
 
         /// <summary>
-        /// 软件下载链接地址(灵鲲诊断必填)
+        /// 软件下载链接地址(任务来源为2时必填)
         /// </summary>
         [JsonProperty("AppDownloadUrl")]
         public string AppDownloadUrl{ get; set; }
 
         /// <summary>
-        /// 隐私文本下载地址(灵鲲诊断必填)
+        /// 隐私文本下载地址(任务来源为2时必填)
         /// </summary>
         [JsonProperty("PrivacyTextUrl")]
         public string PrivacyTextUrl{ get; set; }

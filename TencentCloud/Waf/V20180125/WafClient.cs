@@ -655,46 +655,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 获取防护配置中的自定义策略列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomRulesRequest"/></param>
-        /// <returns><see cref="DescribeCustomRulesResponse"/></returns>
-        public async Task<DescribeCustomRulesResponse> DescribeCustomRules(DescribeCustomRulesRequest req)
-        {
-             JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCustomRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取防护配置中的自定义策略列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCustomRulesRequest"/></param>
-        /// <returns><see cref="DescribeCustomRulesResponse"/></returns>
-        public DescribeCustomRulesResponse DescribeCustomRulesSync(DescribeCustomRulesRequest req)
-        {
-             JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCustomRules");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRulesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取域名的规则白名单
         /// 
         /// </summary>

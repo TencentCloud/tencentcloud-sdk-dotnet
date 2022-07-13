@@ -93,6 +93,46 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 本接口（BanAndRecoverProxy）用于联通封禁解封GAAP跨境通道实例，支持按照客户UIN维度下发请求。被封禁的实例带宽上限将会被限制到0Mbps，无法正常处理客户端和源站之间的请求。
+        /// </summary>
+        /// <param name="req"><see cref="BanAndRecoverProxyRequest"/></param>
+        /// <returns><see cref="BanAndRecoverProxyResponse"/></returns>
+        public async Task<BanAndRecoverProxyResponse> BanAndRecoverProxy(BanAndRecoverProxyRequest req)
+        {
+             JsonResponseModel<BanAndRecoverProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "BanAndRecoverProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BanAndRecoverProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（BanAndRecoverProxy）用于联通封禁解封GAAP跨境通道实例，支持按照客户UIN维度下发请求。被封禁的实例带宽上限将会被限制到0Mbps，无法正常处理客户端和源站之间的请求。
+        /// </summary>
+        /// <param name="req"><see cref="BanAndRecoverProxyRequest"/></param>
+        /// <returns><see cref="BanAndRecoverProxyResponse"/></returns>
+        public BanAndRecoverProxyResponse BanAndRecoverProxySync(BanAndRecoverProxyRequest req)
+        {
+             JsonResponseModel<BanAndRecoverProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "BanAndRecoverProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BanAndRecoverProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（BindListenerRealServers）用于TCP/UDP监听器绑定解绑源站。
         /// 注意：本接口会解绑之前绑定的源站，绑定本次调用所选择的源站。例如：原来绑定的源站为A，B，C，本次调用的选择绑定的源站为C，D，E，那么调用后所绑定的源站为C，D，E。
         /// </summary>
@@ -1528,6 +1568,46 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCountryAreaMapping");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCountryAreaMappingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCrossBorderProxies）用于查询跨境通道实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderProxiesRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderProxiesResponse"/></returns>
+        public async Task<DescribeCrossBorderProxiesResponse> DescribeCrossBorderProxies(DescribeCrossBorderProxiesRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderProxiesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossBorderProxies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderProxiesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeCrossBorderProxies）用于查询跨境通道实例列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderProxiesRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderProxiesResponse"/></returns>
+        public DescribeCrossBorderProxiesResponse DescribeCrossBorderProxiesSync(DescribeCrossBorderProxiesRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderProxiesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossBorderProxies");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderProxiesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

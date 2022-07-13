@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCustomRulesResponse : AbstractModel
+    public class DescribeLogstashInstanceLogsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 规则详情
-        /// </summary>
-        [JsonProperty("RuleList")]
-        public DescribeCustomRulesRspRuleListItem[] RuleList{ get; set; }
-
-        /// <summary>
-        /// 规则条数
+        /// 返回的日志条数
         /// </summary>
         [JsonProperty("TotalCount")]
-        public string TotalCount{ get; set; }
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 日志详细信息列表
+        /// </summary>
+        [JsonProperty("InstanceLogList")]
+        public InstanceLog[] InstanceLogList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "RuleList.", this.RuleList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamArrayObj(map, prefix + "InstanceLogList.", this.InstanceLogList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

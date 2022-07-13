@@ -31,7 +31,7 @@ namespace TencentCloud.Rum.V20210622.Models
         public long? AreaId{ get; set; }
 
         /// <summary>
-        /// 计费类型, (1=体验，2=预付费，3=后付费)
+        /// 计费类型, (1=后付费，2=预付费)
         /// </summary>
         [JsonProperty("ChargeType")]
         public long? ChargeType{ get; set; }

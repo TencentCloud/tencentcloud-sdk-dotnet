@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Waf.V20180125.Models
+namespace TencentCloud.Es.V20180416.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeCustomRulesRequest : AbstractModel
+    public class DescribeLogstashInstanceOperationsRequest : AbstractModel
     {
         
         /// <summary>
-        /// 域名
+        /// 实例ID
         /// </summary>
-        [JsonProperty("Domain")]
-        public string Domain{ get; set; }
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 分页参数
+        /// 起始时间, e.g. "2019-03-07 16:30:39"
         /// </summary>
-        [JsonProperty("Paging")]
-        public DescribeCustomRulesPagingInfo Paging{ get; set; }
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
 
         /// <summary>
-        /// clb-waf或者sparta-waf
+        /// 结束时间, e.g. "2019-03-30 20:18:03"
         /// </summary>
-        [JsonProperty("Edition")]
-        public string Edition{ get; set; }
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
 
         /// <summary>
-        /// 过滤参数：动作类型：0放行，1阻断，2人机识别，3观察，4重定向
+        /// 分页起始值
         /// </summary>
-        [JsonProperty("ActionType")]
-        public string ActionType{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 过滤参数：规则名称过滤条件
+        /// 分页大小
         /// </summary>
-        [JsonProperty("Search")]
-        public string Search{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Waf.V20180125.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Domain", this.Domain);
-            this.SetParamObj(map, prefix + "Paging.", this.Paging);
-            this.SetParamSimple(map, prefix + "Edition", this.Edition);
-            this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
-            this.SetParamSimple(map, prefix + "Search", this.Search);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
         }
     }
 }

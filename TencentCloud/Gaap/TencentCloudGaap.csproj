@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B9686DD-A89E-35E1-B86C-A9051D571534}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.557</VersionPrefix>
+    <VersionPrefix>3.0.558</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,6 +50,8 @@
     <Compile Include="V20180529\Models\AccessRegionDomainConf.cs" />
     <Compile Include="V20180529\Models\AddRealServersRequest.cs" />
     <Compile Include="V20180529\Models\AddRealServersResponse.cs" />
+    <Compile Include="V20180529\Models\BanAndRecoverProxyRequest.cs" />
+    <Compile Include="V20180529\Models\BanAndRecoverProxyResponse.cs" />
     <Compile Include="V20180529\Models\BandwidthPriceGradient.cs" />
     <Compile Include="V20180529\Models\BindListenerRealServersRequest.cs" />
     <Compile Include="V20180529\Models\BindListenerRealServersResponse.cs" />
@@ -130,6 +132,8 @@
     <Compile Include="V20180529\Models\DescribeCertificatesResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCountryAreaMappingRequest.cs" />
     <Compile Include="V20180529\Models\DescribeCountryAreaMappingResponse.cs" />
+    <Compile Include="V20180529\Models\DescribeCrossBorderProxiesRequest.cs" />
+    <Compile Include="V20180529\Models\DescribeCrossBorderProxiesResponse.cs" />
     <Compile Include="V20180529\Models\DescribeCustomHeaderRequest.cs" />
     <Compile Include="V20180529\Models\DescribeCustomHeaderResponse.cs" />
     <Compile Include="V20180529\Models\DescribeDestRegionsRequest.cs" />

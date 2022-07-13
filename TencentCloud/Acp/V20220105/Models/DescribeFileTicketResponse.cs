@@ -31,20 +31,20 @@ namespace TencentCloud.Acp.V20220105.Models
         public long? Result{ get; set; }
 
         /// <summary>
-        /// 上传url(灵鲲:Post方法（100:apk,101:txt）, 灵犀:put方法)
+        /// 上传url(任务来源为2时:Post方法（100:apk,101:txt）, 任务来源为1时:put方法)
         /// </summary>
         [JsonProperty("UploadUrl")]
         public string UploadUrl{ get; set; }
 
         /// <summary>
-        /// 上传url鉴权信息(灵犀上传需要, Authorization参数值)
+        /// 上传url鉴权信息(任务来源为1时上传需要, Authorization参数值)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UploadSign")]
         public string UploadSign{ get; set; }
 
         /// <summary>
-        /// 上传文件ID(灵犀提交诊断任务需要)
+        /// 上传文件ID(任务来源为1时提交诊断任务需要)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FildID")]

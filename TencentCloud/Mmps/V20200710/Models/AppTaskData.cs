@@ -50,7 +50,7 @@ namespace TencentCloud.Mmps.V20200710.Models
         public string TaskErrMsg{ get; set; }
 
         /// <summary>
-        /// 来源,0:默认值(私域), 1:灵犀, 2:灵鲲
+        /// 任务来源,0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }

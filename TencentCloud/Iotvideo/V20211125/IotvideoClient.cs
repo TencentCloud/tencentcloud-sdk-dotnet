@@ -133,6 +133,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 创建产品
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductRequest"/></param>
+        /// <returns><see cref="CreateProductResponse"/></returns>
+        public async Task<CreateProductResponse> CreateProduct(CreateProductRequest req)
+        {
+             JsonResponseModel<CreateProductResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建产品
+        /// </summary>
+        /// <param name="req"><see cref="CreateProductRequest"/></param>
+        /// <returns><see cref="CreateProductResponse"/></returns>
+        public CreateProductResponse CreateProductSync(CreateProductRequest req)
+        {
+             JsonResponseModel<CreateProductResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateProduct");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateProductResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询设备数据统计
         /// </summary>
         /// <param name="req"><see cref="DescribeDeviceDataStatsRequest"/></param>
@@ -204,6 +244,46 @@ namespace TencentCloud.Iotvideo.V20211125
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMessageDataStats");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMessageDataStatsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备的绑定签名
+        /// </summary>
+        /// <param name="req"><see cref="GenSingleDeviceSignatureOfPublicRequest"/></param>
+        /// <returns><see cref="GenSingleDeviceSignatureOfPublicResponse"/></returns>
+        public async Task<GenSingleDeviceSignatureOfPublicResponse> GenSingleDeviceSignatureOfPublic(GenSingleDeviceSignatureOfPublicRequest req)
+        {
+             JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GenSingleDeviceSignatureOfPublic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备的绑定签名
+        /// </summary>
+        /// <param name="req"><see cref="GenSingleDeviceSignatureOfPublicRequest"/></param>
+        /// <returns><see cref="GenSingleDeviceSignatureOfPublicResponse"/></returns>
+        public GenSingleDeviceSignatureOfPublicResponse GenSingleDeviceSignatureOfPublicSync(GenSingleDeviceSignatureOfPublicRequest req)
+        {
+             JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GenSingleDeviceSignatureOfPublic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GenSingleDeviceSignatureOfPublicResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

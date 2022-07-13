@@ -133,6 +133,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 用于创建Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogstashInstanceRequest"/></param>
+        /// <returns><see cref="CreateLogstashInstanceResponse"/></returns>
+        public async Task<CreateLogstashInstanceResponse> CreateLogstashInstance(CreateLogstashInstanceRequest req)
+        {
+             JsonResponseModel<CreateLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于创建Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogstashInstanceRequest"/></param>
+        /// <returns><see cref="CreateLogstashInstanceResponse"/></returns>
+        public CreateLogstashInstanceResponse CreateLogstashInstanceSync(CreateLogstashInstanceRequest req)
+        {
+             JsonResponseModel<CreateLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除索引
         /// </summary>
         /// <param name="req"><see cref="DeleteIndexRequest"/></param>
@@ -204,6 +244,86 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DeleteInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogstashInstanceRequest"/></param>
+        /// <returns><see cref="DeleteLogstashInstanceResponse"/></returns>
+        public async Task<DeleteLogstashInstanceResponse> DeleteLogstashInstance(DeleteLogstashInstanceRequest req)
+        {
+             JsonResponseModel<DeleteLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于删除Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogstashInstanceRequest"/></param>
+        /// <returns><see cref="DeleteLogstashInstanceResponse"/></returns>
+        public DeleteLogstashInstanceResponse DeleteLogstashInstanceSync(DeleteLogstashInstanceRequest req)
+        {
+             JsonResponseModel<DeleteLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于批量删除Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="DeleteLogstashPipelinesResponse"/></returns>
+        public async Task<DeleteLogstashPipelinesResponse> DeleteLogstashPipelines(DeleteLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<DeleteLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于批量删除Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="DeleteLogstashPipelinesResponse"/></returns>
+        public DeleteLogstashPipelinesResponse DeleteLogstashPipelinesSync(DeleteLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<DeleteLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLogstashPipelinesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -413,6 +533,166 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 查询用户该地域下符合条件的Logstash实例的日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstanceLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstanceLogsResponse"/></returns>
+        public async Task<DescribeLogstashInstanceLogsResponse> DescribeLogstashInstanceLogs(DescribeLogstashInstanceLogsRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstanceLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogstashInstanceLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户该地域下符合条件的Logstash实例的日志
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstanceLogsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstanceLogsResponse"/></returns>
+        public DescribeLogstashInstanceLogsResponse DescribeLogstashInstanceLogsSync(DescribeLogstashInstanceLogsRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstanceLogsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogstashInstanceLogs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例指定条件下的操作记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstanceOperationsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstanceOperationsResponse"/></returns>
+        public async Task<DescribeLogstashInstanceOperationsResponse> DescribeLogstashInstanceOperations(DescribeLogstashInstanceOperationsRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstanceOperationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogstashInstanceOperations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstanceOperationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询实例指定条件下的操作记录
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstanceOperationsRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstanceOperationsResponse"/></returns>
+        public DescribeLogstashInstanceOperationsResponse DescribeLogstashInstanceOperationsSync(DescribeLogstashInstanceOperationsRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstanceOperationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogstashInstanceOperations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstanceOperationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户该地域下符合条件的所有Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstancesRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstancesResponse"/></returns>
+        public async Task<DescribeLogstashInstancesResponse> DescribeLogstashInstances(DescribeLogstashInstancesRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogstashInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户该地域下符合条件的所有Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashInstancesRequest"/></param>
+        /// <returns><see cref="DescribeLogstashInstancesResponse"/></returns>
+        public DescribeLogstashInstancesResponse DescribeLogstashInstancesSync(DescribeLogstashInstancesRequest req)
+        {
+             JsonResponseModel<DescribeLogstashInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogstashInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取Logstash实例管道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="DescribeLogstashPipelinesResponse"/></returns>
+        public async Task<DescribeLogstashPipelinesResponse> DescribeLogstashPipelines(DescribeLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<DescribeLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于获取Logstash实例管道列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="DescribeLogstashPipelinesResponse"/></returns>
+        public DescribeLogstashPipelinesResponse DescribeLogstashPipelinesSync(DescribeLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<DescribeLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询集群各视图数据，包括集群维度、节点维度、Kibana维度
         /// </summary>
         /// <param name="req"><see cref="DescribeViewsRequest"/></param>
@@ -613,6 +893,46 @@ namespace TencentCloud.Es.V20180416
         }
 
         /// <summary>
+        /// 用于重启Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartLogstashInstanceRequest"/></param>
+        /// <returns><see cref="RestartLogstashInstanceResponse"/></returns>
+        public async Task<RestartLogstashInstanceResponse> RestartLogstashInstance(RestartLogstashInstanceRequest req)
+        {
+             JsonResponseModel<RestartLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RestartLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于重启Logstash实例
+        /// </summary>
+        /// <param name="req"><see cref="RestartLogstashInstanceRequest"/></param>
+        /// <returns><see cref="RestartLogstashInstanceResponse"/></returns>
+        public RestartLogstashInstanceResponse RestartLogstashInstanceSync(RestartLogstashInstanceRequest req)
+        {
+             JsonResponseModel<RestartLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RestartLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 用于重启集群节点
         /// </summary>
         /// <param name="req"><see cref="RestartNodesRequest"/></param>
@@ -644,6 +964,126 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "RestartNodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RestartNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于下发并且部署管道
+        /// </summary>
+        /// <param name="req"><see cref="SaveAndDeployLogstashPipelineRequest"/></param>
+        /// <returns><see cref="SaveAndDeployLogstashPipelineResponse"/></returns>
+        public async Task<SaveAndDeployLogstashPipelineResponse> SaveAndDeployLogstashPipeline(SaveAndDeployLogstashPipelineRequest req)
+        {
+             JsonResponseModel<SaveAndDeployLogstashPipelineResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SaveAndDeployLogstashPipeline");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveAndDeployLogstashPipelineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于下发并且部署管道
+        /// </summary>
+        /// <param name="req"><see cref="SaveAndDeployLogstashPipelineRequest"/></param>
+        /// <returns><see cref="SaveAndDeployLogstashPipelineResponse"/></returns>
+        public SaveAndDeployLogstashPipelineResponse SaveAndDeployLogstashPipelineSync(SaveAndDeployLogstashPipelineRequest req)
+        {
+             JsonResponseModel<SaveAndDeployLogstashPipelineResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SaveAndDeployLogstashPipeline");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveAndDeployLogstashPipelineResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于启动Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="StartLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="StartLogstashPipelinesResponse"/></returns>
+        public async Task<StartLogstashPipelinesResponse> StartLogstashPipelines(StartLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<StartLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StartLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于启动Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="StartLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="StartLogstashPipelinesResponse"/></returns>
+        public StartLogstashPipelinesResponse StartLogstashPipelinesSync(StartLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<StartLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StartLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StartLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于批量停止Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="StopLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="StopLogstashPipelinesResponse"/></returns>
+        public async Task<StopLogstashPipelinesResponse> StopLogstashPipelines(StopLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<StopLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "StopLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLogstashPipelinesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于批量停止Logstash管道
+        /// </summary>
+        /// <param name="req"><see cref="StopLogstashPipelinesRequest"/></param>
+        /// <returns><see cref="StopLogstashPipelinesResponse"/></returns>
+        public StopLogstashPipelinesResponse StopLogstashPipelinesSync(StopLogstashPipelinesRequest req)
+        {
+             JsonResponseModel<StopLogstashPipelinesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "StopLogstashPipelines");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<StopLogstashPipelinesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -858,6 +1298,96 @@ namespace TencentCloud.Es.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "UpdateJdk");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateJdkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对集群进行节点规格变更，修改实例名称，修改配置，等操作。参数中InstanceId为必传参数，参数传递组合及含义如下：
+        /// - InstanceName：修改实例名称(仅用于标识实例)
+        /// - NodeNum: 修改实例节点数量（节点横向扩缩容，纵向扩缩容等）
+        /// - YMLConfig: 修改实例YML配置
+        /// - BindedES：修改绑定的ES集群配置
+        /// 以上参数组合只能传递一种，多传或少传均会导致请求失败
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLogstashInstanceRequest"/></param>
+        /// <returns><see cref="UpdateLogstashInstanceResponse"/></returns>
+        public async Task<UpdateLogstashInstanceResponse> UpdateLogstashInstance(UpdateLogstashInstanceRequest req)
+        {
+             JsonResponseModel<UpdateLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对集群进行节点规格变更，修改实例名称，修改配置，等操作。参数中InstanceId为必传参数，参数传递组合及含义如下：
+        /// - InstanceName：修改实例名称(仅用于标识实例)
+        /// - NodeNum: 修改实例节点数量（节点横向扩缩容，纵向扩缩容等）
+        /// - YMLConfig: 修改实例YML配置
+        /// - BindedES：修改绑定的ES集群配置
+        /// 以上参数组合只能传递一种，多传或少传均会导致请求失败
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLogstashInstanceRequest"/></param>
+        /// <returns><see cref="UpdateLogstashInstanceResponse"/></returns>
+        public UpdateLogstashInstanceResponse UpdateLogstashInstanceSync(UpdateLogstashInstanceRequest req)
+        {
+             JsonResponseModel<UpdateLogstashInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateLogstashInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLogstashInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新管道描述信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLogstashPipelineDescRequest"/></param>
+        /// <returns><see cref="UpdateLogstashPipelineDescResponse"/></returns>
+        public async Task<UpdateLogstashPipelineDescResponse> UpdateLogstashPipelineDesc(UpdateLogstashPipelineDescRequest req)
+        {
+             JsonResponseModel<UpdateLogstashPipelineDescResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateLogstashPipelineDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLogstashPipelineDescResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于更新管道描述信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateLogstashPipelineDescRequest"/></param>
+        /// <returns><see cref="UpdateLogstashPipelineDescResponse"/></returns>
+        public UpdateLogstashPipelineDescResponse UpdateLogstashPipelineDescSync(UpdateLogstashPipelineDescRequest req)
+        {
+             JsonResponseModel<UpdateLogstashPipelineDescResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateLogstashPipelineDesc");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateLogstashPipelineDescResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
