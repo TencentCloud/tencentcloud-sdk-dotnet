@@ -37,7 +37,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string[] EncryptList{ get; set; }
 
         /// <summary>
-        /// 有加密需求的用户，传入CBC加密的初始向量
+        /// 有加密需求的用户，传入CBC加密的初始向量（客户自定义字符串，长度16字符）。
         /// </summary>
         [JsonProperty("Iv")]
         public string Iv{ get; set; }

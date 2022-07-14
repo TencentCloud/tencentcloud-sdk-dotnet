@@ -36,6 +36,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("InputType")]
         public string InputType{ get; set; }
 
+        /// <summary>
+        /// 是否使用意愿核身，默认不使用。注意：如开启使用，则计费标签按【意愿核身】计费标签计价；如不开启，则计费标签按【E证通】计费标签计价，价格详见：[价格说明](https://cloud.tencent.com/document/product/1007/56804)。
+        /// </summary>
+        [JsonProperty("UseIntentionVerify")]
+        public bool? UseIntentionVerify{ get; set; }
+
+        /// <summary>
+        /// 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+        /// </summary>
+        [JsonProperty("IntentionVerifyText")]
+        public string IntentionVerifyText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -43,6 +55,8 @@ namespace TencentCloud.Faceid.V20180301.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
+            this.SetParamSimple(map, prefix + "UseIntentionVerify", this.UseIntentionVerify);
+            this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
         }
     }
 }

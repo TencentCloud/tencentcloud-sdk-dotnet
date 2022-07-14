@@ -25,6 +25,12 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
+        /// 返回创建成功的集成名称列表
+        /// </summary>
+        [JsonProperty("Names")]
+        public string[] Names{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +42,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "Names.", this.Names);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

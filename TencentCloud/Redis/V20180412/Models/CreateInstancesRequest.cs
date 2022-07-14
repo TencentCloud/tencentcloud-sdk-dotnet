@@ -165,6 +165,18 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
 
+        /// <summary>
+        /// "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认发货为本地盘版本
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
+        /// <summary>
+        /// 独享集群id，ProductVersion="cdc"时必传
+        /// </summary>
+        [JsonProperty("RedisClusterId")]
+        public string RedisClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -194,6 +206,8 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
+            this.SetParamSimple(map, prefix + "RedisClusterId", this.RedisClusterId);
         }
     }
 }

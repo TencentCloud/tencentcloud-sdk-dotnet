@@ -50,7 +50,7 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Extra{ get; set; }
 
         /// <summary>
-        /// 小程序模式配置，包括如何传入姓名身份证的配置。
+        /// 小程序模式配置，包括如何传入姓名身份证的配置，以及是否使用意愿核身。
         /// </summary>
         [JsonProperty("Config")]
         public GetEidTokenConfig Config{ get; set; }

@@ -93,46 +93,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 创建异常信息
-        /// </summary>
-        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
-        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
-        public async Task<CreateTroubleInfoResponse> CreateTroubleInfo(CreateTroubleInfoRequest req)
-        {
-             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateTroubleInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建异常信息
-        /// </summary>
-        /// <param name="req"><see cref="CreateTroubleInfoRequest"/></param>
-        /// <returns><see cref="CreateTroubleInfoResponse"/></returns>
-        public CreateTroubleInfoResponse CreateTroubleInfoSync(CreateTroubleInfoRequest req)
-        {
-             JsonResponseModel<CreateTroubleInfoResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateTroubleInfo");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTroubleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁删除自定义背景图或水印，可通过此接口删除已上传的图片。无需频繁删除图片的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中操作。
         /// </summary>
         /// <param name="req"><see cref="DeletePictureRequest"/></param>

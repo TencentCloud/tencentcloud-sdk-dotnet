@@ -413,48 +413,6 @@ namespace TencentCloud.Faceid.V20180301
         }
 
         /// <summary>
-        /// 使用活体比对（光线）SDK生成的数据包检测活体，并和传入的图片进行比对。
-        /// 图片和SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
-        /// </summary>
-        /// <param name="req"><see cref="DetectReflectLivenessAndCompareRequest"/></param>
-        /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
-        public async Task<DetectReflectLivenessAndCompareResponse> DetectReflectLivenessAndCompare(DetectReflectLivenessAndCompareRequest req)
-        {
-             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DetectReflectLivenessAndCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 使用活体比对（光线）SDK生成的数据包检测活体，并和传入的图片进行比对。
-        /// 图片和SDK生成的数据内容必须存储在腾讯云COS，COS Bucket所在的Region需要和本接口请求的Region保持一致，推荐使用生成上传链接接口来完成资源传递。
-        /// </summary>
-        /// <param name="req"><see cref="DetectReflectLivenessAndCompareRequest"/></param>
-        /// <returns><see cref="DetectReflectLivenessAndCompareResponse"/></returns>
-        public DetectReflectLivenessAndCompareResponse DetectReflectLivenessAndCompareSync(DetectReflectLivenessAndCompareRequest req)
-        {
-             JsonResponseModel<DetectReflectLivenessAndCompareResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DetectReflectLivenessAndCompare");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectReflectLivenessAndCompareResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口用于校验手机号、姓名和身份证号的真实性和一致性，入参支持明文、MD5和SHA256加密传输。
         /// </summary>
         /// <param name="req"><see cref="EncryptedPhoneVerificationRequest"/></param>

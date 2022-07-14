@@ -85,6 +85,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
+        /// <summary>
+        /// "local"本地盘版，"cloud"云盘版，"cdc"独享集群版，如果不传默认询价为本地盘版本
+        /// </summary>
+        [JsonProperty("ProductVersion")]
+        public string ProductVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "RedisReplicasNum", this.RedisReplicasNum);
             this.SetParamSimple(map, prefix + "ReplicasReadonly", this.ReplicasReadonly);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamSimple(map, prefix + "ProductVersion", this.ProductVersion);
         }
     }
 }

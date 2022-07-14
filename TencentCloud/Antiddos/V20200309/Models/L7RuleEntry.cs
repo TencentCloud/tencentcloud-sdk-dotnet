@@ -152,6 +152,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
+        /// <summary>
+        /// 智能cc开关，取值[0(关闭), 1(开启)]
+        /// </summary>
+        [JsonProperty("CCAIEnable")]
+        public ulong? CCAIEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "VirtualPort", this.VirtualPort);
             this.SetParamSimple(map, prefix + "SSLId", this.SSLId);
             this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "CCAIEnable", this.CCAIEnable);
         }
     }
 }
