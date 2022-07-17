@@ -30,6 +30,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TrainingModelVersionId")]
         public string TrainingModelVersionId{ get; set; }
 
+        /// <summary>
+        /// 是否同步清理cos
+        /// </summary>
+        [JsonProperty("EnableDeleteCos")]
+        public bool? EnableDeleteCos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TrainingModelVersionId", this.TrainingModelVersionId);
+            this.SetParamSimple(map, prefix + "EnableDeleteCos", this.EnableDeleteCos);
         }
     }
 }

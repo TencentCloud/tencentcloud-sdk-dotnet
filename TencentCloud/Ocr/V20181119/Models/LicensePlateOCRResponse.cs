@@ -49,6 +49,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string Color{ get; set; }
 
         /// <summary>
+        /// 全部车牌信息。
+        /// </summary>
+        [JsonProperty("LicensePlateInfos")]
+        public LicensePlateInfo[] LicensePlateInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "Color", this.Color);
+            this.SetParamArrayObj(map, prefix + "LicensePlateInfos.", this.LicensePlateInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -94,6 +94,20 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Backtracking")]
         public long? Backtracking{ get; set; }
 
+        /// <summary>
+        /// 是否为Gbk编码.   0: 否, 1: 是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsGBK")]
+        public long? IsGBK{ get; set; }
+
+        /// <summary>
+        /// 是否为标准json.   0: 否, 1: 是
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JsonStandard")]
+        public long? JsonStandard{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -110,6 +124,8 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "UnMatchUpLoadSwitch", this.UnMatchUpLoadSwitch);
             this.SetParamSimple(map, prefix + "UnMatchLogKey", this.UnMatchLogKey);
             this.SetParamSimple(map, prefix + "Backtracking", this.Backtracking);
+            this.SetParamSimple(map, prefix + "IsGBK", this.IsGBK);
+            this.SetParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
         }
     }
 }

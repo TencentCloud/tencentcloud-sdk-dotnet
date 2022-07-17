@@ -54,6 +54,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("DownloadLink")]
         public string DownloadLink{ get; set; }
 
+        /// <summary>
+        /// 当前实例地域码
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 备份的跨地域region和所对应的下载地址
+        /// </summary>
+        [JsonProperty("CrossBackupAddr")]
+        public CrossBackupAddr[] CrossBackupAddr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +77,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamArraySimple(map, prefix + "DBs.", this.DBs);
             this.SetParamSimple(map, prefix + "DownloadLink", this.DownloadLink);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "CrossBackupAddr.", this.CrossBackupAddr);
         }
     }
 }

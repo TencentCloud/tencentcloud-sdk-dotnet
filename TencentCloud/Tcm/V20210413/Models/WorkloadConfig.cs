@@ -48,6 +48,16 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("SelectedNodeList")]
         public string[] SelectedNodeList{ get; set; }
 
+        /// <summary>
+        /// 组件的部署模式，取值说明：
+        /// IN_GENERAL_NODE：常规节点
+        /// IN_EKLET：eklet 节点
+        /// IN_SHARED_NODE_POOL：共享节电池
+        /// IN_EXCLUSIVE_NODE_POOL：独占节点池
+        /// </summary>
+        [JsonProperty("DeployMode")]
+        public string DeployMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +68,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamObj(map, prefix + "Resources.", this.Resources);
             this.SetParamObj(map, prefix + "HorizontalPodAutoscaler.", this.HorizontalPodAutoscaler);
             this.SetParamArraySimple(map, prefix + "SelectedNodeList.", this.SelectedNodeList);
+            this.SetParamSimple(map, prefix + "DeployMode", this.DeployMode);
         }
     }
 }

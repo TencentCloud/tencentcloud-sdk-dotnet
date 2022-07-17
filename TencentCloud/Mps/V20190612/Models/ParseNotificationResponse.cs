@@ -28,6 +28,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// 支持事件类型，目前取值有：
         /// <li>WorkflowTask：视频工作流处理任务。</li>
         /// <li>EditMediaTask：视频编辑任务。</li>
+        /// <li>ScheduleTask：编排任务。</li>
         /// </summary>
         [JsonProperty("EventType")]
         public string EventType{ get; set; }
@@ -59,6 +60,13 @@ namespace TencentCloud.Mps.V20190612.Models
         public string SessionContext{ get; set; }
 
         /// <summary>
+        /// 编排任务信息，仅当 TaskType 为 ScheduleTask，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScheduleTaskEvent")]
+        public ScheduleTask ScheduleTaskEvent{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -75,6 +83,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "EditMediaTaskEvent.", this.EditMediaTaskEvent);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamObj(map, prefix + "ScheduleTaskEvent.", this.ScheduleTaskEvent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -1057,6 +1057,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 查询下载攻击日志任务记录列表
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackDownloadRecordsRequest"/></param>
+        /// <returns><see cref="GetAttackDownloadRecordsResponse"/></returns>
+        public async Task<GetAttackDownloadRecordsResponse> GetAttackDownloadRecords(GetAttackDownloadRecordsRequest req)
+        {
+             JsonResponseModel<GetAttackDownloadRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetAttackDownloadRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackDownloadRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询下载攻击日志任务记录列表
+        /// </summary>
+        /// <param name="req"><see cref="GetAttackDownloadRecordsRequest"/></param>
+        /// <returns><see cref="GetAttackDownloadRecordsResponse"/></returns>
+        public GetAttackDownloadRecordsResponse GetAttackDownloadRecordsSync(GetAttackDownloadRecordsRequest req)
+        {
+             JsonResponseModel<GetAttackDownloadRecordsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetAttackDownloadRecords");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetAttackDownloadRecordsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于修改访问日志保存期限
         /// </summary>
         /// <param name="req"><see cref="ModifyAccessPeriodRequest"/></param>

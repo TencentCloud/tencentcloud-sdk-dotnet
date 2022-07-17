@@ -94,6 +94,12 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
+        /// <summary>
+        /// 集群关联的 Namespace 列表
+        /// </summary>
+        [JsonProperty("HostedNamespaces")]
+        public string[] HostedNamespaces{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +117,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamObj(map, prefix + "Config.", this.Config);
             this.SetParamObj(map, prefix + "Status.", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArraySimple(map, prefix + "HostedNamespaces.", this.HostedNamespaces);
         }
     }
 }

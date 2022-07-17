@@ -73,7 +73,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public ulong? Count{ get; set; }
 
         /// <summary>
-        /// 日志下载状态。Processing:导出正在进行中，Complete:导出完成，Failed:导出失败，Expired:日志导出已过期（三天有效期）。
+        /// 日志下载状态。Processing:导出正在进行中，Completed:导出完成，Failed:导出失败，Expired:日志导出已过期(三天有效期), Queuing 排队中
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }

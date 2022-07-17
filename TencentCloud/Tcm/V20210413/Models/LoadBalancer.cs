@@ -45,10 +45,52 @@ namespace TencentCloud.Tcm.V20210413.Models
         public string InternetChargeType{ get; set; }
 
         /// <summary>
-        /// 最大出带宽，单位Mbps，范围支持0到2048，仅对公网属性的LB生效，默认值 10
+        /// 最大出带宽，单位Mbps，仅对公网属性的LB生效，默认值 10
         /// </summary>
         [JsonProperty("InternetMaxBandwidthOut")]
         public long? InternetMaxBandwidthOut{ get; set; }
+
+        /// <summary>
+        /// 可用区 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneID")]
+        public string ZoneID{ get; set; }
+
+        /// <summary>
+        /// 运营商类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VipIsp")]
+        public string VipIsp{ get; set; }
+
+        /// <summary>
+        /// TGW Group 名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TgwGroupName")]
+        public string TgwGroupName{ get; set; }
+
+        /// <summary>
+        /// IP 类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AddressIPVersion")]
+        public string AddressIPVersion{ get; set; }
+
+        /// <summary>
+        /// 标签列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 内网独占集群配置列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtensiveClusters")]
+        public ExtensiveClusters ExtensiveClusters{ get; set; }
 
 
         /// <summary>
@@ -60,6 +102,12 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "InternetChargeType", this.InternetChargeType);
             this.SetParamSimple(map, prefix + "InternetMaxBandwidthOut", this.InternetMaxBandwidthOut);
+            this.SetParamSimple(map, prefix + "ZoneID", this.ZoneID);
+            this.SetParamSimple(map, prefix + "VipIsp", this.VipIsp);
+            this.SetParamSimple(map, prefix + "TgwGroupName", this.TgwGroupName);
+            this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
         }
     }
 }

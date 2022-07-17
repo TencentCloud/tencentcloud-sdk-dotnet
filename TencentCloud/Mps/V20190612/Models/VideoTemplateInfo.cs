@@ -29,6 +29,8 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>libx264：H.264 编码</li>
         /// <li>libx265：H.265 编码</li>
         /// <li>av1：AOMedia Video 1 编码</li>
+        /// 注意：目前 H.265 编码必须指定分辨率，并且需要在 640*480 以内。
+        /// 注意：av1 编码容器目前只支持 mp4 。
         /// </summary>
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
@@ -36,12 +38,13 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <summary>
         /// 视频帧率，取值范围：[0, 100]，单位：Hz。
         /// 当取值为 0，表示帧率和原始视频保持一致。
+        /// 注意：自适应码率时取值范围是 [0, 60]
         /// </summary>
         [JsonProperty("Fps")]
         public ulong? Fps{ get; set; }
 
         /// <summary>
-        /// 视频流的码率，取值范围：0 和 [75, 35000]，单位：kbps。
+        /// 视频流的码率，取值范围：0 和 [128, 35000]，单位：kbps。
         /// 当取值为 0，表示视频码率和原始视频保持一致。
         /// </summary>
         [JsonProperty("Bitrate")]
@@ -52,6 +55,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>open：开启，此时，Width 代表视频的长边，Height 表示视频的短边；</li>
         /// <li>close：关闭，此时，Width 代表视频的宽度，Height 表示视频的高度。</li>
         /// 默认值：open。
+        /// 注意：自适应模式时，Width不能小于Height。
         /// </summary>
         [JsonProperty("ResolutionAdaptive")]
         public string ResolutionAdaptive{ get; set; }
@@ -92,6 +96,7 @@ namespace TencentCloud.Mps.V20190612.Models
         /// <li>white：留白，保持视频宽高比不变，边缘剩余部分使用白色填充。</li>
         /// <li>gauss：高斯模糊，保持视频宽高比不变，边缘剩余部分使用高斯模糊填充。</li>
         /// 默认值：black 。
+        /// 注意：自适应码流只支持 stretch、black。
         /// </summary>
         [JsonProperty("FillType")]
         public string FillType{ get; set; }

@@ -37,6 +37,12 @@ namespace TencentCloud.Mps.V20190612.Models
         public string ScrollToken{ get; set; }
 
         /// <summary>
+        /// 符合过滤条件的记录总数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Mps.V20190612.Models
         {
             this.SetParamArrayObj(map, prefix + "TaskSet.", this.TaskSet);
             this.SetParamSimple(map, prefix + "ScrollToken", this.ScrollToken);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

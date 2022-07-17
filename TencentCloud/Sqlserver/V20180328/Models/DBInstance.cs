@@ -289,6 +289,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("InstanceType")]
         public string InstanceType{ get; set; }
 
+        /// <summary>
+        /// 跨地域备份目的地域，如果为空，则表示未开启跨地域备份
+        /// </summary>
+        [JsonProperty("CrossRegions")]
+        public string[] CrossRegions{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份状态 enable-开启，disable-关闭
+        /// </summary>
+        [JsonProperty("CrossBackupEnabled")]
+        public string CrossBackupEnabled{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份保留天数，则默认7天
+        /// </summary>
+        [JsonProperty("CrossBackupSaveDays")]
+        public ulong? CrossBackupSaveDays{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -338,6 +356,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupCycleType", this.BackupCycleType);
             this.SetParamSimple(map, prefix + "BackupSaveDays", this.BackupSaveDays);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
+            this.SetParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
+            this.SetParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
         }
     }
 }

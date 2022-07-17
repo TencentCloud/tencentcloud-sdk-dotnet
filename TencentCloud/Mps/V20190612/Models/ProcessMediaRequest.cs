@@ -90,6 +90,15 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("SessionContext")]
         public string SessionContext{ get; set; }
 
+        /// <summary>
+        /// 编排ID。
+        /// 注意1：对于OutputStorage、OutputDir，如果编排任务里没有配置，将采用请求里对应参数。
+        /// 注意2：对于TaskNotifyConfig，如果编排任务里没有配置，将采用请求里对应的参数。
+        /// 注意3：编排的 Trigger 只是用来自动化触发场景，在手动发起的请求中已经配置的 Trigger 无意义。
+        /// </summary>
+        [JsonProperty("ScheduleId")]
+        public long? ScheduleId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +116,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TasksPriority", this.TasksPriority);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
+            this.SetParamSimple(map, prefix + "ScheduleId", this.ScheduleId);
         }
     }
 }

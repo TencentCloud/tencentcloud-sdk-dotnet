@@ -108,6 +108,24 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("BackupFormat")]
         public string BackupFormat{ get; set; }
 
+        /// <summary>
+        /// 实例当前地域Code
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份的目的地域下载链接
+        /// </summary>
+        [JsonProperty("CrossBackupAddr")]
+        public CrossBackupAddr[] CrossBackupAddr{ get; set; }
+
+        /// <summary>
+        /// 跨地域备份的目标地域和备份状态
+        /// </summary>
+        [JsonProperty("CrossBackupStatus")]
+        public CrossRegionStatus[] CrossBackupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +146,9 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
             this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
             this.SetParamSimple(map, prefix + "BackupFormat", this.BackupFormat);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "CrossBackupAddr.", this.CrossBackupAddr);
+            this.SetParamArrayObj(map, prefix + "CrossBackupStatus.", this.CrossBackupStatus);
         }
     }
 }

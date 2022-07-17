@@ -66,6 +66,16 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
+        /// <summary>
+        /// 模板类型（替换旧版本 TEHDType），可选值：
+        /// <li>Common：普通转码模板；</li>
+        /// <li>TEHD：极速高清模板。</li>
+        /// <li>Enhance：音视频增强模板。</li>
+        /// 默认空，不限制类型。
+        /// </summary>
+        [JsonProperty("TranscodeType")]
+        public string TranscodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +88,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "TEHDType", this.TEHDType);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "TranscodeType", this.TranscodeType);
         }
     }
 }

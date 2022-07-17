@@ -82,6 +82,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("TEHDConfig")]
         public TEHDConfigForUpdate TEHDConfig{ get; set; }
 
+        /// <summary>
+        /// 音视频增强参数。
+        /// </summary>
+        [JsonProperty("EnhanceConfig")]
+        public EnhanceConfig EnhanceConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -97,6 +103,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamObj(map, prefix + "VideoTemplate.", this.VideoTemplate);
             this.SetParamObj(map, prefix + "AudioTemplate.", this.AudioTemplate);
             this.SetParamObj(map, prefix + "TEHDConfig.", this.TEHDConfig);
+            this.SetParamObj(map, prefix + "EnhanceConfig.", this.EnhanceConfig);
         }
     }
 }
