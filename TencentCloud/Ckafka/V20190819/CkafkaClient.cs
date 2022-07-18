@@ -253,6 +253,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 用于查询cdc-ckafka任务状态
+        /// </summary>
+        /// <param name="req"><see cref="CheckCdcClusterRequest"/></param>
+        /// <returns><see cref="CheckCdcClusterResponse"/></returns>
+        public async Task<CheckCdcClusterResponse> CheckCdcCluster(CheckCdcClusterRequest req)
+        {
+             JsonResponseModel<CheckCdcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CheckCdcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckCdcClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于查询cdc-ckafka任务状态
+        /// </summary>
+        /// <param name="req"><see cref="CheckCdcClusterRequest"/></param>
+        /// <returns><see cref="CheckCdcClusterResponse"/></returns>
+        public CheckCdcClusterResponse CheckCdcClusterSync(CheckCdcClusterRequest req)
+        {
+             JsonResponseModel<CheckCdcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CheckCdcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CheckCdcClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加 ACL 策略
         /// </summary>
         /// <param name="req"><see cref="CreateAclRequest"/></param>
@@ -284,6 +324,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "CreateAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于cdc的专用ckafka集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcClusterRequest"/></param>
+        /// <returns><see cref="CreateCdcClusterResponse"/></returns>
+        public async Task<CreateCdcClusterResponse> CreateCdcCluster(CreateCdcClusterRequest req)
+        {
+             JsonResponseModel<CreateCdcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCdcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCdcClusterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于cdc的专用ckafka集群
+        /// </summary>
+        /// <param name="req"><see cref="CreateCdcClusterRequest"/></param>
+        /// <returns><see cref="CreateCdcClusterResponse"/></returns>
+        public CreateCdcClusterResponse CreateCdcClusterSync(CreateCdcClusterRequest req)
+        {
+             JsonResponseModel<CreateCdcClusterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCdcCluster");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCdcClusterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

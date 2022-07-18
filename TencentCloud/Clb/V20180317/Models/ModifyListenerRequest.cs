@@ -74,6 +74,12 @@ namespace TencentCloud.Clb.V20180317.Models
         public long? SniSwitch{ get; set; }
 
         /// <summary>
+        /// 后端目标类型，NODE表示绑定普通节点，TARGETGROUP表示绑定目标组。
+        /// </summary>
+        [JsonProperty("TargetType")]
+        public string TargetType{ get; set; }
+
+        /// <summary>
         /// 是否开启长连接，此参数仅适用于HTTP/HTTPS监听器。
         /// </summary>
         [JsonProperty("KeepaliveEnable")]
@@ -105,6 +111,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamObj(map, prefix + "Certificate.", this.Certificate);
             this.SetParamSimple(map, prefix + "Scheduler", this.Scheduler);
             this.SetParamSimple(map, prefix + "SniSwitch", this.SniSwitch);
+            this.SetParamSimple(map, prefix + "TargetType", this.TargetType);
             this.SetParamSimple(map, prefix + "KeepaliveEnable", this.KeepaliveEnable);
             this.SetParamSimple(map, prefix + "DeregisterTargetRst", this.DeregisterTargetRst);
             this.SetParamSimple(map, prefix + "SessionType", this.SessionType);

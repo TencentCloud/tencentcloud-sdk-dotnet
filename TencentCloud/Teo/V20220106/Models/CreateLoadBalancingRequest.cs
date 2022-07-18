@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 子域名，填写@表示根域
+        /// 子域名
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }

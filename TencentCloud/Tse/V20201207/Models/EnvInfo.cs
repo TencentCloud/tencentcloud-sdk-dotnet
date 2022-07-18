@@ -96,6 +96,18 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("AliasEnvName")]
         public string AliasEnvName{ get; set; }
 
+        /// <summary>
+        /// 环境描述
+        /// </summary>
+        [JsonProperty("EnvDesc")]
+        public string EnvDesc{ get; set; }
+
+        /// <summary>
+        /// 客户端带宽
+        /// </summary>
+        [JsonProperty("ClientBandWidth")]
+        public ulong? ClientBandWidth{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "EnvReplica", this.EnvReplica);
             this.SetParamSimple(map, prefix + "RunningCount", this.RunningCount);
             this.SetParamSimple(map, prefix + "AliasEnvName", this.AliasEnvName);
+            this.SetParamSimple(map, prefix + "EnvDesc", this.EnvDesc);
+            this.SetParamSimple(map, prefix + "ClientBandWidth", this.ClientBandWidth);
         }
     }
 }

@@ -120,6 +120,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("MotorBankAccount")]
         public string MotorBankAccount{ get; set; }
 
+        /// <summary>
+        /// 销售地址
+        /// </summary>
+        [JsonProperty("SellerAddress")]
+        public string SellerAddress{ get; set; }
+
+        /// <summary>
+        /// 销售电话
+        /// </summary>
+        [JsonProperty("SellerTel")]
+        public string SellerTel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "MotorTaxRate", this.MotorTaxRate);
             this.SetParamSimple(map, prefix + "MotorBankName", this.MotorBankName);
             this.SetParamSimple(map, prefix + "MotorBankAccount", this.MotorBankAccount);
+            this.SetParamSimple(map, prefix + "SellerAddress", this.SellerAddress);
+            this.SetParamSimple(map, prefix + "SellerTel", this.SellerTel);
         }
     }
 }

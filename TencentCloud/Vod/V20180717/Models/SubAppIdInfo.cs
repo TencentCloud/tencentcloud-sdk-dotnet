@@ -33,8 +33,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <summary>
         /// 子应用名称。
         /// </summary>
-        [JsonProperty("Name")]
-        public string Name{ get; set; }
+        [JsonProperty("SubAppIdName")]
+        public string SubAppIdName{ get; set; }
 
         /// <summary>
         /// 子应用简介。
@@ -58,6 +58,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
+        /// <summary>
+        /// 子应用名称（该字段已不推荐使用，建议使用新的子应用名称字段 SubAppIdName）。
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,10 +71,11 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
-            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "SubAppIdName", this.SubAppIdName);
             this.SetParamSimple(map, prefix + "Description", this.Description);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

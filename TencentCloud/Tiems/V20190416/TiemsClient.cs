@@ -53,6 +53,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateJobRequest"/></param>
@@ -73,6 +75,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateJobRequest"/></param>
@@ -93,6 +97,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
         /// </summary>
         /// <param name="req"><see cref="CreateRsgAsGroupRequest"/></param>
@@ -113,6 +119,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建资源组的伸缩组。当前一个资源组仅允许创建一个伸缩组。
         /// </summary>
         /// <param name="req"><see cref="CreateRsgAsGroupRequest"/></param>
@@ -133,6 +141,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建运行环境
         /// </summary>
         /// <param name="req"><see cref="CreateRuntimeRequest"/></param>
@@ -153,6 +163,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建运行环境
         /// </summary>
         /// <param name="req"><see cref="CreateRuntimeRequest"/></param>
@@ -173,6 +185,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建服务
         /// </summary>
         /// <param name="req"><see cref="CreateServiceRequest"/></param>
@@ -193,6 +207,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建服务
         /// </summary>
         /// <param name="req"><see cref="CreateServiceRequest"/></param>
@@ -213,6 +229,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建服务配置
         /// </summary>
         /// <param name="req"><see cref="CreateServiceConfigRequest"/></param>
@@ -233,6 +251,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 创建服务配置
         /// </summary>
         /// <param name="req"><see cref="CreateServiceConfigRequest"/></param>
@@ -253,6 +273,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
@@ -273,6 +295,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除资源组中的节点。目前仅支持删除已经到期的预付费节点，和按量付费节点。
         /// </summary>
         /// <param name="req"><see cref="DeleteInstanceRequest"/></param>
@@ -293,6 +317,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteJobRequest"/></param>
@@ -313,6 +339,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除任务
         /// </summary>
         /// <param name="req"><see cref="DeleteJobRequest"/></param>
@@ -333,6 +361,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除资源组
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceGroupRequest"/></param>
@@ -353,6 +383,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除资源组
         /// </summary>
         /// <param name="req"><see cref="DeleteResourceGroupRequest"/></param>
@@ -373,6 +405,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 伸缩
         /// </summary>
         /// <param name="req"><see cref="DeleteRsgAsGroupRequest"/></param>
@@ -393,6 +427,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 伸缩
         /// </summary>
         /// <param name="req"><see cref="DeleteRsgAsGroupRequest"/></param>
@@ -413,6 +449,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除运行环境
         /// </summary>
         /// <param name="req"><see cref="DeleteRuntimeRequest"/></param>
@@ -433,6 +471,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除运行环境
         /// </summary>
         /// <param name="req"><see cref="DeleteRuntimeRequest"/></param>
@@ -453,6 +493,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除服务
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceRequest"/></param>
@@ -473,6 +515,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除服务
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceRequest"/></param>
@@ -493,6 +537,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除服务配置
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceConfigRequest"/></param>
@@ -513,6 +559,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 删除服务配置
         /// </summary>
         /// <param name="req"><see cref="DeleteServiceConfigRequest"/></param>
@@ -533,6 +581,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 获取节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -553,6 +603,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 获取节点列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesRequest"/></param>
@@ -573,6 +625,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 获取资源组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceGroupsRequest"/></param>
@@ -593,6 +647,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 获取资源组列表
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceGroupsRequest"/></param>
@@ -613,6 +669,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 查询伸缩组活动
         /// </summary>
         /// <param name="req"><see cref="DescribeRsgAsGroupActivitiesRequest"/></param>
@@ -633,6 +691,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 查询伸缩组活动
         /// </summary>
         /// <param name="req"><see cref="DescribeRsgAsGroupActivitiesRequest"/></param>
@@ -653,6 +713,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 查询资源组的伸缩组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRsgAsGroupsRequest"/></param>
@@ -673,6 +735,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 查询资源组的伸缩组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRsgAsGroupsRequest"/></param>
@@ -693,6 +757,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务运行环境
         /// </summary>
         /// <param name="req"><see cref="DescribeRuntimesRequest"/></param>
@@ -713,6 +779,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务运行环境
         /// </summary>
         /// <param name="req"><see cref="DescribeRuntimesRequest"/></param>
@@ -733,6 +801,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务配置
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceConfigsRequest"/></param>
@@ -753,6 +823,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务配置
         /// </summary>
         /// <param name="req"><see cref="DescribeServiceConfigsRequest"/></param>
@@ -773,6 +845,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务
         /// </summary>
         /// <param name="req"><see cref="DescribeServicesRequest"/></param>
@@ -793,6 +867,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 描述服务
         /// </summary>
         /// <param name="req"><see cref="DescribeServicesRequest"/></param>
@@ -813,6 +889,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 停用资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="DisableRsgAsGroupRequest"/></param>
@@ -833,6 +911,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 停用资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="DisableRsgAsGroupRequest"/></param>
@@ -853,6 +933,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 启用资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="EnableRsgAsGroupRequest"/></param>
@@ -873,6 +955,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 启用资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="EnableRsgAsGroupRequest"/></param>
@@ -893,6 +977,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 暴露服务
         /// </summary>
         /// <param name="req"><see cref="ExposeServiceRequest"/></param>
@@ -913,6 +999,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 暴露服务
         /// </summary>
         /// <param name="req"><see cref="ExposeServiceRequest"/></param>
@@ -933,6 +1021,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新任务
         /// </summary>
         /// <param name="req"><see cref="UpdateJobRequest"/></param>
@@ -953,6 +1043,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新任务
         /// </summary>
         /// <param name="req"><see cref="UpdateJobRequest"/></param>
@@ -973,6 +1065,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="UpdateRsgAsGroupRequest"/></param>
@@ -993,6 +1087,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新资源组的伸缩组
         /// </summary>
         /// <param name="req"><see cref="UpdateRsgAsGroupRequest"/></param>
@@ -1013,6 +1109,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新服务
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>
@@ -1033,6 +1131,8 @@ namespace TencentCloud.Tiems.V20190416
         }
 
         /// <summary>
+        /// 因业务策略调整，腾讯云TI平台TI-EMS已经于2022年6月30日下线并停止提供服务。若您有新增的业务需求，可前往TI-ONE(https://cloud.tencent.com/document/product/851)使用。
+        /// 
         /// 更新服务
         /// </summary>
         /// <param name="req"><see cref="UpdateServiceRequest"/></param>

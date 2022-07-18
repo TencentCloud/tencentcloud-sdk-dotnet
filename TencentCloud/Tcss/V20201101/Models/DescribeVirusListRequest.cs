@@ -50,6 +50,8 @@ namespace TencentCloud.Tcss.V20201101.Models
         /// <li>ContainerNetStatus - String -是否必填: 否 -  容器网络状态筛选 NORMAL ISOLATED ISOLATING RESTORING RESTORE_FAILED</li>
         /// <li>TimeRange - string -是否必填: 否 - 时间范围筛选 ["2022-03-31 16:55:00", "2022-03-31 17:00:00"]</li>
         /// <li>ContainerStatus - string -是否必填: 否 - 容器状态 RUNNING PAUSED STOPPED CREATED DESTROYED RESTARTING REMOVING</li>
+        /// <li>AutoIsolateMode - string -是否必填: 否 - 隔离方式 MANUAL AUTO</li>
+        /// <li>MD5 - string -是否必填: 否 - md5 </li>
         /// </summary>
         [JsonProperty("Filters")]
         public RunTimeFilters[] Filters{ get; set; }

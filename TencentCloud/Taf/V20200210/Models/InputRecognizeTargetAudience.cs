@@ -25,6 +25,12 @@ namespace TencentCloud.Taf.V20200210.Models
     {
         
         /// <summary>
+        /// 模型ID列表
+        /// </summary>
+        [JsonProperty("ModelIdList")]
+        public long?[] ModelIdList{ get; set; }
+
+        /// <summary>
         /// 设备ID，AccountType指定的类型
         /// </summary>
         [JsonProperty("Uid")]
@@ -35,12 +41,6 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         [JsonProperty("AccountType")]
         public long? AccountType{ get; set; }
-
-        /// <summary>
-        /// 模型ID列表
-        /// </summary>
-        [JsonProperty("ModelIdList")]
-        public long?[] ModelIdList{ get; set; }
 
         /// <summary>
         /// 用户IP
@@ -270,9 +270,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "ModelIdList.", this.ModelIdList);
             this.SetParamSimple(map, prefix + "Uid", this.Uid);
             this.SetParamSimple(map, prefix + "AccountType", this.AccountType);
-            this.SetParamArraySimple(map, prefix + "ModelIdList.", this.ModelIdList);
             this.SetParamSimple(map, prefix + "Ip", this.Ip);
             this.SetParamSimple(map, prefix + "Os", this.Os);
             this.SetParamSimple(map, prefix + "Osv", this.Osv);

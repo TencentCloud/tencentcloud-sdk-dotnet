@@ -25,7 +25,7 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 分类 ID
+        /// 分类 ID。
         /// </summary>
         [JsonProperty("ClassId")]
         public long? ClassId{ get; set; }
@@ -37,10 +37,10 @@ namespace TencentCloud.Vod.V20180717.Models
         public long? ParentId{ get; set; }
 
         /// <summary>
-        /// 分类名称
+        /// 分类名称。
         /// </summary>
-        [JsonProperty("ClassName")]
-        public string ClassName{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
         /// 分类级别，一级分类为 0，最大值为 3，即最多允许 4 级分类层次。
@@ -49,10 +49,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Level{ get; set; }
 
         /// <summary>
-        /// 当前分类的第一级子类 ID 集合
+        /// 当前分类的第一级子类 ID 集合。
         /// </summary>
         [JsonProperty("SubClassIdSet")]
         public long?[] SubClassIdSet{ get; set; }
+
+        /// <summary>
+        /// 分类名称（该字段已不推荐使用，建议使用新的分类名称字段 Name）。
+        /// </summary>
+        [JsonProperty("ClassName")]
+        public string ClassName{ get; set; }
 
 
         /// <summary>
@@ -62,9 +68,10 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
             this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
-            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Level", this.Level);
             this.SetParamArraySimple(map, prefix + "SubClassIdSet.", this.SubClassIdSet);
+            this.SetParamSimple(map, prefix + "ClassName", this.ClassName);
         }
     }
 }

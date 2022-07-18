@@ -25,19 +25,19 @@ namespace TencentCloud.Tan.V20220420.Models
     {
         
         /// <summary>
-        /// 盘查实例id
+        /// 盘查组id，可在“盘查组概览”功能中获取。
         /// </summary>
         [JsonProperty("GroupId")]
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 节点id
+        /// 节点id，可在“数据接入管理”中获取。
         /// </summary>
         [JsonProperty("NodeId")]
         public string NodeId{ get; set; }
 
         /// <summary>
-        /// 节点记录-json
+        /// 节点数据json，具体demo请参考输入示例，其中key为数据接入管理中节点内创建的属性变量名，value为期望的推送值。
         /// </summary>
         [JsonProperty("Records")]
         public string Records{ get; set; }
