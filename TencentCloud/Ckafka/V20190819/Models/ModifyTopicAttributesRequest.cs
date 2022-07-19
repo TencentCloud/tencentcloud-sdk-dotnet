@@ -126,6 +126,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("QuotaConsumerByteRate")]
         public long? QuotaConsumerByteRate{ get; set; }
 
+        /// <summary>
+        /// 调整topic副本数
+        /// </summary>
+        [JsonProperty("ReplicaNum")]
+        public long? ReplicaNum{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "QuotaProducerByteRate", this.QuotaProducerByteRate);
             this.SetParamSimple(map, prefix + "QuotaConsumerByteRate", this.QuotaConsumerByteRate);
+            this.SetParamSimple(map, prefix + "ReplicaNum", this.ReplicaNum);
         }
     }
 }

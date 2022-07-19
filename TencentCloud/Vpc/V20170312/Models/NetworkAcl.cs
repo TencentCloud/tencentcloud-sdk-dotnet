@@ -66,6 +66,18 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("EgressEntries")]
         public NetworkAclEntry[] EgressEntries{ get; set; }
 
+        /// <summary>
+        /// 网络ACL类型。三元组：'TRIPLE'   五元组：'QUINTUPLE'
+        /// </summary>
+        [JsonProperty("NetworkAclType")]
+        public string NetworkAclType{ get; set; }
+
+        /// <summary>
+        /// 标签键值对
+        /// </summary>
+        [JsonProperty("TagSet")]
+        public Tag[] TagSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +91,8 @@ namespace TencentCloud.Vpc.V20170312.Models
             this.SetParamArrayObj(map, prefix + "SubnetSet.", this.SubnetSet);
             this.SetParamArrayObj(map, prefix + "IngressEntries.", this.IngressEntries);
             this.SetParamArrayObj(map, prefix + "EgressEntries.", this.EgressEntries);
+            this.SetParamSimple(map, prefix + "NetworkAclType", this.NetworkAclType);
+            this.SetParamArrayObj(map, prefix + "TagSet.", this.TagSet);
         }
     }
 }

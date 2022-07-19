@@ -213,6 +213,46 @@ namespace TencentCloud.Ciam.V20220331
         }
 
         /// <summary>
+        /// 多条件查询用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRequest"/></param>
+        /// <returns><see cref="DescribeUserResponse"/></returns>
+        public async Task<DescribeUserResponse> DescribeUser(DescribeUserRequest req)
+        {
+             JsonResponseModel<DescribeUserResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 多条件查询用户信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserRequest"/></param>
+        /// <returns><see cref="DescribeUserResponse"/></returns>
+        public DescribeUserResponse DescribeUserSync(DescribeUserRequest req)
+        {
+             JsonResponseModel<DescribeUserResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUser");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据ID查询用户信息
         /// </summary>
         /// <param name="req"><see cref="DescribeUserByIdRequest"/></param>

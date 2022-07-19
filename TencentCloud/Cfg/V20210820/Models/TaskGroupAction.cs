@@ -134,6 +134,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
+        /// <summary>
+        /// 是否可重试
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsExecuteRedo")]
+        public bool? IsExecuteRedo{ get; set; }
+
+        /// <summary>
+        /// 动作风险级别
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ActionRisk")]
+        public string ActionRisk{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -157,6 +171,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ActionApiType", this.ActionApiType);
             this.SetParamSimple(map, prefix + "ActionAttribute", this.ActionAttribute);
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
+            this.SetParamSimple(map, prefix + "IsExecuteRedo", this.IsExecuteRedo);
+            this.SetParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
         }
     }
 }

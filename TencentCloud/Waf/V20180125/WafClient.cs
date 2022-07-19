@@ -1337,6 +1337,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
+        /// </summary>
+        /// <param name="req"><see cref="PostAttackDownloadTaskRequest"/></param>
+        /// <returns><see cref="PostAttackDownloadTaskResponse"/></returns>
+        public async Task<PostAttackDownloadTaskResponse> PostAttackDownloadTask(PostAttackDownloadTaskRequest req)
+        {
+             JsonResponseModel<PostAttackDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PostAttackDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostAttackDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建搜索下载攻击日志任务，使用CLS新版本的搜索下载getlog接口
+        /// </summary>
+        /// <param name="req"><see cref="PostAttackDownloadTaskRequest"/></param>
+        /// <returns><see cref="PostAttackDownloadTaskResponse"/></returns>
+        public PostAttackDownloadTaskResponse PostAttackDownloadTaskSync(PostAttackDownloadTaskRequest req)
+        {
+             JsonResponseModel<PostAttackDownloadTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PostAttackDownloadTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PostAttackDownloadTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口用于搜索WAF访问日志
         /// </summary>
         /// <param name="req"><see cref="SearchAccessLogRequest"/></param>

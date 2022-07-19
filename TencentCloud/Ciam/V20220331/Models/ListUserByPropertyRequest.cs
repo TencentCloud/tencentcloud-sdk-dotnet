@@ -45,6 +45,12 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("PropertyValue")]
         public string PropertyValue{ get; set; }
 
+        /// <summary>
+        /// 返回信息是否为原文
+        /// </summary>
+        [JsonProperty("Original")]
+        public bool? Original{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -54,6 +60,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
             this.SetParamSimple(map, prefix + "PropertyCode", this.PropertyCode);
             this.SetParamSimple(map, prefix + "PropertyValue", this.PropertyValue);
+            this.SetParamSimple(map, prefix + "Original", this.Original);
         }
     }
 }

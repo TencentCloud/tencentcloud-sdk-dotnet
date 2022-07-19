@@ -48,6 +48,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// "CHANNEL"：渠道合作企业；
         /// "NOT_CHANNEL"：非渠道合作企业；
         /// "PERSON"：个人；
+        /// "FOLLOWER"：关注方，目前是合同抄送方；
         /// </summary>
         [JsonProperty("GenerateType")]
         public string GenerateType{ get; set; }
@@ -65,7 +66,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string Name{ get; set; }
 
         /// <summary>
-        /// 参与人手机号，GenerateType为"PERSON"时必填
+        /// 参与人手机号；
+        /// GenerateType为"PERSON"或"FOLLOWER"时必填
         /// </summary>
         [JsonProperty("Mobile")]
         public string Mobile{ get; set; }

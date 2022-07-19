@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{18B8B6A9-26F9-3537-BC24-EEBEC5421791}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.561</VersionPrefix>
+    <VersionPrefix>3.0.562</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -55,6 +55,8 @@
     <Compile Include="V20220331\Models\DeleteUsersResponse.cs" />
     <Compile Include="V20220331\Models\DescribeUserByIdRequest.cs" />
     <Compile Include="V20220331\Models\DescribeUserByIdResponse.cs" />
+    <Compile Include="V20220331\Models\DescribeUserRequest.cs" />
+    <Compile Include="V20220331\Models\DescribeUserResponse.cs" />
     <Compile Include="V20220331\Models\ErrorDetails.cs" />
     <Compile Include="V20220331\Models\ExportPropertyMap.cs" />
     <Compile Include="V20220331\Models\FailedUsers.cs" />
@@ -74,6 +76,7 @@
     <Compile Include="V20220331\Models\LogMessage.cs" />
     <Compile Include="V20220331\Models\MemberMap.cs" />
     <Compile Include="V20220331\Models\Pageable.cs" />
+    <Compile Include="V20220331\Models\QueryUserFilter.cs" />
     <Compile Include="V20220331\Models\ResetPasswordRequest.cs" />
     <Compile Include="V20220331\Models\ResetPasswordResponse.cs" />
     <Compile Include="V20220331\Models\Salt.cs" />

@@ -295,7 +295,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建跳转小程序查看或签署的链接
+        /// 创建跳转小程序查看或签署的链接；自动签署的签署方不创建签署链接；
         /// </summary>
         /// <param name="req"><see cref="CreateSignUrlsRequest"/></param>
         /// <returns><see cref="CreateSignUrlsResponse"/></returns>
@@ -315,7 +315,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建跳转小程序查看或签署的链接
+        /// 创建跳转小程序查看或签署的链接；自动签署的签署方不创建签署链接；
         /// </summary>
         /// <param name="req"><see cref="CreateSignUrlsRequest"/></param>
         /// <returns><see cref="CreateSignUrlsResponse"/></returns>

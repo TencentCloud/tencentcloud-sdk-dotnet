@@ -69,6 +69,14 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("RightSet")]
         public string[] RightSet{ get; set; }
 
+        /// <summary>
+        /// 推荐类型，取值有：
+        /// <li>Featured：精选；</li>
+        /// <li>Other：其他。</li>
+        /// </summary>
+        [JsonProperty("RecommendType")]
+        public string RecommendType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +90,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamSimple(map, prefix + "SingerImageUrl", this.SingerImageUrl);
             this.SetParamObj(map, prefix + "AlbumInfo.", this.AlbumInfo);
             this.SetParamArraySimple(map, prefix + "RightSet.", this.RightSet);
+            this.SetParamSimple(map, prefix + "RecommendType", this.RecommendType);
         }
     }
 }

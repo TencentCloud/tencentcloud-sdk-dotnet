@@ -36,6 +36,15 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 返回信息是否为原文
+        /// 
+        /// <li> **false** </li>	默认，返回信息为脱敏信息
+        /// <li> **true** </li>	返回用户信息原文
+        /// </summary>
+        [JsonProperty("Original")]
+        public bool? Original{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +53,7 @@ namespace TencentCloud.Ciam.V20220331.Models
         {
             this.SetParamSimple(map, prefix + "UserStoreId", this.UserStoreId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "Original", this.Original);
         }
     }
 }
