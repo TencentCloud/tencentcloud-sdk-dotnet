@@ -58,6 +58,27 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ModifiedTime")]
         public string ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// cos存储路径
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Location")]
+        public string Location{ get; set; }
+
+        /// <summary>
+        /// 建库用户昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
+        /// <summary>
+        /// 建库用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserSubUin")]
+        public string UserSubUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -69,6 +90,9 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamArrayObj(map, prefix + "Properties.", this.Properties);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "Location", this.Location);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         }
     }
 }

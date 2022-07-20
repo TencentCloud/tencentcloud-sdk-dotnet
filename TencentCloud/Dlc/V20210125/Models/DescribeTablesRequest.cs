@@ -69,7 +69,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 排序字段，支持：ModifiedTime（默认）；CreateTime
+        /// 排序字段，支持：CreateTime、UpdateTime、StorageSize、RecordCount、Name（不传则默认按name升序）
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }

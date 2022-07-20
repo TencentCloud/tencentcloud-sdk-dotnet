@@ -62,6 +62,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string UniformSocialCreditCode{ get; set; }
 
         /// <summary>
+        /// 是否展示左侧菜单栏 是：ENABLE（默认） 否：DISABLE
+        /// </summary>
+        [JsonProperty("MenuStatus")]
+        public string MenuStatus{ get; set; }
+
+        /// <summary>
         /// 操作者的信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -79,6 +85,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Module", this.Module);
             this.SetParamSimple(map, prefix + "ModuleId", this.ModuleId);
             this.SetParamSimple(map, prefix + "UniformSocialCreditCode", this.UniformSocialCreditCode);
+            this.SetParamSimple(map, prefix + "MenuStatus", this.MenuStatus);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

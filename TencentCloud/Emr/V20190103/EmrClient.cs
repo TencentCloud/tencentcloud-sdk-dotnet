@@ -215,6 +215,46 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
+        /// （通过走emrcc接入到cam） yarn applciation 统计接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
+        /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>
+        public async Task<DescribeEmrApplicationStaticsResponse> DescribeEmrApplicationStatics(DescribeEmrApplicationStaticsRequest req)
+        {
+             JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEmrApplicationStatics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// （通过走emrcc接入到cam） yarn applciation 统计接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
+        /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>
+        public DescribeEmrApplicationStaticsResponse DescribeEmrApplicationStaticsSync(DescribeEmrApplicationStaticsRequest req)
+        {
+             JsonResponseModel<DescribeEmrApplicationStaticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEmrApplicationStatics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEmrApplicationStaticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 预付费集群隔离后续费资源查询
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceRenewNodesRequest"/></param>

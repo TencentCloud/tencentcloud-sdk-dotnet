@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.562</VersionPrefix>
+    <VersionPrefix>3.0.563</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -615,6 +615,8 @@
     <Compile Include="V20170312\Models\NetworkAcl.cs" />
     <Compile Include="V20170312\Models\NetworkAclEntry.cs" />
     <Compile Include="V20170312\Models\NetworkAclEntrySet.cs" />
+    <Compile Include="V20170312\Models\NetworkAclQuintupleEntries.cs" />
+    <Compile Include="V20170312\Models\NetworkAclQuintupleEntry.cs" />
     <Compile Include="V20170312\Models\NetworkInterface.cs" />
     <Compile Include="V20170312\Models\NetworkInterfaceAttachment.cs" />
     <Compile Include="V20170312\Models\NotifyRoutesRequest.cs" />

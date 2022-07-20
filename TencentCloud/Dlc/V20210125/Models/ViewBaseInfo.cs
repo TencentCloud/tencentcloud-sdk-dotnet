@@ -36,6 +36,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("ViewName")]
         public string ViewName{ get; set; }
 
+        /// <summary>
+        /// 视图创建人昵称
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
+        /// <summary>
+        /// 视图创建人ID
+        /// </summary>
+        [JsonProperty("UserSubUin")]
+        public string UserSubUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +56,8 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamSimple(map, prefix + "DatabaseName", this.DatabaseName);
             this.SetParamSimple(map, prefix + "ViewName", this.ViewName);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         }
     }
 }

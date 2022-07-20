@@ -49,7 +49,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         public string Color{ get; set; }
 
         /// <summary>
-        /// 置信度，0-100
+        /// 车系置信度，0-100
         /// </summary>
         [JsonProperty("Confidence")]
         public long? Confidence{ get; set; }
@@ -67,11 +67,32 @@ namespace TencentCloud.Tiia.V20190529.Models
         public Coord[] CarLocation{ get; set; }
 
         /// <summary>
-        /// 车牌信息
+        /// 车牌信息，仅车辆识别（增强版）支持
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PlateContent")]
         public CarPlateContent PlateContent{ get; set; }
+
+        /// <summary>
+        /// 车牌信息置信度，0-100，仅车辆识别（增强版）支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateConfidence")]
+        public long? PlateConfidence{ get; set; }
+
+        /// <summary>
+        /// 车辆类型置信度，0-100，仅车辆识别（增强版）支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TypeConfidence")]
+        public long? TypeConfidence{ get; set; }
+
+        /// <summary>
+        /// 车辆颜色置信度，0-100，仅车辆识别（增强版）支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ColorConfidence")]
+        public long? ColorConfidence{ get; set; }
 
 
         /// <summary>
@@ -87,6 +108,9 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "Year", this.Year);
             this.SetParamArrayObj(map, prefix + "CarLocation.", this.CarLocation);
             this.SetParamObj(map, prefix + "PlateContent.", this.PlateContent);
+            this.SetParamSimple(map, prefix + "PlateConfidence", this.PlateConfidence);
+            this.SetParamSimple(map, prefix + "TypeConfidence", this.TypeConfidence);
+            this.SetParamSimple(map, prefix + "ColorConfidence", this.ColorConfidence);
         }
     }
 }

@@ -31,6 +31,12 @@ namespace TencentCloud.Ses.V20201002.Models
         public TemplateContent TemplateContent{ get; set; }
 
         /// <summary>
+        /// 模板状态 0-审核通过 1-待审核 2-审核拒绝
+        /// </summary>
+        [JsonProperty("TemplateStatus")]
+        public ulong? TemplateStatus{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "TemplateContent.", this.TemplateContent);
+            this.SetParamSimple(map, prefix + "TemplateStatus", this.TemplateStatus);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

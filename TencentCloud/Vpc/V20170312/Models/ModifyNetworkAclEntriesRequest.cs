@@ -36,6 +36,12 @@ namespace TencentCloud.Vpc.V20170312.Models
         [JsonProperty("NetworkAclEntrySet")]
         public NetworkAclEntrySet NetworkAclEntrySet{ get; set; }
 
+        /// <summary>
+        /// 网络ACL五元组规则集。NetworkAclEntrySet和NetworkAclQuintupleSet只能输入一个。
+        /// </summary>
+        [JsonProperty("NetworkAclQuintupleSet")]
+        public NetworkAclQuintupleEntries NetworkAclQuintupleSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "NetworkAclId", this.NetworkAclId);
             this.SetParamObj(map, prefix + "NetworkAclEntrySet.", this.NetworkAclEntrySet);
+            this.SetParamObj(map, prefix + "NetworkAclQuintupleSet.", this.NetworkAclQuintupleSet);
         }
     }
 }

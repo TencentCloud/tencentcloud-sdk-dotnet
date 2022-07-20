@@ -64,6 +64,20 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TableFormat")]
         public string TableFormat{ get; set; }
 
+        /// <summary>
+        /// 建表用户昵称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserAlias")]
+        public string UserAlias{ get; set; }
+
+        /// <summary>
+        /// 建表用户ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserSubUin")]
+        public string UserSubUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +90,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "TableComment", this.TableComment);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TableFormat", this.TableFormat);
+            this.SetParamSimple(map, prefix + "UserAlias", this.UserAlias);
+            this.SetParamSimple(map, prefix + "UserSubUin", this.UserSubUin);
         }
     }
 }

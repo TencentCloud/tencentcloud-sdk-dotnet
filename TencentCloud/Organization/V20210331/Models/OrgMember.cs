@@ -136,6 +136,13 @@ namespace TencentCloud.Organization.V20210331.Models
         [JsonProperty("BindStatus")]
         public string BindStatus{ get; set; }
 
+        /// <summary>
+        /// 成员权限状态 已确认：Confirmed ，待确认：UnConfirmed
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PermissionStatus")]
+        public string PermissionStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Organization.V20210331.Models
             this.SetParamSimple(map, prefix + "PayName", this.PayName);
             this.SetParamArrayObj(map, prefix + "OrgIdentity.", this.OrgIdentity);
             this.SetParamSimple(map, prefix + "BindStatus", this.BindStatus);
+            this.SetParamSimple(map, prefix + "PermissionStatus", this.PermissionStatus);
         }
     }
 }
