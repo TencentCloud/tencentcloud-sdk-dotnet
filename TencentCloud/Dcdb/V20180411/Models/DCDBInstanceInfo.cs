@@ -329,6 +329,13 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("ResourceTags")]
         public ResourceTag[] ResourceTags{ get; set; }
 
+        /// <summary>
+        /// 数据库引擎版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DbVersionId")]
+        public string DbVersionId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -384,6 +391,7 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamSimple(map, prefix + "DcnDstNum", this.DcnDstNum);
             this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
             this.SetParamArrayObj(map, prefix + "ResourceTags.", this.ResourceTags);
+            this.SetParamSimple(map, prefix + "DbVersionId", this.DbVersionId);
         }
     }
 }

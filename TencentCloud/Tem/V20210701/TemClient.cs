@@ -619,6 +619,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 销毁命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
+        /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
+        public async Task<DestroyEnvironmentResponse> DestroyEnvironment(DestroyEnvironmentRequest req)
+        {
+             JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁命名空间
+        /// </summary>
+        /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
+        /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
+        public DestroyEnvironmentResponse DestroyEnvironmentSync(DestroyEnvironmentRequest req)
+        {
+             JsonResponseModel<DestroyEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 生成应用程序包预签名下载链接
         /// </summary>
         /// <param name="req"><see cref="GenerateApplicationPackageDownloadUrlRequest"/></param>

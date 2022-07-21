@@ -25,19 +25,20 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用户SDKAppID，查询SDKAppID下任意20条异常体验事件（可能不同房间）
+        /// 用户SdkAppId（如：1400xxxxxx）
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间,本地unix时间戳（1592448600s）
+        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+        /// 注意：支持查询14天内的数据
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间,本地unix时间戳（1592449080s）
+        /// 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）注意：与StartTime间隔时间不超过1小时。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

@@ -25,37 +25,41 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用户sdkappid
+        /// 用户SdkAppId（如：1400xxxxxx）
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，14天内。本地unix时间戳（1588031999）
+        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+        /// 注意：支持查询14天内的数据
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588034999）
+        /// 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+        /// 注意：与StartTime间隔时间不超过24小时。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 字符串房间号
+        /// 房间号（如：223)
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 分页index，从0开始（PageNumber和PageSize 其中一个不填均默认返回10条数据）
+        /// 当前页数，默认为0，
+        /// 注意：PageNumber和PageSize 其中一个不填均默认返回10条数据。
         /// </summary>
         [JsonProperty("PageNumber")]
         public string PageNumber{ get; set; }
 
         /// <summary>
-        /// 分页大小（PageNumber和PageSize 其中一个不填均默认返回10条数据,最大不超过100）
+        /// 每页个数，默认为10，
+        /// 范围：[1，100]
         /// </summary>
         [JsonProperty("PageSize")]
         public string PageSize{ get; set; }

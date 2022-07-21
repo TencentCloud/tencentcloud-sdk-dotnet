@@ -89,6 +89,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskGroupInstanceIsRedo")]
         public bool? TaskGroupInstanceIsRedo{ get; set; }
 
+        /// <summary>
+        /// 动作实例执行时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskGroupInstanceExecuteTime")]
+        public long? TaskGroupInstanceExecuteTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +112,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskGroupInstanceStartTime", this.TaskGroupInstanceStartTime);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceEndTime", this.TaskGroupInstanceEndTime);
             this.SetParamSimple(map, prefix + "TaskGroupInstanceIsRedo", this.TaskGroupInstanceIsRedo);
+            this.SetParamSimple(map, prefix + "TaskGroupInstanceExecuteTime", this.TaskGroupInstanceExecuteTime);
         }
     }
 }

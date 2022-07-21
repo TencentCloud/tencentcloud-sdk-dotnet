@@ -31,7 +31,7 @@ namespace TencentCloud.Mmps.V20200710.Models
         public string MiniAppID{ get; set; }
 
         /// <summary>
-        /// 诊断模式 1:基础诊断，2:深度诊断
+        /// 诊断模式 1:基础诊断
         /// </summary>
         [JsonProperty("Mode")]
         public long? Mode{ get; set; }

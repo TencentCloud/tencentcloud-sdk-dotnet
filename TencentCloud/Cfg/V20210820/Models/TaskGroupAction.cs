@@ -148,6 +148,13 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("ActionRisk")]
         public string ActionRisk{ get; set; }
 
+        /// <summary>
+        /// 动作运行时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskGroupActionExecuteTime")]
+        public long? TaskGroupActionExecuteTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -173,6 +180,7 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "ActionType", this.ActionType);
             this.SetParamSimple(map, prefix + "IsExecuteRedo", this.IsExecuteRedo);
             this.SetParamSimple(map, prefix + "ActionRisk", this.ActionRisk);
+            this.SetParamSimple(map, prefix + "TaskGroupActionExecuteTime", this.TaskGroupActionExecuteTime);
         }
     }
 }

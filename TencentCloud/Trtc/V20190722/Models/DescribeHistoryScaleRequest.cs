@@ -25,19 +25,21 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 用户sdkappid(1400188366)
+        /// 用户SdkAppId（如：1400xxxxxx）
         /// </summary>
         [JsonProperty("SdkAppId")]
         public string SdkAppId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，5天内。本地unix时间戳（1587571000s）
+        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+        /// 注意：支持查询14天内的数据。
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588034999s）
+        /// 查询结束时间，本地unix时间戳，单位为秒（如：1590065877），建议与StartTime间隔时间超过24小时。
+        /// 注意：按天统计，结束时间小于前一天，否则查询数据为空（如：需查询20号数据，结束时间需小于20号0点）。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }

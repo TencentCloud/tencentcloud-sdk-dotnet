@@ -215,7 +215,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// （通过走emrcc接入到cam） yarn applciation 统计接口
+        ///  yarn applciation 统计接口查询
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
         /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>
@@ -235,7 +235,7 @@ namespace TencentCloud.Emr.V20190103
         }
 
         /// <summary>
-        /// （通过走emrcc接入到cam） yarn applciation 统计接口
+        ///  yarn applciation 统计接口查询
         /// </summary>
         /// <param name="req"><see cref="DescribeEmrApplicationStaticsRequest"/></param>
         /// <returns><see cref="DescribeEmrApplicationStaticsResponse"/></returns>

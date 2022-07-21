@@ -2027,6 +2027,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<CreateNetworkAclQuintupleEntriesResponse> CreateNetworkAclQuintupleEntries(CreateNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateNetworkAclQuintupleEntries）用于增量网络ACL五元组的入站规则和出站规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="CreateNetworkAclQuintupleEntriesResponse"/></returns>
+        public CreateNetworkAclQuintupleEntriesResponse CreateNetworkAclQuintupleEntriesSync(CreateNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CreateNetworkInterface）用于创建弹性网卡。
         /// * 创建弹性网卡时可以指定内网IP，并且可以指定一个主IP，指定的内网IP必须在弹性网卡所在子网内，而且不能被占用。
         /// * 创建弹性网卡时可以指定需要申请的内网IP数量，系统会随机生成内网IP地址。
@@ -3632,6 +3672,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DeleteNetworkAcl");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNetworkAclQuintupleEntries）用于删除网络ACL五元组指定的入站规则和出站规则（但不是全量删除该ACL下的所有条目）。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<DeleteNetworkAclQuintupleEntriesResponse> DeleteNetworkAclQuintupleEntries(DeleteNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteNetworkAclQuintupleEntries）用于删除网络ACL五元组指定的入站规则和出站规则（但不是全量删除该ACL下的所有条目）。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DeleteNetworkAclQuintupleEntriesResponse"/></returns>
+        public DeleteNetworkAclQuintupleEntriesResponse DeleteNetworkAclQuintupleEntriesSync(DeleteNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -5952,6 +6032,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNetDetects");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetDetectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNetworkAclQuintupleEntries）查询入方向或出方向网络ACL五元组条目列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<DescribeNetworkAclQuintupleEntriesResponse> DescribeNetworkAclQuintupleEntries(DescribeNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeNetworkAclQuintupleEntries）查询入方向或出方向网络ACL五元组条目列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="DescribeNetworkAclQuintupleEntriesResponse"/></returns>
+        public DescribeNetworkAclQuintupleEntriesResponse DescribeNetworkAclQuintupleEntriesSync(DescribeNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -9838,6 +9958,46 @@ namespace TencentCloud.Vpc.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "ModifyNetworkAclEntries");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNetworkAclQuintupleEntries）用于修改网络ACL五元组的入站规则和出站规则。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclQuintupleEntriesResponse"/></returns>
+        public async Task<ModifyNetworkAclQuintupleEntriesResponse> ModifyNetworkAclQuintupleEntries(ModifyNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ModifyNetworkAclQuintupleEntries）用于修改网络ACL五元组的入站规则和出站规则。在NetworkAclQuintupleEntrySet参数中：NetworkAclQuintupleEntry需要提供NetworkAclQuintupleEntryId。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyNetworkAclQuintupleEntriesRequest"/></param>
+        /// <returns><see cref="ModifyNetworkAclQuintupleEntriesResponse"/></returns>
+        public ModifyNetworkAclQuintupleEntriesResponse ModifyNetworkAclQuintupleEntriesSync(ModifyNetworkAclQuintupleEntriesRequest req)
+        {
+             JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyNetworkAclQuintupleEntries");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyNetworkAclQuintupleEntriesResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

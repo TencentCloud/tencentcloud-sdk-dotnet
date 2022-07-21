@@ -31,6 +31,18 @@ namespace TencentCloud.Ses.V20201002.Models
         public EmailIdentity[] EmailIdentities{ get; set; }
 
         /// <summary>
+        /// 最大信誉等级
+        /// </summary>
+        [JsonProperty("MaxReputationLevel")]
+        public ulong? MaxReputationLevel{ get; set; }
+
+        /// <summary>
+        /// 单域名最高日发送量
+        /// </summary>
+        [JsonProperty("MaxDailyQuota")]
+        public ulong? MaxDailyQuota{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +55,8 @@ namespace TencentCloud.Ses.V20201002.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "EmailIdentities.", this.EmailIdentities);
+            this.SetParamSimple(map, prefix + "MaxReputationLevel", this.MaxReputationLevel);
+            this.SetParamSimple(map, prefix + "MaxDailyQuota", this.MaxDailyQuota);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -133,6 +133,46 @@ namespace TencentCloud.Mmps.V20200710
         }
 
         /// <summary>
+        /// 创建小程序安全深度诊断任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlySecMiniAppProfessionalScanTaskRequest"/></param>
+        /// <returns><see cref="CreateFlySecMiniAppProfessionalScanTaskResponse"/></returns>
+        public async Task<CreateFlySecMiniAppProfessionalScanTaskResponse> CreateFlySecMiniAppProfessionalScanTask(CreateFlySecMiniAppProfessionalScanTaskRequest req)
+        {
+             JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlySecMiniAppProfessionalScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建小程序安全深度诊断任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlySecMiniAppProfessionalScanTaskRequest"/></param>
+        /// <returns><see cref="CreateFlySecMiniAppProfessionalScanTaskResponse"/></returns>
+        public CreateFlySecMiniAppProfessionalScanTaskResponse CreateFlySecMiniAppProfessionalScanTaskSync(CreateFlySecMiniAppProfessionalScanTaskRequest req)
+        {
+             JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlySecMiniAppProfessionalScanTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlySecMiniAppProfessionalScanTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建小程序翼扬安全的基础或深度诊断任务
         /// </summary>
         /// <param name="req"><see cref="CreateFlySecMiniAppScanTaskRequest"/></param>

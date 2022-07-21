@@ -25,31 +25,33 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 通话 ID（唯一标识一次通话）： sdkappid_roomgString（房间号_createTime（房间创建时间，unix时间戳，单位s）。通过 DescribeRoomInformation（查询房间列表）接口获取。（链接：https://cloud.tencent.com/document/product/647/44050）
+        /// 通话 ID（唯一标识一次通话）： SdkAppId_RoomId（房间号）_ CreateTime（房间创建时间，unix时间戳，单位为s）例：1400xxxxxx_218695_1590065777。通过 DescribeRoomInfo（查询历史房间列表）接口获取（[查询历史房间列表](https://cloud.tencent.com/document/product/647/44050)）。
         /// </summary>
         [JsonProperty("CommId")]
         public string CommId{ get; set; }
 
         /// <summary>
-        /// 查询开始时间，14天内。本地unix时间戳（1588055615s）
+        /// 查询开始时间，本地unix时间戳，单位为秒（如：1590065777）
+        /// 注意：支持查询14天内的数据
         /// </summary>
         [JsonProperty("StartTime")]
         public ulong? StartTime{ get; set; }
 
         /// <summary>
-        /// 查询结束时间，本地unix时间戳（1588058615s）
+        /// 查询结束时间，本地unix时间戳，单位为秒（如：1590065877）
+        /// 注意：查询时间大于房间结束时间，以房间结束时间为准。
         /// </summary>
         [JsonProperty("EndTime")]
         public ulong? EndTime{ get; set; }
 
         /// <summary>
-        /// 用户id
+        /// 用户UserId
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 房间号
+        /// 房间号（如：223）
         /// </summary>
         [JsonProperty("RoomId")]
         public string RoomId{ get; set; }
