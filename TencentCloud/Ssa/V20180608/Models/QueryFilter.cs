@@ -25,22 +25,22 @@ namespace TencentCloud.Ssa.V20180608.Models
     {
         
         /// <summary>
-        /// 查询的字段
+        /// 过滤key
         /// </summary>
         [JsonProperty("FilterKey")]
         public string FilterKey{ get; set; }
 
         /// <summary>
-        /// 查询的值
-        /// </summary>
-        [JsonProperty("FilterValue")]
-        public string FilterValue{ get; set; }
-
-        /// <summary>
-        /// 匹配类型，1等于；2大于；3小于；4大于等于；5小于等于；6不等于；7in；8not in；9模糊匹配
+        /// 操作符(只支持32位)
         /// </summary>
         [JsonProperty("FilterOperatorType")]
         public long? FilterOperatorType{ get; set; }
+
+        /// <summary>
+        /// 过滤value
+        /// </summary>
+        [JsonProperty("FilterValue")]
+        public string FilterValue{ get; set; }
 
 
         /// <summary>
@@ -49,8 +49,8 @@ namespace TencentCloud.Ssa.V20180608.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FilterKey", this.FilterKey);
-            this.SetParamSimple(map, prefix + "FilterValue", this.FilterValue);
             this.SetParamSimple(map, prefix + "FilterOperatorType", this.FilterOperatorType);
+            this.SetParamSimple(map, prefix + "FilterValue", this.FilterValue);
         }
     }
 }

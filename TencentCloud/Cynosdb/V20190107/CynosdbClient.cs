@@ -1253,6 +1253,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询新购集群价格
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateResponse"/></returns>
+        public async Task<InquirePriceCreateResponse> InquirePriceCreate(InquirePriceCreateRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceCreate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询新购集群价格
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceCreateRequest"/></param>
+        /// <returns><see cref="InquirePriceCreateResponse"/></returns>
+        public InquirePriceCreateResponse InquirePriceCreateSync(InquirePriceCreateRequest req)
+        {
+             JsonResponseModel<InquirePriceCreateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceCreate");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 隔离集群
         /// </summary>
         /// <param name="req"><see cref="IsolateClusterRequest"/></param>

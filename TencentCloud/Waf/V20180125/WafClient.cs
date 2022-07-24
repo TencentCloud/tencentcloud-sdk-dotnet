@@ -213,46 +213,6 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
-        /// 创建攻击日志下载任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateAttackDownloadTaskRequest"/></param>
-        /// <returns><see cref="CreateAttackDownloadTaskResponse"/></returns>
-        public async Task<CreateAttackDownloadTaskResponse> CreateAttackDownloadTask(CreateAttackDownloadTaskRequest req)
-        {
-             JsonResponseModel<CreateAttackDownloadTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateAttackDownloadTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAttackDownloadTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建攻击日志下载任务
-        /// </summary>
-        /// <param name="req"><see cref="CreateAttackDownloadTaskRequest"/></param>
-        /// <returns><see cref="CreateAttackDownloadTaskResponse"/></returns>
-        public CreateAttackDownloadTaskResponse CreateAttackDownloadTaskSync(CreateAttackDownloadTaskRequest req)
-        {
-             JsonResponseModel<CreateAttackDownloadTaskResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateAttackDownloadTask");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAttackDownloadTaskResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口用于删除访问日志导出
         /// </summary>
         /// <param name="req"><see cref="DeleteAccessExportRequest"/></param>

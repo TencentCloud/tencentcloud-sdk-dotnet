@@ -1060,6 +1060,8 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///       </tbody>
         ///     </table>
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="GeneralBasicOCRRequest"/></param>
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>
@@ -1140,6 +1142,8 @@ namespace TencentCloud.Ocr.V20181119
         ///         </tr>
         ///       </tbody>
         ///     </table>
+        /// 
+        /// 默认接口请求频率限制：20次/秒。
         /// </summary>
         /// <param name="req"><see cref="GeneralBasicOCRRequest"/></param>
         /// <returns><see cref="GeneralBasicOCRResponse"/></returns>

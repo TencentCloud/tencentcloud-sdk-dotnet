@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{307C2F67-1633-3F01-BEA7-F343C91B0D61}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.564</VersionPrefix>
+    <VersionPrefix>3.0.565</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -53,6 +53,8 @@
     <Compile Include="V20190722\Models\DeletePictureResponse.cs" />
     <Compile Include="V20190722\Models\DescribeAbnormalEventRequest.cs" />
     <Compile Include="V20190722\Models\DescribeAbnormalEventResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeCallDetailInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeCallDetailInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailRequest.cs" />
     <Compile Include="V20190722\Models\DescribeCallDetailResponse.cs" />
     <Compile Include="V20190722\Models\DescribeDetailEventRequest.cs" />
@@ -65,10 +67,20 @@
     <Compile Include="V20190722\Models\DescribePictureResponse.cs" />
     <Compile Include="V20190722\Models\DescribeRecordStatisticRequest.cs" />
     <Compile Include="V20190722\Models\DescribeRecordStatisticResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeRoomInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeRoomInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeRoomInformationRequest.cs" />
     <Compile Include="V20190722\Models\DescribeRoomInformationResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeScaleInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeScaleInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeRequest.cs" />
     <Compile Include="V20190722\Models\DescribeTrtcMcuTranscodeTimeResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUnusualEventRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUnusualEventResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUserEventRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUserEventResponse.cs" />
+    <Compile Include="V20190722\Models\DescribeUserInfoRequest.cs" />
+    <Compile Include="V20190722\Models\DescribeUserInfoResponse.cs" />
     <Compile Include="V20190722\Models\DescribeUserInformationRequest.cs" />
     <Compile Include="V20190722\Models\DescribeUserInformationResponse.cs" />
     <Compile Include="V20190722\Models\DismissRoomByStrRoomIdRequest.cs" />

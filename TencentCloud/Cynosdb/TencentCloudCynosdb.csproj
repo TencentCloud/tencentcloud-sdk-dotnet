@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.564</VersionPrefix>
+    <VersionPrefix>3.0.565</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -121,6 +121,8 @@
     <Compile Include="V20190107\Models\GrantAccountPrivilegesRequest.cs" />
     <Compile Include="V20190107\Models\GrantAccountPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\InputAccount.cs" />
+    <Compile Include="V20190107\Models\InquirePriceCreateRequest.cs" />
+    <Compile Include="V20190107\Models\InquirePriceCreateResponse.cs" />
     <Compile Include="V20190107\Models\InstanceSpec.cs" />
     <Compile Include="V20190107\Models\IsolateClusterRequest.cs" />
     <Compile Include="V20190107\Models\IsolateClusterResponse.cs" />
@@ -169,6 +171,7 @@
     <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
     <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
+    <Compile Include="V20190107\Models\TradePrice.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceRequest.cs" />
     <Compile Include="V20190107\Models\UpgradeInstanceResponse.cs" />
   </ItemGroup>

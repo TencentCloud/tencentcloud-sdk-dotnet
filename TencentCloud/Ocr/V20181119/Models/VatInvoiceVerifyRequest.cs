@@ -31,13 +31,13 @@ namespace TencentCloud.Ocr.V20181119.Models
         public string InvoiceCode{ get; set; }
 
         /// <summary>
-        /// 发票号码（8位）。
+        /// 发票号码（8位）
         /// </summary>
         [JsonProperty("InvoiceNo")]
         public string InvoiceNo{ get; set; }
 
         /// <summary>
-        /// 开票日期（不支持当天发票查询，支持五年以内开具的发票），如：2019-12-20。
+        /// 开票日期（不支持当天发票查询，支持五年以内开具的发票），格式：“YYYY-MM-DD”，如：2019-12-20。
         /// </summary>
         [JsonProperty("InvoiceDate")]
         public string InvoiceDate{ get; set; }

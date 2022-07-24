@@ -174,6 +174,12 @@ namespace TencentCloud.Redis.V20180412.Models
         [JsonProperty("ProductVersions")]
         public string[] ProductVersions{ get; set; }
 
+        /// <summary>
+        /// 批量查询指定的实例
+        /// </summary>
+        [JsonProperty("InstanceIds")]
+        public string[] InstanceIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -205,6 +211,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
             this.SetParamArraySimple(map, prefix + "TagKeys.", this.TagKeys);
             this.SetParamArraySimple(map, prefix + "ProductVersions.", this.ProductVersions);
+            this.SetParamArraySimple(map, prefix + "InstanceIds.", this.InstanceIds);
         }
     }
 }

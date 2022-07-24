@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{43C5A54E-C7D9-307F-9FCD-E7792E92A787}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.564</VersionPrefix>
+    <VersionPrefix>3.0.565</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,7 @@
     <Compile Include="V20190819\Models\AclResponse.cs" />
     <Compile Include="V20190819\Models\AclRule.cs" />
     <Compile Include="V20190819\Models\AclRuleInfo.cs" />
+    <Compile Include="V20190819\Models\AnalyseParam.cs" />
     <Compile Include="V20190819\Models\AppIdResponse.cs" />
     <Compile Include="V20190819\Models\Assignment.cs" />
     <Compile Include="V20190819\Models\AuthorizeTokenRequest.cs" />
@@ -67,18 +68,29 @@
     <Compile Include="V20190819\Models\CdcClusterResponse.cs" />
     <Compile Include="V20190819\Models\CheckCdcClusterRequest.cs" />
     <Compile Include="V20190819\Models\CheckCdcClusterResponse.cs" />
+    <Compile Include="V20190819\Models\ClickHouseConnectParam.cs" />
+    <Compile Include="V20190819\Models\ClickHouseParam.cs" />
+    <Compile Include="V20190819\Models\ClickHouseSchema.cs" />
+    <Compile Include="V20190819\Models\ClsParam.cs" />
     <Compile Include="V20190819\Models\ClusterInfo.cs" />
     <Compile Include="V20190819\Models\Config.cs" />
+    <Compile Include="V20190819\Models\ConnectResourceResourceIdResp.cs" />
     <Compile Include="V20190819\Models\ConsumerGroup.cs" />
     <Compile Include="V20190819\Models\ConsumerGroupResponse.cs" />
     <Compile Include="V20190819\Models\ConsumerGroupTopic.cs" />
     <Compile Include="V20190819\Models\ConsumerRecord.cs" />
+    <Compile Include="V20190819\Models\CosParam.cs" />
     <Compile Include="V20190819\Models\CreateAclRequest.cs" />
     <Compile Include="V20190819\Models\CreateAclResponse.cs" />
     <Compile Include="V20190819\Models\CreateCdcClusterRequest.cs" />
     <Compile Include="V20190819\Models\CreateCdcClusterResponse.cs" />
+    <Compile Include="V20190819\Models\CreateConnectResourceRequest.cs" />
+    <Compile Include="V20190819\Models\CreateConnectResourceResponse.cs" />
     <Compile Include="V20190819\Models\CreateConsumerRequest.cs" />
     <Compile Include="V20190819\Models\CreateConsumerResponse.cs" />
+    <Compile Include="V20190819\Models\CreateDatahubTaskRequest.cs" />
+    <Compile Include="V20190819\Models\CreateDatahubTaskRes.cs" />
+    <Compile Include="V20190819\Models\CreateDatahubTaskResponse.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreData.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreRequest.cs" />
     <Compile Include="V20190819\Models\CreateInstancePreResp.cs" />
@@ -96,6 +108,8 @@
     <Compile Include="V20190819\Models\CreateTopicResponse.cs" />
     <Compile Include="V20190819\Models\CreateUserRequest.cs" />
     <Compile Include="V20190819\Models\CreateUserResponse.cs" />
+    <Compile Include="V20190819\Models\DatahubResource.cs" />
+    <Compile Include="V20190819\Models\DateParam.cs" />
     <Compile Include="V20190819\Models\DeleteAclRequest.cs" />
     <Compile Include="V20190819\Models\DeleteAclResponse.cs" />
     <Compile Include="V20190819\Models\DeleteAclRuleRequest.cs" />
@@ -151,11 +165,20 @@
     <Compile Include="V20190819\Models\DescribeTopicSyncReplicaResponse.cs" />
     <Compile Include="V20190819\Models\DescribeUserRequest.cs" />
     <Compile Include="V20190819\Models\DescribeUserResponse.cs" />
+    <Compile Include="V20190819\Models\DropCls.cs" />
+    <Compile Include="V20190819\Models\DtsConnectParam.cs" />
+    <Compile Include="V20190819\Models\DtsParam.cs" />
     <Compile Include="V20190819\Models\DynamicDiskConfig.cs" />
     <Compile Include="V20190819\Models\DynamicRetentionTime.cs" />
+    <Compile Include="V20190819\Models\EsConnectParam.cs" />
+    <Compile Include="V20190819\Models\EsParam.cs" />
+    <Compile Include="V20190819\Models\EventBusParam.cs" />
+    <Compile Include="V20190819\Models\FailureParam.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetRequest.cs" />
     <Compile Include="V20190819\Models\FetchMessageByOffsetResponse.cs" />
+    <Compile Include="V20190819\Models\FieldParam.cs" />
     <Compile Include="V20190819\Models\Filter.cs" />
+    <Compile Include="V20190819\Models\FilterMapParam.cs" />
     <Compile Include="V20190819\Models\Group.cs" />
     <Compile Include="V20190819\Models\GroupInfoMember.cs" />
     <Compile Include="V20190819\Models\GroupInfoResponse.cs" />
@@ -172,6 +195,10 @@
     <Compile Include="V20190819\Models\InstanceQuotaConfigResp.cs" />
     <Compile Include="V20190819\Models\InstanceResponse.cs" />
     <Compile Include="V20190819\Models\JgwOperateResponse.cs" />
+    <Compile Include="V20190819\Models\KafkaParam.cs" />
+    <Compile Include="V20190819\Models\MapParam.cs" />
+    <Compile Include="V20190819\Models\MariaDBConnectParam.cs" />
+    <Compile Include="V20190819\Models\MariaDBParam.cs" />
     <Compile Include="V20190819\Models\ModifyGroupOffsetsRequest.cs" />
     <Compile Include="V20190819\Models\ModifyGroupOffsetsResponse.cs" />
     <Compile Include="V20190819\Models\ModifyInstanceAttributesConfig.cs" />
@@ -183,31 +210,51 @@
     <Compile Include="V20190819\Models\ModifyPasswordResponse.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesRequest.cs" />
     <Compile Include="V20190819\Models\ModifyTopicAttributesResponse.cs" />
+    <Compile Include="V20190819\Models\MongoDBConnectParam.cs" />
+    <Compile Include="V20190819\Models\MongoDBParam.cs" />
+    <Compile Include="V20190819\Models\MySQLConnectParam.cs" />
+    <Compile Include="V20190819\Models\MySQLParam.cs" />
     <Compile Include="V20190819\Models\OperateResponseData.cs" />
     <Compile Include="V20190819\Models\Partition.cs" />
     <Compile Include="V20190819\Models\PartitionOffset.cs" />
     <Compile Include="V20190819\Models\Partitions.cs" />
+    <Compile Include="V20190819\Models\PostgreSQLConnectParam.cs" />
+    <Compile Include="V20190819\Models\PostgreSQLParam.cs" />
     <Compile Include="V20190819\Models\Price.cs" />
+    <Compile Include="V20190819\Models\PrivateLinkParam.cs" />
+    <Compile Include="V20190819\Models\RecordMapping.cs" />
+    <Compile Include="V20190819\Models\RegexReplaceParam.cs" />
     <Compile Include="V20190819\Models\Region.cs" />
+    <Compile Include="V20190819\Models\ReplaceParam.cs" />
     <Compile Include="V20190819\Models\Route.cs" />
     <Compile Include="V20190819\Models\RouteResponse.cs" />
+    <Compile Include="V20190819\Models\SMTParam.cs" />
+    <Compile Include="V20190819\Models\SQLServerConnectParam.cs" />
+    <Compile Include="V20190819\Models\SQLServerParam.cs" />
     <Compile Include="V20190819\Models\SaleInfo.cs" />
+    <Compile Include="V20190819\Models\SecondaryAnalyseParam.cs" />
     <Compile Include="V20190819\Models\SendMessageRequest.cs" />
     <Compile Include="V20190819\Models\SendMessageResponse.cs" />
     <Compile Include="V20190819\Models\SubscribedInfo.cs" />
+    <Compile Include="V20190819\Models\SubstrParam.cs" />
     <Compile Include="V20190819\Models\Tag.cs" />
+    <Compile Include="V20190819\Models\TdwParam.cs" />
     <Compile Include="V20190819\Models\Topic.cs" />
     <Compile Include="V20190819\Models\TopicAttributesResponse.cs" />
     <Compile Include="V20190819\Models\TopicDetail.cs" />
     <Compile Include="V20190819\Models\TopicDetailResponse.cs" />
     <Compile Include="V20190819\Models\TopicInSyncReplicaInfo.cs" />
     <Compile Include="V20190819\Models\TopicInSyncReplicaResult.cs" />
+    <Compile Include="V20190819\Models\TopicParam.cs" />
     <Compile Include="V20190819\Models\TopicPartitionDO.cs" />
     <Compile Include="V20190819\Models\TopicResult.cs" />
     <Compile Include="V20190819\Models\TopicRetentionTimeConfigRsp.cs" />
     <Compile Include="V20190819\Models\TopicSubscribeGroup.cs" />
+    <Compile Include="V20190819\Models\TransformParam.cs" />
+    <Compile Include="V20190819\Models\TransformsParam.cs" />
     <Compile Include="V20190819\Models\User.cs" />
     <Compile Include="V20190819\Models\UserResponse.cs" />
+    <Compile Include="V20190819\Models\ValueParam.cs" />
     <Compile Include="V20190819\Models\VipEntity.cs" />
     <Compile Include="V20190819\Models\ZoneInfo.cs" />
     <Compile Include="V20190819\Models\ZoneResponse.cs" />

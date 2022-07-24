@@ -93,6 +93,88 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 单条和批量复制作业
+        /// https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
+        /// </summary>
+        /// <param name="req"><see cref="CopyJobsRequest"/></param>
+        /// <returns><see cref="CopyJobsResponse"/></returns>
+        public async Task<CopyJobsResponse> CopyJobs(CopyJobsRequest req)
+        {
+             JsonResponseModel<CopyJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CopyJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 单条和批量复制作业
+        /// https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
+        /// </summary>
+        /// <param name="req"><see cref="CopyJobsRequest"/></param>
+        /// <returns><see cref="CopyJobsResponse"/></returns>
+        public CopyJobsResponse CopyJobsSync(CopyJobsRequest req)
+        {
+             JsonResponseModel<CopyJobsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CopyJobs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CopyJobsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 作业列表页面新建文件夹请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateFolderRequest"/></param>
+        /// <returns><see cref="CreateFolderResponse"/></returns>
+        public async Task<CreateFolderResponse> CreateFolder(CreateFolderRequest req)
+        {
+             JsonResponseModel<CreateFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 作业列表页面新建文件夹请求
+        /// </summary>
+        /// <param name="req"><see cref="CreateFolderRequest"/></param>
+        /// <returns><see cref="CreateFolderResponse"/></returns>
+        public CreateFolderResponse CreateFolderSync(CreateFolderRequest req)
+        {
+             JsonResponseModel<CreateFolderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFolder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFolderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新建作业接口，一个 AppId 最多允许创建1000个作业
         /// </summary>
         /// <param name="req"><see cref="CreateJobRequest"/></param>

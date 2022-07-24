@@ -373,6 +373,46 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
+        /// 创建Datahub连接源
+        /// </summary>
+        /// <param name="req"><see cref="CreateConnectResourceRequest"/></param>
+        /// <returns><see cref="CreateConnectResourceResponse"/></returns>
+        public async Task<CreateConnectResourceResponse> CreateConnectResource(CreateConnectResourceRequest req)
+        {
+             JsonResponseModel<CreateConnectResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConnectResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConnectResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建Datahub连接源
+        /// </summary>
+        /// <param name="req"><see cref="CreateConnectResourceRequest"/></param>
+        /// <returns><see cref="CreateConnectResourceResponse"/></returns>
+        public CreateConnectResourceResponse CreateConnectResourceSync(CreateConnectResourceRequest req)
+        {
+             JsonResponseModel<CreateConnectResourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConnectResource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConnectResourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建消费者组
         /// </summary>
         /// <param name="req"><see cref="CreateConsumerRequest"/></param>
@@ -404,6 +444,46 @@ namespace TencentCloud.Ckafka.V20190819
              {
                  var strResp = this.InternalRequestSync(req, "CreateConsumer");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConsumerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建Datahub转储任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateDatahubTaskResponse"/></returns>
+        public async Task<CreateDatahubTaskResponse> CreateDatahubTask(CreateDatahubTaskRequest req)
+        {
+             JsonResponseModel<CreateDatahubTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDatahubTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建Datahub转储任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
+        /// <returns><see cref="CreateDatahubTaskResponse"/></returns>
+        public CreateDatahubTaskResponse CreateDatahubTaskSync(CreateDatahubTaskRequest req)
+        {
+             JsonResponseModel<CreateDatahubTaskResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDatahubTask");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDatahubTaskResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
