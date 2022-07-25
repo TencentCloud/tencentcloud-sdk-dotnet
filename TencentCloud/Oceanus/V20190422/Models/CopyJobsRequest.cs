@@ -24,12 +24,26 @@ namespace TencentCloud.Oceanus.V20190422.Models
     public class CopyJobsRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 复制明细列表
+        /// </summary>
+        [JsonProperty("JobItems")]
+        public CopyJobItem[] JobItems{ get; set; }
+
+        /// <summary>
+        /// 工作空间 SerialId
+        /// </summary>
+        [JsonProperty("WorkSpaceId")]
+        public string WorkSpaceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "JobItems.", this.JobItems);
+            this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }
     }
 }

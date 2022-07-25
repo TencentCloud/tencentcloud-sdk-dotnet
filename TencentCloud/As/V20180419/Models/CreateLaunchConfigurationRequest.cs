@@ -115,6 +115,12 @@ namespace TencentCloud.As.V20180419.Models
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
+        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// </summary>
+        [JsonProperty("CamRoleName")]
+        public string CamRoleName{ get; set; }
+
+        /// <summary>
         /// 实例类型校验策略，取值包括 ALL 和 ANY，默认取值为ANY。
         /// <br><li> ALL，所有实例类型（InstanceType）都可用则通过校验，否则校验报错。
         /// <br><li> ANY，存在任何一个实例类型（InstanceType）可用则通过校验，否则校验报错。
@@ -132,10 +138,10 @@ namespace TencentCloud.As.V20180419.Models
         public InstanceTag[] InstanceTags{ get; set; }
 
         /// <summary>
-        /// CAM角色名称。可通过DescribeRoleList接口返回值中的roleName获取。
+        /// 标签描述列表。通过指定该参数可以支持绑定标签到启动配置。每个启动配置最多支持30个标签。
         /// </summary>
-        [JsonProperty("CamRoleName")]
-        public string CamRoleName{ get; set; }
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 云服务器主机名（HostName）的相关设置。
@@ -184,9 +190,10 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
+            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
             this.SetParamSimple(map, prefix + "InstanceTypesCheckPolicy", this.InstanceTypesCheckPolicy);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
-            this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "HostNameSettings.", this.HostNameSettings);
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);

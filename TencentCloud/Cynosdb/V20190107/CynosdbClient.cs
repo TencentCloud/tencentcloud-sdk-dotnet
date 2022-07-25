@@ -973,6 +973,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 查询用户指定产品下的所有参数模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public async Task<DescribeParamTemplatesResponse> DescribeParamTemplates(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户指定产品下的所有参数模板信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeParamTemplatesRequest"/></param>
+        /// <returns><see cref="DescribeParamTemplatesResponse"/></returns>
+        public DescribeParamTemplatesResponse DescribeParamTemplatesSync(DescribeParamTemplatesRequest req)
+        {
+             JsonResponseModel<DescribeParamTemplatesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeParamTemplates");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeParamTemplatesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询项目安全组信息
         /// </summary>
         /// <param name="req"><see cref="DescribeProjectSecurityGroupsRequest"/></param>
@@ -1284,6 +1324,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "InquirePriceCreate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceCreateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询续费集群价格
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewResponse"/></returns>
+        public async Task<InquirePriceRenewResponse> InquirePriceRenew(InquirePriceRenewRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InquirePriceRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询续费集群价格
+        /// </summary>
+        /// <param name="req"><see cref="InquirePriceRenewRequest"/></param>
+        /// <returns><see cref="InquirePriceRenewResponse"/></returns>
+        public InquirePriceRenewResponse InquirePriceRenewSync(InquirePriceRenewRequest req)
+        {
+             JsonResponseModel<InquirePriceRenewResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InquirePriceRenew");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InquirePriceRenewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -25,6 +25,27 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
+        /// 成功条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SuccessCount")]
+        public long? SuccessCount{ get; set; }
+
+        /// <summary>
+        /// 失败条数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FailCount")]
+        public long? FailCount{ get; set; }
+
+        /// <summary>
+        /// 结果列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CopyJobsResults")]
+        public CopyJobResult[] CopyJobsResults{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +57,9 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "SuccessCount", this.SuccessCount);
+            this.SetParamSimple(map, prefix + "FailCount", this.FailCount);
+            this.SetParamArrayObj(map, prefix + "CopyJobsResults.", this.CopyJobsResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

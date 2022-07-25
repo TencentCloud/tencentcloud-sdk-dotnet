@@ -36,6 +36,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Tid")]
         public string Tid{ get; set; }
 
+        /// <summary>
+        /// 是否为国内站，默认true
+        /// </summary>
+        [JsonProperty("IsDomestic")]
+        public bool? IsDomestic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         {
             this.SetParamSimple(map, prefix + "Bid", this.Bid);
             this.SetParamSimple(map, prefix + "Tid", this.Tid);
+            this.SetParamSimple(map, prefix + "IsDomestic", this.IsDomestic);
         }
     }
 }

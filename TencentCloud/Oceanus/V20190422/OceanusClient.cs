@@ -94,7 +94,6 @@ namespace TencentCloud.Oceanus.V20190422
 
         /// <summary>
         /// 单条和批量复制作业
-        /// https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
         /// </summary>
         /// <param name="req"><see cref="CopyJobsRequest"/></param>
         /// <returns><see cref="CopyJobsResponse"/></returns>
@@ -115,7 +114,6 @@ namespace TencentCloud.Oceanus.V20190422
 
         /// <summary>
         /// 单条和批量复制作业
-        /// https://iwiki.woa.com/pages/viewpage.action?pageId=1288112774
         /// </summary>
         /// <param name="req"><see cref="CopyJobsRequest"/></param>
         /// <returns><see cref="CopyJobsResponse"/></returns>

@@ -25,6 +25,18 @@ namespace TencentCloud.Oceanus.V20190422.Models
     {
         
         /// <summary>
+        /// 新建文件夹名
+        /// </summary>
+        [JsonProperty("FolderName")]
+        public string FolderName{ get; set; }
+
+        /// <summary>
+        /// 新建文件夹的父目录ID
+        /// </summary>
+        [JsonProperty("ParentId")]
+        public string ParentId{ get; set; }
+
+        /// <summary>
         /// 文件夹类型，0是任务文件夹，1是依赖文件夹
         /// </summary>
         [JsonProperty("FolderType")]
@@ -42,6 +54,8 @@ namespace TencentCloud.Oceanus.V20190422.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "FolderName", this.FolderName);
+            this.SetParamSimple(map, prefix + "ParentId", this.ParentId);
             this.SetParamSimple(map, prefix + "FolderType", this.FolderType);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
         }

@@ -137,10 +137,17 @@ namespace TencentCloud.As.V20180419.Models
         public string[] InstanceTypes{ get; set; }
 
         /// <summary>
-        /// 标签列表。
+        /// 实例标签列表。扩容出来的实例会自动带上标签，最多支持10个标签。
         /// </summary>
         [JsonProperty("InstanceTags")]
         public InstanceTag[] InstanceTags{ get; set; }
+
+        /// <summary>
+        /// 标签列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
 
         /// <summary>
         /// 版本号。
@@ -217,6 +224,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceMarketOptions.", this.InstanceMarketOptions);
             this.SetParamArraySimple(map, prefix + "InstanceTypes.", this.InstanceTypes);
             this.SetParamArrayObj(map, prefix + "InstanceTags.", this.InstanceTags);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamSimple(map, prefix + "VersionNumber", this.VersionNumber);
             this.SetParamSimple(map, prefix + "UpdatedTime", this.UpdatedTime);
             this.SetParamSimple(map, prefix + "CamRoleName", this.CamRoleName);

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F16DC90-05EE-3957-8F24-A2C848589A95}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.565</VersionPrefix>
+    <VersionPrefix>3.0.566</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,8 @@
     <Compile Include="V20180525\Models\CreateEKSClusterResponse.cs" />
     <Compile Include="V20180525\Models\CreateEKSContainerInstancesRequest.cs" />
     <Compile Include="V20180525\Models\CreateEKSContainerInstancesResponse.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeLogConfigRequest.cs" />
+    <Compile Include="V20180525\Models\CreateEdgeLogConfigResponse.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheRequest.cs" />
     <Compile Include="V20180525\Models\CreateImageCacheResponse.cs" />
     <Compile Include="V20180525\Models\CreatePrometheusAlertPolicyRequest.cs" />
@@ -199,6 +201,8 @@
     <Compile Include="V20180525\Models\DescribeClusterEndpointStatusResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterEndpointVipStatusResponse.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointsRequest.cs" />
+    <Compile Include="V20180525\Models\DescribeClusterEndpointsResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesRequest.cs" />
     <Compile Include="V20180525\Models\DescribeClusterInstancesResponse.cs" />
     <Compile Include="V20180525\Models\DescribeClusterKubeconfigRequest.cs" />
@@ -371,6 +375,8 @@
     <Compile Include="V20180525\Models\ImageCacheEvent.cs" />
     <Compile Include="V20180525\Models\ImageInstance.cs" />
     <Compile Include="V20180525\Models\ImageRegistryCredential.cs" />
+    <Compile Include="V20180525\Models\InstallEdgeLogAgentRequest.cs" />
+    <Compile Include="V20180525\Models\InstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\InstallLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\InstallLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\Instance.cs" />
@@ -483,6 +489,8 @@
     <Compile Include="V20180525\Models\TaskStepInfo.cs" />
     <Compile Include="V20180525\Models\TcpSocket.cs" />
     <Compile Include="V20180525\Models\Toleration.cs" />
+    <Compile Include="V20180525\Models\UninstallEdgeLogAgentRequest.cs" />
+    <Compile Include="V20180525\Models\UninstallEdgeLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UninstallLogAgentRequest.cs" />
     <Compile Include="V20180525\Models\UninstallLogAgentResponse.cs" />
     <Compile Include="V20180525\Models\UpdateClusterVersionRequest.cs" />
