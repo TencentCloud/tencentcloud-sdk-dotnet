@@ -31,6 +31,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("AmountBeforeTax")]
         public string AmountBeforeTax{ get; set; }
 
+        /// <summary>
+        /// 两位精度税前金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AmountBeforeTaxWithTwoDigitPrecision")]
+        public string AmountBeforeTaxWithTwoDigitPrecision{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +45,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "AmountBeforeTax", this.AmountBeforeTax);
+            this.SetParamSimple(map, prefix + "AmountBeforeTaxWithTwoDigitPrecision", this.AmountBeforeTaxWithTwoDigitPrecision);
         }
     }
 }

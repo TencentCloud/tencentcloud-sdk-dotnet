@@ -78,6 +78,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("Status")]
         public long?[] Status{ get; set; }
 
+        /// <summary>
+        /// 按所属集群ID过滤
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string[] ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamArraySimple(map, prefix + "InstanceName.", this.InstanceName);
             this.SetParamArraySimple(map, prefix + "FenceId.", this.FenceId);
             this.SetParamArraySimple(map, prefix + "Status.", this.Status);
+            this.SetParamArraySimple(map, prefix + "ClusterId.", this.ClusterId);
         }
     }
 }

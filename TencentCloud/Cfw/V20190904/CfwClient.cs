@@ -253,7 +253,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建防火墙实例
+        /// 创建NAT防火墙实例（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>
         /// <returns><see cref="CreateNatFwInstanceResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建防火墙实例
+        /// 创建NAT防火墙实例（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceRequest"/></param>
         /// <returns><see cref="CreateNatFwInstanceResponse"/></returns>

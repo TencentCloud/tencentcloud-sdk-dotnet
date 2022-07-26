@@ -60,6 +60,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 活动ID
+        /// </summary>
+        [JsonProperty("MpTpl")]
+        public string MpTpl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "BatchType", this.BatchType);
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamSimple(map, prefix + "MpTpl", this.MpTpl);
         }
     }
 }

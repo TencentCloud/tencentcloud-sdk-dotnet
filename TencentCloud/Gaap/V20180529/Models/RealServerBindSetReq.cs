@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? RealServerWeight{ get; set; }
 
         /// <summary>
-        /// 源站主备角色：master主，slave备，该参数必须在监听器打开了源站主备模式，且监听器类型为TCP监听器
+        /// 源站主备角色：master表示主，slave表示备，该参数必须在监听器打开了源站主备模式。
         /// </summary>
         [JsonProperty("RealServerFailoverRole")]
         public string RealServerFailoverRole{ get; set; }

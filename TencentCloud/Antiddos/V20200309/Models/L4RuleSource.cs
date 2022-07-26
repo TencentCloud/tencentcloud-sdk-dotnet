@@ -43,6 +43,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("Port")]
         public ulong? Port{ get; set; }
 
+        /// <summary>
+        /// 备份源站，1: 备份源站，0: 普通源站
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Backup")]
+        public ulong? Backup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +59,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "Source", this.Source);
             this.SetParamSimple(map, prefix + "Weight", this.Weight);
             this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "Backup", this.Backup);
         }
     }
 }

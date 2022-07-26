@@ -37,7 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong?[] Ports{ get; set; }
 
         /// <summary>
-        /// 监听器源站调度策略，支持轮询（rr），加权轮询（wrr），最小连接数（lc）。
+        /// 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public ulong? HealthCheck{ get; set; }
 
         /// <summary>
-        /// 监听器对应源站类型，支持IP或者DOMAIN类型。DOMAIN源站类型不支持wrr的源站调度策略。
+        /// 监听器绑定源站类型。IP表示IP地址，DOMAIN表示域名。
         /// </summary>
         [JsonProperty("RealServerType")]
         public string RealServerType{ get; set; }

@@ -49,13 +49,13 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public long? ProductId{ get; set; }
 
         /// <summary>
-        /// 集群类型, 0:公有云, 1:金融围笼
+        /// 集群类型, 0:公有云, 1:金融围笼, 2:CDC集群
         /// </summary>
         [JsonProperty("Type")]
         public long? Type{ get; set; }
 
         /// <summary>
-        /// 主机类型, 0:物理机, 1:cvm本地盘, 2:cvm云盘
+        /// 主机类型, 0:物理机, 1:CVM机型, 2:CDC机型
         /// </summary>
         [JsonProperty("HostType")]
         public long? HostType{ get; set; }
@@ -169,11 +169,18 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 围笼ID
+        /// 金融围笼ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FenceId")]
         public string FenceId{ get; set; }
+
+        /// <summary>
+        /// 所属集群ID(默认集群为空)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
 
         /// <summary>
@@ -206,6 +213,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "DiskAssignable", this.DiskAssignable);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "FenceId", this.FenceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

@@ -25,6 +25,12 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 调用方用户信息，userId 必填
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 签署流程编号,由CreateFlow接口返回
         /// </summary>
         [JsonProperty("FlowId")]
@@ -41,18 +47,6 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }
-
-        /// <summary>
-        /// 无
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 应用相关信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
 
         /// <summary>
         /// 内容控件信息数组
@@ -73,20 +67,26 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("ClientToken")]
         public string ClientToken{ get; set; }
 
+        /// <summary>
+        /// 应用相关信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArrayObj(map, prefix + "FormFields.", this.FormFields);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

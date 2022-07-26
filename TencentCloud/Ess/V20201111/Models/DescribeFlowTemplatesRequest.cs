@@ -25,22 +25,10 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 操作人信息
+        /// 调用方用户信息，userId 必填
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 查询偏移位置，默认0
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
-        /// 查询个数，默认20，最大100
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
 
         /// <summary>
         /// 搜索条件，具体参考Filter结构体。本接口取值：template-id：按照【 **模板唯一标识** 】进行过滤
@@ -49,10 +37,22 @@ namespace TencentCloud.Ess.V20201111.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 应用相关信息
+        /// 查询个数，默认20，最大100
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 查询偏移位置，默认0
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public long? ContentType{ get; set; }
 
         /// <summary>
         /// 暂未开放
@@ -61,10 +61,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? GenerateSource{ get; set; }
 
         /// <summary>
-        /// 查询内容：0-模板列表及详情（默认），1-仅模板列表
+        /// 应用相关信息
         /// </summary>
-        [JsonProperty("ContentType")]
-        public long? ContentType{ get; set; }
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -73,12 +73,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
+            this.SetParamSimple(map, prefix + "GenerateSource", this.GenerateSource);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

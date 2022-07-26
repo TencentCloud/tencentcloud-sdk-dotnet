@@ -25,16 +25,16 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 调用方用户信息，userId 必填
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 需要查询的流程ID列表
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
-
-        /// <summary>
-        /// 操作人信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
 
         /// <summary>
         /// 应用相关信息
@@ -48,8 +48,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

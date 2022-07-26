@@ -213,6 +213,86 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 复制组实例更换角色
+        /// </summary>
+        /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
+        /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
+        public async Task<ChangeInstanceRoleResponse> ChangeInstanceRole(ChangeInstanceRoleRequest req)
+        {
+             JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeInstanceRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeInstanceRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 复制组实例更换角色
+        /// </summary>
+        /// <param name="req"><see cref="ChangeInstanceRoleRequest"/></param>
+        /// <returns><see cref="ChangeInstanceRoleResponse"/></returns>
+        public ChangeInstanceRoleResponse ChangeInstanceRoleSync(ChangeInstanceRoleRequest req)
+        {
+             JsonResponseModel<ChangeInstanceRoleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeInstanceRole");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeInstanceRoleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 复制组实例切主
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
+        /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
+        public async Task<ChangeMasterInstanceResponse> ChangeMasterInstance(ChangeMasterInstanceRequest req)
+        {
+             JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChangeMasterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeMasterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 复制组实例切主
+        /// </summary>
+        /// <param name="req"><see cref="ChangeMasterInstanceRequest"/></param>
+        /// <returns><see cref="ChangeMasterInstanceResponse"/></returns>
+        public ChangeMasterInstanceResponse ChangeMasterInstanceSync(ChangeMasterInstanceRequest req)
+        {
+             JsonResponseModel<ChangeMasterInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChangeMasterInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChangeMasterInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口仅支持多AZ实例副本组提主和单AZ副本提主
         /// </summary>
         /// <param name="req"><see cref="ChangeReplicaToMasterRequest"/></param>

@@ -180,6 +180,13 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("AnycastOutPackRelation")]
         public AnycastOutPackRelation AnycastOutPackRelation{ get; set; }
 
+        /// <summary>
+        /// 资源实例版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceVersion")]
+        public ulong? InstanceVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -208,6 +215,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "BGPIPChannelFlag", this.BGPIPChannelFlag);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
             this.SetParamObj(map, prefix + "AnycastOutPackRelation.", this.AnycastOutPackRelation);
+            this.SetParamSimple(map, prefix + "InstanceVersion", this.InstanceVersion);
         }
     }
 }

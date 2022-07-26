@@ -25,6 +25,12 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
+        /// 调用方用户信息，userId 必填
+        /// </summary>
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
+
+        /// <summary>
         /// 签署流程名称,最大长度200个字符
         /// </summary>
         [JsonProperty("FlowName")]
@@ -43,16 +49,10 @@ namespace TencentCloud.Ess.V20201111.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 调用方用户信息
+        /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
         /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
-
-        /// <summary>
-        /// 应用号信息
-        /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
+        [JsonProperty("FlowType")]
+        public string FlowType{ get; set; }
 
         /// <summary>
         /// 经办人内容控件配置。可选类型为：
@@ -64,6 +64,26 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }
+
+        /// <summary>
+        /// 被抄送人的信息列表。
+        /// 注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
+        /// </summary>
+        [JsonProperty("CcInfos")]
+        public CcInfo[] CcInfos{ get; set; }
+
+        /// <summary>
+        /// 是否需要预览，true：预览模式，false：非预览（默认）；
+        /// 预览链接有效期300秒；
+        /// </summary>
+        [JsonProperty("NeedPreview")]
+        public bool? NeedPreview{ get; set; }
+
+        /// <summary>
+        /// 签署流程描述,最大长度1000个字符
+        /// </summary>
+        [JsonProperty("FlowDescription")]
+        public string FlowDescription{ get; set; }
 
         /// <summary>
         /// 签署流程的签署截止时间。
@@ -82,36 +102,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public bool? Unordered{ get; set; }
 
         /// <summary>
-        /// 是否需要预览，true：预览模式，false：非预览（默认）；
-        /// 预览链接有效期300秒；
-        /// </summary>
-        [JsonProperty("NeedPreview")]
-        public bool? NeedPreview{ get; set; }
-
-        /// <summary>
-        /// 签署流程描述,最大长度1000个字符
-        /// </summary>
-        [JsonProperty("FlowDescription")]
-        public string FlowDescription{ get; set; }
-
-        /// <summary>
-        /// 签署流程的类型(如销售合同/入职合同等)，最大长度200个字符
-        /// </summary>
-        [JsonProperty("FlowType")]
-        public string FlowType{ get; set; }
-
-        /// <summary>
-        /// 被抄送人的信息列表。
-        /// 注:此功能为白名单功能，若有需要，请联系电子签客服开白使用
-        /// </summary>
-        [JsonProperty("CcInfos")]
-        public CcInfo[] CcInfos{ get; set; }
-
-        /// <summary>
         /// 合同显示的页卡模板，说明：只支持{合同名称}, {发起方企业}, {发起方姓名}, {签署方N企业}, {签署方N姓名}，且N不能超过签署人的数量，N从1开始
         /// </summary>
         [JsonProperty("CustomShowMap")]
         public string CustomShowMap{ get; set; }
+
+        /// <summary>
+        /// 应用号信息
+        /// </summary>
+        [JsonProperty("Agent")]
+        public Agent Agent{ get; set; }
 
 
         /// <summary>
@@ -119,19 +119,19 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamSimple(map, prefix + "FlowName", this.FlowName);
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamArraySimple(map, prefix + "FileIds.", this.FileIds);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamArrayObj(map, prefix + "Components.", this.Components);
-            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
-            this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
+            this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
             this.SetParamSimple(map, prefix + "NeedPreview", this.NeedPreview);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
-            this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
-            this.SetParamArrayObj(map, prefix + "CcInfos.", this.CcInfos);
+            this.SetParamSimple(map, prefix + "Deadline", this.Deadline);
+            this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+            this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }
 }

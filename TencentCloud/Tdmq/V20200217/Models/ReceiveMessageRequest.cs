@@ -43,7 +43,7 @@ namespace TencentCloud.Tdmq.V20200217.Models
         public long? ReceiverQueueSize{ get; set; }
 
         /// <summary>
-        /// 默认值为：Latest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
+        /// 默认值为：Earliest。用作判定consumer初始接收消息的位置，可选参数为：Earliest, Latest
         /// </summary>
         [JsonProperty("SubInitialPosition")]
         public string SubInitialPosition{ get; set; }

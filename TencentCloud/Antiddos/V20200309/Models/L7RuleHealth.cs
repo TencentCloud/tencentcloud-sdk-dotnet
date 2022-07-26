@@ -78,6 +78,42 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("StatusCode")]
         public ulong? StatusCode{ get; set; }
 
+        /// <summary>
+        /// 是否同时下发http和https规则健康检查配置
+        /// </summary>
+        [JsonProperty("ProtocolFlag")]
+        public ulong? ProtocolFlag{ get; set; }
+
+        /// <summary>
+        /// 被动探测开关，=1表示开启；=0表示关闭
+        /// </summary>
+        [JsonProperty("PassiveEnable")]
+        public ulong? PassiveEnable{ get; set; }
+
+        /// <summary>
+        /// 被动探测不健康屏蔽时间
+        /// </summary>
+        [JsonProperty("BlockInter")]
+        public ulong? BlockInter{ get; set; }
+
+        /// <summary>
+        /// 被动探测不健康统计间隔
+        /// </summary>
+        [JsonProperty("FailedCountInter")]
+        public ulong? FailedCountInter{ get; set; }
+
+        /// <summary>
+        /// 被动探测不健康阈值
+        /// </summary>
+        [JsonProperty("FailedThreshold")]
+        public ulong? FailedThreshold{ get; set; }
+
+        /// <summary>
+        /// 被动探测判定正常状态码，1xx =1, 2xx=2, 3xx=4, 4xx=8,5xx=16，多个状态码值加和
+        /// </summary>
+        [JsonProperty("PassiveStatusCode")]
+        public ulong? PassiveStatusCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +129,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "KickNum", this.KickNum);
             this.SetParamSimple(map, prefix + "Method", this.Method);
             this.SetParamSimple(map, prefix + "StatusCode", this.StatusCode);
+            this.SetParamSimple(map, prefix + "ProtocolFlag", this.ProtocolFlag);
+            this.SetParamSimple(map, prefix + "PassiveEnable", this.PassiveEnable);
+            this.SetParamSimple(map, prefix + "BlockInter", this.BlockInter);
+            this.SetParamSimple(map, prefix + "FailedCountInter", this.FailedCountInter);
+            this.SetParamSimple(map, prefix + "FailedThreshold", this.FailedThreshold);
+            this.SetParamSimple(map, prefix + "PassiveStatusCode", this.PassiveStatusCode);
         }
     }
 }

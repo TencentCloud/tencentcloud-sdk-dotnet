@@ -37,10 +37,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public string RuleId{ get; set; }
 
         /// <summary>
-        /// 调度策略，其中：
-        /// rr，轮询；
-        /// wrr，加权轮询；
-        /// lc，最小连接数。
+        /// 监听器源站访问策略，其中：rr表示轮询；wrr表示加权轮询；lc表示最小连接数；lrtt表示最小时延。
         /// </summary>
         [JsonProperty("Scheduler")]
         public string Scheduler{ get; set; }

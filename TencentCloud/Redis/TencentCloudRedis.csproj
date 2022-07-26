@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{4D99E92F-0CD8-3F98-B58C-498F1C545766}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.566</VersionPrefix>
+    <VersionPrefix>3.0.567</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,10 @@
     <Compile Include="V20180412\Models\BackupDownloadInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyInfo.cs" />
     <Compile Include="V20180412\Models\BigKeyTypeInfo.cs" />
+    <Compile Include="V20180412\Models\ChangeInstanceRoleRequest.cs" />
+    <Compile Include="V20180412\Models\ChangeInstanceRoleResponse.cs" />
+    <Compile Include="V20180412\Models\ChangeMasterInstanceRequest.cs" />
+    <Compile Include="V20180412\Models\ChangeMasterInstanceResponse.cs" />
     <Compile Include="V20180412\Models\ChangeReplicaToMasterRequest.cs" />
     <Compile Include="V20180412\Models\ChangeReplicaToMasterResponse.cs" />
     <Compile Include="V20180412\Models\CleanUpInstanceRequest.cs" />

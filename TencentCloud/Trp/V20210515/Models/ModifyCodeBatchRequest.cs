@@ -48,6 +48,24 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("MpTpl")]
         public string MpTpl{ get; set; }
 
+        /// <summary>
+        /// 商户ID
+        /// </summary>
+        [JsonProperty("MerchantId")]
+        public string MerchantId{ get; set; }
+
+        /// <summary>
+        /// 商品ID
+        /// </summary>
+        [JsonProperty("ProductId")]
+        public string ProductId{ get; set; }
+
+        /// <summary>
+        /// 备注
+        /// </summary>
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "MpTpl", this.MpTpl);
+            this.SetParamSimple(map, prefix + "MerchantId", this.MerchantId);
+            this.SetParamSimple(map, prefix + "ProductId", this.ProductId);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

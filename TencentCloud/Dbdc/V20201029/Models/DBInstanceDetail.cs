@@ -115,6 +115,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public long? ShardNum{ get; set; }
 
         /// <summary>
+        /// 地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
         /// 可用区
         /// </summary>
         [JsonProperty("Zone")]
@@ -138,6 +144,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
         [JsonProperty("DbEngine")]
         public string DbEngine{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -159,10 +171,12 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "Memory", this.Memory);
             this.SetParamSimple(map, prefix + "Disk", this.Disk);
             this.SetParamSimple(map, prefix + "ShardNum", this.ShardNum);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "DbHosts", this.DbHosts);
             this.SetParamSimple(map, prefix + "HostRole", this.HostRole);
             this.SetParamSimple(map, prefix + "DbEngine", this.DbEngine);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

@@ -169,11 +169,18 @@ namespace TencentCloud.Dbdc.V20201029.Models
         public string Zone{ get; set; }
 
         /// <summary>
-        /// 围笼ID
+        /// 金融围笼ID
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FenceId")]
         public string FenceId{ get; set; }
+
+        /// <summary>
+        /// 所属集群ID(默认集群为空)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -212,6 +219,7 @@ namespace TencentCloud.Dbdc.V20201029.Models
             this.SetParamSimple(map, prefix + "DiskAssignable", this.DiskAssignable);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "FenceId", this.FenceId);
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
