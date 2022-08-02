@@ -853,6 +853,46 @@ namespace TencentCloud.Tcb.V20180608
         }
 
         /// <summary>
+        /// 获取新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaasPackageListRequest"/></param>
+        /// <returns><see cref="DescribeBaasPackageListResponse"/></returns>
+        public async Task<DescribeBaasPackageListResponse> DescribeBaasPackageList(DescribeBaasPackageListRequest req)
+        {
+             JsonResponseModel<DescribeBaasPackageListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBaasPackageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaasPackageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取新套餐列表，含详情，如果传了PackageId，则只获取指定套餐详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBaasPackageListRequest"/></param>
+        /// <returns><see cref="DescribeBaasPackageListResponse"/></returns>
+        public DescribeBaasPackageListResponse DescribeBaasPackageListSync(DescribeBaasPackageListRequest req)
+        {
+             JsonResponseModel<DescribeBaasPackageListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBaasPackageList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBaasPackageListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云托管代码上传url
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudBaseBuildServiceRequest"/></param>

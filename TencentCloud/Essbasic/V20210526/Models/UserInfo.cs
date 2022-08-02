@@ -25,7 +25,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 用户在渠道的编号
+        /// 用户在渠道的编号，最大64位字符串
         /// </summary>
         [JsonProperty("OpenId")]
         public string OpenId{ get; set; }

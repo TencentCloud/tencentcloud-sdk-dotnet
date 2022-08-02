@@ -36,6 +36,14 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
+        /// <summary>
+        /// 类型列表，取值有：
+        /// <li>OfficialRec：官方推荐；</li>
+        /// <li>Customize：自定义。</li>
+        /// </summary>
+        [JsonProperty("Types")]
+        public string[] Types{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +52,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         {
             this.SetParamSimple(map, prefix + "AppName", this.AppName);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamArraySimple(map, prefix + "Types.", this.Types);
         }
     }
 }

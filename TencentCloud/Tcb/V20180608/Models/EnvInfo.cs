@@ -175,6 +175,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("IsDauPackage")]
         public bool? IsDauPackage{ get; set; }
 
+        /// <summary>
+        /// 套餐类型:空\baas\tcbr
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PackageType")]
+        public string PackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +210,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamArrayObj(map, prefix + "CustomLogServices.", this.CustomLogServices);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
             this.SetParamSimple(map, prefix + "IsDauPackage", this.IsDauPackage);
+            this.SetParamSimple(map, prefix + "PackageType", this.PackageType);
         }
     }
 }

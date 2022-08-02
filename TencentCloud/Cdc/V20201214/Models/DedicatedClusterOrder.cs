@@ -125,6 +125,27 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("PayStatus")]
         public long? PayStatus{ get; set; }
 
+        /// <summary>
+        /// 支付方式，一次性、按月、按年
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayType")]
+        public string PayType{ get; set; }
+
+        /// <summary>
+        /// 购买时长的单位
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeUnit")]
+        public string TimeUnit{ get; set; }
+
+        /// <summary>
+        /// 购买时长
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeSpan")]
+        public long? TimeSpan{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +168,9 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "Mem", this.Mem);
             this.SetParamSimple(map, prefix + "Gpu", this.Gpu);
             this.SetParamSimple(map, prefix + "PayStatus", this.PayStatus);
+            this.SetParamSimple(map, prefix + "PayType", this.PayType);
+            this.SetParamSimple(map, prefix + "TimeUnit", this.TimeUnit);
+            this.SetParamSimple(map, prefix + "TimeSpan", this.TimeSpan);
         }
     }
 }

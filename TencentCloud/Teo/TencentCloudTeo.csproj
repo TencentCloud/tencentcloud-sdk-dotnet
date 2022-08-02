@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -305,6 +305,7 @@
     <Compile Include="V20220106\Models\RateLimitUserRule.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneRequest.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneResponse.cs" />
+    <Compile Include="V20220106\Models\Resource.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsResponse.cs" />
     <Compile Include="V20220106\Models\SecEntry.cs" />
@@ -314,6 +315,7 @@
     <Compile Include="V20220106\Models\ServerCertInfo.cs" />
     <Compile Include="V20220106\Models\ShieldArea.cs" />
     <Compile Include="V20220106\Models\SmartRouting.cs" />
+    <Compile Include="V20220106\Models\Sv.cs" />
     <Compile Include="V20220106\Models\SwitchConfig.cs" />
     <Compile Include="V20220106\Models\Tag.cs" />
     <Compile Include="V20220106\Models\Task.cs" />

@@ -857,6 +857,46 @@ namespace TencentCloud.Waf.V20180125
         }
 
         /// <summary>
+        /// 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCdcClbWafRegionsRequest"/></param>
+        /// <returns><see cref="DescribeUserCdcClbWafRegionsResponse"/></returns>
+        public async Task<DescribeUserCdcClbWafRegionsResponse> DescribeUserCdcClbWafRegions(DescribeUserCdcClbWafRegionsRequest req)
+        {
+             JsonResponseModel<DescribeUserCdcClbWafRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeUserCdcClbWafRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserCdcClbWafRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在CDC场景下，负载均衡型WAF的添加、编辑域名配置的时候，需要展示CDC负载均衡型WAF（cdc-clb-waf)支持的地域列表，通过DescribeUserCdcClbWafRegions既可以获得当前对客户已经开放的地域列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeUserCdcClbWafRegionsRequest"/></param>
+        /// <returns><see cref="DescribeUserCdcClbWafRegionsResponse"/></returns>
+        public DescribeUserCdcClbWafRegionsResponse DescribeUserCdcClbWafRegionsSync(DescribeUserCdcClbWafRegionsRequest req)
+        {
+             JsonResponseModel<DescribeUserCdcClbWafRegionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeUserCdcClbWafRegions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserCdcClbWafRegionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在负载均衡型WAF的添加、编辑域名配置的时候，需要展示负载均衡型WAF（clb-waf)支持的地域列表，通过DescribeUserClbWafRegions既可以获得当前对客户已经开放的地域列表
         /// </summary>
         /// <param name="req"><see cref="DescribeUserClbWafRegionsRequest"/></param>

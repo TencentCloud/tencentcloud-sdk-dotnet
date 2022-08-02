@@ -1,0 +1,185 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{A7034962-C435-3A45-87B2-3361AA3AA876}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.0</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Pts</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210728\PtsClient.cs" />
+    <Compile Include="V20210728\Models\AbortCronJobsRequest.cs" />
+    <Compile Include="V20210728\Models\AbortCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\AbortJobRequest.cs" />
+    <Compile Include="V20210728\Models\AbortJobResponse.cs" />
+    <Compile Include="V20210728\Models\AdjustJobSpeedRequest.cs" />
+    <Compile Include="V20210728\Models\AdjustJobSpeedResponse.cs" />
+    <Compile Include="V20210728\Models\AggregationLegend.cs" />
+    <Compile Include="V20210728\Models\AlertChannel.cs" />
+    <Compile Include="V20210728\Models\AlertChannelRecord.cs" />
+    <Compile Include="V20210728\Models\AlertRecord.cs" />
+    <Compile Include="V20210728\Models\AlertRecordStatus.cs" />
+    <Compile Include="V20210728\Models\Attributes.cs" />
+    <Compile Include="V20210728\Models\CheckSummary.cs" />
+    <Compile Include="V20210728\Models\Concurrency.cs" />
+    <Compile Include="V20210728\Models\CopyScenarioRequest.cs" />
+    <Compile Include="V20210728\Models\CopyScenarioResponse.cs" />
+    <Compile Include="V20210728\Models\CreateAlertChannelRequest.cs" />
+    <Compile Include="V20210728\Models\CreateAlertChannelResponse.cs" />
+    <Compile Include="V20210728\Models\CreateCronJobRequest.cs" />
+    <Compile Include="V20210728\Models\CreateCronJobResponse.cs" />
+    <Compile Include="V20210728\Models\CreateFileRequest.cs" />
+    <Compile Include="V20210728\Models\CreateFileResponse.cs" />
+    <Compile Include="V20210728\Models\CreateProjectRequest.cs" />
+    <Compile Include="V20210728\Models\CreateProjectResponse.cs" />
+    <Compile Include="V20210728\Models\CreateScenarioRequest.cs" />
+    <Compile Include="V20210728\Models\CreateScenarioResponse.cs" />
+    <Compile Include="V20210728\Models\Credentials.cs" />
+    <Compile Include="V20210728\Models\CronJob.cs" />
+    <Compile Include="V20210728\Models\CustomSample.cs" />
+    <Compile Include="V20210728\Models\CustomSampleMatrix.cs" />
+    <Compile Include="V20210728\Models\DNSConfig.cs" />
+    <Compile Include="V20210728\Models\DeleteAlertChannelRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteAlertChannelResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteCronJobsRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteFilesRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteFilesResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteJobsRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteProjectsRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteProjectsResponse.cs" />
+    <Compile Include="V20210728\Models\DeleteScenariosRequest.cs" />
+    <Compile Include="V20210728\Models\DeleteScenariosResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeAlertChannelsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeAlertChannelsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeAlertRecordsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeAlertRecordsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeAvailableMetricsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeAvailableMetricsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeCheckSummaryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeCheckSummaryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeCronJobsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeFilesRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeFilesResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeJobsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeLabelValuesRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeLabelValuesResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeMetricLabelWithValuesRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeMetricLabelWithValuesResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeNormalLogsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeNormalLogsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeProjectsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeProjectsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeRegionsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeRequestSummaryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeRequestSummaryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleBatchQueryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleBatchQueryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleLogsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleLogsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleMatrixBatchQueryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleMatrixBatchQueryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleMatrixQueryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleMatrixQueryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleQueryRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeSampleQueryResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeScenarioWithJobsRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeScenarioWithJobsResponse.cs" />
+    <Compile Include="V20210728\Models\DescribeScenariosRequest.cs" />
+    <Compile Include="V20210728\Models\DescribeScenariosResponse.cs" />
+    <Compile Include="V20210728\Models\DomainNameConfig.cs" />
+    <Compile Include="V20210728\Models\File.cs" />
+    <Compile Include="V20210728\Models\FileInfo.cs" />
+    <Compile Include="V20210728\Models\Filter.cs" />
+    <Compile Include="V20210728\Models\GenerateTmpKeyRequest.cs" />
+    <Compile Include="V20210728\Models\GenerateTmpKeyResponse.cs" />
+    <Compile Include="V20210728\Models\GeoRegionsLoadItem.cs" />
+    <Compile Include="V20210728\Models\HostAlias.cs" />
+    <Compile Include="V20210728\Models\InternalMetricQuery.cs" />
+    <Compile Include="V20210728\Models\Job.cs" />
+    <Compile Include="V20210728\Models\Label.cs" />
+    <Compile Include="V20210728\Models\LabelWithValues.cs" />
+    <Compile Include="V20210728\Models\Load.cs" />
+    <Compile Include="V20210728\Models\LoadSource.cs" />
+    <Compile Include="V20210728\Models\LoadSpec.cs" />
+    <Compile Include="V20210728\Models\MetricInfo.cs" />
+    <Compile Include="V20210728\Models\MetricLabelWithValues.cs" />
+    <Compile Include="V20210728\Models\NormalLog.cs" />
+    <Compile Include="V20210728\Models\Project.cs" />
+    <Compile Include="V20210728\Models\ProtocolInfo.cs" />
+    <Compile Include="V20210728\Models\ReactionTimeRange.cs" />
+    <Compile Include="V20210728\Models\RegionDetail.cs" />
+    <Compile Include="V20210728\Models\RequestSummary.cs" />
+    <Compile Include="V20210728\Models\RequestsPerSecond.cs" />
+    <Compile Include="V20210728\Models\RestartCronJobsRequest.cs" />
+    <Compile Include="V20210728\Models\RestartCronJobsResponse.cs" />
+    <Compile Include="V20210728\Models\SLALabel.cs" />
+    <Compile Include="V20210728\Models\SLAPolicy.cs" />
+    <Compile Include="V20210728\Models\SLARule.cs" />
+    <Compile Include="V20210728\Models\SampleLog.cs" />
+    <Compile Include="V20210728\Models\SamplePair.cs" />
+    <Compile Include="V20210728\Models\SampleStream.cs" />
+    <Compile Include="V20210728\Models\Scenario.cs" />
+    <Compile Include="V20210728\Models\ScenarioRelatedJobsParams.cs" />
+    <Compile Include="V20210728\Models\ScenarioWithJobs.cs" />
+    <Compile Include="V20210728\Models\ScriptInfo.cs" />
+    <Compile Include="V20210728\Models\ScriptOrigin.cs" />
+    <Compile Include="V20210728\Models\Stage.cs" />
+    <Compile Include="V20210728\Models\StartJobRequest.cs" />
+    <Compile Include="V20210728\Models\StartJobResponse.cs" />
+    <Compile Include="V20210728\Models\TagSpec.cs" />
+    <Compile Include="V20210728\Models\TestData.cs" />
+    <Compile Include="V20210728\Models\UpdateCronJobRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateCronJobResponse.cs" />
+    <Compile Include="V20210728\Models\UpdateFileScenarioRelationRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateFileScenarioRelationResponse.cs" />
+    <Compile Include="V20210728\Models\UpdateJobRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateJobResponse.cs" />
+    <Compile Include="V20210728\Models\UpdateProjectRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateProjectResponse.cs" />
+    <Compile Include="V20210728\Models\UpdateScenarioRequest.cs" />
+    <Compile Include="V20210728\Models\UpdateScenarioResponse.cs" />
+    <Compile Include="V20210728\Models\VpcLoadDistribution.cs" />
+  </ItemGroup>
+</Project>

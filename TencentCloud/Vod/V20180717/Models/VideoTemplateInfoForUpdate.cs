@@ -60,7 +60,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public string ResolutionAdaptive{ get; set; }
 
         /// <summary>
-        /// 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+        /// 视频流宽度（或长边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
         /// <li>当 Width、Height 均为 0，则分辨率同源；</li>
         /// <li>当 Width 为 0，Height 非 0，则 Width 按比例缩放；</li>
         /// <li>当 Width 非 0，Height 为 0，则 Height 按比例缩放；</li>
@@ -70,7 +70,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public ulong? Width{ get; set; }
 
         /// <summary>
-        /// 视频流高度（或短边）的最大值，取值范围：0 和 [128, 4096]，单位：px。
+        /// 视频流高度（或短边）的最大值，取值范围：0 和 [128, 8192]，单位：px。
         /// </summary>
         [JsonProperty("Height")]
         public ulong? Height{ get; set; }
@@ -103,6 +103,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Gop")]
         public ulong? Gop{ get; set; }
 
+        /// <summary>
+        /// 当原始视频为 HDR（High Dynamic Range）时，转码输出是否依然保持 HDR。取值范围：
+        /// <li>ON: 如果原始文件是 HDR，则转码输出保持 HDR；否则转码输出为 SDR （Standard Dynamic Range）。</li>
+        /// <li>OFF: 无论原始文件是 HDR 还是 SDR，转码输出均为 SDR。</li>
+        /// </summary>
+        [JsonProperty("PreserveHDRSwitch")]
+        public string PreserveHDRSwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +126,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "FillType", this.FillType);
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
+            this.SetParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
         }
     }
 }

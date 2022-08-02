@@ -133,7 +133,7 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
-        /// 获取推荐歌单列表。
+        /// 获取歌单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
         /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
-        /// 获取推荐歌单列表。
+        /// 获取歌单列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistsRequest"/></param>
         /// <returns><see cref="DescribeKTVPlaylistsResponse"/></returns>

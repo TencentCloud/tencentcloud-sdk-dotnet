@@ -67,6 +67,13 @@ namespace TencentCloud.Faceid.V20180301.Models
         public IntentionVerifyData IntentionVerifyData{ get; set; }
 
         /// <summary>
+        /// 意愿核身问答模式结果。若未使用该意愿核身功能，该字段返回值可以不处理。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IntentionQuestionResult")]
+        public IntentionQuestionResult IntentionQuestionResult{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -84,6 +91,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamObj(map, prefix + "VideoData.", this.VideoData);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamObj(map, prefix + "IntentionVerifyData.", this.IntentionVerifyData);
+            this.SetParamObj(map, prefix + "IntentionQuestionResult.", this.IntentionQuestionResult);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

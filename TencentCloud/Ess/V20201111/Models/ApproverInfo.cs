@@ -47,7 +47,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ApproverMobile{ get; set; }
 
         /// <summary>
-        /// 本环节操作人签署控件配置，为企业静默签署时，只允许类型为SIGN_SEAL（印章）和SIGN_DATE（日期）控件，并且传入印章编号。
+        /// 本环节操作人签署控件配置
         /// </summary>
         [JsonProperty("SignComponents")]
         public Component[] SignComponents{ get; set; }

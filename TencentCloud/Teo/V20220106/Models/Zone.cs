@@ -100,6 +100,22 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 计费资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource[] Resources{ get; set; }
+
+        /// <summary>
+        /// 是否开启cname加速
+        /// - enabled 开启
+        /// - disabled 关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +133,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
         }
     }
 }

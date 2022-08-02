@@ -4273,6 +4273,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(ModifyInstancePasswordComplexity)用于修改云数据库实例的密码复杂度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordComplexityResponse"/></returns>
+        public async Task<ModifyInstancePasswordComplexityResponse> ModifyInstancePasswordComplexity(ModifyInstancePasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyInstancePasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(ModifyInstancePasswordComplexity)用于修改云数据库实例的密码复杂度。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyInstancePasswordComplexityRequest"/></param>
+        /// <returns><see cref="ModifyInstancePasswordComplexityResponse"/></returns>
+        public ModifyInstancePasswordComplexityResponse ModifyInstancePasswordComplexitySync(ModifyInstancePasswordComplexityRequest req)
+        {
+             JsonResponseModel<ModifyInstancePasswordComplexityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyInstancePasswordComplexity");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyInstancePasswordComplexityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyInstanceTag)用于对实例标签进行添加、修改或者删除。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceTagRequest"/></param>

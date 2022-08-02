@@ -55,12 +55,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowType{ get; set; }
 
         /// <summary>
-        /// 经办人内容控件配置。可选类型为：
-        /// TEXT - 内容文本控件
-        /// MULTI_LINE_TEXT - 多行文本控件
-        /// CHECK_BOX - 勾选框控件
-        /// ATTACHMENT - 附件
-        /// 注：默认字体大小为 字号12
+        /// 经办人内容控件配置
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

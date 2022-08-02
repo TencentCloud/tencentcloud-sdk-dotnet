@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{063A4C4C-6C7D-3224-9E41-E2850C3FB7E6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -51,6 +51,8 @@
     <Compile Include="V20180409\Models\DeleteProbeTaskResponse.cs" />
     <Compile Include="V20180409\Models\DescribeDetailedSingleProbeDataRequest.cs" />
     <Compile Include="V20180409\Models\DescribeDetailedSingleProbeDataResponse.cs" />
+    <Compile Include="V20180409\Models\DescribeNodesRequest.cs" />
+    <Compile Include="V20180409\Models\DescribeNodesResponse.cs" />
     <Compile Include="V20180409\Models\DescribeProbeMetricDataRequest.cs" />
     <Compile Include="V20180409\Models\DescribeProbeMetricDataResponse.cs" />
     <Compile Include="V20180409\Models\DescribeProbeNodesRequest.cs" />
@@ -62,6 +64,7 @@
     <Compile Include="V20180409\Models\KeyValuePair.cs" />
     <Compile Include="V20180409\Models\Label.cs" />
     <Compile Include="V20180409\Models\NodeDefine.cs" />
+    <Compile Include="V20180409\Models\NodeDefineExt.cs" />
     <Compile Include="V20180409\Models\ProbeTask.cs" />
     <Compile Include="V20180409\Models\ProbeTaskBasicConfiguration.cs" />
     <Compile Include="V20180409\Models\ResumeProbeTaskRequest.cs" />

@@ -60,14 +60,34 @@ namespace TencentCloud.Faceid.V20180301.Models
         public string Avatar{ get; set; }
 
         /// <summary>
-        /// 开启身份证防翻拍告警功能后才会返回，返回数组中可能出现的告警码如下：
-        /// -9102 身份证复印件告警。
-        /// -9103 身份证翻拍告警。
-        /// -9106 身份证 PS 告警。
+        /// 身份证人像面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+        /// -9100 身份证有效日期不合法告警，
+        /// -9101 身份证边框不完整告警，
+        /// -9102 身份证复印件告警，
+        /// -9103 身份证翻拍告警，
+        /// -9105 身份证框内遮挡告警，
+        /// -9104 临时身份证告警，
+        /// -9106 身份证 PS 告警，
+        /// -9107 身份证反光告警。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WarnInfos")]
         public long?[] WarnInfos{ get; set; }
+
+        /// <summary>
+        /// 身份证国徽面告警码，开启身份证告警功能后才会返回，返回数组中可能出现的告警码如下：
+        /// -9100 身份证有效日期不合法告警，
+        /// -9101 身份证边框不完整告警，
+        /// -9102 身份证复印件告警，
+        /// -9103 身份证翻拍告警，
+        /// -9105 身份证框内遮挡告警，
+        /// -9104 临时身份证告警，
+        /// -9106 身份证 PS 告警，
+        /// -9107 身份证反光告警。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackWarnInfos")]
+        public long?[] BackWarnInfos{ get; set; }
 
 
         /// <summary>
@@ -81,6 +101,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ProcessedBackImage", this.ProcessedBackImage);
             this.SetParamSimple(map, prefix + "Avatar", this.Avatar);
             this.SetParamArraySimple(map, prefix + "WarnInfos.", this.WarnInfos);
+            this.SetParamArraySimple(map, prefix + "BackWarnInfos.", this.BackWarnInfos);
         }
     }
 }

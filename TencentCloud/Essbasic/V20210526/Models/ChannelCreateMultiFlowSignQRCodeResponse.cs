@@ -31,6 +31,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public SignQrCode QrCode{ get; set; }
 
         /// <summary>
+        /// 签署链接对象
+        /// </summary>
+        [JsonProperty("SignUrls")]
+        public SignUrl SignUrls{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "QrCode.", this.QrCode);
+            this.SetParamObj(map, prefix + "SignUrls.", this.SignUrls);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

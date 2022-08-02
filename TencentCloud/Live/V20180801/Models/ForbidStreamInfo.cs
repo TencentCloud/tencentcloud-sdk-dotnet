@@ -42,6 +42,20 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
+        /// <summary>
+        /// 推流路径。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppName")]
+        public string AppName{ get; set; }
+
+        /// <summary>
+        /// 推流域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +65,8 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "StreamName", this.StreamName);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "AppName", this.AppName);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
         }
     }
 }

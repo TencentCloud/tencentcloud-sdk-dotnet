@@ -125,6 +125,13 @@ namespace TencentCloud.Teo.V20220106.Models
         public Tag[] Tags{ get; set; }
 
         /// <summary>
+        /// 计费资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource[] Resources{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -150,6 +157,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

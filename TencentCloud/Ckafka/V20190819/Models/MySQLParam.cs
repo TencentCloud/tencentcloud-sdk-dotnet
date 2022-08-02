@@ -102,6 +102,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DataTargetRecordMapping")]
         public RecordMapping[] DataTargetRecordMapping{ get; set; }
 
+        /// <summary>
+        /// 事件路由到特定主题的正则表达式，默认为(.*)
+        /// </summary>
+        [JsonProperty("TopicRegex")]
+        public string TopicRegex{ get; set; }
+
+        /// <summary>
+        /// TopicRegex的引用组，指定$1、$2等
+        /// </summary>
+        [JsonProperty("TopicReplacement")]
+        public string TopicReplacement{ get; set; }
+
+        /// <summary>
+        /// 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+        /// </summary>
+        [JsonProperty("KeyColumns")]
+        public string KeyColumns{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DataTargetInsertMode", this.DataTargetInsertMode);
             this.SetParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
             this.SetParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
+            this.SetParamSimple(map, prefix + "TopicRegex", this.TopicRegex);
+            this.SetParamSimple(map, prefix + "TopicReplacement", this.TopicReplacement);
+            this.SetParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
         }
     }
 }

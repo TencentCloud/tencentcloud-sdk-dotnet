@@ -93,6 +93,48 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 指定需要批量撤回的签署流程Id，获取批量撤销链接
+        /// 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateBatchCancelFlowUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateBatchCancelFlowUrlResponse"/></returns>
+        public async Task<ChannelCreateBatchCancelFlowUrlResponse> ChannelCreateBatchCancelFlowUrl(ChannelCreateBatchCancelFlowUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateBatchCancelFlowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 指定需要批量撤回的签署流程Id，获取批量撤销链接
+        /// 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateBatchCancelFlowUrlRequest"/></param>
+        /// <returns><see cref="ChannelCreateBatchCancelFlowUrlResponse"/></returns>
+        public ChannelCreateBatchCancelFlowUrlResponse ChannelCreateBatchCancelFlowUrlSync(ChannelCreateBatchCancelFlowUrlRequest req)
+        {
+             JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateBatchCancelFlowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateBatchCancelFlowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口不可直接使用，需要运营申请
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>

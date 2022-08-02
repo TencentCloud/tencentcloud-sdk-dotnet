@@ -31,14 +31,14 @@ namespace TencentCloud.Acp.V20220105.Models
         public long? Result{ get; set; }
 
         /// <summary>
-        /// 诊断报告/堆栈信息下载链接
+        /// 诊断报告/堆栈信息/报告json结果下载链接
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportUrl")]
         public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// 诊断报告/堆栈名称
+        /// 诊断报告/堆栈/报告json结果的名称
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ReportTitle")]

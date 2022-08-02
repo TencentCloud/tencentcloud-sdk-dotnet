@@ -80,6 +80,12 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("IntentionVerifyText")]
         public string IntentionVerifyText{ get; set; }
 
+        /// <summary>
+        /// 意愿核身过程中播报文本/问题、用户朗读/回答的文本，当前支持一个播报文本+回答文本。
+        /// </summary>
+        [JsonProperty("IntentionQuestions")]
+        public IntentionQuestion[] IntentionQuestions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "ImageBase64", this.ImageBase64);
             this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
+            this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
         }
     }
 }

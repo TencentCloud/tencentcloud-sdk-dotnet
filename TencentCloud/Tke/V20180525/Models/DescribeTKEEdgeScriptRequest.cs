@@ -48,6 +48,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("Config")]
         public string Config{ get; set; }
 
+        /// <summary>
+        /// 可以下载某个历史版本的edgectl脚本，默认下载最新版本，edgectl版本信息可以在脚本里查看
+        /// </summary>
+        [JsonProperty("ScriptVersion")]
+        public string ScriptVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Interface", this.Interface);
             this.SetParamSimple(map, prefix + "NodeName", this.NodeName);
             this.SetParamSimple(map, prefix + "Config", this.Config);
+            this.SetParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
         }
     }
 }

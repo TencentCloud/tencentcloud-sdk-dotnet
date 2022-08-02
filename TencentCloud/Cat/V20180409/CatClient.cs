@@ -173,6 +173,46 @@ namespace TencentCloud.Cat.V20180409
         }
 
         /// <summary>
+        /// 获取拨测节点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodesRequest"/></param>
+        /// <returns><see cref="DescribeNodesResponse"/></returns>
+        public async Task<DescribeNodesResponse> DescribeNodes(DescribeNodesRequest req)
+        {
+             JsonResponseModel<DescribeNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取拨测节点
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNodesRequest"/></param>
+        /// <returns><see cref="DescribeNodesResponse"/></returns>
+        public DescribeNodesResponse DescribeNodesSync(DescribeNodesRequest req)
+        {
+             JsonResponseModel<DescribeNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询云拨测指标数据，指标支持使用sum,avg,max,min聚合函数进行指标数据查询
         /// </summary>
         /// <param name="req"><see cref="DescribeProbeMetricDataRequest"/></param>

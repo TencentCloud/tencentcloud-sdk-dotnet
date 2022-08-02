@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CAC02B9D-B0F0-3F2E-A9A4-BB0578DC157C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,6 +54,8 @@
     <Compile Include="V20201111\Models\CancelMultiFlowSignQRCodeResponse.cs" />
     <Compile Include="V20201111\Models\CcInfo.cs" />
     <Compile Include="V20201111\Models\Component.cs" />
+    <Compile Include="V20201111\Models\CreateConvertTaskApiRequest.cs" />
+    <Compile Include="V20201111\Models\CreateConvertTaskApiResponse.cs" />
     <Compile Include="V20201111\Models\CreateDocumentRequest.cs" />
     <Compile Include="V20201111\Models\CreateDocumentResponse.cs" />
     <Compile Include="V20201111\Models\CreateFlowByFilesRequest.cs" />
@@ -78,6 +80,9 @@
     <Compile Include="V20201111\Models\FlowBrief.cs" />
     <Compile Include="V20201111\Models\FlowCreateApprover.cs" />
     <Compile Include="V20201111\Models\FormField.cs" />
+    <Compile Include="V20201111\Models\GetTaskResultApiRequest.cs" />
+    <Compile Include="V20201111\Models\GetTaskResultApiResponse.cs" />
+    <Compile Include="V20201111\Models\OrganizationInfo.cs" />
     <Compile Include="V20201111\Models\Recipient.cs" />
     <Compile Include="V20201111\Models\SignQrCode.cs" />
     <Compile Include="V20201111\Models\StartFlowRequest.cs" />

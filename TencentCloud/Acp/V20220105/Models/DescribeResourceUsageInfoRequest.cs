@@ -25,10 +25,22 @@ namespace TencentCloud.Acp.V20220105.Models
     {
         
         /// <summary>
-        /// 资源计费项名称
+        /// 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
         /// </summary>
         [JsonProperty("PriceName")]
         public string PriceName{ get; set; }
+
+        /// <summary>
+        /// 任务类型, 0:基础版, 1:专家版
+        /// </summary>
+        [JsonProperty("TaskType")]
+        public long? TaskType{ get; set; }
+
+        /// <summary>
+        /// 应用平台, 0:android
+        /// </summary>
+        [JsonProperty("Platform")]
+        public long? Platform{ get; set; }
 
 
         /// <summary>
@@ -37,6 +49,8 @@ namespace TencentCloud.Acp.V20220105.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "PriceName", this.PriceName);
+            this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
+            this.SetParamSimple(map, prefix + "Platform", this.Platform);
         }
     }
 }

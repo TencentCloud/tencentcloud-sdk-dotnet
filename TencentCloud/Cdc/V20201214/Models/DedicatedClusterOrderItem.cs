@@ -127,6 +127,20 @@ namespace TencentCloud.Cdc.V20201214.Models
         [JsonProperty("ComputeFormat")]
         public string ComputeFormat{ get; set; }
 
+        /// <summary>
+        /// 规格类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TypeFamily")]
+        public string TypeFamily{ get; set; }
+
+        /// <summary>
+        /// 0未支付，1已支付
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubOrderPayStatus")]
+        public long? SubOrderPayStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Cdc.V20201214.Models
             this.SetParamSimple(map, prefix + "TotalGpu", this.TotalGpu);
             this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
             this.SetParamSimple(map, prefix + "ComputeFormat", this.ComputeFormat);
+            this.SetParamSimple(map, prefix + "TypeFamily", this.TypeFamily);
+            this.SetParamSimple(map, prefix + "SubOrderPayStatus", this.SubOrderPayStatus);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Mmps.V20200710.Models
         public long? Platform{ get; set; }
 
         /// <summary>
-        /// 报告类型, 0:诊断报告, 1:堆栈报告
+        /// 报告类型, 0:诊断报告, 1:堆栈报告(预留), 2:视频证据(预留), 3:报告json结果
         /// </summary>
         [JsonProperty("ReportType")]
         public long? ReportType{ get; set; }

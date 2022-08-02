@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6D394C6-F749-36E5-A127-4F612EC56898}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,13 +45,56 @@
 
   <ItemGroup>
     <Compile Include="V20210624\BmaClient.cs" />
+    <Compile Include="V20210624\Models\BrandData.cs" />
+    <Compile Include="V20210624\Models\CreateBPFakeURLRequest.cs" />
+    <Compile Include="V20210624\Models\CreateBPFakeURLResponse.cs" />
+    <Compile Include="V20210624\Models\CreateBPFalseTicketRequest.cs" />
+    <Compile Include="V20210624\Models\CreateBPFalseTicketResponse.cs" />
+    <Compile Include="V20210624\Models\CreateBPOfflineAttachmentRequest.cs" />
+    <Compile Include="V20210624\Models\CreateBPOfflineAttachmentResponse.cs" />
+    <Compile Include="V20210624\Models\CreateBPOfflineTicketRequest.cs" />
+    <Compile Include="V20210624\Models\CreateBPOfflineTicketResponse.cs" />
+    <Compile Include="V20210624\Models\CreateBPProtectURLsRequest.cs" />
+    <Compile Include="V20210624\Models\CreateBPProtectURLsResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRBlockRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRBlockResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRCompanyVerifyRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRCompanyVerifyResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRRightRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRRightResponse.cs" />
+    <Compile Include="V20210624\Models\CreateCRWorkRequest.cs" />
+    <Compile Include="V20210624\Models\CreateCRWorkResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeBPCompanyInfoRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeBPCompanyInfoResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeBPFakeURLsRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeBPFakeURLsResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeBPProtectURLsRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeBPProtectURLsResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeBPReportFakeURLsRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeBPReportFakeURLsResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeCRMonitorDetailRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeCRMonitorDetailResponse.cs" />
+    <Compile Include="V20210624\Models\DescribeCRMonitorsRequest.cs" />
+    <Compile Include="V20210624\Models\DescribeCRMonitorsResponse.cs" />
     <Compile Include="V20210624\Models\DescribeCRWorkInfoRequest.cs" />
     <Compile Include="V20210624\Models\DescribeCRWorkInfoResponse.cs" />
+    <Compile Include="V20210624\Models\FakeURLInfo.cs" />
+    <Compile Include="V20210624\Models\Filter.cs" />
+    <Compile Include="V20210624\Models\ModifyBPOfflineAttachmentRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyBPOfflineAttachmentResponse.cs" />
+    <Compile Include="V20210624\Models\ModifyCRBlockStatusRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyCRBlockStatusResponse.cs" />
+    <Compile Include="V20210624\Models\ModifyCRMonitorRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyCRMonitorResponse.cs" />
+    <Compile Include="V20210624\Models\ModifyCRObtainStatusRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyCRObtainStatusResponse.cs" />
+    <Compile Include="V20210624\Models\ModifyCRRightStatusRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyCRRightStatusResponse.cs" />
+    <Compile Include="V20210624\Models\Monitor.cs" />
+    <Compile Include="V20210624\Models\MonitorTort.cs" />
+    <Compile Include="V20210624\Models\ProtectURLInfo.cs" />
+    <Compile Include="V20210624\Models\ReportFakeURLInfo.cs" />
+    <Compile Include="V20210624\Models\UpdateCRWorkRequest.cs" />
+    <Compile Include="V20210624\Models\UpdateCRWorkResponse.cs" />
   </ItemGroup>
 </Project>

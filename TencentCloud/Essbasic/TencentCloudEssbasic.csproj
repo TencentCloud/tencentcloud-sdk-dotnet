@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -46,10 +46,13 @@
   <ItemGroup>
     <Compile Include="V20210526\EssbasicClient.cs" />
     <Compile Include="V20210526\Models\Agent.cs" />
+    <Compile Include="V20210526\Models\ApproverRestriction.cs" />
     <Compile Include="V20210526\Models\AuthFailMessage.cs" />
     <Compile Include="V20210526\Models\CcInfo.cs" />
     <Compile Include="V20210526\Models\ChannelCancelMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCancelMultiFlowSignQRCodeResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateBatchCancelFlowUrlRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelCreateBatchCancelFlowUrlResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateFlowByFilesRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateFlowByFilesResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateMultiFlowSignQRCodeRequest.cs" />
@@ -88,6 +91,7 @@
     <Compile Include="V20210526\Models\Recipient.cs" />
     <Compile Include="V20210526\Models\ResourceUrlInfo.cs" />
     <Compile Include="V20210526\Models\SignQrCode.cs" />
+    <Compile Include="V20210526\Models\SignUrl.cs" />
     <Compile Include="V20210526\Models\SignUrlInfo.cs" />
     <Compile Include="V20210526\Models\SyncFailReason.cs" />
     <Compile Include="V20210526\Models\SyncProxyOrganizationOperatorsRequest.cs" />

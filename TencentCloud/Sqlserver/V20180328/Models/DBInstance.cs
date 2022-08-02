@@ -307,6 +307,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("CrossBackupSaveDays")]
         public ulong? CrossBackupSaveDays{ get; set; }
 
+        /// <summary>
+        /// 外网地址域名
+        /// </summary>
+        [JsonProperty("DnsPodDomain")]
+        public string DnsPodDomain{ get; set; }
+
+        /// <summary>
+        /// 外网端口号
+        /// </summary>
+        [JsonProperty("TgwWanVPort")]
+        public long? TgwWanVPort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -359,6 +371,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamArraySimple(map, prefix + "CrossRegions.", this.CrossRegions);
             this.SetParamSimple(map, prefix + "CrossBackupEnabled", this.CrossBackupEnabled);
             this.SetParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
+            this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
+            this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
         }
     }
 }

@@ -25,19 +25,24 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 控件填充value
+        /// 控件填充value，ComponentType和传入值类型对应关系：
+        /// TEXT - 文本内容
+        /// MULTI_LINE_TEXT - 文本内容
+        /// CHECK_BOX - true/false
+        /// ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+        /// SELECTOR - 模板中配置的选项值
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }
 
         /// <summary>
-        /// 控件id
+        /// 控件id，和ComponentName选择一项传入即可
         /// </summary>
         [JsonProperty("ComponentId")]
         public string ComponentId{ get; set; }
 
         /// <summary>
-        /// 控件名字，最大长度不超过30字符
+        /// 控件名字，最大长度不超过30字符，和ComponentId选择一项传入即可
         /// </summary>
         [JsonProperty("ComponentName")]
         public string ComponentName{ get; set; }

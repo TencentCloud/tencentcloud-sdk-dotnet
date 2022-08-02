@@ -40,7 +40,8 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// FRONT 为行驶证主页正面（有红色印章的一面），
-        /// BACK 为行驶证副页正面（有号码号牌的一面）。
+        /// BACK 为行驶证副页正面（有号码号牌的一面），
+        /// DOUBLE 为行驶证主页正面和副页正面。
         /// 默认值为：FRONT。
         /// </summary>
         [JsonProperty("CardSide")]

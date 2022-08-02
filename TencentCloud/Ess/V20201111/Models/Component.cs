@@ -26,13 +26,15 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 如果是 Component 控件类型，则可选类型为：
-        /// TEXT - 内容文本控件
-        /// DATE - 内容日期控件
-        /// CHECK_BOX - 勾选框控件
+        /// TEXT - 单行文本
+        /// MULTI_LINE_TEXT - 多行文本
+        /// CHECK_BOX - 勾选框
+        /// ATTACHMENT - 附件
+        /// SELECTOR - 选择器
         /// 如果是 SignComponent 控件类型，则可选类型为：
-        /// SIGN_SEAL - 签署印章控件
+        /// SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
         /// SIGN_DATE - 签署日期控件
-        /// SIGN_SIGNATURE - 手写签名控件
+        /// SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
         /// </summary>
         [JsonProperty("ComponentType")]
         public string ComponentType{ get; set; }
@@ -112,7 +114,12 @@ namespace TencentCloud.Ess.V20201111.Models
         public string ComponentRecipientId{ get; set; }
 
         /// <summary>
-        /// 控件所填写的内容
+        /// 控件填充vaule，ComponentType和传入值类型对应关系：
+        /// TEXT - 文本内容
+        /// MULTI_LINE_TEXT - 文本内容
+        /// CHECK_BOX - true/false
+        /// ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+        /// SELECTOR - 选项值
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

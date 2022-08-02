@@ -54,6 +54,13 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("Region")]
         public string Region{ get; set; }
 
+        /// <summary>
+        /// topic保存时长 默认7天
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Period")]
+        public long? Period{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "TopicName", this.TopicName);
             this.SetParamSimple(map, prefix + "TopicId", this.TopicId);
             this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Period", this.Period);
         }
     }
 }

@@ -70,6 +70,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
+        /// 限制二维码用户条件
+        /// </summary>
+        [JsonProperty("ApproverRestrictions")]
+        public ApproverRestriction ApproverRestrictions{ get; set; }
+
+        /// <summary>
         /// 用户信息
         /// </summary>
         [JsonProperty("Operator")]
@@ -88,6 +94,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
             this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
         }
     }

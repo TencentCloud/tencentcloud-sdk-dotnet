@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string AppId{ get; set; }
 
         /// <summary>
-        /// 渠道/平台合作企业的企业ID
+        /// 渠道/平台合作企业的企业ID，最大64位字符串
         /// </summary>
         [JsonProperty("ProxyOrganizationOpenId")]
         public string ProxyOrganizationOpenId{ get; set; }
@@ -49,7 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ProxyAppId{ get; set; }
 
         /// <summary>
-        /// 腾讯电子签颁发给渠道侧合作企业的企业ID
+        /// 内部参数，腾讯电子签颁发给渠道侧合作企业的企业ID，不需要传
         /// </summary>
         [JsonProperty("ProxyOrganizationId")]
         public string ProxyOrganizationId{ get; set; }

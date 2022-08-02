@@ -126,7 +126,7 @@ namespace TencentCloud.Ocr.V20181119.Models
 
         /// <summary>
         /// 是否作废（红冲）是否作废（红冲）
-        /// Y: 已作废 N：未作废 H：红冲
+        /// Y：已作废，N：未作废，H：红冲，HP：部分红冲，HF：全额红冲
         /// </summary>
         [JsonProperty("IsAbandoned")]
         public string IsAbandoned{ get; set; }

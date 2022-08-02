@@ -3453,6 +3453,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 获取事件、审计和日志的状态接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
+        public async Task<DescribeEdgeLogSwitchesResponse> DescribeEdgeLogSwitches(DescribeEdgeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取事件、审计和日志的状态接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
+        /// <returns><see cref="DescribeEdgeLogSwitchesResponse"/></returns>
+        public DescribeEdgeLogSwitchesResponse DescribeEdgeLogSwitchesSync(DescribeEdgeLogSwitchesRequest req)
+        {
+             JsonResponseModel<DescribeEdgeLogSwitchesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeLogSwitches");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeLogSwitchesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询容器实例中容器日志
         /// </summary>
         /// <param name="req"><see cref="DescribeEksContainerInstanceLogRequest"/></param>

@@ -137,6 +137,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 创建文件转换任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
+        /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>
+        public async Task<CreateConvertTaskApiResponse> CreateConvertTaskApi(CreateConvertTaskApiRequest req)
+        {
+             JsonResponseModel<CreateConvertTaskApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateConvertTaskApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConvertTaskApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建文件转换任务
+        /// </summary>
+        /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>
+        /// <returns><see cref="CreateConvertTaskApiResponse"/></returns>
+        public CreateConvertTaskApiResponse CreateConvertTaskApiSync(CreateConvertTaskApiRequest req)
+        {
+             JsonResponseModel<CreateConvertTaskApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateConvertTaskApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateConvertTaskApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建签署流程电子文档
         /// 适用场景：见创建签署流程接口。
         /// 
@@ -534,6 +574,46 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeThirdPartyAuthCode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeThirdPartyAuthCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转换任务状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskResultApiRequest"/></param>
+        /// <returns><see cref="GetTaskResultApiResponse"/></returns>
+        public async Task<GetTaskResultApiResponse> GetTaskResultApi(GetTaskResultApiRequest req)
+        {
+             JsonResponseModel<GetTaskResultApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTaskResultApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTaskResultApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转换任务状态
+        /// </summary>
+        /// <param name="req"><see cref="GetTaskResultApiRequest"/></param>
+        /// <returns><see cref="GetTaskResultApiResponse"/></returns>
+        public GetTaskResultApiResponse GetTaskResultApiSync(GetTaskResultApiRequest req)
+        {
+             JsonResponseModel<GetTaskResultApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTaskResultApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTaskResultApiResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

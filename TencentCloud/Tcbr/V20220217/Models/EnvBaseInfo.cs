@@ -72,6 +72,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("EnvType")]
         public string EnvType{ get; set; }
 
+        /// <summary>
+        /// 子网id
+        /// </summary>
+        [JsonProperty("SubnetIds")]
+        public string SubnetIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Region", this.Region);
             this.SetParamSimple(map, prefix + "EnvType", this.EnvType);
+            this.SetParamSimple(map, prefix + "SubnetIds", this.SubnetIds);
         }
     }
 }

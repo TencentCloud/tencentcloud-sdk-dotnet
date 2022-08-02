@@ -31,6 +31,12 @@ namespace TencentCloud.Bma.V20210624.Models
         public string CompanyName{ get; set; }
 
         /// <summary>
+        /// 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
+        /// </summary>
+        [JsonProperty("CompanyIDType")]
+        public string CompanyIDType{ get; set; }
+
+        /// <summary>
         /// 企业证件号码
         /// </summary>
         [JsonProperty("CompanyID")]
@@ -61,12 +67,6 @@ namespace TencentCloud.Bma.V20210624.Models
         public string VerificationCode{ get; set; }
 
         /// <summary>
-        /// 企业认证号码类型 1：社会信用代码 2：组织机构代码 3：企业工商注册码 4：其他 默认为1
-        /// </summary>
-        [JsonProperty("CompanyIDType")]
-        public string CompanyIDType{ get; set; }
-
-        /// <summary>
         /// xxx
         /// </summary>
         [JsonProperty("Type")]
@@ -79,12 +79,12 @@ namespace TencentCloud.Bma.V20210624.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CompanyName", this.CompanyName);
+            this.SetParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
             this.SetParamSimple(map, prefix + "CompanyID", this.CompanyID);
             this.SetParamSimple(map, prefix + "CompanyLegalName", this.CompanyLegalName);
             this.SetParamSimple(map, prefix + "ManagerName", this.ManagerName);
             this.SetParamSimple(map, prefix + "ManagerPhone", this.ManagerPhone);
             this.SetParamSimple(map, prefix + "VerificationCode", this.VerificationCode);
-            this.SetParamSimple(map, prefix + "CompanyIDType", this.CompanyIDType);
             this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }

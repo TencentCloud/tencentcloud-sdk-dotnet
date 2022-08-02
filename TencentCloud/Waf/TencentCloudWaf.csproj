@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8EF2CE7E-06E0-34FA-8DA6-BE00F3CB577E}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.567</VersionPrefix>
+    <VersionPrefix>3.0.0</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,6 +63,8 @@
     <Compile Include="V20180125\Models\AutoDenyDetail.cs" />
     <Compile Include="V20180125\Models\BotPkg.cs" />
     <Compile Include="V20180125\Models\BotStatPointItem.cs" />
+    <Compile Include="V20180125\Models\CdcCluster.cs" />
+    <Compile Include="V20180125\Models\CdcRegion.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportRequest.cs" />
     <Compile Include="V20180125\Models\CreateAccessExportResponse.cs" />
     <Compile Include="V20180125\Models\DeleteAccessExportRequest.cs" />
@@ -97,6 +99,8 @@
     <Compile Include="V20180125\Models\DescribeIpAccessControlResponse.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeIpHitItemsResponse.cs" />
+    <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsRequest.cs" />
+    <Compile Include="V20180125\Models\DescribeUserCdcClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsRequest.cs" />
     <Compile Include="V20180125\Models\DescribeUserClbWafRegionsResponse.cs" />
     <Compile Include="V20180125\Models\DescribeWafAutoDenyRulesRequest.cs" />

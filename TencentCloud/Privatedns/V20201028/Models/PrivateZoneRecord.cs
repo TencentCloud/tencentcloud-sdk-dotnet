@@ -99,6 +99,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("Extra")]
         public string Extra{ get; set; }
 
+        /// <summary>
+        /// 0暂停，1启用
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Enabled")]
+        public ulong? Enabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -117,6 +124,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
             this.SetParamSimple(map, prefix + "UpdatedOn", this.UpdatedOn);
             this.SetParamSimple(map, prefix + "Extra", this.Extra);
+            this.SetParamSimple(map, prefix + "Enabled", this.Enabled);
         }
     }
 }

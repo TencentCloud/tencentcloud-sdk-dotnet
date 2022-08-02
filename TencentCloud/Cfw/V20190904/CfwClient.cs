@@ -293,7 +293,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建防火墙实例和接入域名
+        /// 创建防火墙实例和接入域名（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceWithDomainRequest"/></param>
         /// <returns><see cref="CreateNatFwInstanceWithDomainResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 创建防火墙实例和接入域名
+        /// 创建防火墙实例和接入域名（Region参数必填）
         /// </summary>
         /// <param name="req"><see cref="CreateNatFwInstanceWithDomainRequest"/></param>
         /// <returns><see cref="CreateNatFwInstanceWithDomainResponse"/></returns>

@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 分页大小，最大100，配合Context一起使用
+        /// 分页大小，最大1000，配合Context一起使用
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -53,6 +53,18 @@ namespace TencentCloud.Dlc.V20210125.Models
         /// </summary>
         [JsonProperty("Context")]
         public string Context{ get; set; }
+
+        /// <summary>
+        /// 最近1000条日志是否升序排列，true:升序排序，false:倒序，默认false，倒序排列
+        /// </summary>
+        [JsonProperty("Asc")]
+        public bool? Asc{ get; set; }
+
+        /// <summary>
+        /// 预览日志的通用过滤条件
+        /// </summary>
+        [JsonProperty("Filters")]
+        public Filter[] Filters{ get; set; }
 
 
         /// <summary>
@@ -65,6 +77,8 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Context", this.Context);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
         }
     }
 }

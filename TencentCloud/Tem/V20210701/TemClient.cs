@@ -339,6 +339,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 服务基本信息查看
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationInfoRequest"/></param>
+        /// <returns><see cref="DescribeApplicationInfoResponse"/></returns>
+        public async Task<DescribeApplicationInfoResponse> DescribeApplicationInfo(DescribeApplicationInfoRequest req)
+        {
+             JsonResponseModel<DescribeApplicationInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 服务基本信息查看
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationInfoRequest"/></param>
+        /// <returns><see cref="DescribeApplicationInfoResponse"/></returns>
+        public DescribeApplicationInfoResponse DescribeApplicationInfoSync(DescribeApplicationInfoRequest req)
+        {
+             JsonResponseModel<DescribeApplicationInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取应用实例列表
         /// </summary>
         /// <param name="req"><see cref="DescribeApplicationPodsRequest"/></param>
@@ -370,6 +410,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApplicationPods");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationPodsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取运行服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public async Task<DescribeApplicationsResponse> DescribeApplications(DescribeApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取运行服务列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationsRequest"/></param>
+        /// <returns><see cref="DescribeApplicationsResponse"/></returns>
+        public DescribeApplicationsResponse DescribeApplicationsSync(DescribeApplicationsRequest req)
+        {
+             JsonResponseModel<DescribeApplicationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplications");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -450,6 +530,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDeployApplicationDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDeployApplicationDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentStatusRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentStatusResponse"/></returns>
+        public async Task<DescribeEnvironmentStatusResponse> DescribeEnvironmentStatus(DescribeEnvironmentStatusRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironmentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentStatusRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentStatusResponse"/></returns>
+        public DescribeEnvironmentStatusResponse DescribeEnvironmentStatusSync(DescribeEnvironmentStatusRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironmentStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

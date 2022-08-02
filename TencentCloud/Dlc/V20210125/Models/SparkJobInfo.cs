@@ -224,6 +224,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("TaskNum")]
         public long? TaskNum{ get; set; }
 
+        /// <summary>
+        /// 引擎状态：-100（默认：未知状态），-2~11：引擎正常状态；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DataEngineStatus")]
+        public long? DataEngineStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -262,6 +269,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "JobArchives", this.JobArchives);
             this.SetParamSimple(map, prefix + "JobPythonFiles", this.JobPythonFiles);
             this.SetParamSimple(map, prefix + "TaskNum", this.TaskNum);
+            this.SetParamSimple(map, prefix + "DataEngineStatus", this.DataEngineStatus);
         }
     }
 }

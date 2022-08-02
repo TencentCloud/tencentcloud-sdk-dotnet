@@ -53,6 +53,206 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 添加仿冒链接（举报）
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPFakeURLRequest"/></param>
+        /// <returns><see cref="CreateBPFakeURLResponse"/></returns>
+        public async Task<CreateBPFakeURLResponse> CreateBPFakeURL(CreateBPFakeURLRequest req)
+        {
+             JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBPFakeURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加仿冒链接（举报）
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPFakeURLRequest"/></param>
+        /// <returns><see cref="CreateBPFakeURLResponse"/></returns>
+        public CreateBPFakeURLResponse CreateBPFakeURLSync(CreateBPFakeURLRequest req)
+        {
+             JsonResponseModel<CreateBPFakeURLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBPFakeURL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFakeURLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加误报工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPFalseTicketRequest"/></param>
+        /// <returns><see cref="CreateBPFalseTicketResponse"/></returns>
+        public async Task<CreateBPFalseTicketResponse> CreateBPFalseTicket(CreateBPFalseTicketRequest req)
+        {
+             JsonResponseModel<CreateBPFalseTicketResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBPFalseTicket");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFalseTicketResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加误报工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPFalseTicketRequest"/></param>
+        /// <returns><see cref="CreateBPFalseTicketResponse"/></returns>
+        public CreateBPFalseTicketResponse CreateBPFalseTicketSync(CreateBPFalseTicketRequest req)
+        {
+             JsonResponseModel<CreateBPFalseTicketResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBPFalseTicket");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPFalseTicketResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加下线材料
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPOfflineAttachmentRequest"/></param>
+        /// <returns><see cref="CreateBPOfflineAttachmentResponse"/></returns>
+        public async Task<CreateBPOfflineAttachmentResponse> CreateBPOfflineAttachment(CreateBPOfflineAttachmentRequest req)
+        {
+             JsonResponseModel<CreateBPOfflineAttachmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBPOfflineAttachment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPOfflineAttachmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加下线材料
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPOfflineAttachmentRequest"/></param>
+        /// <returns><see cref="CreateBPOfflineAttachmentResponse"/></returns>
+        public CreateBPOfflineAttachmentResponse CreateBPOfflineAttachmentSync(CreateBPOfflineAttachmentRequest req)
+        {
+             JsonResponseModel<CreateBPOfflineAttachmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBPOfflineAttachment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPOfflineAttachmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加下线工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPOfflineTicketRequest"/></param>
+        /// <returns><see cref="CreateBPOfflineTicketResponse"/></returns>
+        public async Task<CreateBPOfflineTicketResponse> CreateBPOfflineTicket(CreateBPOfflineTicketRequest req)
+        {
+             JsonResponseModel<CreateBPOfflineTicketResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBPOfflineTicket");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPOfflineTicketResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加下线工单
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPOfflineTicketRequest"/></param>
+        /// <returns><see cref="CreateBPOfflineTicketResponse"/></returns>
+        public CreateBPOfflineTicketResponse CreateBPOfflineTicketSync(CreateBPOfflineTicketRequest req)
+        {
+             JsonResponseModel<CreateBPOfflineTicketResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBPOfflineTicket");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPOfflineTicketResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加保护网站
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPProtectURLsRequest"/></param>
+        /// <returns><see cref="CreateBPProtectURLsResponse"/></returns>
+        public async Task<CreateBPProtectURLsResponse> CreateBPProtectURLs(CreateBPProtectURLsRequest req)
+        {
+             JsonResponseModel<CreateBPProtectURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBPProtectURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPProtectURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 添加保护网站
+        /// </summary>
+        /// <param name="req"><see cref="CreateBPProtectURLsRequest"/></param>
+        /// <returns><see cref="CreateBPProtectURLsResponse"/></returns>
+        public CreateBPProtectURLsResponse CreateBPProtectURLsSync(CreateBPProtectURLsRequest req)
+        {
+             JsonResponseModel<CreateBPProtectURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBPProtectURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBPProtectURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 版权保护-新建拦截接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRBlockRequest"/></param>
@@ -173,6 +373,286 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 版权保护-添加作品接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRWorkRequest"/></param>
+        /// <returns><see cref="CreateCRWorkResponse"/></returns>
+        public async Task<CreateCRWorkResponse> CreateCRWork(CreateCRWorkRequest req)
+        {
+             JsonResponseModel<CreateCRWorkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCRWork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRWorkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-添加作品接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRWorkRequest"/></param>
+        /// <returns><see cref="CreateCRWorkResponse"/></returns>
+        public CreateCRWorkResponse CreateCRWorkSync(CreateCRWorkRequest req)
+        {
+             JsonResponseModel<CreateCRWorkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCRWork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRWorkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPCompanyInfoRequest"/></param>
+        /// <returns><see cref="DescribeBPCompanyInfoResponse"/></returns>
+        public async Task<DescribeBPCompanyInfoResponse> DescribeBPCompanyInfo(DescribeBPCompanyInfoRequest req)
+        {
+             JsonResponseModel<DescribeBPCompanyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBPCompanyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPCompanyInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPCompanyInfoRequest"/></param>
+        /// <returns><see cref="DescribeBPCompanyInfoResponse"/></returns>
+        public DescribeBPCompanyInfoResponse DescribeBPCompanyInfoSync(DescribeBPCompanyInfoRequest req)
+        {
+             JsonResponseModel<DescribeBPCompanyInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBPCompanyInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPCompanyInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询仿冒链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPFakeURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPFakeURLsResponse"/></returns>
+        public async Task<DescribeBPFakeURLsResponse> DescribeBPFakeURLs(DescribeBPFakeURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBPFakeURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询仿冒链接
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPFakeURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPFakeURLsResponse"/></returns>
+        public DescribeBPFakeURLsResponse DescribeBPFakeURLsSync(DescribeBPFakeURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPFakeURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBPFakeURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPFakeURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询保护网站
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPProtectURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPProtectURLsResponse"/></returns>
+        public async Task<DescribeBPProtectURLsResponse> DescribeBPProtectURLs(DescribeBPProtectURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPProtectURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBPProtectURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPProtectURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询保护网站
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPProtectURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPProtectURLsResponse"/></returns>
+        public DescribeBPProtectURLsResponse DescribeBPProtectURLsSync(DescribeBPProtectURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPProtectURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBPProtectURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPProtectURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询举报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPReportFakeURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPReportFakeURLsResponse"/></returns>
+        public async Task<DescribeBPReportFakeURLsResponse> DescribeBPReportFakeURLs(DescribeBPReportFakeURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPReportFakeURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBPReportFakeURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPReportFakeURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询举报列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBPReportFakeURLsRequest"/></param>
+        /// <returns><see cref="DescribeBPReportFakeURLsResponse"/></returns>
+        public DescribeBPReportFakeURLsResponse DescribeBPReportFakeURLsSync(DescribeBPReportFakeURLsRequest req)
+        {
+             JsonResponseModel<DescribeBPReportFakeURLsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBPReportFakeURLs");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBPReportFakeURLsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-查询作品监测详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeCRMonitorDetailResponse"/></returns>
+        public async Task<DescribeCRMonitorDetailResponse> DescribeCRMonitorDetail(DescribeCRMonitorDetailRequest req)
+        {
+             JsonResponseModel<DescribeCRMonitorDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCRMonitorDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRMonitorDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-查询作品监测详情接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRMonitorDetailRequest"/></param>
+        /// <returns><see cref="DescribeCRMonitorDetailResponse"/></returns>
+        public DescribeCRMonitorDetailResponse DescribeCRMonitorDetailSync(DescribeCRMonitorDetailRequest req)
+        {
+             JsonResponseModel<DescribeCRMonitorDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCRMonitorDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRMonitorDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-查询监测列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRMonitorsRequest"/></param>
+        /// <returns><see cref="DescribeCRMonitorsResponse"/></returns>
+        public async Task<DescribeCRMonitorsResponse> DescribeCRMonitors(DescribeCRMonitorsRequest req)
+        {
+             JsonResponseModel<DescribeCRMonitorsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCRMonitors");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRMonitorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-查询监测列表接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCRMonitorsRequest"/></param>
+        /// <returns><see cref="DescribeCRMonitorsResponse"/></returns>
+        public DescribeCRMonitorsResponse DescribeCRMonitorsSync(DescribeCRMonitorsRequest req)
+        {
+             JsonResponseModel<DescribeCRMonitorsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCRMonitors");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRMonitorsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询作品基本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeCRWorkInfoRequest"/></param>
@@ -204,6 +684,246 @@ namespace TencentCloud.Bma.V20210624
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCRWorkInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCRWorkInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改下线材料
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBPOfflineAttachmentRequest"/></param>
+        /// <returns><see cref="ModifyBPOfflineAttachmentResponse"/></returns>
+        public async Task<ModifyBPOfflineAttachmentResponse> ModifyBPOfflineAttachment(ModifyBPOfflineAttachmentRequest req)
+        {
+             JsonResponseModel<ModifyBPOfflineAttachmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyBPOfflineAttachment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBPOfflineAttachmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改下线材料
+        /// </summary>
+        /// <param name="req"><see cref="ModifyBPOfflineAttachmentRequest"/></param>
+        /// <returns><see cref="ModifyBPOfflineAttachmentResponse"/></returns>
+        public ModifyBPOfflineAttachmentResponse ModifyBPOfflineAttachmentSync(ModifyBPOfflineAttachmentRequest req)
+        {
+             JsonResponseModel<ModifyBPOfflineAttachmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyBPOfflineAttachment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyBPOfflineAttachmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-拦截申请接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>
+        public async Task<ModifyCRBlockStatusResponse> ModifyCRBlockStatus(ModifyCRBlockStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRBlockStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCRBlockStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRBlockStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-拦截申请接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>
+        public ModifyCRBlockStatusResponse ModifyCRBlockStatusSync(ModifyCRBlockStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRBlockStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCRBlockStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRBlockStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-修改监测状态接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRMonitorRequest"/></param>
+        /// <returns><see cref="ModifyCRMonitorResponse"/></returns>
+        public async Task<ModifyCRMonitorResponse> ModifyCRMonitor(ModifyCRMonitorRequest req)
+        {
+             JsonResponseModel<ModifyCRMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCRMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-修改监测状态接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRMonitorRequest"/></param>
+        /// <returns><see cref="ModifyCRMonitorResponse"/></returns>
+        public ModifyCRMonitorResponse ModifyCRMonitorSync(ModifyCRMonitorRequest req)
+        {
+             JsonResponseModel<ModifyCRMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCRMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请取证
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRObtainStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRObtainStatusResponse"/></returns>
+        public async Task<ModifyCRObtainStatusResponse> ModifyCRObtainStatus(ModifyCRObtainStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRObtainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCRObtainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRObtainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 申请取证
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRObtainStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRObtainStatusResponse"/></returns>
+        public ModifyCRObtainStatusResponse ModifyCRObtainStatusSync(ModifyCRObtainStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRObtainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCRObtainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRObtainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-维权申请接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRRightStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRRightStatusResponse"/></returns>
+        public async Task<ModifyCRRightStatusResponse> ModifyCRRightStatus(ModifyCRRightStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRRightStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCRRightStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRRightStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-维权申请接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRRightStatusRequest"/></param>
+        /// <returns><see cref="ModifyCRRightStatusResponse"/></returns>
+        public ModifyCRRightStatusResponse ModifyCRRightStatusSync(ModifyCRRightStatusRequest req)
+        {
+             JsonResponseModel<ModifyCRRightStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCRRightStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRRightStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新作品
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCRWorkRequest"/></param>
+        /// <returns><see cref="UpdateCRWorkResponse"/></returns>
+        public async Task<UpdateCRWorkResponse> UpdateCRWork(UpdateCRWorkRequest req)
+        {
+             JsonResponseModel<UpdateCRWorkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateCRWork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCRWorkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新作品
+        /// </summary>
+        /// <param name="req"><see cref="UpdateCRWorkRequest"/></param>
+        /// <returns><see cref="UpdateCRWorkResponse"/></returns>
+        public UpdateCRWorkResponse UpdateCRWorkSync(UpdateCRWorkRequest req)
+        {
+             JsonResponseModel<UpdateCRWorkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateCRWork");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateCRWorkResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

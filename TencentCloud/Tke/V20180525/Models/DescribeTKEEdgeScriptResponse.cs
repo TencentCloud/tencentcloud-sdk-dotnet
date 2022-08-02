@@ -43,6 +43,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string Command{ get; set; }
 
         /// <summary>
+        /// edgectl脚本版本，默认拉取最新版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ScriptVersion")]
+        public string ScriptVersion{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +64,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Link", this.Link);
             this.SetParamSimple(map, prefix + "Token", this.Token);
             this.SetParamSimple(map, prefix + "Command", this.Command);
+            this.SetParamSimple(map, prefix + "ScriptVersion", this.ScriptVersion);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
