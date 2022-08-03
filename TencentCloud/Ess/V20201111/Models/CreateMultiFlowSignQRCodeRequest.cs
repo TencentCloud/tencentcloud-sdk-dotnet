@@ -75,6 +75,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("QrEffectiveDay")]
         public long? QrEffectiveDay{ get; set; }
 
+        /// <summary>
+        /// 限制二维码用户条件
+        /// </summary>
+        [JsonProperty("ApproverRestrictions")]
+        public ApproverRestriction ApproverRestrictions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -89,6 +95,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "MaxFlowNum", this.MaxFlowNum);
             this.SetParamSimple(map, prefix + "FlowEffectiveDay", this.FlowEffectiveDay);
             this.SetParamSimple(map, prefix + "QrEffectiveDay", this.QrEffectiveDay);
+            this.SetParamObj(map, prefix + "ApproverRestrictions.", this.ApproverRestrictions);
         }
     }
 }

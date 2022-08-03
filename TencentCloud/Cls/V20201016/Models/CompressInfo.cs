@@ -25,7 +25,7 @@ namespace TencentCloud.Cls.V20201016.Models
     {
         
         /// <summary>
-        /// 压缩格式，支持gzip、lzop和none不压缩
+        /// 压缩格式，支持gzip、lzop、snappy和none不压缩
         /// </summary>
         [JsonProperty("Format")]
         public string Format{ get; set; }

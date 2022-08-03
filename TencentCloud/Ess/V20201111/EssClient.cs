@@ -137,6 +137,48 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 电子签企业版：指定需要批量撤回的签署流程Id，获取批量撤销链接
+        /// 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchCancelFlowUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchCancelFlowUrlResponse"/></returns>
+        public async Task<CreateBatchCancelFlowUrlResponse> CreateBatchCancelFlowUrl(CreateBatchCancelFlowUrlRequest req)
+        {
+             JsonResponseModel<CreateBatchCancelFlowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBatchCancelFlowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchCancelFlowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 电子签企业版：指定需要批量撤回的签署流程Id，获取批量撤销链接
+        /// 客户指定需要撤回的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤回合同的链接，通过链接跳转到电子签小程序完成批量撤回
+        /// </summary>
+        /// <param name="req"><see cref="CreateBatchCancelFlowUrlRequest"/></param>
+        /// <returns><see cref="CreateBatchCancelFlowUrlResponse"/></returns>
+        public CreateBatchCancelFlowUrlResponse CreateBatchCancelFlowUrlSync(CreateBatchCancelFlowUrlRequest req)
+        {
+             JsonResponseModel<CreateBatchCancelFlowUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBatchCancelFlowUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBatchCancelFlowUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建文件转换任务
         /// </summary>
         /// <param name="req"><see cref="CreateConvertTaskApiRequest"/></param>

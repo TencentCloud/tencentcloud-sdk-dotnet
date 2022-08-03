@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.570</VersionPrefix>
+    <VersionPrefix>3.0.571</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,9 +101,15 @@
     <Compile Include="V20201221\Models\StorageMountConf.cs" />
     <Compile Include="V20201221\Models\TemNamespaceInfo.cs" />
     <Compile Include="V20210701\TemClient.cs" />
+    <Compile Include="V20210701\Models\Autoscaler.cs" />
+    <Compile Include="V20210701\Models\ConfigData.cs" />
     <Compile Include="V20210701\Models\CosToken.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationAutoscalerRequest.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20210701\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20210701\Models\CreateConfigDataRequest.cs" />
+    <Compile Include="V20210701\Models\CreateConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\CreateCosTokenRequest.cs" />
     <Compile Include="V20210701\Models\CreateCosTokenResponse.cs" />
     <Compile Include="V20210701\Models\CreateEnvironmentRequest.cs" />
@@ -112,6 +118,8 @@
     <Compile Include="V20210701\Models\CreateResourceResponse.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscaler.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscalerSchedule.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationAutoscalerRequest.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20210701\Models\DeleteApplicationResponse.cs" />
     <Compile Include="V20210701\Models\DeleteIngressRequest.cs" />
@@ -121,6 +129,8 @@
     <Compile Include="V20210701\Models\DeployServiceBatchDetail.cs" />
     <Compile Include="V20210701\Models\DeployServicePodDetail.cs" />
     <Compile Include="V20210701\Models\DeployStrategyConf.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationAutoscalerListRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationAutoscalerListResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationInfoRequest.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationInfoResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationPodsRequest.cs" />
@@ -129,6 +139,11 @@
     <Compile Include="V20210701\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationsStatusRequest.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationsStatusResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeConfigDataListPage.cs" />
+    <Compile Include="V20210701\Models\DescribeConfigDataListRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeConfigDataListResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeConfigDataRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailRequest.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailResponse.cs" />
     <Compile Include="V20210701\Models\DescribeEnvironmentStatusRequest.cs" />
@@ -142,6 +157,8 @@
     <Compile Include="V20210701\Models\DescribeRelatedIngressesRequest.cs" />
     <Compile Include="V20210701\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="V20210701\Models\DescribeRunPodPage.cs" />
+    <Compile Include="V20210701\Models\DestroyConfigDataRequest.cs" />
+    <Compile Include="V20210701\Models\DestroyConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\DestroyEnvironmentRequest.cs" />
     <Compile Include="V20210701\Models\DestroyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\EksService.cs" />
@@ -158,10 +175,14 @@
     <Compile Include="V20210701\Models\IngressRuleValue.cs" />
     <Compile Include="V20210701\Models\IngressTls.cs" />
     <Compile Include="V20210701\Models\LogOutputConf.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationAutoscalerRequest.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationInfoRequest.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationInfoResponse.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationReplicasRequest.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationReplicasResponse.cs" />
+    <Compile Include="V20210701\Models\ModifyConfigDataRequest.cs" />
+    <Compile Include="V20210701\Models\ModifyConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\ModifyEnvironmentRequest.cs" />
     <Compile Include="V20210701\Models\ModifyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\ModifyIngressRequest.cs" />

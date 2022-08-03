@@ -66,6 +66,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OrderByType")]
         public ulong? OrderByType{ get; set; }
 
+        /// <summary>
+        /// VpcId 筛选项
+        /// </summary>
+        [JsonProperty("VpcIds")]
+        public string[] VpcIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "OrderByKey", this.OrderByKey);
             this.SetParamSimple(map, prefix + "OrderByType", this.OrderByType);
+            this.SetParamArraySimple(map, prefix + "VpcIds.", this.VpcIds);
         }
     }
 }

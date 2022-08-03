@@ -40,7 +40,10 @@ namespace TencentCloud.Teo.V20220106.Models
         /// <summary>
         /// 当源站配置类型Type=weight时，表示权重
         /// 取值范围为[1-100]
-        /// 源站组内多个源站权重总和应为100
+        /// 源站组内多个源站权重总和应为100。
+        /// 当源站配置类型Type=proto，表示权重
+        /// 取值范围为[1-100]
+        /// 源站组内Proto相同的多个源站权重总和应为100。
         /// </summary>
         [JsonProperty("Weight")]
         public ulong? Weight{ get; set; }
@@ -73,6 +76,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("PrivateParameter")]
         public OriginRecordPrivateParameter[] PrivateParameter{ get; set; }
 
+        /// <summary>
+        /// 当源站配置类型Type=proto时，表示客户端请求协议，取值：http/https
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Proto")]
+        public string Proto{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +96,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "RecordId", this.RecordId);
             this.SetParamSimple(map, prefix + "Private", this.Private);
             this.SetParamArrayObj(map, prefix + "PrivateParameter.", this.PrivateParameter);
+            this.SetParamSimple(map, prefix + "Proto", this.Proto);
         }
     }
 }

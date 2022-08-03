@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 黑名单
+        /// 黑名单，ID参考接口 DescribeSecurityPolicyManagedRules
         /// </summary>
         [JsonProperty("BlockRuleIDs")]
         public long?[] BlockRuleIDs{ get; set; }
 
         /// <summary>
-        /// id的开关
+        /// 托管规则 开关
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 观察模式
+        /// 观察模式，ID参考接口 DescribeSecurityPolicyManagedRules
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ObserveRuleIDs")]

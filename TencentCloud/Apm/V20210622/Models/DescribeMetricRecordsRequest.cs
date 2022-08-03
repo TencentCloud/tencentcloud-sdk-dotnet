@@ -84,6 +84,18 @@ namespace TencentCloud.Apm.V20210622.Models
         [JsonProperty("BusinessName")]
         public string BusinessName{ get; set; }
 
+        /// <summary>
+        /// 页码
+        /// </summary>
+        [JsonProperty("PageIndex")]
+        public long? PageIndex{ get; set; }
+
+        /// <summary>
+        /// 页长
+        /// </summary>
+        [JsonProperty("PageSize")]
+        public long? PageSize{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +112,8 @@ namespace TencentCloud.Apm.V20210622.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "BusinessName", this.BusinessName);
+            this.SetParamSimple(map, prefix + "PageIndex", this.PageIndex);
+            this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
         }
     }
 }

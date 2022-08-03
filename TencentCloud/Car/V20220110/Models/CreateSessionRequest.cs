@@ -42,6 +42,14 @@ namespace TencentCloud.Car.V20220110.Models
         [JsonProperty("ClientSession")]
         public string ClientSession{ get; set; }
 
+        /// <summary>
+        /// 云端运行模式。
+        /// RunWithoutClient：允许无客户端连接的情况下仍保持云端 App 运行
+        /// 默认值（空）：要求必须有客户端连接才会保持云端 App 运行。
+        /// </summary>
+        [JsonProperty("RunMode")]
+        public string RunMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +59,7 @@ namespace TencentCloud.Car.V20220110.Models
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "UserIp", this.UserIp);
             this.SetParamSimple(map, prefix + "ClientSession", this.ClientSession);
+            this.SetParamSimple(map, prefix + "RunMode", this.RunMode);
         }
     }
 }
