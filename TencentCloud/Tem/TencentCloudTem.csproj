@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.571</VersionPrefix>
+    <VersionPrefix>3.0.572</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -114,6 +114,8 @@
     <Compile Include="V20210701\Models\CreateCosTokenResponse.cs" />
     <Compile Include="V20210701\Models\CreateEnvironmentRequest.cs" />
     <Compile Include="V20210701\Models\CreateEnvironmentResponse.cs" />
+    <Compile Include="V20210701\Models\CreateLogConfigRequest.cs" />
+    <Compile Include="V20210701\Models\CreateLogConfigResponse.cs" />
     <Compile Include="V20210701\Models\CreateResourceRequest.cs" />
     <Compile Include="V20210701\Models\CreateResourceResponse.cs" />
     <Compile Include="V20210701\Models\CronHorizontalAutoscaler.cs" />
@@ -154,6 +156,10 @@
     <Compile Include="V20210701\Models\DescribeIngressResponse.cs" />
     <Compile Include="V20210701\Models\DescribeIngressesRequest.cs" />
     <Compile Include="V20210701\Models\DescribeIngressesResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeLogConfigRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeLogConfigResponse.cs" />
+    <Compile Include="V20210701\Models\DescribePagedLogConfigListRequest.cs" />
+    <Compile Include="V20210701\Models\DescribePagedLogConfigListResponse.cs" />
     <Compile Include="V20210701\Models\DescribeRelatedIngressesRequest.cs" />
     <Compile Include="V20210701\Models\DescribeRelatedIngressesResponse.cs" />
     <Compile Include="V20210701\Models\DescribeRunPodPage.cs" />
@@ -161,6 +167,8 @@
     <Compile Include="V20210701\Models\DestroyConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\DestroyEnvironmentRequest.cs" />
     <Compile Include="V20210701\Models\DestroyEnvironmentResponse.cs" />
+    <Compile Include="V20210701\Models\DestroyLogConfigRequest.cs" />
+    <Compile Include="V20210701\Models\DestroyLogConfigResponse.cs" />
     <Compile Include="V20210701\Models\EksService.cs" />
     <Compile Include="V20210701\Models\EnablePrometheusConf.cs" />
     <Compile Include="V20210701\Models\EsInfo.cs" />
@@ -174,6 +182,8 @@
     <Compile Include="V20210701\Models\IngressRulePath.cs" />
     <Compile Include="V20210701\Models\IngressRuleValue.cs" />
     <Compile Include="V20210701\Models\IngressTls.cs" />
+    <Compile Include="V20210701\Models\LogConfig.cs" />
+    <Compile Include="V20210701\Models\LogConfigListPage.cs" />
     <Compile Include="V20210701\Models\LogOutputConf.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationAutoscalerRequest.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationAutoscalerResponse.cs" />
@@ -187,6 +197,8 @@
     <Compile Include="V20210701\Models\ModifyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\ModifyIngressRequest.cs" />
     <Compile Include="V20210701\Models\ModifyIngressResponse.cs" />
+    <Compile Include="V20210701\Models\ModifyLogConfigRequest.cs" />
+    <Compile Include="V20210701\Models\ModifyLogConfigResponse.cs" />
     <Compile Include="V20210701\Models\MountedSettingConf.cs" />
     <Compile Include="V20210701\Models\NamespacePage.cs" />
     <Compile Include="V20210701\Models\NamespaceStatusInfo.cs" />
@@ -205,6 +217,8 @@
     <Compile Include="V20210701\Models\RollingUpdateApplicationByVersionResponse.cs" />
     <Compile Include="V20210701\Models\RunVersionPod.cs" />
     <Compile Include="V20210701\Models\ServicePage.cs" />
+    <Compile Include="V20210701\Models\ServicePortMapping.cs" />
+    <Compile Include="V20210701\Models\ServicePortMappingItem.cs" />
     <Compile Include="V20210701\Models\ServiceVersionBrief.cs" />
     <Compile Include="V20210701\Models\StopApplicationRequest.cs" />
     <Compile Include="V20210701\Models\StopApplicationResponse.cs" />

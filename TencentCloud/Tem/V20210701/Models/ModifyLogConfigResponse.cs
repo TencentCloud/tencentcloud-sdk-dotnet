@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuerySinglePayResponse : AbstractModel
+    public class ModifyLogConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// 返回结果
+        /// 编辑是否成功
         /// </summary>
         [JsonProperty("Result")]
-        public QuerySinglePayResult Result{ get; set; }
+        public bool? Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

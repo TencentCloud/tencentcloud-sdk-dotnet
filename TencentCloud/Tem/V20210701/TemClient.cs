@@ -253,6 +253,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 创建日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogConfigRequest"/></param>
+        /// <returns><see cref="CreateLogConfigResponse"/></returns>
+        public async Task<CreateLogConfigResponse> CreateLogConfig(CreateLogConfigRequest req)
+        {
+             JsonResponseModel<CreateLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateLogConfigRequest"/></param>
+        /// <returns><see cref="CreateLogConfigResponse"/></returns>
+        public CreateLogConfigResponse CreateLogConfigSync(CreateLogConfigRequest req)
+        {
+             JsonResponseModel<CreateLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 绑定云资源
         /// </summary>
         /// <param name="req"><see cref="CreateResourceRequest"/></param>
@@ -819,7 +859,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 获取租户环境列表
+        /// 获取环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -839,7 +879,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 获取租户环境列表
+        /// 获取环境列表
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentsRequest"/></param>
         /// <returns><see cref="DescribeEnvironmentsResponse"/></returns>
@@ -939,6 +979,86 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 查询日志收集配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigResponse"/></returns>
+        public async Task<DescribeLogConfigResponse> DescribeLogConfig(DescribeLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询日志收集配置详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLogConfigRequest"/></param>
+        /// <returns><see cref="DescribeLogConfigResponse"/></returns>
+        public DescribeLogConfigResponse DescribeLogConfigSync(DescribeLogConfigRequest req)
+        {
+             JsonResponseModel<DescribeLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询分页的日志收集配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePagedLogConfigListRequest"/></param>
+        /// <returns><see cref="DescribePagedLogConfigListResponse"/></returns>
+        public async Task<DescribePagedLogConfigListResponse> DescribePagedLogConfigList(DescribePagedLogConfigListRequest req)
+        {
+             JsonResponseModel<DescribePagedLogConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePagedLogConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePagedLogConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询分页的日志收集配置列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePagedLogConfigListRequest"/></param>
+        /// <returns><see cref="DescribePagedLogConfigListResponse"/></returns>
+        public DescribePagedLogConfigListResponse DescribePagedLogConfigListSync(DescribePagedLogConfigListRequest req)
+        {
+             JsonResponseModel<DescribePagedLogConfigListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePagedLogConfigList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePagedLogConfigListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询应用关联的 Ingress 规则列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRelatedIngressesRequest"/></param>
@@ -1019,7 +1139,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 销毁命名空间
+        /// 销毁环境
         /// </summary>
         /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
         /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
@@ -1039,7 +1159,7 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
-        /// 销毁命名空间
+        /// 销毁环境
         /// </summary>
         /// <param name="req"><see cref="DestroyEnvironmentRequest"/></param>
         /// <returns><see cref="DestroyEnvironmentResponse"/></returns>
@@ -1050,6 +1170,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "DestroyEnvironment");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="DestroyLogConfigRequest"/></param>
+        /// <returns><see cref="DestroyLogConfigResponse"/></returns>
+        public async Task<DestroyLogConfigResponse> DestroyLogConfig(DestroyLogConfigRequest req)
+        {
+             JsonResponseModel<DestroyLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 销毁日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="DestroyLogConfigRequest"/></param>
+        /// <returns><see cref="DestroyLogConfigResponse"/></returns>
+        public DestroyLogConfigResponse DestroyLogConfigSync(DestroyLogConfigRequest req)
+        {
+             JsonResponseModel<DestroyLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyLogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1330,6 +1490,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "ModifyIngress");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyIngressResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogConfigResponse"/></returns>
+        public async Task<ModifyLogConfigResponse> ModifyLogConfig(ModifyLogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLogConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 编辑日志收集配置
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLogConfigRequest"/></param>
+        /// <returns><see cref="ModifyLogConfigResponse"/></returns>
+        public ModifyLogConfigResponse ModifyLogConfigSync(ModifyLogConfigRequest req)
+        {
+             JsonResponseModel<ModifyLogConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLogConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLogConfigResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

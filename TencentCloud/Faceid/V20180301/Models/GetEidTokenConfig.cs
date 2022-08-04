@@ -43,10 +43,22 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? UseIntentionVerify{ get; set; }
 
         /// <summary>
-        /// 意愿核身使用的文案，若未使用意愿核身功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
+        /// 意愿核身模式。枚举值：1( 朗读模式)，2（问答模式） 。默认值1
+        /// </summary>
+        [JsonProperty("IntentionMode")]
+        public string IntentionMode{ get; set; }
+
+        /// <summary>
+        /// 意愿核身朗读模式使用的文案，若未使用意愿核身朗读功能，该字段无需传入。默认为空，最长可接受120的字符串长度。
         /// </summary>
         [JsonProperty("IntentionVerifyText")]
         public string IntentionVerifyText{ get; set; }
+
+        /// <summary>
+        /// 意愿核身问答模式的配置列表。当前仅支持一个问答。
+        /// </summary>
+        [JsonProperty("IntentionQuestions")]
+        public IntentionQuestion[] IntentionQuestions{ get; set; }
 
 
         /// <summary>
@@ -56,7 +68,9 @@ namespace TencentCloud.Faceid.V20180301.Models
         {
             this.SetParamSimple(map, prefix + "InputType", this.InputType);
             this.SetParamSimple(map, prefix + "UseIntentionVerify", this.UseIntentionVerify);
+            this.SetParamSimple(map, prefix + "IntentionMode", this.IntentionMode);
             this.SetParamSimple(map, prefix + "IntentionVerifyText", this.IntentionVerifyText);
+            this.SetParamArrayObj(map, prefix + "IntentionQuestions.", this.IntentionQuestions);
         }
     }
 }

@@ -43,7 +43,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 门神黑白名单
+        /// 托管规则黑白名单
         /// </summary>
         [JsonProperty("WafRules")]
         public WafRule WafRules{ get; set; }

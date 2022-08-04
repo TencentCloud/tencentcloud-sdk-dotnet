@@ -90,6 +90,12 @@ namespace TencentCloud.Dnspod.V20210323.Models
         [JsonProperty("Uin")]
         public long? Uin{ get; set; }
 
+        /// <summary>
+        /// 所属 DNS 服务器
+        /// </summary>
+        [JsonProperty("FreeNs")]
+        public string[] FreeNs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Dnspod.V20210323.Models
             this.SetParamSimple(map, prefix + "RealName", this.RealName);
             this.SetParamSimple(map, prefix + "WechatBinded", this.WechatBinded);
             this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamArraySimple(map, prefix + "FreeNs.", this.FreeNs);
         }
     }
 }

@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuerySinglePayRequest : AbstractModel
+    public class DestroyLogConfigResponse : AbstractModel
     {
         
         /// <summary>
-        /// 业务流水号
+        /// 返回结果
         /// </summary>
-        [JsonProperty("SerialNumber")]
-        public string SerialNumber{ get; set; }
+        [JsonProperty("Result")]
+        public bool? Result{ get; set; }
 
         /// <summary>
-        /// 接入环境。沙箱环境填sandbox
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Profile")]
-        public string Profile{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "SerialNumber", this.SerialNumber);
-            this.SetParamSimple(map, prefix + "Profile", this.Profile);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

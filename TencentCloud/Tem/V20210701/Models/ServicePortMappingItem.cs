@@ -15,42 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuerySinglePayItem : AbstractModel
+    public class ServicePortMappingItem : AbstractModel
     {
         
         /// <summary>
-        /// 付款状态（S：支付成功；P：支付处理中；F：支付失败）
+        /// 应用访问端口
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PayStatus")]
-        public string PayStatus{ get; set; }
+        [JsonProperty("Port")]
+        public long? Port{ get; set; }
 
         /// <summary>
-        /// 平台信息
+        /// 应用监听端口
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("PlatformMsg")]
-        public string PlatformMsg{ get; set; }
+        [JsonProperty("TargetPort")]
+        public long? TargetPort{ get; set; }
 
         /// <summary>
-        /// 银行原始返回码
+        /// 协议类型
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("BankRetCode")]
-        public string BankRetCode{ get; set; }
-
-        /// <summary>
-        /// 银行原始返回
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("BankRetMsg")]
-        public string BankRetMsg{ get; set; }
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
 
 
         /// <summary>
@@ -58,10 +51,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "PayStatus", this.PayStatus);
-            this.SetParamSimple(map, prefix + "PlatformMsg", this.PlatformMsg);
-            this.SetParamSimple(map, prefix + "BankRetCode", this.BankRetCode);
-            this.SetParamSimple(map, prefix + "BankRetMsg", this.BankRetMsg);
+            this.SetParamSimple(map, prefix + "Port", this.Port);
+            this.SetParamSimple(map, prefix + "TargetPort", this.TargetPort);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
         }
     }
 }

@@ -15,40 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class QuerySinglePayResult : AbstractModel
+    public class DestroyLogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 受理状态（S：处理成功；F：处理失败）
+        /// 环境 ID
         /// </summary>
-        [JsonProperty("HandleStatus")]
-        public string HandleStatus{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 受理状态描述
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 配置名
         /// </summary>
-        [JsonProperty("HandleMsg")]
-        public string HandleMsg{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
         /// <summary>
-        /// 业务流水号
+        /// 应用 ID
         /// </summary>
-        [JsonProperty("SerialNo")]
-        public string SerialNo{ get; set; }
-
-        /// <summary>
-        /// 支付明细
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Items")]
-        public QuerySinglePayItem[] Items{ get; set; }
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
 
         /// <summary>
@@ -56,10 +48,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "HandleStatus", this.HandleStatus);
-            this.SetParamSimple(map, prefix + "HandleMsg", this.HandleMsg);
-            this.SetParamSimple(map, prefix + "SerialNo", this.SerialNo);
-            this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

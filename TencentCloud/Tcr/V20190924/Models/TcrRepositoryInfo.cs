@@ -37,7 +37,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Namespace{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
         /// </summary>
         [JsonProperty("CreationTime")]
         public string CreationTime{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string BriefDescription{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 更新时间，格式"2006-01-02 15:04:05.999999999 -0700 MST"
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }

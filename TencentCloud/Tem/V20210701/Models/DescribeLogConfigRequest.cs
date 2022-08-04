@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Cpdp.V20190820.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateSinglePayResponse : AbstractModel
+    public class DescribeLogConfigRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回结果
+        /// 环境 ID
         /// </summary>
-        [JsonProperty("Result")]
-        public CreateSinglePayResult Result{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 配置名
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
+        /// <summary>
+        /// 应用 ID
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Result.", this.Result);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

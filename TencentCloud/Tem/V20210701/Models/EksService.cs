@@ -101,6 +101,41 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("PortMappings")]
         public PortMapping[] PortMappings{ get; set; }
 
+        /// <summary>
+        /// 每种类型访问配置详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServicePortMappingList")]
+        public ServicePortMapping[] ServicePortMappingList{ get; set; }
+
+        /// <summary>
+        /// 刷新复写所有类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlushAll")]
+        public bool? FlushAll{ get; set; }
+
+        /// <summary>
+        /// 1: 下次部署自动注入注册中心信息；0：不注入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableRegistryNextDeploy")]
+        public long? EnableRegistryNextDeploy{ get; set; }
+
+        /// <summary>
+        /// 返回应用id
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
+        /// <summary>
+        /// 所有服务IP是否已经ready
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AllIpDone")]
+        public bool? AllIpDone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +153,11 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "LoadBalanceId", this.LoadBalanceId);
             this.SetParamArrayObj(map, prefix + "PortMappings.", this.PortMappings);
+            this.SetParamArrayObj(map, prefix + "ServicePortMappingList.", this.ServicePortMappingList);
+            this.SetParamSimple(map, prefix + "FlushAll", this.FlushAll);
+            this.SetParamSimple(map, prefix + "EnableRegistryNextDeploy", this.EnableRegistryNextDeploy);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
+            this.SetParamSimple(map, prefix + "AllIpDone", this.AllIpDone);
         }
     }
 }

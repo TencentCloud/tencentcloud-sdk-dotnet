@@ -44,6 +44,13 @@ namespace TencentCloud.Cdn.V20180606.Models
         [JsonProperty("AdvancedRules")]
         public AdvancedCCRules[] AdvancedRules{ get; set; }
 
+        /// <summary>
+        /// 增强自定义 cc 防护规则， 全局
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GlobalAdvancedRules")]
+        public AdvancedCCRules[] GlobalAdvancedRules{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -53,6 +60,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "Rules.", this.Rules);
             this.SetParamArrayObj(map, prefix + "AdvancedRules.", this.AdvancedRules);
+            this.SetParamArrayObj(map, prefix + "GlobalAdvancedRules.", this.GlobalAdvancedRules);
         }
     }
 }

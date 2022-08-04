@@ -41,6 +41,14 @@ namespace TencentCloud.Bda.V20200324.Models
         [JsonProperty("Url")]
         public string Url{ get; set; }
 
+        /// <summary>
+        /// 人体局部关键点识别，开启后对人体局部图（例如部分身体部位）进行关键点识别，输出人体关键点坐标，默认不开启
+        /// 
+        /// 注意：若开启人体局部图片关键点识别，则BoundBox、Confidence返回为空。
+        /// </summary>
+        [JsonProperty("LocalBodySwitch")]
+        public bool? LocalBodySwitch{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,6 +57,7 @@ namespace TencentCloud.Bda.V20200324.Models
         {
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "LocalBodySwitch", this.LocalBodySwitch);
         }
     }
 }

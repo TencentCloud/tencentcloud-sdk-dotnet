@@ -32,6 +32,13 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
+        /// <summary>
+        /// 支持的压缩算法列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Algorithms")]
+        public string[] Algorithms{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -39,6 +46,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "Algorithms.", this.Algorithms);
         }
     }
 }

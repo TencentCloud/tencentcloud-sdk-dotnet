@@ -42,6 +42,12 @@ namespace TencentCloud.Bda.V20200324.Models
         [JsonProperty("Y")]
         public float? Y{ get; set; }
 
+        /// <summary>
+        /// 关键点坐标置信度，分数取值在0-1之间，阈值建议为0.25，小于0.25认为在图中无人体关键点。
+        /// </summary>
+        [JsonProperty("BodyScore")]
+        public float? BodyScore{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Bda.V20200324.Models
             this.SetParamSimple(map, prefix + "KeyPointType", this.KeyPointType);
             this.SetParamSimple(map, prefix + "X", this.X);
             this.SetParamSimple(map, prefix + "Y", this.Y);
+            this.SetParamSimple(map, prefix + "BodyScore", this.BodyScore);
         }
     }
 }
