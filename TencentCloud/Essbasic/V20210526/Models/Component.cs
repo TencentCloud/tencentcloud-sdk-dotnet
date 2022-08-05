@@ -43,6 +43,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// 如果是Component控件类型，则可选的字段为：
         /// TEXT - 普通文本控件；
         /// DATE - 普通日期控件；跟TEXT相比会有校验逻辑
+        /// DYNAMIC_TABLE-动态表格控件；
         /// 如果是SignComponent控件类型，则可选的字段为
         /// SIGN_SEAL - 签署印章控件；
         /// SIGN_DATE - 签署日期控件；

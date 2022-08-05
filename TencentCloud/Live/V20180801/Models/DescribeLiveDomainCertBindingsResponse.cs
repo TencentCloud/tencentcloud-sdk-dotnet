@@ -15,33 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputDescribeRiskModel : AbstractModel
+    public class DescribeLiveDomainCertBindingsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 请求返回状态值，0为成功，别的结合Message查看
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
-
-        /// <summary>
-        /// 请求返回信息
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
-        /// 请求返回结果
-        /// </summary>
-        [JsonProperty("Value")]
-        public OutputDescribeRiskModelValue Value{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -49,9 +36,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

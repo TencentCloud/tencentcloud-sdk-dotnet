@@ -93,46 +93,6 @@ namespace TencentCloud.Rce.V20201103
         }
 
         /// <summary>
-        /// 依托人工智能技术和腾讯丰富的风控实战经验，根据用户提供的数据和业务场景，给客户提供定制化模型服务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskModelRequest"/></param>
-        /// <returns><see cref="DescribeRiskModelResponse"/></returns>
-        public async Task<DescribeRiskModelResponse> DescribeRiskModel(DescribeRiskModelRequest req)
-        {
-             JsonResponseModel<DescribeRiskModelResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRiskModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 依托人工智能技术和腾讯丰富的风控实战经验，根据用户提供的数据和业务场景，给客户提供定制化模型服务
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRiskModelRequest"/></param>
-        /// <returns><see cref="DescribeRiskModelResponse"/></returns>
-        public DescribeRiskModelResponse DescribeRiskModelSync(DescribeRiskModelRequest req)
-        {
-             JsonResponseModel<DescribeRiskModelResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRiskModel");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRiskModelResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 以图表形式展示三种请求状态的趋势变化
         /// </summary>
         /// <param name="req"><see cref="DescribeRiskTrendsRequest"/></param>

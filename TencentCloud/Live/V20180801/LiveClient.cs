@@ -2215,6 +2215,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询绑定证书的域名列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainCertBindingsResponse"/></returns>
+        public async Task<DescribeLiveDomainCertBindingsResponse> DescribeLiveDomainCertBindings(DescribeLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询绑定证书的域名列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="DescribeLiveDomainCertBindingsResponse"/></returns>
+        public DescribeLiveDomainCertBindingsResponse DescribeLiveDomainCertBindingsSync(DescribeLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<DescribeLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLiveDomainCertBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询实时的域名维度下行播放数据，由于数据处理有耗时，接口默认查询4分钟前的准实时数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeLiveDomainPlayInfoListRequest"/></param>
@@ -4236,6 +4276,48 @@ namespace TencentCloud.Live.V20180801
              {
                  var strResp = this.InternalRequestSync(req, "ModifyLiveCallbackTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveCallbackTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定证书对应的播放域名，并更新启用状态。
+        /// 新建自有证书将自动上传至腾讯云ssl。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainCertBindingsResponse"/></returns>
+        public async Task<ModifyLiveDomainCertBindingsResponse> ModifyLiveDomainCertBindings(ModifyLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量绑定证书对应的播放域名，并更新启用状态。
+        /// 新建自有证书将自动上传至腾讯云ssl。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLiveDomainCertBindingsRequest"/></param>
+        /// <returns><see cref="ModifyLiveDomainCertBindingsResponse"/></returns>
+        public ModifyLiveDomainCertBindingsResponse ModifyLiveDomainCertBindingsSync(ModifyLiveDomainCertBindingsRequest req)
+        {
+             JsonResponseModel<ModifyLiveDomainCertBindingsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLiveDomainCertBindings");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLiveDomainCertBindingsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

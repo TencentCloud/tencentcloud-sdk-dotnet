@@ -15,20 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputDescribeRiskModelValue : AbstractModel
+    public class LiveCertDomainInfo : AbstractModel
     {
         
         /// <summary>
-        /// 模型分数值
+        /// 域名。
         /// </summary>
-        [JsonProperty("ApplyScore")]
-        public float? ApplyScore{ get; set; }
+        [JsonProperty("DomainName")]
+        public string DomainName{ get; set; }
+
+        /// <summary>
+        /// 是否启用域名的https规则。
+        /// 1：启用
+        /// 0：禁用
+        /// -1：保持不变
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -36,7 +45,8 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ApplyScore", this.ApplyScore);
+            this.SetParamSimple(map, prefix + "DomainName", this.DomainName);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

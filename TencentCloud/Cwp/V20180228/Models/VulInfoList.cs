@@ -67,7 +67,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? HostCount{ get; set; }
 
         /// <summary>
-        /// 漏洞等级 1:低 2:中 3:高 4:提示
+        /// 漏洞等级 1:低 2:中 3:高 4:严重
         /// </summary>
         [JsonProperty("Level")]
         public ulong? Level{ get; set; }

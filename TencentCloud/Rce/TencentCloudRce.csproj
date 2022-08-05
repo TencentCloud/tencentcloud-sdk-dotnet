@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E523CF0C-FC92-3F06-9926-ECC75CD44DD0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.572</VersionPrefix>
+    <VersionPrefix>3.0.573</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,12 +48,9 @@
     <Compile Include="V20201103\Models\AccountInfo.cs" />
     <Compile Include="V20201103\Models\DescribeRiskAssessmentRequest.cs" />
     <Compile Include="V20201103\Models\DescribeRiskAssessmentResponse.cs" />
-    <Compile Include="V20201103\Models\DescribeRiskModelRequest.cs" />
-    <Compile Include="V20201103\Models\DescribeRiskModelResponse.cs" />
     <Compile Include="V20201103\Models\DescribeRiskTrendsRequest.cs" />
     <Compile Include="V20201103\Models\DescribeRiskTrendsResponse.cs" />
     <Compile Include="V20201103\Models\InputCryptoManageMarketingRisk.cs" />
-    <Compile Include="V20201103\Models\InputDescribeRiskModelData.cs" />
     <Compile Include="V20201103\Models\InputDetails.cs" />
     <Compile Include="V20201103\Models\InputFrontRisk.cs" />
     <Compile Include="V20201103\Models\InputManageMarketingRisk.cs" />
@@ -61,8 +58,6 @@
     <Compile Include="V20201103\Models\ManageMarketingRiskResponse.cs" />
     <Compile Include="V20201103\Models\OnlineScamInfo.cs" />
     <Compile Include="V20201103\Models\OtherAccountInfo.cs" />
-    <Compile Include="V20201103\Models\OutputDescribeRiskModel.cs" />
-    <Compile Include="V20201103\Models\OutputDescribeRiskModelValue.cs" />
     <Compile Include="V20201103\Models\OutputFrontRisk.cs" />
     <Compile Include="V20201103\Models\OutputFrontRiskData.cs" />
     <Compile Include="V20201103\Models\OutputFrontRiskValue.cs" />

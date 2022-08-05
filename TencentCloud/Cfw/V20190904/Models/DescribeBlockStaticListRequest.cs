@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 类型
+        /// 列表类型，只能是下面三种之一：port、address、ip
         /// </summary>
         [JsonProperty("QueryType")]
         public string QueryType{ get; set; }

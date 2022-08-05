@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Rce.V20201103.Models
+namespace TencentCloud.Live.V20180801.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeRiskModelResponse : AbstractModel
+    public class ModifyLiveDomainCertBindingsResponse : AbstractModel
     {
         
         /// <summary>
-        /// 业务出参
+        /// DomainNames 入参中，与证书不匹配的域名列表，将会跳过处理。
         /// </summary>
-        [JsonProperty("Data")]
-        public OutputDescribeRiskModel Data{ get; set; }
+        [JsonProperty("MismatchedDomainNames")]
+        public string[] MismatchedDomainNames{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Rce.V20201103.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
+            this.SetParamArraySimple(map, prefix + "MismatchedDomainNames.", this.MismatchedDomainNames);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

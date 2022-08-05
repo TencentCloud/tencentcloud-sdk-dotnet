@@ -173,6 +173,46 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 查询短信列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsRequest"/></param>
+        /// <returns><see cref="DescribeSmsResponse"/></returns>
+        public async Task<DescribeSmsResponse> DescribeSms(DescribeSmsRequest req)
+        {
+             JsonResponseModel<DescribeSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询短信列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSmsRequest"/></param>
+        /// <returns><see cref="DescribeSmsResponse"/></returns>
+        public DescribeSmsResponse DescribeSmsSync(DescribeSmsRequest req)
+        {
+             JsonResponseModel<DescribeSmsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSms");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSmsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 编辑卡片备注
         /// </summary>
         /// <param name="req"><see cref="ModifyUserCardRemarkRequest"/></param>

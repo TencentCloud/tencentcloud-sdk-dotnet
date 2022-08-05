@@ -68,7 +68,7 @@ namespace TencentCloud.Gaap.V20180529.Models
         public long? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 并发，单位：个/秒。
+        /// 并发，单位：万个/秒。
         /// </summary>
         [JsonProperty("Concurrent")]
         public long? Concurrent{ get; set; }
