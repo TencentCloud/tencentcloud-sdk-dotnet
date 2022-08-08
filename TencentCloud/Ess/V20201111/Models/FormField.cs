@@ -25,12 +25,13 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 控件填充value，ComponentType和传入值类型对应关系：
+        /// 控件填充vaule，ComponentType和传入值类型对应关系：
         /// TEXT - 文本内容
         /// MULTI_LINE_TEXT - 文本内容
         /// CHECK_BOX - true/false
-        /// ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
-        /// SELECTOR - 模板中配置的选项值
+        /// FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+        /// SELECTOR - 选项值
+        /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B5D57B68-CB59-323E-9A06-B048D5C6D369}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.573</VersionPrefix>
+    <VersionPrefix>3.0.574</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -57,6 +57,7 @@
     <Compile Include="V20170312\Models\ChargePrepaid.cs" />
     <Compile Include="V20170312\Models\ChcDeployExtraConfig.cs" />
     <Compile Include="V20170312\Models\ChcHost.cs" />
+    <Compile Include="V20170312\Models\ChcHostDeniedActions.cs" />
     <Compile Include="V20170312\Models\ConfigureChcAssistVpcRequest.cs" />
     <Compile Include="V20170312\Models\ConfigureChcAssistVpcResponse.cs" />
     <Compile Include="V20170312\Models\ConfigureChcDeployVpcRequest.cs" />
@@ -84,6 +85,8 @@
     <Compile Include="V20170312\Models\DeleteLaunchTemplateVersionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAccountQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAccountQuotaResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeChcDeniedActionsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeChcDeniedActionsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeChcHostsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeChcHostsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDisasterRecoverGroupQuotaRequest.cs" />

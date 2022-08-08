@@ -25,6 +25,18 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
+        /// 有绑定证书的域名信息数组。
+        /// </summary>
+        [JsonProperty("LiveDomainCertBindings")]
+        public LiveDomainCertBindings[] LiveDomainCertBindings{ get; set; }
+
+        /// <summary>
+        /// 总的记录行数，便于分页。
+        /// </summary>
+        [JsonProperty("TotalNum")]
+        public long? TotalNum{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +48,8 @@ namespace TencentCloud.Live.V20180801.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "LiveDomainCertBindings.", this.LiveDomainCertBindings);
+            this.SetParamSimple(map, prefix + "TotalNum", this.TotalNum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

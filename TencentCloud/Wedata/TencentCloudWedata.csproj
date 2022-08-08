@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.573</VersionPrefix>
+    <VersionPrefix>3.0.574</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,14 +45,115 @@
 
   <ItemGroup>
     <Compile Include="V20210820\WedataClient.cs" />
+    <Compile Include="V20210820\Models\AlarmInfo.cs" />
+    <Compile Include="V20210820\Models\BatchDeleteTasksNewRequest.cs" />
+    <Compile Include="V20210820\Models\BatchDeleteTasksNewResponse.cs" />
+    <Compile Include="V20210820\Models\BatchModifyOwnersNewRequest.cs" />
+    <Compile Include="V20210820\Models\BatchModifyOwnersNewResponse.cs" />
+    <Compile Include="V20210820\Models\BatchOperateResult.cs" />
+    <Compile Include="V20210820\Models\BatchResult.cs" />
+    <Compile Include="V20210820\Models\BatchReturn.cs" />
+    <Compile Include="V20210820\Models\BatchStopTasksNewRequest.cs" />
+    <Compile Include="V20210820\Models\BatchStopTasksNewResponse.cs" />
+    <Compile Include="V20210820\Models\CanvasInfo.cs" />
+    <Compile Include="V20210820\Models\CommonContent.cs" />
+    <Compile Include="V20210820\Models\CommonId.cs" />
+    <Compile Include="V20210820\Models\CreateFolderRequest.cs" />
+    <Compile Include="V20210820\Models\CreateFolderResponse.cs" />
+    <Compile Include="V20210820\Models\CreateTaskRequest.cs" />
+    <Compile Include="V20210820\Models\CreateTaskResponse.cs" />
+    <Compile Include="V20210820\Models\CreateWorkflowRequest.cs" />
+    <Compile Include="V20210820\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteFolderRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteFolderResponse.cs" />
+    <Compile Include="V20210820\Models\DeleteWorkflowNewRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteWorkflowNewResponse.cs" />
+    <Compile Include="V20210820\Models\DependencyConfig.cs" />
+    <Compile Include="V20210820\Models\DescribeDependTasksNewRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDependTasksNewResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderListData.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderWorkflowListData.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderWorkflowListRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeFolderWorkflowListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeInstanceLogsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeInstanceLogsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20210820\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRelatedInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeRelatedInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskDetailRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskDetailResponse.cs" />
     <Compile Include="V20210820\Models\DescribeTaskInstancesData.cs" />
     <Compile Include="V20210820\Models\DescribeTaskInstancesRequest.cs" />
     <Compile Include="V20210820\Models\DescribeTaskInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskScriptRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTaskScriptResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeTasksByPageRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeTasksByPageResponse.cs" />
+    <Compile Include="V20210820\Models\Folder.cs" />
+    <Compile Include="V20210820\Models\ForceSucInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\ForceSucInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\FreezeTasksByMultiWorkflowRequest.cs" />
+    <Compile Include="V20210820\Models\FreezeTasksByMultiWorkflowResponse.cs" />
+    <Compile Include="V20210820\Models\FreezeTasksRequest.cs" />
+    <Compile Include="V20210820\Models\FreezeTasksResponse.cs" />
+    <Compile Include="V20210820\Models\GeneralTaskParam.cs" />
+    <Compile Include="V20210820\Models\InstanceInfo.cs" />
+    <Compile Include="V20210820\Models\InstanceLog.cs" />
+    <Compile Include="V20210820\Models\IntegrationNodeDetail.cs" />
+    <Compile Include="V20210820\Models\IntegrationNodeMapping.cs" />
+    <Compile Include="V20210820\Models\IntegrationNodeSchema.cs" />
+    <Compile Include="V20210820\Models\IntegrationNodeSchemaMapping.cs" />
+    <Compile Include="V20210820\Models\KillInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\KillInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\MakeUpTasksNewRequest.cs" />
+    <Compile Include="V20210820\Models\MakeUpTasksNewResponse.cs" />
+    <Compile Include="V20210820\Models\MakeUpWorkflowNewRequest.cs" />
+    <Compile Include="V20210820\Models\MakeUpWorkflowNewResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyFolderRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyFolderResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskInfoRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskInfoResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskLinksRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskLinksResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskScriptRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyTaskScriptResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyWorkflowInfoRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyWorkflowInfoResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyWorkflowScheduleRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyWorkflowScheduleResponse.cs" />
+    <Compile Include="V20210820\Models\OperateResult.cs" />
     <Compile Include="V20210820\Models\OrderField.cs" />
+    <Compile Include="V20210820\Models\ParamInfo.cs" />
+    <Compile Include="V20210820\Models\RecordField.cs" />
+    <Compile Include="V20210820\Models\RegisterEventListenerRequest.cs" />
+    <Compile Include="V20210820\Models\RegisterEventListenerResponse.cs" />
+    <Compile Include="V20210820\Models\RegisterEventRequest.cs" />
+    <Compile Include="V20210820\Models\RegisterEventResponse.cs" />
+    <Compile Include="V20210820\Models\RerunInstancesRequest.cs" />
+    <Compile Include="V20210820\Models\RerunInstancesResponse.cs" />
+    <Compile Include="V20210820\Models\RunTaskRequest.cs" />
+    <Compile Include="V20210820\Models\RunTaskResponse.cs" />
+    <Compile Include="V20210820\Models\SetTaskAlarmNewRequest.cs" />
+    <Compile Include="V20210820\Models\SetTaskAlarmNewResponse.cs" />
+    <Compile Include="V20210820\Models\SimpleTaskInfo.cs" />
+    <Compile Include="V20210820\Models\SubmitTaskRequest.cs" />
+    <Compile Include="V20210820\Models\SubmitTaskResponse.cs" />
+    <Compile Include="V20210820\Models\SubmitWorkflow.cs" />
+    <Compile Include="V20210820\Models\SubmitWorkflowRequest.cs" />
+    <Compile Include="V20210820\Models\SubmitWorkflowResponse.cs" />
+    <Compile Include="V20210820\Models\TaskCanvasInfo.cs" />
+    <Compile Include="V20210820\Models\TaskExtInfo.cs" />
+    <Compile Include="V20210820\Models\TaskInfoData.cs" />
+    <Compile Include="V20210820\Models\TaskInfoDataPage.cs" />
+    <Compile Include="V20210820\Models\TaskInnerInfo.cs" />
     <Compile Include="V20210820\Models\TaskInstanceInfo.cs" />
+    <Compile Include="V20210820\Models\TaskLinkInfo.cs" />
+    <Compile Include="V20210820\Models\TaskScriptContent.cs" />
+    <Compile Include="V20210820\Models\TriggerEventRequest.cs" />
+    <Compile Include="V20210820\Models\TriggerEventResponse.cs" />
+    <Compile Include="V20210820\Models\Workflow.cs" />
   </ItemGroup>
 </Project>

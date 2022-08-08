@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0FA5DA3C-0849-3409-A6FE-3F1F2840284F}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.573</VersionPrefix>
+    <VersionPrefix>3.0.574</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,25 +45,7 @@
 
   <ItemGroup>
     <Compile Include="V20200224\AaClient.cs" />
-    <Compile Include="V20200224\Models\AccountInfo.cs" />
-    <Compile Include="V20200224\Models\CrowdAntiRushInfo.cs" />
-    <Compile Include="V20200224\Models\InputActivityAntiRushAdvanced.cs" />
-    <Compile Include="V20200224\Models\InputDetails.cs" />
-    <Compile Include="V20200224\Models\InputManageMarketingRisk.cs" />
-    <Compile Include="V20200224\Models\ManageMarketingRiskRequest.cs" />
-    <Compile Include="V20200224\Models\ManageMarketingRiskResponse.cs" />
-    <Compile Include="V20200224\Models\OnlineScamInfo.cs" />
-    <Compile Include="V20200224\Models\OtherAccountInfo.cs" />
-    <Compile Include="V20200224\Models\OutputActivityAntiRushAdvanced.cs" />
-    <Compile Include="V20200224\Models\OutputActivityAntiRushAdvancedValue.cs" />
-    <Compile Include="V20200224\Models\OutputManageMarketingRisk.cs" />
-    <Compile Include="V20200224\Models\OutputManageMarketingRiskValue.cs" />
-    <Compile Include="V20200224\Models\QQAccountInfo.cs" />
-    <Compile Include="V20200224\Models\QueryActivityAntiRushAdvancedRequest.cs" />
-    <Compile Include="V20200224\Models\QueryActivityAntiRushAdvancedResponse.cs" />
     <Compile Include="V20200224\Models\QueryActivityAntiRushRequest.cs" />
     <Compile Include="V20200224\Models\QueryActivityAntiRushResponse.cs" />
-    <Compile Include="V20200224\Models\SponsorInfo.cs" />
-    <Compile Include="V20200224\Models\WeChatAccountInfo.cs" />
   </ItemGroup>
 </Project>

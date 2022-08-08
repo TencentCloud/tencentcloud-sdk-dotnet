@@ -53,18 +53,18 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// ###接口说明：
+        /// 接口说明：
         /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
         /// 
-        /// ###您可以通过此接口实现如下目标：
+        /// 您可以通过此接口实现如下目标：
         /// * 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
         /// * 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储
         /// * 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
         /// * 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
         /// 
-        /// ###关键名词：
-        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件（M3U8/TS）上传至云存储。
-        /// * 混流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件（M3U8/TS）上传至云存储。
+        /// 关键名词：
+        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件上传至云点播存储。
+        /// * 合流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件上传至云点播存储。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
         /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
@@ -84,18 +84,18 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// ###接口说明：
+        /// 接口说明：
         /// 启动云端录制功能，完成房间内的音视频录制，并上传到指定的云存储。您可以通过此 API 接口把TRTC 房间中的每一路音视频流做单独的录制有或者多路视频画面混流一路。
         /// 
-        /// ###您可以通过此接口实现如下目标：
+        /// 您可以通过此接口实现如下目标：
         /// * 指定订阅流参数（RecordParams）来指定需要录制的主播的黑名单或者白名单。
         /// * 指定第三方存储的参数（StorageParams）来指定上传到您希望的云存储
         /// * 指定混流模式下的音视频转码详细参数（MixTranscodeParams），包括视频分辨率、视频码率、视频帧率、以及声音质量等
         /// * 指定混流模式各路画面的位置和布局或者也可以指定自动模板的方式来配置。
         /// 
-        /// ###关键名词：
-        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件（M3U8/TS）上传至云存储。
-        /// * 混流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件（M3U8/TS）上传至云存储。
+        /// 关键名词：
+        /// * 单流录制：分别录制房间的订阅UserId的音频和视频。录制服务会实时将录制文件上传至云点播存储。
+        /// * 合流录制：将房间内订阅UserId的音视频混录成一个音视频文件，并将录制文件上传至云点播存储。
         /// </summary>
         /// <param name="req"><see cref="CreateCloudRecordingRequest"/></param>
         /// <returns><see cref="CreateCloudRecordingResponse"/></returns>
@@ -155,7 +155,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 成功开启录制后，可以使用此接口来停止录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+        /// 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
         /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
@@ -175,7 +175,7 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 成功开启录制后，可以使用此接口来停止录制任务。仅在录制任务进行时有效，录制退出后更新将会返回错误。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
+        /// 成功开启录制后，可以使用此接口来停止录制任务。停止录制成功后不代表文件全部传输完成，如果未完成后台将会继续上传文件，成功后通过事件回调通知客户文件全部传输完成状态。
         /// </summary>
         /// <param name="req"><see cref="DeleteCloudRecordingRequest"/></param>
         /// <returns><see cref="DeleteCloudRecordingResponse"/></returns>
@@ -235,90 +235,6 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
-        /// 查询SdkAppId下任意20条异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询14天内数据，查询起止时间不超过1个小时。支持跨天查询。
-        /// 异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
-        public async Task<DescribeAbnormalEventResponse> DescribeAbnormalEvent(DescribeAbnormalEventRequest req)
-        {
-             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeAbnormalEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询SdkAppId下任意20条异常体验事件，返回异常体验ID与可能产生异常体验的原因。可查询14天内数据，查询起止时间不超过1个小时。支持跨天查询。
-        /// 异常体验ID映射见：https://cloud.tencent.com/document/product/647/44916
-        /// </summary>
-        /// <param name="req"><see cref="DescribeAbnormalEventRequest"/></param>
-        /// <returns><see cref="DescribeAbnormalEventResponse"/></returns>
-        public DescribeAbnormalEventResponse DescribeAbnormalEventSync(DescribeAbnormalEventRequest req)
-        {
-             JsonResponseModel<DescribeAbnormalEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeAbnormalEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAbnormalEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
-        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
-        public async Task<DescribeCallDetailResponse> DescribeCallDetail(DescribeCallDetailRequest req)
-        {
-             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeCallDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeCallDetailRequest"/></param>
-        /// <returns><see cref="DescribeCallDetailResponse"/></returns>
-        public DescribeCallDetailResponse DescribeCallDetailSync(DescribeCallDetailRequest req)
-        {
-             JsonResponseModel<DescribeCallDetailResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeCallDetail");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCallDetailResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询指定时间内的用户列表及用户通话质量数据，可查询14天内数据。DataType 不为null，查询起止时间不超过1个小时，查询用户不超过6个，支持跨天查询。DataType为null时，查询起止时间不超过4个小时， 默认查询6个用户，同时支持每页查询100以内用户个数（PageSize不超过100）。接口用于查询质量问题，不推荐作为计费使用。（同老接口DescribeCallDetail）
         /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
         /// </summary>
@@ -362,6 +278,7 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
+        /// 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
         /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
@@ -382,6 +299,7 @@ namespace TencentCloud.Trtc.V20190722
 
         /// <summary>
         /// 成功开启录制后，可以使用此接口来查询录制状态。仅在录制任务进行时有效，录制退出后查询将会返回错误。
+        /// 录制文件上传到云点播VOD时，StorageFileList中不会返回录制文件信息，请订阅相关录制文件回调事件，获取录制文件信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudRecordingRequest"/></param>
         /// <returns><see cref="DescribeCloudRecordingResponse"/></returns>
@@ -392,46 +310,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCloudRecording");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudRecordingResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
-        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
-        public async Task<DescribeDetailEventResponse> DescribeDetailEvent(DescribeDetailEventRequest req)
-        {
-             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDetailEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询用户某次通话内的进退房，视频开关等详细事件。可查询14天内数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDetailEventRequest"/></param>
-        /// <returns><see cref="DescribeDetailEventResponse"/></returns>
-        public DescribeDetailEventResponse DescribeDetailEventSync(DescribeDetailEventRequest req)
-        {
-             JsonResponseModel<DescribeDetailEventResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDetailEvent");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDetailEventResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -472,46 +350,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeExternalTrtcMeasure");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeExternalTrtcMeasureResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
-        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
-        public async Task<DescribeHistoryScaleResponse> DescribeHistoryScale(DescribeHistoryScaleRequest req)
-        {
-             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHistoryScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 可查询SdkAppId每天的房间数和用户数，按天统计，可查询最近14天的数据。当天未结束，数据未统计完成，无法查到当天的房间数与用户数
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHistoryScaleRequest"/></param>
-        /// <returns><see cref="DescribeHistoryScaleResponse"/></returns>
-        public DescribeHistoryScaleResponse DescribeHistoryScaleSync(DescribeHistoryScaleRequest req)
-        {
-             JsonResponseModel<DescribeHistoryScaleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHistoryScale");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHistoryScaleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -644,48 +482,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRoomInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
-        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
-        public async Task<DescribeRoomInformationResponse> DescribeRoomInformation(DescribeRoomInformationRequest req)
-        {
-             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeRoomInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询SdkAppId下的房间列表。默认返回10条通话，一次最多返回100条通话。可查询14天内的数据。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeRoomInformationRequest"/></param>
-        /// <returns><see cref="DescribeRoomInformationResponse"/></returns>
-        public DescribeRoomInformationResponse DescribeRoomInformationSync(DescribeRoomInformationRequest req)
-        {
-             JsonResponseModel<DescribeRoomInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeRoomInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRoomInformationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -898,48 +694,6 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeUserInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询指定时间内的用户列表，可查询14天内数据，查询起止时间不超过4小时。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
-        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
-        public async Task<DescribeUserInformationResponse> DescribeUserInformation(DescribeUserInformationRequest req)
-        {
-             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeUserInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询指定时间内的用户列表，可查询14天内数据，查询起止时间不超过4小时。默认每页查询6个用户，支持每页最大查询100个用户PageSize不超过100）。
-        /// **注意**：该接口只用于历史数据统计或核对数据使用，实时类关键业务逻辑不能使用。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeUserInformationRequest"/></param>
-        /// <returns><see cref="DescribeUserInformationResponse"/></returns>
-        public DescribeUserInformationResponse DescribeUserInformationSync(DescribeUserInformationRequest req)
-        {
-             JsonResponseModel<DescribeUserInformationResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeUserInformation");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeUserInformationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

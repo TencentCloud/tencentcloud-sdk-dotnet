@@ -37,13 +37,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 录制服务在TRTC房间使用的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个userId不能与其他TRTC或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+        /// 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
 
         /// <summary>
-        /// 云端录制加入房间的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
+        /// 录制机器人用于进入TRTC房间拉流的用户签名，当前 UserId 对应的验证签名，相当于登录密码，具体计算方法请参考TRTC计算[UserSig](https://cloud.tencent.com/document/product/647/45910#UserSig)的方案。
         /// </summary>
         [JsonProperty("UserSig")]
         public string UserSig{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public RecordParams RecordParams{ get; set; }
 
         /// <summary>
-        /// 云端录制文件上传到云存储的参数。
+        /// 云端录制文件上传到云存储的参数(目前只支持使用腾讯云点播作为存储)。
         /// </summary>
         [JsonProperty("StorageParams")]
         public StorageParams StorageParams{ get; set; }

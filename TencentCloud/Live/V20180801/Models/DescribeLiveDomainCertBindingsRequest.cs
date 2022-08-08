@@ -51,8 +51,8 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 可取值：
-        /// ExpireTimeAsc：证书过期时间降序。
-        /// ExpireTimeDesc：证书过期时间升序。
+        /// ExpireTimeAsc：证书过期时间升序。
+        /// ExpireTimeDesc：证书过期时间降序。
         /// </summary>
         [JsonProperty("OrderBy")]
         public string OrderBy{ get; set; }

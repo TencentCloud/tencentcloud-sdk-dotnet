@@ -739,6 +739,46 @@ namespace TencentCloud.Cvm.V20170312
         }
 
         /// <summary>
+        /// 查询CHC物理服务器禁止做的操作，返回给用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeChcDeniedActionsResponse"/></returns>
+        public async Task<DescribeChcDeniedActionsResponse> DescribeChcDeniedActions(DescribeChcDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeChcDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询CHC物理服务器禁止做的操作，返回给用户
+        /// </summary>
+        /// <param name="req"><see cref="DescribeChcDeniedActionsRequest"/></param>
+        /// <returns><see cref="DescribeChcDeniedActionsResponse"/></returns>
+        public DescribeChcDeniedActionsResponse DescribeChcDeniedActionsSync(DescribeChcDeniedActionsRequest req)
+        {
+             JsonResponseModel<DescribeChcDeniedActionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeChcDeniedActions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeChcDeniedActionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口 (DescribeChcHosts) 用于查询一个或多个CHC物理服务器详细信息。
         /// 
         /// * 可以根据实例`ID`、实例名称或者设备类型等信息来查询实例的详细信息。过滤信息详细请见过滤器`Filter`。

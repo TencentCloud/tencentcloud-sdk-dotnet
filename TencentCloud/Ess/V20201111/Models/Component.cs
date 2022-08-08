@@ -25,16 +25,22 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 如果是 Component 控件类型，则可选类型为：
-        /// TEXT - 单行文本
-        /// MULTI_LINE_TEXT - 多行文本
-        /// CHECK_BOX - 勾选框
-        /// ATTACHMENT - 附件
-        /// SELECTOR - 选择器
-        /// 如果是 SignComponent 控件类型，则可选类型为：
-        /// SIGN_SEAL - 签署印章控件，静默签署时需要传入印章id作为ComponentValue
-        /// SIGN_DATE - 签署日期控件
-        /// SIGN_SIGNATURE - 手写签名控件，静默签署时不能使用
+        /// 如果是Component控件类型，则可选的字段为：
+        /// TEXT - 普通文本控件；
+        /// MULTI_LINE_TEXT - 多行文本控件；
+        /// CHECK_BOX - 勾选框控件；
+        /// FILL_IMAGE - 图片控件；
+        /// DYNAMIC_TABLE - 动态表格控件；
+        /// ATTACHMENT - 附件控件；
+        /// SELECTOR - 选择器控件；
+        /// 
+        /// 如果是SignComponent控件类型，则可选的字段为
+        /// SIGN_SEAL - 签署印章控件；
+        /// SIGN_DATE - 签署日期控件；
+        /// SIGN_SIGNATURE - 用户签名控件；
+        /// SIGN_PERSONAL_SEAL - 个人签署印章控件（使用文件发起暂不支持此类型）；
+        /// 
+        /// 表单域的控件不能作为印章和签名控件
         /// </summary>
         [JsonProperty("ComponentType")]
         public string ComponentType{ get; set; }
@@ -118,8 +124,9 @@ namespace TencentCloud.Ess.V20201111.Models
         /// TEXT - 文本内容
         /// MULTI_LINE_TEXT - 文本内容
         /// CHECK_BOX - true/false
-        /// ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
+        /// FILL_IMAGE、ATTACHMENT - 附件的FileId，需要通过UploadFiles接口上传获取
         /// SELECTOR - 选项值
+        /// DYNAMIC_TABLE - 传入json格式的表格内容，具体见数据结构FlowInfo：https://cloud.tencent.com/document/api/1420/61525#FlowInfo
         /// </summary>
         [JsonProperty("ComponentValue")]
         public string ComponentValue{ get; set; }

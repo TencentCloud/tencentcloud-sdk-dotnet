@@ -333,6 +333,46 @@ namespace TencentCloud.Tag.V20180813
         }
 
         /// <summary>
+        /// 获取项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public async Task<DescribeProjectsResponse> DescribeProjects(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取项目列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeProjectsRequest"/></param>
+        /// <returns><see cref="DescribeProjectsResponse"/></returns>
+        public DescribeProjectsResponse DescribeProjectsSync(DescribeProjectsRequest req)
+        {
+             JsonResponseModel<DescribeProjectsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeProjects");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeProjectsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询资源关联标签
         /// </summary>
         /// <param name="req"><see cref="DescribeResourceTagsRequest"/></param>

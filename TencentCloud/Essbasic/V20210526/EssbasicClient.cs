@@ -135,6 +135,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 渠道创建文件转换任务
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateConvertTaskApiRequest"/></param>
+        /// <returns><see cref="ChannelCreateConvertTaskApiResponse"/></returns>
+        public async Task<ChannelCreateConvertTaskApiResponse> ChannelCreateConvertTaskApi(ChannelCreateConvertTaskApiRequest req)
+        {
+             JsonResponseModel<ChannelCreateConvertTaskApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateConvertTaskApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateConvertTaskApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道创建文件转换任务
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateConvertTaskApiRequest"/></param>
+        /// <returns><see cref="ChannelCreateConvertTaskApiResponse"/></returns>
+        public ChannelCreateConvertTaskApiResponse ChannelCreateConvertTaskApiSync(ChannelCreateConvertTaskApiRequest req)
+        {
+             JsonResponseModel<ChannelCreateConvertTaskApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateConvertTaskApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateConvertTaskApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 接口（ChannelCreateFlowByFiles）用于渠道版通过文件创建签署流程。此接口不可直接使用，需要运营申请
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateFlowByFilesRequest"/></param>
@@ -208,6 +248,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelCreateMultiFlowSignQRCode");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateMultiFlowSignQRCodeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版查询转换任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelGetTaskResultApiRequest"/></param>
+        /// <returns><see cref="ChannelGetTaskResultApiResponse"/></returns>
+        public async Task<ChannelGetTaskResultApiResponse> ChannelGetTaskResultApi(ChannelGetTaskResultApiRequest req)
+        {
+             JsonResponseModel<ChannelGetTaskResultApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelGetTaskResultApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelGetTaskResultApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 渠道版查询转换任务状态
+        /// </summary>
+        /// <param name="req"><see cref="ChannelGetTaskResultApiRequest"/></param>
+        /// <returns><see cref="ChannelGetTaskResultApiResponse"/></returns>
+        public ChannelGetTaskResultApiResponse ChannelGetTaskResultApiSync(ChannelGetTaskResultApiRequest req)
+        {
+             JsonResponseModel<ChannelGetTaskResultApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelGetTaskResultApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelGetTaskResultApiResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

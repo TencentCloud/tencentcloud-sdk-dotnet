@@ -63,7 +63,7 @@ namespace TencentCloud.Iai.V20180301.Models
 
         /// <summary>
         /// 被检测到的人脸，对应最多返回的最相似人员数目。默认值为5，最大值为10。  
-        /// 例，设MaxFaceNum为3，MaxPersonNum为5，则最多可能返回3*5=15个人员。
+        /// 例，设MaxFaceNum为3，MaxPersonNumPerGroup为5，GroupIds长度为3，则最多可能返回3*5*3=45个人员。
         /// </summary>
         [JsonProperty("MaxPersonNumPerGroup")]
         public ulong? MaxPersonNumPerGroup{ get; set; }

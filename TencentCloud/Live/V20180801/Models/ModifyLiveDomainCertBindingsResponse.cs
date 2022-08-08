@@ -31,6 +31,13 @@ namespace TencentCloud.Live.V20180801.Models
         public string[] MismatchedDomainNames{ get; set; }
 
         /// <summary>
+        /// 操作失败的域名及错误码，错误信息，包括MismatchedDomainNames中的域名。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Errors")]
+        public BatchDomainOperateErrors[] Errors{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +50,7 @@ namespace TencentCloud.Live.V20180801.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "MismatchedDomainNames.", this.MismatchedDomainNames);
+            this.SetParamArrayObj(map, prefix + "Errors.", this.Errors);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
