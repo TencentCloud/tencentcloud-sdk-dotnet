@@ -1013,46 +1013,6 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 删除DDoS防护的IP黑白名单
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DeleteBlackWhiteIpListResponse"/></returns>
-        public async Task<DeleteBlackWhiteIpListResponse> DeleteBlackWhiteIpList(DeleteBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除DDoS防护的IP黑白名单
-        /// </summary>
-        /// <param name="req"><see cref="DeleteBlackWhiteIpListRequest"/></param>
-        /// <returns><see cref="DeleteBlackWhiteIpListResponse"/></returns>
-        public DeleteBlackWhiteIpListResponse DeleteBlackWhiteIpListSync(DeleteBlackWhiteIpListRequest req)
-        {
-             JsonResponseModel<DeleteBlackWhiteIpListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteBlackWhiteIpList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBlackWhiteIpListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 删除CC分级策略
         /// </summary>
         /// <param name="req"><see cref="DeleteCCLevelPolicyRequest"/></param>
@@ -1604,6 +1564,46 @@ namespace TencentCloud.Antiddos.V20200309
              {
                  var strResp = this.InternalRequestSync(req, "DescribeBasicDeviceStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBasicDeviceStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高防包流量折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBgpBizTrendResponse"/></returns>
+        public async Task<DescribeBgpBizTrendResponse> DescribeBgpBizTrend(DescribeBgpBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBgpBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBgpBizTrendResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取高防包流量折线图
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBgpBizTrendRequest"/></param>
+        /// <returns><see cref="DescribeBgpBizTrendResponse"/></returns>
+        public DescribeBgpBizTrendResponse DescribeBgpBizTrendSync(DescribeBgpBizTrendRequest req)
+        {
+             JsonResponseModel<DescribeBgpBizTrendResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBgpBizTrend");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBgpBizTrendResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

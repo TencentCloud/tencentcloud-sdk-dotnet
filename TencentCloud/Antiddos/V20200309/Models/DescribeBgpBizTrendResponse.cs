@@ -21,9 +21,33 @@ namespace TencentCloud.Antiddos.V20200309.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteBlackWhiteIpListResponse : AbstractModel
+    public class DescribeBgpBizTrendResponse : AbstractModel
     {
         
+        /// <summary>
+        /// 曲线图各个时间点的值
+        /// </summary>
+        [JsonProperty("DataList")]
+        public ulong?[] DataList{ get; set; }
+
+        /// <summary>
+        /// 曲线图取值个数
+        /// </summary>
+        [JsonProperty("Total")]
+        public ulong? Total{ get; set; }
+
+        /// <summary>
+        /// 统计纬度
+        /// </summary>
+        [JsonProperty("MetricName")]
+        public string MetricName{ get; set; }
+
+        /// <summary>
+        /// 返回数组最大值
+        /// </summary>
+        [JsonProperty("MaxData")]
+        public ulong? MaxData{ get; set; }
+
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
@@ -36,6 +60,10 @@ namespace TencentCloud.Antiddos.V20200309.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArraySimple(map, prefix + "DataList.", this.DataList);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamSimple(map, prefix + "MaxData", this.MaxData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
