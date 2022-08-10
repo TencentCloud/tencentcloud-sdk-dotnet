@@ -261,6 +261,13 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ResourceGroupName")]
         public string ResourceGroupName{ get; set; }
 
+        /// <summary>
+        /// 任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -303,6 +310,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "BillingInfo", this.BillingInfo);
             this.SetParamSimple(map, prefix + "ResourceGroupName", this.ResourceGroupName);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

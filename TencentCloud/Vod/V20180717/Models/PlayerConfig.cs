@@ -39,6 +39,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Type{ get; set; }
 
         /// <summary>
+        /// 播放的音视频类型，可选值有：
+        /// <li>AdaptiveDynamicStream：自适应码流输出；</li>
+        /// <li>Transcode：转码输出；</li>
+        /// <li>Original：原始音视频。</li>
+        /// </summary>
+        [JsonProperty("AudioVideoType")]
+        public string AudioVideoType{ get; set; }
+
+        /// <summary>
         /// 播放 DRM 保护的自适应码流开关：
         /// <li>ON：开启，表示仅播放 DRM  保护的自适应码流输出；</li>
         /// <li>OFF：关闭，表示播放未加密的自适应码流输出。</li>
@@ -58,6 +67,12 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("DrmStreamingsInfo")]
         public DrmStreamingsInfo DrmStreamingsInfo{ get; set; }
+
+        /// <summary>
+        /// 允许输出的转码模板 ID。
+        /// </summary>
+        [JsonProperty("TranscodeDefinition")]
+        public ulong? TranscodeDefinition{ get; set; }
 
         /// <summary>
         /// 允许输出的雪碧图模板 ID。
@@ -112,9 +127,11 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "AudioVideoType", this.AudioVideoType);
             this.SetParamSimple(map, prefix + "DrmSwitch", this.DrmSwitch);
             this.SetParamSimple(map, prefix + "AdaptiveDynamicStreamingDefinition", this.AdaptiveDynamicStreamingDefinition);
             this.SetParamObj(map, prefix + "DrmStreamingsInfo.", this.DrmStreamingsInfo);
+            this.SetParamSimple(map, prefix + "TranscodeDefinition", this.TranscodeDefinition);
             this.SetParamSimple(map, prefix + "ImageSpriteDefinition", this.ImageSpriteDefinition);
             this.SetParamArrayObj(map, prefix + "ResolutionNameSet.", this.ResolutionNameSet);
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);

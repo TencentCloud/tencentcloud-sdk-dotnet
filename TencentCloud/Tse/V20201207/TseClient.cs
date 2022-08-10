@@ -133,6 +133,46 @@ namespace TencentCloud.Tse.V20201207
         }
 
         /// <summary>
+        /// 获取云原生网关节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayNodesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayNodesResponse"/></returns>
+        public async Task<DescribeCloudNativeAPIGatewayNodesResponse> DescribeCloudNativeAPIGatewayNodes(DescribeCloudNativeAPIGatewayNodesRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudNativeAPIGatewayNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取云原生网关节点列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudNativeAPIGatewayNodesRequest"/></param>
+        /// <returns><see cref="DescribeCloudNativeAPIGatewayNodesResponse"/></returns>
+        public DescribeCloudNativeAPIGatewayNodesResponse DescribeCloudNativeAPIGatewayNodesSync(DescribeCloudNativeAPIGatewayNodesRequest req)
+        {
+             JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudNativeAPIGatewayNodes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudNativeAPIGatewayNodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询Nacos类型引擎实例副本信息
         /// </summary>
         /// <param name="req"><see cref="DescribeNacosReplicasRequest"/></param>

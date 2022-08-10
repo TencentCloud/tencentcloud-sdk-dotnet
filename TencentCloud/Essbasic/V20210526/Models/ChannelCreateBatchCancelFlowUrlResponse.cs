@@ -25,19 +25,19 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 批量撤回url
+        /// 批量撤销url
         /// </summary>
         [JsonProperty("BatchCancelFlowUrl")]
         public string BatchCancelFlowUrl{ get; set; }
 
         /// <summary>
-        /// 签署流程批量撤回失败原因
+        /// 签署流程批量撤销失败原因
         /// </summary>
         [JsonProperty("FailMessages")]
         public string[] FailMessages{ get; set; }
 
         /// <summary>
-        /// 签署撤回url过期时间-年月日-时分秒
+        /// 签署撤销url过期时间-年月日-时分秒
         /// </summary>
         [JsonProperty("UrlExpireOn")]
         public string UrlExpireOn{ get; set; }

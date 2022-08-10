@@ -26,8 +26,8 @@ namespace TencentCloud.Ess.V20201111.Models
         
         /// <summary>
         /// 文件对应业务类型，用于区分文件存储路径：
-        /// 1. TEMPLATE - 模板； 文件类型：.pdf/.html
-        /// 2. DOCUMENT - 签署过程及签署后的合同文档 文件类型：.pdf/.html
+        /// 1. TEMPLATE - 模板； 文件类型：.pdf .doc .docx .html
+        /// 2. DOCUMENT - 签署过程及签署后的合同文档/图片控件 文件类型：.pdf/.jpg/.png
         /// 3. SEAL - 印章； 文件类型：.jpg/.jpeg/.png
         /// </summary>
         [JsonProperty("BusinessType")]

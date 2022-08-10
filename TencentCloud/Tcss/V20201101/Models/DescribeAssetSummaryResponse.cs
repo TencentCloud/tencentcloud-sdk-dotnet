@@ -139,6 +139,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? ImageUnsafeCnt{ get; set; }
 
         /// <summary>
+        /// 主机未安装agent数量
+        /// </summary>
+        [JsonProperty("HostUnInstallCnt")]
+        public ulong? HostUnInstallCnt{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -169,6 +175,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "WebServiceCnt", this.WebServiceCnt);
             this.SetParamSimple(map, prefix + "LatestImageScanTime", this.LatestImageScanTime);
             this.SetParamSimple(map, prefix + "ImageUnsafeCnt", this.ImageUnsafeCnt);
+            this.SetParamSimple(map, prefix + "HostUnInstallCnt", this.HostUnInstallCnt);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -63,6 +63,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
+        /// <summary>
+        /// 别名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AliasName")]
+        public string AliasName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +82,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "AliasName", this.AliasName);
         }
     }
 }

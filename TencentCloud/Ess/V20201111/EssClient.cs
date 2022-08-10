@@ -503,6 +503,7 @@ namespace TencentCloud.Ess.V20201111
         /// <summary>
         /// 查询流程摘要
         /// 适用场景：可用于主动查询某个合同流程的签署状态信息。可以配合回调通知使用。
+        /// 日调用量默认10W
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowBriefsRequest"/></param>
         /// <returns><see cref="DescribeFlowBriefsResponse"/></returns>
@@ -524,6 +525,7 @@ namespace TencentCloud.Ess.V20201111
         /// <summary>
         /// 查询流程摘要
         /// 适用场景：可用于主动查询某个合同流程的签署状态信息。可以配合回调通知使用。
+        /// 日调用量默认10W
         /// </summary>
         /// <param name="req"><see cref="DescribeFlowBriefsRequest"/></param>
         /// <returns><see cref="DescribeFlowBriefsResponse"/></returns>

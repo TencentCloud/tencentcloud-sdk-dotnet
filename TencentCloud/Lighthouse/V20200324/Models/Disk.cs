@@ -115,24 +115,39 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string LatestOperationRequestId{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+        /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// 到期时间
+        /// 到期时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+        /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// 隔离时间
+        /// 隔离时间。按照 ISO8601 标准表示，并且使用 UTC 时间。 
+        /// 格式为： YYYY-MM-DDThh:mm:ssZ。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IsolatedTime")]
         public string IsolatedTime{ get; set; }
+
+        /// <summary>
+        /// 云硬盘的已有备份点数量。
+        /// </summary>
+        [JsonProperty("DiskBackupCount")]
+        public long? DiskBackupCount{ get; set; }
+
+        /// <summary>
+        /// 云硬盘的备份点配额数量。
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public long? DiskBackupQuota{ get; set; }
 
 
         /// <summary>
@@ -158,6 +173,8 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "CreatedTime", this.CreatedTime);
             this.SetParamSimple(map, prefix + "ExpiredTime", this.ExpiredTime);
             this.SetParamSimple(map, prefix + "IsolatedTime", this.IsolatedTime);
+            this.SetParamSimple(map, prefix + "DiskBackupCount", this.DiskBackupCount);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

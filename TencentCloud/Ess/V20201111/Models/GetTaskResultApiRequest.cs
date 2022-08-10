@@ -25,16 +25,10 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 任务Id
+        /// 任务Id，通过CreateConvertTaskApi得到
         /// </summary>
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
-
-        /// <summary>
-        /// 企业信息
-        /// </summary>
-        [JsonProperty("Organization")]
-        public OrganizationInfo Organization{ get; set; }
 
         /// <summary>
         /// 操作人信息
@@ -43,10 +37,16 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 渠道信息
+        /// 应用号信息
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("Organization")]
+        public OrganizationInfo Organization{ get; set; }
 
 
         /// <summary>
@@ -55,9 +55,9 @@ namespace TencentCloud.Ess.V20201111.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
-            this.SetParamObj(map, prefix + "Organization.", this.Organization);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "Organization.", this.Organization);
         }
     }
 }

@@ -72,6 +72,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Environment")]
         public string Environment{ get; set; }
 
+        /// <summary>
+        /// 支付结果通知回调地址
+        /// </summary>
+        [JsonProperty("NotifyUrl")]
+        public string NotifyUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -85,6 +91,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamObj(map, prefix + "FundingAccountInfo.", this.FundingAccountInfo);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamSimple(map, prefix + "NotifyUrl", this.NotifyUrl);
         }
     }
 }

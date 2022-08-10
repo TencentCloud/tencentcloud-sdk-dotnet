@@ -25,40 +25,40 @@ namespace TencentCloud.Ess.V20201111.Models
     {
         
         /// <summary>
-        /// 资源Id
-        /// </summary>
-        [JsonProperty("ResourceId")]
-        public string ResourceId{ get; set; }
-
-        /// <summary>
         /// 资源类型 取值范围doc,docx,html之一
         /// </summary>
         [JsonProperty("ResourceType")]
         public string ResourceType{ get; set; }
 
         /// <summary>
-        /// 资源名称
+        /// 资源名称，长度限制为256字符
         /// </summary>
         [JsonProperty("ResourceName")]
         public string ResourceName{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 资源Id，通过UploadFiles获取
         /// </summary>
-        [JsonProperty("Organization")]
-        public OrganizationInfo Organization{ get; set; }
+        [JsonProperty("ResourceId")]
+        public string ResourceId{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 操作者信息
         /// </summary>
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 应用号信息
         /// </summary>
         [JsonProperty("Agent")]
         public Agent Agent{ get; set; }
+
+        /// <summary>
+        /// 暂未开放
+        /// </summary>
+        [JsonProperty("Organization")]
+        public OrganizationInfo Organization{ get; set; }
 
 
         /// <summary>
@@ -66,12 +66,12 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamSimple(map, prefix + "ResourceType", this.ResourceType);
             this.SetParamSimple(map, prefix + "ResourceName", this.ResourceName);
-            this.SetParamObj(map, prefix + "Organization.", this.Organization);
+            this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
+            this.SetParamObj(map, prefix + "Organization.", this.Organization);
         }
     }
 }

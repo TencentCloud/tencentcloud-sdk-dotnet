@@ -36,6 +36,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("EnableDeleteCos")]
         public bool? EnableDeleteCos{ get; set; }
 
+        /// <summary>
+        /// 删除模型类型，枚举值：NORMAL 普通，ACCELERATE 加速，不传则删除所有
+        /// </summary>
+        [JsonProperty("ModelVersionType")]
+        public string ModelVersionType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tione.V20211111.Models
         {
             this.SetParamSimple(map, prefix + "TrainingModelId", this.TrainingModelId);
             this.SetParamSimple(map, prefix + "EnableDeleteCos", this.EnableDeleteCos);
+            this.SetParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
         }
     }
 }

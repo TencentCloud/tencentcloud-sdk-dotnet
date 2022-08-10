@@ -48,6 +48,12 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("Workload")]
         public string Workload{ get; set; }
 
+        /// <summary>
+        /// 部署地域
+        /// </summary>
+        [JsonProperty("EngineRegion")]
+        public string EngineRegion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "VpcId", this.VpcId);
             this.SetParamSimple(map, prefix + "SubnetId", this.SubnetId);
             this.SetParamSimple(map, prefix + "Workload", this.Workload);
+            this.SetParamSimple(map, prefix + "EngineRegion", this.EngineRegion);
         }
     }
 }

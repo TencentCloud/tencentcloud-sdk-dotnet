@@ -31,7 +31,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 需要查询的流程ID列表
+        /// 需要查询的流程ID列表，限制最大20个
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }

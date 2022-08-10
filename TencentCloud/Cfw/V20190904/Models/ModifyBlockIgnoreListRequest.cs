@@ -43,13 +43,13 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string IocAction{ get; set; }
 
         /// <summary>
-        /// 时间格式：yyyy-MM-dd HH:mm:ss
+        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 时间格式：yyyy-MM-dd HH:mm:ss
+        /// 时间格式：yyyy-MM-dd HH:mm:ss，IocAction 为edit或add时必填
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

@@ -115,7 +115,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public CosPathInfo ModelOutputPath{ get; set; }
 
         /// <summary>
-        /// 模型来源 （JOB/COS/AUTO_ML）
+        /// 模型来源 （JOB/COS）
         /// </summary>
         [JsonProperty("TrainingModelSource")]
         public string TrainingModelSource{ get; set; }
@@ -152,6 +152,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ModelFormat")]
         public string ModelFormat{ get; set; }
 
+        /// <summary>
+        /// 推理镜像ID
+        /// </summary>
+        [JsonProperty("ReasoningEnvironmentId")]
+        public string ReasoningEnvironmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +185,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "TrainingJobVersion", this.TrainingJobVersion);
             this.SetParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
+            this.SetParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
         }
     }
 }

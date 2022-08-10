@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 查询个数，默认20，最大100
+        /// 查询个数，默认20，最大200
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }

@@ -893,7 +893,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建超级播放器配置，数量上限：100。
+        /// 创建播放器配置，数量上限：100。
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 创建超级播放器配置，数量上限：100。
+        /// 创建播放器配置，数量上限：100。
         /// </summary>
         /// <param name="req"><see cref="CreateSuperPlayerConfigRequest"/></param>
         /// <returns><see cref="CreateSuperPlayerConfigResponse"/></returns>
@@ -1665,7 +1665,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除超级播放器配置。  
+        /// 删除播放器配置。  
         /// *注：系统预置播放器配置不允许删除。*
         /// </summary>
         /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
@@ -1686,7 +1686,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 删除超级播放器配置。  
+        /// 删除播放器配置。  
         /// *注：系统预置播放器配置不允许删除。*
         /// </summary>
         /// <param name="req"><see cref="DeleteSuperPlayerConfigRequest"/></param>
@@ -3315,7 +3315,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 查询超级播放器配置，支持根据条件，分页查询。
+        /// 查询播放器配置，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
         /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
@@ -3335,7 +3335,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 查询超级播放器配置，支持根据条件，分页查询。
+        /// 查询播放器配置，支持根据条件，分页查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeSuperPlayerConfigsRequest"/></param>
         /// <returns><see cref="DescribeSuperPlayerConfigsResponse"/></returns>
@@ -4593,7 +4593,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改超级播放器配置。
+        /// 修改播放器配置。
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
         /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>
@@ -4613,7 +4613,7 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
-        /// 修改超级播放器配置。
+        /// 修改播放器配置。
         /// </summary>
         /// <param name="req"><see cref="ModifySuperPlayerConfigRequest"/></param>
         /// <returns><see cref="ModifySuperPlayerConfigResponse"/></returns>

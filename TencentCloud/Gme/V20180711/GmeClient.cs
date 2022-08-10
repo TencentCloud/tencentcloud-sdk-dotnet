@@ -675,6 +675,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 修改用户麦克风状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserMicStatusRequest"/></param>
+        /// <returns><see cref="ModifyUserMicStatusResponse"/></returns>
+        public async Task<ModifyUserMicStatusResponse> ModifyUserMicStatus(ModifyUserMicStatusRequest req)
+        {
+             JsonResponseModel<ModifyUserMicStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyUserMicStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserMicStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改用户麦克风状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyUserMicStatusRequest"/></param>
+        /// <returns><see cref="ModifyUserMicStatusResponse"/></returns>
+        public ModifyUserMicStatusResponse ModifyUserMicStatusSync(ModifyUserMicStatusRequest req)
+        {
+             JsonResponseModel<ModifyUserMicStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyUserMicStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyUserMicStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ScanVoice)用于提交语音检测任务，检测任务列表最多支持100个。使用前请您登录[控制台 - 服务配置](https://console.cloud.tencent.com/gamegme/conf)开启语音分析服务。
         /// </br></br>
         /// 

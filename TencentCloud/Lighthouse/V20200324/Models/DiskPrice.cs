@@ -48,6 +48,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DiscountPrice")]
         public float? DiscountPrice{ get; set; }
 
+        /// <summary>
+        /// 计费项目明细列表。
+        /// </summary>
+        [JsonProperty("DetailPrices")]
+        public DetailPrice[] DetailPrices{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
             this.SetParamSimple(map, prefix + "Discount", this.Discount);
             this.SetParamSimple(map, prefix + "DiscountPrice", this.DiscountPrice);
+            this.SetParamArrayObj(map, prefix + "DetailPrices.", this.DetailPrices);
         }
     }
 }
