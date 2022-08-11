@@ -15,38 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BlockByNumberHandlerRequest : AbstractModel
+    public class DescribeEnvironmentRequest : AbstractModel
     {
         
         /// <summary>
-        /// 模块名，固定字段：block
+        /// 命名空间id
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
+        [JsonProperty("EnvironmentId")]
+        public string EnvironmentId{ get; set; }
 
         /// <summary>
-        /// 操作名，固定字段：block_by_number
+        /// 来源Channel
         /// </summary>
-        [JsonProperty("Operation")]
-        public string Operation{ get; set; }
-
-        /// <summary>
-        /// 当前群组编号
-        /// </summary>
-        [JsonProperty("GroupPk")]
-        public string GroupPk{ get; set; }
-
-        /// <summary>
-        /// 区块高度
-        /// </summary>
-        [JsonProperty("BlockNumber")]
-        public long? BlockNumber{ get; set; }
+        [JsonProperty("SourceChannel")]
+        public long? SourceChannel{ get; set; }
 
 
         /// <summary>
@@ -54,10 +42,8 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamSimple(map, prefix + "GroupPk", this.GroupPk);
-            this.SetParamSimple(map, prefix + "BlockNumber", this.BlockNumber);
+            this.SetParamSimple(map, prefix + "EnvironmentId", this.EnvironmentId);
+            this.SetParamSimple(map, prefix + "SourceChannel", this.SourceChannel);
         }
     }
 }

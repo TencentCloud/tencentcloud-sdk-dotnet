@@ -25,26 +25,32 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// DDos攻击数据
+        /// DDos攻击数据内容。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Data")]
         public SecEntry[] Data{ get; set; }
 
         /// <summary>
-        /// 状态，1:失败，0:成功
+        /// 请求响应状态，取值有：
+        /// <li>1 ：失败 ；</li>
+        /// <li>0 ：成功 。</li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 返回数据
+        /// 请求响应信息。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }
 
         /// <summary>
-        /// 查询时间粒度，可选{min,5min,hour,day}
+        /// 查询时间粒度，取值有：
+        /// <li>min ：1分钟 ；</li>
+        /// <li>5min ：5分钟 ；</li>
+        /// <li>hour ：1小时 ；</li>
+        /// <li>day ：1天 。</li>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

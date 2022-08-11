@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeployDynamicContractHandlerResponse : AbstractModel
+    public class CreateCustomizationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 部署成功返回的合约地址
+        /// 应用 ID，登录控制台创建应用得到的AppID
         /// </summary>
-        [JsonProperty("ContractAddress")]
-        public string ContractAddress{ get; set; }
+        [JsonProperty("BizId")]
+        public long? BizId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 文本文件的下载地址，服务会从该地址下载文件，目前仅支持腾讯云cos
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TextUrl")]
+        public string TextUrl{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ContractAddress", this.ContractAddress);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
+            this.SetParamSimple(map, prefix + "TextUrl", this.TextUrl);
         }
     }
 }

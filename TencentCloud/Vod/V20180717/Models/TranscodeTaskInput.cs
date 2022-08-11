@@ -43,25 +43,16 @@ namespace TencentCloud.Vod.V20180717.Models
         public TraceWatermarkInput TraceWatermark{ get; set; }
 
         /// <summary>
-        /// 片头片尾列表，支持多片头片尾，最大可支持 10 个。
-        /// </summary>
-        [JsonProperty("HeadTailSet")]
-        public HeadTailTaskInput[] HeadTailSet{ get; set; }
-
-        /// <summary>
         /// 马赛克列表，最大可支持 10 张。
         /// </summary>
         [JsonProperty("MosaicSet")]
         public MosaicInput[] MosaicSet{ get; set; }
 
         /// <summary>
-        /// 转码后视频的终止时间偏移，单位：秒。
-        /// <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
-        /// <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
-        /// <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+        /// 片头片尾列表，支持多片头片尾，最大可支持 10 个。
         /// </summary>
-        [JsonProperty("EndTimeOffset")]
-        public float? EndTimeOffset{ get; set; }
+        [JsonProperty("HeadTailSet")]
+        public HeadTailTaskInput[] HeadTailSet{ get; set; }
 
         /// <summary>
         /// 转码后的视频的起始时间偏移，单位：秒。
@@ -72,6 +63,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("StartTimeOffset")]
         public float? StartTimeOffset{ get; set; }
 
+        /// <summary>
+        /// 转码后视频的终止时间偏移，单位：秒。
+        /// <li>不填或填0，表示转码后的视频持续到原始视频的末尾终止；</li>
+        /// <li>当数值大于0时（假设为 n），表示转码后的视频持续到原始视频第 n 秒时终止；</li>
+        /// <li>当数值小于0时（假设为 -n），表示转码后的视频持续到原始视频结束 n 秒前终止。</li>
+        /// </summary>
+        [JsonProperty("EndTimeOffset")]
+        public float? EndTimeOffset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -81,10 +81,10 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
             this.SetParamArrayObj(map, prefix + "WatermarkSet.", this.WatermarkSet);
             this.SetParamObj(map, prefix + "TraceWatermark.", this.TraceWatermark);
-            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamArrayObj(map, prefix + "MosaicSet.", this.MosaicSet);
-            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
+            this.SetParamArrayObj(map, prefix + "HeadTailSet.", this.HeadTailSet);
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
+            this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
         }
     }
 }

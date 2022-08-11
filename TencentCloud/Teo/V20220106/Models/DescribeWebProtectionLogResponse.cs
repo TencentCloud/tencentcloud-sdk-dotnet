@@ -25,19 +25,21 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 限速拦截Data
+        /// 限速拦截数据内容。
         /// </summary>
         [JsonProperty("Data")]
         public CCLogData Data{ get; set; }
 
         /// <summary>
-        /// 状态，1：失败，0:成功
+        /// 请求响应状态，取值有：
+        /// <li>1 ：失败 ；</li>
+        /// <li>0 ：成功 。</li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 返回信息
+        /// 请求响应信息。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

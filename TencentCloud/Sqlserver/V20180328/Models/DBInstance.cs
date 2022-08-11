@@ -319,6 +319,18 @@ namespace TencentCloud.Sqlserver.V20180328.Models
         [JsonProperty("TgwWanVPort")]
         public long? TgwWanVPort{ get; set; }
 
+        /// <summary>
+        /// 系统字符集排序规则，默认：Chinese_PRC_CI_AS
+        /// </summary>
+        [JsonProperty("Collation")]
+        public string Collation{ get; set; }
+
+        /// <summary>
+        /// 系统时区，默认：China Standard Time
+        /// </summary>
+        [JsonProperty("TimeZone")]
+        public string TimeZone{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -373,6 +385,8 @@ namespace TencentCloud.Sqlserver.V20180328.Models
             this.SetParamSimple(map, prefix + "CrossBackupSaveDays", this.CrossBackupSaveDays);
             this.SetParamSimple(map, prefix + "DnsPodDomain", this.DnsPodDomain);
             this.SetParamSimple(map, prefix + "TgwWanVPort", this.TgwWanVPort);
+            this.SetParamSimple(map, prefix + "Collation", this.Collation);
+            this.SetParamSimple(map, prefix + "TimeZone", this.TimeZone);
         }
     }
 }

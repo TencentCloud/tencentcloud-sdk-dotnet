@@ -120,6 +120,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("KeyColumns")]
         public string KeyColumns{ get; set; }
 
+        /// <summary>
+        /// Mysql 是否抛弃解析失败的消息，默认为true
+        /// </summary>
+        [JsonProperty("DropInvalidMessage")]
+        public bool? DropInvalidMessage{ get; set; }
+
+        /// <summary>
+        /// 当设置成员参数DropInvalidMessageToCls设置为true时,DropInvalidMessage参数失效
+        /// </summary>
+        [JsonProperty("DropCls")]
+        public DropCls DropCls{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -142,6 +154,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "TopicRegex", this.TopicRegex);
             this.SetParamSimple(map, prefix + "TopicReplacement", this.TopicReplacement);
             this.SetParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+            this.SetParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
+            this.SetParamObj(map, prefix + "DropCls.", this.DropCls);
         }
     }
 }

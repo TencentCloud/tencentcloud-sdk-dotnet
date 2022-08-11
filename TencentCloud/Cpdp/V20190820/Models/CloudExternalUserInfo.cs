@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Cpdp.V20190820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class TransByDynamicContractHandlerResponse : AbstractModel
+    public class CloudExternalUserInfo : AbstractModel
     {
         
         /// <summary>
-        /// 交易结果json字符串
+        /// 渠道方用户类型
         /// </summary>
-        [JsonProperty("TransactionRsp")]
-        public string TransactionRsp{ get; set; }
+        [JsonProperty("ExternalUserType")]
+        public string ExternalUserType{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 渠道方用户ID
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ExternalUserId")]
+        public string ExternalUserId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TransactionRsp", this.TransactionRsp);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ExternalUserType", this.ExternalUserType);
+            this.SetParamSimple(map, prefix + "ExternalUserId", this.ExternalUserId);
         }
     }
 }

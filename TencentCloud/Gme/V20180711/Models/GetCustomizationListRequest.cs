@@ -15,38 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTransByHashHandlerRequest : AbstractModel
+    public class GetCustomizationListRequest : AbstractModel
     {
         
         /// <summary>
-        /// 模块名，固定字段：transaction
+        /// 应用 ID，登录控制台创建应用得到的AppID
         /// </summary>
-        [JsonProperty("Module")]
-        public string Module{ get; set; }
-
-        /// <summary>
-        /// 操作名，固定字段：get_trans_by_hash
-        /// </summary>
-        [JsonProperty("Operation")]
-        public string Operation{ get; set; }
-
-        /// <summary>
-        /// 群组编号
-        /// </summary>
-        [JsonProperty("GroupPk")]
-        public string GroupPk{ get; set; }
-
-        /// <summary>
-        /// 交易哈希
-        /// </summary>
-        [JsonProperty("TransHash")]
-        public string TransHash{ get; set; }
+        [JsonProperty("BizId")]
+        public long? BizId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +36,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Module", this.Module);
-            this.SetParamSimple(map, prefix + "Operation", this.Operation);
-            this.SetParamSimple(map, prefix + "GroupPk", this.GroupPk);
-            this.SetParamSimple(map, prefix + "TransHash", this.TransHash);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
         }
     }
 }

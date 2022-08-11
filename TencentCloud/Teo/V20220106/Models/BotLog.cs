@@ -25,123 +25,128 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 攻击时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 攻击时间，采用unix秒级时间戳。
         /// </summary>
         [JsonProperty("AttackTime")]
         public ulong? AttackTime{ get; set; }
 
         /// <summary>
-        /// 攻击ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 攻击源（客户端）ip。
         /// </summary>
         [JsonProperty("AttackIp")]
         public string AttackIp{ get; set; }
 
         /// <summary>
-        /// 域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 受攻击域名。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 请求uri
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// URI。
         /// </summary>
         [JsonProperty("RequestUri")]
         public string RequestUri{ get; set; }
 
         /// <summary>
-        /// 攻击类型
+        /// 当前该字段无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 请求方法
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 请求方法。
         /// </summary>
         [JsonProperty("RequestMethod")]
         public string RequestMethod{ get; set; }
 
         /// <summary>
-        /// 攻击内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 攻击内容。
         /// </summary>
         [JsonProperty("AttackContent")]
         public string AttackContent{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// 当前该字段无效 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
 
         /// <summary>
-        /// 规则编号
+        /// 当前该字段无效 。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// IP所在国家
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
         /// </summary>
         [JsonProperty("SipCountryCode")]
         public string SipCountryCode{ get; set; }
 
         /// <summary>
-        /// 事件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 请求（事件）ID。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 处置方式
+        /// 该字段当前无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisposalMethod")]
         public string DisposalMethod{ get; set; }
 
         /// <summary>
-        /// http_log
+        /// 该字段当前无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpLog")]
         public string HttpLog{ get; set; }
 
         /// <summary>
-        /// user agent
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// user agent。
         /// </summary>
         [JsonProperty("Ua")]
         public string Ua{ get; set; }
 
         /// <summary>
-        /// 检出方法
+        /// 该字段当前无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DetectionMethod")]
         public string DetectionMethod{ get; set; }
 
         /// <summary>
-        /// 置信度
+        /// 该字段当前无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Confidence")]
         public string Confidence{ get; set; }
 
         /// <summary>
-        /// 恶意度
+        /// 该字段当前无效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Maliciousness")]
         public string Maliciousness{ get; set; }
+
+        /// <summary>
+        /// 规则相关信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleDetailList")]
+        public SecRuleRelatedInfo[] RuleDetailList{ get; set; }
+
+        /// <summary>
+        /// Bot标签。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Label")]
+        public string Label{ get; set; }
 
 
         /// <summary>
@@ -166,6 +171,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "DetectionMethod", this.DetectionMethod);
             this.SetParamSimple(map, prefix + "Confidence", this.Confidence);
             this.SetParamSimple(map, prefix + "Maliciousness", this.Maliciousness);
+            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
+            this.SetParamSimple(map, prefix + "Label", this.Label);
         }
     }
 }

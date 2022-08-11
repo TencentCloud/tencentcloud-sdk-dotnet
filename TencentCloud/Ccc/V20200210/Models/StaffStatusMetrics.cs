@@ -96,6 +96,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ReserveNotReady")]
         public bool? ReserveNotReady{ get; set; }
 
+        /// <summary>
+        /// 手机接听模式： 0 - 关闭 | 1 - 仅离线 | 2- 始终
+        /// </summary>
+        [JsonProperty("UseMobileAccept")]
+        public long? UseMobileAccept{ get; set; }
+
+        /// <summary>
+        /// 手机外呼开关
+        /// </summary>
+        [JsonProperty("UseMobileCallOut")]
+        public bool? UseMobileCallOut{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +126,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Reason", this.Reason);
             this.SetParamSimple(map, prefix + "ReserveRest", this.ReserveRest);
             this.SetParamSimple(map, prefix + "ReserveNotReady", this.ReserveNotReady);
+            this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
+            this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
         }
     }
 }

@@ -973,7 +973,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询DDos攻击数据
+        /// 查询DDos攻击时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeDDosAttackDataRequest"/></param>
         /// <returns><see cref="DescribeDDosAttackDataResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询DDos攻击数据
+        /// 查询DDos攻击时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeDDosAttackDataRequest"/></param>
         /// <returns><see cref="DescribeDDosAttackDataResponse"/></returns>
@@ -1093,7 +1093,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询DDos攻击源
+        /// 查询DDos攻击源信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDDosAttackSourceEventRequest"/></param>
         /// <returns><see cref="DescribeDDosAttackSourceEventResponse"/></returns>
@@ -1113,7 +1113,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询DDos攻击源
+        /// 查询DDos攻击源信息
         /// </summary>
         /// <param name="req"><see cref="DescribeDDosAttackSourceEventRequest"/></param>
         /// <returns><see cref="DescribeDDosAttackSourceEventResponse"/></returns>
@@ -2253,7 +2253,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管规则数据
+        /// 查询waf攻击时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesDataRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesDataResponse"/></returns>
@@ -2273,7 +2273,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管规则数据
+        /// 查询waf攻击时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesDataRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesDataResponse"/></returns>
@@ -2293,7 +2293,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管日志
+        /// 查询waf攻击日志
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesLogRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesLogResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管日志
+        /// 查询waf攻击日志
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesLogRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesLogResponse"/></returns>
@@ -2333,7 +2333,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管规则Top数据
+        /// 查询waf攻击top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesTopDataRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesTopDataResponse"/></returns>
@@ -2353,7 +2353,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询Web托管规则Top数据
+        /// 查询waf攻击top数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebManagedRulesTopDataRequest"/></param>
         /// <returns><see cref="DescribeWebManagedRulesTopDataResponse"/></returns>
@@ -2413,7 +2413,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询web防护数据
+        /// 查询CC防护时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebProtectionDataRequest"/></param>
         /// <returns><see cref="DescribeWebProtectionDataResponse"/></returns>
@@ -2433,7 +2433,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询web防护数据
+        /// 查询CC防护时序数据
         /// </summary>
         /// <param name="req"><see cref="DescribeWebProtectionDataRequest"/></param>
         /// <returns><see cref="DescribeWebProtectionDataResponse"/></returns>
@@ -2453,7 +2453,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询web防护日志
+        /// 查询CC防护日志
         /// </summary>
         /// <param name="req"><see cref="DescribeWebProtectionLogRequest"/></param>
         /// <returns><see cref="DescribeWebProtectionLogResponse"/></returns>
@@ -2473,7 +2473,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询web防护日志
+        /// 查询CC防护日志
         /// </summary>
         /// <param name="req"><see cref="DescribeWebProtectionLogRequest"/></param>
         /// <returns><see cref="DescribeWebProtectionLogResponse"/></returns>

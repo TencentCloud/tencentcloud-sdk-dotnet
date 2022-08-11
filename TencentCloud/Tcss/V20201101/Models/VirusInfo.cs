@@ -178,6 +178,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("MD5")]
         public string MD5{ get; set; }
 
+        /// <summary>
+        /// 风险等级 RISK_CRITICAL, RISK_HIGH, RISK_MEDIUM, RISK_LOW, RISK_NOTICE。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RiskLevel")]
+        public string RiskLevel{ get; set; }
+
+        /// <summary>
+        /// 检测平台
+        /// 1: 云查杀引擎
+        /// 2: tav
+        /// 3: binaryAi
+        /// 4: 异常行为
+        /// 5: 威胁情报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckPlatform")]
+        public string[] CheckPlatform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -203,6 +222,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
             this.SetParamSimple(map, prefix + "MD5", this.MD5);
+            this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
         }
     }
 }

@@ -361,6 +361,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string ContainerIsolateOperationSrc{ get; set; }
 
         /// <summary>
+        /// 检测平台
+        /// 1: 云查杀引擎
+        /// 2: tav
+        /// 3: binaryAi
+        /// 4: 异常行为
+        /// 5: 威胁情报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckPlatform")]
+        public string[] CheckPlatform{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -418,6 +430,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ContainerNetStatus", this.ContainerNetStatus);
             this.SetParamSimple(map, prefix + "ContainerNetSubStatus", this.ContainerNetSubStatus);
             this.SetParamSimple(map, prefix + "ContainerIsolateOperationSrc", this.ContainerIsolateOperationSrc);
+            this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

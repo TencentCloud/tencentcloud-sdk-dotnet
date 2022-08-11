@@ -3173,6 +3173,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// Proxy模拟故障接口
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyRequest"/></param>
+        /// <returns><see cref="SwitchProxyResponse"/></returns>
+        public async Task<SwitchProxyResponse> SwitchProxy(SwitchProxyRequest req)
+        {
+             JsonResponseModel<SwitchProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Proxy模拟故障接口
+        /// </summary>
+        /// <param name="req"><see cref="SwitchProxyRequest"/></param>
+        /// <returns><see cref="SwitchProxyResponse"/></returns>
+        public SwitchProxyResponse SwitchProxySync(SwitchProxyRequest req)
+        {
+             JsonResponseModel<SwitchProxyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchProxy");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchProxyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 升级实例
         /// </summary>
         /// <param name="req"><see cref="UpgradeInstanceRequest"/></param>

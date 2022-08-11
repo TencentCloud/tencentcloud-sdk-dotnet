@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// Entry的Key
+        /// 查询维度值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// Entry的Value
+        /// 查询维度下详细数据。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]

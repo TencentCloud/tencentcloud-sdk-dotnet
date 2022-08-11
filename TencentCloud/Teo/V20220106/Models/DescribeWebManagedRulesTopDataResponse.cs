@@ -25,19 +25,21 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// topn数据
+        /// top数据内容。
         /// </summary>
         [JsonProperty("Data")]
         public TopNEntry[] Data{ get; set; }
 
         /// <summary>
-        /// 状态，1:失败，0:成功
+        /// 请求响应状态，取值有：
+        /// <li>1 ：失败 ；</li>
+        /// <li>0 ：成功 。</li>
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 返回消息
+        /// 请求响应消息。
         /// </summary>
         [JsonProperty("Msg")]
         public string Msg{ get; set; }

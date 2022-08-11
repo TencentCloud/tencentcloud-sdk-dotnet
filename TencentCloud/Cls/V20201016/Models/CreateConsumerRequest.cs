@@ -48,6 +48,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Ckafka")]
         public Ckafka Ckafka{ get; set; }
 
+        /// <summary>
+        /// 投递时压缩方式，取值0，2，3。[0:NONE；2:SNAPPY；3:LZ4]
+        /// </summary>
+        [JsonProperty("Compression")]
+        public long? Compression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "NeedContent", this.NeedContent);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamObj(map, prefix + "Ckafka.", this.Ckafka);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
         }
     }
 }

@@ -25,46 +25,68 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 起始时间
+        /// 起始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 每页条数
+        /// 分页拉取的最大返回结果数。最大值：1000。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 当前页
+        /// 分页拉取的起始页号。最小值：1。
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 站点集合
+        /// 站点集合，不填默认查询所有站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 域名集合
+        /// 域名集合，不填默认查询所有域名。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 查询条件
+        /// 筛选条件。
+        /// 限速规则日志中取值有：
+        /// <li>action ：执行动作（处置方式）；</li>
+        /// <li>ruleId ：规则id ；</li>
+        /// <li>oriDomain ：被攻击的子域名 ；</li>
+        /// <li>attackIp ：攻击ip 。</li>
+        /// 自定义规则日志中取值有：
+        /// <li>action ：执行动作（处置方式）；</li>
+        /// <li>ruleId ：规则id ；</li>
+        /// <li>oriDomain ：被攻击的子域名 ；</li>
+        /// <li>attackIp ：攻击ip ；</li>
+        /// <li>eventId ：事件id ；</li>
+        /// <li>ua ：用户代理 ；</li>
+        /// <li>requestMethod ：请求方法 ；</li>
+        /// <li>uri ：统一资源标识符 。</li>
         /// </summary>
         [JsonProperty("QueryCondition")]
         public QueryCondition[] QueryCondition{ get; set; }
+
+        /// <summary>
+        /// 日志类型，取值有：
+        /// <li>rate ：限速日志 ；</li>
+        /// <li>acl ：自定义规则日志 。</li>不填默认为rate。
+        /// </summary>
+        [JsonProperty("EntityType")]
+        public string EntityType{ get; set; }
 
 
         /// <summary>
@@ -79,6 +101,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
+            this.SetParamSimple(map, prefix + "EntityType", this.EntityType);
         }
     }
 }

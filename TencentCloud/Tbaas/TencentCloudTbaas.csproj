@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{84400F10-9E05-36FF-873D-21C952C381E6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.576</VersionPrefix>
+    <VersionPrefix>3.0.577</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -50,8 +50,6 @@
     <Compile Include="V20180416\Models\BcosBlockObj.cs" />
     <Compile Include="V20180416\Models\BcosTransInfo.cs" />
     <Compile Include="V20180416\Models\Block.cs" />
-    <Compile Include="V20180416\Models\BlockByNumberHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\BlockByNumberHandlerResponse.cs" />
     <Compile Include="V20180416\Models\ChainMakerContractResult.cs" />
     <Compile Include="V20180416\Models\ChainMakerTransactionResult.cs" />
     <Compile Include="V20180416\Models\ChannelDetailForUser.cs" />
@@ -60,8 +58,6 @@
     <Compile Include="V20180416\Models\CreateChaincodeAndInstallForUserResponse.cs" />
     <Compile Include="V20180416\Models\DeployDynamicBcosContractRequest.cs" />
     <Compile Include="V20180416\Models\DeployDynamicBcosContractResponse.cs" />
-    <Compile Include="V20180416\Models\DeployDynamicContractHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\DeployDynamicContractHandlerResponse.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertRequest.cs" />
     <Compile Include="V20180416\Models\DownloadUserCertResponse.cs" />
     <Compile Include="V20180416\Models\EndorserGroup.cs" />
@@ -73,8 +69,6 @@
     <Compile Include="V20180416\Models\GetBcosTransByHashResponse.cs" />
     <Compile Include="V20180416\Models\GetBcosTransListRequest.cs" />
     <Compile Include="V20180416\Models\GetBcosTransListResponse.cs" />
-    <Compile Include="V20180416\Models\GetBlockListHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\GetBlockListHandlerResponse.cs" />
     <Compile Include="V20180416\Models\GetBlockListRequest.cs" />
     <Compile Include="V20180416\Models\GetBlockListResponse.cs" />
     <Compile Include="V20180416\Models\GetBlockTransactionListForUserRequest.cs" />
@@ -97,10 +91,6 @@
     <Compile Include="V20180416\Models\GetLatesdTransactionListResponse.cs" />
     <Compile Include="V20180416\Models\GetPeerLogForUserRequest.cs" />
     <Compile Include="V20180416\Models\GetPeerLogForUserResponse.cs" />
-    <Compile Include="V20180416\Models\GetTransByHashHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\GetTransByHashHandlerResponse.cs" />
-    <Compile Include="V20180416\Models\GetTransListHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\GetTransListHandlerResponse.cs" />
     <Compile Include="V20180416\Models\GetTransactionDetailForUserRequest.cs" />
     <Compile Include="V20180416\Models\GetTransactionDetailForUserResponse.cs" />
     <Compile Include="V20180416\Models\GroupDetailForUser.cs" />
@@ -131,12 +121,8 @@
     <Compile Include="V20180416\Models\QueryChainMakerTransactionResponse.cs" />
     <Compile Include="V20180416\Models\QueryRequest.cs" />
     <Compile Include="V20180416\Models\QueryResponse.cs" />
-    <Compile Include="V20180416\Models\SendTransactionHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\SendTransactionHandlerResponse.cs" />
     <Compile Include="V20180416\Models\SrvInvokeRequest.cs" />
     <Compile Include="V20180416\Models\SrvInvokeResponse.cs" />
-    <Compile Include="V20180416\Models\TransByDynamicContractHandlerRequest.cs" />
-    <Compile Include="V20180416\Models\TransByDynamicContractHandlerResponse.cs" />
     <Compile Include="V20180416\Models\TransactionItem.cs" />
   </ItemGroup>
 </Project>

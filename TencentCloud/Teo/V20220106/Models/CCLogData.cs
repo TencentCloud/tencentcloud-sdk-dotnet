@@ -25,36 +25,32 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// CC拦截日志数据集合
+        /// CC拦截日志数据集合。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("List")]
         public CCLog[] List{ get; set; }
 
         /// <summary>
-        /// 当前页
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 分页拉取的起始页号。最小值：1。
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// 每页展示条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 分页拉取的最大返回结果数。最大值：1000。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 总页数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 总页数。
         /// </summary>
         [JsonProperty("Pages")]
         public long? Pages{ get; set; }
 
         /// <summary>
-        /// 总条数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 总条数。
         /// </summary>
         [JsonProperty("TotalSize")]
         public long? TotalSize{ get; set; }

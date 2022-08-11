@@ -25,66 +25,65 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间，RFC3339格式。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间，RFC3339格式。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计指标列表
+        /// 统计指标列表，取值有：
+        /// <li>ccRate_interceptNum ：速率限制规则限制次数 ；</li>
+        /// <li>ccAcl_interceptNum ：自定义规则拦截次数 。</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点id列表
+        /// 站点id列表，不填默认选择全部站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// 子域名列表
+        /// 子域名列表，不填默认选择全部子域名。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
 
         /// <summary>
-        /// 协议类型
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// "webshell" : Webshell检测防护
-        /// "oa" : 常见OA漏洞防护
-        /// "xss" : XSS跨站脚本攻击防护
-        /// "xxe" : XXE攻击防护
-        /// "webscan" : 扫描器攻击漏洞防护
-        /// "cms" : 常见CMS漏洞防护
-        /// "upload" : 恶意文件上传攻击防护
-        /// "sql" : SQL注入攻击防护
-        /// "cmd_inject": 命令/代码注入攻击防护
-        /// "osc" : 开源组件漏洞防护
-        /// "file_read" : 任意文件读取
-        /// "ldap" : LDAP注入攻击防护
-        /// "other" : 其它漏洞防护
-        /// 
-        /// "all":"所有"
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 查询时间粒度，可选{min,5min,hour,day}
+        /// 查询时间粒度，取值有：
+        /// <li>min ：1分钟 ；</li>
+        /// <li>5min ：5分钟 ；</li>
+        /// <li>hour ：1小时 ；</li>
+        /// <li>day ：1天 。</li>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
+
+        /// <summary>
+        /// 筛选条件，取值有：
+        /// <li>action ：执行动作 。</li>
+        /// </summary>
+        [JsonProperty("QueryCondition")]
+        public QueryCondition[] QueryCondition{ get; set; }
 
 
         /// <summary>
@@ -100,6 +99,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
         }
     }
 }

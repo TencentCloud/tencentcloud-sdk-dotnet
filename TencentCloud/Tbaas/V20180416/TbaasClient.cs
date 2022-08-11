@@ -93,50 +93,6 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos根据块高查询区块信息
-        /// </summary>
-        /// <param name="req"><see cref="BlockByNumberHandlerRequest"/></param>
-        /// <returns><see cref="BlockByNumberHandlerResponse"/></returns>
-        public async Task<BlockByNumberHandlerResponse> BlockByNumberHandler(BlockByNumberHandlerRequest req)
-        {
-             JsonResponseModel<BlockByNumberHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "BlockByNumberHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BlockByNumberHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos根据块高查询区块信息
-        /// </summary>
-        /// <param name="req"><see cref="BlockByNumberHandlerRequest"/></param>
-        /// <returns><see cref="BlockByNumberHandlerResponse"/></returns>
-        public BlockByNumberHandlerResponse BlockByNumberHandlerSync(BlockByNumberHandlerRequest req)
-        {
-             JsonResponseModel<BlockByNumberHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "BlockByNumberHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<BlockByNumberHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 创建并安装合约
         /// </summary>
         /// <param name="req"><see cref="CreateChaincodeAndInstallForUserRequest"/></param>
@@ -208,50 +164,6 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "DeployDynamicBcosContract");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployDynamicBcosContractResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// 动态部署合约
-        /// </summary>
-        /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
-        /// <returns><see cref="DeployDynamicContractHandlerResponse"/></returns>
-        public async Task<DeployDynamicContractHandlerResponse> DeployDynamicContractHandler(DeployDynamicContractHandlerRequest req)
-        {
-             JsonResponseModel<DeployDynamicContractHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeployDynamicContractHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployDynamicContractHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// 动态部署合约
-        /// </summary>
-        /// <param name="req"><see cref="DeployDynamicContractHandlerRequest"/></param>
-        /// <returns><see cref="DeployDynamicContractHandlerResponse"/></returns>
-        public DeployDynamicContractHandlerResponse DeployDynamicContractHandlerSync(DeployDynamicContractHandlerRequest req)
-        {
-             JsonResponseModel<DeployDynamicContractHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeployDynamicContractHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeployDynamicContractHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -492,50 +404,6 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetBlockList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos分页查询当前群组下的区块列表
-        /// </summary>
-        /// <param name="req"><see cref="GetBlockListHandlerRequest"/></param>
-        /// <returns><see cref="GetBlockListHandlerResponse"/></returns>
-        public async Task<GetBlockListHandlerResponse> GetBlockListHandler(GetBlockListHandlerRequest req)
-        {
-             JsonResponseModel<GetBlockListHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetBlockListHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos分页查询当前群组下的区块列表
-        /// </summary>
-        /// <param name="req"><see cref="GetBlockListHandlerRequest"/></param>
-        /// <returns><see cref="GetBlockListHandlerResponse"/></returns>
-        public GetBlockListHandlerResponse GetBlockListHandlerSync(GetBlockListHandlerRequest req)
-        {
-             JsonResponseModel<GetBlockListHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetBlockListHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetBlockListHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -936,94 +804,6 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "GetPeerLogForUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPeerLogForUserResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos根据交易哈希查看交易详细信息
-        /// </summary>
-        /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
-        /// <returns><see cref="GetTransByHashHandlerResponse"/></returns>
-        public async Task<GetTransByHashHandlerResponse> GetTransByHashHandler(GetTransByHashHandlerRequest req)
-        {
-             JsonResponseModel<GetTransByHashHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTransByHashHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransByHashHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos根据交易哈希查看交易详细信息
-        /// </summary>
-        /// <param name="req"><see cref="GetTransByHashHandlerRequest"/></param>
-        /// <returns><see cref="GetTransByHashHandlerResponse"/></returns>
-        public GetTransByHashHandlerResponse GetTransByHashHandlerSync(GetTransByHashHandlerRequest req)
-        {
-             JsonResponseModel<GetTransByHashHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTransByHashHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransByHashHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos分页查询当前群组的交易信息列表
-        /// </summary>
-        /// <param name="req"><see cref="GetTransListHandlerRequest"/></param>
-        /// <returns><see cref="GetTransListHandlerResponse"/></returns>
-        public async Task<GetTransListHandlerResponse> GetTransListHandler(GetTransListHandlerRequest req)
-        {
-             JsonResponseModel<GetTransListHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "GetTransListHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransListHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos分页查询当前群组的交易信息列表
-        /// </summary>
-        /// <param name="req"><see cref="GetTransListHandlerRequest"/></param>
-        /// <returns><see cref="GetTransListHandlerResponse"/></returns>
-        public GetTransListHandlerResponse GetTransListHandlerSync(GetTransListHandlerRequest req)
-        {
-             JsonResponseModel<GetTransListHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "GetTransListHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTransListHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1553,50 +1333,6 @@ namespace TencentCloud.Tbaas.V20180416
         }
 
         /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos发送交易
-        /// </summary>
-        /// <param name="req"><see cref="SendTransactionHandlerRequest"/></param>
-        /// <returns><see cref="SendTransactionHandlerResponse"/></returns>
-        public async Task<SendTransactionHandlerResponse> SendTransactionHandler(SendTransactionHandlerRequest req)
-        {
-             JsonResponseModel<SendTransactionHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendTransactionHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTransactionHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// Bcos发送交易
-        /// </summary>
-        /// <param name="req"><see cref="SendTransactionHandlerRequest"/></param>
-        /// <returns><see cref="SendTransactionHandlerResponse"/></returns>
-        public SendTransactionHandlerResponse SendTransactionHandlerSync(SendTransactionHandlerRequest req)
-        {
-             JsonResponseModel<SendTransactionHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendTransactionHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTransactionHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// trustsql服务统一接口
         /// </summary>
         /// <param name="req"><see cref="SrvInvokeRequest"/></param>
@@ -1628,50 +1364,6 @@ namespace TencentCloud.Tbaas.V20180416
              {
                  var strResp = this.InternalRequestSync(req, "SrvInvoke");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SrvInvokeResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// 根据动态部署的合约发送交易
-        /// </summary>
-        /// <param name="req"><see cref="TransByDynamicContractHandlerRequest"/></param>
-        /// <returns><see cref="TransByDynamicContractHandlerResponse"/></returns>
-        public async Task<TransByDynamicContractHandlerResponse> TransByDynamicContractHandler(TransByDynamicContractHandlerRequest req)
-        {
-             JsonResponseModel<TransByDynamicContractHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "TransByDynamicContractHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransByDynamicContractHandlerResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 版本升级
-        /// 
-        /// 根据动态部署的合约发送交易
-        /// </summary>
-        /// <param name="req"><see cref="TransByDynamicContractHandlerRequest"/></param>
-        /// <returns><see cref="TransByDynamicContractHandlerResponse"/></returns>
-        public TransByDynamicContractHandlerResponse TransByDynamicContractHandlerSync(TransByDynamicContractHandlerRequest req)
-        {
-             JsonResponseModel<TransByDynamicContractHandlerResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "TransByDynamicContractHandler");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TransByDynamicContractHandlerResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

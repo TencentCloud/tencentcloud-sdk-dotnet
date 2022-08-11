@@ -48,6 +48,12 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         [JsonProperty("DiskCount")]
         public long? DiskCount{ get; set; }
 
+        /// <summary>
+        /// 指定云硬盘备份点配额，不传时默认为不带备份点配额。目前只支持不带或设置1个云硬盘备份点配额。
+        /// </summary>
+        [JsonProperty("DiskBackupQuota")]
+        public long? DiskBackupQuota{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Lighthouse.V20200324.Models
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
             this.SetParamObj(map, prefix + "DiskChargePrepaid.", this.DiskChargePrepaid);
             this.SetParamSimple(map, prefix + "DiskCount", this.DiskCount);
+            this.SetParamSimple(map, prefix + "DiskBackupQuota", this.DiskBackupQuota);
         }
     }
 }

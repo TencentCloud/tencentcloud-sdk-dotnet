@@ -153,6 +153,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 用户使用该接口可以创建语音消息转文本自学习模型，以供识别调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizationRequest"/></param>
+        /// <returns><see cref="CreateCustomizationResponse"/></returns>
+        public async Task<CreateCustomizationResponse> CreateCustomization(CreateCustomizationRequest req)
+        {
+             JsonResponseModel<CreateCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户使用该接口可以创建语音消息转文本自学习模型，以供识别调用
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomizationRequest"/></param>
+        /// <returns><see cref="CreateCustomizationResponse"/></returns>
+        public CreateCustomizationResponse CreateCustomizationSync(CreateCustomizationRequest req)
+        {
+             JsonResponseModel<CreateCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增自定义送检用户
         /// </summary>
         /// <param name="req"><see cref="CreateScanUserRequest"/></param>
@@ -184,6 +224,46 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "CreateScanUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateScanUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以删除语音消息转文本自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizationRequest"/></param>
+        /// <returns><see cref="DeleteCustomizationResponse"/></returns>
+        public async Task<DeleteCustomizationResponse> DeleteCustomization(DeleteCustomizationRequest req)
+        {
+             JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以删除语音消息转文本自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomizationRequest"/></param>
+        /// <returns><see cref="DeleteCustomizationResponse"/></returns>
+        public DeleteCustomizationResponse DeleteCustomizationSync(DeleteCustomizationRequest req)
+        {
+             JsonResponseModel<DeleteCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomizationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -595,6 +675,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 查询语音消息转文本自学习模型列表
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomizationListRequest"/></param>
+        /// <returns><see cref="GetCustomizationListResponse"/></returns>
+        public async Task<GetCustomizationListResponse> GetCustomizationList(GetCustomizationListRequest req)
+        {
+             JsonResponseModel<GetCustomizationListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetCustomizationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomizationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询语音消息转文本自学习模型列表
+        /// </summary>
+        /// <param name="req"><see cref="GetCustomizationListRequest"/></param>
+        /// <returns><see cref="GetCustomizationListResponse"/></returns>
+        public GetCustomizationListResponse GetCustomizationListSync(GetCustomizationListRequest req)
+        {
+             JsonResponseModel<GetCustomizationListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetCustomizationList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetCustomizationListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyAppStatus)用于修改应用总开关状态。
         /// </summary>
         /// <param name="req"><see cref="ModifyAppStatusRequest"/></param>
@@ -626,6 +746,86 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "ModifyAppStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAppStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以更新语音消息转文本自学习模型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationResponse"/></returns>
+        public async Task<ModifyCustomizationResponse> ModifyCustomization(ModifyCustomizationRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用户通过该接口可以更新语音消息转文本自学习模型。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationResponse"/></returns>
+        public ModifyCustomizationResponse ModifyCustomizationSync(ModifyCustomizationRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomization");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationStateRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationStateResponse"/></returns>
+        public async Task<ModifyCustomizationStateResponse> ModifyCustomizationState(ModifyCustomizationStateRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomizationState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationStateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过该接口，用户可以修改语音消息转文本自学习模型状态，上下线自学习模型
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomizationStateRequest"/></param>
+        /// <returns><see cref="ModifyCustomizationStateResponse"/></returns>
+        public ModifyCustomizationStateResponse ModifyCustomizationStateSync(ModifyCustomizationStateRequest req)
+        {
+             JsonResponseModel<ModifyCustomizationStateResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomizationState");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomizationStateResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

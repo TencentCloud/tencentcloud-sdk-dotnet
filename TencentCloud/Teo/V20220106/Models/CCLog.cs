@@ -25,81 +25,95 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 攻击时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 攻击请求时间，采用unix秒级时间戳。
         /// </summary>
         [JsonProperty("AttackTime")]
         public ulong? AttackTime{ get; set; }
 
         /// <summary>
-        /// 攻击源ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 客户端ip。
         /// </summary>
         [JsonProperty("AttackSip")]
         public string AttackSip{ get; set; }
 
         /// <summary>
-        /// 攻击域名
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 受攻击域名。
         /// </summary>
         [JsonProperty("AttackDomain")]
         public string AttackDomain{ get; set; }
 
         /// <summary>
-        /// 请求uri
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// URI。
         /// </summary>
         [JsonProperty("RequestUri")]
         public string RequestUri{ get; set; }
 
         /// <summary>
-        /// 命中次数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 命中次数。
         /// </summary>
         [JsonProperty("HitCount")]
         public ulong? HitCount{ get; set; }
 
         /// <summary>
-        /// IP所在国家
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// IP所在国家iso-3166中alpha-2编码，编码信息请参考[ISO-3166](https://git.woa.com/edgeone/iso-3166/blob/master/all/all.json)。
         /// </summary>
         [JsonProperty("SipCountryCode")]
         public string SipCountryCode{ get; set; }
 
         /// <summary>
-        /// 事件id
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 请求（事件）ID。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// 处置方式
+        /// 当前该字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DisposalMethod")]
         public string DisposalMethod{ get; set; }
 
         /// <summary>
-        /// http_log
+        /// 当前该字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("HttpLog")]
         public string HttpLog{ get; set; }
 
         /// <summary>
-        /// 规则编号
+        /// 当前该字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleId")]
         public ulong? RuleId{ get; set; }
 
         /// <summary>
-        /// 风险等级
+        /// 当前该字段已废弃。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RiskLevel")]
         public string RiskLevel{ get; set; }
+
+        /// <summary>
+        /// User Agent，仅自定义规则日志中存在。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ua")]
+        public string Ua{ get; set; }
+
+        /// <summary>
+        /// 请求方法，仅自定义规则日志中存在。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RequestMethod")]
+        public string RequestMethod{ get; set; }
+
+        /// <summary>
+        /// 规则信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RuleDetailList")]
+        public SecRuleRelatedInfo[] RuleDetailList{ get; set; }
 
 
         /// <summary>
@@ -118,6 +132,9 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "HttpLog", this.HttpLog);
             this.SetParamSimple(map, prefix + "RuleId", this.RuleId);
             this.SetParamSimple(map, prefix + "RiskLevel", this.RiskLevel);
+            this.SetParamSimple(map, prefix + "Ua", this.Ua);
+            this.SetParamSimple(map, prefix + "RequestMethod", this.RequestMethod);
+            this.SetParamArrayObj(map, prefix + "RuleDetailList.", this.RuleDetailList);
         }
     }
 }

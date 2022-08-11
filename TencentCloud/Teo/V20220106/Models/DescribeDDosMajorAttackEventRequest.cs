@@ -25,43 +25,46 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 条数
+        /// 分页拉取的最大返回结果数。最大值：1000。
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// 当前页
+        /// 分页拉取的起始页号。最小值：1。
         /// </summary>
         [JsonProperty("PageNo")]
         public long? PageNo{ get; set; }
 
         /// <summary>
-        /// ddos 策略组id集合
+        /// ddos 策略组id集合，不填默认选择全部策略id。
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 协议类型，{tcp,udp,all}
+        /// 协议类型，取值有：
+        /// <li>tcp ；</li>
+        /// <li>udp ；</li>
+        /// <li>all 。</li>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// 站点集合
+        /// 站点id列表，不填默认选择全部站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }

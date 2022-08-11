@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// ddos 策略组id
+        /// ddos 策略组id。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
-        /// 攻击最大带宽
+        /// 攻击最大带宽。
         /// </summary>
         [JsonProperty("AttackMaxBandWidth")]
         public long? AttackMaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 攻击时间 单位为s
+        /// 攻击请求时间，采用unix秒级时间戳。
         /// </summary>
         [JsonProperty("AttackTime")]
         public long? AttackTime{ get; set; }

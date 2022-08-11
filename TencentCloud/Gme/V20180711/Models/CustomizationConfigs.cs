@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetBlockListHandlerResponse : AbstractModel
+    public class CustomizationConfigs : AbstractModel
     {
         
         /// <summary>
-        /// 总记录数
+        /// 应用 ID，登录控制台创建应用得到的AppID
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("BizId")]
+        public long? BizId{ get; set; }
 
         /// <summary>
-        /// 当前群组编号
+        /// 模型ID
         /// </summary>
-        [JsonProperty("GroupPk")]
-        public string GroupPk{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
-        /// 返回数据列表
+        /// 模型状态，-1下线状态，1上线状态, 0训练中, -2训练失败
         /// </summary>
-        [JsonProperty("List")]
-        public BcosBlockObj[] List{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ModelState")]
+        public long? ModelState{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "GroupPk", this.GroupPk);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ModelState", this.ModelState);
         }
     }
 }

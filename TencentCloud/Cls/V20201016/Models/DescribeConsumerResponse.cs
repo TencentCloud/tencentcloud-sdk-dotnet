@@ -50,6 +50,13 @@ namespace TencentCloud.Cls.V20201016.Models
         public Ckafka Ckafka{ get; set; }
 
         /// <summary>
+        /// 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Compression")]
+        public long? Compression{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +72,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "NeedContent", this.NeedContent);
             this.SetParamObj(map, prefix + "Content.", this.Content);
             this.SetParamObj(map, prefix + "Ckafka.", this.Ckafka);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

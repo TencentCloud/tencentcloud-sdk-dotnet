@@ -15,20 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTransByHashHandlerResponse : AbstractModel
+    public class DescribeClientUploadAccelerationUsageDataResponse : AbstractModel
     {
         
         /// <summary>
-        /// 交易信息json字符串
+        /// 客户端上传加速统计数据。
         /// </summary>
-        [JsonProperty("TransactionJson")]
-        public string TransactionJson{ get; set; }
+        [JsonProperty("ClientUploadAccelerationUsageDataSet")]
+        public StatDataItem[] ClientUploadAccelerationUsageDataSet{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -42,7 +42,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TransactionJson", this.TransactionJson);
+            this.SetParamArrayObj(map, prefix + "ClientUploadAccelerationUsageDataSet.", this.ClientUploadAccelerationUsageDataSet);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

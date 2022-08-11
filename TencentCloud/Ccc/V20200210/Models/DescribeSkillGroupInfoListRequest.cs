@@ -54,6 +54,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 技能组名称
+        /// </summary>
+        [JsonProperty("SkillGroupName")]
+        public string SkillGroupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "SkillGroupName", this.SkillGroupName);
         }
     }
 }

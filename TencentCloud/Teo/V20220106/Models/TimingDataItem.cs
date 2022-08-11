@@ -25,14 +25,14 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 秒级时间戳
+        /// 返回数据对应时间点，采用unix秒级时间戳
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Timestamp")]
         public long? Timestamp{ get; set; }
 
         /// <summary>
-        /// 数值
+        /// 具体数值
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]

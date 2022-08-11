@@ -15,32 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Tem.V20210701.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class GetTransListHandlerResponse : AbstractModel
+    public class DescribeEnvironmentResponse : AbstractModel
     {
         
         /// <summary>
-        /// 总记录数
+        /// 环境信息
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
-
-        /// <summary>
-        /// 当前群组编号
-        /// </summary>
-        [JsonProperty("GroupPk")]
-        public string GroupPk{ get; set; }
-
-        /// <summary>
-        /// 返回数据列表
-        /// </summary>
-        [JsonProperty("List")]
-        public BcosTransInfo[] List{ get; set; }
+        [JsonProperty("Result")]
+        public NamespaceInfo Result{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +42,7 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamSimple(map, prefix + "GroupPk", this.GroupPk);
-            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamObj(map, prefix + "Result.", this.Result);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

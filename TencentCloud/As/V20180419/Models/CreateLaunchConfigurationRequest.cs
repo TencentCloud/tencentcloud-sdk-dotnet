@@ -170,6 +170,13 @@ namespace TencentCloud.As.V20180419.Models
         [JsonProperty("DiskTypePolicy")]
         public string DiskTypePolicy{ get; set; }
 
+        /// <summary>
+        /// 高性能计算集群ID。<br>
+        /// 注意：此字段默认为空。
+        /// </summary>
+        [JsonProperty("HpcClusterId")]
+        public string HpcClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +205,7 @@ namespace TencentCloud.As.V20180419.Models
             this.SetParamObj(map, prefix + "InstanceNameSettings.", this.InstanceNameSettings);
             this.SetParamObj(map, prefix + "InstanceChargePrepaid.", this.InstanceChargePrepaid);
             this.SetParamSimple(map, prefix + "DiskTypePolicy", this.DiskTypePolicy);
+            this.SetParamSimple(map, prefix + "HpcClusterId", this.HpcClusterId);
         }
     }
 }

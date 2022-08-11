@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.576</VersionPrefix>
+    <VersionPrefix>3.0.577</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -148,6 +148,8 @@
     <Compile Include="V20210701\Models\DescribeConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailRequest.cs" />
     <Compile Include="V20210701\Models\DescribeDeployApplicationDetailResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeEnvironmentRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\DescribeEnvironmentStatusRequest.cs" />
     <Compile Include="V20210701\Models\DescribeEnvironmentStatusResponse.cs" />
     <Compile Include="V20210701\Models\DescribeEnvironmentsRequest.cs" />
@@ -200,6 +202,7 @@
     <Compile Include="V20210701\Models\ModifyLogConfigRequest.cs" />
     <Compile Include="V20210701\Models\ModifyLogConfigResponse.cs" />
     <Compile Include="V20210701\Models\MountedSettingConf.cs" />
+    <Compile Include="V20210701\Models\NamespaceInfo.cs" />
     <Compile Include="V20210701\Models\NamespacePage.cs" />
     <Compile Include="V20210701\Models\NamespaceStatusInfo.cs" />
     <Compile Include="V20210701\Models\NodeInfo.cs" />

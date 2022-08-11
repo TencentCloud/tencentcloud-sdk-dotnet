@@ -25,64 +25,84 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 过滤指标
+        /// 统计指标列表，取值有：
+        /// <li>waf_requestNum_url ：url请求数排行 ；</li>
+        /// <li>waf_requestNum_cip：客户端ip请求数排行 ；</li>
+        /// <li>waf_cipRequestNum_region ：客户端区域请求数排行 。</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 查询前多少名,传值为0 全量
+        /// 查询前多少个，传值为0返回全量。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 站点集合
+        /// 站点id列表，不填默认选择全部站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ddos策略组id 集合
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 协议类型,tcp,udp,all
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// 攻击类型,flood,icmpFlood......,all
+        /// 该字段已废弃，请勿传。
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 域名集合
+        /// 域名列表，不填默认选择全部子域名。
         /// </summary>
         [JsonProperty("Domains")]
         public string[] Domains{ get; set; }
+
+        /// <summary>
+        /// 查询时间粒度，取值有：
+        /// <li>min ：1分钟 ；</li>
+        /// <li>5min ：5分钟 ；</li>
+        /// <li>hour ：1小时 ；</li>
+        /// <li>day ：1天 。</li>
+        /// </summary>
+        [JsonProperty("Interval")]
+        public string Interval{ get; set; }
+
+        /// <summary>
+        /// 筛选条件，取值有：
+        /// <li>action ：执行动作 。</li>
+        /// </summary>
+        [JsonProperty("QueryCondition")]
+        public QueryCondition[] QueryCondition{ get; set; }
 
 
         /// <summary>
@@ -100,6 +120,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamSimple(map, prefix + "AttackType", this.AttackType);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
+            this.SetParamSimple(map, prefix + "Interval", this.Interval);
+            this.SetParamArrayObj(map, prefix + "QueryCondition.", this.QueryCondition);
         }
     }
 }

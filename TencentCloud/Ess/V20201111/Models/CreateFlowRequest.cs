@@ -37,7 +37,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string FlowName{ get; set; }
 
         /// <summary>
-        /// 签署流程参与者信息
+        /// 签署流程参与者信息，最大限制50方
         /// </summary>
         [JsonProperty("Approvers")]
         public FlowCreateApprover[] Approvers{ get; set; }
@@ -95,6 +95,15 @@ namespace TencentCloud.Ess.V20201111.Models
         public string CustomShowMap{ get; set; }
 
         /// <summary>
+        /// 发起方企业的签署人进行签署操作是否需要企业内部审批。
+        /// 若设置为true,审核结果需通过接口 CreateFlowSignReview 通知电子签，审核通过后，发起方企业签署人方可进行签署操作，否则会阻塞其签署操作。
+        /// 
+        /// 注：企业可以通过此功能与企业内部的审批流程进行关联，支持手动、静默签署合同。
+        /// </summary>
+        [JsonProperty("NeedSignReview")]
+        public bool? NeedSignReview{ get; set; }
+
+        /// <summary>
         /// 暂未开放
         /// </summary>
         [JsonProperty("RelatedFlowId")]
@@ -123,6 +132,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
+            this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
             this.SetParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }

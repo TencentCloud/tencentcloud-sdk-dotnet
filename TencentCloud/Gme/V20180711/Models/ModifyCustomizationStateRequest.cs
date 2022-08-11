@@ -15,26 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Tbaas.V20180416.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BlockByNumberHandlerResponse : AbstractModel
+    public class ModifyCustomizationStateRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回区块json字符串
+        /// 自学习模型ID
         /// </summary>
-        [JsonProperty("BlockJson")]
-        public string BlockJson{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 想要变换的模型状态，-1代表下线，1代表上线
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("ToState")]
+        public long? ToState{ get; set; }
+
+        /// <summary>
+        /// 应用 ID，登录控制台创建应用得到的AppID
+        /// </summary>
+        [JsonProperty("BizId")]
+        public long? BizId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +48,9 @@ namespace TencentCloud.Tbaas.V20180416.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BlockJson", this.BlockJson);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ToState", this.ToState);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
         }
     }
 }

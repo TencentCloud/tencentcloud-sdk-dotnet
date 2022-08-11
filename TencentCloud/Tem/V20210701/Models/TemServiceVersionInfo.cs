@@ -34,7 +34,7 @@ namespace TencentCloud.Tem.V20210701.Models
         /// 服务id
         /// </summary>
         [JsonProperty("ApplicationId")]
-        public bool? ApplicationId{ get; set; }
+        public string ApplicationId{ get; set; }
 
         /// <summary>
         /// 部署方式
@@ -110,6 +110,7 @@ namespace TencentCloud.Tem.V20210701.Models
 
         /// <summary>
         /// 弹性配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EsInfo")]
         public EsInfo EsInfo{ get; set; }
@@ -280,7 +281,7 @@ namespace TencentCloud.Tem.V20210701.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MinAliveInstances")]
-        public long? MinAliveInstances{ get; set; }
+        public string MinAliveInstances{ get; set; }
 
         /// <summary>
         /// 安全组
@@ -416,7 +417,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public ulong? EnableTracing{ get; set; }
 
         /// <summary>
-        /// 是否开启调用链上报，只有 EnableTracing=1 时生效
+        /// 是否开启调用链上报，只有 EnableTracing=1 时生效（参数已弃用）
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnableTracingReport")]
@@ -488,7 +489,7 @@ namespace TencentCloud.Tem.V20210701.Models
         public bool? UnderDeploying{ get; set; }
 
         /// <summary>
-        /// 是否开启prometheus业务指标监控
+        /// 监控业务指标监控
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("EnablePrometheusConf")]
@@ -507,6 +508,14 @@ namespace TencentCloud.Tem.V20210701.Models
         /// </summary>
         [JsonProperty("TcrInstanceId")]
         public string TcrInstanceId{ get; set; }
+
+        /// <summary>
+        /// 1：开始自动metrics采集（open-telemetry）；
+        /// 0：关闭metrics采集；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableMetrics")]
+        public long? EnableMetrics{ get; set; }
 
 
         /// <summary>
@@ -586,6 +595,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
             this.SetParamSimple(map, prefix + "StoppedManually", this.StoppedManually);
             this.SetParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+            this.SetParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
         }
     }
 }

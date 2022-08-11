@@ -25,55 +25,67 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 过滤指标
+        /// 统计指标列表，取值有：
+        /// <li>ddos_attackFlux_protocol ：攻击总流量协议类型分布排行 ；</li>
+        /// <li>ddos_attackPackageNum_protocol ：攻击总包量协议类型分布排行 ；</li>
+        /// <li>ddos_attackNum_attackType ：攻击总次数攻击类型分布排行 ；</li>
+        /// <li>ddos_attackNum_sregion ：攻击总次数攻击源地区分布排行 ；</li>
+        /// <li>ddos_attackFlux_sip ：攻击总流量攻击源ip分布排行 ；</li>
+        /// <li>ddos_attackFlux_sregion ：攻击总流量攻击源地区分布排行 。</li>
         /// </summary>
         [JsonProperty("MetricName")]
         public string MetricName{ get; set; }
 
         /// <summary>
-        /// 查询前多少名,传值为0 全量
+        /// 查询前多少个，传值为0返回全量。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 站点集合
+        /// 站点id集合，不填默认选择全部站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ddos策略组id 集合
+        /// ddos策略组id 集合，不填默认选择全部策略id。
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 端口号。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 协议类型,tcp,udp,all
+        /// 协议类型，取值有：
+        /// <li>tcp ；</li>
+        /// <li>udp ；</li>
+        /// <li>all 。</li>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// 攻击类型,flood,icmpFlood......,all
+        /// 攻击类型，取值有：
+        /// <li>flood ；</li>
+        /// <li>icmpFlood ；</li>
+        /// <li>all 。</li>
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }

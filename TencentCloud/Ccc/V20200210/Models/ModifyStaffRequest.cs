@@ -60,6 +60,18 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("SkillGroupIds")]
         public long?[] SkillGroupIds{ get; set; }
 
+        /// <summary>
+        /// 是否开启手机外呼开关
+        /// </summary>
+        [JsonProperty("UseMobileCallOut")]
+        public bool? UseMobileCallOut{ get; set; }
+
+        /// <summary>
+        /// 手机接听模式 0 - 关闭 | 1 - 仅离线 | 2 - 始终
+        /// </summary>
+        [JsonProperty("UseMobileAccept")]
+        public long? UseMobileAccept{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
             this.SetParamArraySimple(map, prefix + "SkillGroupIds.", this.SkillGroupIds);
+            this.SetParamSimple(map, prefix + "UseMobileCallOut", this.UseMobileCallOut);
+            this.SetParamSimple(map, prefix + "UseMobileAccept", this.UseMobileAccept);
         }
     }
 }

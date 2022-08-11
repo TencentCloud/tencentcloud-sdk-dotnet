@@ -293,50 +293,6 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 备份下载功能已调整，此接口即将下线
-        /// 
-        /// 本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
-        /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
-        public async Task<DescribeBackupAccessResponse> DescribeBackupAccess(DescribeBackupAccessRequest req)
-        {
-             JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeBackupAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 备份下载功能已调整，此接口即将下线
-        /// 
-        /// 本接口（DescribeBackupAccess）用于获取备份文件的下载授权，具体的备份文件信息可通过查询实例备份列表（DescribeDBBackups）接口获取
-        /// </summary>
-        /// <param name="req"><see cref="DescribeBackupAccessRequest"/></param>
-        /// <returns><see cref="DescribeBackupAccessResponse"/></returns>
-        public DescribeBackupAccessResponse DescribeBackupAccessSync(DescribeBackupAccessRequest req)
-        {
-             JsonResponseModel<DescribeBackupAccessResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeBackupAccess");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBackupAccessResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 查询备份下载任务信息
         /// </summary>
         /// <param name="req"><see cref="DescribeBackupDownloadTaskRequest"/></param>

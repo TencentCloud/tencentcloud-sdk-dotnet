@@ -25,49 +25,52 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 攻击状态
+        /// 攻击状态，取值有：
+        /// <li>1 ：观察中 ；</li>
+        /// <li>2 ：攻击开始 ；</li>
+        /// <li>3 ：攻击结束 。</li>
         /// </summary>
         [JsonProperty("AttackStatus")]
         public long? AttackStatus{ get; set; }
 
         /// <summary>
-        /// 攻击类型
+        /// 攻击类型。
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public long? EndTime{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
 
         /// <summary>
-        /// 最大带宽
+        /// 最大带宽。
         /// </summary>
         [JsonProperty("MaxBandWidth")]
         public long? MaxBandWidth{ get; set; }
 
         /// <summary>
-        /// 最大包速率
+        /// 最大包速率。
         /// </summary>
         [JsonProperty("PacketMaxRate")]
         public long? PacketMaxRate{ get; set; }
 
         /// <summary>
-        /// 事件Id
+        /// 事件Id。
         /// </summary>
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
         /// <summary>
-        /// ddos 策略组id
+        /// ddos 策略组id。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

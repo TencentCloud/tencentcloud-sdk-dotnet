@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// Entry key
+        /// top查询维度值。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// TopN数据
+        /// 查询具体数据。
         /// </summary>
         [JsonProperty("Value")]
         public TopNEntryValue[] Value{ get; set; }

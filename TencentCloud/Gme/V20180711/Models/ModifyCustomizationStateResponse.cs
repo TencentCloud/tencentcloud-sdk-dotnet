@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeBackupAccessResponse : AbstractModel
+    public class ModifyCustomizationStateResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例所属地域
+        /// 自学习模型ID
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
-        /// 备份文件所在存储桶
+        /// 返回值。0为成功，非0为失败。
         /// </summary>
-        [JsonProperty("Bucket")]
-        public string Bucket{ get; set; }
-
-        /// <summary>
-        /// 备份文件的存储信息
-        /// </summary>
-        [JsonProperty("Files")]
-        public BackupFile[] Files{ get; set; }
+        [JsonProperty("ErrorCode")]
+        public long? ErrorCode{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -54,9 +48,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamSimple(map, prefix + "Bucket", this.Bucket);
-            this.SetParamArrayObj(map, prefix + "Files.", this.Files);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

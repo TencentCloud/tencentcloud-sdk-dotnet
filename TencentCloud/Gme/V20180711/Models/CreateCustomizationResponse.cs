@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RecognizeEffectiveFlowRequest : AbstractModel
+    public class CreateCustomizationResponse : AbstractModel
     {
         
         /// <summary>
-        /// 业务入参
+        /// 模型ID
         /// </summary>
-        [JsonProperty("BusinessSecurityData")]
-        public InputRecognizeEffectiveFlow BusinessSecurityData{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BusinessSecurityData.", this.BusinessSecurityData);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

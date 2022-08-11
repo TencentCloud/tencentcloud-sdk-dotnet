@@ -25,35 +25,35 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 指标名称
+        /// 指标名称。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metric")]
         public string Metric{ get; set; }
 
         /// <summary>
-        /// 指标数据明细
+        /// 时序数据详情。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]
         public TimingDataItem[] Detail{ get; set; }
 
         /// <summary>
-        /// 最大值
+        /// 最大值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Max")]
         public long? Max{ get; set; }
 
         /// <summary>
-        /// 平均值
+        /// 平均值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Avg")]
         public float? Avg{ get; set; }
 
         /// <summary>
-        /// 数据总和
+        /// 数据总和。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Sum")]

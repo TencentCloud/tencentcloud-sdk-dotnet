@@ -25,55 +25,69 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 统计指标列表
+        /// 统计指标列表，取值有：
+        /// <li>ddos_attackMaxBandwidth ：攻击带宽峰值 ；</li>
+        /// <li>ddos_attackMaxPackageRate：攻击包速率峰值  ；</li>
+        /// <li>ddos_attackBandwidth ：攻击带宽曲线 ；</li>
+        /// <li>ddos_attackPackageRate ：攻击包速率曲线 。</li>
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
 
         /// <summary>
-        /// 站点id列表
+        /// 站点id列表，不填默认选择全部站点。
         /// </summary>
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
         /// <summary>
-        /// ddos策略组id列表
+        /// ddos策略组id列表，不填默认选择全部策略id。
         /// </summary>
         [JsonProperty("PolicyIds")]
         public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 端口号
+        /// 端口号。
         /// </summary>
         [JsonProperty("Port")]
         public long? Port{ get; set; }
 
         /// <summary>
-        /// 协议类型,tcp,udp,all
+        /// 协议类型，取值有：
+        /// <li>tcp ；</li>
+        /// <li>udp ；</li>
+        /// <li>all 。</li>
         /// </summary>
         [JsonProperty("ProtocolType")]
         public string ProtocolType{ get; set; }
 
         /// <summary>
-        /// 攻击类型,flood,icmpFlood......,all
+        /// 攻击类型，取值有：
+        /// <li>flood ；</li>
+        /// <li>icmpFlood ；</li>
+        /// <li>all 。</li>
         /// </summary>
         [JsonProperty("AttackType")]
         public string AttackType{ get; set; }
 
         /// <summary>
-        /// 查询时间粒度，可选{min,5min,hour,day}
+        /// 查询时间粒度，取值有：
+        /// <li>min ：1分钟 ；</li>
+        /// <li>5min ：5分钟 ；</li>
+        /// <li>hour ：1小时 ；</li>
+        /// <li>day ：1天 。</li>
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }

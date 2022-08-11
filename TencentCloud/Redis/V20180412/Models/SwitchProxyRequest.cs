@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ccc.V20200210.Models
+namespace TencentCloud.Redis.V20180412.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSeatUserListRequest : AbstractModel
+    public class SwitchProxyRequest : AbstractModel
     {
         
         /// <summary>
         /// 实例ID
         /// </summary>
         [JsonProperty("InstanceId")]
-        public long? InstanceId{ get; set; }
+        public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 偏移量
+        /// 实例ProxyID
         /// </summary>
-        [JsonProperty("Offset")]
-        public long? Offset{ get; set; }
-
-        /// <summary>
-        /// 返回数量
-        /// </summary>
-        [JsonProperty("Limit")]
-        public long? Limit{ get; set; }
+        [JsonProperty("ProxyID")]
+        public string ProxyID{ get; set; }
 
 
         /// <summary>
@@ -49,8 +43,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ProxyID", this.ProxyID);
         }
     }
 }

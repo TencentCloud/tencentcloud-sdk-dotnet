@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Mongodb.V20190725.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class BackupFile : AbstractModel
+    public class GetCustomizationListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 备份文件所属的副本集/分片ID
+        /// 语音消息转文本自学习模型配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ReplicateSetId")]
-        public string ReplicateSetId{ get; set; }
+        [JsonProperty("CustomizationConfigs")]
+        public CustomizationConfigs[] CustomizationConfigs{ get; set; }
 
         /// <summary>
-        /// 备份文件保存路径
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("File")]
-        public string File{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "ReplicateSetId", this.ReplicateSetId);
-            this.SetParamSimple(map, prefix + "File", this.File);
+            this.SetParamArrayObj(map, prefix + "CustomizationConfigs.", this.CustomizationConfigs);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

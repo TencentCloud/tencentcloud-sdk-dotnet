@@ -25,28 +25,28 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 攻击源ip
+        /// 攻击源ip。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackSourceIp")]
         public string AttackSourceIp{ get; set; }
 
         /// <summary>
-        /// 地区(国家)
+        /// 地区（国家）。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackRegion")]
         public string AttackRegion{ get; set; }
 
         /// <summary>
-        /// 累计攻击流量
+        /// 累计攻击流量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackFlow")]
         public ulong? AttackFlow{ get; set; }
 
         /// <summary>
-        /// 累计攻击包量
+        /// 累计攻击包量。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AttackPacketNum")]

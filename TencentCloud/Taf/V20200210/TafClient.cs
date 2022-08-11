@@ -133,50 +133,6 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// 该服务已不再对外提供能力
-        /// 
-        /// 筛选敏感易骚扰人群
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeEffectiveFlowRequest"/></param>
-        /// <returns><see cref="RecognizeEffectiveFlowResponse"/></returns>
-        public async Task<RecognizeEffectiveFlowResponse> RecognizeEffectiveFlow(RecognizeEffectiveFlowRequest req)
-        {
-             JsonResponseModel<RecognizeEffectiveFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RecognizeEffectiveFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeEffectiveFlowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 该服务已不再对外提供能力
-        /// 
-        /// 筛选敏感易骚扰人群
-        /// </summary>
-        /// <param name="req"><see cref="RecognizeEffectiveFlowRequest"/></param>
-        /// <returns><see cref="RecognizeEffectiveFlowResponse"/></returns>
-        public RecognizeEffectiveFlowResponse RecognizeEffectiveFlowSync(RecognizeEffectiveFlowRequest req)
-        {
-             JsonResponseModel<RecognizeEffectiveFlowResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RecognizeEffectiveFlow");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeEffectiveFlowResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 流量反欺诈-流量验准高级版
         /// </summary>
         /// <param name="req"><see cref="RecognizePreciseTargetAudienceRequest"/></param>

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// Entry的name
+        /// 排序实体名。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 数量
+        /// 排序实体数量。
         /// </summary>
         [JsonProperty("Count")]
         public long? Count{ get; set; }

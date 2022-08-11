@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputRecognizeEffectiveFlowValue : AbstractModel
+    public class ModifyCustomizationRequest : AbstractModel
     {
         
         /// <summary>
-        /// 返回标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 应用 ID，登录控制台创建应用得到的AppID
         /// </summary>
-        [JsonProperty("Lable")]
-        public string Lable{ get; set; }
+        [JsonProperty("BizId")]
+        public long? BizId{ get; set; }
 
         /// <summary>
-        /// 返回分值
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 文本文件
         /// </summary>
-        [JsonProperty("Score")]
-        public float? Score{ get; set; }
+        [JsonProperty("TextUrl")]
+        public string TextUrl{ get; set; }
+
+        /// <summary>
+        /// 要修改的模型ID
+        /// </summary>
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Lable", this.Lable);
-            this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "BizId", this.BizId);
+            this.SetParamSimple(map, prefix + "TextUrl", this.TextUrl);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
         }
     }
 }

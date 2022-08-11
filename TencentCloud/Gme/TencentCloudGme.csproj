@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.576</VersionPrefix>
+    <VersionPrefix>3.0.577</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -54,8 +54,13 @@
     <Compile Include="V20180711\Models\CreateAppRequest.cs" />
     <Compile Include="V20180711\Models\CreateAppResp.cs" />
     <Compile Include="V20180711\Models\CreateAppResponse.cs" />
+    <Compile Include="V20180711\Models\CreateCustomizationRequest.cs" />
+    <Compile Include="V20180711\Models\CreateCustomizationResponse.cs" />
     <Compile Include="V20180711\Models\CreateScanUserRequest.cs" />
     <Compile Include="V20180711\Models\CreateScanUserResponse.cs" />
+    <Compile Include="V20180711\Models\CustomizationConfigs.cs" />
+    <Compile Include="V20180711\Models\DeleteCustomizationRequest.cs" />
+    <Compile Include="V20180711\Models\DeleteCustomizationResponse.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserRequest.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAgeDetectTaskRequest.cs" />
@@ -78,10 +83,16 @@
     <Compile Include="V20180711\Models\DescribeScanResultListResponse.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeRequest.cs" />
     <Compile Include="V20180711\Models\DescribeUserInAndOutTimeResponse.cs" />
+    <Compile Include="V20180711\Models\GetCustomizationListRequest.cs" />
+    <Compile Include="V20180711\Models\GetCustomizationListResponse.cs" />
     <Compile Include="V20180711\Models\InOutTimeInfo.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusRequest.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResp.cs" />
     <Compile Include="V20180711\Models\ModifyAppStatusResponse.cs" />
+    <Compile Include="V20180711\Models\ModifyCustomizationRequest.cs" />
+    <Compile Include="V20180711\Models\ModifyCustomizationResponse.cs" />
+    <Compile Include="V20180711\Models\ModifyCustomizationStateRequest.cs" />
+    <Compile Include="V20180711\Models\ModifyCustomizationStateResponse.cs" />
     <Compile Include="V20180711\Models\ModifyRoomInfoRequest.cs" />
     <Compile Include="V20180711\Models\ModifyRoomInfoResponse.cs" />
     <Compile Include="V20180711\Models\ModifyUserMicStatusRequest.cs" />

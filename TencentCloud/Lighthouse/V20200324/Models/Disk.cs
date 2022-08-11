@@ -79,7 +79,17 @@ namespace TencentCloud.Lighthouse.V20200324.Models
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// 磁盘状态
+        /// 磁盘状态，取值范围：
+        /// <li>PENDING：创建中。 </li>
+        /// <li>UNATTACHED：未挂载。</li>
+        /// <li>ATTACHING：挂载中。</li>
+        /// <li>ATTACHED：已挂载。</li>
+        /// <li>DETACHING：卸载中。 </li>
+        /// <li> SHUTDOWN：已隔离。</li>
+        /// <li> CREATED_FAILED：创建失败。</li>
+        /// <li>TERMINATING：销毁中。</li>
+        /// <li> DELETING：删除中。</li>
+        /// <li> FREEZING：冻结中。</li>
         /// </summary>
         [JsonProperty("DiskState")]
         public string DiskState{ get; set; }

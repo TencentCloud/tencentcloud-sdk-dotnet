@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Ccc.V20200210.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSeatUserListResponse : AbstractModel
+    public class ModifyCustomizationResponse : AbstractModel
     {
         
         /// <summary>
-        /// 此实例的坐席用户总数
+        /// 返回值。0为成功，非0为失败。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("ErrorCode")]
+        public long? ErrorCode{ get; set; }
 
         /// <summary>
-        /// 坐席用户信息列表
+        /// 自学习模型ID
         /// </summary>
-        [JsonProperty("SeatUsers")]
-        public SeatUserInfo[] SeatUsers{ get; set; }
+        [JsonProperty("ModelId")]
+        public string ModelId{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -48,8 +48,8 @@ namespace TencentCloud.Ccc.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "SeatUsers.", this.SeatUsers);
+            this.SetParamSimple(map, prefix + "ErrorCode", this.ErrorCode);
+            this.SetParamSimple(map, prefix + "ModelId", this.ModelId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

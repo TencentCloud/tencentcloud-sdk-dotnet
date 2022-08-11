@@ -819,6 +819,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 获取环境基础信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentResponse"/></returns>
+        public async Task<DescribeEnvironmentResponse> DescribeEnvironment(DescribeEnvironmentRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取环境基础信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEnvironmentRequest"/></param>
+        /// <returns><see cref="DescribeEnvironmentResponse"/></returns>
+        public DescribeEnvironmentResponse DescribeEnvironmentSync(DescribeEnvironmentRequest req)
+        {
+             JsonResponseModel<DescribeEnvironmentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEnvironment");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEnvironmentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取环境状态
         /// </summary>
         /// <param name="req"><see cref="DescribeEnvironmentStatusRequest"/></param>

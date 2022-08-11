@@ -101,6 +101,18 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
+        /// <summary>
+        /// 检测平台
+        /// 1: 云查杀引擎
+        /// 2: tav
+        /// 3: binaryAi
+        /// 4: 异常行为
+        /// 5: 威胁情报
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CheckPlatform")]
+        public string[] CheckPlatform{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +130,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "LatestScanTime", this.LatestScanTime);
             this.SetParamSimple(map, prefix + "Md5", this.Md5);
             this.SetParamSimple(map, prefix + "FileName", this.FileName);
+            this.SetParamArraySimple(map, prefix + "CheckPlatform.", this.CheckPlatform);
         }
     }
 }
