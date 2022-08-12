@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.577</VersionPrefix>
+    <VersionPrefix>3.0.578</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -171,7 +171,11 @@
     <Compile Include="V20210701\Models\DestroyEnvironmentResponse.cs" />
     <Compile Include="V20210701\Models\DestroyLogConfigRequest.cs" />
     <Compile Include="V20210701\Models\DestroyLogConfigResponse.cs" />
+    <Compile Include="V20210701\Models\DisableApplicationAutoscalerRequest.cs" />
+    <Compile Include="V20210701\Models\DisableApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\EksService.cs" />
+    <Compile Include="V20210701\Models\EnableApplicationAutoscalerRequest.cs" />
+    <Compile Include="V20210701\Models\EnableApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\EnablePrometheusConf.cs" />
     <Compile Include="V20210701\Models\EsInfo.cs" />
     <Compile Include="V20210701\Models\GenerateApplicationPackageDownloadUrlRequest.cs" />

@@ -273,17 +273,24 @@ namespace TencentCloud.Tem.V20210701.Models
         public string OsFlavour{ get; set; }
 
         /// <summary>
-        /// 是否开启prometheus 业务指标监控
+        /// metrics业务指标监控配置
         /// </summary>
         [JsonProperty("EnablePrometheusConf")]
         public EnablePrometheusConf EnablePrometheusConf{ get; set; }
 
         /// <summary>
-        /// 1：开始apm采集（skywalking）；
+        /// 1：开始自动apm采集（skywalking）；
         /// 0：关闭apm采集；
         /// </summary>
         [JsonProperty("EnableTracing")]
         public long? EnableTracing{ get; set; }
+
+        /// <summary>
+        /// 1：开始自动metrics采集（open-telemetry）；
+        /// 0：关闭metrics采集；
+        /// </summary>
+        [JsonProperty("EnableMetrics")]
+        public long? EnableMetrics{ get; set; }
 
 
         /// <summary>
@@ -332,6 +339,7 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamSimple(map, prefix + "OsFlavour", this.OsFlavour);
             this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
+            this.SetParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
         }
     }
 }
