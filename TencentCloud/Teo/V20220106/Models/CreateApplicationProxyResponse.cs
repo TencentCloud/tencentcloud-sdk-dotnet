@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 新增的四层代理应用ID
+        /// 新增的四层代理应用ID。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }

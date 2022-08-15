@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// MaxAge 时间设置，单位秒，最大365天
-        /// 注意：时间为0，即不缓存。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxAgeTime")]
-        public long? MaxAgeTime{ get; set; }
-
-        /// <summary>
-        /// 是否遵循源站，on或off，开启时忽略时间设置。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 是否遵循源站，取值有：
+        /// <li>on：遵循源站，忽略MaxAge 时间设置；</li>
+        /// <li>off：不遵循源站，使用MaxAge 时间设置。</li>
         /// </summary>
         [JsonProperty("FollowOrigin")]
         public string FollowOrigin{ get; set; }
+
+        /// <summary>
+        /// MaxAge 时间设置，单位秒，最大365天。
+        /// 注意：时间为0，即不缓存。
+        /// </summary>
+        [JsonProperty("MaxAgeTime")]
+        public long? MaxAgeTime{ get; set; }
 
 
         /// <summary>
@@ -45,8 +45,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
             this.SetParamSimple(map, prefix + "FollowOrigin", this.FollowOrigin);
+            this.SetParamSimple(map, prefix + "MaxAgeTime", this.MaxAgeTime);
         }
     }
 }

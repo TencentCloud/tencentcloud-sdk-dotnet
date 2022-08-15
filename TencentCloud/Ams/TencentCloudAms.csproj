@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{155BF728-D163-3DBE-85B3-CA22151A30C7}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.578</VersionPrefix>
+    <VersionPrefix>3.0.579</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,6 +48,7 @@
     <Compile Include="V20201229\Models\AudioResult.cs" />
     <Compile Include="V20201229\Models\AudioResultDetailLanguageResult.cs" />
     <Compile Include="V20201229\Models\AudioResultDetailMoanResult.cs" />
+    <Compile Include="V20201229\Models\AudioResultDetailSpeakerResult.cs" />
     <Compile Include="V20201229\Models\AudioResultDetailTextResult.cs" />
     <Compile Include="V20201229\Models\AudioSegments.cs" />
     <Compile Include="V20201229\Models\BucketInfo.cs" />

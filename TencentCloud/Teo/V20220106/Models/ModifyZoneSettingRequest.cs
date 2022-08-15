@@ -25,100 +25,122 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 待变更的站点ID
+        /// 待变更的站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 缓存过期时间配置
+        /// 缓存过期时间配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Cache")]
         public CacheConfig Cache{ get; set; }
 
         /// <summary>
-        /// 节点缓存键配置
+        /// 节点缓存键配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
-        /// 浏览器缓存配置
+        /// 浏览器缓存配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("MaxAge")]
         public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// 离线缓存
+        /// 离线缓存配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("OfflineCache")]
         public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// Quic访问
+        /// Quic访问配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// POST请求传输配置
+        /// Post请求传输配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostMaxSize PostMaxSize{ get; set; }
 
         /// <summary>
-        /// 智能压缩配置
+        /// 智能压缩配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// http2回源配置
+        /// Http2回源配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("UpstreamHttp2")]
         public UpstreamHttp2 UpstreamHttp2{ get; set; }
 
         /// <summary>
-        /// 访问协议强制https跳转配置
+        /// 访问协议强制Https跳转配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Https 加速配置
+        /// Https加速配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// 源站配置
+        /// 源站配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// 智能加速配置
+        /// 智能加速配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("SmartRouting")]
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// WebSocket配置
+        /// WebSocket配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// 客户端IP回源请求头配置
+        /// 客户端IP回源请求头配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("ClientIpHeader")]
         public ClientIp ClientIpHeader{ get; set; }
 
         /// <summary>
-        /// 缓存预刷新配置
+        /// 缓存预刷新配置。
+        /// 不填写表示保持原有配置。
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefresh CachePrefresh{ get; set; }
+
+        /// <summary>
+        /// Ipv6访问配置。
+        /// 不填写表示保持原有配置。
+        /// </summary>
+        [JsonProperty("Ipv6")]
+        public Ipv6Access Ipv6{ get; set; }
 
 
         /// <summary>
@@ -142,6 +164,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
             this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
+            this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
         }
     }
 }

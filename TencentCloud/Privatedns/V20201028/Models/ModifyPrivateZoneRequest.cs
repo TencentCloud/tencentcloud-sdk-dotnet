@@ -42,6 +42,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("DnsForwardStatus")]
         public string DnsForwardStatus{ get; set; }
 
+        /// <summary>
+        /// 是否开启CNAME加速：ENABLED， DISABLED
+        /// </summary>
+        [JsonProperty("CnameSpeedupStatus")]
+        public string CnameSpeedupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
+            this.SetParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
         }
     }
 }

@@ -25,22 +25,25 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// on | off CacheKey是否由QueryString组成
+        /// CacheKey是否由QueryString组成，取值有：
+        /// <li>on：是；</li>
+        /// <li>off：否。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// includeCustom:使用部分url参数
-        /// excludeCustom:排除部分url参数
+        /// CacheKey使用QueryString的方式，取值有：
+        /// <li>includeCustom：使用部分url参数；</li>
+        /// <li>excludeCustom：排除部分url参数。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 使用/排除的url参数数组
+        /// 使用/排除的url参数数组。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Value")]

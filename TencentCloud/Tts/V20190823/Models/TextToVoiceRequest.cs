@@ -85,6 +85,12 @@ namespace TencentCloud.Tts.V20190823.Models
         [JsonProperty("Codec")]
         public string Codec{ get; set; }
 
+        /// <summary>
+        /// 是否开启时间戳功能，默认为false。
+        /// </summary>
+        [JsonProperty("EnableSubtitle")]
+        public bool? EnableSubtitle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +107,7 @@ namespace TencentCloud.Tts.V20190823.Models
             this.SetParamSimple(map, prefix + "PrimaryLanguage", this.PrimaryLanguage);
             this.SetParamSimple(map, prefix + "SampleRate", this.SampleRate);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
+            this.SetParamSimple(map, prefix + "EnableSubtitle", this.EnableSubtitle);
         }
     }
 }

@@ -25,26 +25,29 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// http2 配置开关
-        /// on：开启
-        /// off：关闭
+        /// http2 配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Http2")]
         public string Http2{ get; set; }
 
         /// <summary>
-        /// OCSP 配置开关
-        /// on：开启
-        /// off：关闭
-        /// 默认为关闭状态
+        /// OCSP 配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OcspStapling")]
         public string OcspStapling{ get; set; }
 
         /// <summary>
-        /// Tls版本设置，支持设置 TLSv1, TLSV1.1, TLSV1.2, TLSv1.3，修改时必须开启连续的版本
+        /// Tls版本设置，取值有：
+        /// <li>TLSv1：TLSv1版本；</li>
+        /// <li>TLSV1.1：TLSv1.1版本；</li>
+        /// <li>TLSV1.2：TLSv1.2版本；</li>
+        /// <li>TLSv1.3：TLSv1.3版本。</li>修改时必须开启连续的版本。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TlsVersion")]

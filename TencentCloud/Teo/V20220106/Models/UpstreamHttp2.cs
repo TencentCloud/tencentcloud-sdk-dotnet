@@ -25,9 +25,9 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// http2回源配置开关
-        /// on：开启
-        /// off：关闭
+        /// http2回源配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

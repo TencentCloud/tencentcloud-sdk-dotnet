@@ -37,7 +37,7 @@ namespace TencentCloud.Ams.V20201229.Models
         public string DataId{ get; set; }
 
         /// <summary>
-        /// 音频文件资源格式，当前为mp3，wav，请按照实际文件格式填入
+        /// 音频文件资源格式，当前支持格式：wav、mp3、m4a，请按照实际文件格式填入。
         /// </summary>
         [JsonProperty("FileFormat")]
         public string FileFormat{ get; set; }
@@ -50,15 +50,15 @@ namespace TencentCloud.Ams.V20201229.Models
 
         /// <summary>
         /// 数据Base64编码，短音频同步接口仅传入可音频内容；
-        /// 支持范围：文件大小不能超过5M，时长不可超过60s，码率范围为8-16Kbps；
-        /// 支持格式：wav、mp3
+        /// 支持范围：文件大小不能超过5M，时长不可超过60s；
+        /// 支持格式：wav (PCM编码)、mp3、m4a (采样率：16kHz~48kHz，位深：16bit 小端，声道数：单声道/双声道，建议格式：16kHz/16bit/单声道)。
         /// </summary>
         [JsonProperty("FileContent")]
         public string FileContent{ get; set; }
 
         /// <summary>
         /// 音频资源访问链接，与FileContent参数必须二选一输入；
-        /// 支持范围：同FileContent；
+        /// 支持范围及格式：同FileContent；
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }

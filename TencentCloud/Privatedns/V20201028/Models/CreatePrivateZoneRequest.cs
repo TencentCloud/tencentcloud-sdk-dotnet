@@ -49,7 +49,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
         public string Remark{ get; set; }
 
         /// <summary>
-        /// 是否开启子域名递归, ENABLED， DISABLED。默认值为DISABLED
+        /// 是否开启子域名递归, ENABLED， DISABLED。默认值为ENABLED
         /// </summary>
         [JsonProperty("DnsForwardStatus")]
         public string DnsForwardStatus{ get; set; }
@@ -66,6 +66,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("AccountVpcSet")]
         public AccountVpcInfo[] AccountVpcSet{ get; set; }
 
+        /// <summary>
+        /// 是否CNAME加速：ENABLED，DISABLED，默认值为ENABLED
+        /// </summary>
+        [JsonProperty("CnameSpeedupStatus")]
+        public string CnameSpeedupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "DnsForwardStatus", this.DnsForwardStatus);
             this.SetParamArrayObj(map, prefix + "Vpcs.", this.Vpcs);
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
+            this.SetParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
         }
     }
 }

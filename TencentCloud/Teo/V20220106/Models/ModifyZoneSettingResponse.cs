@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 站点ID
+        /// 站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }

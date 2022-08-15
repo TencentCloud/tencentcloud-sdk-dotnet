@@ -61,6 +61,30 @@ namespace TencentCloud.Tcss.V20201101.Models
         public ulong? NoRiskClusterCount{ get; set; }
 
         /// <summary>
+        /// 已经检查集群数
+        /// </summary>
+        [JsonProperty("CheckedClusterCount")]
+        public ulong? CheckedClusterCount{ get; set; }
+
+        /// <summary>
+        /// 自动检查集群数
+        /// </summary>
+        [JsonProperty("AutoCheckClusterCount")]
+        public ulong? AutoCheckClusterCount{ get; set; }
+
+        /// <summary>
+        /// 手动检查集群数
+        /// </summary>
+        [JsonProperty("ManualCheckClusterCount")]
+        public ulong? ManualCheckClusterCount{ get; set; }
+
+        /// <summary>
+        /// 检查失败集群数
+        /// </summary>
+        [JsonProperty("FailedClusterCount")]
+        public ulong? FailedClusterCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -78,6 +102,10 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "ManagedClusterCount", this.ManagedClusterCount);
             this.SetParamSimple(map, prefix + "IndependentClusterCount", this.IndependentClusterCount);
             this.SetParamSimple(map, prefix + "NoRiskClusterCount", this.NoRiskClusterCount);
+            this.SetParamSimple(map, prefix + "CheckedClusterCount", this.CheckedClusterCount);
+            this.SetParamSimple(map, prefix + "AutoCheckClusterCount", this.AutoCheckClusterCount);
+            this.SetParamSimple(map, prefix + "ManualCheckClusterCount", this.ManualCheckClusterCount);
+            this.SetParamSimple(map, prefix + "FailedClusterCount", this.FailedClusterCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

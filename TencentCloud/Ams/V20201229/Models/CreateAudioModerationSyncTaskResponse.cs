@@ -83,6 +83,35 @@ namespace TencentCloud.Ams.V20201229.Models
         public MoanResult[] MoanResults{ get; set; }
 
         /// <summary>
+        /// 该字段用于返回当前标签（Lable）下的二级标签。
+        /// 注意：此字段可能返回null，表示取不到有效值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回音频小语种检测的详细审核结果。具体结果内容请参见AudioResultDetailLanguageResult数据结构的细节描述。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LanguageResults")]
+        public AudioResultDetailLanguageResult[] LanguageResults{ get; set; }
+
+        /// <summary>
+        /// 音频中说话人识别返回结果；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SpeakerResults")]
+        public AudioResultDetailSpeakerResult[] SpeakerResults{ get; set; }
+
+        /// <summary>
+        /// 识别类标签结果信息列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecognitionResults")]
+        public RecognitionResult[] RecognitionResults{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -102,6 +131,10 @@ namespace TencentCloud.Ams.V20201229.Models
             this.SetParamSimple(map, prefix + "AsrText", this.AsrText);
             this.SetParamArrayObj(map, prefix + "TextResults.", this.TextResults);
             this.SetParamArrayObj(map, prefix + "MoanResults.", this.MoanResults);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamArrayObj(map, prefix + "LanguageResults.", this.LanguageResults);
+            this.SetParamArrayObj(map, prefix + "SpeakerResults.", this.SpeakerResults);
+            this.SetParamArrayObj(map, prefix + "RecognitionResults.", this.RecognitionResults);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

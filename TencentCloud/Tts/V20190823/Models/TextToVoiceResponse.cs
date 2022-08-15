@@ -37,6 +37,12 @@ namespace TencentCloud.Tts.V20190823.Models
         public string SessionId{ get; set; }
 
         /// <summary>
+        /// 时间戳信息，若未开启时间戳，则返回空数组。
+        /// </summary>
+        [JsonProperty("Subtitles")]
+        public Subtitle[] Subtitles{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +56,7 @@ namespace TencentCloud.Tts.V20190823.Models
         {
             this.SetParamSimple(map, prefix + "Audio", this.Audio);
             this.SetParamSimple(map, prefix + "SessionId", this.SessionId);
+            this.SetParamArrayObj(map, prefix + "Subtitles.", this.Subtitles);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

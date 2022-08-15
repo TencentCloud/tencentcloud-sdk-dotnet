@@ -54,6 +54,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 公网访问类型
+        /// </summary>
+        [JsonProperty("AccessTypes")]
+        public string[] AccessTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "CustomDomainName", this.CustomDomainName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
         }
     }
 }

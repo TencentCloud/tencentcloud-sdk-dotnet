@@ -60,6 +60,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
+        /// <summary>
+        /// 指定镜像 Digest 进行查找
+        /// </summary>
+        [JsonProperty("Digest")]
+        public string Digest{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Digest", this.Digest);
         }
     }
 }

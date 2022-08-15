@@ -25,21 +25,21 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 缓存配置
+        /// 缓存配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cache")]
         public CacheConfigCache Cache{ get; set; }
 
         /// <summary>
-        /// 不缓存配置
+        /// 不缓存配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NoCache")]
         public CacheConfigNoCache NoCache{ get; set; }
 
         /// <summary>
-        /// 遵循源站配置
+        /// 遵循源站配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("FollowOrigin")]

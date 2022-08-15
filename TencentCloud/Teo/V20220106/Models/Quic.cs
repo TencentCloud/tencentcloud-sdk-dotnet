@@ -25,7 +25,9 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 是否启动Quic配置
+        /// 是否开启Quic配置，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }

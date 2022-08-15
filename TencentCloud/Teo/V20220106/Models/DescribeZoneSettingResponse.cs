@@ -25,121 +25,128 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 缓存过期时间配置
+        /// 站点ID。
+        /// </summary>
+        [JsonProperty("ZoneId")]
+        public string ZoneId{ get; set; }
+
+        /// <summary>
+        /// 站点名称。
+        /// </summary>
+        [JsonProperty("Zone")]
+        public string Zone{ get; set; }
+
+        /// <summary>
+        /// 缓存过期时间配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Cache")]
         public CacheConfig Cache{ get; set; }
 
         /// <summary>
-        /// 节点缓存键配置
+        /// 节点缓存键配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CacheKey")]
         public CacheKey CacheKey{ get; set; }
 
         /// <summary>
-        /// 浏览器缓存配置
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MaxAge")]
-        public MaxAge MaxAge{ get; set; }
-
-        /// <summary>
-        /// 离线缓存
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("OfflineCache")]
-        public OfflineCache OfflineCache{ get; set; }
-
-        /// <summary>
-        /// Quic访问
+        /// Quic访问配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Quic")]
         public Quic Quic{ get; set; }
 
         /// <summary>
-        /// POST请求传输配置
+        /// POST请求传输配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PostMaxSize")]
         public PostMaxSize PostMaxSize{ get; set; }
 
         /// <summary>
-        /// 智能压缩配置
+        /// 智能压缩配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Compression")]
         public Compression Compression{ get; set; }
 
         /// <summary>
-        /// http2回源配置
+        /// Http2回源配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpstreamHttp2")]
         public UpstreamHttp2 UpstreamHttp2{ get; set; }
 
         /// <summary>
-        /// 访问协议强制https跳转配置
+        /// 访问协议强制Https跳转配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ForceRedirect")]
         public ForceRedirect ForceRedirect{ get; set; }
 
         /// <summary>
-        /// Https 加速配置
+        /// Https 加速配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
         /// <summary>
-        /// 源站配置
+        /// 源站配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Origin")]
         public Origin Origin{ get; set; }
 
         /// <summary>
-        /// 动态加速配置
+        /// 智能加速配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SmartRouting")]
         public SmartRouting SmartRouting{ get; set; }
 
         /// <summary>
-        /// 站点ID
+        /// 浏览器缓存配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("ZoneId")]
-        public string ZoneId{ get; set; }
+        [JsonProperty("MaxAge")]
+        public MaxAge MaxAge{ get; set; }
 
         /// <summary>
-        /// 站点域名
+        /// 离线缓存配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Zone")]
-        public string Zone{ get; set; }
+        [JsonProperty("OfflineCache")]
+        public OfflineCache OfflineCache{ get; set; }
 
         /// <summary>
-        /// WebSocket配置
+        /// WebSocket配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WebSocket")]
         public WebSocket WebSocket{ get; set; }
 
         /// <summary>
-        /// 客户端IP回源请求头配置
+        /// 客户端IP回源请求头配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ClientIpHeader")]
         public ClientIp ClientIpHeader{ get; set; }
 
         /// <summary>
-        /// 缓存预刷新配置
+        /// 缓存预刷新配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CachePrefresh")]
         public CachePrefresh CachePrefresh{ get; set; }
+
+        /// <summary>
+        /// Ipv6访问配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ipv6")]
+        public Ipv6Access Ipv6{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -153,10 +160,10 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
+            this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamObj(map, prefix + "Cache.", this.Cache);
             this.SetParamObj(map, prefix + "CacheKey.", this.CacheKey);
-            this.SetParamObj(map, prefix + "MaxAge.", this.MaxAge);
-            this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "Quic.", this.Quic);
             this.SetParamObj(map, prefix + "PostMaxSize.", this.PostMaxSize);
             this.SetParamObj(map, prefix + "Compression.", this.Compression);
@@ -165,11 +172,12 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "Https.", this.Https);
             this.SetParamObj(map, prefix + "Origin.", this.Origin);
             this.SetParamObj(map, prefix + "SmartRouting.", this.SmartRouting);
-            this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
-            this.SetParamSimple(map, prefix + "Zone", this.Zone);
+            this.SetParamObj(map, prefix + "MaxAge.", this.MaxAge);
+            this.SetParamObj(map, prefix + "OfflineCache.", this.OfflineCache);
             this.SetParamObj(map, prefix + "WebSocket.", this.WebSocket);
             this.SetParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
             this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
+            this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

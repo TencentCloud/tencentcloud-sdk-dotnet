@@ -55,6 +55,13 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("TagSpecification")]
         public TagSpecification TagSpecification{ get; set; }
 
+        /// <summary>
+        /// 命名空间元数据
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public KeyValueString[] Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -66,6 +73,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Public", this.Public);
             this.SetParamSimple(map, prefix + "NamespaceId", this.NamespaceId);
             this.SetParamObj(map, prefix + "TagSpecification.", this.TagSpecification);
+            this.SetParamArrayObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

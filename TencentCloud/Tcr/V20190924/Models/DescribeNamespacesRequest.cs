@@ -60,6 +60,12 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 仅查询启用了 KMS 镜像签名的空间
+        /// </summary>
+        [JsonProperty("KmsSignPolicy")]
+        public bool? KmsSignPolicy{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "All", this.All);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "KmsSignPolicy", this.KmsSignPolicy);
         }
     }
 }

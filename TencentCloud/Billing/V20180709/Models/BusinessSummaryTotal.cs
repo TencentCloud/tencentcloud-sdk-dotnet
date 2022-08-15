@@ -54,6 +54,12 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
+        /// <summary>
+        /// 分成金金额
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
             this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }

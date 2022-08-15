@@ -37,7 +37,7 @@ namespace TencentCloud.Cat.V20180409.Models
         /// 节点区域
         /// <li> 1 = 中国大陆 </li>
         /// <li> 2 = 港澳台 </li>
-        /// <li> 3 = 海外 </li>
+        /// <li> 3 = 境外</li>
         /// </summary>
         [JsonProperty("Location")]
         public long? Location{ get; set; }

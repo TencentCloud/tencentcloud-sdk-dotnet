@@ -84,6 +84,12 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("IgnoreScript")]
         public bool? IgnoreScript{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回测试数据文件信息
+        /// </summary>
+        [JsonProperty("IgnoreDataset")]
+        public bool? IgnoreDataset{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Ascend", this.Ascend);
             this.SetParamObj(map, prefix + "ScenarioRelatedJobsParams.", this.ScenarioRelatedJobsParams);
             this.SetParamSimple(map, prefix + "IgnoreScript", this.IgnoreScript);
+            this.SetParamSimple(map, prefix + "IgnoreDataset", this.IgnoreDataset);
         }
     }
 }

@@ -105,6 +105,12 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("IsCustomTld")]
         public bool? IsCustomTld{ get; set; }
 
+        /// <summary>
+        /// CNAME加速状态：开通：ENABLED, 关闭，DISABLED
+        /// </summary>
+        [JsonProperty("CnameSpeedupStatus")]
+        public string CnameSpeedupStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -124,6 +130,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamArrayObj(map, prefix + "AccountVpcSet.", this.AccountVpcSet);
             this.SetParamSimple(map, prefix + "IsCustomTld", this.IsCustomTld);
+            this.SetParamSimple(map, prefix + "CnameSpeedupStatus", this.CnameSpeedupStatus);
         }
     }
 }

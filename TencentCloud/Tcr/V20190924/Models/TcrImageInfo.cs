@@ -31,7 +31,7 @@ namespace TencentCloud.Tcr.V20190924.Models
         public string Digest{ get; set; }
 
         /// <summary>
-        /// 镜像大小
+        /// 镜像体积（单位：字节）
         /// </summary>
         [JsonProperty("Size")]
         public long? Size{ get; set; }
@@ -48,6 +48,20 @@ namespace TencentCloud.Tcr.V20190924.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 制品类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Kind")]
+        public string Kind{ get; set; }
+
+        /// <summary>
+        /// KMS 签名信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KmsSignature")]
+        public string KmsSignature{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +72,8 @@ namespace TencentCloud.Tcr.V20190924.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "ImageVersion", this.ImageVersion);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "Kind", this.Kind);
+            this.SetParamSimple(map, prefix + "KmsSignature", this.KmsSignature);
         }
     }
 }

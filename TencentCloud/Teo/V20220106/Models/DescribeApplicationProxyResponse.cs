@@ -25,36 +25,31 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 数据列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 应用代理列表。
         /// </summary>
         [JsonProperty("Data")]
         public ApplicationProxy[] Data{ get; set; }
 
         /// <summary>
-        /// 记录总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 记录总数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 字段已废弃
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 字段已废弃。
         /// </summary>
         [JsonProperty("Quota")]
         public long? Quota{ get; set; }
 
         /// <summary>
-        /// 表示套餐内PlatType为ip的Anycast IP实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 当ProxyId为空时，表示套餐内PlatType为ip的Anycast IP的实例数量。
         /// </summary>
         [JsonProperty("IpCount")]
         public ulong? IpCount{ get; set; }
 
         /// <summary>
-        /// 表示套餐内PlatType为domain的CNAME实例数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 当ProxyId为空时，表示套餐内PlatType为domain的CNAME的实例数量。
         /// </summary>
         [JsonProperty("DomainCount")]
         public ulong? DomainCount{ get; set; }

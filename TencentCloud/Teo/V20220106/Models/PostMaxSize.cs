@@ -25,15 +25,15 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 是调整POST请求限制，平台默认为32MB。
-        /// 关闭：off，
-        /// 开启：on。
+        /// 是否开启POST请求上传文件限制，平台默认为限制为32MB，取值有：
+        /// <li>on：开启限制；</li>
+        /// <li>off：关闭限制。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 最大限制，取值在1MB和500MB之间。单位字节
+        /// 最大限制，取值在1MB和500MB之间。单位字节。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MaxSize")]

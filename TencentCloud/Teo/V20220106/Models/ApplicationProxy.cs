@@ -25,122 +25,121 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 代理ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 代理ID。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 代理名称
-        /// 当ProxyType=hostname时，表示域名或者子域名
-        /// 当ProxyType=instance时，表示实例名称
+        /// 当ProxyType=hostname时，表示域名或子域名；
+        /// 当ProxyType=instance时，表示代理名称。
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// 调度模式：
-        /// ip表示Anycast IP
-        /// domain表示CNAME
+        /// 调度模式，取值有：
+        /// <li>ip：表示Anycast IP调度；</li>
+        /// <li>domain：表示CNAME调度。</li>
         /// </summary>
         [JsonProperty("PlatType")]
         public string PlatType{ get; set; }
 
         /// <summary>
-        /// 0关闭安全，1开启安全
+        /// 是否开启安全，取值有：
+        /// <li>0：关闭安全；</li>
+        /// <li>1：开启安全。</li>
         /// </summary>
         [JsonProperty("SecurityType")]
         public long? SecurityType{ get; set; }
 
         /// <summary>
-        /// 0关闭加速，1开启加速
+        /// 是否开启加速，取值有：
+        /// <li>0：关闭加速；</li>
+        /// <li>1：开启加速。</li>
         /// </summary>
         [JsonProperty("AccelerateType")]
         public long? AccelerateType{ get; set; }
 
         /// <summary>
-        /// 字段已经移至Rule.ForwardClientIp
+        /// 字段已经废弃。
         /// </summary>
         [JsonProperty("ForwardClientIp")]
         public string ForwardClientIp{ get; set; }
 
         /// <summary>
-        /// 字段已经移至Rule.SessionPersist
+        /// 字段已经废弃。
         /// </summary>
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// 规则列表
+        /// 规则列表。
         /// </summary>
         [JsonProperty("Rule")]
         public ApplicationProxyRule[] Rule{ get; set; }
 
         /// <summary>
-        /// 状态：
-        /// online：启用
-        /// offline：停用
-        /// progress：部署中
-        /// stopping：停用中
-        /// fail：部署失败/停用失败
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 状态，取值有：
+        /// <li>online：启用；</li>
+        /// <li>offline：停用；</li>
+        /// <li>progress：部署中；</li>
+        /// <li>stopping：停用中；</li>
+        /// <li>fail：部署失败/停用失败。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 调度信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 调度信息。
         /// </summary>
         [JsonProperty("ScheduleValue")]
         public string[] ScheduleValue{ get; set; }
 
         /// <summary>
-        /// 更新时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 更新时间。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
         /// <summary>
-        /// 站点ID
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 站点名称
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 站点名称。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 会话保持时间
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 会话保持时间。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// 服务类型
-        /// hostname：子域名模式
-        /// instance：实例模式
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 四层代理模式，取值有：
+        /// <li>hostname：表示子域名模式；</li>
+        /// <li>instance：表示实例模式。</li>
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
 
         /// <summary>
         /// 当ProxyType=hostname时：
-        /// ProxyName为域名，如：test.123.com
-        /// HostId表示该域名，即test.123.com对应的代理加速唯一标识
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 表示代理加速唯一标识。
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
+
+        /// <summary>
+        /// Ipv6访问配置。
+        /// </summary>
+        [JsonProperty("Ipv6")]
+        public Ipv6Access Ipv6{ get; set; }
 
 
         /// <summary>
@@ -164,6 +163,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamSimple(map, prefix + "HostId", this.HostId);
+            this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
         }
     }
 }

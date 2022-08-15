@@ -52,6 +52,34 @@ namespace TencentCloud.Billing.V20180709.Models
         [JsonProperty("TotalCost")]
         public string TotalCost{ get; set; }
 
+        /// <summary>
+        /// 现金金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CashPayAmount")]
+        public string CashPayAmount{ get; set; }
+
+        /// <summary>
+        /// 赠送金金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IncentivePayAmount")]
+        public string IncentivePayAmount{ get; set; }
+
+        /// <summary>
+        /// 代金券金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VoucherPayAmount")]
+        public string VoucherPayAmount{ get; set; }
+
+        /// <summary>
+        /// 分成金金额
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransferPayAmount")]
+        public string TransferPayAmount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +90,10 @@ namespace TencentCloud.Billing.V20180709.Models
             this.SetParamSimple(map, prefix + "RealTotalCost", this.RealTotalCost);
             this.SetParamSimple(map, prefix + "RealTotalCostRatio", this.RealTotalCostRatio);
             this.SetParamSimple(map, prefix + "TotalCost", this.TotalCost);
+            this.SetParamSimple(map, prefix + "CashPayAmount", this.CashPayAmount);
+            this.SetParamSimple(map, prefix + "IncentivePayAmount", this.IncentivePayAmount);
+            this.SetParamSimple(map, prefix + "VoucherPayAmount", this.VoucherPayAmount);
+            this.SetParamSimple(map, prefix + "TransferPayAmount", this.TransferPayAmount);
         }
     }
 }

@@ -31,12 +31,6 @@ namespace TencentCloud.Cbs.V20170312.Models
         public string[] DiskIds{ get; set; }
 
         /// <summary>
-        /// 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
-        /// </summary>
-        [JsonProperty("ProjectId")]
-        public ulong? ProjectId{ get; set; }
-
-        /// <summary>
         /// 新的云硬盘名称。
         /// </summary>
         [JsonProperty("DiskName")]
@@ -47,6 +41,12 @@ namespace TencentCloud.Cbs.V20170312.Models
         /// </summary>
         [JsonProperty("Portable")]
         public bool? Portable{ get; set; }
+
+        /// <summary>
+        /// 新的云硬盘项目ID，只支持修改弹性云盘的项目ID。通过[DescribeProject](/document/api/378/4400)接口查询可用项目及其ID。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public ulong? ProjectId{ get; set; }
 
         /// <summary>
         /// 成功挂载到云主机后该云硬盘是否随云主机销毁，TRUE表示随云主机销毁，FALSE表示不随云主机销毁。仅支持按量计费云硬盘数据盘。
@@ -67,9 +67,9 @@ namespace TencentCloud.Cbs.V20170312.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "DiskIds.", this.DiskIds);
-            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DiskName", this.DiskName);
             this.SetParamSimple(map, prefix + "Portable", this.Portable);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
             this.SetParamSimple(map, prefix + "DeleteWithInstance", this.DeleteWithInstance);
             this.SetParamSimple(map, prefix + "DiskType", this.DiskType);
         }

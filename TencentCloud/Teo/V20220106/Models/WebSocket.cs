@@ -25,13 +25,15 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// WebSocket 超时配置开关, 开关为off时，平台仍支持WebSocket连接，此时超时时间默认为15秒，若需要调整超时时间，将开关置为on.
+        /// WebSocket 超时时间配置开关，取值有：
+        /// <li>on：使用Timeout作为WebSocket超时时间；</li>
+        /// <li>off：平台仍支持WebSocket连接，此时使用系统默认的15秒为超时时间。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 设置超时时间，单位为秒，最大超时时间120秒。
+        /// 超时时间，单位为秒，最大超时时间120秒。
         /// </summary>
         [JsonProperty("Timeout")]
         public long? Timeout{ get; set; }

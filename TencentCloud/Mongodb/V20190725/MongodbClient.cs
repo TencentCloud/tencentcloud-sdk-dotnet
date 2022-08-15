@@ -1292,5 +1292,45 @@ namespace TencentCloud.Mongodb.V20190725
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 包年包月实例隔离接口
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
+        public async Task<TerminateDBInstancesResponse> TerminateDBInstances(TerminateDBInstancesRequest req)
+        {
+             JsonResponseModel<TerminateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "TerminateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 包年包月实例隔离接口
+        /// </summary>
+        /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
+        /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
+        public TerminateDBInstancesResponse TerminateDBInstancesSync(TerminateDBInstancesRequest req)
+        {
+             JsonResponseModel<TerminateDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "TerminateDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<TerminateDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

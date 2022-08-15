@@ -25,22 +25,29 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 站点ID
+        /// 站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 分页参数Offset
+        /// 分页查询偏移量，默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数Limit
+        /// 分页查询限制数目，默认为10，最大可设置为1000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
+
+        /// <summary>
+        /// 代理ID。
+        /// 当ProxyId为空时，表示查询站点下所有应用代理的列表。
+        /// </summary>
+        [JsonProperty("ProxyId")]
+        public string ProxyId{ get; set; }
 
 
         /// <summary>
@@ -51,6 +58,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
         }
     }
 }

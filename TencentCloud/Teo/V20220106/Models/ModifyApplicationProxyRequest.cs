@@ -25,50 +25,55 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 站点ID
+        /// 站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 代理ID
+        /// 代理ID。
         /// </summary>
         [JsonProperty("ProxyId")]
         public string ProxyId{ get; set; }
 
         /// <summary>
-        /// 代理名称
-        /// 当ProxyType=hostname时，表示域名或者子域名
-        /// 当ProxyType=instance时，表示实例名称
+        /// 当ProxyType=hostname时，表示域名或子域名；
+        /// 当ProxyType=instance时，表示代理名称。
         /// </summary>
         [JsonProperty("ProxyName")]
         public string ProxyName{ get; set; }
 
         /// <summary>
-        /// 参数已经废弃
+        /// 参数已经废弃。
         /// </summary>
         [JsonProperty("ForwardClientIp")]
         public string ForwardClientIp{ get; set; }
 
         /// <summary>
-        /// 参数已经废弃
+        /// 参数已经废弃。
         /// </summary>
         [JsonProperty("SessionPersist")]
         public bool? SessionPersist{ get; set; }
 
         /// <summary>
-        /// 会话保持时间，取值范围：30-3600，单位：秒
+        /// 会话保持时间，不填写保持原有配置。取值范围：30-3600，单位：秒。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// 服务类型
-        /// hostname：子域名模式
-        /// instance：实例模式
+        /// 四层代理模式，取值有：
+        /// <li>hostname：表示子域名模式；</li>
+        /// <li>instance：表示实例模式。</li>不填写保持原有配置。
         /// </summary>
         [JsonProperty("ProxyType")]
         public string ProxyType{ get; set; }
+
+        /// <summary>
+        /// Ipv6访问配置，不填写保持原有配置。
+        /// </summary>
+        [JsonProperty("Ipv6")]
+        public Ipv6Access Ipv6{ get; set; }
 
 
         /// <summary>
@@ -83,6 +88,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
+            this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
         }
     }
 }

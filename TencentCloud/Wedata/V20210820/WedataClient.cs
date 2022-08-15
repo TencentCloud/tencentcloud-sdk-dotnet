@@ -53,7 +53,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量删除任务，仅对任务状态为”已停止“有效；（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量删除任务，仅对任务状态为”已停止“有效；
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteTasksNewRequest"/></param>
         /// <returns><see cref="BatchDeleteTasksNewResponse"/></returns>
@@ -73,7 +74,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量删除任务，仅对任务状态为”已停止“有效；（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量删除任务，仅对任务状态为”已停止“有效；
         /// </summary>
         /// <param name="req"><see cref="BatchDeleteTasksNewRequest"/></param>
         /// <returns><see cref="BatchDeleteTasksNewResponse"/></returns>
@@ -93,7 +95,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量修改任务责任人（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量修改任务责任人
         /// </summary>
         /// <param name="req"><see cref="BatchModifyOwnersNewRequest"/></param>
         /// <returns><see cref="BatchModifyOwnersNewResponse"/></returns>
@@ -113,7 +116,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量修改任务责任人（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量修改任务责任人
         /// </summary>
         /// <param name="req"><see cref="BatchModifyOwnersNewRequest"/></param>
         /// <returns><see cref="BatchModifyOwnersNewResponse"/></returns>
@@ -133,7 +137,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
         /// </summary>
         /// <param name="req"><see cref="BatchStopTasksNewRequest"/></param>
         /// <returns><see cref="BatchStopTasksNewResponse"/></returns>
@@ -153,7 +158,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 仅对任务状态为”调度中“和”已暂停“有效，对所选任务的任务实例进行终止，并停止调度
         /// </summary>
         /// <param name="req"><see cref="BatchStopTasksNewRequest"/></param>
         /// <returns><see cref="BatchStopTasksNewResponse"/></returns>
@@ -173,7 +179,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建文件夹（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建文件夹
         /// </summary>
         /// <param name="req"><see cref="CreateFolderRequest"/></param>
         /// <returns><see cref="CreateFolderResponse"/></returns>
@@ -193,7 +200,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建文件夹（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建文件夹
         /// </summary>
         /// <param name="req"><see cref="CreateFolderRequest"/></param>
         /// <returns><see cref="CreateFolderResponse"/></returns>
@@ -213,7 +221,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -233,7 +242,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建任务
         /// </summary>
         /// <param name="req"><see cref="CreateTaskRequest"/></param>
         /// <returns><see cref="CreateTaskResponse"/></returns>
@@ -253,7 +263,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
         /// <returns><see cref="CreateWorkflowResponse"/></returns>
@@ -273,7 +284,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 创建工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建工作流
         /// </summary>
         /// <param name="req"><see cref="CreateWorkflowRequest"/></param>
         /// <returns><see cref="CreateWorkflowResponse"/></returns>
@@ -293,7 +305,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除文件夹（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除文件夹
         /// </summary>
         /// <param name="req"><see cref="DeleteFolderRequest"/></param>
         /// <returns><see cref="DeleteFolderResponse"/></returns>
@@ -313,7 +326,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除文件夹（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除文件夹
         /// </summary>
         /// <param name="req"><see cref="DeleteFolderRequest"/></param>
         /// <returns><see cref="DeleteFolderResponse"/></returns>
@@ -333,7 +347,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除工作流
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowNewRequest"/></param>
         /// <returns><see cref="DeleteWorkflowNewResponse"/></returns>
@@ -353,7 +368,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 删除工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除工作流
         /// </summary>
         /// <param name="req"><see cref="DeleteWorkflowNewRequest"/></param>
         /// <returns><see cref="DeleteWorkflowNewResponse"/></returns>
@@ -373,7 +389,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据层级查找上/下游任务节点（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 根据层级查找上/下游任务节点
         /// </summary>
         /// <param name="req"><see cref="DescribeDependTasksNewRequest"/></param>
         /// <returns><see cref="DescribeDependTasksNewResponse"/></returns>
@@ -393,7 +410,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据层级查找上/下游任务节点（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 根据层级查找上/下游任务节点
         /// </summary>
         /// <param name="req"><see cref="DescribeDependTasksNewRequest"/></param>
         /// <returns><see cref="DescribeDependTasksNewResponse"/></returns>
@@ -413,7 +431,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 拉取文件夹目录（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 拉取文件夹目录
         /// </summary>
         /// <param name="req"><see cref="DescribeFolderListRequest"/></param>
         /// <returns><see cref="DescribeFolderListResponse"/></returns>
@@ -433,7 +452,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 拉取文件夹目录（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 拉取文件夹目录
         /// </summary>
         /// <param name="req"><see cref="DescribeFolderListRequest"/></param>
         /// <returns><see cref="DescribeFolderListResponse"/></returns>
@@ -453,7 +473,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 拉取文件夹下的工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 拉取文件夹下的工作流
         /// </summary>
         /// <param name="req"><see cref="DescribeFolderWorkflowListRequest"/></param>
         /// <returns><see cref="DescribeFolderWorkflowListResponse"/></returns>
@@ -473,7 +494,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 拉取文件夹下的工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 拉取文件夹下的工作流
         /// </summary>
         /// <param name="req"><see cref="DescribeFolderWorkflowListRequest"/></param>
         /// <returns><see cref="DescribeFolderWorkflowListResponse"/></returns>
@@ -493,7 +515,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取实例日志列表（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 获取实例日志列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
@@ -513,7 +536,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 获取实例日志列表（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 获取实例日志列表
         /// </summary>
         /// <param name="req"><see cref="DescribeInstanceLogsRequest"/></param>
         /// <returns><see cref="DescribeInstanceLogsResponse"/></returns>
@@ -613,7 +637,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务具体详情（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 查询任务具体详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
@@ -633,7 +658,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务具体详情（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 查询任务具体详情
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskDetailRequest"/></param>
         /// <returns><see cref="DescribeTaskDetailResponse"/></returns>
@@ -693,7 +719,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务脚本（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 查询任务脚本
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskScriptRequest"/></param>
         /// <returns><see cref="DescribeTaskScriptResponse"/></returns>
@@ -713,7 +740,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 查询任务脚本（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 查询任务脚本
         /// </summary>
         /// <param name="req"><see cref="DescribeTaskScriptRequest"/></param>
         /// <returns><see cref="DescribeTaskScriptResponse"/></returns>
@@ -733,7 +761,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据工作流分页查询任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 根据工作流分页查询任务
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksByPageRequest"/></param>
         /// <returns><see cref="DescribeTasksByPageResponse"/></returns>
@@ -753,7 +782,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 根据工作流分页查询任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 根据工作流分页查询任务
         /// </summary>
         /// <param name="req"><see cref="DescribeTasksByPageRequest"/></param>
         /// <returns><see cref="DescribeTasksByPageResponse"/></returns>
@@ -773,7 +803,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量置成功（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量置成功
         /// </summary>
         /// <param name="req"><see cref="ForceSucInstancesRequest"/></param>
         /// <returns><see cref="ForceSucInstancesResponse"/></returns>
@@ -793,7 +824,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量置成功（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量置成功
         /// </summary>
         /// <param name="req"><see cref="ForceSucInstancesRequest"/></param>
         /// <returns><see cref="ForceSucInstancesResponse"/></returns>
@@ -813,7 +845,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量冻结任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量冻结任务
         /// </summary>
         /// <param name="req"><see cref="FreezeTasksRequest"/></param>
         /// <returns><see cref="FreezeTasksResponse"/></returns>
@@ -833,7 +866,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 批量冻结任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 批量冻结任务
         /// </summary>
         /// <param name="req"><see cref="FreezeTasksRequest"/></param>
         /// <returns><see cref="FreezeTasksResponse"/></returns>
@@ -853,7 +887,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 基于多个工作流进行批量冻结任务操作（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 基于多个工作流进行批量冻结任务操作
         /// </summary>
         /// <param name="req"><see cref="FreezeTasksByMultiWorkflowRequest"/></param>
         /// <returns><see cref="FreezeTasksByMultiWorkflowResponse"/></returns>
@@ -873,7 +908,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 基于多个工作流进行批量冻结任务操作（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 基于多个工作流进行批量冻结任务操作
         /// </summary>
         /// <param name="req"><see cref="FreezeTasksByMultiWorkflowRequest"/></param>
         /// <returns><see cref="FreezeTasksByMultiWorkflowResponse"/></returns>
@@ -893,7 +929,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量终止操作（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量终止操作
         /// </summary>
         /// <param name="req"><see cref="KillInstancesRequest"/></param>
         /// <returns><see cref="KillInstancesResponse"/></returns>
@@ -913,7 +950,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量终止操作（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量终止操作
         /// </summary>
         /// <param name="req"><see cref="KillInstancesRequest"/></param>
         /// <returns><see cref="KillInstancesResponse"/></returns>
@@ -933,7 +971,10 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 任务批量补录，调度状态任务才可以补录；（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 任务批量补录，调度状态任务才可以补录；
+        /// 
+        /// 
         /// </summary>
         /// <param name="req"><see cref="MakeUpTasksNewRequest"/></param>
         /// <returns><see cref="MakeUpTasksNewResponse"/></returns>
@@ -953,7 +994,10 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 任务批量补录，调度状态任务才可以补录；（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 任务批量补录，调度状态任务才可以补录；
+        /// 
+        /// 
         /// </summary>
         /// <param name="req"><see cref="MakeUpTasksNewRequest"/></param>
         /// <returns><see cref="MakeUpTasksNewResponse"/></returns>
@@ -973,7 +1017,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 工作流下所有任务的补录（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 工作流下所有任务的补录
         /// </summary>
         /// <param name="req"><see cref="MakeUpWorkflowNewRequest"/></param>
         /// <returns><see cref="MakeUpWorkflowNewResponse"/></returns>
@@ -993,7 +1038,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 工作流下所有任务的补录（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 工作流下所有任务的补录
         /// </summary>
         /// <param name="req"><see cref="MakeUpWorkflowNewRequest"/></param>
         /// <returns><see cref="MakeUpWorkflowNewResponse"/></returns>
@@ -1013,7 +1059,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 文件夹更新（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 文件夹更新
         /// </summary>
         /// <param name="req"><see cref="ModifyFolderRequest"/></param>
         /// <returns><see cref="ModifyFolderResponse"/></returns>
@@ -1033,7 +1080,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 文件夹更新（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 文件夹更新
         /// </summary>
         /// <param name="req"><see cref="ModifyFolderRequest"/></param>
         /// <returns><see cref="ModifyFolderResponse"/></returns>
@@ -1053,7 +1101,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新任务
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskInfoRequest"/></param>
         /// <returns><see cref="ModifyTaskInfoResponse"/></returns>
@@ -1073,7 +1122,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新任务
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskInfoRequest"/></param>
         /// <returns><see cref="ModifyTaskInfoResponse"/></returns>
@@ -1093,7 +1143,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 添加父任务依赖（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 添加父任务依赖
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
@@ -1113,7 +1164,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 添加父任务依赖（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 添加父任务依赖
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskLinksRequest"/></param>
         /// <returns><see cref="ModifyTaskLinksResponse"/></returns>
@@ -1133,7 +1185,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 修改任务脚本（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 修改任务脚本
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskScriptRequest"/></param>
         /// <returns><see cref="ModifyTaskScriptResponse"/></returns>
@@ -1153,7 +1206,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 修改任务脚本（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 修改任务脚本
         /// </summary>
         /// <param name="req"><see cref="ModifyTaskScriptRequest"/></param>
         /// <returns><see cref="ModifyTaskScriptResponse"/></returns>
@@ -1173,7 +1227,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新工作流
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -1193,7 +1248,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新工作流
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowInfoRequest"/></param>
         /// <returns><see cref="ModifyWorkflowInfoResponse"/></returns>
@@ -1213,7 +1269,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流调度（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新工作流调度
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -1233,7 +1290,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 更新工作流调度（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 更新工作流调度
         /// </summary>
         /// <param name="req"><see cref="ModifyWorkflowScheduleRequest"/></param>
         /// <returns><see cref="ModifyWorkflowScheduleResponse"/></returns>
@@ -1253,7 +1311,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 注册事件（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 注册事件
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -1273,7 +1332,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 注册事件（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 注册事件
         /// </summary>
         /// <param name="req"><see cref="RegisterEventRequest"/></param>
         /// <returns><see cref="RegisterEventResponse"/></returns>
@@ -1293,7 +1353,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 注册事件监听器（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 注册事件监听器
         /// </summary>
         /// <param name="req"><see cref="RegisterEventListenerRequest"/></param>
         /// <returns><see cref="RegisterEventListenerResponse"/></returns>
@@ -1313,7 +1374,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 注册事件监听器（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 注册事件监听器
         /// </summary>
         /// <param name="req"><see cref="RegisterEventListenerRequest"/></param>
         /// <returns><see cref="RegisterEventListenerResponse"/></returns>
@@ -1333,7 +1395,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量重跑（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量重跑
         /// </summary>
         /// <param name="req"><see cref="RerunInstancesRequest"/></param>
         /// <returns><see cref="RerunInstancesResponse"/></returns>
@@ -1353,7 +1416,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 实例批量重跑（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 实例批量重跑
         /// </summary>
         /// <param name="req"><see cref="RerunInstancesRequest"/></param>
         /// <returns><see cref="RerunInstancesResponse"/></returns>
@@ -1373,7 +1437,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 运行任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 运行任务
         /// </summary>
         /// <param name="req"><see cref="RunTaskRequest"/></param>
         /// <returns><see cref="RunTaskResponse"/></returns>
@@ -1393,7 +1458,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 运行任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 运行任务
         /// </summary>
         /// <param name="req"><see cref="RunTaskRequest"/></param>
         /// <returns><see cref="RunTaskResponse"/></returns>
@@ -1413,7 +1479,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 设置任务告警，新建/更新告警信息（最新）（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 设置任务告警，新建/更新告警信息（最新）
         /// </summary>
         /// <param name="req"><see cref="SetTaskAlarmNewRequest"/></param>
         /// <returns><see cref="SetTaskAlarmNewResponse"/></returns>
@@ -1433,7 +1500,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 设置任务告警，新建/更新告警信息（最新）（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 设置任务告警，新建/更新告警信息（最新）
         /// </summary>
         /// <param name="req"><see cref="SetTaskAlarmNewRequest"/></param>
         /// <returns><see cref="SetTaskAlarmNewResponse"/></returns>
@@ -1453,7 +1521,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 提交任务
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -1473,7 +1542,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交任务（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 提交任务
         /// </summary>
         /// <param name="req"><see cref="SubmitTaskRequest"/></param>
         /// <returns><see cref="SubmitTaskResponse"/></returns>
@@ -1493,7 +1563,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 提交工作流
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -1513,7 +1584,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 提交工作流（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 提交工作流
         /// </summary>
         /// <param name="req"><see cref="SubmitWorkflowRequest"/></param>
         /// <returns><see cref="SubmitWorkflowResponse"/></returns>
@@ -1533,7 +1605,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 触发事件（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 触发事件
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>
@@ -1553,7 +1626,8 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
-        /// 触发事件（Beta版本）
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 触发事件
         /// </summary>
         /// <param name="req"><see cref="TriggerEventRequest"/></param>
         /// <returns><see cref="TriggerEventResponse"/></returns>

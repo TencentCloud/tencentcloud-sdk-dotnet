@@ -25,76 +25,87 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 站点ID
+        /// 站点ID。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// 站点名称
+        /// 站点名称。
         /// </summary>
         [JsonProperty("ZoneName")]
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 代理名称
-        /// 当ProxyType=hostname时，表示域名或者子域名
-        /// 当ProxyType=instance时，表示实例名称
-        /// </summary>
-        [JsonProperty("ProxyName")]
-        public string ProxyName{ get; set; }
-
-        /// <summary>
-        /// 调度模式：
-        /// ip表示Anycast IP
-        /// domain表示CNAME
-        /// </summary>
-        [JsonProperty("PlatType")]
-        public string PlatType{ get; set; }
-
-        /// <summary>
-        /// 0关闭安全，1开启安全
-        /// </summary>
-        [JsonProperty("SecurityType")]
-        public long? SecurityType{ get; set; }
-
-        /// <summary>
-        /// 0关闭加速，1开启加速
-        /// </summary>
-        [JsonProperty("AccelerateType")]
-        public long? AccelerateType{ get; set; }
-
-        /// <summary>
-        /// 字段已经移至Rule.ForwardClientIp
-        /// </summary>
-        [JsonProperty("ForwardClientIp")]
-        public string ForwardClientIp{ get; set; }
-
-        /// <summary>
-        /// 字段已经移至Rule.SessionPersist
-        /// </summary>
-        [JsonProperty("SessionPersist")]
-        public bool? SessionPersist{ get; set; }
-
-        /// <summary>
-        /// 规则详细信息
+        /// 规则详细信息。
         /// </summary>
         [JsonProperty("Rule")]
         public ApplicationProxyRule[] Rule{ get; set; }
 
         /// <summary>
-        /// 会话保持时间，取值范围：30-3600，单位：秒
+        /// 当ProxyType=hostname时，表示域名或子域名；
+        /// 当ProxyType=instance时，表示代理名称。
+        /// </summary>
+        [JsonProperty("ProxyName")]
+        public string ProxyName{ get; set; }
+
+        /// <summary>
+        /// 调度模式，取值有：
+        /// <li>ip：表示Anycast IP调度；</li>
+        /// <li>domain：表示CNAME调度。</li>
+        /// </summary>
+        [JsonProperty("PlatType")]
+        public string PlatType{ get; set; }
+
+        /// <summary>
+        /// 是否开启安全，取值有：
+        /// <li>0：关闭安全；</li>
+        /// <li>1：开启安全。</li>
+        /// </summary>
+        [JsonProperty("SecurityType")]
+        public long? SecurityType{ get; set; }
+
+        /// <summary>
+        /// 是否开启加速，取值有：
+        /// <li>0：关闭加速；</li>
+        /// <li>1：开启加速。</li>
+        /// </summary>
+        [JsonProperty("AccelerateType")]
+        public long? AccelerateType{ get; set; }
+
+        /// <summary>
+        /// 字段已经废弃。
+        /// </summary>
+        [JsonProperty("SessionPersist")]
+        public bool? SessionPersist{ get; set; }
+
+        /// <summary>
+        /// 字段已经废弃。
+        /// </summary>
+        [JsonProperty("ForwardClientIp")]
+        public string ForwardClientIp{ get; set; }
+
+        /// <summary>
+        /// 四层代理模式，取值有：
+        /// <li>hostname：表示子域名模式；</li>
+        /// <li>instance：表示实例模式。</li>不填写使用默认值instance。
+        /// </summary>
+        [JsonProperty("ProxyType")]
+        public string ProxyType{ get; set; }
+
+        /// <summary>
+        /// 会话保持时间，取值范围：30-3600，单位：秒。
+        /// 不填写使用默认值600。
         /// </summary>
         [JsonProperty("SessionPersistTime")]
         public ulong? SessionPersistTime{ get; set; }
 
         /// <summary>
-        /// 服务类型
-        /// hostname：子域名模式
-        /// instance：实例模式
+        /// Ipv6访问配置。
+        /// 不填写表示关闭Ipv6访问。
         /// </summary>
-        [JsonProperty("ProxyType")]
-        public string ProxyType{ get; set; }
+        [JsonProperty("Ipv6")]
+        public Ipv6Access Ipv6{ get; set; }
 
 
         /// <summary>
@@ -104,15 +115,16 @@ namespace TencentCloud.Teo.V20220106.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
+            this.SetParamArrayObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "ProxyName", this.ProxyName);
             this.SetParamSimple(map, prefix + "PlatType", this.PlatType);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamSimple(map, prefix + "AccelerateType", this.AccelerateType);
-            this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
-            this.SetParamArrayObj(map, prefix + "Rule.", this.Rule);
-            this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
+            this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
+            this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
+            this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
         }
     }
 }
