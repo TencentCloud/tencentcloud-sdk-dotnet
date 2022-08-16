@@ -62,6 +62,12 @@ namespace TencentCloud.Vm.V20201229.Models
         [JsonProperty("SubLabel")]
         public string SubLabel{ get; set; }
 
+        /// <summary>
+        /// 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Vm.V20201229.Models
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
             this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
         }
     }
 }

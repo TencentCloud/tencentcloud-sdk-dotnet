@@ -80,6 +80,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ValidateTime")]
         public string ValidateTime{ get; set; }
 
+        /// <summary>
+        /// 所属部门ID，如：“1.2.3”
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -95,6 +101,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "GroupIdSet.", this.GroupIdSet);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

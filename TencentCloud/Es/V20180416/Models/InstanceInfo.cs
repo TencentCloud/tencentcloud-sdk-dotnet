@@ -525,6 +525,20 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OperationDuration")]
         public OperationDuration OperationDuration{ get; set; }
 
+        /// <summary>
+        /// web节点列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OptionalWebServiceInfos")]
+        public OptionalWebServiceInfo[] OptionalWebServiceInfos{ get; set; }
+
+        /// <summary>
+        /// 自治索引开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoIndexEnabled")]
+        public bool? AutoIndexEnabled{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -607,6 +621,8 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "EsPrivateDomain", this.EsPrivateDomain);
             this.SetParamArrayObj(map, prefix + "EsConfigSets.", this.EsConfigSets);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
+            this.SetParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
         }
     }
 }

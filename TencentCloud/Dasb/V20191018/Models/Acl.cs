@@ -182,6 +182,13 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
+        /// <summary>
+        /// 所属部门的信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Department")]
+        public Department Department{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -214,6 +221,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
             this.SetParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "Department.", this.Department);
         }
     }
 }

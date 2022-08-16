@@ -49,7 +49,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         public Attribute[] Attributes{ get; set; }
 
         /// <summary>
-        /// 图像的所有主体区域。
+        /// 图像的所有主体区域，置信度，以及主体区域类别ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AllBox")]

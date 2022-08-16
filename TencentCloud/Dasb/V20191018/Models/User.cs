@@ -86,6 +86,20 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ValidateTime")]
         public string ValidateTime{ get; set; }
 
+        /// <summary>
+        /// 用户所属部门（用于出参）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Department")]
+        public Department Department{ get; set; }
+
+        /// <summary>
+        /// 用户所属部门（用于入参）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +116,8 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArrayObj(map, prefix + "GroupSet.", this.GroupSet);
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ValidateTime", this.ValidateTime);
+            this.SetParamObj(map, prefix + "Department.", this.Department);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

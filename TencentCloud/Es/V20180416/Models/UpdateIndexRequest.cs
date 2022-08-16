@@ -60,6 +60,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("Password")]
         public string Password{ get; set; }
 
+        /// <summary>
+        /// 是否滚动后备索引
+        /// </summary>
+        [JsonProperty("RolloverBackingIndex")]
+        public bool? RolloverBackingIndex{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "UpdateMetaJson", this.UpdateMetaJson);
             this.SetParamSimple(map, prefix + "Username", this.Username);
             this.SetParamSimple(map, prefix + "Password", this.Password);
+            this.SetParamSimple(map, prefix + "RolloverBackingIndex", this.RolloverBackingIndex);
         }
     }
 }

@@ -30,6 +30,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 资产组所属部门ID，如：1.2.3
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Dasb.V20191018.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

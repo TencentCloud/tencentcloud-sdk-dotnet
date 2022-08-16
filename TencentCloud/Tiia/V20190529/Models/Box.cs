@@ -36,6 +36,12 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("Score")]
         public float? Score{ get; set; }
 
+        /// <summary>
+        /// 主体区域类目ID
+        /// </summary>
+        [JsonProperty("CategoryId")]
+        public long? CategoryId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         {
             this.SetParamObj(map, prefix + "Rect.", this.Rect);
             this.SetParamSimple(map, prefix + "Score", this.Score);
+            this.SetParamSimple(map, prefix + "CategoryId", this.CategoryId);
         }
     }
 }

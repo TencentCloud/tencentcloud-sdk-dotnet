@@ -176,6 +176,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("ValidateTo")]
         public string ValidateTo{ get; set; }
 
+        /// <summary>
+        /// 权限所属部门的ID，如：1.2.3
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -207,6 +213,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "AllowFileDel", this.AllowFileDel);
             this.SetParamSimple(map, prefix + "ValidateFrom", this.ValidateFrom);
             this.SetParamSimple(map, prefix + "ValidateTo", this.ValidateTo);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

@@ -84,6 +84,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("KindSet")]
         public ulong?[] KindSet{ get; set; }
 
+        /// <summary>
+        /// 过滤条件，可按照部门ID进行过滤
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
             this.SetParamArraySimple(map, prefix + "ResourceIdSet.", this.ResourceIdSet);
             this.SetParamArraySimple(map, prefix + "KindSet.", this.KindSet);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

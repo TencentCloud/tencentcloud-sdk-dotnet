@@ -533,6 +533,46 @@ namespace TencentCloud.Iotcloud.V20210408
         }
 
         /// <summary>
+        /// 本接口（DeleteDeviceShadow）用于删除设备影子 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
+        /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
+        public async Task<DeleteDeviceShadowResponse> DeleteDeviceShadow(DeleteDeviceShadowRequest req)
+        {
+             JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteDeviceShadow）用于删除设备影子 
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceShadowRequest"/></param>
+        /// <returns><see cref="DeleteDeviceShadowResponse"/></returns>
+        public DeleteDeviceShadowResponse DeleteDeviceShadowSync(DeleteDeviceShadowRequest req)
+        {
+             JsonResponseModel<DeleteDeviceShadowResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDeviceShadow");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceShadowResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除私有CA证书
         /// </summary>
         /// <param name="req"><see cref="DeletePrivateCARequest"/></param>

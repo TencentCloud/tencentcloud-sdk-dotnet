@@ -72,6 +72,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
 
+        /// <summary>
+        /// 部门ID，用于过滤属于某个部门的访问权限
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamArraySimple(map, prefix + "AuthorizedUserIdSet.", this.AuthorizedUserIdSet);
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

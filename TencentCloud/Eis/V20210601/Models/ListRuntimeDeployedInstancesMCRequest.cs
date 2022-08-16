@@ -66,6 +66,21 @@ namespace TencentCloud.Eis.V20210601.Models
         [JsonProperty("ApiVersion")]
         public long? ApiVersion{ get; set; }
 
+        /// <summary>
+        /// -1:不按项目筛选，获取所有
+        /// >=0: 按项目id筛选
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public long? GroupId{ get; set; }
+
+        /// <summary>
+        /// -2: 不按状态筛选，获取所有
+        /// 0: 运行中
+        /// 2: 已停止
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +94,8 @@ namespace TencentCloud.Eis.V20210601.Models
             this.SetParamSimple(map, prefix + "Sort", this.Sort);
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamSimple(map, prefix + "ApiVersion", this.ApiVersion);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

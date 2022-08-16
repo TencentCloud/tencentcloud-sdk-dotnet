@@ -73,6 +73,12 @@ namespace TencentCloud.Dasb.V20191018.Models
         [JsonProperty("AuthTypeSet")]
         public ulong?[] AuthTypeSet{ get; set; }
 
+        /// <summary>
+        /// 部门ID，用于过滤属于某个部门的用户
+        /// </summary>
+        [JsonProperty("DepartmentId")]
+        public string DepartmentId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -87,6 +93,7 @@ namespace TencentCloud.Dasb.V20191018.Models
             this.SetParamSimple(map, prefix + "Phone", this.Phone);
             this.SetParamArraySimple(map, prefix + "AuthorizedDeviceIdSet.", this.AuthorizedDeviceIdSet);
             this.SetParamArraySimple(map, prefix + "AuthTypeSet.", this.AuthTypeSet);
+            this.SetParamSimple(map, prefix + "DepartmentId", this.DepartmentId);
         }
     }
 }

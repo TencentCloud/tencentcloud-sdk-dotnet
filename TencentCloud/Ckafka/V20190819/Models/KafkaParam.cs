@@ -98,6 +98,20 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("QpsLimit")]
         public ulong? QpsLimit{ get; set; }
 
+        /// <summary>
+        /// Table到Topic的路由，「分发到多个topic」开关打开时必传
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TableMappings")]
+        public TableMapping[] TableMappings{ get; set; }
+
+        /// <summary>
+        /// 「分发到多个topic」开关，默认为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UseTableMapping")]
+        public bool? UseTableMapping{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -115,6 +129,8 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "PartitionNum", this.PartitionNum);
             this.SetParamSimple(map, prefix + "EnableToleration", this.EnableToleration);
             this.SetParamSimple(map, prefix + "QpsLimit", this.QpsLimit);
+            this.SetParamArrayObj(map, prefix + "TableMappings.", this.TableMappings);
+            this.SetParamSimple(map, prefix + "UseTableMapping", this.UseTableMapping);
         }
     }
 }

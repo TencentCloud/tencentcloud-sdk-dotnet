@@ -63,6 +63,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("PdfPageNumber")]
         public ulong? PdfPageNumber{ get; set; }
 
+        /// <summary>
+        /// 是否开启全文字段识别，默认值为false，开启后可返回全文字段识别结果。
+        /// </summary>
+        [JsonProperty("ReturnFullText")]
+        public bool? ReturnFullText{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -74,6 +80,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamArraySimple(map, prefix + "ItemNames.", this.ItemNames);
             this.SetParamSimple(map, prefix + "IsPdf", this.IsPdf);
             this.SetParamSimple(map, prefix + "PdfPageNumber", this.PdfPageNumber);
+            this.SetParamSimple(map, prefix + "ReturnFullText", this.ReturnFullText);
         }
     }
 }

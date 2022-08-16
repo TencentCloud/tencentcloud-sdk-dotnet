@@ -37,7 +37,7 @@ namespace TencentCloud.Ssa.V20180608.Models
         public long? PageIndex{ get; set; }
 
         /// <summary>
-        /// 业务场景 参考ScenesType
+        /// 1:急需关注 2.重保监控 3.全量告警
         /// </summary>
         [JsonProperty("Scenes")]
         public long? Scenes{ get; set; }

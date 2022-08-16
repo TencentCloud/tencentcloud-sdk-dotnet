@@ -67,13 +67,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public bool? LogEnable{ get; set; }
 
         /// <summary>
-        /// 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、TENSORFLOW、PYTORCH、LIGHT
+        /// 训练框架名称，通过DescribeTrainingFrameworks接口查询，eg：SPARK、PYSPARK、TENSORFLOW、PYTORCH
         /// </summary>
         [JsonProperty("FrameworkName")]
         public string FrameworkName{ get; set; }
 
         /// <summary>
-        /// 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：1.15-py3.6-cpu、1.9-py3.6-cuda11.1-gpu
+        /// 训练框架版本，通过DescribeTrainingFrameworks接口查询，eg：tf1.15-py3.7-cpu、torch1.9-py3.8-cuda11.1-gpu
         /// </summary>
         [JsonProperty("FrameworkVersion")]
         public string FrameworkVersion{ get; set; }
