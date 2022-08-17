@@ -25,86 +25,97 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// tcp协议封禁 on-开；off-关
+        /// tcp协议封禁，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("DropTcp")]
         public string DropTcp{ get; set; }
 
         /// <summary>
-        /// udp协议封禁 on-开；off-关
+        /// udp协议封禁，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("DropUdp")]
         public string DropUdp{ get; set; }
 
         /// <summary>
-        /// icmp协议封禁 on-开；off-关
+        /// icmp协议封禁，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("DropIcmp")]
         public string DropIcmp{ get; set; }
 
         /// <summary>
-        /// 其他协议封禁 on-开；off-关
+        /// 其他协议封禁，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("DropOther")]
         public string DropOther{ get; set; }
 
         /// <summary>
-        /// 源每秒新建数限制  0-4294967295
+        /// 源站每秒新连接限速，取值范围0-4294967295。
         /// </summary>
         [JsonProperty("SourceCreateLimit")]
         public long? SourceCreateLimit{ get; set; }
 
         /// <summary>
-        /// 源并发连接控制 0-4294967295
+        /// 源站并发连接控制，取值范围0-4294967295。
         /// </summary>
         [JsonProperty("SourceConnectLimit")]
         public long? SourceConnectLimit{ get; set; }
 
         /// <summary>
-        /// 目的每秒新建数限制 0-4294967295
+        /// 目的端口每秒新连接限速，取值范围0-4294967295。
         /// </summary>
         [JsonProperty("DestinationCreateLimit")]
         public long? DestinationCreateLimit{ get; set; }
 
         /// <summary>
-        /// 目的端口的并发连接控制 0-4294967295
+        /// 目的端口并发连接控制，取值范围0-4294967295。
         /// </summary>
         [JsonProperty("DestinationConnectLimit")]
         public long? DestinationConnectLimit{ get; set; }
 
         /// <summary>
-        /// 异常连接数阈值  0-4294967295
+        /// 每秒异常连接数阈值，取值范围0-4294967295。
         /// </summary>
         [JsonProperty("AbnormalConnectNum")]
         public long? AbnormalConnectNum{ get; set; }
 
         /// <summary>
-        /// syn占比异常阈值 0-100
+        /// 异常syn报文百分比阈值，取值范围0-100。
         /// </summary>
         [JsonProperty("AbnormalSynRatio")]
         public long? AbnormalSynRatio{ get; set; }
 
         /// <summary>
-        /// syn个数异常阈值 0-65535
+        /// 异常syn报文阈值，取值范围0-65535。
         /// </summary>
         [JsonProperty("AbnormalSynNum")]
         public long? AbnormalSynNum{ get; set; }
 
         /// <summary>
-        /// 连接超时检测 0-65535
+        /// 每秒连接超时检测，取值范围0-65535。
         /// </summary>
         [JsonProperty("ConnectTimeout")]
         public long? ConnectTimeout{ get; set; }
 
         /// <summary>
-        /// 空连接防护开启 0-1
+        /// 空连接防护开启，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("EmptyConnectProtect")]
         public string EmptyConnectProtect{ get; set; }
 
         /// <summary>
-        /// UDP分片开关；off-关闭，on-开启
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// UDP分片开关，取值有：
+        /// <li>off ：关闭 ；</li>
+        /// <li>on ：开启 。</li>
         /// </summary>
         [JsonProperty("UdpShard")]
         public string UdpShard{ get; set; }

@@ -15,28 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Bma.V20210624.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VoiceFilter : AbstractModel
+    public class CreateCRUserVerifyRequest : AbstractModel
     {
         
         /// <summary>
-        /// 过滤类型，1：色情，2：涉毒，3：谩骂
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 用户真实姓名
         /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
 
         /// <summary>
-        /// 过滤命中关键词
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 用户身份证ID
         /// </summary>
-        [JsonProperty("Word")]
-        public string Word{ get; set; }
+        [JsonProperty("UserID")]
+        public string UserID{ get; set; }
+
+        /// <summary>
+        /// 用户手机号码
+        /// </summary>
+        [JsonProperty("UserPhone")]
+        public string UserPhone{ get; set; }
+
+        /// <summary>
+        /// 短信验证码
+        /// </summary>
+        [JsonProperty("VerificationCode")]
+        public string VerificationCode{ get; set; }
+
+        /// <summary>
+        /// xxx
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
 
         /// <summary>
@@ -44,8 +60,11 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
+            this.SetParamSimple(map, prefix + "UserID", this.UserID);
+            this.SetParamSimple(map, prefix + "UserPhone", this.UserPhone);
+            this.SetParamSimple(map, prefix + "VerificationCode", this.VerificationCode);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamSimple(map, prefix + "Word", this.Word);
         }
     }
 }

@@ -25,16 +25,18 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关标识防护是否清空
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 黑白名单数组
+        /// 黑白名单数组。
         /// </summary>
         [JsonProperty("UserAllowBlockIp")]
         public DDoSUserAllowBlockIP[] UserAllowBlockIp{ get; set; }
+
+        /// <summary>
+        /// 开关标识防护是否清空，取值有：
+        /// <li>off ：清空黑白名单列表，UserAllowBlockIp无需填写。 ；</li>
+        /// <li>on ：配置黑白名单，需填写UserAllowBlockIp参数。</li>默认值为on。
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "UserAllowBlockIp.", this.UserAllowBlockIp);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

@@ -32,15 +32,23 @@ namespace TencentCloud.Cvm.V20170312.Models
 
         /// <summary>
         /// 目的同步地域列表；必须满足限制：<br><li>不能为源地域，<br><li>必须是一个合法的Region。<br><li>暂不支持部分地域同步。<br>具体地域参数请参考[Region](https://cloud.tencent.com/document/product/213/6091)。
+        /// 
+        /// 如果是共享镜像，则目的同步地域仅支持源地域，表示将共享镜像复制为同地域的自定义镜像。
         /// </summary>
         [JsonProperty("DestinationRegions")]
         public string[] DestinationRegions{ get; set; }
 
         /// <summary>
-        /// 检测是否支持发起同步镜像
+        /// 检测是否支持发起同步镜像。
         /// </summary>
         [JsonProperty("DryRun")]
         public bool? DryRun{ get; set; }
+
+        /// <summary>
+        /// 目标镜像名称。
+        /// </summary>
+        [JsonProperty("ImageName")]
+        public string ImageName{ get; set; }
 
 
         /// <summary>
@@ -51,6 +59,7 @@ namespace TencentCloud.Cvm.V20170312.Models
             this.SetParamArraySimple(map, prefix + "ImageIds.", this.ImageIds);
             this.SetParamArraySimple(map, prefix + "DestinationRegions.", this.DestinationRegions);
             this.SetParamSimple(map, prefix + "DryRun", this.DryRun);
+            this.SetParamSimple(map, prefix + "ImageName", this.ImageName);
         }
     }
 }

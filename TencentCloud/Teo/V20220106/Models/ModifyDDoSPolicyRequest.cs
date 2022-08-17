@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 策略组ID
+        /// 策略id。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }
 
         /// <summary>
-        /// 一级域名
+        /// 站点id。
         /// </summary>
         [JsonProperty("ZoneId")]
         public string ZoneId{ get; set; }
 
         /// <summary>
-        /// DDoS具体防护配置
+        /// DDoS防护配置详情。
         /// </summary>
         [JsonProperty("DdosRule")]
         public DdosRule DdosRule{ get; set; }

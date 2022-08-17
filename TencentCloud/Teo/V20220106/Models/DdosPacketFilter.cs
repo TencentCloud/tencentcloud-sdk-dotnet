@@ -25,16 +25,18 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 特征过滤清空标识，off清空处理
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 特征过滤数组
+        /// 特征过滤规则数组。
         /// </summary>
         [JsonProperty("PacketFilter")]
         public DDoSFeaturesFilter[] PacketFilter{ get; set; }
+
+        /// <summary>
+        /// 特征过滤清空标识，取值有：
+        /// <li>off ：清空特征过滤规则，无需填写 PacketFilter 参数 ；</li>
+        /// <li>on ：配置特征过滤规则，需填写 PacketFilter 参数。</li>默认值为on。
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "PacketFilter.", this.PacketFilter);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

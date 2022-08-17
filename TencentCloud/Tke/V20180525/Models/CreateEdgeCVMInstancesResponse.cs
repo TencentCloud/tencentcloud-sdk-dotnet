@@ -15,28 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220106.Models
+namespace TencentCloud.Tke.V20180525.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DDoSGeoIp : AbstractModel
+    public class CreateEdgeCVMInstancesResponse : AbstractModel
     {
         
         /// <summary>
-        /// 区域封禁清空标识，取值有：
-        /// <li>off ：清空地域封禁列表 ；</li>
-        /// <li>on ：不做处理 。</li>
+        /// cvm id 列表
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("CvmIdSet")]
+        public string[] CvmIdSet{ get; set; }
 
         /// <summary>
-        /// 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long?[] RegionId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +42,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "RegionId.", this.RegionId);
+            this.SetParamArraySimple(map, prefix + "CvmIdSet.", this.CvmIdSet);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         public long? SdkAppId{ get; set; }
 
         /// <summary>
-        /// 分页尺寸，上限 100
+        /// 分页尺寸，上限 9999
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
@@ -54,6 +54,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("ModifiedTime")]
         public long? ModifiedTime{ get; set; }
 
+        /// <summary>
+        /// 技能组ID
+        /// </summary>
+        [JsonProperty("SkillGroupId")]
+        public long? SkillGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Ccc.V20200210.Models
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "StaffMail", this.StaffMail);
             this.SetParamSimple(map, prefix + "ModifiedTime", this.ModifiedTime);
+            this.SetParamSimple(map, prefix + "SkillGroupId", this.SkillGroupId);
         }
     }
 }

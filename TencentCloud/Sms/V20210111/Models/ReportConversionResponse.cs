@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Sms.V20210111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFilterResultRequest : AbstractModel
+    public class ReportConversionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 应用ID
+        /// 转化率上报响应包体。
         /// </summary>
-        [JsonProperty("BizId")]
-        public ulong? BizId{ get; set; }
+        [JsonProperty("ReportConversionStatus")]
+        public ReportConversionStatus ReportConversionStatus{ get; set; }
 
         /// <summary>
-        /// 文件ID
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("FileId")]
-        public string FileId{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "BizId", this.BizId);
-            this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamObj(map, prefix + "ReportConversionStatus.", this.ReportConversionStatus);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

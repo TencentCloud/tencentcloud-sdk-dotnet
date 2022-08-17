@@ -25,16 +25,18 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关 off清空规则标识
-        /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
-
-        /// <summary>
-        /// 端口过了详细参数
+        /// 端口过滤规则数组。
         /// </summary>
         [JsonProperty("Acl")]
         public DDoSAcl[] Acl{ get; set; }
+
+        /// <summary>
+        /// 清空规则标识，取值有：
+        /// <li>off ：清空端口过滤规则列表，Acl无需填写。 ；</li>
+        /// <li>on ：配置端口过滤规则，需填写Acl参数。</li>默认值为on。
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamArrayObj(map, prefix + "Acl.", this.Acl);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
         }
     }
 }

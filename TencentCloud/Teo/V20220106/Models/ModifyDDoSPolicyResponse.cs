@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 策略组ID
+        /// 策略id。
         /// </summary>
         [JsonProperty("PolicyId")]
         public long? PolicyId{ get; set; }

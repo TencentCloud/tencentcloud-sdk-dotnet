@@ -25,60 +25,69 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// DDoS防护等级
+        /// DDoS防护等级。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosStatusInfo")]
         public DDoSStatusInfo DdosStatusInfo{ get; set; }
 
         /// <summary>
-        /// DDoS地域封禁
+        /// DDoS地域封禁。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosGeoIp")]
         public DDoSGeoIp DdosGeoIp{ get; set; }
 
         /// <summary>
-        /// DDoS黑白名单
+        /// DDoS黑白名单。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosAllowBlock")]
         public DdosAllowBlock DdosAllowBlock{ get; set; }
 
         /// <summary>
-        /// DDoS 协议封禁+连接防护
+        /// DDoS 协议封禁+连接防护。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosAntiPly")]
         public DDoSAntiPly DdosAntiPly{ get; set; }
 
         /// <summary>
-        /// DDoS特征过滤
+        /// DDoS特征过滤。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosPacketFilter")]
         public DdosPacketFilter DdosPacketFilter{ get; set; }
 
         /// <summary>
-        /// DDoS端口过滤
+        /// DDoS端口过滤。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosAcl")]
         public DdosAcls DdosAcl{ get; set; }
 
         /// <summary>
-        /// DDoS开关 on-开启；off-关闭
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// DDoS开关，取值有:
+        /// <li>on ：开启 ；</li>
+        /// <li>off ：关闭 。</li>
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// UDP分片功能是否支持，off-不支持，on-支持
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// UDP分片功能是否支持，取值有:
+        /// <li>on ：支持 ；</li>
+        /// <li>off ：不支持 。</li>
         /// </summary>
         [JsonProperty("UdpShardOpen")]
         public string UdpShardOpen{ get; set; }
+
+        /// <summary>
+        /// DDoS源站访问速率限制。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DdosSpeedLimit")]
+        public DdosSpeedLimit DdosSpeedLimit{ get; set; }
 
 
         /// <summary>
@@ -94,6 +103,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "DdosAcl.", this.DdosAcl);
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "UdpShardOpen", this.UdpShardOpen);
+            this.SetParamObj(map, prefix + "DdosSpeedLimit.", this.DdosSpeedLimit);
         }
     }
 }

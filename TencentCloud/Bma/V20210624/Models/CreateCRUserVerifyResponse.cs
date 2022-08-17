@@ -15,28 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Teo.V20220106.Models
+namespace TencentCloud.Bma.V20210624.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DDoSGeoIp : AbstractModel
+    public class CreateCRUserVerifyResponse : AbstractModel
     {
         
         /// <summary>
-        /// 区域封禁清空标识，取值有：
-        /// <li>off ：清空地域封禁列表 ；</li>
-        /// <li>on ：不做处理 。</li>
+        /// 认证状态 0-认证成功 1-认证失败
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
         /// <summary>
-        /// 地域信息，ID参考[DescribeSecurityPolicyRegions](https://tcloud4api.woa.com/document/product/1657/76031?!preview&!document=1)。
+        /// 认证结果返回
         /// </summary>
-        [JsonProperty("RegionId")]
-        public long?[] RegionId{ get; set; }
+        [JsonProperty("Note")]
+        public string Note{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -44,8 +48,9 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
-            this.SetParamArraySimple(map, prefix + "RegionId.", this.RegionId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Note", this.Note);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

@@ -773,6 +773,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 创建边缘容器CVM机器
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="CreateEdgeCVMInstancesResponse"/></returns>
+        public async Task<CreateEdgeCVMInstancesResponse> CreateEdgeCVMInstances(CreateEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<CreateEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建边缘容器CVM机器
+        /// </summary>
+        /// <param name="req"><see cref="CreateEdgeCVMInstancesRequest"/></param>
+        /// <returns><see cref="CreateEdgeCVMInstancesResponse"/></returns>
+        public CreateEdgeCVMInstancesResponse CreateEdgeCVMInstancesSync(CreateEdgeCVMInstancesRequest req)
+        {
+             JsonResponseModel<CreateEdgeCVMInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateEdgeCVMInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateEdgeCVMInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建边缘集群日志采集配置
         /// </summary>
         /// <param name="req"><see cref="CreateEdgeLogConfigRequest"/></param>

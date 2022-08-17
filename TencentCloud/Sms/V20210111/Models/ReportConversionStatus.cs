@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Sms.V20210111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFilterResultResponse : AbstractModel
+    public class ReportConversionStatus : AbstractModel
     {
         
         /// <summary>
-        /// 过滤结果
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 错误码。上报成功返回 ok。
         /// </summary>
-        [JsonProperty("Data")]
-        public VoiceFilterInfo Data{ get; set; }
+        [JsonProperty("Code")]
+        public string Code{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 错误码描述。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Message")]
+        public string Message{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "Message", this.Message);
         }
     }
 }

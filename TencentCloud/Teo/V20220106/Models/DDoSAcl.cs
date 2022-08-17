@@ -25,43 +25,51 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 目的端口end
+        /// 目的端口结束，取值范围0-65535。
         /// </summary>
         [JsonProperty("DportEnd")]
         public long? DportEnd{ get; set; }
 
         /// <summary>
-        /// 目的端口start
+        /// 目的端口开始，取值范围0-65535。
         /// </summary>
         [JsonProperty("DportStart")]
         public long? DportStart{ get; set; }
 
         /// <summary>
-        /// 源端口end
+        /// 源端口结束，取值范围0-65535。
         /// </summary>
         [JsonProperty("SportEnd")]
         public long? SportEnd{ get; set; }
 
         /// <summary>
-        /// 源端口start
+        /// 源端口开始，取值范围0-65535。
         /// </summary>
         [JsonProperty("SportStart")]
         public long? SportStart{ get; set; }
 
         /// <summary>
-        /// 协议 'tcp', 'udp', 'all'
+        /// 协议，取值有：
+        /// <li>tcp ：tcp协议 ；</li>
+        /// <li>udp ：udp协议 ；</li>
+        /// <li>all ：全部协议 。</li>
         /// </summary>
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
         /// <summary>
-        /// 动作  drop-丢弃,；transmit-放行； forward-继续防护
+        /// 执行动作，取值为：
+        /// <li>drop ：丢弃 ；</li>
+        /// <li>transmit ：放行 ；</li>
+        /// <li>forward ：继续防护 。</li>
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 是否为系统配置 0-人工配置；1-系统配置
+        /// 是否为系统配置，取值为：
+        /// <li>0 ：修改配置 ；</li>
+        /// <li>1 ：系统默认配置 。</li>
         /// </summary>
         [JsonProperty("Default")]
         public long? Default{ get; set; }

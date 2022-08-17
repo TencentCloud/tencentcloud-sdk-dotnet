@@ -15,34 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeFilterResultListResponse : AbstractModel
+    public class DdosSpeedLimit : AbstractModel
     {
         
         /// <summary>
-        /// 过滤结果总数
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 源站包量限制，支持单位有pps、Kpps、Mpps、Gpps。支持范围1 pps-10000 Gpps。"0 pps"或其他单位数值为0，即不限包。""为不更新。
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public ulong? TotalCount{ get; set; }
+        [JsonProperty("PackageLimit")]
+        public string PackageLimit{ get; set; }
 
         /// <summary>
-        /// 当前分页过滤结果列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 源站流量限制，支持单位有bps、Kbps、Mbps、Gbps，支持范围1 bps-10000 Gbps。"0 bps"或其他单位数值为0，即不限流。""为不更新。
         /// </summary>
-        [JsonProperty("Data")]
-        public VoiceFilterInfo[] Data{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FluxLimit")]
+        public string FluxLimit{ get; set; }
 
 
         /// <summary>
@@ -50,9 +42,8 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "PackageLimit", this.PackageLimit);
+            this.SetParamSimple(map, prefix + "FluxLimit", this.FluxLimit);
         }
     }
 }

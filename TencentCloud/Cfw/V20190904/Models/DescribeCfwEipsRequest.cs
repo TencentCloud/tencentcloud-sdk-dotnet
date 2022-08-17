@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 0：cfw新增模式，1：cfw接入模式
+        /// 1：cfw接入模式，目前仅支持接入模式实例
         /// </summary>
         [JsonProperty("Mode")]
         public ulong? Mode{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public string NatGatewayId{ get; set; }
 
         /// <summary>
-        /// 防火墙实例id
+        /// 防火墙实例id，当前仅支持接入模式的实例
         /// </summary>
         [JsonProperty("CfwInstance")]
         public string CfwInstance{ get; set; }

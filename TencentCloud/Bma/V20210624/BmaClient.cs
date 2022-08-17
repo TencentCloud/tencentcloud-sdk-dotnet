@@ -373,6 +373,46 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 品牌经营管家-版权保护个人认证接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRUserVerifyRequest"/></param>
+        /// <returns><see cref="CreateCRUserVerifyResponse"/></returns>
+        public async Task<CreateCRUserVerifyResponse> CreateCRUserVerify(CreateCRUserVerifyRequest req)
+        {
+             JsonResponseModel<CreateCRUserVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCRUserVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRUserVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 品牌经营管家-版权保护个人认证接口
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRUserVerifyRequest"/></param>
+        /// <returns><see cref="CreateCRUserVerifyResponse"/></returns>
+        public CreateCRUserVerifyResponse CreateCRUserVerifySync(CreateCRUserVerifyRequest req)
+        {
+             JsonResponseModel<CreateCRUserVerifyResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCRUserVerify");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRUserVerifyResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 版权保护-添加作品接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRWorkRequest"/></param>

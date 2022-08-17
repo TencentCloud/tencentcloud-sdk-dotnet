@@ -25,19 +25,22 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 不支持，填off
+        /// 暂不支持，默认值off。
         /// </summary>
         [JsonProperty("AiStatus")]
         public string AiStatus{ get; set; }
 
         /// <summary>
-        /// 用户appid
+        /// 废弃字段。
         /// </summary>
         [JsonProperty("Appid")]
         public string Appid{ get; set; }
 
         /// <summary>
-        /// 策略等级 low, middle, high
+        /// 策略等级，取值有:
+        /// <li>low ：宽松 ；</li>
+        /// <li>middle ：适中 ；</li>
+        /// <li>high : 严格。 </li>
         /// </summary>
         [JsonProperty("PlyLevel")]
         public string PlyLevel{ get; set; }

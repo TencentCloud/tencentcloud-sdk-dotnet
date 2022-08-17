@@ -167,7 +167,7 @@ namespace TencentCloud.Live.V20180801.Models
 
         /// <summary>
         /// 完整目标 URL 地址。
-        /// 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空值，任务将会使用该 ToUrl 参数指定的目标地址。
+        /// 用法注意：如果使用该参数来传完整目标地址，则 DomainName, AppName, StreamName 需要传入空字符串，任务将会使用该 ToUrl 参数指定的目标地址。
         /// 
         /// 注意：签名时间需要超过任务结束时间，避免因签名过期造成任务失败。
         /// </summary>
@@ -193,6 +193,16 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("BackupSourceUrl")]
         public string BackupSourceUrl{ get; set; }
 
+        /// <summary>
+        /// 水印信息列表。
+        /// 注意：
+        /// 1. 最多支持4个不同位置的水印。
+        /// 2. 水印图片 URL 请使用合法外网可访问地址。
+        /// 3. 支持的水印图片格式：png，jpg，gif 等。
+        /// </summary>
+        [JsonProperty("WatermarkList")]
+        public PullPushWatermarkInfo[] WatermarkList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -217,6 +227,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "ToUrl", this.ToUrl);
             this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
             this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+            this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         }
     }
 }

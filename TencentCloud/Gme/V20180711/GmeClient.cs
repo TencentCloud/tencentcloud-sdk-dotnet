@@ -433,86 +433,6 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
-        /// 根据应用ID和文件ID查询识别结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFilterResultRequest"/></param>
-        /// <returns><see cref="DescribeFilterResultResponse"/></returns>
-        public async Task<DescribeFilterResultResponse> DescribeFilterResult(DescribeFilterResultRequest req)
-        {
-             JsonResponseModel<DescribeFilterResultResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFilterResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFilterResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 根据应用ID和文件ID查询识别结果
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFilterResultRequest"/></param>
-        /// <returns><see cref="DescribeFilterResultResponse"/></returns>
-        public DescribeFilterResultResponse DescribeFilterResultSync(DescribeFilterResultRequest req)
-        {
-             JsonResponseModel<DescribeFilterResultResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFilterResult");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFilterResultResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 根据日期查询识别结果列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFilterResultListRequest"/></param>
-        /// <returns><see cref="DescribeFilterResultListResponse"/></returns>
-        public async Task<DescribeFilterResultListResponse> DescribeFilterResultList(DescribeFilterResultListRequest req)
-        {
-             JsonResponseModel<DescribeFilterResultListResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeFilterResultList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFilterResultListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 根据日期查询识别结果列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeFilterResultListRequest"/></param>
-        /// <returns><see cref="DescribeFilterResultListResponse"/></returns>
-        public DescribeFilterResultListResponse DescribeFilterResultListSync(DescribeFilterResultListRequest req)
-        {
-             JsonResponseModel<DescribeFilterResultListResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeFilterResultList");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFilterResultListResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 获取用户自定义送检信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRealtimeScanConfigRequest"/></param>
@@ -1294,50 +1214,6 @@ namespace TencentCloud.Gme.V20180711
              {
                  var strResp = this.InternalRequestSync(req, "UpdateScanUsers");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateScanUsersResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于识别涉黄等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
-        /// {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
-        /// Type表示过滤类型，1：色情，2：谩骂
-        /// </summary>
-        /// <param name="req"><see cref="VoiceFilterRequest"/></param>
-        /// <returns><see cref="VoiceFilterResponse"/></returns>
-        public async Task<VoiceFilterResponse> VoiceFilter(VoiceFilterRequest req)
-        {
-             JsonResponseModel<VoiceFilterResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "VoiceFilter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoiceFilterResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口用于识别涉黄等违规音频，成功会回调配置在应用的回调地址。回调示例如下：
-        /// {"BizId":0,"FileId":"test_file_id","FileName":"test_file_name","FileUrl":"test_file_url","OpenId":"test_open_id","TimeStamp":"0000-00-00 00:00:00","Data":[{"Type":1,"Word":"xx"}]}
-        /// Type表示过滤类型，1：色情，2：谩骂
-        /// </summary>
-        /// <param name="req"><see cref="VoiceFilterRequest"/></param>
-        /// <returns><see cref="VoiceFilterResponse"/></returns>
-        public VoiceFilterResponse VoiceFilterSync(VoiceFilterRequest req)
-        {
-             JsonResponseModel<VoiceFilterResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "VoiceFilter");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VoiceFilterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

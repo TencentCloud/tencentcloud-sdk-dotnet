@@ -208,6 +208,29 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("Comment")]
         public string Comment{ get; set; }
 
+        /// <summary>
+        /// 备源类型：
+        /// PullLivePushLive -直播，
+        /// PullVodPushLive -点播。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSourceType")]
+        public string BackupSourceType{ get; set; }
+
+        /// <summary>
+        /// 备源URL。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupSourceUrl")]
+        public string BackupSourceUrl{ get; set; }
+
+        /// <summary>
+        /// 水印信息列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WatermarkList")]
+        public PullPushWatermarkInfo[] WatermarkList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -237,6 +260,9 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "RecentPullInfo.", this.RecentPullInfo);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
+            this.SetParamSimple(map, prefix + "BackupSourceType", this.BackupSourceType);
+            this.SetParamSimple(map, prefix + "BackupSourceUrl", this.BackupSourceUrl);
+            this.SetParamArrayObj(map, prefix + "WatermarkList.", this.WatermarkList);
         }
     }
 }

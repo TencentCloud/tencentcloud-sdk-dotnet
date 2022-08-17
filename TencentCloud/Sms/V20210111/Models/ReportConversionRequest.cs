@@ -15,20 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Gme.V20180711.Models
+namespace TencentCloud.Sms.V20210111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class VoiceFilterResponse : AbstractModel
+    public class ReportConversionRequest : AbstractModel
     {
         
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 短信应用ID。在 [短信控制台](https://console.cloud.tencent.com/smsv2/app-manage)  添加应用后生成的实际 SdkAppId，示例如1400006666。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("SmsSdkAppId")]
+        public string SmsSdkAppId{ get; set; }
+
+        /// <summary>
+        /// 发送短信返回的流水号。
+        /// </summary>
+        [JsonProperty("SerialNo")]
+        public string SerialNo{ get; set; }
+
+        /// <summary>
+        /// 用户回填时间，UNIX 时间戳（单位：秒）。
+        /// </summary>
+        [JsonProperty("ConversionTime")]
+        public ulong? ConversionTime{ get; set; }
 
 
         /// <summary>
@@ -36,7 +48,9 @@ namespace TencentCloud.Gme.V20180711.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "SmsSdkAppId", this.SmsSdkAppId);
+            this.SetParamSimple(map, prefix + "SerialNo", this.SerialNo);
+            this.SetParamSimple(map, prefix + "ConversionTime", this.ConversionTime);
         }
     }
 }

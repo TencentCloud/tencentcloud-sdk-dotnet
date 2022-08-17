@@ -25,43 +25,39 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 用户ip
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 客户端IP。
         /// </summary>
         [JsonProperty("Ip")]
         public string Ip{ get; set; }
 
         /// <summary>
-        /// 掩码
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 掩码。
         /// </summary>
         [JsonProperty("Mask")]
         public long? Mask{ get; set; }
 
         /// <summary>
-        /// 类型 block-丢弃；allow-允许
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 类型，取值有：
+        /// <li>block ：丢弃 ；</li>
+        /// <li>allow ：允许。</li>
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 时间戳
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 10位时间戳，例如1199116800。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public long? UpdateTime{ get; set; }
 
         /// <summary>
-        /// 用户ip范围截止
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 客户端IP2，设置IP范围时使用，例如 1.1.1.1-1.1.1.2。
         /// </summary>
         [JsonProperty("Ip2")]
         public string Ip2{ get; set; }
 
         /// <summary>
-        /// 掩码截止范围
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 掩码2，设置IP网段范围时使用，例如 1.1.1.0/24-1.1.2.0/24。
         /// </summary>
         [JsonProperty("Mask2")]
         public long? Mask2{ get; set; }
