@@ -78,6 +78,24 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("PublicLB")]
         public EdgeClusterPublicLB PublicLB{ get; set; }
 
+        /// <summary>
+        /// 集群的级别
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 集群是否支持自动升配
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
+        /// <summary>
+        /// 集群计费方式
+        /// </summary>
+        [JsonProperty("ChargeType")]
+        public string ChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamObj(map, prefix + "ClusterAdvancedSettings.", this.ClusterAdvancedSettings);
             this.SetParamSimple(map, prefix + "MaxNodePodNum", this.MaxNodePodNum);
             this.SetParamObj(map, prefix + "PublicLB.", this.PublicLB);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+            this.SetParamSimple(map, prefix + "ChargeType", this.ChargeType);
         }
     }
 }

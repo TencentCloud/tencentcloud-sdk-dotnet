@@ -61,7 +61,7 @@ namespace TencentCloud.Partners.V20180321.Models
         public string ClientName{ get; set; }
 
         /// <summary>
-        /// 认证类型, 0：个人，1：企业；其他：未认证
+        /// 认证类型, 0：个人，1：企业；其他：未认证或无效值
         /// </summary>
         [JsonProperty("AuthType")]
         public string AuthType{ get; set; }

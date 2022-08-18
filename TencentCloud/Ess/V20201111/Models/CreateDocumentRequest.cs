@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string TemplateId{ get; set; }
 
         /// <summary>
-        /// 文件名列表,单个文件名最大长度200个字符
+        /// 文件名列表，单个文件名最大长度200个字符，暂时仅支持单文件发起
         /// </summary>
         [JsonProperty("FileNames")]
         public string[] FileNames{ get; set; }

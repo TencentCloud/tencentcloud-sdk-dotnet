@@ -25,7 +25,7 @@ namespace TencentCloud.Partners.V20180321.Models
     {
         
         /// <summary>
-        /// 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）
+        /// 账户可用余额，单位分 （可用余额 = 现金余额 - 冻结金额）  【注：该数据准确性存疑，请切换至DescribeClientBalanceNew取值】
         /// </summary>
         [JsonProperty("Balance")]
         public ulong? Balance{ get; set; }

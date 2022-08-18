@@ -173,6 +173,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 强制销毁 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="CleanGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CleanGrafanaInstanceResponse"/></returns>
+        public async Task<CleanGrafanaInstanceResponse> CleanGrafanaInstance(CleanGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CleanGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 强制销毁 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="CleanGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CleanGrafanaInstanceResponse"/></returns>
+        public CleanGrafanaInstanceResponse CleanGrafanaInstanceSync(CleanGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CleanGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CleanGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CleanGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建通知模板
         /// </summary>
         /// <param name="req"><see cref="CreateAlarmNoticeRequest"/></param>
@@ -328,6 +368,126 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreateExporterIntegration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
+        public async Task<CreateGrafanaInstanceResponse> CreateGrafanaInstance(CreateGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="CreateGrafanaInstanceResponse"/></returns>
+        public CreateGrafanaInstanceResponse CreateGrafanaInstanceSync(CreateGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<CreateGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="CreateGrafanaIntegrationResponse"/></returns>
+        public async Task<CreateGrafanaIntegrationResponse> CreateGrafanaIntegration(CreateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="CreateGrafanaIntegrationResponse"/></returns>
+        public CreateGrafanaIntegrationResponse CreateGrafanaIntegrationSync(CreateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<CreateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="CreateGrafanaNotificationChannelResponse"/></returns>
+        public async Task<CreateGrafanaNotificationChannelResponse> CreateGrafanaNotificationChannel(CreateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="CreateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="CreateGrafanaNotificationChannelResponse"/></returns>
+        public CreateGrafanaNotificationChannelResponse CreateGrafanaNotificationChannelSync(CreateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<CreateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGrafanaNotificationChannelResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -528,6 +688,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "CreateRecordingRule");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRecordingRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Grafana实例授权其他腾讯云用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSOAccountRequest"/></param>
+        /// <returns><see cref="CreateSSOAccountResponse"/></returns>
+        public async Task<CreateSSOAccountResponse> CreateSSOAccount(CreateSSOAccountRequest req)
+        {
+             JsonResponseModel<CreateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Grafana实例授权其他腾讯云用户
+        /// </summary>
+        /// <param name="req"><see cref="CreateSSOAccountRequest"/></param>
+        /// <returns><see cref="CreateSSOAccountResponse"/></returns>
+        public CreateSSOAccountResponse CreateSSOAccountSync(CreateSSOAccountRequest req)
+        {
+             JsonResponseModel<CreateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateSSOAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -741,6 +941,126 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 删除 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
+        public async Task<DeleteGrafanaInstanceResponse> DeleteGrafanaInstance(DeleteGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaInstanceResponse"/></returns>
+        public DeleteGrafanaInstanceResponse DeleteGrafanaInstanceSync(DeleteGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaIntegrationResponse"/></returns>
+        public async Task<DeleteGrafanaIntegrationResponse> DeleteGrafanaIntegration(DeleteGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaIntegrationResponse"/></returns>
+        public DeleteGrafanaIntegrationResponse DeleteGrafanaIntegrationSync(DeleteGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaNotificationChannelResponse"/></returns>
+        public async Task<DeleteGrafanaNotificationChannelResponse> DeleteGrafanaNotificationChannel(DeleteGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="DeleteGrafanaNotificationChannelResponse"/></returns>
+        public DeleteGrafanaNotificationChannelResponse DeleteGrafanaNotificationChannelSync(DeleteGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<DeleteGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除告警策略组
         /// </summary>
         /// <param name="req"><see cref="DeletePolicyGroupRequest"/></param>
@@ -852,6 +1172,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DeleteRecordingRules");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRecordingRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Grafana可视化服务 删除授权用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSSOAccountRequest"/></param>
+        /// <returns><see cref="DeleteSSOAccountResponse"/></returns>
+        public async Task<DeleteSSOAccountResponse> DeleteSSOAccount(DeleteSSOAccountRequest req)
+        {
+             JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// Grafana可视化服务 删除授权用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteSSOAccountRequest"/></param>
+        /// <returns><see cref="DeleteSSOAccountResponse"/></returns>
+        public DeleteSSOAccountResponse DeleteSSOAccountSync(DeleteSSOAccountRequest req)
+        {
+             JsonResponseModel<DeleteSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSSOAccountResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1509,6 +1869,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出 Grafana DNS 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
+        /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
+        public async Task<DescribeDNSConfigResponse> DescribeDNSConfig(DescribeDNSConfigRequest req)
+        {
+             JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana DNS 配置
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDNSConfigRequest"/></param>
+        /// <returns><see cref="DescribeDNSConfigResponse"/></returns>
+        public DescribeDNSConfigResponse DescribeDNSConfigSync(DescribeDNSConfigRequest req)
+        {
+             JsonResponseModel<DescribeDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询 exporter 集成列表
         /// </summary>
         /// <param name="req"><see cref="DescribeExporterIntegrationsRequest"/></param>
@@ -1549,6 +1949,286 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出 Grafana 的设置，即 grafana.ini 文件内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaConfigRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaConfigResponse"/></returns>
+        public async Task<DescribeGrafanaConfigResponse> DescribeGrafanaConfig(DescribeGrafanaConfigRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 的设置，即 grafana.ini 文件内容
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaConfigRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaConfigResponse"/></returns>
+        public DescribeGrafanaConfigResponse DescribeGrafanaConfigSync(DescribeGrafanaConfigRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 环境变量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaEnvironmentsResponse"/></returns>
+        public async Task<DescribeGrafanaEnvironmentsResponse> DescribeGrafanaEnvironments(DescribeGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 环境变量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaEnvironmentsResponse"/></returns>
+        public DescribeGrafanaEnvironmentsResponse DescribeGrafanaEnvironmentsSync(DescribeGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出用户所有的 Grafana 服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaInstancesResponse"/></returns>
+        public async Task<DescribeGrafanaInstancesResponse> DescribeGrafanaInstances(DescribeGrafanaInstancesRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出用户所有的 Grafana 服务
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaInstancesRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaInstancesResponse"/></returns>
+        public DescribeGrafanaInstancesResponse DescribeGrafanaInstancesSync(DescribeGrafanaInstancesRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 已安装的集成
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaIntegrationsResponse"/></returns>
+        public async Task<DescribeGrafanaIntegrationsResponse> DescribeGrafanaIntegrations(DescribeGrafanaIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 已安装的集成
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaIntegrationsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaIntegrationsResponse"/></returns>
+        public DescribeGrafanaIntegrationsResponse DescribeGrafanaIntegrationsSync(DescribeGrafanaIntegrationsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaIntegrationsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaIntegrations");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaIntegrationsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaNotificationChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaNotificationChannelsResponse"/></returns>
+        public async Task<DescribeGrafanaNotificationChannelsResponse> DescribeGrafanaNotificationChannels(DescribeGrafanaNotificationChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaNotificationChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaNotificationChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaNotificationChannelsResponse"/></returns>
+        public DescribeGrafanaNotificationChannelsResponse DescribeGrafanaNotificationChannelsSync(DescribeGrafanaNotificationChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaNotificationChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaNotificationChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaNotificationChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaWhiteListResponse"/></returns>
+        public async Task<DescribeGrafanaWhiteListResponse> DescribeGrafanaWhiteList(DescribeGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 白名单
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaWhiteListResponse"/></returns>
+        public DescribeGrafanaWhiteListResponse DescribeGrafanaWhiteListSync(DescribeGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出实例已安装的插件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstalledPluginsRequest"/></param>
+        /// <returns><see cref="DescribeInstalledPluginsResponse"/></returns>
+        public async Task<DescribeInstalledPluginsResponse> DescribeInstalledPlugins(DescribeInstalledPluginsRequest req)
+        {
+             JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeInstalledPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstalledPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出实例已安装的插件
+        /// </summary>
+        /// <param name="req"><see cref="DescribeInstalledPluginsRequest"/></param>
+        /// <returns><see cref="DescribeInstalledPluginsResponse"/></returns>
+        public DescribeInstalledPluginsResponse DescribeInstalledPluginsSync(DescribeInstalledPluginsRequest req)
+        {
+             JsonResponseModel<DescribeInstalledPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeInstalledPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstalledPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 云监控支持多种类型的监控，此接口列出支持的所有类型
         /// </summary>
         /// <param name="req"><see cref="DescribeMonitorTypesRequest"/></param>
@@ -1580,6 +2260,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMonitorTypes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMonitorTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出可安装的所有 Grafana 插件
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginOverviewsRequest"/></param>
+        /// <returns><see cref="DescribePluginOverviewsResponse"/></returns>
+        public async Task<DescribePluginOverviewsResponse> DescribePluginOverviews(DescribePluginOverviewsRequest req)
+        {
+             JsonResponseModel<DescribePluginOverviewsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePluginOverviews");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginOverviewsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出可安装的所有 Grafana 插件
+        /// </summary>
+        /// <param name="req"><see cref="DescribePluginOverviewsRequest"/></param>
+        /// <returns><see cref="DescribePluginOverviewsResponse"/></returns>
+        public DescribePluginOverviewsResponse DescribePluginOverviewsSync(DescribePluginOverviewsRequest req)
+        {
+             JsonResponseModel<DescribePluginOverviewsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePluginOverviews");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePluginOverviewsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1957,6 +2677,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出当前grafana实例的所有授权账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
+        /// <returns><see cref="DescribeSSOAccountResponse"/></returns>
+        public async Task<DescribeSSOAccountResponse> DescribeSSOAccount(DescribeSSOAccountRequest req)
+        {
+             JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出当前grafana实例的所有授权账号
+        /// </summary>
+        /// <param name="req"><see cref="DescribeSSOAccountRequest"/></param>
+        /// <returns><see cref="DescribeSSOAccountResponse"/></returns>
+        public DescribeSSOAccountResponse DescribeSSOAccountSync(DescribeSSOAccountRequest req)
+        {
+             JsonResponseModel<DescribeSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列出在腾讯云容器服务下创建的 Prometheus 服务发现。
         /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
         /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -2081,6 +2841,126 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 设置 Grafana 公网访问
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaInternetRequest"/></param>
+        /// <returns><see cref="EnableGrafanaInternetResponse"/></returns>
+        public async Task<EnableGrafanaInternetResponse> EnableGrafanaInternet(EnableGrafanaInternetRequest req)
+        {
+             JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGrafanaInternet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaInternetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置 Grafana 公网访问
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaInternetRequest"/></param>
+        /// <returns><see cref="EnableGrafanaInternetResponse"/></returns>
+        public EnableGrafanaInternetResponse EnableGrafanaInternetSync(EnableGrafanaInternetRequest req)
+        {
+             JsonResponseModel<EnableGrafanaInternetResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGrafanaInternet");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaInternetResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置 Grafana 单点登录，使用腾讯云账号
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaSSORequest"/></param>
+        /// <returns><see cref="EnableGrafanaSSOResponse"/></returns>
+        public async Task<EnableGrafanaSSOResponse> EnableGrafanaSSO(EnableGrafanaSSORequest req)
+        {
+             JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGrafanaSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置 Grafana 单点登录，使用腾讯云账号
+        /// </summary>
+        /// <param name="req"><see cref="EnableGrafanaSSORequest"/></param>
+        /// <returns><see cref="EnableGrafanaSSOResponse"/></returns>
+        public EnableGrafanaSSOResponse EnableGrafanaSSOSync(EnableGrafanaSSORequest req)
+        {
+             JsonResponseModel<EnableGrafanaSSOResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGrafanaSSO");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGrafanaSSOResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SSO单点登录时，设置是否cam鉴权
+        /// </summary>
+        /// <param name="req"><see cref="EnableSSOCamCheckRequest"/></param>
+        /// <returns><see cref="EnableSSOCamCheckResponse"/></returns>
+        public async Task<EnableSSOCamCheckResponse> EnableSSOCamCheck(EnableSSOCamCheckRequest req)
+        {
+             JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableSSOCamCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSSOCamCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// SSO单点登录时，设置是否cam鉴权
+        /// </summary>
+        /// <param name="req"><see cref="EnableSSOCamCheckRequest"/></param>
+        /// <returns><see cref="EnableSSOCamCheckResponse"/></returns>
+        public EnableSSOCamCheckResponse EnableSSOCamCheckSync(EnableSSOCamCheckRequest req)
+        {
+             JsonResponseModel<EnableSSOCamCheckResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableSSOCamCheck");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableSSOCamCheckResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取云产品的监控数据。此接口不适用于拉取容器服务监控数据，如需拉取容器服务监控数据，请使用[根据维度条件查询监控数据](https://cloud.tencent.com/document/product/248/51845)接口。
         /// 传入产品的命名空间、对象维度描述和监控指标即可获得相应的监控数据。
         /// 接口调用频率限制为：20次/秒，1200次/分钟。单请求最多可支持批量拉取10个实例的监控数据，单请求的数据点数限制为1440个。
@@ -2158,6 +3038,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "GetPrometheusAgentManagementCommand");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetPrometheusAgentManagementCommandResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安装 Grafana Plugin
+        /// </summary>
+        /// <param name="req"><see cref="InstallPluginsRequest"/></param>
+        /// <returns><see cref="InstallPluginsResponse"/></returns>
+        public async Task<InstallPluginsResponse> InstallPlugins(InstallPluginsRequest req)
+        {
+             JsonResponseModel<InstallPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "InstallPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 安装 Grafana Plugin
+        /// </summary>
+        /// <param name="req"><see cref="InstallPluginsRequest"/></param>
+        /// <returns><see cref="InstallPluginsResponse"/></returns>
+        public InstallPluginsResponse InstallPluginsSync(InstallPluginsRequest req)
+        {
+             JsonResponseModel<InstallPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "InstallPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<InstallPluginsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2447,6 +3367,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 修改 Grafana 实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ModifyGrafanaInstanceResponse"/></returns>
+        public async Task<ModifyGrafanaInstanceResponse> ModifyGrafanaInstance(ModifyGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改 Grafana 实例属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ModifyGrafanaInstanceResponse"/></returns>
+        public ModifyGrafanaInstanceResponse ModifyGrafanaInstanceSync(ModifyGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ModifyGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新策略组
         /// </summary>
         /// <param name="req"><see cref="ModifyPolicyGroupRequest"/></param>
@@ -2570,6 +3530,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "PutMonitorData");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<PutMonitorDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
+        public async Task<ResumeGrafanaInstanceResponse> ResumeGrafanaInstance(ResumeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ResumeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 恢复 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="ResumeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="ResumeGrafanaInstanceResponse"/></returns>
+        public ResumeGrafanaInstanceResponse ResumeGrafanaInstanceSync(ResumeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<ResumeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ResumeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ResumeGrafanaInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2861,6 +3861,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 删除已安装的插件
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaPluginsRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaPluginsResponse"/></returns>
+        public async Task<UninstallGrafanaPluginsResponse> UninstallGrafanaPlugins(UninstallGrafanaPluginsRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UninstallGrafanaPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除已安装的插件
+        /// </summary>
+        /// <param name="req"><see cref="UninstallGrafanaPluginsRequest"/></param>
+        /// <returns><see cref="UninstallGrafanaPluginsResponse"/></returns>
+        public UninstallGrafanaPluginsResponse UninstallGrafanaPluginsSync(UninstallGrafanaPluginsRequest req)
+        {
+             JsonResponseModel<UninstallGrafanaPluginsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UninstallGrafanaPlugins");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UninstallGrafanaPluginsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新 Prometheus 的报警规则。
         /// 
         /// 请注意，**告警对象和告警消息是 Prometheus Rule Annotations 的特殊字段，需要通过 annotations 来传递，对应的 Key 分别为summary/description**，，请参考 [Prometheus Rule更多配置请参考](https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/)。
@@ -2945,6 +3985,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 更新 Grafana 的 DNS 配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDNSConfigRequest"/></param>
+        /// <returns><see cref="UpdateDNSConfigResponse"/></returns>
+        public async Task<UpdateDNSConfigResponse> UpdateDNSConfig(UpdateDNSConfigRequest req)
+        {
+             JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 的 DNS 配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDNSConfigRequest"/></param>
+        /// <returns><see cref="UpdateDNSConfigResponse"/></returns>
+        public UpdateDNSConfigResponse UpdateDNSConfigSync(UpdateDNSConfigRequest req)
+        {
+             JsonResponseModel<UpdateDNSConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDNSConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDNSConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新 exporter 集成配置
         /// </summary>
         /// <param name="req"><see cref="UpdateExporterIntegrationRequest"/></param>
@@ -2976,6 +4056,206 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UpdateExporterIntegration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateExporterIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaConfigRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaConfigResponse"/></returns>
+        public async Task<UpdateGrafanaConfigResponse> UpdateGrafanaConfig(UpdateGrafanaConfigRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaConfigRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaConfigResponse"/></returns>
+        public UpdateGrafanaConfigResponse UpdateGrafanaConfigSync(UpdateGrafanaConfigRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 环境变量
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaEnvironmentsResponse"/></returns>
+        public async Task<UpdateGrafanaEnvironmentsResponse> UpdateGrafanaEnvironments(UpdateGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 环境变量
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaEnvironmentsRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaEnvironmentsResponse"/></returns>
+        public UpdateGrafanaEnvironmentsResponse UpdateGrafanaEnvironmentsSync(UpdateGrafanaEnvironmentsRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaEnvironmentsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaEnvironments");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaEnvironmentsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaIntegrationResponse"/></returns>
+        public async Task<UpdateGrafanaIntegrationResponse> UpdateGrafanaIntegration(UpdateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 集成配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaIntegrationRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaIntegrationResponse"/></returns>
+        public UpdateGrafanaIntegrationResponse UpdateGrafanaIntegrationSync(UpdateGrafanaIntegrationRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaIntegrationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaIntegration");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaIntegrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaNotificationChannelResponse"/></returns>
+        public async Task<UpdateGrafanaNotificationChannelResponse> UpdateGrafanaNotificationChannel(UpdateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 告警通道
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaNotificationChannelRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaNotificationChannelResponse"/></returns>
+        public UpdateGrafanaNotificationChannelResponse UpdateGrafanaNotificationChannelSync(UpdateGrafanaNotificationChannelRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaNotificationChannelResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaNotificationChannel");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaNotificationChannelResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaWhiteListResponse"/></returns>
+        public async Task<UpdateGrafanaWhiteListResponse> UpdateGrafanaWhiteList(UpdateGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新 Grafana 白名单
+        /// </summary>
+        /// <param name="req"><see cref="UpdateGrafanaWhiteListRequest"/></param>
+        /// <returns><see cref="UpdateGrafanaWhiteListResponse"/></returns>
+        public UpdateGrafanaWhiteListResponse UpdateGrafanaWhiteListSync(UpdateGrafanaWhiteListRequest req)
+        {
+             JsonResponseModel<UpdateGrafanaWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateGrafanaWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateGrafanaWhiteListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3105,6 +4385,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 更新已授权账号的备注、权限信息，会直接覆盖原有的信息，不传则不会更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSOAccountRequest"/></param>
+        /// <returns><see cref="UpdateSSOAccountResponse"/></returns>
+        public async Task<UpdateSSOAccountResponse> UpdateSSOAccount(UpdateSSOAccountRequest req)
+        {
+             JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新已授权账号的备注、权限信息，会直接覆盖原有的信息，不传则不会更新。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateSSOAccountRequest"/></param>
+        /// <returns><see cref="UpdateSSOAccountResponse"/></returns>
+        public UpdateSSOAccountResponse UpdateSSOAccountSync(UpdateSSOAccountRequest req)
+        {
+             JsonResponseModel<UpdateSSOAccountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateSSOAccount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateSSOAccountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在腾讯云容器服务下更新 Prometheus 服务发现。
         /// <p>注意：前提条件，已经通过 Prometheus 控制台集成了对应的腾讯云容器服务，具体请参考
         /// <a href="https://cloud.tencent.com/document/product/248/48859" target="_blank">Agent 安装</a>。</p>
@@ -3180,6 +4500,46 @@ namespace TencentCloud.Monitor.V20180724
              {
                  var strResp = this.InternalRequestSync(req, "UpgradeGrafanaDashboard");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaDashboardResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaInstanceResponse"/></returns>
+        public async Task<UpgradeGrafanaInstanceResponse> UpgradeGrafanaInstance(UpgradeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpgradeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级 Grafana 实例
+        /// </summary>
+        /// <param name="req"><see cref="UpgradeGrafanaInstanceRequest"/></param>
+        /// <returns><see cref="UpgradeGrafanaInstanceResponse"/></returns>
+        public UpgradeGrafanaInstanceResponse UpgradeGrafanaInstanceSync(UpgradeGrafanaInstanceRequest req)
+        {
+             JsonResponseModel<UpgradeGrafanaInstanceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpgradeGrafanaInstance");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpgradeGrafanaInstanceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

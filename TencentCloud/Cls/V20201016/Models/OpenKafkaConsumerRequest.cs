@@ -30,6 +30,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("FromTopicId")]
         public string FromTopicId{ get; set; }
 
+        /// <summary>
+        /// 压缩方式[0:NONE；2:SNAPPY；3:LZ4]
+        /// </summary>
+        [JsonProperty("Compression")]
+        public long? Compression{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "FromTopicId", this.FromTopicId);
+            this.SetParamSimple(map, prefix + "Compression", this.Compression);
         }
     }
 }

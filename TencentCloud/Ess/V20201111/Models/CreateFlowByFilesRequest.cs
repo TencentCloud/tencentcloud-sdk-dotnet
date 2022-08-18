@@ -43,7 +43,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ApproverInfo[] Approvers{ get; set; }
 
         /// <summary>
-        /// 签署pdf文件的资源编号列表，通过UploadFiles接口获取
+        /// 签署pdf文件的资源编号列表，通过UploadFiles接口获取，暂时仅支持单文件发起
         /// </summary>
         [JsonProperty("FileIds")]
         public string[] FileIds{ get; set; }
