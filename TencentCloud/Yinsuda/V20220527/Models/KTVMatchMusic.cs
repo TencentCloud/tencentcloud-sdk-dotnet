@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Yinsuda.V20220527.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InputKolBspData : AbstractModel
+    public class KTVMatchMusic : AbstractModel
     {
         
         /// <summary>
-        /// BspData
+        /// 匹配到的歌曲基础信息。
         /// </summary>
-        [JsonProperty("DataList")]
-        public InputKolDataList[] DataList{ get; set; }
+        [JsonProperty("KTVMusicBaseInfo")]
+        public KTVMusicBaseInfo KTVMusicBaseInfo{ get; set; }
+
+        /// <summary>
+        /// 命中规则。
+        /// </summary>
+        [JsonProperty("MatchRule")]
+        public KTVMatchRule MatchRule{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamArrayObj(map, prefix + "DataList.", this.DataList);
+            this.SetParamObj(map, prefix + "KTVMusicBaseInfo.", this.KTVMusicBaseInfo);
+            this.SetParamObj(map, prefix + "MatchRule.", this.MatchRule);
         }
     }
 }

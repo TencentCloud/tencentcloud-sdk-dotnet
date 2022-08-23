@@ -25,13 +25,13 @@ namespace TencentCloud.Live.V20180801.Models
     {
         
         /// <summary>
-        /// 大区名称
+        /// 大区名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 国家明细数据
+        /// 国家或地区明细数据。
         /// </summary>
         [JsonProperty("Countrys")]
         public BillCountryInfo[] Countrys{ get; set; }

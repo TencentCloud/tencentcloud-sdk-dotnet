@@ -69,6 +69,14 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("ZoneIds")]
         public string[] ZoneIds{ get; set; }
 
+        /// <summary>
+        /// 数据归属地区，取值有：
+        /// <li>overseas ：全球（除中国大陆地区）数据 ；</li>
+        /// <li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +90,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
             this.SetParamSimple(map, prefix + "ProtocolType", this.ProtocolType);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

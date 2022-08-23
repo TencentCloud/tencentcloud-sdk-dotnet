@@ -53,46 +53,6 @@ namespace TencentCloud.Taf.V20200210
         }
 
         /// <summary>
-        /// 流量反欺诈-KOL欺诈识别
-        /// </summary>
-        /// <param name="req"><see cref="DetectFraudKOLRequest"/></param>
-        /// <returns><see cref="DetectFraudKOLResponse"/></returns>
-        public async Task<DetectFraudKOLResponse> DetectFraudKOL(DetectFraudKOLRequest req)
-        {
-             JsonResponseModel<DetectFraudKOLResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DetectFraudKOL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectFraudKOLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 流量反欺诈-KOL欺诈识别
-        /// </summary>
-        /// <param name="req"><see cref="DetectFraudKOLRequest"/></param>
-        /// <returns><see cref="DetectFraudKOLResponse"/></returns>
-        public DetectFraudKOLResponse DetectFraudKOLSync(DetectFraudKOLRequest req)
-        {
-             JsonResponseModel<DetectFraudKOLResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DetectFraudKOL");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DetectFraudKOLResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 流量反欺诈-流量验准定制版
         /// </summary>
         /// <param name="req"><see cref="RecognizeCustomizedAudienceRequest"/></param>

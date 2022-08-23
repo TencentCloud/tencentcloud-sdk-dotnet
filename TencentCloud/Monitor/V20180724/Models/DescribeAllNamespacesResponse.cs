@@ -49,6 +49,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public CommonNamespace[] CustomNamespacesNew{ get; set; }
 
         /// <summary>
+        /// 通用告警策略类型(包括：应用性能监控，前端性能监控，云拨测)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CommonNamespaces")]
+        public CommonNamespaceNew[] CommonNamespaces{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamObj(map, prefix + "CustomNamespaces.", this.CustomNamespaces);
             this.SetParamArrayObj(map, prefix + "QceNamespacesNew.", this.QceNamespacesNew);
             this.SetParamArrayObj(map, prefix + "CustomNamespacesNew.", this.CustomNamespacesNew);
+            this.SetParamArrayObj(map, prefix + "CommonNamespaces.", this.CommonNamespaces);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

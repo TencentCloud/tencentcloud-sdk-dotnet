@@ -60,6 +60,12 @@ namespace TencentCloud.Tcbr.V20220217.Models
         [JsonProperty("AccessTypes")]
         public string[] AccessTypes{ get; set; }
 
+        /// <summary>
+        /// 展示自定义域名
+        /// </summary>
+        [JsonProperty("CustomDomainNames")]
+        public string[] CustomDomainNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Tcbr.V20220217.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamArraySimple(map, prefix + "AccessTypes.", this.AccessTypes);
+            this.SetParamArraySimple(map, prefix + "CustomDomainNames.", this.CustomDomainNames);
         }
     }
 }

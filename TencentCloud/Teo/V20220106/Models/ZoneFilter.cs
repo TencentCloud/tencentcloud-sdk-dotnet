@@ -26,22 +26,22 @@ namespace TencentCloud.Teo.V20220106.Models
         
         /// <summary>
         /// 过滤字段名，支持的列表如下：
-        /// - name: 站点名。
-        /// - status: 站点状态
-        /// - tagKey: 标签键
-        /// - tagValue: 标签值
+        /// <li> name：站点名；</li>
+        /// <li> status：站点状态；</li>
+        /// <li> tagKey：标签键；</li>
+        /// <li> tagValue: 标签值。</li>
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 过滤字段值
+        /// 过滤字段值。
         /// </summary>
         [JsonProperty("Values")]
         public string[] Values{ get; set; }
 
         /// <summary>
-        /// 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1
+        /// 是否启用模糊查询，仅支持过滤字段名为name。模糊查询时，Values长度最大为1。默认为false。
         /// </summary>
         [JsonProperty("Fuzzy")]
         public bool? Fuzzy{ get; set; }

@@ -141,6 +141,25 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Ipv6")]
         public Ipv6Access Ipv6{ get; set; }
 
+        /// <summary>
+        /// 加速区域，取值有：
+        /// <li>mainland：中国大陆境内;</li>
+        /// <li>overseas：全球（不含中国大陆）。</li>
+        /// 默认值：overseas
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// 封禁状态，取值有：
+        /// <li>banned：已封禁;</li>
+        /// <li>banning：封禁中；</li>
+        /// <li>recover：已解封；</li>
+        /// <li>recovering：解封禁中。</li>
+        /// </summary>
+        [JsonProperty("BanStatus")]
+        public string BanStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +183,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamSimple(map, prefix + "HostId", this.HostId);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "BanStatus", this.BanStatus);
         }
     }
 }

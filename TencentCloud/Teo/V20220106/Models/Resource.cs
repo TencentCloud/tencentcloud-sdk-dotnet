@@ -25,63 +25,73 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 资源 ID
+        /// 资源 ID。
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// 付费模式
-        /// 0 为后付费
-        /// 1 为预付费
+        /// 付费模式，取值有：
+        /// <li>0：后付费。</li>
         /// </summary>
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
         /// <summary>
-        /// 创建时间
+        /// 创建时间。
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 生效时间
+        /// 生效时间。
         /// </summary>
         [JsonProperty("EnableTime")]
         public string EnableTime{ get; set; }
 
         /// <summary>
-        /// 失效时间
+        /// 失效时间。
         /// </summary>
         [JsonProperty("ExpireTime")]
         public string ExpireTime{ get; set; }
 
         /// <summary>
-        /// 套餐状态
+        /// 套餐状态，取值有：
+        /// <li>normal：正常；</li>
+        /// <li>isolated：隔离；</li>
+        /// <li>destroyed：销毁。</li>
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
 
         /// <summary>
-        /// 询价参数
+        /// 询价参数。
         /// </summary>
         [JsonProperty("Sv")]
         public Sv[] Sv{ get; set; }
 
         /// <summary>
-        /// 是否自动续费
-        /// 0 表示默认状态
-        /// 1 表示自动续费
-        /// 2 表示不自动续费
+        /// 是否自动续费，取值有：
+        /// <li>0：默认状态；</li>
+        /// <li>1：自动续费；</li>
+        /// <li>2：不自动续费。</li>
         /// </summary>
         [JsonProperty("AutoRenewFlag")]
         public long? AutoRenewFlag{ get; set; }
 
         /// <summary>
-        /// 套餐关联资源ID
+        /// 套餐关联资源 ID。
         /// </summary>
         [JsonProperty("PlanId")]
         public string PlanId{ get; set; }
+
+        /// <summary>
+        /// 地域，取值有：
+        /// <li>mainland：国内；</li>
+        /// <li>overseas：海外。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
 
 
         /// <summary>
@@ -98,6 +108,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArrayObj(map, prefix + "Sv.", this.Sv);
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "PlanId", this.PlanId);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

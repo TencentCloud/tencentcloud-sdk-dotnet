@@ -15,42 +15,34 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Ckafka.V20190819.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputKolValue : AbstractModel
+    public class RowParam : AbstractModel
     {
         
         /// <summary>
-        /// KOL账号ID[比如微信公众号ID]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 行内容，KEY_VALUE，VALUE
         /// </summary>
-        [JsonProperty("Id")]
-        public string Id{ get; set; }
+        [JsonProperty("RowContent")]
+        public string RowContent{ get; set; }
 
         /// <summary>
-        /// 是否查得[0：未查得；1：查得]
+        /// key和value间的分隔符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("IsCheck")]
-        public long? IsCheck{ get; set; }
+        [JsonProperty("KeyValueDelimiter")]
+        public string KeyValueDelimiter{ get; set; }
 
         /// <summary>
-        /// 作弊的可能性[0～100]
+        /// 元素建的分隔符
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("FraudPScore")]
-        public long? FraudPScore{ get; set; }
-
-        /// <summary>
-        /// 作弊的严重性[0～100]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("EvilPScore")]
-        public long? EvilPScore{ get; set; }
+        [JsonProperty("EntryDelimiter")]
+        public string EntryDelimiter{ get; set; }
 
 
         /// <summary>
@@ -58,10 +50,9 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Id", this.Id);
-            this.SetParamSimple(map, prefix + "IsCheck", this.IsCheck);
-            this.SetParamSimple(map, prefix + "FraudPScore", this.FraudPScore);
-            this.SetParamSimple(map, prefix + "EvilPScore", this.EvilPScore);
+            this.SetParamSimple(map, prefix + "RowContent", this.RowContent);
+            this.SetParamSimple(map, prefix + "KeyValueDelimiter", this.KeyValueDelimiter);
+            this.SetParamSimple(map, prefix + "EntryDelimiter", this.EntryDelimiter);
         }
     }
 }

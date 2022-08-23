@@ -41,6 +41,7 @@ namespace TencentCloud.Teo.V20220106.Models
         /// l7Flow_outFlux: 访问流量
         /// l7Flow_request: 访问请求数
         /// l7Flow_outBandwidth: 访问带宽
+        ///  l7Flow_hit_outFlux: 缓存命中流量
         /// </summary>
         [JsonProperty("MetricNames")]
         public string[] MetricNames{ get; set; }
@@ -69,6 +70,14 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Protocol")]
         public string Protocol{ get; set; }
 
+        /// <summary>
+        /// 加速区域，取值有：
+        /// <li>mainland：中国大陆境内;</li>
+        /// <li>overseas：全球（不含中国大陆）。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +91,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamArraySimple(map, prefix + "Domains.", this.Domains);
             this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

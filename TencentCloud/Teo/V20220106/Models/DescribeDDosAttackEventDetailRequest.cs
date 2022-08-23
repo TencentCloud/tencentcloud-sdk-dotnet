@@ -30,6 +30,14 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("EventId")]
         public string EventId{ get; set; }
 
+        /// <summary>
+        /// 数据归属地区，取值有：
+        /// <li>overseas ：全球（除中国大陆地区）数据 ；</li>
+        /// <li>mainland ：中国大陆地区数据 。</li>不填默认查询overseas。
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +45,7 @@ namespace TencentCloud.Teo.V20220106.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "EventId", this.EventId);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

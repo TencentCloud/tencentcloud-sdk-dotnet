@@ -43,6 +43,12 @@ namespace TencentCloud.Vod.V20180717.Models
         public string FileId{ get; set; }
 
         /// <summary>
+        /// 剪辑固化后的视频任务流 ID。
+        /// </summary>
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -57,6 +63,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamObj(map, prefix + "MetaData.", this.MetaData);
             this.SetParamSimple(map, prefix + "FileId", this.FileId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

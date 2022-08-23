@@ -38,14 +38,12 @@ namespace TencentCloud.Teo.V20220106.Models
 
         /// <summary>
         /// 用户当前使用的 NS 列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
 
         /// <summary>
         /// 腾讯云分配给用户的 NS 列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("NameServers")]
         public string[] NameServers{ get; set; }
@@ -75,16 +73,55 @@ namespace TencentCloud.Teo.V20220106.Models
         public bool? Paused{ get; set; }
 
         /// <summary>
-        /// 站点创建时间
+        /// 是否开启 CNAME 加速
+        /// - enabled：开启
+        /// - disabled：关闭
         /// </summary>
-        [JsonProperty("CreatedOn")]
-        public string CreatedOn{ get; set; }
+        [JsonProperty("CnameSpeedUp")]
+        public string CnameSpeedUp{ get; set; }
+
+        /// <summary>
+        /// cname切换验证状态
+        /// - finished 切换完成
+        /// - pending 切换验证中
+        /// </summary>
+        [JsonProperty("CnameStatus")]
+        public string CnameStatus{ get; set; }
+
+        /// <summary>
+        /// 资源标签
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 站点接入地域，取值为：
+        /// <li> global：全球；</li>
+        /// <li> mainland：中国大陆；</li>
+        /// <li> overseas：境外区域。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
+        /// 计费资源
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Resources")]
+        public Resource[] Resources{ get; set; }
 
         /// <summary>
         /// 站点修改时间
         /// </summary>
         [JsonProperty("ModifiedOn")]
         public string ModifiedOn{ get; set; }
+
+        /// <summary>
+        /// 站点创建时间
+        /// </summary>
+        [JsonProperty("CreatedOn")]
+        public string CreatedOn{ get; set; }
 
         /// <summary>
         /// 用户自定义 NS 信息
@@ -99,37 +136,6 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         [JsonProperty("VanityNameServersIps")]
         public VanityNameServersIps[] VanityNameServersIps{ get; set; }
-
-        /// <summary>
-        /// 是否开启 CNAME 加速
-        /// - enabled：开启
-        /// - disabled：关闭
-        /// </summary>
-        [JsonProperty("CnameSpeedUp")]
-        public string CnameSpeedUp{ get; set; }
-
-        /// <summary>
-        /// cname切换验证状态
-        /// - finished 切换完成
-        /// - pending 切换验证中
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("CnameStatus")]
-        public string CnameStatus{ get; set; }
-
-        /// <summary>
-        /// 资源标签
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Tags")]
-        public Tag[] Tags{ get; set; }
-
-        /// <summary>
-        /// 计费资源
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Resources")]
-        public Resource[] Resources{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -150,14 +156,15 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Paused", this.Paused);
-            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
-            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
-            this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
-            this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
             this.SetParamSimple(map, prefix + "CnameSpeedUp", this.CnameSpeedUp);
             this.SetParamSimple(map, prefix + "CnameStatus", this.CnameStatus);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamArrayObj(map, prefix + "Resources.", this.Resources);
+            this.SetParamSimple(map, prefix + "ModifiedOn", this.ModifiedOn);
+            this.SetParamSimple(map, prefix + "CreatedOn", this.CreatedOn);
+            this.SetParamObj(map, prefix + "VanityNameServers.", this.VanityNameServers);
+            this.SetParamArrayObj(map, prefix + "VanityNameServersIps.", this.VanityNameServersIps);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

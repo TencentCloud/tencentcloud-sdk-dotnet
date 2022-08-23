@@ -25,14 +25,13 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 符合条件的站点数
+        /// 符合条件的站点个数。
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 站点详细信息列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 站点详细信息列表。
         /// </summary>
         [JsonProperty("Zones")]
         public Zone[] Zones{ get; set; }

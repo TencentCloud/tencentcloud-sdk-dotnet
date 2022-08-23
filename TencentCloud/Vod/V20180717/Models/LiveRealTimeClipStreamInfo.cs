@@ -15,26 +15,29 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Vod.V20180717.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectFraudKOLRequest : AbstractModel
+    public class LiveRealTimeClipStreamInfo : AbstractModel
     {
         
         /// <summary>
-        /// 业务数据
+        /// 直播流类型，可选值：
+        /// <li>Original（原始流，<b>默认值</b>）。</li>
+        /// <li>Transcoding（转码流）。</li>
         /// </summary>
-        [JsonProperty("BspData")]
-        public InputKolBspData BspData{ get; set; }
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
 
         /// <summary>
-        /// 业务加密数据
+        /// 直播转码模板ID。
+        /// <b>当Type值为"Transcoding"时，必须填写。</b>
         /// </summary>
-        [JsonProperty("BusinessEncryptData")]
-        public InputBusinessEncryptData BusinessEncryptData{ get; set; }
+        [JsonProperty("TemplateId")]
+        public ulong? TemplateId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +45,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BspData.", this.BspData);
-            this.SetParamObj(map, prefix + "BusinessEncryptData.", this.BusinessEncryptData);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
         }
     }
 }

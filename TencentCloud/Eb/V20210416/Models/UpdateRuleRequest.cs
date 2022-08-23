@@ -49,6 +49,12 @@ namespace TencentCloud.Eb.V20210416.Models
         public string Description{ get; set; }
 
         /// <summary>
+        /// 参考：[事件模式](https://cloud.tencent.com/document/product/1359/56084)
+        /// </summary>
+        [JsonProperty("EventPattern")]
+        public string EventPattern{ get; set; }
+
+        /// <summary>
         /// 事件规则名称，只能包含字母、数字、下划线、连字符，以字母开头，以数字或字母结尾，2~60个字符
         /// </summary>
         [JsonProperty("RuleName")]
@@ -64,6 +70,7 @@ namespace TencentCloud.Eb.V20210416.Models
             this.SetParamSimple(map, prefix + "EventBusId", this.EventBusId);
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "Description", this.Description);
+            this.SetParamSimple(map, prefix + "EventPattern", this.EventPattern);
             this.SetParamSimple(map, prefix + "RuleName", this.RuleName);
         }
     }

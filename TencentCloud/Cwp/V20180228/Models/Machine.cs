@@ -174,10 +174,17 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string KernelVersion{ get; set; }
 
         /// <summary>
-        /// 防护版本 BASIC_VERSION 基础版, PRO_VERSION 专业版 Flagship 旗舰版.
+        /// 防护版本：BASIC_VERSION 基础版， PRO_VERSION 专业版，Flagship 旗舰版，GENERAL_DISCOUNT 普惠版
         /// </summary>
         [JsonProperty("ProtectType")]
         public string ProtectType{ get; set; }
+
+        /// <summary>
+        /// 云标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CloudTags")]
+        public Tags[] CloudTags{ get; set; }
 
 
         /// <summary>
@@ -209,6 +216,7 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "MachineType", this.MachineType);
             this.SetParamSimple(map, prefix + "KernelVersion", this.KernelVersion);
             this.SetParamSimple(map, prefix + "ProtectType", this.ProtectType);
+            this.SetParamArrayObj(map, prefix + "CloudTags.", this.CloudTags);
         }
     }
 }

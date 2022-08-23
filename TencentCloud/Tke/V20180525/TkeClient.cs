@@ -1933,7 +1933,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 解除2.0实例的集群关联
+        /// 解除TMP实例的集群关联
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusClusterAgentRequest"/></param>
         /// <returns><see cref="DeletePrometheusClusterAgentResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 解除2.0实例的集群关联
+        /// 解除TMP实例的集群关联
         /// </summary>
         /// <param name="req"><see cref="DeletePrometheusClusterAgentRequest"/></param>
         /// <returns><see cref="DeletePrometheusClusterAgentResponse"/></returns>

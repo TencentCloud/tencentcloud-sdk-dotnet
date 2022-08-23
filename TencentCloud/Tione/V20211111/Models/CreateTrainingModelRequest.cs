@@ -61,7 +61,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TrainingJobName{ get; set; }
 
         /// <summary>
-        /// 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML)
+        /// 算法框架 （PYTORCH/TENSORFLOW/DETECTRON2/PMML/MMDETECTION)
         /// </summary>
         [JsonProperty("AlgorithmFramework")]
         public string AlgorithmFramework{ get; set; }
@@ -127,7 +127,7 @@ namespace TencentCloud.Tione.V20211111.Models
         public string TrainingPreference{ get; set; }
 
         /// <summary>
-        /// 自动学习任务ID
+        /// 自动学习任务ID（已废弃）
         /// </summary>
         [JsonProperty("AutoMLTaskId")]
         public string AutoMLTaskId{ get; set; }

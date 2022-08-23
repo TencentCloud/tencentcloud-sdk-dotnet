@@ -15,50 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class InputKolDataList : AbstractModel
+    public class CommonNamespaceNew : AbstractModel
     {
         
         /// <summary>
-        /// 账号类型[1：微信；2：qq；3：微博]
-        /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
-
-        /// <summary>
-        /// KOL账号ID[比如微信公众号ID]
+        /// 命名空间标示
         /// </summary>
         [JsonProperty("Id")]
         public string Id{ get; set; }
 
         /// <summary>
-        /// KOL名称
+        /// 命名空间名称
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
         /// <summary>
-        /// 手机号
+        /// 监控类型
         /// </summary>
-        [JsonProperty("Phone")]
-        public string Phone{ get; set; }
+        [JsonProperty("MonitorType")]
+        public string MonitorType{ get; set; }
 
         /// <summary>
-        /// 代理商名称
+        /// 维度信息
         /// </summary>
-        [JsonProperty("AgentInfo")]
-        public string AgentInfo{ get; set; }
-
-        /// <summary>
-        /// 是否授权
-        /// </summary>
-        [JsonProperty("IsAuthorized")]
-        public ulong? IsAuthorized{ get; set; }
+        [JsonProperty("Dimensions")]
+        public DimensionNew[] Dimensions{ get; set; }
 
 
         /// <summary>
@@ -66,12 +54,10 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "Name", this.Name);
-            this.SetParamSimple(map, prefix + "Phone", this.Phone);
-            this.SetParamSimple(map, prefix + "AgentInfo", this.AgentInfo);
-            this.SetParamSimple(map, prefix + "IsAuthorized", this.IsAuthorized);
+            this.SetParamSimple(map, prefix + "MonitorType", this.MonitorType);
+            this.SetParamArrayObj(map, prefix + "Dimensions.", this.Dimensions);
         }
     }
 }

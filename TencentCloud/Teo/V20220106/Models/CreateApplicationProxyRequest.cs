@@ -37,12 +37,6 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ZoneName{ get; set; }
 
         /// <summary>
-        /// 规则详细信息。
-        /// </summary>
-        [JsonProperty("Rule")]
-        public ApplicationProxyRule[] Rule{ get; set; }
-
-        /// <summary>
         /// 当ProxyType=hostname时，表示域名或子域名；
         /// 当ProxyType=instance时，表示代理名称。
         /// </summary>
@@ -86,6 +80,12 @@ namespace TencentCloud.Teo.V20220106.Models
         public string ForwardClientIp{ get; set; }
 
         /// <summary>
+        /// 规则详细信息。
+        /// </summary>
+        [JsonProperty("Rule")]
+        public ApplicationProxyRule[] Rule{ get; set; }
+
+        /// <summary>
         /// 四层代理模式，取值有：
         /// <li>hostname：表示子域名模式；</li>
         /// <li>instance：表示实例模式。</li>不填写使用默认值instance。
@@ -115,13 +115,13 @@ namespace TencentCloud.Teo.V20220106.Models
         {
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "ZoneName", this.ZoneName);
-            this.SetParamArrayObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "ProxyName", this.ProxyName);
             this.SetParamSimple(map, prefix + "PlatType", this.PlatType);
             this.SetParamSimple(map, prefix + "SecurityType", this.SecurityType);
             this.SetParamSimple(map, prefix + "AccelerateType", this.AccelerateType);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
             this.SetParamSimple(map, prefix + "ForwardClientIp", this.ForwardClientIp);
+            this.SetParamArrayObj(map, prefix + "Rule.", this.Rule);
             this.SetParamSimple(map, prefix + "ProxyType", this.ProxyType);
             this.SetParamSimple(map, prefix + "SessionPersistTime", this.SessionPersistTime);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);

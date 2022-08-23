@@ -65,11 +65,18 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string SourceType{ get; set; }
 
         /// <summary>
-        /// 输出格式
+        /// 输出格式，JSON，ROW，默认为JSON
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OutputFormat")]
         public string OutputFormat{ get; set; }
+
+        /// <summary>
+        /// 输出格式为ROW必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RowParam")]
+        public RowParam RowParam{ get; set; }
 
 
         /// <summary>
@@ -84,6 +91,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Result", this.Result);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamObj(map, prefix + "RowParam.", this.RowParam);
         }
     }
 }

@@ -93,7 +93,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 获取实例总数和运行数
+        /// 获取并发总数和运行数
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesCountRequest"/></param>
         /// <returns><see cref="DescribeInstancesCountResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Gs.V20191118
         }
 
         /// <summary>
-        /// 获取实例总数和运行数
+        /// 获取并发总数和运行数
         /// </summary>
         /// <param name="req"><see cref="DescribeInstancesCountRequest"/></param>
         /// <returns><see cref="DescribeInstancesCountResponse"/></returns>

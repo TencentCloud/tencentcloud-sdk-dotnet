@@ -55,6 +55,18 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? TaskId{ get; set; }
 
         /// <summary>
+        /// 最后一次修复漏洞的时间
+        /// </summary>
+        [JsonProperty("LastFixTime")]
+        public string LastFixTime{ get; set; }
+
+        /// <summary>
+        /// 是否有支持自动修复的漏洞事件
+        /// </summary>
+        [JsonProperty("hadAutoFixVul")]
+        public bool? hadAutoFixVul{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +83,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "ScanTime", this.ScanTime);
             this.SetParamSimple(map, prefix + "IfFirstScan", this.IfFirstScan);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "LastFixTime", this.LastFixTime);
+            this.SetParamSimple(map, prefix + "hadAutoFixVul", this.hadAutoFixVul);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

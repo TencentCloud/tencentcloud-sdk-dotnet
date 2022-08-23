@@ -31,7 +31,12 @@ namespace TencentCloud.Tcss.V20201101.Models
         public string[] EventIdSet{ get; set; }
 
         /// <summary>
-        /// 标记事件的状态：EVENT_UNDEAL:未处理（取消忽略），EVENT_DEALED:已处理，EVENT_IGNORE:忽略，EVENT_DELETE：已删除
+        /// 标记事件的状态：
+        /// EVENT_UNDEAL:未处理（取消忽略），
+        /// EVENT_DEALED:已处理，
+        /// EVENT_IGNORE:忽略，
+        /// EVENT_DELETE：已删除
+        /// EVENT_ADD_WHITE：加白
         /// </summary>
         [JsonProperty("Status")]
         public string Status{ get; set; }
@@ -42,6 +47,25 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("Remark")]
         public string Remark{ get; set; }
 
+        /// <summary>
+        /// 加白镜像ID数组
+        /// </summary>
+        [JsonProperty("ImageIDs")]
+        public string[] ImageIDs{ get; set; }
+
+        /// <summary>
+        /// 加白事件类型
+        ///    ESCAPE_CGROUPS：利用cgroup机制逃逸
+        ///    ESCAPE_TAMPER_SENSITIVE_FILE：篡改敏感文件逃逸
+        ///    ESCAPE_DOCKER_API：访问Docker API接口逃逸
+        ///    ESCAPE_VUL_OCCURRED：逃逸漏洞利用
+        ///    MOUNT_SENSITIVE_PTAH：敏感路径挂载
+        ///    PRIVILEGE_CONTAINER_START：特权容器
+        ///    PRIVILEGE：程序提权逃逸
+        /// </summary>
+        [JsonProperty("EventType")]
+        public string[] EventType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +75,8 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamArraySimple(map, prefix + "EventIdSet.", this.EventIdSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
+            this.SetParamArraySimple(map, prefix + "ImageIDs.", this.ImageIDs);
+            this.SetParamArraySimple(map, prefix + "EventType.", this.EventType);
         }
     }
 }

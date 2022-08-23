@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Tcaplusdb.V20190823.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputKolData : AbstractModel
+    public class SyncTableField : AbstractModel
     {
         
         /// <summary>
-        /// 错误码[0:成功；非0：失败的错误码]
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// TcaplusDB表字段名称
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
+        [JsonProperty("SourceName")]
+        public string SourceName{ get; set; }
 
         /// <summary>
-        /// 错误信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 目标缓写表的字段名称
         /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
-        /// 业务返回数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Value")]
-        public OutputKolValue[] Value{ get; set; }
+        [JsonProperty("TargetName")]
+        public string TargetName{ get; set; }
 
 
         /// <summary>
@@ -51,9 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamArrayObj(map, prefix + "Value.", this.Value);
+            this.SetParamSimple(map, prefix + "SourceName", this.SourceName);
+            this.SetParamSimple(map, prefix + "TargetName", this.TargetName);
         }
     }
 }

@@ -25,13 +25,13 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 询价参数 key
+        /// 询价参数键。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 询价参数 value
+        /// 询价参数值。
         /// </summary>
         [JsonProperty("Value")]
         public string Value{ get; set; }

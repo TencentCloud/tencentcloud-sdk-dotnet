@@ -15,27 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Monitor.V20180724.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DetectFraudKOLResponse : AbstractModel
+    public class Operator : AbstractModel
     {
         
         /// <summary>
-        /// 回包数据
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 运算符标识
         /// </summary>
-        [JsonProperty("Data")]
-        public OutputKolData Data{ get; set; }
+        [JsonProperty("Id")]
+        public string Id{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 运算符展示名
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
 
 
         /// <summary>
@@ -43,8 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Data.", this.Data);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Id", this.Id);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

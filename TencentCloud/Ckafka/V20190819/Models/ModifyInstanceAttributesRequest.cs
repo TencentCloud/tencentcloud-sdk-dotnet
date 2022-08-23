@@ -72,6 +72,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DynamicDiskConfig")]
         public DynamicDiskConfig DynamicDiskConfig{ get; set; }
 
+        /// <summary>
+        /// 实例级别单条消息大小（单位byte)
+        /// </summary>
+        [JsonProperty("MaxMessageByte")]
+        public ulong? MaxMessageByte{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "RebalanceTime", this.RebalanceTime);
             this.SetParamSimple(map, prefix + "PublicNetwork", this.PublicNetwork);
             this.SetParamObj(map, prefix + "DynamicDiskConfig.", this.DynamicDiskConfig);
+            this.SetParamSimple(map, prefix + "MaxMessageByte", this.MaxMessageByte);
         }
     }
 }

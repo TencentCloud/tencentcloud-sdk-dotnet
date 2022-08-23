@@ -67,6 +67,26 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Procedure{ get; set; }
 
         /// <summary>
+        /// 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+        /// <li>默认值：0，表示其他分类。</li>
+        /// 仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
+        /// <summary>
+        /// 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
+        /// <summary>
         /// 是否需要返回剪辑后的视频元信息。0 不需要，1 需要。默认不需要。
         /// </summary>
         [JsonProperty("MetaDataRequired")]
@@ -77,6 +97,14 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         [JsonProperty("Host")]
         public string Host{ get; set; }
+
+        /// <summary>
+        /// 剪辑的直播流信息：
+        /// <li>默认剪辑直播原始流。</li>
+        /// <li>当StreamInfo中指定的Type为Transcoding，则剪辑TemplateId对应的直播转码流。</li>
+        /// </summary>
+        [JsonProperty("StreamInfo")]
+        public LiveRealTimeClipStreamInfo StreamInfo{ get; set; }
 
         /// <summary>
         /// 系统保留字段，请勿填写。
@@ -97,8 +125,12 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
             this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
             this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "MetaDataRequired", this.MetaDataRequired);
             this.SetParamSimple(map, prefix + "Host", this.Host);
+            this.SetParamObj(map, prefix + "StreamInfo.", this.StreamInfo);
             this.SetParamSimple(map, prefix + "ExtInfo", this.ExtInfo);
         }
     }

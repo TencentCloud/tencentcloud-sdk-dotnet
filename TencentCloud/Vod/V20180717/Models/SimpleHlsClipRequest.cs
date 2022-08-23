@@ -54,6 +54,38 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("IsPersistence")]
         public long? IsPersistence{ get; set; }
 
+        /// <summary>
+        /// 剪辑固化后的视频存储过期时间。格式参照 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。填“9999-12-31T23:59:59Z”表示永不过期。过期后该媒体文件及其相关资源（转码结果、雪碧图等）将被永久删除。仅 IsPersistence 为 1 时有效，默认剪辑固化的视频永不过期。
+        /// </summary>
+        [JsonProperty("ExpireTime")]
+        public string ExpireTime{ get; set; }
+
+        /// <summary>
+        /// 剪辑固化后的视频点播任务流处理，详见[上传指定任务流](https://cloud.tencent.com/document/product/266/9759)。仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("Procedure")]
+        public string Procedure{ get; set; }
+
+        /// <summary>
+        /// 分类ID，用于对媒体进行分类管理，可通过 [创建分类](/document/product/266/7812) 接口，创建分类，获得分类 ID。
+        /// <li>默认值：0，表示其他分类。</li>
+        /// 仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("ClassId")]
+        public long? ClassId{ get; set; }
+
+        /// <summary>
+        /// 来源上下文，用于透传用户请求信息，[上传完成回调](/document/product/266/7830) 将返回该字段值，最长 250 个字符。仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("SourceContext")]
+        public string SourceContext{ get; set; }
+
+        /// <summary>
+        /// 会话上下文，用于透传用户请求信息，当指定 Procedure 参数后，[任务流状态变更回调](/document/product/266/9636) 将返回该字段值，最长 1000 个字符。仅 IsPersistence 为 1 时有效。
+        /// </summary>
+        [JsonProperty("SessionContext")]
+        public string SessionContext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +97,11 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "StartTimeOffset", this.StartTimeOffset);
             this.SetParamSimple(map, prefix + "EndTimeOffset", this.EndTimeOffset);
             this.SetParamSimple(map, prefix + "IsPersistence", this.IsPersistence);
+            this.SetParamSimple(map, prefix + "ExpireTime", this.ExpireTime);
+            this.SetParamSimple(map, prefix + "Procedure", this.Procedure);
+            this.SetParamSimple(map, prefix + "ClassId", this.ClassId);
+            this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
         }
     }
 }

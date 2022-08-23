@@ -59,6 +59,14 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("LogPacketName")]
         public string LogPacketName{ get; set; }
 
+        /// <summary>
+        /// 加速区域，取值有：
+        /// <li>mainland：中国大陆境内;</li>
+        /// <li>overseas：全球（不含中国大陆）。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -70,6 +78,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Size", this.Size);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "LogPacketName", this.LogPacketName);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }

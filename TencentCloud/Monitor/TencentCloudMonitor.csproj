@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.582</VersionPrefix>
+    <VersionPrefix>3.0.583</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -66,6 +66,7 @@
     <Compile Include="V20180724\Models\CleanGrafanaInstanceRequest.cs" />
     <Compile Include="V20180724\Models\CleanGrafanaInstanceResponse.cs" />
     <Compile Include="V20180724\Models\CommonNamespace.cs" />
+    <Compile Include="V20180724\Models\CommonNamespaceNew.cs" />
     <Compile Include="V20180724\Models\Condition.cs" />
     <Compile Include="V20180724\Models\ConditionsTemp.cs" />
     <Compile Include="V20180724\Models\CreateAlarmNoticeRequest.cs" />
@@ -229,6 +230,7 @@
     <Compile Include="V20180724\Models\DestroyPrometheusInstanceRequest.cs" />
     <Compile Include="V20180724\Models\DestroyPrometheusInstanceResponse.cs" />
     <Compile Include="V20180724\Models\Dimension.cs" />
+    <Compile Include="V20180724\Models\DimensionNew.cs" />
     <Compile Include="V20180724\Models\DimensionsDesc.cs" />
     <Compile Include="V20180724\Models\EnableGrafanaInternetRequest.cs" />
     <Compile Include="V20180724\Models\EnableGrafanaInternetResponse.cs" />
@@ -286,6 +288,7 @@
     <Compile Include="V20180724\Models\ModifyPrometheusInstanceAttributesResponse.cs" />
     <Compile Include="V20180724\Models\MonitorTypeInfo.cs" />
     <Compile Include="V20180724\Models\MonitorTypeNamespace.cs" />
+    <Compile Include="V20180724\Models\Operator.cs" />
     <Compile Include="V20180724\Models\PeriodsSt.cs" />
     <Compile Include="V20180724\Models\Point.cs" />
     <Compile Include="V20180724\Models\PolicyGroup.cs" />

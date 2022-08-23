@@ -112,6 +112,20 @@ namespace TencentCloud.Tcb.V20180608.Models
         [JsonProperty("FreeQuota")]
         public string FreeQuota{ get; set; }
 
+        /// <summary>
+        /// 是否开启 `超过套餐额度部分转按量付费`
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableOverrun")]
+        public bool? EnableOverrun{ get; set; }
+
+        /// <summary>
+        /// 环境套餐类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExtPackageType")]
+        public string ExtPackageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +145,8 @@ namespace TencentCloud.Tcb.V20180608.Models
             this.SetParamSimple(map, prefix + "PaymentChannel", this.PaymentChannel);
             this.SetParamObj(map, prefix + "OrderInfo.", this.OrderInfo);
             this.SetParamSimple(map, prefix + "FreeQuota", this.FreeQuota);
+            this.SetParamSimple(map, prefix + "EnableOverrun", this.EnableOverrun);
+            this.SetParamSimple(map, prefix + "ExtPackageType", this.ExtPackageType);
         }
     }
 }

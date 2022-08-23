@@ -149,6 +149,14 @@ namespace TencentCloud.Teo.V20220106.Models
         public Ipv6Access Ipv6{ get; set; }
 
         /// <summary>
+        /// 站点加速区域信息，取值有：
+        /// <li>mainland：中国境内加速；</li>
+        /// <li>overseas：中国境外加速。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -178,6 +186,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "ClientIpHeader.", this.ClientIpHeader);
             this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

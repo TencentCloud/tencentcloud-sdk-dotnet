@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 分页参数，页偏移
+        /// 分页查询偏移量。默认值：0，最小值：0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 分页参数，每页返回的站点个数
+        /// 分页查询限制数目。默认值：1000，最大值：1000。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 查询条件过滤器，复杂类型
+        /// 查询条件过滤器，复杂类型。
         /// </summary>
         [JsonProperty("Filters")]
         public ZoneFilter[] Filters{ get; set; }

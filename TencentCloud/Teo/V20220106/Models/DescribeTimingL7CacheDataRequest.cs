@@ -64,6 +64,14 @@ namespace TencentCloud.Teo.V20220106.Models
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }
 
+        /// <summary>
+        /// 加速区域，取值有：
+        /// <li>mainland：中国大陆境内;</li>
+        /// <li>overseas：全球（不含中国大陆）。</li>
+        /// </summary>
+        [JsonProperty("Area")]
+        public string Area{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +84,7 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamArraySimple(map, prefix + "ZoneIds.", this.ZoneIds);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Area", this.Area);
         }
     }
 }
