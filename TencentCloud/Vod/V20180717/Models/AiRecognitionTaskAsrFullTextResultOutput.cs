@@ -38,13 +38,19 @@ namespace TencentCloud.Vod.V20180717.Models
         public string SegmentSetFileUrl{ get; set; }
 
         /// <summary>
-        /// 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。。
+        /// 语音全文识别片段列表文件 URL 失效时间，使用 [ISO 日期格式](https://cloud.tencent.com/document/product/266/11732#I)。
         /// </summary>
         [JsonProperty("SegmentSetFileUrlExpireTime")]
         public string SegmentSetFileUrlExpireTime{ get; set; }
 
         /// <summary>
-        /// 字幕文件 Url。
+        /// 生成的字幕列表，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormats。
+        /// </summary>
+        [JsonProperty("SubtitleSet")]
+        public AiRecognitionTaskAsrFullTextResultOutputSubtitleItem[] SubtitleSet{ get; set; }
+
+        /// <summary>
+        /// 生成的字幕文件 Url，对应 [语音全文识别任务控制参数](https://cloud.tencent.com/document/api/266/31773#AsrFullTextConfigureInfo) SubtitleFormat。
         /// </summary>
         [JsonProperty("SubtitleUrl")]
         public string SubtitleUrl{ get; set; }
@@ -58,6 +64,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "SegmentSet.", this.SegmentSet);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrl", this.SegmentSetFileUrl);
             this.SetParamSimple(map, prefix + "SegmentSetFileUrlExpireTime", this.SegmentSetFileUrlExpireTime);
+            this.SetParamArrayObj(map, prefix + "SubtitleSet.", this.SubtitleSet);
             this.SetParamSimple(map, prefix + "SubtitleUrl", this.SubtitleUrl);
         }
     }

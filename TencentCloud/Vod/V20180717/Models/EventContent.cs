@@ -151,6 +151,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public WechatMiniProgramPublishTask WechatMiniProgramPublishCompleteEvent{ get; set; }
 
         /// <summary>
+        /// 智能去除水印任务完成事件，当事件类型为 RemoveWatermark 有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoveWatermarkCompleteEvent")]
+        public RemoveWatermarkTask RemoveWatermarkCompleteEvent{ get; set; }
+
+        /// <summary>
         /// 视频取回完成事件，当事件类型为RestoreMediaComplete 时有效。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -179,6 +186,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetCompleteEvent.", this.SnapshotByTimeOffsetCompleteEvent);
             this.SetParamObj(map, prefix + "WechatPublishCompleteEvent.", this.WechatPublishCompleteEvent);
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
+            this.SetParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
         }
     }

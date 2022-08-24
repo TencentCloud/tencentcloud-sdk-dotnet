@@ -2931,6 +2931,46 @@ namespace TencentCloud.Apigateway.V20180808
         }
 
         /// <summary>
+        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
+        /// </summary>
+        /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
+        /// <returns><see cref="ImportOpenApiResponse"/></returns>
+        public async Task<ImportOpenApiResponse> ImportOpenApi(ImportOpenApiRequest req)
+        {
+             JsonResponseModel<ImportOpenApiResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImportOpenApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportOpenApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（ImportOpenApi）用于将OpenAPI规范定义的API导入到API网关。 
+        /// </summary>
+        /// <param name="req"><see cref="ImportOpenApiRequest"/></param>
+        /// <returns><see cref="ImportOpenApiResponse"/></returns>
+        public ImportOpenApiResponse ImportOpenApiSync(ImportOpenApiRequest req)
+        {
+             JsonResponseModel<ImportOpenApiResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImportOpenApi");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImportOpenApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改 API 文档
         /// </summary>
         /// <param name="req"><see cref="ModifyAPIDocRequest"/></param>

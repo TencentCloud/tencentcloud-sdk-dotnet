@@ -41,6 +41,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
+        /// <summary>
+        /// TRTC 伴生录制信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TrtcRecordInfo")]
+        public TrtcRecordInfo TrtcRecordInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -49,6 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         {
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamObj(map, prefix + "TrtcRecordInfo.", this.TrtcRecordInfo);
         }
     }
 }

@@ -90,6 +90,12 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("Content")]
         public ContentInfo Content{ get; set; }
 
+        /// <summary>
+        /// 投递文件命名配置，0：随机数命名，1：投递时间命名，默认0（随机数命名）
+        /// </summary>
+        [JsonProperty("FilenameMode")]
+        public ulong? FilenameMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Partition", this.Partition);
             this.SetParamObj(map, prefix + "Compress.", this.Compress);
             this.SetParamObj(map, prefix + "Content.", this.Content);
+            this.SetParamSimple(map, prefix + "FilenameMode", this.FilenameMode);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Acp.V20220105.Models
     {
         
         /// <summary>
-        /// 资源计费项名称(为空时，则根据TaskType和Platform进行查询)
+        /// 资源计费项名称(为空时，则根据Source，TaskType和Platform进行查询)
         /// </summary>
         [JsonProperty("PriceName")]
         public string PriceName{ get; set; }
@@ -42,6 +42,12 @@ namespace TencentCloud.Acp.V20220105.Models
         [JsonProperty("Platform")]
         public long? Platform{ get; set; }
 
+        /// <summary>
+        /// 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
+        /// </summary>
+        [JsonProperty("Source")]
+        public long? Source{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Acp.V20220105.Models
             this.SetParamSimple(map, prefix + "PriceName", this.PriceName);
             this.SetParamSimple(map, prefix + "TaskType", this.TaskType);
             this.SetParamSimple(map, prefix + "Platform", this.Platform);
+            this.SetParamSimple(map, prefix + "Source", this.Source);
         }
     }
 }

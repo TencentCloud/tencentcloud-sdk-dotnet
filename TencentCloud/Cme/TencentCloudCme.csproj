@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{79B78607-34D6-33E9-8AF9-AEC1367DE95C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.583</VersionPrefix>
+    <VersionPrefix>3.0.584</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -159,6 +159,14 @@
     <Compile Include="V20191029\Models\MaterialMovedEvent.cs" />
     <Compile Include="V20191029\Models\MaterialStatus.cs" />
     <Compile Include="V20191029\Models\MaterialTagInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastDestinationInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastDestinationInterruptInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastOutputMediaSetting.cs" />
+    <Compile Include="V20191029\Models\MediaCastPlaySetting.cs" />
+    <Compile Include="V20191029\Models\MediaCastProjectInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastSourceInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastSourceInterruptInfo.cs" />
+    <Compile Include="V20191029\Models\MediaCastVideoSetting.cs" />
     <Compile Include="V20191029\Models\MediaImageSpriteInfo.cs" />
     <Compile Include="V20191029\Models\MediaMetaData.cs" />
     <Compile Include="V20191029\Models\MediaPreprocessOperation.cs" />
@@ -187,6 +195,7 @@
     <Compile Include="V20191029\Models\PlatformInfo.cs" />
     <Compile Include="V20191029\Models\PresetTagInfo.cs" />
     <Compile Include="V20191029\Models\ProjectInfo.cs" />
+    <Compile Include="V20191029\Models\ProjectMediaCastStatusChangedEvent.cs" />
     <Compile Include="V20191029\Models\ProjectStreamConnectStatusChangedEvent.cs" />
     <Compile Include="V20191029\Models\ProjectSwitcherStatusChangedEvent.cs" />
     <Compile Include="V20191029\Models\RecordReplayProjectInput.cs" />

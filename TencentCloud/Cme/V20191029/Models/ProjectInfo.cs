@@ -73,16 +73,23 @@ namespace TencentCloud.Cme.V20191029.Models
         public StreamConnectProjectInfo StreamConnectProjectInfo{ get; set; }
 
         /// <summary>
-        /// 项目创建时间，格式按照 ISO 8601 标准表示。
+        /// 点播转直播项目信息，仅当项目类别取值为 MEDIA_CAST 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CreateTime")]
-        public string CreateTime{ get; set; }
+        [JsonProperty("MediaCastProjectInfo")]
+        public MediaCastProjectInfo MediaCastProjectInfo{ get; set; }
 
         /// <summary>
         /// 项目更新时间，格式按照 ISO 8601 标准表示。
         /// </summary>
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
+
+        /// <summary>
+        /// 项目创建时间，格式按照 ISO 8601 标准表示。
+        /// </summary>
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
 
         /// <summary>
@@ -97,8 +104,9 @@ namespace TencentCloud.Cme.V20191029.Models
             this.SetParamObj(map, prefix + "Owner.", this.Owner);
             this.SetParamSimple(map, prefix + "CoverUrl", this.CoverUrl);
             this.SetParamObj(map, prefix + "StreamConnectProjectInfo.", this.StreamConnectProjectInfo);
-            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamObj(map, prefix + "MediaCastProjectInfo.", this.MediaCastProjectInfo);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
         }
     }
 }

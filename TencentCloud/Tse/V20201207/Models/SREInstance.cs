@@ -219,6 +219,13 @@ namespace TencentCloud.Tse.V20201207.Models
         [JsonProperty("IsolateTime")]
         public string IsolateTime{ get; set; }
 
+        /// <summary>
+        /// 实例地域相关的描述信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionInfos")]
+        public DescribeInstanceRegionInfo[] RegionInfos{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -254,6 +261,7 @@ namespace TencentCloud.Tse.V20201207.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "CurDeadline", this.CurDeadline);
             this.SetParamSimple(map, prefix + "IsolateTime", this.IsolateTime);
+            this.SetParamArrayObj(map, prefix + "RegionInfos.", this.RegionInfos);
         }
     }
 }

@@ -33,8 +33,18 @@ namespace TencentCloud.Vod.V20180717.Models
         public string Switch{ get; set; }
 
         /// <summary>
+        /// 生成的字幕文件格式列表，不填或者填空数组表示不生成字幕文件，可选值：
+        /// <li>vtt：生成 WebVTT 字幕文件；</li>
+        /// <li>srt：生成 SRT 字幕文件。</li>
+        /// </summary>
+        [JsonProperty("SubtitleFormats")]
+        public string[] SubtitleFormats{ get; set; }
+
+        /// <summary>
         /// 生成的字幕文件格式，不填或者填空字符串表示不生成字幕文件，可选值：
-        /// <li>vtt：生成 WebVTT 字幕文件。</li>
+        /// <li>vtt：生成 WebVTT 字幕文件；</li>
+        /// <li>srt：生成 SRT 字幕文件。</li>
+        /// <font color='red'>注意：此字段已废弃，建议使用 SubtitleFormats。</font>
         /// </summary>
         [JsonProperty("SubtitleFormat")]
         public string SubtitleFormat{ get; set; }
@@ -46,6 +56,7 @@ namespace TencentCloud.Vod.V20180717.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "SubtitleFormats.", this.SubtitleFormats);
             this.SetParamSimple(map, prefix + "SubtitleFormat", this.SubtitleFormat);
         }
     }

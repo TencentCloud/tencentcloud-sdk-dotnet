@@ -25,7 +25,7 @@ namespace TencentCloud.Acp.V20220105.Models
     {
         
         /// <summary>
-        /// 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android);
+        /// 任务来源, 0:小程序诊断, 1:预留字段(暂未使用), 2:app诊断(android), 3:app漏洞扫描;
         /// </summary>
         [JsonProperty("Source")]
         public long? Source{ get; set; }

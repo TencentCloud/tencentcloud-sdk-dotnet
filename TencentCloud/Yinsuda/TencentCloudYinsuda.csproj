@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{213C2BE8-30A9-3154-A66B-F89DE0B01C6C}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.583</VersionPrefix>
+    <VersionPrefix>3.0.584</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,24 +48,44 @@
     <Compile Include="V20220527\Models\BatchDescribeKTVMusicDetailsRequest.cs" />
     <Compile Include="V20220527\Models\BatchDescribeKTVMusicDetailsResponse.cs" />
     <Compile Include="V20220527\Models\ChorusClip.cs" />
+    <Compile Include="V20220527\Models\CreateKTVRobotRequest.cs" />
+    <Compile Include="V20220527\Models\CreateKTVRobotResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMatchMusicsRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVMatchMusicsResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVPlaylistDetailRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVPlaylistDetailResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVPlaylistsRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVPlaylistsResponse.cs" />
+    <Compile Include="V20220527\Models\DescribeKTVRobotsRequest.cs" />
+    <Compile Include="V20220527\Models\DescribeKTVRobotsResponse.cs" />
     <Compile Include="V20220527\Models\DescribeKTVSuggestionsRequest.cs" />
     <Compile Include="V20220527\Models\DescribeKTVSuggestionsResponse.cs" />
+    <Compile Include="V20220527\Models\DestroyKTVRobotRequest.cs" />
+    <Compile Include="V20220527\Models\DestroyKTVRobotResponse.cs" />
+    <Compile Include="V20220527\Models\JoinRoomInput.cs" />
     <Compile Include="V20220527\Models\KTVMatchMusic.cs" />
     <Compile Include="V20220527\Models\KTVMatchRule.cs" />
     <Compile Include="V20220527\Models\KTVMatchRuleMusicInfo.cs" />
     <Compile Include="V20220527\Models\KTVMusicBaseInfo.cs" />
     <Compile Include="V20220527\Models\KTVMusicDetailInfo.cs" />
     <Compile Include="V20220527\Models\KTVPlaylistBaseInfo.cs" />
+    <Compile Include="V20220527\Models\KTVRobotInfo.cs" />
     <Compile Include="V20220527\Models\KTVSuggestionInfo.cs" />
     <Compile Include="V20220527\Models\MusicAlbumCoverInfo.cs" />
     <Compile Include="V20220527\Models\MusicAlbumInfo.cs" />
+    <Compile Include="V20220527\Models\PlayCommandInput.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsRequest.cs" />
     <Compile Include="V20220527\Models\SearchKTVMusicsResponse.cs" />
+    <Compile Include="V20220527\Models\SeekCommandInput.cs" />
+    <Compile Include="V20220527\Models\SendMessageCommandInput.cs" />
+    <Compile Include="V20220527\Models\SetAudioParamCommandInput.cs" />
+    <Compile Include="V20220527\Models\SetDestroyModeCommandInput.cs" />
+    <Compile Include="V20220527\Models\SetPlayModeCommandInput.cs" />
+    <Compile Include="V20220527\Models\SetPlaylistCommandInput.cs" />
+    <Compile Include="V20220527\Models\SyncKTVRobotCommandRequest.cs" />
+    <Compile Include="V20220527\Models\SyncKTVRobotCommandResponse.cs" />
+    <Compile Include="V20220527\Models\SyncRobotCommand.cs" />
+    <Compile Include="V20220527\Models\TRTCJoinRoomInput.cs" />
+    <Compile Include="V20220527\Models\TimeRange.cs" />
   </ItemGroup>
 </Project>

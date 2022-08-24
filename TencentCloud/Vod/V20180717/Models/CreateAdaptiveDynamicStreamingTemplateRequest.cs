@@ -62,6 +62,15 @@ namespace TencentCloud.Vod.V20180717.Models
         public string DrmType{ get; set; }
 
         /// <summary>
+        /// DRM 的密钥提供商，取值范围：
+        /// <li>SDMC：华曦达；</li>
+        /// <li>VOD：云点播。</li>
+        /// 默认为 VOD 。
+        /// </summary>
+        [JsonProperty("DrmKeyProvider")]
+        public string DrmKeyProvider{ get; set; }
+
+        /// <summary>
         /// 是否禁止视频低码率转高码率，取值范围：
         /// <li>0：否，</li>
         /// <li>1：是。</li>
@@ -96,6 +105,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
+            this.SetParamSimple(map, prefix + "DrmKeyProvider", this.DrmKeyProvider);
             this.SetParamSimple(map, prefix + "DisableHigherVideoBitrate", this.DisableHigherVideoBitrate);
             this.SetParamSimple(map, prefix + "DisableHigherVideoResolution", this.DisableHigherVideoResolution);
             this.SetParamSimple(map, prefix + "Comment", this.Comment);
