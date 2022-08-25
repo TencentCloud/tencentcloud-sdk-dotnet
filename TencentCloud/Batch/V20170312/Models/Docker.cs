@@ -48,6 +48,18 @@ namespace TencentCloud.Batch.V20170312.Models
         [JsonProperty("Server")]
         public string Server{ get; set; }
 
+        /// <summary>
+        /// 拉取Docker镜像重试次数。默认值：0。
+        /// </summary>
+        [JsonProperty("MaxRetryCount")]
+        public ulong? MaxRetryCount{ get; set; }
+
+        /// <summary>
+        /// 拉取Docker镜像失败时延迟时间。单位：秒。
+        /// </summary>
+        [JsonProperty("DelayOnRetry")]
+        public ulong? DelayOnRetry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Batch.V20170312.Models
             this.SetParamSimple(map, prefix + "Password", this.Password);
             this.SetParamSimple(map, prefix + "Image", this.Image);
             this.SetParamSimple(map, prefix + "Server", this.Server);
+            this.SetParamSimple(map, prefix + "MaxRetryCount", this.MaxRetryCount);
+            this.SetParamSimple(map, prefix + "DelayOnRetry", this.DelayOnRetry);
         }
     }
 }

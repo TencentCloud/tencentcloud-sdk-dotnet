@@ -2485,6 +2485,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 查询 DRM 密钥提供商信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDrmKeyProviderInfoRequest"/></param>
+        /// <returns><see cref="DescribeDrmKeyProviderInfoResponse"/></returns>
+        public async Task<DescribeDrmKeyProviderInfoResponse> DescribeDrmKeyProviderInfo(DescribeDrmKeyProviderInfoRequest req)
+        {
+             JsonResponseModel<DescribeDrmKeyProviderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDrmKeyProviderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询 DRM 密钥提供商信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDrmKeyProviderInfoRequest"/></param>
+        /// <returns><see cref="DescribeDrmKeyProviderInfoResponse"/></returns>
+        public DescribeDrmKeyProviderInfoResponse DescribeDrmKeyProviderInfoSync(DescribeDrmKeyProviderInfoRequest req)
+        {
+             JsonResponseModel<DescribeDrmKeyProviderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDrmKeyProviderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDrmKeyProviderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 腾讯云点播为客户提供了媒体上传、媒体管理、媒体处理等等服务，在这些服务执行过程或执行结束时，腾讯云点播也提供各种对应的事件通知，方便开发者感知服务处理状态，并做下一步的业务操作。
         /// 
         /// 开发者可以通过本接口来查询当前配置事件通知的接收方式、接收地址以及哪些事件开启了接收回调通知。
@@ -5506,6 +5546,8 @@ namespace TencentCloud.Vod.V20180717
         /// - 指定直播推流码集合 StreamIds（见输入参数）筛选直播录制的媒体。
         /// - 指定视频 ID 集合 Vids （见输入参数）筛选直播录制的媒体。
         /// - 指定媒体的创建时间范围筛选媒体。
+        /// - 指定 TRTC 应用 ID 集合筛选媒体。
+        /// - 指定 TRTC 房间 ID 集合筛选媒体。
         /// - （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）指定单个文本 Text 对媒体文件名或描述信息进行模糊搜索。
         /// - （不推荐：应使用 SourceTypes 替代）指定单个媒体文件来源 SourceType 进行搜索。
         /// - （不推荐：应使用 StreamIds 替代）指定单个推流直播码 StreamId 进行搜索。
@@ -5559,6 +5601,8 @@ namespace TencentCloud.Vod.V20180717
         /// - 指定直播推流码集合 StreamIds（见输入参数）筛选直播录制的媒体。
         /// - 指定视频 ID 集合 Vids （见输入参数）筛选直播录制的媒体。
         /// - 指定媒体的创建时间范围筛选媒体。
+        /// - 指定 TRTC 应用 ID 集合筛选媒体。
+        /// - 指定 TRTC 房间 ID 集合筛选媒体。
         /// - （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）指定单个文本 Text 对媒体文件名或描述信息进行模糊搜索。
         /// - （不推荐：应使用 SourceTypes 替代）指定单个媒体文件来源 SourceType 进行搜索。
         /// - （不推荐：应使用 StreamIds 替代）指定单个推流直播码 StreamId 进行搜索。
@@ -5592,6 +5636,46 @@ namespace TencentCloud.Vod.V20180717
              {
                  var strResp = this.InternalRequestSync(req, "SearchMedia");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SearchMediaResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置 DRM 密钥提供商信息。
+        /// </summary>
+        /// <param name="req"><see cref="SetDrmKeyProviderInfoRequest"/></param>
+        /// <returns><see cref="SetDrmKeyProviderInfoResponse"/></returns>
+        public async Task<SetDrmKeyProviderInfoResponse> SetDrmKeyProviderInfo(SetDrmKeyProviderInfoRequest req)
+        {
+             JsonResponseModel<SetDrmKeyProviderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetDrmKeyProviderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDrmKeyProviderInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置 DRM 密钥提供商信息。
+        /// </summary>
+        /// <param name="req"><see cref="SetDrmKeyProviderInfoRequest"/></param>
+        /// <returns><see cref="SetDrmKeyProviderInfoResponse"/></returns>
+        public SetDrmKeyProviderInfoResponse SetDrmKeyProviderInfoSync(SetDrmKeyProviderInfoRequest req)
+        {
+             JsonResponseModel<SetDrmKeyProviderInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetDrmKeyProviderInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetDrmKeyProviderInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

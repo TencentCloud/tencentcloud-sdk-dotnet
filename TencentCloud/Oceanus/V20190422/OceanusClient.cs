@@ -853,6 +853,46 @@ namespace TencentCloud.Oceanus.V20190422
         }
 
         /// <summary>
+        /// 查询树状结构资源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTreeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeTreeResourcesResponse"/></returns>
+        public async Task<DescribeTreeResourcesResponse> DescribeTreeResources(DescribeTreeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeTreeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTreeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTreeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询树状结构资源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTreeResourcesRequest"/></param>
+        /// <returns><see cref="DescribeTreeResourcesResponse"/></returns>
+        public DescribeTreeResourcesResponse DescribeTreeResourcesSync(DescribeTreeResourcesRequest req)
+        {
+             JsonResponseModel<DescribeTreeResourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTreeResources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTreeResourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新作业属性，仅允许以下3种操作，不支持组合操作：
         /// (1)	更新作业名称
         /// (2)	更新作业备注 

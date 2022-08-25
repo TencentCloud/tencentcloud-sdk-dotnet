@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.584</VersionPrefix>
+    <VersionPrefix>3.0.585</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -295,6 +295,8 @@
     <Compile Include="V20180717\Models\DescribeDailyPlayStatFileListResponse.cs" />
     <Compile Include="V20180717\Models\DescribeDrmDataKeyRequest.cs" />
     <Compile Include="V20180717\Models\DescribeDrmDataKeyResponse.cs" />
+    <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoRequest.cs" />
+    <Compile Include="V20180717\Models\DescribeDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEventConfigRequest.cs" />
     <Compile Include="V20180717\Models\DescribeEventConfigResponse.cs" />
     <Compile Include="V20180717\Models\DescribeEventsStateRequest.cs" />
@@ -574,12 +576,15 @@
     <Compile Include="V20180717\Models\RestoreMediaTask.cs" />
     <Compile Include="V20180717\Models\ReviewImageRequest.cs" />
     <Compile Include="V20180717\Models\ReviewImageResponse.cs" />
+    <Compile Include="V20180717\Models\SDMCDrmKeyProviderInfo.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTaskInput.cs" />
     <Compile Include="V20180717\Models\SampleSnapshotTemplate.cs" />
     <Compile Include="V20180717\Models\SearchMediaRequest.cs" />
     <Compile Include="V20180717\Models\SearchMediaResponse.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfo.cs" />
     <Compile Include="V20180717\Models\SegmentConfigureInfoForUpdate.cs" />
+    <Compile Include="V20180717\Models\SetDrmKeyProviderInfoRequest.cs" />
+    <Compile Include="V20180717\Models\SetDrmKeyProviderInfoResponse.cs" />
     <Compile Include="V20180717\Models\SimpleAesEdkPair.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipRequest.cs" />
     <Compile Include="V20180717\Models\SimpleHlsClipResponse.cs" />

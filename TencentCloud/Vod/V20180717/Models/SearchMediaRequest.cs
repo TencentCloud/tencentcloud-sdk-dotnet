@@ -178,6 +178,21 @@ namespace TencentCloud.Vod.V20180717.Models
         public string[] StorageClasses{ get; set; }
 
         /// <summary>
+        /// TRTC 应用 ID 集合。匹配集合中的任意元素。
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("TrtcSdkAppIds")]
+        public ulong?[] TrtcSdkAppIds{ get; set; }
+
+        /// <summary>
+        /// TRTC 房间 ID 集合。匹配集合中的任意元素。
+        /// <li>单个房间 ID 长度限制：64个字符；</li>
+        /// <li>数组长度限制：10。</li>
+        /// </summary>
+        [JsonProperty("TrtcRoomIds")]
+        public string[] TrtcRoomIds{ get; set; }
+
+        /// <summary>
         /// （不推荐：应使用 Names、NamePrefixes 或 Descriptions 替代）
         /// 搜索文本，模糊匹配媒体文件名称或描述信息，匹配项越多，匹配度越高，排序越优先。长度限制：64个字符。
         /// </summary>
@@ -250,6 +265,8 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArraySimple(map, prefix + "Filters.", this.Filters);
             this.SetParamArraySimple(map, prefix + "StorageRegions.", this.StorageRegions);
             this.SetParamArraySimple(map, prefix + "StorageClasses.", this.StorageClasses);
+            this.SetParamArraySimple(map, prefix + "TrtcSdkAppIds.", this.TrtcSdkAppIds);
+            this.SetParamArraySimple(map, prefix + "TrtcRoomIds.", this.TrtcRoomIds);
             this.SetParamSimple(map, prefix + "Text", this.Text);
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "StreamId", this.StreamId);

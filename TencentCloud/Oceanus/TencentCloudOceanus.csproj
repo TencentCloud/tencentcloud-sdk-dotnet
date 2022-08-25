@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{BD8B9947-C847-3AEB-AD67-726BC5EFD4EE}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.584</VersionPrefix>
+    <VersionPrefix>3.0.585</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -90,6 +90,8 @@
     <Compile Include="V20190422\Models\DescribeSystemResourcesResponse.cs" />
     <Compile Include="V20190422\Models\DescribeTreeJobsRequest.cs" />
     <Compile Include="V20190422\Models\DescribeTreeJobsResponse.cs" />
+    <Compile Include="V20190422\Models\DescribeTreeResourcesRequest.cs" />
+    <Compile Include="V20190422\Models\DescribeTreeResourcesResponse.cs" />
     <Compile Include="V20190422\Models\Filter.cs" />
     <Compile Include="V20190422\Models\JobConfig.cs" />
     <Compile Include="V20190422\Models\JobV1.cs" />

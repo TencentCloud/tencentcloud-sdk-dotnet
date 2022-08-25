@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{249E2CB9-57E5-324C-A6C1-D3248FF18744}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.584</VersionPrefix>
+    <VersionPrefix>3.0.585</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,10 +58,14 @@
     <Compile Include="V20190924\Models\CheckInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\CreateImageAccelerationServiceRequest.cs" />
+    <Compile Include="V20190924\Models\CreateImageAccelerationServiceResponse.cs" />
     <Compile Include="V20190924\Models\CreateImageLifecyclePersonalRequest.cs" />
     <Compile Include="V20190924\Models\CreateImageLifecyclePersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\CreateImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceCustomizedDomainRequest.cs" />
+    <Compile Include="V20190924\Models\CreateInstanceCustomizedDomainResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceRequest.cs" />
     <Compile Include="V20190924\Models\CreateInstanceResponse.cs" />
     <Compile Include="V20190924\Models\CreateInstanceTokenRequest.cs" />
@@ -80,8 +84,14 @@
     <Compile Include="V20190924\Models\CreateRepositoryPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateRepositoryRequest.cs" />
     <Compile Include="V20190924\Models\CreateRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\CreateSecurityPoliciesRequest.cs" />
+    <Compile Include="V20190924\Models\CreateSecurityPoliciesResponse.cs" />
     <Compile Include="V20190924\Models\CreateSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\CreateSecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\CreateSignaturePolicyRequest.cs" />
+    <Compile Include="V20190924\Models\CreateSignaturePolicyResponse.cs" />
+    <Compile Include="V20190924\Models\CreateSignatureRequest.cs" />
+    <Compile Include="V20190924\Models\CreateSignatureResponse.cs" />
     <Compile Include="V20190924\Models\CreateTagRetentionExecutionRequest.cs" />
     <Compile Include="V20190924\Models\CreateTagRetentionExecutionResponse.cs" />
     <Compile Include="V20190924\Models\CreateTagRetentionRuleRequest.cs" />
@@ -90,8 +100,11 @@
     <Compile Include="V20190924\Models\CreateUserPersonalResponse.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerRequest.cs" />
     <Compile Include="V20190924\Models\CreateWebhookTriggerResponse.cs" />
+    <Compile Include="V20190924\Models\CustomizedDomainInfo.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteApplicationTriggerPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteImageAccelerateServiceRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteImageAccelerateServiceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecycleGlobalPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImageLifecyclePersonalRequest.cs" />
@@ -102,6 +115,8 @@
     <Compile Include="V20190924\Models\DeleteImageResponse.cs" />
     <Compile Include="V20190924\Models\DeleteImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\DeleteImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteInstanceCustomizedDomainRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteInstanceCustomizedDomainResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteInstanceTokenRequest.cs" />
@@ -114,12 +129,18 @@
     <Compile Include="V20190924\Models\DeleteNamespacePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteNamespaceRequest.cs" />
     <Compile Include="V20190924\Models\DeleteNamespaceResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteReplicationInstanceRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteReplicationInstanceResponse.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryRequest.cs" />
     <Compile Include="V20190924\Models\DeleteRepositoryResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryTagsRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteRepositoryTagsResponse.cs" />
     <Compile Include="V20190924\Models\DeleteSecurityPolicyRequest.cs" />
     <Compile Include="V20190924\Models\DeleteSecurityPolicyResponse.cs" />
+    <Compile Include="V20190924\Models\DeleteSignaturePolicyRequest.cs" />
+    <Compile Include="V20190924\Models\DeleteSignaturePolicyResponse.cs" />
     <Compile Include="V20190924\Models\DeleteTagRetentionRuleRequest.cs" />
     <Compile Include="V20190924\Models\DeleteTagRetentionRuleResponse.cs" />
     <Compile Include="V20190924\Models\DeleteWebhookTriggerRequest.cs" />
@@ -136,6 +157,10 @@
     <Compile Include="V20190924\Models\DescribeExternalEndpointStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeFavorRepositoryPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeFavorRepositoryPersonalResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeGCJobsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeGCJobsResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeImageAccelerateServiceRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeImageAccelerateServiceResponse.cs" />
     <Compile Include="V20190924\Models\DescribeImageFilterPersonalRequest.cs" />
     <Compile Include="V20190924\Models\DescribeImageFilterPersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeImageLifecycleGlobalPersonalRequest.cs" />
@@ -150,6 +175,12 @@
     <Compile Include="V20190924\Models\DescribeImagesResponse.cs" />
     <Compile Include="V20190924\Models\DescribeImmutableTagRulesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeImmutableTagRulesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceAllNamespacesRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceAllNamespacesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceAllRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceAllResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceCustomizedDomainRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeInstanceCustomizedDomainResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceStatusRequest.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceStatusResponse.cs" />
     <Compile Include="V20190924\Models\DescribeInstanceTokenRequest.cs" />
@@ -164,6 +195,8 @@
     <Compile Include="V20190924\Models\DescribeNamespacePersonalResponse.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacesRequest.cs" />
     <Compile Include="V20190924\Models\DescribeNamespacesResponse.cs" />
+    <Compile Include="V20190924\Models\DescribeRegionsRequest.cs" />
+    <Compile Include="V20190924\Models\DescribeRegionsResponse.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksRequest.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstanceCreateTasksResponse.cs" />
     <Compile Include="V20190924\Models\DescribeReplicationInstanceSyncStatusRequest.cs" />
@@ -200,6 +233,7 @@
     <Compile Include="V20190924\Models\FavorResp.cs" />
     <Compile Include="V20190924\Models\Favors.cs" />
     <Compile Include="V20190924\Models\Filter.cs" />
+    <Compile Include="V20190924\Models\GCJobInfo.cs" />
     <Compile Include="V20190924\Models\Header.cs" />
     <Compile Include="V20190924\Models\ImmutableTagRule.cs" />
     <Compile Include="V20190924\Models\KeyValueString.cs" />
@@ -240,6 +274,7 @@
     <Compile Include="V20190924\Models\NamespaceInfoResp.cs" />
     <Compile Include="V20190924\Models\NamespaceIsExistsResp.cs" />
     <Compile Include="V20190924\Models\PeerReplicationOption.cs" />
+    <Compile Include="V20190924\Models\Region.cs" />
     <Compile Include="V20190924\Models\Registry.cs" />
     <Compile Include="V20190924\Models\RegistryChargePrepaid.cs" />
     <Compile Include="V20190924\Models\RegistryCondition.cs" />
@@ -260,6 +295,7 @@
     <Compile Include="V20190924\Models\RetentionRule.cs" />
     <Compile Include="V20190924\Models\RetentionTask.cs" />
     <Compile Include="V20190924\Models\SameImagesResp.cs" />
+    <Compile Include="V20190924\Models\Schedule.cs" />
     <Compile Include="V20190924\Models\SearchUserRepositoryResp.cs" />
     <Compile Include="V20190924\Models\SecurityPolicy.cs" />
     <Compile Include="V20190924\Models\Tag.cs" />

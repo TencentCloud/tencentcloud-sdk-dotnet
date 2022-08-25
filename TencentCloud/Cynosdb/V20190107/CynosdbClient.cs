@@ -93,6 +93,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 增加从可用区
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="AddClusterSlaveZoneResponse"/></returns>
+        public async Task<AddClusterSlaveZoneResponse> AddClusterSlaveZone(AddClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<AddClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 增加从可用区
+        /// </summary>
+        /// <param name="req"><see cref="AddClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="AddClusterSlaveZoneResponse"/></returns>
+        public AddClusterSlaveZoneResponse AddClusterSlaveZoneSync(AddClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<AddClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（AddInstances）用于集群添加实例
         /// </summary>
         /// <param name="req"><see cref="AddInstancesRequest"/></param>
@@ -684,6 +724,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "DescribeClusterParamLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterParamLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterParams）用于查询集群参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
+        /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
+        public async Task<DescribeClusterParamsResponse> DescribeClusterParams(DescribeClusterParamsRequest req)
+        {
+             JsonResponseModel<DescribeClusterParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeClusterParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterParamsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeClusterParams）用于查询集群参数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeClusterParamsRequest"/></param>
+        /// <returns><see cref="DescribeClusterParamsResponse"/></returns>
+        public DescribeClusterParamsResponse DescribeClusterParamsSync(DescribeClusterParamsRequest req)
+        {
+             JsonResponseModel<DescribeClusterParamsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeClusterParams");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeClusterParamsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1653,6 +1733,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 修改从可用区
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="ModifyClusterSlaveZoneResponse"/></returns>
+        public async Task<ModifyClusterSlaveZoneResponse> ModifyClusterSlaveZone(ModifyClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<ModifyClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改从可用区
+        /// </summary>
+        /// <param name="req"><see cref="ModifyClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="ModifyClusterSlaveZoneResponse"/></returns>
+        public ModifyClusterSlaveZoneResponse ModifyClusterSlaveZoneSync(ModifyClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<ModifyClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(ModifyDBInstanceSecurityGroups)用于修改实例绑定的安全组。
         /// </summary>
         /// <param name="req"><see cref="ModifyDBInstanceSecurityGroupsRequest"/></param>
@@ -1893,6 +2013,46 @@ namespace TencentCloud.Cynosdb.V20190107
         }
 
         /// <summary>
+        /// 删除从可用区
+        /// </summary>
+        /// <param name="req"><see cref="RemoveClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="RemoveClusterSlaveZoneResponse"/></returns>
+        public async Task<RemoveClusterSlaveZoneResponse> RemoveClusterSlaveZone(RemoveClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<RemoveClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RemoveClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除从可用区
+        /// </summary>
+        /// <param name="req"><see cref="RemoveClusterSlaveZoneRequest"/></param>
+        /// <returns><see cref="RemoveClusterSlaveZoneResponse"/></returns>
+        public RemoveClusterSlaveZoneResponse RemoveClusterSlaveZoneSync(RemoveClusterSlaveZoneRequest req)
+        {
+             JsonResponseModel<RemoveClusterSlaveZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RemoveClusterSlaveZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RemoveClusterSlaveZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 恢复serverless集群
         /// </summary>
         /// <param name="req"><see cref="ResumeServerlessRequest"/></param>
@@ -2044,6 +2204,46 @@ namespace TencentCloud.Cynosdb.V20190107
              {
                  var strResp = this.InternalRequestSync(req, "SetRenewFlag");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetRenewFlagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换到从可用区
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterZoneRequest"/></param>
+        /// <returns><see cref="SwitchClusterZoneResponse"/></returns>
+        public async Task<SwitchClusterZoneResponse> SwitchClusterZone(SwitchClusterZoneRequest req)
+        {
+             JsonResponseModel<SwitchClusterZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SwitchClusterZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 切换到从可用区
+        /// </summary>
+        /// <param name="req"><see cref="SwitchClusterZoneRequest"/></param>
+        /// <returns><see cref="SwitchClusterZoneResponse"/></returns>
+        public SwitchClusterZoneResponse SwitchClusterZoneSync(SwitchClusterZoneRequest req)
+        {
+             JsonResponseModel<SwitchClusterZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SwitchClusterZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SwitchClusterZoneResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

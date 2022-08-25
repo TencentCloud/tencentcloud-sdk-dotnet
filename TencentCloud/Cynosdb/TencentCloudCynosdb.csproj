@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.584</VersionPrefix>
+    <VersionPrefix>3.0.585</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -49,6 +49,8 @@
     <Compile Include="V20190107\Models\AccountParam.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceRequest.cs" />
     <Compile Include="V20190107\Models\ActivateInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\AddClusterSlaveZoneRequest.cs" />
+    <Compile Include="V20190107\Models\AddClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\AddInstancesRequest.cs" />
     <Compile Include="V20190107\Models\AddInstancesResponse.cs" />
     <Compile Include="V20190107\Models\Addr.cs" />
@@ -92,6 +94,8 @@
     <Compile Include="V20190107\Models\DescribeClusterInstanceGrpsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClusterParamLogsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClusterParamLogsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterParamsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeClusterParamsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeClustersRequest.cs" />
     <Compile Include="V20190107\Models\DescribeClustersResponse.cs" />
     <Compile Include="V20190107\Models\DescribeDBSecurityGroupsRequest.cs" />
@@ -142,6 +146,8 @@
     <Compile Include="V20190107\Models\ModifyClusterNameResponse.cs" />
     <Compile Include="V20190107\Models\ModifyClusterParamRequest.cs" />
     <Compile Include="V20190107\Models\ModifyClusterParamResponse.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterSlaveZoneRequest.cs" />
+    <Compile Include="V20190107\Models\ModifyClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\ModifyDBInstanceSecurityGroupsResponse.cs" />
     <Compile Include="V20190107\Models\ModifyInstanceNameRequest.cs" />
@@ -155,12 +161,15 @@
     <Compile Include="V20190107\Models\OfflineClusterResponse.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceRequest.cs" />
     <Compile Include="V20190107\Models\OfflineInstanceResponse.cs" />
+    <Compile Include="V20190107\Models\ParamInfo.cs" />
     <Compile Include="V20190107\Models\ParamItem.cs" />
     <Compile Include="V20190107\Models\ParamTemplateListInfo.cs" />
     <Compile Include="V20190107\Models\PauseServerlessRequest.cs" />
     <Compile Include="V20190107\Models\PauseServerlessResponse.cs" />
     <Compile Include="V20190107\Models\PolicyRule.cs" />
     <Compile Include="V20190107\Models\QueryFilter.cs" />
+    <Compile Include="V20190107\Models\RemoveClusterSlaveZoneRequest.cs" />
+    <Compile Include="V20190107\Models\RemoveClusterSlaveZoneResponse.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessRequest.cs" />
     <Compile Include="V20190107\Models\ResumeServerlessResponse.cs" />
     <Compile Include="V20190107\Models\RevokeAccountPrivilegesRequest.cs" />
@@ -170,10 +179,13 @@
     <Compile Include="V20190107\Models\RollbackDatabase.cs" />
     <Compile Include="V20190107\Models\RollbackTable.cs" />
     <Compile Include="V20190107\Models\RollbackTableInfo.cs" />
+    <Compile Include="V20190107\Models\RollbackTimeRange.cs" />
     <Compile Include="V20190107\Models\SecurityGroup.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagRequest.cs" />
     <Compile Include="V20190107\Models\SetRenewFlagResponse.cs" />
     <Compile Include="V20190107\Models\SlowQueriesItem.cs" />
+    <Compile Include="V20190107\Models\SwitchClusterZoneRequest.cs" />
+    <Compile Include="V20190107\Models\SwitchClusterZoneResponse.cs" />
     <Compile Include="V20190107\Models\TablePrivileges.cs" />
     <Compile Include="V20190107\Models\Tag.cs" />
     <Compile Include="V20190107\Models\TradePrice.cs" />

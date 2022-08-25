@@ -85,7 +85,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public string InstanceRole{ get; set; }
 
         /// <summary>
-        /// 主实例的可用区信息，购买灾备实例时必填。
+        /// 主实例的可用区信息，购买灾备、RO实例时必填。
         /// </summary>
         [JsonProperty("MasterRegion")]
         public string MasterRegion{ get; set; }
@@ -187,7 +187,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? ParamTemplateId{ get; set; }
 
         /// <summary>
-        /// 告警策略id数组。
+        /// 告警策略id数组。云监控DescribeAlarmPolicy接口返回的OriginId。
         /// </summary>
         [JsonProperty("AlarmPolicyList")]
         public long?[] AlarmPolicyList{ get; set; }

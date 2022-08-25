@@ -25,16 +25,22 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 有效回归时间范围开始时间点
+        /// 有效回归时间范围开始时间点（已废弃）
         /// </summary>
         [JsonProperty("TimeRangeStart")]
         public string TimeRangeStart{ get; set; }
 
         /// <summary>
-        /// 有效回归时间范围结束时间点
+        /// 有效回归时间范围结束时间点（已废弃）
         /// </summary>
         [JsonProperty("TimeRangeEnd")]
         public string TimeRangeEnd{ get; set; }
+
+        /// <summary>
+        /// 可回档时间范围
+        /// </summary>
+        [JsonProperty("RollbackTimeRanges")]
+        public RollbackTimeRange[] RollbackTimeRanges{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         {
             this.SetParamSimple(map, prefix + "TimeRangeStart", this.TimeRangeStart);
             this.SetParamSimple(map, prefix + "TimeRangeEnd", this.TimeRangeEnd);
+            this.SetParamArrayObj(map, prefix + "RollbackTimeRanges.", this.RollbackTimeRanges);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

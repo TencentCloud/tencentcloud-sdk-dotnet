@@ -180,6 +180,18 @@ namespace TencentCloud.Dcdb.V20180411.Models
         [JsonProperty("SlaveHostIds")]
         public string[] SlaveHostIds{ get; set; }
 
+        /// <summary>
+        /// 需要回档的源实例ID
+        /// </summary>
+        [JsonProperty("RollbackInstanceId")]
+        public string RollbackInstanceId{ get; set; }
+
+        /// <summary>
+        /// 回档时间
+        /// </summary>
+        [JsonProperty("RollbackTime")]
+        public string RollbackTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -212,6 +224,8 @@ namespace TencentCloud.Dcdb.V20180411.Models
             this.SetParamObj(map, prefix + "InitParams.", this.InitParams);
             this.SetParamSimple(map, prefix + "MasterHostId", this.MasterHostId);
             this.SetParamArraySimple(map, prefix + "SlaveHostIds.", this.SlaveHostIds);
+            this.SetParamSimple(map, prefix + "RollbackInstanceId", this.RollbackInstanceId);
+            this.SetParamSimple(map, prefix + "RollbackTime", this.RollbackTime);
         }
     }
 }

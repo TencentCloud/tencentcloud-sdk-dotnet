@@ -577,6 +577,86 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 用来创建统一域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainResponse"/></returns>
+        public async Task<CreateGlobalDomainResponse> CreateGlobalDomain(CreateGlobalDomainRequest req)
+        {
+             JsonResponseModel<CreateGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用来创建统一域名
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainResponse"/></returns>
+        public CreateGlobalDomainResponse CreateGlobalDomainSync(CreateGlobalDomainRequest req)
+        {
+             JsonResponseModel<CreateGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建域名解析记录
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainDnsResponse"/></returns>
+        public async Task<CreateGlobalDomainDnsResponse> CreateGlobalDomainDns(CreateGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<CreateGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建域名解析记录
+        /// </summary>
+        /// <param name="req"><see cref="CreateGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="CreateGlobalDomainDnsResponse"/></returns>
+        public CreateGlobalDomainDnsResponse CreateGlobalDomainDnsSync(CreateGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<CreateGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口（CreateHTTPListener）用于在通道实例下创建HTTP协议类型的监听器。
         /// </summary>
         /// <param name="req"><see cref="CreateHTTPListenerRequest"/></param>
@@ -1128,6 +1208,86 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DeleteFirstLinkSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除统一域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalDomainRequest"/></param>
+        /// <returns><see cref="DeleteGlobalDomainResponse"/></returns>
+        public async Task<DeleteGlobalDomainResponse> DeleteGlobalDomain(DeleteGlobalDomainRequest req)
+        {
+             JsonResponseModel<DeleteGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除统一域名
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalDomainRequest"/></param>
+        /// <returns><see cref="DeleteGlobalDomainResponse"/></returns>
+        public DeleteGlobalDomainResponse DeleteGlobalDomainSync(DeleteGlobalDomainRequest req)
+        {
+             JsonResponseModel<DeleteGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名的某条解析记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="DeleteGlobalDomainDnsResponse"/></returns>
+        public async Task<DeleteGlobalDomainDnsResponse> DeleteGlobalDomainDns(DeleteGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<DeleteGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除域名的某条解析记录
+        /// </summary>
+        /// <param name="req"><see cref="DeleteGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="DeleteGlobalDomainDnsResponse"/></returns>
+        public DeleteGlobalDomainDnsResponse DeleteGlobalDomainDnsSync(DeleteGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<DeleteGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteGlobalDomainDnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1808,6 +1968,86 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFirstLinkSession");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFirstLinkSessionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询域名解析列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainDnsResponse"/></returns>
+        public async Task<DescribeGlobalDomainDnsResponse> DescribeGlobalDomainDns(DescribeGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<DescribeGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询域名解析列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainDnsResponse"/></returns>
+        public DescribeGlobalDomainDnsResponse DescribeGlobalDomainDnsSync(DescribeGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<DescribeGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainsResponse"/></returns>
+        public async Task<DescribeGlobalDomainsResponse> DescribeGlobalDomains(DescribeGlobalDomainsRequest req)
+        {
+             JsonResponseModel<DescribeGlobalDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGlobalDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGlobalDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询域名列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGlobalDomainsRequest"/></param>
+        /// <returns><see cref="DescribeGlobalDomainsResponse"/></returns>
+        public DescribeGlobalDomainsResponse DescribeGlobalDomainsSync(DescribeGlobalDomainsRequest req)
+        {
+             JsonResponseModel<DescribeGlobalDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGlobalDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGlobalDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -2897,6 +3137,86 @@ namespace TencentCloud.Gaap.V20180529
         }
 
         /// <summary>
+        /// 暂停域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DisableGlobalDomainRequest"/></param>
+        /// <returns><see cref="DisableGlobalDomainResponse"/></returns>
+        public async Task<DisableGlobalDomainResponse> DisableGlobalDomain(DisableGlobalDomainRequest req)
+        {
+             JsonResponseModel<DisableGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 暂停域名解析
+        /// </summary>
+        /// <param name="req"><see cref="DisableGlobalDomainRequest"/></param>
+        /// <returns><see cref="DisableGlobalDomainResponse"/></returns>
+        public DisableGlobalDomainResponse DisableGlobalDomainSync(DisableGlobalDomainRequest req)
+        {
+             JsonResponseModel<DisableGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启域名解析
+        /// </summary>
+        /// <param name="req"><see cref="EnableGlobalDomainRequest"/></param>
+        /// <returns><see cref="EnableGlobalDomainResponse"/></returns>
+        public async Task<EnableGlobalDomainResponse> EnableGlobalDomain(EnableGlobalDomainRequest req)
+        {
+             JsonResponseModel<EnableGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "EnableGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启域名解析
+        /// </summary>
+        /// <param name="req"><see cref="EnableGlobalDomainRequest"/></param>
+        /// <returns><see cref="EnableGlobalDomainResponse"/></returns>
+        public EnableGlobalDomainResponse EnableGlobalDomainSync(EnableGlobalDomainRequest req)
+        {
+             JsonResponseModel<EnableGlobalDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "EnableGlobalDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<EnableGlobalDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（InquiryPriceCreateProxy）用于创建加速通道询价。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceCreateProxyRequest"/></param>
@@ -3048,6 +3368,86 @@ namespace TencentCloud.Gaap.V20180529
              {
                  var strResp = this.InternalRequestSync(req, "ModifyDomain");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalDomainAttributeRequest"/></param>
+        /// <returns><see cref="ModifyGlobalDomainAttributeResponse"/></returns>
+        public async Task<ModifyGlobalDomainAttributeResponse> ModifyGlobalDomainAttribute(ModifyGlobalDomainAttributeRequest req)
+        {
+             JsonResponseModel<ModifyGlobalDomainAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGlobalDomainAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGlobalDomainAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名属性
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalDomainAttributeRequest"/></param>
+        /// <returns><see cref="ModifyGlobalDomainAttributeResponse"/></returns>
+        public ModifyGlobalDomainAttributeResponse ModifyGlobalDomainAttributeSync(ModifyGlobalDomainAttributeRequest req)
+        {
+             JsonResponseModel<ModifyGlobalDomainAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGlobalDomainAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGlobalDomainAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名解析记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="ModifyGlobalDomainDnsResponse"/></returns>
+        public async Task<ModifyGlobalDomainDnsResponse> ModifyGlobalDomainDns(ModifyGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<ModifyGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGlobalDomainDnsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改域名解析记录
+        /// </summary>
+        /// <param name="req"><see cref="ModifyGlobalDomainDnsRequest"/></param>
+        /// <returns><see cref="ModifyGlobalDomainDnsResponse"/></returns>
+        public ModifyGlobalDomainDnsResponse ModifyGlobalDomainDnsSync(ModifyGlobalDomainDnsRequest req)
+        {
+             JsonResponseModel<ModifyGlobalDomainDnsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyGlobalDomainDns");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyGlobalDomainDnsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
