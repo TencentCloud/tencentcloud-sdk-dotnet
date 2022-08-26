@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D86DC2B3-8DC2-3479-84C4-A4A6F240C352}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.587</VersionPrefix>
+    <VersionPrefix>3.0.588</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -88,10 +88,14 @@
     <Compile Include="V20220106\Models\CreateLoadBalancingResponse.cs" />
     <Compile Include="V20220106\Models\CreateOriginGroupRequest.cs" />
     <Compile Include="V20220106\Models\CreateOriginGroupResponse.cs" />
+    <Compile Include="V20220106\Models\CreatePlanForZoneRequest.cs" />
+    <Compile Include="V20220106\Models\CreatePlanForZoneResponse.cs" />
     <Compile Include="V20220106\Models\CreatePrefetchTaskRequest.cs" />
     <Compile Include="V20220106\Models\CreatePrefetchTaskResponse.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskRequest.cs" />
     <Compile Include="V20220106\Models\CreatePurgeTaskResponse.cs" />
+    <Compile Include="V20220106\Models\CreateRuleRequest.cs" />
+    <Compile Include="V20220106\Models\CreateRuleResponse.cs" />
     <Compile Include="V20220106\Models\CreateZoneRequest.cs" />
     <Compile Include="V20220106\Models\CreateZoneResponse.cs" />
     <Compile Include="V20220106\Models\DDoSAcl.cs" />
@@ -126,12 +130,16 @@
     <Compile Include="V20220106\Models\DeleteLoadBalancingResponse.cs" />
     <Compile Include="V20220106\Models\DeleteOriginGroupRequest.cs" />
     <Compile Include="V20220106\Models\DeleteOriginGroupResponse.cs" />
+    <Compile Include="V20220106\Models\DeleteRulesRequest.cs" />
+    <Compile Include="V20220106\Models\DeleteRulesResponse.cs" />
     <Compile Include="V20220106\Models\DeleteZoneRequest.cs" />
     <Compile Include="V20220106\Models\DeleteZoneResponse.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyDetailRequest.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyDetailResponse.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyRequest.cs" />
     <Compile Include="V20220106\Models\DescribeApplicationProxyResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeAvailablePlansRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeAvailablePlansResponse.cs" />
     <Compile Include="V20220106\Models\DescribeBotLogRequest.cs" />
     <Compile Include="V20220106\Models\DescribeBotLogResponse.cs" />
     <Compile Include="V20220106\Models\DescribeBotManagedRulesRequest.cs" />
@@ -180,6 +188,10 @@
     <Compile Include="V20220106\Models\DescribePrefetchTasksResponse.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksRequest.cs" />
     <Compile Include="V20220106\Models\DescribePurgeTasksResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeRulesRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeRulesResponse.cs" />
+    <Compile Include="V20220106\Models\DescribeRulesSettingRequest.cs" />
+    <Compile Include="V20220106\Models\DescribeRulesSettingResponse.cs" />
     <Compile Include="V20220106\Models\DescribeSecurityPolicyListRequest.cs" />
     <Compile Include="V20220106\Models\DescribeSecurityPolicyListResponse.cs" />
     <Compile Include="V20220106\Models\DescribeSecurityPolicyManagedRulesIdRequest.cs" />
@@ -278,6 +290,10 @@
     <Compile Include="V20220106\Models\ModifyLoadBalancingStatusResponse.cs" />
     <Compile Include="V20220106\Models\ModifyOriginGroupRequest.cs" />
     <Compile Include="V20220106\Models\ModifyOriginGroupResponse.cs" />
+    <Compile Include="V20220106\Models\ModifyRulePriorityRequest.cs" />
+    <Compile Include="V20220106\Models\ModifyRulePriorityResponse.cs" />
+    <Compile Include="V20220106\Models\ModifyRuleRequest.cs" />
+    <Compile Include="V20220106\Models\ModifyRuleResponse.cs" />
     <Compile Include="V20220106\Models\ModifySecurityPolicyRequest.cs" />
     <Compile Include="V20220106\Models\ModifySecurityPolicyResponse.cs" />
     <Compile Include="V20220106\Models\ModifyZoneCnameSpeedUpRequest.cs" />
@@ -295,6 +311,7 @@
     <Compile Include="V20220106\Models\OriginGroup.cs" />
     <Compile Include="V20220106\Models\OriginRecord.cs" />
     <Compile Include="V20220106\Models\OriginRecordPrivateParameter.cs" />
+    <Compile Include="V20220106\Models\PlanInfo.cs" />
     <Compile Include="V20220106\Models\PortraitManagedRuleDetail.cs" />
     <Compile Include="V20220106\Models\PostMaxSize.cs" />
     <Compile Include="V20220106\Models\QueryCondition.cs" />
@@ -308,6 +325,22 @@
     <Compile Include="V20220106\Models\ReclaimZoneRequest.cs" />
     <Compile Include="V20220106\Models\ReclaimZoneResponse.cs" />
     <Compile Include="V20220106\Models\Resource.cs" />
+    <Compile Include="V20220106\Models\RuleAction.cs" />
+    <Compile Include="V20220106\Models\RuleAndConditions.cs" />
+    <Compile Include="V20220106\Models\RuleChoicePropertiesItem.cs" />
+    <Compile Include="V20220106\Models\RuleCodeAction.cs" />
+    <Compile Include="V20220106\Models\RuleCodeActionParams.cs" />
+    <Compile Include="V20220106\Models\RuleCondition.cs" />
+    <Compile Include="V20220106\Models\RuleExtraParameter.cs" />
+    <Compile Include="V20220106\Models\RuleFilter.cs" />
+    <Compile Include="V20220106\Models\RuleItem.cs" />
+    <Compile Include="V20220106\Models\RuleNormalAction.cs" />
+    <Compile Include="V20220106\Models\RuleNormalActionParams.cs" />
+    <Compile Include="V20220106\Models\RuleRewriteAction.cs" />
+    <Compile Include="V20220106\Models\RuleRewriteActionParams.cs" />
+    <Compile Include="V20220106\Models\RuleSettingDetail.cs" />
+    <Compile Include="V20220106\Models\RulesProperties.cs" />
+    <Compile Include="V20220106\Models\RulesSettingAction.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsRequest.cs" />
     <Compile Include="V20220106\Models\ScanDnsRecordsResponse.cs" />
     <Compile Include="V20220106\Models\SecEntry.cs" />

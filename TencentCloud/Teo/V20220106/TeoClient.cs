@@ -373,6 +373,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 为未购买套餐的站点购买套餐
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanForZoneRequest"/></param>
+        /// <returns><see cref="CreatePlanForZoneResponse"/></returns>
+        public async Task<CreatePlanForZoneResponse> CreatePlanForZone(CreatePlanForZoneRequest req)
+        {
+             JsonResponseModel<CreatePlanForZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreatePlanForZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePlanForZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 为未购买套餐的站点购买套餐
+        /// </summary>
+        /// <param name="req"><see cref="CreatePlanForZoneRequest"/></param>
+        /// <returns><see cref="CreatePlanForZoneResponse"/></returns>
+        public CreatePlanForZoneResponse CreatePlanForZoneSync(CreatePlanForZoneRequest req)
+        {
+             JsonResponseModel<CreatePlanForZoneResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreatePlanForZone");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePlanForZoneResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建预热任务
         /// </summary>
         /// <param name="req"><see cref="CreatePrefetchTaskRequest"/></param>
@@ -444,6 +484,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "CreatePurgeTask");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreatePurgeTaskResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 规则引擎创建规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRuleRequest"/></param>
+        /// <returns><see cref="CreateRuleResponse"/></returns>
+        public async Task<CreateRuleResponse> CreateRule(CreateRuleRequest req)
+        {
+             JsonResponseModel<CreateRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 规则引擎创建规则。
+        /// </summary>
+        /// <param name="req"><see cref="CreateRuleRequest"/></param>
+        /// <returns><see cref="CreateRuleResponse"/></returns>
+        public CreateRuleResponse CreateRuleSync(CreateRuleRequest req)
+        {
+             JsonResponseModel<CreateRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateRuleResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -693,6 +773,46 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
+        /// 批量删除规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRulesRequest"/></param>
+        /// <returns><see cref="DeleteRulesResponse"/></returns>
+        public async Task<DeleteRulesResponse> DeleteRules(DeleteRulesRequest req)
+        {
+             JsonResponseModel<DeleteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 批量删除规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRulesRequest"/></param>
+        /// <returns><see cref="DeleteRulesResponse"/></returns>
+        public DeleteRulesResponse DeleteRulesSync(DeleteRulesRequest req)
+        {
+             JsonResponseModel<DeleteRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除站点
         /// </summary>
         /// <param name="req"><see cref="DeleteZoneRequest"/></param>
@@ -804,6 +924,46 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApplicationProxyDetail");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationProxyDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询当前账户可用套餐信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailablePlansRequest"/></param>
+        /// <returns><see cref="DescribeAvailablePlansResponse"/></returns>
+        public async Task<DescribeAvailablePlansResponse> DescribeAvailablePlans(DescribeAvailablePlansRequest req)
+        {
+             JsonResponseModel<DescribeAvailablePlansResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAvailablePlans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailablePlansResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询当前账户可用套餐信息列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAvailablePlansRequest"/></param>
+        /// <returns><see cref="DescribeAvailablePlansResponse"/></returns>
+        public DescribeAvailablePlansResponse DescribeAvailablePlansSync(DescribeAvailablePlansRequest req)
+        {
+             JsonResponseModel<DescribeAvailablePlansResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAvailablePlans");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAvailablePlansResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1764,6 +1924,86 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "DescribePurgeTasks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePurgeTasksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRulesRequest"/></param>
+        /// <returns><see cref="DescribeRulesResponse"/></returns>
+        public async Task<DescribeRulesResponse> DescribeRules(DescribeRulesRequest req)
+        {
+             JsonResponseModel<DescribeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRulesRequest"/></param>
+        /// <returns><see cref="DescribeRulesResponse"/></returns>
+        public DescribeRulesResponse DescribeRulesSync(DescribeRulesRequest req)
+        {
+             JsonResponseModel<DescribeRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
+        /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
+        public async Task<DescribeRulesSettingResponse> DescribeRulesSetting(DescribeRulesSettingRequest req)
+        {
+             JsonResponseModel<DescribeRulesSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRulesSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRulesSettingResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 返回规则引擎可应用匹配请求的设置列表及其详细建议配置信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRulesSettingRequest"/></param>
+        /// <returns><see cref="DescribeRulesSettingResponse"/></returns>
+        public DescribeRulesSettingResponse DescribeRulesSettingSync(DescribeRulesSettingRequest req)
+        {
+             JsonResponseModel<DescribeRulesSettingResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRulesSetting");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRulesSettingResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3284,6 +3524,86 @@ namespace TencentCloud.Teo.V20220106
              {
                  var strResp = this.InternalRequestSync(req, "ModifyOriginGroup");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOriginGroupResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRuleRequest"/></param>
+        /// <returns><see cref="ModifyRuleResponse"/></returns>
+        public async Task<ModifyRuleResponse> ModifyRule(ModifyRuleRequest req)
+        {
+             JsonResponseModel<ModifyRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改规则引擎规则。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRuleRequest"/></param>
+        /// <returns><see cref="ModifyRuleResponse"/></returns>
+        public ModifyRuleResponse ModifyRuleSync(ModifyRuleRequest req)
+        {
+             JsonResponseModel<ModifyRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改规则引擎规则优先级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyRulePriorityResponse"/></returns>
+        public async Task<ModifyRulePriorityResponse> ModifyRulePriority(ModifyRulePriorityRequest req)
+        {
+             JsonResponseModel<ModifyRulePriorityResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyRulePriority");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRulePriorityResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改规则引擎规则优先级
+        /// </summary>
+        /// <param name="req"><see cref="ModifyRulePriorityRequest"/></param>
+        /// <returns><see cref="ModifyRulePriorityResponse"/></returns>
+        public ModifyRulePriorityResponse ModifyRulePrioritySync(ModifyRulePriorityRequest req)
+        {
+             JsonResponseModel<ModifyRulePriorityResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyRulePriority");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyRulePriorityResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

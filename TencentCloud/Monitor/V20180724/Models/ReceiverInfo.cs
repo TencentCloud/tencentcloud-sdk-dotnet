@@ -25,7 +25,7 @@ namespace TencentCloud.Monitor.V20180724.Models
     {
         
         /// <summary>
-        /// 告警时间段开始时间。范围[0,86400)，作为unix时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
+        /// 告警时间段开始时间。范围[0,86400)，作为 UNIX 时间戳转成北京时间后去掉日期，例如7200表示"10:0:0"
         /// </summary>
         [JsonProperty("StartTime")]
         public long? StartTime{ get; set; }
@@ -61,7 +61,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] SendFor{ get; set; }
 
         /// <summary>
-        /// 电话告警接收者uid
+        /// 电话告警接收者 UID
         /// </summary>
         [JsonProperty("UidList")]
         public long?[] UidList{ get; set; }
@@ -97,13 +97,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         public long? NeedSendNotice{ get; set; }
 
         /// <summary>
-        /// 接收组列表。通过平台接口查询到的接收组id列表
+        /// 接收组列表。通过平台接口查询到的接收组 ID 列表
         /// </summary>
         [JsonProperty("ReceiverGroupList")]
         public long?[] ReceiverGroupList{ get; set; }
 
         /// <summary>
-        /// 接收人列表。通过平台接口查询到的接收人id列表
+        /// 接收人列表。通过平台接口查询到的接收人 ID 列表
         /// </summary>
         [JsonProperty("ReceiverUserList")]
         public long?[] ReceiverUserList{ get; set; }

@@ -2781,46 +2781,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 同步资产-互联网&VPC
-        /// </summary>
-        /// <param name="req"><see cref="RunSyncAssetRequest"/></param>
-        /// <returns><see cref="RunSyncAssetResponse"/></returns>
-        public async Task<RunSyncAssetResponse> RunSyncAsset(RunSyncAssetRequest req)
-        {
-             JsonResponseModel<RunSyncAssetResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "RunSyncAsset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunSyncAssetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 同步资产-互联网&VPC
-        /// </summary>
-        /// <param name="req"><see cref="RunSyncAssetRequest"/></param>
-        /// <returns><see cref="RunSyncAssetResponse"/></returns>
-        public RunSyncAssetResponse RunSyncAssetSync(RunSyncAssetRequest req)
-        {
-             JsonResponseModel<RunSyncAssetResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "RunSyncAsset");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RunSyncAssetResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 配置防火墙Dnat规则
         /// </summary>
         /// <param name="req"><see cref="SetNatFwDnatRuleRequest"/></param>

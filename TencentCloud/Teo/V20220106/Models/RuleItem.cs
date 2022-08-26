@@ -15,26 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunSyncAssetResponse : AbstractModel
+    public class RuleItem : AbstractModel
     {
         
         /// <summary>
-        /// 0：同步成功，1：资产更新中，2：后台同步调用失败
+        /// 执行功能判断条件。
+        /// 注意：满足该数组内任意一项条件，功能即可执行。
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("Conditions")]
+        public RuleAndConditions[] Conditions{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 执行的功能。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("Actions")]
+        public RuleAction[] Actions{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamArrayObj(map, prefix + "Conditions.", this.Conditions);
+            this.SetParamArrayObj(map, prefix + "Actions.", this.Actions);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.587</VersionPrefix>
+    <VersionPrefix>3.0.588</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -197,8 +197,6 @@
     <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleRequest.cs" />
     <Compile Include="V20190904\Models\RemoveEnterpriseSecurityGroupRuleResponse.cs" />
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
-    <Compile Include="V20190904\Models\RunSyncAssetRequest.cs" />
-    <Compile Include="V20190904\Models\RunSyncAssetResponse.cs" />
     <Compile Include="V20190904\Models\ScanInfo.cs" />
     <Compile Include="V20190904\Models\ScanResultInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupApiRuleData.cs" />

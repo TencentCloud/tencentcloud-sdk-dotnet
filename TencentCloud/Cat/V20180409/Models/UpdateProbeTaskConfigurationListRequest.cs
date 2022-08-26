@@ -54,6 +54,13 @@ namespace TencentCloud.Cat.V20180409.Models
         [JsonProperty("Cron")]
         public string Cron{ get; set; }
 
+        /// <summary>
+        /// 预付费套餐id
+        /// 需要与taskId对应
+        /// </summary>
+        [JsonProperty("ResourceIDs")]
+        public string[] ResourceIDs{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +72,7 @@ namespace TencentCloud.Cat.V20180409.Models
             this.SetParamSimple(map, prefix + "Interval", this.Interval);
             this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
             this.SetParamSimple(map, prefix + "Cron", this.Cron);
+            this.SetParamArraySimple(map, prefix + "ResourceIDs.", this.ResourceIDs);
         }
     }
 }

@@ -63,10 +63,16 @@ namespace TencentCloud.Faceid.V20180301.Models
         public bool? IsNeedIdCardAvatar{ get; set; }
 
         /// <summary>
-        /// 是否需要对返回中的敏感信息进行加密。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+        /// 已弃用。
         /// </summary>
         [JsonProperty("IsEncrypt")]
         public bool? IsEncrypt{ get; set; }
+
+        /// <summary>
+        /// 是否需要对返回中的敏感信息进行加密。仅指定加密算法Algorithm即可，其余字段传入默认值。其中敏感信息包括：Response.Text.IdCard、Response.Text.Name、Response.Text.OcrIdCard、Response.Text.OcrName
+        /// </summary>
+        [JsonProperty("Encryption")]
+        public Encryption Encryption{ get; set; }
 
 
         /// <summary>
@@ -81,6 +87,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamSimple(map, prefix + "IsCutIdCardImage", this.IsCutIdCardImage);
             this.SetParamSimple(map, prefix + "IsNeedIdCardAvatar", this.IsNeedIdCardAvatar);
             this.SetParamSimple(map, prefix + "IsEncrypt", this.IsEncrypt);
+            this.SetParamObj(map, prefix + "Encryption.", this.Encryption);
         }
     }
 }

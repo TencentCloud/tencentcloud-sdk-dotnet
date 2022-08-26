@@ -15,20 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Teo.V20220106.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RunSyncAssetRequest : AbstractModel
+    public class DescribeAvailablePlansResponse : AbstractModel
     {
         
         /// <summary>
-        /// 0: 互联网防火墙开关，1：vpc 防火墙开关
+        /// 当前账户可购买套餐类型及相关信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
+        [JsonProperty("PlanInfoList")]
+        public PlanInfo[] PlanInfoList{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +43,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamArrayObj(map, prefix + "PlanInfoList.", this.PlanInfoList);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

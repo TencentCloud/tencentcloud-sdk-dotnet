@@ -37,7 +37,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ComponentValue{ get; set; }
 
         /// <summary>
-        /// 表单域或控件的ID，跟ComponentName二选一，不能全为空
+        /// 表单域或控件的ID，跟ComponentName二选一，不能全为空；
+        /// CreateFlowsByTemplates 接口不使用此字段。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ComponentId")]
