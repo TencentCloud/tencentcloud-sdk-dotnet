@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DeleteSecurityGroupAllRuleRequest : AbstractModel
+    public class CreateFlowEvidenceReportResponse : AbstractModel
     {
         
         /// <summary>
-        /// 方向，0：出站，1：入站
+        /// 出证报告 URL（有效期5分钟）
         /// </summary>
-        [JsonProperty("Direction")]
-        public ulong? Direction{ get; set; }
+        [JsonProperty("ReportUrl")]
+        public string ReportUrl{ get; set; }
 
         /// <summary>
-        /// 腾讯云地域的英文简写
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Direction", this.Direction);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "ReportUrl", this.ReportUrl);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

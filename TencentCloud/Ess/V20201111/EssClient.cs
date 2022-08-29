@@ -355,6 +355,46 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 创建出证报告，返回报告 URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateFlowEvidenceReportResponse"/></returns>
+        public async Task<CreateFlowEvidenceReportResponse> CreateFlowEvidenceReport(CreateFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建出证报告，返回报告 URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateFlowEvidenceReportResponse"/></returns>
+        public CreateFlowEvidenceReportResponse CreateFlowEvidenceReportSync(CreateFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提交企业签署流程审批结果
         /// 适用场景: 
         /// 在通过接口(CreateFlow 或者CreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。

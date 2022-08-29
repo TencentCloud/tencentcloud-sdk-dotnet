@@ -15,26 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Essbasic.V20210526.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SignUpCfsServiceResponse : AbstractModel
+    public class TaskInfo : AbstractModel
     {
         
         /// <summary>
-        /// 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+        /// 合成任务Id，可以通过 ChannelGetTaskResultApi 接口获取任务信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("CfsServiceStatus")]
-        public string CfsServiceStatus{ get; set; }
+        [JsonProperty("TaskId")]
+        public string TaskId{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 任务状态：READY - 任务已完成；NOTREADY - 任务未完成；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("TaskStatus")]
+        public string TaskStatus{ get; set; }
 
 
         /// <summary>
@@ -42,8 +44,8 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CfsServiceStatus", this.CfsServiceStatus);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
         }
     }
 }

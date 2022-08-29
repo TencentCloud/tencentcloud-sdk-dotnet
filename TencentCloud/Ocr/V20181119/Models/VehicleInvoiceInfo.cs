@@ -132,6 +132,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("SellerTel")]
         public string SellerTel{ get; set; }
 
+        /// <summary>
+        /// 购方身份证
+        /// </summary>
+        [JsonProperty("BuyerNo")]
+        public string BuyerNo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "MotorBankAccount", this.MotorBankAccount);
             this.SetParamSimple(map, prefix + "SellerAddress", this.SellerAddress);
             this.SetParamSimple(map, prefix + "SellerTel", this.SellerTel);
+            this.SetParamSimple(map, prefix + "BuyerNo", this.BuyerNo);
         }
     }
 }

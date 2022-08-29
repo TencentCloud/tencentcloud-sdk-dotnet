@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfs.V20190719.Models
+namespace TencentCloud.Ess.V20201111.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SignUpCfsServiceResponse : AbstractModel
+    public class CreateFlowEvidenceReportRequest : AbstractModel
     {
         
         /// <summary>
-        /// 该用户当前 CFS 服务的状态，creating 是开通中，created 是已开通
+        /// 调用方用户信息，userId 必填
         /// </summary>
-        [JsonProperty("CfsServiceStatus")]
-        public string CfsServiceStatus{ get; set; }
+        [JsonProperty("Operator")]
+        public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// 签署流程编号
         /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("FlowId")]
+        public string FlowId{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Cfs.V20190719.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "CfsServiceStatus", this.CfsServiceStatus);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
         }
     }
 }

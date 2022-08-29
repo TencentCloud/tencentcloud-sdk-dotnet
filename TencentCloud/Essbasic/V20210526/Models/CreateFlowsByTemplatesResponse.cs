@@ -50,6 +50,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] PreviewUrls{ get; set; }
 
         /// <summary>
+        /// 复杂文档合成任务的任务信息数组
+        /// </summary>
+        [JsonProperty("TaskInfos")]
+        public TaskInfo[] TaskInfos{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -65,6 +71,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamArraySimple(map, prefix + "CustomerData.", this.CustomerData);
             this.SetParamArraySimple(map, prefix + "ErrorMessages.", this.ErrorMessages);
             this.SetParamArraySimple(map, prefix + "PreviewUrls.", this.PreviewUrls);
+            this.SetParamArrayObj(map, prefix + "TaskInfos.", this.TaskInfos);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

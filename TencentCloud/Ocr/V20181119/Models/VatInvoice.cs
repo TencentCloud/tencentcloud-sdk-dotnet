@@ -175,6 +175,18 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("Items")]
         public VatInvoiceItem[] Items{ get; set; }
 
+        /// <summary>
+        /// 所属税局
+        /// </summary>
+        [JsonProperty("TaxBureau")]
+        public string TaxBureau{ get; set; }
+
+        /// <summary>
+        /// 通行费标志:Y、是;N、否
+        /// </summary>
+        [JsonProperty("TrafficFreeFlag")]
+        public string TrafficFreeFlag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -204,6 +216,8 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
             this.SetParamSimple(map, prefix + "AmountWithTax", this.AmountWithTax);
             this.SetParamArrayObj(map, prefix + "Items.", this.Items);
+            this.SetParamSimple(map, prefix + "TaxBureau", this.TaxBureau);
+            this.SetParamSimple(map, prefix + "TrafficFreeFlag", this.TrafficFreeFlag);
         }
     }
 }

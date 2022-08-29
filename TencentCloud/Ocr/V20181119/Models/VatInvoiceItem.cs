@@ -78,6 +78,12 @@ namespace TencentCloud.Ocr.V20181119.Models
         [JsonProperty("TaxAmount")]
         public string TaxAmount{ get; set; }
 
+        /// <summary>
+        /// 税收分类编码
+        /// </summary>
+        [JsonProperty("TaxClassifyCode")]
+        public string TaxClassifyCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ocr.V20181119.Models
             this.SetParamSimple(map, prefix + "AmountWithoutTax", this.AmountWithoutTax);
             this.SetParamSimple(map, prefix + "TaxRate", this.TaxRate);
             this.SetParamSimple(map, prefix + "TaxAmount", this.TaxAmount);
+            this.SetParamSimple(map, prefix + "TaxClassifyCode", this.TaxClassifyCode);
         }
     }
 }

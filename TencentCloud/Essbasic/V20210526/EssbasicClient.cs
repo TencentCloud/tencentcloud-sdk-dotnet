@@ -343,6 +343,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 创建出证报告，返回报告 URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
+        public async Task<CreateChannelFlowEvidenceReportResponse> CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建出证报告，返回报告 URL
+        /// </summary>
+        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
+        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
+        public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReportSync(CreateChannelFlowEvidenceReportRequest req)
+        {
+             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateChannelFlowEvidenceReport");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateConsoleLoginUrl）用于创建电子签控制台登录链接。若企业未激活，调用同步企业信息、同步经办人信息
         /// </summary>
         /// <param name="req"><see cref="CreateConsoleLoginUrlRequest"/></param>

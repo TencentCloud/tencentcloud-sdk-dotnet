@@ -573,46 +573,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 删除全部规则
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSecurityGroupAllRuleRequest"/></param>
-        /// <returns><see cref="DeleteSecurityGroupAllRuleResponse"/></returns>
-        public async Task<DeleteSecurityGroupAllRuleResponse> DeleteSecurityGroupAllRule(DeleteSecurityGroupAllRuleRequest req)
-        {
-             JsonResponseModel<DeleteSecurityGroupAllRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DeleteSecurityGroupAllRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupAllRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 删除全部规则
-        /// </summary>
-        /// <param name="req"><see cref="DeleteSecurityGroupAllRuleRequest"/></param>
-        /// <returns><see cref="DeleteSecurityGroupAllRuleResponse"/></returns>
-        public DeleteSecurityGroupAllRuleResponse DeleteSecurityGroupAllRuleSync(DeleteSecurityGroupAllRuleRequest req)
-        {
-             JsonResponseModel<DeleteSecurityGroupAllRuleResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DeleteSecurityGroupAllRule");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteSecurityGroupAllRuleResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 删除规则
         /// </summary>
         /// <param name="req"><see cref="DeleteSecurityGroupRuleRequest"/></param>
@@ -1244,46 +1204,6 @@ namespace TencentCloud.Cfw.V20190904
              {
                  var strResp = this.InternalRequestSync(req, "DescribeNatFwVpcDnsLst");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatFwVpcDnsLstResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// nat规则列表概况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeNatRuleOverviewRequest"/></param>
-        /// <returns><see cref="DescribeNatRuleOverviewResponse"/></returns>
-        public async Task<DescribeNatRuleOverviewResponse> DescribeNatRuleOverview(DescribeNatRuleOverviewRequest req)
-        {
-             JsonResponseModel<DescribeNatRuleOverviewResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeNatRuleOverview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatRuleOverviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// nat规则列表概况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeNatRuleOverviewRequest"/></param>
-        /// <returns><see cref="DescribeNatRuleOverviewResponse"/></returns>
-        public DescribeNatRuleOverviewResponse DescribeNatRuleOverviewSync(DescribeNatRuleOverviewRequest req)
-        {
-             JsonResponseModel<DescribeNatRuleOverviewResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeNatRuleOverview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNatRuleOverviewResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

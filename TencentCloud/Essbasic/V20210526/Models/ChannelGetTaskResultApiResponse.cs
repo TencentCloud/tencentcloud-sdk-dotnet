@@ -61,6 +61,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string ResourceId{ get; set; }
 
         /// <summary>
+        /// 预览文件Url，有效期30分钟
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PreviewUrl")]
+        public string PreviewUrl{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -76,6 +83,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "TaskMessage", this.TaskMessage);
             this.SetParamSimple(map, prefix + "ResourceId", this.ResourceId);
+            this.SetParamSimple(map, prefix + "PreviewUrl", this.PreviewUrl);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

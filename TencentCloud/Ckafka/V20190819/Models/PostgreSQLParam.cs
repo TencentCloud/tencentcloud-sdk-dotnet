@@ -54,6 +54,36 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SnapshotMode")]
         public string SnapshotMode{ get; set; }
 
+        /// <summary>
+        /// 上游数据格式(JSON/Debezium), 当数据库同步模式为默认字段匹配时,必填
+        /// </summary>
+        [JsonProperty("DataFormat")]
+        public string DataFormat{ get; set; }
+
+        /// <summary>
+        /// "INSERT" 表示使用 Insert 模式插入，"UPSERT" 表示使用 Upsert 模式插入
+        /// </summary>
+        [JsonProperty("DataTargetInsertMode")]
+        public string DataTargetInsertMode{ get; set; }
+
+        /// <summary>
+        /// 当 "DataInsertMode"="UPSERT" 时，传入当前 upsert 时依赖的主键
+        /// </summary>
+        [JsonProperty("DataTargetPrimaryKeyField")]
+        public string DataTargetPrimaryKeyField{ get; set; }
+
+        /// <summary>
+        /// 表与消息间的映射关系
+        /// </summary>
+        [JsonProperty("DataTargetRecordMapping")]
+        public RecordMapping[] DataTargetRecordMapping{ get; set; }
+
+        /// <summary>
+        /// 是否抛弃解析失败的消息，默认为true
+        /// </summary>
+        [JsonProperty("DropInvalidMessage")]
+        public bool? DropInvalidMessage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +95,11 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
             this.SetParamSimple(map, prefix + "PluginName", this.PluginName);
             this.SetParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
+            this.SetParamSimple(map, prefix + "DataFormat", this.DataFormat);
+            this.SetParamSimple(map, prefix + "DataTargetInsertMode", this.DataTargetInsertMode);
+            this.SetParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
+            this.SetParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
+            this.SetParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
         }
     }
 }
