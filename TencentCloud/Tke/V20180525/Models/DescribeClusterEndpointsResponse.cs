@@ -57,6 +57,27 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] ClusterExternalACL{ get; set; }
 
         /// <summary>
+        /// 外网域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterExternalDomain")]
+        public string ClusterExternalDomain{ get; set; }
+
+        /// <summary>
+        /// 内网域名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClusterIntranetDomain")]
+        public string ClusterIntranetDomain{ get; set; }
+
+        /// <summary>
+        /// 外网安全组
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -73,6 +94,9 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "ClusterIntranetEndpoint", this.ClusterIntranetEndpoint);
             this.SetParamSimple(map, prefix + "ClusterDomain", this.ClusterDomain);
             this.SetParamArraySimple(map, prefix + "ClusterExternalACL.", this.ClusterExternalACL);
+            this.SetParamSimple(map, prefix + "ClusterExternalDomain", this.ClusterExternalDomain);
+            this.SetParamSimple(map, prefix + "ClusterIntranetDomain", this.ClusterIntranetDomain);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -25,73 +25,73 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// cdh实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
+        /// 专用宿主机实例所在的位置。通过该参数可以指定实例所属可用区，所属项目等属性。
         /// </summary>
         [JsonProperty("Placement")]
         public Placement Placement{ get; set; }
 
         /// <summary>
-        /// cdh实例id
+        /// 专用宿主机实例id
         /// </summary>
         [JsonProperty("HostId")]
         public string HostId{ get; set; }
 
         /// <summary>
-        /// cdh实例类型
+        /// 专用宿主机实例类型
         /// </summary>
         [JsonProperty("HostType")]
         public string HostType{ get; set; }
 
         /// <summary>
-        /// cdh实例名称
+        /// 专用宿主机实例名称
         /// </summary>
         [JsonProperty("HostName")]
         public string HostName{ get; set; }
 
         /// <summary>
-        /// cdh实例付费模式
+        /// 专用宿主机实例付费模式
         /// </summary>
         [JsonProperty("HostChargeType")]
         public string HostChargeType{ get; set; }
 
         /// <summary>
-        /// cdh实例自动续费标记
+        /// 专用宿主机实例自动续费标记
         /// </summary>
         [JsonProperty("RenewFlag")]
         public string RenewFlag{ get; set; }
 
         /// <summary>
-        /// cdh实例创建时间
+        /// 专用宿主机实例创建时间
         /// </summary>
         [JsonProperty("CreatedTime")]
         public string CreatedTime{ get; set; }
 
         /// <summary>
-        /// cdh实例过期时间
+        /// 专用宿主机实例过期时间
         /// </summary>
         [JsonProperty("ExpiredTime")]
         public string ExpiredTime{ get; set; }
 
         /// <summary>
-        /// cdh实例上已创建云子机的实例id列表
+        /// 专用宿主机实例上已创建云子机的实例id列表
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }
 
         /// <summary>
-        /// cdh实例状态
+        /// 专用宿主机实例状态
         /// </summary>
         [JsonProperty("HostState")]
         public string HostState{ get; set; }
 
         /// <summary>
-        /// cdh实例ip
+        /// 专用宿主机实例ip
         /// </summary>
         [JsonProperty("HostIp")]
         public string HostIp{ get; set; }
 
         /// <summary>
-        /// cdh实例资源信息
+        /// 专用宿主机实例资源信息
         /// </summary>
         [JsonProperty("HostResource")]
         public HostResource HostResource{ get; set; }

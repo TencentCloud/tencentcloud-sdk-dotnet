@@ -37,6 +37,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
+        /// 任务概览信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TasksOverview")]
+        public TasksOverview TasksOverview{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -50,6 +57,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         {
             this.SetParamArrayObj(map, prefix + "TaskList.", this.TaskList);
             this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamObj(map, prefix + "TasksOverview.", this.TasksOverview);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -81,6 +81,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public long? DesiredPodNumber{ get; set; }
 
         /// <summary>
+        /// GPU驱动相关参数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GPUArgs")]
+        public GPUArgs GPUArgs{ get; set; }
+
+        /// <summary>
         /// base64 编码的用户脚本，在初始化节点之前执行，目前只对添加已有节点生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
@@ -108,6 +115,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamArrayObj(map, prefix + "DataDisks.", this.DataDisks);
             this.SetParamObj(map, prefix + "ExtraArgs.", this.ExtraArgs);
             this.SetParamSimple(map, prefix + "DesiredPodNumber", this.DesiredPodNumber);
+            this.SetParamObj(map, prefix + "GPUArgs.", this.GPUArgs);
             this.SetParamSimple(map, prefix + "PreStartUserScript", this.PreStartUserScript);
             this.SetParamArrayObj(map, prefix + "Taints.", this.Taints);
         }

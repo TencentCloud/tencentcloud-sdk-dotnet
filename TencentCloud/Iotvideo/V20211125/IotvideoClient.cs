@@ -1533,6 +1533,46 @@ namespace TencentCloud.Iotvideo.V20211125
         }
 
         /// <summary>
+        /// 获取设备图片流数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageStreamDataRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageStreamDataResponse"/></returns>
+        public async Task<DescribeCloudStorageStreamDataResponse> DescribeCloudStorageStreamData(DescribeCloudStorageStreamDataRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageStreamDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCloudStorageStreamData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageStreamDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备图片流数据
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCloudStorageStreamDataRequest"/></param>
+        /// <returns><see cref="DescribeCloudStorageStreamDataResponse"/></returns>
+        public DescribeCloudStorageStreamDataResponse DescribeCloudStorageStreamDataSync(DescribeCloudStorageStreamDataRequest req)
+        {
+             JsonResponseModel<DescribeCloudStorageStreamDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCloudStorageStreamData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCloudStorageStreamDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取云存事件缩略图
         /// </summary>
         /// <param name="req"><see cref="DescribeCloudStorageThumbnailRequest"/></param>

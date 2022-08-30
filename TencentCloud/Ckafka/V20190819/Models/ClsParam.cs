@@ -51,6 +51,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ContentKey")]
         public string ContentKey{ get; set; }
 
+        /// <summary>
+        /// 指定消息中的某字段内容作为cls日志的时间。
+        /// 字段内容格式需要是秒级时间戳
+        /// </summary>
+        [JsonProperty("TimeField")]
+        public string TimeField{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
             this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
             this.SetParamSimple(map, prefix + "ContentKey", this.ContentKey);
+            this.SetParamSimple(map, prefix + "TimeField", this.TimeField);
         }
     }
 }

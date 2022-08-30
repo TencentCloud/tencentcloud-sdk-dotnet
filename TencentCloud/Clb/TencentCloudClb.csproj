@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{85382FF1-BBAE-38BC-A5A9-F38E940A3D38}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.589</VersionPrefix>
+    <VersionPrefix>3.0.590</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -135,6 +135,8 @@
     <Compile Include="V20180317\Models\DescribeCustomizedConfigListResponse.cs" />
     <Compile Include="V20180317\Models\DescribeExclusiveClustersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeExclusiveClustersResponse.cs" />
+    <Compile Include="V20180317\Models\DescribeIdleLoadBalancersRequest.cs" />
+    <Compile Include="V20180317\Models\DescribeIdleLoadBalancersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersRequest.cs" />
     <Compile Include="V20180317\Models\DescribeLBListenersResponse.cs" />
     <Compile Include="V20180317\Models\DescribeListenersRequest.cs" />
@@ -173,6 +175,7 @@
     <Compile Include="V20180317\Models\ExtraInfo.cs" />
     <Compile Include="V20180317\Models\Filter.cs" />
     <Compile Include="V20180317\Models\HealthCheck.cs" />
+    <Compile Include="V20180317\Models\IdleLoadBalancer.cs" />
     <Compile Include="V20180317\Models\InternetAccessible.cs" />
     <Compile Include="V20180317\Models\LBChargePrepaid.cs" />
     <Compile Include="V20180317\Models\LBItem.cs" />

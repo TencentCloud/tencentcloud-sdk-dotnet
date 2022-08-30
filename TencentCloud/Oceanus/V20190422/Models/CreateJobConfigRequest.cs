@@ -132,6 +132,12 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("LogLevel")]
         public string LogLevel{ get; set; }
 
+        /// <summary>
+        /// Oceanus 平台恢复作业开关 1:开启 -1: 关闭
+        /// </summary>
+        [JsonProperty("AutoRecover")]
+        public long? AutoRecover{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -156,6 +162,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamSimple(map, prefix + "PythonVersion", this.PythonVersion);
             this.SetParamSimple(map, prefix + "WorkSpaceId", this.WorkSpaceId);
             this.SetParamSimple(map, prefix + "LogLevel", this.LogLevel);
+            this.SetParamSimple(map, prefix + "AutoRecover", this.AutoRecover);
         }
     }
 }

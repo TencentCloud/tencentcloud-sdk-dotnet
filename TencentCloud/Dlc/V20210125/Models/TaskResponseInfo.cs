@@ -43,7 +43,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string Id{ get; set; }
 
         /// <summary>
-        /// 计算时长，单位： ms。
+        /// 计算耗时，单位： ms
         /// </summary>
         [JsonProperty("UsedTime")]
         public long? UsedTime{ get; set; }
@@ -219,6 +219,13 @@ namespace TencentCloud.Dlc.V20210125.Models
         [JsonProperty("UiUrl")]
         public string UiUrl{ get; set; }
 
+        /// <summary>
+        /// 任务耗时，单位： ms
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalTime")]
+        public long? TotalTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -255,6 +262,7 @@ namespace TencentCloud.Dlc.V20210125.Models
             this.SetParamSimple(map, prefix + "SparkJobId", this.SparkJobId);
             this.SetParamSimple(map, prefix + "SparkJobFile", this.SparkJobFile);
             this.SetParamSimple(map, prefix + "UiUrl", this.UiUrl);
+            this.SetParamSimple(map, prefix + "TotalTime", this.TotalTime);
         }
     }
 }

@@ -1507,6 +1507,46 @@ namespace TencentCloud.Clb.V20180317
         }
 
         /// <summary>
+        /// 闲置实例是指创建超过7天后付费实例，且没有创建规则或创建规则没有绑定子机的负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdleLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeIdleLoadBalancersResponse"/></returns>
+        public async Task<DescribeIdleLoadBalancersResponse> DescribeIdleLoadBalancers(DescribeIdleLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeIdleLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdleLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 闲置实例是指创建超过7天后付费实例，且没有创建规则或创建规则没有绑定子机的负载均衡实例。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeIdleLoadBalancersRequest"/></param>
+        /// <returns><see cref="DescribeIdleLoadBalancersResponse"/></returns>
+        public DescribeIdleLoadBalancersResponse DescribeIdleLoadBalancersSync(DescribeIdleLoadBalancersRequest req)
+        {
+             JsonResponseModel<DescribeIdleLoadBalancersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeIdleLoadBalancers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeIdleLoadBalancersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询后端云主机或弹性网卡绑定的负载均衡，支持弹性网卡和cvm查询。
         /// </summary>
         /// <param name="req"><see cref="DescribeLBListenersRequest"/></param>

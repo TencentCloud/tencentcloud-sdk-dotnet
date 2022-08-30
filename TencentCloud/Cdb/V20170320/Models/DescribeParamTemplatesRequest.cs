@@ -30,6 +30,24 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("EngineVersions")]
         public string[] EngineVersions{ get; set; }
 
+        /// <summary>
+        /// 引擎类型，缺省则查询所有
+        /// </summary>
+        [JsonProperty("EngineTypes")]
+        public string[] EngineTypes{ get; set; }
+
+        /// <summary>
+        /// 模板名称，缺省则查询所有
+        /// </summary>
+        [JsonProperty("TemplateNames")]
+        public string[] TemplateNames{ get; set; }
+
+        /// <summary>
+        /// 模板id，缺省则查询所有
+        /// </summary>
+        [JsonProperty("TemplateIds")]
+        public long?[] TemplateIds{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +55,9 @@ namespace TencentCloud.Cdb.V20170320.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "EngineVersions.", this.EngineVersions);
+            this.SetParamArraySimple(map, prefix + "EngineTypes.", this.EngineTypes);
+            this.SetParamArraySimple(map, prefix + "TemplateNames.", this.TemplateNames);
+            this.SetParamArraySimple(map, prefix + "TemplateIds.", this.TemplateIds);
         }
     }
 }

@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("SecurityPolicies")]
         public string[] SecurityPolicies{ get; set; }
 
+        /// <summary>
+        /// 修改外网访问安全组
+        /// </summary>
+        [JsonProperty("SecurityGroup")]
+        public string SecurityGroup{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamArraySimple(map, prefix + "SecurityPolicies.", this.SecurityPolicies);
+            this.SetParamSimple(map, prefix + "SecurityGroup", this.SecurityGroup);
         }
     }
 }

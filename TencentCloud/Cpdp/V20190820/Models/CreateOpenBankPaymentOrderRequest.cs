@@ -148,6 +148,18 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public OpenBankProfitShareInfo[] ProfitShareInfoList{ get; set; }
 
         /// <summary>
+        /// 商企付-担保支付（PaymentMode为 FREEZE ）时需设置该参数
+        /// </summary>
+        [JsonProperty("SettlementRulesInfo")]
+        public OpenBankSettlementRulesInfo SettlementRulesInfo{ get; set; }
+
+        /// <summary>
+        /// 底层支付渠道特殊字段，若无特殊说明时，可以为空
+        /// </summary>
+        [JsonProperty("ExternalPaymentData")]
+        public string ExternalPaymentData{ get; set; }
+
+        /// <summary>
         /// 备注信息。
         /// </summary>
         [JsonProperty("Remark")]
@@ -186,6 +198,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Attachment", this.Attachment);
             this.SetParamSimple(map, prefix + "ProfitShareFlag", this.ProfitShareFlag);
             this.SetParamArrayObj(map, prefix + "ProfitShareInfoList.", this.ProfitShareInfoList);
+            this.SetParamObj(map, prefix + "SettlementRulesInfo.", this.SettlementRulesInfo);
+            this.SetParamSimple(map, prefix + "ExternalPaymentData", this.ExternalPaymentData);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
         }

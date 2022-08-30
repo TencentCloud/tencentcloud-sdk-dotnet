@@ -31,6 +31,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
+        /// <summary>
+        /// 是否需要返回可用区信息
+        /// </summary>
+        [JsonProperty("IncludeZoneStocks")]
+        public bool? IncludeZoneStocks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -38,6 +44,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamSimple(map, prefix + "IncludeZoneStocks", this.IncludeZoneStocks);
         }
     }
 }

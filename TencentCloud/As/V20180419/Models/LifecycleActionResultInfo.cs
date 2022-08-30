@@ -37,7 +37,25 @@ namespace TencentCloud.As.V20180419.Models
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 通知的结果，表示通知CMQ是否成功。
+        /// 执行活动ID。可通过TAT的[查询执行活动](https://cloud.tencent.com/document/api/1340/52679)API查询具体的执行结果。
+        /// </summary>
+        [JsonProperty("InvocationId")]
+        public string InvocationId{ get; set; }
+
+        /// <summary>
+        /// 命令调用的结果，表示执行TAT命令是否成功。<br>
+        /// <li>SUCCESSFUL 命令调用成功，不代表命令执行成功，执行的具体情况可根据InvocationId进行查询</li>
+        /// <li>FAILED 命令调用失败</li>
+        /// <li>NONE</li>
+        /// </summary>
+        [JsonProperty("InvokeCommandResult")]
+        public string InvokeCommandResult{ get; set; }
+
+        /// <summary>
+        /// 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+        /// <li>SUCCESSFUL 通知成功</li>
+        /// <li>FAILED 通知失败</li>
+        /// <li>NONE</li>
         /// </summary>
         [JsonProperty("NotificationResult")]
         public string NotificationResult{ get; set; }
@@ -49,7 +67,15 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleActionResult{ get; set; }
 
         /// <summary>
-        /// 结果的原因。
+        /// 结果的原因。<br>
+        /// <li>HEARTBEAT_TIMEOUT 由于心跳超时，结果根据DefaultResult设置。</li>
+        /// <li>NOTIFICATION_FAILURE 由于发送通知失败，结果根据DefaultResult设置。</li>
+        /// <li>CALL_INTERFACE 调用了接口CompleteLifecycleAction设置结果。</li>
+        /// <li>ANOTHER_ACTION_ABANDON 另一个生命周期操作的结果已设置为“ABANDON”。</li>
+        /// <li>COMMAND_CALL_FAILURE  由于命令调用失败，结果根据DefaultResult设置。</li>
+        /// <li>COMMAND_EXEC_FINISH  命令执行完成。</li>
+        /// <li>COMMAND_EXEC_FAILURE 由于命令执行失败，结果根据DefaultResult设置。</li>
+        /// <li>COMMAND_EXEC_RESULT_CHECK_FAILURE 由于命令结果检查失败，结果根据DefaultResult设置。</li>
         /// </summary>
         [JsonProperty("ResultReason")]
         public string ResultReason{ get; set; }
@@ -62,6 +88,8 @@ namespace TencentCloud.As.V20180419.Models
         {
             this.SetParamSimple(map, prefix + "LifecycleHookId", this.LifecycleHookId);
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "InvocationId", this.InvocationId);
+            this.SetParamSimple(map, prefix + "InvokeCommandResult", this.InvokeCommandResult);
             this.SetParamSimple(map, prefix + "NotificationResult", this.NotificationResult);
             this.SetParamSimple(map, prefix + "LifecycleActionResult", this.LifecycleActionResult);
             this.SetParamSimple(map, prefix + "ResultReason", this.ResultReason);

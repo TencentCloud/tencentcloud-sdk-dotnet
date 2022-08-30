@@ -2813,6 +2813,46 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
+        /// 获取L7转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public async Task<DescribeNewL7RulesErrHealthResponse> DescribeNewL7RulesErrHealth(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取L7转发规则健康检查异常结果
+        /// </summary>
+        /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
+        /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
+        public DescribeNewL7RulesErrHealthResponse DescribeNewL7RulesErrHealthSync(DescribeNewL7RulesErrHealthRequest req)
+        {
+             JsonResponseModel<DescribeNewL7RulesErrHealthResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeNewL7RulesErrHealth");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeNewL7RulesErrHealthResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 拉取防护概览攻击趋势
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewAttackTrendRequest"/></param>

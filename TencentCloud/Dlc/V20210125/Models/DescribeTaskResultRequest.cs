@@ -31,7 +31,7 @@ namespace TencentCloud.Dlc.V20210125.Models
         public string TaskId{ get; set; }
 
         /// <summary>
-        /// 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回1000行数据。
+        /// 上一次请求响应返回的分页信息。第一次可以不带，从头开始返回数据，每次返回MaxResults字段设置的数据量。
         /// </summary>
         [JsonProperty("NextToken")]
         public string NextToken{ get; set; }

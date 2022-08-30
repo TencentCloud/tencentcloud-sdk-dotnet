@@ -253,6 +253,46 @@ namespace TencentCloud.Ic.V20190307
         }
 
         /// <summary>
+        /// 购买套外流量包
+        /// </summary>
+        /// <param name="req"><see cref="PayForExtendDataRequest"/></param>
+        /// <returns><see cref="PayForExtendDataResponse"/></returns>
+        public async Task<PayForExtendDataResponse> PayForExtendData(PayForExtendDataRequest req)
+        {
+             JsonResponseModel<PayForExtendDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "PayForExtendData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayForExtendDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 购买套外流量包
+        /// </summary>
+        /// <param name="req"><see cref="PayForExtendDataRequest"/></param>
+        /// <returns><see cref="PayForExtendDataResponse"/></returns>
+        public PayForExtendDataResponse PayForExtendDataSync(PayForExtendDataRequest req)
+        {
+             JsonResponseModel<PayForExtendDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "PayForExtendData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<PayForExtendDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 批量为卡片续费，此接口建议调用至少间隔10s,如果出现返回deal lock failed相关的错误，请过10s再重试。
         /// 续费的必要条件：
         /// 1、单次续费的卡片不可以超过 100张。
