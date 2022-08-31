@@ -94,6 +94,20 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("ColorConfidence")]
         public long? ColorConfidence{ get; set; }
 
+        /// <summary>
+        /// 车辆朝向，仅车辆识别（增强版）支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Orientation")]
+        public string Orientation{ get; set; }
+
+        /// <summary>
+        /// 车辆朝向置信度，0-100，仅车辆识别（增强版）支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrientationConfidence")]
+        public long? OrientationConfidence{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -111,6 +125,8 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "PlateConfidence", this.PlateConfidence);
             this.SetParamSimple(map, prefix + "TypeConfidence", this.TypeConfidence);
             this.SetParamSimple(map, prefix + "ColorConfidence", this.ColorConfidence);
+            this.SetParamSimple(map, prefix + "Orientation", this.Orientation);
+            this.SetParamSimple(map, prefix + "OrientationConfidence", this.OrientationConfidence);
         }
     }
 }

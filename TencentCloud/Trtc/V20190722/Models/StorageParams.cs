@@ -25,7 +25,7 @@ namespace TencentCloud.Trtc.V20190722.Models
     {
         
         /// <summary>
-        /// 第三方云存储的账号信息。
+        /// 第三方云存储的账号信息（暂不支持）。
         /// </summary>
         [JsonProperty("CloudStorage")]
         public CloudStorage CloudStorage{ get; set; }

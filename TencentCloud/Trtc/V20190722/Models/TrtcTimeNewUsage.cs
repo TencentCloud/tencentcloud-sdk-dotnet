@@ -37,31 +37,31 @@ namespace TencentCloud.Trtc.V20190722.Models
         public ulong? VoiceUserNum{ get; set; }
 
         /// <summary>
-        /// 音视频通话时长。单位：秒。
+        /// 音视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("VideoTime")]
         public ulong? VideoTime{ get; set; }
 
         /// <summary>
-        /// 标清视频通话时长。单位：秒。
+        /// 标清视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("Class1VideoTime")]
         public ulong? Class1VideoTime{ get; set; }
 
         /// <summary>
-        /// 高清视频通话时长。单位：秒。
+        /// 高清视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("Class2VideoTime")]
         public ulong? Class2VideoTime{ get; set; }
 
         /// <summary>
-        /// 超高清视频通话时长。单位：秒。
+        /// 超高清视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("Class3VideoTime")]
         public ulong? Class3VideoTime{ get; set; }
 
         /// <summary>
-        /// 音频通话时长。单位：秒。
+        /// 音频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("AudioTime")]
         public ulong? AudioTime{ get; set; }
@@ -73,13 +73,13 @@ namespace TencentCloud.Trtc.V20190722.Models
         public float? Bandwidth{ get; set; }
 
         /// <summary>
-        /// 2k视频通话时长。单位：秒。
+        /// 2k视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("Video2KTime")]
         public ulong? Video2KTime{ get; set; }
 
         /// <summary>
-        /// 4k视频通话时长。单位：秒。
+        /// 4k视频通话收费时长。单位：秒。
         /// </summary>
         [JsonProperty("Video4KTime")]
         public ulong? Video4KTime{ get; set; }

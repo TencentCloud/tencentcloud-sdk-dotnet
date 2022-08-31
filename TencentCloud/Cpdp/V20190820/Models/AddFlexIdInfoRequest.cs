@@ -54,6 +54,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Environment")]
         public string Environment{ get; set; }
 
+        /// <summary>
+        /// 姓名
+        /// </summary>
+        [JsonProperty("Name")]
+        public string Name{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -64,6 +70,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "IdNo", this.IdNo);
             this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamSimple(map, prefix + "Name", this.Name);
         }
     }
 }

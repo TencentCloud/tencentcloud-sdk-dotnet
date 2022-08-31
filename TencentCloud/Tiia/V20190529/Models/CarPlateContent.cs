@@ -52,6 +52,27 @@ namespace TencentCloud.Tiia.V20190529.Models
         [JsonProperty("PlateLocation")]
         public Coord[] PlateLocation{ get; set; }
 
+        /// <summary>
+        /// 判断车牌是否遮挡。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateStatus")]
+        public string PlateStatus{ get; set; }
+
+        /// <summary>
+        /// 车牌遮挡的置信度，0-100。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateStatusConfidence")]
+        public long? PlateStatusConfidence{ get; set; }
+
+        /// <summary>
+        /// 车牌角度。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PlateAngle")]
+        public float? PlateAngle{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +83,9 @@ namespace TencentCloud.Tiia.V20190529.Models
             this.SetParamSimple(map, prefix + "Color", this.Color);
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArrayObj(map, prefix + "PlateLocation.", this.PlateLocation);
+            this.SetParamSimple(map, prefix + "PlateStatus", this.PlateStatus);
+            this.SetParamSimple(map, prefix + "PlateStatusConfidence", this.PlateStatusConfidence);
+            this.SetParamSimple(map, prefix + "PlateAngle", this.PlateAngle);
         }
     }
 }

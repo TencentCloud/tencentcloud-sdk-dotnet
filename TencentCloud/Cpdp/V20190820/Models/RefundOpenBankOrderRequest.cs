@@ -89,6 +89,12 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("Environment")]
         public string Environment{ get; set; }
 
+        /// <summary>
+        /// 分账信息列表。
+        /// </summary>
+        [JsonProperty("ProfitShareInfoList")]
+        public OpenBankProfitShareInfo[] ProfitShareInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -105,6 +111,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ExternalRefundData", this.ExternalRefundData);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "Environment", this.Environment);
+            this.SetParamArrayObj(map, prefix + "ProfitShareInfoList.", this.ProfitShareInfoList);
         }
     }
 }

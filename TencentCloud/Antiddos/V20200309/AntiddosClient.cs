@@ -2813,7 +2813,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取L7转发规则健康检查异常结果
+        /// 获取L7转发规则健康检查异常结果列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
         /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>
@@ -2833,7 +2833,7 @@ namespace TencentCloud.Antiddos.V20200309
         }
 
         /// <summary>
-        /// 获取L7转发规则健康检查异常结果
+        /// 获取L7转发规则健康检查异常结果列表
         /// </summary>
         /// <param name="req"><see cref="DescribeNewL7RulesErrHealthRequest"/></param>
         /// <returns><see cref="DescribeNewL7RulesErrHealthResponse"/></returns>

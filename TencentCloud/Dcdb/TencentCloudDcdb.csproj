@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{700BCB15-E440-34BE-979B-260C57587D11}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.590</VersionPrefix>
+    <VersionPrefix>3.0.591</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -64,8 +64,6 @@
     <Compile Include="V20180411\Models\CreateAccountResponse.cs" />
     <Compile Include="V20180411\Models\CreateDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\CreateDCDBInstanceResponse.cs" />
-    <Compile Include="V20180411\Models\CreateDedicatedClusterDCDBInstanceRequest.cs" />
-    <Compile Include="V20180411\Models\CreateDedicatedClusterDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\CreateHourDCDBInstanceRequest.cs" />
     <Compile Include="V20180411\Models\CreateHourDCDBInstanceResponse.cs" />
     <Compile Include="V20180411\Models\DBAccount.cs" />

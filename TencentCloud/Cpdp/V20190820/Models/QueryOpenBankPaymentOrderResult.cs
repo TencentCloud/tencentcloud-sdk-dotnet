@@ -136,6 +136,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("FeeRate")]
         public long? FeeRate{ get; set; }
 
+        /// <summary>
+        /// 分账信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProfitShareRespInfoList")]
+        public OpenBankProfitShareRespInfo[] ProfitShareRespInfoList{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamObj(map, prefix + "BankApprovalGuideInfo.", this.BankApprovalGuideInfo);
             this.SetParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
             this.SetParamSimple(map, prefix + "FeeRate", this.FeeRate);
+            this.SetParamArrayObj(map, prefix + "ProfitShareRespInfoList.", this.ProfitShareRespInfoList);
         }
     }
 }

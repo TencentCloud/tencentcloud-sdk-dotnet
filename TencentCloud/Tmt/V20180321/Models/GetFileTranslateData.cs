@@ -50,6 +50,13 @@ namespace TencentCloud.Tmt.V20180321.Models
         [JsonProperty("Message")]
         public string Message{ get; set; }
 
+        /// <summary>
+        /// 翻译进度
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Progress")]
+        public long? Progress{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Tmt.V20180321.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "FileData", this.FileData);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "Progress", this.Progress);
         }
     }
 }
