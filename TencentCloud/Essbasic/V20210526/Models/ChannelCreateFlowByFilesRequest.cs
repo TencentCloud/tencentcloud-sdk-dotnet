@@ -49,7 +49,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FileIds{ get; set; }
 
         /// <summary>
-        /// 签署文件中的控件，如：填写控件等
+        /// 签署文件中的发起方的填写控件，需要在发起的时候进行填充
         /// </summary>
         [JsonProperty("Components")]
         public Component[] Components{ get; set; }

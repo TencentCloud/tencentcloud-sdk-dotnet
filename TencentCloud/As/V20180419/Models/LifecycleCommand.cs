@@ -39,7 +39,7 @@ namespace TencentCloud.As.V20180419.Models
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Parameters")]
-        public string[] Parameters{ get; set; }
+        public string Parameters{ get; set; }
 
 
         /// <summary>
@@ -48,7 +48,7 @@ namespace TencentCloud.As.V20180419.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "CommandId", this.CommandId);
-            this.SetParamArraySimple(map, prefix + "Parameters.", this.Parameters);
+            this.SetParamSimple(map, prefix + "Parameters", this.Parameters);
         }
     }
 }

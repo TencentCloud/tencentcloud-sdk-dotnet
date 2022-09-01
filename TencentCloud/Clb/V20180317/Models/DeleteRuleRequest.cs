@@ -43,13 +43,13 @@ namespace TencentCloud.Clb.V20180317.Models
         public string[] LocationIds{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。已提供LocationIds参数时本参数不生效。
+        /// 要删除的转发规则的域名，如果是多域名，可以指定多域名列表中的任意一个。
         /// </summary>
         [JsonProperty("Domain")]
         public string Domain{ get; set; }
 
         /// <summary>
-        /// 要删除的转发规则的转发路径，已提供LocationIds参数时本参数不生效。
+        /// 要删除的转发规则的转发路径。
         /// </summary>
         [JsonProperty("Url")]
         public string Url{ get; set; }

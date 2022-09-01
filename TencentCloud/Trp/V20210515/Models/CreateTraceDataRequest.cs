@@ -78,6 +78,18 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("TraceItems")]
         public TraceItem[] TraceItems{ get; set; }
 
+        /// <summary>
+        /// 溯源状态 0: 无效, 1: 有效
+        /// </summary>
+        [JsonProperty("Status")]
+        public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 环节数据
+        /// </summary>
+        [JsonProperty("PhaseData")]
+        public PhaseData PhaseData{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +105,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "TraceId", this.TraceId);
             this.SetParamArrayObj(map, prefix + "TraceItems.", this.TraceItems);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
         }
     }
 }

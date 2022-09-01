@@ -114,6 +114,16 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("PolyClientCertificateAliasInfo")]
         public CertificateAliasInfo[] PolyClientCertificateAliasInfo{ get; set; }
 
+        /// <summary>
+        /// 是否支持Http3，其中：
+        /// 0，不支持Http3接入；
+        /// 1，持Http3接入。
+        /// 注意：如果支持了Http3的功能，那么该监听器会占用对应的UDP接入端口，不可再创建相同端口的UDP监听器。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Http3Supported")]
+        public long? Http3Supported{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +143,7 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "AuthType", this.AuthType);
             this.SetParamSimple(map, prefix + "ClientCertificateAlias", this.ClientCertificateAlias);
             this.SetParamArrayObj(map, prefix + "PolyClientCertificateAliasInfo.", this.PolyClientCertificateAliasInfo);
+            this.SetParamSimple(map, prefix + "Http3Supported", this.Http3Supported);
         }
     }
 }

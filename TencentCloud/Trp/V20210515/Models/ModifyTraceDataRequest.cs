@@ -115,10 +115,16 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// [无效] 溯源状态
+        /// 溯源状态 0: 无效, 1: 有效
         /// </summary>
         [JsonProperty("Status")]
         public ulong? Status{ get; set; }
+
+        /// <summary>
+        /// 环节数据
+        /// </summary>
+        [JsonProperty("PhaseData")]
+        public PhaseData PhaseData{ get; set; }
 
 
         /// <summary>
@@ -142,6 +148,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamObj(map, prefix + "ChainData.", this.ChainData);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
         }
     }
 }

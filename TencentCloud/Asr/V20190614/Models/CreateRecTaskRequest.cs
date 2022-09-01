@@ -113,13 +113,13 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? FilterDirty{ get; set; }
 
         /// <summary>
-        /// 热词表id。如不设置该参数，自动生效默认热词表；如果设置了该参数，那么将生效对应的热词表。
+        /// 热词表id。如不设置该参数，自动生效默认热词表；如设置了该参数，那么将生效对应的热词表。
         /// </summary>
         [JsonProperty("HotwordId")]
         public string HotwordId{ get; set; }
 
         /// <summary>
-        /// 自学习模型 id。如不设置该参数，自动生效最后一次上线的自学习模型；如果设置了该参数，那么将生效对应的自学习模型。
+        /// 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
         /// </summary>
         [JsonProperty("CustomizationId")]
         public string CustomizationId{ get; set; }

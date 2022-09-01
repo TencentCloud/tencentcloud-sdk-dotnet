@@ -41,7 +41,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>WechatPublishComplete：微信发布完成；</li>
         /// <li>ComposeMediaComplete：制作媒体文件完成；</li>
         /// <li>WechatMiniProgramPublishComplete：微信小程序发布完成。</li>
-        /// <li>FastClipMediaComplete：快速剪辑完成。</li>
+        /// <li>FastClipMediaComplete：快速剪辑完成；</li>
+        /// <li>ReviewAudioVideoComplete：音视频审核完成。</li>
         /// <b>兼容 2017 版的事件类型：</b>
         /// <li>TranscodeComplete：视频转码完成；</li>
         /// <li>ConcatComplete：视频拼接完成；</li>
@@ -164,6 +165,13 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RestoreMediaCompleteEvent")]
         public RestoreMediaTask RestoreMediaCompleteEvent{ get; set; }
 
+        /// <summary>
+        /// 音视频审核完成事件，当事件类型为 ReviewAudioVideoComplete 时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoCompleteEvent")]
+        public ReviewAudioVideoTask ReviewAudioVideoCompleteEvent{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -188,6 +196,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "WechatMiniProgramPublishCompleteEvent.", this.WechatMiniProgramPublishCompleteEvent);
             this.SetParamObj(map, prefix + "RemoveWatermarkCompleteEvent.", this.RemoveWatermarkCompleteEvent);
             this.SetParamObj(map, prefix + "RestoreMediaCompleteEvent.", this.RestoreMediaCompleteEvent);
+            this.SetParamObj(map, prefix + "ReviewAudioVideoCompleteEvent.", this.ReviewAudioVideoCompleteEvent);
         }
     }
 }

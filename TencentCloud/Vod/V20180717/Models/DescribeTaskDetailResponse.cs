@@ -34,7 +34,8 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li>WechatMiniProgramPublish：微信小程序视频发布任务；</li>
         /// <li>PullUpload：拉取上传媒体文件任务；</li>
         /// <li>FastClipMedia：快速剪辑任务；</li>
-        /// <li>RemoveWatermarkTask：智能去除水印任务。</li>
+        /// <li>RemoveWatermarkTask：智能去除水印任务；</li>
+        /// <li> ReviewAudioVideo：音视频审核任务。</li>
         /// </summary>
         [JsonProperty("TaskType")]
         public string TaskType{ get; set; }
@@ -158,6 +159,13 @@ namespace TencentCloud.Vod.V20180717.Models
         public RemoveWatermarkTask RemoveWatermarkTask{ get; set; }
 
         /// <summary>
+        /// 音视频审核任务信息，仅当 TaskType 为 ReviewAudioVideo，该字段有值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ReviewAudioVideoTask")]
+        public ReviewAudioVideoTask ReviewAudioVideoTask{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -187,6 +195,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamObj(map, prefix + "CreateImageSpriteTask.", this.CreateImageSpriteTask);
             this.SetParamObj(map, prefix + "SnapshotByTimeOffsetTask.", this.SnapshotByTimeOffsetTask);
             this.SetParamObj(map, prefix + "RemoveWatermarkTask.", this.RemoveWatermarkTask);
+            this.SetParamObj(map, prefix + "ReviewAudioVideoTask.", this.ReviewAudioVideoTask);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
