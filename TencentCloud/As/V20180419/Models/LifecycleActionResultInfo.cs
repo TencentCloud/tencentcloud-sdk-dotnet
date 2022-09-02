@@ -52,7 +52,7 @@ namespace TencentCloud.As.V20180419.Models
         public string InvokeCommandResult{ get; set; }
 
         /// <summary>
-        /// 通知的结果，表示通知CMQ/TCMQ是否成功。<br>
+        /// 通知的结果，表示通知CMQ/TDMQ是否成功。<br>
         /// <li>SUCCESSFUL 通知成功</li>
         /// <li>FAILED 通知失败</li>
         /// <li>NONE</li>

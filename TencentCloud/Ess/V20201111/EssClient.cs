@@ -309,6 +309,54 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
+        /// 补充签署流程本企业签署人信息
+        /// 适用场景：在通过模版或者文件发起合同时，若未指定本企业签署人信息，则流程发起后，可以调用此接口补充签署人。
+        /// 同一签署人可以补充多个员工作为候选签署人,最终签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 注：目前暂时只支持补充来源于企业微信的员工作为候选签署人
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowApproversRequest"/></param>
+        /// <returns><see cref="CreateFlowApproversResponse"/></returns>
+        public async Task<CreateFlowApproversResponse> CreateFlowApprovers(CreateFlowApproversRequest req)
+        {
+             JsonResponseModel<CreateFlowApproversResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateFlowApprovers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowApproversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 补充签署流程本企业签署人信息
+        /// 适用场景：在通过模版或者文件发起合同时，若未指定本企业签署人信息，则流程发起后，可以调用此接口补充签署人。
+        /// 同一签署人可以补充多个员工作为候选签署人,最终签署人取决于谁先领取合同完成签署。
+        /// 
+        /// 注：目前暂时只支持补充来源于企业微信的员工作为候选签署人
+        /// </summary>
+        /// <param name="req"><see cref="CreateFlowApproversRequest"/></param>
+        /// <returns><see cref="CreateFlowApproversResponse"/></returns>
+        public CreateFlowApproversResponse CreateFlowApproversSync(CreateFlowApproversRequest req)
+        {
+             JsonResponseModel<CreateFlowApproversResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateFlowApprovers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateFlowApproversResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（CreateFlowByFiles）用来通过上传后的pdf资源编号来创建待签署的合同流程。
         /// 适用场景1：适用非制式的合同文件签署。一般开发者自己有完整的签署文件，可以通过该接口传入完整的PDF文件及流程信息生成待签署的合同流程。
         /// 适用场景2：可通过该接口传入制式合同文件，同时在指定位置添加签署控件。可以起到接口创建临时模板的效果。如果是标准的制式文件，建议使用模板功能生成模板ID进行合同流程的生成。
@@ -622,6 +670,48 @@ namespace TencentCloud.Ess.V20201111
              {
                  var strResp = this.InternalRequestSync(req, "DescribeFlowBriefs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowBriefsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询合同详情
+        /// 适用场景：可用于主动查询某个合同详情信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowInfoRequest"/></param>
+        /// <returns><see cref="DescribeFlowInfoResponse"/></returns>
+        public async Task<DescribeFlowInfoResponse> DescribeFlowInfo(DescribeFlowInfoRequest req)
+        {
+             JsonResponseModel<DescribeFlowInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFlowInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询合同详情
+        /// 适用场景：可用于主动查询某个合同详情信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFlowInfoRequest"/></param>
+        /// <returns><see cref="DescribeFlowInfoResponse"/></returns>
+        public DescribeFlowInfoResponse DescribeFlowInfoSync(DescribeFlowInfoRequest req)
+        {
+             JsonResponseModel<DescribeFlowInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFlowInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFlowInfoResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

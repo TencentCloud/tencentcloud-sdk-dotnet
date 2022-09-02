@@ -25,7 +25,7 @@ namespace TencentCloud.Asr.V20190614.Models
     {
         
         /// <summary>
-        /// 腾讯云项目 ID，可填 0，总长度不超过 1024 字节。
+        /// 腾讯云项目 ID，废弃参数，默认填写0即可。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
@@ -47,7 +47,6 @@ namespace TencentCloud.Asr.V20190614.Models
         /// • 16k_ca：16k 粤语；
         /// • 16k_ja：16k 日语；
         /// • 16k_zh_medical：16k 医疗；
-        /// • 16k_zh_dialect：多方言，支持23种方言。
         /// </summary>
         [JsonProperty("EngSerViceType")]
         public string EngSerViceType{ get; set; }
@@ -65,7 +64,7 @@ namespace TencentCloud.Asr.V20190614.Models
         public string VoiceFormat{ get; set; }
 
         /// <summary>
-        /// 用户端对此任务的唯一标识，用户自助生成，用于用户查找识别结果。
+        /// 用户端对此任务的唯一标识。废弃参数，忽略即可。
         /// </summary>
         [JsonProperty("UsrAudioKey")]
         public string UsrAudioKey{ get; set; }
@@ -89,10 +88,10 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? DataLen{ get; set; }
 
         /// <summary>
-        /// 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
+        /// 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
         /// </summary>
-        [JsonProperty("HotwordId")]
-        public string HotwordId{ get; set; }
+        [JsonProperty("WordInfo")]
+        public long? WordInfo{ get; set; }
 
         /// <summary>
         /// 是否过滤脏词（目前支持中文普通话引擎）。0：不过滤脏词；1：过滤脏词；2：将脏词替换为 * 。默认值为 0。
@@ -119,10 +118,16 @@ namespace TencentCloud.Asr.V20190614.Models
         public long? ConvertNumMode{ get; set; }
 
         /// <summary>
-        /// 是否显示词级别时间戳。0：不显示；1：显示，不包含标点时间戳，2：显示，包含标点时间戳。默认值为 0。
+        /// 热词id。用于调用对应的热词表，如果在调用语音识别服务时，不进行单独的热词id设置，自动生效默认热词；如果进行了单独的热词id设置，那么将生效单独设置的热词id。
         /// </summary>
-        [JsonProperty("WordInfo")]
-        public long? WordInfo{ get; set; }
+        [JsonProperty("HotwordId")]
+        public string HotwordId{ get; set; }
+
+        /// <summary>
+        /// 自学习模型 id。如设置了该参数，将生效对应的自学习模型。
+        /// </summary>
+        [JsonProperty("CustomizationId")]
+        public string CustomizationId{ get; set; }
 
 
         /// <summary>
@@ -139,12 +144,13 @@ namespace TencentCloud.Asr.V20190614.Models
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Data", this.Data);
             this.SetParamSimple(map, prefix + "DataLen", this.DataLen);
-            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+            this.SetParamSimple(map, prefix + "WordInfo", this.WordInfo);
             this.SetParamSimple(map, prefix + "FilterDirty", this.FilterDirty);
             this.SetParamSimple(map, prefix + "FilterModal", this.FilterModal);
             this.SetParamSimple(map, prefix + "FilterPunc", this.FilterPunc);
             this.SetParamSimple(map, prefix + "ConvertNumMode", this.ConvertNumMode);
-            this.SetParamSimple(map, prefix + "WordInfo", this.WordInfo);
+            this.SetParamSimple(map, prefix + "HotwordId", this.HotwordId);
+            this.SetParamSimple(map, prefix + "CustomizationId", this.CustomizationId);
         }
     }
 }

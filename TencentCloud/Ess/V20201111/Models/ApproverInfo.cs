@@ -97,6 +97,24 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("PreReadTime")]
         public long? PreReadTime{ get; set; }
 
+        /// <summary>
+        /// 签署人userId，非企微场景不使用此字段
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
+        /// <summary>
+        /// 签署人用户来源,企微侧用户请传入：WEWORKAPP
+        /// </summary>
+        [JsonProperty("ApproverSource")]
+        public string ApproverSource{ get; set; }
+
+        /// <summary>
+        /// 客户自定义签署人标识，64位长度，保证唯一，非企微场景不使用此字段
+        /// </summary>
+        [JsonProperty("CustomApproverTag")]
+        public string CustomApproverTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +132,9 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "ApproverRole", this.ApproverRole);
             this.SetParamArraySimple(map, prefix + "VerifyChannel.", this.VerifyChannel);
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
+            this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
         }
     }
 }

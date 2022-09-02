@@ -152,6 +152,13 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("BotPkg")]
         public BotPkg BotPkg{ get; set; }
 
+        /// <summary>
+        /// bot的qps详情
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BotQPS")]
+        public BotQPS BotQPS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +186,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
             this.SetParamObj(map, prefix + "FraudPkg.", this.FraudPkg);
             this.SetParamObj(map, prefix + "BotPkg.", this.BotPkg);
+            this.SetParamObj(map, prefix + "BotQPS.", this.BotQPS);
         }
     }
 }

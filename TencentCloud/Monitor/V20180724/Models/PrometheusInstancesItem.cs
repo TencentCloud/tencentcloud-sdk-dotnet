@@ -245,6 +245,20 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GrafanaInstanceId")]
         public string GrafanaInstanceId{ get; set; }
 
+        /// <summary>
+        /// 告警规则限制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AlertRuleLimit")]
+        public long? AlertRuleLimit{ get; set; }
+
+        /// <summary>
+        /// 预聚合规则限制
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RecordingRuleLimit")]
+        public long? RecordingRuleLimit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -278,6 +292,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "GrafanaIpWhiteList", this.GrafanaIpWhiteList);
             this.SetParamObj(map, prefix + "Grant.", this.Grant);
             this.SetParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
+            this.SetParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
+            this.SetParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
         }
     }
 }

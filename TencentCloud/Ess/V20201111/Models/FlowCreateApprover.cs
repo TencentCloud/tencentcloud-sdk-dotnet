@@ -97,7 +97,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public ulong? PreReadTime{ get; set; }
 
         /// <summary>
-        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个
+        /// 签署方经办人的用户ID,和签署方经办人姓名+手机号+证件必须有一个。非企微场景不使用此字段
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -107,6 +107,18 @@ namespace TencentCloud.Ess.V20201111.Models
         /// </summary>
         [JsonProperty("Required")]
         public bool? Required{ get; set; }
+
+        /// <summary>
+        /// 签署人用户来源,企微侧用户请传入：WEWORKAPP
+        /// </summary>
+        [JsonProperty("ApproverSource")]
+        public string ApproverSource{ get; set; }
+
+        /// <summary>
+        /// 客户自定义签署人标识，64位长度，保证唯一。非企微场景不使用此字段
+        /// </summary>
+        [JsonProperty("CustomApproverTag")]
+        public string CustomApproverTag{ get; set; }
 
 
         /// <summary>
@@ -127,6 +139,8 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "PreReadTime", this.PreReadTime);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
             this.SetParamSimple(map, prefix + "Required", this.Required);
+            this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
+            this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
         }
     }
 }

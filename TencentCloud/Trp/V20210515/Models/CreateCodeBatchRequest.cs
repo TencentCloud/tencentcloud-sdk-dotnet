@@ -66,6 +66,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("MpTpl")]
         public string MpTpl{ get; set; }
 
+        /// <summary>
+        /// 克隆批次ID
+        /// </summary>
+        [JsonProperty("CloneId")]
+        public string CloneId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "BatchId", this.BatchId);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "MpTpl", this.MpTpl);
+            this.SetParamSimple(map, prefix + "CloneId", this.CloneId);
         }
     }
 }

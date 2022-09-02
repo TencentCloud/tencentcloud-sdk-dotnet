@@ -539,6 +539,13 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("AutoIndexEnabled")]
         public bool? AutoIndexEnabled{ get; set; }
 
+        /// <summary>
+        /// 是否支持存储计算分离
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnableHybridStorage")]
+        public bool? EnableHybridStorage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -623,6 +630,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
             this.SetParamArrayObj(map, prefix + "OptionalWebServiceInfos.", this.OptionalWebServiceInfos);
             this.SetParamSimple(map, prefix + "AutoIndexEnabled", this.AutoIndexEnabled);
+            this.SetParamSimple(map, prefix + "EnableHybridStorage", this.EnableHybridStorage);
         }
     }
 }

@@ -87,6 +87,16 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("RefundStatus")]
         public string RefundStatus{ get; set; }
 
+        /// <summary>
+        /// 自动续费状态，取值有：
+        /// <li>Never：不自动续费。</li>
+        /// <li>Expire：到期自动续费。</li>
+        /// <li>ExpireOrUseOut：到期或用完自动续费。</li>
+        /// <li>NotSupport：不支持。</li>
+        /// </summary>
+        [JsonProperty("RenewStatus")]
+        public string RenewStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -102,6 +112,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamArrayObj(map, prefix + "ProductInstanceResourceSet.", this.ProductInstanceResourceSet);
             this.SetParamSimple(map, prefix + "ProductInstanceStatus", this.ProductInstanceStatus);
             this.SetParamSimple(map, prefix + "RefundStatus", this.RefundStatus);
+            this.SetParamSimple(map, prefix + "RenewStatus", this.RenewStatus);
         }
     }
 }

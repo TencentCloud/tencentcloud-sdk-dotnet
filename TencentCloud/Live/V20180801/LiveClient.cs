@@ -601,7 +601,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
+        /// 创建截图模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
         /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotTemplateRequest"/></param>
@@ -622,7 +622,7 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
-        /// 创建截图模板，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
+        /// 创建截图模板，数量上限：50，成功返回模板id后，需要调用[CreateLiveSnapshotRule](/document/product/267/32625)接口，将模板id绑定到流使用。
         /// <br>截图相关文档：[直播截图](/document/product/267/32737)。
         /// </summary>
         /// <param name="req"><see cref="CreateLiveSnapshotTemplateRequest"/></param>

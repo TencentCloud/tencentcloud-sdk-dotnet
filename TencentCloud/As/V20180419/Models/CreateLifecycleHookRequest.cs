@@ -55,13 +55,13 @@ namespace TencentCloud.As.V20180419.Models
         public long? HeartbeatTimeout{ get; set; }
 
         /// <summary>
-        /// 弹性伸缩向通知目标发送的附加信息，默认值为空字符串""。最大长度不能超过1024个字节。
+        /// 弹性伸缩向通知目标发送的附加信息，配置通知时使用,默认值为空字符串""。最大长度不能超过1024个字节。
         /// </summary>
         [JsonProperty("NotificationMetadata")]
         public string NotificationMetadata{ get; set; }
 
         /// <summary>
-        /// 通知目标
+        /// 通知目标。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
         /// </summary>
         [JsonProperty("NotificationTarget")]
         public NotificationTarget NotificationTarget{ get; set; }
@@ -73,7 +73,7 @@ namespace TencentCloud.As.V20180419.Models
         public string LifecycleTransitionType{ get; set; }
 
         /// <summary>
-        /// 远程命令执行对象。NotificationTarget和CommandInfo参数互斥，二者不可同时指定。
+        /// 远程命令执行对象。NotificationTarget和LifecycleCommand参数互斥，二者不可同时指定。
         /// </summary>
         [JsonProperty("LifecycleCommand")]
         public LifecycleCommand LifecycleCommand{ get; set; }
