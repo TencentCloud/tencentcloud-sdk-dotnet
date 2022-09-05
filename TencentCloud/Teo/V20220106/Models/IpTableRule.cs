@@ -25,35 +25,42 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 动作: drop拦截，trans放行，monitor观察
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Action")]
-        public string Action{ get; set; }
-
-        /// <summary>
-        /// 根据类型匹配：ip(根据ip), area(根据区域)
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MatchFrom")]
-        public string MatchFrom{ get; set; }
-
-        /// <summary>
-        /// 匹配内容
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("MatchContent")]
-        public string MatchContent{ get; set; }
-
-        /// <summary>
-        /// 规则id
+        /// 规则ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// 更新时间
+        /// 处置动作。
+        /// 1. drop 拦截
+        /// 2. trans放行
+        /// 3. monitor观察
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
+
+        /// <summary>
+        /// 类型匹配。
+        /// 1. ip 根据ip
+        /// 2. area 根据区域
+        /// 3. ua 根据User-Agent
+        /// 4. referer 根据Referer
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchFrom")]
+        public string MatchFrom{ get; set; }
+
+        /// <summary>
+        /// 匹配内容。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MatchContent")]
+        public string MatchContent{ get; set; }
+
+        /// <summary>
+        /// 更新时间。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -65,10 +72,10 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamSimple(map, prefix + "MatchFrom", this.MatchFrom);
             this.SetParamSimple(map, prefix + "MatchContent", this.MatchContent);
-            this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
         }
     }

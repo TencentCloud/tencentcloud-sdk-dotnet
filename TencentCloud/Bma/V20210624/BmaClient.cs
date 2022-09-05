@@ -373,6 +373,86 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
+        /// 新增权属文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRRightFileRequest"/></param>
+        /// <returns><see cref="CreateCRRightFileResponse"/></returns>
+        public async Task<CreateCRRightFileResponse> CreateCRRightFile(CreateCRRightFileRequest req)
+        {
+             JsonResponseModel<CreateCRRightFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCRRightFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRRightFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增权属文件
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRRightFileRequest"/></param>
+        /// <returns><see cref="CreateCRRightFileResponse"/></returns>
+        public CreateCRRightFileResponse CreateCRRightFileSync(CreateCRRightFileRequest req)
+        {
+             JsonResponseModel<CreateCRRightFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCRRightFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRRightFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 举报侵权链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRTortRequest"/></param>
+        /// <returns><see cref="CreateCRTortResponse"/></returns>
+        public async Task<CreateCRTortResponse> CreateCRTort(CreateCRTortRequest req)
+        {
+             JsonResponseModel<CreateCRTortResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCRTort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRTortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 举报侵权链接
+        /// </summary>
+        /// <param name="req"><see cref="CreateCRTortRequest"/></param>
+        /// <returns><see cref="CreateCRTortResponse"/></returns>
+        public CreateCRTortResponse CreateCRTortSync(CreateCRTortRequest req)
+        {
+             JsonResponseModel<CreateCRTortResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCRTort");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCRTortResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 品牌经营管家-版权保护个人认证接口
         /// </summary>
         /// <param name="req"><see cref="CreateCRUserVerifyRequest"/></param>
@@ -924,6 +1004,46 @@ namespace TencentCloud.Bma.V20210624
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCRRightStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRRightStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-白名单修改接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRWhiteListRequest"/></param>
+        /// <returns><see cref="ModifyCRWhiteListResponse"/></returns>
+        public async Task<ModifyCRWhiteListResponse> ModifyCRWhiteList(ModifyCRWhiteListRequest req)
+        {
+             JsonResponseModel<ModifyCRWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCRWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRWhiteListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 版权保护-白名单修改接口
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCRWhiteListRequest"/></param>
+        /// <returns><see cref="ModifyCRWhiteListResponse"/></returns>
+        public ModifyCRWhiteListResponse ModifyCRWhiteListSync(ModifyCRWhiteListRequest req)
+        {
+             JsonResponseModel<ModifyCRWhiteListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCRWhiteList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCRWhiteListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

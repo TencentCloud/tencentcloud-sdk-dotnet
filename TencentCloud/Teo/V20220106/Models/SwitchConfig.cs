@@ -25,7 +25,9 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// Web类型的安全总开关：Web基础防护，自定义规则，速率限制
+        /// Web类型的安全总开关生效范围，Waf，自定义规则，速率限制。
+        /// 1. on 开启
+        /// 2. off 关闭
         /// </summary>
         [JsonProperty("WebSwitch")]
         public string WebSwitch{ get; set; }

@@ -25,31 +25,40 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关
+        /// WafConfig开关，取值有：
+        /// <li> on：开启；</li>
+        /// <li> off：关闭。</li>开关仅与配置是否生效有关，即使为off（关闭），也可以正常修改配置的内容。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 防护级别，loose/normal/strict/stricter/custom
+        /// 防护级别，取值有：
+        /// <li> loose：宽松；</li>
+        /// <li> normal：正常；</li>
+        /// <li> strict：严格；</li>
+        /// <li> stricter：超严格；</li>
+        /// <li> custom：自定义。</li>
         /// </summary>
         [JsonProperty("Level")]
         public string Level{ get; set; }
 
         /// <summary>
-        /// 模式 block-阻断；observe-观察模式；close-关闭
+        /// 全局WAF模式，取值有：
+        /// <li> block：阻断（全局阻断，但可对详细规则配置观察）；</li>
+        /// <li> observe：观察（无论详细规则配置什么，都为观察）。</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 托管规则黑白名单
+        /// 托管规则详细配置。
         /// </summary>
         [JsonProperty("WafRules")]
         public WafRule WafRules{ get; set; }
 
         /// <summary>
-        /// AI规则引擎防护
+        /// AI规则引擎防护配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AiRule")]

@@ -25,14 +25,20 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 模板名称
+        /// 模板等级名称。
+        /// 1. sup_loose 自适应 - 超级宽松
+        /// 2. loose     自适应 - 宽松
+        /// 3. emergency 自适应 - 紧急
+        /// 4. normal    自适应 - 适中
+        /// 5. strict    固定阈值 - 严格
+        /// 6. close     关闭 - 仅精准速率限制生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 模板值详情
+        /// 模板值详情。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Detail")]

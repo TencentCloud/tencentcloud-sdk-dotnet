@@ -158,6 +158,27 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("OrganizationInfo")]
         public OrganizationInfo OrganizationInfo{ get; set; }
 
+        /// <summary>
+        /// 子商户证件类型
+        /// 1 - 身份证
+        /// 3 - 回乡证
+        /// 4 - 中国护照
+        /// 5 - 台胞证
+        /// 19 - 外国护照
+        /// 52 - 组织机构代码证
+        /// 68 - 营业执照 
+        /// 73 - 统一社会信用代码
+        /// </summary>
+        [JsonProperty("SubMerchantIdType")]
+        public string SubMerchantIdType{ get; set; }
+
+        /// <summary>
+        /// 子商户证件号码
+        /// <敏感信息>加密详见<a href="https://cloud.tencent.com/document/product/1122/48979" target="_blank">《商户端接口敏感信息加密说明》</a>
+        /// </summary>
+        [JsonProperty("SubMerchantIdCode")]
+        public string SubMerchantIdCode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -183,6 +204,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "MidasEnvironment", this.MidasEnvironment);
             this.SetParamSimple(map, prefix + "SubMerchantStoreName", this.SubMerchantStoreName);
             this.SetParamObj(map, prefix + "OrganizationInfo.", this.OrganizationInfo);
+            this.SetParamSimple(map, prefix + "SubMerchantIdType", this.SubMerchantIdType);
+            this.SetParamSimple(map, prefix + "SubMerchantIdCode", this.SubMerchantIdCode);
         }
     }
 }

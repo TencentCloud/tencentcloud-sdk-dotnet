@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{D6D394C6-F749-36E5-A127-4F612EC56898}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.596</VersionPrefix>
+    <VersionPrefix>3.0.597</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -60,8 +60,12 @@
     <Compile Include="V20210624\Models\CreateCRBlockResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRCompanyVerifyRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRCompanyVerifyResponse.cs" />
+    <Compile Include="V20210624\Models\CreateCRRightFileRequest.cs" />
+    <Compile Include="V20210624\Models\CreateCRRightFileResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRRightRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRRightResponse.cs" />
+    <Compile Include="V20210624\Models\CreateCRTortRequest.cs" />
+    <Compile Include="V20210624\Models\CreateCRTortResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRUserVerifyRequest.cs" />
     <Compile Include="V20210624\Models\CreateCRUserVerifyResponse.cs" />
     <Compile Include="V20210624\Models\CreateCRWorkRequest.cs" />
@@ -81,6 +85,7 @@
     <Compile Include="V20210624\Models\DescribeCRWorkInfoRequest.cs" />
     <Compile Include="V20210624\Models\DescribeCRWorkInfoResponse.cs" />
     <Compile Include="V20210624\Models\FakeURLInfo.cs" />
+    <Compile Include="V20210624\Models\File.cs" />
     <Compile Include="V20210624\Models\Filter.cs" />
     <Compile Include="V20210624\Models\ModifyBPOfflineAttachmentRequest.cs" />
     <Compile Include="V20210624\Models\ModifyBPOfflineAttachmentResponse.cs" />
@@ -92,6 +97,8 @@
     <Compile Include="V20210624\Models\ModifyCRObtainStatusResponse.cs" />
     <Compile Include="V20210624\Models\ModifyCRRightStatusRequest.cs" />
     <Compile Include="V20210624\Models\ModifyCRRightStatusResponse.cs" />
+    <Compile Include="V20210624\Models\ModifyCRWhiteListRequest.cs" />
+    <Compile Include="V20210624\Models\ModifyCRWhiteListResponse.cs" />
     <Compile Include="V20210624\Models\Monitor.cs" />
     <Compile Include="V20210624\Models\MonitorTort.cs" />
     <Compile Include="V20210624\Models\ProtectURLInfo.cs" />

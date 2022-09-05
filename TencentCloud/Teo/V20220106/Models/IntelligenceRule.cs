@@ -25,14 +25,16 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关
+        /// 开关。
+        /// 1. on 开启
+        /// 2. off 关闭
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 规则详情
+        /// 规则详情。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Items")]

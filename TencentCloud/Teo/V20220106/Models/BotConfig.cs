@@ -25,37 +25,39 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// bot开关
+        /// 开关。
+        /// 1. on 开启
+        /// 2. off 关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 预置规则
+        /// 通用详细基础规则。
         /// </summary>
         [JsonProperty("ManagedRule")]
         public BotManagedRule ManagedRule{ get; set; }
 
         /// <summary>
-        /// 保留
+        /// ua基础规则。
         /// </summary>
         [JsonProperty("UaBotRule")]
         public BotManagedRule UaBotRule{ get; set; }
 
         /// <summary>
-        /// 保留
+        /// isp基础规则。
         /// </summary>
         [JsonProperty("IspBotRule")]
         public BotManagedRule IspBotRule{ get; set; }
 
         /// <summary>
-        /// 用户画像规则
+        /// 用户画像规则。
         /// </summary>
         [JsonProperty("PortraitRule")]
         public BotPortraitRule PortraitRule{ get; set; }
 
         /// <summary>
-        /// Bot智能分析
+        /// Bot智能分析。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IntelligenceRule")]

@@ -57,6 +57,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// CLOSED：关单
         /// PAY_FAIL：支付失败
         /// REVOKE：退票
+        /// PART_REFUND：部分退款
+        /// FULL_REFUND：全部退款
         /// </summary>
         [JsonProperty("OrderStatus")]
         public string OrderStatus{ get; set; }

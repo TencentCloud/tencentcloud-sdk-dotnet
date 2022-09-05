@@ -25,46 +25,62 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 本规则的id
+        /// 本功能的开关。
+        /// 1. on 开启
+        /// 2. off 关闭
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// 本规则的ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// JS挑战的规则ID
+        /// JS挑战的规则ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AlgManagedIds")]
         public long?[] AlgManagedIds{ get; set; }
 
         /// <summary>
-        /// 数字验证码的规则ID
+        /// 数字验证码的规则ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CapManagedIds")]
         public long?[] CapManagedIds{ get; set; }
 
         /// <summary>
-        /// 观察的规则ID
+        /// 观察的规则ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MonManagedIds")]
         public long?[] MonManagedIds{ get; set; }
 
         /// <summary>
-        /// 拦截的规则ID
+        /// 拦截的规则ID。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DropManagedIds")]
         public long?[] DropManagedIds{ get; set; }
 
         /// <summary>
-        /// 本功能的开关
+        /// 保留。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Switch")]
-        public string Switch{ get; set; }
+        [JsonProperty("ManagedIds")]
+        public long?[] ManagedIds{ get; set; }
+
+        /// <summary>
+        /// 保留。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TransManagedIds")]
+        public long?[] TransManagedIds{ get; set; }
 
 
         /// <summary>
@@ -72,12 +88,14 @@ namespace TencentCloud.Teo.V20220106.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "RuleID", this.RuleID);
             this.SetParamArraySimple(map, prefix + "AlgManagedIds.", this.AlgManagedIds);
             this.SetParamArraySimple(map, prefix + "CapManagedIds.", this.CapManagedIds);
             this.SetParamArraySimple(map, prefix + "MonManagedIds.", this.MonManagedIds);
             this.SetParamArraySimple(map, prefix + "DropManagedIds.", this.DropManagedIds);
-            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamArraySimple(map, prefix + "ManagedIds.", this.ManagedIds);
+            this.SetParamArraySimple(map, prefix + "TransManagedIds.", this.TransManagedIds);
         }
     }
 }

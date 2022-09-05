@@ -31,10 +31,16 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// 监测状态 1-开启监测 2-关闭监测 默认为1
+        /// 监测状态 1-开启监测 2-关闭监测
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public string MonitorStatus{ get; set; }
+
+        /// <summary>
+        /// 默认不停止，支持续期
+        /// </summary>
+        [JsonProperty("MonitorEnd")]
+        public string MonitorEnd{ get; set; }
 
 
         /// <summary>
@@ -44,6 +50,7 @@ namespace TencentCloud.Bma.V20210624.Models
         {
             this.SetParamSimple(map, prefix + "WorkId", this.WorkId);
             this.SetParamSimple(map, prefix + "MonitorStatus", this.MonitorStatus);
+            this.SetParamSimple(map, prefix + "MonitorEnd", this.MonitorEnd);
         }
     }
 }

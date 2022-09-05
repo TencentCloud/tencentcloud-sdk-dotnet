@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.596</VersionPrefix>
+    <VersionPrefix>3.0.597</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -393,6 +393,8 @@
     <Compile Include="V20170312\Models\DescribeTemplateLimitsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeTenantCcnsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeTenantCcnsResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficPackagesRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeTrafficPackagesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointRequest.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointResponse.cs" />
     <Compile Include="V20170312\Models\DescribeVpcEndPointServiceRequest.cs" />
@@ -694,6 +696,7 @@
     <Compile Include="V20170312\Models\SubnetInput.cs" />
     <Compile Include="V20170312\Models\Tag.cs" />
     <Compile Include="V20170312\Models\TemplateLimit.cs" />
+    <Compile Include="V20170312\Models\TrafficPackage.cs" />
     <Compile Include="V20170312\Models\TransformAddressRequest.cs" />
     <Compile Include="V20170312\Models\TransformAddressResponse.cs" />
     <Compile Include="V20170312\Models\UnassignIpv6AddressesRequest.cs" />

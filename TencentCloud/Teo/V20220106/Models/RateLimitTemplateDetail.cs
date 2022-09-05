@@ -25,42 +25,48 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 模板名称
+        /// 模板等级名称。
+        /// 1. sup_loose 自适应 - 超级宽松
+        /// 2. loose     自适应 - 宽松
+        /// 3. emergency 自适应 - 紧急
+        /// 4. normal    自适应 - 适中
+        /// 5. strict    固定阈值 - 严格
+        /// 6. close     关闭 - 仅精准速率限制生效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
 
         /// <summary>
-        /// 唯一id
+        /// 唯一id。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 处置动作
+        /// 处置动作。模板阀值触发后的处罚行为。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
 
         /// <summary>
-        /// 惩罚时间，秒
+        /// 惩罚时间，单位是秒。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("PunishTime")]
         public long? PunishTime{ get; set; }
 
         /// <summary>
-        /// 阈值
+        /// 阈值。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Threshold")]
         public long? Threshold{ get; set; }
 
         /// <summary>
-        /// 统计周期
+        /// 统计周期。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Period")]

@@ -6765,6 +6765,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DescribeTrafficPackagesResponse"/></returns>
+        public async Task<DescribeTrafficPackagesResponse> DescribeTrafficPackages(DescribeTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口 (DescribeTrafficPackages)  用于查询共享流量包详细信息，包括共享流量包唯一标识ID，名称，流量使用信息等
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrafficPackagesRequest"/></param>
+        /// <returns><see cref="DescribeTrafficPackagesResponse"/></returns>
+        public DescribeTrafficPackagesResponse DescribeTrafficPackagesSync(DescribeTrafficPackagesRequest req)
+        {
+             JsonResponseModel<DescribeTrafficPackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrafficPackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrafficPackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询终端节点列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeVpcEndPointRequest"/></param>

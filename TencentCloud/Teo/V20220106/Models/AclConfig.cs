@@ -25,13 +25,15 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关
+        /// 开关。
+        /// 1. on 开启
+        /// 2. off 关闭
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// ACL用户规则
+        /// 自定义-用户规则。
         /// </summary>
         [JsonProperty("UserRules")]
         public ACLUserRule[] UserRules{ get; set; }

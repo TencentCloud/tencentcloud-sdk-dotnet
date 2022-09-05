@@ -25,8 +25,10 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// smart_status_close-关闭；smart_status_open-拦截处置；
-        /// smart_status_observe-观察处置
+        /// AI规则引擎状态，取值有：
+        /// <li> smart_status_close：关闭；</li>
+        /// <li> smart_status_open：拦截处置；</li>
+        /// <li> smart_status_observe：观察处置。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Mode")]

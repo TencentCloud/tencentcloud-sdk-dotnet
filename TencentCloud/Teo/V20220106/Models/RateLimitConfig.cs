@@ -25,26 +25,28 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 开关
+        /// 开关。
+        /// 1. on 开启RateLimit；
+        /// 2. off 关闭RateLimit
         /// </summary>
         [JsonProperty("Switch")]
         public string Switch{ get; set; }
 
         /// <summary>
-        /// 用户规则
+        /// 速率限制-用户规则列表。
         /// </summary>
         [JsonProperty("UserRules")]
         public RateLimitUserRule[] UserRules{ get; set; }
 
         /// <summary>
-        /// 默认模板
+        /// 速率限制模板功能。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Template")]
         public RateLimitTemplate Template{ get; set; }
 
         /// <summary>
-        /// 智能客户端过滤
+        /// 智能客户端过滤。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Intelligence")]

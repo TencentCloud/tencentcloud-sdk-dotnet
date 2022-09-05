@@ -25,53 +25,67 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 门神配置
+        /// 托管规则。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("WafConfig")]
         public WafConfig WafConfig{ get; set; }
 
         /// <summary>
-        /// RateLimit配置
+        /// 速率限制。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RateLimitConfig")]
         public RateLimitConfig RateLimitConfig{ get; set; }
 
         /// <summary>
-        /// DDoS配置
+        /// DDoS配置。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("DdosConfig")]
         public DDoSConfig DdosConfig{ get; set; }
 
         /// <summary>
-        /// ACL配置
+        /// 自定义规则。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("AclConfig")]
         public AclConfig AclConfig{ get; set; }
 
         /// <summary>
-        /// Bot配置
+        /// Bot配置。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BotConfig")]
         public BotConfig BotConfig{ get; set; }
 
         /// <summary>
-        /// 总开关
+        /// 七层防护总开关。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("SwitchConfig")]
         public SwitchConfig SwitchConfig{ get; set; }
 
         /// <summary>
-        /// IP黑白名单
+        /// 基础访问管控。如果为null，默认使用历史配置。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("IpTableConfig")]
         public IpTableConfig IpTableConfig{ get; set; }
+
+        /// <summary>
+        /// 例外规则配置。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ExceptConfig")]
+        public ExceptConfig ExceptConfig{ get; set; }
+
+        /// <summary>
+        /// 自定义拦截页面配置。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DropPageConfig")]
+        public DropPageConfig DropPageConfig{ get; set; }
 
 
         /// <summary>
@@ -86,6 +100,8 @@ namespace TencentCloud.Teo.V20220106.Models
             this.SetParamObj(map, prefix + "BotConfig.", this.BotConfig);
             this.SetParamObj(map, prefix + "SwitchConfig.", this.SwitchConfig);
             this.SetParamObj(map, prefix + "IpTableConfig.", this.IpTableConfig);
+            this.SetParamObj(map, prefix + "ExceptConfig.", this.ExceptConfig);
+            this.SetParamObj(map, prefix + "DropPageConfig.", this.DropPageConfig);
         }
     }
 }

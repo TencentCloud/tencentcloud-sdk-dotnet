@@ -25,14 +25,23 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 恶意BOT
+        /// 智能分析标签。
+        /// 1. evil_bot 恶意
+        /// 2. suspect_bot 疑似恶意
+        /// 3. good_bot 好的
+        /// 4. normal 正常
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 动作
+        /// 触发智能分析标签对应的处置方式。
+        /// 1. drop 拦截
+        /// 2. trans 放行
+        /// 3. monitor 监控
+        /// 4. alg Javascript挑战
+        /// 5. captcha 数字验证码
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
