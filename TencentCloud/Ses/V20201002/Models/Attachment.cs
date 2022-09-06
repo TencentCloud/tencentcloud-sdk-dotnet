@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string FileName{ get; set; }
 
         /// <summary>
-        /// base64之后的附件内容，您可以发送的附件大小上限为4 MB。 注意：腾讯云api目前要求请求包大小不得超过8 MB。如果您要发送多个附件，那么这些附件的总大小不能超过8 MB。
+        /// Base64之后的附件内容，你可以发送的附件大小上限为4M。注意：腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍。应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 接口会返回错误。
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }

@@ -46,7 +46,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public UploadFile[] FileInfos{ get; set; }
 
         /// <summary>
-        /// 上传文件链接数组，最多支持20个URL
+        /// 不再使用，上传文件链接数组，最多支持20个URL
         /// </summary>
         [JsonProperty("FileUrls")]
         public string FileUrls{ get; set; }

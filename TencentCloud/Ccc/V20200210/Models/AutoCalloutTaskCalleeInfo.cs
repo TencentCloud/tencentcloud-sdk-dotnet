@@ -36,6 +36,12 @@ namespace TencentCloud.Ccc.V20200210.Models
         [JsonProperty("State")]
         public ulong? State{ get; set; }
 
+        /// <summary>
+        /// 会话ID列表
+        /// </summary>
+        [JsonProperty("Sessions")]
+        public string[] Sessions{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Ccc.V20200210.Models
         {
             this.SetParamSimple(map, prefix + "Callee", this.Callee);
             this.SetParamSimple(map, prefix + "State", this.State);
+            this.SetParamArraySimple(map, prefix + "Sessions.", this.Sessions);
         }
     }
 }

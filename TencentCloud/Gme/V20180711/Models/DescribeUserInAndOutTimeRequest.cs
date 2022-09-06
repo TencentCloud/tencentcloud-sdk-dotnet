@@ -42,6 +42,18 @@ namespace TencentCloud.Gme.V20180711.Models
         [JsonProperty("UserId")]
         public long? UserId{ get; set; }
 
+        /// <summary>
+        /// 字符串类型用户ID
+        /// </summary>
+        [JsonProperty("UserIdStr")]
+        public string UserIdStr{ get; set; }
+
+        /// <summary>
+        /// 字符串类型房间ID
+        /// </summary>
+        [JsonProperty("RoomIdStr")]
+        public string RoomIdStr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +63,8 @@ namespace TencentCloud.Gme.V20180711.Models
             this.SetParamSimple(map, prefix + "BizId", this.BizId);
             this.SetParamSimple(map, prefix + "RoomId", this.RoomId);
             this.SetParamSimple(map, prefix + "UserId", this.UserId);
+            this.SetParamSimple(map, prefix + "UserIdStr", this.UserIdStr);
+            this.SetParamSimple(map, prefix + "RoomIdStr", this.RoomIdStr);
         }
     }
 }

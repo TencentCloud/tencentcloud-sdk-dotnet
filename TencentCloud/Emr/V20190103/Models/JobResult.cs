@@ -52,6 +52,13 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("JobState")]
         public string JobState{ get; set; }
 
+        /// <summary>
+        /// YARN任务ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ApplicationId")]
+        public string ApplicationId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +68,7 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Name", this.Name);
             this.SetParamSimple(map, prefix + "ActionOnFailure", this.ActionOnFailure);
             this.SetParamSimple(map, prefix + "JobState", this.JobState);
+            this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
         }
     }
 }

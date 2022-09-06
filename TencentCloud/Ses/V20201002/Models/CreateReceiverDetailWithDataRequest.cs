@@ -31,7 +31,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public ulong? ReceiverId{ get; set; }
 
         /// <summary>
-        /// 收信人邮箱以及模板参数，数组形式
+        /// 收信人邮箱以及模板参数，数组形式。收件人个数限制20000个以内。
         /// </summary>
         [JsonProperty("Datas")]
         public ReceiverInputData[] Datas{ get; set; }

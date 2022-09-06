@@ -333,6 +333,34 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("Clients")]
         public string Clients{ get; set; }
 
+        /// <summary>
+        /// 系统当前时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CurrentTime")]
+        public string CurrentTime{ get; set; }
+
+        /// <summary>
+        /// 是否用于联邦
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsFederation")]
+        public long? IsFederation{ get; set; }
+
+        /// <summary>
+        /// 设备名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
+
+        /// <summary>
+        /// 服务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ServiceClient")]
+        public string ServiceClient{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -383,6 +411,10 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Zone", this.Zone);
             this.SetParamObj(map, prefix + "SubnetInfo.", this.SubnetInfo);
             this.SetParamSimple(map, prefix + "Clients", this.Clients);
+            this.SetParamSimple(map, prefix + "CurrentTime", this.CurrentTime);
+            this.SetParamSimple(map, prefix + "IsFederation", this.IsFederation);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "ServiceClient", this.ServiceClient);
         }
     }
 }

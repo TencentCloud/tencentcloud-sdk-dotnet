@@ -51,7 +51,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public string ReplyToAddresses{ get; set; }
 
         /// <summary>
-        /// 使用模板发送时，填写的模板相关参数
+        /// 使用模板发送时，填写的模板相关参数。因 Simple 已经废除使用，Template 为必填项
         /// </summary>
         [JsonProperty("Template")]
         public Template Template{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Ses.V20201002.Models
         public Simple Simple{ get; set; }
 
         /// <summary>
-        /// 需要发送附件时，填写附件相关参数。
+        /// 需要发送附件时，填写附件相关参数。腾讯云接口请求最大支持 8M 的请求包，附件内容经过 Base64 预期扩大1.5倍，应该控制所有附件的总大小最大在 4M 以内，整体请求超出 8M 时接口会返回错误
         /// </summary>
         [JsonProperty("Attachments")]
         public Attachment[] Attachments{ get; set; }

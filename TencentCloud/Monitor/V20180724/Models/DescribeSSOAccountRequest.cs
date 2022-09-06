@@ -30,6 +30,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
+        /// <summary>
+        /// 按账号 UIN 进行过滤
+        /// </summary>
+        [JsonProperty("UserId")]
+        public string UserId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "UserId", this.UserId);
         }
     }
 }

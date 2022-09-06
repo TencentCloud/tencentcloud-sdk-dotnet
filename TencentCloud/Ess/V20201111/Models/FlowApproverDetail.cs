@@ -39,6 +39,16 @@ namespace TencentCloud.Ess.V20201111.Models
 
         /// <summary>
         /// 签署人的状态
+        /// 0：还没有发起
+        /// 1：流程中 没有开始处理
+        /// 2：待处理
+        /// 3：签署态
+        /// 4：拒绝态
+        /// 5：过期没人处理
+        /// 6：取消态
+        /// 7：还没有预发起
+        /// 8：待填写
+        /// 9：因为各种原因而终止
         /// </summary>
         [JsonProperty("ApproveStatus")]
         public long? ApproveStatus{ get; set; }

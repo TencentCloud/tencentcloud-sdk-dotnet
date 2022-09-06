@@ -63,7 +63,7 @@ namespace TencentCloud.Emr.V20190103.Models
         public LoginSettings LoginSettings{ get; set; }
 
         /// <summary>
-        /// 实例标签。
+        /// 实例标签，示例：["{\"TagKey\":\"test-tag1\",\"TagValue\":\"001\"}","{\"TagKey\":\"test-tag2\",\"TagValue\":\"002\"}"]。
         /// </summary>
         [JsonProperty("TagSpecification")]
         public string[] TagSpecification{ get; set; }

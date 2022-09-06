@@ -39,8 +39,7 @@ namespace TencentCloud.Emr.V20190103.Models
         /// <summary>
         /// 执行失败策略。
         /// 1. TERMINATE_CLUSTER 执行失败时退出并销毁集群。
-        /// 2. CANCEL_AND_WAIT 执行失败时阻塞等待。
-        /// 3. CONTINUE 执行失败时跳过并执行后续步骤。
+        /// 2. CONTINUE 执行失败时跳过并执行后续步骤。
         /// </summary>
         [JsonProperty("ActionOnFailure")]
         public string ActionOnFailure{ get; set; }

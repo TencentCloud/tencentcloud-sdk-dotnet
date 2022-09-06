@@ -2581,46 +2581,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// 单个修改VPC火墙开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyVPCSwitchStatusResponse"/></returns>
-        public async Task<ModifyVPCSwitchStatusResponse> ModifyVPCSwitchStatus(ModifyVPCSwitchStatusRequest req)
-        {
-             JsonResponseModel<ModifyVPCSwitchStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "ModifyVPCSwitchStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVPCSwitchStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 单个修改VPC火墙开关
-        /// </summary>
-        /// <param name="req"><see cref="ModifyVPCSwitchStatusRequest"/></param>
-        /// <returns><see cref="ModifyVPCSwitchStatusResponse"/></returns>
-        public ModifyVPCSwitchStatusResponse ModifyVPCSwitchStatusSync(ModifyVPCSwitchStatusRequest req)
-        {
-             JsonResponseModel<ModifyVPCSwitchStatusResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "ModifyVPCSwitchStatus");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyVPCSwitchStatusResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 删除互联网边界规则
         /// </summary>
         /// <param name="req"><see cref="RemoveAcRuleRequest"/></param>

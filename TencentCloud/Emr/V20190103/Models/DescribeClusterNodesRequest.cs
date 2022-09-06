@@ -70,6 +70,18 @@ namespace TencentCloud.Emr.V20190103.Models
         [JsonProperty("SearchFields")]
         public SearchItem[] SearchFields{ get; set; }
 
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("OrderField")]
+        public string OrderField{ get; set; }
+
+        /// <summary>
+        /// 无
+        /// </summary>
+        [JsonProperty("Asc")]
+        public long? Asc{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -82,6 +94,8 @@ namespace TencentCloud.Emr.V20190103.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "HardwareResourceType", this.HardwareResourceType);
             this.SetParamArrayObj(map, prefix + "SearchFields.", this.SearchFields);
+            this.SetParamSimple(map, prefix + "OrderField", this.OrderField);
+            this.SetParamSimple(map, prefix + "Asc", this.Asc);
         }
     }
 }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{E60BF861-5F39-3CA3-BBF9-F91D18A81B74}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.597</VersionPrefix>
+    <VersionPrefix>3.0.598</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -264,8 +264,6 @@
     <Compile Include="V20200309\Models\ModifyDDoSThresholdResponse.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameRequest.cs" />
     <Compile Include="V20200309\Models\ModifyDomainUsrNameResponse.cs" />
-    <Compile Include="V20200309\Models\ModifyL7RulesEdgeRequest.cs" />
-    <Compile Include="V20200309\Models\ModifyL7RulesEdgeResponse.cs" />
     <Compile Include="V20200309\Models\ModifyNewDomainRulesRequest.cs" />
     <Compile Include="V20200309\Models\ModifyNewDomainRulesResponse.cs" />
     <Compile Include="V20200309\Models\ModifyPacketFilterConfigRequest.cs" />

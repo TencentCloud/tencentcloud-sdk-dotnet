@@ -32,7 +32,7 @@ namespace TencentCloud.Ses.V20201002.Models
 
         /// <summary>
         /// 模板中的变量参数，请使用json.dump将json对象格式化为string类型。该对象是一组键值对，每个Key代表模板中的一个变量，模板中的变量使用{{键}}表示，相应的值在发送时会被替换为{{值}}。
-        /// 注意：参数值不能是html等复杂类型的数据。
+        /// 注意：参数值不能是html等复杂类型的数据。TemplateData (整个 JSON 结构) 总长度限制为 800 bytes。
         /// </summary>
         [JsonProperty("TemplateData")]
         public string TemplateData{ get; set; }
