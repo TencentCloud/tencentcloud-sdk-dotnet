@@ -5487,6 +5487,50 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 对点播中的音视频媒体发起审核任务，智能检测视频画面、画面中的文字、语音中的文字出现的违规内容。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
+        /// </summary>
+        /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
+        /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
+        public async Task<ReviewAudioVideoResponse> ReviewAudioVideo(ReviewAudioVideoRequest req)
+        {
+             JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReviewAudioVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewAudioVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对点播中的音视频媒体发起审核任务，智能检测视频画面、画面中的文字、语音中的文字出现的违规内容。
+        /// 
+        /// 如使用事件通知，事件通知的类型为 [任务流状态变更](https://cloud.tencent.com/document/product/266/9636)。
+        /// </summary>
+        /// <param name="req"><see cref="ReviewAudioVideoRequest"/></param>
+        /// <returns><see cref="ReviewAudioVideoResponse"/></returns>
+        public ReviewAudioVideoResponse ReviewAudioVideoSync(ReviewAudioVideoRequest req)
+        {
+             JsonResponseModel<ReviewAudioVideoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReviewAudioVideo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReviewAudioVideoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 对点播中的图片文件发起审核（令人反感的信息、不安全的信息、不适宜的信息）任务。
         /// 
         /// ><li>图片文件大小支持：文件 < 5M；</li>

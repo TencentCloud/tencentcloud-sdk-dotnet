@@ -1093,6 +1093,46 @@ namespace TencentCloud.Dbbrain.V20210527
         }
 
         /// <summary>
+        /// 查询redis实例top key前缀列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopKeyPrefixListRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopKeyPrefixListResponse"/></returns>
+        public async Task<DescribeRedisTopKeyPrefixListResponse> DescribeRedisTopKeyPrefixList(DescribeRedisTopKeyPrefixListRequest req)
+        {
+             JsonResponseModel<DescribeRedisTopKeyPrefixListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRedisTopKeyPrefixList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRedisTopKeyPrefixListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询redis实例top key前缀列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRedisTopKeyPrefixListRequest"/></param>
+        /// <returns><see cref="DescribeRedisTopKeyPrefixListResponse"/></returns>
+        public DescribeRedisTopKeyPrefixListResponse DescribeRedisTopKeyPrefixListSync(DescribeRedisTopKeyPrefixListRequest req)
+        {
+             JsonResponseModel<DescribeRedisTopKeyPrefixListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRedisTopKeyPrefixList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRedisTopKeyPrefixListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询安全审计日志导出文件下载链接。目前日志文件下载仅提供腾讯云内网地址，请通过广州地域的腾讯云服务器进行下载。
         /// </summary>
         /// <param name="req"><see cref="DescribeSecurityAuditLogDownloadUrlsRequest"/></param>

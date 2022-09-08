@@ -192,6 +192,12 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
+        /// <summary>
+        /// x
+        /// </summary>
+        [JsonProperty("MonitorEndTime")]
+        public string MonitorEndTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -226,6 +232,7 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "AuthorizationEndTime", this.AuthorizationEndTime);
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamSimple(map, prefix + "Content", this.Content);
+            this.SetParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
         }
     }
 }

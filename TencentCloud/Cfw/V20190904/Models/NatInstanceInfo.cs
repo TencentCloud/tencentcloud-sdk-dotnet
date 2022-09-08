@@ -100,6 +100,27 @@ namespace TencentCloud.Cfw.V20190904.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 地域区域信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RegionDetail")]
+        public string RegionDetail{ get; set; }
+
+        /// <summary>
+        /// 实例所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneZh")]
+        public string ZoneZh{ get; set; }
+
+        /// <summary>
+        /// 实例所在可用区
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ZoneZhBak")]
+        public string ZoneZhBak{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -118,6 +139,9 @@ namespace TencentCloud.Cfw.V20190904.Models
             this.SetParamArraySimple(map, prefix + "VpcIp.", this.VpcIp);
             this.SetParamArraySimple(map, prefix + "Subnets.", this.Subnets);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "RegionDetail", this.RegionDetail);
+            this.SetParamSimple(map, prefix + "ZoneZh", this.ZoneZh);
+            this.SetParamSimple(map, prefix + "ZoneZhBak", this.ZoneZhBak);
         }
     }
 }

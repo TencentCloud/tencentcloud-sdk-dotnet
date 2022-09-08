@@ -90,6 +90,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("GridDaemon")]
         public string GridDaemon{ get; set; }
 
+        /// <summary>
+        /// 边缘集群开启自动升配
+        /// </summary>
+        [JsonProperty("AutoUpgradeClusterLevel")]
+        public bool? AutoUpgradeClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -107,6 +113,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "HealthRegion", this.HealthRegion);
             this.SetParamSimple(map, prefix + "Health", this.Health);
             this.SetParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
+            this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
         }
     }
 }

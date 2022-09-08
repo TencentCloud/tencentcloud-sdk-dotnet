@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{F5D5EEC8-AE19-3226-9D01-52472441AFA5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.598</VersionPrefix>
+    <VersionPrefix>3.0.599</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -96,7 +96,9 @@
     <Compile Include="V20210922\Models\ImageSegments.cs" />
     <Compile Include="V20210922\Models\InputInfo.cs" />
     <Compile Include="V20210922\Models\MediaInfo.cs" />
+    <Compile Include="V20210922\Models\RecognitionResult.cs" />
     <Compile Include="V20210922\Models\StorageInfo.cs" />
+    <Compile Include="V20210922\Models\Tag.cs" />
     <Compile Include="V20210922\Models\TaskData.cs" />
     <Compile Include="V20210922\Models\TaskFilter.cs" />
     <Compile Include="V20210922\Models\TaskInput.cs" />

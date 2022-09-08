@@ -292,6 +292,24 @@ namespace TencentCloud.Tem.V20210701.Models
         [JsonProperty("EnableMetrics")]
         public long? EnableMetrics{ get; set; }
 
+        /// <summary>
+        /// 镜像部署时，选择的tcr实例id
+        /// </summary>
+        [JsonProperty("TcrInstanceId")]
+        public string TcrInstanceId{ get; set; }
+
+        /// <summary>
+        /// 镜像部署时，选择的镜像服务器地址
+        /// </summary>
+        [JsonProperty("RepoServer")]
+        public string RepoServer{ get; set; }
+
+        /// <summary>
+        /// 镜像部署时，仓库类型：0：个人仓库；1：企业版；2：公共仓库；3：tem托管仓库；4：demo仓库
+        /// </summary>
+        [JsonProperty("RepoType")]
+        public long? RepoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +358,9 @@ namespace TencentCloud.Tem.V20210701.Models
             this.SetParamObj(map, prefix + "EnablePrometheusConf.", this.EnablePrometheusConf);
             this.SetParamSimple(map, prefix + "EnableTracing", this.EnableTracing);
             this.SetParamSimple(map, prefix + "EnableMetrics", this.EnableMetrics);
+            this.SetParamSimple(map, prefix + "TcrInstanceId", this.TcrInstanceId);
+            this.SetParamSimple(map, prefix + "RepoServer", this.RepoServer);
+            this.SetParamSimple(map, prefix + "RepoType", this.RepoType);
         }
     }
 }

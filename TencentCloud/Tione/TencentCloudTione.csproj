@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FCDD1411-50DD-3C7B-8F8A-53C30B20D920}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.598</VersionPrefix>
+    <VersionPrefix>3.0.599</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -113,14 +113,20 @@
     <Compile Include="V20191022\Models\UpdateNotebookLifecycleScriptResponse.cs" />
     <Compile Include="V20191022\Models\VpcConfig.cs" />
     <Compile Include="V20211111\TioneClient.cs" />
+    <Compile Include="V20211111\Models\BatchTaskDetail.cs" />
+    <Compile Include="V20211111\Models\BatchTaskInstance.cs" />
+    <Compile Include="V20211111\Models\BatchTaskSetItem.cs" />
     <Compile Include="V20211111\Models\CFSConfig.cs" />
     <Compile Include="V20211111\Models\CosPathInfo.cs" />
+    <Compile Include="V20211111\Models\CreateBatchTaskRequest.cs" />
+    <Compile Include="V20211111\Models\CreateBatchTaskResponse.cs" />
     <Compile Include="V20211111\Models\CreateDatasetRequest.cs" />
     <Compile Include="V20211111\Models\CreateDatasetResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelRequest.cs" />
     <Compile Include="V20211111\Models\CreateTrainingModelResponse.cs" />
     <Compile Include="V20211111\Models\CreateTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\CreateTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\CronInfo.cs" />
     <Compile Include="V20211111\Models\CustomTrainingData.cs" />
     <Compile Include="V20211111\Models\CustomTrainingMetric.cs" />
     <Compile Include="V20211111\Models\CustomTrainingPoint.cs" />
@@ -129,6 +135,8 @@
     <Compile Include="V20211111\Models\DataSetConfig.cs" />
     <Compile Include="V20211111\Models\DatasetGroup.cs" />
     <Compile Include="V20211111\Models\DatasetInfo.cs" />
+    <Compile Include="V20211111\Models\DeleteBatchTaskRequest.cs" />
+    <Compile Include="V20211111\Models\DeleteBatchTaskResponse.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetRequest.cs" />
     <Compile Include="V20211111\Models\DeleteDatasetResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingModelRequest.cs" />
@@ -137,10 +145,18 @@
     <Compile Include="V20211111\Models\DeleteTrainingModelVersionResponse.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\DeleteTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTaskInstancesRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTaskInstancesResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTaskRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTaskResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTasksRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBatchTasksResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingResourceGroupsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeBillingSpecsPriceRequest.cs" />
     <Compile Include="V20211111\Models\DescribeBillingSpecsPriceResponse.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsRequest.cs" />
+    <Compile Include="V20211111\Models\DescribeBillingSpecsResponse.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetDetailStructuredRequest.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetDetailStructuredResponse.cs" />
     <Compile Include="V20211111\Models\DescribeDatasetDetailUnstructuredRequest.cs" />
@@ -184,6 +200,7 @@
     <Compile Include="V20211111\Models\LogConfig.cs" />
     <Compile Include="V20211111\Models\LogIdentity.cs" />
     <Compile Include="V20211111\Models\MetricData.cs" />
+    <Compile Include="V20211111\Models\ModelInfo.cs" />
     <Compile Include="V20211111\Models\OcrLabelInfo.cs" />
     <Compile Include="V20211111\Models\PointInfo.cs" />
     <Compile Include="V20211111\Models\PushTrainingMetricsRequest.cs" />
@@ -195,11 +212,14 @@
     <Compile Include="V20211111\Models\RowValue.cs" />
     <Compile Include="V20211111\Models\SchemaInfo.cs" />
     <Compile Include="V20211111\Models\SegmentationInfo.cs" />
+    <Compile Include="V20211111\Models\Spec.cs" />
     <Compile Include="V20211111\Models\SpecPrice.cs" />
     <Compile Include="V20211111\Models\SpecUnit.cs" />
     <Compile Include="V20211111\Models\StartCmdInfo.cs" />
     <Compile Include="V20211111\Models\StartTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StartTrainingTaskResponse.cs" />
+    <Compile Include="V20211111\Models\StopBatchTaskRequest.cs" />
+    <Compile Include="V20211111\Models\StopBatchTaskResponse.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskRequest.cs" />
     <Compile Include="V20211111\Models\StopTrainingTaskResponse.cs" />
     <Compile Include="V20211111\Models\Tag.cs" />

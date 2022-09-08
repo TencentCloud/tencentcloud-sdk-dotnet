@@ -298,6 +298,13 @@ namespace TencentCloud.Ssl.V20191205.Models
         public string EncryptCertFingerprint{ get; set; }
 
         /// <summary>
+        /// 证书算法
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EncryptAlgorithm")]
+        public string EncryptAlgorithm{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -348,6 +355,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "EncryptPrivateKey", this.EncryptPrivateKey);
             this.SetParamSimple(map, prefix + "CertFingerprint", this.CertFingerprint);
             this.SetParamSimple(map, prefix + "EncryptCertFingerprint", this.EncryptCertFingerprint);
+            this.SetParamSimple(map, prefix + "EncryptAlgorithm", this.EncryptAlgorithm);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

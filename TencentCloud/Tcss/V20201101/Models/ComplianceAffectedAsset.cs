@@ -94,6 +94,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("ImageTag")]
         public string ImageTag{ get; set; }
 
+        /// <summary>
+        /// 检查项验证信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyInfo")]
+        public string VerifyInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -109,6 +116,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "CheckResult", this.CheckResult);
             this.SetParamSimple(map, prefix + "HostIP", this.HostIP);
             this.SetParamSimple(map, prefix + "ImageTag", this.ImageTag);
+            this.SetParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
         }
     }
 }

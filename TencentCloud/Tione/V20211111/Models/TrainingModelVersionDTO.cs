@@ -148,6 +148,48 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("TrainingModelFormat")]
         public string TrainingModelFormat{ get; set; }
 
+        /// <summary>
+        /// 模型版本类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VersionType")]
+        public string VersionType{ get; set; }
+
+        /// <summary>
+        /// GPU类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GPUType")]
+        public string GPUType{ get; set; }
+
+        /// <summary>
+        /// 模型自动清理开关
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AutoClean")]
+        public string AutoClean{ get; set; }
+
+        /// <summary>
+        /// 模型清理周期
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelCleanPeriod")]
+        public ulong? ModelCleanPeriod{ get; set; }
+
+        /// <summary>
+        /// 模型数量保留上限
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxReservedModels")]
+        public ulong? MaxReservedModels{ get; set; }
+
+        /// <summary>
+        /// 模型热更新目录
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ModelHotUpdatePath")]
+        public CosPathInfo ModelHotUpdatePath{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +216,12 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "TrainingModelProgress", this.TrainingModelProgress);
             this.SetParamSimple(map, prefix + "TrainingModelErrorMsg", this.TrainingModelErrorMsg);
             this.SetParamSimple(map, prefix + "TrainingModelFormat", this.TrainingModelFormat);
+            this.SetParamSimple(map, prefix + "VersionType", this.VersionType);
+            this.SetParamSimple(map, prefix + "GPUType", this.GPUType);
+            this.SetParamSimple(map, prefix + "AutoClean", this.AutoClean);
+            this.SetParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
+            this.SetParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
+            this.SetParamObj(map, prefix + "ModelHotUpdatePath.", this.ModelHotUpdatePath);
         }
     }
 }

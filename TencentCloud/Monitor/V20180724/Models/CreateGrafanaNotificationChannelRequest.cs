@@ -37,7 +37,7 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string ChannelName{ get; set; }
 
         /// <summary>
-        /// 组织 ID
+        /// 默认为1，已废弃，请使用 OrganizationIds
         /// </summary>
         [JsonProperty("OrgId")]
         public long? OrgId{ get; set; }
@@ -49,10 +49,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 额外组织 ID 数组
+        /// 额外组织 ID 数组，已废弃，请使用 OrganizationIds
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
+
+        /// <summary>
+        /// 生效的所有组织 ID 数组，默认为 ["1"]
+        /// </summary>
+        [JsonProperty("OrganizationIds")]
+        public string[] OrganizationIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
             this.SetParamArraySimple(map, prefix + "Receivers.", this.Receivers);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+            this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         }
     }
 }

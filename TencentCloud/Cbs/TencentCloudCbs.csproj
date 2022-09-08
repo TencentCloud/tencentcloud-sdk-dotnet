@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A6E782C7-FC94-3EC6-A8AC-DB20F13405F5}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.598</VersionPrefix>
+    <VersionPrefix>3.0.599</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,8 @@
 
   <ItemGroup>
     <Compile Include="V20170312\CbsClient.cs" />
+    <Compile Include="V20170312\Models\ApplyDiskBackupRequest.cs" />
+    <Compile Include="V20170312\Models\ApplyDiskBackupResponse.cs" />
     <Compile Include="V20170312\Models\ApplySnapshotRequest.cs" />
     <Compile Include="V20170312\Models\ApplySnapshotResponse.cs" />
     <Compile Include="V20170312\Models\AttachDetail.cs" />
@@ -66,12 +68,16 @@
     <Compile Include="V20170312\Models\CreateSnapshotResponse.cs" />
     <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DeleteAutoSnapshotPoliciesResponse.cs" />
+    <Compile Include="V20170312\Models\DeleteDiskBackupsRequest.cs" />
+    <Compile Include="V20170312\Models\DeleteDiskBackupsResponse.cs" />
     <Compile Include="V20170312\Models\DeleteSnapshotsRequest.cs" />
     <Compile Include="V20170312\Models\DeleteSnapshotsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeAutoSnapshotPoliciesRequest.cs" />
     <Compile Include="V20170312\Models\DescribeAutoSnapshotPoliciesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDiskAssociatedAutoSnapshotPolicyRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDiskAssociatedAutoSnapshotPolicyResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskBackupsRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeDiskBackupsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDiskConfigQuotaRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDiskConfigQuotaResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDiskOperationLogsRequest.cs" />
@@ -91,6 +97,7 @@
     <Compile Include="V20170312\Models\DetachDisksRequest.cs" />
     <Compile Include="V20170312\Models\DetachDisksResponse.cs" />
     <Compile Include="V20170312\Models\Disk.cs" />
+    <Compile Include="V20170312\Models\DiskBackup.cs" />
     <Compile Include="V20170312\Models\DiskChargePrepaid.cs" />
     <Compile Include="V20170312\Models\DiskConfig.cs" />
     <Compile Include="V20170312\Models\DiskOperationLog.cs" />
@@ -100,6 +107,8 @@
     <Compile Include="V20170312\Models\Image.cs" />
     <Compile Include="V20170312\Models\InitializeDisksRequest.cs" />
     <Compile Include="V20170312\Models\InitializeDisksResponse.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskBackupQuotaRequest.cs" />
+    <Compile Include="V20170312\Models\InquirePriceModifyDiskBackupQuotaResponse.cs" />
     <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceRequest.cs" />
     <Compile Include="V20170312\Models\InquirePriceModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\InquiryPriceCreateDisksRequest.cs" />
@@ -112,6 +121,8 @@
     <Compile Include="V20170312\Models\ModifyAutoSnapshotPolicyAttributeResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDiskAttributesResponse.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskBackupQuotaRequest.cs" />
+    <Compile Include="V20170312\Models\ModifyDiskBackupQuotaResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceRequest.cs" />
     <Compile Include="V20170312\Models\ModifyDiskExtraPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\ModifyDisksChargeTypeRequest.cs" />

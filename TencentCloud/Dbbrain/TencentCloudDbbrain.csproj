@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0689E213-B38A-304E-8D1F-81510F158DA2}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.598</VersionPrefix>
+    <VersionPrefix>3.0.599</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -182,6 +182,8 @@
     <Compile Include="V20210527\Models\DescribeProxySessionKillTasksResponse.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysRequest.cs" />
     <Compile Include="V20210527\Models\DescribeRedisTopBigKeysResponse.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListRequest.cs" />
+    <Compile Include="V20210527\Models\DescribeRedisTopKeyPrefixListResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsRequest.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogDownloadUrlsResponse.cs" />
     <Compile Include="V20210527\Models\DescribeSecurityAuditLogExportTasksRequest.cs" />
@@ -230,6 +232,7 @@
     <Compile Include="V20210527\Models\MySqlProcess.cs" />
     <Compile Include="V20210527\Models\ProfileInfo.cs" />
     <Compile Include="V20210527\Models\RedisKeySpaceData.cs" />
+    <Compile Include="V20210527\Models\RedisPreKeySpaceData.cs" />
     <Compile Include="V20210527\Models\SQLFilter.cs" />
     <Compile Include="V20210527\Models\SchemaItem.cs" />
     <Compile Include="V20210527\Models\SchemaSpaceData.cs" />

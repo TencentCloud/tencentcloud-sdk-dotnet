@@ -1819,6 +1819,46 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
+        /// 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdbZoneConfigRequest"/></param>
+        /// <returns><see cref="DescribeCdbZoneConfigResponse"/></returns>
+        public async Task<DescribeCdbZoneConfigResponse> DescribeCdbZoneConfig(DescribeCdbZoneConfigRequest req)
+        {
+             JsonResponseModel<DescribeCdbZoneConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCdbZoneConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdbZoneConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeCdbZoneConfig)用于查询云数据库各地域可售卖的规格配置。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCdbZoneConfigRequest"/></param>
+        /// <returns><see cref="DescribeCdbZoneConfigResponse"/></returns>
+        public DescribeCdbZoneConfigResponse DescribeCdbZoneConfigSync(DescribeCdbZoneConfigRequest req)
+        {
+             JsonResponseModel<DescribeCdbZoneConfigResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCdbZoneConfig");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCdbZoneConfigResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeCloneList) 用于查询用户实例的克隆任务列表。
         /// </summary>
         /// <param name="req"><see cref="DescribeCloneListRequest"/></param>

@@ -25,35 +25,47 @@ namespace TencentCloud.Vm.V20210922.Models
     {
         
         /// <summary>
-        /// 固定为Moan
+        /// 该字段用于返回检测结果需要检测的内容类型，此处固定为**Moan**（呻吟）以调用呻吟检测功能。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Label")]
         public string Label{ get; set; }
 
         /// <summary>
-        /// 分数
+        /// 该字段用于返回呻吟检测的置信度，取值范围：0（**置信度最低**）-100（**置信度最高**），越高代表音频越有可能属于呻吟内容。
         /// </summary>
         [JsonProperty("Score")]
         public long? Score{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 该字段用于返回对应呻吟标签的片段在音频文件内的开始时间，单位为毫秒。
         /// </summary>
         [JsonProperty("StartTime")]
         public float? StartTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 该字段用于返回对应呻吟标签的片段在音频文件内的结束时间，单位为毫秒。
         /// </summary>
         [JsonProperty("EndTime")]
         public float? EndTime{ get; set; }
 
         /// <summary>
-        /// 子标签码
+        /// *内测中，敬请期待*
         /// </summary>
         [JsonProperty("SubLabelCode")]
         public string SubLabelCode{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回当前标签（Lable）下的二级标签。
+        /// </summary>
+        [JsonProperty("SubLabel")]
+        public string SubLabel{ get; set; }
+
+        /// <summary>
+        /// 该字段用于返回基于恶意标签的后续操作建议。当您获取到判定结果后，返回值表示系统推荐的后续操作；建议您按照业务所需，对不同违规类型与建议值进行处理。<br>返回值：**Block**：建议屏蔽，**Review** ：建议人工复审，**Pass**：建议通过
+        /// </summary>
+        [JsonProperty("Suggestion")]
+        public string Suggestion{ get; set; }
 
 
         /// <summary>
@@ -66,6 +78,8 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "SubLabelCode", this.SubLabelCode);
+            this.SetParamSimple(map, prefix + "SubLabel", this.SubLabel);
+            this.SetParamSimple(map, prefix + "Suggestion", this.Suggestion);
         }
     }
 }

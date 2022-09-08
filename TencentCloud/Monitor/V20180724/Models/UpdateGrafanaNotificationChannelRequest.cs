@@ -49,10 +49,16 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string[] Receivers{ get; set; }
 
         /// <summary>
-        /// 额外组织 ID 数组
+        /// 已废弃，请使用 OrganizationIds
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
+
+        /// <summary>
+        /// 生效的组织 ID 数组
+        /// </summary>
+        [JsonProperty("OrganizationIds")]
+        public string[] OrganizationIds{ get; set; }
 
 
         /// <summary>
@@ -65,6 +71,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "ChannelName", this.ChannelName);
             this.SetParamArraySimple(map, prefix + "Receivers.", this.Receivers);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
+            this.SetParamArraySimple(map, prefix + "OrganizationIds.", this.OrganizationIds);
         }
     }
 }

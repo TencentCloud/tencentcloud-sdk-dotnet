@@ -25,16 +25,22 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 实例价格，单位：分（人民币）。
+        /// 实例价格，单位：分。
         /// </summary>
         [JsonProperty("Price")]
         public long? Price{ get; set; }
 
         /// <summary>
-        /// 实例原价，单位：分（人民币）。
+        /// 实例原价，单位：分。
         /// </summary>
         [JsonProperty("OriginalPrice")]
         public long? OriginalPrice{ get; set; }
+
+        /// <summary>
+        /// 货币单位。CNY-人民币，USD-美元。
+        /// </summary>
+        [JsonProperty("Currency")]
+        public string Currency{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +56,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "Price", this.Price);
             this.SetParamSimple(map, prefix + "OriginalPrice", this.OriginalPrice);
+            this.SetParamSimple(map, prefix + "Currency", this.Currency);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

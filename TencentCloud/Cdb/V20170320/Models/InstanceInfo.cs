@@ -291,6 +291,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TagList")]
         public TagInfoItem[] TagList{ get; set; }
 
+        /// <summary>
+        /// 引擎类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
+        /// <summary>
+        /// 最大延迟阈值
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MaxDelayTime")]
+        public long? MaxDelayTime{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -340,6 +354,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "InstanceNodes", this.InstanceNodes);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
+            this.SetParamSimple(map, prefix + "MaxDelayTime", this.MaxDelayTime);
         }
     }
 }

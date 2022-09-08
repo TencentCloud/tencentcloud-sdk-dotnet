@@ -25,7 +25,10 @@ namespace TencentCloud.Tione.V20211111.Models
     {
         
         /// <summary>
-        /// 导入方式（MODEL/VERSION）
+        /// 导入方式
+        /// MODEL：导入新模型
+        /// VERSION：导入新版本
+        /// EXIST：导入现有版本
         /// </summary>
         [JsonProperty("ImportMethod")]
         public string ImportMethod{ get; set; }
@@ -158,6 +161,24 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("ReasoningEnvironmentId")]
         public string ReasoningEnvironmentId{ get; set; }
 
+        /// <summary>
+        /// 模型自动清理开关(true/false)，当前版本仅支持SAVED_MODEL格式模型
+        /// </summary>
+        [JsonProperty("AutoClean")]
+        public string AutoClean{ get; set; }
+
+        /// <summary>
+        /// 模型数量保留上限(默认值为24个，上限为24，下限为1，步长为1)
+        /// </summary>
+        [JsonProperty("MaxReservedModels")]
+        public ulong? MaxReservedModels{ get; set; }
+
+        /// <summary>
+        /// 模型清理周期(默认值为1分钟，上限为1440，下限为1分钟，步长为1)
+        /// </summary>
+        [JsonProperty("ModelCleanPeriod")]
+        public ulong? ModelCleanPeriod{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -186,6 +207,9 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "ModelVersionType", this.ModelVersionType);
             this.SetParamSimple(map, prefix + "ModelFormat", this.ModelFormat);
             this.SetParamSimple(map, prefix + "ReasoningEnvironmentId", this.ReasoningEnvironmentId);
+            this.SetParamSimple(map, prefix + "AutoClean", this.AutoClean);
+            this.SetParamSimple(map, prefix + "MaxReservedModels", this.MaxReservedModels);
+            this.SetParamSimple(map, prefix + "ModelCleanPeriod", this.ModelCleanPeriod);
         }
     }
 }

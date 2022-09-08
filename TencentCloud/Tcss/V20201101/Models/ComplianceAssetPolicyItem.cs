@@ -105,6 +105,13 @@ namespace TencentCloud.Tcss.V20201101.Models
         [JsonProperty("LastCheckTime")]
         public string LastCheckTime{ get; set; }
 
+        /// <summary>
+        /// 验证信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("VerifyInfo")]
+        public string VerifyInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -123,6 +130,7 @@ namespace TencentCloud.Tcss.V20201101.Models
             this.SetParamSimple(map, prefix + "WhitelistId", this.WhitelistId);
             this.SetParamSimple(map, prefix + "FixSuggestion", this.FixSuggestion);
             this.SetParamSimple(map, prefix + "LastCheckTime", this.LastCheckTime);
+            this.SetParamSimple(map, prefix + "VerifyInfo", this.VerifyInfo);
         }
     }
 }

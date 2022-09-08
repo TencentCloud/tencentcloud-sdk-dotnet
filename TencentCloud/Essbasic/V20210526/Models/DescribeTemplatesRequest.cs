@@ -60,6 +60,18 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 是否返回所有组件信息
+        /// </summary>
+        [JsonProperty("QueryAllComponents")]
+        public bool? QueryAllComponents{ get; set; }
+
+        /// <summary>
+        /// 模糊搜索模版名称
+        /// </summary>
+        [JsonProperty("TemplateName")]
+        public string TemplateName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +84,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "QueryAllComponents", this.QueryAllComponents);
+            this.SetParamSimple(map, prefix + "TemplateName", this.TemplateName);
         }
     }
 }

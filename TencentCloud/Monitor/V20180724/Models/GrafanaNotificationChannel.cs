@@ -55,24 +55,31 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string UpdatedAt{ get; set; }
 
         /// <summary>
-        /// 默认生效组织
+        /// 默认生效组织，已废弃，请使用 OrganizationIds
         /// </summary>
         [JsonProperty("OrgId")]
         public string OrgId{ get; set; }
 
         /// <summary>
-        /// 额外生效组织
+        /// 额外生效组织，已废弃，请使用 OrganizationIds
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ExtraOrgIds")]
         public string[] ExtraOrgIds{ get; set; }
 
         /// <summary>
-        /// 生效组织
+        /// 生效组织，已废弃，请使用 OrganizationIds
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OrgIds")]
         public string OrgIds{ get; set; }
+
+        /// <summary>
+        /// 告警渠道的所有生效组织
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OrganizationIds")]
+        public string OrganizationIds{ get; set; }
 
 
         /// <summary>
@@ -88,6 +95,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "OrgId", this.OrgId);
             this.SetParamArraySimple(map, prefix + "ExtraOrgIds.", this.ExtraOrgIds);
             this.SetParamSimple(map, prefix + "OrgIds", this.OrgIds);
+            this.SetParamSimple(map, prefix + "OrganizationIds", this.OrganizationIds);
         }
     }
 }
