@@ -126,6 +126,12 @@ namespace TencentCloud.Antiddos.V20200309.Models
         [JsonProperty("IpCountNewFlag")]
         public ulong? IpCountNewFlag{ get; set; }
 
+        /// <summary>
+        /// 攻击封堵套餐标记
+        /// </summary>
+        [JsonProperty("VitalityVersion")]
+        public ulong? VitalityVersion{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -147,6 +153,7 @@ namespace TencentCloud.Antiddos.V20200309.Models
             this.SetParamSimple(map, prefix + "CCEnable", this.CCEnable);
             this.SetParamArrayObj(map, prefix + "TagInfoList.", this.TagInfoList);
             this.SetParamSimple(map, prefix + "IpCountNewFlag", this.IpCountNewFlag);
+            this.SetParamSimple(map, prefix + "VitalityVersion", this.VitalityVersion);
         }
     }
 }

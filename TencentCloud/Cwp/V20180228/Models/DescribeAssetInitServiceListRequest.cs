@@ -25,16 +25,16 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
+        /// 服务器Uuid
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 服务器Quuid
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
 
         /// <summary>
         /// 过滤条件。
@@ -62,16 +62,28 @@ namespace TencentCloud.Cwp.V20180228.Models
         public AssetFilters[] Filters{ get; set; }
 
         /// <summary>
-        /// 服务器Uuid
+        /// 偏移量，默认为0。
         /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 服务器Quuid
+        /// 需要返回的数量，默认为10，最大值为100
         /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 排序方式，asc升序 或 desc降序
+        /// </summary>
+        [JsonProperty("Order")]
+        public string Order{ get; set; }
+
+        /// <summary>
+        /// 排序方式：[FirstTime]
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
 
 
         /// <summary>
@@ -79,11 +91,13 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

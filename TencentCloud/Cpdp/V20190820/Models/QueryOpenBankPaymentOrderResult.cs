@@ -145,6 +145,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("ProfitShareRespInfoList")]
         public OpenBankProfitShareRespInfo[] ProfitShareRespInfoList{ get; set; }
 
+        /// <summary>
+        /// 支付完成时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TimeFinish")]
+        public string TimeFinish{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -168,6 +175,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "FeeAmount", this.FeeAmount);
             this.SetParamSimple(map, prefix + "FeeRate", this.FeeRate);
             this.SetParamArrayObj(map, prefix + "ProfitShareRespInfoList.", this.ProfitShareRespInfoList);
+            this.SetParamSimple(map, prefix + "TimeFinish", this.TimeFinish);
         }
     }
 }

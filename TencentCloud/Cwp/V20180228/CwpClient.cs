@@ -253,6 +253,52 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
+        /// 支持预付费后付费创建
+        /// 后付费订单直接闯将成功
+        /// 预付费订单仅下单不支付,需要调用计费支付接口进行支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateLicenseOrderRequest"/></param>
+        /// <returns><see cref="CreateLicenseOrderResponse"/></returns>
+        public async Task<CreateLicenseOrderResponse> CreateLicenseOrder(CreateLicenseOrderRequest req)
+        {
+             JsonResponseModel<CreateLicenseOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateLicenseOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
+        /// 支持预付费后付费创建
+        /// 后付费订单直接闯将成功
+        /// 预付费订单仅下单不支付,需要调用计费支付接口进行支付
+        /// </summary>
+        /// <param name="req"><see cref="CreateLicenseOrderRequest"/></param>
+        /// <returns><see cref="CreateLicenseOrderResponse"/></returns>
+        public CreateLicenseOrderResponse CreateLicenseOrderSync(CreateLicenseOrderRequest req)
+        {
+             JsonResponseModel<CreateLicenseOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateLicenseOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateLicenseOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 添加网站防护服务器
         /// </summary>
         /// <param name="req"><see cref="CreateProtectServerRequest"/></param>
@@ -604,6 +650,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBruteAttacks");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBruteAttacksResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对授权管理-订单列表内已过期的订单进行删除.(删除后的订单不在统计范畴内)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLicenseRecordRequest"/></param>
+        /// <returns><see cref="DeleteLicenseRecordResponse"/></returns>
+        public async Task<DeleteLicenseRecordResponse> DeleteLicenseRecord(DeleteLicenseRecordRequest req)
+        {
+             JsonResponseModel<DeleteLicenseRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteLicenseRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLicenseRecordResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对授权管理-订单列表内已过期的订单进行删除.(删除后的订单不在统计范畴内)
+        /// </summary>
+        /// <param name="req"><see cref="DeleteLicenseRecordRequest"/></param>
+        /// <returns><see cref="DeleteLicenseRecordResponse"/></returns>
+        public DeleteLicenseRecordResponse DeleteLicenseRecordSync(DeleteLicenseRecordRequest req)
+        {
+             JsonResponseModel<DeleteLicenseRecordResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteLicenseRecord");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteLicenseRecordResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3893,6 +3979,166 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 该接口可以获取设置中心-授权管理,某个授权下已绑定的授权机器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseBindListRequest"/></param>
+        /// <returns><see cref="DescribeLicenseBindListResponse"/></returns>
+        public async Task<DescribeLicenseBindListResponse> DescribeLicenseBindList(DescribeLicenseBindListRequest req)
+        {
+             JsonResponseModel<DescribeLicenseBindListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseBindList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseBindListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 该接口可以获取设置中心-授权管理,某个授权下已绑定的授权机器列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseBindListRequest"/></param>
+        /// <returns><see cref="DescribeLicenseBindListResponse"/></returns>
+        public DescribeLicenseBindListResponse DescribeLicenseBindListSync(DescribeLicenseBindListRequest req)
+        {
+             JsonResponseModel<DescribeLicenseBindListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseBindList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseBindListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询授权绑定任务的进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseBindScheduleRequest"/></param>
+        /// <returns><see cref="DescribeLicenseBindScheduleResponse"/></returns>
+        public async Task<DescribeLicenseBindScheduleResponse> DescribeLicenseBindSchedule(DescribeLicenseBindScheduleRequest req)
+        {
+             JsonResponseModel<DescribeLicenseBindScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseBindSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseBindScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询授权绑定任务的进度
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseBindScheduleRequest"/></param>
+        /// <returns><see cref="DescribeLicenseBindScheduleResponse"/></returns>
+        public DescribeLicenseBindScheduleResponse DescribeLicenseBindScheduleSync(DescribeLicenseBindScheduleRequest req)
+        {
+             JsonResponseModel<DescribeLicenseBindScheduleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseBindSchedule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseBindScheduleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 授权管理-授权概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseGeneralRequest"/></param>
+        /// <returns><see cref="DescribeLicenseGeneralResponse"/></returns>
+        public async Task<DescribeLicenseGeneralResponse> DescribeLicenseGeneral(DescribeLicenseGeneralRequest req)
+        {
+             JsonResponseModel<DescribeLicenseGeneralResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseGeneral");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseGeneralResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 授权管理-授权概览信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseGeneralRequest"/></param>
+        /// <returns><see cref="DescribeLicenseGeneralResponse"/></returns>
+        public DescribeLicenseGeneralResponse DescribeLicenseGeneralSync(DescribeLicenseGeneralRequest req)
+        {
+             JsonResponseModel<DescribeLicenseGeneralResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseGeneral");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseGeneralResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户所有授权订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeLicenseListResponse"/></returns>
+        public async Task<DescribeLicenseListResponse> DescribeLicenseList(DescribeLicenseListRequest req)
+        {
+             JsonResponseModel<DescribeLicenseListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeLicenseList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取用户所有授权订单信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeLicenseListRequest"/></param>
+        /// <returns><see cref="DescribeLicenseListResponse"/></returns>
+        public DescribeLicenseListResponse DescribeLicenseListSync(DescribeLicenseListRequest req)
+        {
+             JsonResponseModel<DescribeLicenseListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeLicenseList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeLicenseListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取日志检索容量使用统计
         /// </summary>
         /// <param name="req"><see cref="DescribeLogStorageStatisticRequest"/></param>
@@ -6413,6 +6659,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// DestroyOrder  该接口可以对资源销毁.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyOrderRequest"/></param>
+        /// <returns><see cref="DestroyOrderResponse"/></returns>
+        public async Task<DestroyOrderResponse> DestroyOrder(DestroyOrderRequest req)
+        {
+             JsonResponseModel<DestroyOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DestroyOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// DestroyOrder  该接口可以对资源销毁.
+        /// </summary>
+        /// <param name="req"><see cref="DestroyOrderRequest"/></param>
+        /// <returns><see cref="DestroyOrderResponse"/></returns>
+        public DestroyOrderResponse DestroyOrderSync(DestroyOrderRequest req)
+        {
+             JsonResponseModel<DestroyOrderResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DestroyOrder");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DestroyOrderResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新增或修改高危命令规则
         /// </summary>
         /// <param name="req"><see cref="EditBashRulesRequest"/></param>
@@ -6844,6 +7130,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "ExportIgnoreRuleEffectHostList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportIgnoreRuleEffectHostListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出授权列表对应的绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="ExportLicenseDetailRequest"/></param>
+        /// <returns><see cref="ExportLicenseDetailResponse"/></returns>
+        public async Task<ExportLicenseDetailResponse> ExportLicenseDetail(ExportLicenseDetailRequest req)
+        {
+             JsonResponseModel<ExportLicenseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExportLicenseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportLicenseDetailResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 导出授权列表对应的绑定信息
+        /// </summary>
+        /// <param name="req"><see cref="ExportLicenseDetailRequest"/></param>
+        /// <returns><see cref="ExportLicenseDetailResponse"/></returns>
+        public ExportLicenseDetailResponse ExportLicenseDetailSync(ExportLicenseDetailRequest req)
+        {
+             JsonResponseModel<ExportLicenseDetailResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExportLicenseDetail");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExportLicenseDetailResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -7613,6 +7939,86 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 设置中心-授权管理 对某个授权批量绑定机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseBindsResponse"/></returns>
+        public async Task<ModifyLicenseBindsResponse> ModifyLicenseBinds(ModifyLicenseBindsRequest req)
+        {
+             JsonResponseModel<ModifyLicenseBindsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLicenseBinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLicenseBindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置中心-授权管理 对某个授权批量绑定机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseBindsResponse"/></returns>
+        public ModifyLicenseBindsResponse ModifyLicenseBindsSync(ModifyLicenseBindsRequest req)
+        {
+             JsonResponseModel<ModifyLicenseBindsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLicenseBinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLicenseBindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置中心-授权管理 对某个授权批量解绑机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseUnBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseUnBindsResponse"/></returns>
+        public async Task<ModifyLicenseUnBindsResponse> ModifyLicenseUnBinds(ModifyLicenseUnBindsRequest req)
+        {
+             JsonResponseModel<ModifyLicenseUnBindsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyLicenseUnBinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLicenseUnBindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置中心-授权管理 对某个授权批量解绑机器
+        /// </summary>
+        /// <param name="req"><see cref="ModifyLicenseUnBindsRequest"/></param>
+        /// <returns><see cref="ModifyLicenseUnBindsResponse"/></returns>
+        public ModifyLicenseUnBindsResponse ModifyLicenseUnBindsSync(ModifyLicenseUnBindsRequest req)
+        {
+             JsonResponseModel<ModifyLicenseUnBindsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyLicenseUnBinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyLicenseUnBindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 定时扫描设置
         /// </summary>
         /// <param name="req"><see cref="ModifyMalwareTimingScanSettingsRequest"/></param>
@@ -7644,6 +8050,46 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "ModifyMalwareTimingScanSettings");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMalwareTimingScanSettingsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对订单属性编辑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrderAttributeRequest"/></param>
+        /// <returns><see cref="ModifyOrderAttributeResponse"/></returns>
+        public async Task<ModifyOrderAttributeResponse> ModifyOrderAttribute(ModifyOrderAttributeRequest req)
+        {
+             JsonResponseModel<ModifyOrderAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyOrderAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOrderAttributeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 对订单属性编辑
+        /// </summary>
+        /// <param name="req"><see cref="ModifyOrderAttributeRequest"/></param>
+        /// <returns><see cref="ModifyOrderAttributeResponse"/></returns>
+        public ModifyOrderAttributeResponse ModifyOrderAttributeSync(ModifyOrderAttributeRequest req)
+        {
+             JsonResponseModel<ModifyOrderAttributeResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyOrderAttribute");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyOrderAttributeResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

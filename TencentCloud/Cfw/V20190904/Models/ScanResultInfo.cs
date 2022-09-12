@@ -25,7 +25,7 @@ namespace TencentCloud.Cfw.V20190904.Models
     {
         
         /// <summary>
-        /// 暴漏漏洞数量
+        /// 暴露漏洞数量
         /// </summary>
         [JsonProperty("LeakNum")]
         public ulong? LeakNum{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Cfw.V20190904.Models
         public ulong? IPNum{ get; set; }
 
         /// <summary>
-        /// 暴漏端口数量
+        /// 暴露端口数量
         /// </summary>
         [JsonProperty("PortNum")]
         public ulong? PortNum{ get; set; }

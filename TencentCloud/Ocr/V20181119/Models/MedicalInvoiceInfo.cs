@@ -15,34 +15,20 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Ocr.V20181119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class OutputSendTrafficSecuritySmsMsg : AbstractModel
+    public class MedicalInvoiceInfo : AbstractModel
     {
         
         /// <summary>
-        /// 返回码（0：接口调用成功 非0：接口调用失败）
+        /// 医疗发票识别结果条目
         /// </summary>
-        [JsonProperty("Code")]
-        public long? Code{ get; set; }
-
-        /// <summary>
-        /// 返回码对应的信息
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Message")]
-        public string Message{ get; set; }
-
-        /// <summary>
-        /// 发送失败的号码列表
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Value")]
-        public string[] Value{ get; set; }
+        [JsonProperty("MedicalInvoiceItems")]
+        public MedicalInvoiceItem[] MedicalInvoiceItems{ get; set; }
 
 
         /// <summary>
@@ -50,9 +36,7 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Code", this.Code);
-            this.SetParamSimple(map, prefix + "Message", this.Message);
-            this.SetParamArraySimple(map, prefix + "Value.", this.Value);
+            this.SetParamArrayObj(map, prefix + "MedicalInvoiceItems.", this.MedicalInvoiceItems);
         }
     }
 }

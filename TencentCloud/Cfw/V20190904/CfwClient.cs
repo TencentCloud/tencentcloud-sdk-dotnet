@@ -893,6 +893,46 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
+        /// 获取入侵防御按钮列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefenseSwitchRequest"/></param>
+        /// <returns><see cref="DescribeDefenseSwitchResponse"/></returns>
+        public async Task<DescribeDefenseSwitchResponse> DescribeDefenseSwitch(DescribeDefenseSwitchRequest req)
+        {
+             JsonResponseModel<DescribeDefenseSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDefenseSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefenseSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取入侵防御按钮列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDefenseSwitchRequest"/></param>
+        /// <returns><see cref="DescribeDefenseSwitchResponse"/></returns>
+        public DescribeDefenseSwitchResponse DescribeDefenseSwitchSync(DescribeDefenseSwitchRequest req)
+        {
+             JsonResponseModel<DescribeDefenseSwitchResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDefenseSwitch");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDefenseSwitchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询新企业安全组规则
         /// </summary>
         /// <param name="req"><see cref="DescribeEnterpriseSecurityGroupRuleRequest"/></param>

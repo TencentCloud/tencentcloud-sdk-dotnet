@@ -2433,6 +2433,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMedicalInvoiceOCRRequest"/></param>
+        /// <returns><see cref="RecognizeMedicalInvoiceOCRResponse"/></returns>
+        public async Task<RecognizeMedicalInvoiceOCRResponse> RecognizeMedicalInvoiceOCR(RecognizeMedicalInvoiceOCRRequest req)
+        {
+             JsonResponseModel<RecognizeMedicalInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "RecognizeMedicalInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeMedicalInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 医疗发票识别目前支持全国统一门诊发票、全国统一住院发票、以及部分地方的门诊和住院发票的识别。
+        /// </summary>
+        /// <param name="req"><see cref="RecognizeMedicalInvoiceOCRRequest"/></param>
+        /// <returns><see cref="RecognizeMedicalInvoiceOCRResponse"/></returns>
+        public RecognizeMedicalInvoiceOCRResponse RecognizeMedicalInvoiceOCRSync(RecognizeMedicalInvoiceOCRRequest req)
+        {
+             JsonResponseModel<RecognizeMedicalInvoiceOCRResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "RecognizeMedicalInvoiceOCR");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<RecognizeMedicalInvoiceOCRResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持网约车行程单关键字段的识别，包括行程起止日期、上车时间、起点、终点、里程、金额等字段。
         /// </summary>
         /// <param name="req"><see cref="RecognizeOnlineTaxiItineraryOCRRequest"/></param>

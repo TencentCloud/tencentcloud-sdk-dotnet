@@ -37,18 +37,6 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Quuid{ get; set; }
 
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 偏移量，默认为0。
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
         /// 过滤条件。
         /// <li>Name - String - 是否必填：否 - 包 名</li>
         /// <li>StartTime - String - 是否必填：否 - 安装开始时间</li>
@@ -63,13 +51,25 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
+
+        /// <summary>
+        /// 需要返回的数量，默认为10，最大值为100
+        /// </summary>
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
         /// 排序方式，asc-升序 或 desc-降序。默认：desc-降序
         /// </summary>
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序方式可选：InstallTime 安装时间
+        /// 排序方式可选：[FistTime|InstallTime:安装时间]
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
@@ -82,9 +82,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         {
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
+            this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
         }

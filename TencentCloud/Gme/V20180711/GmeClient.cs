@@ -273,6 +273,46 @@ namespace TencentCloud.Gme.V20180711
         }
 
         /// <summary>
+        /// 本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomMemberRequest"/></param>
+        /// <returns><see cref="DeleteRoomMemberResponse"/></returns>
+        public async Task<DeleteRoomMemberResponse> DeleteRoomMember(DeleteRoomMemberRequest req)
+        {
+             JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoomMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DeleteRoomMember)用户删除房间或者剔除房间内用户
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomMemberRequest"/></param>
+        /// <returns><see cref="DeleteRoomMemberResponse"/></returns>
+        public DeleteRoomMemberResponse DeleteRoomMemberSync(DeleteRoomMemberRequest req)
+        {
+             JsonResponseModel<DeleteRoomMemberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoomMember");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomMemberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除自定义送检用户
         /// </summary>
         /// <param name="req"><see cref="DeleteScanUserRequest"/></param>

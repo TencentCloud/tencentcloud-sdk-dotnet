@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5B725517-C450-383B-A194-A17CAF39F71A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.599</VersionPrefix>
+    <VersionPrefix>3.0.600</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -61,6 +61,9 @@
     <Compile Include="V20180711\Models\CustomizationConfigs.cs" />
     <Compile Include="V20180711\Models\DeleteCustomizationRequest.cs" />
     <Compile Include="V20180711\Models\DeleteCustomizationResponse.cs" />
+    <Compile Include="V20180711\Models\DeleteResult.cs" />
+    <Compile Include="V20180711\Models\DeleteRoomMemberRequest.cs" />
+    <Compile Include="V20180711\Models\DeleteRoomMemberResponse.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserRequest.cs" />
     <Compile Include="V20180711\Models\DeleteScanUserResponse.cs" />
     <Compile Include="V20180711\Models\DescribeAgeDetectTaskRequest.cs" />

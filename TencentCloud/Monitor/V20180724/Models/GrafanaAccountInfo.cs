@@ -48,6 +48,19 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("CreateAt")]
         public string CreateAt{ get; set; }
 
+        /// <summary>
+        /// 实例 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
+        /// <summary>
+        /// 用户主账号 UIN
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +71,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "Role.", this.Role);
             this.SetParamSimple(map, prefix + "Notes", this.Notes);
             this.SetParamSimple(map, prefix + "CreateAt", this.CreateAt);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
         }
     }
 }

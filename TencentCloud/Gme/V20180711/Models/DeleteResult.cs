@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Taf.V20200210.Models
+namespace TencentCloud.Gme.V20180711.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SendTrafficSecuritySmsMessageRequest : AbstractModel
+    public class DeleteResult : AbstractModel
     {
         
         /// <summary>
-        /// 业务入参
+        /// 错误码，0-剔除成功 其他-剔除失败
         /// </summary>
-        [JsonProperty("BspData")]
-        public InputSendTrafficSecuritySmsMsg BspData{ get; set; }
+        [JsonProperty("Code")]
+        public long? Code{ get; set; }
+
+        /// <summary>
+        /// 错误描述
+        /// </summary>
+        [JsonProperty("ErrorMsg")]
+        public string ErrorMsg{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Taf.V20200210.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "BspData.", this.BspData);
+            this.SetParamSimple(map, prefix + "Code", this.Code);
+            this.SetParamSimple(map, prefix + "ErrorMsg", this.ErrorMsg);
         }
     }
 }

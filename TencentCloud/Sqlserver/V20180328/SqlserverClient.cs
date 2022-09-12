@@ -133,6 +133,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（CloseInterCommunication）用于关闭实例互通。
+        /// </summary>
+        /// <param name="req"><see cref="CloseInterCommunicationRequest"/></param>
+        /// <returns><see cref="CloseInterCommunicationResponse"/></returns>
+        public async Task<CloseInterCommunicationResponse> CloseInterCommunication(CloseInterCommunicationRequest req)
+        {
+             JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CloseInterCommunication）用于关闭实例互通。
+        /// </summary>
+        /// <param name="req"><see cref="CloseInterCommunicationRequest"/></param>
+        /// <returns><see cref="CloseInterCommunicationResponse"/></returns>
+        public CloseInterCommunicationResponse CloseInterCommunicationSync(CloseInterCommunicationRequest req)
+        {
+             JsonResponseModel<CloseInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（CompleteExpansion）在实例发起扩容后，实例状态处于“升级待切换”时，可立即完成实例升级切换操作，无需等待可维护时间窗。本接口需要在实例低峰时调用，在完全切换成功前，存在部分库不可访问的风险。
         /// </summary>
         /// <param name="req"><see cref="CompleteExpansionRequest"/></param>
@@ -364,6 +404,86 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "CreateBasicDBInstances");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBasicDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
+        public async Task<CreateBusinessDBInstancesResponse> CreateBusinessDBInstances(CreateBusinessDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBusinessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateBusinessDBInstances）用于创建商业智能服务实例。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessDBInstancesRequest"/></param>
+        /// <returns><see cref="CreateBusinessDBInstancesResponse"/></returns>
+        public CreateBusinessDBInstancesResponse CreateBusinessDBInstancesSync(CreateBusinessDBInstancesRequest req)
+        {
+             JsonResponseModel<CreateBusinessDBInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBusinessDBInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessDBInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateBusinessIntelligenceFile）用于添加商业智能服务文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="CreateBusinessIntelligenceFileResponse"/></returns>
+        public async Task<CreateBusinessIntelligenceFileResponse> CreateBusinessIntelligenceFile(CreateBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（CreateBusinessIntelligenceFile）用于添加商业智能服务文件。
+        /// </summary>
+        /// <param name="req"><see cref="CreateBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="CreateBusinessIntelligenceFileResponse"/></returns>
+        public CreateBusinessIntelligenceFileResponse CreateBusinessIntelligenceFileSync(CreateBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<CreateBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateBusinessIntelligenceFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -684,6 +804,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DeleteBackupMigration");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBackupMigrationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DeleteBusinessIntelligenceFileResponse"/></returns>
+        public async Task<DeleteBusinessIntelligenceFileResponse> DeleteBusinessIntelligenceFile(DeleteBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DeleteBusinessIntelligenceFile）用于删除商业智能文件。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DeleteBusinessIntelligenceFileResponse"/></returns>
+        public DeleteBusinessIntelligenceFileResponse DeleteBusinessIntelligenceFileSync(DeleteBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DeleteBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteBusinessIntelligenceFileResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1173,6 +1333,46 @@ namespace TencentCloud.Sqlserver.V20180328
         }
 
         /// <summary>
+        /// 本接口（DescribeBusinessIntelligenceFile）用于查询商业智能服务需要的文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DescribeBusinessIntelligenceFileResponse"/></returns>
+        public async Task<DescribeBusinessIntelligenceFileResponse> DescribeBusinessIntelligenceFile(DescribeBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeBusinessIntelligenceFile）用于查询商业智能服务需要的文件。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeBusinessIntelligenceFileRequest"/></param>
+        /// <returns><see cref="DescribeBusinessIntelligenceFileResponse"/></returns>
+        public DescribeBusinessIntelligenceFileResponse DescribeBusinessIntelligenceFileSync(DescribeBusinessIntelligenceFileRequest req)
+        {
+             JsonResponseModel<DescribeBusinessIntelligenceFileResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeBusinessIntelligenceFile");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeBusinessIntelligenceFileResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口(DescribeCrossRegionZone)根据主实例查询备机的容灾地域和可用区。
         /// </summary>
         /// <param name="req"><see cref="DescribeCrossRegionZoneRequest"/></param>
@@ -1244,6 +1444,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "DescribeDBCharsets");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBCharsetsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceInter）用于查询互通实例的信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInterRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInterResponse"/></returns>
+        public async Task<DescribeDBInstanceInterResponse> DescribeDBInstanceInter(DescribeDBInstanceInterRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDBInstanceInter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInterResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（DescribeDBInstanceInter）用于查询互通实例的信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDBInstanceInterRequest"/></param>
+        /// <returns><see cref="DescribeDBInstanceInterResponse"/></returns>
+        public DescribeDBInstanceInterResponse DescribeDBInstanceInterSync(DescribeDBInstanceInterRequest req)
+        {
+             JsonResponseModel<DescribeDBInstanceInterResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDBInstanceInter");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBInstanceInterResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3248,6 +3488,46 @@ namespace TencentCloud.Sqlserver.V20180328
              {
                  var strResp = this.InternalRequestSync(req, "ModifyReadOnlyGroupDetails");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyReadOnlyGroupDetailsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（OpenInterCommunication）用于打开实例的互通，实例互通可以实现商业智能服务相互联通。
+        /// </summary>
+        /// <param name="req"><see cref="OpenInterCommunicationRequest"/></param>
+        /// <returns><see cref="OpenInterCommunicationResponse"/></returns>
+        public async Task<OpenInterCommunicationResponse> OpenInterCommunication(OpenInterCommunicationRequest req)
+        {
+             JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenInterCommunicationResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口（OpenInterCommunication）用于打开实例的互通，实例互通可以实现商业智能服务相互联通。
+        /// </summary>
+        /// <param name="req"><see cref="OpenInterCommunicationRequest"/></param>
+        /// <returns><see cref="OpenInterCommunicationResponse"/></returns>
+        public OpenInterCommunicationResponse OpenInterCommunicationSync(OpenInterCommunicationRequest req)
+        {
+             JsonResponseModel<OpenInterCommunicationResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenInterCommunication");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenInterCommunicationResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -48,6 +48,12 @@ namespace TencentCloud.Clb.V20180317.Models
         [JsonProperty("Period")]
         public ulong? Period{ get; set; }
 
+        /// <summary>
+        /// 日志主题的存储类型，可选值 HOT（标准存储），COLD（低频存储）；默认为HOT。
+        /// </summary>
+        [JsonProperty("StorageType")]
+        public string StorageType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Clb.V20180317.Models
             this.SetParamSimple(map, prefix + "PartitionCount", this.PartitionCount);
             this.SetParamSimple(map, prefix + "TopicType", this.TopicType);
             this.SetParamSimple(map, prefix + "Period", this.Period);
+            this.SetParamSimple(map, prefix + "StorageType", this.StorageType);
         }
     }
 }

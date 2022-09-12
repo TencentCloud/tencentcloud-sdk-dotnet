@@ -48,6 +48,24 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("AreaKey")]
         public string AreaKey{ get; set; }
 
+        /// <summary>
+        /// 地域码表 id
+        /// </summary>
+        [JsonProperty("AreaRegionID")]
+        public string AreaRegionID{ get; set; }
+
+        /// <summary>
+        /// 地域码表 code 如 ap-xxx（xxx 为地域词）
+        /// </summary>
+        [JsonProperty("AreaRegionCode")]
+        public string AreaRegionCode{ get; set; }
+
+        /// <summary>
+        /// 地域缩写
+        /// </summary>
+        [JsonProperty("AreaAbbr")]
+        public string AreaAbbr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +76,9 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "AreaStatus", this.AreaStatus);
             this.SetParamSimple(map, prefix + "AreaName", this.AreaName);
             this.SetParamSimple(map, prefix + "AreaKey", this.AreaKey);
+            this.SetParamSimple(map, prefix + "AreaRegionID", this.AreaRegionID);
+            this.SetParamSimple(map, prefix + "AreaRegionCode", this.AreaRegionCode);
+            this.SetParamSimple(map, prefix + "AreaAbbr", this.AreaAbbr);
         }
     }
 }

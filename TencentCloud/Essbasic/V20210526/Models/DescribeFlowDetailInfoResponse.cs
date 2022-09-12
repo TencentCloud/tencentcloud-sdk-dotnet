@@ -44,6 +44,20 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public FlowDetailInfo[] FlowInfo{ get; set; }
 
         /// <summary>
+        /// 合同组编号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
+        /// <summary>
+        /// 合同组名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FlowGroupName")]
+        public string FlowGroupName{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -58,6 +72,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "ApplicationId", this.ApplicationId);
             this.SetParamSimple(map, prefix + "ProxyOrganizationOpenId", this.ProxyOrganizationOpenId);
             this.SetParamArrayObj(map, prefix + "FlowInfo.", this.FlowInfo);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
+            this.SetParamSimple(map, prefix + "FlowGroupName", this.FlowGroupName);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

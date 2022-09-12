@@ -37,7 +37,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public string RoomId{ get; set; }
 
         /// <summary>
-        /// 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC功能或者录制服务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分。
+        /// 录制机器人用于进入TRTC房间拉流的[UserId](https://cloud.tencent.com/document/product/647/46351#userid)，注意这个UserId不能与其他TRTC房间内的主播或者其他录制任务等已经使用的UserId重复，建议可以把房间ID作为userId的标识的一部分，即录制机器人进入房间的userid应保证独立且唯一。
         /// </summary>
         [JsonProperty("UserId")]
         public string UserId{ get; set; }
@@ -63,7 +63,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// <summary>
         /// TRTC房间号的类型，必须和录制的房间所对应的RoomId类型相同:
         /// 0: 字符串类型的RoomId
-        /// 1: 32位整型的RoomId
+        /// 1: 32位整型的RoomId（默认）
         /// </summary>
         [JsonProperty("RoomIdType")]
         public ulong? RoomIdType{ get; set; }

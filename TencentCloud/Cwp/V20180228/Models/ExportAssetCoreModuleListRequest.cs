@@ -25,6 +25,18 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 服务器Uuid
+        /// </summary>
+        [JsonProperty("Uuid")]
+        public string Uuid{ get; set; }
+
+        /// <summary>
+        /// 服务器Quuid
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
+        /// <summary>
         /// 过滤条件。
         /// <li>Name- string - 是否必填：否 - 包名</li>
         /// <li>User- string - 是否必填：否 - 用户</li>
@@ -39,22 +51,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 排序依据:Size,ProcessCount,ModuleCount
+        /// 排序依据[FirstTime|Size|ProcessCount|ModuleCount]
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
-
-        /// <summary>
-        /// 服务器Uuid
-        /// </summary>
-        [JsonProperty("Uuid")]
-        public string Uuid{ get; set; }
-
-        /// <summary>
-        /// 服务器Quuid
-        /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
 
 
         /// <summary>
@@ -62,11 +62,11 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
-            this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
-            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
         }
     }
 }

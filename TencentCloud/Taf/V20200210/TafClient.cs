@@ -172,45 +172,5 @@ namespace TencentCloud.Taf.V20200210
              return rsp.Response;
         }
 
-        /// <summary>
-        /// 流量安选产品，短信发送接口
-        /// </summary>
-        /// <param name="req"><see cref="SendTrafficSecuritySmsMessageRequest"/></param>
-        /// <returns><see cref="SendTrafficSecuritySmsMessageResponse"/></returns>
-        public async Task<SendTrafficSecuritySmsMessageResponse> SendTrafficSecuritySmsMessage(SendTrafficSecuritySmsMessageRequest req)
-        {
-             JsonResponseModel<SendTrafficSecuritySmsMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "SendTrafficSecuritySmsMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTrafficSecuritySmsMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 流量安选产品，短信发送接口
-        /// </summary>
-        /// <param name="req"><see cref="SendTrafficSecuritySmsMessageRequest"/></param>
-        /// <returns><see cref="SendTrafficSecuritySmsMessageResponse"/></returns>
-        public SendTrafficSecuritySmsMessageResponse SendTrafficSecuritySmsMessageSync(SendTrafficSecuritySmsMessageRequest req)
-        {
-             JsonResponseModel<SendTrafficSecuritySmsMessageResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "SendTrafficSecuritySmsMessage");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SendTrafficSecuritySmsMessageResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
     }
 }

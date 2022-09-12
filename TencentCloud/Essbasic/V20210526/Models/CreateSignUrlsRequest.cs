@@ -31,7 +31,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public Agent Agent{ get; set; }
 
         /// <summary>
-        /// 签署流程编号数组，最多支持100个。
+        /// 签署流程编号数组，最多支持100个。(备注：该参数和合同组编号必须二选一)
         /// </summary>
         [JsonProperty("FlowIds")]
         public string[] FlowIds{ get; set; }
@@ -102,6 +102,12 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
+        /// <summary>
+        /// 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -120,6 +126,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

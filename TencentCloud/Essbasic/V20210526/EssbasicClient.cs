@@ -53,6 +53,48 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 指定需要批量撤销的签署流程Id，批量撤销合同
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelBatchCancelFlowsRequest"/></param>
+        /// <returns><see cref="ChannelBatchCancelFlowsResponse"/></returns>
+        public async Task<ChannelBatchCancelFlowsResponse> ChannelBatchCancelFlows(ChannelBatchCancelFlowsRequest req)
+        {
+             JsonResponseModel<ChannelBatchCancelFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelBatchCancelFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelBatchCancelFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 指定需要批量撤销的签署流程Id，批量撤销合同
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// </summary>
+        /// <param name="req"><see cref="ChannelBatchCancelFlowsRequest"/></param>
+        /// <returns><see cref="ChannelBatchCancelFlowsResponse"/></returns>
+        public ChannelBatchCancelFlowsResponse ChannelBatchCancelFlowsSync(ChannelBatchCancelFlowsRequest req)
+        {
+             JsonResponseModel<ChannelBatchCancelFlowsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelBatchCancelFlows");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelBatchCancelFlowsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 此接口（ChannelCancelMultiFlowSignQRCode）用于取消一码多扫二维码。该接口对传入的二维码ID，若还在有效期内，可以提前失效。
         /// </summary>
         /// <param name="req"><see cref="ChannelCancelMultiFlowSignQRCodeRequest"/></param>
@@ -215,6 +257,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 接口（ChannelCreateFlowGroupByFiles）用于通过多文件创建合同组签署流程。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowGroupByFilesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowGroupByFilesResponse"/></returns>
+        public async Task<ChannelCreateFlowGroupByFilesResponse> ChannelCreateFlowGroupByFiles(ChannelCreateFlowGroupByFilesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowGroupByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelCreateFlowGroupByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowGroupByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 接口（ChannelCreateFlowGroupByFiles）用于通过多文件创建合同组签署流程。
+        /// </summary>
+        /// <param name="req"><see cref="ChannelCreateFlowGroupByFilesRequest"/></param>
+        /// <returns><see cref="ChannelCreateFlowGroupByFilesResponse"/></returns>
+        public ChannelCreateFlowGroupByFilesResponse ChannelCreateFlowGroupByFilesSync(ChannelCreateFlowGroupByFilesRequest req)
+        {
+             JsonResponseModel<ChannelCreateFlowGroupByFilesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelCreateFlowGroupByFiles");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelCreateFlowGroupByFilesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 提交企业签署流程审批结果
         /// 
         /// 在通过接口(CreateFlowsByTemplates 或者ChannelCreateFlowByFiles)创建签署流程时，若指定了参数 NeedSignReview 为true,则可以调用此接口提交企业内部签署审批结果。
@@ -343,7 +425,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建出证报告，返回报告 URL
+        /// 【描述】：创建出证报告，返回报告 URL
+        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
@@ -363,7 +446,8 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建出证报告，返回报告 URL
+        /// 【描述】：创建出证报告，返回报告 URL
+        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>

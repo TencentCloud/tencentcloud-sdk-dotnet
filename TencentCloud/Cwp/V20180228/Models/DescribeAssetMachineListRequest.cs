@@ -25,18 +25,6 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
-        /// 需要返回的数量，默认为10，最大值为100
-        /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
-
-        /// <summary>
-        /// 偏移量，默认为0。
-        /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
-
-        /// <summary>
         /// 过滤条件。
         /// <li>IpOrAlias - String - 是否必填：否 - 主机ip或别名筛选</li>
         /// <li>OsType - String - 是否必填：否 - windows或linux</li>
@@ -58,10 +46,16 @@ namespace TencentCloud.Cwp.V20180228.Models
         public Filter[] Filters{ get; set; }
 
         /// <summary>
-        /// 可选排序：PartitionCount
+        /// 需要返回的数量，默认为10，最大值为100
         /// </summary>
-        [JsonProperty("By")]
-        public string By{ get; set; }
+        [JsonProperty("Limit")]
+        public ulong? Limit{ get; set; }
+
+        /// <summary>
+        /// 偏移量，默认为0。
+        /// </summary>
+        [JsonProperty("Offset")]
+        public ulong? Offset{ get; set; }
 
         /// <summary>
         /// 排序方式，asc升序 或 desc降序
@@ -69,17 +63,23 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("Order")]
         public string Order{ get; set; }
 
+        /// <summary>
+        /// 可选排序[FirstTime|PartitionCount]
+        /// </summary>
+        [JsonProperty("By")]
+        public string By{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
-            this.SetParamSimple(map, prefix + "By", this.By);
             this.SetParamSimple(map, prefix + "Order", this.Order);
+            this.SetParamSimple(map, prefix + "By", this.By);
         }
     }
 }

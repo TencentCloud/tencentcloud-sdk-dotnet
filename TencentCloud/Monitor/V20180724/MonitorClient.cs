@@ -1949,6 +1949,46 @@ namespace TencentCloud.Monitor.V20180724
         }
 
         /// <summary>
+        /// 列出 Grafana 所有告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaChannelsResponse"/></returns>
+        public async Task<DescribeGrafanaChannelsResponse> DescribeGrafanaChannels(DescribeGrafanaChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeGrafanaChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 列出 Grafana 所有告警通道
+        /// </summary>
+        /// <param name="req"><see cref="DescribeGrafanaChannelsRequest"/></param>
+        /// <returns><see cref="DescribeGrafanaChannelsResponse"/></returns>
+        public DescribeGrafanaChannelsResponse DescribeGrafanaChannelsSync(DescribeGrafanaChannelsRequest req)
+        {
+             JsonResponseModel<DescribeGrafanaChannelsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeGrafanaChannels");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeGrafanaChannelsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 列出 Grafana 的设置，即 grafana.ini 文件内容
         /// </summary>
         /// <param name="req"><see cref="DescribeGrafanaConfigRequest"/></param>

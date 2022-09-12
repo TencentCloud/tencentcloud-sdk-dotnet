@@ -85,6 +85,66 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? WebLocationCount{ get; set; }
 
         /// <summary>
+        /// 账号今日新增
+        /// </summary>
+        [JsonProperty("AccountNewCount")]
+        public long? AccountNewCount{ get; set; }
+
+        /// <summary>
+        /// 端口今日新增
+        /// </summary>
+        [JsonProperty("PortNewCount")]
+        public long? PortNewCount{ get; set; }
+
+        /// <summary>
+        /// 进程今日新增
+        /// </summary>
+        [JsonProperty("ProcessNewCount")]
+        public long? ProcessNewCount{ get; set; }
+
+        /// <summary>
+        /// 软件今日新增
+        /// </summary>
+        [JsonProperty("SoftwareNewCount")]
+        public long? SoftwareNewCount{ get; set; }
+
+        /// <summary>
+        /// 数据库今日新增
+        /// </summary>
+        [JsonProperty("DatabaseNewCount")]
+        public long? DatabaseNewCount{ get; set; }
+
+        /// <summary>
+        /// Web应用今日新增
+        /// </summary>
+        [JsonProperty("WebAppNewCount")]
+        public long? WebAppNewCount{ get; set; }
+
+        /// <summary>
+        /// Web框架今日新增
+        /// </summary>
+        [JsonProperty("WebFrameNewCount")]
+        public long? WebFrameNewCount{ get; set; }
+
+        /// <summary>
+        /// Web服务今日新增
+        /// </summary>
+        [JsonProperty("WebServiceNewCount")]
+        public long? WebServiceNewCount{ get; set; }
+
+        /// <summary>
+        /// Web站点今日新增
+        /// </summary>
+        [JsonProperty("WebLocationNewCount")]
+        public long? WebLocationNewCount{ get; set; }
+
+        /// <summary>
+        /// 主机今日新增
+        /// </summary>
+        [JsonProperty("MachineNewCount")]
+        public long? MachineNewCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -106,6 +166,16 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "WebFrameCount", this.WebFrameCount);
             this.SetParamSimple(map, prefix + "WebServiceCount", this.WebServiceCount);
             this.SetParamSimple(map, prefix + "WebLocationCount", this.WebLocationCount);
+            this.SetParamSimple(map, prefix + "AccountNewCount", this.AccountNewCount);
+            this.SetParamSimple(map, prefix + "PortNewCount", this.PortNewCount);
+            this.SetParamSimple(map, prefix + "ProcessNewCount", this.ProcessNewCount);
+            this.SetParamSimple(map, prefix + "SoftwareNewCount", this.SoftwareNewCount);
+            this.SetParamSimple(map, prefix + "DatabaseNewCount", this.DatabaseNewCount);
+            this.SetParamSimple(map, prefix + "WebAppNewCount", this.WebAppNewCount);
+            this.SetParamSimple(map, prefix + "WebFrameNewCount", this.WebFrameNewCount);
+            this.SetParamSimple(map, prefix + "WebServiceNewCount", this.WebServiceNewCount);
+            this.SetParamSimple(map, prefix + "WebLocationNewCount", this.WebLocationNewCount);
+            this.SetParamSimple(map, prefix + "MachineNewCount", this.MachineNewCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

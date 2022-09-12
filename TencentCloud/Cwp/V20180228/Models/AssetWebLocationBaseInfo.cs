@@ -139,6 +139,19 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 首次采集时间
+        /// </summary>
+        [JsonProperty("FirstTime")]
+        public string FirstTime{ get; set; }
+
+        /// <summary>
+        /// 是否新增[0:否|1:是]
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNew")]
+        public long? IsNew{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -164,6 +177,8 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamArrayObj(map, prefix + "Tag.", this.Tag);
             this.SetParamSimple(map, prefix + "Id", this.Id);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
+            this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
         }
     }
 }

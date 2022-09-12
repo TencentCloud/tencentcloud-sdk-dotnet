@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.599</VersionPrefix>
+    <VersionPrefix>3.0.600</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -101,6 +101,8 @@
     <Compile Include="V20180228\Models\CreateBaselineStrategyResponse.cs" />
     <Compile Include="V20180228\Models\CreateEmergencyVulScanRequest.cs" />
     <Compile Include="V20180228\Models\CreateEmergencyVulScanResponse.cs" />
+    <Compile Include="V20180228\Models\CreateLicenseOrderRequest.cs" />
+    <Compile Include="V20180228\Models\CreateLicenseOrderResponse.cs" />
     <Compile Include="V20180228\Models\CreateProtectServerRequest.cs" />
     <Compile Include="V20180228\Models\CreateProtectServerResponse.cs" />
     <Compile Include="V20180228\Models\CreateScanMalwareSettingRequest.cs" />
@@ -120,6 +122,8 @@
     <Compile Include="V20180228\Models\DeleteBashRulesResponse.cs" />
     <Compile Include="V20180228\Models\DeleteBruteAttacksRequest.cs" />
     <Compile Include="V20180228\Models\DeleteBruteAttacksResponse.cs" />
+    <Compile Include="V20180228\Models\DeleteLicenseRecordRequest.cs" />
+    <Compile Include="V20180228\Models\DeleteLicenseRecordResponse.cs" />
     <Compile Include="V20180228\Models\DeleteLoginWhiteListRequest.cs" />
     <Compile Include="V20180228\Models\DeleteLoginWhiteListResponse.cs" />
     <Compile Include="V20180228\Models\DeleteMachineRequest.cs" />
@@ -284,6 +288,14 @@
     <Compile Include="V20180228\Models\DescribeImportMachineInfoResponse.cs" />
     <Compile Include="V20180228\Models\DescribeIndexListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeIndexListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseBindListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseBindListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseBindScheduleRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseBindScheduleResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseGeneralRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseGeneralResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeLicenseListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLogStorageStatisticRequest.cs" />
     <Compile Include="V20180228\Models\DescribeLogStorageStatisticResponse.cs" />
     <Compile Include="V20180228\Models\DescribeLoginWhiteCombinedListRequest.cs" />
@@ -410,6 +422,8 @@
     <Compile Include="V20180228\Models\DescribeWebPageProtectStatResponse.cs" />
     <Compile Include="V20180228\Models\DescribeWebPageServiceInfoRequest.cs" />
     <Compile Include="V20180228\Models\DescribeWebPageServiceInfoResponse.cs" />
+    <Compile Include="V20180228\Models\DestroyOrderRequest.cs" />
+    <Compile Include="V20180228\Models\DestroyOrderResponse.cs" />
     <Compile Include="V20180228\Models\EditBashRulesRequest.cs" />
     <Compile Include="V20180228\Models\EditBashRulesResponse.cs" />
     <Compile Include="V20180228\Models\EditTagsRequest.cs" />
@@ -437,6 +451,8 @@
     <Compile Include="V20180228\Models\ExportIgnoreBaselineRuleResponse.cs" />
     <Compile Include="V20180228\Models\ExportIgnoreRuleEffectHostListRequest.cs" />
     <Compile Include="V20180228\Models\ExportIgnoreRuleEffectHostListResponse.cs" />
+    <Compile Include="V20180228\Models\ExportLicenseDetailRequest.cs" />
+    <Compile Include="V20180228\Models\ExportLicenseDetailResponse.cs" />
     <Compile Include="V20180228\Models\ExportMaliciousRequestsRequest.cs" />
     <Compile Include="V20180228\Models\ExportMaliciousRequestsResponse.cs" />
     <Compile Include="V20180228\Models\ExportMalwaresRequest.cs" />
@@ -473,7 +489,11 @@
     <Compile Include="V20180228\Models\IgnoreImpactedHostsRequest.cs" />
     <Compile Include="V20180228\Models\IgnoreImpactedHostsResponse.cs" />
     <Compile Include="V20180228\Models\IgnoreRuleEffectHostInfo.cs" />
+    <Compile Include="V20180228\Models\LicenseBindDetail.cs" />
+    <Compile Include="V20180228\Models\LicenseBindTaskDetail.cs" />
+    <Compile Include="V20180228\Models\LicenseDetail.cs" />
     <Compile Include="V20180228\Models\LicenseOrder.cs" />
+    <Compile Include="V20180228\Models\LicenseUnBindRsp.cs" />
     <Compile Include="V20180228\Models\LoginWhiteCombinedInfo.cs" />
     <Compile Include="V20180228\Models\LoginWhiteLists.cs" />
     <Compile Include="V20180228\Models\Machine.cs" />
@@ -490,8 +510,14 @@
     <Compile Include="V20180228\Models\ModifyBanStatusResponse.cs" />
     <Compile Include="V20180228\Models\ModifyBruteAttackRulesRequest.cs" />
     <Compile Include="V20180228\Models\ModifyBruteAttackRulesResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseBindsRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseBindsResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseUnBindsRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyLicenseUnBindsResponse.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsRequest.cs" />
     <Compile Include="V20180228\Models\ModifyMalwareTimingScanSettingsResponse.cs" />
+    <Compile Include="V20180228\Models\ModifyOrderAttributeRequest.cs" />
+    <Compile Include="V20180228\Models\ModifyOrderAttributeResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWarningSettingRequest.cs" />
     <Compile Include="V20180228\Models\ModifyWarningSettingResponse.cs" />
     <Compile Include="V20180228\Models\ModifyWebPageProtectDirRequest.cs" />

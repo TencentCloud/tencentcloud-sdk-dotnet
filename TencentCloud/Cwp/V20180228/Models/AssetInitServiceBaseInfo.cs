@@ -104,6 +104,24 @@ namespace TencentCloud.Cwp.V20180228.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 首次采集时间
+        /// </summary>
+        [JsonProperty("FirstTime")]
+        public string FirstTime{ get; set; }
+
+        /// <summary>
+        /// 是否新增[0:否|1:是]
+        /// </summary>
+        [JsonProperty("IsNew")]
+        public long? IsNew{ get; set; }
+
+        /// <summary>
+        /// 服务器外网IP
+        /// </summary>
+        [JsonProperty("MachineWanIp")]
+        public string MachineWanIp{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +139,9 @@ namespace TencentCloud.Cwp.V20180228.Models
             this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamSimple(map, prefix + "Uuid", this.Uuid);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "FirstTime", this.FirstTime);
+            this.SetParamSimple(map, prefix + "IsNew", this.IsNew);
+            this.SetParamSimple(map, prefix + "MachineWanIp", this.MachineWanIp);
         }
     }
 }

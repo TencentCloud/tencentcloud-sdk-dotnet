@@ -25,6 +25,12 @@ namespace TencentCloud.Cwp.V20180228.Models
     {
         
         /// <summary>
+        /// 查询指定Quuid主机的信息
+        /// </summary>
+        [JsonProperty("Quuid")]
+        public string Quuid{ get; set; }
+
+        /// <summary>
         /// 过滤条件。
         /// <li>User- string - 是否必填：否 - 运行用户</li>
         /// <li>Name- string - 是否必填：否 - Web服务名：
@@ -50,16 +56,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         public string Order{ get; set; }
 
         /// <summary>
-        /// 可选排序：ProcessCount
+        /// 可选排序：[FirstTime|ProcessCount]
         /// </summary>
         [JsonProperty("By")]
         public string By{ get; set; }
-
-        /// <summary>
-        /// 查询指定Quuid主机的信息
-        /// </summary>
-        [JsonProperty("Quuid")]
-        public string Quuid{ get; set; }
 
 
         /// <summary>
@@ -67,10 +67,10 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Order", this.Order);
             this.SetParamSimple(map, prefix + "By", this.By);
-            this.SetParamSimple(map, prefix + "Quuid", this.Quuid);
         }
     }
 }

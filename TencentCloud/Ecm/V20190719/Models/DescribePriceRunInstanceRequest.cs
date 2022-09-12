@@ -48,6 +48,16 @@ namespace TencentCloud.Ecm.V20190719.Models
         [JsonProperty("DataDisk")]
         public DataDisk[] DataDisk{ get; set; }
 
+        /// <summary>
+        /// 实例计费类型。其中：
+        /// 0，按资源维度后付费，计算当日用量峰值，例如CPU，内存，硬盘等，仅适用于非GNR系列机型；
+        /// 1，按小时后付费，单价：xx元/实例/小时，仅适用于GNR机型，如需开通该计费方式请提工单申请；
+        /// 2，按月后付费，单价：xx元/实例/月，仅适用于GNR机型；
+        /// 该字段不填时，非GNR机型会默认选择0；GNR机型默认选择2。
+        /// </summary>
+        [JsonProperty("InstanceChargeType")]
+        public long? InstanceChargeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +68,7 @@ namespace TencentCloud.Ecm.V20190719.Models
             this.SetParamObj(map, prefix + "SystemDisk.", this.SystemDisk);
             this.SetParamSimple(map, prefix + "InstanceCount", this.InstanceCount);
             this.SetParamArrayObj(map, prefix + "DataDisk.", this.DataDisk);
+            this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
         }
     }
 }

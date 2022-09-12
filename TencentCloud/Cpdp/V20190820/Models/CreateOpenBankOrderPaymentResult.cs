@@ -51,6 +51,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("OutOrderId")]
         public string OutOrderId{ get; set; }
 
+        /// <summary>
+        /// 渠道扩展支付信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayInfo")]
+        public string PayInfo{ get; set; }
+
+        /// <summary>
+        /// 渠道扩展支付信息类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PayInfoType")]
+        public string PayInfoType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +75,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ThirdPayOrderId", this.ThirdPayOrderId);
             this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
             this.SetParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
+            this.SetParamSimple(map, prefix + "PayInfo", this.PayInfo);
+            this.SetParamSimple(map, prefix + "PayInfoType", this.PayInfoType);
         }
     }
 }
