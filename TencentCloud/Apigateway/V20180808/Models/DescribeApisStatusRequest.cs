@@ -43,7 +43,7 @@ namespace TencentCloud.Apigateway.V20180808.Models
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// API过滤条件。支持ApiId、ApiName、ApiPath、ApiType、AuthRelationApiId、AuthType、ApiBuniessType、NotUsagePlanId、Environment、Tags (values为 $tag_key:tag_value的列表)、TagKeys （values 为 tag key的列表）。
+        /// API过滤条件。支持ApiId、ApiName、ApiPath、ApiType、AuthRelationApiId、AuthType、ApiBuniessType、NotUsagePlanId、 Environment、Tags (values为 $tag_key:tag_value的列表)、TagKeys （values 为 tag key的列表），其中NotUsagePlanId和Environment必须同时使用，不能单独使用一个。
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Mna.V20210119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class RegionSellConf : AbstractModel
+    public class DeviceBaseInfo : AbstractModel
     {
         
         /// <summary>
-        /// 地域中文名称
+        /// 设备唯一ID
         /// </summary>
-        [JsonProperty("RegionName")]
-        public string RegionName{ get; set; }
+        [JsonProperty("DeviceId")]
+        public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 所属大区
+        /// 设备名称
         /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("DeviceName")]
+        public string DeviceName{ get; set; }
 
         /// <summary>
-        /// 是否为默认地域
+        /// 设备创建的时间，单位：ms
         /// </summary>
-        [JsonProperty("IsDefaultRegion")]
-        public long? IsDefaultRegion{ get; set; }
+        [JsonProperty("CreateTime")]
+        public string CreateTime{ get; set; }
 
         /// <summary>
-        /// 地域名称
+        /// 设备最后在线时间，单位：ms
         /// </summary>
-        [JsonProperty("Region")]
-        public string Region{ get; set; }
+        [JsonProperty("LastTime")]
+        public string LastTime{ get; set; }
 
         /// <summary>
-        /// 可用区售卖配置
+        /// 设备的备注
         /// </summary>
-        [JsonProperty("ZonesConf")]
-        public ZoneSellConf[] ZonesConf{ get; set; }
+        [JsonProperty("Remark")]
+        public string Remark{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "RegionName", this.RegionName);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
-            this.SetParamSimple(map, prefix + "IsDefaultRegion", this.IsDefaultRegion);
-            this.SetParamSimple(map, prefix + "Region", this.Region);
-            this.SetParamArrayObj(map, prefix + "ZonesConf.", this.ZonesConf);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "DeviceName", this.DeviceName);
+            this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
+            this.SetParamSimple(map, prefix + "LastTime", this.LastTime);
+            this.SetParamSimple(map, prefix + "Remark", this.Remark);
         }
     }
 }

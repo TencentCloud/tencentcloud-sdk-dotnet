@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{5E3993CA-3190-3343-8FD0-BC4234130564}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.601</VersionPrefix>
+    <VersionPrefix>3.0.602</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -185,8 +185,6 @@
     <Compile Include="V20170320\Models\DescribeDBSecurityGroupsResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDBSwitchRecordsRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDBSwitchRecordsResponse.cs" />
-    <Compile Include="V20170320\Models\DescribeDBZoneConfigRequest.cs" />
-    <Compile Include="V20170320\Models\DescribeDBZoneConfigResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDataBackupOverviewRequest.cs" />
     <Compile Include="V20170320\Models\DescribeDataBackupOverviewResponse.cs" />
     <Compile Include="V20170320\Models\DescribeDatabasesRequest.cs" />
@@ -337,7 +335,6 @@
     <Compile Include="V20170320\Models\RWInfo.cs" />
     <Compile Include="V20170320\Models\RWInfos.cs" />
     <Compile Include="V20170320\Models\RWInstanceInfo.cs" />
-    <Compile Include="V20170320\Models\RegionSellConf.cs" />
     <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesRequest.cs" />
     <Compile Include="V20170320\Models\ReleaseIsolatedDBInstancesResponse.cs" />
     <Compile Include="V20170320\Models\ReleaseResult.cs" />
@@ -363,8 +360,6 @@
     <Compile Include="V20170320\Models\RollbackTimeRange.cs" />
     <Compile Include="V20170320\Models\Rule.cs" />
     <Compile Include="V20170320\Models\SecurityGroup.cs" />
-    <Compile Include="V20170320\Models\SellConfig.cs" />
-    <Compile Include="V20170320\Models\SellType.cs" />
     <Compile Include="V20170320\Models\SlaveConfig.cs" />
     <Compile Include="V20170320\Models\SlaveInfo.cs" />
     <Compile Include="V20170320\Models\SlaveInstanceInfo.cs" />
@@ -409,6 +404,5 @@
     <Compile Include="V20170320\Models\VerifyRootAccountRequest.cs" />
     <Compile Include="V20170320\Models\VerifyRootAccountResponse.cs" />
     <Compile Include="V20170320\Models\ZoneConf.cs" />
-    <Compile Include="V20170320\Models\ZoneSellConf.cs" />
   </ItemGroup>
 </Project>

@@ -1813,7 +1813,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询七层监控类时序流量数据
+        /// 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>
@@ -1833,7 +1833,7 @@ namespace TencentCloud.Teo.V20220106
         }
 
         /// <summary>
-        /// 查询七层监控类时序流量数据
+        /// 本接口（DescribeOverviewL7Data）用于查询七层监控类时序流量数据。
         /// </summary>
         /// <param name="req"><see cref="DescribeOverviewL7DataRequest"/></param>
         /// <returns><see cref="DescribeOverviewL7DataResponse"/></returns>

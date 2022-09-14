@@ -4003,6 +4003,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 查询转码任务数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeTaskNumRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeTaskNumResponse"/></returns>
+        public async Task<DescribeTranscodeTaskNumResponse> DescribeTranscodeTaskNum(DescribeTranscodeTaskNumRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTranscodeTaskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTaskNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询转码任务数。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTranscodeTaskNumRequest"/></param>
+        /// <returns><see cref="DescribeTranscodeTaskNumResponse"/></returns>
+        public DescribeTranscodeTaskNumResponse DescribeTranscodeTaskNumSync(DescribeTranscodeTaskNumRequest req)
+        {
+             JsonResponseModel<DescribeTranscodeTaskNumResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTranscodeTaskNum");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTranscodeTaskNumResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 直播上行路数查询
         /// </summary>
         /// <param name="req"><see cref="DescribeUploadStreamNumsRequest"/></param>

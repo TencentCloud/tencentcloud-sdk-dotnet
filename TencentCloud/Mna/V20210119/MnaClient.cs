@@ -53,6 +53,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 新建设备记录
+        /// </summary>
+        /// <param name="req"><see cref="AddDeviceRequest"/></param>
+        /// <returns><see cref="AddDeviceResponse"/></returns>
+        public async Task<AddDeviceResponse> AddDevice(AddDeviceRequest req)
+        {
+             JsonResponseModel<AddDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AddDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建设备记录
+        /// </summary>
+        /// <param name="req"><see cref="AddDeviceRequest"/></param>
+        /// <returns><see cref="AddDeviceResponse"/></returns>
+        public AddDeviceResponse AddDeviceSync(AddDeviceRequest req)
+        {
+             JsonResponseModel<AddDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AddDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AddDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 移动网络发起Qos加速过程
         /// </summary>
         /// <param name="req"><see cref="CreateQosRequest"/></param>
@@ -84,6 +124,46 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "CreateQos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除设备信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResponse"/></returns>
+        public async Task<DeleteDeviceResponse> DeleteDevice(DeleteDeviceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除设备信息
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDeviceRequest"/></param>
+        /// <returns><see cref="DeleteDeviceResponse"/></returns>
+        public DeleteDeviceResponse DeleteDeviceSync(DeleteDeviceRequest req)
+        {
+             JsonResponseModel<DeleteDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -164,6 +244,166 @@ namespace TencentCloud.Mna.V20210119
              {
                  var strResp = this.InternalRequestSync(req, "DescribeQos");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeQosResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过指定设备的ID查找设备详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceRequest"/></param>
+        /// <returns><see cref="GetDeviceResponse"/></returns>
+        public async Task<GetDeviceResponse> GetDevice(GetDeviceRequest req)
+        {
+             JsonResponseModel<GetDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过指定设备的ID查找设备详细信息
+        /// </summary>
+        /// <param name="req"><see cref="GetDeviceRequest"/></param>
+        /// <returns><see cref="GetDeviceResponse"/></returns>
+        public GetDeviceResponse GetDeviceSync(GetDeviceRequest req)
+        {
+             JsonResponseModel<GetDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicesRequest"/></param>
+        /// <returns><see cref="GetDevicesResponse"/></returns>
+        public async Task<GetDevicesResponse> GetDevices(GetDevicesRequest req)
+        {
+             JsonResponseModel<GetDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取设备信息列表
+        /// </summary>
+        /// <param name="req"><see cref="GetDevicesRequest"/></param>
+        /// <returns><see cref="GetDevicesResponse"/></returns>
+        public GetDevicesResponse GetDevicesSync(GetDevicesRequest req)
+        {
+             JsonResponseModel<GetDevicesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetDevices");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetDevicesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在用量统计页面下载流量数据
+        /// </summary>
+        /// <param name="req"><see cref="GetStatisticDataRequest"/></param>
+        /// <returns><see cref="GetStatisticDataResponse"/></returns>
+        public async Task<GetStatisticDataResponse> GetStatisticData(GetStatisticDataRequest req)
+        {
+             JsonResponseModel<GetStatisticDataResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetStatisticData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetStatisticDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 在用量统计页面下载流量数据
+        /// </summary>
+        /// <param name="req"><see cref="GetStatisticDataRequest"/></param>
+        /// <returns><see cref="GetStatisticDataResponse"/></returns>
+        public GetStatisticDataResponse GetStatisticDataSync(GetStatisticDataRequest req)
+        {
+             JsonResponseModel<GetStatisticDataResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetStatisticData");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetStatisticDataResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新设备信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeviceRequest"/></param>
+        /// <returns><see cref="UpdateDeviceResponse"/></returns>
+        public async Task<UpdateDeviceResponse> UpdateDevice(UpdateDeviceRequest req)
+        {
+             JsonResponseModel<UpdateDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新设备信息
+        /// </summary>
+        /// <param name="req"><see cref="UpdateDeviceRequest"/></param>
+        /// <returns><see cref="UpdateDeviceResponse"/></returns>
+        public UpdateDeviceResponse UpdateDeviceSync(UpdateDeviceRequest req)
+        {
+             JsonResponseModel<UpdateDeviceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateDevice");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateDeviceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

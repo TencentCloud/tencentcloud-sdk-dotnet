@@ -25,19 +25,27 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 维度
+        /// 筛选条件的key。
         /// </summary>
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
         /// <summary>
-        /// 操作符
+        /// 查询条件操作符，操作类型有：
+        /// <li>equals: 等于；</li>
+        /// <li>notEquals: 不等于；</li>
+        /// <li>include: 包含；</li>
+        /// <li>notInclude: 不包含; </li>
+        /// <li>startWith: 开始于；</li>
+        /// <li>notStartWith: 不开始于；</li>
+        /// <li>endWith: 结尾是；</li>
+        /// <li>notEndWith: 不结尾是。</li>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
-        /// 维度值
+        /// 筛选条件的值。
         /// </summary>
         [JsonProperty("Value")]
         public string[] Value{ get; set; }

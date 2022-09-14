@@ -28,7 +28,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
         /// 处理状态
         ///   SUCCESS：签约成功
         ///   FAILED：签约失败
-        ///   PROCESSING“签约中
+        ///   PROCESSING：签约中
         /// </summary>
         [JsonProperty("SignStatus")]
         public string SignStatus{ get; set; }

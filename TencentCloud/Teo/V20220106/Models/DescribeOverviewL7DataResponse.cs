@@ -25,19 +25,19 @@ namespace TencentCloud.Teo.V20220106.Models
     {
         
         /// <summary>
-        /// 查询维度
+        /// 查询维度。
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }
 
         /// <summary>
-        /// 时间间隔
+        /// 查询时间间隔。
         /// </summary>
         [JsonProperty("Interval")]
         public string Interval{ get; set; }
 
         /// <summary>
-        /// 详细数据
+        /// 七层监控类时序流量数据列表。
         /// </summary>
         [JsonProperty("Data")]
         public TimingDataRecord[] Data{ get; set; }

@@ -49,6 +49,12 @@ namespace TencentCloud.Vm.V20210922.Models
         [JsonProperty("Height")]
         public long? Height{ get; set; }
 
+        /// <summary>
+        /// 封面
+        /// </summary>
+        [JsonProperty("Thumbnail")]
+        public string Thumbnail{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +65,7 @@ namespace TencentCloud.Vm.V20210922.Models
             this.SetParamSimple(map, prefix + "Duration", this.Duration);
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Height", this.Height);
+            this.SetParamSimple(map, prefix + "Thumbnail", this.Thumbnail);
         }
     }
 }

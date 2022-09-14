@@ -25,37 +25,37 @@ namespace TencentCloud.Cynosdb.V20190107.Models
     {
         
         /// <summary>
-        /// 快照文件ID，用于回滚
+        /// 快照文件ID，已废弃，请使用BackupId
         /// </summary>
         [JsonProperty("SnapshotId")]
         public ulong? SnapshotId{ get; set; }
 
         /// <summary>
-        /// 快照文件名
+        /// 备份文件名
         /// </summary>
         [JsonProperty("FileName")]
         public string FileName{ get; set; }
 
         /// <summary>
-        /// 快照文件大小
+        /// 备份文件大小
         /// </summary>
         [JsonProperty("FileSize")]
         public ulong? FileSize{ get; set; }
 
         /// <summary>
-        /// 快照备份开始时间
+        /// 备份开始时间
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 快照备份完成时间
+        /// 备份完成时间
         /// </summary>
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
         /// <summary>
-        /// 备份类型：snapshot，快照备份；timepoint，时间点备份
+        /// 备份类型：snapshot，快照备份；logic，逻辑备份
         /// </summary>
         [JsonProperty("BackupType")]
         public string BackupType{ get; set; }
@@ -78,6 +78,27 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("SnapshotTime")]
         public string SnapshotTime{ get; set; }
 
+        /// <summary>
+        /// 备份ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupId")]
+        public long? BackupId{ get; set; }
+
+        /// <summary>
+        /// 快照类型，可选值：full，全量；increment，增量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SnapShotType")]
+        public string SnapShotType{ get; set; }
+
+        /// <summary>
+        /// 备份文件备注
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupName")]
+        public string BackupName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +114,9 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
             this.SetParamSimple(map, prefix + "BackupStatus", this.BackupStatus);
             this.SetParamSimple(map, prefix + "SnapshotTime", this.SnapshotTime);
+            this.SetParamSimple(map, prefix + "BackupId", this.BackupId);
+            this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+            this.SetParamSimple(map, prefix + "BackupName", this.BackupName);
         }
     }
 }

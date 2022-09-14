@@ -31,13 +31,13 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         public string ClusterId{ get; set; }
 
         /// <summary>
-        /// 备份文件列表偏移
+        /// 备份文件列表大小，取值范围(0,100]
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 备份文件列表起始
+        /// 备份文件列表偏移，取值范围[0,INF)
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
@@ -49,6 +49,54 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("DbType")]
         public string DbType{ get; set; }
 
+        /// <summary>
+        /// 备份ID
+        /// </summary>
+        [JsonProperty("BackupIds")]
+        public long?[] BackupIds{ get; set; }
+
+        /// <summary>
+        /// 备份类型，可选值：snapshot，快照备份； logic，逻辑备份
+        /// </summary>
+        [JsonProperty("BackupType")]
+        public string BackupType{ get; set; }
+
+        /// <summary>
+        /// 备份方式，可选值：auto，自动备份；manual，手动备
+        /// </summary>
+        [JsonProperty("BackupMethod")]
+        public string BackupMethod{ get; set; }
+
+        /// <summary>
+        /// 快照类型，可选值：full，全量；increment，增量
+        /// </summary>
+        [JsonProperty("SnapShotType")]
+        public string SnapShotType{ get; set; }
+
+        /// <summary>
+        /// 备份开始时间
+        /// </summary>
+        [JsonProperty("StartTime")]
+        public string StartTime{ get; set; }
+
+        /// <summary>
+        /// 备份结束时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public string EndTime{ get; set; }
+
+        /// <summary>
+        /// 备份文件名，模糊查询
+        /// </summary>
+        [JsonProperty("FileNames")]
+        public string[] FileNames{ get; set; }
+
+        /// <summary>
+        /// 备份备注名，模糊查询
+        /// </summary>
+        [JsonProperty("BackupNames")]
+        public string[] BackupNames{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +107,14 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
             this.SetParamSimple(map, prefix + "DbType", this.DbType);
+            this.SetParamArraySimple(map, prefix + "BackupIds.", this.BackupIds);
+            this.SetParamSimple(map, prefix + "BackupType", this.BackupType);
+            this.SetParamSimple(map, prefix + "BackupMethod", this.BackupMethod);
+            this.SetParamSimple(map, prefix + "SnapShotType", this.SnapShotType);
+            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamArraySimple(map, prefix + "FileNames.", this.FileNames);
+            this.SetParamArraySimple(map, prefix + "BackupNames.", this.BackupNames);
         }
     }
 }

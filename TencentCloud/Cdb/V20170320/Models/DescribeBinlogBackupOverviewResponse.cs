@@ -25,16 +25,28 @@ namespace TencentCloud.Cdb.V20170320.Models
     {
         
         /// <summary>
-        /// 总的日志备份容量（单位为字节）。
+        /// 总的日志备份容量，包含异地日志备份（单位为字节）。
         /// </summary>
         [JsonProperty("BinlogBackupVolume")]
         public long? BinlogBackupVolume{ get; set; }
 
         /// <summary>
-        /// 总的日志备份个数。
+        /// 总的日志备份个数，包含异地日志备份。
         /// </summary>
         [JsonProperty("BinlogBackupCount")]
         public long? BinlogBackupCount{ get; set; }
+
+        /// <summary>
+        /// 异地日志备份容量（单位为字节）。
+        /// </summary>
+        [JsonProperty("RemoteBinlogVolume")]
+        public long? RemoteBinlogVolume{ get; set; }
+
+        /// <summary>
+        /// 异地日志备份个数。
+        /// </summary>
+        [JsonProperty("RemoteBinlogCount")]
+        public long? RemoteBinlogCount{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -50,6 +62,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         {
             this.SetParamSimple(map, prefix + "BinlogBackupVolume", this.BinlogBackupVolume);
             this.SetParamSimple(map, prefix + "BinlogBackupCount", this.BinlogBackupCount);
+            this.SetParamSimple(map, prefix + "RemoteBinlogVolume", this.RemoteBinlogVolume);
+            this.SetParamSimple(map, prefix + "RemoteBinlogCount", this.RemoteBinlogCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -67,6 +67,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("SourceContext")]
         public string SourceContext{ get; set; }
 
+        /// <summary>
+        /// 上传到vod平台的录制文件格式类型，0：mp4(默认), 1: hls。
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public ulong? MediaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +86,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "SubAppId", this.SubAppId);
             this.SetParamSimple(map, prefix + "SessionContext", this.SessionContext);
             this.SetParamSimple(map, prefix + "SourceContext", this.SourceContext);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
         }
     }
 }

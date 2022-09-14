@@ -47,7 +47,6 @@ namespace TencentCloud.Vpc.V20170312.Models
 
         /// <summary>
         /// 下一跳地址，这里只需要指定不同下一跳类型的网关ID，系统会自动匹配到下一跳地址。
-        /// 特别注意：当 GatewayType 为 EIP 时，GatewayId 固定值 '0'
         /// </summary>
         [JsonProperty("GatewayId")]
         public string GatewayId{ get; set; }

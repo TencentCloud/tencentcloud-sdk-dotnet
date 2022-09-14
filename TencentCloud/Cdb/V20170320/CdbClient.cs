@@ -2303,46 +2303,6 @@ namespace TencentCloud.Cdb.V20170320
         }
 
         /// <summary>
-        /// 本接口(DescribeDBZoneConfig)用于查询可创建的云数据库各地域可售卖的规格配置。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBZoneConfigRequest"/></param>
-        /// <returns><see cref="DescribeDBZoneConfigResponse"/></returns>
-        public async Task<DescribeDBZoneConfigResponse> DescribeDBZoneConfig(DescribeDBZoneConfigRequest req)
-        {
-             JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDBZoneConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBZoneConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(DescribeDBZoneConfig)用于查询可创建的云数据库各地域可售卖的规格配置。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBZoneConfigRequest"/></param>
-        /// <returns><see cref="DescribeDBZoneConfigResponse"/></returns>
-        public DescribeDBZoneConfigResponse DescribeDBZoneConfigSync(DescribeDBZoneConfigRequest req)
-        {
-             JsonResponseModel<DescribeDBZoneConfigResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBZoneConfig");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBZoneConfigResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(DescribeDataBackupOverview)用于查询用户在当前地域总的数据备份概览。
         /// </summary>
         /// <param name="req"><see cref="DescribeDataBackupOverviewRequest"/></param>

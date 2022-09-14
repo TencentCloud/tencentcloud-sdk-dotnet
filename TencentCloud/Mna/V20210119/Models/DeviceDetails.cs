@@ -15,32 +15,27 @@
  * under the License.
  */
 
-namespace TencentCloud.Cdb.V20170320.Models
+namespace TencentCloud.Mna.V20210119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class SellType : AbstractModel
+    public class DeviceDetails : AbstractModel
     {
         
         /// <summary>
-        /// 售卖实例名称
+        /// 设备基本信息
         /// </summary>
-        [JsonProperty("TypeName")]
-        public string TypeName{ get; set; }
+        [JsonProperty("DeviceBaseInfo")]
+        public DeviceBaseInfo DeviceBaseInfo{ get; set; }
 
         /// <summary>
-        /// 内核版本号
+        /// 设备网络信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EngineVersion")]
-        public string[] EngineVersion{ get; set; }
-
-        /// <summary>
-        /// 售卖规格详细配置
-        /// </summary>
-        [JsonProperty("Configs")]
-        public SellConfig[] Configs{ get; set; }
+        [JsonProperty("DeviceNetInfo")]
+        public DeviceNetInfo[] DeviceNetInfo{ get; set; }
 
 
         /// <summary>
@@ -48,9 +43,8 @@ namespace TencentCloud.Cdb.V20170320.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TypeName", this.TypeName);
-            this.SetParamArraySimple(map, prefix + "EngineVersion.", this.EngineVersion);
-            this.SetParamArrayObj(map, prefix + "Configs.", this.Configs);
+            this.SetParamObj(map, prefix + "DeviceBaseInfo.", this.DeviceBaseInfo);
+            this.SetParamArrayObj(map, prefix + "DeviceNetInfo.", this.DeviceNetInfo);
         }
     }
 }
