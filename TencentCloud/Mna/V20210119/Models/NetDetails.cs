@@ -15,20 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Mna.V20210119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeSyncAssetStatusRequest : AbstractModel
+    public class NetDetails : AbstractModel
     {
         
         /// <summary>
-        /// 0: 互联网防火墙开关，1：vpc 防火墙开关
+        /// 时间点，单位：s
         /// </summary>
-        [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
+        [JsonProperty("Time")]
+        public string Time{ get; set; }
+
+        /// <summary>
+        /// 流量值（bit）
+        /// </summary>
+        [JsonProperty("Current")]
+        public float? Current{ get; set; }
 
 
         /// <summary>
@@ -36,7 +42,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamSimple(map, prefix + "Time", this.Time);
+            this.SetParamSimple(map, prefix + "Current", this.Current);
         }
     }
 }

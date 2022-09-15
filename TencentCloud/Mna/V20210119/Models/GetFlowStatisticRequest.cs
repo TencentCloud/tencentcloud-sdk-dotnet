@@ -15,44 +15,44 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Mna.V20210119.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifyAllSwitchStatusRequest : AbstractModel
+    public class GetFlowStatisticRequest : AbstractModel
     {
         
         /// <summary>
-        /// 状态，0：关闭，1：开启
+        /// 设备ID，ID="-1"时默认查找所有设备
         /// </summary>
-        [JsonProperty("Status")]
-        public long? Status{ get; set; }
+        [JsonProperty("DeviceId")]
+        public string DeviceId{ get; set; }
 
         /// <summary>
-        /// 0: 互联网边界防火墙开关，1：vpc防火墙开关
+        /// 开始查找时间
+        /// </summary>
+        [JsonProperty("BeginTime")]
+        public long? BeginTime{ get; set; }
+
+        /// <summary>
+        /// 截止时间
+        /// </summary>
+        [JsonProperty("EndTime")]
+        public long? EndTime{ get; set; }
+
+        /// <summary>
+        /// 流量种类（1：上行流量，2：下行流量）
         /// </summary>
         [JsonProperty("Type")]
-        public ulong? Type{ get; set; }
+        public long? Type{ get; set; }
 
         /// <summary>
-        /// 选中的防火墙开关Id
+        /// 时间粒度（1：按小时统计，2：按天统计）
         /// </summary>
-        [JsonProperty("Ids")]
-        public string[] Ids{ get; set; }
-
-        /// <summary>
-        /// NAT开关切换类型，1,单个子网，2，同开同关，3，全部
-        /// </summary>
-        [JsonProperty("ChangeType")]
-        public long? ChangeType{ get; set; }
-
-        /// <summary>
-        /// NAT实例所在地域
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("TimeGranularity")]
+        public long? TimeGranularity{ get; set; }
 
 
         /// <summary>
@@ -60,11 +60,11 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "DeviceId", this.DeviceId);
+            this.SetParamSimple(map, prefix + "BeginTime", this.BeginTime);
+            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
             this.SetParamSimple(map, prefix + "Type", this.Type);
-            this.SetParamArraySimple(map, prefix + "Ids.", this.Ids);
-            this.SetParamSimple(map, prefix + "ChangeType", this.ChangeType);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "TimeGranularity", this.TimeGranularity);
         }
     }
 }

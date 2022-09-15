@@ -15,38 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Tcm.V20210413.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class ModifySecurityGroupAllRuleStatusRequest : AbstractModel
+    public class SmartDNSConfig : AbstractModel
     {
         
         /// <summary>
-        /// 列表规则状态，0：全部停用，1：全部启用
+        /// 开启DNS代理
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Status")]
-        public ulong? Status{ get; set; }
+        [JsonProperty("IstioMetaDNSCapture")]
+        public bool? IstioMetaDNSCapture{ get; set; }
 
         /// <summary>
-        /// 方向，0：出站，1：入站
+        /// 开启自动地址分配
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Direction")]
-        public ulong? Direction{ get; set; }
-
-        /// <summary>
-        /// Edge ID值
-        /// </summary>
-        [JsonProperty("EdgeId")]
-        public string EdgeId{ get; set; }
-
-        /// <summary>
-        /// NAT地域, 腾讯云地域的英文简写
-        /// </summary>
-        [JsonProperty("Area")]
-        public string Area{ get; set; }
+        [JsonProperty("IstioMetaDNSAutoAllocate")]
+        public bool? IstioMetaDNSAutoAllocate{ get; set; }
 
 
         /// <summary>
@@ -54,10 +44,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Status", this.Status);
-            this.SetParamSimple(map, prefix + "Direction", this.Direction);
-            this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
-            this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "IstioMetaDNSCapture", this.IstioMetaDNSCapture);
+            this.SetParamSimple(map, prefix + "IstioMetaDNSAutoAllocate", this.IstioMetaDNSAutoAllocate);
         }
     }
 }

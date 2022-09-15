@@ -31,7 +31,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string InstanceName{ get; set; }
 
         /// <summary>
-        /// 可用区
+        /// 可用区，购买多可用区实例时，填写ZoneIds.N字段中的任意一个值
         /// </summary>
         [JsonProperty("ZoneId")]
         public long? ZoneId{ get; set; }
@@ -128,7 +128,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public bool? MultiZoneFlag{ get; set; }
 
         /// <summary>
-        /// 可用区列表
+        /// 可用区列表，购买多可用区实例时为必填项
         /// </summary>
         [JsonProperty("ZoneIds")]
         public long?[] ZoneIds{ get; set; }

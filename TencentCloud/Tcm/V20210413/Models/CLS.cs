@@ -42,6 +42,12 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("Topic")]
         public string Topic{ get; set; }
 
+        /// <summary>
+        /// 是否删除
+        /// </summary>
+        [JsonProperty("NeedDelete")]
+        public bool? NeedDelete{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "Enable", this.Enable);
             this.SetParamSimple(map, prefix + "LogSet", this.LogSet);
             this.SetParamSimple(map, prefix + "Topic", this.Topic);
+            this.SetParamSimple(map, prefix + "NeedDelete", this.NeedDelete);
         }
     }
 }

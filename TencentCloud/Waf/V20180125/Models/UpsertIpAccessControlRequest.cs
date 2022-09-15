@@ -42,6 +42,12 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Edition")]
         public string Edition{ get; set; }
 
+        /// <summary>
+        /// 是否为多域名黑白名单
+        /// </summary>
+        [JsonProperty("SourceType")]
+        public string SourceType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "Domain", this.Domain);
             this.SetParamArraySimple(map, prefix + "Items.", this.Items);
             this.SetParamSimple(map, prefix + "Edition", this.Edition);
+            this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
         }
     }
 }

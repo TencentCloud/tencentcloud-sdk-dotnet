@@ -96,6 +96,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("AutoUpgradeClusterLevel")]
         public bool? AutoUpgradeClusterLevel{ get; set; }
 
+        /// <summary>
+        /// 边缘集群的集群规模
+        /// </summary>
+        [JsonProperty("ClusterLevel")]
+        public string ClusterLevel{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tke.V20180525.Models
             this.SetParamSimple(map, prefix + "Health", this.Health);
             this.SetParamSimple(map, prefix + "GridDaemon", this.GridDaemon);
             this.SetParamSimple(map, prefix + "AutoUpgradeClusterLevel", this.AutoUpgradeClusterLevel);
+            this.SetParamSimple(map, prefix + "ClusterLevel", this.ClusterLevel);
         }
     }
 }

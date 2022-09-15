@@ -43,6 +43,27 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("DisablePolicyChecks")]
         public bool? DisablePolicyChecks{ get; set; }
 
+        /// <summary>
+        /// 支持HTTP1.0协议
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EnablePilotHTTP")]
+        public bool? EnablePilotHTTP{ get; set; }
+
+        /// <summary>
+        /// 禁用HTTP重试策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DisableHTTPRetry")]
+        public bool? DisableHTTPRetry{ get; set; }
+
+        /// <summary>
+        /// SmartDNS策略
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SmartDNS")]
+        public SmartDNSConfig SmartDNS{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -52,6 +73,9 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "OutboundTrafficPolicy", this.OutboundTrafficPolicy);
             this.SetParamObj(map, prefix + "Tracing.", this.Tracing);
             this.SetParamSimple(map, prefix + "DisablePolicyChecks", this.DisablePolicyChecks);
+            this.SetParamSimple(map, prefix + "EnablePilotHTTP", this.EnablePilotHTTP);
+            this.SetParamSimple(map, prefix + "DisableHTTPRetry", this.DisableHTTPRetry);
+            this.SetParamObj(map, prefix + "SmartDNS.", this.SmartDNS);
         }
     }
 }

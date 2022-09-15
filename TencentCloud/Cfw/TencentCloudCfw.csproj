@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.602</VersionPrefix>
+    <VersionPrefix>3.0.603</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -63,8 +63,6 @@
     <Compile Include="V20190904\Models\CreateNatFwInstanceResponse.cs" />
     <Compile Include="V20190904\Models\CreateNatFwInstanceWithDomainRequest.cs" />
     <Compile Include="V20190904\Models\CreateNatFwInstanceWithDomainResponse.cs" />
-    <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesRequest.cs" />
-    <Compile Include="V20190904\Models\CreateSecurityGroupApiRulesResponse.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupRulesRequest.cs" />
     <Compile Include="V20190904\Models\CreateSecurityGroupRulesResponse.cs" />
     <Compile Include="V20190904\Models\DatabaseWhiteListRuleData.cs" />
@@ -82,8 +80,6 @@
     <Compile Include="V20190904\Models\DeleteVpcInstanceResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAcListsResponse.cs" />
-    <Compile Include="V20190904\Models\DescribeAddrTemplateListRequest.cs" />
-    <Compile Include="V20190904\Models\DescribeAddrTemplateListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeAssociatedInstanceListResponse.cs" />
     <Compile Include="V20190904\Models\DescribeBlockByIpTimesListRequest.cs" />
@@ -122,8 +118,6 @@
     <Compile Include="V20190904\Models\DescribeSourceAssetResponse.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsRequest.cs" />
     <Compile Include="V20190904\Models\DescribeSwitchListsResponse.cs" />
-    <Compile Include="V20190904\Models\DescribeSyncAssetStatusRequest.cs" />
-    <Compile Include="V20190904\Models\DescribeSyncAssetStatusResponse.cs" />
     <Compile Include="V20190904\Models\DescribeTLogInfoRequest.cs" />
     <Compile Include="V20190904\Models\DescribeTLogInfoResponse.cs" />
     <Compile Include="V20190904\Models\DescribeTLogIpListRequest.cs" />
@@ -147,8 +141,6 @@
     <Compile Include="V20190904\Models\ModifyAllPublicIPSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAllRuleStatusResponse.cs" />
-    <Compile Include="V20190904\Models\ModifyAllSwitchStatusRequest.cs" />
-    <Compile Include="V20190904\Models\ModifyAllSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAllVPCSwitchStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifyAllVPCSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyAssetScanRequest.cs" />
@@ -157,8 +149,6 @@
     <Compile Include="V20190904\Models\ModifyBlockIgnoreListResponse.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopRequest.cs" />
     <Compile Include="V20190904\Models\ModifyBlockTopResponse.cs" />
-    <Compile Include="V20190904\Models\ModifyItemSwitchStatusRequest.cs" />
-    <Compile Include="V20190904\Models\ModifyItemSwitchStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwReSelectRequest.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwReSelectResponse.cs" />
     <Compile Include="V20190904\Models\ModifyNatFwSwitchRequest.cs" />
@@ -171,8 +161,6 @@
     <Compile Include="V20190904\Models\ModifyResourceGroupResponse.cs" />
     <Compile Include="V20190904\Models\ModifyRunSyncAssetRequest.cs" />
     <Compile Include="V20190904\Models\ModifyRunSyncAssetResponse.cs" />
-    <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusRequest.cs" />
-    <Compile Include="V20190904\Models\ModifySecurityGroupAllRuleStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifySecurityGroupItemRuleStatusRequest.cs" />
     <Compile Include="V20190904\Models\ModifySecurityGroupItemRuleStatusResponse.cs" />
     <Compile Include="V20190904\Models\ModifySecurityGroupRuleRequest.cs" />
@@ -195,7 +183,6 @@
     <Compile Include="V20190904\Models\RuleInfoData.cs" />
     <Compile Include="V20190904\Models\ScanInfo.cs" />
     <Compile Include="V20190904\Models\ScanResultInfo.cs" />
-    <Compile Include="V20190904\Models\SecurityGroupApiRuleData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupBothWayInfo.cs" />
     <Compile Include="V20190904\Models\SecurityGroupListData.cs" />
     <Compile Include="V20190904\Models\SecurityGroupOrderIndexData.cs" />
@@ -210,7 +197,6 @@
     <Compile Include="V20190904\Models\StopSecurityGroupRuleDispatchResponse.cs" />
     <Compile Include="V20190904\Models\SwitchListsData.cs" />
     <Compile Include="V20190904\Models\TLogInfo.cs" />
-    <Compile Include="V20190904\Models\TemplateListInfo.cs" />
     <Compile Include="V20190904\Models\UnHandleEvent.cs" />
     <Compile Include="V20190904\Models\UnHandleEventDetail.cs" />
     <Compile Include="V20190904\Models\VpcDnsInfo.cs" />

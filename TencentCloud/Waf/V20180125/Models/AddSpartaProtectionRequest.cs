@@ -168,6 +168,30 @@ namespace TencentCloud.Waf.V20180125.Models
         [JsonProperty("Weights")]
         public long?[] Weights{ get; set; }
 
+        /// <summary>
+        /// 是否开启主动健康检测，1表示开启，0表示不开启
+        /// </summary>
+        [JsonProperty("ActiveCheck")]
+        public long? ActiveCheck{ get; set; }
+
+        /// <summary>
+        /// TLS版本信息
+        /// </summary>
+        [JsonProperty("TLSVersion")]
+        public long? TLSVersion{ get; set; }
+
+        /// <summary>
+        /// 加密套件信息
+        /// </summary>
+        [JsonProperty("Ciphers")]
+        public long?[] Ciphers{ get; set; }
+
+        /// <summary>
+        /// 0:不支持选择：默认模版  1:通用型模版 2:安全型模版 3:自定义模版
+        /// </summary>
+        [JsonProperty("CipherTemplate")]
+        public long? CipherTemplate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -198,6 +222,10 @@ namespace TencentCloud.Waf.V20180125.Models
             this.SetParamSimple(map, prefix + "InstanceID", this.InstanceID);
             this.SetParamSimple(map, prefix + "Anycast", this.Anycast);
             this.SetParamArraySimple(map, prefix + "Weights.", this.Weights);
+            this.SetParamSimple(map, prefix + "ActiveCheck", this.ActiveCheck);
+            this.SetParamSimple(map, prefix + "TLSVersion", this.TLSVersion);
+            this.SetParamArraySimple(map, prefix + "Ciphers.", this.Ciphers);
+            this.SetParamSimple(map, prefix + "CipherTemplate", this.CipherTemplate);
         }
     }
 }

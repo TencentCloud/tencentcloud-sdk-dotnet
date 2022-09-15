@@ -333,6 +333,46 @@ namespace TencentCloud.Mna.V20210119
         }
 
         /// <summary>
+        /// 获取指定设备Id，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticResponse"/></returns>
+        public async Task<GetFlowStatisticResponse> GetFlowStatistic(GetFlowStatisticRequest req)
+        {
+             JsonResponseModel<GetFlowStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetFlowStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFlowStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取指定设备Id，指定时间点数据流量使用情况
+        /// </summary>
+        /// <param name="req"><see cref="GetFlowStatisticRequest"/></param>
+        /// <returns><see cref="GetFlowStatisticResponse"/></returns>
+        public GetFlowStatisticResponse GetFlowStatisticSync(GetFlowStatisticRequest req)
+        {
+             JsonResponseModel<GetFlowStatisticResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetFlowStatistic");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetFlowStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 在用量统计页面下载流量数据
         /// </summary>
         /// <param name="req"><see cref="GetStatisticDataRequest"/></param>

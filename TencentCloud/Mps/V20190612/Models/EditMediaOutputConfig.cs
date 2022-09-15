@@ -30,6 +30,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("Container")]
         public string Container{ get; set; }
 
+        /// <summary>
+        /// 剪辑模式，可选值 normal、fast。默认是精确剪辑 normal
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +43,7 @@ namespace TencentCloud.Mps.V20190612.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Container", this.Container);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
         }
     }
 }
