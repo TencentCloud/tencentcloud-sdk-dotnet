@@ -57,6 +57,14 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Size")]
         public long? Size{ get; set; }
 
+        /// <summary>
+        /// 数字水印类型。可选值：
+        /// <li>Trace 表示经过溯源水印处理；</li>
+        /// <li>None 表示没有经过数字水印处理。</li>
+        /// </summary>
+        [JsonProperty("DigitalWatermarkType")]
+        public string DigitalWatermarkType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +76,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "DrmType", this.DrmType);
             this.SetParamSimple(map, prefix + "Url", this.Url);
             this.SetParamSimple(map, prefix + "Size", this.Size);
+            this.SetParamSimple(map, prefix + "DigitalWatermarkType", this.DigitalWatermarkType);
         }
     }
 }

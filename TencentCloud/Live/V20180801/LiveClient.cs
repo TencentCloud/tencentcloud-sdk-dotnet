@@ -179,6 +179,46 @@ namespace TencentCloud.Live.V20180801
         }
 
         /// <summary>
+        /// 验证用户是否拥有特定直播域名。
+        /// </summary>
+        /// <param name="req"><see cref="AuthenticateDomainOwnerRequest"/></param>
+        /// <returns><see cref="AuthenticateDomainOwnerResponse"/></returns>
+        public async Task<AuthenticateDomainOwnerResponse> AuthenticateDomainOwner(AuthenticateDomainOwnerRequest req)
+        {
+             JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "AuthenticateDomainOwner");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthenticateDomainOwnerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证用户是否拥有特定直播域名。
+        /// </summary>
+        /// <param name="req"><see cref="AuthenticateDomainOwnerRequest"/></param>
+        /// <returns><see cref="AuthenticateDomainOwnerResponse"/></returns>
+        public AuthenticateDomainOwnerResponse AuthenticateDomainOwnerSync(AuthenticateDomainOwnerRequest req)
+        {
+             JsonResponseModel<AuthenticateDomainOwnerResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "AuthenticateDomainOwner");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<AuthenticateDomainOwnerResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 该接口用来取消混流。用法与 mix_streamv2.cancel_mix_stream 基本一致。
         /// </summary>
         /// <param name="req"><see cref="CancelCommonMixStreamRequest"/></param>

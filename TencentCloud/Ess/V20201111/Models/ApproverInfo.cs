@@ -29,7 +29,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 0：企业
         /// 1：个人
         /// 3：企业静默签署
-        /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+        /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }

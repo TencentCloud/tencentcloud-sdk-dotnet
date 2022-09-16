@@ -126,6 +126,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("TagList")]
         public TagInfo[] TagList{ get; set; }
 
+        /// <summary>
+        /// 可维护时间段
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDuration OperationDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +155,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
             this.SetParamSimple(map, prefix + "LicenseType", this.LicenseType);
             this.SetParamArrayObj(map, prefix + "TagList.", this.TagList);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         }
     }
 }

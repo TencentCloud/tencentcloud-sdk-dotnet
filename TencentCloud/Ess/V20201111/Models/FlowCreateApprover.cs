@@ -29,7 +29,7 @@ namespace TencentCloud.Ess.V20201111.Models
         /// 0：企业
         /// 1：个人
         /// 3：企业静默签署
-        /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。
+        /// 注：类型为3（企业静默签署）时，此接口会默认完成该签署方的签署。静默签署仅进行盖章操作，不能自动签名。
         /// </summary>
         [JsonProperty("ApproverType")]
         public long? ApproverType{ get; set; }
@@ -120,6 +120,12 @@ namespace TencentCloud.Ess.V20201111.Models
         [JsonProperty("CustomApproverTag")]
         public string CustomApproverTag{ get; set; }
 
+        /// <summary>
+        /// 快速注册相关信息，目前暂未开放！
+        /// </summary>
+        [JsonProperty("RegisterInfo")]
+        public RegisterInfo RegisterInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -141,6 +147,7 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamSimple(map, prefix + "Required", this.Required);
             this.SetParamSimple(map, prefix + "ApproverSource", this.ApproverSource);
             this.SetParamSimple(map, prefix + "CustomApproverTag", this.CustomApproverTag);
+            this.SetParamObj(map, prefix + "RegisterInfo.", this.RegisterInfo);
         }
     }
 }

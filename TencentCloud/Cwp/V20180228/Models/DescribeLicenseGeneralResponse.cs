@@ -61,7 +61,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         public ulong? ExpireLicenseCnt{ get; set; }
 
         /// <summary>
-        /// 自动升级开关状态,默认 false,  ture 开启, false 关闭
+        /// 自动升级开关状态,默认 false,  true 开启, false 关闭
         /// </summary>
         [JsonProperty("AutoOpenStatus")]
         public bool? AutoOpenStatus{ get; set; }

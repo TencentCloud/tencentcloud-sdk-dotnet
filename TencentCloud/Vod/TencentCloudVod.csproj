@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{A2C87E76-9334-3551-9635-3923223E0A2A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.603</VersionPrefix>
+    <VersionPrefix>3.0.604</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -369,6 +369,11 @@
     <Compile Include="V20180717\Models\EventContent.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionRequest.cs" />
     <Compile Include="V20180717\Models\ExecuteFunctionResponse.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkRequest.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkResponse.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTask.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTaskInput.cs" />
+    <Compile Include="V20180717\Models\ExtractTraceWatermarkTaskOutput.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfo.cs" />
     <Compile Include="V20180717\Models\FaceConfigureInfoForUpdate.cs" />
     <Compile Include="V20180717\Models\FileDeleteResultItem.cs" />
@@ -559,6 +564,10 @@
     <Compile Include="V20180717\Models\PullUploadTask.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\PushUrlCacheResponse.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateAdaptiveDynamicStreamingResult.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateMediaProcessTaskResult.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateTask.cs" />
+    <Compile Include="V20180717\Models\ReduceMediaBitrateTranscodeResult.cs" />
     <Compile Include="V20180717\Models\RefererAuthPolicy.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheRequest.cs" />
     <Compile Include="V20180717\Models\RefreshUrlCacheResponse.cs" />

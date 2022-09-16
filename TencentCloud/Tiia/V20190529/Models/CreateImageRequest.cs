@@ -32,41 +32,43 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 物品ID，最多支持64个字符。 
-        /// 若EntityId已存在，则对其追加图片。
+        /// 一个物品ID可以包含多张图片，若EntityId已存在，则对其追加图片。同一个EntityId，最大支持10张图。
         /// </summary>
         [JsonProperty("EntityId")]
         public string EntityId{ get; set; }
 
         /// <summary>
         /// 图片名称，最多支持64个字符， 
-        /// 同一个EntityId，最大支持10张图。
+        /// PicName唯一确定一张图片，具有唯一性。
         /// </summary>
         [JsonProperty("PicName")]
         public string PicName{ get; set; }
 
         /// <summary>
         /// 图片的 Url 。对应图片 base64 编码后大小不可超过5M。  
-        /// Url、Image必须提供一个，如果都提供，只使用 Url。 
-        /// 图片分辨率不超过4096\*4096。
-        /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-        /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-        /// 注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+        /// ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+        /// 图片限制：
+        /// • 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// • 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+        /// • 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+        /// 建议：
+        /// • 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 用户自定义的内容，最多支持4096个字符，查询时原样带回。
+        /// 图片自定义备注内容，最多支持4096个字符，查询时原样带回。
         /// </summary>
         [JsonProperty("CustomContent")]
         public string CustomContent{ get; set; }
 
         /// <summary>
         /// 图片 base64 数据，base64 编码后大小不可超过5M。 
-        /// 图片分辨率不超过4096\*4096。 
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-        /// 注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+        /// 图片限制：
+        /// • 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// • 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+        /// • 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
@@ -79,24 +81,24 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 是否需要启用主体识别，默认为**TRUE**。
-        /// 1.  为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体创建图片并进行主体识别。主体识别结果可在**Response**中获取。
-        /// 2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图创建图片。
-        /// 注意：服务类型为商品图像搜索时生效。
+        /// • 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体创建图片并进行主体识别。主体识别结果可在**Response**中获取。
+        /// • 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图创建图片。
+        /// **<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
         /// </summary>
         [JsonProperty("EnableDetect")]
         public bool? EnableDetect{ get; set; }
 
         /// <summary>
         /// 图像类目ID。
-        /// 若设置类目ID，提取对应类目的主体创建图片。
-        /// 注意：服务类型为商品图像搜索时生效。
-        /// 类目信息：
+        /// 若设置类目ID，提取以下类目的主体创建图片。
+        /// 类目取值说明：
         /// 0：上衣。
         /// 1：裙装。
         /// 2：下装。
         /// 3：包。
         /// 4：鞋。
         /// 5：配饰。
+        /// **<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }

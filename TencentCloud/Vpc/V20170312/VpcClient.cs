@@ -5153,6 +5153,46 @@ namespace TencentCloud.Vpc.V20170312
         }
 
         /// <summary>
+        /// 查询跨境带宽监控数据，该接口特提供给联通使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderFlowMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderFlowMonitorResponse"/></returns>
+        public async Task<DescribeCrossBorderFlowMonitorResponse> DescribeCrossBorderFlowMonitor(DescribeCrossBorderFlowMonitorRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCrossBorderFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderFlowMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询跨境带宽监控数据，该接口特提供给联通使用
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCrossBorderFlowMonitorRequest"/></param>
+        /// <returns><see cref="DescribeCrossBorderFlowMonitorResponse"/></returns>
+        public DescribeCrossBorderFlowMonitorResponse DescribeCrossBorderFlowMonitorSync(DescribeCrossBorderFlowMonitorRequest req)
+        {
+             JsonResponseModel<DescribeCrossBorderFlowMonitorResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCrossBorderFlowMonitor");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCrossBorderFlowMonitorResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DescribeCustomerGatewayVendors）用于查询可支持的对端网关厂商信息。
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomerGatewayVendorsRequest"/></param>

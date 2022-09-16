@@ -25,14 +25,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
     {
         
         /// <summary>
-        /// 控制台url，此链接5分钟内有效，且只能访问一次
+        /// 子客Web控制台url，此链接5分钟内有效，且只能访问一次
         /// </summary>
         [JsonProperty("ConsoleUrl")]
         public string ConsoleUrl{ get; set; }
 
         /// <summary>
-        /// 渠道合作企业是否认证开通腾讯电子签。
-        /// 当渠道合作企业未完成认证开通腾讯电子签,建议先调用同步企业信息(SyncProxyOrganization)和同步经办人信息(SyncProxyOrganizationOperators)接口成功后再跳转到登录页面。
+        /// 渠道子客企业是否已开通腾讯电子签。
         /// </summary>
         [JsonProperty("IsActivated")]
         public bool? IsActivated{ get; set; }

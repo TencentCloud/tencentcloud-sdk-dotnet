@@ -72,6 +72,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("DiskSize")]
         public ulong? DiskSize{ get; set; }
 
+        /// <summary>
+        /// 可维护时间段
+        /// </summary>
+        [JsonProperty("OperationDuration")]
+        public OperationDurationUpdated OperationDuration{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +92,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamArrayObj(map, prefix + "ExtendedFiles.", this.ExtendedFiles);
             this.SetParamSimple(map, prefix + "NodeType", this.NodeType);
             this.SetParamSimple(map, prefix + "DiskSize", this.DiskSize);
+            this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
         }
     }
 }

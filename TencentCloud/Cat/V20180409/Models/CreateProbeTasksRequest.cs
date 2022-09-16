@@ -87,7 +87,7 @@ namespace TencentCloud.Cat.V20180409.Models
         public string PluginSource{ get; set; }
 
         /// <summary>
-        /// 客户度ID
+        /// 客户端ID
         /// </summary>
         [JsonProperty("ClientNum")]
         public string ClientNum{ get; set; }

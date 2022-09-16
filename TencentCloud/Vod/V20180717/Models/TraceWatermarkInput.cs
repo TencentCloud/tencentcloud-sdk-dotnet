@@ -25,7 +25,15 @@ namespace TencentCloud.Vod.V20180717.Models
     {
         
         /// <summary>
-        /// 水印模板 ID。
+        /// 溯源水印任务开关，此字段必填，可选值：
+        /// <li>ON：开启溯源水印；</li>
+        /// <li>OFF：关闭溯源水印。</li>
+        /// </summary>
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
+
+        /// <summary>
+        /// 该字段已废弃，请勿使用。
         /// </summary>
         [JsonProperty("Definition")]
         public ulong? Definition{ get; set; }
@@ -36,6 +44,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
             this.SetParamSimple(map, prefix + "Definition", this.Definition);
         }
     }

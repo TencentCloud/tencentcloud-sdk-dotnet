@@ -3793,6 +3793,46 @@ namespace TencentCloud.Vod.V20180717
         }
 
         /// <summary>
+        /// 用于提取溯源水印。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>
+        public async Task<ExtractTraceWatermarkResponse> ExtractTraceWatermark(ExtractTraceWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ExtractTraceWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractTraceWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 用于提取溯源水印。
+        /// </summary>
+        /// <param name="req"><see cref="ExtractTraceWatermarkRequest"/></param>
+        /// <returns><see cref="ExtractTraceWatermarkResponse"/></returns>
+        public ExtractTraceWatermarkResponse ExtractTraceWatermarkSync(ExtractTraceWatermarkRequest req)
+        {
+             JsonResponseModel<ExtractTraceWatermarkResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ExtractTraceWatermark");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ExtractTraceWatermarkResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// * 对媒体禁播后，除了点播控制台预览，其他场景访问视频各种资源的 URL（原始文件、转码输出文件、截图等）均会返回 403。
         ///   禁播/解禁操作全网生效时间约 5~10 分钟。
         /// </summary>

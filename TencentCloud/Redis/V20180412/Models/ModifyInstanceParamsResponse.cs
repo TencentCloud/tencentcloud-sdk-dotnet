@@ -25,13 +25,13 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 修改是否成功。
+        /// 修改是否成功。修改成功为true，失败为false。
         /// </summary>
         [JsonProperty("Changed")]
         public bool? Changed{ get; set; }
 
         /// <summary>
-        /// 任务ID
+        /// 任务ID。
         /// </summary>
         [JsonProperty("TaskId")]
         public long? TaskId{ get; set; }

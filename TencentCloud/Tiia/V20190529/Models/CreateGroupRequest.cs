@@ -43,7 +43,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         public ulong? MaxCapacity{ get; set; }
 
         /// <summary>
-        /// 简介。
+        /// 图库简介。
         /// </summary>
         [JsonProperty("Brief")]
         public string Brief{ get; set; }
@@ -55,11 +55,11 @@ namespace TencentCloud.Tiia.V20190529.Models
         public ulong? MaxQps{ get; set; }
 
         /// <summary>
-        /// 图库类型，对应不同服务类型，默认为4。1～3为历史版本，不推荐。
-        /// 参数值：
-        /// 4：在自建图库中搜索相同原图，可支持裁剪、翻转、调色、加水印后的图片搜索，适用于图片版权保护、原图查询等场景。
-        /// 5：在自建图库中搜索相同或相似的商品图片，适用于商品分类、检索、推荐等电商场景。
-        /// 6：在自建图片库中搜索与输入图片高度相似的图片，适用于相似图案、logo、纹理等图像元素的搜索。
+        /// 图库类型，对应不同的图像搜索服务类型，默认为4。1～3为历史版本，不推荐。
+        /// 参数取值：
+        /// 4：相同图像搜索。
+        /// 5：商品图像搜索。
+        /// 6：相似图像搜索。
         /// </summary>
         [JsonProperty("GroupType")]
         public ulong? GroupType{ get; set; }

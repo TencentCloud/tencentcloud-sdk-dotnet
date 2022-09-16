@@ -653,6 +653,46 @@ namespace TencentCloud.Dnspod.V20210323
         }
 
         /// <summary>
+        /// 获取域名分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDomainGroupListResponse"/></returns>
+        public async Task<DescribeDomainGroupListResponse> DescribeDomainGroupList(DescribeDomainGroupListRequest req)
+        {
+             JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDomainGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取域名分组列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDomainGroupListRequest"/></param>
+        /// <returns><see cref="DescribeDomainGroupListResponse"/></returns>
+        public DescribeDomainGroupListResponse DescribeDomainGroupListSync(DescribeDomainGroupListRequest req)
+        {
+             JsonResponseModel<DescribeDomainGroupListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDomainGroupList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDomainGroupListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取域名列表
         /// </summary>
         /// <param name="req"><see cref="DescribeDomainListRequest"/></param>

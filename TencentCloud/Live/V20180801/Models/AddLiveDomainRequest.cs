@@ -66,6 +66,17 @@ namespace TencentCloud.Live.V20180801.Models
         [JsonProperty("IsMiniProgramLive")]
         public long? IsMiniProgramLive{ get; set; }
 
+        /// <summary>
+        /// 域名归属校验类型。
+        /// 可取值（与 AuthenticateDomainOwner 接口的 VerifyType 参数一致。）：
+        /// dnsCheck ：立即验证配置 dns 的解析记录是否与待验证内容一致，成功则保存记录。
+        /// fileCheck ：立即验证 web 文件是否与待验证内容一致，成功则保存记录。
+        /// dbCheck :  检查是否已经验证成功过。
+        /// 若不传默认为 dbCheck 。
+        /// </summary>
+        [JsonProperty("VerifyOwnerType")]
+        public string VerifyOwnerType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -77,6 +88,7 @@ namespace TencentCloud.Live.V20180801.Models
             this.SetParamSimple(map, prefix + "PlayType", this.PlayType);
             this.SetParamSimple(map, prefix + "IsDelayLive", this.IsDelayLive);
             this.SetParamSimple(map, prefix + "IsMiniProgramLive", this.IsMiniProgramLive);
+            this.SetParamSimple(map, prefix + "VerifyOwnerType", this.VerifyOwnerType);
         }
     }
 }

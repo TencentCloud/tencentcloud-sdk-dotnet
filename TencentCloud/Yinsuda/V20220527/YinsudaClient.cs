@@ -173,6 +173,46 @@ namespace TencentCloud.Yinsuda.V20220527
         }
 
         /// <summary>
+        /// 通过标签过滤歌曲列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicsByTagRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicsByTagResponse"/></returns>
+        public async Task<DescribeKTVMusicsByTagResponse> DescribeKTVMusicsByTag(DescribeKTVMusicsByTagRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicsByTagResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVMusicsByTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicsByTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 通过标签过滤歌曲列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVMusicsByTagRequest"/></param>
+        /// <returns><see cref="DescribeKTVMusicsByTagResponse"/></returns>
+        public DescribeKTVMusicsByTagResponse DescribeKTVMusicsByTagSync(DescribeKTVMusicsByTagRequest req)
+        {
+             JsonResponseModel<DescribeKTVMusicsByTagResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVMusicsByTag");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVMusicsByTagResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 根据歌单 Id 获取歌单详情。
         /// </summary>
         /// <param name="req"><see cref="DescribeKTVPlaylistDetailRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Yinsuda.V20220527
              {
                  var strResp = this.InternalRequestSync(req, "DescribeKTVSuggestions");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVSuggestionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取标签分组及分组下的标签列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVTagsRequest"/></param>
+        /// <returns><see cref="DescribeKTVTagsResponse"/></returns>
+        public async Task<DescribeKTVTagsResponse> DescribeKTVTags(DescribeKTVTagsRequest req)
+        {
+             JsonResponseModel<DescribeKTVTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeKTVTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVTagsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取标签分组及分组下的标签列表信息。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeKTVTagsRequest"/></param>
+        /// <returns><see cref="DescribeKTVTagsResponse"/></returns>
+        public DescribeKTVTagsResponse DescribeKTVTagsSync(DescribeKTVTagsRequest req)
+        {
+             JsonResponseModel<DescribeKTVTagsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeKTVTags");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeKTVTagsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

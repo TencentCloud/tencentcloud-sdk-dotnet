@@ -31,46 +31,59 @@ namespace TencentCloud.Tiia.V20190529.Models
         public string GroupId{ get; set; }
 
         /// <summary>
-        /// 图片的 Url 。对应图片 base64 编码后大小不可超过5M。 
-        /// 图片分辨率不超4096\*4096。 
-        /// Url、Image必须提供一个，如果都提供，只使用 Url。 
-        /// 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。 
-        /// 非腾讯云存储的Url速度和稳定性可能受一定影响。 
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-        /// 注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+        /// 图片的 Url 。
+        /// ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+        /// 图片限制：
+        /// • 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// • 图片大小：对应图片 base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+        /// • 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
+        /// 建议：
+        /// • 图片存储于腾讯云的Url可保障更高下载速度和稳定性，建议图片存储于腾讯云。非腾讯云存储的Url速度和稳定性可能受一定影响。
         /// </summary>
         [JsonProperty("ImageUrl")]
         public string ImageUrl{ get; set; }
 
         /// <summary>
-        /// 图片 base64 数据，base64 编码后大小不可超过5M。 
-        /// 图片分辨率不超过4096\*4096。 
-        /// 支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
-        /// 注意：开启主体识别分辨率不超过2000\*2000，图片长宽比小于10（长/短 < 10）。
+        /// 图片 base64 数据。
+        /// ImageUrl和ImageBase64必须提供一个，如果都提供，只使用ImageUrl。
+        /// 图片限制：
+        /// • 图片格式：支持PNG、JPG、JPEG、BMP，不支持 GIF 图片。
+        /// • 图片大小：base64 编码后大小不可超过5M。图片分辨率不超过4096\*4096。
+        /// • 如果在商品图像搜索中开启主体识别，分辨率不超过2000\*2000，图片长宽比小于10。
         /// </summary>
         [JsonProperty("ImageBase64")]
         public string ImageBase64{ get; set; }
 
         /// <summary>
-        /// 返回数量，默认值为10，最大值为100。
+        /// 返回结果的数量，默认值为10，最大值为100。
+        /// 按照相似度分数由高到低排序。
+        /// **<font color=#1E90FF>注意：服务类型为相似图像搜索时返回数量限制为1，即返回top1的结果。</font>**
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 起始序号，默认值为0。
+        /// 返回结果的起始序号，默认值为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
 
         /// <summary>
-        /// 出参Score中，只有超过**MatchThreshold**值的结果才会返回。默认为0
+        /// 匹配阈值。
+        /// 只有图片相似度分数超过MatchThreshold值的结果才会返回。
+        /// 默认值：
+        /// • 相同图像搜索：50。
+        /// • 商品图像搜索：28。
+        /// • 相似图像搜索：56。
+        /// 建议：
+        /// 可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
         /// </summary>
         [JsonProperty("MatchThreshold")]
         public long? MatchThreshold{ get; set; }
 
         /// <summary>
-        /// 针对入库时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
+        /// 标签过滤条件。
+        /// 针对创建图片时提交的Tags信息进行条件过滤。支持>、>=、 <、 <=、=，!=，多个条件之间支持AND和OR进行连接。
         /// </summary>
         [JsonProperty("Filter")]
         public string Filter{ get; set; }
@@ -84,24 +97,24 @@ namespace TencentCloud.Tiia.V20190529.Models
 
         /// <summary>
         /// 是否需要启用主体识别，默认为**TRUE** 。
-        /// 1. 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
-        /// 2. 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
-        /// 注意：服务类型为商品图像搜索时生效。
+        /// • 为**TRUE**时，启用主体识别，返回主体信息。若没有指定**ImageRect**，自动提取最大面积主体进行检索并进行主体识别。主体识别结果可在**Response中**获取。
+        /// • 为**FALSE**时，不启用主体识别，不返回主体信息。若没有指定**ImageRect**，以整张图检索图片。
+        /// **<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
         /// </summary>
         [JsonProperty("EnableDetect")]
         public bool? EnableDetect{ get; set; }
 
         /// <summary>
         /// 图像类目ID。
-        /// 若设置类目ID，提取对应类目的主体进行检索。
-        /// 注意：服务类型为商品图像搜索时生效。
-        /// 类目信息：
+        /// 若设置类目ID，提取以下类目的主体进行检索。
+        /// 类目取值说明：
         /// 0：上衣。
         /// 1：裙装。
         /// 2：下装。
         /// 3：包。
         /// 4：鞋。
         /// 5：配饰。
+        /// **<font color=#1E90FF>注意：仅服务类型为商品图像搜索时才生效。</font>**
         /// </summary>
         [JsonProperty("CategoryId")]
         public long? CategoryId{ get; set; }

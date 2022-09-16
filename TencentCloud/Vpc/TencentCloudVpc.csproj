@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{727FCCFA-EA0F-3D6A-A79A-438B3D84555A}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.603</VersionPrefix>
+    <VersionPrefix>3.0.604</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -201,6 +201,7 @@
     <Compile Include="V20170312\Models\CreateVpnGatewaySslServerRequest.cs" />
     <Compile Include="V20170312\Models\CreateVpnGatewaySslServerResponse.cs" />
     <Compile Include="V20170312\Models\CrossBorderCompliance.cs" />
+    <Compile Include="V20170312\Models\CrossBorderFlowMonitorData.cs" />
     <Compile Include="V20170312\Models\CustomerGateway.cs" />
     <Compile Include="V20170312\Models\CustomerGatewayVendor.cs" />
     <Compile Include="V20170312\Models\CvmInstance.cs" />
@@ -313,6 +314,8 @@
     <Compile Include="V20170312\Models\DescribeCrossBorderCcnRegionBandwidthLimitsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCrossBorderComplianceRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCrossBorderComplianceResponse.cs" />
+    <Compile Include="V20170312\Models\DescribeCrossBorderFlowMonitorRequest.cs" />
+    <Compile Include="V20170312\Models\DescribeCrossBorderFlowMonitorResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCustomerGatewayVendorsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeCustomerGatewayVendorsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeCustomerGatewaysRequest.cs" />

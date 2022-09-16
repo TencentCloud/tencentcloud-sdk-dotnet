@@ -66,6 +66,13 @@ namespace TencentCloud.Yinsuda.V20220527.Models
         [JsonProperty("GenreSet")]
         public string[] GenreSet{ get; set; }
 
+        /// <summary>
+        /// 节拍信息。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BPMInfo")]
+        public KTVBPMInfo BPMInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +86,7 @@ namespace TencentCloud.Yinsuda.V20220527.Models
             this.SetParamArrayObj(map, prefix + "ChorusClipSet.", this.ChorusClipSet);
             this.SetParamSimple(map, prefix + "PreludeInterval", this.PreludeInterval);
             this.SetParamArraySimple(map, prefix + "GenreSet.", this.GenreSet);
+            this.SetParamObj(map, prefix + "BPMInfo.", this.BPMInfo);
         }
     }
 }

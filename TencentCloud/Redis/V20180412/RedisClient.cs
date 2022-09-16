@@ -2733,7 +2733,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyInstanceParams)用于修改实例参数。
+        /// 本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
@@ -2753,7 +2753,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 本接口(ModifyInstanceParams)用于修改实例参数。
+        /// 本接口(ModifyInstanceParams)用于修改Redis实例的参数配置。
         /// </summary>
         /// <param name="req"><see cref="ModifyInstanceParamsRequest"/></param>
         /// <returns><see cref="ModifyInstanceParamsResponse"/></returns>
