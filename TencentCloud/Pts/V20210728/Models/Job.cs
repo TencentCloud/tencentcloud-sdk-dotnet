@@ -243,6 +243,55 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("CronId")]
         public string CronId{ get; set; }
 
+        /// <summary>
+        /// 场景类型
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 域名绑定配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DomainNameConfig")]
+        public DomainNameConfig DomainNameConfig{ get; set; }
+
+        /// <summary>
+        /// false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Debug")]
+        public bool? Debug{ get; set; }
+
+        /// <summary>
+        /// 中断原因
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AbortReason")]
+        public long? AbortReason{ get; set; }
+
+        /// <summary>
+        /// 任务的创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
+        /// 项目ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
+        /// <summary>
+        /// 通知事件回调
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotificationHooks")]
+        public NotificationHook[] NotificationHooks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -280,6 +329,13 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamArrayObj(map, prefix + "RequestFiles.", this.RequestFiles);
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamSimple(map, prefix + "CronId", this.CronId);
+            this.SetParamSimple(map, prefix + "Type", this.Type);
+            this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+            this.SetParamSimple(map, prefix + "Debug", this.Debug);
+            this.SetParamSimple(map, prefix + "AbortReason", this.AbortReason);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
+            this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
         }
     }
 }

@@ -84,6 +84,24 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("DropInvalidMessage")]
         public bool? DropInvalidMessage{ get; set; }
 
+        /// <summary>
+        /// 输入的table是否为正则表达式
+        /// </summary>
+        [JsonProperty("IsTableRegular")]
+        public bool? IsTableRegular{ get; set; }
+
+        /// <summary>
+        /// 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+        /// </summary>
+        [JsonProperty("KeyColumns")]
+        public string KeyColumns{ get; set; }
+
+        /// <summary>
+        /// 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+        /// </summary>
+        [JsonProperty("RecordWithSchema")]
+        public bool? RecordWithSchema{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +118,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "DataTargetPrimaryKeyField", this.DataTargetPrimaryKeyField);
             this.SetParamArrayObj(map, prefix + "DataTargetRecordMapping.", this.DataTargetRecordMapping);
             this.SetParamSimple(map, prefix + "DropInvalidMessage", this.DropInvalidMessage);
+            this.SetParamSimple(map, prefix + "IsTableRegular", this.IsTableRegular);
+            this.SetParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+            this.SetParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
         }
     }
 }

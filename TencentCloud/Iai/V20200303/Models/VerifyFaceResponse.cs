@@ -35,7 +35,7 @@ namespace TencentCloud.Iai.V20200303.Models
         public float? Score{ get; set; }
 
         /// <summary>
-        /// 是否为同一人的判断。
+        /// 是否为同一人判断，固定阈值分数为60分，若想更灵活地调整阈值可取Score参数返回进行判断
         /// </summary>
         [JsonProperty("IsMatch")]
         public bool? IsMatch{ get; set; }

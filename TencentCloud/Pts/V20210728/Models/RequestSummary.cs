@@ -78,6 +78,24 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("ErrorPercentage")]
         public float? ErrorPercentage{ get; set; }
 
+        /// <summary>
+        /// 请求p99耗时，单位秒
+        /// </summary>
+        [JsonProperty("P99")]
+        public float? P99{ get; set; }
+
+        /// <summary>
+        /// 响应状态码
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// 响应详情
+        /// </summary>
+        [JsonProperty("Result")]
+        public string Result{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +111,9 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Min", this.Min);
             this.SetParamSimple(map, prefix + "Max", this.Max);
             this.SetParamSimple(map, prefix + "ErrorPercentage", this.ErrorPercentage);
+            this.SetParamSimple(map, prefix + "P99", this.P99);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "Result", this.Result);
         }
     }
 }

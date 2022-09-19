@@ -37,7 +37,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string[] FlowIds{ get; set; }
 
         /// <summary>
-        /// 签署链接类型：“WEIXINAPP”-直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；默认“WEIXINAPP”类型，即跳转至小程序；
+        /// 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
+        /// </summary>
+        [JsonProperty("FlowGroupId")]
+        public string FlowGroupId{ get; set; }
+
+        /// <summary>
+        /// 签署链接类型：“WEIXINAPP”-短链直接跳小程序；“CHANNEL”-跳转H5页面；“APP”-第三方APP或小程序跳转电子签小程序；"LONGURL2WEIXINAPP"-长链接跳转小程序；默认“WEIXINAPP”类型，即跳转至小程序；
         /// </summary>
         [JsonProperty("Endpoint")]
         public string Endpoint{ get; set; }
@@ -102,12 +108,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
         [JsonProperty("Operator")]
         public UserInfo Operator{ get; set; }
 
-        /// <summary>
-        /// 合同组编号(备注：该参数和合同(流程)编号数组必须二选一)
-        /// </summary>
-        [JsonProperty("FlowGroupId")]
-        public string FlowGroupId{ get; set; }
-
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -116,6 +116,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         {
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
             this.SetParamArraySimple(map, prefix + "FlowIds.", this.FlowIds);
+            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
             this.SetParamSimple(map, prefix + "Endpoint", this.Endpoint);
             this.SetParamSimple(map, prefix + "GenerateType", this.GenerateType);
             this.SetParamSimple(map, prefix + "OrganizationName", this.OrganizationName);
@@ -126,7 +127,6 @@ namespace TencentCloud.Essbasic.V20210526.Models
             this.SetParamSimple(map, prefix + "AutoJumpBack", this.AutoJumpBack);
             this.SetParamSimple(map, prefix + "JumpUrl", this.JumpUrl);
             this.SetParamObj(map, prefix + "Operator.", this.Operator);
-            this.SetParamSimple(map, prefix + "FlowGroupId", this.FlowGroupId);
         }
     }
 }

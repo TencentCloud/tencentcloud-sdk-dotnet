@@ -73,6 +73,12 @@ namespace TencentCloud.Cdn.V20180606.Models
         public bool? DisableRange{ get; set; }
 
         /// <summary>
+        /// 自定义 HTTP 请求头。最多定义 20 个，Name 长度不超过 128 字节，Value 长度不超过 1024 字节
+        /// </summary>
+        [JsonProperty("Headers")]
+        public HTTPHeader[] Headers{ get; set; }
+
+        /// <summary>
         /// 是否对URL进行编码
         /// </summary>
         [JsonProperty("UrlEncode")]
@@ -90,6 +96,7 @@ namespace TencentCloud.Cdn.V20180606.Models
             this.SetParamSimple(map, prefix + "Layer", this.Layer);
             this.SetParamSimple(map, prefix + "ParseM3U8", this.ParseM3U8);
             this.SetParamSimple(map, prefix + "DisableRange", this.DisableRange);
+            this.SetParamArrayObj(map, prefix + "Headers.", this.Headers);
             this.SetParamSimple(map, prefix + "UrlEncode", this.UrlEncode);
         }
     }

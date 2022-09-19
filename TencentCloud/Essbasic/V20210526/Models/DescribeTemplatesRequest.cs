@@ -43,13 +43,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public long? ContentType{ get; set; }
 
         /// <summary>
-        /// 查询个数，默认20，最大100
+        /// 查询个数，默认20，最大100；在查询列表的时候有效
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 查询偏移位置，默认0
+        /// 查询偏移位置，默认0；在查询列表的时候有效
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public bool? QueryAllComponents{ get; set; }
 
         /// <summary>
-        /// 模糊搜索模版名称
+        /// 模糊搜索模板名称
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

@@ -48,6 +48,42 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SnapshotMode")]
         public string SnapshotMode{ get; set; }
 
+        /// <summary>
+        /// 格式：库1.表1:字段1,字段2;库2.表2:字段2，表之间;（分号）隔开，字段之间,（逗号）隔开。不指定的表默认取表的主键
+        /// </summary>
+        [JsonProperty("KeyColumns")]
+        public string KeyColumns{ get; set; }
+
+        /// <summary>
+        /// 当Table输入的是前缀时，该项值为true，否则为false
+        /// </summary>
+        [JsonProperty("IsTablePrefix")]
+        public bool? IsTablePrefix{ get; set; }
+
+        /// <summary>
+        /// 输出格式，DEFAULT、CANAL_1、CANAL_2
+        /// </summary>
+        [JsonProperty("OutputFormat")]
+        public string OutputFormat{ get; set; }
+
+        /// <summary>
+        /// 如果该值为all，则DDL数据以及DML数据也会写入到选中的topic；若该值为dml，则只有DML数据写入到选中的topic
+        /// </summary>
+        [JsonProperty("IncludeContentChanges")]
+        public string IncludeContentChanges{ get; set; }
+
+        /// <summary>
+        /// 如果该值为true，且MySQL中"binlog_rows_query_log_events"配置项的值为"ON"，则流入到topic的数据包含原SQL语句；若该值为false，流入到topic的数据不包含原SQL语句
+        /// </summary>
+        [JsonProperty("IncludeQuery")]
+        public bool? IncludeQuery{ get; set; }
+
+        /// <summary>
+        /// 如果该值为 true，则消息中会携带消息结构体对应的schema，如果该值为false则不会携带
+        /// </summary>
+        [JsonProperty("RecordWithSchema")]
+        public bool? RecordWithSchema{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +94,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "Table", this.Table);
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
             this.SetParamSimple(map, prefix + "SnapshotMode", this.SnapshotMode);
+            this.SetParamSimple(map, prefix + "KeyColumns", this.KeyColumns);
+            this.SetParamSimple(map, prefix + "IsTablePrefix", this.IsTablePrefix);
+            this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
+            this.SetParamSimple(map, prefix + "IncludeContentChanges", this.IncludeContentChanges);
+            this.SetParamSimple(map, prefix + "IncludeQuery", this.IncludeQuery);
+            this.SetParamSimple(map, prefix + "RecordWithSchema", this.RecordWithSchema);
         }
     }
 }

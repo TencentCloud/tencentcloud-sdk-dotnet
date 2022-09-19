@@ -42,6 +42,13 @@ namespace TencentCloud.Privatedns.V20201028.Models
         [JsonProperty("DataSet")]
         public DatePoint[] DataSet{ get; set; }
 
+        /// <summary>
+        /// 查询范围内的请求总量
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MetricCount")]
+        public long? MetricCount{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +58,7 @@ namespace TencentCloud.Privatedns.V20201028.Models
             this.SetParamSimple(map, prefix + "Resource", this.Resource);
             this.SetParamSimple(map, prefix + "Metric", this.Metric);
             this.SetParamArrayObj(map, prefix + "DataSet.", this.DataSet);
+            this.SetParamSimple(map, prefix + "MetricCount", this.MetricCount);
         }
     }
 }

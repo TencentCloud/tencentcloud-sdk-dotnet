@@ -129,6 +129,27 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("JobOwner")]
         public string JobOwner{ get; set; }
 
+        /// <summary>
+        /// App ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// 主账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 子账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +171,9 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "FrequencyType", this.FrequencyType);
             this.SetParamSimple(map, prefix + "Note", this.Note);
             this.SetParamSimple(map, prefix + "JobOwner", this.JobOwner);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         }
     }
 }

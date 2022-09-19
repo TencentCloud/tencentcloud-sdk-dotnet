@@ -66,6 +66,27 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("UpdatedAt")]
         public string UpdatedAt{ get; set; }
 
+        /// <summary>
+        /// App ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AppId")]
+        public long? AppId{ get; set; }
+
+        /// <summary>
+        /// 主账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Uin")]
+        public string Uin{ get; set; }
+
+        /// <summary>
+        /// 子账号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SubAccountUin")]
+        public string SubAccountUin{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -78,6 +99,9 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
             this.SetParamSimple(map, prefix + "UpdatedAt", this.UpdatedAt);
+            this.SetParamSimple(map, prefix + "AppId", this.AppId);
+            this.SetParamSimple(map, prefix + "Uin", this.Uin);
+            this.SetParamSimple(map, prefix + "SubAccountUin", this.SubAccountUin);
         }
     }
 }

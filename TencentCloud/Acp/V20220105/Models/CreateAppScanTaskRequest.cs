@@ -49,7 +49,7 @@ namespace TencentCloud.Acp.V20220105.Models
         public string AppPackage{ get; set; }
 
         /// <summary>
-        /// App名称
+        /// App名称(任务来源为2时必填)
         /// </summary>
         [JsonProperty("AppName")]
         public string AppName{ get; set; }
@@ -126,6 +126,18 @@ namespace TencentCloud.Acp.V20220105.Models
         [JsonProperty("PrivacyTextName")]
         public string PrivacyTextName{ get; set; }
 
+        /// <summary>
+        /// 软件Sha1值(PrivacyTextMD5不为空时必填)
+        /// </summary>
+        [JsonProperty("AppSha1")]
+        public string AppSha1{ get; set; }
+
+        /// <summary>
+        /// 隐私申明文本md5(AppSha1不为空时必填)
+        /// </summary>
+        [JsonProperty("PrivacyTextMD5")]
+        public string PrivacyTextMD5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Acp.V20220105.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "IsAgreePrivacy", this.IsAgreePrivacy);
             this.SetParamSimple(map, prefix + "PrivacyTextName", this.PrivacyTextName);
+            this.SetParamSimple(map, prefix + "AppSha1", this.AppSha1);
+            this.SetParamSimple(map, prefix + "PrivacyTextMD5", this.PrivacyTextMD5);
         }
     }
 }

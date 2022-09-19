@@ -188,6 +188,13 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("DomainNameConfig")]
         public DomainNameConfig DomainNameConfig{ get; set; }
 
+        /// <summary>
+        /// 通知事件回调
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("NotificationHooks")]
+        public NotificationHook[] NotificationHooks{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -218,6 +225,7 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamObj(map, prefix + "SLAPolicy.", this.SLAPolicy);
             this.SetParamArrayObj(map, prefix + "Plugins.", this.Plugins);
             this.SetParamObj(map, prefix + "DomainNameConfig.", this.DomainNameConfig);
+            this.SetParamArrayObj(map, prefix + "NotificationHooks.", this.NotificationHooks);
         }
     }
 }

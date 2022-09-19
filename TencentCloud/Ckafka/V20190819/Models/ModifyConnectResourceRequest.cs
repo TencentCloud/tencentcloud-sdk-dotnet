@@ -96,6 +96,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SQLServerConnectParam")]
         public SQLServerModifyConnectParam SQLServerConnectParam{ get; set; }
 
+        /// <summary>
+        /// Ctsdb配置，Type为CTSDB
+        /// </summary>
+        [JsonProperty("CtsdbConnectParam")]
+        public CtsdbModifyConnectParam CtsdbConnectParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "PostgreSQLConnectParam.", this.PostgreSQLConnectParam);
             this.SetParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
             this.SetParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
+            this.SetParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
         }
     }
 }

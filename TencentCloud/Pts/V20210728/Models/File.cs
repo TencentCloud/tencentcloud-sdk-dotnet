@@ -116,6 +116,20 @@ namespace TencentCloud.Pts.V20210728.Models
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
+        /// <summary>
+        /// 创建时间
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CreatedAt")]
+        public string CreatedAt{ get; set; }
+
+        /// <summary>
+        /// 项目 ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProjectId")]
+        public string ProjectId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -136,6 +150,8 @@ namespace TencentCloud.Pts.V20210728.Models
             this.SetParamArrayObj(map, prefix + "FileInfos.", this.FileInfos);
             this.SetParamArrayObj(map, prefix + "ScenarioSet.", this.ScenarioSet);
             this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamSimple(map, prefix + "CreatedAt", this.CreatedAt);
+            this.SetParamSimple(map, prefix + "ProjectId", this.ProjectId);
         }
     }
 }

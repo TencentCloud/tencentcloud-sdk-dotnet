@@ -78,6 +78,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("RowParam")]
         public RowParam RowParam{ get; set; }
 
+        /// <summary>
+        /// 是否保留数据源Topic元数据信息（源Topic、Partition、Offset），默认为false
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("KeepMetadata")]
+        public bool? KeepMetadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SourceType", this.SourceType);
             this.SetParamSimple(map, prefix + "OutputFormat", this.OutputFormat);
             this.SetParamObj(map, prefix + "RowParam.", this.RowParam);
+            this.SetParamSimple(map, prefix + "KeepMetadata", this.KeepMetadata);
         }
     }
 }

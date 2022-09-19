@@ -128,6 +128,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("SQLServerParam")]
         public SQLServerParam SQLServerParam{ get; set; }
 
+        /// <summary>
+        /// Ctsdb配置，Type为CTSDB时必填
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CtsdbParam")]
+        public CtsdbParam CtsdbParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +156,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "TopicParam.", this.TopicParam);
             this.SetParamObj(map, prefix + "MariaDBParam.", this.MariaDBParam);
             this.SetParamObj(map, prefix + "SQLServerParam.", this.SQLServerParam);
+            this.SetParamObj(map, prefix + "CtsdbParam.", this.CtsdbParam);
         }
     }
 }

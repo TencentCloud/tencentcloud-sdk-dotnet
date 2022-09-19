@@ -88,7 +88,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
         public string[] StepList{ get; set; }
 
         /// <summary>
-        /// MySQL配置，Type为MYSQL时返回
+        /// MySQL配置，Type为MYSQL或TDSQL_C_MYSQL时返回
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MySQLConnectParam")]
@@ -129,6 +129,27 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("ClickHouseConnectParam")]
         public ClickHouseConnectParam ClickHouseConnectParam{ get; set; }
 
+        /// <summary>
+        /// MariaDB配置，Type为MARIADB时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MariaDBConnectParam")]
+        public MariaDBConnectParam MariaDBConnectParam{ get; set; }
+
+        /// <summary>
+        /// SQLServer配置，Type为SQLSERVER时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SQLServerConnectParam")]
+        public SQLServerConnectParam SQLServerConnectParam{ get; set; }
+
+        /// <summary>
+        /// Ctsdb配置，Type为CTSDB时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CtsdbConnectParam")]
+        public CtsdbConnectParam CtsdbConnectParam{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +171,9 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "MongoDBConnectParam.", this.MongoDBConnectParam);
             this.SetParamObj(map, prefix + "EsConnectParam.", this.EsConnectParam);
             this.SetParamObj(map, prefix + "ClickHouseConnectParam.", this.ClickHouseConnectParam);
+            this.SetParamObj(map, prefix + "MariaDBConnectParam.", this.MariaDBConnectParam);
+            this.SetParamObj(map, prefix + "SQLServerConnectParam.", this.SQLServerConnectParam);
+            this.SetParamObj(map, prefix + "CtsdbConnectParam.", this.CtsdbConnectParam);
         }
     }
 }

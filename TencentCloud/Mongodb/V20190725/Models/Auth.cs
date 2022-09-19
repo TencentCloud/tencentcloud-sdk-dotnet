@@ -25,16 +25,17 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// *表示所有数据库,db.name表示特定的name数据库。
-        /// </summary>
-        [JsonProperty("NameSpace")]
-        public string NameSpace{ get; set; }
-
-        /// <summary>
-        /// 用于控制权限,0无权限，1只读，2只写，3读写。
+        /// 当前账号具有的权限信息。<ul><li>0：无权限。</li><li>1：只读。</li><li>2：只写。</li><li>3：读写。</li></ul>
         /// </summary>
         [JsonProperty("Mask")]
         public long? Mask{ get; set; }
+
+        /// <summary>
+        /// 指具有当前账号权限的数据库名。
+        /// <ul><li>* ：表示所有数据库。</li><li>db.name：表示特定name的数据库。</li></ul>
+        /// </summary>
+        [JsonProperty("NameSpace")]
+        public string NameSpace{ get; set; }
 
 
         /// <summary>
@@ -42,8 +43,8 @@ namespace TencentCloud.Mongodb.V20190725.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
             this.SetParamSimple(map, prefix + "Mask", this.Mask);
+            this.SetParamSimple(map, prefix + "NameSpace", this.NameSpace);
         }
     }
 }

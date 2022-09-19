@@ -115,7 +115,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public string IsMonitor{ get; set; }
 
         /// <summary>
-        /// 是否启用存证0：不启用 1：启用 默认为1
+        /// 是否启用存证0：不存证  2：存证 默认为0
         /// </summary>
         [JsonProperty("IsCert")]
         public string IsCert{ get; set; }
@@ -139,61 +139,61 @@ namespace TencentCloud.Bma.V20210624.Models
         public string ProduceType{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 白名单
         /// </summary>
         [JsonProperty("WhiteLists")]
         public string[] WhiteLists{ get; set; }
 
         /// <summary>
-        /// x
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 著作权人姓名
         /// </summary>
         [JsonProperty("ProducerName")]
         public string ProducerName{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 作者
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书
         /// </summary>
         [JsonProperty("Authorization")]
         public string Authorization{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书开始时间
         /// </summary>
         [JsonProperty("AuthorizationStartTime")]
         public string AuthorizationStartTime{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书结束时间
         /// </summary>
         [JsonProperty("AuthorizationEndTime")]
         public string AuthorizationEndTime{ get; set; }
 
         /// <summary>
-        /// x
+        /// 内容格式
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
 
         /// <summary>
-        /// x
+        /// 文件内容
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// x
+        /// 监测结束时间
         /// </summary>
         [JsonProperty("MonitorEndTime")]
         public string MonitorEndTime{ get; set; }

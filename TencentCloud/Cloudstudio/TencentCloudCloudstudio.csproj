@@ -1,0 +1,103 @@
+<Project Sdk="Microsoft.NET.Sdk" ToolsVersion="15.0">
+  <PropertyGroup>
+    <RootNamespace>TencentCloud</RootNamespace>
+    <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
+    <ProjectGuid>{40D73980-F3D8-31AD-91A8-DEE12D7F48C3}</ProjectGuid>
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
+    <VersionPrefix>3.0.605</VersionPrefix>
+    <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
+    <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
+    <Authors>Tencent Cloud API Team</Authors>
+    <Company>Tencent Ltd.</Company>
+    <Product />
+    <PackageId>TencentCloudSDK.Cloudstudio</PackageId>
+    <PackageProjectUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet</PackageProjectUrl>
+    <PackageIconUrl>https://avatars3.githubusercontent.com/u/20101770</PackageIconUrl>
+    <Copyright>Copyright @2018 THL A29 Limited, a Tencent company. All Rights Reserved.</Copyright>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>Full</DebugType>
+    <NoWarn>1702;1705;1591</NoWarn>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(TargetFramework)'=='netstandard2.0' ">
+    <DefineConstants>NS2</DefineConstants>
+  </PropertyGroup>
+
+  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard2.0' ">
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
+    <Reference Include="System.Net.Http" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Text.Encodings.Web" Version="4.5.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\TencentCloudCommon.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Include="V20210524\CloudstudioClient.cs" />
+    <Compile Include="V20210524\Models\AgentSpaceDTO.cs" />
+    <Compile Include="V20210524\Models\CreateCustomizeTemplatesRequest.cs" />
+    <Compile Include="V20210524\Models\CreateCustomizeTemplatesResponse.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByAgentRequest.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByAgentResponse.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByTemplateRequest.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByTemplateResponse.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByVersionControlRequest.cs" />
+    <Compile Include="V20210524\Models\CreateWorkspaceByVersionControlResponse.cs" />
+    <Compile Include="V20210524\Models\CustomizeTemplatesPresetsInfo.cs" />
+    <Compile Include="V20210524\Models\DeleteCustomizeTemplatesByIdRequest.cs" />
+    <Compile Include="V20210524\Models\DeleteCustomizeTemplatesByIdResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesByIdRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesByIdResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesPresetsRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesPresetsResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeCustomizeTemplatesResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceEnvListRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceEnvListResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceNameExistRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceNameExistResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceStatusListRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceStatusListResponse.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceStatusRequest.cs" />
+    <Compile Include="V20210524\Models\DescribeWorkspaceStatusResponse.cs" />
+    <Compile Include="V20210524\Models\ImageUserDTO.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplateVersionControlRequest.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplateVersionControlResponse.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplatesFullByIdRequest.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplatesFullByIdResponse.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplatesPartByIdRequest.cs" />
+    <Compile Include="V20210524\Models\ModifyCustomizeTemplatesPartByIdResponse.cs" />
+    <Compile Include="V20210524\Models\ModifyWorkspaceAttributesRequest.cs" />
+    <Compile Include="V20210524\Models\ModifyWorkspaceAttributesResponse.cs" />
+    <Compile Include="V20210524\Models\RecoverWorkspaceRequest.cs" />
+    <Compile Include="V20210524\Models\RecoverWorkspaceResponse.cs" />
+    <Compile Include="V20210524\Models\RemoveWorkspaceRequest.cs" />
+    <Compile Include="V20210524\Models\RemoveWorkspaceResponse.cs" />
+    <Compile Include="V20210524\Models\RunWorkspaceRequest.cs" />
+    <Compile Include="V20210524\Models\RunWorkspaceResponse.cs" />
+    <Compile Include="V20210524\Models\StopWorkspaceRequest.cs" />
+    <Compile Include="V20210524\Models\StopWorkspaceResponse.cs" />
+    <Compile Include="V20210524\Models\UserDefinedTemplateParams.cs" />
+    <Compile Include="V20210524\Models\UserDefinedTemplatePatchedParams.cs" />
+    <Compile Include="V20210524\Models\UserInfoRsp.cs" />
+    <Compile Include="V20210524\Models\UserSubInfo.cs" />
+    <Compile Include="V20210524\Models\WorkspaceDTO.cs" />
+    <Compile Include="V20210524\Models\WorkspaceInfo.cs" />
+    <Compile Include="V20210524\Models\WorkspaceInfoDTO.cs" />
+    <Compile Include="V20210524\Models\WorkspaceResourceDTO.cs" />
+    <Compile Include="V20210524\Models\WorkspaceShareInfo.cs" />
+    <Compile Include="V20210524\Models\WorkspaceStatusInfo.cs" />
+    <Compile Include="V20210524\Models\WorkspaceTemplateInfo.cs" />
+  </ItemGroup>
+</Project>
