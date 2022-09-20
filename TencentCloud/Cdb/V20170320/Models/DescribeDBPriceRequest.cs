@@ -91,7 +91,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? Cpu{ get; set; }
 
         /// <summary>
-        /// 续费询价实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
+        /// 询价续费实例ID。如需查询实例续费价格，填写InstanceId和Period即可。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

@@ -180,6 +180,48 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public async Task<CreateDataSourceResponse> CreateDataSource(CreateDataSourceRequest req)
+        {
+             JsonResponseModel<CreateDataSourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDataSource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataSourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 创建数据源
+        /// </summary>
+        /// <param name="req"><see cref="CreateDataSourceRequest"/></param>
+        /// <returns><see cref="CreateDataSourceResponse"/></returns>
+        public CreateDataSourceResponse CreateDataSourceSync(CreateDataSourceRequest req)
+        {
+             JsonResponseModel<CreateDataSourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDataSource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDataSourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 创建文件夹
         /// </summary>
         /// <param name="req"><see cref="CreateFolderRequest"/></param>
@@ -306,6 +348,48 @@ namespace TencentCloud.Wedata.V20210820
 
         /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除数据源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourcesRequest"/></param>
+        /// <returns><see cref="DeleteDataSourcesResponse"/></returns>
+        public async Task<DeleteDataSourcesResponse> DeleteDataSources(DeleteDataSourcesRequest req)
+        {
+             JsonResponseModel<DeleteDataSourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteDataSources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataSourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 删除数据源
+        /// </summary>
+        /// <param name="req"><see cref="DeleteDataSourcesRequest"/></param>
+        /// <returns><see cref="DeleteDataSourcesResponse"/></returns>
+        public DeleteDataSourcesResponse DeleteDataSourcesSync(DeleteDataSourcesRequest req)
+        {
+             JsonResponseModel<DeleteDataSourcesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteDataSources");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteDataSourcesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 删除文件夹
         /// </summary>
         /// <param name="req"><see cref="DeleteFolderRequest"/></param>
@@ -380,6 +464,48 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DeleteWorkflowNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteWorkflowNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatasourceRequest"/></param>
+        /// <returns><see cref="DescribeDatasourceResponse"/></returns>
+        public async Task<DescribeDatasourceResponse> DescribeDatasource(DescribeDatasourceRequest req)
+        {
+             JsonResponseModel<DescribeDatasourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDatasource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatasourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDatasourceRequest"/></param>
+        /// <returns><see cref="DescribeDatasourceResponse"/></returns>
+        public DescribeDatasourceResponse DescribeDatasourceSync(DescribeDatasourceRequest req)
+        {
+             JsonResponseModel<DescribeDatasourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDatasource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDatasourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1050,6 +1176,48 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "MakeUpWorkflowNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<MakeUpWorkflowNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 修改数据源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyDataSourceResponse"/></returns>
+        public async Task<ModifyDataSourceResponse> ModifyDataSource(ModifyDataSourceRequest req)
+        {
+             JsonResponseModel<ModifyDataSourceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyDataSource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataSourceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 修改数据源
+        /// </summary>
+        /// <param name="req"><see cref="ModifyDataSourceRequest"/></param>
+        /// <returns><see cref="ModifyDataSourceResponse"/></returns>
+        public ModifyDataSourceResponse ModifyDataSourceSync(ModifyDataSourceRequest req)
+        {
+             JsonResponseModel<ModifyDataSourceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyDataSource");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyDataSourceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

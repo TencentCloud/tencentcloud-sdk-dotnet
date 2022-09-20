@@ -57,6 +57,12 @@ namespace TencentCloud.Mps.V20190612.Models
         [JsonProperty("FinishTime")]
         public string FinishTime{ get; set; }
 
+        /// <summary>
+        /// 子任务类型。
+        /// </summary>
+        [JsonProperty("SubTaskTypes")]
+        public string[] SubTaskTypes{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -68,6 +74,7 @@ namespace TencentCloud.Mps.V20190612.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "BeginProcessTime", this.BeginProcessTime);
             this.SetParamSimple(map, prefix + "FinishTime", this.FinishTime);
+            this.SetParamArraySimple(map, prefix + "SubTaskTypes.", this.SubTaskTypes);
         }
     }
 }

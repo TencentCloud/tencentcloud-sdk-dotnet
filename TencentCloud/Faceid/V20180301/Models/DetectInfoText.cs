@@ -182,6 +182,18 @@ namespace TencentCloud.Faceid.V20180301.Models
         [JsonProperty("CompareLibType")]
         public string CompareLibType{ get; set; }
 
+        /// <summary>
+        /// 本次流程最终活体类型。包括：
+        /// 0：未知
+        /// 1：数字活体
+        /// 2：动作活体
+        /// 3：静默活体
+        /// 4：一闪活体（动作+光线）
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("LivenessMode")]
+        public ulong? LivenessMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -210,6 +222,7 @@ namespace TencentCloud.Faceid.V20180301.Models
             this.SetParamArrayObj(map, prefix + "LivenessDetail.", this.LivenessDetail);
             this.SetParamSimple(map, prefix + "Mobile", this.Mobile);
             this.SetParamSimple(map, prefix + "CompareLibType", this.CompareLibType);
+            this.SetParamSimple(map, prefix + "LivenessMode", this.LivenessMode);
         }
     }
 }

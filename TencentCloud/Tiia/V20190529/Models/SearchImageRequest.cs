@@ -76,7 +76,7 @@ namespace TencentCloud.Tiia.V20190529.Models
         /// • 商品图像搜索：28。
         /// • 相似图像搜索：56。
         /// 建议：
-        /// 可以手动调整MatchThreshold值来控制输出结果的范围。入股发现无检索结果，建议调整为较低的阈值。
+        /// 可以手动调整MatchThreshold值来控制输出结果的范围。如果发现无检索结果，建议调整为较低的阈值。
         /// </summary>
         [JsonProperty("MatchThreshold")]
         public long? MatchThreshold{ get; set; }

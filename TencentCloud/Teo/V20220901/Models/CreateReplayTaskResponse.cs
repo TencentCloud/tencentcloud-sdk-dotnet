@@ -15,35 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeVpcRuleOverviewResponse : AbstractModel
+    public class CreateReplayTaskResponse : AbstractModel
     {
         
         /// <summary>
-        /// 阻断策略规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 此次任务ID。
         /// </summary>
-        [JsonProperty("StrategyNum")]
-        public ulong? StrategyNum{ get; set; }
+        [JsonProperty("JobId")]
+        public string JobId{ get; set; }
 
         /// <summary>
-        /// 启用规则数量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 失败的任务列表及原因。
         /// </summary>
-        [JsonProperty("StartRuleNum")]
-        public ulong? StartRuleNum{ get; set; }
-
-        /// <summary>
-        /// 规则总量
-        /// 注意：此字段可能返回 null，表示取不到有效值。
-        /// </summary>
-        [JsonProperty("Total")]
-        public ulong? Total{ get; set; }
+        [JsonProperty("FailedList")]
+        public FailReason[] FailedList{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -57,9 +48,8 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StrategyNum", this.StrategyNum);
-            this.SetParamSimple(map, prefix + "StartRuleNum", this.StartRuleNum);
-            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamArrayObj(map, prefix + "FailedList.", this.FailedList);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

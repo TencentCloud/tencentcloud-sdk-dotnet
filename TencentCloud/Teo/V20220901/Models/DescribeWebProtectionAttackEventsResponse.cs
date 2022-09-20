@@ -15,20 +15,33 @@
  * under the License.
  */
 
-namespace TencentCloud.Cfw.V20190904.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeVpcRuleOverviewRequest : AbstractModel
+    public class DescribeWebProtectionAttackEventsResponse : AbstractModel
     {
         
         /// <summary>
-        /// EdgeId值两个vpc间的边id  不是必填项可以为空，就是所有vpc间的访问控制规则
+        /// CC相关攻击事件列表。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("EdgeId")]
-        public string EdgeId{ get; set; }
+        [JsonProperty("Data")]
+        public CCInterceptEvent[] Data{ get; set; }
+
+        /// <summary>
+        /// 查询结果的总条数。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
+        /// </summary>
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -36,7 +49,9 @@ namespace TencentCloud.Cfw.V20190904.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "EdgeId", this.EdgeId);
+            this.SetParamArrayObj(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

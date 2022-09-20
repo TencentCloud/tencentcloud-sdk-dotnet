@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{3F39A11E-57B5-3115-8397-BD397C84B698}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.605</VersionPrefix>
+    <VersionPrefix>3.0.606</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -126,8 +126,6 @@
     <Compile Include="V20190904\Models\DescribeTableStatusResponse.cs" />
     <Compile Include="V20190904\Models\DescribeUnHandleEventTabListRequest.cs" />
     <Compile Include="V20190904\Models\DescribeUnHandleEventTabListResponse.cs" />
-    <Compile Include="V20190904\Models\DescribeVpcRuleOverviewRequest.cs" />
-    <Compile Include="V20190904\Models\DescribeVpcRuleOverviewResponse.cs" />
     <Compile Include="V20190904\Models\DnsVpcSwitch.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalRequest.cs" />
     <Compile Include="V20190904\Models\ExpandCfwVerticalResponse.cs" />

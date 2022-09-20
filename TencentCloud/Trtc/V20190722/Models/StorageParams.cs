@@ -31,7 +31,7 @@ namespace TencentCloud.Trtc.V20190722.Models
         public CloudStorage CloudStorage{ get; set; }
 
         /// <summary>
-        /// 第三方云点播的账号信息。
+        /// 腾讯云云点播的账号信息（必填，目前仅支持存储至腾讯云云点播）。
         /// </summary>
         [JsonProperty("CloudVod")]
         public CloudVod CloudVod{ get; set; }

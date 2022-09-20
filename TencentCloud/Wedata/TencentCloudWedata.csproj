@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.605</VersionPrefix>
+    <VersionPrefix>3.0.606</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,17 +58,24 @@
     <Compile Include="V20210820\Models\CanvasInfo.cs" />
     <Compile Include="V20210820\Models\CommonContent.cs" />
     <Compile Include="V20210820\Models\CommonId.cs" />
+    <Compile Include="V20210820\Models\CreateDataSourceRequest.cs" />
+    <Compile Include="V20210820\Models\CreateDataSourceResponse.cs" />
     <Compile Include="V20210820\Models\CreateFolderRequest.cs" />
     <Compile Include="V20210820\Models\CreateFolderResponse.cs" />
     <Compile Include="V20210820\Models\CreateTaskRequest.cs" />
     <Compile Include="V20210820\Models\CreateTaskResponse.cs" />
     <Compile Include="V20210820\Models\CreateWorkflowRequest.cs" />
     <Compile Include="V20210820\Models\CreateWorkflowResponse.cs" />
+    <Compile Include="V20210820\Models\DataSourceInfo.cs" />
+    <Compile Include="V20210820\Models\DeleteDataSourcesRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteDataSourcesResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFolderRequest.cs" />
     <Compile Include="V20210820\Models\DeleteFolderResponse.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowNewRequest.cs" />
     <Compile Include="V20210820\Models\DeleteWorkflowNewResponse.cs" />
     <Compile Include="V20210820\Models\DependencyConfig.cs" />
+    <Compile Include="V20210820\Models\DescribeDatasourceRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeDatasourceResponse.cs" />
     <Compile Include="V20210820\Models\DescribeDependTasksNewRequest.cs" />
     <Compile Include="V20210820\Models\DescribeDependTasksNewResponse.cs" />
     <Compile Include="V20210820\Models\DescribeFolderListData.cs" />
@@ -112,6 +119,8 @@
     <Compile Include="V20210820\Models\MakeUpTasksNewResponse.cs" />
     <Compile Include="V20210820\Models\MakeUpWorkflowNewRequest.cs" />
     <Compile Include="V20210820\Models\MakeUpWorkflowNewResponse.cs" />
+    <Compile Include="V20210820\Models\ModifyDataSourceRequest.cs" />
+    <Compile Include="V20210820\Models\ModifyDataSourceResponse.cs" />
     <Compile Include="V20210820\Models\ModifyFolderRequest.cs" />
     <Compile Include="V20210820\Models\ModifyFolderResponse.cs" />
     <Compile Include="V20210820\Models\ModifyTaskInfoRequest.cs" />

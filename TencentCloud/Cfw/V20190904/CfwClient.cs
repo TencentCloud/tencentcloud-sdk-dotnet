@@ -1573,46 +1573,6 @@ namespace TencentCloud.Cfw.V20190904
         }
 
         /// <summary>
-        /// vpc规则列表概况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVpcRuleOverviewRequest"/></param>
-        /// <returns><see cref="DescribeVpcRuleOverviewResponse"/></returns>
-        public async Task<DescribeVpcRuleOverviewResponse> DescribeVpcRuleOverview(DescribeVpcRuleOverviewRequest req)
-        {
-             JsonResponseModel<DescribeVpcRuleOverviewResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeVpcRuleOverview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcRuleOverviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// vpc规则列表概况
-        /// </summary>
-        /// <param name="req"><see cref="DescribeVpcRuleOverviewRequest"/></param>
-        /// <returns><see cref="DescribeVpcRuleOverviewResponse"/></returns>
-        public DescribeVpcRuleOverviewResponse DescribeVpcRuleOverviewSync(DescribeVpcRuleOverviewRequest req)
-        {
-             JsonResponseModel<DescribeVpcRuleOverviewResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeVpcRuleOverview");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeVpcRuleOverviewResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 防火墙垂直扩容
         /// </summary>
         /// <param name="req"><see cref="ExpandCfwVerticalRequest"/></param>
