@@ -32,10 +32,32 @@ namespace TencentCloud.Ivld.V20210903.Models
         public TaskInfo TaskInfo{ get; set; }
 
         /// <summary>
-        /// 任务结果数据，只在任务结束时返回
+        /// 视频任务结果数据，只在视频任务结束时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("TaskData")]
         public Data TaskData{ get; set; }
+
+        /// <summary>
+        /// 图片任务结果数据，只在图片任务结束时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageTaskData")]
+        public ImageData ImageTaskData{ get; set; }
+
+        /// <summary>
+        /// 音频任务结果数据，只在音频任务结束时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioTaskData")]
+        public AudioData AudioTaskData{ get; set; }
+
+        /// <summary>
+        /// 文本任务结果数据，只在文本任务结束时返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextTaskData")]
+        public TextData TextTaskData{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -51,6 +73,9 @@ namespace TencentCloud.Ivld.V20210903.Models
         {
             this.SetParamObj(map, prefix + "TaskInfo.", this.TaskInfo);
             this.SetParamObj(map, prefix + "TaskData.", this.TaskData);
+            this.SetParamObj(map, prefix + "ImageTaskData.", this.ImageTaskData);
+            this.SetParamObj(map, prefix + "AudioTaskData.", this.AudioTaskData);
+            this.SetParamObj(map, prefix + "TextTaskData.", this.TextTaskData);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

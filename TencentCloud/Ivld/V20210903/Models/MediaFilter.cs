@@ -52,6 +52,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("LabelSet")]
         public string[] LabelSet{ get; set; }
 
+        /// <summary>
+        /// 媒资文件类型，定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public long? MediaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -62,6 +69,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamArraySimple(map, prefix + "StatusSet.", this.StatusSet);
             this.SetParamArraySimple(map, prefix + "MediaIdSet.", this.MediaIdSet);
             this.SetParamArraySimple(map, prefix + "LabelSet.", this.LabelSet);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
         }
     }
 }

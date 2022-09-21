@@ -129,6 +129,20 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("SummaryTagSet")]
         public string[] SummaryTagSet{ get; set; }
 
+        /// <summary>
+        /// 未知人物信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UnknownPersonSet")]
+        public UnknownPerson[] UnknownPersonSet{ get; set; }
+
+        /// <summary>
+        /// 树状已分类人物信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MultiLevelPersonInfoSet")]
+        public MultiLevelPersonInfo[] MultiLevelPersonInfoSet{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -150,6 +164,8 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "WebMediaURL", this.WebMediaURL);
             this.SetParamArraySimple(map, prefix + "MediaClassifierSet.", this.MediaClassifierSet);
             this.SetParamArraySimple(map, prefix + "SummaryTagSet.", this.SummaryTagSet);
+            this.SetParamArrayObj(map, prefix + "UnknownPersonSet.", this.UnknownPersonSet);
+            this.SetParamArrayObj(map, prefix + "MultiLevelPersonInfoSet.", this.MultiLevelPersonInfoSet);
         }
     }
 }

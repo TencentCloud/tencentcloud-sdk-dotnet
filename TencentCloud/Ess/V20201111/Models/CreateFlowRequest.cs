@@ -57,8 +57,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 暂未开放
         /// </summary>
-        [JsonProperty("CallbackUrl")]
-        public string CallbackUrl{ get; set; }
+        [JsonProperty("RelatedFlowId")]
+        public string RelatedFlowId{ get; set; }
 
         /// <summary>
         /// 签署流程的签署截止时间。
@@ -106,8 +106,8 @@ namespace TencentCloud.Ess.V20201111.Models
         /// <summary>
         /// 暂未开放
         /// </summary>
-        [JsonProperty("RelatedFlowId")]
-        public string RelatedFlowId{ get; set; }
+        [JsonProperty("CallbackUrl")]
+        public string CallbackUrl{ get; set; }
 
         /// <summary>
         /// 应用相关信息
@@ -126,14 +126,14 @@ namespace TencentCloud.Ess.V20201111.Models
             this.SetParamArrayObj(map, prefix + "Approvers.", this.Approvers);
             this.SetParamSimple(map, prefix + "FlowType", this.FlowType);
             this.SetParamSimple(map, prefix + "ClientToken", this.ClientToken);
-            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
+            this.SetParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
             this.SetParamSimple(map, prefix + "DeadLine", this.DeadLine);
             this.SetParamSimple(map, prefix + "UserData", this.UserData);
             this.SetParamSimple(map, prefix + "FlowDescription", this.FlowDescription);
             this.SetParamSimple(map, prefix + "Unordered", this.Unordered);
             this.SetParamSimple(map, prefix + "CustomShowMap", this.CustomShowMap);
             this.SetParamSimple(map, prefix + "NeedSignReview", this.NeedSignReview);
-            this.SetParamSimple(map, prefix + "RelatedFlowId", this.RelatedFlowId);
+            this.SetParamSimple(map, prefix + "CallbackUrl", this.CallbackUrl);
             this.SetParamObj(map, prefix + "Agent.", this.Agent);
         }
     }

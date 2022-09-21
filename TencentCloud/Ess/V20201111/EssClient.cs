@@ -932,5 +932,45 @@ namespace TencentCloud.Ess.V20201111
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 验证合同文件
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPdfRequest"/></param>
+        /// <returns><see cref="VerifyPdfResponse"/></returns>
+        public async Task<VerifyPdfResponse> VerifyPdf(VerifyPdfRequest req)
+        {
+             JsonResponseModel<VerifyPdfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "VerifyPdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyPdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 验证合同文件
+        /// </summary>
+        /// <param name="req"><see cref="VerifyPdfRequest"/></param>
+        /// <returns><see cref="VerifyPdfResponse"/></returns>
+        public VerifyPdfResponse VerifyPdfSync(VerifyPdfRequest req)
+        {
+             JsonResponseModel<VerifyPdfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "VerifyPdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<VerifyPdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

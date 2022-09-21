@@ -31,7 +31,7 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// 实例详细信息。
+        /// 实例详细信息列表。
         /// </summary>
         [JsonProperty("Items")]
         public InstanceInfo[] Items{ get; set; }

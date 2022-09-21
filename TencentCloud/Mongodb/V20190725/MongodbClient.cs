@@ -253,6 +253,46 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
+        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
+        /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
+        public async Task<DescribeAccountUsersResponse> DescribeAccountUsers(DescribeAccountUsersRequest req)
+        {
+             JsonResponseModel<DescribeAccountUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAccountUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 本接口(DescribeAccountUsers)用于获取当前实例的全部账号列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAccountUsersRequest"/></param>
+        /// <returns><see cref="DescribeAccountUsersResponse"/></returns>
+        public DescribeAccountUsersResponse DescribeAccountUsersSync(DescribeAccountUsersRequest req)
+        {
+             JsonResponseModel<DescribeAccountUsersResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAccountUsers");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAccountUsersResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询异步任务状态接口
         /// </summary>
         /// <param name="req"><see cref="DescribeAsyncRequestInfoRequest"/></param>

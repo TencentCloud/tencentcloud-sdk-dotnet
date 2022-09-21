@@ -37,7 +37,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         public string MD5{ get; set; }
 
         /// <summary>
-        /// 待分析视频的名称，指定后可支持筛选，最多100个中文字符
+        /// 待分析视频的名称，指定后可支持筛选，最多64B
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }
@@ -61,6 +61,13 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("CallbackURL")]
         public string CallbackURL{ get; set; }
 
+        /// <summary>
+        /// 媒资文件类型，详细定义参见[MediaPreknownInfo.MediaType](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+        /// 默认为2(视频)
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public long? MediaType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -73,6 +80,7 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "WriteBackCosPath", this.WriteBackCosPath);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
         }
     }
 }

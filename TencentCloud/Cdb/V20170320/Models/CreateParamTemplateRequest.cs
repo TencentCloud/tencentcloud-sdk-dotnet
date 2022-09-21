@@ -60,6 +60,12 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("TemplateType")]
         public string TemplateType{ get; set; }
 
+        /// <summary>
+        /// 实例引擎类型，默认为"InnoDB"，支持值包括："InnoDB"，"RocksDB"。
+        /// </summary>
+        [JsonProperty("EngineType")]
+        public string EngineType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -72,6 +78,7 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
             this.SetParamSimple(map, prefix + "TemplateType", this.TemplateType);
+            this.SetParamSimple(map, prefix + "EngineType", this.EngineType);
         }
     }
 }

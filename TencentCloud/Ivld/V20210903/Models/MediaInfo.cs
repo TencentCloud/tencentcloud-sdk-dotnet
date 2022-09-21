@@ -59,7 +59,7 @@ namespace TencentCloud.Ivld.V20210903.Models
         public string FailedReason{ get; set; }
 
         /// <summary>
-        /// 媒资视频元信息
+        /// 媒资视频元信息，仅在MediaType=VIDEO时有效
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Metadata")]
@@ -86,6 +86,34 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("CallbackURL")]
         public string CallbackURL{ get; set; }
 
+        /// <summary>
+        /// 媒资文件类型，具体参看[MediaPreknownInfo](https://cloud.tencent.com/document/product/1509/65063#MediaPreknownInfo)
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MediaType")]
+        public long? MediaType{ get; set; }
+
+        /// <summary>
+        /// 媒资音频元信息，仅在MediaType=Audio时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioMetadata")]
+        public AudioMetadata AudioMetadata{ get; set; }
+
+        /// <summary>
+        /// 媒资图片文件元信息，仅在MediaType=Image时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageMetadata")]
+        public ImageMetadata ImageMetadata{ get; set; }
+
+        /// <summary>
+        /// 媒资文本文件元信息，仅在MediaType=Text时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextMetadata")]
+        public TextMetadata TextMetadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -101,6 +129,10 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "Progress", this.Progress);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+            this.SetParamSimple(map, prefix + "MediaType", this.MediaType);
+            this.SetParamObj(map, prefix + "AudioMetadata.", this.AudioMetadata);
+            this.SetParamObj(map, prefix + "ImageMetadata.", this.ImageMetadata);
+            this.SetParamObj(map, prefix + "TextMetadata.", this.TextMetadata);
         }
     }
 }

@@ -25,7 +25,7 @@ namespace TencentCloud.Ivld.V20210903.Models
     {
         
         /// <summary>
-        /// 媒资视频文件大小
+        /// 媒资视频文件大小，单位为字节
         /// </summary>
         [JsonProperty("FileSize")]
         public long? FileSize{ get; set; }

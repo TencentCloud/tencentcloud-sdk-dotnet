@@ -110,6 +110,34 @@ namespace TencentCloud.Ivld.V20210903.Models
         [JsonProperty("CallbackURL")]
         public string CallbackURL{ get; set; }
 
+        /// <summary>
+        /// 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AudioMetadata")]
+        public AudioMetadata AudioMetadata{ get; set; }
+
+        /// <summary>
+        /// 任务对应的媒资文件元信息，仅在MediaType为Audio时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImageMetadata")]
+        public ImageMetadata ImageMetadata{ get; set; }
+
+        /// <summary>
+        /// 任务对应的媒资文件元信息，仅在MediaType为Text时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextMetadata")]
+        public TextMetadata TextMetadata{ get; set; }
+
+        /// <summary>
+        /// 任务对应的媒资文件元信息，仅在MediaType为Video时有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Metadata")]
+        public MediaMetadata Metadata{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -129,6 +157,10 @@ namespace TencentCloud.Ivld.V20210903.Models
             this.SetParamSimple(map, prefix + "MediaName", this.MediaName);
             this.SetParamSimple(map, prefix + "Label", this.Label);
             this.SetParamSimple(map, prefix + "CallbackURL", this.CallbackURL);
+            this.SetParamObj(map, prefix + "AudioMetadata.", this.AudioMetadata);
+            this.SetParamObj(map, prefix + "ImageMetadata.", this.ImageMetadata);
+            this.SetParamObj(map, prefix + "TextMetadata.", this.TextMetadata);
+            this.SetParamObj(map, prefix + "Metadata.", this.Metadata);
         }
     }
 }

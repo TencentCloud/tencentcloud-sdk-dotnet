@@ -1649,6 +1649,46 @@ namespace TencentCloud.Ocr.V20181119
         }
 
         /// <summary>
+        /// 图像增强
+        /// </summary>
+        /// <param name="req"><see cref="ImageEnhancementRequest"/></param>
+        /// <returns><see cref="ImageEnhancementResponse"/></returns>
+        public async Task<ImageEnhancementResponse> ImageEnhancement(ImageEnhancementRequest req)
+        {
+             JsonResponseModel<ImageEnhancementResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ImageEnhancement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageEnhancementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 图像增强
+        /// </summary>
+        /// <param name="req"><see cref="ImageEnhancementRequest"/></param>
+        /// <returns><see cref="ImageEnhancementResponse"/></returns>
+        public ImageEnhancementResponse ImageEnhancementSync(ImageEnhancementRequest req)
+        {
+             JsonResponseModel<ImageEnhancementResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ImageEnhancement");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ImageEnhancementResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口支持事业单位法人证书关键字段识别，包括注册号、有效期、住所、名称、法定代表人等。
         /// </summary>
         /// <param name="req"><see cref="InstitutionOCRRequest"/></param>

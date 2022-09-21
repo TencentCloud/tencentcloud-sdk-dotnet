@@ -55,6 +55,8 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量撤销的签署流程Id，批量撤销合同
         /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
         /// </summary>
         /// <param name="req"><see cref="ChannelBatchCancelFlowsRequest"/></param>
         /// <returns><see cref="ChannelBatchCancelFlowsResponse"/></returns>
@@ -76,6 +78,8 @@ namespace TencentCloud.Essbasic.V20210526
         /// <summary>
         /// 指定需要批量撤销的签署流程Id，批量撤销合同
         /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口失败后返回错误信息
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
         /// </summary>
         /// <param name="req"><see cref="ChannelBatchCancelFlowsRequest"/></param>
         /// <returns><see cref="ChannelBatchCancelFlowsResponse"/></returns>
@@ -136,7 +140,10 @@ namespace TencentCloud.Essbasic.V20210526
 
         /// <summary>
         /// 指定需要批量撤销的签署流程Id，获取批量撤销链接
-        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
+        /// 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateBatchCancelFlowUrlRequest"/></param>
         /// <returns><see cref="ChannelCreateBatchCancelFlowUrlResponse"/></returns>
@@ -157,7 +164,10 @@ namespace TencentCloud.Essbasic.V20210526
 
         /// <summary>
         /// 指定需要批量撤销的签署流程Id，获取批量撤销链接
-        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销
+        /// 客户指定需要撤销的签署流程Id，最多100个，超过100不处理；
+        /// 接口调用成功返回批量撤销合同的链接，通过链接跳转到电子签小程序完成批量撤销;
+        /// 注意:
+        /// 能撤回合同的只能是合同的发起人或者发起企业的超管、法人
         /// </summary>
         /// <param name="req"><see cref="ChannelCreateBatchCancelFlowUrlRequest"/></param>
         /// <returns><see cref="ChannelCreateBatchCancelFlowUrlResponse"/></returns>
@@ -416,6 +426,46 @@ namespace TencentCloud.Essbasic.V20210526
              {
                  var strResp = this.InternalRequestSync(req, "ChannelGetTaskResultApi");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelGetTaskResultApiResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合同文件验签
+        /// </summary>
+        /// <param name="req"><see cref="ChannelVerifyPdfRequest"/></param>
+        /// <returns><see cref="ChannelVerifyPdfResponse"/></returns>
+        public async Task<ChannelVerifyPdfResponse> ChannelVerifyPdf(ChannelVerifyPdfRequest req)
+        {
+             JsonResponseModel<ChannelVerifyPdfResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelVerifyPdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelVerifyPdfResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 合同文件验签
+        /// </summary>
+        /// <param name="req"><see cref="ChannelVerifyPdfRequest"/></param>
+        /// <returns><see cref="ChannelVerifyPdfResponse"/></returns>
+        public ChannelVerifyPdfResponse ChannelVerifyPdfSync(ChannelVerifyPdfRequest req)
+        {
+             JsonResponseModel<ChannelVerifyPdfResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelVerifyPdf");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelVerifyPdfResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
