@@ -108,6 +108,32 @@ namespace TencentCloud.Cls.V20201016.Models
         [JsonProperty("JsonStandard")]
         public long? JsonStandard{ get; set; }
 
+        /// <summary>
+        /// syslog传输协议，取值为tcp或者udp。
+        /// 该接口适用于：创建采集规则配置、修改采集规则配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Protocol")]
+        public string Protocol{ get; set; }
+
+        /// <summary>
+        /// syslog系统日志采集指定采集器监听的地址和端口 ，形式：[ip]:[port]。举例：127.0.0.1:9000
+        /// 该接口适用于：创建采集规则配置、修改采集规则配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Address")]
+        public string Address{ get; set; }
+
+        /// <summary>
+        /// rfc3164：指定系统日志采集使用RFC3164协议解析日志。
+        /// rfc5424：指定系统日志采集使用RFC5424协议解析日志。
+        /// auto：自动匹配rfc3164或者rfc5424其中一种协议
+        /// 该接口适用于：创建采集规则配置、修改采集规则配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ParseProtocol")]
+        public string ParseProtocol{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -126,6 +152,9 @@ namespace TencentCloud.Cls.V20201016.Models
             this.SetParamSimple(map, prefix + "Backtracking", this.Backtracking);
             this.SetParamSimple(map, prefix + "IsGBK", this.IsGBK);
             this.SetParamSimple(map, prefix + "JsonStandard", this.JsonStandard);
+            this.SetParamSimple(map, prefix + "Protocol", this.Protocol);
+            this.SetParamSimple(map, prefix + "Address", this.Address);
+            this.SetParamSimple(map, prefix + "ParseProtocol", this.ParseProtocol);
         }
     }
 }

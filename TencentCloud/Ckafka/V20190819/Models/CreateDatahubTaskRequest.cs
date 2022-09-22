@@ -78,6 +78,12 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("TaskId")]
         public string TaskId{ get; set; }
 
+        /// <summary>
+        /// 标签列表
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +99,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamSimple(map, prefix + "SchemaId", this.SchemaId);
             this.SetParamObj(map, prefix + "TransformsParam.", this.TransformsParam);
             this.SetParamSimple(map, prefix + "TaskId", this.TaskId);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

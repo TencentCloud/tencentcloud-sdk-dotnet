@@ -25,7 +25,7 @@ namespace TencentCloud.Mongodb.V20190725.Models
     {
         
         /// <summary>
-        /// 实例Id列表
+        /// 指定预隔离实例ID。格式如：cmgo-p8vnipr5。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }

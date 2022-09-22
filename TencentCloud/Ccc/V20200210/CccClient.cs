@@ -933,6 +933,46 @@ namespace TencentCloud.Ccc.V20200210
         }
 
         /// <summary>
+        /// 停用号码
+        /// </summary>
+        /// <param name="req"><see cref="DisableCCCPhoneNumberRequest"/></param>
+        /// <returns><see cref="DisableCCCPhoneNumberResponse"/></returns>
+        public async Task<DisableCCCPhoneNumberResponse> DisableCCCPhoneNumber(DisableCCCPhoneNumberRequest req)
+        {
+             JsonResponseModel<DisableCCCPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DisableCCCPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableCCCPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 停用号码
+        /// </summary>
+        /// <param name="req"><see cref="DisableCCCPhoneNumberRequest"/></param>
+        /// <returns><see cref="DisableCCCPhoneNumberResponse"/></returns>
+        public DisableCCCPhoneNumberResponse DisableCCCPhoneNumberSync(DisableCCCPhoneNumberRequest req)
+        {
+             JsonResponseModel<DisableCCCPhoneNumberResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DisableCCCPhoneNumber");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DisableCCCPhoneNumberResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改客服账号
         /// </summary>
         /// <param name="req"><see cref="ModifyStaffRequest"/></param>

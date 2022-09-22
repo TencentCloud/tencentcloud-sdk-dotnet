@@ -1333,7 +1333,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 包年包月实例隔离接口
+        /// 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
         /// <returns><see cref="TerminateDBInstancesResponse"/></returns>
@@ -1353,7 +1353,7 @@ namespace TencentCloud.Mongodb.V20190725
         }
 
         /// <summary>
-        /// 包年包月实例隔离接口
+        /// 本接口（TerminateDBInstances）可将包年包月实例退还隔离。
         /// </summary>
         /// <param name="req"><see cref="TerminateDBInstancesRequest"/></param>
         /// <returns><see cref="TerminateDBInstancesResponse"/></returns>

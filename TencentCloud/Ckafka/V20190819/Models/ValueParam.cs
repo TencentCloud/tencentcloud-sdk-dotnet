@@ -79,6 +79,13 @@ namespace TencentCloud.Ckafka.V20190819.Models
         [JsonProperty("Result")]
         public string Result{ get; set; }
 
+        /// <summary>
+        /// JsonPath替换，TYPE=JSON_PATH_REPLACE时必传
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("JsonPathReplace")]
+        public JsonPathReplaceParam JsonPathReplace{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -93,6 +100,7 @@ namespace TencentCloud.Ckafka.V20190819.Models
             this.SetParamObj(map, prefix + "Split.", this.Split);
             this.SetParamObj(map, prefix + "KV.", this.KV);
             this.SetParamSimple(map, prefix + "Result", this.Result);
+            this.SetParamObj(map, prefix + "JsonPathReplace.", this.JsonPathReplace);
         }
     }
 }

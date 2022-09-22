@@ -476,6 +476,90 @@ namespace TencentCloud.Wedata.V20210820
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 数据源详情
         /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceListRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceListResponse"/></returns>
+        public async Task<DescribeDataSourceListResponse> DescribeDataSourceList(DescribeDataSourceListRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataSourceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源详情
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceListRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceListResponse"/></returns>
+        public DescribeDataSourceListResponse DescribeDataSourceListSync(DescribeDataSourceListRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataSourceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceWithoutInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceWithoutInfoResponse"/></returns>
+        public async Task<DescribeDataSourceWithoutInfoResponse> DescribeDataSourceWithoutInfo(DescribeDataSourceWithoutInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceWithoutInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeDataSourceWithoutInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceWithoutInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeDataSourceWithoutInfoRequest"/></param>
+        /// <returns><see cref="DescribeDataSourceWithoutInfoResponse"/></returns>
+        public DescribeDataSourceWithoutInfoResponse DescribeDataSourceWithoutInfoSync(DescribeDataSourceWithoutInfoRequest req)
+        {
+             JsonResponseModel<DescribeDataSourceWithoutInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeDataSourceWithoutInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDataSourceWithoutInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
+        /// 数据源详情
+        /// </summary>
         /// <param name="req"><see cref="DescribeDatasourceRequest"/></param>
         /// <returns><see cref="DescribeDatasourceResponse"/></returns>
         public async Task<DescribeDatasourceResponse> DescribeDatasource(DescribeDatasourceRequest req)

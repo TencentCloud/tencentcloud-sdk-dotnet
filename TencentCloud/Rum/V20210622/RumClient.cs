@@ -789,7 +789,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取DescribeDataFetchProject信息
+        /// 获取DescribeDataFetchProject信息。已下线，请使用DescribeDataFetchUrl
         /// </summary>
         /// <param name="req"><see cref="DescribeDataFetchProjectRequest"/></param>
         /// <returns><see cref="DescribeDataFetchProjectResponse"/></returns>
@@ -809,7 +809,7 @@ namespace TencentCloud.Rum.V20210622
         }
 
         /// <summary>
-        /// 获取DescribeDataFetchProject信息
+        /// 获取DescribeDataFetchProject信息。已下线，请使用DescribeDataFetchUrl
         /// </summary>
         /// <param name="req"><see cref="DescribeDataFetchProjectRequest"/></param>
         /// <returns><see cref="DescribeDataFetchProjectResponse"/></returns>

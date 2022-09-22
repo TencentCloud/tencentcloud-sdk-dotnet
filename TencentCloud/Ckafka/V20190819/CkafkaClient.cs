@@ -453,7 +453,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub转储任务
+        /// 创建DIP转储任务
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
         /// <returns><see cref="CreateDatahubTaskResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Ckafka.V20190819
         }
 
         /// <summary>
-        /// 创建Datahub转储任务
+        /// 创建DIP转储任务
         /// </summary>
         /// <param name="req"><see cref="CreateDatahubTaskRequest"/></param>
         /// <returns><see cref="CreateDatahubTaskResponse"/></returns>

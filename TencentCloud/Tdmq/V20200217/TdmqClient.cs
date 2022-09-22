@@ -2813,6 +2813,46 @@ namespace TencentCloud.Tdmq.V20200217
         }
 
         /// <summary>
+        /// 查询用户已购的RocketMQ专享实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstancesResponse"/></returns>
+        public async Task<DescribeRocketMQVipInstancesResponse> DescribeRocketMQVipInstances(DescribeRocketMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRocketMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询用户已购的RocketMQ专享实例列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRocketMQVipInstancesRequest"/></param>
+        /// <returns><see cref="DescribeRocketMQVipInstancesResponse"/></returns>
+        public DescribeRocketMQVipInstancesResponse DescribeRocketMQVipInstancesSync(DescribeRocketMQVipInstancesRequest req)
+        {
+             JsonResponseModel<DescribeRocketMQVipInstancesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRocketMQVipInstances");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRocketMQVipInstancesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取角色列表
         /// </summary>
         /// <param name="req"><see cref="DescribeRolesRequest"/></param>
