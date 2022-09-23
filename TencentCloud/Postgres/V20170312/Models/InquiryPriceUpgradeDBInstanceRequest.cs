@@ -43,7 +43,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string DBInstanceId{ get; set; }
 
         /// <summary>
-        /// 实例计费类型，预付费或者后付费。PREPAID-预付费。目前只支持预付费。
+        /// 【废弃参数，不再生效】，实例计费类型。
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }

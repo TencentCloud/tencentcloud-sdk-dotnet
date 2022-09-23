@@ -1733,7 +1733,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+        /// 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。只支持按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>
@@ -1753,7 +1753,7 @@ namespace TencentCloud.Postgres.V20170312
         }
 
         /// <summary>
-        /// 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。
+        /// 本接口（InquiryPriceUpgradeDBInstance）用于查询升级实例的价格。只支持按量计费实例。
         /// </summary>
         /// <param name="req"><see cref="InquiryPriceUpgradeDBInstanceRequest"/></param>
         /// <returns><see cref="InquiryPriceUpgradeDBInstanceResponse"/></returns>

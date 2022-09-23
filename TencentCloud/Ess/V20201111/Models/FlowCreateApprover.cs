@@ -79,7 +79,7 @@ namespace TencentCloud.Ess.V20201111.Models
         public string[] VerifyChannel{ get; set; }
 
         /// <summary>
-        /// 是否发送短信，sms--短信通知，none--不通知，默认为sms
+        /// 是否发送短信，sms--短信通知，none--不通知，默认为sms；发起方=签署方时不发送短信
         /// </summary>
         [JsonProperty("NotifyType")]
         public string NotifyType{ get; set; }

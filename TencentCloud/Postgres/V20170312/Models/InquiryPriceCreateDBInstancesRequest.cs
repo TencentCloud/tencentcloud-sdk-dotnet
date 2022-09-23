@@ -55,7 +55,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         public ulong? Period{ get; set; }
 
         /// <summary>
-        /// 计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
+        /// 【弃字段，不再生效】，计费ID。该参数可以通过调用DescribeProductConfig接口的返回值中的Pid字段来获取。
         /// </summary>
         [JsonProperty("Pid")]
         public ulong? Pid{ get; set; }
@@ -65,6 +65,22 @@ namespace TencentCloud.Postgres.V20170312.Models
         /// </summary>
         [JsonProperty("InstanceChargeType")]
         public string InstanceChargeType{ get; set; }
+
+        /// <summary>
+        /// 实例类型，默认primary，支持如下：
+        /// primary（双机高可用（一主一从））
+        /// readonly（只读实例）
+        /// </summary>
+        [JsonProperty("InstanceType")]
+        public string InstanceType{ get; set; }
+
+        /// <summary>
+        /// DB引擎，默认postgresql，支持如下：
+        /// postgresql（云数据库PostgreSQL）
+        /// mssql_compatible（MSSQL兼容-云数据库PostgreSQL）
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
 
 
         /// <summary>
@@ -79,6 +95,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "Period", this.Period);
             this.SetParamSimple(map, prefix + "Pid", this.Pid);
             this.SetParamSimple(map, prefix + "InstanceChargeType", this.InstanceChargeType);
+            this.SetParamSimple(map, prefix + "InstanceType", this.InstanceType);
+            this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
         }
     }
 }

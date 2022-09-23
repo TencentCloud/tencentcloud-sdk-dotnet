@@ -39,6 +39,13 @@ namespace TencentCloud.Postgres.V20170312.Models
         public string BillId{ get; set; }
 
         /// <summary>
+        /// 克隆出的新实例ID，当前只支持后付费返回该值。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBInstanceId")]
+        public string DBInstanceId{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Postgres.V20170312.Models
         {
             this.SetParamSimple(map, prefix + "DealName", this.DealName);
             this.SetParamSimple(map, prefix + "BillId", this.BillId);
+            this.SetParamSimple(map, prefix + "DBInstanceId", this.DBInstanceId);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

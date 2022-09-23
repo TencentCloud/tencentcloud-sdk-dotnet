@@ -31,13 +31,13 @@ namespace TencentCloud.Cam.V20190116.Models
         public ulong? PolicyId{ get; set; }
 
         /// <summary>
-        /// 角色ID，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+        /// 角色ID，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
         /// </summary>
         [JsonProperty("DetachRoleId")]
         public string DetachRoleId{ get; set; }
 
         /// <summary>
-        /// 角色名称，用于指定角色，入参 AttachRoleId 与 AttachRoleName 二选一
+        /// 角色名称，用于指定角色，入参 DetachRoleId 与 DetachRoleName 二选一
         /// </summary>
         [JsonProperty("DetachRoleName")]
         public string DetachRoleName{ get; set; }

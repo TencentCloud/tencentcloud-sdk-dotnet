@@ -256,6 +256,22 @@ namespace TencentCloud.Postgres.V20170312.Models
         [JsonProperty("IsSupportTDE")]
         public long? IsSupportTDE{ get; set; }
 
+        /// <summary>
+        /// 数据库引擎，支持：
+        /// 1、postgresql（云数据库PostgreSQL）；
+        /// 2、mssql_compatible（MSSQL兼容-云数据库PostgreSQL）；
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBEngine")]
+        public string DBEngine{ get; set; }
+
+        /// <summary>
+        /// 数据库引擎的配置信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DBEngineConfig")]
+        public string DBEngineConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -299,6 +315,8 @@ namespace TencentCloud.Postgres.V20170312.Models
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamArrayObj(map, prefix + "DBNodeSet.", this.DBNodeSet);
             this.SetParamSimple(map, prefix + "IsSupportTDE", this.IsSupportTDE);
+            this.SetParamSimple(map, prefix + "DBEngine", this.DBEngine);
+            this.SetParamSimple(map, prefix + "DBEngineConfig", this.DBEngineConfig);
         }
     }
 }
