@@ -92,6 +92,13 @@ namespace TencentCloud.Tcm.V20210413.Models
         [JsonProperty("ExtensiveClusters")]
         public ExtensiveClusters ExtensiveClusters{ get; set; }
 
+        /// <summary>
+        /// 负载均衡跨地域配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CrossRegionConfig")]
+        public CrossRegionConfig CrossRegionConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -108,6 +115,7 @@ namespace TencentCloud.Tcm.V20210413.Models
             this.SetParamSimple(map, prefix + "AddressIPVersion", this.AddressIPVersion);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
             this.SetParamObj(map, prefix + "ExtensiveClusters.", this.ExtensiveClusters);
+            this.SetParamObj(map, prefix + "CrossRegionConfig.", this.CrossRegionConfig);
         }
     }
 }

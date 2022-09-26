@@ -25,7 +25,7 @@ namespace TencentCloud.Tke.V20180525.Models
     {
         
         /// <summary>
-        /// k8s版本号。可为1.14.4, 1.12.8。
+        /// k8s版本号。可为1.18.4 1.20.6。
         /// </summary>
         [JsonProperty("K8SVersion")]
         public string K8SVersion{ get; set; }
@@ -55,7 +55,7 @@ namespace TencentCloud.Tke.V20180525.Models
         public string ClusterDesc{ get; set; }
 
         /// <summary>
-        /// Serivce 所在子网Id
+        /// Service CIDR 或 Serivce 所在子网Id
         /// </summary>
         [JsonProperty("ServiceSubnetId")]
         public string ServiceSubnetId{ get; set; }

@@ -67,6 +67,20 @@ namespace TencentCloud.Cfg.V20210820.Models
         [JsonProperty("TaskUpdateTime")]
         public string TaskUpdateTime{ get; set; }
 
+        /// <summary>
+        /// 0--未开始，1--进行中，2--已完成
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPreCheckStatus")]
+        public long? TaskPreCheckStatus{ get; set; }
+
+        /// <summary>
+        /// 环境检查是否通过
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TaskPreCheckSuccess")]
+        public bool? TaskPreCheckSuccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +94,8 @@ namespace TencentCloud.Cfg.V20210820.Models
             this.SetParamSimple(map, prefix + "TaskStatus", this.TaskStatus);
             this.SetParamSimple(map, prefix + "TaskCreateTime", this.TaskCreateTime);
             this.SetParamSimple(map, prefix + "TaskUpdateTime", this.TaskUpdateTime);
+            this.SetParamSimple(map, prefix + "TaskPreCheckStatus", this.TaskPreCheckStatus);
+            this.SetParamSimple(map, prefix + "TaskPreCheckSuccess", this.TaskPreCheckSuccess);
         }
     }
 }

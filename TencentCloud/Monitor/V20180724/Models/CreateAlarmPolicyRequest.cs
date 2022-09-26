@@ -108,6 +108,18 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("GroupBy")]
         public string[] GroupBy{ get; set; }
 
+        /// <summary>
+        /// 模版绑定的标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
+        /// <summary>
+        /// 日志告警信息
+        /// </summary>
+        [JsonProperty("LogAlarmReqInfo")]
+        public LogAlarmReq LogAlarmReqInfo{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +140,8 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "TriggerTasks.", this.TriggerTasks);
             this.SetParamObj(map, prefix + "Filter.", this.Filter);
             this.SetParamArraySimple(map, prefix + "GroupBy.", this.GroupBy);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamObj(map, prefix + "LogAlarmReqInfo.", this.LogAlarmReqInfo);
         }
     }
 }

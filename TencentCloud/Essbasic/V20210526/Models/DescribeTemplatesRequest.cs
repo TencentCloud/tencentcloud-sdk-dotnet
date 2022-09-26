@@ -61,13 +61,13 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public UserInfo Operator{ get; set; }
 
         /// <summary>
-        /// 是否返回所有组件信息
+        /// 是否返回所有组件信息。默认false，只返回发起方控件；true，返回所有签署方控件
         /// </summary>
         [JsonProperty("QueryAllComponents")]
         public bool? QueryAllComponents{ get; set; }
 
         /// <summary>
-        /// 模糊搜索模板名称
+        /// 模糊搜索模板名称，最大长度200
         /// </summary>
         [JsonProperty("TemplateName")]
         public string TemplateName{ get; set; }

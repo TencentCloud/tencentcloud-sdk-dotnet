@@ -66,6 +66,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("CLSNotices")]
         public CLSNotice[] CLSNotices{ get; set; }
 
+        /// <summary>
+        /// 模版绑定的标签
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "UserNotices.", this.UserNotices);
             this.SetParamArrayObj(map, prefix + "URLNotices.", this.URLNotices);
             this.SetParamArrayObj(map, prefix + "CLSNotices.", this.CLSNotices);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

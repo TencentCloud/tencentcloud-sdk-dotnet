@@ -84,6 +84,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("NoticeIds")]
         public string[] NoticeIds{ get; set; }
 
+        /// <summary>
+        /// 模版根据标签过滤
+        /// </summary>
+        [JsonProperty("Tags")]
+        public Tag[] Tags{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +106,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArraySimple(map, prefix + "UserIds.", this.UserIds);
             this.SetParamArraySimple(map, prefix + "GroupIds.", this.GroupIds);
             this.SetParamArraySimple(map, prefix + "NoticeIds.", this.NoticeIds);
+            this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
         }
     }
 }

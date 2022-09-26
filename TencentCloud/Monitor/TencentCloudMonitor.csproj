@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{60CF7C93-B2EE-30A5-84D3-AA04B825F7A0}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.609</VersionPrefix>
+    <VersionPrefix>3.0.610</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -258,6 +258,8 @@
     <Compile Include="V20180724\Models\InstanceGroup.cs" />
     <Compile Include="V20180724\Models\InstanceGroups.cs" />
     <Compile Include="V20180724\Models\IntegrationConfiguration.cs" />
+    <Compile Include="V20180724\Models\LogAlarmReq.cs" />
+    <Compile Include="V20180724\Models\LogFilterInfo.cs" />
     <Compile Include="V20180724\Models\ManagementCommand.cs" />
     <Compile Include="V20180724\Models\Metric.cs" />
     <Compile Include="V20180724\Models\MetricConfig.cs" />
@@ -316,6 +318,7 @@
     <Compile Include="V20180724\Models\ServiceDiscoveryItem.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyRequest.cs" />
     <Compile Include="V20180724\Models\SetDefaultAlarmPolicyResponse.cs" />
+    <Compile Include="V20180724\Models\Tag.cs" />
     <Compile Include="V20180724\Models\TagInstance.cs" />
     <Compile Include="V20180724\Models\TemplateGroup.cs" />
     <Compile Include="V20180724\Models\TerminatePrometheusInstancesRequest.cs" />
