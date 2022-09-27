@@ -4713,6 +4713,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 财税-查询金融数据文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryFinancialDataUrlRequest"/></param>
+        /// <returns><see cref="QueryFinancialDataUrlResponse"/></returns>
+        public async Task<QueryFinancialDataUrlResponse> QueryFinancialDataUrl(QueryFinancialDataUrlRequest req)
+        {
+             JsonResponseModel<QueryFinancialDataUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryFinancialDataUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFinancialDataUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 财税-查询金融数据文件下载链接
+        /// </summary>
+        /// <param name="req"><see cref="QueryFinancialDataUrlRequest"/></param>
+        /// <returns><see cref="QueryFinancialDataUrlResponse"/></returns>
+        public QueryFinancialDataUrlResponse QueryFinancialDataUrlSync(QueryFinancialDataUrlRequest req)
+        {
+             JsonResponseModel<QueryFinancialDataUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryFinancialDataUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryFinancialDataUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 灵云V2-查询税前金额
         /// </summary>
         /// <param name="req"><see cref="QueryFlexAmountBeforeTaxRequest"/></param>

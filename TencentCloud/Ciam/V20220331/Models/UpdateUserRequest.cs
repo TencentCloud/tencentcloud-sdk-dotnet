@@ -84,6 +84,36 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("CustomizationAttributes")]
         public MemberMap[] CustomizationAttributes{ get; set; }
 
+        /// <summary>
+        /// 索引字段1
+        /// </summary>
+        [JsonProperty("IndexedAttribute1")]
+        public string IndexedAttribute1{ get; set; }
+
+        /// <summary>
+        /// 索引字段2
+        /// </summary>
+        [JsonProperty("IndexedAttribute2")]
+        public string IndexedAttribute2{ get; set; }
+
+        /// <summary>
+        /// 索引字段3
+        /// </summary>
+        [JsonProperty("IndexedAttribute3")]
+        public string IndexedAttribute3{ get; set; }
+
+        /// <summary>
+        /// 索引字段4
+        /// </summary>
+        [JsonProperty("IndexedAttribute4")]
+        public string IndexedAttribute4{ get; set; }
+
+        /// <summary>
+        /// 索引字段5
+        /// </summary>
+        [JsonProperty("IndexedAttribute5")]
+        public string IndexedAttribute5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -100,6 +130,11 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamArraySimple(map, prefix + "UserGroup.", this.UserGroup);
             this.SetParamSimple(map, prefix + "Birthdate", this.Birthdate);
             this.SetParamArrayObj(map, prefix + "CustomizationAttributes.", this.CustomizationAttributes);
+            this.SetParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+            this.SetParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+            this.SetParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+            this.SetParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+            this.SetParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
         }
     }
 }

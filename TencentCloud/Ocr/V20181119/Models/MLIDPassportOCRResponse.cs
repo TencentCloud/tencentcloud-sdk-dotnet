@@ -69,7 +69,7 @@ namespace TencentCloud.Ocr.V20181119.Models
         /// <summary>
         /// 告警码
         /// -9103	证照翻拍告警
-        /// -9102	证照复印件告警
+        /// -9102	证照复印件告警（包括黑白复印件、彩色复印件）
         /// -9106       证件遮挡告警
         /// </summary>
         [JsonProperty("Warn")]

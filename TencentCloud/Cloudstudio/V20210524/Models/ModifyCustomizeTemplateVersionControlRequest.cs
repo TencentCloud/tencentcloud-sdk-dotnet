@@ -31,7 +31,7 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         public string CloudStudioSessionTeam{ get; set; }
 
         /// <summary>
-        /// 模版ID
+        /// 模板ID
         /// </summary>
         [JsonProperty("TemplateId")]
         public long? TemplateId{ get; set; }

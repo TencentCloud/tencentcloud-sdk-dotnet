@@ -53,6 +53,7 @@ namespace TencentCloud.Vod.V20180717.Models
         /// <li> ContentRecognition: 内容识别</li>
         /// <li> RemoveWatermark: 去除水印</li>
         /// <li> ExtractTraceWatermark: 提取水印</li>
+        /// <li> AddTraceWatermark: 添加水印</li>
         /// <li>Transcode: 转码，包含普通转码、极速高清和视频编辑（不推荐使用）</li>
         /// </summary>
         [JsonProperty("Type")]

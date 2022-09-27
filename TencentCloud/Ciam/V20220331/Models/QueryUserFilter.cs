@@ -42,6 +42,12 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("Logic")]
         public bool? Logic{ get; set; }
 
+        /// <summary>
+        /// 操作逻辑符（支持> < = >= <=  != between）
+        /// </summary>
+        [JsonProperty("OperateLogic")]
+        public string OperateLogic{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -51,6 +57,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "PropertyKey", this.PropertyKey);
             this.SetParamSimple(map, prefix + "PropertyValue", this.PropertyValue);
             this.SetParamSimple(map, prefix + "Logic", this.Logic);
+            this.SetParamSimple(map, prefix + "OperateLogic", this.OperateLogic);
         }
     }
 }

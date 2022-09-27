@@ -93,7 +93,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 云主机方式创建工作空间
+        /// 云服务器方式创建工作空间
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceByAgentRequest"/></param>
         /// <returns><see cref="CreateWorkspaceByAgentResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 云主机方式创建工作空间
+        /// 云服务器方式创建工作空间
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceByAgentRequest"/></param>
         /// <returns><see cref="CreateWorkspaceByAgentResponse"/></returns>
@@ -133,7 +133,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 快速开始, 基于模版创建工作空间
+        /// 快速开始, 基于模板创建工作空间
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceByTemplateRequest"/></param>
         /// <returns><see cref="CreateWorkspaceByTemplateResponse"/></returns>
@@ -153,7 +153,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 快速开始, 基于模版创建工作空间
+        /// 快速开始, 基于模板创建工作空间
         /// </summary>
         /// <param name="req"><see cref="CreateWorkspaceByTemplateRequest"/></param>
         /// <returns><see cref="CreateWorkspaceByTemplateResponse"/></returns>
@@ -253,7 +253,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 获取所有模版列表
+        /// 获取所有模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomizeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeCustomizeTemplatesResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 获取所有模版列表
+        /// 获取所有模板列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCustomizeTemplatesRequest"/></param>
         /// <returns><see cref="DescribeCustomizeTemplatesResponse"/></returns>
@@ -533,7 +533,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 修改模版默认代码仓库
+        /// 修改模板默认代码仓库
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomizeTemplateVersionControlRequest"/></param>
         /// <returns><see cref="ModifyCustomizeTemplateVersionControlResponse"/></returns>
@@ -553,7 +553,7 @@ namespace TencentCloud.Cloudstudio.V20210524
         }
 
         /// <summary>
-        /// 修改模版默认代码仓库
+        /// 修改模板默认代码仓库
         /// </summary>
         /// <param name="req"><see cref="ModifyCustomizeTemplateVersionControlRequest"/></param>
         /// <returns><see cref="ModifyCustomizeTemplateVersionControlResponse"/></returns>

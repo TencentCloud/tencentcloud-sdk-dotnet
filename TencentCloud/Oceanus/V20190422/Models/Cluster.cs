@@ -245,6 +245,13 @@ namespace TencentCloud.Oceanus.V20190422.Models
         [JsonProperty("PayMode")]
         public long? PayMode{ get; set; }
 
+        /// <summary>
+        /// 前端区分 集群是否需要2CU逻辑 因为历史集群 变配不需要, default 1  新集群都需要
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IsNeedManageNode")]
+        public long? IsNeedManageNode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -285,6 +292,7 @@ namespace TencentCloud.Oceanus.V20190422.Models
             this.SetParamArrayObj(map, prefix + "Correlations.", this.Correlations);
             this.SetParamSimple(map, prefix + "RunningCu", this.RunningCu);
             this.SetParamSimple(map, prefix + "PayMode", this.PayMode);
+            this.SetParamSimple(map, prefix + "IsNeedManageNode", this.IsNeedManageNode);
         }
     }
 }

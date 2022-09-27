@@ -43,19 +43,19 @@ namespace TencentCloud.Cloudstudio.V20210524.Models
         public string ImageName{ get; set; }
 
         /// <summary>
-        /// 云主机登录名称
+        /// 云服务器登录名称
         /// </summary>
         [JsonProperty("RemoteUser")]
         public string RemoteUser{ get; set; }
 
         /// <summary>
-        /// 云主机登录地址
+        /// 云服务器登录地址
         /// </summary>
         [JsonProperty("RemoteHost")]
         public string RemoteHost{ get; set; }
 
         /// <summary>
-        /// 云主机登录端口
+        /// 云服务器登录端口
         /// </summary>
         [JsonProperty("RemotePort")]
         public string RemotePort{ get; set; }

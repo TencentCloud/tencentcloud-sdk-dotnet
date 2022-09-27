@@ -33,7 +33,6 @@ namespace TencentCloud.Ciam.V20220331.Models
         /// <summary>
         /// 导出的数据类型
         /// 
-        /// <li> **JSON** </li>  JSON
         /// <li> **NDJSON** </li>  New-line Delimited JSON
         /// <li> **CSV** </li>  Comma-Separated Values
         /// </summary>

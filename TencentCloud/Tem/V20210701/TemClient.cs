@@ -133,6 +133,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 新增访问方式
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationServiceRequest"/></param>
+        /// <returns><see cref="CreateApplicationServiceResponse"/></returns>
+        public async Task<CreateApplicationServiceResponse> CreateApplicationService(CreateApplicationServiceRequest req)
+        {
+             JsonResponseModel<CreateApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新增访问方式
+        /// </summary>
+        /// <param name="req"><see cref="CreateApplicationServiceRequest"/></param>
+        /// <returns><see cref="CreateApplicationServiceResponse"/></returns>
+        public CreateApplicationServiceResponse CreateApplicationServiceSync(CreateApplicationServiceRequest req)
+        {
+             JsonResponseModel<CreateApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateApplicationServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建配置
         /// </summary>
         /// <param name="req"><see cref="CreateConfigDataRequest"/></param>
@@ -419,6 +459,46 @@ namespace TencentCloud.Tem.V20210701
         }
 
         /// <summary>
+        /// 删除一条访问方式
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationServiceRequest"/></param>
+        /// <returns><see cref="DeleteApplicationServiceResponse"/></returns>
+        public async Task<DeleteApplicationServiceResponse> DeleteApplicationService(DeleteApplicationServiceRequest req)
+        {
+             JsonResponseModel<DeleteApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除一条访问方式
+        /// </summary>
+        /// <param name="req"><see cref="DeleteApplicationServiceRequest"/></param>
+        /// <returns><see cref="DeleteApplicationServiceResponse"/></returns>
+        public DeleteApplicationServiceResponse DeleteApplicationServiceSync(DeleteApplicationServiceRequest req)
+        {
+             JsonResponseModel<DeleteApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteApplicationServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除 Ingress 规则
         /// </summary>
         /// <param name="req"><see cref="DeleteIngressRequest"/></param>
@@ -610,6 +690,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "DescribeApplicationPods");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationPodsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用访问方式列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationServiceListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationServiceListResponse"/></returns>
+        public async Task<DescribeApplicationServiceListResponse> DescribeApplicationServiceList(DescribeApplicationServiceListRequest req)
+        {
+             JsonResponseModel<DescribeApplicationServiceListResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeApplicationServiceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationServiceListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询应用访问方式列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeApplicationServiceListRequest"/></param>
+        /// <returns><see cref="DescribeApplicationServiceListResponse"/></returns>
+        public DescribeApplicationServiceListResponse DescribeApplicationServiceListSync(DescribeApplicationServiceListRequest req)
+        {
+             JsonResponseModel<DescribeApplicationServiceListResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeApplicationServiceList");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeApplicationServiceListResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1490,6 +1610,46 @@ namespace TencentCloud.Tem.V20210701
              {
                  var strResp = this.InternalRequestSync(req, "ModifyApplicationReplicas");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationReplicasResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改服务访问方式列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationServiceRequest"/></param>
+        /// <returns><see cref="ModifyApplicationServiceResponse"/></returns>
+        public async Task<ModifyApplicationServiceResponse> ModifyApplicationService(ModifyApplicationServiceRequest req)
+        {
+             JsonResponseModel<ModifyApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationServiceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改服务访问方式列表
+        /// </summary>
+        /// <param name="req"><see cref="ModifyApplicationServiceRequest"/></param>
+        /// <returns><see cref="ModifyApplicationServiceResponse"/></returns>
+        public ModifyApplicationServiceResponse ModifyApplicationServiceSync(ModifyApplicationServiceRequest req)
+        {
+             JsonResponseModel<ModifyApplicationServiceResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyApplicationService");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyApplicationServiceResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

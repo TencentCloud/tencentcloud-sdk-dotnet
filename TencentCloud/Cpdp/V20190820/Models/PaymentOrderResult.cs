@@ -112,6 +112,13 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("OutUserId")]
         public string OutUserId{ get; set; }
 
+        /// <summary>
+        /// 渠道支付订单号
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ChannelOrderId")]
+        public string ChannelOrderId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -131,6 +138,7 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamSimple(map, prefix + "PayeeId", this.PayeeId);
             this.SetParamSimple(map, prefix + "OutUserId", this.OutUserId);
+            this.SetParamSimple(map, prefix + "ChannelOrderId", this.ChannelOrderId);
         }
     }
 }

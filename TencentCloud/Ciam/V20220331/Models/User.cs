@@ -272,6 +272,41 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("LockTime")]
         public long? LockTime{ get; set; }
 
+        /// <summary>
+        /// 索引字段1
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexedAttribute1")]
+        public string IndexedAttribute1{ get; set; }
+
+        /// <summary>
+        /// 索引字段2
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexedAttribute2")]
+        public string IndexedAttribute2{ get; set; }
+
+        /// <summary>
+        /// 索引字段3
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexedAttribute3")]
+        public string IndexedAttribute3{ get; set; }
+
+        /// <summary>
+        /// 索引字段4
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexedAttribute4")]
+        public string IndexedAttribute4{ get; set; }
+
+        /// <summary>
+        /// 索引字段5
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("IndexedAttribute5")]
+        public string IndexedAttribute5{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -314,6 +349,11 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamSimple(map, prefix + "Version", this.Version);
             this.SetParamSimple(map, prefix + "LockType", this.LockType);
             this.SetParamSimple(map, prefix + "LockTime", this.LockTime);
+            this.SetParamSimple(map, prefix + "IndexedAttribute1", this.IndexedAttribute1);
+            this.SetParamSimple(map, prefix + "IndexedAttribute2", this.IndexedAttribute2);
+            this.SetParamSimple(map, prefix + "IndexedAttribute3", this.IndexedAttribute3);
+            this.SetParamSimple(map, prefix + "IndexedAttribute4", this.IndexedAttribute4);
+            this.SetParamSimple(map, prefix + "IndexedAttribute5", this.IndexedAttribute5);
         }
     }
 }

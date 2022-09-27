@@ -48,6 +48,12 @@ namespace TencentCloud.Ciam.V20220331.Models
         [JsonProperty("Original")]
         public bool? Original{ get; set; }
 
+        /// <summary>
+        /// 排序设置
+        /// </summary>
+        [JsonProperty("Sort")]
+        public Sort Sort{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Ciam.V20220331.Models
             this.SetParamObj(map, prefix + "Pageable.", this.Pageable);
             this.SetParamArrayObj(map, prefix + "Filters.", this.Filters);
             this.SetParamSimple(map, prefix + "Original", this.Original);
+            this.SetParamObj(map, prefix + "Sort.", this.Sort);
         }
     }
 }

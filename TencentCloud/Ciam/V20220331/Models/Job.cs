@@ -59,7 +59,6 @@ namespace TencentCloud.Ciam.V20220331.Models
         /// <summary>
         /// 任务的数据类型
         /// 
-        /// <li> **JSON** </li>  JSON
         /// <li> **NDJSON** </li>  New-line Delimited JSON
         /// <li> **CSV** </li>  Comma-Separated Values
         /// 注意：此字段可能返回 null，表示取不到有效值。

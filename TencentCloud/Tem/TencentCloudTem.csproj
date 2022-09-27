@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{70147D26-20D1-3AB4-8897-76660439CE6B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.610</VersionPrefix>
+    <VersionPrefix>3.0.611</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -108,6 +108,8 @@
     <Compile Include="V20210701\Models\CreateApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\CreateApplicationRequest.cs" />
     <Compile Include="V20210701\Models\CreateApplicationResponse.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationServiceRequest.cs" />
+    <Compile Include="V20210701\Models\CreateApplicationServiceResponse.cs" />
     <Compile Include="V20210701\Models\CreateConfigDataRequest.cs" />
     <Compile Include="V20210701\Models\CreateConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\CreateCosTokenRequest.cs" />
@@ -124,6 +126,8 @@
     <Compile Include="V20210701\Models\DeleteApplicationAutoscalerResponse.cs" />
     <Compile Include="V20210701\Models\DeleteApplicationRequest.cs" />
     <Compile Include="V20210701\Models\DeleteApplicationResponse.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationServiceRequest.cs" />
+    <Compile Include="V20210701\Models\DeleteApplicationServiceResponse.cs" />
     <Compile Include="V20210701\Models\DeleteIngressRequest.cs" />
     <Compile Include="V20210701\Models\DeleteIngressResponse.cs" />
     <Compile Include="V20210701\Models\DeployApplicationRequest.cs" />
@@ -137,6 +141,8 @@
     <Compile Include="V20210701\Models\DescribeApplicationInfoResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationPodsRequest.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationPodsResponse.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationServiceListRequest.cs" />
+    <Compile Include="V20210701\Models\DescribeApplicationServiceListResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationsRequest.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationsResponse.cs" />
     <Compile Include="V20210701\Models\DescribeApplicationsStatusRequest.cs" />
@@ -197,6 +203,8 @@
     <Compile Include="V20210701\Models\ModifyApplicationInfoResponse.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationReplicasRequest.cs" />
     <Compile Include="V20210701\Models\ModifyApplicationReplicasResponse.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationServiceRequest.cs" />
+    <Compile Include="V20210701\Models\ModifyApplicationServiceResponse.cs" />
     <Compile Include="V20210701\Models\ModifyConfigDataRequest.cs" />
     <Compile Include="V20210701\Models\ModifyConfigDataResponse.cs" />
     <Compile Include="V20210701\Models\ModifyEnvironmentRequest.cs" />
