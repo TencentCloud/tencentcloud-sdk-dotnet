@@ -21,22 +21,22 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class HostsCertificate : AbstractModel
+    public class PartialModule : AbstractModel
     {
         
         /// <summary>
-        /// 域名。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 模块名称，取值为：
+        /// <li>waf：托管规则。</li>
         /// </summary>
-        [JsonProperty("Host")]
-        public string Host{ get; set; }
+        [JsonProperty("Module")]
+        public string Module{ get; set; }
 
         /// <summary>
-        /// 服务端证书配置。
+        /// 模块下的需要例外的具体规则ID列表。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("HostCertInfo")]
-        public HostCertInfo HostCertInfo{ get; set; }
+        [JsonProperty("Include")]
+        public long?[] Include{ get; set; }
 
 
         /// <summary>
@@ -44,8 +44,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Host", this.Host);
-            this.SetParamObj(map, prefix + "HostCertInfo.", this.HostCertInfo);
+            this.SetParamSimple(map, prefix + "Module", this.Module);
+            this.SetParamArraySimple(map, prefix + "Include.", this.Include);
         }
     }
 }

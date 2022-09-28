@@ -15,26 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Trtc.V20190722.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class StorageParams : AbstractModel
+    public class FileAscriptionInfo : AbstractModel
     {
         
         /// <summary>
-        /// 第三方云存储的账号信息（CloudStorage参数暂不可用，请使用CloudVod参数存储至云点播）。
+        /// 文件校验目录。
         /// </summary>
-        [JsonProperty("CloudStorage")]
-        public CloudStorage CloudStorage{ get; set; }
+        [JsonProperty("IdentifyPath")]
+        public string IdentifyPath{ get; set; }
 
         /// <summary>
-        /// 【必填】腾讯云云点播的账号信息，目前仅支持存储至腾讯云点播VOD。
+        /// 文件校验内容。
         /// </summary>
-        [JsonProperty("CloudVod")]
-        public CloudVod CloudVod{ get; set; }
+        [JsonProperty("IdentifyContent")]
+        public string IdentifyContent{ get; set; }
 
 
         /// <summary>
@@ -42,8 +42,8 @@ namespace TencentCloud.Trtc.V20190722.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "CloudStorage.", this.CloudStorage);
-            this.SetParamObj(map, prefix + "CloudVod.", this.CloudVod);
+            this.SetParamSimple(map, prefix + "IdentifyPath", this.IdentifyPath);
+            this.SetParamSimple(map, prefix + "IdentifyContent", this.IdentifyContent);
         }
     }
 }

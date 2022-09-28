@@ -37,13 +37,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>method：请求方式；</li>
         /// <li>header：请求头部；</li>
         /// <li>sip_proto：网络层协议。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchFrom")]
         public string MatchFrom{ get; set; }
 
         /// <summary>
-        /// 匹配项的参数。当 MatchFrom 为 header 时，可以填入 header 的 key 作为参数。
+        /// 匹配项的参数。仅当 MatchFrom 为 header 时，可以使用本参数，值可填入 header 的 key 作为参数。
         /// </summary>
         [JsonProperty("MatchParam")]
         public string MatchParam{ get; set; }
@@ -66,14 +65,12 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>match_prefix：前缀匹配；</li>
         /// <li>match_suffix：后缀匹配；</li>
         /// <li>wildcard：通配符。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }
 
         /// <summary>
         /// 匹配值。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("MatchContent")]
         public string MatchContent{ get; set; }

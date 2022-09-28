@@ -78,6 +78,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 当OriginType=self时，表示回源Host。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -92,6 +99,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
             this.SetParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }
 }

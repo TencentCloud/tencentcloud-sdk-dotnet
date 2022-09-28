@@ -21,27 +21,23 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeHostCertificatesResponse : AbstractModel
+    public class ClientIpCountry : AbstractModel
     {
         
         /// <summary>
-        /// 总数，用于分页查询。
+        /// 配置开关，取值有：
+        /// <li>on：开启；</li>
+        /// <li>off：关闭。</li>
         /// </summary>
-        [JsonProperty("TotalCount")]
-        public long? TotalCount{ get; set; }
+        [JsonProperty("Switch")]
+        public string Switch{ get; set; }
 
         /// <summary>
-        /// 域名证书配置列表。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 存放客户端IP所属地域信息的请求头名称，当Switch=on时有效。
+        /// 为空则使用默认值：EO-Client-IPCountry。
         /// </summary>
-        [JsonProperty("HostCertificates")]
-        public HostsCertificate[] HostCertificates{ get; set; }
-
-        /// <summary>
-        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
-        /// </summary>
-        [JsonProperty("RequestId")]
-        public string RequestId{ get; set; }
+        [JsonProperty("HeaderName")]
+        public string HeaderName{ get; set; }
 
 
         /// <summary>
@@ -49,9 +45,8 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
-            this.SetParamArrayObj(map, prefix + "HostCertificates.", this.HostCertificates);
-            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
+            this.SetParamSimple(map, prefix + "Switch", this.Switch);
+            this.SetParamSimple(map, prefix + "HeaderName", this.HeaderName);
         }
     }
 }

@@ -114,6 +114,24 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("IsProducer")]
         public string IsProducer{ get; set; }
 
+        /// <summary>
+        /// x
+        /// </summary>
+        [JsonProperty("EvidenceFileUrl")]
+        public string EvidenceFileUrl{ get; set; }
+
+        /// <summary>
+        /// x
+        /// </summary>
+        [JsonProperty("EvidenceValidStartDate")]
+        public string EvidenceValidStartDate{ get; set; }
+
+        /// <summary>
+        /// x
+        /// </summary>
+        [JsonProperty("EvidenceValidEndDate")]
+        public string EvidenceValidEndDate{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +153,9 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "HomeValidStartDate", this.HomeValidStartDate);
             this.SetParamSimple(map, prefix + "HomeValidEndDate", this.HomeValidEndDate);
             this.SetParamSimple(map, prefix + "IsProducer", this.IsProducer);
+            this.SetParamSimple(map, prefix + "EvidenceFileUrl", this.EvidenceFileUrl);
+            this.SetParamSimple(map, prefix + "EvidenceValidStartDate", this.EvidenceValidStartDate);
+            this.SetParamSimple(map, prefix + "EvidenceValidEndDate", this.EvidenceValidEndDate);
         }
     }
 }

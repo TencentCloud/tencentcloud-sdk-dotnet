@@ -15,32 +15,35 @@
  * under the License.
  */
 
-namespace TencentCloud.Cwp.V20180228.Models
+namespace TencentCloud.Teo.V20220901.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeESHitsRequest : AbstractModel
+    public class OriginGroupCondition : AbstractModel
     {
         
         /// <summary>
-        /// ES查询条件JSON
+        /// 匹配类型，取值有：
+        /// <li>url：当前站点下匹配URL路径的请求，例如：/example 或 /example/foo.jpg。支持*表示通配符，支持?表示匹配一个字符。
+        /// </li>
         /// </summary>
-        [JsonProperty("Query")]
-        public string Query{ get; set; }
+        [JsonProperty("Target")]
+        public string Target{ get; set; }
 
         /// <summary>
-        /// 偏移量，默认为0。
+        /// 运算符，取值有：
+        /// <li>equal：等于。</li>
         /// </summary>
-        [JsonProperty("Offset")]
-        public ulong? Offset{ get; set; }
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
 
         /// <summary>
-        /// 返回数量，最大值为100。
+        /// 对应匹配类型的取值。
         /// </summary>
-        [JsonProperty("Limit")]
-        public ulong? Limit{ get; set; }
+        [JsonProperty("Values")]
+        public string[] Values{ get; set; }
 
 
         /// <summary>
@@ -48,9 +51,9 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Query", this.Query);
-            this.SetParamSimple(map, prefix + "Offset", this.Offset);
-            this.SetParamSimple(map, prefix + "Limit", this.Limit);
+            this.SetParamSimple(map, prefix + "Target", this.Target);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
+            this.SetParamArraySimple(map, prefix + "Values.", this.Values);
         }
     }
 }

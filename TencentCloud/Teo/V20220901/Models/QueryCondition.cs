@@ -36,10 +36,10 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>notEquals: 不等于；</li>
         /// <li>include: 包含；</li>
         /// <li>notInclude: 不包含; </li>
-        /// <li>startWith: 开始于；</li>
-        /// <li>notStartWith: 不开始于；</li>
-        /// <li>endWith: 结尾是；</li>
-        /// <li>notEndWith: 不结尾是。</li>
+        /// <li>startWith: 开始的值是value；</li>
+        /// <li>notStartWith: 不以value的值开始；</li>
+        /// <li>endWith: 结尾是value值；</li>
+        /// <li>notEndWith: 不以value的值结尾。</li>
         /// </summary>
         [JsonProperty("Operator")]
         public string Operator{ get; set; }

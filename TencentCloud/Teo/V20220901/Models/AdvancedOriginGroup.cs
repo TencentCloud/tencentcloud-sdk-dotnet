@@ -21,23 +21,26 @@ namespace TencentCloud.Teo.V20220901.Models
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class Sort : AbstractModel
+    public class AdvancedOriginGroup : AbstractModel
     {
         
         /// <summary>
-        /// 排序字段，当前支持：
-        /// createTime，域名创建时间
-        /// certExpireTime，证书过期时间
-        /// certDeployTime,  证书部署时间
+        /// 高级回源配置的匹配条件。其中相同的Target只能出现一次。
         /// </summary>
-        [JsonProperty("Key")]
-        public string Key{ get; set; }
+        [JsonProperty("OriginGroupConditions")]
+        public OriginGroupCondition[] OriginGroupConditions{ get; set; }
 
         /// <summary>
-        /// asc/desc，默认desc。
+        /// 主源站组ID。
         /// </summary>
-        [JsonProperty("Sequence")]
-        public string Sequence{ get; set; }
+        [JsonProperty("OriginGroupId")]
+        public string OriginGroupId{ get; set; }
+
+        /// <summary>
+        /// 备用源站组ID。
+        /// </summary>
+        [JsonProperty("BackupOriginGroupId")]
+        public string BackupOriginGroupId{ get; set; }
 
 
         /// <summary>
@@ -45,8 +48,9 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "Key", this.Key);
-            this.SetParamSimple(map, prefix + "Sequence", this.Sequence);
+            this.SetParamArrayObj(map, prefix + "OriginGroupConditions.", this.OriginGroupConditions);
+            this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
+            this.SetParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
         }
     }
 }

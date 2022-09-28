@@ -39,7 +39,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string Status{ get; set; }
 
         /// <summary>
-        /// 站点归属信息。
+        /// 站点归属权校验：Dns校验信息。
         /// </summary>
         [JsonProperty("Ascription")]
         public AscriptionInfo Ascription{ get; set; }
@@ -51,6 +51,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginalNameServers")]
         public string[] OriginalNameServers{ get; set; }
 
+        /// <summary>
+        /// 站点归属权校验：文件校验信息。
+        /// </summary>
+        [JsonProperty("FileAscription")]
+        public FileAscriptionInfo FileAscription{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -61,6 +67,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamObj(map, prefix + "Ascription.", this.Ascription);
             this.SetParamArraySimple(map, prefix + "OriginalNameServers.", this.OriginalNameServers);
+            this.SetParamObj(map, prefix + "FileAscription.", this.FileAscription);
         }
     }
 }

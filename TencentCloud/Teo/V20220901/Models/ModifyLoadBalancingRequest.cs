@@ -63,6 +63,21 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("TTL")]
         public ulong? TTL{ get; set; }
 
+        /// <summary>
+        /// 回源类型，取值有：
+        /// <li>normal：主备回源；</li>
+        /// <li>advanced：高级回源配置（仅当Type=proxied时可以使用）。</li>不填写表示使用主备回源。
+        /// </summary>
+        [JsonProperty("OriginType")]
+        public string OriginType{ get; set; }
+
+        /// <summary>
+        /// 高级回源配置，当OriginType=advanced时有效。
+        /// 不填写表示不使用高级回源配置。
+        /// </summary>
+        [JsonProperty("AdvancedOriginGroups")]
+        public AdvancedOriginGroup[] AdvancedOriginGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -75,6 +90,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
             this.SetParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
             this.SetParamSimple(map, prefix + "TTL", this.TTL);
+            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
+            this.SetParamArrayObj(map, prefix + "AdvancedOriginGroups.", this.AdvancedOriginGroups);
         }
     }
 }

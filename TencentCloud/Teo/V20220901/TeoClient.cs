@@ -2093,46 +2093,6 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
-        /// 查询域名证书列表，支持搜索、分页、排序、过滤。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHostCertificatesRequest"/></param>
-        /// <returns><see cref="DescribeHostCertificatesResponse"/></returns>
-        public async Task<DescribeHostCertificatesResponse> DescribeHostCertificates(DescribeHostCertificatesRequest req)
-        {
-             JsonResponseModel<DescribeHostCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeHostCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 查询域名证书列表，支持搜索、分页、排序、过滤。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeHostCertificatesRequest"/></param>
-        /// <returns><see cref="DescribeHostCertificatesResponse"/></returns>
-        public DescribeHostCertificatesResponse DescribeHostCertificatesSync(DescribeHostCertificatesRequest req)
-        {
-             JsonResponseModel<DescribeHostCertificatesResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeHostCertificates");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeHostCertificatesResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 用于查询域名配置信息
         /// </summary>
         /// <param name="req"><see cref="DescribeHostsSettingRequest"/></param>

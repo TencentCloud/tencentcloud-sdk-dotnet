@@ -102,6 +102,78 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("WorkTitle")]
         public string WorkTitle{ get; set; }
 
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("TortSite")]
+        public string TortSite{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("ICP")]
+        public string ICP{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("RightNote")]
+        public string RightNote{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("ObtainType")]
+        public long? ObtainType{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("BlockNote")]
+        public string BlockNote{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("WorkId")]
+        public long? WorkId{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("WorkName")]
+        public string WorkName{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("AuthStatus")]
+        public long? AuthStatus{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("CommStatus")]
+        public long? CommStatus{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("EvidenceStatus")]
+        public long? EvidenceStatus{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("IsProducer")]
+        public long? IsProducer{ get; set; }
+
+        /// <summary>
+        /// 1
+        /// </summary>
+        [JsonProperty("IsOverseas")]
+        public long? IsOverseas{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -121,6 +193,18 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "TortNum", this.TortNum);
             this.SetParamSimple(map, prefix + "ObtainNote", this.ObtainNote);
             this.SetParamSimple(map, prefix + "WorkTitle", this.WorkTitle);
+            this.SetParamSimple(map, prefix + "TortSite", this.TortSite);
+            this.SetParamSimple(map, prefix + "ICP", this.ICP);
+            this.SetParamSimple(map, prefix + "RightNote", this.RightNote);
+            this.SetParamSimple(map, prefix + "ObtainType", this.ObtainType);
+            this.SetParamSimple(map, prefix + "BlockNote", this.BlockNote);
+            this.SetParamSimple(map, prefix + "WorkId", this.WorkId);
+            this.SetParamSimple(map, prefix + "WorkName", this.WorkName);
+            this.SetParamSimple(map, prefix + "AuthStatus", this.AuthStatus);
+            this.SetParamSimple(map, prefix + "CommStatus", this.CommStatus);
+            this.SetParamSimple(map, prefix + "EvidenceStatus", this.EvidenceStatus);
+            this.SetParamSimple(map, prefix + "IsProducer", this.IsProducer);
+            this.SetParamSimple(map, prefix + "IsOverseas", this.IsOverseas);
         }
     }
 }

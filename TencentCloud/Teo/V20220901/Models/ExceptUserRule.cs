@@ -25,15 +25,13 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 规则名称。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 规则名称，不可使用中文。
         /// </summary>
         [JsonProperty("RuleName")]
         public string RuleName{ get; set; }
 
         /// <summary>
         /// 规则的处置方式，当前仅支持skip：跳过全部托管规则。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Action")]
         public string Action{ get; set; }
@@ -42,20 +40,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 规则生效状态，取值有：
         /// <li>on：生效；</li>
         /// <li>off：失效。</li>
-        /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("RuleStatus")]
         public string RuleStatus{ get; set; }
 
         /// <summary>
-        /// 规则ID。仅出参使用。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 规则ID。仅出参使用。默认由底层生成。
         /// </summary>
         [JsonProperty("RuleID")]
         public long? RuleID{ get; set; }
 
         /// <summary>
-        /// 更新时间。仅出参使用
+        /// 更新时间，如果为null，默认由底层按当前时间生成。
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("UpdateTime")]
@@ -76,8 +72,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public ExceptUserRuleScope ExceptUserRuleScope{ get; set; }
 
         /// <summary>
-        /// 优先级，取值范围0-100。
-        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// 优先级，取值范围0-100。如果为null，默认由底层设置为0。
         /// </summary>
         [JsonProperty("RulePriority")]
         public long? RulePriority{ get; set; }

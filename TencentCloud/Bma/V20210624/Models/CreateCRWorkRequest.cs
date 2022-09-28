@@ -198,6 +198,18 @@ namespace TencentCloud.Bma.V20210624.Models
         [JsonProperty("MonitorEndTime")]
         public string MonitorEndTime{ get; set; }
 
+        /// <summary>
+        /// 申请人ID
+        /// </summary>
+        [JsonProperty("ApplierId")]
+        public string ApplierId{ get; set; }
+
+        /// <summary>
+        /// 申请人姓名
+        /// </summary>
+        [JsonProperty("ApplierName")]
+        public string ApplierName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -233,6 +245,8 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
             this.SetParamSimple(map, prefix + "Content", this.Content);
             this.SetParamSimple(map, prefix + "MonitorEndTime", this.MonitorEndTime);
+            this.SetParamSimple(map, prefix + "ApplierId", this.ApplierId);
+            this.SetParamSimple(map, prefix + "ApplierName", this.ApplierName);
         }
     }
 }

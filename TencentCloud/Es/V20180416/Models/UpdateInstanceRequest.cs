@@ -216,6 +216,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("OperationDuration")]
         public OperationDurationUpdated OperationDuration{ get; set; }
 
+        /// <summary>
+        /// 是否开启Altering 外网告警输出
+        /// </summary>
+        [JsonProperty("KibanaAlteringPublicAccess")]
+        public string KibanaAlteringPublicAccess{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -253,6 +259,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "CerebroPrivateAccess", this.CerebroPrivateAccess);
             this.SetParamObj(map, prefix + "EsConfigSet.", this.EsConfigSet);
             this.SetParamObj(map, prefix + "OperationDuration.", this.OperationDuration);
+            this.SetParamSimple(map, prefix + "KibanaAlteringPublicAccess", this.KibanaAlteringPublicAccess);
         }
     }
 }

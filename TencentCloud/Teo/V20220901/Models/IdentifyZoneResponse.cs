@@ -25,10 +25,16 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 站点归属信息。
+        /// 站点归属校验：Dns校验信息。
         /// </summary>
         [JsonProperty("Ascription")]
         public AscriptionInfo Ascription{ get; set; }
+
+        /// <summary>
+        /// 站点归属权校验：文件校验信息。
+        /// </summary>
+        [JsonProperty("FileAscription")]
+        public FileAscriptionInfo FileAscription{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -43,6 +49,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamObj(map, prefix + "Ascription.", this.Ascription);
+            this.SetParamObj(map, prefix + "FileAscription.", this.FileAscription);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

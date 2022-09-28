@@ -78,8 +78,9 @@ namespace TencentCloud.Teo.V20220901.Models
 
         /// <summary>
         /// 部署状态，取值有：
-        /// <li>processing: 部署中;</li>
-        /// <li>deployed: 已部署。</li>
+        /// <li>processing: 部署中；</li>
+        /// <li>deployed: 已部署；</li>
+        /// <li>failed: 部署失败。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]
@@ -91,6 +92,13 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         [JsonProperty("Message")]
         public string Message{ get; set; }
+
+        /// <summary>
+        /// 证书算法。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SignAlgo")]
+        public string SignAlgo{ get; set; }
 
 
         /// <summary>
@@ -107,6 +115,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamArraySimple(map, prefix + "SubjectAltName.", this.SubjectAltName);
             this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "Message", this.Message);
+            this.SetParamSimple(map, prefix + "SignAlgo", this.SignAlgo);
         }
     }
 }

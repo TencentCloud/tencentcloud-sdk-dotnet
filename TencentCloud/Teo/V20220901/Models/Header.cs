@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// HTTP头部。
+        /// HTTP头部名称。
         /// </summary>
         [JsonProperty("Name")]
         public string Name{ get; set; }

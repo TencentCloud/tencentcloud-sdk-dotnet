@@ -255,7 +255,7 @@ namespace TencentCloud.Cwp.V20180228
         /// <summary>
         /// CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
         /// 支持预付费后付费创建
-        /// 后付费订单直接闯将成功
+        /// 后付费订单直接创建成功
         /// 预付费订单仅下单不支付,需要调用计费支付接口进行支付
         /// </summary>
         /// <param name="req"><see cref="CreateLicenseOrderRequest"/></param>
@@ -278,7 +278,7 @@ namespace TencentCloud.Cwp.V20180228
         /// <summary>
         /// CreateLicenseOrder 该接口可以创建专业版/旗舰版订单
         /// 支持预付费后付费创建
-        /// 后付费订单直接闯将成功
+        /// 后付费订单直接创建成功
         /// 预付费订单仅下单不支付,需要调用计费支付接口进行支付
         /// </summary>
         /// <param name="req"><see cref="CreateLicenseOrderRequest"/></param>
@@ -3410,46 +3410,6 @@ namespace TencentCloud.Cwp.V20180228
              {
                  var strResp = this.InternalRequestSync(req, "DescribeESAggregations");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeESAggregationsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取ES查询文档列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeESHitsRequest"/></param>
-        /// <returns><see cref="DescribeESHitsResponse"/></returns>
-        public async Task<DescribeESHitsResponse> DescribeESHits(DescribeESHitsRequest req)
-        {
-             JsonResponseModel<DescribeESHitsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeESHits");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeESHitsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 获取ES查询文档列表
-        /// </summary>
-        /// <param name="req"><see cref="DescribeESHitsRequest"/></param>
-        /// <returns><see cref="DescribeESHitsResponse"/></returns>
-        public DescribeESHitsResponse DescribeESHitsSync(DescribeESHitsRequest req)
-        {
-             JsonResponseModel<DescribeESHitsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeESHits");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeESHitsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

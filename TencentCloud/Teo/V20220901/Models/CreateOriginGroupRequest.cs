@@ -60,6 +60,12 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("OriginRecords")]
         public OriginRecord[] OriginRecords{ get; set; }
 
+        /// <summary>
+        /// 回源Host，仅当OriginType=self时可以设置。
+        /// </summary>
+        [JsonProperty("HostHeader")]
+        public string HostHeader{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -71,6 +77,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "OriginGroupName", this.OriginGroupName);
             this.SetParamSimple(map, prefix + "ConfigurationType", this.ConfigurationType);
             this.SetParamArrayObj(map, prefix + "OriginRecords.", this.OriginRecords);
+            this.SetParamSimple(map, prefix + "HostHeader", this.HostHeader);
         }
     }
 }

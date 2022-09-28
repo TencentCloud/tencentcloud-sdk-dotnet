@@ -31,6 +31,20 @@ namespace TencentCloud.Tke.V20180525.Models
         public string[] Versions{ get; set; }
 
         /// <summary>
+        /// 边缘集群最新版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EdgeVersionLatest")]
+        public string EdgeVersionLatest{ get; set; }
+
+        /// <summary>
+        /// 边缘集群当前版本
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("EdgeVersionCurrent")]
+        public string EdgeVersionCurrent{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +57,8 @@ namespace TencentCloud.Tke.V20180525.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArraySimple(map, prefix + "Versions.", this.Versions);
+            this.SetParamSimple(map, prefix + "EdgeVersionLatest", this.EdgeVersionLatest);
+            this.SetParamSimple(map, prefix + "EdgeVersionCurrent", this.EdgeVersionCurrent);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

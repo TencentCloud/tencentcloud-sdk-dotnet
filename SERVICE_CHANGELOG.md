@@ -1,132 +1,103 @@
 # 本版本更新包含以下内容：
 
-## 账号风控平台(ciam) 版本：2022-03-31
+## 边缘安全加速平台(teo) 版本：2022-09-01
 
-### 第 8 次发布
+### 第 2 次发布
 
-发布时间：2022-09-27 06:14:52
+发布时间：2022-09-28 19:21:32
 
 本次发布包含了以下内容：
 
 改善已有的文档。
 
+<font color="#dd0000">**删除接口**：</font>
+
+* DescribeHostCertificates
+
 修改接口：
 
-* [CreateUser](https://cloud.tencent.com/document/api/1441/75642)
+* [CreateLoadBalancing](https://cloud.tencent.com/document/api/1552/80599)
 
-	* 新增入参：IndexedAttribute1, IndexedAttribute2, IndexedAttribute3, IndexedAttribute4, IndexedAttribute5
+	* 新增入参：OriginType, AdvancedOriginGroups
 
-* [DescribeUser](https://cloud.tencent.com/document/api/1441/77525)
+* [CreateOriginGroup](https://cloud.tencent.com/document/api/1552/80598)
 
-	* 新增入参：Sort
+	* 新增入参：HostHeader
 
-* [UpdateUser](https://cloud.tencent.com/document/api/1441/75635)
+* [DeleteLogTopicTask](https://cloud.tencent.com/document/api/1552/80631)
 
-	* 新增入参：IndexedAttribute1, IndexedAttribute2, IndexedAttribute3, IndexedAttribute4, IndexedAttribute5
+	* <font color="#dd0000">**修改入参**：</font>LogSetRegion
+
+* [IdentifyZone](https://cloud.tencent.com/document/api/1552/80712)
+
+	* 新增出参：FileAscription
+
+* [ModifyLoadBalancing](https://cloud.tencent.com/document/api/1552/80763)
+
+	* 新增入参：OriginType, AdvancedOriginGroups
+
+* [ModifyOriginGroup](https://cloud.tencent.com/document/api/1552/80592)
+
+	* 新增入参：HostHeader
+
+* [ModifyZoneSetting](https://cloud.tencent.com/document/api/1552/80614)
+
+	* 新增入参：ClientIpCountry
 
 
 新增数据结构：
 
-* [Sort](https://cloud.tencent.com/document/api/1441/75643#Sort)
+* [AdvancedOriginGroup](https://cloud.tencent.com/document/api/1552/80721#AdvancedOriginGroup)
+* [ClientIpCountry](https://cloud.tencent.com/document/api/1552/80721#ClientIpCountry)
+* [FileAscriptionInfo](https://cloud.tencent.com/document/api/1552/80721#FileAscriptionInfo)
+* [OriginGroupCondition](https://cloud.tencent.com/document/api/1552/80721#OriginGroupCondition)
+* [PartialModule](https://cloud.tencent.com/document/api/1552/80721#PartialModule)
+* [SkipCondition](https://cloud.tencent.com/document/api/1552/80721#SkipCondition)
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* HostCertInfo
+* HostsCertificate
+* Sort
 
 修改数据结构：
 
-* [ImportUser](https://cloud.tencent.com/document/api/1441/75643#ImportUser)
+* [ClsLogTopicInfo](https://cloud.tencent.com/document/api/1552/80721#ClsLogTopicInfo)
 
-	* 新增成员：IndexedAttribute1, IndexedAttribute2, IndexedAttribute3, IndexedAttribute4, IndexedAttribute5
+	* 新增成员：LogSetType
 
-* [QueryUserFilter](https://cloud.tencent.com/document/api/1441/75643#QueryUserFilter)
+* [DefaultServerCertInfo](https://cloud.tencent.com/document/api/1552/80721#DefaultServerCertInfo)
 
-	* 新增成员：OperateLogic
+	* 新增成员：SignAlgo
 
-* [User](https://cloud.tencent.com/document/api/1441/75643#User)
+* [DetailHost](https://cloud.tencent.com/document/api/1552/80721#DetailHost)
 
-	* 新增成员：IndexedAttribute1, IndexedAttribute2, IndexedAttribute3, IndexedAttribute4, IndexedAttribute5
+	* 新增成员：ClientIpCountry
 
+* [ExceptUserRuleScope](https://cloud.tencent.com/document/api/1552/80721#ExceptUserRuleScope)
 
+	* 新增成员：Type, PartialModules, SkipConditions
 
+* [Identification](https://cloud.tencent.com/document/api/1552/80721#Identification)
 
-## 企业收付平台(cpdp) 版本：2019-08-20
+	* 新增成员：FileAscription
 
-### 第 86 次发布
+* [LoadBalancing](https://cloud.tencent.com/document/api/1552/80721#LoadBalancing)
 
-发布时间：2022-09-27 06:17:24
+	* 新增成员：OriginType, AdvancedOriginGroups
 
-本次发布包含了以下内容：
+* [OriginGroup](https://cloud.tencent.com/document/api/1552/80721#OriginGroup)
 
-改善已有的文档。
+	* 新增成员：HostHeader
 
-新增接口：
+* [ZoneSetting](https://cloud.tencent.com/document/api/1552/80721#ZoneSetting)
 
-* [QueryFinancialDataUrl](https://cloud.tencent.com/document/api/1122/81046)
-
-修改数据结构：
-
-* [PaymentOrderResult](https://cloud.tencent.com/document/api/1122/40683#PaymentOrderResult)
-
-	* 新增成员：ChannelOrderId
+	* 新增成员：ClientIpCountry
 
 
 
 
-## 流计算 Oceanus(oceanus) 版本：2019-04-22
-
-### 第 26 次发布
-
-发布时间：2022-09-27 06:36:12
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改数据结构：
-
-* [Cluster](https://cloud.tencent.com/document/api/849/52010#Cluster)
-
-	* 新增成员：IsNeedManageNode
-
-
-
-
-## 弹性微服务(tem) 版本：2021-07-01
-
-### 第 30 次发布
-
-发布时间：2022-09-27 06:45:31
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-新增接口：
-
-* [CreateApplicationService](https://cloud.tencent.com/document/api/1371/81051)
-* [DeleteApplicationService](https://cloud.tencent.com/document/api/1371/81050)
-* [DescribeApplicationServiceList](https://cloud.tencent.com/document/api/1371/81049)
-* [ModifyApplicationService](https://cloud.tencent.com/document/api/1371/81048)
-
-
-
-## 弹性微服务(tem) 版本：2020-12-21
-
-
-
-## 腾讯云微服务引擎(tse) 版本：2020-12-07
-
-### 第 27 次发布
-
-发布时间：2022-09-27 06:48:42
-
-本次发布包含了以下内容：
-
-改善已有的文档。
-
-修改接口：
-
-* [DescribeCloudNativeAPIGatewayNodes](https://cloud.tencent.com/document/api/1364/78800)
-
-	* 新增入参：GroupId
-
+## 边缘安全加速平台(teo) 版本：2022-01-06
 
 
 
@@ -7871,6 +7842,36 @@
 
 
 ## 品牌经营管家(bma) 版本：2021-06-24
+
+### 第 9 次发布
+
+发布时间：2022-09-28 06:10:28
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateCRBlock](https://cloud.tencent.com/document/api/1296/77824)
+
+	* 新增入参：EvidenceFileUrl, EvidenceValidStartDate, EvidenceValidEndDate
+
+* [CreateCRRight](https://cloud.tencent.com/document/api/1296/77822)
+
+	* 新增入参：EvidenceFileUrl, EvidenceValidStartDate, EvidenceValidEndDate
+
+* [CreateCRWork](https://cloud.tencent.com/document/api/1296/78029)
+
+	* 新增入参：ApplierId, ApplierName
+
+
+修改数据结构：
+
+* [MonitorTort](https://cloud.tencent.com/document/api/1296/78030#MonitorTort)
+
+	* 新增成员：TortSite, ICP, RightNote, ObtainType, BlockNote, WorkId, WorkName, AuthStatus, CommStatus, EvidenceStatus, IsProducer, IsOverseas
+
 
 ### 第 8 次发布
 
@@ -17466,7 +17467,7 @@
 
 新增数据结构：
 
-* [[Sort](https://cloud.tencent.com/document/api/1441/75643#Sort)](https://cloud.tencent.com/document/api/1441/75643#[Sort](https://cloud.tencent.com/document/api/1441/75643#Sort))
+* [Sort](https://cloud.tencent.com/document/api/1441/75643#Sort)
 
 修改数据结构：
 
@@ -23443,7 +23444,7 @@
 
 新增接口：
 
-* [[QueryFinancialDataUrl](https://cloud.tencent.com/document/api/1122/81046)](https://cloud.tencent.com/document/api/#/#)
+* [QueryFinancialDataUrl](https://cloud.tencent.com/document/api/1122/81046)
 
 修改数据结构：
 
@@ -27657,6 +27658,18 @@
 
 
 ## 主机安全(cwp) 版本：2018-02-28
+
+### 第 54 次发布
+
+发布时间：2022-09-28 06:22:44
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**删除接口**：</font>
+
+* DescribeESHits
 
 ### 第 53 次发布
 
@@ -37872,6 +37885,25 @@
 
 
 ## Elasticsearch Service(es) 版本：2018-04-16
+
+### 第 37 次发布
+
+发布时间：2022-09-28 06:30:23
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [UpdateInstance](https://cloud.tencent.com/document/api/845/30629)
+
+	* 新增入参：KibanaAlteringPublicAccess
+
+* [UpgradeInstance](https://cloud.tencent.com/document/api/845/36270)
+
+	* 新增入参：SkipCheckForceRestart
+
 
 ### 第 36 次发布
 
@@ -74474,6 +74506,29 @@
 
 ## 弹性微服务(tem) 版本：2021-07-01
 
+### 第 31 次发布
+
+发布时间：2022-09-28 06:54:52
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+新增数据结构：
+
+* [Tag](https://cloud.tencent.com/document/api/1371/60171#Tag)
+
+修改数据结构：
+
+* [NamespacePage](https://cloud.tencent.com/document/api/1371/60171#NamespacePage)
+
+	* 新增成员：Current
+
+* [TemNamespaceInfo](https://cloud.tencent.com/document/api/1371/60171#TemNamespaceInfo)
+
+	* 新增成员：AppId, Uin, SubAccountUin, ClusterId, Tags
+
+
 ### 第 30 次发布
 
 发布时间：2022-09-27 06:45:31
@@ -74484,10 +74539,10 @@
 
 新增接口：
 
-* [[CreateApplicationService](https://cloud.tencent.com/document/api/1371/81051)](https://cloud.tencent.com/document/api/#/#)
-* [[DeleteApplicationService](https://cloud.tencent.com/document/api/1371/81050)](https://cloud.tencent.com/document/api/#/#)
-* [[DescribeApplicationServiceList](https://cloud.tencent.com/document/api/1371/81049)](https://cloud.tencent.com/document/api/#/#)
-* [[ModifyApplicationService](https://cloud.tencent.com/document/api/1371/81048)](https://cloud.tencent.com/document/api/#/#)
+* [CreateApplicationService](https://cloud.tencent.com/document/api/1371/81051)
+* [DeleteApplicationService](https://cloud.tencent.com/document/api/1371/81050)
+* [DescribeApplicationServiceList](https://cloud.tencent.com/document/api/1371/81049)
+* [ModifyApplicationService](https://cloud.tencent.com/document/api/1371/81048)
 
 ### 第 29 次发布
 
@@ -75952,6 +76007,99 @@
 
 
 ## 边缘安全加速平台(teo) 版本：2022-09-01
+
+### 第 2 次发布
+
+发布时间：2022-09-28 19:21:32
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+<font color="#dd0000">**删除接口**：</font>
+
+* DescribeHostCertificates
+
+修改接口：
+
+* [CreateLoadBalancing](https://cloud.tencent.com/document/api/1552/80599)
+
+	* 新增入参：OriginType, AdvancedOriginGroups
+
+* [CreateOriginGroup](https://cloud.tencent.com/document/api/1552/80598)
+
+	* 新增入参：HostHeader
+
+* [DeleteLogTopicTask](https://cloud.tencent.com/document/api/1552/80631)
+
+	* <font color="#dd0000">**修改入参**：</font>LogSetRegion
+
+* [IdentifyZone](https://cloud.tencent.com/document/api/1552/80712)
+
+	* 新增出参：FileAscription
+
+* [ModifyLoadBalancing](https://cloud.tencent.com/document/api/1552/80763)
+
+	* 新增入参：OriginType, AdvancedOriginGroups
+
+* [ModifyOriginGroup](https://cloud.tencent.com/document/api/1552/80592)
+
+	* 新增入参：HostHeader
+
+* [ModifyZoneSetting](https://cloud.tencent.com/document/api/1552/80614)
+
+	* 新增入参：ClientIpCountry
+
+
+新增数据结构：
+
+* [[AdvancedOriginGroup](https://cloud.tencent.com/document/api/1552/80721#AdvancedOriginGroup)](https://cloud.tencent.com/document/api/1552/80721#[AdvancedOriginGroup](https://cloud.tencent.com/document/api/1552/80721#AdvancedOriginGroup))
+* [[ClientIpCountry](https://cloud.tencent.com/document/api/1552/80721#ClientIpCountry)](https://cloud.tencent.com/document/api/1552/80721#[ClientIpCountry](https://cloud.tencent.com/document/api/1552/80721#ClientIpCountry))
+* [[FileAscriptionInfo](https://cloud.tencent.com/document/api/1552/80721#FileAscriptionInfo)](https://cloud.tencent.com/document/api/1552/80721#[FileAscriptionInfo](https://cloud.tencent.com/document/api/1552/80721#FileAscriptionInfo))
+* [[OriginGroupCondition](https://cloud.tencent.com/document/api/1552/80721#OriginGroupCondition)](https://cloud.tencent.com/document/api/1552/80721#[OriginGroupCondition](https://cloud.tencent.com/document/api/1552/80721#OriginGroupCondition))
+* [[PartialModule](https://cloud.tencent.com/document/api/1552/80721#PartialModule)](https://cloud.tencent.com/document/api/1552/80721#[PartialModule](https://cloud.tencent.com/document/api/1552/80721#PartialModule))
+* [[SkipCondition](https://cloud.tencent.com/document/api/1552/80721#SkipCondition)](https://cloud.tencent.com/document/api/1552/80721#[SkipCondition](https://cloud.tencent.com/document/api/1552/80721#SkipCondition))
+
+<font color="#dd0000">**删除数据结构**：</font>
+
+* HostCertInfo
+* HostsCertificate
+* Sort
+
+修改数据结构：
+
+* [ClsLogTopicInfo](https://cloud.tencent.com/document/api/1552/80721#ClsLogTopicInfo)
+
+	* 新增成员：LogSetType
+
+* [DefaultServerCertInfo](https://cloud.tencent.com/document/api/1552/80721#DefaultServerCertInfo)
+
+	* 新增成员：SignAlgo
+
+* [DetailHost](https://cloud.tencent.com/document/api/1552/80721#DetailHost)
+
+	* 新增成员：ClientIpCountry
+
+* [ExceptUserRuleScope](https://cloud.tencent.com/document/api/1552/80721#ExceptUserRuleScope)
+
+	* 新增成员：Type, PartialModules, SkipConditions
+
+* [Identification](https://cloud.tencent.com/document/api/1552/80721#Identification)
+
+	* 新增成员：FileAscription
+
+* [LoadBalancing](https://cloud.tencent.com/document/api/1552/80721#LoadBalancing)
+
+	* 新增成员：OriginType, AdvancedOriginGroups
+
+* [OriginGroup](https://cloud.tencent.com/document/api/1552/80721#OriginGroup)
+
+	* 新增成员：HostHeader
+
+* [ZoneSetting](https://cloud.tencent.com/document/api/1552/80721#ZoneSetting)
+
+	* 新增成员：ClientIpCountry
+
 
 ### 第 1 次发布
 
@@ -78470,6 +78618,27 @@
 
 
 ## 容器服务(tke) 版本：2018-05-25
+
+### 第 123 次发布
+
+发布时间：2022-09-28 06:56:37
+
+本次发布包含了以下内容：
+
+改善已有的文档。
+
+修改接口：
+
+* [CreateTKEEdgeCluster](https://cloud.tencent.com/document/api/457/74868)
+
+	* 新增入参：EdgeVersion, RegistryPrefix
+
+* [DescribeAvailableTKEEdgeVersion](https://cloud.tencent.com/document/api/457/74863)
+
+	* 新增入参：ClusterId
+
+	* 新增出参：EdgeVersionLatest, EdgeVersionCurrent
+
 
 ### 第 122 次发布
 

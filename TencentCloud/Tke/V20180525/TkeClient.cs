@@ -2293,7 +2293,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 边缘计算支持的k8s版本
+        /// 边缘计算支持版本和k8s版本
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
         /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>
@@ -2313,7 +2313,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 边缘计算支持的k8s版本
+        /// 边缘计算支持版本和k8s版本
         /// </summary>
         /// <param name="req"><see cref="DescribeAvailableTKEEdgeVersionRequest"/></param>
         /// <returns><see cref="DescribeAvailableTKEEdgeVersionResponse"/></returns>

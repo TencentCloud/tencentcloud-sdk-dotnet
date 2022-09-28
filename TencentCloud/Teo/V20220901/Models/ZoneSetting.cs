@@ -150,6 +150,13 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Https")]
         public Https Https{ get; set; }
 
+        /// <summary>
+        /// 回源时是否携带客户端IP所属地域信息的配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ClientIpCountry")]
+        public ClientIpCountry ClientIpCountry{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +181,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamObj(map, prefix + "CachePrefresh.", this.CachePrefresh);
             this.SetParamObj(map, prefix + "Ipv6.", this.Ipv6);
             this.SetParamObj(map, prefix + "Https.", this.Https);
+            this.SetParamObj(map, prefix + "ClientIpCountry.", this.ClientIpCountry);
         }
     }
 }

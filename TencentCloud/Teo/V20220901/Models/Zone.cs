@@ -73,7 +73,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public bool? Paused{ get; set; }
 
         /// <summary>
-        /// 是否开启cname加速，取值有：
+        /// 是否开启 CNAME 加速，取值有：
         /// <li> enabled：开启；</li>
         /// <li> disabled：关闭。</li>
         /// </summary>
@@ -81,7 +81,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string CnameSpeedUp{ get; set; }
 
         /// <summary>
-        /// cname 接入状态，取值有：
+        /// CNAME 接入状态，取值有：
         /// <li> finished：站点已验证；</li>
         /// <li> pending：站点验证中。</li>
         /// </summary>

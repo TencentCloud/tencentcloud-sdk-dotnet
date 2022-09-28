@@ -24,12 +24,19 @@ namespace TencentCloud.Tke.V20180525.Models
     public class DescribeAvailableTKEEdgeVersionRequest : AbstractModel
     {
         
+        /// <summary>
+        /// 填写ClusterId获取当前集群各个组件版本和最新版本
+        /// </summary>
+        [JsonProperty("ClusterId")]
+        public string ClusterId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
         }
     }
 }

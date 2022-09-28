@@ -88,6 +88,21 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("UpdateTime")]
         public string UpdateTime{ get; set; }
 
+        /// <summary>
+        /// 回源类型，取值有：
+        /// <li>normal：主备回源；</li>
+        /// <li>advanced：高级回源配置。</li>
+        /// </summary>
+        [JsonProperty("OriginType")]
+        public string OriginType{ get; set; }
+
+        /// <summary>
+        /// 高级回源配置，当OriginType=advanced时有效。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AdvancedOriginGroups")]
+        public AdvancedOriginGroup[] AdvancedOriginGroups{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -104,6 +119,8 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "OriginGroupId", this.OriginGroupId);
             this.SetParamSimple(map, prefix + "BackupOriginGroupId", this.BackupOriginGroupId);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
+            this.SetParamSimple(map, prefix + "OriginType", this.OriginType);
+            this.SetParamArrayObj(map, prefix + "AdvancedOriginGroups.", this.AdvancedOriginGroups);
         }
     }
 }

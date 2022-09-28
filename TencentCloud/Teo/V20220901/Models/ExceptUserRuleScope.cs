@@ -25,11 +25,36 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 生效的模块。当前仅支持waf：托管规则。
+        /// 例外规则类型。其中complete模式代表全量数据进行例外，partial模式代表可选择指定模块指定字段进行例外，该字段取值有：
+        /// <li>complete：完全跳过模式；</li>
+        /// <li>partial：部分跳过模式。</li>
+        /// </summary>
+        [JsonProperty("Type")]
+        public string Type{ get; set; }
+
+        /// <summary>
+        /// 生效的模块，该字段取值有：
+        /// <li>waf：托管规则；</li>
+        /// <li>cc：速率限制规则；</li>
+        /// <li>bot：Bot防护。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Modules")]
         public string[] Modules{ get; set; }
+
+        /// <summary>
+        /// 跳过部分规则ID的例外规则详情。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PartialModules")]
+        public PartialModule[] PartialModules{ get; set; }
+
+        /// <summary>
+        /// 跳过具体字段不去扫描的例外规则详情。如果为null，默认使用历史配置。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("SkipConditions")]
+        public SkipCondition[] SkipConditions{ get; set; }
 
 
         /// <summary>
@@ -37,7 +62,10 @@ namespace TencentCloud.Teo.V20220901.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamArraySimple(map, prefix + "Modules.", this.Modules);
+            this.SetParamArrayObj(map, prefix + "PartialModules.", this.PartialModules);
+            this.SetParamArrayObj(map, prefix + "SkipConditions.", this.SkipConditions);
         }
     }
 }

@@ -31,7 +31,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public string TopicId{ get; set; }
 
         /// <summary>
-        /// 推送任务所属日志集地域。
+        /// 推送任务所属日志集地域，此字段仅用于CLS推送任务。
         /// </summary>
         [JsonProperty("LogSetRegion")]
         public string LogSetRegion{ get; set; }

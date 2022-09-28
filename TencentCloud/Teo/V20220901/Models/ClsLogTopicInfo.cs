@@ -108,6 +108,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Area")]
         public string Area{ get; set; }
 
+        /// <summary>
+        /// 推送任务类型，取值有：
+        /// <li>cls：推送到cls；</li>
+        /// <li>custom_endpoint：推送到自定义接口。</li>
+        /// </summary>
+        [JsonProperty("LogSetType")]
+        public string LogSetType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +135,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "LogSetRegion", this.LogSetRegion);
             this.SetParamSimple(map, prefix + "ZoneId", this.ZoneId);
             this.SetParamSimple(map, prefix + "Area", this.Area);
+            this.SetParamSimple(map, prefix + "LogSetType", this.LogSetType);
         }
     }
 }

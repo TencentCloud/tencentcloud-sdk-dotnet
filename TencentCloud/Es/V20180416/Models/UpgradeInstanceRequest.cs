@@ -66,6 +66,12 @@ namespace TencentCloud.Es.V20180416.Models
         [JsonProperty("CosBackup")]
         public bool? CosBackup{ get; set; }
 
+        /// <summary>
+        /// 滚动模式时，是否跳过检查，进行强制重启。默认值为false
+        /// </summary>
+        [JsonProperty("SkipCheckForceRestart")]
+        public bool? SkipCheckForceRestart{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -79,6 +85,7 @@ namespace TencentCloud.Es.V20180416.Models
             this.SetParamSimple(map, prefix + "BasicSecurityType", this.BasicSecurityType);
             this.SetParamSimple(map, prefix + "UpgradeMode", this.UpgradeMode);
             this.SetParamSimple(map, prefix + "CosBackup", this.CosBackup);
+            this.SetParamSimple(map, prefix + "SkipCheckForceRestart", this.SkipCheckForceRestart);
         }
     }
 }
