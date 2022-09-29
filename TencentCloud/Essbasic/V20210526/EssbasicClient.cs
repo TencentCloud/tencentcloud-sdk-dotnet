@@ -395,6 +395,46 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
+        /// 查询企业员工
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeEmployeesRequest"/></param>
+        /// <returns><see cref="ChannelDescribeEmployeesResponse"/></returns>
+        public async Task<ChannelDescribeEmployeesResponse> ChannelDescribeEmployees(ChannelDescribeEmployeesRequest req)
+        {
+             JsonResponseModel<ChannelDescribeEmployeesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ChannelDescribeEmployees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeEmployeesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询企业员工
+        /// </summary>
+        /// <param name="req"><see cref="ChannelDescribeEmployeesRequest"/></param>
+        /// <returns><see cref="ChannelDescribeEmployeesResponse"/></returns>
+        public ChannelDescribeEmployeesResponse ChannelDescribeEmployeesSync(ChannelDescribeEmployeesRequest req)
+        {
+             JsonResponseModel<ChannelDescribeEmployeesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ChannelDescribeEmployees");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ChannelDescribeEmployeesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 渠道版查询转换任务状态
         /// </summary>
         /// <param name="req"><see cref="ChannelGetTaskResultApiRequest"/></param>
@@ -475,8 +515,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 【描述】：创建出证报告，返回报告 URL
-        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+        /// 创建出证报告，返回报告 URL。此接口暂为开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
@@ -496,8 +535,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 【描述】：创建出证报告，返回报告 URL
-        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+        /// 创建出证报告，返回报告 URL。此接口暂为开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>

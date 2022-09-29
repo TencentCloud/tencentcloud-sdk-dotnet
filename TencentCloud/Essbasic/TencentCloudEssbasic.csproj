@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{B9887456-D090-35D3-9EFC-3D27B86D0C97}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.612</VersionPrefix>
+    <VersionPrefix>3.0.613</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -65,6 +65,8 @@
     <Compile Include="V20210526\Models\ChannelCreateFlowSignReviewResponse.cs" />
     <Compile Include="V20210526\Models\ChannelCreateMultiFlowSignQRCodeRequest.cs" />
     <Compile Include="V20210526\Models\ChannelCreateMultiFlowSignQRCodeResponse.cs" />
+    <Compile Include="V20210526\Models\ChannelDescribeEmployeesRequest.cs" />
+    <Compile Include="V20210526\Models\ChannelDescribeEmployeesResponse.cs" />
     <Compile Include="V20210526\Models\ChannelGetTaskResultApiRequest.cs" />
     <Compile Include="V20210526\Models\ChannelGetTaskResultApiResponse.cs" />
     <Compile Include="V20210526\Models\ChannelVerifyPdfRequest.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="V20210526\Models\CreateSealByImageResponse.cs" />
     <Compile Include="V20210526\Models\CreateSignUrlsRequest.cs" />
     <Compile Include="V20210526\Models\CreateSignUrlsResponse.cs" />
+    <Compile Include="V20210526\Models\Department.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoRequest.cs" />
     <Compile Include="V20210526\Models\DescribeFlowDetailInfoResponse.cs" />
     <Compile Include="V20210526\Models\DescribeResourceUrlsByFlowsRequest.cs" />
@@ -89,6 +92,7 @@
     <Compile Include="V20210526\Models\DescribeUsageRequest.cs" />
     <Compile Include="V20210526\Models\DescribeUsageResponse.cs" />
     <Compile Include="V20210526\Models\DownloadFlowInfo.cs" />
+    <Compile Include="V20210526\Models\Filter.cs" />
     <Compile Include="V20210526\Models\FlowApproverDetail.cs" />
     <Compile Include="V20210526\Models\FlowApproverInfo.cs" />
     <Compile Include="V20210526\Models\FlowDetailInfo.cs" />
@@ -110,6 +114,8 @@
     <Compile Include="V20210526\Models\SignQrCode.cs" />
     <Compile Include="V20210526\Models\SignUrl.cs" />
     <Compile Include="V20210526\Models\SignUrlInfo.cs" />
+    <Compile Include="V20210526\Models\Staff.cs" />
+    <Compile Include="V20210526\Models\StaffRole.cs" />
     <Compile Include="V20210526\Models\SyncFailReason.cs" />
     <Compile Include="V20210526\Models\SyncProxyOrganizationOperatorsRequest.cs" />
     <Compile Include="V20210526\Models\SyncProxyOrganizationOperatorsResponse.cs" />

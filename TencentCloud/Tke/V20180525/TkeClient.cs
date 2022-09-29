@@ -373,7 +373,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// 创建集群访问端口
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 创建集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// 创建集群访问端口
         /// </summary>
         /// <param name="req"><see cref="CreateClusterEndpointRequest"/></param>
         /// <returns><see cref="CreateClusterEndpointResponse"/></returns>
@@ -1373,7 +1373,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// 删除集群访问端口
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterEndpointRequest"/></param>
         /// <returns><see cref="DeleteClusterEndpointResponse"/></returns>
@@ -1393,7 +1393,7 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
-        /// 删除集群访问端口(独立集群开启内网/外网访问，托管集群支持开启内网访问)
+        /// 删除集群访问端口
         /// </summary>
         /// <param name="req"><see cref="DeleteClusterEndpointRequest"/></param>
         /// <returns><see cref="DeleteClusterEndpointResponse"/></returns>

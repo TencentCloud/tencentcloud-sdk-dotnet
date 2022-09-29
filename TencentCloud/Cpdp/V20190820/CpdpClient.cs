@@ -413,7 +413,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付结算申请接口
+        /// 云企付-结算申请接口
         /// </summary>
         /// <param name="req"><see cref="ApplyOpenBankSettleOrderRequest"/></param>
         /// <returns><see cref="ApplyOpenBankSettleOrderResponse"/></returns>
@@ -433,7 +433,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付结算申请接口
+        /// 云企付-结算申请接口
         /// </summary>
         /// <param name="req"><see cref="ApplyOpenBankSettleOrderRequest"/></param>
         /// <returns><see cref="ApplyOpenBankSettleOrderResponse"/></returns>
@@ -6195,7 +6195,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付结算单查询结果
+        /// 云企付-结算单查询结果
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankSettleOrderRequest"/></param>
         /// <returns><see cref="QueryOpenBankSettleOrderResponse"/></returns>
@@ -6215,7 +6215,7 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
-        /// 云企付结算单查询结果
+        /// 云企付-结算单查询结果
         /// </summary>
         /// <param name="req"><see cref="QueryOpenBankSettleOrderRequest"/></param>
         /// <returns><see cref="QueryOpenBankSettleOrderResponse"/></returns>

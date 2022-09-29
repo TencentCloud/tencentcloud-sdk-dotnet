@@ -37,7 +37,7 @@ namespace TencentCloud.As.V20180419.Models
         public string[] LoadBalancerIds{ get; set; }
 
         /// <summary>
-        /// 应用型负载均衡器标识信息列表，列表长度上限为50，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
+        /// 应用型负载均衡器标识信息列表，列表长度上限为100，LoadBalancerIds 和 ForwardLoadBalancerIdentifications二者同时最多只能指定一个
         /// </summary>
         [JsonProperty("ForwardLoadBalancerIdentifications")]
         public ForwardLoadBalancerIdentification[] ForwardLoadBalancerIdentifications{ get; set; }

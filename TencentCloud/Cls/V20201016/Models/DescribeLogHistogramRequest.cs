@@ -49,7 +49,7 @@ namespace TencentCloud.Cls.V20201016.Models
         public string Query{ get; set; }
 
         /// <summary>
-        /// 时间间隔: 单位ms
+        /// 时间间隔: 单位ms  限制性条件：(To-From) / interval <= 200
         /// </summary>
         [JsonProperty("Interval")]
         public long? Interval{ get; set; }

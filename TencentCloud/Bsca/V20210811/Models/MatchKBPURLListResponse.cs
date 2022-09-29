@@ -31,6 +31,12 @@ namespace TencentCloud.Bsca.V20210811.Models
         public PURL[] PURLList{ get; set; }
 
         /// <summary>
+        /// 是否命中数据库。
+        /// </summary>
+        [JsonProperty("Hit")]
+        public bool? Hit{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -43,6 +49,7 @@ namespace TencentCloud.Bsca.V20210811.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamArrayObj(map, prefix + "PURLList.", this.PURLList);
+            this.SetParamSimple(map, prefix + "Hit", this.Hit);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

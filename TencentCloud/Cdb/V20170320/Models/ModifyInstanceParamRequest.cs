@@ -48,6 +48,18 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("WaitSwitch")]
         public long? WaitSwitch{ get; set; }
 
+        /// <summary>
+        /// 参数是否同步到主实例下的只读实例。true 为不同步，false 为同步。默认为 false。
+        /// </summary>
+        [JsonProperty("NotSyncRo")]
+        public bool? NotSyncRo{ get; set; }
+
+        /// <summary>
+        /// 参数是否同步到主实例下的灾备实例。true 为不同步，false 为同步。默认为 false。
+        /// </summary>
+        [JsonProperty("NotSyncDr")]
+        public bool? NotSyncDr{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +70,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamArrayObj(map, prefix + "ParamList.", this.ParamList);
             this.SetParamSimple(map, prefix + "TemplateId", this.TemplateId);
             this.SetParamSimple(map, prefix + "WaitSwitch", this.WaitSwitch);
+            this.SetParamSimple(map, prefix + "NotSyncRo", this.NotSyncRo);
+            this.SetParamSimple(map, prefix + "NotSyncDr", this.NotSyncDr);
         }
     }
 }
