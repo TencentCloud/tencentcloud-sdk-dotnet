@@ -53,6 +53,13 @@ namespace TencentCloud.Tione.V20211111.Models
         public FilterLabelInfo[] FilterLabelList{ get; set; }
 
         /// <summary>
+        /// 数据文本行，默认返回前1000行
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RowTexts")]
+        public string[] RowTexts{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -68,6 +75,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "NonAnnotatedTotalCount", this.NonAnnotatedTotalCount);
             this.SetParamSimple(map, prefix + "FilterTotalCount", this.FilterTotalCount);
             this.SetParamArrayObj(map, prefix + "FilterLabelList.", this.FilterLabelList);
+            this.SetParamArraySimple(map, prefix + "RowTexts.", this.RowTexts);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

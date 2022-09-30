@@ -50,6 +50,13 @@ namespace TencentCloud.Bpaas.V20181217.Models
         [JsonProperty("Nick")]
         public string Nick{ get; set; }
 
+        /// <summary>
+        /// 动态获取Scf
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Scf")]
+        public Scf Scf{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +67,7 @@ namespace TencentCloud.Bpaas.V20181217.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "Desc", this.Desc);
             this.SetParamSimple(map, prefix + "Nick", this.Nick);
+            this.SetParamObj(map, prefix + "Scf.", this.Scf);
         }
     }
 }

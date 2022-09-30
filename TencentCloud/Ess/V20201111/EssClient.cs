@@ -403,8 +403,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 【描述】：创建出证报告，返回报告 URL
-        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateFlowEvidenceReportResponse"/></returns>
@@ -424,8 +423,7 @@ namespace TencentCloud.Ess.V20201111
         }
 
         /// <summary>
-        /// 【描述】：创建出证报告，返回报告 URL
-        /// 【注意】：此接口需要通过添加白名单获取调用权限，请联系运营人员加白
+        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateFlowEvidenceReportResponse"/></returns>

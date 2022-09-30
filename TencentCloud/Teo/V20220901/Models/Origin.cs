@@ -42,14 +42,16 @@ namespace TencentCloud.Teo.V20220901.Models
         /// 回源协议配置，取值有：
         /// <li>http：强制 http 回源；</li>
         /// <li>follow：协议跟随回源；</li>
-        /// <li>https：强制 https 回源，https 回源时仅支持源站 443 端口。</li>
+        /// <li>https：强制 https 回源。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("OriginPullProtocol")]
         public string OriginPullProtocol{ get; set; }
 
         /// <summary>
-        /// OriginType 为对象存储（COS）时，可以指定是否允许访问私有 bucket。
+        /// 源站为腾讯云COS时，是否为私有访问bucket，取值有：
+        /// <li>on：私有访问；</li>
+        /// <li>off：公共访问。</li>
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("CosPrivateAccess")]

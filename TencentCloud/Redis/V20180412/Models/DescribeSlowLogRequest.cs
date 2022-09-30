@@ -25,40 +25,46 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例Id
+        /// 实例Id。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间。
         /// </summary>
         [JsonProperty("BeginTime")]
         public string BeginTime{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间。
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }
 
         /// <summary>
-        /// 慢查询阈值（单位：微秒）
+        /// 慢查询平均执行时间阈值（单位：微秒）。
         /// </summary>
         [JsonProperty("MinQueryTime")]
         public long? MinQueryTime{ get; set; }
 
         /// <summary>
-        /// 页面大小
+        /// 每个页面展示的慢查询条数，默认值为20。
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
 
         /// <summary>
-        /// 偏移量，取Limit整数倍
+        /// 慢查询条数的偏移量，取Limit整数倍。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }
+
+        /// <summary>
+        /// 节点所属角色。<ul><li>master：主节点。</li><li>slave：从节点。</li></ul>
+        /// </summary>
+        [JsonProperty("Role")]
+        public string Role{ get; set; }
 
 
         /// <summary>
@@ -72,6 +78,7 @@ namespace TencentCloud.Redis.V20180412.Models
             this.SetParamSimple(map, prefix + "MinQueryTime", this.MinQueryTime);
             this.SetParamSimple(map, prefix + "Limit", this.Limit);
             this.SetParamSimple(map, prefix + "Offset", this.Offset);
+            this.SetParamSimple(map, prefix + "Role", this.Role);
         }
     }
 }

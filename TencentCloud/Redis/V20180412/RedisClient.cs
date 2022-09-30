@@ -1933,7 +1933,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例慢查询记录
+        /// 本接口（DescribeSlowLog）查询实例慢查询记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
         /// <returns><see cref="DescribeSlowLogResponse"/></returns>
@@ -1953,7 +1953,7 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
-        /// 查询实例慢查询记录
+        /// 本接口（DescribeSlowLog）查询实例慢查询记录。
         /// </summary>
         /// <param name="req"><see cref="DescribeSlowLogRequest"/></param>
         /// <returns><see cref="DescribeSlowLogResponse"/></returns>

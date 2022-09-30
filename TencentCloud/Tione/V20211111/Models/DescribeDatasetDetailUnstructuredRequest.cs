@@ -64,6 +64,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("DatasetIds")]
         public string[] DatasetIds{ get; set; }
 
+        /// <summary>
+        /// 要筛选的文本分类场景标签信息
+        /// </summary>
+        [JsonProperty("TextClassificationLabels")]
+        public TextLabelDistributionInfo[] TextClassificationLabels{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -76,6 +82,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamArraySimple(map, prefix + "LabelList.", this.LabelList);
             this.SetParamSimple(map, prefix + "AnnotationStatus", this.AnnotationStatus);
             this.SetParamArraySimple(map, prefix + "DatasetIds.", this.DatasetIds);
+            this.SetParamArrayObj(map, prefix + "TextClassificationLabels.", this.TextClassificationLabels);
         }
     }
 }

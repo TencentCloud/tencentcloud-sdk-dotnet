@@ -515,7 +515,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建出证报告，返回报告 URL。此接口暂为开放，有问题请联系运营人员。
+        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
@@ -535,7 +535,7 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建出证报告，返回报告 URL。此接口暂为开放，有问题请联系运营人员。
+        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
         /// </summary>
         /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
         /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>

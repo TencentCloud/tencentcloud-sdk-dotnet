@@ -114,6 +114,34 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("OcrLabels")]
         public OcrLabelInfo[] OcrLabels{ get; set; }
 
+        /// <summary>
+        /// OCR场景标签信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OcrLabelInfo")]
+        public string OcrLabelInfo{ get; set; }
+
+        /// <summary>
+        /// 文本分类场景标签结果，内容是json结构
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TextClassificationLabelList")]
+        public string TextClassificationLabelList{ get; set; }
+
+        /// <summary>
+        /// 文本内容，返回50字符
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RowText")]
+        public string RowText{ get; set; }
+
+        /// <summary>
+        /// 文本内容是否完全返回
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ContentOmit")]
+        public bool? ContentOmit{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -133,6 +161,10 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "DownloadRGBUrl", this.DownloadRGBUrl);
             this.SetParamSimple(map, prefix + "OcrScene", this.OcrScene);
             this.SetParamArrayObj(map, prefix + "OcrLabels.", this.OcrLabels);
+            this.SetParamSimple(map, prefix + "OcrLabelInfo", this.OcrLabelInfo);
+            this.SetParamSimple(map, prefix + "TextClassificationLabelList", this.TextClassificationLabelList);
+            this.SetParamSimple(map, prefix + "RowText", this.RowText);
+            this.SetParamSimple(map, prefix + "ContentOmit", this.ContentOmit);
         }
     }
 }

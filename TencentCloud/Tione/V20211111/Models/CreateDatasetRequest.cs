@@ -98,6 +98,12 @@ namespace TencentCloud.Tione.V20211111.Models
         [JsonProperty("IsSchemaExisted")]
         public bool? IsSchemaExisted{ get; set; }
 
+        /// <summary>
+        /// 导入文件粒度，按行或者按文件
+        /// </summary>
+        [JsonProperty("ContentType")]
+        public string ContentType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Tione.V20211111.Models
             this.SetParamSimple(map, prefix + "AnnotationFormat", this.AnnotationFormat);
             this.SetParamArrayObj(map, prefix + "SchemaInfos.", this.SchemaInfos);
             this.SetParamSimple(map, prefix + "IsSchemaExisted", this.IsSchemaExisted);
+            this.SetParamSimple(map, prefix + "ContentType", this.ContentType);
         }
     }
 }

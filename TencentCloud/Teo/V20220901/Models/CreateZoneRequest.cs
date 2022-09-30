@@ -50,6 +50,14 @@ namespace TencentCloud.Teo.V20220901.Models
         [JsonProperty("Tags")]
         public Tag[] Tags{ get; set; }
 
+        /// <summary>
+        /// 是否允许重复接入。
+        /// <li> true：允许重复接入；</li>
+        /// <li> false：不允许重复接入。</li>不填写使用默认值false。
+        /// </summary>
+        [JsonProperty("AllowDuplicates")]
+        public bool? AllowDuplicates{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +68,7 @@ namespace TencentCloud.Teo.V20220901.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "JumpStart", this.JumpStart);
             this.SetParamArrayObj(map, prefix + "Tags.", this.Tags);
+            this.SetParamSimple(map, prefix + "AllowDuplicates", this.AllowDuplicates);
         }
     }
 }
