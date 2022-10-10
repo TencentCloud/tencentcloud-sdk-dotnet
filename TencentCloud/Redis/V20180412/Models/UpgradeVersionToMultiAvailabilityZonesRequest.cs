@@ -25,13 +25,14 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 实例ID
+        /// 实例ID。
         /// </summary>
         [JsonProperty("InstanceId")]
         public string InstanceId{ get; set; }
 
         /// <summary>
-        /// 是否升级proxy和redis内核版本，升级后可支持就近接入
+        /// 升级多可用区之后是否支持就近访问功能。
+        /// <ul><li>true：支持就近访问功能。升级过程，需同时升级 Proxy 版本和 Redis 内核小版本，涉及数据搬迁，可能会长达数小时。</li><li>false：无需支持就近访问功能。升级多可用区仅涉及管理元数据迁移，对服务没有影响，升级过程通常在3分钟内完成。</li></ul>
         /// </summary>
         [JsonProperty("UpgradeProxyAndRedisServer")]
         public bool? UpgradeProxyAndRedisServer{ get; set; }

@@ -413,6 +413,46 @@ namespace TencentCloud.Redis.V20180412
         }
 
         /// <summary>
+        /// 关闭SSL
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public async Task<CloseSSLResponse> CloseSSL(CloseSSLRequest req)
+        {
+             JsonResponseModel<CloseSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CloseSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseSSLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 关闭SSL
+        /// </summary>
+        /// <param name="req"><see cref="CloseSSLRequest"/></param>
+        /// <returns><see cref="CloseSSLResponse"/></returns>
+        public CloseSSLResponse CloseSSLSync(CloseSSLRequest req)
+        {
+             JsonResponseModel<CloseSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CloseSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CloseSSLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建实例子账号
         /// </summary>
         /// <param name="req"><see cref="CreateInstanceAccountRequest"/></param>
@@ -2924,6 +2964,46 @@ namespace TencentCloud.Redis.V20180412
              {
                  var strResp = this.InternalRequestSync(req, "ModifyParamTemplate");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyParamTemplateResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启SSL
+        /// </summary>
+        /// <param name="req"><see cref="OpenSSLRequest"/></param>
+        /// <returns><see cref="OpenSSLResponse"/></returns>
+        public async Task<OpenSSLResponse> OpenSSL(OpenSSLRequest req)
+        {
+             JsonResponseModel<OpenSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "OpenSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenSSLResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 开启SSL
+        /// </summary>
+        /// <param name="req"><see cref="OpenSSLRequest"/></param>
+        /// <returns><see cref="OpenSSLResponse"/></returns>
+        public OpenSSLResponse OpenSSLSync(OpenSSLRequest req)
+        {
+             JsonResponseModel<OpenSSLResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "OpenSSL");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<OpenSSLResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

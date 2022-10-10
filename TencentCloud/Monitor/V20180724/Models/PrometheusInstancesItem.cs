@@ -259,6 +259,13 @@ namespace TencentCloud.Monitor.V20180724.Models
         [JsonProperty("RecordingRuleLimit")]
         public long? RecordingRuleLimit{ get; set; }
 
+        /// <summary>
+        /// 迁移状态，0-不在迁移中，1-迁移中、原实例，2-迁移中、目标实例
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("MigrationType")]
+        public long? MigrationType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -294,6 +301,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamSimple(map, prefix + "GrafanaInstanceId", this.GrafanaInstanceId);
             this.SetParamSimple(map, prefix + "AlertRuleLimit", this.AlertRuleLimit);
             this.SetParamSimple(map, prefix + "RecordingRuleLimit", this.RecordingRuleLimit);
+            this.SetParamSimple(map, prefix + "MigrationType", this.MigrationType);
         }
     }
 }

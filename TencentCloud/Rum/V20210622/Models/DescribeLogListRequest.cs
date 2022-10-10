@@ -25,31 +25,31 @@ namespace TencentCloud.Rum.V20210622.Models
     {
         
         /// <summary>
-        /// 排序方式  desc  asc
+        /// 排序方式  desc  asc（必填）
         /// </summary>
         [JsonProperty("Sort")]
         public string Sort{ get; set; }
 
         /// <summary>
-        /// searchlog  histogram
+        /// searchlog  histogram（必填）
         /// </summary>
         [JsonProperty("ActionType")]
         public string ActionType{ get; set; }
 
         /// <summary>
-        /// 项目ID
+        /// 项目ID（必填）
         /// </summary>
         [JsonProperty("ID")]
         public long? ID{ get; set; }
 
         /// <summary>
-        /// 开始时间
+        /// 开始时间（必填）
         /// </summary>
         [JsonProperty("StartTime")]
         public string StartTime{ get; set; }
 
         /// <summary>
-        /// 单次查询返回的原始日志条数，最大值为100
+        /// 单次查询返回的原始日志条数，最大值为100（必填）
         /// </summary>
         [JsonProperty("Limit")]
         public long? Limit{ get; set; }
@@ -61,13 +61,13 @@ namespace TencentCloud.Rum.V20210622.Models
         public string Context{ get; set; }
 
         /// <summary>
-        /// 查询语句，参考控制台请求参数，语句长度最大为4096
+        /// 查询语句，参考控制台请求参数，语句长度最大为4096（必填）
         /// </summary>
         [JsonProperty("Query")]
         public string Query{ get; set; }
 
         /// <summary>
-        /// 结束时间
+        /// 结束时间（必填）
         /// </summary>
         [JsonProperty("EndTime")]
         public string EndTime{ get; set; }

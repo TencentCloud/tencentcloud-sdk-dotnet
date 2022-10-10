@@ -3493,6 +3493,46 @@ namespace TencentCloud.Tke.V20180525
         }
 
         /// <summary>
+        /// 可以查询边缘集群升级信息，包含可以升级的组件，当前升级状态和升级错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterUpgradeInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterUpgradeInfoResponse"/></returns>
+        public async Task<DescribeEdgeClusterUpgradeInfoResponse> DescribeEdgeClusterUpgradeInfo(DescribeEdgeClusterUpgradeInfoRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeEdgeClusterUpgradeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 可以查询边缘集群升级信息，包含可以升级的组件，当前升级状态和升级错误信息
+        /// </summary>
+        /// <param name="req"><see cref="DescribeEdgeClusterUpgradeInfoRequest"/></param>
+        /// <returns><see cref="DescribeEdgeClusterUpgradeInfoResponse"/></returns>
+        public DescribeEdgeClusterUpgradeInfoResponse DescribeEdgeClusterUpgradeInfoSync(DescribeEdgeClusterUpgradeInfoRequest req)
+        {
+             JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeEdgeClusterUpgradeInfo");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeEdgeClusterUpgradeInfoResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取事件、审计和日志的状态接口
         /// </summary>
         /// <param name="req"><see cref="DescribeEdgeLogSwitchesRequest"/></param>
@@ -6724,6 +6764,46 @@ namespace TencentCloud.Tke.V20180525
              {
                  var strResp = this.InternalRequestSync(req, "UpdateEKSContainerInstance");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEKSContainerInstanceResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级边缘集群组件到指定版本，此版本为TKEEdge专用版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEdgeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateEdgeClusterVersionResponse"/></returns>
+        public async Task<UpdateEdgeClusterVersionResponse> UpdateEdgeClusterVersion(UpdateEdgeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEdgeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEdgeClusterVersionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 升级边缘集群组件到指定版本，此版本为TKEEdge专用版本。
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEdgeClusterVersionRequest"/></param>
+        /// <returns><see cref="UpdateEdgeClusterVersionResponse"/></returns>
+        public UpdateEdgeClusterVersionResponse UpdateEdgeClusterVersionSync(UpdateEdgeClusterVersionRequest req)
+        {
+             JsonResponseModel<UpdateEdgeClusterVersionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEdgeClusterVersion");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEdgeClusterVersionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

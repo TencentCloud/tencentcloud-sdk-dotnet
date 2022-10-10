@@ -62,10 +62,22 @@ namespace TencentCloud.Captcha.V20190722.Models
         public long? CaptchaCode{ get; set; }
 
         /// <summary>
-        /// 票据校验量
+        /// 票据校验总量
         /// </summary>
         [JsonProperty("CheckTicketSum")]
         public long? CheckTicketSum{ get; set; }
+
+        /// <summary>
+        /// 票据验证通过量
+        /// </summary>
+        [JsonProperty("TicketThroughputSum")]
+        public long? TicketThroughputSum{ get; set; }
+
+        /// <summary>
+        /// 票据验证拦截量
+        /// </summary>
+        [JsonProperty("TicketInterceptSum")]
+        public long? TicketInterceptSum{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -86,6 +98,8 @@ namespace TencentCloud.Captcha.V20190722.Models
             this.SetParamSimple(map, prefix + "CaptchaMsg", this.CaptchaMsg);
             this.SetParamSimple(map, prefix + "CaptchaCode", this.CaptchaCode);
             this.SetParamSimple(map, prefix + "CheckTicketSum", this.CheckTicketSum);
+            this.SetParamSimple(map, prefix + "TicketThroughputSum", this.TicketThroughputSum);
+            this.SetParamSimple(map, prefix + "TicketInterceptSum", this.TicketInterceptSum);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

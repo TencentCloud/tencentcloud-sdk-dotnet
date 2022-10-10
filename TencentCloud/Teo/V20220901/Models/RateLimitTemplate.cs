@@ -31,10 +31,18 @@ namespace TencentCloud.Teo.V20220901.Models
         /// <li>emergency：紧急；</li>
         /// <li>normal：适中；</li>
         /// <li>strict：严格；</li>
-        /// <li>close：关闭 - 仅精准速率限制生效。</li>
+        /// <li>close：关闭，仅精准速率限制生效。</li>
         /// </summary>
         [JsonProperty("Mode")]
         public string Mode{ get; set; }
+
+        /// <summary>
+        /// 模板处置方式，取值有：
+        /// <li>alg：JavaScript挑战；</li>
+        /// <li>monitor：观察。</li>不填写默认取alg。
+        /// </summary>
+        [JsonProperty("Action")]
+        public string Action{ get; set; }
 
         /// <summary>
         /// 模板值详情。仅出参返回。
@@ -49,6 +57,7 @@ namespace TencentCloud.Teo.V20220901.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Mode", this.Mode);
+            this.SetParamSimple(map, prefix + "Action", this.Action);
             this.SetParamObj(map, prefix + "RateLimitTemplateDetail.", this.RateLimitTemplateDetail);
         }
     }

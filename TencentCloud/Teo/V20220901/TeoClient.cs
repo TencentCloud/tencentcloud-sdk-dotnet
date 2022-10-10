@@ -93,6 +93,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 创建别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
+        /// <returns><see cref="CreateAliasDomainResponse"/></returns>
+        public async Task<CreateAliasDomainResponse> CreateAliasDomain(CreateAliasDomainRequest req)
+        {
+             JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="CreateAliasDomainRequest"/></param>
+        /// <returns><see cref="CreateAliasDomainResponse"/></returns>
+        public CreateAliasDomainResponse CreateAliasDomainSync(CreateAliasDomainRequest req)
+        {
+             JsonResponseModel<CreateAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建应用代理
         /// </summary>
         /// <param name="req"><see cref="CreateApplicationProxyRequest"/></param>
@@ -813,6 +853,46 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 删除别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
+        /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
+        public async Task<DeleteAliasDomainResponse> DeleteAliasDomain(DeleteAliasDomainRequest req)
+        {
+             JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="DeleteAliasDomainRequest"/></param>
+        /// <returns><see cref="DeleteAliasDomainResponse"/></returns>
+        public DeleteAliasDomainResponse DeleteAliasDomainSync(DeleteAliasDomainRequest req)
+        {
+             JsonResponseModel<DeleteAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 删除应用代理
         /// </summary>
         /// <param name="req"><see cref="DeleteApplicationProxyRequest"/></param>
@@ -1164,6 +1244,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "DescribeAddableEntityList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAddableEntityListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询别称域名信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
+        public async Task<DescribeAliasDomainsResponse> DescribeAliasDomains(DescribeAliasDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAliasDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAliasDomainsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询别称域名信息列表。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAliasDomainsRequest"/></param>
+        /// <returns><see cref="DescribeAliasDomainsResponse"/></returns>
+        public DescribeAliasDomainsResponse DescribeAliasDomainsSync(DescribeAliasDomainsRequest req)
+        {
+             JsonResponseModel<DescribeAliasDomainsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAliasDomains");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAliasDomainsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -3853,6 +3973,86 @@ namespace TencentCloud.Teo.V20220901
         }
 
         /// <summary>
+        /// 修改别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
+        public async Task<ModifyAliasDomainResponse> ModifyAliasDomain(ModifyAliasDomainRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改别称域名。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainResponse"/></returns>
+        public ModifyAliasDomainResponse ModifyAliasDomainSync(ModifyAliasDomainRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改别称域名状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
+        public async Task<ModifyAliasDomainStatusResponse> ModifyAliasDomainStatus(ModifyAliasDomainStatusRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyAliasDomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改别称域名状态。
+        /// </summary>
+        /// <param name="req"><see cref="ModifyAliasDomainStatusRequest"/></param>
+        /// <returns><see cref="ModifyAliasDomainStatusResponse"/></returns>
+        public ModifyAliasDomainStatusResponse ModifyAliasDomainStatusSync(ModifyAliasDomainStatusRequest req)
+        {
+             JsonResponseModel<ModifyAliasDomainStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyAliasDomainStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyAliasDomainStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 修改应用代理
         /// </summary>
         /// <param name="req"><see cref="ModifyApplicationProxyRequest"/></param>
@@ -4724,6 +4924,46 @@ namespace TencentCloud.Teo.V20220901
              {
                  var strResp = this.InternalRequestSync(req, "ModifyZoneStatus");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyZoneStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当客户取回站定的同时会取回此站点下关联的别称域名，此时入参为ZoneId；当客户接入站点发现已被别称域名接入时通过验证之后可取回域名，此时入参为ZoneName。
+        /// </summary>
+        /// <param name="req"><see cref="ReclaimAliasDomainRequest"/></param>
+        /// <returns><see cref="ReclaimAliasDomainResponse"/></returns>
+        public async Task<ReclaimAliasDomainResponse> ReclaimAliasDomain(ReclaimAliasDomainRequest req)
+        {
+             JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ReclaimAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReclaimAliasDomainResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 当客户取回站定的同时会取回此站点下关联的别称域名，此时入参为ZoneId；当客户接入站点发现已被别称域名接入时通过验证之后可取回域名，此时入参为ZoneName。
+        /// </summary>
+        /// <param name="req"><see cref="ReclaimAliasDomainRequest"/></param>
+        /// <returns><see cref="ReclaimAliasDomainResponse"/></returns>
+        public ReclaimAliasDomainResponse ReclaimAliasDomainSync(ReclaimAliasDomainRequest req)
+        {
+             JsonResponseModel<ReclaimAliasDomainResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ReclaimAliasDomain");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ReclaimAliasDomainResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

@@ -61,7 +61,7 @@ namespace TencentCloud.Vpc.V20170312.Models
         public string OrderField{ get; set; }
 
         /// <summary>
-        /// 排序方法。顺序：`ASC`，倒序：`DESC`。
+        /// 排序方法。升序：`ASC`，倒序：`DESC`。
         /// </summary>
         [JsonProperty("OrderDirection")]
         public string OrderDirection{ get; set; }

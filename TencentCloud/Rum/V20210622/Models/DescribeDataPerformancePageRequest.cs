@@ -156,6 +156,12 @@ namespace TencentCloud.Rum.V20210622.Models
         [JsonProperty("Env")]
         public string Env{ get; set; }
 
+        /// <summary>
+        /// 网络状态
+        /// </summary>
+        [JsonProperty("NetStatus")]
+        public string NetStatus{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -184,6 +190,7 @@ namespace TencentCloud.Rum.V20210622.Models
             this.SetParamSimple(map, prefix + "From", this.From);
             this.SetParamSimple(map, prefix + "CostType", this.CostType);
             this.SetParamSimple(map, prefix + "Env", this.Env);
+            this.SetParamSimple(map, prefix + "NetStatus", this.NetStatus);
         }
     }
 }

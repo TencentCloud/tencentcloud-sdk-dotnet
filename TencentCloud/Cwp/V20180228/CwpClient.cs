@@ -1619,6 +1619,46 @@ namespace TencentCloud.Cwp.V20180228
         }
 
         /// <summary>
+        /// 获取主机所有资源数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetHostTotalCountRequest"/></param>
+        /// <returns><see cref="DescribeAssetHostTotalCountResponse"/></returns>
+        public async Task<DescribeAssetHostTotalCountResponse> DescribeAssetHostTotalCount(DescribeAssetHostTotalCountRequest req)
+        {
+             JsonResponseModel<DescribeAssetHostTotalCountResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeAssetHostTotalCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetHostTotalCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取主机所有资源数量
+        /// </summary>
+        /// <param name="req"><see cref="DescribeAssetHostTotalCountRequest"/></param>
+        /// <returns><see cref="DescribeAssetHostTotalCountResponse"/></returns>
+        public DescribeAssetHostTotalCountResponse DescribeAssetHostTotalCountSync(DescribeAssetHostTotalCountRequest req)
+        {
+             JsonResponseModel<DescribeAssetHostTotalCountResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeAssetHostTotalCount");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeAssetHostTotalCountResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取资产数量： 主机数、账号数、端口数、进程数、软件数、数据库数、Web应用数、Web框架数、Web服务数、Web站点数
         /// </summary>
         /// <param name="req"><see cref="DescribeAssetInfoRequest"/></param>
