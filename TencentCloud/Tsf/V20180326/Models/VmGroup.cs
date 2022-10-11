@@ -269,6 +269,20 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("Alias")]
         public string Alias{ get; set; }
 
+        /// <summary>
+        /// javaagent信息
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentProfileList")]
+        public AgentProfile[] AgentProfileList{ get; set; }
+
+        /// <summary>
+        /// 预热属性配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("WarmupSetting")]
+        public WarmupSetting WarmupSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -310,6 +324,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "StartScript", this.StartScript);
             this.SetParamSimple(map, prefix + "StopScript", this.StopScript);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
+            this.SetParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+            this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         }
     }
 }

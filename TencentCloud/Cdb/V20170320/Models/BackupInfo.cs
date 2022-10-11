@@ -114,6 +114,30 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("SaveMode")]
         public string SaveMode{ get; set; }
 
+        /// <summary>
+        /// 本地备份所在地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 异地备份详细信息
+        /// </summary>
+        [JsonProperty("RemoteInfo")]
+        public RemoteBackupInfo[] RemoteInfo{ get; set; }
+
+        /// <summary>
+        /// 存储方式，0-常规存储，1-归档存储，默认为0
+        /// </summary>
+        [JsonProperty("CosStorageType")]
+        public long? CosStorageType{ get; set; }
+
+        /// <summary>
+        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -135,6 +159,10 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Way", this.Way);
             this.SetParamSimple(map, prefix + "ManualBackupName", this.ManualBackupName);
             this.SetParamSimple(map, prefix + "SaveMode", this.SaveMode);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+            this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

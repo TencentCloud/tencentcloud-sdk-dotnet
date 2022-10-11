@@ -67,7 +67,7 @@ namespace TencentCloud.Essbasic.V20210526.Models
         public string CallbackUrl{ get; set; }
 
         /// <summary>
-        /// 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署
+        /// 合同签署顺序类型(无序签,顺序签)，默认为false，即有序签署。有序签署时以传入FlowApprovers数组的顺序作为签署顺序
         /// </summary>
         [JsonProperty("Unordered")]
         public bool? Unordered{ get; set; }

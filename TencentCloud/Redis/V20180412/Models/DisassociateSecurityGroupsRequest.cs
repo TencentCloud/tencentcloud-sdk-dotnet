@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb 等。
+        /// 数据库引擎名称，本接口取值：redis。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 安全组Id。
+        /// 安全组 ID。
         /// </summary>
         [JsonProperty("SecurityGroupId")]
         public string SecurityGroupId{ get; set; }
 
         /// <summary>
-        /// 实例ID列表，一个或者多个实例Id组成的数组。
+        /// 实例ID列表，一个或者多个实例 ID 组成的数组。
         /// </summary>
         [JsonProperty("InstanceIds")]
         public string[] InstanceIds{ get; set; }

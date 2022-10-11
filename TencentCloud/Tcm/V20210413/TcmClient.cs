@@ -53,6 +53,86 @@ namespace TencentCloud.Tcm.V20210413
         }
 
         /// <summary>
+        /// 创建网格
+        /// </summary>
+        /// <param name="req"><see cref="CreateMeshRequest"/></param>
+        /// <returns><see cref="CreateMeshResponse"/></returns>
+        public async Task<CreateMeshResponse> CreateMesh(CreateMeshRequest req)
+        {
+             JsonResponseModel<CreateMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建网格
+        /// </summary>
+        /// <param name="req"><see cref="CreateMeshRequest"/></param>
+        /// <returns><see cref="CreateMeshResponse"/></returns>
+        public CreateMeshResponse CreateMeshSync(CreateMeshRequest req)
+        {
+             JsonResponseModel<CreateMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除网格
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMeshRequest"/></param>
+        /// <returns><see cref="DeleteMeshResponse"/></returns>
+        public async Task<DeleteMeshResponse> DeleteMesh(DeleteMeshRequest req)
+        {
+             JsonResponseModel<DeleteMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除网格
+        /// </summary>
+        /// <param name="req"><see cref="DeleteMeshRequest"/></param>
+        /// <returns><see cref="DeleteMeshResponse"/></returns>
+        public DeleteMeshResponse DeleteMeshSync(DeleteMeshRequest req)
+        {
+             JsonResponseModel<DeleteMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询网格详情
         /// </summary>
         /// <param name="req"><see cref="DescribeMeshRequest"/></param>
@@ -124,6 +204,46 @@ namespace TencentCloud.Tcm.V20210413
              {
                  var strResp = this.InternalRequestSync(req, "DescribeMeshList");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMeshListResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改网格
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMeshRequest"/></param>
+        /// <returns><see cref="ModifyMeshResponse"/></returns>
+        public async Task<ModifyMeshResponse> ModifyMesh(ModifyMeshRequest req)
+        {
+             JsonResponseModel<ModifyMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMeshResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改网格
+        /// </summary>
+        /// <param name="req"><see cref="ModifyMeshRequest"/></param>
+        /// <returns><see cref="ModifyMeshResponse"/></returns>
+        public ModifyMeshResponse ModifyMeshSync(ModifyMeshRequest req)
+        {
+             JsonResponseModel<ModifyMeshResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyMesh");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyMeshResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

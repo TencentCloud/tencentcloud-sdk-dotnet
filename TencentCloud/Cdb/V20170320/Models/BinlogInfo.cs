@@ -72,6 +72,36 @@ namespace TencentCloud.Cdb.V20170320.Models
         [JsonProperty("BinlogFinishTime")]
         public string BinlogFinishTime{ get; set; }
 
+        /// <summary>
+        /// 本地binlog文件所在地域
+        /// </summary>
+        [JsonProperty("Region")]
+        public string Region{ get; set; }
+
+        /// <summary>
+        /// 备份任务状态。可能的值有 "SUCCESS": 备份成功， "FAILED": 备份失败， "RUNNING": 备份进行中。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
+        /// binlog异地备份详细信息
+        /// </summary>
+        [JsonProperty("RemoteInfo")]
+        public RemoteBackupInfo[] RemoteInfo{ get; set; }
+
+        /// <summary>
+        /// 存储方式，0-常规存储，1-归档存储，默认为0
+        /// </summary>
+        [JsonProperty("CosStorageType")]
+        public long? CosStorageType{ get; set; }
+
+        /// <summary>
+        /// 实例 ID，格式如：cdb-c1nl9rpv。与云数据库控制台页面中显示的实例 ID 相同。
+        /// </summary>
+        [JsonProperty("InstanceId")]
+        public string InstanceId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +116,11 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "Type", this.Type);
             this.SetParamSimple(map, prefix + "BinlogStartTime", this.BinlogStartTime);
             this.SetParamSimple(map, prefix + "BinlogFinishTime", this.BinlogFinishTime);
+            this.SetParamSimple(map, prefix + "Region", this.Region);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
+            this.SetParamArrayObj(map, prefix + "RemoteInfo.", this.RemoteInfo);
+            this.SetParamSimple(map, prefix + "CosStorageType", this.CosStorageType);
+            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
         }
     }
 }

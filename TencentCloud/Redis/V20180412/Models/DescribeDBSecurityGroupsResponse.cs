@@ -25,19 +25,19 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 安全组规则
+        /// 安全组规则。
         /// </summary>
         [JsonProperty("Groups")]
         public SecurityGroup[] Groups{ get; set; }
 
         /// <summary>
-        /// 安全组生效内网地址
+        /// 安全组生效内网地址。
         /// </summary>
         [JsonProperty("VIP")]
         public string VIP{ get; set; }
 
         /// <summary>
-        /// 安全组生效内网端口
+        /// 安全组生效内网端口。
         /// </summary>
         [JsonProperty("VPort")]
         public string VPort{ get; set; }

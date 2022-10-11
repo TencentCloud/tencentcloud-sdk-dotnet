@@ -4393,6 +4393,46 @@ namespace TencentCloud.Cpdp.V20190820
         }
 
         /// <summary>
+        /// 智慧零售-查询公司抬头
+        /// </summary>
+        /// <param name="req"><see cref="QueryCompanyTitleRequest"/></param>
+        /// <returns><see cref="QueryCompanyTitleResponse"/></returns>
+        public async Task<QueryCompanyTitleResponse> QueryCompanyTitle(QueryCompanyTitleRequest req)
+        {
+             JsonResponseModel<QueryCompanyTitleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "QueryCompanyTitle");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCompanyTitleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 智慧零售-查询公司抬头
+        /// </summary>
+        /// <param name="req"><see cref="QueryCompanyTitleRequest"/></param>
+        /// <returns><see cref="QueryCompanyTitleResponse"/></returns>
+        public QueryCompanyTitleResponse QueryCompanyTitleSync(QueryCompanyTitleRequest req)
+        {
+             JsonResponseModel<QueryCompanyTitleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "QueryCompanyTitle");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<QueryCompanyTitleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 通过此接口查询签约数据
         /// </summary>
         /// <param name="req"><see cref="QueryContractRequest"/></param>

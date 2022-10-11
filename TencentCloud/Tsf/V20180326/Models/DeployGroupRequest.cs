@@ -126,6 +126,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("JdkVersion")]
         public string JdkVersion{ get; set; }
 
+        /// <summary>
+        /// 部署agent的类型、版本
+        /// </summary>
+        [JsonProperty("AgentProfileList")]
+        public AgentProfile[] AgentProfileList{ get; set; }
+
+        /// <summary>
+        /// 预热参数配置
+        /// </summary>
+        [JsonProperty("WarmupSetting")]
+        public WarmupSetting WarmupSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -149,6 +161,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamSimple(map, prefix + "IncrementalDeployment", this.IncrementalDeployment);
             this.SetParamSimple(map, prefix + "JdkName", this.JdkName);
             this.SetParamSimple(map, prefix + "JdkVersion", this.JdkVersion);
+            this.SetParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+            this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         }
     }
 }

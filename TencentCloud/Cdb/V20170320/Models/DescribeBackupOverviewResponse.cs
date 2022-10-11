@@ -49,6 +49,20 @@ namespace TencentCloud.Cdb.V20170320.Models
         public long? FreeVolume{ get; set; }
 
         /// <summary>
+        /// 用户在当前地域的异地备份总容量。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("RemoteBackupVolume")]
+        public long? RemoteBackupVolume{ get; set; }
+
+        /// <summary>
+        /// 归档备份容量，包含数据备份以及日志备份。
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("BackupArchiveVolume")]
+        public long? BackupArchiveVolume{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -64,6 +78,8 @@ namespace TencentCloud.Cdb.V20170320.Models
             this.SetParamSimple(map, prefix + "BackupVolume", this.BackupVolume);
             this.SetParamSimple(map, prefix + "BillingVolume", this.BillingVolume);
             this.SetParamSimple(map, prefix + "FreeVolume", this.FreeVolume);
+            this.SetParamSimple(map, prefix + "RemoteBackupVolume", this.RemoteBackupVolume);
+            this.SetParamSimple(map, prefix + "BackupArchiveVolume", this.BackupArchiveVolume);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

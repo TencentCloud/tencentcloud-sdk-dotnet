@@ -55,6 +55,12 @@ namespace TencentCloud.Monitor.V20180724.Models
         public string EndTime{ get; set; }
 
         /// <summary>
+        /// 返回信息
+        /// </summary>
+        [JsonProperty("Msg")]
+        public string Msg{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -71,6 +77,7 @@ namespace TencentCloud.Monitor.V20180724.Models
             this.SetParamArrayObj(map, prefix + "DataPoints.", this.DataPoints);
             this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
             this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
+            this.SetParamSimple(map, prefix + "Msg", this.Msg);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

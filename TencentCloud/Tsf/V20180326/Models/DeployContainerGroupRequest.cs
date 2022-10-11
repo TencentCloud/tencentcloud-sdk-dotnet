@@ -240,6 +240,18 @@ namespace TencentCloud.Tsf.V20180326.Models
         [JsonProperty("VolumeClean")]
         public bool? VolumeClean{ get; set; }
 
+        /// <summary>
+        /// javaagent信息: SERVICE_AGENT/OT_AGENT
+        /// </summary>
+        [JsonProperty("AgentProfileList")]
+        public AgentProfile[] AgentProfileList{ get; set; }
+
+        /// <summary>
+        /// 预热配置信息
+        /// </summary>
+        [JsonProperty("WarmupSetting")]
+        public WarmupSetting WarmupSetting{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -282,6 +294,8 @@ namespace TencentCloud.Tsf.V20180326.Models
             this.SetParamArrayObj(map, prefix + "VolumeInfoList.", this.VolumeInfoList);
             this.SetParamArrayObj(map, prefix + "VolumeMountInfoList.", this.VolumeMountInfoList);
             this.SetParamSimple(map, prefix + "VolumeClean", this.VolumeClean);
+            this.SetParamArrayObj(map, prefix + "AgentProfileList.", this.AgentProfileList);
+            this.SetParamObj(map, prefix + "WarmupSetting.", this.WarmupSetting);
         }
     }
 }
