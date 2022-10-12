@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 权属文件Id，按提交顺序排序
         /// </summary>
         [JsonProperty("FileIds")]
         public long?[] FileIds{ get; set; }

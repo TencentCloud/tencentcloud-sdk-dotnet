@@ -25,13 +25,13 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// 认证状态 0-认证成功 1-认证失败
+        /// 认证状态：0-认证成功 1-认证失败
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// 认证结果返回
+        /// 认证状态说明，包括认证失败的原因
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }

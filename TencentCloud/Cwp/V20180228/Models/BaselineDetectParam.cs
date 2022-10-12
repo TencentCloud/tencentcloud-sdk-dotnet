@@ -15,38 +15,38 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Cwp.V20180228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBPerformanceRequest : AbstractModel
+    public class BaselineDetectParam : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID，形如：tdsql-ow728lmc。
+        /// 检测的策略集合
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("PolicyIds")]
+        public long?[] PolicyIds{ get; set; }
 
         /// <summary>
-        /// 开始日期，格式yyyy-mm-dd
+        /// 检测的规则集合
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("RuleIds")]
+        public long?[] RuleIds{ get; set; }
 
         /// <summary>
-        /// 结束日期，格式yyyy-mm-dd
+        /// 检测项集合
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
+        [JsonProperty("ItemIds")]
+        public long?[] ItemIds{ get; set; }
 
         /// <summary>
-        /// 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
+        /// 检测的主机ID集合
         /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
+        [JsonProperty("HostIds")]
+        public string[] HostIds{ get; set; }
 
 
         /// <summary>
@@ -54,10 +54,10 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamArraySimple(map, prefix + "PolicyIds.", this.PolicyIds);
+            this.SetParamArraySimple(map, prefix + "RuleIds.", this.RuleIds);
+            this.SetParamArraySimple(map, prefix + "ItemIds.", this.ItemIds);
+            this.SetParamArraySimple(map, prefix + "HostIds.", this.HostIds);
         }
     }
 }

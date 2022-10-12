@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.616</VersionPrefix>
+    <VersionPrefix>3.0.617</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -58,6 +58,8 @@
     <Compile Include="V20210820\Models\CanvasInfo.cs" />
     <Compile Include="V20210820\Models\CommonContent.cs" />
     <Compile Include="V20210820\Models\CommonId.cs" />
+    <Compile Include="V20210820\Models\CreateCustomFunctionRequest.cs" />
+    <Compile Include="V20210820\Models\CreateCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\CreateDataSourceRequest.cs" />
     <Compile Include="V20210820\Models\CreateDataSourceResponse.cs" />
     <Compile Include="V20210820\Models\CreateFolderRequest.cs" />

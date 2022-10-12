@@ -15,34 +15,28 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Wedata.V20210820.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBPerformanceDetailsResponse : AbstractModel
+    public class CreateCustomFunctionResponse : AbstractModel
     {
         
         /// <summary>
-        /// 主节点性能监控数据
-        /// </summary>
-        [JsonProperty("Master")]
-        public PerformanceMonitorSet Master{ get; set; }
-
-        /// <summary>
-        /// 备机1性能监控数据
+        /// 函数唯一标识
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Slave1")]
-        public PerformanceMonitorSet Slave1{ get; set; }
+        [JsonProperty("FunctionId")]
+        public string FunctionId{ get; set; }
 
         /// <summary>
-        /// 备机2性能监控数据，如果实例是一主一从，则没有该字段
+        /// 无
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
-        [JsonProperty("Slave2")]
-        public PerformanceMonitorSet Slave2{ get; set; }
+        [JsonProperty("ErrorMessage")]
+        public string ErrorMessage{ get; set; }
 
         /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
@@ -56,9 +50,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamObj(map, prefix + "Master.", this.Master);
-            this.SetParamObj(map, prefix + "Slave1.", this.Slave1);
-            this.SetParamObj(map, prefix + "Slave2.", this.Slave2);
+            this.SetParamSimple(map, prefix + "FunctionId", this.FunctionId);
+            this.SetParamSimple(map, prefix + "ErrorMessage", this.ErrorMessage);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

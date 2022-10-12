@@ -25,25 +25,25 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xx
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 侵权网址
         /// </summary>
         [JsonProperty("TortURL")]
         public string TortURL{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 侵权平台
         /// </summary>
         [JsonProperty("TortPlat")]
         public string TortPlat{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 侵权标题
         /// </summary>
         [JsonProperty("TortTitle")]
         public string TortTitle{ get; set; }

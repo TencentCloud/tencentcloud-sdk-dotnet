@@ -108,6 +108,13 @@ namespace TencentCloud.Wav.V20210129.Models
         [JsonProperty("TagList")]
         public string[] TagList{ get; set; }
 
+        /// <summary>
+        /// 客户姓名
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("UserName")]
+        public string UserName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -128,6 +135,7 @@ namespace TencentCloud.Wav.V20210129.Models
             this.SetParamSimple(map, prefix + "SalesPhone", this.SalesPhone);
             this.SetParamSimple(map, prefix + "Remark", this.Remark);
             this.SetParamArraySimple(map, prefix + "TagList.", this.TagList);
+            this.SetParamSimple(map, prefix + "UserName", this.UserName);
         }
     }
 }

@@ -111,6 +111,15 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("PreserveHDRSwitch")]
         public string PreserveHDRSwitch{ get; set; }
 
+        /// <summary>
+        /// 编码标签，仅当视频流的编码格式为 H.265 编码时有效，可选值：
+        /// <li>hvc1 表示 hvc1 标签；</li>
+        /// <li>hev1 表示 hev1 标签。 </li>
+        /// 默认值：hvc1。
+        /// </summary>
+        [JsonProperty("CodecTag")]
+        public string CodecTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -127,6 +136,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Vcrf", this.Vcrf);
             this.SetParamSimple(map, prefix + "Gop", this.Gop);
             this.SetParamSimple(map, prefix + "PreserveHDRSwitch", this.PreserveHDRSwitch);
+            this.SetParamSimple(map, prefix + "CodecTag", this.CodecTag);
         }
     }
 }

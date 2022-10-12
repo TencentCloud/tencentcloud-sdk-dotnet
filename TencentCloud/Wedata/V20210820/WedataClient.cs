@@ -179,6 +179,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        ///  创建用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomFunctionRequest"/></param>
+        /// <returns><see cref="CreateCustomFunctionResponse"/></returns>
+        public async Task<CreateCustomFunctionResponse> CreateCustomFunction(CreateCustomFunctionRequest req)
+        {
+             JsonResponseModel<CreateCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        ///  创建用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomFunctionRequest"/></param>
+        /// <returns><see cref="CreateCustomFunctionResponse"/></returns>
+        public CreateCustomFunctionResponse CreateCustomFunctionSync(CreateCustomFunctionRequest req)
+        {
+             JsonResponseModel<CreateCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 创建数据源
         /// </summary>

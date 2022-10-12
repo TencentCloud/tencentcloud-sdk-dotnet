@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// MonitorTort数组
+        /// 侵权数组
         /// </summary>
         [JsonProperty("Torts")]
         public MonitorTort[] Torts{ get; set; }
@@ -37,7 +37,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? TotalCount{ get; set; }
 
         /// <summary>
-        /// x
+        /// 监测状态
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public long? MonitorStatus{ get; set; }

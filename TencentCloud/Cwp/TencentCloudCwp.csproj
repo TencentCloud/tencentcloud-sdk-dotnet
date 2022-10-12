@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{8D086D22-DFFF-30EF-982F-7FD4B5485183}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.616</VersionPrefix>
+    <VersionPrefix>3.0.617</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -79,10 +79,13 @@
     <Compile Include="V20180228\Models\BanWhiteListDetail.cs" />
     <Compile Include="V20180228\Models\BaselineBasicInfo.cs" />
     <Compile Include="V20180228\Models\BaselineDetail.cs" />
+    <Compile Include="V20180228\Models\BaselineDetectParam.cs" />
     <Compile Include="V20180228\Models\BaselineEffectHost.cs" />
     <Compile Include="V20180228\Models\BaselineEventLevelInfo.cs" />
     <Compile Include="V20180228\Models\BaselineHostTopList.cs" />
     <Compile Include="V20180228\Models\BaselineInfo.cs" />
+    <Compile Include="V20180228\Models\BaselineItem.cs" />
+    <Compile Include="V20180228\Models\BaselineItemDetect.cs" />
     <Compile Include="V20180228\Models\BaselineRuleInfo.cs" />
     <Compile Include="V20180228\Models\BaselineRuleTopInfo.cs" />
     <Compile Include="V20180228\Models\BashEvent.cs" />
@@ -238,6 +241,10 @@
     <Compile Include="V20180228\Models\DescribeBaselineEffectHostListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineHostTopResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemDetectListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemDetectListResponse.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemListRequest.cs" />
+    <Compile Include="V20180228\Models\DescribeBaselineItemListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListRequest.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineListResponse.cs" />
     <Compile Include="V20180228\Models\DescribeBaselineRuleRequest.cs" />
@@ -567,6 +574,8 @@
     <Compile Include="V20180228\Models\SetBashEventsStatusRequest.cs" />
     <Compile Include="V20180228\Models\SetBashEventsStatusResponse.cs" />
     <Compile Include="V20180228\Models\StandardModeConfig.cs" />
+    <Compile Include="V20180228\Models\StartBaselineDetectRequest.cs" />
+    <Compile Include="V20180228\Models\StartBaselineDetectResponse.cs" />
     <Compile Include="V20180228\Models\StopNoticeBanTipsRequest.cs" />
     <Compile Include="V20180228\Models\StopNoticeBanTipsResponse.cs" />
     <Compile Include="V20180228\Models\Strategy.cs" />
@@ -574,6 +583,8 @@
     <Compile Include="V20180228\Models\SwitchBashRulesResponse.cs" />
     <Compile Include="V20180228\Models\SyncAssetScanRequest.cs" />
     <Compile Include="V20180228\Models\SyncAssetScanResponse.cs" />
+    <Compile Include="V20180228\Models\SyncBaselineDetectSummaryRequest.cs" />
+    <Compile Include="V20180228\Models\SyncBaselineDetectSummaryResponse.cs" />
     <Compile Include="V20180228\Models\Tag.cs" />
     <Compile Include="V20180228\Models\TagMachine.cs" />
     <Compile Include="V20180228\Models\Tags.cs" />

@@ -253,7 +253,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-新建拦截接口
+        /// 新建拦截
         /// </summary>
         /// <param name="req"><see cref="CreateCRBlockRequest"/></param>
         /// <returns><see cref="CreateCRBlockResponse"/></returns>
@@ -273,7 +273,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-新建拦截接口
+        /// 新建拦截
         /// </summary>
         /// <param name="req"><see cref="CreateCRBlockRequest"/></param>
         /// <returns><see cref="CreateCRBlockResponse"/></returns>
@@ -293,7 +293,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 品牌经营管家-版权保护模块企业认证接口
+        /// 本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
         /// </summary>
         /// <param name="req"><see cref="CreateCRCompanyVerifyRequest"/></param>
         /// <returns><see cref="CreateCRCompanyVerifyResponse"/></returns>
@@ -313,7 +313,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 品牌经营管家-版权保护模块企业认证接口
+        /// 本接口用于企业认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
         /// </summary>
         /// <param name="req"><see cref="CreateCRCompanyVerifyRequest"/></param>
         /// <returns><see cref="CreateCRCompanyVerifyResponse"/></returns>
@@ -373,7 +373,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 新增权属文件
+        /// 权属文件添加
         /// </summary>
         /// <param name="req"><see cref="CreateCRRightFileRequest"/></param>
         /// <returns><see cref="CreateCRRightFileResponse"/></returns>
@@ -393,7 +393,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 新增权属文件
+        /// 权属文件添加
         /// </summary>
         /// <param name="req"><see cref="CreateCRRightFileRequest"/></param>
         /// <returns><see cref="CreateCRRightFileResponse"/></returns>
@@ -453,7 +453,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 品牌经营管家-版权保护个人认证接口
+        /// 本接口用于个人认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
         /// </summary>
         /// <param name="req"><see cref="CreateCRUserVerifyRequest"/></param>
         /// <returns><see cref="CreateCRUserVerifyResponse"/></returns>
@@ -473,7 +473,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 品牌经营管家-版权保护个人认证接口
+        /// 本接口用于个人认证，新接入用户必须认证后才可以进行后续操作（个人认证和企业认证二选一），只需认证一次即可
         /// </summary>
         /// <param name="req"><see cref="CreateCRUserVerifyRequest"/></param>
         /// <returns><see cref="CreateCRUserVerifyResponse"/></returns>
@@ -493,7 +493,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-添加作品接口
+        /// 新建作品
         /// </summary>
         /// <param name="req"><see cref="CreateCRWorkRequest"/></param>
         /// <returns><see cref="CreateCRWorkResponse"/></returns>
@@ -513,7 +513,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-添加作品接口
+        /// 新建作品
         /// </summary>
         /// <param name="req"><see cref="CreateCRWorkRequest"/></param>
         /// <returns><see cref="CreateCRWorkResponse"/></returns>
@@ -853,7 +853,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-拦截申请接口
+        /// 拦截申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
         /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>
@@ -873,7 +873,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-拦截申请接口
+        /// 拦截申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRBlockStatusRequest"/></param>
         /// <returns><see cref="ModifyCRBlockStatusResponse"/></returns>
@@ -893,7 +893,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-修改监测状态接口
+        /// 开启/关闭监测
         /// </summary>
         /// <param name="req"><see cref="ModifyCRMonitorRequest"/></param>
         /// <returns><see cref="ModifyCRMonitorResponse"/></returns>
@@ -913,7 +913,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-修改监测状态接口
+        /// 开启/关闭监测
         /// </summary>
         /// <param name="req"><see cref="ModifyCRMonitorRequest"/></param>
         /// <returns><see cref="ModifyCRMonitorResponse"/></returns>
@@ -933,7 +933,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 申请取证
+        /// 取证申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRObtainStatusRequest"/></param>
         /// <returns><see cref="ModifyCRObtainStatusResponse"/></returns>
@@ -953,7 +953,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 申请取证
+        /// 取证申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRObtainStatusRequest"/></param>
         /// <returns><see cref="ModifyCRObtainStatusResponse"/></returns>
@@ -973,7 +973,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-维权申请接口
+        /// 发函申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRRightStatusRequest"/></param>
         /// <returns><see cref="ModifyCRRightStatusResponse"/></returns>
@@ -993,7 +993,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-维权申请接口
+        /// 发函申请
         /// </summary>
         /// <param name="req"><see cref="ModifyCRRightStatusRequest"/></param>
         /// <returns><see cref="ModifyCRRightStatusResponse"/></returns>
@@ -1013,7 +1013,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-白名单修改接口
+        /// 修改白名单列表
         /// </summary>
         /// <param name="req"><see cref="ModifyCRWhiteListRequest"/></param>
         /// <returns><see cref="ModifyCRWhiteListResponse"/></returns>
@@ -1033,7 +1033,7 @@ namespace TencentCloud.Bma.V20210624
         }
 
         /// <summary>
-        /// 版权保护-白名单修改接口
+        /// 修改白名单列表
         /// </summary>
         /// <param name="req"><see cref="ModifyCRWhiteListRequest"/></param>
         /// <returns><see cref="ModifyCRWhiteListResponse"/></returns>

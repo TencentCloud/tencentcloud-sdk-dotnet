@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }

@@ -25,133 +25,133 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// x
+        /// 作品名称
         /// </summary>
         [JsonProperty("WorkName")]
         public string WorkName{ get; set; }
 
         /// <summary>
-        /// x
+        /// 监测状态
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public long? MonitorStatus{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权文件状态
         /// </summary>
         [JsonProperty("AuthStatus")]
         public long? AuthStatus{ get; set; }
 
         /// <summary>
-        /// x
+        /// 委托书状态
         /// </summary>
         [JsonProperty("CommStatus")]
         public long? CommStatus{ get; set; }
 
         /// <summary>
-        /// x
+        /// 是否著作权人
         /// </summary>
         [JsonProperty("IsProducer")]
         public long? IsProducer{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 存证证书状态
         /// </summary>
         [JsonProperty("EvidenceStatus")]
         public long? EvidenceStatus{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 作品类型
         /// </summary>
         [JsonProperty("WorkCategory")]
         public string WorkCategory{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 是否原创
         /// </summary>
         [JsonProperty("IsOriginal")]
         public string IsOriginal{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 是否已发表
         /// </summary>
         [JsonProperty("IsRelease")]
         public string IsRelease{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 著作权人姓名
         /// </summary>
         [JsonProperty("ProducerName")]
         public string ProducerName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 发表时间
         /// </summary>
         [JsonProperty("ProduceTime")]
         public string ProduceTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 白名单
         /// </summary>
         [JsonProperty("WhiteLists")]
         public string[] WhiteLists{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 作品描述
         /// </summary>
         [JsonProperty("WorkDesc")]
         public string WorkDesc{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 授权书
         /// </summary>
         [JsonProperty("Authorization")]
         public string Authorization{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 授权书生效日期
         /// </summary>
         [JsonProperty("AuthorizationStartTime")]
         public string AuthorizationStartTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 授权书截止日期
         /// </summary>
         [JsonProperty("AuthorizationEndTime")]
         public string AuthorizationEndTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 委托书
         /// </summary>
         [JsonProperty("Commission")]
         public string Commission{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 委托书生效日期
         /// </summary>
         [JsonProperty("CommissionStartTime")]
         public string CommissionStartTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 委托书截止日期
         /// </summary>
         [JsonProperty("CommissionEndTime")]
         public string CommissionEndTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 存证证书
         /// </summary>
         [JsonProperty("EvidenceUrl")]
         public string EvidenceUrl{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 存证证书生效日期
         /// </summary>
         [JsonProperty("EvidenceStartTime")]
         public string EvidenceStartTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 存证证书截止日期
         /// </summary>
         [JsonProperty("EvidenceEndTime")]
         public string EvidenceEndTime{ get; set; }

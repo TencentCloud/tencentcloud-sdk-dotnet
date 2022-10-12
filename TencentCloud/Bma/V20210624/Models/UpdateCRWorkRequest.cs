@@ -25,25 +25,25 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xx
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 文件的扩展名，比如txt，docx
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 内容的base64编码
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 本次存证类型：0-不存证 1-存当前文件 2-存历史全量文件
         /// </summary>
         [JsonProperty("CertType")]
         public string CertType{ get; set; }

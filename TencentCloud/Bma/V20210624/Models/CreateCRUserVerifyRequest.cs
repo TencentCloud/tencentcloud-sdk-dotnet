@@ -31,7 +31,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public string UserName{ get; set; }
 
         /// <summary>
-        /// 用户身份证ID
+        /// 用户身份证号
         /// </summary>
         [JsonProperty("UserID")]
         public string UserID{ get; set; }
@@ -43,13 +43,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public string UserPhone{ get; set; }
 
         /// <summary>
-        /// 短信验证码
+        /// 短信验证码，接口接入可以置空
         /// </summary>
         [JsonProperty("VerificationCode")]
         public string VerificationCode{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 字段已废弃，认证类型
         /// </summary>
         [JsonProperty("Type")]
         public string Type{ get; set; }

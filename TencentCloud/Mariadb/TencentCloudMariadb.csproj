@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{0D2899B4-58E8-3E59-BC9E-E832FA5AC4D6}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.616</VersionPrefix>
+    <VersionPrefix>3.0.617</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -98,10 +98,6 @@
     <Compile Include="V20170312\Models\DescribeDBLogFilesResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBParametersRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBParametersResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeDBPerformanceDetailsRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeDBPerformanceDetailsResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeDBPerformanceRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeDBPerformanceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsRequest.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageDetailsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeDBResourceUsageRequest.cs" />
@@ -136,8 +132,6 @@
     <Compile Include="V20170312\Models\DescribeRenewalPriceResponse.cs" />
     <Compile Include="V20170312\Models\DescribeSaleInfoRequest.cs" />
     <Compile Include="V20170312\Models\DescribeSaleInfoResponse.cs" />
-    <Compile Include="V20170312\Models\DescribeSqlLogsRequest.cs" />
-    <Compile Include="V20170312\Models\DescribeSqlLogsResponse.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceRequest.cs" />
     <Compile Include="V20170312\Models\DescribeUpgradePriceResponse.cs" />
     <Compile Include="V20170312\Models\DestroyDBInstanceRequest.cs" />
@@ -188,7 +182,6 @@
     <Compile Include="V20170312\Models\ParamConstraint.cs" />
     <Compile Include="V20170312\Models\ParamDesc.cs" />
     <Compile Include="V20170312\Models\ParamModifyResult.cs" />
-    <Compile Include="V20170312\Models\PerformanceMonitorSet.cs" />
     <Compile Include="V20170312\Models\ProcedurePrivilege.cs" />
     <Compile Include="V20170312\Models\RegionInfo.cs" />
     <Compile Include="V20170312\Models\RenewDBInstanceRequest.cs" />
@@ -203,7 +196,6 @@
     <Compile Include="V20170312\Models\SecurityGroupBound.cs" />
     <Compile Include="V20170312\Models\SlowLogData.cs" />
     <Compile Include="V20170312\Models\SpecConfigInfo.cs" />
-    <Compile Include="V20170312\Models\SqlLogItem.cs" />
     <Compile Include="V20170312\Models\SwitchDBInstanceHARequest.cs" />
     <Compile Include="V20170312\Models\SwitchDBInstanceHAResponse.cs" />
     <Compile Include="V20170312\Models\TableColumn.cs" />

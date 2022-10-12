@@ -61,115 +61,115 @@ namespace TencentCloud.Bma.V20210624.Models
         public string Author{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 发现时间
         /// </summary>
         [JsonProperty("DetectTime")]
         public string DetectTime{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 取证状态
         /// </summary>
         [JsonProperty("ObtainStatus")]
         public long? ObtainStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 维权状态
         /// </summary>
         [JsonProperty("RightStatus")]
         public long? RightStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 拦截状态
         /// </summary>
         [JsonProperty("BlockStatus")]
         public long? BlockStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 侵权编号
         /// </summary>
         [JsonProperty("TortNum")]
         public string TortNum{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 取证状态说明
         /// </summary>
         [JsonProperty("ObtainNote")]
         public string ObtainNote{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 作品标题
         /// </summary>
         [JsonProperty("WorkTitle")]
         public string WorkTitle{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 侵权站点
         /// </summary>
         [JsonProperty("TortSite")]
         public string TortSite{ get; set; }
 
         /// <summary>
-        /// 1
+        /// ICP备案信息
         /// </summary>
         [JsonProperty("ICP")]
         public string ICP{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 维权状态说明
         /// </summary>
         [JsonProperty("RightNote")]
         public string RightNote{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 取证类型
         /// </summary>
         [JsonProperty("ObtainType")]
         public long? ObtainType{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 拦截状态说明
         /// </summary>
         [JsonProperty("BlockNote")]
         public string BlockNote{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 作品名称
         /// </summary>
         [JsonProperty("WorkName")]
         public string WorkName{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 授权书状态
         /// </summary>
         [JsonProperty("AuthStatus")]
         public long? AuthStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 委托书状态
         /// </summary>
         [JsonProperty("CommStatus")]
         public long? CommStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 存证证书状态
         /// </summary>
         [JsonProperty("EvidenceStatus")]
         public long? EvidenceStatus{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 是否著作权人
         /// </summary>
         [JsonProperty("IsProducer")]
         public long? IsProducer{ get; set; }
 
         /// <summary>
-        /// 1
+        /// 是否海外网址
         /// </summary>
         [JsonProperty("IsOverseas")]
         public long? IsOverseas{ get; set; }

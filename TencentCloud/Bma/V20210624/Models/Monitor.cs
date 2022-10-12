@@ -73,13 +73,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public string WorkCategory{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 新增时间
         /// </summary>
         [JsonProperty("InsertTime")]
         public string InsertTime{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 监测状态说明
         /// </summary>
         [JsonProperty("MonitorNote")]
         public string MonitorNote{ get; set; }

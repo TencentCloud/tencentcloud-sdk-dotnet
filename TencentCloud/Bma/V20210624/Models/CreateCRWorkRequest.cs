@@ -49,31 +49,31 @@ namespace TencentCloud.Bma.V20210624.Models
         public string WorkSign{ get; set; }
 
         /// <summary>
-        /// 作品图片
+        /// 字段已废弃，作品图片
         /// </summary>
         [JsonProperty("WorkPic")]
         public string WorkPic{ get; set; }
 
         /// <summary>
-        /// 创作描述
+        /// 作品描述
         /// </summary>
         [JsonProperty("WorkDesc")]
         public string WorkDesc{ get; set; }
 
         /// <summary>
-        /// 是否原创 0:否 1:是
+        /// 是否原创：0-否 1-是
         /// </summary>
         [JsonProperty("IsOriginal")]
         public string IsOriginal{ get; set; }
 
         /// <summary>
-        /// 是否发布 0：未发布 1：已发布
+        /// 是否发布：0-未发布 1-已发布
         /// </summary>
         [JsonProperty("IsRelease")]
         public string IsRelease{ get; set; }
 
         /// <summary>
-        /// 著作权人ID
+        /// 字段已废弃，著作权人ID
         /// </summary>
         [JsonProperty("ProducerID")]
         public long? ProducerID{ get; set; }
@@ -85,37 +85,37 @@ namespace TencentCloud.Bma.V20210624.Models
         public string ProduceTime{ get; set; }
 
         /// <summary>
-        /// 样品文件路径
+        /// 字段已废弃
         /// </summary>
         [JsonProperty("SampleContentURL")]
         public string SampleContentURL{ get; set; }
 
         /// <summary>
-        /// 样本下载Url
+        /// 作品下载地址
         /// </summary>
         [JsonProperty("SampleDownloadURL")]
         public string SampleDownloadURL{ get; set; }
 
         /// <summary>
-        /// 授予类型
-        /// </summary>
-        [JsonProperty("GrantType")]
-        public string GrantType{ get; set; }
-
-        /// <summary>
-        /// 作品发布Url
+        /// 作品在线地址
         /// </summary>
         [JsonProperty("SamplePublicURL")]
         public string SamplePublicURL{ get; set; }
 
         /// <summary>
-        /// 是否启用监测 0：不启用 1：启用 默认为0
+        /// 字段已废弃，授予类型
+        /// </summary>
+        [JsonProperty("GrantType")]
+        public string GrantType{ get; set; }
+
+        /// <summary>
+        /// 是否监测：0-不监测 1-监测
         /// </summary>
         [JsonProperty("IsMonitor")]
         public string IsMonitor{ get; set; }
 
         /// <summary>
-        /// 是否启用存证0：不存证  2：存证 默认为0
+        /// 是否存证：0-不存证  2-存证 注意是2
         /// </summary>
         [JsonProperty("IsCert")]
         public string IsCert{ get; set; }
@@ -133,19 +133,19 @@ namespace TencentCloud.Bma.V20210624.Models
         public string MonitorUrl{ get; set; }
 
         /// <summary>
-        /// 创作性质（原创,改编,翻译,汇编,注释,整理,其他)
+        /// 字段已废弃，创作性质
         /// </summary>
         [JsonProperty("ProduceType")]
         public string ProduceType{ get; set; }
 
         /// <summary>
-        /// 白名单
+        /// 白名单列表
         /// </summary>
         [JsonProperty("WhiteLists")]
         public string[] WhiteLists{ get; set; }
 
         /// <summary>
-        /// 作品ID
+        /// 作品ID，忽略该字段
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
@@ -157,13 +157,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public string ProducerName{ get; set; }
 
         /// <summary>
-        /// 作者
+        /// 作者，小说类型必填
         /// </summary>
         [JsonProperty("Nickname")]
         public string Nickname{ get; set; }
 
         /// <summary>
-        /// 授权书
+        /// 授权书下载地址
         /// </summary>
         [JsonProperty("Authorization")]
         public string Authorization{ get; set; }
@@ -181,13 +181,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public string AuthorizationEndTime{ get; set; }
 
         /// <summary>
-        /// 内容格式
+        /// 内容格式，支持txt、doc等，表示Content的具体格式
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }
 
         /// <summary>
-        /// 文件内容
+        /// 文件内容base64编码，该字段仅在无法提供下载链接时使用
         /// </summary>
         [JsonProperty("Content")]
         public string Content{ get; set; }
@@ -199,13 +199,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public string MonitorEndTime{ get; set; }
 
         /// <summary>
-        /// 申请人ID
+        /// 申请人ID，用于存证和取证
         /// </summary>
         [JsonProperty("ApplierId")]
         public string ApplierId{ get; set; }
 
         /// <summary>
-        /// 申请人姓名
+        /// 申请人姓名，用于存证和取证
         /// </summary>
         [JsonProperty("ApplierName")]
         public string ApplierName{ get; set; }
@@ -228,8 +228,8 @@ namespace TencentCloud.Bma.V20210624.Models
             this.SetParamSimple(map, prefix + "ProduceTime", this.ProduceTime);
             this.SetParamSimple(map, prefix + "SampleContentURL", this.SampleContentURL);
             this.SetParamSimple(map, prefix + "SampleDownloadURL", this.SampleDownloadURL);
-            this.SetParamSimple(map, prefix + "GrantType", this.GrantType);
             this.SetParamSimple(map, prefix + "SamplePublicURL", this.SamplePublicURL);
+            this.SetParamSimple(map, prefix + "GrantType", this.GrantType);
             this.SetParamSimple(map, prefix + "IsMonitor", this.IsMonitor);
             this.SetParamSimple(map, prefix + "IsCert", this.IsCert);
             this.SetParamSimple(map, prefix + "CertUrl", this.CertUrl);

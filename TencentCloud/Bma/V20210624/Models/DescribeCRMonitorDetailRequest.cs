@@ -43,7 +43,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? PageNumber{ get; set; }
 
         /// <summary>
-        /// x
+        /// 过滤参数
         /// </summary>
         [JsonProperty("Filters")]
         public Filter[] Filters{ get; set; }

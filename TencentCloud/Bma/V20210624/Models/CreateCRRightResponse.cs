@@ -31,7 +31,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? TortId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 该字段已废弃
         /// </summary>
         [JsonProperty("TortNum")]
         public string TortNum{ get; set; }

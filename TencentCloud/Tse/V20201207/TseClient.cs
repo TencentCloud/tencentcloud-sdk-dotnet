@@ -412,5 +412,45 @@ namespace TencentCloud.Tse.V20201207
              return rsp.Response;
         }
 
+        /// <summary>
+        /// 修改引擎公网访问配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEngineInternetAccessRequest"/></param>
+        /// <returns><see cref="UpdateEngineInternetAccessResponse"/></returns>
+        public async Task<UpdateEngineInternetAccessResponse> UpdateEngineInternetAccess(UpdateEngineInternetAccessRequest req)
+        {
+             JsonResponseModel<UpdateEngineInternetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "UpdateEngineInternetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEngineInternetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改引擎公网访问配置
+        /// </summary>
+        /// <param name="req"><see cref="UpdateEngineInternetAccessRequest"/></param>
+        /// <returns><see cref="UpdateEngineInternetAccessResponse"/></returns>
+        public UpdateEngineInternetAccessResponse UpdateEngineInternetAccessSync(UpdateEngineInternetAccessRequest req)
+        {
+             JsonResponseModel<UpdateEngineInternetAccessResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "UpdateEngineInternetAccess");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<UpdateEngineInternetAccessResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
     }
 }

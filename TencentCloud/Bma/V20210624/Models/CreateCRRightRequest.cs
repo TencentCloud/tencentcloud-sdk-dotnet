@@ -25,7 +25,7 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// 已存证的作品ID
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
@@ -55,79 +55,79 @@ namespace TencentCloud.Bma.V20210624.Models
         public string RightUrl{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书下载地址
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书生效日期
         /// </summary>
         [JsonProperty("ValidStartDate")]
         public string ValidStartDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 授权书截止日期
         /// </summary>
         [JsonProperty("ValidEndDate")]
         public string ValidEndDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 委托书下载地址
         /// </summary>
         [JsonProperty("CommFileUrl")]
         public string CommFileUrl{ get; set; }
 
         /// <summary>
-        /// x
+        /// 委托书生效日期
         /// </summary>
         [JsonProperty("CommValidStartDate")]
         public string CommValidStartDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 委托书截止日期
         /// </summary>
         [JsonProperty("CommValidEndDate")]
         public string CommValidEndDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 主页下载地址
         /// </summary>
         [JsonProperty("HomeFileUrl")]
         public string HomeFileUrl{ get; set; }
 
         /// <summary>
-        /// x
+        /// 主页生效日期
         /// </summary>
         [JsonProperty("HomeValidStartDate")]
         public string HomeValidStartDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 主页截止日期
         /// </summary>
         [JsonProperty("HomeValidEndDate")]
         public string HomeValidEndDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 是否著作权人：0-否 1-是
         /// </summary>
         [JsonProperty("IsProducer")]
         public string IsProducer{ get; set; }
 
         /// <summary>
-        /// x
+        /// 存证证书下载地址
         /// </summary>
         [JsonProperty("EvidenceFileUrl")]
         public string EvidenceFileUrl{ get; set; }
 
         /// <summary>
-        /// x
+        /// 存证证书生效日期
         /// </summary>
         [JsonProperty("EvidenceValidStartDate")]
         public string EvidenceValidStartDate{ get; set; }
 
         /// <summary>
-        /// x
+        /// 存证证书截止日期
         /// </summary>
         [JsonProperty("EvidenceValidEndDate")]
         public string EvidenceValidEndDate{ get; set; }

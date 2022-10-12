@@ -25,13 +25,13 @@ namespace TencentCloud.Cvm.V20170312.Models
     {
         
         /// <summary>
-        /// 地域数量
+        /// 地域数量。
         /// </summary>
         [JsonProperty("TotalCount")]
         public ulong? TotalCount{ get; set; }
 
         /// <summary>
-        /// 地域列表信息
+        /// 地域列表信息。
         /// </summary>
         [JsonProperty("RegionSet")]
         public RegionInfo[] RegionSet{ get; set; }

@@ -25,43 +25,43 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// 白名单ID
+        /// 该字段已废弃，白名单ID
         /// </summary>
         [JsonProperty("WhiteListId")]
         public long? WhiteListId{ get; set; }
 
         /// <summary>
-        /// 平台名称
+        /// 该字段已废弃，平台名称
         /// </summary>
         [JsonProperty("PlatForm")]
         public string PlatForm{ get; set; }
 
         /// <summary>
-        /// 平台站点链接
+        /// 该字段已废弃，平台站点链接
         /// </summary>
         [JsonProperty("PlatUrl")]
         public string PlatUrl{ get; set; }
 
         /// <summary>
-        /// 作者ID
+        /// 该字段已废弃，作者ID
         /// </summary>
         [JsonProperty("AuthorId")]
         public string AuthorId{ get; set; }
 
         /// <summary>
-        /// 作品ID
+        /// 该字段已废弃，作品ID
         /// </summary>
         [JsonProperty("WorksId")]
         public long? WorksId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 作品ID
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 白名单列表，以\n分割
         /// </summary>
         [JsonProperty("WhiteSites")]
         public string WhiteSites{ get; set; }

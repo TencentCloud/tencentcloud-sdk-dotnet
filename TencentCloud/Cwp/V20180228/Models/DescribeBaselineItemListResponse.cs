@@ -15,38 +15,32 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Cwp.V20180228.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class DescribeDBPerformanceDetailsRequest : AbstractModel
+    public class DescribeBaselineItemListResponse : AbstractModel
     {
         
         /// <summary>
-        /// 实例 ID，形如：tdsql-ow728lmc。
+        /// 无
         /// </summary>
-        [JsonProperty("InstanceId")]
-        public string InstanceId{ get; set; }
+        [JsonProperty("List")]
+        public BaselineItem[] List{ get; set; }
 
         /// <summary>
-        /// 开始日期，格式yyyy-mm-dd
+        /// 总数
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("Total")]
+        public long? Total{ get; set; }
 
         /// <summary>
-        /// 结束日期，格式yyyy-mm-dd
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 拉取的指标名，支持的值为：long_query,select_total,update_total,insert_total,delete_total,mem_hit_rate,disk_iops,conn_active,is_master_switched,slave_delay
-        /// </summary>
-        [JsonProperty("MetricName")]
-        public string MetricName{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -54,10 +48,9 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "InstanceId", this.InstanceId);
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamSimple(map, prefix + "MetricName", this.MetricName);
+            this.SetParamArrayObj(map, prefix + "List.", this.List);
+            this.SetParamSimple(map, prefix + "Total", this.Total);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

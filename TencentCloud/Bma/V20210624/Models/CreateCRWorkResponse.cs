@@ -25,13 +25,13 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// 作品ID
+        /// 作品ID，一个作品对应唯一的workid
         /// </summary>
         [JsonProperty("WorkId")]
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// x
+        /// 存证ID，忽略该字段
         /// </summary>
         [JsonProperty("EvidenceId")]
         public long? EvidenceId{ get; set; }

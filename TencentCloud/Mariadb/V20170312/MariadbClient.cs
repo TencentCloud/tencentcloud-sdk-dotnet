@@ -819,86 +819,6 @@ namespace TencentCloud.Mariadb.V20170312
         }
 
         /// <summary>
-        /// 本接口(DescribeDBPerformance)用于查看数据库实例当前性能数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBPerformanceRequest"/></param>
-        /// <returns><see cref="DescribeDBPerformanceResponse"/></returns>
-        public async Task<DescribeDBPerformanceResponse> DescribeDBPerformance(DescribeDBPerformanceRequest req)
-        {
-             JsonResponseModel<DescribeDBPerformanceResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDBPerformance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPerformanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(DescribeDBPerformance)用于查看数据库实例当前性能数据。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBPerformanceRequest"/></param>
-        /// <returns><see cref="DescribeDBPerformanceResponse"/></returns>
-        public DescribeDBPerformanceResponse DescribeDBPerformanceSync(DescribeDBPerformanceRequest req)
-        {
-             JsonResponseModel<DescribeDBPerformanceResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBPerformance");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPerformanceResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBPerformanceDetailsRequest"/></param>
-        /// <returns><see cref="DescribeDBPerformanceDetailsResponse"/></returns>
-        public async Task<DescribeDBPerformanceDetailsResponse> DescribeDBPerformanceDetails(DescribeDBPerformanceDetailsRequest req)
-        {
-             JsonResponseModel<DescribeDBPerformanceDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeDBPerformanceDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPerformanceDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口(DescribeDBPerformanceDetails)用于查看实例性能数据详情。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeDBPerformanceDetailsRequest"/></param>
-        /// <returns><see cref="DescribeDBPerformanceDetailsResponse"/></returns>
-        public DescribeDBPerformanceDetailsResponse DescribeDBPerformanceDetailsSync(DescribeDBPerformanceDetailsRequest req)
-        {
-             JsonResponseModel<DescribeDBPerformanceDetailsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeDBPerformanceDetails");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeDBPerformanceDetailsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 本接口(DescribeDBResourceUsage)用于查看数据库实例资源的使用情况。
         /// </summary>
         /// <param name="req"><see cref="DescribeDBResourceUsageRequest"/></param>
@@ -1570,46 +1490,6 @@ namespace TencentCloud.Mariadb.V20170312
              {
                  var strResp = this.InternalRequestSync(req, "DescribeSaleInfo");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSaleInfoResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
-        public async Task<DescribeSqlLogsResponse> DescribeSqlLogs(DescribeSqlLogsRequest req)
-        {
-             JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "DescribeSqlLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSqlLogsResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 本接口（DescribeSqlLogs）用于获取实例SQL日志。
-        /// </summary>
-        /// <param name="req"><see cref="DescribeSqlLogsRequest"/></param>
-        /// <returns><see cref="DescribeSqlLogsResponse"/></returns>
-        public DescribeSqlLogsResponse DescribeSqlLogsSync(DescribeSqlLogsRequest req)
-        {
-             JsonResponseModel<DescribeSqlLogsResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "DescribeSqlLogs");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeSqlLogsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

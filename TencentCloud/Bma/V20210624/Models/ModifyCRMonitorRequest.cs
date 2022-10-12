@@ -31,13 +31,13 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// 监测状态 1-开启监测 2-关闭监测
+        /// 监测状态：1-开启监测 2-关闭监测
         /// </summary>
         [JsonProperty("MonitorStatus")]
         public string MonitorStatus{ get; set; }
 
         /// <summary>
-        /// 默认不停止，支持续期
+        /// 监测截止时间
         /// </summary>
         [JsonProperty("MonitorEnd")]
         public string MonitorEnd{ get; set; }

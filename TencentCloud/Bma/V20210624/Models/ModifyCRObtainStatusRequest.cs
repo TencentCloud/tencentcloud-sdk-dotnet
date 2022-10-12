@@ -25,25 +25,25 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 侵权ID
         /// </summary>
         [JsonProperty("TortId")]
         public long? TortId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 取证类型：1-网页取证 2-过程取证
         /// </summary>
         [JsonProperty("ObtainType")]
         public long? ObtainType{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 过程取证的取证时长，单位分钟，范围0-120
         /// </summary>
         [JsonProperty("ObtainDuration")]
         public long? ObtainDuration{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 结果回调地址
         /// </summary>
         [JsonProperty("ObtainUrl")]
         public string ObtainUrl{ get; set; }
