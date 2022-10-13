@@ -54,6 +54,12 @@ namespace TencentCloud.Vod.V20180717.Models
         [JsonProperty("Fps")]
         public long? Fps{ get; set; }
 
+        /// <summary>
+        /// 编码标签，仅当 Codec 为 hevc 时有效。
+        /// </summary>
+        [JsonProperty("CodecTag")]
+        public string CodecTag{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Vod.V20180717.Models
             this.SetParamSimple(map, prefix + "Width", this.Width);
             this.SetParamSimple(map, prefix + "Codec", this.Codec);
             this.SetParamSimple(map, prefix + "Fps", this.Fps);
+            this.SetParamSimple(map, prefix + "CodecTag", this.CodecTag);
         }
     }
 }

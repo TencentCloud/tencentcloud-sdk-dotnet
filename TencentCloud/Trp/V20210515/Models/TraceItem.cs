@@ -73,6 +73,13 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("Key")]
         public string Key{ get; set; }
 
+        /// <summary>
+        /// 扩展字段
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Ext")]
+        public string Ext{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -86,6 +93,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Hidden", this.Hidden);
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "Key", this.Key);
+            this.SetParamSimple(map, prefix + "Ext", this.Ext);
         }
     }
 }

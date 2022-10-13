@@ -25,31 +25,31 @@ namespace TencentCloud.Redis.V20180412.Models
     {
         
         /// <summary>
-        /// 数据库引擎名称：mariadb,cdb,cynosdb,dcdb,redis,mongodb
+        /// 数据库引擎名称，本接口取值：redis。
         /// </summary>
         [JsonProperty("Product")]
         public string Product{ get; set; }
 
         /// <summary>
-        /// 项目Id。
+        /// 项目 ID。
         /// </summary>
         [JsonProperty("ProjectId")]
         public ulong? ProjectId{ get; set; }
 
         /// <summary>
-        /// 偏移量。
+        /// 偏移量，取值为Limit的整数倍。
         /// </summary>
         [JsonProperty("Offset")]
         public ulong? Offset{ get; set; }
 
         /// <summary>
-        /// 拉取数量限制，默认20
+        /// 拉取数量限制，默认 20。
         /// </summary>
         [JsonProperty("Limit")]
         public ulong? Limit{ get; set; }
 
         /// <summary>
-        /// 搜索条件，支持安全组id或者安全组名称。
+        /// 搜索条件，支持安全组 ID 或者安全组名称。
         /// </summary>
         [JsonProperty("SearchKey")]
         public string SearchKey{ get; set; }

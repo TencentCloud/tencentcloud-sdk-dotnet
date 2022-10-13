@@ -67,6 +67,19 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CodeRule")]
         public string CodeRule{ get; set; }
 
+        /// <summary>
+        /// 码来源类型 0: 安心平台 1: 第三方码
+        /// </summary>
+        [JsonProperty("CodeType")]
+        public long? CodeType{ get; set; }
+
+        /// <summary>
+        /// 第三方码域名前缀
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodeUrl")]
+        public string CodeUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -80,6 +93,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "CreateTime", this.CreateTime);
             this.SetParamSimple(map, prefix + "UpdateTime", this.UpdateTime);
             this.SetParamSimple(map, prefix + "CodeRule", this.CodeRule);
+            this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
+            this.SetParamSimple(map, prefix + "CodeUrl", this.CodeUrl);
         }
     }
 }

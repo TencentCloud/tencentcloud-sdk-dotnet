@@ -93,7 +93,7 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 生成码包
+        /// 生成普通码包
         /// </summary>
         /// <param name="req"><see cref="CreateCodePackRequest"/></param>
         /// <returns><see cref="CreateCodePackResponse"/></returns>
@@ -113,7 +113,7 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
-        /// 生成码包
+        /// 生成普通码包
         /// </summary>
         /// <param name="req"><see cref="CreateCodePackRequest"/></param>
         /// <returns><see cref="CreateCodePackResponse"/></returns>

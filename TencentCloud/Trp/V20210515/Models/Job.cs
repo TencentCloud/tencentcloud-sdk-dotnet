@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Mariadb.V20170312.Models
+namespace TencentCloud.Trp.V20210515.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class MonitorData : AbstractModel
+    public class Job : AbstractModel
     {
         
         /// <summary>
-        /// 起始时间，形如 2018-03-24 23:59:59
+        /// 调度ID
         /// </summary>
-        [JsonProperty("StartTime")]
-        public string StartTime{ get; set; }
+        [JsonProperty("JobId")]
+        public long? JobId{ get; set; }
 
         /// <summary>
-        /// 结束时间，形如 2018-03-24 23:59:59
+        /// 执行状态 init:初始化, pending: 执行中, done: 执行成功, error: 执行失败
         /// </summary>
-        [JsonProperty("EndTime")]
-        public string EndTime{ get; set; }
-
-        /// <summary>
-        /// 监控数据
-        /// </summary>
-        [JsonProperty("Data")]
-        public float?[] Data{ get; set; }
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Mariadb.V20170312.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "StartTime", this.StartTime);
-            this.SetParamSimple(map, prefix + "EndTime", this.EndTime);
-            this.SetParamArraySimple(map, prefix + "Data.", this.Data);
+            this.SetParamSimple(map, prefix + "JobId", this.JobId);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

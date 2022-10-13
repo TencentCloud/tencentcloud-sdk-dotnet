@@ -154,6 +154,20 @@ namespace TencentCloud.Gaap.V20180529.Models
         [JsonProperty("SessionPersist")]
         public ulong? SessionPersist{ get; set; }
 
+        /// <summary>
+        /// 监听器的通道ID，如果监听器属于通道组，则为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ProxyId")]
+        public string ProxyId{ get; set; }
+
+        /// <summary>
+        /// 监听器的通道组ID，如果监听器属于通道，则为null
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("GroupId")]
+        public string GroupId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -179,6 +193,8 @@ namespace TencentCloud.Gaap.V20180529.Models
             this.SetParamSimple(map, prefix + "UnhealthyThreshold", this.UnhealthyThreshold);
             this.SetParamSimple(map, prefix + "FailoverSwitch", this.FailoverSwitch);
             this.SetParamSimple(map, prefix + "SessionPersist", this.SessionPersist);
+            this.SetParamSimple(map, prefix + "ProxyId", this.ProxyId);
+            this.SetParamSimple(map, prefix + "GroupId", this.GroupId);
         }
     }
 }

@@ -48,6 +48,12 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CorpId")]
         public ulong? CorpId{ get; set; }
 
+        /// <summary>
+        /// 码来源类型 0:自建, 1:第三方
+        /// </summary>
+        [JsonProperty("CodeType")]
+        public long? CodeType{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PageSize", this.PageSize);
             this.SetParamSimple(map, prefix + "PageNumber", this.PageNumber);
             this.SetParamSimple(map, prefix + "CorpId", this.CorpId);
+            this.SetParamSimple(map, prefix + "CodeType", this.CodeType);
         }
     }
 }

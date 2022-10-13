@@ -136,6 +136,13 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("TplName")]
         public string TplName{ get; set; }
 
+        /// <summary>
+        /// 调度任务
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Job")]
+        public Job Job{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -158,6 +165,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ProductName", this.ProductName);
             this.SetParamObj(map, prefix + "Ext.", this.Ext);
             this.SetParamSimple(map, prefix + "TplName", this.TplName);
+            this.SetParamObj(map, prefix + "Job.", this.Job);
         }
     }
 }
