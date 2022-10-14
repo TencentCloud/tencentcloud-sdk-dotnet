@@ -149,6 +149,15 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
+        /// <summary>
+        /// 存储付费模式
+        ///  - PREPAID：预付费，即包年包月
+        ///  - POSTPAID_BY_HOUR：按小时后付费
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public string StoragePayMode{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -174,6 +183,7 @@ namespace TencentCloud.Tdcpg.V20211118.Models
             this.SetParamArrayObj(map, prefix + "EndpointSet.", this.EndpointSet);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
         }
     }
 }

@@ -30,6 +30,20 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("TradeSerialNo")]
         public string TradeSerialNo{ get; set; }
 
+        /// <summary>
+        /// 代理商ID
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentId")]
+        public string AgentId{ get; set; }
+
+        /// <summary>
+        /// 代理商名称
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("AgentName")]
+        public string AgentName{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -37,6 +51,8 @@ namespace TencentCloud.Cpdp.V20190820.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "TradeSerialNo", this.TradeSerialNo);
+            this.SetParamSimple(map, prefix + "AgentId", this.AgentId);
+            this.SetParamSimple(map, prefix + "AgentName", this.AgentName);
         }
     }
 }

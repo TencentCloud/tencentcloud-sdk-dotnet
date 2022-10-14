@@ -25,13 +25,13 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 页数
         /// </summary>
         [JsonProperty("PageSize")]
         public long? PageSize{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 页码
         /// </summary>
         [JsonProperty("PageNumber")]
         public long? PageNumber{ get; set; }

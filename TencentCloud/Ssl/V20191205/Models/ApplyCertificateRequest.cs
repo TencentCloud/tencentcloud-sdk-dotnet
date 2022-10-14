@@ -96,6 +96,12 @@ namespace TencentCloud.Ssl.V20191205.Models
         [JsonProperty("OldCertificateId")]
         public string OldCertificateId{ get; set; }
 
+        /// <summary>
+        /// 权益包ID，用于免费证书扩容包使用
+        /// </summary>
+        [JsonProperty("PackageId")]
+        public string PackageId{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -114,6 +120,7 @@ namespace TencentCloud.Ssl.V20191205.Models
             this.SetParamSimple(map, prefix + "CsrKeyPassword", this.CsrKeyPassword);
             this.SetParamSimple(map, prefix + "Alias", this.Alias);
             this.SetParamSimple(map, prefix + "OldCertificateId", this.OldCertificateId);
+            this.SetParamSimple(map, prefix + "PackageId", this.PackageId);
         }
     }
 }

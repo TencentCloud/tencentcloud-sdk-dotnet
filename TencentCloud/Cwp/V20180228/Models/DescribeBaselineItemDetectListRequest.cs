@@ -31,7 +31,7 @@ namespace TencentCloud.Cwp.V20180228.Models
         /// <li>ItemName - string - 是否必填：否 - 项名称</li>
         /// <li>DetectStatus - int - 是否必填：否 - 检测状态</li>
         /// <li>Level - int - 是否必填：否 - 风险等级</li>
-        /// <li>StartTime - string - 是否必填：否 - 开时时间</li>
+        /// <li>StartTime - string - 是否必填：否 - 开始时间</li>
         /// <li>EndTime - string - 是否必填：否 - 结束时间</li>
         /// </summary>
         [JsonProperty("Filters")]

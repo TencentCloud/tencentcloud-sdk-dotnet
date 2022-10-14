@@ -25,25 +25,25 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 保护网址ID
         /// </summary>
         [JsonProperty("ProtectURLId")]
         public long? ProtectURLId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网址
         /// </summary>
         [JsonProperty("FakeURL")]
         public string FakeURL{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 截图
         /// </summary>
         [JsonProperty("SnapshotNames")]
         public string[] SnapshotNames{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 举报说明
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }

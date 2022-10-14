@@ -25,25 +25,25 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 文件下载地址
         /// </summary>
         [JsonProperty("FileUrl")]
         public string FileUrl{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 文件类型 1-委托书 2-授权书 5-存证证书 11-营业执照
         /// </summary>
         [JsonProperty("FileType")]
         public long? FileType{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 文件有效开始日期
         /// </summary>
         [JsonProperty("ValidStartDate")]
         public string ValidStartDate{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 文件有效截止日期
         /// </summary>
         [JsonProperty("ValidEndDate")]
         public string ValidEndDate{ get; set; }

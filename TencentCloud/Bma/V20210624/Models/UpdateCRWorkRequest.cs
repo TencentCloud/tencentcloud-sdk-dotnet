@@ -31,7 +31,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? WorkId{ get; set; }
 
         /// <summary>
-        /// 文件的扩展名，比如txt，docx
+        /// 文件的扩展名，例如txt，docx
         /// </summary>
         [JsonProperty("ContentType")]
         public string ContentType{ get; set; }

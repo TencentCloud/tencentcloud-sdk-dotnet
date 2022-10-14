@@ -53,6 +53,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 创建房间内可以使用的文档。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocumentRequest"/></param>
+        /// <returns><see cref="CreateDocumentResponse"/></returns>
+        public async Task<CreateDocumentResponse> CreateDocument(CreateDocumentRequest req)
+        {
+             JsonResponseModel<CreateDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 创建房间内可以使用的文档。
+        /// </summary>
+        /// <param name="req"><see cref="CreateDocumentRequest"/></param>
+        /// <returns><see cref="CreateDocumentResponse"/></returns>
+        public CreateDocumentResponse CreateDocumentSync(CreateDocumentRequest req)
+        {
+             JsonResponseModel<CreateDocumentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateDocument");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateDocumentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 创建房间
         /// </summary>
         /// <param name="req"><see cref="CreateRoomRequest"/></param>
@@ -324,6 +364,46 @@ namespace TencentCloud.Lcic.V20220817
              {
                  var strResp = this.InternalRequestSync(req, "RegisterUser");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<RegisterUserResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+        /// </summary>
+        /// <param name="req"><see cref="SetAppCustomContentRequest"/></param>
+        /// <returns><see cref="SetAppCustomContentResponse"/></returns>
+        public async Task<SetAppCustomContentResponse> SetAppCustomContent(SetAppCustomContentRequest req)
+        {
+             JsonResponseModel<SetAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SetAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAppCustomContentResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 设置应用的自定义内容，包括应用图标，自定义的代码等。如果已存在，则为更新。更新js、css内容后，要生效也需要调用该接口
+        /// </summary>
+        /// <param name="req"><see cref="SetAppCustomContentRequest"/></param>
+        /// <returns><see cref="SetAppCustomContentResponse"/></returns>
+        public SetAppCustomContentResponse SetAppCustomContentSync(SetAppCustomContentRequest req)
+        {
+             JsonResponseModel<SetAppCustomContentResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SetAppCustomContent");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetAppCustomContentResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

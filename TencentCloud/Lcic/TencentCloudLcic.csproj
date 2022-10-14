@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{06F3F01F-1C8E-3B3F-9C08-A37C195B200B}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.618</VersionPrefix>
+    <VersionPrefix>3.0.619</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -45,6 +45,9 @@
 
   <ItemGroup>
     <Compile Include="V20220817\LcicClient.cs" />
+    <Compile Include="V20220817\Models\AppCustomContent.cs" />
+    <Compile Include="V20220817\Models\CreateDocumentRequest.cs" />
+    <Compile Include="V20220817\Models\CreateDocumentResponse.cs" />
     <Compile Include="V20220817\Models\CreateRoomRequest.cs" />
     <Compile Include="V20220817\Models\CreateRoomResponse.cs" />
     <Compile Include="V20220817\Models\CreateSupervisorRequest.cs" />
@@ -59,5 +62,7 @@
     <Compile Include="V20220817\Models\LoginUserResponse.cs" />
     <Compile Include="V20220817\Models\RegisterUserRequest.cs" />
     <Compile Include="V20220817\Models\RegisterUserResponse.cs" />
+    <Compile Include="V20220817\Models\SetAppCustomContentRequest.cs" />
+    <Compile Include="V20220817\Models\SetAppCustomContentResponse.cs" />
   </ItemGroup>
 </Project>

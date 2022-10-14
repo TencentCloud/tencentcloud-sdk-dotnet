@@ -25,43 +25,43 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 商标名称
         /// </summary>
         [JsonProperty("BrandName")]
         public string BrandName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 商标证明
         /// </summary>
         [JsonProperty("BrandCertificateName")]
         public string BrandCertificateName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 商标审核状态 1-审核中 2-审核未通过 3-审核通过
         /// </summary>
         [JsonProperty("BrandStatus")]
         public long? BrandStatus{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 审核说明
         /// </summary>
         [JsonProperty("BrandNote")]
         public string BrandNote{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 商标转让证明
         /// </summary>
         [JsonProperty("TransferName")]
         public string TransferName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 商标转让证明审核状态
         /// </summary>
         [JsonProperty("TransferStatus")]
         public long? TransferStatus{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 审核说明 1-审核中 2-审核未通过 3-审核通过
         /// </summary>
         [JsonProperty("TransferNote")]
         public string TransferNote{ get; set; }

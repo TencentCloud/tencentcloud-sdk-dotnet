@@ -25,61 +25,61 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xx
+        /// 企业名称
         /// </summary>
         [JsonProperty("CompanyName")]
         public string CompanyName{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 电话号码
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 营业执照
         /// </summary>
         [JsonProperty("LicenseName")]
         public string LicenseName{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 营业执照审核状态 1-审核中 2-审核未通过，3、审核通过
         /// </summary>
         [JsonProperty("LicenseStatus")]
         public long? LicenseStatus{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 营业执照备注
         /// </summary>
         [JsonProperty("LicenseNote")]
         public string LicenseNote{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 授权书
         /// </summary>
         [JsonProperty("AuthorizationName")]
         public string AuthorizationName{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 授权书审核状态
         /// </summary>
         [JsonProperty("AuthorizationStatus")]
         public long? AuthorizationStatus{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 授权书备注
         /// </summary>
         [JsonProperty("AuthorizationNote")]
         public string AuthorizationNote{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 品牌信息
         /// </summary>
         [JsonProperty("BrandDatas")]
         public BrandData[] BrandDatas{ get; set; }
 
         /// <summary>
-        /// xx
+        /// 企业ID
         /// </summary>
         [JsonProperty("CompanyId")]
         public long? CompanyId{ get; set; }

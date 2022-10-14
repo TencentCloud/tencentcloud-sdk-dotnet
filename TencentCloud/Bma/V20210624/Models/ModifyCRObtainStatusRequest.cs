@@ -43,7 +43,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? ObtainDuration{ get; set; }
 
         /// <summary>
-        /// 结果回调地址
+        /// 取证结果回调地址
         /// </summary>
         [JsonProperty("ObtainUrl")]
         public string ObtainUrl{ get; set; }

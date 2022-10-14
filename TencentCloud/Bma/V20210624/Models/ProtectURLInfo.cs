@@ -25,37 +25,37 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 保护网站ID
         /// </summary>
         [JsonProperty("ProtectURLId")]
         public long? ProtectURLId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站
         /// </summary>
         [JsonProperty("ProtectURL")]
         public string ProtectURL{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站名称
         /// </summary>
         [JsonProperty("ProtectWeb")]
         public string ProtectWeb{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站审核状态 1-审核中 2-审核不通过 3-审核通过
         /// </summary>
         [JsonProperty("ProtectURLStatus")]
         public long? ProtectURLStatus{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 网站审核不通过原因
         /// </summary>
         [JsonProperty("ProtectURLNote")]
         public string ProtectURLNote{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 创建时间
         /// </summary>
         [JsonProperty("CreateTime")]
         public string CreateTime{ get; set; }

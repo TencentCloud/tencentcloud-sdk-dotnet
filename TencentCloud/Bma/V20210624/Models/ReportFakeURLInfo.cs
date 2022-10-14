@@ -25,109 +25,109 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 仿冒网址ID
         /// </summary>
         [JsonProperty("FakeURLId")]
         public long? FakeURLId{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 检测时间
         /// </summary>
         [JsonProperty("DetectTime")]
         public string DetectTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站
         /// </summary>
         [JsonProperty("ProtectURL")]
         public string ProtectURL{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站名称
         /// </summary>
         [JsonProperty("ProtectWeb")]
         public string ProtectWeb{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网址
         /// </summary>
         [JsonProperty("FakeURL")]
         public string FakeURL{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 截图
         /// </summary>
         [JsonProperty("Snapshot")]
         public string Snapshot{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// IP地址
         /// </summary>
         [JsonProperty("IP")]
         public string IP{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// IP地理位置
         /// </summary>
         [JsonProperty("IPLoc")]
         public string IPLoc{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 热度
         /// </summary>
         [JsonProperty("Heat")]
         public long? Heat{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 网站状态
         /// </summary>
         [JsonProperty("Status")]
         public long? Status{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 网站不处理原因
         /// </summary>
         [JsonProperty("Note")]
         public string Note{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站的企业名称
         /// </summary>
         [JsonProperty("FakeURLCompany")]
         public string FakeURLCompany{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站的网站性质
         /// </summary>
         [JsonProperty("FakeURLAttr")]
         public string FakeURLAttr{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站的网站名称
         /// </summary>
         [JsonProperty("FakeURLName")]
         public string FakeURLName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站的备案
         /// </summary>
         [JsonProperty("FakeURLICP")]
         public string FakeURLICP{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站创建时间
         /// </summary>
         [JsonProperty("FakeURLCreateTime")]
         public string FakeURLCreateTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 仿冒网站过期时间
         /// </summary>
         [JsonProperty("FakeURLExpireTime")]
         public string FakeURLExpireTime{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 协查处置时间
         /// </summary>
         [JsonProperty("BlockTime")]
         public string BlockTime{ get; set; }

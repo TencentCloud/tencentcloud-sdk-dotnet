@@ -274,6 +274,13 @@ namespace TencentCloud.Dc.V20180410.Models
         [JsonProperty("JumboEnable")]
         public long? JumboEnable{ get; set; }
 
+        /// <summary>
+        /// 专用通道是否支持高精度BFD。1支持，0不支持
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("HighPrecisionBFDEnable")]
+        public long? HighPrecisionBFDEnable{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -319,6 +326,7 @@ namespace TencentCloud.Dc.V20180410.Models
             this.SetParamObj(map, prefix + "BgpIPv6Status.", this.BgpIPv6Status);
             this.SetParamSimple(map, prefix + "CustomerIPv6Address", this.CustomerIPv6Address);
             this.SetParamSimple(map, prefix + "JumboEnable", this.JumboEnable);
+            this.SetParamSimple(map, prefix + "HighPrecisionBFDEnable", this.HighPrecisionBFDEnable);
         }
     }
 }

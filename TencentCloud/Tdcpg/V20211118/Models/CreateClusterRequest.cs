@@ -61,7 +61,7 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         public string SubnetId{ get; set; }
 
         /// <summary>
-        /// 集群付费模式
+        /// 实例付费模式
         ///  - PREPAID：预付费，即包年包月
         ///  - POSTPAID_BY_HOUR：按小时后付费
         /// </summary>
@@ -129,6 +129,21 @@ namespace TencentCloud.Tdcpg.V20211118.Models
         [JsonProperty("DBKernelVersion")]
         public string DBKernelVersion{ get; set; }
 
+        /// <summary>
+        /// 存储付费模式
+        ///  - PREPAID：预付费，即包年包月
+        ///  - POSTPAID_BY_HOUR：按小时后付费
+        /// 默认为POSTPAID_BY_HOUR，实例付费模式为按小时付费时，存储付费模式不支持包年包月
+        /// </summary>
+        [JsonProperty("StoragePayMode")]
+        public string StoragePayMode{ get; set; }
+
+        /// <summary>
+        /// 存储最大使用量，单位GB。取值参考文档【购买指南】。存储使用预付费模式时必须设置，存储使用按小时后付费时不可设置
+        /// </summary>
+        [JsonProperty("Storage")]
+        public ulong? Storage{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -151,6 +166,8 @@ namespace TencentCloud.Tdcpg.V20211118.Models
             this.SetParamSimple(map, prefix + "AutoRenewFlag", this.AutoRenewFlag);
             this.SetParamSimple(map, prefix + "DBMajorVersion", this.DBMajorVersion);
             this.SetParamSimple(map, prefix + "DBKernelVersion", this.DBKernelVersion);
+            this.SetParamSimple(map, prefix + "StoragePayMode", this.StoragePayMode);
+            this.SetParamSimple(map, prefix + "Storage", this.Storage);
         }
     }
 }

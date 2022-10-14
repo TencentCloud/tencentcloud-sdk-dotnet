@@ -50,6 +50,27 @@ namespace TencentCloud.Cpdp.V20190820.Models
         [JsonProperty("OutOrderId")]
         public string OutOrderId{ get; set; }
 
+        /// <summary>
+        /// 充值状态
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealStatus")]
+        public string DealStatus{ get; set; }
+
+        /// <summary>
+        /// 充值返回描述
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("DealMessage")]
+        public string DealMessage{ get; set; }
+
+        /// <summary>
+        /// PC web端跳转链接
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PcWebUrl")]
+        public string PcWebUrl{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -60,6 +81,9 @@ namespace TencentCloud.Cpdp.V20190820.Models
             this.SetParamSimple(map, prefix + "ThirdPayOrderId", this.ThirdPayOrderId);
             this.SetParamObj(map, prefix + "RedirectInfo.", this.RedirectInfo);
             this.SetParamSimple(map, prefix + "OutOrderId", this.OutOrderId);
+            this.SetParamSimple(map, prefix + "DealStatus", this.DealStatus);
+            this.SetParamSimple(map, prefix + "DealMessage", this.DealMessage);
+            this.SetParamSimple(map, prefix + "PcWebUrl", this.PcWebUrl);
         }
     }
 }

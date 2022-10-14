@@ -54,6 +54,12 @@ namespace TencentCloud.Trtc.V20190722.Models
         [JsonProperty("VideoTimeFhd")]
         public ulong? VideoTimeFhd{ get; set; }
 
+        /// <summary>
+        /// 带宽，单位：Mbps。
+        /// </summary>
+        [JsonProperty("Flux")]
+        public float? Flux{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -65,6 +71,7 @@ namespace TencentCloud.Trtc.V20190722.Models
             this.SetParamSimple(map, prefix + "VideoTimeSd", this.VideoTimeSd);
             this.SetParamSimple(map, prefix + "VideoTimeHd", this.VideoTimeHd);
             this.SetParamSimple(map, prefix + "VideoTimeFhd", this.VideoTimeFhd);
+            this.SetParamSimple(map, prefix + "Flux", this.Flux);
         }
     }
 }

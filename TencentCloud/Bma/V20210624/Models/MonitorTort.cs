@@ -169,7 +169,7 @@ namespace TencentCloud.Bma.V20210624.Models
         public long? IsProducer{ get; set; }
 
         /// <summary>
-        /// 是否海外网址
+        /// 是否境外网址
         /// </summary>
         [JsonProperty("IsOverseas")]
         public long? IsOverseas{ get; set; }

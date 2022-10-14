@@ -48,6 +48,12 @@ namespace TencentCloud.Cynosdb.V20190107.Models
         [JsonProperty("Name")]
         public string Name{ get; set; }
 
+        /// <summary>
+        /// 操作符
+        /// </summary>
+        [JsonProperty("Operator")]
+        public string Operator{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -58,6 +64,7 @@ namespace TencentCloud.Cynosdb.V20190107.Models
             this.SetParamArraySimple(map, prefix + "Values.", this.Values);
             this.SetParamSimple(map, prefix + "ExactMatch", this.ExactMatch);
             this.SetParamSimple(map, prefix + "Name", this.Name);
+            this.SetParamSimple(map, prefix + "Operator", this.Operator);
         }
     }
 }

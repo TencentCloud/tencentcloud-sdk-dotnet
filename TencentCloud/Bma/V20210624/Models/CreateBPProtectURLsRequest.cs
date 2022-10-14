@@ -25,31 +25,31 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 企业名称
         /// </summary>
         [JsonProperty("CompanyName")]
         public string CompanyName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 电话号码
         /// </summary>
         [JsonProperty("Phone")]
         public string Phone{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 营业执照
         /// </summary>
         [JsonProperty("LicenseName")]
         public string LicenseName{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 保护网站
         /// </summary>
         [JsonProperty("ProtectURLs")]
         public string[] ProtectURLs{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 网站名称
         /// </summary>
         [JsonProperty("ProtectWebs")]
         public string[] ProtectWebs{ get; set; }

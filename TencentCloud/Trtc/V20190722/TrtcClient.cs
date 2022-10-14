@@ -363,6 +363,56 @@ namespace TencentCloud.Trtc.V20190722
         }
 
         /// <summary>
+        /// 获取TRTC混流转码的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMixTranscodingUsageRequest"/></param>
+        /// <returns><see cref="DescribeMixTranscodingUsageResponse"/></returns>
+        public async Task<DescribeMixTranscodingUsageResponse> DescribeMixTranscodingUsage(DescribeMixTranscodingUsageRequest req)
+        {
+             JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeMixTranscodingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMixTranscodingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC混流转码的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeMixTranscodingUsageRequest"/></param>
+        /// <returns><see cref="DescribeMixTranscodingUsageResponse"/></returns>
+        public DescribeMixTranscodingUsageResponse DescribeMixTranscodingUsageSync(DescribeMixTranscodingUsageRequest req)
+        {
+             JsonResponseModel<DescribeMixTranscodingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeMixTranscodingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeMixTranscodingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 如果您需要在 [云端混流转码](https://cloud.tencent.com/document/product/647/16827) 时频繁查找自定义背景图或水印信息，可通过此接口查找已上传的图片信息。无需频繁查找图片信息的场景，建议直接在 [控制台 > 应用管理 > 素材管理](https://cloud.tencent.com/document/product/647/50769) 中查看。
         /// </summary>
         /// <param name="req"><see cref="DescribePictureRequest"/></param>
@@ -444,6 +494,106 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeRecordStatistic");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordStatisticResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC录制的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingUsageRequest"/></param>
+        /// <returns><see cref="DescribeRecordingUsageResponse"/></returns>
+        public async Task<DescribeRecordingUsageResponse> DescribeRecordingUsage(DescribeRecordingUsageRequest req)
+        {
+             JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRecordingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC录制的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRecordingUsageRequest"/></param>
+        /// <returns><see cref="DescribeRecordingUsageResponse"/></returns>
+        public DescribeRecordingUsageResponse DescribeRecordingUsageSync(DescribeRecordingUsageRequest req)
+        {
+             JsonResponseModel<DescribeRecordingUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRecordingUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRecordingUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC旁路转推的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelayUsageRequest"/></param>
+        /// <returns><see cref="DescribeRelayUsageResponse"/></returns>
+        public async Task<DescribeRelayUsageResponse> DescribeRelayUsage(DescribeRelayUsageRequest req)
+        {
+             JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeRelayUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelayUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC旁路转推的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeRelayUsageRequest"/></param>
+        /// <returns><see cref="DescribeRelayUsageResponse"/></returns>
+        public DescribeRelayUsageResponse DescribeRelayUsageSync(DescribeRelayUsageRequest req)
+        {
+             JsonResponseModel<DescribeRelayUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeRelayUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeRelayUsageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -578,6 +728,56 @@ namespace TencentCloud.Trtc.V20190722
              {
                  var strResp = this.InternalRequestSync(req, "DescribeTrtcMcuTranscodeTime");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcMcuTranscodeTimeResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC音视频互动的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcUsageRequest"/></param>
+        /// <returns><see cref="DescribeTrtcUsageResponse"/></returns>
+        public async Task<DescribeTrtcUsageResponse> DescribeTrtcUsage(DescribeTrtcUsageRequest req)
+        {
+             JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTrtcUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcUsageResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取TRTC音视频互动的用量明细。
+        /// - 查询时间小于等于1天时，返回每5分钟粒度的数据；查询时间大于1天时，返回按天汇总的数据。
+        /// - 单次查询统计区间最多不能超过31天。
+        /// - 若查询当天用量，由于统计延迟等原因，返回数据可能不够准确。
+        /// - 该接口只用于历史用量数据统计或核对数据使用，关键业务逻辑不能使用。
+        /// - 默认接口请求频率限制：5次/秒。
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTrtcUsageRequest"/></param>
+        /// <returns><see cref="DescribeTrtcUsageResponse"/></returns>
+        public DescribeTrtcUsageResponse DescribeTrtcUsageSync(DescribeTrtcUsageRequest req)
+        {
+             JsonResponseModel<DescribeTrtcUsageResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTrtcUsage");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTrtcUsageResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
