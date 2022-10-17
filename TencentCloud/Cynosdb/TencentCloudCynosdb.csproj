@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{FEBD4BA8-D71D-307D-97C6-CC6B06586449}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.619</VersionPrefix>
+    <VersionPrefix>3.0.620</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -56,6 +56,9 @@
     <Compile Include="V20190107\Models\Addr.cs" />
     <Compile Include="V20190107\Models\AssociateSecurityGroupsRequest.cs" />
     <Compile Include="V20190107\Models\AssociateSecurityGroupsResponse.cs" />
+    <Compile Include="V20190107\Models\AuditLog.cs" />
+    <Compile Include="V20190107\Models\AuditLogFile.cs" />
+    <Compile Include="V20190107\Models\AuditLogFilter.cs" />
     <Compile Include="V20190107\Models\BackupFileInfo.cs" />
     <Compile Include="V20190107\Models\BillingResourceInfo.cs" />
     <Compile Include="V20190107\Models\BinlogItem.cs" />
@@ -63,6 +66,8 @@
     <Compile Include="V20190107\Models\ClusterParamModifyLog.cs" />
     <Compile Include="V20190107\Models\CreateAccountsRequest.cs" />
     <Compile Include="V20190107\Models\CreateAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\CreateAuditLogFileRequest.cs" />
+    <Compile Include="V20190107\Models\CreateAuditLogFileResponse.cs" />
     <Compile Include="V20190107\Models\CreateBackupRequest.cs" />
     <Compile Include="V20190107\Models\CreateBackupResponse.cs" />
     <Compile Include="V20190107\Models\CreateClustersRequest.cs" />
@@ -75,10 +80,16 @@
     <Compile Include="V20190107\Models\DatabasePrivileges.cs" />
     <Compile Include="V20190107\Models\DatabaseTables.cs" />
     <Compile Include="V20190107\Models\DbTable.cs" />
+    <Compile Include="V20190107\Models\DeleteAuditLogFileRequest.cs" />
+    <Compile Include="V20190107\Models\DeleteAuditLogFileResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAccountAllGrantPrivilegesRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountAllGrantPrivilegesResponse.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsRequest.cs" />
     <Compile Include="V20190107\Models\DescribeAccountsResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogFilesRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogFilesResponse.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogsRequest.cs" />
+    <Compile Include="V20190107\Models\DescribeAuditLogsResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigRequest.cs" />
     <Compile Include="V20190107\Models\DescribeBackupConfigResponse.cs" />
     <Compile Include="V20190107\Models\DescribeBackupDownloadUrlRequest.cs" />

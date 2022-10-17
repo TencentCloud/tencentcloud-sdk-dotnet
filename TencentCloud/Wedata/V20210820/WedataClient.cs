@@ -387,6 +387,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 删除用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomFunctionRequest"/></param>
+        /// <returns><see cref="DeleteCustomFunctionResponse"/></returns>
+        public async Task<DeleteCustomFunctionResponse> DeleteCustomFunction(DeleteCustomFunctionRequest req)
+        {
+             JsonResponseModel<DeleteCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="DeleteCustomFunctionRequest"/></param>
+        /// <returns><see cref="DeleteCustomFunctionResponse"/></returns>
+        public DeleteCustomFunctionResponse DeleteCustomFunctionSync(DeleteCustomFunctionRequest req)
+        {
+             JsonResponseModel<DeleteCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 删除数据源
         /// </summary>
@@ -765,6 +805,86 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 查询函数分类
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionKindsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionKindsResponse"/></returns>
+        public async Task<DescribeFunctionKindsResponse> DescribeFunctionKinds(DescribeFunctionKindsRequest req)
+        {
+             JsonResponseModel<DescribeFunctionKindsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFunctionKinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFunctionKindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询函数分类
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionKindsRequest"/></param>
+        /// <returns><see cref="DescribeFunctionKindsResponse"/></returns>
+        public DescribeFunctionKindsResponse DescribeFunctionKindsSync(DescribeFunctionKindsRequest req)
+        {
+             JsonResponseModel<DescribeFunctionKindsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFunctionKinds");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFunctionKindsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询函数类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionTypesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionTypesResponse"/></returns>
+        public async Task<DescribeFunctionTypesResponse> DescribeFunctionTypes(DescribeFunctionTypesRequest req)
+        {
+             JsonResponseModel<DescribeFunctionTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeFunctionTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFunctionTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询函数类型
+        /// </summary>
+        /// <param name="req"><see cref="DescribeFunctionTypesRequest"/></param>
+        /// <returns><see cref="DescribeFunctionTypesResponse"/></returns>
+        public DescribeFunctionTypesResponse DescribeFunctionTypesSync(DescribeFunctionTypesRequest req)
+        {
+             JsonResponseModel<DescribeFunctionTypesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeFunctionTypes");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeFunctionTypesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 获取实例日志列表
         /// </summary>
@@ -798,6 +918,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "DescribeInstanceLogs");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeInstanceLogsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询全量函数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationalFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationalFunctionsResponse"/></returns>
+        public async Task<DescribeOrganizationalFunctionsResponse> DescribeOrganizationalFunctions(DescribeOrganizationalFunctionsRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationalFunctionsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeOrganizationalFunctions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationalFunctionsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询全量函数
+        /// </summary>
+        /// <param name="req"><see cref="DescribeOrganizationalFunctionsRequest"/></param>
+        /// <returns><see cref="DescribeOrganizationalFunctionsResponse"/></returns>
+        public DescribeOrganizationalFunctionsResponse DescribeOrganizationalFunctionsSync(DescribeOrganizationalFunctionsRequest req)
+        {
+             JsonResponseModel<DescribeOrganizationalFunctionsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeOrganizationalFunctions");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeOrganizationalFunctionsResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -1771,6 +1931,46 @@ namespace TencentCloud.Wedata.V20210820
         }
 
         /// <summary>
+        /// 保存用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="SaveCustomFunctionRequest"/></param>
+        /// <returns><see cref="SaveCustomFunctionResponse"/></returns>
+        public async Task<SaveCustomFunctionResponse> SaveCustomFunction(SaveCustomFunctionRequest req)
+        {
+             JsonResponseModel<SaveCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SaveCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 保存用户自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="SaveCustomFunctionRequest"/></param>
+        /// <returns><see cref="SaveCustomFunctionResponse"/></returns>
+        public SaveCustomFunctionResponse SaveCustomFunctionSync(SaveCustomFunctionRequest req)
+        {
+             JsonResponseModel<SaveCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SaveCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SaveCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// <p style="color:red;">[注意：该Beta版本只满足广州区部分白名单客户使用]</p>
         /// 设置任务告警，新建/更新告警信息（最新）
         /// </summary>
@@ -1804,6 +2004,46 @@ namespace TencentCloud.Wedata.V20210820
              {
                  var strResp = this.InternalRequestSync(req, "SetTaskAlarmNew");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<SetTaskAlarmNewResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="SubmitCustomFunctionRequest"/></param>
+        /// <returns><see cref="SubmitCustomFunctionResponse"/></returns>
+        public async Task<SubmitCustomFunctionResponse> SubmitCustomFunction(SubmitCustomFunctionRequest req)
+        {
+             JsonResponseModel<SubmitCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "SubmitCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCustomFunctionResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 提交自定义函数
+        /// </summary>
+        /// <param name="req"><see cref="SubmitCustomFunctionRequest"/></param>
+        /// <returns><see cref="SubmitCustomFunctionResponse"/></returns>
+        public SubmitCustomFunctionResponse SubmitCustomFunctionSync(SubmitCustomFunctionRequest req)
+        {
+             JsonResponseModel<SubmitCustomFunctionResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "SubmitCustomFunction");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<SubmitCustomFunctionResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

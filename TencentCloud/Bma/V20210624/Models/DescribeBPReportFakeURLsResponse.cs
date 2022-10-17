@@ -25,13 +25,13 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 举报网站列表
         /// </summary>
         [JsonProperty("ReportFakeURLInfos")]
         public ReportFakeURLInfo[] ReportFakeURLInfos{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 总量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

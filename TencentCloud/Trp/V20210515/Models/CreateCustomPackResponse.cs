@@ -15,32 +15,26 @@
  * under the License.
  */
 
-namespace TencentCloud.Essbasic.V20210526.Models
+namespace TencentCloud.Trp.V20210515.Models
 {
     using Newtonsoft.Json;
     using System.Collections.Generic;
     using TencentCloud.Common;
 
-    public class CreateChannelFlowEvidenceReportRequest : AbstractModel
+    public class CreateCustomPackResponse : AbstractModel
     {
         
         /// <summary>
-        /// 签署流程编号
+        /// 码包ID
         /// </summary>
-        [JsonProperty("FlowId")]
-        public string FlowId{ get; set; }
+        [JsonProperty("PackId")]
+        public string PackId{ get; set; }
 
         /// <summary>
-        /// 渠道应用相关信息。 此接口Agent.ProxyOrganizationOpenId、Agent. ProxyOperator.OpenId、Agent.AppId 和 Agent.ProxyAppId 均必填
+        /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
-        [JsonProperty("Agent")]
-        public Agent Agent{ get; set; }
-
-        /// <summary>
-        /// 操作者的信息
-        /// </summary>
-        [JsonProperty("Operator")]
-        public UserInfo Operator{ get; set; }
+        [JsonProperty("RequestId")]
+        public string RequestId{ get; set; }
 
 
         /// <summary>
@@ -48,9 +42,8 @@ namespace TencentCloud.Essbasic.V20210526.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
-            this.SetParamSimple(map, prefix + "FlowId", this.FlowId);
-            this.SetParamObj(map, prefix + "Agent.", this.Agent);
-            this.SetParamObj(map, prefix + "Operator.", this.Operator);
+            this.SetParamSimple(map, prefix + "PackId", this.PackId);
+            this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
 }

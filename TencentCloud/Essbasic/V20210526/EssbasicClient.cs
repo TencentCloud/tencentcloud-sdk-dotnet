@@ -515,46 +515,6 @@ namespace TencentCloud.Essbasic.V20210526
         }
 
         /// <summary>
-        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
-        /// </summary>
-        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
-        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
-        public async Task<CreateChannelFlowEvidenceReportResponse> CreateChannelFlowEvidenceReport(CreateChannelFlowEvidenceReportRequest req)
-        {
-             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
-             try
-             {
-                 var strResp = await this.InternalRequest(req, "CreateChannelFlowEvidenceReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
-        /// 创建出证报告，返回报告 URL。此接口暂未开放，有问题请联系运营人员。
-        /// </summary>
-        /// <param name="req"><see cref="CreateChannelFlowEvidenceReportRequest"/></param>
-        /// <returns><see cref="CreateChannelFlowEvidenceReportResponse"/></returns>
-        public CreateChannelFlowEvidenceReportResponse CreateChannelFlowEvidenceReportSync(CreateChannelFlowEvidenceReportRequest req)
-        {
-             JsonResponseModel<CreateChannelFlowEvidenceReportResponse> rsp = null;
-             try
-             {
-                 var strResp = this.InternalRequestSync(req, "CreateChannelFlowEvidenceReport");
-                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateChannelFlowEvidenceReportResponse>>(strResp);
-             }
-             catch (JsonSerializationException e)
-             {
-                 throw new TencentCloudSDKException(e.Message);
-             }
-             return rsp.Response;
-        }
-
-        /// <summary>
         /// 此接口（CreateConsoleLoginUrl）用于创建渠道子客企业控制台Web端登录链接。Web端登录链接是子客控制台的唯一入口。
         /// 若子客企业未激活，会进入企业激活流程,首次参与激活流程的经办人会成为超管。（若企业激活过程中填写信息有误，需要重置激活流程，可以换一个经办人OpenId获取新的链接进入。）
         /// 若子客企业已激活，使用了新的经办人OpenId进入，则会进入经办人的实名流程。

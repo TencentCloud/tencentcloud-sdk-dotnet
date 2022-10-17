@@ -133,6 +133,86 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 生成自定义码包
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomPackRequest"/></param>
+        /// <returns><see cref="CreateCustomPackResponse"/></returns>
+        public async Task<CreateCustomPackResponse> CreateCustomPack(CreateCustomPackRequest req)
+        {
+             JsonResponseModel<CreateCustomPackResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomPack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomPackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 生成自定义码包
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomPackRequest"/></param>
+        /// <returns><see cref="CreateCustomPackResponse"/></returns>
+        public CreateCustomPackResponse CreateCustomPackSync(CreateCustomPackRequest req)
+        {
+             JsonResponseModel<CreateCustomPackResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomPack");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomPackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomRuleRequest"/></param>
+        /// <returns><see cref="CreateCustomRuleResponse"/></returns>
+        public async Task<CreateCustomRuleResponse> CreateCustomRule(CreateCustomRuleRequest req)
+        {
+             JsonResponseModel<CreateCustomRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateCustomRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 新建自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="CreateCustomRuleRequest"/></param>
+        /// <returns><see cref="CreateCustomRuleResponse"/></returns>
+        public CreateCustomRuleResponse CreateCustomRuleSync(CreateCustomRuleRequest req)
+        {
+             JsonResponseModel<CreateCustomRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateCustomRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateCustomRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 新建商户
         /// </summary>
         /// <param name="req"><see cref="CreateMerchantRequest"/></param>
@@ -284,6 +364,46 @@ namespace TencentCloud.Trp.V20210515
              {
                  var strResp = this.InternalRequestSync(req, "CreateTraceCodes");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTraceCodesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 异步导入激活码包，如果是第三方码包，需要域名跟配置的匹配
+        /// </summary>
+        /// <param name="req"><see cref="CreateTraceCodesAsyncRequest"/></param>
+        /// <returns><see cref="CreateTraceCodesAsyncResponse"/></returns>
+        public async Task<CreateTraceCodesAsyncResponse> CreateTraceCodesAsync(CreateTraceCodesAsyncRequest req)
+        {
+             JsonResponseModel<CreateTraceCodesAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "CreateTraceCodesAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTraceCodesAsyncResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 异步导入激活码包，如果是第三方码包，需要域名跟配置的匹配
+        /// </summary>
+        /// <param name="req"><see cref="CreateTraceCodesAsyncRequest"/></param>
+        /// <returns><see cref="CreateTraceCodesAsyncResponse"/></returns>
+        public CreateTraceCodesAsyncResponse CreateTraceCodesAsyncSync(CreateTraceCodesAsyncRequest req)
+        {
+             JsonResponseModel<CreateTraceCodesAsyncResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "CreateTraceCodesAsync");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<CreateTraceCodesAsyncResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -573,6 +693,86 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询码包状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodePackStatusRequest"/></param>
+        /// <returns><see cref="DescribeCodePackStatusResponse"/></returns>
+        public async Task<DescribeCodePackStatusResponse> DescribeCodePackStatus(DescribeCodePackStatusRequest req)
+        {
+             JsonResponseModel<DescribeCodePackStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCodePackStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodePackStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询码包状态
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodePackStatusRequest"/></param>
+        /// <returns><see cref="DescribeCodePackStatusResponse"/></returns>
+        public DescribeCodePackStatusResponse DescribeCodePackStatusSync(DescribeCodePackStatusRequest req)
+        {
+             JsonResponseModel<DescribeCodePackStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCodePackStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodePackStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询码包地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodePackUrlRequest"/></param>
+        /// <returns><see cref="DescribeCodePackUrlResponse"/></returns>
+        public async Task<DescribeCodePackUrlResponse> DescribeCodePackUrl(DescribeCodePackUrlRequest req)
+        {
+             JsonResponseModel<DescribeCodePackUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCodePackUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodePackUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询码包地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCodePackUrlRequest"/></param>
+        /// <returns><see cref="DescribeCodePackUrlResponse"/></returns>
+        public DescribeCodePackUrlResponse DescribeCodePackUrlSync(DescribeCodePackUrlRequest req)
+        {
+             JsonResponseModel<DescribeCodePackUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCodePackUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodePackUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询码包列表
         /// </summary>
         /// <param name="req"><see cref="DescribeCodePacksRequest"/></param>
@@ -644,6 +844,126 @@ namespace TencentCloud.Trp.V20210515
              {
                  var strResp = this.InternalRequestSync(req, "DescribeCodesByPack");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCodesByPackResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRuleByIdRequest"/></param>
+        /// <returns><see cref="DescribeCustomRuleByIdResponse"/></returns>
+        public async Task<DescribeCustomRuleByIdResponse> DescribeCustomRuleById(DescribeCustomRuleByIdRequest req)
+        {
+             JsonResponseModel<DescribeCustomRuleByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomRuleById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRuleByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRuleByIdRequest"/></param>
+        /// <returns><see cref="DescribeCustomRuleByIdResponse"/></returns>
+        public DescribeCustomRuleByIdResponse DescribeCustomRuleByIdSync(DescribeCustomRuleByIdRequest req)
+        {
+             JsonResponseModel<DescribeCustomRuleByIdResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomRuleById");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRuleByIdResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查自定义码规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRulesRequest"/></param>
+        /// <returns><see cref="DescribeCustomRulesResponse"/></returns>
+        public async Task<DescribeCustomRulesResponse> DescribeCustomRules(DescribeCustomRulesRequest req)
+        {
+             JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeCustomRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查自定义码规则列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribeCustomRulesRequest"/></param>
+        /// <returns><see cref="DescribeCustomRulesResponse"/></returns>
+        public DescribeCustomRulesResponse DescribeCustomRulesSync(DescribeCustomRulesRequest req)
+        {
+             JsonResponseModel<DescribeCustomRulesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeCustomRules");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeCustomRulesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取异步任务的输出地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobFileUrlRequest"/></param>
+        /// <returns><see cref="DescribeJobFileUrlResponse"/></returns>
+        public async Task<DescribeJobFileUrlResponse> DescribeJobFileUrl(DescribeJobFileUrlRequest req)
+        {
+             JsonResponseModel<DescribeJobFileUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeJobFileUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobFileUrlResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获取异步任务的输出地址
+        /// </summary>
+        /// <param name="req"><see cref="DescribeJobFileUrlRequest"/></param>
+        /// <returns><see cref="DescribeJobFileUrlResponse"/></returns>
+        public DescribeJobFileUrlResponse DescribeJobFileUrlSync(DescribeJobFileUrlRequest req)
+        {
+             JsonResponseModel<DescribeJobFileUrlResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeJobFileUrl");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeJobFileUrlResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {
@@ -964,6 +1284,86 @@ namespace TencentCloud.Trp.V20210515
              {
                  var strResp = this.InternalRequestSync(req, "ModifyCodeBatch");
                  rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCodeBatchResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomRuleRequest"/></param>
+        /// <returns><see cref="ModifyCustomRuleResponse"/></returns>
+        public async Task<ModifyCustomRuleResponse> ModifyCustomRule(ModifyCustomRuleRequest req)
+        {
+             JsonResponseModel<ModifyCustomRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 修改自定义码规则
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomRuleRequest"/></param>
+        /// <returns><see cref="ModifyCustomRuleResponse"/></returns>
+        public ModifyCustomRuleResponse ModifyCustomRuleSync(ModifyCustomRuleRequest req)
+        {
+             JsonResponseModel<ModifyCustomRuleResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomRule");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomRuleResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义码规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyCustomRuleStatusResponse"/></returns>
+        public async Task<ModifyCustomRuleStatusResponse> ModifyCustomRuleStatus(ModifyCustomRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyCustomRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "ModifyCustomRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomRuleStatusResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 更新自定义码规则状态
+        /// </summary>
+        /// <param name="req"><see cref="ModifyCustomRuleStatusRequest"/></param>
+        /// <returns><see cref="ModifyCustomRuleStatusResponse"/></returns>
+        public ModifyCustomRuleStatusResponse ModifyCustomRuleStatusSync(ModifyCustomRuleStatusRequest req)
+        {
+             JsonResponseModel<ModifyCustomRuleStatusResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "ModifyCustomRuleStatus");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<ModifyCustomRuleStatusResponse>>(strResp);
              }
              catch (JsonSerializationException e)
              {

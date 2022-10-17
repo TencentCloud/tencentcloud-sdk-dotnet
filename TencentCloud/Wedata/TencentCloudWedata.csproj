@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{CD6C0EA8-5241-363A-BC4F-E9BB21A8E370}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.619</VersionPrefix>
+    <VersionPrefix>3.0.620</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -70,6 +70,8 @@
     <Compile Include="V20210820\Models\CreateWorkflowResponse.cs" />
     <Compile Include="V20210820\Models\DataSourceInfo.cs" />
     <Compile Include="V20210820\Models\DataSourceInfoPage.cs" />
+    <Compile Include="V20210820\Models\DeleteCustomFunctionRequest.cs" />
+    <Compile Include="V20210820\Models\DeleteCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\DeleteDataSourcesRequest.cs" />
     <Compile Include="V20210820\Models\DeleteDataSourcesResponse.cs" />
     <Compile Include="V20210820\Models\DeleteFolderRequest.cs" />
@@ -91,8 +93,14 @@
     <Compile Include="V20210820\Models\DescribeFolderWorkflowListData.cs" />
     <Compile Include="V20210820\Models\DescribeFolderWorkflowListRequest.cs" />
     <Compile Include="V20210820\Models\DescribeFolderWorkflowListResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeFunctionKindsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeFunctionKindsResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeFunctionTypesRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeFunctionTypesResponse.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceLogsRequest.cs" />
     <Compile Include="V20210820\Models\DescribeInstanceLogsResponse.cs" />
+    <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsRequest.cs" />
+    <Compile Include="V20210820\Models\DescribeOrganizationalFunctionsResponse.cs" />
     <Compile Include="V20210820\Models\DescribeProjectRequest.cs" />
     <Compile Include="V20210820\Models\DescribeProjectResponse.cs" />
     <Compile Include="V20210820\Models\DescribeRelatedInstancesRequest.cs" />
@@ -114,6 +122,9 @@
     <Compile Include="V20210820\Models\FreezeTasksByMultiWorkflowResponse.cs" />
     <Compile Include="V20210820\Models\FreezeTasksRequest.cs" />
     <Compile Include="V20210820\Models\FreezeTasksResponse.cs" />
+    <Compile Include="V20210820\Models\FunctionResource.cs" />
+    <Compile Include="V20210820\Models\FunctionTypeOrKind.cs" />
+    <Compile Include="V20210820\Models\FunctionVersion.cs" />
     <Compile Include="V20210820\Models\GeneralTaskParam.cs" />
     <Compile Include="V20210820\Models\InstanceInfo.cs" />
     <Compile Include="V20210820\Models\InstanceLog.cs" />
@@ -143,6 +154,7 @@
     <Compile Include="V20210820\Models\ModifyWorkflowScheduleResponse.cs" />
     <Compile Include="V20210820\Models\OperateResult.cs" />
     <Compile Include="V20210820\Models\OrderField.cs" />
+    <Compile Include="V20210820\Models\OrganizationalFunction.cs" />
     <Compile Include="V20210820\Models\ParamInfo.cs" />
     <Compile Include="V20210820\Models\RecordField.cs" />
     <Compile Include="V20210820\Models\RegisterEventListenerRequest.cs" />
@@ -153,9 +165,13 @@
     <Compile Include="V20210820\Models\RerunInstancesResponse.cs" />
     <Compile Include="V20210820\Models\RunTaskRequest.cs" />
     <Compile Include="V20210820\Models\RunTaskResponse.cs" />
+    <Compile Include="V20210820\Models\SaveCustomFunctionRequest.cs" />
+    <Compile Include="V20210820\Models\SaveCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\SetTaskAlarmNewRequest.cs" />
     <Compile Include="V20210820\Models\SetTaskAlarmNewResponse.cs" />
     <Compile Include="V20210820\Models\SimpleTaskInfo.cs" />
+    <Compile Include="V20210820\Models\SubmitCustomFunctionRequest.cs" />
+    <Compile Include="V20210820\Models\SubmitCustomFunctionResponse.cs" />
     <Compile Include="V20210820\Models\SubmitTaskRequest.cs" />
     <Compile Include="V20210820\Models\SubmitTaskResponse.cs" />
     <Compile Include="V20210820\Models\SubmitWorkflow.cs" />

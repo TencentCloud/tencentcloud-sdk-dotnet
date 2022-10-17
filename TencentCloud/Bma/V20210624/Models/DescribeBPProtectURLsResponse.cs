@@ -25,13 +25,13 @@ namespace TencentCloud.Bma.V20210624.Models
     {
         
         /// <summary>
-        /// xxx
+        /// 保护网址列表
         /// </summary>
         [JsonProperty("ProtectURLInfos")]
         public ProtectURLInfo[] ProtectURLInfos{ get; set; }
 
         /// <summary>
-        /// xxx
+        /// 总量
         /// </summary>
         [JsonProperty("TotalCount")]
         public long? TotalCount{ get; set; }

@@ -4,7 +4,7 @@
     <TargetFrameworks>net45;netstandard2.0</TargetFrameworks>
     <ProjectGuid>{7B36C41A-5976-3538-93E0-40A089B50522}</ProjectGuid>
     <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
-    <VersionPrefix>3.0.619</VersionPrefix>
+    <VersionPrefix>3.0.620</VersionPrefix>
     <Description>Tencent Cloud API 3.0 SDK for .NET</Description>
     <PackageLicenseUrl>https://github.com/TencentCloud/tencentcloud-sdk-dotnet/blob/master/LICENSE</PackageLicenseUrl>
     <Authors>Tencent Cloud API Team</Authors>
@@ -48,20 +48,28 @@
     <Compile Include="V20210515\Models\ChainData.cs" />
     <Compile Include="V20210515\Models\CodeBatch.cs" />
     <Compile Include="V20210515\Models\CodeItem.cs" />
+    <Compile Include="V20210515\Models\CodePart.cs" />
     <Compile Include="V20210515\Models\CreateCodeBatchRequest.cs" />
     <Compile Include="V20210515\Models\CreateCodeBatchResponse.cs" />
     <Compile Include="V20210515\Models\CreateCodePackRequest.cs" />
     <Compile Include="V20210515\Models\CreateCodePackResponse.cs" />
+    <Compile Include="V20210515\Models\CreateCustomPackRequest.cs" />
+    <Compile Include="V20210515\Models\CreateCustomPackResponse.cs" />
+    <Compile Include="V20210515\Models\CreateCustomRuleRequest.cs" />
+    <Compile Include="V20210515\Models\CreateCustomRuleResponse.cs" />
     <Compile Include="V20210515\Models\CreateMerchantRequest.cs" />
     <Compile Include="V20210515\Models\CreateMerchantResponse.cs" />
     <Compile Include="V20210515\Models\CreateProductRequest.cs" />
     <Compile Include="V20210515\Models\CreateProductResponse.cs" />
     <Compile Include="V20210515\Models\CreateTraceChainRequest.cs" />
     <Compile Include="V20210515\Models\CreateTraceChainResponse.cs" />
+    <Compile Include="V20210515\Models\CreateTraceCodesAsyncRequest.cs" />
+    <Compile Include="V20210515\Models\CreateTraceCodesAsyncResponse.cs" />
     <Compile Include="V20210515\Models\CreateTraceCodesRequest.cs" />
     <Compile Include="V20210515\Models\CreateTraceCodesResponse.cs" />
     <Compile Include="V20210515\Models\CreateTraceDataRequest.cs" />
     <Compile Include="V20210515\Models\CreateTraceDataResponse.cs" />
+    <Compile Include="V20210515\Models\CustomRule.cs" />
     <Compile Include="V20210515\Models\DeleteCodeBatchRequest.cs" />
     <Compile Include="V20210515\Models\DeleteCodeBatchResponse.cs" />
     <Compile Include="V20210515\Models\DeleteMerchantRequest.cs" />
@@ -74,10 +82,20 @@
     <Compile Include="V20210515\Models\DescribeCodeBatchByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodeBatchsRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCodeBatchsResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePackStatusRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePackStatusResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePackUrlRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCodePackUrlResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodePacksRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCodePacksResponse.cs" />
     <Compile Include="V20210515\Models\DescribeCodesByPackRequest.cs" />
     <Compile Include="V20210515\Models\DescribeCodesByPackResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCustomRuleByIdRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCustomRuleByIdResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeCustomRulesRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeCustomRulesResponse.cs" />
+    <Compile Include="V20210515\Models\DescribeJobFileUrlRequest.cs" />
+    <Compile Include="V20210515\Models\DescribeJobFileUrlResponse.cs" />
     <Compile Include="V20210515\Models\DescribeMerchantByIdRequest.cs" />
     <Compile Include="V20210515\Models\DescribeMerchantByIdResponse.cs" />
     <Compile Include="V20210515\Models\DescribeMerchantsRequest.cs" />
@@ -97,6 +115,10 @@
     <Compile Include="V20210515\Models\Merchant.cs" />
     <Compile Include="V20210515\Models\ModifyCodeBatchRequest.cs" />
     <Compile Include="V20210515\Models\ModifyCodeBatchResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyCustomRuleRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyCustomRuleResponse.cs" />
+    <Compile Include="V20210515\Models\ModifyCustomRuleStatusRequest.cs" />
+    <Compile Include="V20210515\Models\ModifyCustomRuleStatusResponse.cs" />
     <Compile Include="V20210515\Models\ModifyMerchantRequest.cs" />
     <Compile Include="V20210515\Models\ModifyMerchantResponse.cs" />
     <Compile Include="V20210515\Models\ModifyProductRequest.cs" />
