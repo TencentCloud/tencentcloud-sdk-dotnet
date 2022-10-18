@@ -653,6 +653,46 @@ namespace TencentCloud.Ssl.V20191205
         }
 
         /// <summary>
+        /// 获得权益包列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackagesRequest"/></param>
+        /// <returns><see cref="DescribePackagesResponse"/></returns>
+        public async Task<DescribePackagesResponse> DescribePackages(DescribePackagesRequest req)
+        {
+             JsonResponseModel<DescribePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 获得权益包列表
+        /// </summary>
+        /// <param name="req"><see cref="DescribePackagesRequest"/></param>
+        /// <returns><see cref="DescribePackagesResponse"/></returns>
+        public DescribePackagesResponse DescribePackagesSync(DescribePackagesRequest req)
+        {
+             JsonResponseModel<DescribePackagesResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribePackages");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribePackagesResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 本接口（DownloadCertificate）用于下载证书。
         /// </summary>
         /// <param name="req"><see cref="DownloadCertificateRequest"/></param>

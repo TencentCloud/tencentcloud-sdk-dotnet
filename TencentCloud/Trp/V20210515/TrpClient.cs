@@ -1133,6 +1133,46 @@ namespace TencentCloud.Trp.V20210515
         }
 
         /// <summary>
+        /// 查询临时Token，主要用于上传接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTmpTokenRequest"/></param>
+        /// <returns><see cref="DescribeTmpTokenResponse"/></returns>
+        public async Task<DescribeTmpTokenResponse> DescribeTmpToken(DescribeTmpTokenRequest req)
+        {
+             JsonResponseModel<DescribeTmpTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DescribeTmpToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTmpTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询临时Token，主要用于上传接口
+        /// </summary>
+        /// <param name="req"><see cref="DescribeTmpTokenRequest"/></param>
+        /// <returns><see cref="DescribeTmpTokenResponse"/></returns>
+        public DescribeTmpTokenResponse DescribeTmpTokenSync(DescribeTmpTokenRequest req)
+        {
+             JsonResponseModel<DescribeTmpTokenResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DescribeTmpToken");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DescribeTmpTokenResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 查询二维码信息
         /// </summary>
         /// <param name="req"><see cref="DescribeTraceCodeByIdRequest"/></param>

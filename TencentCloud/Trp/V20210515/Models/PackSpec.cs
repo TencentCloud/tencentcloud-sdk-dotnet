@@ -49,6 +49,13 @@ namespace TencentCloud.Trp.V20210515.Models
         [JsonProperty("CustomId")]
         public string CustomId{ get; set; }
 
+        /// <summary>
+        /// 码段配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodeParts")]
+        public CodePart[] CodeParts{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -59,6 +66,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "Rate", this.Rate);
             this.SetParamSimple(map, prefix + "Amount", this.Amount);
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
+            this.SetParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
         }
     }
 }

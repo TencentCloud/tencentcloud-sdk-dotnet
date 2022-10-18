@@ -533,6 +533,46 @@ namespace TencentCloud.Captcha.V20190722
         }
 
         /// <summary>
+        /// 查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>
+        /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>
+        public async Task<GetTotalTicketStatisticsResponse> GetTotalTicketStatistics(GetTotalTicketStatisticsRequest req)
+        {
+             JsonResponseModel<GetTotalTicketStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "GetTotalTicketStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalTicketStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 查询所有验证的统计数据，包括：总票据校验量、总票据校验通过量、总票据校验拦截量。
+        /// </summary>
+        /// <param name="req"><see cref="GetTotalTicketStatisticsRequest"/></param>
+        /// <returns><see cref="GetTotalTicketStatisticsResponse"/></returns>
+        public GetTotalTicketStatisticsResponse GetTotalTicketStatisticsSync(GetTotalTicketStatisticsRequest req)
+        {
+             JsonResponseModel<GetTotalTicketStatisticsResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "GetTotalTicketStatistics");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<GetTotalTicketStatisticsResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 更新验证码应用APPId信息
         /// </summary>
         /// <param name="req"><see cref="UpdateCaptchaAppIdInfoRequest"/></param>

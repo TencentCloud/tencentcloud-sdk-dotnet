@@ -173,6 +173,46 @@ namespace TencentCloud.Lcic.V20220817
         }
 
         /// <summary>
+        /// 删除房间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomRequest"/></param>
+        /// <returns><see cref="DeleteRoomResponse"/></returns>
+        public async Task<DeleteRoomResponse> DeleteRoom(DeleteRoomRequest req)
+        {
+             JsonResponseModel<DeleteRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = await this.InternalRequest(req, "DeleteRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
+        /// 删除房间
+        /// </summary>
+        /// <param name="req"><see cref="DeleteRoomRequest"/></param>
+        /// <returns><see cref="DeleteRoomResponse"/></returns>
+        public DeleteRoomResponse DeleteRoomSync(DeleteRoomRequest req)
+        {
+             JsonResponseModel<DeleteRoomResponse> rsp = null;
+             try
+             {
+                 var strResp = this.InternalRequestSync(req, "DeleteRoom");
+                 rsp = JsonConvert.DeserializeObject<JsonResponseModel<DeleteRoomResponse>>(strResp);
+             }
+             catch (JsonSerializationException e)
+             {
+                 throw new TencentCloudSDKException(e.Message);
+             }
+             return rsp.Response;
+        }
+
+        /// <summary>
         /// 获取房间信息
         /// </summary>
         /// <param name="req"><see cref="DescribeRoomRequest"/></param>

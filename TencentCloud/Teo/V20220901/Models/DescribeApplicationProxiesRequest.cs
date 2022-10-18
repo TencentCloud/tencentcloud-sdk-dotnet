@@ -25,7 +25,7 @@ namespace TencentCloud.Teo.V20220901.Models
     {
         
         /// <summary>
-        /// 分页查询偏移量，默认为0。
+        /// 分页查询偏移量。默认为0。
         /// </summary>
         [JsonProperty("Offset")]
         public long? Offset{ get; set; }

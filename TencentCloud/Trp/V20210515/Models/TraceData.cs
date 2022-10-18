@@ -39,21 +39,21 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? CorpId{ get; set; }
 
         /// <summary>
-        /// 0
+        /// 码类型 0: 批次, 1: 码, 2: 生产任务
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Type")]
         public ulong? Type{ get; set; }
 
         /// <summary>
-        /// 码
+        /// 码值，跟码类型一一对应
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Code")]
         public string Code{ get; set; }
 
         /// <summary>
-        /// 排序
+        /// 排序，在Phase相同情况下，值越小排名靠前
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Rank")]
@@ -109,11 +109,25 @@ namespace TencentCloud.Trp.V20210515.Models
         public string ChainTime{ get; set; }
 
         /// <summary>
-        /// 无
+        /// 上链数据
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("ChainData")]
         public ChainData ChainData{ get; set; }
+
+        /// <summary>
+        /// 溯源阶段配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("PhaseData")]
+        public PhaseData PhaseData{ get; set; }
+
+        /// <summary>
+        /// 溯源阶段状态 0: 无效, 1: 有效
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public long? Status{ get; set; }
 
 
         /// <summary>
@@ -134,6 +148,8 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "ChainStatus", this.ChainStatus);
             this.SetParamSimple(map, prefix + "ChainTime", this.ChainTime);
             this.SetParamObj(map, prefix + "ChainData.", this.ChainData);
+            this.SetParamObj(map, prefix + "PhaseData.", this.PhaseData);
+            this.SetParamSimple(map, prefix + "Status", this.Status);
         }
     }
 }

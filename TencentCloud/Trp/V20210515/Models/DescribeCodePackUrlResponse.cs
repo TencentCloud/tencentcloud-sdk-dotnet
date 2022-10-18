@@ -32,6 +32,20 @@ namespace TencentCloud.Trp.V20210515.Models
         public string Url{ get; set; }
 
         /// <summary>
+        /// 图片码包地址，可能为空
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("ImgUrl")]
+        public string ImgUrl{ get; set; }
+
+        /// <summary>
+        /// 文字码包Key，用于上传导入
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("FileKey")]
+        public string FileKey{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -44,6 +58,8 @@ namespace TencentCloud.Trp.V20210515.Models
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
             this.SetParamSimple(map, prefix + "Url", this.Url);
+            this.SetParamSimple(map, prefix + "ImgUrl", this.ImgUrl);
+            this.SetParamSimple(map, prefix + "FileKey", this.FileKey);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

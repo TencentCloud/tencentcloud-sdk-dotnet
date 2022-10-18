@@ -36,6 +36,12 @@ namespace TencentCloud.Tke.V20180525.Models
         [JsonProperty("ServiceAccounts")]
         public ServiceAccountAuthenticationOptions ServiceAccounts{ get; set; }
 
+        /// <summary>
+        /// OIDC认证配置
+        /// </summary>
+        [JsonProperty("OIDCConfig")]
+        public OIDCConfigAuthenticationOptions OIDCConfig{ get; set; }
+
 
         /// <summary>
         /// For internal usage only. DO NOT USE IT.
@@ -44,6 +50,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamSimple(map, prefix + "ClusterId", this.ClusterId);
             this.SetParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
+            this.SetParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
         }
     }
 }

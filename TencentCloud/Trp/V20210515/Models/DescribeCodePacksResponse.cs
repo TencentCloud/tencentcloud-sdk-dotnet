@@ -25,6 +25,20 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
+        /// 码列表
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("CodePacks")]
+        public CodePack[] CodePacks{ get; set; }
+
+        /// <summary>
+        /// 总数
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("TotalCount")]
+        public ulong? TotalCount{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +50,8 @@ namespace TencentCloud.Trp.V20210515.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamArrayObj(map, prefix + "CodePacks.", this.CodePacks);
+            this.SetParamSimple(map, prefix + "TotalCount", this.TotalCount);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

@@ -39,7 +39,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public long? CorpId{ get; set; }
 
         /// <summary>
-        /// 码
+        /// 批次编码(未使用)
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("BatchCode")]
@@ -88,7 +88,7 @@ namespace TencentCloud.Trp.V20210515.Models
         public string MpTpl{ get; set; }
 
         /// <summary>
-        /// 状态
+        /// 批次状态 0: 未激活 1: 已激活 -1: 已冻结
         /// 注意：此字段可能返回 null，表示取不到有效值。
         /// </summary>
         [JsonProperty("Status")]

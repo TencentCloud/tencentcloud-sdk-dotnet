@@ -55,16 +55,22 @@ namespace TencentCloud.Trp.V20210515.Models
         public ulong? PackLevel{ get; set; }
 
         /// <summary>
-        /// 层级码包规则 [{ Level, Rate, Amount, CustomId }]
+        /// 层级码包规则
         /// </summary>
         [JsonProperty("PackSpec")]
         public PackSpec[] PackSpec{ get; set; }
 
         /// <summary>
-        /// 码规则ID,  普通码包时必填
+        /// 码规则ID,  和CodeParts二选一必填
         /// </summary>
         [JsonProperty("CustomId")]
         public string CustomId{ get; set; }
+
+        /// <summary>
+        /// 码段配置，和CustomId二选一必填
+        /// </summary>
+        [JsonProperty("CodeParts")]
+        public CodePart[] CodeParts{ get; set; }
 
 
         /// <summary>
@@ -79,6 +85,7 @@ namespace TencentCloud.Trp.V20210515.Models
             this.SetParamSimple(map, prefix + "PackLevel", this.PackLevel);
             this.SetParamArrayObj(map, prefix + "PackSpec.", this.PackSpec);
             this.SetParamSimple(map, prefix + "CustomId", this.CustomId);
+            this.SetParamArrayObj(map, prefix + "CodeParts.", this.CodeParts);
         }
     }
 }

@@ -25,6 +25,13 @@ namespace TencentCloud.Trp.V20210515.Models
     {
         
         /// <summary>
+        /// 码包状态 init: 初始化, pending: 执行中, done: 完成, error: 失败
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("Status")]
+        public string Status{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -36,6 +43,7 @@ namespace TencentCloud.Trp.V20210515.Models
         /// </summary>
         public override void ToMap(Dictionary<string, string> map, string prefix)
         {
+            this.SetParamSimple(map, prefix + "Status", this.Status);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }

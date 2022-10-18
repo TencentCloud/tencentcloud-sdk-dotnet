@@ -39,6 +39,13 @@ namespace TencentCloud.Tke.V20180525.Models
         public string LatestOperationState{ get; set; }
 
         /// <summary>
+        /// OIDC认证配置
+        /// 注意：此字段可能返回 null，表示取不到有效值。
+        /// </summary>
+        [JsonProperty("OIDCConfig")]
+        public OIDCConfigAuthenticationOptions OIDCConfig{ get; set; }
+
+        /// <summary>
         /// 唯一请求 ID，每次请求都会返回。定位问题时需要提供该次请求的 RequestId。
         /// </summary>
         [JsonProperty("RequestId")]
@@ -52,6 +59,7 @@ namespace TencentCloud.Tke.V20180525.Models
         {
             this.SetParamObj(map, prefix + "ServiceAccounts.", this.ServiceAccounts);
             this.SetParamSimple(map, prefix + "LatestOperationState", this.LatestOperationState);
+            this.SetParamObj(map, prefix + "OIDCConfig.", this.OIDCConfig);
             this.SetParamSimple(map, prefix + "RequestId", this.RequestId);
         }
     }
